@@ -24,6 +24,7 @@ This repository contains our core fleet of skills.
 | `modernize` | "modernize" | Rebases an older PR and evaluates whether it should still exist or be superseded. |
 | `leaving-pr-comments` | (automatic) | Standardizes the format and tone of automated comments posted on pull requests. |
 | `kb` | "consult kb", "record venture" | Searches past ventures and playbooks before a task, and logs outcomes/lessons afterward. |
+| `reverse-engineer` | "reverse engineer" | Captures web applications, extracts schemas/APIs/design tokens, and queries the vector index. |
 
 ### Skill Dependencies
 
