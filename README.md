@@ -4,7 +4,7 @@ A lightweight, native agent skills harness inspired by [`tstack`](https://github
 
 In modern agent environments (**Antigravity `agy`**, **Claude Code**, and **Codex**), you do not need an external runner script or Python wrapper. The agent runtime itself is the runner: it discovers, loads, and executes skills directly from declarative markdown specifications (`SKILL.md`).
 
-This repository contains our core fleet of skills and specialized agent roles.
+This repository contains our core fleet of skills.
 
 ---
 
@@ -32,19 +32,6 @@ Several skills work together as a pipeline:
 - `full-stop` uses `full-send`.
 - `takeover` uses `modernize`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
 - `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
-
----
-
-## Agent Personas
-
-In addition to actionable workflow skills, specialized agent personas live in `agents/`:
-
-- **Global Agents**:
-  - `architect`: High-level system design, interface contracts, simplicity enforcement.
-  - `reviewer`: Code quality, security audits, regression detection.
-- **Project Agents**:
-  - `builder`: Clean, focused code implementation following blueprints.
-  - `tester`: Deterministic QA, edge-case validation, test automation.
 
 ---
 
