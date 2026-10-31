@@ -20,6 +20,14 @@ AGENTS_DIR = REPO_ROOT / "agents"
 GLOBAL_AGENTS_DIR = AGENTS_DIR / "global"
 PROJECT_AGENTS_DIR = AGENTS_DIR / "project"
 MODELS_DIR = AGENTS_DIR / "models"
+SKILLS_DIR = REPO_ROOT / ".agents" / "skills"
+
+
+def get_all_skills():
+    """Returns a list of installed skill names."""
+    if not SKILLS_DIR.is_dir():
+        return []
+    return sorted([d.name for d in SKILLS_DIR.iterdir() if d.is_dir() and not d.name.startswith(".")])
 
 
 def parse_frontmatter(file_path: Path):
@@ -125,7 +133,14 @@ def cmd_list(args):
             print(f"    └─ {a['description']}")
         print()
 
-    print(f"Total: {len(agents)} agents available.\n")
+    skills = get_all_skills()
+    if skills:
+        print("[Fleet Skills]")
+        for s in skills:
+            print(f"  • {s}")
+        print()
+
+    print(f"Total: {len(agents)} agents, {len(skills)} skills available.\n")
     return 0
 
 
@@ -248,6 +263,22 @@ def cmd_link(args):
 
     agents_summary_file.write_text("\n".join(lines), encoding="utf-8")
     print(f"Linked fleet definitions into: {agents_summary_file}")
+
+    # Link skills if available
+    if SKILLS_DIR.is_dir():
+        target_skills_dir = target_agents_dir / "skills"
+        target_skills_dir.mkdir(parents=True, exist_ok=True)
+        for skill_dir in SKILLS_DIR.iterdir():
+            if skill_dir.is_dir() and not skill_dir.name.startswith("."):
+                target_skill_path = target_skills_dir / skill_dir.name
+                if not target_skill_path.exists():
+                    try:
+                        target_skill_path.symlink_to(skill_dir, target_is_directory=True)
+                        print(f"Linked skill [{skill_dir.name}] -> {target_skill_path}")
+                    except OSError:
+                        import shutil
+                        shutil.copytree(skill_dir, target_skill_path)
+                        print(f"Copied skill [{skill_dir.name}] -> {target_skill_path}")
     return 0
 
 
