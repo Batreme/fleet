@@ -1,115 +1,90 @@
-# Fleet: Agent Harness
+# Fleet: Agent Skills & Harness
 
-A simple, zero-dependency harness for managing and dispatching a fleet of specialized AI agents.
+A lightweight, native agent skills harness inspired by [`tstack`](https://github.com/t3dotgg/tstack).
 
-This repository does **not** contain application code. Instead, it serves as the central control plane and specification library for our agent fleet, structured by scope (global vs. project-oriented) and model-specific profiles (starting with Antigravity `agy`, extensible to `claude`).
+In modern agent environments (**Antigravity `agy`**, **Claude Code**, and **Codex**), you do not need an external runner script or Python wrapper. The agent runtime itself is the runner: it discovers, loads, and executes skills directly from declarative markdown specifications (`SKILL.md`).
 
----
-
-## Core Philosophy
-
-- **Keep It Simple (KISS)**: Minimal moving parts, standard markdown personas, zero third-party Python dependencies (runs on standard Python 3.9+).
-- **Decoupled from Application Code**: Application repositories remain clean; the fleet harness can inspect, link into, or run against any target project workspace.
-- **Model Agnostic**: Built today for `agy` (Gemini), architected to support `claude` (Anthropic) with drop-in configuration.
+This repository contains our core fleet of skills and specialized agent roles.
 
 ---
 
-## Directory Layout
+## Skills
 
-```text
-fleet/
-├── fleet                    # Executable CLI entrypoint
-├── README.md                # Documentation & usage reference
-├── .gitignore
-├── agents/
-│   ├── global/              # Universal, cross-project agents
-│   │   ├── architect.md     # System architecture, interface contracts, trade-offs
-│   │   └── reviewer.md      # Code quality, security audits, simplicity checks
-│   ├── project/             # Project/lifecycle specific agents
-│   │   ├── builder.md       # Implementation workhorse (clean, minimal code)
-│   │   └── tester.md        # QA & test automation (unit, integration, boundaries)
-│   └── models/              # Model-specific parameters, flags, and mappings
-│       ├── agy.json         # Antigravity CLI profile (Gemini)
-│       └── claude.json      # Claude Code profile (Anthropic)
-└── harness/
-    └── runner.py            # Zero-dependency Python manager and dispatcher
-```
+| Skill | Trigger / Say | What it does |
+|---|---|---|
+| `grill-me` | "grill me" | Relentless interactive interview to sharpen a plan, architecture, or design tree before writing code. |
+| `grilling` | (engine) | Decision-tree interrogation engine that uncovers hidden assumptions in structured rounds. |
+| `full-send` | "full send" | Drives a change all the way to a merged PR: proves it, reviews it, files it, babysits it, merges it. |
+| `full-stop` | "full stop" | Same as `full-send`, but pauses when the PR is green and ready for human review/merge. |
+| `council` | "council" | Solicits reviews from multiple models/providers and loops until they achieve consensus. |
+| `sol-loop` | "sol loop" | Reviews a change with GPT Sol in a loop until both agents agree. |
+| `file-pr` | "file a PR" | Files a concise, issue-first pull request via GitHub CLI (`gh`). |
+| `takeover` | "take over" | Picks up and finishes someone else's branch, PR, or thread while preserving attribution. |
+| `babysit-pr` | "babysit" | Monitors a PR through CI and review bots, fixing genuine issues until green. |
+| `modernize` | "modernize" | Rebases an older PR and evaluates whether it should still exist or be superseded. |
+| `leaving-pr-comments` | (automatic) | Standardizes the format and tone of automated comments posted on pull requests. |
+
+### Skill Dependencies
+
+Several skills work together as a pipeline:
+- `grill-me` calls `grilling`.
+- `full-send` uses `sol-loop`, `file-pr`, and `babysit-pr`.
+- `full-stop` uses `full-send`.
+- `takeover` uses `modernize`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
+- `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
 
 ---
 
-## Getting Started
+## Agent Personas
 
-### 1. List Available Agents
+In addition to actionable workflow skills, specialized agent personas live in `agents/`:
 
-View all global and project-oriented agents currently in the fleet:
+- **Global Agents**:
+  - `architect`: High-level system design, interface contracts, simplicity enforcement.
+  - `reviewer`: Code quality, security audits, regression detection.
+- **Project Agents**:
+  - `builder`: Clean, focused code implementation following blueprints.
+  - `tester`: Deterministic QA, edge-case validation, test automation.
 
+---
+
+## Installation & Usage
+
+### 1. In Antigravity (`agy`)
+
+Skills are automatically discovered from `.agents/skills` (which symlinks to `./skills` in this repo).
+
+To install into a target project:
 ```bash
-./fleet list
+# Link all skills into your project's .agents directory:
+mkdir -p /path/to/project/.agents
+ln -s "$(pwd)/skills" /path/to/project/.agents/skills
 ```
 
-### 2. Inspect an Agent's Persona & System Instructions
-
+Or install globally for `agy`:
 ```bash
-./fleet show architect
-./fleet show builder
+mkdir -p ~/.gemini/config/skills
+cp -R skills/* ~/.gemini/config/skills/
 ```
 
-### 3. Run an Agent against a Target Project Workspace
-
-Run an agent in interactive mode using `agy` on a target application directory:
+### 2. In Claude Code
 
 ```bash
-./fleet run builder --target /path/to/my-app --prompt "Implement auth middleware"
+mkdir -p ~/.claude/skills
+cp -R skills/* ~/.claude/skills/
 ```
 
-To test the generated command without executing:
+### 3. In Codex
 
 ```bash
-./fleet run builder --target /path/to/my-app --prompt "Implement auth middleware" --dry-run
-```
-
-To switch to Claude:
-
-```bash
-./fleet run builder --backend claude --target /path/to/my-app --prompt "Implement auth middleware"
-```
-
-### 4. Link Fleet into a Target Workspace
-
-Inject the fleet's agent definitions into a target repository so `agy` automatically discovers the roster via `.agents/rules/`:
-
-```bash
-./fleet link /path/to/my-app
-```
-
-### 5. Export for Claude Code
-
-Export agent roles directly into a target workspace's `CLAUDE.md`:
-
-```bash
-./fleet export-claude --target /path/to/my-app
+mkdir -p ~/.codex/skills
+cp -R skills/* ~/.codex/skills/
 ```
 
 ---
 
-## Adding New Agents
+## Requirements
 
-To add an agent to the fleet, simply create a new markdown file in `agents/global/` or `agents/project/`:
-
-```markdown
----
-name: security-officer
-role: Security Specialist
-type: global
-description: Audits dependencies and configurations for vulnerabilities.
-tools:
-  - read_file
-  - run_command
----
-
-# Security Specialist Persona
-
-You are a security specialist...
-```
-
-The `./fleet` CLI will automatically discover and register your new agent without any configuration changes.
+- **GitHub CLI (`gh`)**: Required for `file-pr`, `babysit-pr`, `takeover`, and `modernize`.
+- **Python 3**: Used by `skills/babysit-pr/scripts/pr-wait` to watch PR event streams.
+- **Subagents / Multi-model**: `council` and `sol-loop` delegate reviews to subagents or external models.
