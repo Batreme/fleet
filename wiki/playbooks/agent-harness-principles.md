@@ -20,9 +20,11 @@ Guidelines for building, extending, and organizing tools and skills for autonomo
    - Use declarative `SKILL.md` documents rather than external Python/Node runner scripts.
    - Let the agent's progressive disclosure load tools and instructions on demand.
 
-2. **Decoupled Repositories**:
-   - Keep the agent harness repository separate from application code.
-   - Mount or symlink skills into target projects (`.agents/skills/` or `~/.claude/skills/`).
+2. **Decoupled Repositories & Isolated Projects**:
+   - Keep the agent harness repository (`fleet`) strictly for skills and the knowledge base. Never build application code inside `fleet`.
+   - Every application or client project must be created in its own directory and separate Git repository outside `fleet` (e.g. `../<project-name>`).
+   - Mount or symlink skills from `fleet/skills` into target projects (`.agents/skills/` or `~/.claude/skills/`).
+   - Log venture outcomes and lessons back into `fleet/wiki/ventures/`.
 
 3. **Obsidian-Compatible Knowledge**:
    - Store lessons, venture outcomes, and playbooks in clean Markdown with YAML frontmatter.
