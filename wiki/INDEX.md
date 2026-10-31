@@ -11,6 +11,7 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 
 - [[2026-10-31-fleet-harness-setup]] — Initial harness setup, migration to native skills (`tstack`), and wiki integration.
 - [[2026-10-31-reverse-harness-setup]] — Setup of standalone reverse-harness engine, upstream reverse-skill submodule, and vector store.
+- [[2026-10-31-cinematic-studio-portfolio]] — High-craft 35mm photography portfolio with interactive scroll-scrub optical lens hero and EXIF inspector.
 
 ---
 
