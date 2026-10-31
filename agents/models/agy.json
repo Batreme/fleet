@@ -1,0 +1,25 @@
+{
+  "name": "agy",
+  "display_name": "Antigravity (AGY)",
+  "cli_binary": "agy",
+  "default_model": "gemini-2.5-pro",
+  "models": [
+    "gemini-2.5-pro",
+    "gemini-3.8-flash",
+    "gemini-2.5-flash"
+  ],
+  "default_effort": "medium",
+  "tool_mapping": {
+    "read_file": "view_file",
+    "write_file": "write_to_file",
+    "edit_file": "replace_file_content",
+    "run_command": "run_command"
+  },
+  "flags": {
+    "interactive": "-i",
+    "print": "-p",
+    "agent": "--agent",
+    "model": "--model",
+    "effort": "--effort"
+  }
+}
