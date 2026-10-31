@@ -57,6 +57,24 @@ uv run --directory ../reverse-harness reverse-harness index --wiki-dir ../fleet/
 
 ---
 
+### 🚀 Scaffolding High-Craft Applications (Design DNA Engine)
+
+Generate non-standard, production-grade applications initialized directly from reverse-engineered design archetypes:
+
+```bash
+# 1. Inspect extracted design archetypes
+uv run --directory ../reverse-harness reverse-harness dna
+
+# 2. Scaffold a brand-new Next.js 15 + Tailwind application
+# Archetypes: dark-luxury | minimal-editorial | cinematic-studio | modern-boutique
+uv run --directory ../reverse-harness reverse-harness scaffold my-new-studio \
+  --concept "Aura Spatial Interface & Experimental Design" \
+  --style dark-luxury \
+  --install
+```
+
+---
+
 ### 🛡️ Upstream Security & Binary Reverse Engineering (`reverse-skill`)
 
 For mobile APKs, native binaries, or general penetration testing:
