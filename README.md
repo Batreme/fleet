@@ -23,6 +23,7 @@ This repository contains our core fleet of skills.
 | `babysit-pr` | "babysit" | Monitors a PR through CI and review bots, fixing genuine issues until green. |
 | `modernize` | "modernize" | Rebases an older PR and evaluates whether it should still exist or be superseded. |
 | `leaving-pr-comments` | (automatic) | Standardizes the format and tone of automated comments posted on pull requests. |
+| `kb` | "consult kb", "record venture" | Searches past ventures and playbooks before a task, and logs outcomes/lessons afterward. |
 
 ### Skill Dependencies
 
@@ -32,6 +33,16 @@ Several skills work together as a pipeline:
 - `full-stop` uses `full-send`.
 - `takeover` uses `modernize`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
 - `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
+
+---
+
+## Knowledge Base (Wiki)
+
+The `wiki/` directory is an Obsidian-compatible Markdown vault that serves as long-term agent memory across projects:
+- **`wiki/ventures/`**: Historical logs of tasks and projects—the intended outcome, obstacles faced, lessons learned, and final result.
+- **`wiki/playbooks/`**: Proven patterns and best practices extracted from past ventures.
+- **`wiki/templates/`**: Templates for standardizing new venture logs and playbooks.
+- **`wiki/INDEX.md`**: Central Map of Content (MOC) linking all entries.
 
 ---
 
