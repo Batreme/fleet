@@ -1,0 +1,36 @@
+---
+title: "Target Overview: awmedia-marketing"
+date: 2026-11-14
+url: "https://awmedia.marketing/"
+status: analyzed
+tags:
+  - target
+  - reverse-engineering
+  - awmedia-marketing
+auth_required: false
+---
+
+# Target Overview: awmedia-marketing
+
+## 🧭 Dossier Navigation
+- [[apis|Discovered APIs & Network Protocols]]
+- [[data-models|Data Models & Local State]]
+- [[ui-ux|UI Architecture & Design Tokens]]
+- [[source-maps|De-obfuscated Source Maps]]
+
+---
+
+## 🏗️ Architecture & Stack Fingerprint
+- **Target URL**: `https://awmedia.marketing/`
+- **Page Title**: AW Media & Marketing | UK Web Design Studio
+- **Identified Frameworks**: Tailwind CSS
+- **Auth Profile Used**: None (Public session)
+- **Recorded API Endpoints**: 0
+- **Recovered Scripts**: 19
+- **Recovered Stylesheets**: 10
+
+---
+
+## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
+- **Domain Modeling**: See [[data-models]] for concrete entity structures observed in network requests and local storage.
+- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
