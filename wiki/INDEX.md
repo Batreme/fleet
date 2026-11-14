@@ -1,6 +1,6 @@
 # Knowledge Base (Wiki)
 
-A lightweight, Obsidian-compatible knowledge base designed for agents and humans. It tracks historical ventures, outcomes, reusable engineering playbooks, and a rich index of production reverse-engineered web targets.
+A lightweight, Obsidian-compatible knowledge base designed for agents and humans. It tracks historical ventures, outcomes, reusable engineering playbooks, and a rich catalog of 197 production reverse-engineered web targets across design agencies, e-commerce, architecture, fashion, experimental, and technology verticals.
 
 ---
 
@@ -13,14 +13,17 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 - [[2026-10-31-reverse-harness-setup]] — Setup of standalone reverse-harness engine, upstream reverse-skill submodule, and vector store.
 - [[2026-10-31-cinematic-studio-portfolio]] — High-craft 35mm photography portfolio with interactive scroll-scrub optical lens hero and EXIF inspector.
 - [[2026-11-14-awwwards-photography-expansion]] — Scale reverse-harness knowledge base with 50 live Awwwards photography portfolio targets, vector indexing, and new design DNA archetypes.
-- [[2026-11-14-awwwards-multi-category-expansion]] — Scale Fleet KB across 25 Awwwards industry categories (500+ production targets).
+- [[2026-11-14-awwwards-multi-category-expansion]] — Large-scale expansion across Awwwards verticals (197 production targets cataloged).
 
 ---
 
 ### 📖 Playbooks & Standards (`wiki/playbooks/`)
 Actionable, proven patterns synthesized from past ventures.
 
+- [[agency-and-ecommerce-patterns]] — Production-tested architectural blueprints, headless commerce state patterns, design token systems, and anti-AI-slop design principles reverse-engineered from 17 elite design agency and e-commerce targets.
 - [[agent-harness-principles]] — Core principles for designing agent skills without unnecessary wrappers or dependencies.
+- [[architectural-and-spatial-patterns]] — Architectural and spatial design patterns: blueprint framing, modular grid mathematics, elevation viewports, austere serif/monoline typography, and anti-slop technical case studies.
+- [[tech-and-experimental-patterns]] — Architectural patterns for high-craft technology and experimental web applications (real-time telemetry HUDs, WebGL canvas integration, fluid state management, neon phosphor tokens on pitch-black substrates).
 
 ---
 
