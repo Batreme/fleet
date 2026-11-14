@@ -34,7 +34,8 @@ outcome_summary: "Designed and built custom-city: a dark heavyweight industrial 
 
 ## Final Outcome & Artifacts
 - **Repository**: Located at `/root/projects/custom-city` with clean git history (`feat: initial release of custom-city streetwear embroidery platform`).
-- **Production Server**: Deployed and serving at `http://localhost:3000` with 0 compile errors.
+- **Production Server**: Deployed directly on the user's VPS (`31.70.120.216`, alongside `ozaklad`) in `/app/custom-city`, managed by systemd (`custom-city.service`) on port 3000 and reverse-proxied by Nginx on port 80.
+- **GitHub Repository**: Pushed and synced to `https://github.com/Batreme/custom-city`.
 - **Deliverables**:
   - Live Customizer with Realtime Pricing & Canvas Embroidery Simulation.
   - Printable / Downloadable Production Tech Pack Spec Sheet.
