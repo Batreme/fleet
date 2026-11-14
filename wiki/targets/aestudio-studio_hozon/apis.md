@@ -1,0 +1,19 @@
+---
+title: "APIs & Protocols: aestudio-studio_hozon"
+date: 2026-11-14
+target: "[[overview|aestudio-studio_hozon]]"
+---
+
+# Discovered APIs & Protocols: aestudio-studio_hozon
+
+## 📡 Endpoint Catalog
+
+| Method | Path | Status | Protocol / Operation |
+|---|---|---|---|
+*No API endpoints captured in session.*
+
+---
+
+## 📦 Inferred Payload Schemas
+
+*No payload schemas inferred.*

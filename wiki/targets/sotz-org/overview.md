@@ -1,0 +1,36 @@
+---
+title: "Target Overview: sotz-org"
+date: 2026-11-14
+url: "https://sotz.org/"
+status: analyzed
+tags:
+  - target
+  - reverse-engineering
+  - sotz-org
+auth_required: false
+---
+
+# Target Overview: sotz-org
+
+## 🧭 Dossier Navigation
+- [[apis|Discovered APIs & Network Protocols]]
+- [[data-models|Data Models & Local State]]
+- [[ui-ux|UI Architecture & Design Tokens]]
+- [[source-maps|De-obfuscated Source Maps]]
+
+---
+
+## 🏗️ Architecture & Stack Fingerprint
+- **Target URL**: `https://sotz.org/`
+- **Page Title**: Shout out to Zanzibar
+- **Identified Frameworks**: Modern Web Application
+- **Auth Profile Used**: None (Public session)
+- **Recorded API Endpoints**: 0
+- **Recovered Scripts**: 0
+- **Recovered Stylesheets**: 2
+
+---
+
+## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
+- **Domain Modeling**: See [[data-models]] for concrete entity structures observed in network requests and local storage.
+- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.

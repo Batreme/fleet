@@ -1,0 +1,36 @@
+---
+title: "Target Overview: kissbranding-co-uk"
+date: 2026-11-14
+url: "https://kissbranding.co.uk/"
+status: analyzed
+tags:
+  - target
+  - reverse-engineering
+  - kissbranding-co-uk
+auth_required: false
+---
+
+# Target Overview: kissbranding-co-uk
+
+## 🧭 Dossier Navigation
+- [[apis|Discovered APIs & Network Protocols]]
+- [[data-models|Data Models & Local State]]
+- [[ui-ux|UI Architecture & Design Tokens]]
+- [[source-maps|De-obfuscated Source Maps]]
+
+---
+
+## 🏗️ Architecture & Stack Fingerprint
+- **Target URL**: `https://kissbranding.co.uk/`
+- **Page Title**: Kiss | Brands that Kiss
+- **Identified Frameworks**: Modern Web Application
+- **Auth Profile Used**: None (Public session)
+- **Recorded API Endpoints**: 21
+- **Recovered Scripts**: 5
+- **Recovered Stylesheets**: 2
+
+---
+
+## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
+- **Domain Modeling**: See [[data-models]] for concrete entity structures observed in network requests and local storage.
+- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
