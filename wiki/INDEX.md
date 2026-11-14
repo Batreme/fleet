@@ -14,6 +14,7 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 - [[2026-10-31-cinematic-studio-portfolio]] — High-craft 35mm photography portfolio with interactive scroll-scrub optical lens hero and EXIF inspector.
 - [[2026-11-14-awwwards-photography-expansion]] — Scale reverse-harness knowledge base with 50 live Awwwards photography portfolio targets, vector indexing, and new design DNA archetypes.
 - [[2026-11-14-awwwards-multi-category-expansion]] — Massive multi-vertical expansion across all 25 Awwwards industry categories (575 production targets cataloged).
+- [[2026-11-14-custom-city-streetwear-embroidery]] — Dark heavyweight industrial streetwear e-commerce platform with interactive 2D live embroidery simulator, 3D puff relief preview, Tech Pack generator, and BLIK checkout.
 
 ---
 
