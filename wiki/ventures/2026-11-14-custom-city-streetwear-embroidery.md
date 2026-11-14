@@ -24,9 +24,14 @@ outcome_summary: "Designed and built custom-city: a dark heavyweight industrial 
   5. Interactive B2B bulk tier calculator for clothing brands and crews.
 
 ## Approach Taken
-- **Architecture & Isolation**: Created a standalone repository at `/root/projects/custom-city` adhering strictly to workspace boundaries.
-- **Tech Stack**: Next.js 15 (App Router, TypeScript), Tailwind CSS, Framer Motion, HTML5 Canvas / SVG hybrid rendering for stitch texture simulation, Web Audio API synthesizer for tactile mechanical UI haptics.
-- **Visual Design DNA**: Dark Heavyweight Industrial aesthetic (`#060608` to `#16161c`, raw concrete grey `#6e7075`, acid volt `#ccff00`, safety orange `#ff5500`), heavy grotesk typography, and modular industrial grids.
+- **Architecture & Isolation**: Created a standalone repository at `/root/projects/custom-city` adhering strictly to workspace boundaries, and deployed to `/app/custom-city` on the VPS.
+- **Anti-AI-Slop Overhaul (Fleet Playbooks)**:
+  - Applied blueprints from `[[agency-and-ecommerce-patterns]]` and `[[tech-and-experimental-patterns]]`.
+  - Replaced generic SaaS card grids with an Asymmetric Split-Screen Hero (`twohalves-co` pattern) and a Floating Bottom Dock (`FloatingPillNav` from `romainavalle-dev`).
+  - Implemented the Optical Macro Loupe (20x magnifying lens) with thread filament inspection.
+  - Added Tajima 15-needle slot rack (`#01-#15`), real stitch density controls (`0.30 - 0.55 mm`), wireframe X-Ray CAD mode, and dynamic runtime/meter telemetry.
+  - Applied strict 3:4 portrait aspect ratio discipline (`--aspect-ratio: .75`) on product cards with physical weight in grams, model stats, and batch remaining counters.
+  - Synchronized cart state across tabs via `BroadcastChannel('custom_city_cart_sync')` (Shopify Shop JS v2 pattern).
 
 ## Challenges & Obstacles
 - **ESLint no-unused-vars during Next.js production build**: Catch clauses and unused variables flagged by Next.js 15 strict linting were resolved by cleaning unused parameters and integrating state variables directly into interactive controls.
