@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-velaaprivateisland-com"
 date: 2026-10-31
-target: "[[overview|www-velaaprivateisland-com]]"
+target: "www-velaaprivateisland-com"
 ---
 
 # De-obfuscated Source Maps: www-velaaprivateisland-com

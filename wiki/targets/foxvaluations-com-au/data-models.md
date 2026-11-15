@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: foxvaluations-com-au"
 date: 2026-11-14
-target: "[[overview|foxvaluations-com-au]]"
+target: "foxvaluations-com-au"
 ---
 
 # Data Models & Client Storage: foxvaluations-com-au

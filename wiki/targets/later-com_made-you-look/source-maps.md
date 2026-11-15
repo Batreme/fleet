@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: later-com_made-you-look"
 date: 2026-11-14
-target: "[[overview|later-com_made-you-look]]"
+target: "later-com_made-you-look"
 ---
 
 # De-obfuscated Source Maps: later-com_made-you-look

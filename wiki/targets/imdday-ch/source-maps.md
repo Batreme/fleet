@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: imdday-ch"
 date: 2026-11-14
-target: "[[overview|imdday-ch]]"
+target: "imdday-ch"
 ---
 
 # De-obfuscated Source Maps: imdday-ch

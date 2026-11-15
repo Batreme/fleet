@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-concretemanagement-fr"
 date: 2026-11-14
-target: "[[overview|www-concretemanagement-fr]]"
+target: "www-concretemanagement-fr"
 ---
 
 # Data Models & Client Storage: www-concretemanagement-fr

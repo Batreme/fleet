@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: heirest-com"
 date: 2026-11-14
-target: "[[overview|heirest-com]]"
+target: "heirest-com"
 ---
 
 # De-obfuscated Source Maps: heirest-com

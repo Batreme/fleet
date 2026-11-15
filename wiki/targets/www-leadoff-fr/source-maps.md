@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-leadoff-fr"
 date: 2026-11-14
-target: "[[overview|www-leadoff-fr]]"
+target: "www-leadoff-fr"
 ---
 
 # De-obfuscated Source Maps: www-leadoff-fr

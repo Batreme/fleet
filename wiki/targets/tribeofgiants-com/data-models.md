@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tribeofgiants-com"
 date: 2026-11-14
-target: "[[overview|tribeofgiants-com]]"
+target: "tribeofgiants-com"
 ---
 
 # Data Models & Client Storage: tribeofgiants-com

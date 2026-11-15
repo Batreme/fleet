@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: chicago-com"
 date: 2026-11-14
-target: "[[overview|chicago-com]]"
+target: "chicago-com"
 ---
 
 # De-obfuscated Source Maps: chicago-com

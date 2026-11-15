@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mychess-events"
 date: 2026-11-14
-target: "[[overview|mychess-events]]"
+target: "mychess-events"
 ---
 
 # Discovered APIs & Protocols: mychess-events

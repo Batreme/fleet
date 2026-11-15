@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lenvalproperties-com"
 date: 2026-11-14
-target: "[[overview|lenvalproperties-com]]"
+target: "lenvalproperties-com"
 ---
 
 # Discovered APIs & Protocols: lenvalproperties-com

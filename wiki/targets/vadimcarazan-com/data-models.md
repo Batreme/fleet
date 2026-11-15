@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: vadimcarazan-com"
 date: 2026-10-31
-target: "[[overview|vadimcarazan-com]]"
+target: "vadimcarazan-com"
 ---
 
 # Data Models & Client Storage: vadimcarazan-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: seedjewelry-com"
 date: 2026-11-14
-target: "[[overview|seedjewelry-com]]"
+target: "seedjewelry-com"
 ---
 
 # Discovered APIs & Protocols: seedjewelry-com

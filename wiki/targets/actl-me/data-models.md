@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: actl-me"
 date: 2026-11-14
-target: "[[overview|actl-me]]"
+target: "actl-me"
 ---
 
 # Data Models & Client Storage: actl-me

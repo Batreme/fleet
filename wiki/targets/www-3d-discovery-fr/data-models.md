@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-3d-discovery-fr"
 date: 2026-11-14
-target: "[[overview|www-3d-discovery-fr]]"
+target: "www-3d-discovery-fr"
 ---
 
 # Data Models & Client Storage: www-3d-discovery-fr

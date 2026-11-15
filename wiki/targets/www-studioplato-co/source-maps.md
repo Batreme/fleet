@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-studioplato-co"
 date: 2026-11-14
-target: "[[overview|www-studioplato-co]]"
+target: "www-studioplato-co"
 ---
 
 # De-obfuscated Source Maps: www-studioplato-co

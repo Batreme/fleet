@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-honeyquote-com"
 date: 2026-11-14
-target: "[[overview|www-honeyquote-com]]"
+target: "www-honeyquote-com"
 ---
 
 # Data Models & Client Storage: www-honeyquote-com

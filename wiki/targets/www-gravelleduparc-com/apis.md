@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-gravelleduparc-com"
 date: 2026-11-14
-target: "[[overview|www-gravelleduparc-com]]"
+target: "www-gravelleduparc-com"
 ---
 
 # Discovered APIs & Protocols: www-gravelleduparc-com

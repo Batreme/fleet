@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lpas-com"
 date: 2026-11-14
-target: "[[overview|lpas-com]]"
+target: "lpas-com"
 ---
 
 # Data Models & Client Storage: lpas-com

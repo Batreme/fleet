@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-stellarmanagement-com"
 date: 2026-11-14
-target: "[[overview|www-stellarmanagement-com]]"
+target: "www-stellarmanagement-com"
 ---
 
 # Discovered APIs & Protocols: www-stellarmanagement-com

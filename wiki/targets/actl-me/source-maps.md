@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: actl-me"
 date: 2026-11-14
-target: "[[overview|actl-me]]"
+target: "actl-me"
 ---
 
 # De-obfuscated Source Maps: actl-me

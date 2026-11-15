@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: white-desert-com"
 date: 2026-11-14
-target: "[[overview|white-desert-com]]"
+target: "white-desert-com"
 ---
 
 # Data Models & Client Storage: white-desert-com

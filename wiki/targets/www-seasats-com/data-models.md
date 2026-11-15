@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-seasats-com"
 date: 2026-11-14
-target: "[[overview|www-seasats-com]]"
+target: "www-seasats-com"
 ---
 
 # Data Models & Client Storage: www-seasats-com

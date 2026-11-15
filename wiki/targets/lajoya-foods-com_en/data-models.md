@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lajoya-foods-com_en"
 date: 2026-11-14
-target: "[[overview|lajoya-foods-com_en]]"
+target: "lajoya-foods-com_en"
 ---
 
 # Data Models & Client Storage: lajoya-foods-com_en

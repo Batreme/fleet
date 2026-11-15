@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: holmchrome-byholm-co"
 date: 2026-11-14
-target: "[[overview|holmchrome-byholm-co]]"
+target: "holmchrome-byholm-co"
 ---
 
 # Discovered APIs & Protocols: holmchrome-byholm-co

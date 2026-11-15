@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-terakawaoffice-com_en"
 date: 2026-11-14
-target: "[[overview|www-terakawaoffice-com_en]]"
+target: "www-terakawaoffice-com_en"
 ---
 
 # Discovered APIs & Protocols: www-terakawaoffice-com_en

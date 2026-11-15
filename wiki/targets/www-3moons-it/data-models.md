@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-3moons-it"
 date: 2026-11-14
-target: "[[overview|www-3moons-it]]"
+target: "www-3moons-it"
 ---
 
 # Data Models & Client Storage: www-3moons-it

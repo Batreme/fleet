@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-danielebuser-com"
 date: 2026-11-14
-target: "[[overview|www-danielebuser-com]]"
+target: "www-danielebuser-com"
 ---
 
 # Data Models & Client Storage: www-danielebuser-com

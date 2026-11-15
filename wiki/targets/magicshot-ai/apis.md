@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: magicshot-ai"
 date: 2026-11-14
-target: "[[overview|magicshot-ai]]"
+target: "magicshot-ai"
 ---
 
 # Discovered APIs & Protocols: magicshot-ai

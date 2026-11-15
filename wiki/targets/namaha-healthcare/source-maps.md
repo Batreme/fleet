@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: namaha-healthcare"
 date: 2026-11-14
-target: "[[overview|namaha-healthcare]]"
+target: "namaha-healthcare"
 ---
 
 # De-obfuscated Source Maps: namaha-healthcare

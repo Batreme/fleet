@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: spykercars-com"
 date: 2026-10-31
-target: "[[overview|spykercars-com]]"
+target: "spykercars-com"
 ---
 
 # De-obfuscated Source Maps: spykercars-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tochi-sanwa-jp"
 date: 2026-11-14
-target: "[[overview|tochi-sanwa-jp]]"
+target: "tochi-sanwa-jp"
 ---
 
 # De-obfuscated Source Maps: tochi-sanwa-jp

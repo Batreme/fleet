@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-urbik-eu"
 date: 2026-11-14
-target: "[[overview|www-urbik-eu]]"
+target: "www-urbik-eu"
 ---
 
 # Data Models & Client Storage: www-urbik-eu

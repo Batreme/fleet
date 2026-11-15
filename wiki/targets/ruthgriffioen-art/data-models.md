@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ruthgriffioen-art"
 date: 2026-11-14
-target: "[[overview|ruthgriffioen-art]]"
+target: "ruthgriffioen-art"
 ---
 
 # Data Models & Client Storage: ruthgriffioen-art

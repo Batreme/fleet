@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-sztanki-com"
 date: 2026-11-14
-target: "[[overview|www-sztanki-com]]"
+target: "www-sztanki-com"
 ---
 
 # Discovered APIs & Protocols: www-sztanki-com

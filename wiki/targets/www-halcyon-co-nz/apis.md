@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-halcyon-co-nz"
 date: 2026-11-14
-target: "[[overview|www-halcyon-co-nz]]"
+target: "www-halcyon-co-nz"
 ---
 
 # Discovered APIs & Protocols: www-halcyon-co-nz

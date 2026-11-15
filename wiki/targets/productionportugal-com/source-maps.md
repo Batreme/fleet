@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: productionportugal-com"
 date: 2026-11-14
-target: "[[overview|productionportugal-com]]"
+target: "productionportugal-com"
 ---
 
 # De-obfuscated Source Maps: productionportugal-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-nettiesbees-com"
 date: 2026-11-14
-target: "[[overview|www-nettiesbees-com]]"
+target: "www-nettiesbees-com"
 ---
 
 # Discovered APIs & Protocols: www-nettiesbees-com

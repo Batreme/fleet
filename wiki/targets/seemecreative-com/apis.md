@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: seemecreative-com"
 date: 2026-11-14
-target: "[[overview|seemecreative-com]]"
+target: "seemecreative-com"
 ---
 
 # Discovered APIs & Protocols: seemecreative-com

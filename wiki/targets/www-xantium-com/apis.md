@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-xantium-com"
 date: 2026-11-14
-target: "[[overview|www-xantium-com]]"
+target: "www-xantium-com"
 ---
 
 # Discovered APIs & Protocols: www-xantium-com

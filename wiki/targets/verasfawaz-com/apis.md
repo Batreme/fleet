@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: verasfawaz-com"
 date: 2026-11-14
-target: "[[overview|verasfawaz-com]]"
+target: "verasfawaz-com"
 ---
 
 # Discovered APIs & Protocols: verasfawaz-com

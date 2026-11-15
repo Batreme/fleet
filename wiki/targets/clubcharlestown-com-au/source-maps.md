@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: clubcharlestown-com-au"
 date: 2026-11-14
-target: "[[overview|clubcharlestown-com-au]]"
+target: "clubcharlestown-com-au"
 ---
 
 # De-obfuscated Source Maps: clubcharlestown-com-au

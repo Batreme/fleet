@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: grail-app-com"
 date: 2026-11-14
-target: "[[overview|grail-app-com]]"
+target: "grail-app-com"
 ---
 
 # Data Models & Client Storage: grail-app-com

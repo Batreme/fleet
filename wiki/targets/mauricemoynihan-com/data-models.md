@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mauricemoynihan-com"
 date: 2026-11-14
-target: "[[overview|mauricemoynihan-com]]"
+target: "mauricemoynihan-com"
 ---
 
 # Data Models & Client Storage: mauricemoynihan-com

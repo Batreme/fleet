@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: patmos-studio"
 date: 2026-11-14
-target: "[[overview|patmos-studio]]"
+target: "patmos-studio"
 ---
 
 # Discovered APIs & Protocols: patmos-studio

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mrcresidencesbocaraton-com"
 date: 2026-11-14
-target: "[[overview|mrcresidencesbocaraton-com]]"
+target: "mrcresidencesbocaraton-com"
 ---
 
 # Discovered APIs & Protocols: mrcresidencesbocaraton-com

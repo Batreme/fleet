@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: bennos-light-org"
 date: 2026-11-14
-target: "[[overview|bennos-light-org]]"
+target: "bennos-light-org"
 ---
 
 # Discovered APIs & Protocols: bennos-light-org

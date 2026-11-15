@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: rialto-com-au"
 date: 2026-11-14
-target: "[[overview|rialto-com-au]]"
+target: "rialto-com-au"
 ---
 
 # Discovered APIs & Protocols: rialto-com-au

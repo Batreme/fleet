@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ellioteriksson-com"
 date: 2026-11-14
-target: "[[overview|ellioteriksson-com]]"
+target: "ellioteriksson-com"
 ---
 
 # De-obfuscated Source Maps: ellioteriksson-com

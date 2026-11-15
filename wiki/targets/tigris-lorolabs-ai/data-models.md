@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tigris-lorolabs-ai"
 date: 2026-11-14
-target: "[[overview|tigris-lorolabs-ai]]"
+target: "tigris-lorolabs-ai"
 ---
 
 # Data Models & Client Storage: tigris-lorolabs-ai

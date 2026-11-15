@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: klad-design"
 date: 2026-11-14
-target: "[[overview|klad-design]]"
+target: "klad-design"
 ---
 
 # Discovered APIs & Protocols: klad-design

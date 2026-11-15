@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thebranx-com"
 date: 2026-11-14
-target: "[[overview|thebranx-com]]"
+target: "thebranx-com"
 ---
 
 # Data Models & Client Storage: thebranx-com

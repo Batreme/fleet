@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-remyshoots-co-za"
 date: 2026-11-14
-target: "[[overview|www-remyshoots-co-za]]"
+target: "www-remyshoots-co-za"
 ---
 
 # Discovered APIs & Protocols: www-remyshoots-co-za

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: revelatio-studio"
 date: 2026-10-31
-target: "[[overview|revelatio-studio]]"
+target: "revelatio-studio"
 ---
 
 # De-obfuscated Source Maps: revelatio-studio

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: productionportugal-com"
 date: 2026-11-14
-target: "[[overview|productionportugal-com]]"
+target: "productionportugal-com"
 ---
 
 # Discovered APIs & Protocols: productionportugal-com

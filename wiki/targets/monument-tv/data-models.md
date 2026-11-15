@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: monument-tv"
 date: 2026-11-14
-target: "[[overview|monument-tv]]"
+target: "monument-tv"
 ---
 
 # Data Models & Client Storage: monument-tv

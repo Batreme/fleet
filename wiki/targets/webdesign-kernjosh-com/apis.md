@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: webdesign-kernjosh-com"
 date: 2026-11-14
-target: "[[overview|webdesign-kernjosh-com]]"
+target: "webdesign-kernjosh-com"
 ---
 
 # Discovered APIs & Protocols: webdesign-kernjosh-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: daddyyankee-com"
 date: 2026-11-14
-target: "[[overview|daddyyankee-com]]"
+target: "daddyyankee-com"
 ---
 
 # Discovered APIs & Protocols: daddyyankee-com

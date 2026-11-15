@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: altufanulu-com_en"
 date: 2026-11-14
-target: "[[overview|altufanulu-com_en]]"
+target: "altufanulu-com_en"
 ---
 
 # Data Models & Client Storage: altufanulu-com_en

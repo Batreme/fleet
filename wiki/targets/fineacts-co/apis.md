@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fineacts-co"
 date: 2026-11-14
-target: "[[overview|fineacts-co]]"
+target: "fineacts-co"
 ---
 
 # Discovered APIs & Protocols: fineacts-co

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thecassandravale-com"
 date: 2026-11-14
-target: "[[overview|thecassandravale-com]]"
+target: "thecassandravale-com"
 ---
 
 # Discovered APIs & Protocols: thecassandravale-com

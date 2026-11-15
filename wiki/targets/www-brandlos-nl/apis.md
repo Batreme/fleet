@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-brandlos-nl"
 date: 2026-11-14
-target: "[[overview|www-brandlos-nl]]"
+target: "www-brandlos-nl"
 ---
 
 # Discovered APIs & Protocols: www-brandlos-nl

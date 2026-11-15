@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: auge-xp-com"
 date: 2026-11-14
-target: "[[overview|auge-xp-com]]"
+target: "auge-xp-com"
 ---
 
 # Data Models & Client Storage: auge-xp-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tamasolajos-com"
 date: 2026-10-31
-target: "[[overview|tamasolajos-com]]"
+target: "tamasolajos-com"
 ---
 
 # Discovered APIs & Protocols: tamasolajos-com

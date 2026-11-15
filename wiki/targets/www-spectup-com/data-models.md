@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-spectup-com"
 date: 2026-11-14
-target: "[[overview|www-spectup-com]]"
+target: "www-spectup-com"
 ---
 
 # Data Models & Client Storage: www-spectup-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: fineacts-co"
 date: 2026-11-14
-target: "[[overview|fineacts-co]]"
+target: "fineacts-co"
 ---
 
 # De-obfuscated Source Maps: fineacts-co

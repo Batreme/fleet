@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-enigmascult-com"
 date: 2026-11-14
-target: "[[overview|www-enigmascult-com]]"
+target: "www-enigmascult-com"
 ---
 
 # Data Models & Client Storage: www-enigmascult-com

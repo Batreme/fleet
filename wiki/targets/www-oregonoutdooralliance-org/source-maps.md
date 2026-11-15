@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-oregonoutdooralliance-org"
 date: 2026-11-14
-target: "[[overview|www-oregonoutdooralliance-org]]"
+target: "www-oregonoutdooralliance-org"
 ---
 
 # De-obfuscated Source Maps: www-oregonoutdooralliance-org

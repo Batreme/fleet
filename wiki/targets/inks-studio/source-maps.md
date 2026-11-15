@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: inks-studio"
 date: 2026-11-14
-target: "[[overview|inks-studio]]"
+target: "inks-studio"
 ---
 
 # De-obfuscated Source Maps: inks-studio

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-killstar-com"
 date: 2026-11-14
-target: "[[overview|www-killstar-com]]"
+target: "www-killstar-com"
 ---
 
 # Data Models & Client Storage: www-killstar-com

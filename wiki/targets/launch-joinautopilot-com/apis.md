@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: launch-joinautopilot-com"
 date: 2026-11-14
-target: "[[overview|launch-joinautopilot-com]]"
+target: "launch-joinautopilot-com"
 ---
 
 # Discovered APIs & Protocols: launch-joinautopilot-com

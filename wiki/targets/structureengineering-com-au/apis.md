@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: structureengineering-com-au"
 date: 2026-11-14
-target: "[[overview|structureengineering-com-au]]"
+target: "structureengineering-com-au"
 ---
 
 # Discovered APIs & Protocols: structureengineering-com-au

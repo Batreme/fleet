@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: daikifujita-com"
 date: 2026-11-14
-target: "[[overview|daikifujita-com]]"
+target: "daikifujita-com"
 ---
 
 # Discovered APIs & Protocols: daikifujita-com

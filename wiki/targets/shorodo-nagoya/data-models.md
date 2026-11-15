@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: shorodo-nagoya"
 date: 2026-11-14
-target: "[[overview|shorodo-nagoya]]"
+target: "shorodo-nagoya"
 ---
 
 # Data Models & Client Storage: shorodo-nagoya

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lfs-org-uk"
 date: 2026-11-14
-target: "[[overview|lfs-org-uk]]"
+target: "lfs-org-uk"
 ---
 
 # De-obfuscated Source Maps: lfs-org-uk

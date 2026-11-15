@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: nader-io"
 date: 2026-11-14
-target: "[[overview|nader-io]]"
+target: "nader-io"
 ---
 
 # Data Models & Client Storage: nader-io

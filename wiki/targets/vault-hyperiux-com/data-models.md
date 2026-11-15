@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: vault-hyperiux-com"
 date: 2026-11-14
-target: "[[overview|vault-hyperiux-com]]"
+target: "vault-hyperiux-com"
 ---
 
 # Data Models & Client Storage: vault-hyperiux-com

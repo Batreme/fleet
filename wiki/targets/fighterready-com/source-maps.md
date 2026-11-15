@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: fighterready-com"
 date: 2026-11-14
-target: "[[overview|fighterready-com]]"
+target: "fighterready-com"
 ---
 
 # De-obfuscated Source Maps: fighterready-com

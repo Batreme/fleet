@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: articles-gamcare-org-uk"
 date: 2026-11-14
-target: "[[overview|articles-gamcare-org-uk]]"
+target: "articles-gamcare-org-uk"
 ---
 
 # Data Models & Client Storage: articles-gamcare-org-uk

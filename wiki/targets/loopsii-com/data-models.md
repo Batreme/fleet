@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: loopsii-com"
 date: 2026-11-14
-target: "[[overview|loopsii-com]]"
+target: "loopsii-com"
 ---
 
 # Data Models & Client Storage: loopsii-com

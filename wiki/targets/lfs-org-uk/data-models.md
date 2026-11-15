@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lfs-org-uk"
 date: 2026-11-14
-target: "[[overview|lfs-org-uk]]"
+target: "lfs-org-uk"
 ---
 
 # Data Models & Client Storage: lfs-org-uk

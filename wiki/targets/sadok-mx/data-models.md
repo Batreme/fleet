@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sadok-mx"
 date: 2026-11-14
-target: "[[overview|sadok-mx]]"
+target: "sadok-mx"
 ---
 
 # Data Models & Client Storage: sadok-mx

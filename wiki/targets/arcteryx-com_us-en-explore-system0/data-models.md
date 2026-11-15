@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: arcteryx-com_us-en-explore-system0"
 date: 2026-11-14
-target: "[[overview|arcteryx-com_us-en-explore-system0]]"
+target: "arcteryx-com_us-en-explore-system0"
 ---
 
 # Data Models & Client Storage: arcteryx-com_us-en-explore-system0

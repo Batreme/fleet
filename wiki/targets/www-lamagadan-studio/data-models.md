@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-lamagadan-studio"
 date: 2026-11-14
-target: "[[overview|www-lamagadan-studio]]"
+target: "www-lamagadan-studio"
 ---
 
 # Data Models & Client Storage: www-lamagadan-studio

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: wedding-s-tmro-com"
 date: 2026-11-14
-target: "[[overview|wedding-s-tmro-com]]"
+target: "wedding-s-tmro-com"
 ---
 
 # Data Models & Client Storage: wedding-s-tmro-com

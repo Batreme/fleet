@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: noravale-framer-website"
 date: 2026-11-14
-target: "[[overview|noravale-framer-website]]"
+target: "noravale-framer-website"
 ---
 
 # Discovered APIs & Protocols: noravale-framer-website

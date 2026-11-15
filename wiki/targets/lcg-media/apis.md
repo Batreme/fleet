@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lcg-media"
 date: 2026-11-14
-target: "[[overview|lcg-media]]"
+target: "lcg-media"
 ---
 
 # Discovered APIs & Protocols: lcg-media

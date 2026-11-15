@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: janiswanger-ch"
 date: 2026-11-14
-target: "[[overview|janiswanger-ch]]"
+target: "janiswanger-ch"
 ---
 
 # Data Models & Client Storage: janiswanger-ch

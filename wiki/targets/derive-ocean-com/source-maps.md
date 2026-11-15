@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: derive-ocean-com"
 date: 2026-11-14
-target: "[[overview|derive-ocean-com]]"
+target: "derive-ocean-com"
 ---
 
 # De-obfuscated Source Maps: derive-ocean-com

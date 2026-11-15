@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: suho-studio"
 date: 2026-11-14
-target: "[[overview|suho-studio]]"
+target: "suho-studio"
 ---
 
 # De-obfuscated Source Maps: suho-studio

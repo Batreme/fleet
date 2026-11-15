@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mms-inherited-band"
 date: 2026-11-14
-target: "[[overview|mms-inherited-band]]"
+target: "mms-inherited-band"
 ---
 
 # Data Models & Client Storage: mms-inherited-band

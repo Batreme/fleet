@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-imersion-io"
 date: 2026-11-14
-target: "[[overview|www-imersion-io]]"
+target: "www-imersion-io"
 ---
 
 # Data Models & Client Storage: www-imersion-io

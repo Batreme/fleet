@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: legacybridge-software"
 date: 2026-11-14
-target: "[[overview|legacybridge-software]]"
+target: "legacybridge-software"
 ---
 
 # Discovered APIs & Protocols: legacybridge-software

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-sharplink-com"
 date: 2026-11-14
-target: "[[overview|www-sharplink-com]]"
+target: "www-sharplink-com"
 ---
 
 # Discovered APIs & Protocols: www-sharplink-com

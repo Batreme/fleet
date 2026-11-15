@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: superlogica-com"
 date: 2026-11-14
-target: "[[overview|superlogica-com]]"
+target: "superlogica-com"
 ---
 
 # Data Models & Client Storage: superlogica-com

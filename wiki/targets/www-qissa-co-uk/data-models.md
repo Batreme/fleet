@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-qissa-co-uk"
 date: 2026-11-14
-target: "[[overview|www-qissa-co-uk]]"
+target: "www-qissa-co-uk"
 ---
 
 # Data Models & Client Storage: www-qissa-co-uk

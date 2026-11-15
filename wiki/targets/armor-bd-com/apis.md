@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: armor-bd-com"
 date: 2026-11-14
-target: "[[overview|armor-bd-com]]"
+target: "armor-bd-com"
 ---
 
 # Discovered APIs & Protocols: armor-bd-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-paaspop-nl"
 date: 2026-11-14
-target: "[[overview|www-paaspop-nl]]"
+target: "www-paaspop-nl"
 ---
 
 # Discovered APIs & Protocols: www-paaspop-nl

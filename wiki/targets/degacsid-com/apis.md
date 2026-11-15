@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: degacsid-com"
 date: 2026-11-14
-target: "[[overview|degacsid-com]]"
+target: "degacsid-com"
 ---
 
 # Discovered APIs & Protocols: degacsid-com

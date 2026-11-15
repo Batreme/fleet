@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-hoteldutassosorrento-com"
 date: 2026-11-14
-target: "[[overview|www-hoteldutassosorrento-com]]"
+target: "www-hoteldutassosorrento-com"
 ---
 
 # Discovered APIs & Protocols: www-hoteldutassosorrento-com

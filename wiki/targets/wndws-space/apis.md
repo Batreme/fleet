@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: wndws-space"
 date: 2026-10-31
-target: "[[overview|wndws-space]]"
+target: "wndws-space"
 ---
 
 # Discovered APIs & Protocols: wndws-space

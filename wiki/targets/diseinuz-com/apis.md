@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: diseinuz-com"
 date: 2026-11-14
-target: "[[overview|diseinuz-com]]"
+target: "diseinuz-com"
 ---
 
 # Discovered APIs & Protocols: diseinuz-com

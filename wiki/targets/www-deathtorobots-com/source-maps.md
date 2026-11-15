@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-deathtorobots-com"
 date: 2026-11-14
-target: "[[overview|www-deathtorobots-com]]"
+target: "www-deathtorobots-com"
 ---
 
 # De-obfuscated Source Maps: www-deathtorobots-com

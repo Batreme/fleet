@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: theimmortals-world"
 date: 2026-11-14
-target: "[[overview|theimmortals-world]]"
+target: "theimmortals-world"
 ---
 
 # Data Models & Client Storage: theimmortals-world

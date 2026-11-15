@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-areyoudami-com"
 date: 2026-11-14
-target: "[[overview|www-areyoudami-com]]"
+target: "www-areyoudami-com"
 ---
 
 # Discovered APIs & Protocols: www-areyoudami-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: oblikworks-com"
 date: 2026-11-14
-target: "[[overview|oblikworks-com]]"
+target: "oblikworks-com"
 ---
 
 # Discovered APIs & Protocols: oblikworks-com

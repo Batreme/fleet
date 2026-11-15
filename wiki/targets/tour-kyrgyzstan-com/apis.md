@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tour-kyrgyzstan-com"
 date: 2026-11-14
-target: "[[overview|tour-kyrgyzstan-com]]"
+target: "tour-kyrgyzstan-com"
 ---
 
 # Discovered APIs & Protocols: tour-kyrgyzstan-com

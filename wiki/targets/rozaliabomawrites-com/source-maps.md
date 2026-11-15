@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: rozaliabomawrites-com"
 date: 2026-11-14
-target: "[[overview|rozaliabomawrites-com]]"
+target: "rozaliabomawrites-com"
 ---
 
 # De-obfuscated Source Maps: rozaliabomawrites-com

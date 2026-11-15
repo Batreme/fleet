@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: hole-money"
 date: 2026-11-14
-target: "[[overview|hole-money]]"
+target: "hole-money"
 ---
 
 # Data Models & Client Storage: hole-money

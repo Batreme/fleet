@@ -1,42 +1,36 @@
 ---
 title: "UI & Design System: morrow-valerian-studio"
-date: 2026-11-14
-target: "[[overview|morrow-valerian-studio]]"
+date: 2026-11-15
+target: "morrow-valerian-studio"
 ---
 
 # UI Architecture & Design Tokens: morrow-valerian-studio
 
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `morrow-valerian-studio` (`MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
+
 ## 🎨 Design Tokens (CSS Variables)
 
-| Token Name | Inferred Value |
-|---|---|
-| `--font-pp-neue-montreal` | `"ppNeueMontreal", "ppNeueMontreal Fallback"}
-@font-face{font` |
-| `--font-editorial-new` | `"editorialNew", "editorialNew Fallback"}
-.shipping-banner-an` |
-| `--tw-translate-x` | `0` |
-| `--tw-translate-y` | `0` |
-| `--tw-translate-z` | `0` |
-| `--tw-rotate-x` | `initial` |
-| `--tw-rotate-y` | `initial` |
-| `--tw-rotate-z` | `initial` |
-| `--tw-skew-x` | `initial` |
-| `--tw-skew-y` | `initial` |
-| `--tw-space-y-reverse` | `0` |
-| `--tw-border-style` | `solid` |
-| `--tw-gradient-position` | `initial` |
-| `--tw-gradient-from` | `#0000` |
-| `--tw-gradient-via` | `#0000` |
-| `--tw-gradient-to` | `#0000` |
-| `--tw-gradient-stops` | `initial` |
-| `--tw-gradient-via-stops` | `initial` |
-| `--tw-gradient-from-position` | `0%` |
-| `--tw-gradient-via-position` | `50%` |
-| `--tw-gradient-to-position` | `100%` |
-| `--tw-leading` | `initial` |
-| `--tw-font-weight` | `initial` |
-| `--tw-tracking` | `initial` |
-| `--tw-ordinal` | `initial` |
+| Token Name | Extracted Value | Semantic UI Role |
+|---|---|---|
+| `--font-pp-neue-montreal` | `"ppNeueMontreal", "ppNeueMontreal Fallback"` | Primary Neo-Grotesque UI & grid sans font |
+| `--font-editorial-new` | `"editorialNew", "editorialNew Fallback"` | High-contrast editorial display serif font |
+| `--font-sans` | `var(--font-pp-neue-montreal), Arial, sans-serif` | Default sans-serif font stack |
+| `--color-white` | `#fff` | Primary canvas background |
+| `--color-black` | `#000` | Pure black contrast token |
+| `--color-neutral-50` | `#fafafa` | Porcelain soft background surface |
+| `--color-neutral-100` | `#f5f5f5` | Product card backdrop surface |
+| `--color-neutral-200` | `#e5e5e5` | 1px hairline border token |
+| `--color-neutral-300` | `#d4d4d4` | Hover border divider token |
+| `--color-neutral-400` | `#a1a1a1` | Muted index & size label ink |
+| `--color-neutral-500` | `#737373` | Secondary editorial body ink |
+| `--color-neutral-600` | `#525252` | Sub-heading ink |
+| `--color-neutral-900` | `#171717` | Primary heading & garment title ink |
+| `--color-red-800` | `#9f0712` | Deep crimson seasonal accent |
+| `--color-rose-500` | `#ff2357` | Vibrant rose campaign highlight |
+| `--spacing` | `.25rem` | Base 4px spatial unit |
+| `--container-xs` | `20rem` | Mini cart / drawer container width (320px) |
+| `--container-3xl` | `48rem` | Editorial narrative column max-width (768px) |
+| `--text-xs` | `.75rem` | 12px micro-label size (`line-height: calc(1 / .75)`) |
 
 ---
 
@@ -44,16 +38,17 @@ target: "[[overview|morrow-valerian-studio]]"
 
 | Primitive | ID | Classes / Selectors |
 |---|---|---|
-| `<nav>` | `-` | `site-nav-toolbar grid grid-cols-[1fr_auto_1fr] items-center gap-x-gutter px-page lg:grid-cols-12 lg:` |
-| `<nav>` | `-` | `site-mobile-menu-content px-page` |
-| `<nav>` | `-` | `col-span-4 min-w-0 self-start lg:row-start-1 lg:col-span-2 lg:col-start-7` |
-| `<nav>` | `-` | `col-span-4 min-w-0 self-start lg:row-start-1 lg:col-span-2 lg:col-start-9` |
-| `<nav>` | `-` | `col-span-4 min-w-0 self-start lg:row-start-1 lg:col-span-2 lg:col-start-11` |
-| `<nav>` | `-` | `col-span-12 lg:col-span-10` |
 | `<header>` | `-` | `site-nav col-start-1 row-start-1` |
 | `<header>` | `-` | `cart-header` |
-| `<aside>` | `-` | `relative z-20 overflow-hidden border-y border-neutral-200 bg-white font-sans text-body text-neutral-` |
+| `<nav>` | `-` | `site-nav-toolbar grid grid-cols-[1fr_auto_1fr] items-center ` |
+| `<nav>` | `-` | `site-mobile-menu-content px-page` |
+| `<nav>` | `-` | `col-span-4 min-w-0 self-start lg:row-start-1 lg:col-span-2 l` |
+| `<nav>` | `-` | `col-span-12 lg:col-span-10` |
 | `<main>` | `-` | `relative z-10 bg-white` |
-| `<footer>` | `-` | `relative z-0 flex min-h-[40svh] flex-col px-page font-sans text-body lg:px-page-lg bg-[#030d07] text` |
-| `<dialog>` | `_R_2lflb_` | `site-mobile-menu` |
-| `<dialog>` | `morrow-cart` | `cart-dialog` |
+| `<section>` | `-` | `relative grid h-svh grid-cols-12 gap-x-gutter overflow-hidde` |
+| `<section>` | `-` | `grid grid-cols-12 gap-x-gutter px-page py-section font-sans ` |
+| `<section>` | `-` | `grid grid-cols-12 pb-section lg:pb-section-lg` |
+| `<section>` | `-` | `grid grid-cols-12 gap-x-gutter px-page pb-24 font-sans lg:px` |
+| `<section>` | `-` | `grid grid-cols-12 gap-x-gutter px-page font-sans lg:px-page-` |
+| `<section>` | `-` | `mt-section w-full lg:mt-section-lg` |
+| `<footer>` | `-` | `relative z-0 flex min-h-[40svh] flex-col px-page font-sans t` |

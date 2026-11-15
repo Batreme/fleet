@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jjettas-com"
 date: 2026-11-14
-target: "[[overview|jjettas-com]]"
+target: "jjettas-com"
 ---
 
 # Data Models & Client Storage: jjettas-com

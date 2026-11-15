@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-concretemanagement-fr"
 date: 2026-11-14
-target: "[[overview|www-concretemanagement-fr]]"
+target: "www-concretemanagement-fr"
 ---
 
 # De-obfuscated Source Maps: www-concretemanagement-fr

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: legacybridge-software"
 date: 2026-11-14
-target: "[[overview|legacybridge-software]]"
+target: "legacybridge-software"
 ---
 
 # Data Models & Client Storage: legacybridge-software

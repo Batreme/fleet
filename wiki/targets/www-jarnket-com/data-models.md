@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-jarnket-com"
 date: 2026-11-14
-target: "[[overview|www-jarnket-com]]"
+target: "www-jarnket-com"
 ---
 
 # Data Models & Client Storage: www-jarnket-com

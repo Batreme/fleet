@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-routedurhum-com"
 date: 2026-11-14
-target: "[[overview|www-routedurhum-com]]"
+target: "www-routedurhum-com"
 ---
 
 # Data Models & Client Storage: www-routedurhum-com

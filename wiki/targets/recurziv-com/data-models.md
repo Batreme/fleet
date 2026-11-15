@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: recurziv-com"
 date: 2026-11-14
-target: "[[overview|recurziv-com]]"
+target: "recurziv-com"
 ---
 
 # Data Models & Client Storage: recurziv-com

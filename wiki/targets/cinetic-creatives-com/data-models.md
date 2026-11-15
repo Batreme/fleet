@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: cinetic-creatives-com"
 date: 2026-11-14
-target: "[[overview|cinetic-creatives-com]]"
+target: "cinetic-creatives-com"
 ---
 
 # Data Models & Client Storage: cinetic-creatives-com

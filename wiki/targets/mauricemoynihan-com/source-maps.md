@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mauricemoynihan-com"
 date: 2026-11-14
-target: "[[overview|mauricemoynihan-com]]"
+target: "mauricemoynihan-com"
 ---
 
 # De-obfuscated Source Maps: mauricemoynihan-com

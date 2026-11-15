@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: giallostudio-it_en-the-experience"
 date: 2026-11-14
-target: "[[overview|giallostudio-it_en-the-experience]]"
+target: "giallostudio-it_en-the-experience"
 ---
 
 # Discovered APIs & Protocols: giallostudio-it_en-the-experience

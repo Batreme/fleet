@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-extrafazant-nl"
 date: 2026-11-14
-target: "[[overview|www-extrafazant-nl]]"
+target: "www-extrafazant-nl"
 ---
 
 # Discovered APIs & Protocols: www-extrafazant-nl

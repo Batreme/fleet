@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: pankow-band"
 date: 2026-11-14
-target: "[[overview|pankow-band]]"
+target: "pankow-band"
 ---
 
 # Data Models & Client Storage: pankow-band

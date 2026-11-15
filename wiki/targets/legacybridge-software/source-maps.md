@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: legacybridge-software"
 date: 2026-11-14
-target: "[[overview|legacybridge-software]]"
+target: "legacybridge-software"
 ---
 
 # De-obfuscated Source Maps: legacybridge-software

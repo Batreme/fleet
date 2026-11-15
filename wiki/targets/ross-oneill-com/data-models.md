@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ross-oneill-com"
 date: 2026-11-14
-target: "[[overview|ross-oneill-com]]"
+target: "ross-oneill-com"
 ---
 
 # Data Models & Client Storage: ross-oneill-com

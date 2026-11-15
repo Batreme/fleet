@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-omni-org"
 date: 2026-11-14
-target: "[[overview|www-omni-org]]"
+target: "www-omni-org"
 ---
 
 # Data Models & Client Storage: www-omni-org

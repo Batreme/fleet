@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: nickho-motorsports-nl"
 date: 2026-11-14
-target: "[[overview|nickho-motorsports-nl]]"
+target: "nickho-motorsports-nl"
 ---
 
 # De-obfuscated Source Maps: nickho-motorsports-nl

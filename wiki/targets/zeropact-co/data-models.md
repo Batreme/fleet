@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: zeropact-co"
 date: 2026-11-14
-target: "[[overview|zeropact-co]]"
+target: "zeropact-co"
 ---
 
 # Data Models & Client Storage: zeropact-co

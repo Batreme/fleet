@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: constellations-icilalune-com"
 date: 2026-11-14
-target: "[[overview|constellations-icilalune-com]]"
+target: "constellations-icilalune-com"
 ---
 
 # Data Models & Client Storage: constellations-icilalune-com

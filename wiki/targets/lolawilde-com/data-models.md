@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lolawilde-com"
 date: 2026-11-14
-target: "[[overview|lolawilde-com]]"
+target: "lolawilde-com"
 ---
 
 # Data Models & Client Storage: lolawilde-com

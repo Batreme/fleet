@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-avara-band"
 date: 2026-11-14
-target: "[[overview|www-avara-band]]"
+target: "www-avara-band"
 ---
 
 # Data Models & Client Storage: www-avara-band

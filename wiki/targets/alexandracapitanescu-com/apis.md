@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: alexandracapitanescu-com"
 date: 2026-11-14
-target: "[[overview|alexandracapitanescu-com]]"
+target: "alexandracapitanescu-com"
 ---
 
 # Discovered APIs & Protocols: alexandracapitanescu-com

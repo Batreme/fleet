@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-197historiasilustradas-com"
 date: 2026-11-14
-target: "[[overview|www-197historiasilustradas-com]]"
+target: "www-197historiasilustradas-com"
 ---
 
 # Discovered APIs & Protocols: www-197historiasilustradas-com

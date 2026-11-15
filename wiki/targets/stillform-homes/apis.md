@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: stillform-homes"
 date: 2026-11-14
-target: "[[overview|stillform-homes]]"
+target: "stillform-homes"
 ---
 
 # Discovered APIs & Protocols: stillform-homes

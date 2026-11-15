@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: vadimcarazan-com"
 date: 2026-10-31
-target: "[[overview|vadimcarazan-com]]"
+target: "vadimcarazan-com"
 ---
 
 # De-obfuscated Source Maps: vadimcarazan-com

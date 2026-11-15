@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: rubenwalma-nl"
 date: 2026-11-14
-target: "[[overview|rubenwalma-nl]]"
+target: "rubenwalma-nl"
 ---
 
 # Data Models & Client Storage: rubenwalma-nl

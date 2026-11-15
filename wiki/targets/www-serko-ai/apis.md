@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-serko-ai"
 date: 2026-11-14
-target: "[[overview|www-serko-ai]]"
+target: "www-serko-ai"
 ---
 
 # Discovered APIs & Protocols: www-serko-ai

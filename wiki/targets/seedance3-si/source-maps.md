@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: seedance3-si"
 date: 2026-11-14
-target: "[[overview|seedance3-si]]"
+target: "seedance3-si"
 ---
 
 # De-obfuscated Source Maps: seedance3-si

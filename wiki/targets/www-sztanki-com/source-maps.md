@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-sztanki-com"
 date: 2026-11-14
-target: "[[overview|www-sztanki-com]]"
+target: "www-sztanki-com"
 ---
 
 # De-obfuscated Source Maps: www-sztanki-com

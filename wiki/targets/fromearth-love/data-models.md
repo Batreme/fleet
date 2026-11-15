@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: fromearth-love"
 date: 2026-11-14
-target: "[[overview|fromearth-love]]"
+target: "fromearth-love"
 ---
 
 # Data Models & Client Storage: fromearth-love

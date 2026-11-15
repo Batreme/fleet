@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-terrenohotel-com_en"
 date: 2026-11-14
-target: "[[overview|www-terrenohotel-com_en]]"
+target: "www-terrenohotel-com_en"
 ---
 
 # Data Models & Client Storage: www-terrenohotel-com_en

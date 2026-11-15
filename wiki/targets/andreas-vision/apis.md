@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: andreas-vision"
 date: 2026-11-14
-target: "[[overview|andreas-vision]]"
+target: "andreas-vision"
 ---
 
 # Discovered APIs & Protocols: andreas-vision

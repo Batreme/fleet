@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: statusisup-com"
 date: 2026-11-14
-target: "[[overview|statusisup-com]]"
+target: "statusisup-com"
 ---
 
 # Data Models & Client Storage: statusisup-com

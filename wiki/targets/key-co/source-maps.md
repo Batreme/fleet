@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: key-co"
 date: 2026-11-14
-target: "[[overview|key-co]]"
+target: "key-co"
 ---
 
 # De-obfuscated Source Maps: key-co

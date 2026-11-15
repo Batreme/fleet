@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aviator-yakudoo-games"
 date: 2026-11-14
-target: "[[overview|aviator-yakudoo-games]]"
+target: "aviator-yakudoo-games"
 ---
 
 # Discovered APIs & Protocols: aviator-yakudoo-games

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: johnhardy-com_collections-billie-eilish-and-finneas"
 date: 2026-11-14
-target: "[[overview|johnhardy-com_collections-billie-eilish-and-finneas]]"
+target: "johnhardy-com_collections-billie-eilish-and-finneas"
 ---
 
 # Data Models & Client Storage: johnhardy-com_collections-billie-eilish-and-finneas

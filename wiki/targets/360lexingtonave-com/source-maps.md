@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: 360lexingtonave-com"
 date: 2026-11-14
-target: "[[overview|360lexingtonave-com]]"
+target: "360lexingtonave-com"
 ---
 
 # De-obfuscated Source Maps: 360lexingtonave-com

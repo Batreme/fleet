@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: inks-studio"
 date: 2026-11-14
-target: "[[overview|inks-studio]]"
+target: "inks-studio"
 ---
 
 # Discovered APIs & Protocols: inks-studio

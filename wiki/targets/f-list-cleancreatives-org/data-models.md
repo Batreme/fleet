@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: f-list-cleancreatives-org"
 date: 2026-11-14
-target: "[[overview|f-list-cleancreatives-org]]"
+target: "f-list-cleancreatives-org"
 ---
 
 # Data Models & Client Storage: f-list-cleancreatives-org

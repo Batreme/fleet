@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: stateofaidesign-com"
 date: 2026-11-14
-target: "[[overview|stateofaidesign-com]]"
+target: "stateofaidesign-com"
 ---
 
 # Data Models & Client Storage: stateofaidesign-com

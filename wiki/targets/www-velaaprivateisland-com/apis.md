@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-velaaprivateisland-com"
 date: 2026-10-31
-target: "[[overview|www-velaaprivateisland-com]]"
+target: "www-velaaprivateisland-com"
 ---
 
 # Discovered APIs & Protocols: www-velaaprivateisland-com

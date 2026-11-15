@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: anokhee-dev_albatross"
 date: 2026-11-14
-target: "[[overview|anokhee-dev_albatross]]"
+target: "anokhee-dev_albatross"
 ---
 
 # De-obfuscated Source Maps: anokhee-dev_albatross

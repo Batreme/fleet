@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: kindi-land"
 date: 2026-11-14
-target: "[[overview|kindi-land]]"
+target: "kindi-land"
 ---
 
 # Discovered APIs & Protocols: kindi-land

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: coloniazacamil-com"
 date: 2026-11-14
-target: "[[overview|coloniazacamil-com]]"
+target: "coloniazacamil-com"
 ---
 
 # De-obfuscated Source Maps: coloniazacamil-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mychess-events"
 date: 2026-11-14
-target: "[[overview|mychess-events]]"
+target: "mychess-events"
 ---
 
 # De-obfuscated Source Maps: mychess-events

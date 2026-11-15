@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: sotz-org"
 date: 2026-11-14
-target: "[[overview|sotz-org]]"
+target: "sotz-org"
 ---
 
 # De-obfuscated Source Maps: sotz-org

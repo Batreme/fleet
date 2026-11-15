@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-plugandplaydesign-co-uk"
 date: 2026-11-14
-target: "[[overview|www-plugandplaydesign-co-uk]]"
+target: "www-plugandplaydesign-co-uk"
 ---
 
 # Discovered APIs & Protocols: www-plugandplaydesign-co-uk

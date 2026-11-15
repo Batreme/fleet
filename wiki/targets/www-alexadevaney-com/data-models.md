@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-alexadevaney-com"
 date: 2026-11-14
-target: "[[overview|www-alexadevaney-com]]"
+target: "www-alexadevaney-com"
 ---
 
 # Data Models & Client Storage: www-alexadevaney-com

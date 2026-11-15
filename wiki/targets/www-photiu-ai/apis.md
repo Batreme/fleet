@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-photiu-ai"
 date: 2026-11-14
-target: "[[overview|www-photiu-ai]]"
+target: "www-photiu-ai"
 ---
 
 # Discovered APIs & Protocols: www-photiu-ai

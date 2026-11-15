@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: perappelgren-de"
 date: 2026-10-31
-target: "[[overview|perappelgren-de]]"
+target: "perappelgren-de"
 ---
 
 # Data Models & Client Storage: perappelgren-de

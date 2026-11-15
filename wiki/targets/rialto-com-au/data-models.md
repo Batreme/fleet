@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: rialto-com-au"
 date: 2026-11-14
-target: "[[overview|rialto-com-au]]"
+target: "rialto-com-au"
 ---
 
 # Data Models & Client Storage: rialto-com-au

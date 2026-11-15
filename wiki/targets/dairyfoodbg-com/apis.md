@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dairyfoodbg-com"
 date: 2026-11-14
-target: "[[overview|dairyfoodbg-com]]"
+target: "dairyfoodbg-com"
 ---
 
 # Discovered APIs & Protocols: dairyfoodbg-com

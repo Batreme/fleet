@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dreams-paulvl-eu"
 date: 2026-11-14
-target: "[[overview|dreams-paulvl-eu]]"
+target: "dreams-paulvl-eu"
 ---
 
 # Data Models & Client Storage: dreams-paulvl-eu

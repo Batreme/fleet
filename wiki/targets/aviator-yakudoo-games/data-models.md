@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aviator-yakudoo-games"
 date: 2026-11-14
-target: "[[overview|aviator-yakudoo-games]]"
+target: "aviator-yakudoo-games"
 ---
 
 # Data Models & Client Storage: aviator-yakudoo-games

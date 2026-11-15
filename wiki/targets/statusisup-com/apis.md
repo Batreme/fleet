@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: statusisup-com"
 date: 2026-11-14
-target: "[[overview|statusisup-com]]"
+target: "statusisup-com"
 ---
 
 # Discovered APIs & Protocols: statusisup-com

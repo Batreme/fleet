@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: concretaceramiche-it"
 date: 2026-11-14
-target: "[[overview|concretaceramiche-it]]"
+target: "concretaceramiche-it"
 ---
 
 # Discovered APIs & Protocols: concretaceramiche-it

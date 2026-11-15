@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-politico-eu_sponsored-content-saving-costs-and-improving-lives"
 date: 2026-11-14
-target: "[[overview|www-politico-eu_sponsored-content-saving-costs-and-improving-lives]]"
+target: "www-politico-eu_sponsored-content-saving-costs-and-improving-lives"
 ---
 
 # De-obfuscated Source Maps: www-politico-eu_sponsored-content-saving-costs-and-improving-lives

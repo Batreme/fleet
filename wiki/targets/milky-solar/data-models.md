@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: milky-solar"
 date: 2026-11-14
-target: "[[overview|milky-solar]]"
+target: "milky-solar"
 ---
 
 # Data Models & Client Storage: milky-solar

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: layrmedia-com"
 date: 2026-11-14
-target: "[[overview|layrmedia-com]]"
+target: "layrmedia-com"
 ---
 
 # Discovered APIs & Protocols: layrmedia-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: halloween-ferayna-com"
 date: 2026-11-14
-target: "[[overview|halloween-ferayna-com]]"
+target: "halloween-ferayna-com"
 ---
 
 # Data Models & Client Storage: halloween-ferayna-com

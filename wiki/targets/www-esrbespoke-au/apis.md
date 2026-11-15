@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-esrbespoke-au"
 date: 2026-11-14
-target: "[[overview|www-esrbespoke-au]]"
+target: "www-esrbespoke-au"
 ---
 
 # Discovered APIs & Protocols: www-esrbespoke-au

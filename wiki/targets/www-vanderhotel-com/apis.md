@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-vanderhotel-com"
 date: 2026-11-14
-target: "[[overview|www-vanderhotel-com]]"
+target: "www-vanderhotel-com"
 ---
 
 # Discovered APIs & Protocols: www-vanderhotel-com

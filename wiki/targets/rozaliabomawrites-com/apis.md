@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: rozaliabomawrites-com"
 date: 2026-11-14
-target: "[[overview|rozaliabomawrites-com]]"
+target: "rozaliabomawrites-com"
 ---
 
 # Discovered APIs & Protocols: rozaliabomawrites-com

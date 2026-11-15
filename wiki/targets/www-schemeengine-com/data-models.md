@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-schemeengine-com"
 date: 2026-11-14
-target: "[[overview|www-schemeengine-com]]"
+target: "www-schemeengine-com"
 ---
 
 # Data Models & Client Storage: www-schemeengine-com

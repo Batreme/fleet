@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: thefwa-net"
 date: 2026-11-14
-target: "[[overview|thefwa-net]]"
+target: "thefwa-net"
 ---
 
 # De-obfuscated Source Maps: thefwa-net

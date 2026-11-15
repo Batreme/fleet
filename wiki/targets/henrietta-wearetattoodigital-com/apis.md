@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: henrietta-wearetattoodigital-com"
 date: 2026-11-14
-target: "[[overview|henrietta-wearetattoodigital-com]]"
+target: "henrietta-wearetattoodigital-com"
 ---
 
 # Discovered APIs & Protocols: henrietta-wearetattoodigital-com

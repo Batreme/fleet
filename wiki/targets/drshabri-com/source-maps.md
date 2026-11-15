@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: drshabri-com"
 date: 2026-11-14
-target: "[[overview|drshabri-com]]"
+target: "drshabri-com"
 ---
 
 # De-obfuscated Source Maps: drshabri-com

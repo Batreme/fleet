@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: straw-page"
 date: 2026-11-14
-target: "[[overview|straw-page]]"
+target: "straw-page"
 ---
 
 # Discovered APIs & Protocols: straw-page

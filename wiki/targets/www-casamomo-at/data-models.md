@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-casamomo-at"
 date: 2026-11-14
-target: "[[overview|www-casamomo-at]]"
+target: "www-casamomo-at"
 ---
 
 # Data Models & Client Storage: www-casamomo-at

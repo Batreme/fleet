@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aya-nl"
 date: 2026-11-14
-target: "[[overview|aya-nl]]"
+target: "aya-nl"
 ---
 
 # Data Models & Client Storage: aya-nl

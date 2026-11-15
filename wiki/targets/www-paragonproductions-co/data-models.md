@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-paragonproductions-co"
 date: 2026-11-14
-target: "[[overview|www-paragonproductions-co]]"
+target: "www-paragonproductions-co"
 ---
 
 # Data Models & Client Storage: www-paragonproductions-co

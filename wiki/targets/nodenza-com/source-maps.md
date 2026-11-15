@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: nodenza-com"
 date: 2026-11-14
-target: "[[overview|nodenza-com]]"
+target: "nodenza-com"
 ---
 
 # De-obfuscated Source Maps: nodenza-com

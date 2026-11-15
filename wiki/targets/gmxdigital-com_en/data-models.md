@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: gmxdigital-com_en"
 date: 2026-11-14
-target: "[[overview|gmxdigital-com_en]]"
+target: "gmxdigital-com_en"
 ---
 
 # Data Models & Client Storage: gmxdigital-com_en

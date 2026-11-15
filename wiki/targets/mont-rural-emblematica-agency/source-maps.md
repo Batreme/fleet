@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mont-rural-emblematica-agency"
 date: 2026-11-14
-target: "[[overview|mont-rural-emblematica-agency]]"
+target: "mont-rural-emblematica-agency"
 ---
 
 # De-obfuscated Source Maps: mont-rural-emblematica-agency

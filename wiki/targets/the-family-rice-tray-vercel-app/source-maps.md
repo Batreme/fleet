@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: the-family-rice-tray-vercel-app"
 date: 2026-11-14
-target: "[[overview|the-family-rice-tray-vercel-app]]"
+target: "the-family-rice-tray-vercel-app"
 ---
 
 # De-obfuscated Source Maps: the-family-rice-tray-vercel-app

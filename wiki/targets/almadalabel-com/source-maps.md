@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: almadalabel-com"
 date: 2026-11-14
-target: "[[overview|almadalabel-com]]"
+target: "almadalabel-com"
 ---
 
 # De-obfuscated Source Maps: almadalabel-com

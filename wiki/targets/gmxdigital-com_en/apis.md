@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: gmxdigital-com_en"
 date: 2026-11-14
-target: "[[overview|gmxdigital-com_en]]"
+target: "gmxdigital-com_en"
 ---
 
 # Discovered APIs & Protocols: gmxdigital-com_en

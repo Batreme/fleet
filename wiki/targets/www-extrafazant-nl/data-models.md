@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-extrafazant-nl"
 date: 2026-11-14
-target: "[[overview|www-extrafazant-nl]]"
+target: "www-extrafazant-nl"
 ---
 
 # Data Models & Client Storage: www-extrafazant-nl

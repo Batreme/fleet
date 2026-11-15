@@ -1,24 +1,14 @@
 ---
-title: "UI & Design System: www-si-edu"
-date: 2026-11-14
-target: "[[overview|www-si-edu]]"
+title: "UI & UX Architecture: www-si-edu"
+status: blocked
+block_reason: "Cloudflare Turnstile Anti-Bot Challenge (Just a moment...)"
 ---
 
-# UI Architecture & Design Tokens: www-si-edu
+# UI & UX Architecture: www-si-edu (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://www.si.edu/](https://www.si.edu/)  
+> **Block / Unreachable Reason**: Cloudflare Turnstile Anti-Bot Challenge (Just a moment...)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-| `<nav>` | `-` | `footer-links` |
-| `<header>` | `-` | `brand-bar` |
-| `<main>` | `-` | `content` |
-| `<footer>` | `-` | `footer` |
+This target's raw capture in `raw/www-si-edu/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

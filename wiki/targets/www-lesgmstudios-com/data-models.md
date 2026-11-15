@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-lesgmstudios-com"
 date: 2026-11-14
-target: "[[overview|www-lesgmstudios-com]]"
+target: "www-lesgmstudios-com"
 ---
 
 # Data Models & Client Storage: www-lesgmstudios-com

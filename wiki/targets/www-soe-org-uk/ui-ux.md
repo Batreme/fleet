@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: www-soe-org-uk"
-date: 2026-11-14
-target: "[[overview|www-soe-org-uk]]"
+title: "UI & UX Architecture: www-soe-org-uk"
+status: blocked
+block_reason: "Anti-Bot Browser Verification Gate (Checking your browser / Confirm you are human)"
 ---
 
-# UI Architecture & Design Tokens: www-soe-org-uk
+# UI & UX Architecture: www-soe-org-uk (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://www.soe.org.uk/](https://www.soe.org.uk/)  
+> **Block / Unreachable Reason**: Anti-Bot Browser Verification Gate (Checking your browser / Confirm you are human)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `raw/www-soe-org-uk/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-kaviengcreative-com"
 date: 2026-11-14
-target: "[[overview|www-kaviengcreative-com]]"
+target: "www-kaviengcreative-com"
 ---
 
 # Discovered APIs & Protocols: www-kaviengcreative-com

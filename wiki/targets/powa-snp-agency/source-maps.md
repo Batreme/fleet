@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: powa-snp-agency"
 date: 2026-11-14
-target: "[[overview|powa-snp-agency]]"
+target: "powa-snp-agency"
 ---
 
 # De-obfuscated Source Maps: powa-snp-agency

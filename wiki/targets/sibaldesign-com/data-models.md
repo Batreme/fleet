@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sibaldesign-com"
 date: 2026-11-14
-target: "[[overview|sibaldesign-com]]"
+target: "sibaldesign-com"
 ---
 
 # Data Models & Client Storage: sibaldesign-com

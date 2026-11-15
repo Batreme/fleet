@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sotz-org"
 date: 2026-11-14
-target: "[[overview|sotz-org]]"
+target: "sotz-org"
 ---
 
 # Discovered APIs & Protocols: sotz-org

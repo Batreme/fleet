@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: secure-the-unknown-cyera-com"
 date: 2026-11-14
-target: "[[overview|secure-the-unknown-cyera-com]]"
+target: "secure-the-unknown-cyera-com"
 ---
 
 # Data Models & Client Storage: secure-the-unknown-cyera-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-mdscollective-com"
 date: 2026-11-14
-target: "[[overview|www-mdscollective-com]]"
+target: "www-mdscollective-com"
 ---
 
 # Data Models & Client Storage: www-mdscollective-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: digitalofthings-studio"
 date: 2026-11-14
-target: "[[overview|digitalofthings-studio]]"
+target: "digitalofthings-studio"
 ---
 
 # Discovered APIs & Protocols: digitalofthings-studio

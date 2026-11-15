@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: stillform-homes"
 date: 2026-11-14
-target: "[[overview|stillform-homes]]"
+target: "stillform-homes"
 ---
 
 # Data Models & Client Storage: stillform-homes

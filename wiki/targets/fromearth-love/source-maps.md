@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: fromearth-love"
 date: 2026-11-14
-target: "[[overview|fromearth-love]]"
+target: "fromearth-love"
 ---
 
 # De-obfuscated Source Maps: fromearth-love

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: earthwallet-com"
 date: 2026-11-14
-target: "[[overview|earthwallet-com]]"
+target: "earthwallet-com"
 ---
 
 # Discovered APIs & Protocols: earthwallet-com

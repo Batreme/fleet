@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: www-cadillacf1team-com"
-date: 2026-11-14
-target: "[[overview|www-cadillacf1team-com]]"
+title: "UI & UX Architecture: www-cadillacf1team-com"
+status: blocked
+block_reason: "CloudFront HTTP 403 WAF Block (ERROR: The request could not be satisfied)"
 ---
 
-# UI Architecture & Design Tokens: www-cadillacf1team-com
+# UI & UX Architecture: www-cadillacf1team-com (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://www.cadillacf1team.com/](https://www.cadillacf1team.com/)  
+> **Block / Unreachable Reason**: CloudFront HTTP 403 WAF Block (ERROR: The request could not be satisfied)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `raw/www-cadillacf1team-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

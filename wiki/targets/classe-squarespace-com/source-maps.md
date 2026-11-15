@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: classe-squarespace-com"
 date: 2026-11-14
-target: "[[overview|classe-squarespace-com]]"
+target: "classe-squarespace-com"
 ---
 
 # De-obfuscated Source Maps: classe-squarespace-com

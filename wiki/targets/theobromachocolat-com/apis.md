@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: theobromachocolat-com"
 date: 2026-11-14
-target: "[[overview|theobromachocolat-com]]"
+target: "theobromachocolat-com"
 ---
 
 # Discovered APIs & Protocols: theobromachocolat-com

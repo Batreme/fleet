@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tengilemalamala-com"
 date: 2026-11-14
-target: "[[overview|tengilemalamala-com]]"
+target: "tengilemalamala-com"
 ---
 
 # De-obfuscated Source Maps: tengilemalamala-com

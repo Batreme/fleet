@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: switchblade-awwwards-vercel-app"
 date: 2026-11-14
-target: "[[overview|switchblade-awwwards-vercel-app]]"
+target: "switchblade-awwwards-vercel-app"
 ---
 
 # De-obfuscated Source Maps: switchblade-awwwards-vercel-app

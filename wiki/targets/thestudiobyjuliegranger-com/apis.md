@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thestudiobyjuliegranger-com"
 date: 2026-11-14
-target: "[[overview|thestudiobyjuliegranger-com]]"
+target: "thestudiobyjuliegranger-com"
 ---
 
 # Discovered APIs & Protocols: thestudiobyjuliegranger-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-kubehotel-saint-tropez-com_fr"
 date: 2026-11-14
-target: "[[overview|www-kubehotel-saint-tropez-com_fr]]"
+target: "www-kubehotel-saint-tropez-com_fr"
 ---
 
 # Data Models & Client Storage: www-kubehotel-saint-tropez-com_fr

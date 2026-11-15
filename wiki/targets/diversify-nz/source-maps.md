@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: diversify-nz"
 date: 2026-11-14
-target: "[[overview|diversify-nz]]"
+target: "diversify-nz"
 ---
 
 # De-obfuscated Source Maps: diversify-nz

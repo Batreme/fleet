@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: zeropact-co"
 date: 2026-11-14
-target: "[[overview|zeropact-co]]"
+target: "zeropact-co"
 ---
 
 # De-obfuscated Source Maps: zeropact-co

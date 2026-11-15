@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: arcteryx-com_us-en-explore-system0"
 date: 2026-11-14
-target: "[[overview|arcteryx-com_us-en-explore-system0]]"
+target: "arcteryx-com_us-en-explore-system0"
 ---
 
 # Discovered APIs & Protocols: arcteryx-com_us-en-explore-system0

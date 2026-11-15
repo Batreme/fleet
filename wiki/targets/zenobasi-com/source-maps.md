@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: zenobasi-com"
 date: 2026-11-14
-target: "[[overview|zenobasi-com]]"
+target: "zenobasi-com"
 ---
 
 # De-obfuscated Source Maps: zenobasi-com

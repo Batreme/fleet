@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: apricode-agency"
 date: 2026-11-14
-target: "[[overview|apricode-agency]]"
+target: "apricode-agency"
 ---
 
 # De-obfuscated Source Maps: apricode-agency

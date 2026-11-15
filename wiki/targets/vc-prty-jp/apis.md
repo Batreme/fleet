@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: vc-prty-jp"
 date: 2026-11-14
-target: "[[overview|vc-prty-jp]]"
+target: "vc-prty-jp"
 ---
 
 # Discovered APIs & Protocols: vc-prty-jp

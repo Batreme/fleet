@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: twodo-design"
 date: 2026-11-14
-target: "[[overview|twodo-design]]"
+target: "twodo-design"
 ---
 
 # Data Models & Client Storage: twodo-design

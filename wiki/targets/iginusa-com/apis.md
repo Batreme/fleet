@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: iginusa-com"
 date: 2026-11-14
-target: "[[overview|iginusa-com]]"
+target: "iginusa-com"
 ---
 
 # Discovered APIs & Protocols: iginusa-com

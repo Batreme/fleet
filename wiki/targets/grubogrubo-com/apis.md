@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: grubogrubo-com"
 date: 2026-11-14
-target: "[[overview|grubogrubo-com]]"
+target: "grubogrubo-com"
 ---
 
 # Discovered APIs & Protocols: grubogrubo-com

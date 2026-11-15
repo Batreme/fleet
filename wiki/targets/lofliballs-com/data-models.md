@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lofliballs-com"
 date: 2026-11-14
-target: "[[overview|lofliballs-com]]"
+target: "lofliballs-com"
 ---
 
 # Data Models & Client Storage: lofliballs-com

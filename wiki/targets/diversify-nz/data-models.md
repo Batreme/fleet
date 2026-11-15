@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: diversify-nz"
 date: 2026-11-14
-target: "[[overview|diversify-nz]]"
+target: "diversify-nz"
 ---
 
 # Data Models & Client Storage: diversify-nz

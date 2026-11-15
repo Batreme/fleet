@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: gpg-dops-agency"
 date: 2026-11-14
-target: "[[overview|gpg-dops-agency]]"
+target: "gpg-dops-agency"
 ---
 
 # Data Models & Client Storage: gpg-dops-agency

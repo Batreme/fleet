@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: noho-ink"
 date: 2026-11-14
-target: "[[overview|noho-ink]]"
+target: "noho-ink"
 ---
 
 # De-obfuscated Source Maps: noho-ink

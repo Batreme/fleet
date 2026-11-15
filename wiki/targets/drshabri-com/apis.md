@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: drshabri-com"
 date: 2026-11-14
-target: "[[overview|drshabri-com]]"
+target: "drshabri-com"
 ---
 
 # Discovered APIs & Protocols: drshabri-com

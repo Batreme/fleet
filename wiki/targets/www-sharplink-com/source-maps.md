@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-sharplink-com"
 date: 2026-11-14
-target: "[[overview|www-sharplink-com]]"
+target: "www-sharplink-com"
 ---
 
 # De-obfuscated Source Maps: www-sharplink-com

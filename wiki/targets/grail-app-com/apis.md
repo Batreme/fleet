@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: grail-app-com"
 date: 2026-11-14
-target: "[[overview|grail-app-com]]"
+target: "grail-app-com"
 ---
 
 # Discovered APIs & Protocols: grail-app-com

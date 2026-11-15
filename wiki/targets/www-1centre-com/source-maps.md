@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-1centre-com"
 date: 2026-11-14
-target: "[[overview|www-1centre-com]]"
+target: "www-1centre-com"
 ---
 
 # De-obfuscated Source Maps: www-1centre-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: bright-avenue-jp"
 date: 2026-11-14
-target: "[[overview|bright-avenue-jp]]"
+target: "bright-avenue-jp"
 ---
 
 # Discovered APIs & Protocols: bright-avenue-jp

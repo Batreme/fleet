@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: midnightvideo-cuchillo-rocks"
 date: 2026-11-14
-target: "[[overview|midnightvideo-cuchillo-rocks]]"
+target: "midnightvideo-cuchillo-rocks"
 ---
 
 # Data Models & Client Storage: midnightvideo-cuchillo-rocks

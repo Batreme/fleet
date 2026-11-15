@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-genomines-com"
 date: 2026-11-14
-target: "[[overview|www-genomines-com]]"
+target: "www-genomines-com"
 ---
 
 # Discovered APIs & Protocols: www-genomines-com

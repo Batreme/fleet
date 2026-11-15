@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: articles-gamcare-org-uk"
 date: 2026-11-14
-target: "[[overview|articles-gamcare-org-uk]]"
+target: "articles-gamcare-org-uk"
 ---
 
 # Discovered APIs & Protocols: articles-gamcare-org-uk

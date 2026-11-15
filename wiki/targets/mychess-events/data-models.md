@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mychess-events"
 date: 2026-11-14
-target: "[[overview|mychess-events]]"
+target: "mychess-events"
 ---
 
 # Data Models & Client Storage: mychess-events

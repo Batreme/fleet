@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: miligram-pt"
 date: 2026-11-14
-target: "[[overview|miligram-pt]]"
+target: "miligram-pt"
 ---
 
 # Discovered APIs & Protocols: miligram-pt

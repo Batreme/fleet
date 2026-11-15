@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-mynobs-co"
 date: 2026-11-14
-target: "[[overview|www-mynobs-co]]"
+target: "www-mynobs-co"
 ---
 
 # Discovered APIs & Protocols: www-mynobs-co

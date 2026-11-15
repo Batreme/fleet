@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: namaha-healthcare"
 date: 2026-11-14
-target: "[[overview|namaha-healthcare]]"
+target: "namaha-healthcare"
 ---
 
 # Data Models & Client Storage: namaha-healthcare

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: coloniazacamil-com"
 date: 2026-11-14
-target: "[[overview|coloniazacamil-com]]"
+target: "coloniazacamil-com"
 ---
 
 # Data Models & Client Storage: coloniazacamil-com

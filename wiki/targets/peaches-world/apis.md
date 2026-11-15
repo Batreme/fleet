@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: peaches-world"
 date: 2026-10-31
-target: "[[overview|peaches-world]]"
+target: "peaches-world"
 ---
 
 # Discovered APIs & Protocols: peaches-world

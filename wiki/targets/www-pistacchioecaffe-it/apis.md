@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-pistacchioecaffe-it"
 date: 2026-11-14
-target: "[[overview|www-pistacchioecaffe-it]]"
+target: "www-pistacchioecaffe-it"
 ---
 
 # Discovered APIs & Protocols: www-pistacchioecaffe-it

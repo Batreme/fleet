@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: yoyu-design"
 date: 2026-11-14
-target: "[[overview|yoyu-design]]"
+target: "yoyu-design"
 ---
 
 # Data Models & Client Storage: yoyu-design

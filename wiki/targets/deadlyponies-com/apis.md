@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: deadlyponies-com"
 date: 2026-11-14
-target: "[[overview|deadlyponies-com]]"
+target: "deadlyponies-com"
 ---
 
 # Discovered APIs & Protocols: deadlyponies-com

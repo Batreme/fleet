@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-mbidirectmail-com"
 date: 2026-11-14
-target: "[[overview|www-mbidirectmail-com]]"
+target: "www-mbidirectmail-com"
 ---
 
 # De-obfuscated Source Maps: www-mbidirectmail-com

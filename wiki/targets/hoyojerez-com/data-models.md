@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: hoyojerez-com"
 date: 2026-11-14
-target: "[[overview|hoyojerez-com]]"
+target: "hoyojerez-com"
 ---
 
 # Data Models & Client Storage: hoyojerez-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: duda-works"
 date: 2026-11-14
-target: "[[overview|duda-works]]"
+target: "duda-works"
 ---
 
 # Discovered APIs & Protocols: duda-works

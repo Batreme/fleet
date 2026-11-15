@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-fixchocolatier-com"
 date: 2026-11-14
-target: "[[overview|www-fixchocolatier-com]]"
+target: "www-fixchocolatier-com"
 ---
 
 # De-obfuscated Source Maps: www-fixchocolatier-com

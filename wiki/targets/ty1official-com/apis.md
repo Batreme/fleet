@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ty1official-com"
 date: 2026-11-14
-target: "[[overview|ty1official-com]]"
+target: "ty1official-com"
 ---
 
 # Discovered APIs & Protocols: ty1official-com

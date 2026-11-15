@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pixlpin-com_designs"
 date: 2026-11-14
-target: "[[overview|pixlpin-com_designs]]"
+target: "pixlpin-com_designs"
 ---
 
 # Discovered APIs & Protocols: pixlpin-com_designs

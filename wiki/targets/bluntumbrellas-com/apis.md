@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: bluntumbrellas-com"
 date: 2026-11-14
-target: "[[overview|bluntumbrellas-com]]"
+target: "bluntumbrellas-com"
 ---
 
 # Discovered APIs & Protocols: bluntumbrellas-com

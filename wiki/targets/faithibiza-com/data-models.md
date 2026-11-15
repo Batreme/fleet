@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: faithibiza-com"
 date: 2026-11-14
-target: "[[overview|faithibiza-com]]"
+target: "faithibiza-com"
 ---
 
 # Data Models & Client Storage: faithibiza-com

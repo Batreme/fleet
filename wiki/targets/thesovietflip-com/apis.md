@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thesovietflip-com"
 date: 2026-11-14
-target: "[[overview|thesovietflip-com]]"
+target: "thesovietflip-com"
 ---
 
 # Discovered APIs & Protocols: thesovietflip-com

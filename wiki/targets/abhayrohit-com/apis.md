@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: abhayrohit-com"
 date: 2026-11-14
-target: "[[overview|abhayrohit-com]]"
+target: "abhayrohit-com"
 ---
 
 # Discovered APIs & Protocols: abhayrohit-com

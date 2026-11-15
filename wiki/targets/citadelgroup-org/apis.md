@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: citadelgroup-org"
 date: 2026-11-14
-target: "[[overview|citadelgroup-org]]"
+target: "citadelgroup-org"
 ---
 
 # Discovered APIs & Protocols: citadelgroup-org

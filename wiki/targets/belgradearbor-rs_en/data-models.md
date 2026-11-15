@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: belgradearbor-rs_en"
 date: 2026-11-14
-target: "[[overview|belgradearbor-rs_en]]"
+target: "belgradearbor-rs_en"
 ---
 
 # Data Models & Client Storage: belgradearbor-rs_en

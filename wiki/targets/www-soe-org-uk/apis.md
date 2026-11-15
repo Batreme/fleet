@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-soe-org-uk"
 date: 2026-11-14
-target: "[[overview|www-soe-org-uk]]"
+target: "www-soe-org-uk"
 ---
 
 # Discovered APIs & Protocols: www-soe-org-uk

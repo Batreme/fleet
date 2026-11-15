@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: 360lexingtonave-com"
 date: 2026-11-14
-target: "[[overview|360lexingtonave-com]]"
+target: "360lexingtonave-com"
 ---
 
 # Data Models & Client Storage: 360lexingtonave-com

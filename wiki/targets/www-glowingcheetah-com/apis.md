@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-glowingcheetah-com"
 date: 2026-11-14
-target: "[[overview|www-glowingcheetah-com]]"
+target: "www-glowingcheetah-com"
 ---
 
 # Discovered APIs & Protocols: www-glowingcheetah-com

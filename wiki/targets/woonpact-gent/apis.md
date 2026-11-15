@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: woonpact-gent"
 date: 2026-11-14
-target: "[[overview|woonpact-gent]]"
+target: "woonpact-gent"
 ---
 
 # Discovered APIs & Protocols: woonpact-gent

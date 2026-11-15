@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tamasolajos-com"
 date: 2026-10-31
-target: "[[overview|tamasolajos-com]]"
+target: "tamasolajos-com"
 ---
 
 # Data Models & Client Storage: tamasolajos-com

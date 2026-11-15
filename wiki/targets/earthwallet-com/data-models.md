@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: earthwallet-com"
 date: 2026-11-14
-target: "[[overview|earthwallet-com]]"
+target: "earthwallet-com"
 ---
 
 # Data Models & Client Storage: earthwallet-com

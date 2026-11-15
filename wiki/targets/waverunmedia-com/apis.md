@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: waverunmedia-com"
 date: 2026-11-14
-target: "[[overview|waverunmedia-com]]"
+target: "waverunmedia-com"
 ---
 
 # Discovered APIs & Protocols: waverunmedia-com

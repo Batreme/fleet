@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: stillform-homes"
 date: 2026-11-14
-target: "[[overview|stillform-homes]]"
+target: "stillform-homes"
 ---
 
 # De-obfuscated Source Maps: stillform-homes

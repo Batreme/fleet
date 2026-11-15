@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: jockey-stuudio-xyz"
 date: 2026-11-14
-target: "[[overview|jockey-stuudio-xyz]]"
+target: "jockey-stuudio-xyz"
 ---
 
 # De-obfuscated Source Maps: jockey-stuudio-xyz

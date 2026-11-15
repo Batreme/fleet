@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-zzdp-nl"
 date: 2026-11-14
-target: "[[overview|www-zzdp-nl]]"
+target: "www-zzdp-nl"
 ---
 
 # Data Models & Client Storage: www-zzdp-nl

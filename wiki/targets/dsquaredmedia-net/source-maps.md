@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: dsquaredmedia-net"
 date: 2026-11-14
-target: "[[overview|dsquaredmedia-net]]"
+target: "dsquaredmedia-net"
 ---
 
 # De-obfuscated Source Maps: dsquaredmedia-net

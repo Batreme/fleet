@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: macmillan-studio"
 date: 2026-11-14
-target: "[[overview|macmillan-studio]]"
+target: "macmillan-studio"
 ---
 
 # Discovered APIs & Protocols: macmillan-studio

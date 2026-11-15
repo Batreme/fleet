@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: untitledfilm-framer-website"
 date: 2026-10-31
-target: "[[overview|untitledfilm-framer-website]]"
+target: "untitledfilm-framer-website"
 ---
 
 # De-obfuscated Source Maps: untitledfilm-framer-website

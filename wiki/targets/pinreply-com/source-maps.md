@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: pinreply-com"
 date: 2026-11-14
-target: "[[overview|pinreply-com]]"
+target: "pinreply-com"
 ---
 
 # De-obfuscated Source Maps: pinreply-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: gpg-dops-agency"
 date: 2026-11-14
-target: "[[overview|gpg-dops-agency]]"
+target: "gpg-dops-agency"
 ---
 
 # De-obfuscated Source Maps: gpg-dops-agency

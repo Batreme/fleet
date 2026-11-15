@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: theperformancelab-ca"
 date: 2026-11-14
-target: "[[overview|theperformancelab-ca]]"
+target: "theperformancelab-ca"
 ---
 
 # De-obfuscated Source Maps: theperformancelab-ca

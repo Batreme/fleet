@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-cartier-com_en-us-roadster-universe-html"
 date: 2026-11-14
-target: "[[overview|www-cartier-com_en-us-roadster-universe-html]]"
+target: "www-cartier-com_en-us-roadster-universe-html"
 ---
 
 # Discovered APIs & Protocols: www-cartier-com_en-us-roadster-universe-html

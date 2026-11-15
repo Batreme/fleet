@@ -1,60 +1,67 @@
----
-title: "UI & Design System: www-vineyard-co-za"
-date: 2026-11-14
-target: "[[overview|www-vineyard-co-za]]"
----
+# UI & UX Architecture: www-vineyard-co-za
 
-# UI Architecture & Design Tokens: www-vineyard-co-za
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--disabled` | `hover {
-    background-color: #999999` |
-| `--disabled` | `hover {
-    background-color: #666666` |
-| `--highlighted` | `hover {
-    cursor: pointer` |
-| `--moz-device-pixel-ratio` | `1.5),
-	   only screen and (min-device-pixel-ratio: 1.5){
-
-	#` |
-| `--swiper-theme-color` | `#007aff}:host{position:relative` |
-| `--swiper-preloader-color` | `#fff}.swiper-lazy-preloader-black{--swiper-preloader-color: ` |
-| `--action` | `hover{background:var(--adp-background-color-hover)}.air-date` |
-| `--title` | `hover{background:var(--adp-background-color-hover)}.air-date` |
-| `--current-hours` | `after,.air-datepicker-time--current-minutes:after{content:""` |
-| `--row` | `first-child{margin-bottom:4px}.air-datepicker-time--row inpu` |
-| `--adp-font-family` | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve` |
-| `--adp-font-size` | `14px` |
-| `--adp-width` | `246px` |
-| `--adp-z-index` | `100` |
-| `--adp-padding` | `4px` |
-| `--adp-grid-areas` | `"nav" "body" "timepicker" "buttons"` |
-| `--adp-transition-duration` | `.3s` |
-| `--adp-transition-ease` | `ease-out` |
-| `--adp-transition-offset` | `8px` |
-| `--adp-background-color` | `#fff` |
-| `--adp-background-color-hover` | `#f0f0f0` |
-| `--adp-background-color-active` | `#eaeaea` |
-| `--adp-background-color-in-range` | `rgba(92, 196, 239, .1)` |
-| `--adp-background-color-in-range-focused` | `rgba(92, 196, 239, .2)` |
-| `--adp-background-color-selected-other-month-focused` | `#8ad5f4` |
+## Overview & Design Identity
+- **Target**: `www-vineyard-co-za` (**The Vineyard Hotel · Hotel & Spa in Newlands, Cape Town**)
+- **Production URL**: [https://www.vineyard.co.za/](https://www.vineyard.co.za/)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#4a4a4a` ink, `#a2ddf6` accent)
+- **Summary**: Independently owned hotel on Table Mountain's eastern slopes in Newlands. Rooms and apartments, four places to eat, Angsana Spa, two pool...
+- **Total Clean CSS Variables Extracted**: `139` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Optima`
+- **Body Font Stack**: `Mori`
+- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`)
+- **Section Heading (`H2`)**: rule `,h2` (`letter-spacing: calc(var(--size)*-0.01)`)
+- **Body Copy**: rule `p` (`line-height: 180%`)
+- **Metadata & Labels**: CSS variables `--content-width-small: 44.8rem`; rule `small` (`font-size: 80%`)
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `-` | `air-datepicker-nav` |
-| `<nav>` | `-` | `air-datepicker-nav` |
-| `<nav>` | `-` | `nav-inner` |
-| `<nav>` | `-` | `nav` |
-| `<nav>` | `-` | `nav desktop-only` |
-| `<nav>` | `-` | `air-datepicker-nav` |
-| `<nav>` | `-` | `air-datepicker-nav` |
-| `<header>` | `-` | `header header-light` |
-| `<main>` | `home` | `main` |
-| `<footer>` | `-` | `footer` |
+| **Primary Canvas Substrate** | `#fff` | `var(--adp-background-color)` in `:root` |
+| **Primary Typography Ink** | `#f0f0f0` | `var(--adp-background-color-hover)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#eaeaea` | `var(--adp-background-color-active)` in `:root` |
+| **Interactive Accent / Highlight** | `#a2ddf6` | `var(--adp-background-color-selected-other-month)` in `:root` |
+| **Secondary / Muted Copy** | `#4a4a4a` | `var(--adp-color)` in `:root` |
+| **Structural Hairline Border** | `#9c9c9c` | `var(--adp-color-secondary)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--adp-font-size` | `14px` | Typography / Scale Token |
+| `--adp-width` | `246px` | Layout / Spatial Grid Token |
+| `--adp-z-index` | `100` | Elevation / Border Token |
+| `--adp-padding` | `4px` | Layout / Spatial Grid Token |
+| `--adp-grid-areas` | `"nav" "body" "timepicker" "buttons"` | Layout / Spatial Grid Token |
+| `--adp-transition-duration` | `.3s` | Motion / Easing Token |
+| `--adp-transition-ease` | `ease-out` | Motion / Easing Token |
+| `--adp-transition-offset` | `8px` | Motion / Easing Token |
+| `--adp-background-color` | `#fff` | Canvas / Surface Token |
+| `--adp-background-color-hover` | `#f0f0f0` | Canvas / Surface Token |
+| `--adp-background-color-active` | `#eaeaea` | Canvas / Surface Token |
+| `--adp-background-color-in-range` | `rgba(92, 196, 239, .1)` | Canvas / Surface Token |
+| `--adp-background-color-in-range-focused` | `rgba(92, 196, 239, .2)` | Canvas / Surface Token |
+| `--adp-background-color-selected-other-month` | `#a2ddf6` | Canvas / Surface Token |
+| `--adp-color` | `#4a4a4a` | Brand / Palette Token |
+| `--adp-color-secondary` | `#9c9c9c` | Brand / Palette Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.header> — `www-vineyard-co-za`)**:
+   - Landmark `<header class="header header-light">` hosting `The Vineyard Hotel · Hotel & Spa in ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-barba="wrapper"`, `data-id="sleep"`, `data-id="eat"`, `data-id="meet"`), and stylesheet rule `root { --swiper-theme-color: 007aff }`.
+2. **Hero Stage & Focal Lead (<section.section> — `Booking`)**:
+   - Landmark `<section class="section section-home-hero">` presenting display lead `Booking` and copy excerpt *"Skip to main content"* over `#fff` canvas and `#4a4a4a` ink.
+3. **Primary Showcase & Content Grid (<section.section> — `The Vineyard Hotel, Newlands, Cape`)**:
+   - Landmark `<section class="section section-trust">` rendering section `The Vineyard Hotel, Newlands, Cape Town` with copy *"Check-in Date 14 Nov 2026"*, asset references (`public-prod.dineplan.com`, `i.vimeocdn.com`, `mori-regular.woff2`, `mori-medium.woff2`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+4. **Interactive Detail & Feature Matrix (<section.section> — `Reawaken your sense of wonder`)**:
+   - Landmark `<section class="section section-carousel">` framing `Reawaken your sense of wonder` and `Best Available Rate` (*"Check-out Date 15 Nov 2026"*) with `#eaeaea` surface cards, `#a2ddf6` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
+5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.vineyard.co.za/`)**:
+   - Landmark `<footer class="footer">` anchoring `The Vineyard Hotel · Hotel & Spa` footer links (`Overview · Index · Archive · About · Contact`), copy *"Remove room Remove room"*, and `#9c9c9c` structural dividers.

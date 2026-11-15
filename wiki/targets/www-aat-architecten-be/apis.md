@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-aat-architecten-be"
 date: 2026-11-14
-target: "[[overview|www-aat-architecten-be]]"
+target: "www-aat-architecten-be"
 ---
 
 # Discovered APIs & Protocols: www-aat-architecten-be

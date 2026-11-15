@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: auge-xp-com"
 date: 2026-11-14
-target: "[[overview|auge-xp-com]]"
+target: "auge-xp-com"
 ---
 
 # De-obfuscated Source Maps: auge-xp-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: jetalto-com"
 date: 2026-11-14
-target: "[[overview|jetalto-com]]"
+target: "jetalto-com"
 ---
 
 # Discovered APIs & Protocols: jetalto-com

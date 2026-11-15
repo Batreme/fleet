@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-apc-pallets-nl"
 date: 2026-11-14
-target: "[[overview|www-apc-pallets-nl]]"
+target: "www-apc-pallets-nl"
 ---
 
 # De-obfuscated Source Maps: www-apc-pallets-nl

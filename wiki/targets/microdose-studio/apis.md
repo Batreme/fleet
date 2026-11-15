@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: microdose-studio"
 date: 2026-11-14
-target: "[[overview|microdose-studio]]"
+target: "microdose-studio"
 ---
 
 # Discovered APIs & Protocols: microdose-studio

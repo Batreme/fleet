@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: wedding-s-tmro-com"
 date: 2026-11-14
-target: "[[overview|wedding-s-tmro-com]]"
+target: "wedding-s-tmro-com"
 ---
 
 # Discovered APIs & Protocols: wedding-s-tmro-com

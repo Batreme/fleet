@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: deltacafes-com_en"
 date: 2026-11-14
-target: "[[overview|deltacafes-com_en]]"
+target: "deltacafes-com_en"
 ---
 
 # Data Models & Client Storage: deltacafes-com_en

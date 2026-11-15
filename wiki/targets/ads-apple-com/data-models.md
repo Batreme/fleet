@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ads-apple-com"
 date: 2026-11-14
-target: "[[overview|ads-apple-com]]"
+target: "ads-apple-com"
 ---
 
 # Data Models & Client Storage: ads-apple-com

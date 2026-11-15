@@ -1,48 +1,77 @@
----
-title: "UI & Design System: xiloteca-it_en"
-date: 2026-11-14
-target: "[[overview|xiloteca-it_en]]"
----
+# UI & UX Architecture: xiloteca-it_en
 
-# UI Architecture & Design Tokens: xiloteca-it_en
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--fa-animation-direction` | `reverse}.um .fa-pulse,.um .fa-spin-pulse,.um-icon-within .fa` |
-| `--fa-style-family-brands` | `"Font Awesome 6 Brands"` |
-| `--fa-font-brands` | `normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-fam` |
-| `--fa-style-family-classic` | `"Font Awesome 6 Free"` |
-| `--fa-font-regular` | `normal 400 1em/1 "Font Awesome 6 Free"}@font-face{font-famil` |
-| `--fa-style-family-classic` | `"Font Awesome 6 Free"` |
-| `--fa-font-solid` | `normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-famil` |
-| `--bs-info-100` | `rgba(243, 255, 230, 1)` |
-| `--bs-gray-100` | `rgba(238, 241, 235, 1)` |
-| `--bs-info-200` | `rgba(226, 254, 191, 1)` |
-| `--bs-info-300` | `rgba(196, 254, 128, 1)` |
-| `--bs-info-400` | `rgba(167, 253, 64, 1)` |
-| `--bs-info-500` | `rgba(137, 252, 0, 1)` |
-| `--bs-info-600` | `rgba(103, 189, 0, 1)` |
-| `--bs-info-700` | `rgba(69, 126, 0, 1)` |
-| `--bs-info-800` | `rgba(34, 63, 0, 1)` |
-| `--bs-info-900` | `rgba(21, 38, 0, 1)` |
-| `--bs-primary-100` | `rgba(248, 245, 241, 1)` |
-| `--bs-primary-200` | `rgba(237, 229, 219, 1)` |
-| `--bs-primary-300` | `rgba(220, 203, 183, 1)` |
-| `--bs-primary-400` | `rgba(202, 177, 146, 1)` |
-| `--bs-primary-500` | `rgba(184, 151, 110, 1)` |
-| `--bs-primary-600` | `rgba(138, 113, 83, 1)` |
-| `--bs-primary-700` | `rgba(92, 76, 55, 1)` |
-| `--bs-primary-800` | `rgba(46, 38, 28, 1)` |
+## Overview & Design Identity
+- **Target**: `xiloteca-it_en` (**Xiloteca Trevigiana. Woods from around the world. Digital Museum.**)
+- **Production URL**: [https://xiloteca.it/en/](https://xiloteca.it/en/)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0d6efd` / `#d63384`)
+- **Summary**: Xiloteca Trevigiana. From the heart of the forests to the future of business, wood tells stories. Digital Museum of Wood Sustainability.
+- **Total Clean CSS Variables Extracted**: `1001` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Space Mono`
+- **Body Font Stack**: `raty`
+- **Monospace / Technical Font Stack**: `Space Mono`
+- **Hero Display (`H1`)**: CSS variables `--bs-h1-font-size: 7.5rem`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
+- **Section Heading (`H2`)**: CSS variables `--bs-h2-font-size: 5.5rem`; rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
+- **Body Copy**: CSS variables `--bs-body-color-rgb: 33,37,41`, `--bs-body-bg-rgb: 255,255,255`, `--bs-body-font-family: var(--bs-font-sans-serif)`; rule `p` (`font-size: var(--bs-h1-font-size)`, `line-height: 1`, `letter-spacing: -.04em`, `font-weight: var(--bs-font...`)
+- **Metadata & Labels**: CSS variables `--search-filter-label-scale-font-size: var(--bs-body-font-size-sm)`, `--search-filter-label-color: var(--bs-dark-bs-body-color)`, `--search-filter-label-scale: 2`; rule `,small` (`font-size: .875em`)
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `main-nav` | `navbar` |
-| `<header>` | `wrapper-navbar` | `fixed-top` |
-| `<main>` | `main` | `site-main` |
-| `<footer>` | `colophon` | `site-footer pt-12 pt-sm-14 pt-md-20 pt-lg-28 pt-xl-32 pt-xxl-40 pb-10 pb-sm-11 pb-md-12` |
+| **Primary Canvas Substrate** | `#0d6efd` | `var(--bs-blue)` in `:root` |
+| **Primary Typography Ink** | `#6610f2` | `var(--bs-indigo)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#5533ff` | `var(--bs-purple)` in `:root` |
+| **Interactive Accent / Highlight** | `#d63384` | `var(--bs-pink)` in `:root` |
+| **Secondary / Muted Copy** | `#dc3545` | `var(--bs-red)` in `:root` |
+| **Structural Hairline Border** | `#fd7e14` | `var(--bs-orange)` in `:root` |
+| **Variable Token (`--bs-yellow`)** | `#ffc107` | `var(--bs-yellow)` in `:root` |
+| **Variable Token (`--bs-green`)** | `#198754` | `var(--bs-green)` in `:root` |
+| **Variable Token (`--bs-teal`)** | `#20c997` | `var(--bs-teal)` in `:root` |
+| **Variable Token (`--bs-cyan`)** | `#0dcaf0` | `var(--bs-cyan)` in `:root` |
+| **Variable Token (`--bs-black`)** | `#000` | `var(--bs-black)` in `:root` |
+| **Variable Token (`--bs-white`)** | `#fff` | `var(--bs-white)` in `:root` |
+| **Variable Token (`--bs-gray`)** | `#6c757d` | `var(--bs-gray)` in `:root` |
+| **Variable Token (`--bs-gray-dark`)** | `#343a40` | `var(--bs-gray-dark)` in `:root` |
+| **Variable Token (`--bs-gray-100`)** | `#f8f9fa` | `var(--bs-gray-100)` in `:root` |
+| **Variable Token (`--bs-gray-200`)** | `#e9ecef` | `var(--bs-gray-200)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--bs-blue` | `#0d6efd` | Color / Atmospheric Token |
+| `--bs-indigo` | `#6610f2` | Color / Atmospheric Token |
+| `--bs-purple` | `#5533ff` | Color / Atmospheric Token |
+| `--bs-pink` | `#d63384` | Typography Ink Token |
+| `--bs-red` | `#dc3545` | Color / Atmospheric Token |
+| `--bs-orange` | `#fd7e14` | Color / Atmospheric Token |
+| `--bs-yellow` | `#ffc107` | Color / Atmospheric Token |
+| `--bs-green` | `#198754` | Color / Atmospheric Token |
+| `--bs-teal` | `#20c997` | Color / Atmospheric Token |
+| `--bs-cyan` | `#0dcaf0` | Color / Atmospheric Token |
+| `--bs-black` | `#000` | Canvas / Surface Token |
+| `--bs-white` | `#fff` | Canvas / Surface Token |
+| `--bs-gray` | `#6c757d` | Color / Atmospheric Token |
+| `--bs-gray-dark` | `#343a40` | Canvas / Surface Token |
+| `--bs-gray-100` | `#f8f9fa` | Color / Atmospheric Token |
+| `--bs-gray-200` | `#e9ecef` | Color / Atmospheric Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.fixed-top> — `xiloteca-it_en`)**:
+   - Landmark `<header class="fixed-top">` hosting `Xiloteca Trevigiana. Woods from arou` navigation (`Xiloteca Trevigiana · The initiative · Digital collection · Interactive game · Wood Glossary`), DOM attributes (`data-cookieconsent="statistics"`, `data-cookieconsent="statistics"`, `data-cookieconsent="statistics"`, `data-cookieconsent="ignore"`), and stylesheet rule `before { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<main.site-main> — `Xiloteca Trevigiana. Woods from ar`)**:
+   - Landmark `<main class="site-main">` presenting display lead `Xiloteca Trevigiana. Woods from around the world.` and copy excerpt *"Informazioni sui cookie"* over `#0d6efd` canvas and `#6610f2` ink.
+3. **Primary Showcase & Content Grid (<main.site-main> — `From the heart of the forests to t`)**:
+   - Landmark `<main class="site-main">` rendering section `From the heart of the forests to the future of bu...` with copy *"Selezione del consenso"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `cc.js`), and grid rule `root { scroll-behavior:smooth }`.
+4. **Interactive Detail & Feature Matrix (<main.site-main> — `Explore according to your profile`)**:
+   - Landmark `<main class="site-main">` framing `Explore according to your profile` and `Necessari 3 I cookie necessari contribuiscono a ` (*"Necessari 3 I cookie necessari contribuiscono a rendere fruibile "*) with `#5533ff` surface cards, `#d63384` accents, and `address { margin-bottom:1rem;font-style:normal;line-height:inherit }`.
+5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://xiloteca.it/en/`)**:
+   - Landmark `<footer class="site-footer pt-12">` anchoring `Xiloteca Trevigiana. Woods from ` footer links (`Xiloteca Trevigiana · The initiative · Digital collection · Interactive game · Wood Glossary`), copy *"Cloudflare 1 Per saperne di più su questo fornitore cf.turns"*, and `#fd7e14` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: north-cloud"
 date: 2026-11-14
-target: "[[overview|north-cloud]]"
+target: "north-cloud"
 ---
 
 # De-obfuscated Source Maps: north-cloud

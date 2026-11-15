@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tej-as_story"
 date: 2026-11-14
-target: "[[overview|tej-as_story]]"
+target: "tej-as_story"
 ---
 
 # De-obfuscated Source Maps: tej-as_story

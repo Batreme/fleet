@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: both-sides-the7eye-org-il_en"
 date: 2026-11-14
-target: "[[overview|both-sides-the7eye-org-il_en]]"
+target: "both-sides-the7eye-org-il_en"
 ---
 
 # Discovered APIs & Protocols: both-sides-the7eye-org-il_en

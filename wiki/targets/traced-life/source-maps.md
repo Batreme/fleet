@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: traced-life"
 date: 2026-11-14
-target: "[[overview|traced-life]]"
+target: "traced-life"
 ---
 
 # De-obfuscated Source Maps: traced-life

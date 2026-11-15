@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-hollywoodexhibit2026-com"
 date: 2026-11-14
-target: "[[overview|www-hollywoodexhibit2026-com]]"
+target: "www-hollywoodexhibit2026-com"
 ---
 
 # Data Models & Client Storage: www-hollywoodexhibit2026-com

@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: offform-net"
-date: 2026-11-14
-target: "[[overview|offform-net]]"
+title: "UI & UX Architecture: offform-net"
+status: blocked
+block_reason: "Empty raw DOM capture (39 bytes, 0 stylesheets)"
 ---
 
-# UI Architecture & Design Tokens: offform-net
+# UI & UX Architecture: offform-net (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://offform.net/](https://offform.net/)  
+> **Block / Unreachable Reason**: Empty raw DOM capture (39 bytes, 0 stylesheets)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `raw/offform-net/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

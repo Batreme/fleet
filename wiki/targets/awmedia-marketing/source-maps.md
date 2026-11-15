@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: awmedia-marketing"
 date: 2026-11-14
-target: "[[overview|awmedia-marketing]]"
+target: "awmedia-marketing"
 ---
 
 # De-obfuscated Source Maps: awmedia-marketing

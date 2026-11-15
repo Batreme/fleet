@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: microdose-studio"
 date: 2026-11-14
-target: "[[overview|microdose-studio]]"
+target: "microdose-studio"
 ---
 
 # De-obfuscated Source Maps: microdose-studio

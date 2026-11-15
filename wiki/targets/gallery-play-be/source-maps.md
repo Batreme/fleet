@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: gallery-play-be"
 date: 2026-10-31
-target: "[[overview|gallery-play-be]]"
+target: "gallery-play-be"
 ---
 
 # De-obfuscated Source Maps: gallery-play-be

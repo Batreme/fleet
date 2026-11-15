@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-brandlos-nl"
 date: 2026-11-14
-target: "[[overview|www-brandlos-nl]]"
+target: "www-brandlos-nl"
 ---
 
 # Data Models & Client Storage: www-brandlos-nl

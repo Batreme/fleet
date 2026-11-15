@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tribeofgiants-com"
 date: 2026-11-14
-target: "[[overview|tribeofgiants-com]]"
+target: "tribeofgiants-com"
 ---
 
 # De-obfuscated Source Maps: tribeofgiants-com

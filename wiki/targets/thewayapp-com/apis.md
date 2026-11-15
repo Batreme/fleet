@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thewayapp-com"
 date: 2026-11-14
-target: "[[overview|thewayapp-com]]"
+target: "thewayapp-com"
 ---
 
 # Discovered APIs & Protocols: thewayapp-com

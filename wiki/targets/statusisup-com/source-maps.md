@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: statusisup-com"
 date: 2026-11-14
-target: "[[overview|statusisup-com]]"
+target: "statusisup-com"
 ---
 
 # De-obfuscated Source Maps: statusisup-com

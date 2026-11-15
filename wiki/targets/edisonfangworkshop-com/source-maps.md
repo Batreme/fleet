@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: edisonfangworkshop-com"
 date: 2026-11-14
-target: "[[overview|edisonfangworkshop-com]]"
+target: "edisonfangworkshop-com"
 ---
 
 # De-obfuscated Source Maps: edisonfangworkshop-com

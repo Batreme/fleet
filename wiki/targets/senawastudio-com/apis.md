@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: senawastudio-com"
 date: 2026-11-14
-target: "[[overview|senawastudio-com]]"
+target: "senawastudio-com"
 ---
 
 # Discovered APIs & Protocols: senawastudio-com

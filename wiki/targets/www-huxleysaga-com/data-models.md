@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-huxleysaga-com"
 date: 2026-11-14
-target: "[[overview|www-huxleysaga-com]]"
+target: "www-huxleysaga-com"
 ---
 
 # Data Models & Client Storage: www-huxleysaga-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-studioplato-co"
 date: 2026-11-14
-target: "[[overview|www-studioplato-co]]"
+target: "www-studioplato-co"
 ---
 
 # Data Models & Client Storage: www-studioplato-co

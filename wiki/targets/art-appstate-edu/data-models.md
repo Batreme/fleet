@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: art-appstate-edu"
 date: 2026-10-31
-target: "[[overview|art-appstate-edu]]"
+target: "art-appstate-edu"
 ---
 
 # Data Models & Client Storage: art-appstate-edu

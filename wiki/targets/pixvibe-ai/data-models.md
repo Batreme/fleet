@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: pixvibe-ai"
 date: 2026-11-14
-target: "[[overview|pixvibe-ai]]"
+target: "pixvibe-ai"
 ---
 
 # Data Models & Client Storage: pixvibe-ai

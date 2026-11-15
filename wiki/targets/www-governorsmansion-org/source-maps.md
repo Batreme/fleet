@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-governorsmansion-org"
 date: 2026-11-14
-target: "[[overview|www-governorsmansion-org]]"
+target: "www-governorsmansion-org"
 ---
 
 # De-obfuscated Source Maps: www-governorsmansion-org

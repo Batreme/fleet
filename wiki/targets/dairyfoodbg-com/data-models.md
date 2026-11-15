@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dairyfoodbg-com"
 date: 2026-11-14
-target: "[[overview|dairyfoodbg-com]]"
+target: "dairyfoodbg-com"
 ---
 
 # Data Models & Client Storage: dairyfoodbg-com

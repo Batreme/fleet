@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aya-nl"
 date: 2026-11-14
-target: "[[overview|aya-nl]]"
+target: "aya-nl"
 ---
 
 # Discovered APIs & Protocols: aya-nl

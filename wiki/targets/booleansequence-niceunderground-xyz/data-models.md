@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: booleansequence-niceunderground-xyz"
 date: 2026-11-14
-target: "[[overview|booleansequence-niceunderground-xyz]]"
+target: "booleansequence-niceunderground-xyz"
 ---
 
 # Data Models & Client Storage: booleansequence-niceunderground-xyz

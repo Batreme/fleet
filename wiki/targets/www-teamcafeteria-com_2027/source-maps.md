@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-teamcafeteria-com_2027"
 date: 2026-11-14
-target: "[[overview|www-teamcafeteria-com_2027]]"
+target: "www-teamcafeteria-com_2027"
 ---
 
 # De-obfuscated Source Maps: www-teamcafeteria-com_2027

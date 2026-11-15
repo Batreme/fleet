@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-si-edu"
 date: 2026-11-14
-target: "[[overview|www-si-edu]]"
+target: "www-si-edu"
 ---
 
 # Data Models & Client Storage: www-si-edu

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-undplus-com"
 date: 2026-11-14
-target: "[[overview|www-undplus-com]]"
+target: "www-undplus-com"
 ---
 
 # De-obfuscated Source Maps: www-undplus-com

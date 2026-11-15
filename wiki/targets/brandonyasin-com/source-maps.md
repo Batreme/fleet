@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: brandonyasin-com"
 date: 2026-11-14
-target: "[[overview|brandonyasin-com]]"
+target: "brandonyasin-com"
 ---
 
 # De-obfuscated Source Maps: brandonyasin-com

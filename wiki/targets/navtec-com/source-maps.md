@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: navtec-com"
 date: 2026-11-14
-target: "[[overview|navtec-com]]"
+target: "navtec-com"
 ---
 
 # De-obfuscated Source Maps: navtec-com

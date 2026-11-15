@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-cadillacf1team-com"
 date: 2026-11-14
-target: "[[overview|www-cadillacf1team-com]]"
+target: "www-cadillacf1team-com"
 ---
 
 # Data Models & Client Storage: www-cadillacf1team-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-poulo-site"
 date: 2026-11-14
-target: "[[overview|www-poulo-site]]"
+target: "www-poulo-site"
 ---
 
 # Discovered APIs & Protocols: www-poulo-site

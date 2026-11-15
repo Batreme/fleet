@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-cartier-com_en-fr-lechoeurdespierres"
 date: 2026-11-14
-target: "[[overview|www-cartier-com_en-fr-lechoeurdespierres]]"
+target: "www-cartier-com_en-fr-lechoeurdespierres"
 ---
 
 # Data Models & Client Storage: www-cartier-com_en-fr-lechoeurdespierres

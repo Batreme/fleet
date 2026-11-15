@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: layersoftime-studio"
 date: 2026-11-14
-target: "[[overview|layersoftime-studio]]"
+target: "layersoftime-studio"
 ---
 
 # De-obfuscated Source Maps: layersoftime-studio

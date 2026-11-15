@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: gracefashion-ai"
 date: 2026-11-14
-target: "[[overview|gracefashion-ai]]"
+target: "gracefashion-ai"
 ---
 
 # Data Models & Client Storage: gracefashion-ai

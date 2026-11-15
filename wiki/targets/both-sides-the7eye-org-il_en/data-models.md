@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: both-sides-the7eye-org-il_en"
 date: 2026-11-14
-target: "[[overview|both-sides-the7eye-org-il_en]]"
+target: "both-sides-the7eye-org-il_en"
 ---
 
 # Data Models & Client Storage: both-sides-the7eye-org-il_en

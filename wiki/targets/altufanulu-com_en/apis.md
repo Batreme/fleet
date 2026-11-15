@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: altufanulu-com_en"
 date: 2026-11-14
-target: "[[overview|altufanulu-com_en]]"
+target: "altufanulu-com_en"
 ---
 
 # Discovered APIs & Protocols: altufanulu-com_en

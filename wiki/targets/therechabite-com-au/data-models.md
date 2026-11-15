@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: therechabite-com-au"
 date: 2026-11-14
-target: "[[overview|therechabite-com-au]]"
+target: "therechabite-com-au"
 ---
 
 # Data Models & Client Storage: therechabite-com-au

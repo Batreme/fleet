@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: useguidely-co"
 date: 2026-11-14
-target: "[[overview|useguidely-co]]"
+target: "useguidely-co"
 ---
 
 # De-obfuscated Source Maps: useguidely-co

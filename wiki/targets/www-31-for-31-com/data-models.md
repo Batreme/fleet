@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-31-for-31-com"
 date: 2026-11-14
-target: "[[overview|www-31-for-31-com]]"
+target: "www-31-for-31-com"
 ---
 
 # Data Models & Client Storage: www-31-for-31-com

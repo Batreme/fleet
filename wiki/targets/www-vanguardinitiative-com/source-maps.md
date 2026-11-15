@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-vanguardinitiative-com"
 date: 2026-11-14
-target: "[[overview|www-vanguardinitiative-com]]"
+target: "www-vanguardinitiative-com"
 ---
 
 # De-obfuscated Source Maps: www-vanguardinitiative-com

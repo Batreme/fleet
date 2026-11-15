@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: classe-squarespace-com"
 date: 2026-11-14
-target: "[[overview|classe-squarespace-com]]"
+target: "classe-squarespace-com"
 ---
 
 # Discovered APIs & Protocols: classe-squarespace-com

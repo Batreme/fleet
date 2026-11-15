@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-sentientx-com"
 date: 2026-11-14
-target: "[[overview|www-sentientx-com]]"
+target: "www-sentientx-com"
 ---
 
 # Data Models & Client Storage: www-sentientx-com

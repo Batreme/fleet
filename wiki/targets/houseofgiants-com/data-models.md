@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: houseofgiants-com"
 date: 2026-11-14
-target: "[[overview|houseofgiants-com]]"
+target: "houseofgiants-com"
 ---
 
 # Data Models & Client Storage: houseofgiants-com

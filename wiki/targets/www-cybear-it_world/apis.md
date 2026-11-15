@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-cybear-it_world"
 date: 2026-11-14
-target: "[[overview|www-cybear-it_world]]"
+target: "www-cybear-it_world"
 ---
 
 # Discovered APIs & Protocols: www-cybear-it_world

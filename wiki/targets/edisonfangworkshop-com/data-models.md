@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: edisonfangworkshop-com"
 date: 2026-11-14
-target: "[[overview|edisonfangworkshop-com]]"
+target: "edisonfangworkshop-com"
 ---
 
 # Data Models & Client Storage: edisonfangworkshop-com

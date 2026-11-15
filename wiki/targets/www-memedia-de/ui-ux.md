@@ -1,58 +1,76 @@
----
-title: "UI & Design System: www-memedia-de"
-date: 2026-11-14
-target: "[[overview|www-memedia-de]]"
----
+# UI & UX Architecture: www-memedia-de
 
-# UI Architecture & Design Tokens: www-memedia-de
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--ink` | `#1a1a1a` |
-| `--ink-muted` | `#666665` |
-| `--ink-inverse` | `#ffffff` |
-| `--muted-on-dark` | `#b4b4b3` |
-| `--label-on-dark` | `#9a9a99` |
-| `--line` | `#d8d8d6` |
-| `--line-soft` | `#ececea` |
-| `--line-dark` | `#414140` |
-| `--surface` | `#ffffff` |
-| `--surface-2` | `#f4f4f2` |
-| `--surface-3` | `#eaeae8` |
-| `--brand` | `#f03714` |
-| `--cta` | `#e0320f` |
-| `--brand-text` | `#c42a0c` |
-| `--coral` | `#ff9d80` |
-| `--lime` | `#e6f84a` |
-| `--lime-dark` | `#c9dc1e` |
-| `--mint` | `#65ffdb` |
-| `--mint-dark` | `#2ad4ad` |
-| `--violet` | `#7616fb` |
-| `--lilac` | `#b69cff` |
-| `--focus` | `#7616fb` |
-| `--font` | `"Poppins","Poppins Fallback","Segoe UI",system-ui,sans-serif` |
-| `--fs-hero` | `clamp(1.875rem,7.8vw,7rem)` |
-| `--fs-tagline` | `clamp(1.25rem,.69rem + 2.29vw,2.75rem)` |
+## Overview & Design Identity
+- **Target**: `www-memedia-de` (**Webdesign München für nachhaltig denkende Unternehmer**)
+- **Production URL**: [https://www.memedia.de](https://www.memedia.de)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#1a1a1a` canvas, `#ffffff` ink, `#b4b4b3` accent)
+- **Summary**: Die Web-Experten für nachhaltig denkende Unternehmer: Strategie, Konzeption, Design und Umsetzung aus München. Websites, die Anfragen bri...
+- **Total Clean CSS Variables Extracted**: `62` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Poppins Fallback`
+- **Body Font Stack**: `Poppins`
+- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--fs-body)`, `var(--fs-label)`, `var(--fs-h2)`, `var(--fs-h2-s)`, `var(--fs-lead)`)
+- **Section Heading (`H2`)**: CSS variables `--fs-h2: clamp(2rem,1.6rem + 1.556vw,3rem)`, `--fs-h2-s: clamp(1.625rem,1.3rem + 1vw,2.25rem)`; rule `h2` (`font-size: 1rem`, `font-weight: 600`)
+- **Body Copy**: CSS variables `--fs-body: clamp(1.0625rem,1rem + .15vw,1.125rem)`; rule `p` (`font-size: var(--fs-body)`, `line-height: 1.6`)
+- **Metadata & Labels**: CSS variables `--label-on-dark: #9a9a99`, `--fs-small: .9375rem`, `--fs-label: .8125rem`; rule `.meta` (`font-size: var(--fs-small)`)
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `-` | `nav-main` |
-| `<nav>` | `nav-mobile` | `nav-mobile` |
-| `<nav>` | `-` | `` |
-| `<nav>` | `-` | `` |
-| `<nav>` | `-` | `` |
-| `<header>` | `-` | `site-header` |
-| `<aside>` | `-` | `wp-block-group cta-box hm-footer-cta` |
-| `<main>` | `inhalt` | `wp-block-group site-main` |
-| `<footer>` | `-` | `gr-foot` |
-| `<footer>` | `-` | `gr-foot` |
-| `<footer>` | `-` | `gr-foot` |
-| `<footer>` | `-` | `gr-foot` |
-| `<footer>` | `-` | `gr-foot` |
-| `<footer>` | `-` | `site-footer dark aura-dark` |
+| **Primary Canvas Substrate** | `#1a1a1a` | `var(--ink)` in `:root` |
+| **Primary Typography Ink** | `#666665` | `var(--ink-muted)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--ink-inverse)` in `:root` |
+| **Interactive Accent / Highlight** | `#b4b4b3` | `var(--muted-on-dark)` in `:root` |
+| **Secondary / Muted Copy** | `#9a9a99` | `var(--label-on-dark)` in `:root` |
+| **Structural Hairline Border** | `#d8d8d6` | `var(--line)` in `:root` |
+| **Variable Token (`--line-soft`)** | `#ececea` | `var(--line-soft)` in `:root` |
+| **Variable Token (`--line-dark`)** | `#414140` | `var(--line-dark)` in `:root` |
+| **Variable Token (`--surface-2`)** | `#f4f4f2` | `var(--surface-2)` in `:root` |
+| **Variable Token (`--surface-3`)** | `#eaeae8` | `var(--surface-3)` in `:root` |
+| **Variable Token (`--brand`)** | `#f03714` | `var(--brand)` in `:root` |
+| **Variable Token (`--cta`)** | `#e0320f` | `var(--cta)` in `:root` |
+| **Variable Token (`--brand-text`)** | `#c42a0c` | `var(--brand-text)` in `:root` |
+| **Variable Token (`--coral`)** | `#ff9d80` | `var(--coral)` in `:root` |
+| **Variable Token (`--lime`)** | `#e6f84a` | `var(--lime)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--ink` | `#1a1a1a` | Typography Ink Token |
+| `--ink-muted` | `#666665` | Typography Ink Token |
+| `--ink-inverse` | `#ffffff` | Typography Ink Token |
+| `--muted-on-dark` | `#b4b4b3` | Canvas / Surface Token |
+| `--label-on-dark` | `#9a9a99` | Canvas / Surface Token |
+| `--line` | `#d8d8d6` | Color / Atmospheric Token |
+| `--line-soft` | `#ececea` | Color / Atmospheric Token |
+| `--line-dark` | `#414140` | Canvas / Surface Token |
+| `--surface` | `#ffffff` | Canvas / Surface Token |
+| `--surface-2` | `#f4f4f2` | Canvas / Surface Token |
+| `--surface-3` | `#eaeae8` | Canvas / Surface Token |
+| `--brand` | `#f03714` | Brand / Palette Token |
+| `--cta` | `#e0320f` | Brand / Palette Token |
+| `--brand-text` | `#c42a0c` | Typography Ink Token |
+| `--coral` | `#ff9d80` | Color / Atmospheric Token |
+| `--lime` | `#e6f84a` | Color / Atmospheric Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.site-header> — `www-memedia-de`)**:
+   - Landmark `<header class="site-header">` hosting `Webdesign München für nachhaltig den` navigation (`Alle Leistungen · Konzeption & UX · Design · Umsetzung · Betreuung & Support`), DOM attributes (`data-bereich="/leistungen/"`, `data-bereich="/technologien/"`, `data-bereich="/produkte/ /web-check..."`, `data-bereich="/referenzen/"`), and stylesheet rule `after { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.wp-block-group> — `Die Web-Experten für nachhaltig de`)**:
+   - Landmark `<section class="wp-block-group hero">` presenting display lead `Die Web-Experten für nachhaltig denkende Unterneh...` and copy excerpt *"Zum Inhalt springen"* over `#1a1a1a` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.wp-block-group> — `Was willst du eigentlich? Eine sch`)**:
+   - Landmark `<section class="wp-block-group intro">` rendering section `Was willst du eigentlich? Eine schöne Website?` with copy *"Leistungen Alle Leistungen Strategie & Positionierung Konzeption "*, asset references (`poppins-latin-600-normal.woff2`, `poppins-latin-500-normal.woff2`, `favicon.svg`, `apple-touch-icon.png`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smoo... }`.
+4. **Interactive Detail & Feature Matrix (<section.wp-block-group> — `Du willst eine hübsche Website?`)**:
+   - Landmark `<section class="wp-block-group section">` framing `Du willst eine hübsche Website?` and `Du willst eine technisch optimierte Website?` (*"Strategie & Positionierung"*) with `#ffffff` surface cards, `#b4b4b3` accents, and `video { display:block;max-width:100% }`.
+5. **Colophon & Global Directory Footer (<footer.gr-foot> — `https://www.memedia.de`)**:
+   - Landmark `<footer class="gr-foot">` anchoring `Webdesign München für nachhaltig` footer links (`Alle Leistungen · Konzeption & UX · Design · Umsetzung · Betreuung & Support`), copy *"Betreuung & Support"*, and `#d8d8d6` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: about-centra-com"
 date: 2026-11-14
-target: "[[overview|about-centra-com]]"
+target: "about-centra-com"
 ---
 
 # Discovered APIs & Protocols: about-centra-com

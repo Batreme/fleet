@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: about-centra-com"
 date: 2026-11-14
-target: "[[overview|about-centra-com]]"
+target: "about-centra-com"
 ---
 
 # Data Models & Client Storage: about-centra-com

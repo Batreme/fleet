@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: myfrida-com"
 date: 2026-11-14
-target: "[[overview|myfrida-com]]"
+target: "myfrida-com"
 ---
 
 # Discovered APIs & Protocols: myfrida-com

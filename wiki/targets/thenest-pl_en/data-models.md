@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thenest-pl_en"
 date: 2026-11-14
-target: "[[overview|thenest-pl_en]]"
+target: "thenest-pl_en"
 ---
 
 # Data Models & Client Storage: thenest-pl_en

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-amberjs-dev"
 date: 2026-11-14
-target: "[[overview|www-amberjs-dev]]"
+target: "www-amberjs-dev"
 ---
 
 # Data Models & Client Storage: www-amberjs-dev

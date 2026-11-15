@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: iroom-devinthehood-com"
 date: 2026-11-14
-target: "[[overview|iroom-devinthehood-com]]"
+target: "iroom-devinthehood-com"
 ---
 
 # De-obfuscated Source Maps: iroom-devinthehood-com

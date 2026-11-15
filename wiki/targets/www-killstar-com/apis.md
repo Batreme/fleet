@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-killstar-com"
 date: 2026-11-14
-target: "[[overview|www-killstar-com]]"
+target: "www-killstar-com"
 ---
 
 # Discovered APIs & Protocols: www-killstar-com

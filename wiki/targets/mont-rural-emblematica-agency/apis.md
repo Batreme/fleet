@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mont-rural-emblematica-agency"
 date: 2026-11-14
-target: "[[overview|mont-rural-emblematica-agency]]"
+target: "mont-rural-emblematica-agency"
 ---
 
 # Discovered APIs & Protocols: mont-rural-emblematica-agency

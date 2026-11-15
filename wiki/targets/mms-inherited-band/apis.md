@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mms-inherited-band"
 date: 2026-11-14
-target: "[[overview|mms-inherited-band]]"
+target: "mms-inherited-band"
 ---
 
 # Discovered APIs & Protocols: mms-inherited-band

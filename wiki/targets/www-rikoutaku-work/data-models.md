@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-rikoutaku-work"
 date: 2026-11-14
-target: "[[overview|www-rikoutaku-work]]"
+target: "www-rikoutaku-work"
 ---
 
 # Data Models & Client Storage: www-rikoutaku-work

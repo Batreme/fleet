@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: clubcharlestown-com-au"
 date: 2026-11-14
-target: "[[overview|clubcharlestown-com-au]]"
+target: "clubcharlestown-com-au"
 ---
 
 # Discovered APIs & Protocols: clubcharlestown-com-au

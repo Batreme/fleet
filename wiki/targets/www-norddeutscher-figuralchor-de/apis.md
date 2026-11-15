@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-norddeutscher-figuralchor-de"
 date: 2026-11-14
-target: "[[overview|www-norddeutscher-figuralchor-de]]"
+target: "www-norddeutscher-figuralchor-de"
 ---
 
 # Discovered APIs & Protocols: www-norddeutscher-figuralchor-de

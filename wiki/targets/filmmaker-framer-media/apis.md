@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: filmmaker-framer-media"
 date: 2026-11-14
-target: "[[overview|filmmaker-framer-media]]"
+target: "filmmaker-framer-media"
 ---
 
 # Discovered APIs & Protocols: filmmaker-framer-media

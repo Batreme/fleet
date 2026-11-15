@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tridentstars-maserati-com_en"
 date: 2026-11-14
-target: "[[overview|tridentstars-maserati-com_en]]"
+target: "tridentstars-maserati-com_en"
 ---
 
 # De-obfuscated Source Maps: tridentstars-maserati-com_en

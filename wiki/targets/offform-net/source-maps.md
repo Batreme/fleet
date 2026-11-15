@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: offform-net"
 date: 2026-11-14
-target: "[[overview|offform-net]]"
+target: "offform-net"
 ---
 
 # De-obfuscated Source Maps: offform-net

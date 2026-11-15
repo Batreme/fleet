@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: offpossible-com"
 date: 2026-11-14
-target: "[[overview|offpossible-com]]"
+target: "offpossible-com"
 ---
 
 # Discovered APIs & Protocols: offpossible-com

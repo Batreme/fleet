@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: henwoodcourt-co-uk"
 date: 2026-11-14
-target: "[[overview|henwoodcourt-co-uk]]"
+target: "henwoodcourt-co-uk"
 ---
 
 # Discovered APIs & Protocols: henwoodcourt-co-uk

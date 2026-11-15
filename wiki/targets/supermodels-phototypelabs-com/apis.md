@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: supermodels-phototypelabs-com"
 date: 2026-11-14
-target: "[[overview|supermodels-phototypelabs-com]]"
+target: "supermodels-phototypelabs-com"
 ---
 
 # Discovered APIs & Protocols: supermodels-phototypelabs-com

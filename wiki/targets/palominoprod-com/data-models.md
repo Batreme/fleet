@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: palominoprod-com"
 date: 2026-11-14
-target: "[[overview|palominoprod-com]]"
+target: "palominoprod-com"
 ---
 
 # Data Models & Client Storage: palominoprod-com

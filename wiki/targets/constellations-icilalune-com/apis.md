@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: constellations-icilalune-com"
 date: 2026-11-14
-target: "[[overview|constellations-icilalune-com]]"
+target: "constellations-icilalune-com"
 ---
 
 # Discovered APIs & Protocols: constellations-icilalune-com

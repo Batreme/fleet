@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: vastworld-ai"
 date: 2026-11-14
-target: "[[overview|vastworld-ai]]"
+target: "vastworld-ai"
 ---
 
 # Discovered APIs & Protocols: vastworld-ai

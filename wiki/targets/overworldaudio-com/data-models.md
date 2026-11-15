@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: overworldaudio-com"
 date: 2026-11-14
-target: "[[overview|overworldaudio-com]]"
+target: "overworldaudio-com"
 ---
 
 # Data Models & Client Storage: overworldaudio-com

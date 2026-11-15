@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: vc-prty-jp"
 date: 2026-11-14
-target: "[[overview|vc-prty-jp]]"
+target: "vc-prty-jp"
 ---
 
 # Data Models & Client Storage: vc-prty-jp

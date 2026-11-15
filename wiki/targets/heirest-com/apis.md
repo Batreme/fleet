@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: heirest-com"
 date: 2026-11-14
-target: "[[overview|heirest-com]]"
+target: "heirest-com"
 ---
 
 # Discovered APIs & Protocols: heirest-com

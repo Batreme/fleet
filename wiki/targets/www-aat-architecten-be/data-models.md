@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-aat-architecten-be"
 date: 2026-11-14
-target: "[[overview|www-aat-architecten-be]]"
+target: "www-aat-architecten-be"
 ---
 
 # Data Models & Client Storage: www-aat-architecten-be

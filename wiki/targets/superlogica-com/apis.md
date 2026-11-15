@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: superlogica-com"
 date: 2026-11-14
-target: "[[overview|superlogica-com]]"
+target: "superlogica-com"
 ---
 
 # Discovered APIs & Protocols: superlogica-com

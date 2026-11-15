@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: wild-ag-ch"
 date: 2026-11-14
-target: "[[overview|wild-ag-ch]]"
+target: "wild-ag-ch"
 ---
 
 # Data Models & Client Storage: wild-ag-ch

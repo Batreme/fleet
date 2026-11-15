@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: loopsii-com"
 date: 2026-11-14
-target: "[[overview|loopsii-com]]"
+target: "loopsii-com"
 ---
 
 # Discovered APIs & Protocols: loopsii-com

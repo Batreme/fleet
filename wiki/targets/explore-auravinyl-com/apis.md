@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: explore-auravinyl-com"
 date: 2026-11-14
-target: "[[overview|explore-auravinyl-com]]"
+target: "explore-auravinyl-com"
 ---
 
 # Discovered APIs & Protocols: explore-auravinyl-com

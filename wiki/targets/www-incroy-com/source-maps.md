@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-incroy-com"
 date: 2026-11-14
-target: "[[overview|www-incroy-com]]"
+target: "www-incroy-com"
 ---
 
 # De-obfuscated Source Maps: www-incroy-com

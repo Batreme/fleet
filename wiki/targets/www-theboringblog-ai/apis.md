@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-theboringblog-ai"
 date: 2026-11-14
-target: "[[overview|www-theboringblog-ai]]"
+target: "www-theboringblog-ai"
 ---
 
 # Discovered APIs & Protocols: www-theboringblog-ai

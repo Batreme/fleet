@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lorenzolottici-it_en"
 date: 2026-11-14
-target: "[[overview|lorenzolottici-it_en]]"
+target: "lorenzolottici-it_en"
 ---
 
 # Data Models & Client Storage: lorenzolottici-it_en

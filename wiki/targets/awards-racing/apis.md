@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: awards-racing"
 date: 2026-11-14
-target: "[[overview|awards-racing]]"
+target: "awards-racing"
 ---
 
 # Discovered APIs & Protocols: awards-racing

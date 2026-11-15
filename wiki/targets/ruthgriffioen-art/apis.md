@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ruthgriffioen-art"
 date: 2026-11-14
-target: "[[overview|ruthgriffioen-art]]"
+target: "ruthgriffioen-art"
 ---
 
 # Discovered APIs & Protocols: ruthgriffioen-art

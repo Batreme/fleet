@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: offpossible-com"
 date: 2026-11-14
-target: "[[overview|offpossible-com]]"
+target: "offpossible-com"
 ---
 
 # Data Models & Client Storage: offpossible-com

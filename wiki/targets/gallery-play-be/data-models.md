@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: gallery-play-be"
 date: 2026-10-31
-target: "[[overview|gallery-play-be]]"
+target: "gallery-play-be"
 ---
 
 # Data Models & Client Storage: gallery-play-be

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-fragment-im"
 date: 2026-11-14
-target: "[[overview|www-fragment-im]]"
+target: "www-fragment-im"
 ---
 
 # Discovered APIs & Protocols: www-fragment-im

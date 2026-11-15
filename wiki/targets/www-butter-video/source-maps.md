@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-butter-video"
 date: 2026-11-14
-target: "[[overview|www-butter-video]]"
+target: "www-butter-video"
 ---
 
 # De-obfuscated Source Maps: www-butter-video

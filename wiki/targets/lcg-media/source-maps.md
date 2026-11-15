@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lcg-media"
 date: 2026-11-14
-target: "[[overview|lcg-media]]"
+target: "lcg-media"
 ---
 
 # De-obfuscated Source Maps: lcg-media

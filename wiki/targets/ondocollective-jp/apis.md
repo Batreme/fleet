@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ondocollective-jp"
 date: 2026-10-31
-target: "[[overview|ondocollective-jp]]"
+target: "ondocollective-jp"
 ---
 
 # Discovered APIs & Protocols: ondocollective-jp

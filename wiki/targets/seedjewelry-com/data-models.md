@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: seedjewelry-com"
 date: 2026-11-14
-target: "[[overview|seedjewelry-com]]"
+target: "seedjewelry-com"
 ---
 
 # Data Models & Client Storage: seedjewelry-com

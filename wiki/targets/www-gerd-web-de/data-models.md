@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-gerd-web-de"
 date: 2026-11-14
-target: "[[overview|www-gerd-web-de]]"
+target: "www-gerd-web-de"
 ---
 
 # Data Models & Client Storage: www-gerd-web-de

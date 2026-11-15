@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-apc-pallets-nl"
 date: 2026-11-14
-target: "[[overview|www-apc-pallets-nl]]"
+target: "www-apc-pallets-nl"
 ---
 
 # Discovered APIs & Protocols: www-apc-pallets-nl

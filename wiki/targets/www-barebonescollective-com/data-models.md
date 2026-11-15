@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-barebonescollective-com"
 date: 2026-11-14
-target: "[[overview|www-barebonescollective-com]]"
+target: "www-barebonescollective-com"
 ---
 
 # Data Models & Client Storage: www-barebonescollective-com

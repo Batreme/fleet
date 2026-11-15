@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: perappelgren-de"
 date: 2026-10-31
-target: "[[overview|perappelgren-de]]"
+target: "perappelgren-de"
 ---
 
 # Discovered APIs & Protocols: perappelgren-de

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: vastworld-ai"
 date: 2026-11-14
-target: "[[overview|vastworld-ai]]"
+target: "vastworld-ai"
 ---
 
 # De-obfuscated Source Maps: vastworld-ai

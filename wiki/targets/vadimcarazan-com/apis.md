@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: vadimcarazan-com"
 date: 2026-10-31
-target: "[[overview|vadimcarazan-com]]"
+target: "vadimcarazan-com"
 ---
 
 # Discovered APIs & Protocols: vadimcarazan-com

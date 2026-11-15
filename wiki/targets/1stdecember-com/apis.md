@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: 1stdecember-com"
 date: 2026-11-14
-target: "[[overview|1stdecember-com]]"
+target: "1stdecember-com"
 ---
 
 # Discovered APIs & Protocols: 1stdecember-com

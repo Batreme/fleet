@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ieqtechnology-com"
 date: 2026-11-14
-target: "[[overview|ieqtechnology-com]]"
+target: "ieqtechnology-com"
 ---
 
 # De-obfuscated Source Maps: ieqtechnology-com

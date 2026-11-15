@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: stateofaidesign-com"
 date: 2026-11-14
-target: "[[overview|stateofaidesign-com]]"
+target: "stateofaidesign-com"
 ---
 
 # De-obfuscated Source Maps: stateofaidesign-com

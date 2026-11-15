@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lajoya-foods-com_en"
 date: 2026-11-14
-target: "[[overview|lajoya-foods-com_en]]"
+target: "lajoya-foods-com_en"
 ---
 
 # De-obfuscated Source Maps: lajoya-foods-com_en

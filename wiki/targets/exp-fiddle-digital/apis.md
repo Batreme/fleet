@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: exp-fiddle-digital"
 date: 2026-11-14
-target: "[[overview|exp-fiddle-digital]]"
+target: "exp-fiddle-digital"
 ---
 
 # Discovered APIs & Protocols: exp-fiddle-digital

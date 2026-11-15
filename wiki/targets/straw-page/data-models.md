@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: straw-page"
 date: 2026-11-14
-target: "[[overview|straw-page]]"
+target: "straw-page"
 ---
 
 # Data Models & Client Storage: straw-page

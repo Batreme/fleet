@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-codeofsagar-in"
 date: 2026-11-14
-target: "[[overview|www-codeofsagar-in]]"
+target: "www-codeofsagar-in"
 ---
 
 # Discovered APIs & Protocols: www-codeofsagar-in

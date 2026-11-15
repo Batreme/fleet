@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: johnhardy-com_collections-billie-eilish-and-finneas"
 date: 2026-11-14
-target: "[[overview|johnhardy-com_collections-billie-eilish-and-finneas]]"
+target: "johnhardy-com_collections-billie-eilish-and-finneas"
 ---
 
 # De-obfuscated Source Maps: johnhardy-com_collections-billie-eilish-and-finneas

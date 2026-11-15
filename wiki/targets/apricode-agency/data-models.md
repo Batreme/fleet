@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: apricode-agency"
 date: 2026-11-14
-target: "[[overview|apricode-agency]]"
+target: "apricode-agency"
 ---
 
 # Data Models & Client Storage: apricode-agency

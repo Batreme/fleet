@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: example-app"
-date: 2026-10-31
-target: "[[overview|example-app]]"
+title: "UI & UX Architecture: example-app"
+status: blocked
+block_reason: "Placeholder Example Domain capture (0 production stylesheets)"
 ---
 
-# UI Architecture & Design Tokens: example-app
+# UI & UX Architecture: example-app (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://example.com](https://example.com)  
+> **Block / Unreachable Reason**: Placeholder Example Domain capture (0 production stylesheets)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `raw/example-app/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

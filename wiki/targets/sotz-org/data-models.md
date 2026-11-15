@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sotz-org"
 date: 2026-11-14
-target: "[[overview|sotz-org]]"
+target: "sotz-org"
 ---
 
 # Data Models & Client Storage: sotz-org

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: manifesto-blandina-org"
 date: 2026-11-14
-target: "[[overview|manifesto-blandina-org]]"
+target: "manifesto-blandina-org"
 ---
 
 # Discovered APIs & Protocols: manifesto-blandina-org

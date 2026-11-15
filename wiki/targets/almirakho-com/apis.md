@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: almirakho-com"
 date: 2026-10-31
-target: "[[overview|almirakho-com]]"
+target: "almirakho-com"
 ---
 
 # Discovered APIs & Protocols: almirakho-com

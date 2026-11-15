@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-seasats-com"
 date: 2026-11-14
-target: "[[overview|www-seasats-com]]"
+target: "www-seasats-com"
 ---
 
 # De-obfuscated Source Maps: www-seasats-com

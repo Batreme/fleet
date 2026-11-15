@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-1centre-com"
 date: 2026-11-14
-target: "[[overview|www-1centre-com]]"
+target: "www-1centre-com"
 ---
 
 # Discovered APIs & Protocols: www-1centre-com

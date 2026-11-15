@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ofrenda-davidlangarica-dev"
 date: 2026-11-14
-target: "[[overview|ofrenda-davidlangarica-dev]]"
+target: "ofrenda-davidlangarica-dev"
 ---
 
 # Data Models & Client Storage: ofrenda-davidlangarica-dev

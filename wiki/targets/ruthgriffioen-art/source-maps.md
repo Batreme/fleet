@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ruthgriffioen-art"
 date: 2026-11-14
-target: "[[overview|ruthgriffioen-art]]"
+target: "ruthgriffioen-art"
 ---
 
 # De-obfuscated Source Maps: ruthgriffioen-art

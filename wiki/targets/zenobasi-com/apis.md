@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: zenobasi-com"
 date: 2026-11-14
-target: "[[overview|zenobasi-com]]"
+target: "zenobasi-com"
 ---
 
 # Discovered APIs & Protocols: zenobasi-com

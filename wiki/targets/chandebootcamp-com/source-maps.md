@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: chandebootcamp-com"
 date: 2026-11-14
-target: "[[overview|chandebootcamp-com]]"
+target: "chandebootcamp-com"
 ---
 
 # De-obfuscated Source Maps: chandebootcamp-com

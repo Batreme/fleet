@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: clinia-com"
 date: 2026-11-14
-target: "[[overview|clinia-com]]"
+target: "clinia-com"
 ---
 
 # Discovered APIs & Protocols: clinia-com

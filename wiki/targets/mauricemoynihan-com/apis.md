@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mauricemoynihan-com"
 date: 2026-11-14
-target: "[[overview|mauricemoynihan-com]]"
+target: "mauricemoynihan-com"
 ---
 
 # Discovered APIs & Protocols: mauricemoynihan-com

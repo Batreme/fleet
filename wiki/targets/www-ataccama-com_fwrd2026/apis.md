@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-ataccama-com_fwrd2026"
 date: 2026-11-14
-target: "[[overview|www-ataccama-com_fwrd2026]]"
+target: "www-ataccama-com_fwrd2026"
 ---
 
 # Discovered APIs & Protocols: www-ataccama-com_fwrd2026

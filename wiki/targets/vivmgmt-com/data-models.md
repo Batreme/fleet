@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: vivmgmt-com"
 date: 2026-11-14
-target: "[[overview|vivmgmt-com]]"
+target: "vivmgmt-com"
 ---
 
 # Data Models & Client Storage: vivmgmt-com

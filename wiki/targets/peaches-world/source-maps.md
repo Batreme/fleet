@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: peaches-world"
 date: 2026-10-31
-target: "[[overview|peaches-world]]"
+target: "peaches-world"
 ---
 
 # De-obfuscated Source Maps: peaches-world

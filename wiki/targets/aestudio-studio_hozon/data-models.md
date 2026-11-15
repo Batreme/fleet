@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aestudio-studio_hozon"
 date: 2026-11-14
-target: "[[overview|aestudio-studio_hozon]]"
+target: "aestudio-studio_hozon"
 ---
 
 # Data Models & Client Storage: aestudio-studio_hozon

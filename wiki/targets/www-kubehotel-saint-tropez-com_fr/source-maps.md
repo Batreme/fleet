@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-kubehotel-saint-tropez-com_fr"
 date: 2026-11-14
-target: "[[overview|www-kubehotel-saint-tropez-com_fr]]"
+target: "www-kubehotel-saint-tropez-com_fr"
 ---
 
 # De-obfuscated Source Maps: www-kubehotel-saint-tropez-com_fr

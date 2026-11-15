@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: noravale-framer-website"
 date: 2026-11-14
-target: "[[overview|noravale-framer-website]]"
+target: "noravale-framer-website"
 ---
 
 # Data Models & Client Storage: noravale-framer-website

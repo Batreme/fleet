@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-tedxportland-com"
 date: 2026-11-14
-target: "[[overview|www-tedxportland-com]]"
+target: "www-tedxportland-com"
 ---
 
 # Data Models & Client Storage: www-tedxportland-com

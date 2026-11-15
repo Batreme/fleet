@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-serko-ai"
 date: 2026-11-14
-target: "[[overview|www-serko-ai]]"
+target: "www-serko-ai"
 ---
 
 # Data Models & Client Storage: www-serko-ai

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: gpg-dops-agency"
 date: 2026-11-14
-target: "[[overview|gpg-dops-agency]]"
+target: "gpg-dops-agency"
 ---
 
 # Discovered APIs & Protocols: gpg-dops-agency

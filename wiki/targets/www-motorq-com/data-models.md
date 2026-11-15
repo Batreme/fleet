@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-motorq-com"
 date: 2026-11-14
-target: "[[overview|www-motorq-com]]"
+target: "www-motorq-com"
 ---
 
 # Data Models & Client Storage: www-motorq-com

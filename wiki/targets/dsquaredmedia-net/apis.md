@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dsquaredmedia-net"
 date: 2026-11-14
-target: "[[overview|dsquaredmedia-net]]"
+target: "dsquaredmedia-net"
 ---
 
 # Discovered APIs & Protocols: dsquaredmedia-net

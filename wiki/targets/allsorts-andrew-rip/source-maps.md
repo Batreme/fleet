@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: allsorts-andrew-rip"
 date: 2026-11-14
-target: "[[overview|allsorts-andrew-rip]]"
+target: "allsorts-andrew-rip"
 ---
 
 # De-obfuscated Source Maps: allsorts-andrew-rip

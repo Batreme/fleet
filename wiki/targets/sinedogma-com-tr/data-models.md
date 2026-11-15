@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sinedogma-com-tr"
 date: 2026-11-14
-target: "[[overview|sinedogma-com-tr]]"
+target: "sinedogma-com-tr"
 ---
 
 # Data Models & Client Storage: sinedogma-com-tr

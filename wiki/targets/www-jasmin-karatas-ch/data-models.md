@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-jasmin-karatas-ch"
 date: 2026-11-14
-target: "[[overview|www-jasmin-karatas-ch]]"
+target: "www-jasmin-karatas-ch"
 ---
 
 # Data Models & Client Storage: www-jasmin-karatas-ch

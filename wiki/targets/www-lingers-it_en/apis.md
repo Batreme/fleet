@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-lingers-it_en"
 date: 2026-11-14
-target: "[[overview|www-lingers-it_en]]"
+target: "www-lingers-it_en"
 ---
 
 # Discovered APIs & Protocols: www-lingers-it_en

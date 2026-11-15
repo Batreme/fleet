@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-leadoff-fr"
 date: 2026-11-14
-target: "[[overview|www-leadoff-fr]]"
+target: "www-leadoff-fr"
 ---
 
 # Data Models & Client Storage: www-leadoff-fr

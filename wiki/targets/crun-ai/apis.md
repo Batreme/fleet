@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: crun-ai"
 date: 2026-11-14
-target: "[[overview|crun-ai]]"
+target: "crun-ai"
 ---
 
 # Discovered APIs & Protocols: crun-ai

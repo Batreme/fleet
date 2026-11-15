@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tridentstars-maserati-com_en"
 date: 2026-11-14
-target: "[[overview|tridentstars-maserati-com_en]]"
+target: "tridentstars-maserati-com_en"
 ---
 
 # Discovered APIs & Protocols: tridentstars-maserati-com_en

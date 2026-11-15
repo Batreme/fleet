@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: clinia-com"
 date: 2026-11-14
-target: "[[overview|clinia-com]]"
+target: "clinia-com"
 ---
 
 # Data Models & Client Storage: clinia-com

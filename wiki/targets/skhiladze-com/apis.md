@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: skhiladze-com"
 date: 2026-11-14
-target: "[[overview|skhiladze-com]]"
+target: "skhiladze-com"
 ---
 
 # Discovered APIs & Protocols: skhiladze-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: christoph-nagel-dev"
 date: 2026-10-31
-target: "[[overview|christoph-nagel-dev]]"
+target: "christoph-nagel-dev"
 ---
 
 # Data Models & Client Storage: christoph-nagel-dev

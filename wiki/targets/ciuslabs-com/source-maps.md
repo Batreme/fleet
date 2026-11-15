@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ciuslabs-com"
 date: 2026-11-14
-target: "[[overview|ciuslabs-com]]"
+target: "ciuslabs-com"
 ---
 
 # De-obfuscated Source Maps: ciuslabs-com

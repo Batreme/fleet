@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-lapl-org"
 date: 2026-11-14
-target: "[[overview|www-lapl-org]]"
+target: "www-lapl-org"
 ---
 
 # Discovered APIs & Protocols: www-lapl-org

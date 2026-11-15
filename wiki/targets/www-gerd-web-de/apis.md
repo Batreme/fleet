@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-gerd-web-de"
 date: 2026-11-14
-target: "[[overview|www-gerd-web-de]]"
+target: "www-gerd-web-de"
 ---
 
 # Discovered APIs & Protocols: www-gerd-web-de

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: errormade-tech"
 date: 2026-11-14
-target: "[[overview|errormade-tech]]"
+target: "errormade-tech"
 ---
 
 # Discovered APIs & Protocols: errormade-tech

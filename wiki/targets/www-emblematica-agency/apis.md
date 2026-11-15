@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-emblematica-agency"
 date: 2026-11-14
-target: "[[overview|www-emblematica-agency]]"
+target: "www-emblematica-agency"
 ---
 
 # Discovered APIs & Protocols: www-emblematica-agency

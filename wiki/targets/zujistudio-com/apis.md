@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: zujistudio-com"
 date: 2026-11-14
-target: "[[overview|zujistudio-com]]"
+target: "zujistudio-com"
 ---
 
 # Discovered APIs & Protocols: zujistudio-com

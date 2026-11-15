@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-worksruthi-com"
 date: 2026-11-14
-target: "[[overview|www-worksruthi-com]]"
+target: "www-worksruthi-com"
 ---
 
 # Discovered APIs & Protocols: www-worksruthi-com

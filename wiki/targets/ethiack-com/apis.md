@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ethiack-com"
 date: 2026-11-14
-target: "[[overview|ethiack-com]]"
+target: "ethiack-com"
 ---
 
 # Discovered APIs & Protocols: ethiack-com

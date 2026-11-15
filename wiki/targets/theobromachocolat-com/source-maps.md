@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: theobromachocolat-com"
 date: 2026-11-14
-target: "[[overview|theobromachocolat-com]]"
+target: "theobromachocolat-com"
 ---
 
 # De-obfuscated Source Maps: theobromachocolat-com

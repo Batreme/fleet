@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: jimo-ai_product-ai"
 date: 2026-11-14
-target: "[[overview|jimo-ai_product-ai]]"
+target: "jimo-ai_product-ai"
 ---
 
 # De-obfuscated Source Maps: jimo-ai_product-ai

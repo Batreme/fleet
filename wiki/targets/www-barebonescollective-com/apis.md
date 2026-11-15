@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-barebonescollective-com"
 date: 2026-11-14
-target: "[[overview|www-barebonescollective-com]]"
+target: "www-barebonescollective-com"
 ---
 
 # Discovered APIs & Protocols: www-barebonescollective-com

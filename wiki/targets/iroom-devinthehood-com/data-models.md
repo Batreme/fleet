@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: iroom-devinthehood-com"
 date: 2026-11-14
-target: "[[overview|iroom-devinthehood-com]]"
+target: "iroom-devinthehood-com"
 ---
 
 # Data Models & Client Storage: iroom-devinthehood-com

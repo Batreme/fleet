@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-spectup-com"
 date: 2026-11-14
-target: "[[overview|www-spectup-com]]"
+target: "www-spectup-com"
 ---
 
 # Discovered APIs & Protocols: www-spectup-com

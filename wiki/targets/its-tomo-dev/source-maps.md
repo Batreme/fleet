@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: its-tomo-dev"
 date: 2026-11-14
-target: "[[overview|its-tomo-dev]]"
+target: "its-tomo-dev"
 ---
 
 # De-obfuscated Source Maps: its-tomo-dev

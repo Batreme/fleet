@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: xavierjoliot-com"
 date: 2026-11-14
-target: "[[overview|xavierjoliot-com]]"
+target: "xavierjoliot-com"
 ---
 
 # Data Models & Client Storage: xavierjoliot-com

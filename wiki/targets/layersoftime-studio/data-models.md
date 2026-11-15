@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: layersoftime-studio"
 date: 2026-11-14
-target: "[[overview|layersoftime-studio]]"
+target: "layersoftime-studio"
 ---
 
 # Data Models & Client Storage: layersoftime-studio

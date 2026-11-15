@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: north-cloud"
 date: 2026-11-14
-target: "[[overview|north-cloud]]"
+target: "north-cloud"
 ---
 
 # Discovered APIs & Protocols: north-cloud

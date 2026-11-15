@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest"
 date: 2026-11-14
-target: "[[overview|templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest]]"
+target: "templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest"
 ---
 
 # Data Models & Client Storage: templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest

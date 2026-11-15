@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: bluntumbrellas-com"
 date: 2026-11-14
-target: "[[overview|bluntumbrellas-com]]"
+target: "bluntumbrellas-com"
 ---
 
 # Data Models & Client Storage: bluntumbrellas-com

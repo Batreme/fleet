@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-huxleysaga-com"
 date: 2026-11-14
-target: "[[overview|www-huxleysaga-com]]"
+target: "www-huxleysaga-com"
 ---
 
 # De-obfuscated Source Maps: www-huxleysaga-com

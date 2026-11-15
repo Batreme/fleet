@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: aryabhangybuilders-com"
 date: 2026-11-14
-target: "[[overview|aryabhangybuilders-com]]"
+target: "aryabhangybuilders-com"
 ---
 
 # De-obfuscated Source Maps: aryabhangybuilders-com

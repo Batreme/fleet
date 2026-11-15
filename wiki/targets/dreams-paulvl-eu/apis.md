@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dreams-paulvl-eu"
 date: 2026-11-14
-target: "[[overview|dreams-paulvl-eu]]"
+target: "dreams-paulvl-eu"
 ---
 
 # Discovered APIs & Protocols: dreams-paulvl-eu

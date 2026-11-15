@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sadok-mx"
 date: 2026-11-14
-target: "[[overview|sadok-mx]]"
+target: "sadok-mx"
 ---
 
 # Discovered APIs & Protocols: sadok-mx

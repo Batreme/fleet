@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: awards-racing"
 date: 2026-11-14
-target: "[[overview|awards-racing]]"
+target: "awards-racing"
 ---
 
 # De-obfuscated Source Maps: awards-racing

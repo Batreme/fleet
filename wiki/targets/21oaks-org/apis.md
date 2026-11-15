@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: 21oaks-org"
 date: 2026-11-14
-target: "[[overview|21oaks-org]]"
+target: "21oaks-org"
 ---
 
 # Discovered APIs & Protocols: 21oaks-org

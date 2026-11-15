@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kohenavocats-com_avocats-droit-famille-paris"
 date: 2026-11-14
-target: "[[overview|kohenavocats-com_avocats-droit-famille-paris]]"
+target: "kohenavocats-com_avocats-droit-famille-paris"
 ---
 
 # Data Models & Client Storage: kohenavocats-com_avocats-droit-famille-paris

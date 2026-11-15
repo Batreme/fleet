@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mubien-com"
 date: 2026-11-14
-target: "[[overview|mubien-com]]"
+target: "mubien-com"
 ---
 
 # Data Models & Client Storage: mubien-com

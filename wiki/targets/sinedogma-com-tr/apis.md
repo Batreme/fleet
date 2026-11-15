@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sinedogma-com-tr"
 date: 2026-11-14
-target: "[[overview|sinedogma-com-tr]]"
+target: "sinedogma-com-tr"
 ---
 
 # Discovered APIs & Protocols: sinedogma-com-tr

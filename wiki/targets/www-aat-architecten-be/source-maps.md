@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-aat-architecten-be"
 date: 2026-11-14
-target: "[[overview|www-aat-architecten-be]]"
+target: "www-aat-architecten-be"
 ---
 
 # De-obfuscated Source Maps: www-aat-architecten-be

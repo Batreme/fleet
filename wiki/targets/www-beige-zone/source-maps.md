@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-beige-zone"
 date: 2026-11-14
-target: "[[overview|www-beige-zone]]"
+target: "www-beige-zone"
 ---
 
 # De-obfuscated Source Maps: www-beige-zone

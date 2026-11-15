@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-stellarmanagement-com"
 date: 2026-11-14
-target: "[[overview|www-stellarmanagement-com]]"
+target: "www-stellarmanagement-com"
 ---
 
 # Data Models & Client Storage: www-stellarmanagement-com

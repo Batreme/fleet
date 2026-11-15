@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: v4vevilos-gr"
 date: 2026-11-14
-target: "[[overview|v4vevilos-gr]]"
+target: "v4vevilos-gr"
 ---
 
 # Discovered APIs & Protocols: v4vevilos-gr

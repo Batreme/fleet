@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: magicshot-ai"
 date: 2026-11-14
-target: "[[overview|magicshot-ai]]"
+target: "magicshot-ai"
 ---
 
 # Data Models & Client Storage: magicshot-ai

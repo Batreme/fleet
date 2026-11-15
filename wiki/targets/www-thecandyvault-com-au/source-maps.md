@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-thecandyvault-com-au"
 date: 2026-11-14
-target: "[[overview|www-thecandyvault-com-au]]"
+target: "www-thecandyvault-com-au"
 ---
 
 # De-obfuscated Source Maps: www-thecandyvault-com-au

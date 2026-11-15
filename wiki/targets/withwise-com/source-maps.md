@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: withwise-com"
 date: 2026-11-14
-target: "[[overview|withwise-com]]"
+target: "withwise-com"
 ---
 
 # De-obfuscated Source Maps: withwise-com

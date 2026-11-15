@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-aaronbrimhall-com"
 date: 2026-10-31
-target: "[[overview|www-aaronbrimhall-com]]"
+target: "www-aaronbrimhall-com"
 ---
 
 # De-obfuscated Source Maps: www-aaronbrimhall-com

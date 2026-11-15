@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: anemone-mina-massoud-com"
 date: 2026-11-14
-target: "[[overview|anemone-mina-massoud-com]]"
+target: "anemone-mina-massoud-com"
 ---
 
 # De-obfuscated Source Maps: anemone-mina-massoud-com

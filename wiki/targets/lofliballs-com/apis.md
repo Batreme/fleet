@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lofliballs-com"
 date: 2026-11-14
-target: "[[overview|lofliballs-com]]"
+target: "lofliballs-com"
 ---
 
 # Discovered APIs & Protocols: lofliballs-com

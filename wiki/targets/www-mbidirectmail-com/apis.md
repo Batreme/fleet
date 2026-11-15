@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-mbidirectmail-com"
 date: 2026-11-14
-target: "[[overview|www-mbidirectmail-com]]"
+target: "www-mbidirectmail-com"
 ---
 
 # Discovered APIs & Protocols: www-mbidirectmail-com

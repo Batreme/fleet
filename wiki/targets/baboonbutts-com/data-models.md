@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: baboonbutts-com"
 date: 2026-11-14
-target: "[[overview|baboonbutts-com]]"
+target: "baboonbutts-com"
 ---
 
 # Data Models & Client Storage: baboonbutts-com

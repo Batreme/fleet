@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-ouiwill-com"
 date: 2026-11-14
-target: "[[overview|www-ouiwill-com]]"
+target: "www-ouiwill-com"
 ---
 
 # De-obfuscated Source Maps: www-ouiwill-com

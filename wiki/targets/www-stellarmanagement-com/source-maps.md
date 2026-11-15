@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-stellarmanagement-com"
 date: 2026-11-14
-target: "[[overview|www-stellarmanagement-com]]"
+target: "www-stellarmanagement-com"
 ---
 
 # De-obfuscated Source Maps: www-stellarmanagement-com

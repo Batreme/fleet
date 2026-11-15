@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: kindi-land"
 date: 2026-11-14
-target: "[[overview|kindi-land]]"
+target: "kindi-land"
 ---
 
 # De-obfuscated Source Maps: kindi-land

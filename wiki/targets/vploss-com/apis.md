@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: vploss-com"
 date: 2026-11-14
-target: "[[overview|vploss-com]]"
+target: "vploss-com"
 ---
 
 # Discovered APIs & Protocols: vploss-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: namaha-healthcare"
 date: 2026-11-14
-target: "[[overview|namaha-healthcare]]"
+target: "namaha-healthcare"
 ---
 
 # Discovered APIs & Protocols: namaha-healthcare

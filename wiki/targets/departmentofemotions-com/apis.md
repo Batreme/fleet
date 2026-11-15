@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: departmentofemotions-com"
 date: 2026-11-14
-target: "[[overview|departmentofemotions-com]]"
+target: "departmentofemotions-com"
 ---
 
 # Discovered APIs & Protocols: departmentofemotions-com

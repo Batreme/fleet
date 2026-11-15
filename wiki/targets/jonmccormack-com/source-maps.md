@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: jonmccormack-com"
 date: 2026-11-14
-target: "[[overview|jonmccormack-com]]"
+target: "jonmccormack-com"
 ---
 
 # De-obfuscated Source Maps: jonmccormack-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fighterready-com"
 date: 2026-11-14
-target: "[[overview|fighterready-com]]"
+target: "fighterready-com"
 ---
 
 # Discovered APIs & Protocols: fighterready-com

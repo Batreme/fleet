@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: southandstonestudio-com"
 date: 2026-11-14
-target: "[[overview|southandstonestudio-com]]"
+target: "southandstonestudio-com"
 ---
 
 # De-obfuscated Source Maps: southandstonestudio-com

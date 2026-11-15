@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: zujistudio-com"
 date: 2026-11-14
-target: "[[overview|zujistudio-com]]"
+target: "zujistudio-com"
 ---
 
 # De-obfuscated Source Maps: zujistudio-com

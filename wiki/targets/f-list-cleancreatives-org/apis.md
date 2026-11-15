@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: f-list-cleancreatives-org"
 date: 2026-11-14
-target: "[[overview|f-list-cleancreatives-org]]"
+target: "f-list-cleancreatives-org"
 ---
 
 # Discovered APIs & Protocols: f-list-cleancreatives-org

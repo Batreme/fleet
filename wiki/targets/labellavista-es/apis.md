@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: labellavista-es"
 date: 2026-11-14
-target: "[[overview|labellavista-es]]"
+target: "labellavista-es"
 ---
 
 # Discovered APIs & Protocols: labellavista-es

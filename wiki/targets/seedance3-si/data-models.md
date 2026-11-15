@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: seedance3-si"
 date: 2026-11-14
-target: "[[overview|seedance3-si]]"
+target: "seedance3-si"
 ---
 
 # Data Models & Client Storage: seedance3-si

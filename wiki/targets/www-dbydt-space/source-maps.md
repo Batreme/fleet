@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-dbydt-space"
 date: 2026-11-14
-target: "[[overview|www-dbydt-space]]"
+target: "www-dbydt-space"
 ---
 
 # De-obfuscated Source Maps: www-dbydt-space

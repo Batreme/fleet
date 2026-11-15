@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-thecandyvault-com-au"
 date: 2026-11-14
-target: "[[overview|www-thecandyvault-com-au]]"
+target: "www-thecandyvault-com-au"
 ---
 
 # Data Models & Client Storage: www-thecandyvault-com-au

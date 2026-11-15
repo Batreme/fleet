@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thebranx-com"
 date: 2026-11-14
-target: "[[overview|thebranx-com]]"
+target: "thebranx-com"
 ---
 
 # Discovered APIs & Protocols: thebranx-com

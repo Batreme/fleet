@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: yigua-art"
 date: 2026-11-14
-target: "[[overview|yigua-art]]"
+target: "yigua-art"
 ---
 
 # De-obfuscated Source Maps: yigua-art

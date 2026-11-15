@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-raomuhammadhamza-tech"
 date: 2026-11-14
-target: "[[overview|www-raomuhammadhamza-tech]]"
+target: "www-raomuhammadhamza-tech"
 ---
 
 # Discovered APIs & Protocols: www-raomuhammadhamza-tech

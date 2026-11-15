@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: yaas-energy-com"
 date: 2026-11-14
-target: "[[overview|yaas-energy-com]]"
+target: "yaas-energy-com"
 ---
 
 # Discovered APIs & Protocols: yaas-energy-com

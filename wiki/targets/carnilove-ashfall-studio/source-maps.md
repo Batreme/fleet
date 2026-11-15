@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: carnilove-ashfall-studio"
 date: 2026-11-14
-target: "[[overview|carnilove-ashfall-studio]]"
+target: "carnilove-ashfall-studio"
 ---
 
 # De-obfuscated Source Maps: carnilove-ashfall-studio

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: hole-money"
 date: 2026-11-14
-target: "[[overview|hole-money]]"
+target: "hole-money"
 ---
 
 # De-obfuscated Source Maps: hole-money

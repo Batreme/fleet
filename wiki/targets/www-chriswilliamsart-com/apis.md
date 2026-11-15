@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-chriswilliamsart-com"
 date: 2026-11-14
-target: "[[overview|www-chriswilliamsart-com]]"
+target: "www-chriswilliamsart-com"
 ---
 
 # Discovered APIs & Protocols: www-chriswilliamsart-com

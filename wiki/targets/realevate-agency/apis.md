@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: realevate-agency"
 date: 2026-11-14
-target: "[[overview|realevate-agency]]"
+target: "realevate-agency"
 ---
 
 # Discovered APIs & Protocols: realevate-agency

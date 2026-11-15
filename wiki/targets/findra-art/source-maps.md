@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: findra-art"
 date: 2026-11-14
-target: "[[overview|findra-art]]"
+target: "findra-art"
 ---
 
 # De-obfuscated Source Maps: findra-art

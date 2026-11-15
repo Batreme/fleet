@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: auge-xp-com"
 date: 2026-11-14
-target: "[[overview|auge-xp-com]]"
+target: "auge-xp-com"
 ---
 
 # Discovered APIs & Protocols: auge-xp-com

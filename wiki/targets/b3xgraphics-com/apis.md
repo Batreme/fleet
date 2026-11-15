@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: b3xgraphics-com"
 date: 2026-11-14
-target: "[[overview|b3xgraphics-com]]"
+target: "b3xgraphics-com"
 ---
 
 # Discovered APIs & Protocols: b3xgraphics-com

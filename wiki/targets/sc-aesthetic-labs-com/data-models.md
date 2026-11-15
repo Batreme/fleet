@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sc-aesthetic-labs-com"
 date: 2026-11-14
-target: "[[overview|sc-aesthetic-labs-com]]"
+target: "sc-aesthetic-labs-com"
 ---
 
 # Data Models & Client Storage: sc-aesthetic-labs-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-quintadamalia-com"
 date: 2026-11-14
-target: "[[overview|www-quintadamalia-com]]"
+target: "www-quintadamalia-com"
 ---
 
 # Discovered APIs & Protocols: www-quintadamalia-com

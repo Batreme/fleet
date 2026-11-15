@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ethiack-com"
 date: 2026-11-14
-target: "[[overview|ethiack-com]]"
+target: "ethiack-com"
 ---
 
 # Data Models & Client Storage: ethiack-com

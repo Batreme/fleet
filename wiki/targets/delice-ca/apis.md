@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: delice-ca"
 date: 2026-11-14
-target: "[[overview|delice-ca]]"
+target: "delice-ca"
 ---
 
 # Discovered APIs & Protocols: delice-ca

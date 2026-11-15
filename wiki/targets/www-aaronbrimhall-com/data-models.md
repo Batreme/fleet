@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-aaronbrimhall-com"
 date: 2026-10-31
-target: "[[overview|www-aaronbrimhall-com]]"
+target: "www-aaronbrimhall-com"
 ---
 
 # Data Models & Client Storage: www-aaronbrimhall-com

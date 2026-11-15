@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: adamperlis-com"
 date: 2026-11-14
-target: "[[overview|adamperlis-com]]"
+target: "adamperlis-com"
 ---
 
 # Discovered APIs & Protocols: adamperlis-com

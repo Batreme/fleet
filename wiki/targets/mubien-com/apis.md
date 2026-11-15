@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mubien-com"
 date: 2026-11-14
-target: "[[overview|mubien-com]]"
+target: "mubien-com"
 ---
 
 # Discovered APIs & Protocols: mubien-com

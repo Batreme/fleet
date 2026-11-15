@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thesovietflip-com"
 date: 2026-11-14
-target: "[[overview|thesovietflip-com]]"
+target: "thesovietflip-com"
 ---
 
 # Data Models & Client Storage: thesovietflip-com

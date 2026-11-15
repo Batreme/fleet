@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: exspeedia-com"
 date: 2026-11-14
-target: "[[overview|exspeedia-com]]"
+target: "exspeedia-com"
 ---
 
 # De-obfuscated Source Maps: exspeedia-com

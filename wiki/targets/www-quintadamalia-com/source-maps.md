@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-quintadamalia-com"
 date: 2026-11-14
-target: "[[overview|www-quintadamalia-com]]"
+target: "www-quintadamalia-com"
 ---
 
 # De-obfuscated Source Maps: www-quintadamalia-com

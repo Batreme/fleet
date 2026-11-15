@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dailymoscow-ru_mirpay"
 date: 2026-11-14
-target: "[[overview|dailymoscow-ru_mirpay]]"
+target: "dailymoscow-ru_mirpay"
 ---
 
 # Discovered APIs & Protocols: dailymoscow-ru_mirpay

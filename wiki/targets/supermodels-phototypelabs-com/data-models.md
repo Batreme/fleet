@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: supermodels-phototypelabs-com"
 date: 2026-11-14
-target: "[[overview|supermodels-phototypelabs-com]]"
+target: "supermodels-phototypelabs-com"
 ---
 
 # Data Models & Client Storage: supermodels-phototypelabs-com

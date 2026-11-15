@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-avilus-com"
 date: 2026-11-14
-target: "[[overview|www-avilus-com]]"
+target: "www-avilus-com"
 ---
 
 # Discovered APIs & Protocols: www-avilus-com

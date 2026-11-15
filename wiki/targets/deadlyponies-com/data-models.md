@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: deadlyponies-com"
 date: 2026-11-14
-target: "[[overview|deadlyponies-com]]"
+target: "deadlyponies-com"
 ---
 
 # Data Models & Client Storage: deadlyponies-com

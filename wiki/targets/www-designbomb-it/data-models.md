@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-designbomb-it"
 date: 2026-11-14
-target: "[[overview|www-designbomb-it]]"
+target: "www-designbomb-it"
 ---
 
 # Data Models & Client Storage: www-designbomb-it

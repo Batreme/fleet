@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: xiloteca-it_en"
 date: 2026-11-14
-target: "[[overview|xiloteca-it_en]]"
+target: "xiloteca-it_en"
 ---
 
 # Discovered APIs & Protocols: xiloteca-it_en

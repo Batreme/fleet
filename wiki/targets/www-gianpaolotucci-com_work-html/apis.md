@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-gianpaolotucci-com_work-html"
 date: 2026-11-14
-target: "[[overview|www-gianpaolotucci-com_work-html]]"
+target: "www-gianpaolotucci-com_work-html"
 ---
 
 # Discovered APIs & Protocols: www-gianpaolotucci-com_work-html

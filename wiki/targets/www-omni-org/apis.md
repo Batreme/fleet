@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-omni-org"
 date: 2026-11-14
-target: "[[overview|www-omni-org]]"
+target: "www-omni-org"
 ---
 
 # Discovered APIs & Protocols: www-omni-org

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: hotelaurelia-online"
 date: 2026-11-14
-target: "[[overview|hotelaurelia-online]]"
+target: "hotelaurelia-online"
 ---
 
 # Data Models & Client Storage: hotelaurelia-online

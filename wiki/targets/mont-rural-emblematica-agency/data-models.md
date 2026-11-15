@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mont-rural-emblematica-agency"
 date: 2026-11-14
-target: "[[overview|mont-rural-emblematica-agency]]"
+target: "mont-rural-emblematica-agency"
 ---
 
 # Data Models & Client Storage: mont-rural-emblematica-agency

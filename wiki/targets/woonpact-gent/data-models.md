@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: woonpact-gent"
 date: 2026-11-14
-target: "[[overview|woonpact-gent]]"
+target: "woonpact-gent"
 ---
 
 # Data Models & Client Storage: woonpact-gent

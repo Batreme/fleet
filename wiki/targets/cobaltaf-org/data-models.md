@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: cobaltaf-org"
 date: 2026-11-14
-target: "[[overview|cobaltaf-org]]"
+target: "cobaltaf-org"
 ---
 
 # Data Models & Client Storage: cobaltaf-org

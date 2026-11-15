@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: its-tomo-dev"
 date: 2026-11-14
-target: "[[overview|its-tomo-dev]]"
+target: "its-tomo-dev"
 ---
 
 # Discovered APIs & Protocols: its-tomo-dev

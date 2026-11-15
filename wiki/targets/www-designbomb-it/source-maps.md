@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-designbomb-it"
 date: 2026-11-14
-target: "[[overview|www-designbomb-it]]"
+target: "www-designbomb-it"
 ---
 
 # De-obfuscated Source Maps: www-designbomb-it

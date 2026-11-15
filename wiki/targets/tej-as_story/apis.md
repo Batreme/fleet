@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tej-as_story"
 date: 2026-11-14
-target: "[[overview|tej-as_story]]"
+target: "tej-as_story"
 ---
 
 # Discovered APIs & Protocols: tej-as_story

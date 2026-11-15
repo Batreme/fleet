@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: 11moissanstoit-com"
 date: 2026-11-14
-target: "[[overview|11moissanstoit-com]]"
+target: "11moissanstoit-com"
 ---
 
 # Data Models & Client Storage: 11moissanstoit-com

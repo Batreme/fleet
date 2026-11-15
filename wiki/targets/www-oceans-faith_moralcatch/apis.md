@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-oceans-faith_moralcatch"
 date: 2026-11-14
-target: "[[overview|www-oceans-faith_moralcatch]]"
+target: "www-oceans-faith_moralcatch"
 ---
 
 # Discovered APIs & Protocols: www-oceans-faith_moralcatch

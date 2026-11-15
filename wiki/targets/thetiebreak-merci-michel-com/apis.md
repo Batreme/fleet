@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thetiebreak-merci-michel-com"
 date: 2026-11-14
-target: "[[overview|thetiebreak-merci-michel-com]]"
+target: "thetiebreak-merci-michel-com"
 ---
 
 # Discovered APIs & Protocols: thetiebreak-merci-michel-com

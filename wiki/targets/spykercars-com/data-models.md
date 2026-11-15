@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: spykercars-com"
 date: 2026-10-31
-target: "[[overview|spykercars-com]]"
+target: "spykercars-com"
 ---
 
 # Data Models & Client Storage: spykercars-com

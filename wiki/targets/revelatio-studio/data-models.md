@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: revelatio-studio"
 date: 2026-10-31
-target: "[[overview|revelatio-studio]]"
+target: "revelatio-studio"
 ---
 
 # Data Models & Client Storage: revelatio-studio

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pankow-band"
 date: 2026-11-14
-target: "[[overview|pankow-band]]"
+target: "pankow-band"
 ---
 
 # Discovered APIs & Protocols: pankow-band

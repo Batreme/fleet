@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: deadlyponies-com"
 date: 2026-11-14
-target: "[[overview|deadlyponies-com]]"
+target: "deadlyponies-com"
 ---
 
 # De-obfuscated Source Maps: deadlyponies-com

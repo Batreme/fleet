@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: siglitos-com"
 date: 2026-11-14
-target: "[[overview|siglitos-com]]"
+target: "siglitos-com"
 ---
 
 # Discovered APIs & Protocols: siglitos-com

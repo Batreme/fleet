@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-selkirk-com_pages-omni-pickleball-paddle"
 date: 2026-11-14
-target: "[[overview|www-selkirk-com_pages-omni-pickleball-paddle]]"
+target: "www-selkirk-com_pages-omni-pickleball-paddle"
 ---
 
 # Data Models & Client Storage: www-selkirk-com_pages-omni-pickleball-paddle

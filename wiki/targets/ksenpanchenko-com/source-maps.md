@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ksenpanchenko-com"
 date: 2026-11-14
-target: "[[overview|ksenpanchenko-com]]"
+target: "ksenpanchenko-com"
 ---
 
 # De-obfuscated Source Maps: ksenpanchenko-com

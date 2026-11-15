@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: agnestoth-com"
 date: 2026-11-14
-target: "[[overview|agnestoth-com]]"
+target: "agnestoth-com"
 ---
 
 # Discovered APIs & Protocols: agnestoth-com

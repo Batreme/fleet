@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: glinto-co-kr"
 date: 2026-11-14
-target: "[[overview|glinto-co-kr]]"
+target: "glinto-co-kr"
 ---
 
 # Data Models & Client Storage: glinto-co-kr

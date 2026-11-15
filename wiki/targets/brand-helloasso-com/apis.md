@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: brand-helloasso-com"
 date: 2026-11-14
-target: "[[overview|brand-helloasso-com]]"
+target: "brand-helloasso-com"
 ---
 
 # Discovered APIs & Protocols: brand-helloasso-com

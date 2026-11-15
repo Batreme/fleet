@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: azimuteresidencial-com-br"
 date: 2026-11-14
-target: "[[overview|azimuteresidencial-com-br]]"
+target: "azimuteresidencial-com-br"
 ---
 
 # Discovered APIs & Protocols: azimuteresidencial-com-br

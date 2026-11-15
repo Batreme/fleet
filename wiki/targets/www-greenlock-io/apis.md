@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-greenlock-io"
 date: 2026-11-14
-target: "[[overview|www-greenlock-io]]"
+target: "www-greenlock-io"
 ---
 
 # Discovered APIs & Protocols: www-greenlock-io

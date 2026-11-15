@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ridetorio-com"
 date: 2026-11-14
-target: "[[overview|ridetorio-com]]"
+target: "ridetorio-com"
 ---
 
 # Data Models & Client Storage: ridetorio-com

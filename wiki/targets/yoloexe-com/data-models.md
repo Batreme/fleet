@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: yoloexe-com"
 date: 2026-11-14
-target: "[[overview|yoloexe-com]]"
+target: "yoloexe-com"
 ---
 
 # Data Models & Client Storage: yoloexe-com

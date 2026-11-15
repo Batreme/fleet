@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: matchball-today"
 date: 2026-11-14
-target: "[[overview|matchball-today]]"
+target: "matchball-today"
 ---
 
 # Discovered APIs & Protocols: matchball-today

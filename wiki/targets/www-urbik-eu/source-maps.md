@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-urbik-eu"
 date: 2026-11-14
-target: "[[overview|www-urbik-eu]]"
+target: "www-urbik-eu"
 ---
 
 # De-obfuscated Source Maps: www-urbik-eu

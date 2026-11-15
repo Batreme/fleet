@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: akaiito-ai"
 date: 2026-11-14
-target: "[[overview|akaiito-ai]]"
+target: "akaiito-ai"
 ---
 
 # Discovered APIs & Protocols: akaiito-ai

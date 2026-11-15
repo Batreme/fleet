@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: giga-ai"
 date: 2026-11-14
-target: "[[overview|giga-ai]]"
+target: "giga-ai"
 ---
 
 # Discovered APIs & Protocols: giga-ai

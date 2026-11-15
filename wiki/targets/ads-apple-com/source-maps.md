@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ads-apple-com"
 date: 2026-11-14
-target: "[[overview|ads-apple-com]]"
+target: "ads-apple-com"
 ---
 
 # De-obfuscated Source Maps: ads-apple-com

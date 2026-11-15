@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: zarcerog-com"
 date: 2026-11-14
-target: "[[overview|zarcerog-com]]"
+target: "zarcerog-com"
 ---
 
 # Discovered APIs & Protocols: zarcerog-com

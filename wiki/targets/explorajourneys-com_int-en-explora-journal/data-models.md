@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: explorajourneys-com_int-en-explora-journal"
 date: 2026-11-14
-target: "[[overview|explorajourneys-com_int-en-explora-journal]]"
+target: "explorajourneys-com_int-en-explora-journal"
 ---
 
 # Data Models & Client Storage: explorajourneys-com_int-en-explora-journal

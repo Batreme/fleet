@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: key-co"
 date: 2026-11-14
-target: "[[overview|key-co]]"
+target: "key-co"
 ---
 
 # Discovered APIs & Protocols: key-co

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: almadalabel-com"
 date: 2026-11-14
-target: "[[overview|almadalabel-com]]"
+target: "almadalabel-com"
 ---
 
 # Discovered APIs & Protocols: almadalabel-com

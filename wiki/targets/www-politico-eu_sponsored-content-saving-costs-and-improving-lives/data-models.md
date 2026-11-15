@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-politico-eu_sponsored-content-saving-costs-and-improving-lives"
 date: 2026-11-14
-target: "[[overview|www-politico-eu_sponsored-content-saving-costs-and-improving-lives]]"
+target: "www-politico-eu_sponsored-content-saving-costs-and-improving-lives"
 ---
 
 # Data Models & Client Storage: www-politico-eu_sponsored-content-saving-costs-and-improving-lives

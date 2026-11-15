@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: plastic-ocean-com"
 date: 2026-11-14
-target: "[[overview|plastic-ocean-com]]"
+target: "plastic-ocean-com"
 ---
 
 # Discovered APIs & Protocols: plastic-ocean-com

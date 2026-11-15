@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: vivmgmt-com"
 date: 2026-11-14
-target: "[[overview|vivmgmt-com]]"
+target: "vivmgmt-com"
 ---
 
 # Discovered APIs & Protocols: vivmgmt-com

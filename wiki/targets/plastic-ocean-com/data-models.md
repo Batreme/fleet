@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: plastic-ocean-com"
 date: 2026-11-14
-target: "[[overview|plastic-ocean-com]]"
+target: "plastic-ocean-com"
 ---
 
 # Data Models & Client Storage: plastic-ocean-com

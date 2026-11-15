@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: nodenza-com"
 date: 2026-11-14
-target: "[[overview|nodenza-com]]"
+target: "nodenza-com"
 ---
 
 # Discovered APIs & Protocols: nodenza-com

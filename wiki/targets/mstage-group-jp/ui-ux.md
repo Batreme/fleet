@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: mstage-group-jp"
-date: 2026-11-14
-target: "[[overview|mstage-group-jp]]"
+title: "UI & UX Architecture: mstage-group-jp"
+status: blocked
+block_reason: "CloudFront HTTP 403 WAF Block (ERROR: The request could not be satisfied)"
 ---
 
-# UI Architecture & Design Tokens: mstage-group-jp
+# UI & UX Architecture: mstage-group-jp (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://mstage-group.jp/](https://mstage-group.jp/)  
+> **Block / Unreachable Reason**: CloudFront HTTP 403 WAF Block (ERROR: The request could not be satisfied)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `raw/mstage-group-jp/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

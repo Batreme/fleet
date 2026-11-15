@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: dreams-paulvl-eu"
 date: 2026-11-14
-target: "[[overview|dreams-paulvl-eu]]"
+target: "dreams-paulvl-eu"
 ---
 
 # De-obfuscated Source Maps: dreams-paulvl-eu

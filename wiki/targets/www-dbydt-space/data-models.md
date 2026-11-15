@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-dbydt-space"
 date: 2026-11-14
-target: "[[overview|www-dbydt-space]]"
+target: "www-dbydt-space"
 ---
 
 # Data Models & Client Storage: www-dbydt-space

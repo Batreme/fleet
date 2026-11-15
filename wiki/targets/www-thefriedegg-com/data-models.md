@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-thefriedegg-com"
 date: 2026-11-14
-target: "[[overview|www-thefriedegg-com]]"
+target: "www-thefriedegg-com"
 ---
 
 # Data Models & Client Storage: www-thefriedegg-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: inks-studio"
 date: 2026-11-14
-target: "[[overview|inks-studio]]"
+target: "inks-studio"
 ---
 
 # Data Models & Client Storage: inks-studio

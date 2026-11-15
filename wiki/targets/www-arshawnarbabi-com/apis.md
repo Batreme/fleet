@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-arshawnarbabi-com"
 date: 2026-11-14
-target: "[[overview|www-arshawnarbabi-com]]"
+target: "www-arshawnarbabi-com"
 ---
 
 # Discovered APIs & Protocols: www-arshawnarbabi-com

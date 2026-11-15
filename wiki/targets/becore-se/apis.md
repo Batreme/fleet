@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: becore-se"
 date: 2026-11-14
-target: "[[overview|becore-se]]"
+target: "becore-se"
 ---
 
 # Discovered APIs & Protocols: becore-se

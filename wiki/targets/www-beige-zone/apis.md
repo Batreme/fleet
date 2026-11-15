@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-beige-zone"
 date: 2026-11-14
-target: "[[overview|www-beige-zone]]"
+target: "www-beige-zone"
 ---
 
 # Discovered APIs & Protocols: www-beige-zone

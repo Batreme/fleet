@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: 100yearsmonet-com"
 date: 2026-11-14
-target: "[[overview|100yearsmonet-com]]"
+target: "100yearsmonet-com"
 ---
 
 # Data Models & Client Storage: 100yearsmonet-com

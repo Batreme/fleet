@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-3d-discovery-fr"
 date: 2026-11-14
-target: "[[overview|www-3d-discovery-fr]]"
+target: "www-3d-discovery-fr"
 ---
 
 # Discovered APIs & Protocols: www-3d-discovery-fr

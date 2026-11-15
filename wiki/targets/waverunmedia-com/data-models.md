@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: waverunmedia-com"
 date: 2026-11-14
-target: "[[overview|waverunmedia-com]]"
+target: "waverunmedia-com"
 ---
 
 # Data Models & Client Storage: waverunmedia-com

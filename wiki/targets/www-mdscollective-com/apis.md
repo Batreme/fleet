@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-mdscollective-com"
 date: 2026-11-14
-target: "[[overview|www-mdscollective-com]]"
+target: "www-mdscollective-com"
 ---
 
 # Discovered APIs & Protocols: www-mdscollective-com

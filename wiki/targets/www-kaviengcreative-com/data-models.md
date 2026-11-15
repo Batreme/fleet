@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-kaviengcreative-com"
 date: 2026-11-14
-target: "[[overview|www-kaviengcreative-com]]"
+target: "www-kaviengcreative-com"
 ---
 
 # Data Models & Client Storage: www-kaviengcreative-com

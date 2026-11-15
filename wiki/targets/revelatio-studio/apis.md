@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: revelatio-studio"
 date: 2026-10-31
-target: "[[overview|revelatio-studio]]"
+target: "revelatio-studio"
 ---
 
 # Discovered APIs & Protocols: revelatio-studio

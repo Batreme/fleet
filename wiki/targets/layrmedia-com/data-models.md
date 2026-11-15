@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: layrmedia-com"
 date: 2026-11-14
-target: "[[overview|layrmedia-com]]"
+target: "layrmedia-com"
 ---
 
 # Data Models & Client Storage: layrmedia-com

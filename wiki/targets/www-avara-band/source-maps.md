@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-avara-band"
 date: 2026-11-14
-target: "[[overview|www-avara-band]]"
+target: "www-avara-band"
 ---
 
 # De-obfuscated Source Maps: www-avara-band

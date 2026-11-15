@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: pda-archi_en"
 date: 2026-11-14
-target: "[[overview|pda-archi_en]]"
+target: "pda-archi_en"
 ---
 
 # Data Models & Client Storage: pda-archi_en

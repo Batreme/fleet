@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ofrenda-davidlangarica-dev"
 date: 2026-11-14
-target: "[[overview|ofrenda-davidlangarica-dev]]"
+target: "ofrenda-davidlangarica-dev"
 ---
 
 # Discovered APIs & Protocols: ofrenda-davidlangarica-dev

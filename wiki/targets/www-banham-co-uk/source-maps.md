@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-banham-co-uk"
 date: 2026-11-14
-target: "[[overview|www-banham-co-uk]]"
+target: "www-banham-co-uk"
 ---
 
 # De-obfuscated Source Maps: www-banham-co-uk

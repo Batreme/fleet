@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-glowingcheetah-com"
 date: 2026-11-14
-target: "[[overview|www-glowingcheetah-com]]"
+target: "www-glowingcheetah-com"
 ---
 
 # Data Models & Client Storage: www-glowingcheetah-com

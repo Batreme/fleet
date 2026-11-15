@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-areyoudami-com"
 date: 2026-11-14
-target: "[[overview|www-areyoudami-com]]"
+target: "www-areyoudami-com"
 ---
 
 # De-obfuscated Source Maps: www-areyoudami-com

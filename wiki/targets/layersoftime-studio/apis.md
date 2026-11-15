@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: layersoftime-studio"
 date: 2026-11-14
-target: "[[overview|layersoftime-studio]]"
+target: "layersoftime-studio"
 ---
 
 # Discovered APIs & Protocols: layersoftime-studio

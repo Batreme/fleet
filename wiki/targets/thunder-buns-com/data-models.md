@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thunder-buns-com"
 date: 2026-11-14
-target: "[[overview|thunder-buns-com]]"
+target: "thunder-buns-com"
 ---
 
 # Data Models & Client Storage: thunder-buns-com

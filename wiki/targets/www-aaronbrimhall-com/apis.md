@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-aaronbrimhall-com"
 date: 2026-10-31
-target: "[[overview|www-aaronbrimhall-com]]"
+target: "www-aaronbrimhall-com"
 ---
 
 # Discovered APIs & Protocols: www-aaronbrimhall-com

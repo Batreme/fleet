@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: altamedfoundation-org"
 date: 2026-11-14
-target: "[[overview|altamedfoundation-org]]"
+target: "altamedfoundation-org"
 ---
 
 # Data Models & Client Storage: altamedfoundation-org

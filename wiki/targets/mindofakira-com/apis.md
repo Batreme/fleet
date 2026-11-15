@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mindofakira-com"
 date: 2026-11-14
-target: "[[overview|mindofakira-com]]"
+target: "mindofakira-com"
 ---
 
 # Discovered APIs & Protocols: mindofakira-com

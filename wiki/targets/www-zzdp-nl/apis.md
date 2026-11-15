@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-zzdp-nl"
 date: 2026-11-14
-target: "[[overview|www-zzdp-nl]]"
+target: "www-zzdp-nl"
 ---
 
 # Discovered APIs & Protocols: www-zzdp-nl

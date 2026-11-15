@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tigris-lorolabs-ai"
 date: 2026-11-14
-target: "[[overview|tigris-lorolabs-ai]]"
+target: "tigris-lorolabs-ai"
 ---
 
 # De-obfuscated Source Maps: tigris-lorolabs-ai

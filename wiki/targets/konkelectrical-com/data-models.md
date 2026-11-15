@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: konkelectrical-com"
 date: 2026-11-14
-target: "[[overview|konkelectrical-com]]"
+target: "konkelectrical-com"
 ---
 
 # Data Models & Client Storage: konkelectrical-com

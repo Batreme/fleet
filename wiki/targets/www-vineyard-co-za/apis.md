@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-vineyard-co-za"
 date: 2026-11-14
-target: "[[overview|www-vineyard-co-za]]"
+target: "www-vineyard-co-za"
 ---
 
 # Discovered APIs & Protocols: www-vineyard-co-za

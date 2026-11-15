@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: studyhall-design"
 date: 2026-11-14
-target: "[[overview|studyhall-design]]"
+target: "studyhall-design"
 ---
 
 # De-obfuscated Source Maps: studyhall-design

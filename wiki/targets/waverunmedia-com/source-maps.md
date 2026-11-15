@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: waverunmedia-com"
 date: 2026-11-14
-target: "[[overview|waverunmedia-com]]"
+target: "waverunmedia-com"
 ---
 
 # De-obfuscated Source Maps: waverunmedia-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: switchblade-awwwards-vercel-app"
 date: 2026-11-14
-target: "[[overview|switchblade-awwwards-vercel-app]]"
+target: "switchblade-awwwards-vercel-app"
 ---
 
 # Data Models & Client Storage: switchblade-awwwards-vercel-app

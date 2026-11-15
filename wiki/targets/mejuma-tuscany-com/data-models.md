@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mejuma-tuscany-com"
 date: 2026-11-14
-target: "[[overview|mejuma-tuscany-com]]"
+target: "mejuma-tuscany-com"
 ---
 
 # Data Models & Client Storage: mejuma-tuscany-com

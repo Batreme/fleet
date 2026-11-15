@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: key-co"
 date: 2026-11-14
-target: "[[overview|key-co]]"
+target: "key-co"
 ---
 
 # Data Models & Client Storage: key-co

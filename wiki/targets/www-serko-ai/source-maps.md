@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-serko-ai"
 date: 2026-11-14
-target: "[[overview|www-serko-ai]]"
+target: "www-serko-ai"
 ---
 
 # De-obfuscated Source Maps: www-serko-ai
