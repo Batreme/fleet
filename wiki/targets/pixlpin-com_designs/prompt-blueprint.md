@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#c9
 
 > **Pixlpin: 58K+ Free UI Designs, App Screens, Motion & Graphics** (https://pixlpin.com/designs) — Join free. Browse 58K+ real app screens, user flows, websites, motion, logos & 3D, curated from the internet and updated daily.
 
-![Desktop Viewport Capture (1440x3513)](file:///root/projects/fleet/wiki/targets/pixlpin-com_designs/assets/desktop.png)
+![Desktop Viewport Capture (1440x3513)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#c9
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/pixlpin-com_designs/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×3513px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

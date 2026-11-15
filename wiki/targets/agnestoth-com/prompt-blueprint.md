@@ -9,7 +9,7 @@ archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightB
 
 > **AGNESTOTH · House of Luxurious Embroidery** — A serene, museum-grade luxury fashion and bespoke embroidery house designed around pure gallery white (`rgb(255,255,255)`), warm alabaster stone (`#f0eee9`), charcoal ink (`rgb(18,18,18)`), and crimson thread accents (`#9a3b2e`).
 
-![Desktop Viewport Capture (1440x9759)](file:///root/projects/fleet/wiki/targets/agnestoth-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x9759)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightB
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x4200)](file:///root/projects/fleet/wiki/targets/agnestoth-com/assets/mobile.png)
+![Mobile Viewport Capture (390x4200)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×9759px` (`assets/desktop.png`), Mobile `390×4200px` (`assets/mobile.png`).

@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 
 > **TY1 — DJ & Producer** (https://ty1official.com) — TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/ty1official-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/ty1official-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

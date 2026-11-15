@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#fff0
 
 > **Blue Square X – Premium LED Displays & Immersive Digital Experiences** (https://www.bluesqx.com/) — We design and deliver high-end LED display systems and immersive digital experiences for luxury brands, retail spaces, and iconic environ...
 
-![Desktop Viewport Capture (1440x11949)](file:///root/projects/fleet/wiki/targets/www-bluesqx-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x11949)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#fff0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-bluesqx-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11949px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

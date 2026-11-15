@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#FAFB
 
 > **Reformed: The biggest thing to happen to Coffee since Coffee.** (https://www.feelreformed.com/) — Reformed: Arabica coffee and ceremonial matcha, enriched with functionality: collagen or creatine, adaptogens and twenty-one vitamins.
 
-![Desktop Viewport Capture (1440x4311)](file:///root/projects/fleet/wiki/targets/www-feelreformed-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x4311)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#FAFB
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-feelreformed-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×4311px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

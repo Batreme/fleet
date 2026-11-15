@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#242520` canvas
 
 > **Seedance 3.0 AI Video Generator: Make Videos from References** (https://seedance3.si/) — Try Seedance 3.0 free online. Turn text, images, video clips, and audio into videos with sound. Keep faces the same and edit any part wit...
 
-![Desktop Viewport Capture (1440x10319)](file:///root/projects/fleet/wiki/targets/seedance3-si/assets/desktop.png)
+![Desktop Viewport Capture (1440x10319)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#242520` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/seedance3-si/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10319px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

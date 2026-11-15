@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#999`
 
 > **Huxley · Home** (https://www.huxleysaga.com/) — The HUXLEY® saga is an original sci-fi universe created by renowned concept artist Ben Mauro. Explore all the books, products, artwork an...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/www-huxleysaga-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#999`
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-huxleysaga-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#13171a` canvas
 
 > **Cue - Creating Unforgettable Experiences** (https://cue-onebranding.webflow.io/) — Fan-first technology for premium brands and event experiences. Take your events to the next level with CUE and experience true fan engage...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/cue-onebranding-webflow-io/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#13171a` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/cue-onebranding-webflow-io/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

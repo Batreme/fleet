@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#faeb
 
 > **Armor Bangladesh Limited — ATM, CRM & Banking Technology Solutions** (https://armor-bd.com) — Armor Bangladesh Limited provides banking hardware and software — cash recyclers, ATMs, kiosks, UPS, payment switching and card managemen...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/armor-bd-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#faeb
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/armor-bd-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

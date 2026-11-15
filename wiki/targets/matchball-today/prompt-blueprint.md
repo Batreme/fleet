@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 > **Matchball · Football quiz: name the match ball in flight** (https://matchball.today/) — A free football quiz: historic match balls fly past in 3D and you name them. Every World Cup ball since 1930, plus Euros, Champions Leagu...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/matchball-today/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/matchball-today/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

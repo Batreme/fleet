@@ -9,7 +9,7 @@ archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigm
 
 > **SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses** — An industrial optical engineering and e-commerce platform built on pure optical white (`--ps-white: #fefefd`), matte lens-barrel charcoal (`--ps-text: #333333`), subtle light tint (`--ps-tint: #f7f7f7`), and precision blue/amber indicators (`#4eb5e6`, `#ff9a19`).
 
-![Desktop Viewport Capture (1440x7696)](file:///root/projects/fleet/wiki/targets/www-sigma-imaging-se/assets/desktop.png)
+![Desktop Viewport Capture (1440x7696)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigm
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x10390)](file:///root/projects/fleet/wiki/targets/www-sigma-imaging-se/assets/mobile.png)
+![Mobile Viewport Capture (390x10390)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×7696px` (`assets/desktop.png`), Mobile `390×10390px` (`assets/mobile.png`).

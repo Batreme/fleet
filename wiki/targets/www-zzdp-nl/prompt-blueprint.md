@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#87
 
 > **Al meer dan 70 jaar betekenisvolle architectuur · ZZDP** (https://www.zzdp.nl/) — Bij ZZDP combineren we vakmanschap en visie in betekenisvolle architectuur. Met meer dan 70 jaar ervaring realiseren we ontwerpen waarin...
 
-![Desktop Viewport Capture (1440x18562)](file:///root/projects/fleet/wiki/targets/www-zzdp-nl/assets/desktop.png)
+![Desktop Viewport Capture (1440x18562)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#87
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-zzdp-nl/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×18562px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

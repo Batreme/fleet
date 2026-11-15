@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#04060b` / `#
 
 > **Jeff Sibal — Visual & Digital Designer · SIBALDESIGN** (https://sibaldesign.com/) — Jeff Sibal, visual and digital designer in Southern California. Twenty-plus years across web, UI/UX, email, video and photography. I desi...
 
-![Desktop Viewport Capture (1440x10877)](file:///root/projects/fleet/wiki/targets/sibaldesign-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x10877)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#04060b` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/sibaldesign-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10877px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

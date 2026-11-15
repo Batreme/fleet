@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 
 > **Microdose Studio - Design & Development Agency for Startups** (https://microdose.studio/) — Microdose Studio helps tech startups turn ideas into products through strategy, brand and product design, React/Next.js development, and...
 
-![Desktop Viewport Capture (1440x15031)](file:///root/projects/fleet/wiki/targets/microdose-studio/assets/desktop.png)
+![Desktop Viewport Capture (1440x15031)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/microdose-studio/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×15031px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

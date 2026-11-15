@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 
 > **ChanPan · AI Video Production, Commercials & Creative Studio — Argentina** (https://chanpan.com.ar) — AI-driven video production, commercials, branded content, branding and 2D/3D animation. A creative studio from Corrientes, Argentina, wor...
 
-![Desktop Viewport Capture (1440x25422)](file:///root/projects/fleet/wiki/targets/chanpan-com-ar/assets/desktop.png)
+![Desktop Viewport Capture (1440x25422)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/chanpan-com-ar/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×25422px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

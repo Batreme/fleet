@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#62d6dc` / `#f
 
 > **Sunny's Journey** (http://www.iamsunnywang.com/) — A résumé you can walk through: Sunny Wang's design career, from Beijing to Pittsburgh to Silicon Valley, rebuilt as hand-crafted worlds y...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/www-iamsunnywang-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#62d6dc` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-iamsunnywang-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

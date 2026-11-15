@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4a60ff` / `#
 
 > **Design Bomb Festival** (https://www.designbomb.it/) — The Wave presenta la nuova edizione di Design Bomb, che cresce e diventa festival. 22-23-24 Maggio, Catania.
 
-![Desktop Viewport Capture (1440x10601)](file:///root/projects/fleet/wiki/targets/www-designbomb-it/assets/desktop.png)
+![Desktop Viewport Capture (1440x10601)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4a60ff` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-designbomb-it/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10601px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

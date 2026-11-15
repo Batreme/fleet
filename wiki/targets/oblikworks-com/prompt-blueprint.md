@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#eee` canvas, `#00
 
 > **oblikworks · Architectural Visualization & 3D Rendering Studio** (https://oblikworks.com/) — oblikworks is an architectural visualization studio creating photorealistic 3D renderings, architectural imagery, and visual storytelling...
 
-![Desktop Viewport Capture (1440x3719)](file:///root/projects/fleet/wiki/targets/oblikworks-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x3719)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#eee` canvas, `#00
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/oblikworks-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×3719px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 
 > **Xantium** (https://www.xantium.com) — Xantium
 
-![Desktop Viewport Capture (1440x6423)](file:///root/projects/fleet/wiki/targets/www-xantium-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x6423)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-xantium-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6423px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

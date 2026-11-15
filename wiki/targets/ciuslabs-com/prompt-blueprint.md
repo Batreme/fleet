@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#008
 
 > **CIUSLABS — Independent Product Lab for Apps & AI Tools** (https://ciuslabs.com/) — We design, build and run our own mobile apps and AI tools, and co-build with a few founders a year: one squad, from first sketch to a pro...
 
-![Desktop Viewport Capture (1440x10891)](file:///root/projects/fleet/wiki/targets/ciuslabs-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x10891)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#008
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/ciuslabs-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10891px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

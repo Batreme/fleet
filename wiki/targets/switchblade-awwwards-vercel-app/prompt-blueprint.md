@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb2c36` / `#
 
 > **SWITCHBLADE™** (https://switchblade-awwwards.vercel.app/) — SWITCHBLADE™: a philosophy applied to whatever it touches. Strength, compassion, and intent, distilled into a mark for builders who refus...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/switchblade-awwwards-vercel-app/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb2c36` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/switchblade-awwwards-vercel-app/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

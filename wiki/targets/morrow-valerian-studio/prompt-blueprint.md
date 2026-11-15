@@ -9,7 +9,7 @@ archetype: "Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`p
 
 > **MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship** — An avant-garde fashion and knitwear digital flagship crafted by Valerian Studio, pairing crisp gallery white (`--color-white: #fff`) and neutral alabaster (`--color-neutral-50: #fafafa`) with deep espresso/charcoal ink (`--color-neutral-900: #171717`, `#030d07`), crimson/rose editorial accents (`#9f0712`, `#ff2357`), and a strict 12-column `h-svh` viewport grid.
 
-![Desktop Viewport Capture (1440x5154)](file:///root/projects/fleet/wiki/targets/morrow-valerian-studio/assets/desktop.png)
+![Desktop Viewport Capture (1440x5154)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`p
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x6015)](file:///root/projects/fleet/wiki/targets/morrow-valerian-studio/assets/mobile.png)
+![Mobile Viewport Capture (390x6015)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×5154px` (`assets/desktop.png`), Mobile `390×6015px` (`assets/mobile.png`).

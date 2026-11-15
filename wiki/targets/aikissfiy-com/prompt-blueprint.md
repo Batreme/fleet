@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f
 
 > **Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy** (https://aikissfiy.com) — Description: AIKissfiy creates realistic AI kissing videos from your photos. Choose different kiss styles, keep faces recognizable, and e...
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/aikissfiy-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/aikissfiy-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#1d1
 
 > **Hyperiux Vault - React & Next.js Interaction Effects.** (https://vault.hyperiux.com) — Start with 70+ free source-first effects. Upgrade to Pro for 180+ effects.
 
-![Desktop Viewport Capture (1440x13176)](file:///root/projects/fleet/wiki/targets/vault-hyperiux-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x13176)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#1d1
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/vault-hyperiux-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×13176px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#f
 
 > **Vanguard Initiative · Software Development Company in Laos** (https://www.vanguardinitiative.com/) — Vanguard Initiative is a Laos-based software company that designs, builds, and ships production-ready web applications, MVPs, internal pl...
 
-![Desktop Viewport Capture (1440x15305)](file:///root/projects/fleet/wiki/targets/www-vanguardinitiative-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x15305)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-vanguardinitiative-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×15305px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

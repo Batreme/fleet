@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 
 > **AltaMed Foundation · AltaMed Foundation** (https://altamedfoundation.org/) — AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
 
-![Desktop Viewport Capture (1440x4182)](file:///root/projects/fleet/wiki/targets/altamedfoundation-org/assets/desktop.png)
+![Desktop Viewport Capture (1440x4182)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/altamedfoundation-org/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×4182px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

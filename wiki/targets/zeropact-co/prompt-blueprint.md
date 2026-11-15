@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#E5E7EB` canvas, `
 
 > **Zeropact · Life Cycle Analysis (LCA) & Product Carbon Footprint** (https://zeropact.co) — Worlds Most Advanced Product Carbon Footprint AI-Powered Software
 
-![Desktop Viewport Capture (1440x2400)](file:///root/projects/fleet/wiki/targets/zeropact-co/assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#E5E7EB` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/zeropact-co/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

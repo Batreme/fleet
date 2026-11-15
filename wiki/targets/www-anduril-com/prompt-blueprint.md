@@ -9,7 +9,7 @@ archetype: "Mission-Critical Defense Autonomy Platform & Odometer Telemetry Grid
 
 > **Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology** — An authoritative defense hardware and autonomous systems platform engineered around near-black stealth carbon (`--theme-color-background: #010101`), stark optic white (`--theme-color-text: #fff`), warm bone light-theme chapters (`.theme-light` / `#f1f0ea`), and high-visibility radar volt-yellow (`#dff140`) and alert red (`#ff3535`) indicators.
 
-![Desktop Viewport Capture (1440x5230)](file:///root/projects/fleet/wiki/targets/www-anduril-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x5230)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Mission-Critical Defense Autonomy Platform & Odometer Telemetry Grid
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x6917)](file:///root/projects/fleet/wiki/targets/www-anduril-com/assets/mobile.png)
+![Mobile Viewport Capture (390x6917)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×5230px` (`assets/desktop.png`), Mobile `390×6917px` (`assets/mobile.png`).

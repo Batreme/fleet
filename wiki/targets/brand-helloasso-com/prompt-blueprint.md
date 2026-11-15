@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 
 > **Accueil – Brandbook HelloAsso** (https://brand.helloasso.com/) — Logotype, typographie, couleurs, direction photographique et identité verbale de HelloAsso.
 
-![Desktop Viewport Capture (1440x5580)](file:///root/projects/fleet/wiki/targets/brand-helloasso-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x5580)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/brand-helloasso-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5580px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

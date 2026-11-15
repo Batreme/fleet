@@ -9,7 +9,7 @@ archetype: "Milanese Industrial Horology Lab & Srgb Color-Mix Token Architecture
 
 > **UNIMATIC Watches · Italian Minimalist Tool Watch Lab** — An industrial-grade horological design lab built on a light laboratory gray substrate (`--color-bg: #F6F6F6`), pure black dial ink (`--color-ink: #000000`), high-visibility lume volt-lime (`--color-accent: #AFFF00`), and a mathematically derived `color-mix(in srgb, ...)` opacity token ladder.
 
-![Desktop Viewport Capture (1440x4841)](file:///root/projects/fleet/wiki/targets/www-unimaticwatches-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x4841)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Milanese Industrial Horology Lab & Srgb Color-Mix Token Architecture
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x6103)](file:///root/projects/fleet/wiki/targets/www-unimaticwatches-com/assets/mobile.png)
+![Mobile Viewport Capture (390x6103)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×4841px` (`assets/desktop.png`), Mobile `390×6103px` (`assets/mobile.png`).

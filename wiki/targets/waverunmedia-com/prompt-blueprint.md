@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `
 
 > **WaveRun Media** (https://waverunmedia.com/) — WaveRun Media captures the pulse of real stories that move markets and shape culture.
 
-![Desktop Viewport Capture (1440x6506)](file:///root/projects/fleet/wiki/targets/waverunmedia-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x6506)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/waverunmedia-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6506px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

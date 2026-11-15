@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ca9df1` canvas, `
 
 > **UNDPLUS — Brand Architecture & Spatial Design Studio** (https://www.undplus.com) — Studio for brand architecture, spatial design and live experiences. We build trade fair booths, brand spaces and installations from Berli...
 
-![Desktop Viewport Capture (1440x10120)](file:///root/projects/fleet/wiki/targets/www-undplus-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x10120)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ca9df1` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-undplus-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10120px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

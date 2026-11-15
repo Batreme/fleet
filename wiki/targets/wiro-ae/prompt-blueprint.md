@@ -9,7 +9,7 @@ archetype: "Warm-Paper Tactile SaaS Operating System & Scatter-Card Workspace (`
 
 > **Wiro · Operating System for All Agencies** — An inventive agency operating system interface built on a warm cream paper canvas (`--wiro-canvas: #f6efe3`), deep charcoal ink (`--wiro-ink: #10100f`), and tactile pastel workspace accents (`--wiro-pink: #efacd4`, `--wiro-yellow: #f6d94e`, `--wiro-sage: #9caf63`, `--wiro-blue: #a9c5e9`).
 
-![Desktop Viewport Capture (1440x7497)](file:///root/projects/fleet/wiki/targets/wiro-ae/assets/desktop.png)
+![Desktop Viewport Capture (1440x7497)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Warm-Paper Tactile SaaS Operating System & Scatter-Card Workspace (`
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x8396)](file:///root/projects/fleet/wiki/targets/wiro-ae/assets/mobile.png)
+![Mobile Viewport Capture (390x8396)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×7497px` (`assets/desktop.png`), Mobile `390×8396px` (`assets/mobile.png`).

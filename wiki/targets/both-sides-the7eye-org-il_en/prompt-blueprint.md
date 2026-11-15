@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#FDFCFF` / `#E
 
 > **Extremists on Both Sides** (https://both-sides.the7eye.org.il/en/) — We collected thousands of political actions carried out in public space over the past four years. Decide for yourself — who are the extre...
 
-![Desktop Viewport Capture (1440x21770)](file:///root/projects/fleet/wiki/targets/both-sides-the7eye-org-il_en/assets/desktop.png)
+![Desktop Viewport Capture (1440x21770)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#FDFCFF` / `#E
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/both-sides-the7eye-org-il_en/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×21770px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

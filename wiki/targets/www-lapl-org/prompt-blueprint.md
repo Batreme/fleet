@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffccd5` canvas, `
 
 > **Homepage · Los Angeles Public Library** (https://www.lapl.org/) — Visit our catalog to search for books, movies, music and more.
 
-![Desktop Viewport Capture (1440x7428)](file:///root/projects/fleet/wiki/targets/www-lapl-org/assets/desktop.png)
+![Desktop Viewport Capture (1440x7428)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffccd5` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-lapl-org/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7428px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

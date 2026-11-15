@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#c6f432` canvas, `
 
 > **Elliot Eriksson — UI/UX, web & brand design, Stockholm & Åland** (https://ellioteriksson.com/) — Elliot Eriksson is a digital designer in Stockholm, designing clear, accessible websites and interfaces from first sketch to final polish.
 
-![Desktop Viewport Capture (1440x7593)](file:///root/projects/fleet/wiki/targets/ellioteriksson-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x7593)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#c6f432` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/ellioteriksson-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7593px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

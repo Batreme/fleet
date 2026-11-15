@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eae0d0` / `#0
 
 > **Werbefilm & Social Ads aus Gießen · Peryton Film** (https://www.peryton-film.com/) — Werbefilme, Imagefilme und Social Ads aus Gießen, von Mittelhessen bis Frankfurt. Über 200 Unternehmen vertrauen Peryton Film. Jetzt Erst...
 
-![Desktop Viewport Capture (1440x24773)](file:///root/projects/fleet/wiki/targets/www-peryton-film-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x24773)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eae0d0` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-peryton-film-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×24773px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e2e2e2` canvas, `
 
 > **EquitiFy Assets · Home** (https://equitifyasset.com/) — We source off-market commercial property, run the acquisition end to end, and hand you 100% ownership. No syndicates, no partners.
 
-![Desktop Viewport Capture (1440x8426)](file:///root/projects/fleet/wiki/targets/equitifyasset-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x8426)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e2e2e2` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/equitifyasset-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×8426px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

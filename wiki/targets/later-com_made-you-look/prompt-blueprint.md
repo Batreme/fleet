@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 > **Made You Look: Campaigns so good you break the algorithm.** (https://later.com/made-you-look/) — Meet the creators shaping culture through bold ideas and obsessive craft—and see how brands partner with them to build standout influence...
 
-![Desktop Viewport Capture (1440x18396)](file:///root/projects/fleet/wiki/targets/later-com_made-you-look/assets/desktop.png)
+![Desktop Viewport Capture (1440x18396)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/later-com_made-you-look/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×18396px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

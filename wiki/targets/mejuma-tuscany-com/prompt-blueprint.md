@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 
 > **Mejuma Tuscany** (https://mejuma-tuscany.com/) — Find your dream home in Tuscany with expert guidance. We handle property search, purchase, renovation & local coordination. Trusted turnk...
 
-![Desktop Viewport Capture (1440x9010)](file:///root/projects/fleet/wiki/targets/mejuma-tuscany-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x9010)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/mejuma-tuscany-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9010px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

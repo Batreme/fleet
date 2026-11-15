@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#050507` / `#
 
 > **I'm having bad dreams** (https://dreams.paulvl.eu/) — An interactive story about a kid whose dreams break, and the fight to rebuild them without becoming someone else.
 
-![Desktop Viewport Capture (1440x9900)](file:///root/projects/fleet/wiki/targets/dreams-paulvl-eu/assets/desktop.png)
+![Desktop Viewport Capture (1440x9900)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#050507` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/dreams-paulvl-eu/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9900px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

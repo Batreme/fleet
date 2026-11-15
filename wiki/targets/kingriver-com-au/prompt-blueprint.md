@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f6ede8` / `#e
 
 > **Australian Wagyu Beef · King River Legendary Wagyu** (https://kingriver.com.au/) — Explore the exquisite taste of King River Australian Wagyu beef and its unique quality that sets it apart in the culinary world.
 
-![Desktop Viewport Capture (1440x10193)](file:///root/projects/fleet/wiki/targets/kingriver-com-au/assets/desktop.png)
+![Desktop Viewport Capture (1440x10193)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f6ede8` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/kingriver-com-au/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10193px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

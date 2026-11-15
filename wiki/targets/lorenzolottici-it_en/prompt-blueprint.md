@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#3080ff` / `#0
 
 > **Lorenzo Lottici · Order in chaos** (https://lorenzolottici.it/en) — I bring order to the chaos in your business. Outside, a site people recognize at first glance. Inside, automations and AI agents that wor...
 
-![Desktop Viewport Capture (1440x24039)](file:///root/projects/fleet/wiki/targets/lorenzolottici-it_en/assets/desktop.png)
+![Desktop Viewport Capture (1440x24039)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#3080ff` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/lorenzolottici-it_en/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×24039px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

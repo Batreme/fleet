@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 > **Home - Woonpact** (https://woonpact.gent/) — Alles begint bij betaalbaar wonen. En waar doe je dat liever dan in Gent? De vraag werd groter dan het aanbod, waardoor Gent in een woonc...
 
-![Desktop Viewport Capture (1440x11932)](file:///root/projects/fleet/wiki/targets/woonpact-gent/assets/desktop.png)
+![Desktop Viewport Capture (1440x11932)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/woonpact-gent/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11932px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

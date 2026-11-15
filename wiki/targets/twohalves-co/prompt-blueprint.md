@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f2e
 
 > **Two Halves — design & development studio, Cairo** (https://twohalves.co/) — We design and build websites people remember — motion, 3D and stories — for brands in Egypt and everywhere.
 
-![Desktop Viewport Capture (1440x14075)](file:///root/projects/fleet/wiki/targets/twohalves-co/assets/desktop.png)
+![Desktop Viewport Capture (1440x14075)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f2e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/twohalves-co/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×14075px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

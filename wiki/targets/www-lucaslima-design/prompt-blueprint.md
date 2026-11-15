@@ -10,7 +10,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafb` / `#d
 
 > **Lucas Lima · Product designer and design engineer** (https://www.lucaslima.design/) — Brazilian product designer working across SaaS, finance and AI. I work directly in code, exploring live interfaces and bridging design an...
 
-![Desktop Viewport Capture (1440x5927)](file:///root/projects/fleet/wiki/targets/www-lucaslima-design/assets/desktop.png)
+![Desktop Viewport Capture (1440x5927)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafb` / `#d
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/www-lucaslima-design/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5927px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

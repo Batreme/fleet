@@ -10,7 +10,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 
 > **guidely - the hospitality of the future** (https://useguidely.co/) — A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
 
-![Desktop Viewport Capture (1440x3643)](file:///root/projects/fleet/wiki/targets/useguidely-co/assets/desktop.png)
+![Desktop Viewport Capture (1440x3643)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/useguidely-co/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×3643px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

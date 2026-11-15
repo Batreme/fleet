@@ -10,7 +10,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#090c12` / `#
 
 > **Luka Skhiladze, motion designer and product engineer** (https://skhiladze.com) — Motion design, AI film, 3D and original sound, plus the website or app to go with them. Tbilisi, working worldwide.
 
-![Desktop Viewport Capture (1440x15769)](file:///root/projects/fleet/wiki/targets/skhiladze-com/assets/desktop.png)
+![Desktop Viewport Capture (1440x15769)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#090c12` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/skhiladze-com/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×15769px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

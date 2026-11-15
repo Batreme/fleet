@@ -10,7 +10,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `
 
 > **Becore** (https://becore.se/) — Experience the latest in activewear from our new Becore collection
 
-![Desktop Viewport Capture (1440x6489)](file:///root/projects/fleet/wiki/targets/becore-se/assets/desktop.png)
+![Desktop Viewport Capture (1440x6489)](assets/desktop.png)
 
 ---
 
@@ -27,7 +27,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](file:///root/projects/fleet/wiki/targets/becore-se/assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6489px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
