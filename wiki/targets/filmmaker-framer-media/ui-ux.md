@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: filmmaker-framer-media"
-date: 2026-11-14
-target: "[[overview|filmmaker-framer-media]]"
+title: "UI & UX Architecture: filmmaker-framer-media"
+status: blocked
+block_reason: "Upstream HTTP 404 (Site Not Found | Framer)"
 ---
 
-# UI Architecture & Design Tokens: filmmaker-framer-media
+# UI & UX Architecture: filmmaker-framer-media (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://filmmaker.framer.media/](https://filmmaker.framer.media/)  
+> **Block / Unreachable Reason**: Upstream HTTP 404 (Site Not Found | Framer)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `/root/projects/reverse-harness/raw/filmmaker-framer-media/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

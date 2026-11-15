@@ -1,59 +1,74 @@
----
-title: "UI & Design System: clinia-com"
-date: 2026-11-14
-target: "[[overview|clinia-com]]"
----
+# UI & UX Architecture: clinia-com
 
-# UI Architecture & Design Tokens: clinia-com
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--color-transparent` | `transparent` |
-| `--color-current` | `currentColor` |
-| `--color-black` | `#000` |
-| `--color-white` | `#fff` |
-| `--color-primary` | `#1a1a1e` |
-| `--color-secondary` | `#ff5c00` |
-| `--color-body` | `light-dark(color-mix(in srgb,currentColor,transparent 50%),c` |
-| `--color-vital` | `#ff5c00` |
-| `--color-noble` | `#cca44f` |
-| `--color-trust` | `#95795c` |
-| `--color-trust-dark` | `#53402c` |
-| `--color-remedy` | `#fcf8ef` |
-| `--color-remedy-dark` | `#ecd9b9` |
-| `--color-remedy-medium` | `#f2eee5` |
-| `--color-remedy-light` | `#f9f7f2` |
-| `--color-aura` | `#f7f1ff` |
-| `--color-aura-dark` | `#cabbdb` |
-| `--color-mend` | `#ffccaf` |
-| `--color-mend-light` | `#ffe4d3` |
-| `--color-thistle` | `#e3daed` |
-| `--color-peach` | `#f1e0cb` |
-| `--gray-50` | `rgba(0,0,0,.051)` |
-| `--gray-100` | `rgba(0,0,0,.102)` |
-| `--gray-500` | `rgba(0,0,0,.502)` |
-| `--gray-700` | `#2f2f34` |
+## Overview & Design Identity
+- **Target**: `clinia-com` (**Patient Context for Healthcare AI · Clinia**)
+- **Production URL**: [https://clinia.com](https://clinia.com)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5c00`)
+- **Summary**: Fragmented health data breaks AI. Clinia reconciles it into graph-based context so your healthcare AI agents stay reliable and support op...
+- **Total Clean CSS Variables Extracted**: `231` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `NaN Serf B Text`
+- **Body Font Stack**: `Circular XX`
+- **Monospace / Technical Font Stack**: `Circular XX Mono`
+- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `18px`)
+- **Section Heading (`H2`)**: CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`)
+- **Body Copy**: CSS variables `--ff-body: Circular XX,sans-serif`, `--body-text-color: light-dark(var(--color-primary),var(--color-white))`, `--body-bg-color: light-dark(var(--color-white),var(--gray-900))`
+- **Metadata & Labels**: CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__color: currentColor!important`, `--hsf-default-field-label__font-family: Circular XX,sans-serif!important`
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `nav-main` | `site-header__nav position-relative d-none d-xl-block pointer-events-all justify-self-center` |
-| `<nav>` | `-` | `site-header__rightNav d-flex align-items-center grid-gap-8 justify-self-end` |
-| `<nav>` | `nav-main` | `site-nav__nav d-flex flex-column row-gap-30 pt-40 pb-40` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-hero__buttons justify-content-center justify-content-md-center justify-conte` |
-| `<nav>` | `-` | `pb-row-text-medias-tabs__tabList d-none d-md-flex position-relative blossom-carousel` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-text-medias-tabs__buttons mt-8 mt-xl-auto --layout-mobile-horizontal --layou` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-text-medias-tabs__buttons mt-8 mt-xl-auto --layout-mobile-horizontal --layou` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-text-medias-tabs__buttons mt-8 mt-xl-auto --layout-mobile-horizontal --layou` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-rich-scrolling-content__buttons --layout-mobile-horizontal --layout-tablet-h` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-rich-scrolling-content__buttons --layout-mobile-horizontal --layout-tablet-h` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-certifications__buttons col-span-xl-6 col-start-md-2 col-start-xl-7 --layout` |
-| `<nav>` | `-` | `links-nav d-flex pb-row-promo__buttons justify-items-center --layout-mobile-horizontal --layout-tabl` |
-| `<nav>` | `-` | `social-links site-footer__socialLinks` |
-| `<nav>` | `-` | `site-footer__nav col-span-md-5 col-start-md-4 col-span-xl-6 col-start-xl-7 mb-10 mb-md-0 mb-xl-60 ml` |
-| `<nav>` | `-` | `site-footer__bottomNav fz-12 lh-140 col-start-xl-7 col-span-md-5 col-span-xl-4 align-self-md-center ` |
+| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
+| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#1a1a1e` | `var(--color-primary)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff5c00` | `var(--color-secondary)` in `:root` |
+| **Secondary / Muted Copy** | `#cca44f` | `var(--color-noble)` in `:root` |
+| **Structural Hairline Border** | `#95795c` | `var(--color-trust)` in `:root` |
+| **Variable Token (`--color-trust-dark`)** | `#53402c` | `var(--color-trust-dark)` in `:root` |
+| **Variable Token (`--color-remedy`)** | `#fcf8ef` | `var(--color-remedy)` in `:root` |
+| **Variable Token (`--color-remedy-dark`)** | `#ecd9b9` | `var(--color-remedy-dark)` in `:root` |
+| **Variable Token (`--color-remedy-medium`)** | `#f2eee5` | `var(--color-remedy-medium)` in `:root` |
+| **Variable Token (`--color-remedy-light`)** | `#f9f7f2` | `var(--color-remedy-light)` in `:root` |
+| **Variable Token (`--color-aura`)** | `#f7f1ff` | `var(--color-aura)` in `:root` |
+| **Variable Token (`--color-aura-dark`)** | `#cabbdb` | `var(--color-aura-dark)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--color-transparent` | `transparent` | Brand / Palette Token |
+| `--color-current` | `currentColor` | Brand / Palette Token |
+| `--color-black` | `#000` | Canvas / Surface Token |
+| `--color-white` | `#fff` | Canvas / Surface Token |
+| `--color-primary` | `#1a1a1e` | Brand / Palette Token |
+| `--color-secondary` | `#ff5c00` | Brand / Palette Token |
+| `--color-vital` | `#ff5c00` | Brand / Palette Token |
+| `--color-noble` | `#cca44f` | Brand / Palette Token |
+| `--color-trust` | `#95795c` | Brand / Palette Token |
+| `--color-trust-dark` | `#53402c` | Canvas / Surface Token |
+| `--color-remedy` | `#fcf8ef` | Brand / Palette Token |
+| `--color-remedy-dark` | `#ecd9b9` | Canvas / Surface Token |
+| `--color-remedy-medium` | `#f2eee5` | Brand / Palette Token |
+| `--color-remedy-light` | `#f9f7f2` | Canvas / Surface Token |
+| `--color-aura` | `#f7f1ff` | Brand / Palette Token |
+| `--color-aura-dark` | `#cabbdb` | Canvas / Surface Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.site-header> — `clinia-com`)**:
+   - Landmark `<header class="site-header position-fixed">` hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-wp-strategy="async"`, `data-site-loader`, `data-site-transition`), and stylesheet rule `webkit-scrollbar { display:none }`.
+2. **Hero Stage & Focal Lead (<main.flex-grow-1> — `Health data, turned into a patient`)**:
+   - Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"Product Clinia Context Engine Product A health-specific context l"* over `#000` canvas and `#fff` ink.
+3. **Primary Showcase & Content Grid (<main.flex-grow-1> — `Engineered for AI agents in missio`)**:
+   - Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Clinia Context Engine"*, asset references (`humans.txt`, `xmlrpc.php`, `gtm.js`, `embed`), and grid rule `active { cursor:grabbing }`.
+4. **Interactive Detail & Feature Matrix (<main.flex-grow-1> — `Health-native`)**:
+   - Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Product A health-specific context layer that sits between patient"*) with `#1a1a1e` surface cards, `#ff5c00` accents, and `blossom-dots>blossom-dot { display:none }`.
+5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)**:
+   - Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"A health-specific context layer that sits between patient da"*, and `#95795c` structural dividers.

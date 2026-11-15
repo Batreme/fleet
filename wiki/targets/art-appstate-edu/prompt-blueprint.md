@@ -1,0 +1,15 @@
+---
+title: "UI Prompt Blueprint: art-appstate-edu"
+date: 2026-11-15
+target: "[[overview|art-appstate-edu]]"
+status: blocked
+block_reason: "Empty raw DOM capture (39 bytes, 0 stylesheets)"
+archetype: "Blocked / WAF-Gated Target (Excluded from Tally)"
+---
+
+# UI Design System & Master Generation Blueprint: art-appstate-edu (`status: blocked`)
+
+> [!WARNING]
+> **Target Status**: `status: blocked` (`Empty raw DOM capture (39 bytes, 0 stylesheets)`)  
+> **Production URL**: [https://art.appstate.edu/](https://art.appstate.edu/)  
+> **Verification Policy**: Excluded from the `25.0` truth evaluation tally per `claude-loop` `C1` (zero fabricated tokens on WAF-gated/error captures).

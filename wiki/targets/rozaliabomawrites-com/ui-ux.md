@@ -1,47 +1,67 @@
----
-title: "UI & Design System: rozaliabomawrites-com"
-date: 2026-11-14
-target: "[[overview|rozaliabomawrites-com]]"
----
+# UI & UX Architecture: rozaliabomawrites-com
 
-# UI Architecture & Design Tokens: rozaliabomawrites-com
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--td176b92ada598f8f` | `initial` |
-| `--td851cd75a8793667` | `initial` |
-| `--tc58f4bf5a9869b3e` | `initial` |
-| `--t3a480c2f814ef19c` | `initial` |
-| `--t77e217518bcd986b` | `initial` |
-| `--tc5e0863356bf5767` | `initial` |
-| `--t7a2234c5eadde886` | `initial` |
-| `--td340014d093b0821` | `initial` |
-| `--tf8c80baf678711b8` | `initial` |
-| `--t2986df03ecf88759` | `initial` |
-| `--te0c856964146535b` | `initial` |
-| `--tf630d2cff7da8057` | `initial` |
-| `--tf69032263d26c015` | `initial` |
-| `--ta5930fb3c4c7209c` | `initial` |
-| `--t1f1729a8e756e8bf` | `initial` |
-| `--t53c1a9d86136aded` | `initial` |
-| `--t8533f30445e4a126` | `initial` |
-| `--tc2512a21369bd447` | `initial` |
-| `--t5088a11581fecd14` | `initial` |
-| `--t331d13276596b01e` | `initial` |
-| `--t42381e7a43d9caf4` | `initial` |
-| `--t7f4f2c6d54836ce0` | `initial` |
-| `--t7d8b8e5ee291aec0` | `initial` |
-| `--t4726c68ef6d7b08f` | `initial` |
-| `--tf0a0d1154827847f` | `initial` |
+## Overview & Design Identity
+- **Target**: `rozaliabomawrites-com` (**Rozalia Boma — Multicultural Romance Author**)
+- **Production URL**: [https://rozaliabomawrites.com/](https://rozaliabomawrites.com/)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#9ca3af`)
+- **Summary**: Official site of Rozalia Boma, author of multicultural YA romance. Books, diary entries, guestbook and newsletter.
+- **Total Clean CSS Variables Extracted**: `268` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Gochi Hand Fallback`
+- **Body Font Stack**: `Barlow Condensed`
+- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `6em`)
+- **Section Heading (`H2`)**: rule `h2` (`letter-spacing: -.02em`, `font-weight: 400`)
+- **Body Copy**: rule `p` (`line-height: 1.65`)
+- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `6em`)
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `-` | `fixed top-0 left-0 right-0 z-50` |
-| `<nav>` | `-` | `fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 group` |
-| `<footer>` | `-` | `relative z-10 mt-8 p-0 m-0 w-full` |
+| **Primary Canvas Substrate** | `#000` | `var(--w2w-start-background-color)` in `:root` |
+| **Primary Typography Ink** | `#fff` | `var(--normal-bg)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#e5e7eb` | `:after { border-color: #e5e7eb }` |
+| **Interactive Accent / Highlight** | `#9ca3af` | `textarea::-moz-placeholder { color: #9ca3af }` |
+| **Secondary / Muted Copy** | `#ffa500` | `.os-window--orange { border-color: orange }` (`#ffa500`) |
+| **Structural Hairline Border** | `#93ceec` | `.os-window--babyblue { border-color: #93ceec }` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--background` | `290 80% 92%` | Canvas / Surface Token |
+| `--foreground` | `320 60% 18%` | Typography Ink Token |
+| `--card` | `0 0% 100%` | Dimension / Scale Token |
+| `--card-foreground` | `320 60% 18%` | Typography Ink Token |
+| `--popover` | `0 0% 100%` | Dimension / Scale Token |
+| `--popover-foreground` | `320 60% 18%` | Typography Ink Token |
+| `--primary` | `330 95% 60%` | Brand / Palette Token |
+| `--primary-foreground` | `0 0% 100%` | Typography Ink Token |
+| `--secondary` | `280 85% 78%` | Brand / Palette Token |
+| `--secondary-foreground` | `320 60% 18%` | Typography Ink Token |
+| `--muted` | `320 60% 95%` | Dimension / Scale Token |
+| `--muted-foreground` | `320 25% 45%` | Typography Ink Token |
+| `--accent` | `195 90% 75%` | Brand / Palette Token |
+| `--accent-foreground` | `320 60% 18%` | Typography Ink Token |
+| `--destructive` | `0 84% 60%` | Dimension / Scale Token |
+| `--destructive-foreground` | `0 0% 100%` | Typography Ink Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<nav.fixed> — `rozaliabomawrites-com`)**:
+   - Landmark `<nav class="fixed top-0">` hosting `Rozalia Boma — Multicultural Romance` navigation (`Home · Author · Books · Blog · Guestbook`), DOM attributes (`data-artifact-kind="dwl_content_hash"`, `data-artifact-id="db5c4db312500dfaed9e3..."`, `data-commit-sha="37366776bd44c18a989e4..."`, `data-context-token="v1.eyJwcm9qZWN0X2lkIj..."`), and stylesheet rule `after { box-sizing:border-box;border-width:0;border-style:solid;border-color:e5e7eb }`.
+2. **Hero Stage & Focal Lead (<section.fixed> — `Rozalia Boma — writing multicultur`)**:
+   - Landmark `<section class="fixed">` presenting display lead `Rozalia Boma — writing multicultural romances` and copy excerpt *"Rozalia Boma Writes is loading"* over `#000` canvas and `#fff` ink.
+3. **Primary Showcase & Content Grid (<section.relative> — `w r i t i n g m u l t i c u l t u `)**:
+   - Landmark `<section class="relative min-h-screen">` rendering section `w r i t i n g m u l t i c u l t u r a l r o m a n...` with copy *"Beware! Black Eastern European baddies on the rise!"*, asset references (`holo-sky-bg-C4iYYOxV.webp`, `fonts.googleapis.com`, `fonts.gstatic.com`, `sykz-yx0lLcxQaSIhS23-w.woff2`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.relative> — `H i ! I ' m R o z a l i a B o m a `)**:
+   - Landmark `<section class="relative w-full">` framing `H i ! I ' m R o z a l i a B o m a .` and `T h e B o o k` (*"w r i t i n g m u l t i c u l t u r a l"*) with `#e5e7eb` surface cards, `#9ca3af` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.relative> — `https://rozaliabomawrites.com/`)**:
+   - Landmark `<footer class="relative z-10">` anchoring `Rozalia Boma — Multicultural Rom` footer links (`Home · Author · Books · Blog · Guestbook`), copy *"m u l t i c u l t u r a l"*, and `#93ceec` structural dividers.

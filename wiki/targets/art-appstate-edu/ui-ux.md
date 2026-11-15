@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: art-appstate-edu"
-date: 2026-10-31
-target: "[[overview|art-appstate-edu]]"
+title: "UI & UX Architecture: art-appstate-edu"
+status: blocked
+block_reason: "Empty raw DOM capture (39 bytes, 0 stylesheets)"
 ---
 
-# UI Architecture & Design Tokens: art-appstate-edu
+# UI & UX Architecture: art-appstate-edu (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://art.appstate.edu/](https://art.appstate.edu/)  
+> **Block / Unreachable Reason**: Empty raw DOM capture (39 bytes, 0 stylesheets)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-*No layout primitives identified.*
+This target's raw capture in `/root/projects/reverse-harness/raw/art-appstate-edu/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

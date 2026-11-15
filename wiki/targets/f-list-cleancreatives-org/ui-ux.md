@@ -1,52 +1,67 @@
----
-title: "UI & Design System: f-list-cleancreatives-org"
-date: 2026-11-14
-target: "[[overview|f-list-cleancreatives-org]]"
----
+# UI & UX Architecture: f-list-cleancreatives-org
 
-# UI Architecture & Design Tokens: f-list-cleancreatives-org
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--fl-black-pure` | `#1D1D1D` |
-| `--fl-black-text` | `#1D1D1D` |
-| `--fl-white` | `#FFF` |
-| `--fl-grey-1` | `#CACACA` |
-| `--fl-grey-2` | `#7D7D7D` |
-| `--fl-cream` | `#ECEAE3` |
-| `--fl-yellow` | `#EDCC4B` |
-| `--fl-green` | `#5DA279` |
-| `--fl-red` | `#FF5037` |
-| `--font-longform-family` | `"roc-grotesk", sans-serif` |
-| `--font-longform-line-height` | `165%` |
-| `--font-longform-size` | `1.25rem` |
-| `--font-longform-style` | `normal` |
-| `--font-longform-weight` | `400` |
-| `--font-longform-weight-bold` | `600` |
-| `--font-longform-paragraph-margin` | `2.125rem 0 0 0` |
-| `--font-heading-family` | `"roc-grotesk-compressed", sans-serif` |
-| `--font-heading-line-height` | `85%` |
-| `--font-heading-style` | `normal` |
-| `--font-heading-weight` | `600` |
-| `--font-heading-margin-before` | `3.5rem` |
-| `--font-heading-margin-after` | `1.5rem` |
-| `--plyr-embed-accent` | `--fl-yellow}html{font-size:16px}body{background-color:var(--` |
-| `--full-ui` | `after,.plyr--full-ui :before{box-sizing:inherit}.plyr--full-` |
-| `--full-ui` | `:-webkit-media-text-track-container{display:none}.plyr__capt` |
+## Overview & Design Identity
+- **Target**: `f-list-cleancreatives-org` (**F-List 2026**)
+- **Production URL**: [https://f-list.cleancreatives.org/](https://f-list.cleancreatives.org/)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1d1d1d` ink, `#edcc4b` accent)
+- **Summary**: Search the F-List 2026 to uncover the 802 advertising and PR agencies behind 1,321 documented fossil fuel contracts worldwide.
+- **Total Clean CSS Variables Extracted**: `56` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `roc-grotesk`
+- **Body Font Stack**: `roc-grotesk-compressed`
+- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: rule `,.h1` (`font-size: 4.5rem`)
+- **Section Heading (`H2`)**: rule `h2` (`font-size: 17px`)
+- **Body Copy**: CSS variables `--cmplz_category_body_font_size: 12px`, `--font-longform-paragraph-margin: 2.125rem 0 0 0`; rule `p` (`font-size: 16px`, `line-height: 24px`)
+- **Metadata & Labels**: rule `small` (`line-height: 100%`, `font-weight: 300`)
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `main-nav` | `` |
-| `<nav>` | `-` | `socials icons style-1` |
-| `<nav>` | `footer-links-column_1` | `` |
-| `<nav>` | `footer-links-legal` | `` |
-| `<nav>` | `-` | `` |
-| `<nav>` | `-` | `` |
-| `<header>` | `site-header` | `` |
-| `<footer>` | `-` | `` |
+| **Primary Canvas Substrate** | `#ffffff` | `var(--cmplz_banner_background_color)` in `:root` |
+| **Primary Typography Ink** | `#f2f2f2` | `var(--cmplz_banner_border_color)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#1d1d1d` | `var(--cmplz_text_color)` in `:root` |
+| **Interactive Accent / Highlight** | `#edcc4b` | `var(--cmplz_button_accept_background_color)` in `:root` |
+| **Secondary / Muted Copy** | `#dddddd` | `var(--cmplz_slider_inactive_color)` in `:root` |
+| **Structural Hairline Border** | `#FFF` | `var(--fl-white)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--cmplz_banner_width` | `526px` | Layout / Spatial Grid Token |
+| `--cmplz_banner_background_color` | `#ffffff` | Canvas / Surface Token |
+| `--cmplz_banner_border_color` | `#f2f2f2` | Brand / Palette Token |
+| `--cmplz_banner_border_width` | `0px 0px 0px 0px` | Layout / Spatial Grid Token |
+| `--cmplz_banner_border_radius` | `0px 0px 0px 0px` | Elevation / Border Token |
+| `--cmplz_banner_margin` | `10px` | Layout / Spatial Grid Token |
+| `--cmplz_categories-height` | `216px` | Layout / Spatial Grid Token |
+| `--cmplz_title_font_size` | `15px` | Typography / Scale Token |
+| `--cmplz_text_line_height` | `calc(var(--cmplz_text_font_size) * 1.5)` | Typography Ink Token |
+| `--cmplz_text_color` | `#1d1d1d` | Typography Ink Token |
+| `--cmplz_hyperlink_color` | `#1d1d1d` | Typography Ink Token |
+| `--cmplz_text_font_size` | `12px` | Typography Ink Token |
+| `--cmplz_link_font_size` | `12px` | Typography Ink Token |
+| `--cmplz_category_body_font_size` | `12px` | Typography / Scale Token |
+| `--cmplz_button_accept_background_color` | `#edcc4b` | Canvas / Surface Token |
+| `--cmplz_button_accept_border_color` | `#1d1d1d` | Brand / Palette Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.browser-chrome> — `f-list-cleancreatives-org`)**:
+   - Landmark `<header class="browser-chrome">` hosting `F-List 2026` navigation (`The report · The F-List · Dirty work · Take Action`), DOM attributes (`data-cmplz="1"`, `data-nosnippet="true"`, `data-prefix="fas"`, `data-icon="times"`), and stylesheet rule `.cmplz-category { width: initial; -webkit-appearance: checkbox; }`.
+2. **Hero Stage & Focal Lead (<section.flex> — `The Creative Cover-up`)**:
+   - Landmark `<section class="flex hero">` presenting display lead `The Creative Cover-up` and copy excerpt *"Functional Always active"* over `#ffffff` canvas and `#1d1d1d` ink.
+3. **Primary Showcase & Content Grid (<section.flex> — `Dirty work. Exposed.`)**:
+   - Landmark `<section class="flex call-intro">` rendering section `Dirty work. Exposed.` with copy *"The technical storage or access is strictly necessary for the leg"*, asset references (`xmlrpc.php`, `www.googletagmanager.com`, `flist2026.b-cdn.net`, `embed`), and grid rule `.cmplz-category:checked::before { content: ''; }`.
+4. **Interactive Detail & Feature Matrix (<section.flex> — `We are exposing`)**:
+   - Landmark `<section class="flex redacted">` framing `We are exposing` and `The 2026 picture` (*"The technical storage or access is necessary for the legitimate p"*) with `#1d1d1d` surface cards, `#edcc4b` accents, and `.cmplz-cookiebanner { box-sizing: border-box; }`.
+5. **Colophon & Global Directory Footer (<footer.page-template> — `https://f-list.cleancreatives.org/`)**:
+   - Landmark `<footer class="page-template">` anchoring `F-List 2026` footer links (`The report · The F-List · Dirty work · Take Action`), copy *"The technical storage or access that is used exclusively for"*, and `#FFF` structural dividers.

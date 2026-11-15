@@ -1,21 +1,14 @@
 ---
-title: "UI & Design System: www-danielebuser-com"
-date: 2026-11-14
-target: "[[overview|www-danielebuser-com]]"
+title: "UI & UX Architecture: www-danielebuser-com"
+status: blocked
+block_reason: "Vercel Platform Gate (Deployment Paused)"
 ---
 
-# UI Architecture & Design Tokens: www-danielebuser-com
+# UI & UX Architecture: www-danielebuser-com (`status: blocked`)
 
-## 🎨 Design Tokens (CSS Variables)
+> [!WARNING]
+> **Target Status**: `status: blocked`  
+> **Production URL**: [https://www.danielebuser.com/](https://www.danielebuser.com/)  
+> **Block / Unreachable Reason**: Vercel Platform Gate (Deployment Paused)
 
-| Token Name | Inferred Value |
-|---|---|
-*No CSS custom property tokens extracted.*
-
----
-
-## 🧱 Layout Primitives & Component Tree
-
-| Primitive | ID | Classes / Selectors |
-|---|---|---|
-| `<main>` | `-` | `` |
+This target's raw capture in `/root/projects/reverse-harness/raw/www-danielebuser-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.

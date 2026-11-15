@@ -28,6 +28,7 @@ outcome_summary: "Designed and built custom-city: a dark heavyweight industrial 
 - **Anti-AI-Slop Overhaul (Fleet Playbooks)**:
   - Applied blueprints from `[[agency-and-ecommerce-patterns]]` and `[[tech-and-experimental-patterns]]`.
   - Replaced generic SaaS card grids with an Asymmetric Split-Screen Hero (`twohalves-co` pattern) and a Floating Bottom Dock (`FloatingPillNav` from `romainavalle-dev`).
+  - **Real-Time 3D WebGL Hero Garment Rack (`tech-and-experimental-patterns`)**: Upgraded the Hero right-hand obsidian viewport from CSS-perspective 2D SVGs to a full Three.js WebGL spatial substrate (`z-0`) with procedural PBR French Terry & ribbed knit textures (`bumpMap`, `roughnessMap`, `sheen`), sculpted 3D garment meshes (`hoodie`, `tshirt`, `crewneck`, `beanie`), 3D raised puff embroidery patches, `pointer-events-none` Telemetry HUD (`z-10` with corner reticles, live azimuth/FPS), and `pointer-events-auto` CAD `X-RAY` wireframe & `ORBIT` controls (`z-20`).
   - Implemented the Optical Macro Loupe (20x magnifying lens) with thread filament inspection.
   - Added Tajima 15-needle slot rack (`#01-#15`), real stitch density controls (`0.30 - 0.55 mm`), wireframe X-Ray CAD mode, and dynamic runtime/meter telemetry.
   - Applied strict 3:4 portrait aspect ratio discipline (`--aspect-ratio: .75`) on product cards with physical weight in grams, model stats, and batch remaining counters.

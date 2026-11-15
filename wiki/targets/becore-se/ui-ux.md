@@ -1,55 +1,67 @@
----
-title: "UI & Design System: becore-se"
-date: 2026-11-14
-target: "[[overview|becore-se]]"
----
+# UI & UX Architecture: becore-se
 
-# UI Architecture & Design Tokens: becore-se
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--unbranded` | `hover:not([disabled]){background-color:#136f99}.shopify-paym` |
-| `--border-color` | `var(--text-color) / .6}.accordion{--accordion-block-padding:` |
-| `--accordion-inline-padding` | `0` |
-| `--accordion-block-padding` | `1.25rem}.accordion--large{--accordion-block-padding: 1.65rem` |
-| `--accordion-inline-padding` | `1.75rem}}.big-link{align-items:center` |
-| `--opacity` | `hover~.big-link--opacity>*{opacity:.3}.big-link--opacity:has` |
-| `--colors` | `hover>*{transform:translate(1.75rem)}.big-link--colors:hover` |
-| `--button-padding-block` | `.75rem` |
-| `--button-padding-inline` | `1.5rem` |
-| `--button-background` | `var(--button-background-primary)` |
-| `--button-text-color` | `var(--button-text-primary)` |
-| `--button-border-color` | `0 0 0 / 0` |
-| `--button-padding-inline` | `1.5rem` |
-| `--button-padding-block` | `.625rem` |
-| `--button-padding-inline` | `1.25rem` |
-| `--button-padding-block` | `.875rem` |
-| `--button-padding-inline` | `2.5rem}}@media screen and (pointer:fine){.button__content[ro` |
-| `--glowing-shape-width` | `min(40px, 60%)` |
-| `--unbranded` | `hover:not([disabled]){background-color:rgb(var(--button-back` |
-| `--shopify-accelerated-checkout-button-block-size` | `44px` |
-| `--shopify-accelerated-checkout-button-border-radius` | `var(--button-border-radius)` |
-| `--shopify-accelerated-checkout-button-box-shadow` | `none}.circle-button{--button-size: 1.75rem` |
-| `--button-size` | `2.5rem}.circle-button--blurred{-webkit-backdrop-filter:blur(` |
-| `--blurred` | `before{opacity:.6}@media screen and (min-width:1000px){.circ` |
-| `--content-box-spacing` | `max(1.5rem, var(--container-gutter))` |
+## Overview & Design Identity
+- **Target**: `becore-se` (**Becore**)
+- **Production URL**: [https://becore.se/](https://becore.se/)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `#fff` ink, `#121212` accent)
+- **Summary**: Experience the latest in activewear from our new Becore collection
+- **Total Clean CSS Variables Extracted**: `240` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Roboto`
+- **Body Font Stack**: `Cabin`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `100%`, `.6875rem`, `.8125rem`, `.625rem`)
+- **Section Heading (`H2`)**: rule `h2` (`font-size: 120%`, `font-weight: bold`)
+- **Body Copy**: CSS variables `--drawer-body-padding-block: min(2rem, var(--container-gutter))`, `--drawer-body-padding-inline: min(2rem, var(--container-gutter))`, `--modal-body-padding-block: 1.25rem`; rule `p` (`line-height: 1.3`)
+- **Metadata & Labels**: CSS variables `--subheading-letter-spacing: -0.01em`, `--heading-letter-spacing: 0.01em`, `--text-letter-spacing: -0.01em`
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `-` | `mode-tabs mode-tabs-sections--27158676930896__announcement-bar` |
-| `<nav>` | `-` | `header__primary-nav md:justify-center` |
-| `<nav>` | `-` | `header__secondary-nav` |
-| `<header>` | `-` | `` |
-| `<header>` | `-` | `` |
-| `<header>` | `-` | `` |
-| `<header>` | `shopify-section-sections--27158676930896__header` | `shopify-section shopify-section-group-header-group shopify-section--header` |
-| `<aside>` | `shopify-section-sections--27158676930896__announcement-bar` | `shopify-section shopify-section-group-header-group shopify-section--announcement-bar` |
-| `<main>` | `main` | `anchor` |
-| `<footer>` | `-` | `` |
-| `<footer>` | `shopify-section-sections--27158676898128__footer` | `shopify-section shopify-section-group-footer-group shopify-section--footer` |
+| **Primary Canvas Substrate** | `#1990c6` | `.shopify-payment-button__button... { background-color: #1990c6 }` |
+| **Primary Typography Ink** | `#0000` | `pify-payment-button__button.but... { color: #0000 }` |
+| **Elevated Surface / Card Substrate** | `#fff` | `on.loading>.loading-overlay__sp... { stroke: #fff }` |
+| **Interactive Accent / Highlight** | `#121212` | `.shopify-payment-button__button... { stroke: #121212 }` |
+| **Secondary / Muted Copy** | `#1a1a1a` | `.toast__message { background: #1a1a1a }` |
+| **Structural Hairline Border** | `#e51c00` | `.toast__message--error { background: #e51c00 }` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--border-color` | `var(--text-color) / .6` | Brand / Palette Token |
+| `--accordion-block-padding` | `.875rem` | Layout / Spatial Grid Token |
+| `--accordion-inline-padding` | `0` | Layout / Spatial Grid Token |
+| `--button-padding-block` | `.75rem` | Layout / Spatial Grid Token |
+| `--button-padding-inline` | `1.5rem` | Layout / Spatial Grid Token |
+| `--button-background` | `var(--button-background-primary)` | Canvas / Surface Token |
+| `--button-text-color` | `var(--button-text-primary)` | Typography Ink Token |
+| `--button-border-color` | `0 0 0 / 0` | Brand / Palette Token |
+| `--glowing-shape-width` | `min(40px, 60%)` | Layout / Spatial Grid Token |
+| `--button-size` | `1.75rem` | Layout / Spatial Grid Token |
+| `--content-box-spacing` | `max(1.5rem, var(--container-gutter))` | Layout / Spatial Grid Token |
+| `--scroll-marker-group-gap` | `.3125rem .75rem` | Layout / Spatial Grid Token |
+| `--scroll-marker-size` | `.375rem` | Layout / Spatial Grid Token |
+| `--scroll-marker-width` | `.5rem` | Layout / Spatial Grid Token |
+| `--scroll-marker-height` | `1px` | Layout / Spatial Grid Token |
+| `--scroll-marker-group-justify-content` | `start` | Design System Custom Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.hydrated> — `becore-se`)**:
+   - Landmark `<header class="hydrated">` hosting `Becore` navigation (`MOVE · SHOP`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-locksmith`, `data-styles`, `data-shop-id="85529952592"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+2. **Hero Stage & Focal Lead (<section.shopify-pc__banner__dialog> — `Cookie consent`)**:
+   - Landmark `<section class="shopify-pc__banner__dialog">` presenting display lead `Cookie consent` and copy excerpt *"We and our partners, including Shopify, use cookies and other tec"* over `#1990c6` canvas and `#fff` ink.
+3. **Primary Showcase & Content Grid (<section.shopify-section> — `Becore`)**:
+   - Landmark `<section class="shopify-section shopify-section-group-overlay-group">` rendering section `Becore` with copy *"Manage preferences"*, asset references (`mixpanel-2-latest.min.js`, `jquery-3.6.4.min-dad6fdf250e31dfa...`, `jquery-migrate-3.4.1.min-6a381abc...`, `jquery-ui-1.13.2.widget-32e3429b3...`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
+4. **Interactive Detail & Feature Matrix (<section.shopify-section> — `Cart`)**:
+   - Landmark `<section class="shopify-section shopify-section-group-overlay-group">` framing `Cart` and `Favourites ( 0 )` (*"BLACK FRIDAY · 10 CREDITS FOR 2 500 SEK · SHOP NOW"*) with `#fff` surface cards, `#121212` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+5. **Colophon & Global Directory Footer (<footer.shopify-pc__banner__dialog> — `https://becore.se/`)**:
+   - Landmark `<footer class="shopify-pc__banner__dialog">` anchoring `Becore` footer links (`MOVE · SHOP`), copy *"Studio Join Membership & credits Gift card FAQ Studio login "*, and `#e51c00` structural dividers.

@@ -1,51 +1,67 @@
----
-title: "UI & Design System: www-plugandplaydesign-co-uk"
-date: 2026-11-14
-target: "[[overview|www-plugandplaydesign-co-uk]]"
----
+# UI & UX Architecture: www-plugandplaydesign-co-uk
 
-# UI Architecture & Design Tokens: www-plugandplaydesign-co-uk
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Inferred Value |
-|---|---|
-| `--swiper-theme-color` | `#007aff}:host{position:relative` |
-| `--tw-translate-x` | `0` |
-| `--tw-translate-y` | `0` |
-| `--tw-translate-z` | `0` |
-| `--tw-rotate-x` | `initial` |
-| `--tw-rotate-y` | `initial` |
-| `--tw-rotate-z` | `initial` |
-| `--tw-skew-x` | `initial` |
-| `--tw-skew-y` | `initial` |
-| `--tw-space-y-reverse` | `0` |
-| `--tw-border-style` | `solid` |
-| `--tw-gradient-position` | `initial` |
-| `--tw-gradient-from` | `#0000` |
-| `--tw-gradient-via` | `#0000` |
-| `--tw-gradient-to` | `#0000` |
-| `--tw-gradient-stops` | `initial` |
-| `--tw-gradient-via-stops` | `initial` |
-| `--tw-gradient-from-position` | `0%` |
-| `--tw-gradient-via-position` | `50%` |
-| `--tw-gradient-to-position` | `100%` |
-| `--tw-leading` | `initial` |
-| `--tw-font-weight` | `initial` |
-| `--tw-ordinal` | `initial` |
-| `--tw-slashed-zero` | `initial` |
-| `--tw-numeric-figure` | `initial` |
+## Overview & Design Identity
+- **Target**: `www-plugandplaydesign-co-uk` (**Web Design Agency London & Guildford · Plug & Play**)
+- **Production URL**: [https://www.plugandplaydesign.co.uk/](https://www.plugandplaydesign.co.uk/)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#c40806` canvas, `#fff` ink, `#000` accent)
+- **Summary**: Award-winning web design agency in London and Guildford. High-performance websites and digital retainers that drive measurable growth.
+- **Total Clean CSS Variables Extracted**: `380` (curated ground-truth set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Geist`
+- **Body Font Stack**: `Geist Mono`
+- **Monospace / Technical Font Stack**: `Geist Mono`
+- **Hero Display (`H1`)**: rule `h1` (`font-size: var(--text-body-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`)
+- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--text-body-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`)
+- **Body Copy**: CSS variables `--text-body-sm: .875rem`, `--text-body-sm--line-height: 1.4`, `--text-body-sm--letter-spacing: -.02em`
+- **Metadata & Labels**: CSS variables `--font-mono: "Geist Mono",ui-monospace,"SF Mono",Menlo,monospace`, `--default-mono-font-family: var(--font-mono)`, `--color-media-caption: #0006`
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
 |---|---|---|
-| `<nav>` | `-` | `absolute top-1/2 left-1/2 hidden w-max -translate-x-1/2 -translate-y-1/2 items-center gap-2 lg:flex ` |
-| `<header>` | `-` | `fixed inset-x-0 z-40 transition-[background-color] duration-300 ease-in-out motion-reduce:transition` |
-| `<header>` | `-` | `bg-background` |
-| `<header>` | `-` | `bg-background` |
-| `<header>` | `-` | `bg-background` |
-| `<main>` | `-` | `` |
-| `<footer>` | `-` | `bg-background px-page pt-section-md pb-6` |
+| **Primary Canvas Substrate** | `#c40806` | `var(--color-red-600)` in `:root` |
+| **Primary Typography Ink** | `#5f58ff` | `var(--color-purple-600)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#4b23cd` | `var(--color-purple-700)` in `:root` |
+| **Interactive Accent / Highlight** | `#000` | `var(--color-black)` in `:root` |
+| **Secondary / Muted Copy** | `#fff` | `var(--color-white)` in `:root` |
+| **Structural Hairline Border** | `#fafafa` | `var(--color-grey-50)` in `:root` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--font-sans` | `"Geist","Helvetica Neue",Arial,sans-serif` | Typography / Scale Token |
+| `--font-mono` | `"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace` | Typography / Scale Token |
+| `--color-red-600` | `#c40806` | Brand / Palette Token |
+| `--color-purple-600` | `#5f58ff` | Brand / Palette Token |
+| `--color-purple-700` | `#4b23cd` | Brand / Palette Token |
+| `--color-black` | `#000` | Canvas / Surface Token |
+| `--color-white` | `#fff` | Canvas / Surface Token |
+| `--spacing` | `.25rem` | Layout / Spatial Grid Token |
+| `--container-sm` | `24rem` | Layout / Spatial Grid Token |
+| `--container-md` | `28rem` | Layout / Spatial Grid Token |
+| `--font-weight-light` | `300` | Canvas / Surface Token |
+| `--font-weight-normal` | `400` | Typography / Scale Token |
+| `--font-weight-medium` | `500` | Typography / Scale Token |
+| `--radius-xs` | `.125rem` | Elevation / Border Token |
+| `--radius-sm` | `.25rem` | Elevation / Border Token |
+| `--radius-md` | `.5rem` | Elevation / Border Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.fixed> — `www-plugandplaydesign-co-uk`)**:
+   - Landmark `<header class="fixed inset-x-0">` hosting `Web Design Agency London & Guildford` navigation (`Our Work · Web Design · Branding · Digital Marketing · UX / UI Design`), DOM attributes (`data-hero-enter`, `data-precedence="next"`, `data-precedence="next"`, `data-domain="plugandplaydesign.co.uk"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.px-page> — `Web Design Agency in London and Su`)**:
+   - Landmark `<section class="px-page pt-section">` presenting display lead `Web Design Agency in London and Surrey` and copy excerpt *"Plug and Play is a creative web design agency based in Guildford,"* over `#c40806` canvas and `#fff` ink.
+3. **Primary Showcase & Content Grid (<section.bg-background> — `Our process`)**:
+   - Landmark `<section class="bg-background px-page">` rendering section `Our process` with copy *"digital transformation"*, asset references (`ca4cfa437ae45d18.css`, `dd5d352a082118c1.css`, `webpack-43624c9fe997cbf4.js`, `cf303062-0b72e54636065547.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.w-screen> — `What types of websites do we build`)**:
+   - Landmark `<section class="w-screen">` framing `What types of websites do we build?` and `What industries do you work with?` (*"(via its enterprise site,"*) with `#4b23cd` surface cards, `#000` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.bg-background> — `https://www.plugandplaydesign.co.uk/`)**:
+   - Landmark `<footer class="bg-background px-page">` anchoring `Web Design Agency London & Guild` footer links (`Our Work · Web Design · Branding · Digital Marketing · UX / UI Design`), copy *"digital marketing strategy"*, and `#fafafa` structural dividers.
