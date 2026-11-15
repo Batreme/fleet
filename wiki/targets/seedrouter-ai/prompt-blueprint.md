@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "seedrouter-ai"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#e40014` ink, `#ff6568` accent)"
 ---
 

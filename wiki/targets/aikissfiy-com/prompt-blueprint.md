@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "aikissfiy-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f172a` ink, `#64748b` accent)"
 ---
 

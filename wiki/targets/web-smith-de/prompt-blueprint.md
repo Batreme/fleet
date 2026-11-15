@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "web-smith-de"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a1320` canvas, `#8fb5fa` ink, `#163faf` accent)"
 ---
 

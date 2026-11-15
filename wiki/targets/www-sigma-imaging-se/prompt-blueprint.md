@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-sigma-imaging-se"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigma Sans` + `Sigma Serif`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "awards-racing"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas, `#fff` ink, `#c60000` accent)"
 ---
 

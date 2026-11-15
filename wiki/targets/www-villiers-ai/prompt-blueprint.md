@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-villiers-ai"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f15` canvas, `#f8f9f9` ink, `#1a1a1f` accent)"
 ---
 

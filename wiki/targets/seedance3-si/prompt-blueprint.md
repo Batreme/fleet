@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "seedance3-si"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#242520` canvas, `#e4e4e7` ink, `#111113` accent)"
 ---
 

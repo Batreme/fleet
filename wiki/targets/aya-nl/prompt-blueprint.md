@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "aya-nl"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191717` canvas, `#fffdfd` ink, `#fffdfd` accent)"
 ---
 

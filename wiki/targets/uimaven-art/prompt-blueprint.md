@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "uimaven-art"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#ffdb43`)"
 ---
 

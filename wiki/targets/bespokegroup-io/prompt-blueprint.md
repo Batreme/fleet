@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "bespokegroup-io"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#474747` ink, `#9c9c9c` accent)"
 ---
 

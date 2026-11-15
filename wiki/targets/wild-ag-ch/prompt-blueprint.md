@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "wild-ag-ch"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#faf9f4` canvas, `#2b221c` ink, `#a48a7a` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "the-family-rice-tray-vercel-app"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas, `#e3a94a` ink, `#8b0c1c` accent)"
 ---
 

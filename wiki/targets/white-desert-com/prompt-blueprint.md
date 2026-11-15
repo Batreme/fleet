@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "white-desert-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0b0c0f` ink, `#6aa5ff` accent)"
 ---
 

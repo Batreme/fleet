@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ieqtechnology-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0d91d0` canvas, `#fff` ink, `#e1eff6` accent)"
 ---
 

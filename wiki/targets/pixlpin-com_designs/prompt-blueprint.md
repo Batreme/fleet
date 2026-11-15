@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "pixlpin-com_designs"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#c9c9c9` ink, `#ebebeb` accent)"
 ---
 

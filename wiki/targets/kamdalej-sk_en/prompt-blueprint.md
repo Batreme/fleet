@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "kamdalej-sk_en"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `#141413` ink, `#D6C4BB` accent)"
 ---
 

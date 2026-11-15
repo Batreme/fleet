@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-zrk-technology"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fc4f00` / `#0000`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "dennypratama-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Monolith Ink & Bone Editorial Grid (`Archivo` + Mechanical Ease-Out)"
 ---
 

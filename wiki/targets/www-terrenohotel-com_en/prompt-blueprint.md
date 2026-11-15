@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-terrenohotel-com_en"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `#570007` ink, `#fff` accent)"
 ---
 

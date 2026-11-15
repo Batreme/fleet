@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "altufanulu-com_en"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#050a34` ink, `#fdfaf6` accent)"
 ---
 

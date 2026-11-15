@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "hotelaurelia-online"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f6efe5` canvas, `#1f1a15` ink, `#8a7d6c` accent)"
 ---
 

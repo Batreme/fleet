@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thecassandravale-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#131313` ink, `#bb3a4e` accent)"
 ---
 

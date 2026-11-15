@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "sinedogma-com-tr"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#d9d9d9` accent)"
 ---
 

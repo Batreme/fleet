@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-johnbolster-design"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ECEAE2` / `#D3D0C6`)"
 ---
 

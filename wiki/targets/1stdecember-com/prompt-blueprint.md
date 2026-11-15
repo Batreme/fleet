@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "1stdecember-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#efece7` canvas, `#000` ink, `#eee` accent)"
 ---
 

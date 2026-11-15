@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-motorq-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#c1b2a2` canvas, `#31273f` ink, `#ff6f6f` accent)"
 ---
 

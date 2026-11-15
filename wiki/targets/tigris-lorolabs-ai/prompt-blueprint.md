@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "tigris-lorolabs-ai"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4a0e1a` / `#c9a24a`)"
 ---
 

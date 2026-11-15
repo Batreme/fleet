@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "kindi-land"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e40014` / `#71717b`)"
 ---
 

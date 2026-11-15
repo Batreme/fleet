@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "matthisgarnier-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fcfcfc` / `#ececec`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-theboringblog-ai"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#f5f4ee`)"
 ---
 

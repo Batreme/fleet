@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "stillhere-hdfund-org"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas, `#eeeee8` ink, `#FED545` accent)"
 ---
 

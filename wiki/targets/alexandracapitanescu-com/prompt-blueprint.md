@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "alexandracapitanescu-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba1818` canvas, `#e2d9d0` ink, `#0000` accent)"
 ---
 

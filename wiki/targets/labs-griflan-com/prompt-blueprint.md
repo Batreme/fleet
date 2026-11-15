@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "labs-griflan-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fffddb` / `#181616`)"
 ---
 

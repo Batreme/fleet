@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "giga-ai"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161413` / `#fb2c36`)"
 ---
 

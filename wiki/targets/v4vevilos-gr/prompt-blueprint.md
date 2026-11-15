@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "v4vevilos-gr"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#050507` / `#ffffff`)"
 ---
 

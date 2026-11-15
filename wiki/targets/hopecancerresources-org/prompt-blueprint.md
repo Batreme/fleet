@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "hopecancerresources-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0e1829` canvas, `#edf1f4` ink, `#476577` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "apricode-agency"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eeece6` / `#d6b287`)"
 ---
 

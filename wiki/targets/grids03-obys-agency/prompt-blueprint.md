@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "grids03-obys-agency"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1e1`)"
 ---
 

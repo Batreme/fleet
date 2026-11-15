@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-lapl-org"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffccd5` canvas, `#bf2713` ink, `#bf2713` accent)"
 ---
 

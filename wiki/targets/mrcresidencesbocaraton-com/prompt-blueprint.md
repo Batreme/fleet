@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mrcresidencesbocaraton-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `#fff` ink, `#f9f9f9` accent)"
 ---
 

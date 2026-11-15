@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "later-com_made-you-look"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#fff6cc` ink, `#ffd200` accent)"
 ---
 

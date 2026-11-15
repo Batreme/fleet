@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "daikifujita-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe6` / `#0b0a0d`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-thefriedegg-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#666` canvas, `#f3f1e7` ink, `#fff0` accent)"
 ---
 

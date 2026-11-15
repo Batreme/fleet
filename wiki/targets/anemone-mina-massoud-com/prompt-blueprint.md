@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "anemone-mina-massoud-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#efe6d2` / `#8d8170`)"
 ---
 

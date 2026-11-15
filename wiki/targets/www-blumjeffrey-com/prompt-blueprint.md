@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-blumjeffrey-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#080808` canvas, `#555` ink, `#1e1e1e` accent)"
 ---
 

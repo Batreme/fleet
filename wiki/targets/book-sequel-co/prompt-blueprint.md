@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "book-sequel-co"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0d0d` / `#ffffff`)"
 ---
 

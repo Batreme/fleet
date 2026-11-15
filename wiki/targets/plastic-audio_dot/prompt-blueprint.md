@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "plastic-audio_dot"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#F2F0EA` canvas, `#0A0908` ink, `#5A5853` accent)"
 ---
 

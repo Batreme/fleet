@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-era-residence-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#1ba64b` canvas, `#f3f3ec` ink, `#340c24` accent)"
 ---
 

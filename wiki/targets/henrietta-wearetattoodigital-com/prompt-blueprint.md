@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "henrietta-wearetattoodigital-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e3a898` / `#8b231a`)"
 ---
 

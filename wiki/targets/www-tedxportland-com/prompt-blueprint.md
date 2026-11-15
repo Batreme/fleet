@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-tedxportland-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#be000c` accent)"
 ---
 

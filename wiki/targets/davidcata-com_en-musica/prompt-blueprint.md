@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "davidcata-com_en-musica"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1f3a78` / `#EDE7DE`)"
 ---
 

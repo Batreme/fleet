@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "belgradearbor-rs_en"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb2c36` / `#2e3a26`)"
 ---
 

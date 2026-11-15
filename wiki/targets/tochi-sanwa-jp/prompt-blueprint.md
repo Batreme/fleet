@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "tochi-sanwa-jp"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `#D03030` ink, `#EB3535` accent)"
 ---
 

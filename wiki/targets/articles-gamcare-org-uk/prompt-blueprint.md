@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "articles-gamcare-org-uk"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3a04a8` canvas, `#fff8ef` ink, `#eee` accent)"
 ---
 

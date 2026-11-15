@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-jarnket-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f5f7` / `#62666e`)"
 ---
 

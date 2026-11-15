@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "dcspaces-co-uk"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas, `#FFFFFF` ink, `#F2F1ED` accent)"
 ---
 

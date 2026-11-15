@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-pistacchioecaffe-it"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#465565` canvas, `#ffba00` ink, `#a00` accent)"
 ---
 

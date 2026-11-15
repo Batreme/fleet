@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "yuyafilmstudio-dev"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0a` / `#c9a96e`)"
 ---
 

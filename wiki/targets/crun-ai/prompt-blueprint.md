@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "crun-ai"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#409eff` canvas, `#18222b` ink, `#213d5b` accent)"
 ---
 

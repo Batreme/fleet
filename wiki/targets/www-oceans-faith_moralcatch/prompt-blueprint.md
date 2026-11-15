@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-oceans-faith_moralcatch"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ff0` canvas, `#000` ink, `#fff` accent)"
 ---
 

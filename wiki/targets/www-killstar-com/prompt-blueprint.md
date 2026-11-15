@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-killstar-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e9eb` canvas, `#1d1e20` ink, `#518b22` accent)"
 ---
 

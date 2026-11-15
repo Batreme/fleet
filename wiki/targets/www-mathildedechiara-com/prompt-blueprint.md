@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-mathildedechiara-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0006`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "explore-auravinyl-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0a0a` / `#1e1e1e`)"
 ---
 

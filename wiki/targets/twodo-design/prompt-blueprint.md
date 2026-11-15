@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "twodo-design"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `#211d18` ink, `#57524a` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "baztan-race-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#FFFFFF` ink, `#DDF240` accent)"
 ---
 

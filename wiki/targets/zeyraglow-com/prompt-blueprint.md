@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "zeyraglow-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#720eec` canvas, `#fcfbfe` ink, `#ffba00` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "faithibiza-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#7a00df` canvas, `#ddd` ink, `#006ba1` accent)"
 ---
 

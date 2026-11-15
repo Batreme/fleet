@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-flatlineagency-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f0e9` canvas, `#000` ink, `#000` accent)"
 ---
 

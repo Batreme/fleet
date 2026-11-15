@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-oregonoutdooralliance-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas, `#fff` ink, `#242a37` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "fighterready-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#2b2b2b`)"
 ---
 

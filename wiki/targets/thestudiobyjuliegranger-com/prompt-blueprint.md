@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thestudiobyjuliegranger-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#7a00df` canvas, `#FFFDE2` ink, `#006ba1` accent)"
 ---
 

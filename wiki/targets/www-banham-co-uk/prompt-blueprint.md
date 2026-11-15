@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-banham-co-uk"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#000` ink, `#2b3239` accent)"
 ---
 

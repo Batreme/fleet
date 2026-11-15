@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-greenlock-io"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0c221b` canvas, `#e0faef` ink, `#0f3026` accent)"
 ---
 

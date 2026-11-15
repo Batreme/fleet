@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "trek-cards"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#2E1650`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "lolawilde-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#000000` ink, `#000000` accent)"
 ---
 

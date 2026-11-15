@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "fontsight-xyz"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffd84a` / `#ff5a36`)"
 ---
 

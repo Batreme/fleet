@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "velourproductions-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas, `#f4f0e5` ink, `#1a1a1a` accent)"
 ---
 

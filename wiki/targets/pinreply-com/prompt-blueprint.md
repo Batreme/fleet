@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "pinreply-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101828` canvas, `#f8fafc` ink, `#e4e7ec` accent)"
 ---
 

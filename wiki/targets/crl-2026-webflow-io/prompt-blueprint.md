@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "crl-2026-webflow-io"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c6fb50` / `#d9d9d9`)"
 ---
 

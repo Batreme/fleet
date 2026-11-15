@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-thedesignsociety-fr"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ebedf5` canvas, `#1e1e1e` ink, `#bcf015` accent)"
 ---
 

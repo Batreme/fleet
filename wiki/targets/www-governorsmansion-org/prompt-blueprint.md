@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-governorsmansion-org"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#002b59` canvas, `#f3efe9` ink, `#f2e7d4` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "seemecreative-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f8f7f7` canvas, `#000` ink, `#333` accent)"
 ---
 

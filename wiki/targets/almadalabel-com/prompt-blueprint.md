@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "almadalabel-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#17140f` ink, `#a6a6a5` accent)"
 ---
 

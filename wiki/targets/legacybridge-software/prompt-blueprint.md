@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "legacybridge-software"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#082a1c` canvas, `#ffffff` ink, `#94a3b8` accent)"
 ---
 

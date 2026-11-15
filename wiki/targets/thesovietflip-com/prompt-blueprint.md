@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thesovietflip-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#fff0d3` ink, `#fff0d3` accent)"
 ---
 

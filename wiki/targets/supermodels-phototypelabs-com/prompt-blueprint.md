@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "supermodels-phototypelabs-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f6f2` / `#000`)"
 ---
 

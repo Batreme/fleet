@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "agnestoth-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightBig Pro` + `Jost`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ruthgriffioen-art"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#f8f1eb` accent)"
 ---
 

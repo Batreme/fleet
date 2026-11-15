@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "newminds-studio_concept-elune"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas, `#fff` ink, `#c9d1cc` accent)"
 ---
 

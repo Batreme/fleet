@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "realevate-agency"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1F2B5E` canvas, `#FFFFFF` ink, `#222A4C` accent)"
 ---
 

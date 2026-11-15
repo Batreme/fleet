@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "powa-snp-agency"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f4f2` canvas, `#000` ink, `#000` accent)"
 ---
 

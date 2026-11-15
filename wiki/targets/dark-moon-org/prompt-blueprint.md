@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "dark-moon-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#dceaf4` ink, `#b9c7d6` accent)"
 ---
 

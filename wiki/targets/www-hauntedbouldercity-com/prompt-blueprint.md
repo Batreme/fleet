@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-hauntedbouldercity-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#090f0e` canvas, `#e7e9d8` ink, `#a7b3a7` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "twohalves-co"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f2e9e2`)"
 ---
 

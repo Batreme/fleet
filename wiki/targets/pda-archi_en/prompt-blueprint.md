@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "pda-archi_en"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#30363c` accent)"
 ---
 

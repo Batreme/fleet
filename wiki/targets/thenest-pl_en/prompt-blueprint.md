@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thenest-pl_en"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#eef0ea` canvas, `#04191c` ink, `#ffe2e2` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-impastofornoantico-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#efefe7` canvas, `#312426` ink, `#494341` accent)"
 ---
 

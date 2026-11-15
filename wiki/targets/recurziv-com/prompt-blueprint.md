@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "recurziv-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00d4ff` / `#fff`)"
 ---
 

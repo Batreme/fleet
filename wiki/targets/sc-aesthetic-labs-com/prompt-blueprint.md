@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "sc-aesthetic-labs-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas, `#f2f4f4` ink, `#171818` accent)"
 ---
 

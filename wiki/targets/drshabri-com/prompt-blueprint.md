@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "drshabri-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ccc` canvas, `#555` ink, `#d9534f` accent)"
 ---
 

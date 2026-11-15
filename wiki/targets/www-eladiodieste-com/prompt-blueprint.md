@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-eladiodieste-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (`--background: #eadfd2` + `--foreground: #a55f2d`)"
 ---
 

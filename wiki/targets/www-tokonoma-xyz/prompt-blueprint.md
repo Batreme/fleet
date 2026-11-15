@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-tokonoma-xyz"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#baff00` / `#000`)"
 ---
 

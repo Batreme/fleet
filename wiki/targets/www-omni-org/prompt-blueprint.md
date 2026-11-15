@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-omni-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#5776b2` canvas, `#fff` ink, `#fff` accent)"
 ---
 

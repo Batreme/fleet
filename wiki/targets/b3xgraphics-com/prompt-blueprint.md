@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "b3xgraphics-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#04b5ff` canvas, `#a00` ink, `#008a20` accent)"
 ---
 

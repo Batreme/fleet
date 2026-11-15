@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "foxvaluations-com-au"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#16202F` canvas, `#FAFAF8` ink, `#FAFAF8` accent)"
 ---
 

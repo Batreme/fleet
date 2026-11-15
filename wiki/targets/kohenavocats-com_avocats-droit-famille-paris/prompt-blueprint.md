@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "kohenavocats-com_avocats-droit-famille-paris"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `#000` ink, `#fff` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "becore-se"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `#fff` ink, `#121212` accent)"
 ---
 

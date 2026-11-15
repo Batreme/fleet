@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "chandebootcamp-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0f1513` / `#236c3c`)"
 ---
 

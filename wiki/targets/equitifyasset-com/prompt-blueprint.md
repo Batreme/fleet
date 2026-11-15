@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "equitifyasset-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e2e2e2` canvas, `#000` ink, `#f4f4e8` accent)"
 ---
 

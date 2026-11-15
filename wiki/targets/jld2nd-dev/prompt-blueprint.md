@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "jld2nd-dev"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffd64f` canvas, `#212121` ink, `#616161` accent)"
 ---
 

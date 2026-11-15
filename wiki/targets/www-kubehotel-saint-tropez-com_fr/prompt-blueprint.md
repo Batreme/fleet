@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-kubehotel-saint-tropez-com_fr"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fdf9f4` ink, `#7c7c7c` accent)"
 ---
 

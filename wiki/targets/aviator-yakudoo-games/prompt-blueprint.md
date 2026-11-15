@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "aviator-yakudoo-games"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b6c6a6` / `#f7d9aa`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-emblematica-agency"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0e0c0d` canvas, `#fbfbfb` ink, `#d5ff69` accent)"
 ---
 

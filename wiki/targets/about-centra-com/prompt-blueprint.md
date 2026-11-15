@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "about-centra-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#d9d9d9` canvas, `#191919` ink, `#f85943` accent)"
 ---
 

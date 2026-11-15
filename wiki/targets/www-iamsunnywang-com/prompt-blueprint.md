@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-iamsunnywang-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#62d6dc` / `#fffdfc`)"
 ---
 

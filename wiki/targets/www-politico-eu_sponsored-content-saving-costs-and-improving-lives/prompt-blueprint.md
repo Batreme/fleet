@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-politico-eu_sponsored-content-saving-costs-and-improving-lives"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#7a00df` canvas, `#CCE5F4` ink, `#006ba1` accent)"
 ---
 

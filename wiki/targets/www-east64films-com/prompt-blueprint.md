@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-east64films-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#4eaebf` canvas, `#151515` ink, `#e43936` accent)"
 ---
 

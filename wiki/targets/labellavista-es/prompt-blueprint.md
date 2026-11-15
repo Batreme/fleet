@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "labellavista-es"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0a` canvas, `#fff` ink, `#fff` accent)"
 ---
 

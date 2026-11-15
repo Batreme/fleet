@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "overworldaudio-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e9ecee` / `#6e8799`)"
 ---
 

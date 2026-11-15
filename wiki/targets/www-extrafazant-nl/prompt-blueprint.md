@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-extrafazant-nl"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101010` canvas, `#f4f4f4` ink, `#ff77cd` accent)"
 ---
 

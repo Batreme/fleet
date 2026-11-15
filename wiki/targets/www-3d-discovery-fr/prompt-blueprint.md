@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-3d-discovery-fr"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1a1a1a` / `#ebebeb`)"
 ---
 

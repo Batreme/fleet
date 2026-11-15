@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-routedurhum-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0E111D` ink, `#006F7B` accent)"
 ---
 

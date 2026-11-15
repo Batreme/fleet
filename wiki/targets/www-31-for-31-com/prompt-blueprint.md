@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-31-for-31-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#07090c` / `#8d8a80`)"
 ---
 

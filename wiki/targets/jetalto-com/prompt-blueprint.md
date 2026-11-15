@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "jetalto-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ccc` canvas, `#0b1220` ink, `#122d4d` accent)"
 ---
 

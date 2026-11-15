@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-deathtorobots-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#facfd7` canvas, `#09090a` ink, `#f4f0f1` accent)"
 ---
 

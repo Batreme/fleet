@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "anokhee-dev_albatross"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#c9cfdd` canvas, `#7d879e` ink, `#e7dfc9` accent)"
 ---
 

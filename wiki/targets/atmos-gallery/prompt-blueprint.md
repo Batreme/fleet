@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "atmos-gallery"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f3` / `#1a1a1a`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "residences-loamhouse-com-au"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1e211d` canvas, `#fbfaf6` ink, `#8d4f36` accent)"
 ---
 

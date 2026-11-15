@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-norddeutscher-figuralchor-de"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#000000` accent)"
 ---
 

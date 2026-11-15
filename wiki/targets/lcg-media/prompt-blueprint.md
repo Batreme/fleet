@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "lcg-media"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eeede7` / `#121212`)"
 ---
 

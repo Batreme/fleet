@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "dwell-au"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#badcf7`)"
 ---
 

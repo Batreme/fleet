@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "akaiito-ai"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#e4322b`)"
 ---
 

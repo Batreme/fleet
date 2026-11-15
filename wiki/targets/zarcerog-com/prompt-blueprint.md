@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "zarcerog-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#241417` ink, `#f4e6cb` accent)"
 ---
 

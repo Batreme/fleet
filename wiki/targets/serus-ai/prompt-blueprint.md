@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "serus-ai"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff0f0` / `#fdd8d8`)"
 ---
 

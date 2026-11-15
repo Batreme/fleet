@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "gracefashion-ai"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#d1d3d4` accent)"
 ---
 

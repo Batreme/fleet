@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "macmillan-studio"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#d3d6da`)"
 ---
 

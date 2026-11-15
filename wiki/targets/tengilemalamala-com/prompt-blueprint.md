@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "tengilemalamala-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fbf8f6` canvas, `#48561a` ink, `#a5a593` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "sleutelaar-xyz"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0d0d` / `#f0e6db`)"
 ---
 

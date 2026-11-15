@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "tribeofgiants-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fe7624` canvas, `#111` ink, `#f89a29` accent)"
 ---
 

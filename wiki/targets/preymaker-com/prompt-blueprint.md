@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "preymaker-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#f1f3f5` ink, `#c0c6ca` accent)"
 ---
 

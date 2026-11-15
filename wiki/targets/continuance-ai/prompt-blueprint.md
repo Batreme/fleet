@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "continuance-ai"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9d9`)"
 ---
 

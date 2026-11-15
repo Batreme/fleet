@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "bluntumbrellas-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#121212` canvas, `#fff` ink, `#000` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-rikoutaku-work"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2e3bff` / `#e9e4d8`)"
 ---
 

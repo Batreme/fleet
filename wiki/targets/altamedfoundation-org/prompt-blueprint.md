@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "altamedfoundation-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas, `#f9fafb` ink, `#155dfc` accent)"
 ---
 

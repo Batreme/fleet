@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "explorajourneys-com_int-en-explora-journal"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#454545` canvas, `#fef2f2` ink, `#ba0c2f` accent)"
 ---
 

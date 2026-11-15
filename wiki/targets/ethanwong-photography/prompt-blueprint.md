@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ethanwong-photography"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#9b1120` canvas, `#8a8174` ink, `#c01f34` accent)"
 ---
 

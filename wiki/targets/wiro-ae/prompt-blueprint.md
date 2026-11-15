@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "wiro-ae"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Warm-Paper Tactile SaaS Operating System & Scatter-Card Workspace (`Bricolage Grotesque` + `DM Sans`)"
 ---
 

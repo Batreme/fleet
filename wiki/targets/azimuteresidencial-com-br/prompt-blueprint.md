@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "azimuteresidencial-com-br"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#625e55` canvas, `#f6f0e5` ink, `#ccb494` accent)"
 ---
 

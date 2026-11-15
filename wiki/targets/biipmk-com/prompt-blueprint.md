@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "biipmk-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#2e2e2f` ink, `#f0f0f1` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mychess-events"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0096ff` canvas, `#ffffff` ink, `#ffffff` accent)"
 ---
 

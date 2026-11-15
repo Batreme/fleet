@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "sotz-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#b9ae95` canvas, `#2b2f33` ink, `#8a7f68` accent)"
 ---
 

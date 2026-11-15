@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "rialto-com-au"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#3d3d3b` accent)"
 ---
 

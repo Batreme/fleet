@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-lucaslima-design"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafb` / `#dce0e5`)"
 ---
 

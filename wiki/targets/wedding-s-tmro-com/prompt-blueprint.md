@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "wedding-s-tmro-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#333333` / `#f2f2f2`)"
 ---
 

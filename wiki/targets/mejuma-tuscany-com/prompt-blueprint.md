@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mejuma-tuscany-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `#38352c` ink, `#c5beb4` accent)"
 ---
 

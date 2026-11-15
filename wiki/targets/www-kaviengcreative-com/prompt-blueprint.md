@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-kaviengcreative-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas, `#f0efe9` ink, `#0a0a09` accent)"
 ---
 

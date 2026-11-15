@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "f-list-cleancreatives-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1d1d1d` ink, `#edcc4b` accent)"
 ---
 

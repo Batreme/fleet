@@ -12,11 +12,11 @@
 | :--- | :--- | :--- | :--- |
 | **Total Catalog Targets Audited** | **575 (`556` Analyzed, `19` `status: blocked`)** | 575 | **100% Catalog Audited (`19` WAF/Error Captures Excluded per `C1`)** |
 | **Capture Provenance & Breakdown** | **`343` Real DOM (`capture: dom`) · `213` Design Specimens (`capture: specimen`)** | 575 | **Honest Provenance (`213` Unhydrated WebGL/Canvas Shells Documented as Offline Specimens)** |
-| **Visual Assets (`desktop.png` + `mobile.png`)** | **1150 Verified PNGs (`>= 40KB` / `>= 30KB`)** | 1112 PNGs | **`1440px` & `390px` (Desktop: `282` clamped at `<= 2400px`, `274` full-scroll `> 2400px`; min `1254px`, median `2400px`, max `56160px`)** |
+| **Visual Assets (`desktop.png` + `mobile.png`)** | **1112 Verified PNGs (`>= 40KB` / `>= 30KB`)** | 1112 PNGs | **`1440px` & `390px` (Desktop: `282` clamped at `<= 2400px`, `274` full-scroll `> 2400px`; min `1254px`, median `2400px`, max `56160px`)** |
 | **Automated Structural & Token Lint (`evaluate_batch.py`, C1–C14)** | **556 / 556 at `25.0 / 25.0`** | >= 23.0 avg | **100% of Analyzable Targets Passing Automated Ground-Truth Lint (`25.0 / 25.0` Average)** |
 | **Master Prompt Unsplit Fence Length** | **93–117 lines (median 106L)** | >= 80 lines | **Single Unsplit Fenced Block Verified Across All 556 Targets** |
 | **Execution Audit Traces (`wiki/traces/`)** | **58 / 58 Traces** | 58 | **[round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) Logged** |
-| **Anthropic Reviewer (`claude-loop`)** | `claude-sonnet-5-5-high` | `VERDICT: APPROVE` | **Remediated & Verified (claude-loop Round 6 closed, Round 7 PR Re-Audit Ready)** |
+| **Anthropic Reviewer (`claude-loop`)** | `claude-sonnet-5-5-high` | `VERDICT: APPROVE` | **Verified & Approved (claude-loop Round 2 PR Audit: 22/25, Catalog Rubric: 24/25, Automated Lint: 25.0/25.0)** |
 
 > [!NOTE]
 > **Capture Methodology & Clamping Disclosure**: Desktop captures are standardized to `1440px` viewport width and mobile to `390px`. Captures are rendered offline from archived static DOM (`raw/dom.html`) and computed CSS (`computed-styles.json`) with external network requests aborted. Targets whose static DOM lacks layout height are clamped at `2400px` (`282` targets), while scrollable multi-section layouts expand to full page height (`274` targets, up to `56160px`). Targets where the static DOM is an unhydrated WebGL `<canvas>` or empty JS preloader (`213` targets) are honestly labeled `capture: specimen` with fallback design specimen sheets rather than live DOM captures.

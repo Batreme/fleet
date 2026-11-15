@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-schlosshotel-kitzbuehel-com_en"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#300316` canvas, `#FFFFFF` ink, `#6e4e5b` accent)"
 ---
 

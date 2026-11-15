@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "deltacafes-com_en"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#9e0212`)"
 ---
 

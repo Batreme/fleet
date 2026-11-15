@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-concretemanagement-fr"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas, `#fffdf1` ink, `#fffdf1` accent)"
 ---
 

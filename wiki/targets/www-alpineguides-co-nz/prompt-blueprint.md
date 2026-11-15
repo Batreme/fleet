@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-alpineguides-co-nz"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fcb124` canvas, `#1e1e1e` ink, `#dad9d9` accent)"
 ---
 

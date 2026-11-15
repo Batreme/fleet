@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "heirest-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#DFDFDF` canvas, `#000000` ink, `#ffffff` accent)"
 ---
 

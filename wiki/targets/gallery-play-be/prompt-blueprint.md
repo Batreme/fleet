@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "gallery-play-be"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1E1E1E`)"
 ---
 

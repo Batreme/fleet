@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "yaas-energy-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#0b0a09` ink, `#f3d118` accent)"
 ---
 

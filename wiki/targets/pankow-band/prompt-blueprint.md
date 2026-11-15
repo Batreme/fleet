@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "pankow-band"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `#000000` ink, `#ddd` accent)"
 ---
 

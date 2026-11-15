@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "nakagawa-corp-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#202020` canvas, `#D6B996` ink, `#AD8A72` accent)"
 ---
 

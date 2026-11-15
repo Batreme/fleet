@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "jonmccormack-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#7a00df` canvas, `#ffffff` ink, `#006ba1` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "effepinnastudio-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#ef233c` / `#ee2c3d`)"
 ---
 

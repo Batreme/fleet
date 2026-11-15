@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "infinitytechstack-uk_pulsebridge"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#05060a` canvas, `#3df5c0` ink, `#ffc53d` accent)"
 ---
 

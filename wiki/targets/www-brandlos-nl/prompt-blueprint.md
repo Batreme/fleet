@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-brandlos-nl"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `#040404` ink, `#3a39ff` accent)"
 ---
 

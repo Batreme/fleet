@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "members-play-lacoste-com_ace-breaker-rg"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b762ff` / `#ee5f62`)"
 ---
 

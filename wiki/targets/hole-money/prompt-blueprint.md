@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "hole-money"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#afafb6`)"
 ---
 

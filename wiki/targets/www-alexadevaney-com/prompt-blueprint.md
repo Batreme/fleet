@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-alexadevaney-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas, `#FFFFFF` ink, `#FFFFFF` accent)"
 ---
 

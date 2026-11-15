@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-seasats-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#4e9a85`)"
 ---
 

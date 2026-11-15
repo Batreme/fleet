@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-undplus-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ca9df1` canvas, `#ffd650` ink, `#0daa75` accent)"
 ---
 

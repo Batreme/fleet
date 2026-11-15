@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mauricemoynihan-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#EFEDE6` / `#4c4a43`)"
 ---
 

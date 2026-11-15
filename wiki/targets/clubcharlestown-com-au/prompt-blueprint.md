@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "clubcharlestown-com-au"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#98A2B3` ink, `#344054` accent)"
 ---
 

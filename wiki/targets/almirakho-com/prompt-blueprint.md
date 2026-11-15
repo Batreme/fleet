@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "almirakho-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0a` canvas, `#fafafa` ink, `#3dd68c` accent)"
 ---
 

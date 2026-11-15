@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thebranx-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff085` canvas, `#4a5565` ink, `#f9fafb` accent)"
 ---
 

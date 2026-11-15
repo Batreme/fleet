@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "concretaceramiche-it"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#720eec` canvas, `#fcfbfe` ink, `#ffba00` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-paragonproductions-co"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ff5b4b` canvas, `#f8f8f8` ink, `#ffcdd2` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "stateofaidesign-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fe7141` canvas, `#000` ink, `#cdabfe` accent)"
 ---
 

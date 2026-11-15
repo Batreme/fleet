@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "grail-app-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c9a24a` / `#f2f2f7`)"
 ---
 

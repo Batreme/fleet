@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "jockey-stuudio-xyz"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#a3a3a3` / `#000`)"
 ---
 

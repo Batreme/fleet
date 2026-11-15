@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "bright-avenue-jp"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#333333` / `#D9D4D4`)"
 ---
 

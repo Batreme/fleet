@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "dailymoscow-ru_mirpay"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#7b7b81` accent)"
 ---
 

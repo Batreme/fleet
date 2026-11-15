@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0c0f` / `#f9f6ef`)"
 ---
 

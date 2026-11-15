@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "imdday-ch"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b2b2b2` / `#808080`)"
 ---
 

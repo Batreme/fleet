@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "thewayapp-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e8f2f0` / `#e6f2f0`)"
 ---
 

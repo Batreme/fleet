@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "emmaus-agir-31-fr"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1ece1` / `#5f5d57`)"
 ---
 

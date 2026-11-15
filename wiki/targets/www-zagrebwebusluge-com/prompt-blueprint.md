@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-zagrebwebusluge-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090d` / `#30323e`)"
 ---
 

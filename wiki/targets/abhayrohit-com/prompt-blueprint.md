@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "abhayrohit-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5ead6` / `#d1c5ac`)"
 ---
 

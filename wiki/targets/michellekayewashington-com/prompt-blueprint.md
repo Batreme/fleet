@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "michellekayewashington-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#2b201d` accent)"
 ---
 

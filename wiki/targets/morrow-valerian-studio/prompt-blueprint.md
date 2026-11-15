@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "morrow-valerian-studio"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`ppNeueMontreal` + `editorialNew`)"
 ---
 

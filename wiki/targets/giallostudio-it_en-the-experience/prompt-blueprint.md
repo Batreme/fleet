@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "giallostudio-it_en-the-experience"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050608` canvas, `#f2f1ea` ink, `#fb2c36` accent)"
 ---
 

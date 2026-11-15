@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-selkirk-com_pages-omni-pickleball-paddle"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#5046e4` canvas, `#ffffff` ink, `#333333` accent)"
 ---
 

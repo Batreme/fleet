@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-fragment-im"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#c9d0d2` canvas, `#000` ink, `#fff` accent)"
 ---
 

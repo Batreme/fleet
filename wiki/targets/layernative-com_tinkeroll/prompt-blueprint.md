@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "layernative-com_tinkeroll"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3efe7` / `#4a453d`)"
 ---
 

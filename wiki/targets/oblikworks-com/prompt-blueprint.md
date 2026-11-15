@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "oblikworks-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#eee` canvas, `#000` ink, `#000` accent)"
 ---
 

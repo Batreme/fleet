@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mosaic-flabbergast-agency"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#4b4b4b`)"
 ---
 

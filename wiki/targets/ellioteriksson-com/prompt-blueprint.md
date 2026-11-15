@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ellioteriksson-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#c6f432` canvas, `#0c0c0c` ink, `#ff5a36` accent)"
 ---
 

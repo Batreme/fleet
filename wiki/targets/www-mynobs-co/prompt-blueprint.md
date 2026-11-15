@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-mynobs-co"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#7E5AF2` canvas, `#FACC15` ink, `#EC4899` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-stellarmanagement-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#181513` ink, `#f5f5f5` accent)"
 ---
 

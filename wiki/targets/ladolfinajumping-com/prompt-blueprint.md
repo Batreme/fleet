@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ladolfinajumping-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fbe0b6` canvas, `#0d1620` ink, `#c7bcac` accent)"
 ---
 

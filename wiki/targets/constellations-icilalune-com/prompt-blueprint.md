@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "constellations-icilalune-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent)"
 ---
 

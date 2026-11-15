@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "departmentofemotions-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#212c24` canvas, `#fff` ink, `#e2e7db` accent)"
 ---
 

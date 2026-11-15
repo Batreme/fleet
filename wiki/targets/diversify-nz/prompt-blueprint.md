@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "diversify-nz"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#21206c` canvas, `#cdccf0` ink, `#3937b9` accent)"
 ---
 

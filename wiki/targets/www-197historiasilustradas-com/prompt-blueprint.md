@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-197historiasilustradas-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#d4d4d4` canvas, `#000` ink, `#fff` accent)"
 ---
 

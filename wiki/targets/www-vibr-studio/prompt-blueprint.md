@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-vibr-studio"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1d1d1f`)"
 ---
 

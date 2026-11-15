@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "senawastudio-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `#302620` ink, `#a8967e` accent)"
 ---
 

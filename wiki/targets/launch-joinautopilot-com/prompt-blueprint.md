@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "launch-joinautopilot-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1f2f3` / `#3cbe69`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "palaceskateboards-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e4e4e4`)"
 ---
 

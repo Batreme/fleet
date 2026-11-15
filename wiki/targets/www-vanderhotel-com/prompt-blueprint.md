@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-vanderhotel-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#F3F5FB` accent)"
 ---
 

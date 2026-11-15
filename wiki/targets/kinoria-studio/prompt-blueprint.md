@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "kinoria-studio"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#F2EDE4`)"
 ---
 

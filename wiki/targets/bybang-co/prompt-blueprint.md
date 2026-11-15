@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "bybang-co"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f2` canvas, `#141414` ink, `#141414` accent)"
 ---
 

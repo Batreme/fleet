@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "moderncraftaz-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#4831B0` canvas, `#FFFFFF` ink, `#7a00df` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "gpg-dops-agency"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#1051b4` accent)"
 ---
 

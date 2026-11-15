@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-casamomo-at"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff0ca` canvas, `#050505` ink, `#050505` accent)"
 ---
 

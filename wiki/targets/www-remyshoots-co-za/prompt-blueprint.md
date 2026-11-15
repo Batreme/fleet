@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-remyshoots-co-za"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fcf8ef` canvas, `#111` ink, `#ff3131` accent)"
 ---
 

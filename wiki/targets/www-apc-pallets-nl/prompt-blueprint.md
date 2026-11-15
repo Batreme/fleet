@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-apc-pallets-nl"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0c473b` / `#e3f1e0`)"
 ---
 

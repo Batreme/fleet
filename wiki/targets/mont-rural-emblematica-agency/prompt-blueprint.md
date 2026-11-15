@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "mont-rural-emblematica-agency"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#443e2b` canvas, `#ffffff` ink, `#8f8637` accent)"
 ---
 

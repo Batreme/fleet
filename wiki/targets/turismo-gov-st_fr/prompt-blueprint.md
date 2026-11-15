@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "turismo-gov-st_fr"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#EEEDEA` accent)"
 ---
 

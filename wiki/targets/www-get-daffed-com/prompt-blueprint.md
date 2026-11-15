@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-get-daffed-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f8f8f6` canvas, `#111` ink, `#111` accent)"
 ---
 

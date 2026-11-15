@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "noho-ink"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1eee9` / `#0000`)"
 ---
 

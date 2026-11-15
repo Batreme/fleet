@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "m3-pg-de"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas, `#6610f2` ink, `#d63384` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "zeropact-co"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#E5E7EB` canvas, `#0A0A0A` ink, `#7C88AC` accent)"
 ---
 

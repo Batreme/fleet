@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "fabiantjoeaon-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f3ef` canvas, `#000` ink, `#e8fffd` accent)"
 ---
 

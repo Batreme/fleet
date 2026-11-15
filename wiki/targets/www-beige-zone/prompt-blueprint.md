@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-beige-zone"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f9f4f2` / `#42d5b6`)"
 ---
 

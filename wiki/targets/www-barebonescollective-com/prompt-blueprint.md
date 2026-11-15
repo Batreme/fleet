@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-barebonescollective-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#000` ink, `#333` accent)"
 ---
 

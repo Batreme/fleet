@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-davidecarusio-it"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#f9efe7`)"
 ---
 

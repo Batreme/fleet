@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "lorenzolottici-it_en"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#3080ff` / `#070707`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-imersion-io"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#007bff` canvas, `#6610f2` ink, `#e83e8c` accent)"
 ---
 

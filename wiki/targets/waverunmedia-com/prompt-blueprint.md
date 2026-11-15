@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "waverunmedia-com"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `#f7f7f8` ink, `#e5e5e9` accent)"
 ---
 

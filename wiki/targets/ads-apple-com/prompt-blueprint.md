@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "ads-apple-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f7` canvas, `#1d1d1f` ink, `#06c` accent)"
 ---
 

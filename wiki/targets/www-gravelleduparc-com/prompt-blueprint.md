@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-gravelleduparc-com"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `#15663c` ink, `#baf1c5` accent)"
 ---
 

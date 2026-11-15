@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "chanpan-com-ar"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `#17130D` ink, `#F15A24` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "both-sides-the7eye-org-il_en"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#FDFCFF` / `#E1E1E1`)"
 ---
 

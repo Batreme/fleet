@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "bcgbuildingdesign-com-au"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3efe8` canvas, `#1b1a18` ink, `#fffdf8` accent)"
 ---
 

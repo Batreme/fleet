@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "rubenwalma-nl"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#5766ab` / `#1D1D1D`)"
 ---
 

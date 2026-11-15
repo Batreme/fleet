@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "explorewashingtonpark-org"
 status: analyzed
 capture: specimen
+capture_desktop: specimen
+capture_mobile: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `#243746` ink, `#aac0d2` accent)"
 ---
 

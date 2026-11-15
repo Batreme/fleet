@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "reapi-ai_models-gpt-image-2-5"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fef2f2` / `#ffa3a3`)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "relevovinco-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#1f140b` ink, `#6b4c34` accent)"
 ---
 

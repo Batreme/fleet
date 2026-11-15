@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "familyservicelincoln-org"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1b1f2a` canvas, `#ffffff` ink, `#ffc145` accent)"
 ---
 

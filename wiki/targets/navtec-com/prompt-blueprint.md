@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "navtec-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#062c3c` canvas, `#fcfbf8` ink, `#031820` accent)"
 ---
 

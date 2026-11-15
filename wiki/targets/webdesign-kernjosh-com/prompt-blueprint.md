@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "webdesign-kernjosh-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3f3f3f`)"
 ---
 

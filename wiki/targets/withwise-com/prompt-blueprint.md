@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "withwise-com"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1B1B1B` canvas, `#FFFDF1` ink, `#D3C0A0` accent)"
 ---
 

@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-zzdp-nl"
 status: analyzed
 capture: dom
+capture_desktop: dom
+capture_mobile: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#8746e3` ink, `#c7c6be` accent)"
 ---
 

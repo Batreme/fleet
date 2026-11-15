@@ -4,6 +4,8 @@ date: 2026-11-15
 target: "www-thecandyvault-com-au"
 status: analyzed
 capture: specimen
+capture_desktop: dom
+capture_mobile: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f2ccf` canvas, `#eaefff` ink, `#acbeff` accent)"
 ---
 
