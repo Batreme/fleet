@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: thesovietflip-com"
 date: 2026-11-15
-target: "[[overview|thesovietflip-com]]"
+target: "thesovietflip-com"
 status: analyzed
+capture: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#fff0d3` ink, `#fff0d3` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 
 > **The Soviet Flip** (https://thesovietflip.com/) — A visual historical research project about the Cold War, Israel, the USSR, and the rise of modern Palestinian identity, with archival sou...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

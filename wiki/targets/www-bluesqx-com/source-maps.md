@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-bluesqx-com"
 date: 2026-11-14
-target: "[[overview|www-bluesqx-com]]"
+target: "www-bluesqx-com"
 ---
 
 # De-obfuscated Source Maps: www-bluesqx-com

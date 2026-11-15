@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: www-eladiodieste-com"
 date: 2026-11-15
-target: "[[overview|www-eladiodieste-com]]"
+target: "www-eladiodieste-com"
 ---
 
 # UI Architecture & Design Tokens: www-eladiodieste-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-eladiodieste-com` (`Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-eladiodieste-com` (`Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

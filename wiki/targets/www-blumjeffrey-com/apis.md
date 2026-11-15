@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-blumjeffrey-com"
 date: 2026-11-14
-target: "[[overview|www-blumjeffrey-com]]"
+target: "www-blumjeffrey-com"
 ---
 
 # Discovered APIs & Protocols: www-blumjeffrey-com

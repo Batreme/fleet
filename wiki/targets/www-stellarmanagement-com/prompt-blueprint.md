@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-stellarmanagement-com"
 date: 2026-11-15
-target: "[[overview|www-stellarmanagement-com]]"
+target: "www-stellarmanagement-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#181513` ink, `#f5f5f5` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#18
 
 > **Stellar Management · NYC Real Estate Developer & No Fee Rentals** (https://www.stellarmanagement.com) — Stellar is a leading New York real estate developer and manager providing a wide range of apartments and commercial properties. Browse no...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#18
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

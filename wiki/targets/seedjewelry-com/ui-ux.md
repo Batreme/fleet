@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: seedjewelry-com"
 date: 2026-11-15
-target: "[[overview|seedjewelry-com]]"
+target: "seedjewelry-com"
 ---
 
 # UI Architecture & Design Tokens: seedjewelry-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `seedjewelry-com` (`Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `seedjewelry-com` (`Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

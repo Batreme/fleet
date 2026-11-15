@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: kamdalej-sk_en"
 date: 2026-11-14
-target: "[[overview|kamdalej-sk_en]]"
+target: "kamdalej-sk_en"
 ---
 
 # De-obfuscated Source Maps: kamdalej-sk_en

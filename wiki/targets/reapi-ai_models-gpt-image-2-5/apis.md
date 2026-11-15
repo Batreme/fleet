@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: reapi-ai_models-gpt-image-2-5"
 date: 2026-11-14
-target: "[[overview|reapi-ai_models-gpt-image-2-5]]"
+target: "reapi-ai_models-gpt-image-2-5"
 ---
 
 # Discovered APIs & Protocols: reapi-ai_models-gpt-image-2-5

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: biipmk-com"
 date: 2026-10-31
-target: "[[overview|biipmk-com]]"
+target: "biipmk-com"
 ---
 
 # Discovered APIs & Protocols: biipmk-com

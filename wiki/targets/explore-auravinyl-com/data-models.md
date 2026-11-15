@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: explore-auravinyl-com"
 date: 2026-11-14
-target: "[[overview|explore-auravinyl-com]]"
+target: "explore-auravinyl-com"
 ---
 
 # Data Models & Client Storage: explore-auravinyl-com

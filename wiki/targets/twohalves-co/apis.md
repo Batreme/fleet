@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: twohalves-co"
 date: 2026-11-14
-target: "[[overview|twohalves-co]]"
+target: "twohalves-co"
 ---
 
 # Discovered APIs & Protocols: twohalves-co

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-extrafazant-nl"
 date: 2026-11-15
-target: "[[overview|www-extrafazant-nl]]"
+target: "www-extrafazant-nl"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101010` canvas, `#f4f4f4` ink, `#ff77cd` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101010` canvas
 
 > **Extrafazant · Social Content, Video's & Animatie** (https://www.extrafazant.nl/) — Creatives die je merk in beweging brengen. Animatie, film en social content die blijft hangen. Snel schakelen, meedenken, geen lang burea...
 
-![Desktop Viewport Capture (1440x9447)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101010` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9447px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

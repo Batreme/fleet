@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-fieldrank-run"
 date: 2026-11-15
-target: "[[overview|www-fieldrank-run]]"
+target: "www-fieldrank-run"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#faf9f6` ink, `#faf9f6` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 > **FieldRank: Trail and ultra rankings** (https://www.fieldrank.run) — A season ranking of trail and ultra runners, built from race results. Overall and by distance.
 
-![Desktop Viewport Capture (1440x1266)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×1266px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

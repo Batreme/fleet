@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: apricode-agency"
 date: 2026-11-14
-target: "[[overview|apricode-agency]]"
+target: "apricode-agency"
 ---
 
 # Discovered APIs & Protocols: apricode-agency

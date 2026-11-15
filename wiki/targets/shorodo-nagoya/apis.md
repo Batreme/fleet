@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: shorodo-nagoya"
 date: 2026-11-14
-target: "[[overview|shorodo-nagoya]]"
+target: "shorodo-nagoya"
 ---
 
 # Discovered APIs & Protocols: shorodo-nagoya

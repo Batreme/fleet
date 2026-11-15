@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: premotio-com"
 date: 2026-11-14
-target: "[[overview|premotio-com]]"
+target: "premotio-com"
 ---
 
 # Data Models & Client Storage: premotio-com

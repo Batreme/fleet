@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: peabodyhouse-com"
 date: 2026-11-15
-target: "[[overview|peabodyhouse-com]]"
+target: "peabodyhouse-com"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#26211E` / `#517BB3`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#26211E` / `#
 
 > **Peabody House • Digital Brand World Implementation Studio** (https://peabodyhouse.com) — Peabody House is a Milwaukee-based digital studio that turns brand aspirations into elevated, scalable design systems. Led by human expre...
 
-![Desktop Viewport Capture (1440x6542)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#26211E` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6542px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

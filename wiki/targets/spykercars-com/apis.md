@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: spykercars-com"
 date: 2026-10-31
-target: "[[overview|spykercars-com]]"
+target: "spykercars-com"
 ---
 
 # Discovered APIs & Protocols: spykercars-com

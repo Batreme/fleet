@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-miljofyrtarn-no"
 date: 2026-10-31
-target: "[[overview|www-miljofyrtarn-no]]"
+target: "www-miljofyrtarn-no"
 ---
 
 # Data Models & Client Storage: www-miljofyrtarn-no

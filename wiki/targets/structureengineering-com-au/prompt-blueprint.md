@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: structureengineering-com-au"
 date: 2026-11-15
-target: "[[overview|structureengineering-com-au]]"
+target: "structureengineering-com-au"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#ffffff` ink, `#F5F5F5` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 > **Structure Consulting Engineers · Structural Engineering Sydney** (https://structureengineering.com.au/) — Specialists in structural engineering in Sydney, we work across a range of industries from residential to commercial, remedial, governmen...
 
-![Desktop Viewport Capture (1440x9590)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9590px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

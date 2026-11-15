@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: zarcerog-com"
 date: 2026-11-14
-target: "[[overview|zarcerog-com]]"
+target: "zarcerog-com"
 ---
 
 # Data Models & Client Storage: zarcerog-com

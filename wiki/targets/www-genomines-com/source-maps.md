@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-genomines-com"
 date: 2026-11-14
-target: "[[overview|www-genomines-com]]"
+target: "www-genomines-com"
 ---
 
 # De-obfuscated Source Maps: www-genomines-com

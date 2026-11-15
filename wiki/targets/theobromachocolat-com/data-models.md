@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: theobromachocolat-com"
 date: 2026-11-14
-target: "[[overview|theobromachocolat-com]]"
+target: "theobromachocolat-com"
 ---
 
 # Data Models & Client Storage: theobromachocolat-com

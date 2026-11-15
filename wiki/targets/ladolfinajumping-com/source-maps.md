@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ladolfinajumping-com"
 date: 2026-11-14
-target: "[[overview|ladolfinajumping-com]]"
+target: "ladolfinajumping-com"
 ---
 
 # De-obfuscated Source Maps: ladolfinajumping-com

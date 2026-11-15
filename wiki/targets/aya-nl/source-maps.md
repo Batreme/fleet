@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: aya-nl"
 date: 2026-11-14
-target: "[[overview|aya-nl]]"
+target: "aya-nl"
 ---
 
 # De-obfuscated Source Maps: aya-nl

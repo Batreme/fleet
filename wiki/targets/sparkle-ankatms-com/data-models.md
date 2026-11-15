@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sparkle-ankatms-com"
 date: 2026-11-14
-target: "[[overview|sparkle-ankatms-com]]"
+target: "sparkle-ankatms-com"
 ---
 
 # Data Models & Client Storage: sparkle-ankatms-com

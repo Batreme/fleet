@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-lev-com"
 date: 2026-11-14
-target: "[[overview|www-lev-com]]"
+target: "www-lev-com"
 ---
 
 # Data Models & Client Storage: www-lev-com

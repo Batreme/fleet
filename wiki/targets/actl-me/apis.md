@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: actl-me"
 date: 2026-11-14
-target: "[[overview|actl-me]]"
+target: "actl-me"
 ---
 
 # Discovered APIs & Protocols: actl-me

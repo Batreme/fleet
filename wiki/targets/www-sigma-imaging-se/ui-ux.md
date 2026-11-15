@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: www-sigma-imaging-se"
 date: 2026-11-15
-target: "[[overview|www-sigma-imaging-se]]"
+target: "www-sigma-imaging-se"
 ---
 
 # UI Architecture & Design Tokens: www-sigma-imaging-se
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-sigma-imaging-se` (`SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-sigma-imaging-se` (`SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

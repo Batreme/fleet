@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: emmaus-agir-31-fr"
 date: 2026-11-15
-target: "[[overview|emmaus-agir-31-fr]]"
+target: "emmaus-agir-31-fr"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1ece1` / `#5f5d57`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1ece1` / `#5
 
 > **Emmaüs A.G.I.R. — Boutiques solidaires à Toulouse et autour** (https://emmaus-agir-31.fr/) — Donnez une seconde vie à vos objets. Emmaüs A.G.I.R. collecte, trie et revend vos dons dans six boutiques solidaires à Toulouse et autour...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1ece1` / `#5
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

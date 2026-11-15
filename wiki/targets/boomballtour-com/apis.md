@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: boomballtour-com"
 date: 2026-11-14
-target: "[[overview|boomballtour-com]]"
+target: "boomballtour-com"
 ---
 
 # Discovered APIs & Protocols: boomballtour-com

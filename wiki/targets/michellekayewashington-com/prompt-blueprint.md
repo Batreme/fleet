@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: michellekayewashington-com"
 date: 2026-11-15
-target: "[[overview|michellekayewashington-com]]"
+target: "michellekayewashington-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#2b201d` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `
 
 > **Michelle Kaye — Fine Arts · Contemporary Artist, Charleston SC** (https://michellekayewashington.com/) — Michelle Kaye is a contemporary artist in Charleston, SC, exploring humanity’s relationship with the natural world. See Against the Grain...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

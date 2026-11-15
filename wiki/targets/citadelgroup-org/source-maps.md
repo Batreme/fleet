@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: citadelgroup-org"
 date: 2026-11-14
-target: "[[overview|citadelgroup-org]]"
+target: "citadelgroup-org"
 ---
 
 # De-obfuscated Source Maps: citadelgroup-org

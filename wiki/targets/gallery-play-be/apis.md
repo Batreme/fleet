@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: gallery-play-be"
 date: 2026-10-31
-target: "[[overview|gallery-play-be]]"
+target: "gallery-play-be"
 ---
 
 # Discovered APIs & Protocols: gallery-play-be

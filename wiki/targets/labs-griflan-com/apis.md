@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: labs-griflan-com"
 date: 2026-11-14
-target: "[[overview|labs-griflan-com]]"
+target: "labs-griflan-com"
 ---
 
 # Discovered APIs & Protocols: labs-griflan-com

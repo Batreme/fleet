@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: inks-studio"
 date: 2026-11-15
-target: "[[overview|inks-studio]]"
+target: "inks-studio"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#f2f9fe` ink, `#959ba6` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 > **Ink Studio - UI UX Design, CRO & Webflow Development Agency** (http://inks.studio/) — Ink Studio is a UI/UX design and CRO agency. We build high-converting Webflow sites, mobile & web apps, and design systems for SaaS and s...
 
-![Desktop Viewport Capture (1440x9230)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9230px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

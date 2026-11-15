@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: iginusa-com"
 date: 2026-11-14
-target: "[[overview|iginusa-com]]"
+target: "iginusa-com"
 ---
 
 # De-obfuscated Source Maps: iginusa-com

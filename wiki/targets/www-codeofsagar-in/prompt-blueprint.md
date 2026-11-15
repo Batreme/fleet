@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-codeofsagar-in"
 date: 2026-11-15
-target: "[[overview|www-codeofsagar-in]]"
+target: "www-codeofsagar-in"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171717` / `#0f0f0f`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171717` / `#
 
 > **Sagar K. Ghosh — Full-stack Developer & Designer** (https://www.codeofsagar.in/) — Websites and stores that sell, 3D people remember and automation that gives your team its time back, designed and built by Sagar K. Ghosh.
 
-![Desktop Viewport Capture (1440x17965)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171717` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×17965px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

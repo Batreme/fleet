@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tabletales-crz-studio"
 date: 2026-11-14
-target: "[[overview|tabletales-crz-studio]]"
+target: "tabletales-crz-studio"
 ---
 
 # De-obfuscated Source Maps: tabletales-crz-studio

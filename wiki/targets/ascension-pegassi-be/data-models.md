@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ascension-pegassi-be"
 date: 2026-11-14
-target: "[[overview|ascension-pegassi-be]]"
+target: "ascension-pegassi-be"
 ---
 
 # Data Models & Client Storage: ascension-pegassi-be

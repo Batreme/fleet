@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tochi-sanwa-jp"
 date: 2026-11-14
-target: "[[overview|tochi-sanwa-jp]]"
+target: "tochi-sanwa-jp"
 ---
 
 # Discovered APIs & Protocols: tochi-sanwa-jp

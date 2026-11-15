@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-routedurhum-com"
 date: 2026-11-15
-target: "[[overview|www-routedurhum-com]]"
+target: "www-routedurhum-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0E111D` ink, `#006F7B` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0E
 
 > **Route du Rhum 2026 – Destination Guadeloupe · Site Officiel** (https://www.routedurhum.com/) — Suivez la Route du Rhum, course légendaire entre Saint-Malo et la Guadeloupe. Skippers, actualités, villages de Saint-Malo à la Guadeloupe.
 
-![Desktop Viewport Capture (1440x11359)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0E
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11359px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

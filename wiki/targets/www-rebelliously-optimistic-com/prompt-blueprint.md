@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-rebelliously-optimistic-com"
 date: 2026-11-15
-target: "[[overview|www-rebelliously-optimistic-com]]"
+target: "www-rebelliously-optimistic-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e7eb` / `#fff9`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e7eb` / `#f
 
 > **Rebelliously Optimistic — A movement for the human future** (https://www.rebelliously-optimistic.com/) — A movement for the human future in the age of AI. Quarterly gatherings and Human Notes for people who refuse to let progress be anything...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e7eb` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

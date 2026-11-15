@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-jasmin-karatas-ch"
 date: 2026-11-15
-target: "[[overview|www-jasmin-karatas-ch]]"
+target: "www-jasmin-karatas-ch"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#5ee9b5` / `#fff`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#5ee9b5` / `#f
 
 > **Jasmin Deniz Karatas – Product Designer, Gamification Specialist & Keyno...** (http://www.jasmin-karatas.ch) — Jasmin Deniz Karatas (JayKay): product designer, gamification specialist and keynote speaker. Keynotes, workshops and books on gaming the...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#5ee9b5` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

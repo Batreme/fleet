@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aryabhangybuilders-com"
 date: 2026-11-14
-target: "[[overview|aryabhangybuilders-com]]"
+target: "aryabhangybuilders-com"
 ---
 
 # Discovered APIs & Protocols: aryabhangybuilders-com

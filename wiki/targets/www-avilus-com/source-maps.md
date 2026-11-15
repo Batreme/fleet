@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-avilus-com"
 date: 2026-11-14
-target: "[[overview|www-avilus-com]]"
+target: "www-avilus-com"
 ---
 
 # De-obfuscated Source Maps: www-avilus-com

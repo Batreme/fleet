@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-east64films-com"
 date: 2026-11-15
-target: "[[overview|www-east64films-com]]"
+target: "www-east64films-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#4eaebf` canvas, `#151515` ink, `#e43936` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#4eaebf` canvas, `
 
 > **EAST 64 Films · Tokyo-Based International Production Company** (https://www.east64films.com/) — EAST 64 Films is a Tokyo-based production company working across Japan and abroad. From commercials, music videos, and branded content to...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#4eaebf` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

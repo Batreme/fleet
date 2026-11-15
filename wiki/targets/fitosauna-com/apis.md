@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fitosauna-com"
 date: 2026-11-14
-target: "[[overview|fitosauna-com]]"
+target: "fitosauna-com"
 ---
 
 # Discovered APIs & Protocols: fitosauna-com

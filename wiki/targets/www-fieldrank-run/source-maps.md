@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-fieldrank-run"
 date: 2026-11-14
-target: "[[overview|www-fieldrank-run]]"
+target: "www-fieldrank-run"
 ---
 
 # De-obfuscated Source Maps: www-fieldrank-run

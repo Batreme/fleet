@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: aqualoqa-com"
 date: 2026-11-14
-target: "[[overview|aqualoqa-com]]"
+target: "aqualoqa-com"
 ---
 
 # De-obfuscated Source Maps: aqualoqa-com

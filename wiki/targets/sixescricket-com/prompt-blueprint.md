@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: sixescricket-com"
 date: 2026-11-15
-target: "[[overview|sixescricket-com]]"
+target: "sixescricket-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffa3a3` / `#e40014`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffa3a3` / `#e
 
 > **Sixes Party Cricket · Let's Play · Nets & Simulator · Sixes Social Cricket** (https://sixescricket.com/) — Cricket, but not as you know it. We've re-imagined the age old game of cricket for the modern socialite.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffa3a3` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: trek-cards"
 date: 2026-11-14
-target: "[[overview|trek-cards]]"
+target: "trek-cards"
 ---
 
 # Discovered APIs & Protocols: trek-cards

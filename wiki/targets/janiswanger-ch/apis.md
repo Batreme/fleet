@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: janiswanger-ch"
 date: 2026-11-14
-target: "[[overview|janiswanger-ch]]"
+target: "janiswanger-ch"
 ---
 
 # Discovered APIs & Protocols: janiswanger-ch

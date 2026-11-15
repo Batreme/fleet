@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-allerstudio-com"
 date: 2026-11-14
-target: "[[overview|www-allerstudio-com]]"
+target: "www-allerstudio-com"
 ---
 
 # Data Models & Client Storage: www-allerstudio-com

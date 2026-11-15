@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-pragenhatlen-com"
 date: 2026-11-15
-target: "[[overview|www-pragenhatlen-com]]"
+target: "www-pragenhatlen-com"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#52667e` / `#000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#52667e` / `#
 
 > **Prägen Hätlen · Swiss watchmaking for the crypto community.** (https://www.pragenhatlen.com/) — Trust, precision, resilience and uncompromising attention to detail.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#52667e` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

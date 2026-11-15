@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fabiantjoeaon-com"
 date: 2026-11-14
-target: "[[overview|fabiantjoeaon-com]]"
+target: "fabiantjoeaon-com"
 ---
 
 # Discovered APIs & Protocols: fabiantjoeaon-com

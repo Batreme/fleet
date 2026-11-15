@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: siglitos-com"
 date: 2026-11-14
-target: "[[overview|siglitos-com]]"
+target: "siglitos-com"
 ---
 
 # De-obfuscated Source Maps: siglitos-com

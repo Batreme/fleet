@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: yumlog-dev"
 date: 2026-11-14
-target: "[[overview|yumlog-dev]]"
+target: "yumlog-dev"
 ---
 
 # De-obfuscated Source Maps: yumlog-dev

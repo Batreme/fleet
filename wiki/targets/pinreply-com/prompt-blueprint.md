@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: pinreply-com"
 date: 2026-11-15
-target: "[[overview|pinreply-com]]"
+target: "pinreply-com"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101828` canvas, `#f8fafc` ink, `#e4e7ec` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101828` canvas
 
 > **PinReply — Design feedback, in the right place** (https://pinreply.com/) — PinReply is a design feedback tool for visual comments on websites. Point to a change, share a review, and keep replies in context.
 
-![Desktop Viewport Capture (1440x4025)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101828` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×4025px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

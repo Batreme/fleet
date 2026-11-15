@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-villiers-ai"
 date: 2026-11-14
-target: "[[overview|www-villiers-ai]]"
+target: "www-villiers-ai"
 ---
 
 # De-obfuscated Source Maps: www-villiers-ai

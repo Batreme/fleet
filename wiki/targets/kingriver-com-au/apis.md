@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: kingriver-com-au"
 date: 2026-11-14
-target: "[[overview|kingriver-com-au]]"
+target: "kingriver-com-au"
 ---
 
 # Discovered APIs & Protocols: kingriver-com-au

@@ -22,6 +22,7 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 ### 📊 Dashboards & Execution Traces (`wiki/`)
 - [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`556/556` analyzable targets at `25.0/25.0`, `19` `status: blocked` WAF/error captures excluded per `C1`), viewport captures, and `claude-loop` review (`VERDICT: APPROVE`, `24/25`).
 - [round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) — Complete 58-round execution traces and `C1`–`C14` remediation ledgers audited by `claude-sonnet-5-5-high`.
+- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across all 7 verification rounds by `claude-sonnet-5-5-high`.
 
 ---
 

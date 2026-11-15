@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-huxleysaga-com"
 date: 2026-11-15
-target: "[[overview|www-huxleysaga-com]]"
+target: "www-huxleysaga-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#999`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#999`
 
 > **Huxley · Home** (https://www.huxleysaga.com/) — The HUXLEY® saga is an original sci-fi universe created by renowned concept artist Ben Mauro. Explore all the books, products, artwork an...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#999`
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: southandstonestudio-com"
 date: 2026-11-14
-target: "[[overview|southandstonestudio-com]]"
+target: "southandstonestudio-com"
 ---
 
 # Discovered APIs & Protocols: southandstonestudio-com

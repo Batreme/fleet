@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: kinoria-studio"
 date: 2026-11-14
-target: "[[overview|kinoria-studio]]"
+target: "kinoria-studio"
 ---
 
 # De-obfuscated Source Maps: kinoria-studio

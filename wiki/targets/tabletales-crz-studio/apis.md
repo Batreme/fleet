@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tabletales-crz-studio"
 date: 2026-11-14
-target: "[[overview|tabletales-crz-studio]]"
+target: "tabletales-crz-studio"
 ---
 
 # Discovered APIs & Protocols: tabletales-crz-studio

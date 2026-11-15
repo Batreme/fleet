@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: halloween-ferayna-com"
 date: 2026-11-14
-target: "[[overview|halloween-ferayna-com]]"
+target: "halloween-ferayna-com"
 ---
 
 # Discovered APIs & Protocols: halloween-ferayna-com

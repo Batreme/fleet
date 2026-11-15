@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: morphowater-com"
 date: 2026-11-14
-target: "[[overview|morphowater-com]]"
+target: "morphowater-com"
 ---
 
 # Discovered APIs & Protocols: morphowater-com

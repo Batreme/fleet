@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thewayapp-com"
 date: 2026-11-14
-target: "[[overview|thewayapp-com]]"
+target: "thewayapp-com"
 ---
 
 # Data Models & Client Storage: thewayapp-com

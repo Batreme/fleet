@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-sigma-imaging-se"
 date: 2026-11-14
-target: "[[overview|www-sigma-imaging-se]]"
+target: "www-sigma-imaging-se"
 ---
 
 # De-obfuscated Source Maps: www-sigma-imaging-se

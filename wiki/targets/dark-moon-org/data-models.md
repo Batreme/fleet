@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dark-moon-org"
 date: 2026-11-14
-target: "[[overview|dark-moon-org]]"
+target: "dark-moon-org"
 ---
 
 # Data Models & Client Storage: dark-moon-org

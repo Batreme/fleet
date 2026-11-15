@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: oblikworks-com"
 date: 2026-11-14
-target: "[[overview|oblikworks-com]]"
+target: "oblikworks-com"
 ---
 
 # De-obfuscated Source Maps: oblikworks-com

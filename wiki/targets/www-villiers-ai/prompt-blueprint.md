@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-villiers-ai"
 date: 2026-11-15
-target: "[[overview|www-villiers-ai]]"
+target: "www-villiers-ai"
 status: analyzed
+capture: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f15` canvas, `#f8f9f9` ink, `#1a1a1f` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f15` canvas
 
 > **Private Jet Charter and Empty Leg Flights · Villiers** (https://www.villiers.ai/) — Charter a private jet or find an empty leg flight. Villiers is an independent broker that compares vetted operators and quotes one clear...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f15` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

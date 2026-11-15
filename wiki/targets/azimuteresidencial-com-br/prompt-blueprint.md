@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: azimuteresidencial-com-br"
 date: 2026-11-15
-target: "[[overview|azimuteresidencial-com-br]]"
+target: "azimuteresidencial-com-br"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#625e55` canvas, `#f6f0e5` ink, `#ccb494` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#625e55` canvas
 
 > **Azimute — Seu próximo horizonte · ASL** (https://azimuteresidencial.com.br/) — Conheça o Residencial Azimute, da ASL, na Vila Vitória, em Mauá. Apartamentos de 63 e 67 m², com 2 dormitórios, 1 suíte e varanda gourmet.
 
-![Desktop Viewport Capture (1440x29619)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#625e55` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×29619px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

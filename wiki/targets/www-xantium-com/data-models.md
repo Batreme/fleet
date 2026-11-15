@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-xantium-com"
 date: 2026-11-14
-target: "[[overview|www-xantium-com]]"
+target: "www-xantium-com"
 ---
 
 # Data Models & Client Storage: www-xantium-com

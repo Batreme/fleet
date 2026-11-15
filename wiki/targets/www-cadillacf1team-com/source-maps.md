@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-cadillacf1team-com"
 date: 2026-11-14
-target: "[[overview|www-cadillacf1team-com]]"
+target: "www-cadillacf1team-com"
 ---
 
 # De-obfuscated Source Maps: www-cadillacf1team-com

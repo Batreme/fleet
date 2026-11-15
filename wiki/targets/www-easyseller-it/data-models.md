@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-easyseller-it"
 date: 2026-11-14
-target: "[[overview|www-easyseller-it]]"
+target: "www-easyseller-it"
 ---
 
 # Data Models & Client Storage: www-easyseller-it

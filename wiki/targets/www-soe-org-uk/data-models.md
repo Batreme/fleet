@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-soe-org-uk"
 date: 2026-11-14
-target: "[[overview|www-soe-org-uk]]"
+target: "www-soe-org-uk"
 ---
 
 # Data Models & Client Storage: www-soe-org-uk

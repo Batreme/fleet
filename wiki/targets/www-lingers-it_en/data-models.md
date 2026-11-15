@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-lingers-it_en"
 date: 2026-11-14
-target: "[[overview|www-lingers-it_en]]"
+target: "www-lingers-it_en"
 ---
 
 # Data Models & Client Storage: www-lingers-it_en

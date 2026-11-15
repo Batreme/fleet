@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: re-cycle-org"
 date: 2026-11-14
-target: "[[overview|re-cycle-org]]"
+target: "re-cycle-org"
 ---
 
 # Data Models & Client Storage: re-cycle-org

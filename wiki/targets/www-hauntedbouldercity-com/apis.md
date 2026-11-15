@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-hauntedbouldercity-com"
 date: 2026-11-14
-target: "[[overview|www-hauntedbouldercity-com]]"
+target: "www-hauntedbouldercity-com"
 ---
 
 # Discovered APIs & Protocols: www-hauntedbouldercity-com

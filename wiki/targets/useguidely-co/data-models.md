@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: useguidely-co"
 date: 2026-11-14
-target: "[[overview|useguidely-co]]"
+target: "useguidely-co"
 ---
 
 # Data Models & Client Storage: useguidely-co

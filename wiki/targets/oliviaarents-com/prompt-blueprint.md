@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: oliviaarents-com"
 date: 2026-11-15
-target: "[[overview|oliviaarents-com]]"
+target: "oliviaarents-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#8ccf88` canvas, `#000` ink, `#08130b` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#8ccf88` canvas, `
 
 > **OliviaOS 96 — Personal Edition** (https://oliviaarents.com/) — OliviaOS 96 — Personal Edition. Olivia's personal portfolio, imagined as a late-1990s desktop operating system.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#8ccf88` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

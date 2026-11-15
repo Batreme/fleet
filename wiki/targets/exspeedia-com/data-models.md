@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: exspeedia-com"
 date: 2026-11-14
-target: "[[overview|exspeedia-com]]"
+target: "exspeedia-com"
 ---
 
 # Data Models & Client Storage: exspeedia-com

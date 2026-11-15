@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mosaic-flabbergast-agency"
 date: 2026-11-14
-target: "[[overview|mosaic-flabbergast-agency]]"
+target: "mosaic-flabbergast-agency"
 ---
 
 # Data Models & Client Storage: mosaic-flabbergast-agency

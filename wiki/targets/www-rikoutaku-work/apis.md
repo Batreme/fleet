@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-rikoutaku-work"
 date: 2026-11-14
-target: "[[overview|www-rikoutaku-work]]"
+target: "www-rikoutaku-work"
 ---
 
 # Discovered APIs & Protocols: www-rikoutaku-work

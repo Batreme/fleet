@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: agnestoth-com"
 date: 2026-11-14
-target: "[[overview|agnestoth-com]]"
+target: "agnestoth-com"
 ---
 
 # De-obfuscated Source Maps: agnestoth-com

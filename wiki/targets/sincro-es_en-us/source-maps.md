@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: sincro-es_en-us"
 date: 2026-11-14
-target: "[[overview|sincro-es_en-us]]"
+target: "sincro-es_en-us"
 ---
 
 # De-obfuscated Source Maps: sincro-es_en-us

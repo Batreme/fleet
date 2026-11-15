@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-get-daffed-com"
 date: 2026-11-14
-target: "[[overview|www-get-daffed-com]]"
+target: "www-get-daffed-com"
 ---
 
 # Data Models & Client Storage: www-get-daffed-com

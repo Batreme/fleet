@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-flatlineagency-com"
 date: 2026-11-15
-target: "[[overview|www-flatlineagency-com]]"
+target: "www-flatlineagency-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f0e9` canvas, `#000` ink, `#000` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f0e9` canvas, `
 
 > **Shopify, Marketing & AI Agency Amsterdam · Flatline** (https://www.flatlineagency.com/) — Flatline is a Shopify Platinum Partner in Amsterdam. We build, migrate and grow Shopify Plus stores and run marketing and AI for premium...
 
-![Desktop Viewport Capture (1440x7042)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f0e9` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7042px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

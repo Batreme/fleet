@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: palominoprod-com"
 date: 2026-11-15
-target: "[[overview|palominoprod-com]]"
+target: "palominoprod-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff6568` / `#05df72`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff6568` / `#0
 
 > **Palomino — Cinematic Sports & Brand Films** (https://palominoprod.com/) — Cinematic sports and branded films—from global campaigns to athlete documentaries and live events—with strategy, premium production & edi...
 
-![Desktop Viewport Capture (1440x8375)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff6568` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×8375px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

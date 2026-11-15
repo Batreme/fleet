@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-allerstudio-com"
 date: 2026-11-14
-target: "[[overview|www-allerstudio-com]]"
+target: "www-allerstudio-com"
 ---
 
 # Discovered APIs & Protocols: www-allerstudio-com

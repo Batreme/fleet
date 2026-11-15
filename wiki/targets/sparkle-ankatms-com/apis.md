@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sparkle-ankatms-com"
 date: 2026-11-14
-target: "[[overview|sparkle-ankatms-com]]"
+target: "sparkle-ankatms-com"
 ---
 
 # Discovered APIs & Protocols: sparkle-ankatms-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: theinfinitysocks-com"
 date: 2026-11-14
-target: "[[overview|theinfinitysocks-com]]"
+target: "theinfinitysocks-com"
 ---
 
 # Discovered APIs & Protocols: theinfinitysocks-com

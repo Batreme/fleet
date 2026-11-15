@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: re-cycle-org"
 date: 2026-11-14
-target: "[[overview|re-cycle-org]]"
+target: "re-cycle-org"
 ---
 
 # Discovered APIs & Protocols: re-cycle-org

@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: morrow-valerian-studio"
 date: 2026-11-15
-target: "[[overview|morrow-valerian-studio]]"
+target: "morrow-valerian-studio"
 ---
 
 # UI Architecture & Design Tokens: morrow-valerian-studio
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `morrow-valerian-studio` (`MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `morrow-valerian-studio` (`MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ciuslabs-com"
 date: 2026-11-14
-target: "[[overview|ciuslabs-com]]"
+target: "ciuslabs-com"
 ---
 
 # Data Models & Client Storage: ciuslabs-com

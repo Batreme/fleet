@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-banham-co-uk"
 date: 2026-11-14
-target: "[[overview|www-banham-co-uk]]"
+target: "www-banham-co-uk"
 ---
 
 # Discovered APIs & Protocols: www-banham-co-uk

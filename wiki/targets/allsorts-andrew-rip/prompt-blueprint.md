@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: allsorts-andrew-rip"
 date: 2026-11-15
-target: "[[overview|allsorts-andrew-rip]]"
+target: "allsorts-andrew-rip"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#888`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#888
 
 > **Allsorts · Andrew Robinson** (https://allsorts.andrew.rip) — Liquorice allsorts to throw, pile and frame, rendered in your browser. Save one as a wallpaper. By Andrew Robinson.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#888
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

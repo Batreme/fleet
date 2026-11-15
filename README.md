@@ -25,6 +25,8 @@ This repository contains our core fleet of skills.
 | `leaving-pr-comments` | (automatic) | Standardizes the format and tone of automated comments posted on pull requests. |
 | `kb` | "consult kb", "record venture" | Searches past ventures and playbooks before a task, and logs outcomes/lessons afterward. |
 | `reverse-engineer` | "reverse engineer" | Captures web applications, extracts schemas/APIs/design tokens, and queries the vector index. |
+| `ui-prompt-designer` | "ui prompt designer" | Reverse-engineers web properties, design tokens, DOM hierarchies, and visual assets into production-grade AI prompt blueprints. |
+| `claude-loop` | "claude loop" | Anthropic Claude-powered review loop modeled on `sol-loop`. Runs autonomous multi-round reviews against strict quality rubrics. |
 
 ### Skill Dependencies
 
@@ -34,6 +36,7 @@ Several skills work together as a pipeline:
 - `full-stop` uses `full-send`.
 - `takeover` uses `modernize`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
 - `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
+- `ui-prompt-designer` uses `claude-loop` for autonomous blueprint and rubric verification.
 
 ---
 
@@ -44,6 +47,9 @@ The `wiki/` directory is an Obsidian-compatible Markdown vault that serves as lo
 - **`wiki/playbooks/`**: Proven patterns and best practices extracted from past ventures.
 - **`wiki/templates/`**: Templates for standardizing new venture logs and playbooks.
 - **`wiki/INDEX.md`**: Central Map of Content (MOC) linking all entries.
+- **[`wiki/UI_EVALS_DASHBOARD.md`](wiki/UI_EVALS_DASHBOARD.md)**: Master 58-round / 575-target UI Prompt Blueprint & Evaluation Dashboard (with direct clickable links to every target's zero-shot prompt).
+- **`wiki/targets/<slug>/prompt-blueprint.md`**: 7-part UI Prompt Blueprints and Section 7 Master Zero-Shot AI Generation Prompts (`#7-master-zero-shot-ai-generation-prompt`), paired with `ui-ux.md` design tokens and `assets/desktop.png` (`1440px`) + `assets/mobile.png` (`390px`).
+- **`wiki/traces/`**: 58 round execution traces (`round-01-trace.md` .. `round-58-trace.md`) and `claude-loop-ledger.json`.
 
 ---
 
@@ -87,3 +93,10 @@ cp -R skills/* ~/.codex/skills/
 - **GitHub CLI (`gh`)**: Required for `file-pr`, `babysit-pr`, `takeover`, and `modernize`.
 - **Python 3**: Used by `skills/babysit-pr/scripts/pr-wait` to watch PR event streams.
 - **Subagents / Multi-model**: `council` and `sol-loop` delegate reviews to subagents or external models.
+
+---
+
+## License
+
+Non-Commercial Software License. Copyright (c) 2026 Jakub Szkop (Batreme). All rights reserved.  
+See [`LICENSE`](LICENSE) for complete terms. For commercial licensing inquiries, contact: Jakub Szkop `<szkopjakub@gmail.com>`.

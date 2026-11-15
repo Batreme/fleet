@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: turismo-gov-st_fr"
 date: 2026-11-14
-target: "[[overview|turismo-gov-st_fr]]"
+target: "turismo-gov-st_fr"
 ---
 
 # Discovered APIs & Protocols: turismo-gov-st_fr

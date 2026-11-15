@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: theperformancelab-ca"
 date: 2026-11-14
-target: "[[overview|theperformancelab-ca]]"
+target: "theperformancelab-ca"
 ---
 
 # Data Models & Client Storage: theperformancelab-ca

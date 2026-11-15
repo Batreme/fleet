@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-bitwip-fr_en"
 date: 2026-11-14
-target: "[[overview|www-bitwip-fr_en]]"
+target: "www-bitwip-fr_en"
 ---
 
 # Data Models & Client Storage: www-bitwip-fr_en

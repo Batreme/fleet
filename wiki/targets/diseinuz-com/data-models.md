@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: diseinuz-com"
 date: 2026-11-14
-target: "[[overview|diseinuz-com]]"
+target: "diseinuz-com"
 ---
 
 # Data Models & Client Storage: diseinuz-com

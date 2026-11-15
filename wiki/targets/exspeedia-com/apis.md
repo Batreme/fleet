@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: exspeedia-com"
 date: 2026-11-14
-target: "[[overview|exspeedia-com]]"
+target: "exspeedia-com"
 ---
 
 # Discovered APIs & Protocols: exspeedia-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sc-aesthetic-labs-com"
 date: 2026-11-14
-target: "[[overview|sc-aesthetic-labs-com]]"
+target: "sc-aesthetic-labs-com"
 ---
 
 # Discovered APIs & Protocols: sc-aesthetic-labs-com

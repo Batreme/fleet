@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ksenpanchenko-com"
 date: 2026-11-14
-target: "[[overview|ksenpanchenko-com]]"
+target: "ksenpanchenko-com"
 ---
 
 # Data Models & Client Storage: ksenpanchenko-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: yuyafilmstudio-dev"
 date: 2026-11-14
-target: "[[overview|yuyafilmstudio-dev]]"
+target: "yuyafilmstudio-dev"
 ---
 
 # Data Models & Client Storage: yuyafilmstudio-dev

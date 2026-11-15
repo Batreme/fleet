@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-agencejacquesparis-fr"
 date: 2026-11-14
-target: "[[overview|www-agencejacquesparis-fr]]"
+target: "www-agencejacquesparis-fr"
 ---
 
 # Discovered APIs & Protocols: www-agencejacquesparis-fr

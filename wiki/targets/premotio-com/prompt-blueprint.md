@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: premotio-com"
 date: 2026-11-15
-target: "[[overview|premotio-com]]"
+target: "premotio-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#000000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#0
 
 > **premotio — finished design into polished motion** (https://premotio.com/) — premotio turns finished design into polished motion without sending you into a video editor. Pick a preset, drop in your work and export...
 
-![Desktop Viewport Capture (1440x50734)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×50734px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

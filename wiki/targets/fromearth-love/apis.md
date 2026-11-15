@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fromearth-love"
 date: 2026-11-14
-target: "[[overview|fromearth-love]]"
+target: "fromearth-love"
 ---
 
 # Discovered APIs & Protocols: fromearth-love

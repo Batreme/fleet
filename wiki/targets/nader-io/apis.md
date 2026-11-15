@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: nader-io"
 date: 2026-11-14
-target: "[[overview|nader-io]]"
+target: "nader-io"
 ---
 
 # Discovered APIs & Protocols: nader-io

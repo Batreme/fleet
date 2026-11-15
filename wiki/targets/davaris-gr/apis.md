@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: davaris-gr"
 date: 2026-11-14
-target: "[[overview|davaris-gr]]"
+target: "davaris-gr"
 ---
 
 # Discovered APIs & Protocols: davaris-gr

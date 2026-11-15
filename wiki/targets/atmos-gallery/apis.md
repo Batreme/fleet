@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: atmos-gallery"
 date: 2026-11-14
-target: "[[overview|atmos-gallery]]"
+target: "atmos-gallery"
 ---
 
 # Discovered APIs & Protocols: atmos-gallery

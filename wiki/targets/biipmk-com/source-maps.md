@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: biipmk-com"
 date: 2026-10-31
-target: "[[overview|biipmk-com]]"
+target: "biipmk-com"
 ---
 
 # De-obfuscated Source Maps: biipmk-com

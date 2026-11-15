@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: articles-gamcare-org-uk"
 date: 2026-11-15
-target: "[[overview|articles-gamcare-org-uk]]"
+target: "articles-gamcare-org-uk"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3a04a8` canvas, `#fff8ef` ink, `#eee` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3a04a8` canvas
 
 > **The Gamification of Everything · GamCare** (https://articles.gamcare.org.uk/) — Gambling-like mechanics are becoming part of everyday digital life. Explore how gamification can shape behaviour and why prevention needs...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3a04a8` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

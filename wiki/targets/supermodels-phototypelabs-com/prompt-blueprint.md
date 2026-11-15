@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: supermodels-phototypelabs-com"
 date: 2026-11-15
-target: "[[overview|supermodels-phototypelabs-com]]"
+target: "supermodels-phototypelabs-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f6f2` / `#000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f6f2` / `#0
 
 > **SUPERMODELS — Image, Video, Voice & Music, Pay Per Use** (https://supermodels.phototypelabs.com) — SUPERMODELS is a creative platform for images, video, voice, music, and text with leading models. Pay per use, with no subscription.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f6f2` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

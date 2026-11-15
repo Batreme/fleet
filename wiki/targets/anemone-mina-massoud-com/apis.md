@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: anemone-mina-massoud-com"
 date: 2026-11-14
-target: "[[overview|anemone-mina-massoud-com]]"
+target: "anemone-mina-massoud-com"
 ---
 
 # Discovered APIs & Protocols: anemone-mina-massoud-com

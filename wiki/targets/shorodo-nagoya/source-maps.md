@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: shorodo-nagoya"
 date: 2026-11-14
-target: "[[overview|shorodo-nagoya]]"
+target: "shorodo-nagoya"
 ---
 
 # De-obfuscated Source Maps: shorodo-nagoya

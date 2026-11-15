@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: forgeautomotive-co-uk"
 date: 2026-11-14
-target: "[[overview|forgeautomotive-co-uk]]"
+target: "forgeautomotive-co-uk"
 ---
 
 # Discovered APIs & Protocols: forgeautomotive-co-uk

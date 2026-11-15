@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: overworldaudio-com"
 date: 2026-11-14
-target: "[[overview|overworldaudio-com]]"
+target: "overworldaudio-com"
 ---
 
 # De-obfuscated Source Maps: overworldaudio-com

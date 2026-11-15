@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: baztan-race-com"
 date: 2026-11-14
-target: "[[overview|baztan-race-com]]"
+target: "baztan-race-com"
 ---
 
 # Discovered APIs & Protocols: baztan-race-com

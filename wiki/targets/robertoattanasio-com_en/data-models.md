@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: robertoattanasio-com_en"
 date: 2026-11-14
-target: "[[overview|robertoattanasio-com_en]]"
+target: "robertoattanasio-com_en"
 ---
 
 # Data Models & Client Storage: robertoattanasio-com_en

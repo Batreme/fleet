@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: atmos-gallery"
 date: 2026-11-14
-target: "[[overview|atmos-gallery]]"
+target: "atmos-gallery"
 ---
 
 # Data Models & Client Storage: atmos-gallery

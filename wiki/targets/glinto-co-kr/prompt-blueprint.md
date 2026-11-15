@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: glinto-co-kr"
 date: 2026-11-15
-target: "[[overview|glinto-co-kr]]"
+target: "glinto-co-kr"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7b0`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7
 
 > **Glinto — Creative studio** (https://glinto.co.kr) — Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
 
-![Desktop Viewport Capture (1440x9417)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9417px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: kissbranding-co-uk"
 date: 2026-11-15
-target: "[[overview|kissbranding-co-uk]]"
+target: "kissbranding-co-uk"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f3eddf`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f3e
 
 > **Kiss · Brands that Kiss** (https://kissbranding.co.uk/) — Brand strategy and identity for founder-led and investor-backed businesses at the moments that matter. Transform Award-winning studio in...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f3e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

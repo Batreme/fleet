@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: example-app"
 date: 2026-10-31
-target: "[[overview|example-app]]"
+target: "example-app"
 ---
 
 # Data Models & Client Storage: example-app

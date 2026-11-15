@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: xavierjoliot-com"
 date: 2026-11-14
-target: "[[overview|xavierjoliot-com]]"
+target: "xavierjoliot-com"
 ---
 
 # De-obfuscated Source Maps: xavierjoliot-com

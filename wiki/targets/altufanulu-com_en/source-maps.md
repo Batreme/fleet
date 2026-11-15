@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: altufanulu-com_en"
 date: 2026-11-14
-target: "[[overview|altufanulu-com_en]]"
+target: "altufanulu-com_en"
 ---
 
 # De-obfuscated Source Maps: altufanulu-com_en

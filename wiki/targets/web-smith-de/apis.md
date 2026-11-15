@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: web-smith-de"
 date: 2026-11-14
-target: "[[overview|web-smith-de]]"
+target: "web-smith-de"
 ---
 
 # Discovered APIs & Protocols: web-smith-de

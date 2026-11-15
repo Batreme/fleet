@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-governorsmansion-org"
 date: 2026-11-14
-target: "[[overview|www-governorsmansion-org]]"
+target: "www-governorsmansion-org"
 ---
 
 # Discovered APIs & Protocols: www-governorsmansion-org

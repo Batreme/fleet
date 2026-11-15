@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aizeitgeist-tv"
 date: 2026-11-14
-target: "[[overview|aizeitgeist-tv]]"
+target: "aizeitgeist-tv"
 ---
 
 # Data Models & Client Storage: aizeitgeist-tv

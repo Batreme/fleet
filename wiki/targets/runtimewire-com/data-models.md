@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: runtimewire-com"
 date: 2026-11-14
-target: "[[overview|runtimewire-com]]"
+target: "runtimewire-com"
 ---
 
 # Data Models & Client Storage: runtimewire-com

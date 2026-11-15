@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: ads-apple-com"
 date: 2026-11-15
-target: "[[overview|ads-apple-com]]"
+target: "ads-apple-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f7` canvas, `#1d1d1f` ink, `#06c` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f7` canvas, `
 
 > **Apple Ads** (http://ads.apple.com) — Reach customers where only Apple Ads can take you. Learn how to grow your business with ads on the App Store, Apple Maps, Apple News, MLS...
 
-![Desktop Viewport Capture (1440x7027)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f7` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7027px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

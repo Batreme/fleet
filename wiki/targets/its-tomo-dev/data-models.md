@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: its-tomo-dev"
 date: 2026-11-14
-target: "[[overview|its-tomo-dev]]"
+target: "its-tomo-dev"
 ---
 
 # Data Models & Client Storage: its-tomo-dev

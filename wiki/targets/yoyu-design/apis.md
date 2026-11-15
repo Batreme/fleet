@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: yoyu-design"
 date: 2026-11-14
-target: "[[overview|yoyu-design]]"
+target: "yoyu-design"
 ---
 
 # Discovered APIs & Protocols: yoyu-design

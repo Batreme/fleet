@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: wiro-ae"
 date: 2026-11-14
-target: "[[overview|wiro-ae]]"
+target: "wiro-ae"
 ---
 
 # Data Models & Client Storage: wiro-ae

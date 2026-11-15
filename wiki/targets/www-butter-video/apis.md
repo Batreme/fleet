@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-butter-video"
 date: 2026-11-14
-target: "[[overview|www-butter-video]]"
+target: "www-butter-video"
 ---
 
 # Discovered APIs & Protocols: www-butter-video

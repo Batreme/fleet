@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: preymaker-com"
 date: 2026-11-14
-target: "[[overview|preymaker-com]]"
+target: "preymaker-com"
 ---
 
 # Discovered APIs & Protocols: preymaker-com

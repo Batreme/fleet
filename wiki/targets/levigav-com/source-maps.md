@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: levigav-com"
 date: 2026-11-14
-target: "[[overview|levigav-com]]"
+target: "levigav-com"
 ---
 
 # De-obfuscated Source Maps: levigav-com

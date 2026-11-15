@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: grids03-obys-agency"
 date: 2026-11-14
-target: "[[overview|grids03-obys-agency]]"
+target: "grids03-obys-agency"
 ---
 
 # Discovered APIs & Protocols: grids03-obys-agency

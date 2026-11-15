@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-impastofornoantico-com"
 date: 2026-11-14
-target: "[[overview|www-impastofornoantico-com]]"
+target: "www-impastofornoantico-com"
 ---
 
 # Discovered APIs & Protocols: www-impastofornoantico-com

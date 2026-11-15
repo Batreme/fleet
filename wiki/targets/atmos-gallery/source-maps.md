@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: atmos-gallery"
 date: 2026-11-14
-target: "[[overview|atmos-gallery]]"
+target: "atmos-gallery"
 ---
 
 # De-obfuscated Source Maps: atmos-gallery

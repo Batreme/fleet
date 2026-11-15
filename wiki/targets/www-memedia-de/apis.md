@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-memedia-de"
 date: 2026-11-14
-target: "[[overview|www-memedia-de]]"
+target: "www-memedia-de"
 ---
 
 # Discovered APIs & Protocols: www-memedia-de

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tribeofgiants-com"
 date: 2026-11-14
-target: "[[overview|tribeofgiants-com]]"
+target: "tribeofgiants-com"
 ---
 
 # Discovered APIs & Protocols: tribeofgiants-com

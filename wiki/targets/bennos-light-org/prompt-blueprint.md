@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: bennos-light-org"
 date: 2026-11-15
-target: "[[overview|bennos-light-org]]"
+target: "bennos-light-org"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#9ca3af` / `#000000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#9ca3af` / `#0
 
 > **Benno's Light** (https://bennos-light.org/) — Benno Kern, one of only a few Holocaust survivors still alive in Austria, tells his heartbreaking story of survival in the latest experie...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#9ca3af` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

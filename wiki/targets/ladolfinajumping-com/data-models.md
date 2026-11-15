@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ladolfinajumping-com"
 date: 2026-11-14
-target: "[[overview|ladolfinajumping-com]]"
+target: "ladolfinajumping-com"
 ---
 
 # Data Models & Client Storage: ladolfinajumping-com

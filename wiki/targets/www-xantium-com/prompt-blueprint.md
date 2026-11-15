@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-xantium-com"
 date: 2026-11-15
-target: "[[overview|www-xantium-com]]"
+target: "www-xantium-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#221f25` ink, `#084432` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 
 > **Xantium** (https://www.xantium.com) — Xantium
 
-![Desktop Viewport Capture (1440x6423)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6423px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

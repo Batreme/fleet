@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-huxleysaga-com"
 date: 2026-11-14
-target: "[[overview|www-huxleysaga-com]]"
+target: "www-huxleysaga-com"
 ---
 
 # Discovered APIs & Protocols: www-huxleysaga-com

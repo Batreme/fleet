@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: duda-works"
 date: 2026-11-14
-target: "[[overview|duda-works]]"
+target: "duda-works"
 ---
 
 # Data Models & Client Storage: duda-works

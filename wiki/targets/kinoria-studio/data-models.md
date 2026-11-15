@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kinoria-studio"
 date: 2026-11-14
-target: "[[overview|kinoria-studio]]"
+target: "kinoria-studio"
 ---
 
 # Data Models & Client Storage: kinoria-studio

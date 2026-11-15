@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-schlosshotel-kitzbuehel-com_en"
 date: 2026-11-14
-target: "[[overview|www-schlosshotel-kitzbuehel-com_en]]"
+target: "www-schlosshotel-kitzbuehel-com_en"
 ---
 
 # Data Models & Client Storage: www-schlosshotel-kitzbuehel-com_en

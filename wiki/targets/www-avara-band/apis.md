@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-avara-band"
 date: 2026-11-14
-target: "[[overview|www-avara-band]]"
+target: "www-avara-band"
 ---
 
 # Discovered APIs & Protocols: www-avara-band

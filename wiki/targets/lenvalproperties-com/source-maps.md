@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lenvalproperties-com"
 date: 2026-11-14
-target: "[[overview|lenvalproperties-com]]"
+target: "lenvalproperties-com"
 ---
 
 # De-obfuscated Source Maps: lenvalproperties-com

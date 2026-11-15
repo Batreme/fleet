@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: konkelectrical-com"
 date: 2026-11-14
-target: "[[overview|konkelectrical-com]]"
+target: "konkelectrical-com"
 ---
 
 # Discovered APIs & Protocols: konkelectrical-com

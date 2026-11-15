@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: supermodels-phototypelabs-com"
 date: 2026-11-14
-target: "[[overview|supermodels-phototypelabs-com]]"
+target: "supermodels-phototypelabs-com"
 ---
 
 # De-obfuscated Source Maps: supermodels-phototypelabs-com

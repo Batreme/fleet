@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: theimmortals-world"
 date: 2026-11-14
-target: "[[overview|theimmortals-world]]"
+target: "theimmortals-world"
 ---
 
 # Discovered APIs & Protocols: theimmortals-world

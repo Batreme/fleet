@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: the-family-rice-tray-vercel-app"
 date: 2026-11-14
-target: "[[overview|the-family-rice-tray-vercel-app]]"
+target: "the-family-rice-tray-vercel-app"
 ---
 
 # Discovered APIs & Protocols: the-family-rice-tray-vercel-app

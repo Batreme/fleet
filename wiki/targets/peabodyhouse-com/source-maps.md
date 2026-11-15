@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: peabodyhouse-com"
 date: 2026-11-14
-target: "[[overview|peabodyhouse-com]]"
+target: "peabodyhouse-com"
 ---
 
 # De-obfuscated Source Maps: peabodyhouse-com

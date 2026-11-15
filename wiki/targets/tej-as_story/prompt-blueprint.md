@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: tej-as_story"
 date: 2026-11-15
-target: "[[overview|tej-as_story]]"
+target: "tej-as_story"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0708` / `#4a4441`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0708` / `#
 
 > **The testimony and autobiography of Tejas Kumar** (https://tej.as/story) — Tejas Kumar died at 4 and was revived, got about 19 days of school a year, and is now an AI engineer at IBM. His full testimony, in 39 ch...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0708` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

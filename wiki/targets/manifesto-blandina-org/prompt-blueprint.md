@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: manifesto-blandina-org"
 date: 2026-11-15
-target: "[[overview|manifesto-blandina-org]]"
+target: "manifesto-blandina-org"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#edece8`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#edec
 
 > **Connect, Create, Change: Manifesto of Blandina** (https://manifesto.blandina.org/) — Manifesto of Blandina: connect with yourself, create the life you want, change the world. Yoga, mindfulness and meditation in Padua, the...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#edec
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

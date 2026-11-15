@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-weisslameraner-com_en"
 date: 2026-11-14
-target: "[[overview|www-weisslameraner-com_en]]"
+target: "www-weisslameraner-com_en"
 ---
 
 # Discovered APIs & Protocols: www-weisslameraner-com_en

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: uimaven-art"
 date: 2026-11-14
-target: "[[overview|uimaven-art]]"
+target: "uimaven-art"
 ---
 
 # Data Models & Client Storage: uimaven-art

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: hopecancerresources-org"
 date: 2026-11-15
-target: "[[overview|hopecancerresources-org]]"
+target: "hopecancerresources-org"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0e1829` canvas, `#edf1f4` ink, `#476577` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0e1829` canvas
 
 > **Hope Cancer Resources - Support. Educate. Prevent.** (https://hopecancerresources.org/) — Providing free cancer support services through counseling, transportation, financial assistance, personal training, tobacco treatment, &...
 
-![Desktop Viewport Capture (1440x5575)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0e1829` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5575px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

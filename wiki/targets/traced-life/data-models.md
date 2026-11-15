@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: traced-life"
 date: 2026-11-14
-target: "[[overview|traced-life]]"
+target: "traced-life"
 ---
 
 # Data Models & Client Storage: traced-life

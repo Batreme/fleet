@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-anduril-com"
 date: 2026-11-14
-target: "[[overview|www-anduril-com]]"
+target: "www-anduril-com"
 ---
 
 # De-obfuscated Source Maps: www-anduril-com

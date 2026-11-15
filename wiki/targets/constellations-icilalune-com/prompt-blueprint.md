@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: constellations-icilalune-com"
 date: 2026-11-15
-target: "[[overview|constellations-icilalune-com]]"
+target: "constellations-icilalune-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `
 
 > **Constellation(s) — Immersive virtual 3D art exhibitions** (https://constellations.icilalune.com/) — Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam Krypel, Pia Be...
 
-![Desktop Viewport Capture (1440x2963)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2963px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thecontenders-co"
 date: 2026-11-14
-target: "[[overview|thecontenders-co]]"
+target: "thecontenders-co"
 ---
 
 # Discovered APIs & Protocols: thecontenders-co

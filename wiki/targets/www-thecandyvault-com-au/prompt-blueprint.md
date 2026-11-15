@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-thecandyvault-com-au"
 date: 2026-11-15
-target: "[[overview|www-thecandyvault-com-au]]"
+target: "www-thecandyvault-com-au"
 status: analyzed
+capture: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f2ccf` canvas, `#eaefff` ink, `#acbeff` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f2ccf` canvas
 
 > **The Candy Vault · Buy Sweets Online · Australia** (https://www.thecandyvault.com.au/) — Shop delicious lollies, chocolates and sweet treats online at The Candy Vault. Discover a colourful range of favourites delivered across...
 
-![Desktop Viewport Capture (1440x6419)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f2ccf` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6419px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

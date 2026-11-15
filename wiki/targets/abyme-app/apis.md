@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: abyme-app"
 date: 2026-11-14
-target: "[[overview|abyme-app]]"
+target: "abyme-app"
 ---
 
 # Discovered APIs & Protocols: abyme-app

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: emmaus-agir-31-fr"
 date: 2026-11-14
-target: "[[overview|emmaus-agir-31-fr]]"
+target: "emmaus-agir-31-fr"
 ---
 
 # Data Models & Client Storage: emmaus-agir-31-fr

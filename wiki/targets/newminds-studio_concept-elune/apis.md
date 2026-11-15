@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: newminds-studio_concept-elune"
 date: 2026-11-14
-target: "[[overview|newminds-studio_concept-elune]]"
+target: "newminds-studio_concept-elune"
 ---
 
 # Discovered APIs & Protocols: newminds-studio_concept-elune

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-killstar-com"
 date: 2026-11-14
-target: "[[overview|www-killstar-com]]"
+target: "www-killstar-com"
 ---
 
 # De-obfuscated Source Maps: www-killstar-com

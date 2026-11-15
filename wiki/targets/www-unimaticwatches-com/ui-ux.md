@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: www-unimaticwatches-com"
 date: 2026-11-15
-target: "[[overview|www-unimaticwatches-com]]"
+target: "www-unimaticwatches-com"
 ---
 
 # UI Architecture & Design Tokens: www-unimaticwatches-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-unimaticwatches-com` (`UNIMATIC Watches · Italian Minimalist Tool Watch Lab`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-unimaticwatches-com` (`UNIMATIC Watches · Italian Minimalist Tool Watch Lab`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

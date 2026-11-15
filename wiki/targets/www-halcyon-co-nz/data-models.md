@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-halcyon-co-nz"
 date: 2026-11-14
-target: "[[overview|www-halcyon-co-nz]]"
+target: "www-halcyon-co-nz"
 ---
 
 # Data Models & Client Storage: www-halcyon-co-nz

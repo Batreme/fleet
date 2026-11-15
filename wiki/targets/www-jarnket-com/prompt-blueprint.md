@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-jarnket-com"
 date: 2026-11-15
-target: "[[overview|www-jarnket-com]]"
+target: "www-jarnket-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f5f7` / `#62666e`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f5f7` / `#6
 
 > **JarnKet · Ketsadaphone Boutpanyda, web engineer in Vientiane** (https://www.jarnket.com/) — Software engineer in Vientiane, Laos and WorldSkills ASEAN 2025 Web Technologies Expert, building fast, accessible React and Next.js inte...
 
-![Desktop Viewport Capture (1440x10631)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f5f7` / `#6
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10631px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

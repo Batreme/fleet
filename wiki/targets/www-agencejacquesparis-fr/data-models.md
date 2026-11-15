@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-agencejacquesparis-fr"
 date: 2026-11-14
-target: "[[overview|www-agencejacquesparis-fr]]"
+target: "www-agencejacquesparis-fr"
 ---
 
 # Data Models & Client Storage: www-agencejacquesparis-fr

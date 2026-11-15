@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-avilus-com"
 date: 2026-11-15
-target: "[[overview|www-avilus-com]]"
+target: "www-avilus-com"
+status: analyzed
+capture: dom
 archetype: "Tactical Aerospace Engineering Spec Sheet & Lumos Token System (`Inter` + `Robotomono`)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Tactical Aerospace Engineering Spec Sheet & Lumos Token System (`Int
 
 > **Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Surveillance** — A German aerospace engineering interface built on a structured Lumos/Webflow design token architecture pairing light technical paper (`--swatch--light-200: #f7f7f7`), deep cockpit petrol-teal ink (`--swatch--dark-900: #183032`), high-visibility flight-deck chartreuse lime (`--swatch--brand-500: #ddff2c`), and medical rescue red (`--_theme---error: #b3261e`).
 
-![Desktop Viewport Capture (1440x6212)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Tactical Aerospace Engineering Spec Sheet & Lumos Token System (`Int
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x6167)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×6212px` (`assets/desktop.png`), Mobile `390×6167px` (`assets/mobile.png`).

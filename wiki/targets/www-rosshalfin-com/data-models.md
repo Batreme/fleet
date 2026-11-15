@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-rosshalfin-com"
 date: 2026-11-14
-target: "[[overview|www-rosshalfin-com]]"
+target: "www-rosshalfin-com"
 ---
 
 # Data Models & Client Storage: www-rosshalfin-com

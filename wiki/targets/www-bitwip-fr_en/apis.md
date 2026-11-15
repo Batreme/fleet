@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-bitwip-fr_en"
 date: 2026-11-14
-target: "[[overview|www-bitwip-fr_en]]"
+target: "www-bitwip-fr_en"
 ---
 
 # Discovered APIs & Protocols: www-bitwip-fr_en

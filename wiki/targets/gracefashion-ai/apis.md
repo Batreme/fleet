@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: gracefashion-ai"
 date: 2026-11-14
-target: "[[overview|gracefashion-ai]]"
+target: "gracefashion-ai"
 ---
 
 # Discovered APIs & Protocols: gracefashion-ai

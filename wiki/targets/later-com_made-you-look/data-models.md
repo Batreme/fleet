@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: later-com_made-you-look"
 date: 2026-11-14
-target: "[[overview|later-com_made-you-look]]"
+target: "later-com_made-you-look"
 ---
 
 # Data Models & Client Storage: later-com_made-you-look

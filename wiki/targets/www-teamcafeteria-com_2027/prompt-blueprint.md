@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-teamcafeteria-com_2027"
 date: 2026-11-15
-target: "[[overview|www-teamcafeteria-com_2027]]"
+target: "www-teamcafeteria-com_2027"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171515` / `#8a8f90`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171515` / `#
 
 > **2027 — a [cafeteria] report** (https://www.teamcafeteria.com/2027) — 1,423 people told us what 2027 looks like. A scroll-driven [cafeteria] report.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#171515` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

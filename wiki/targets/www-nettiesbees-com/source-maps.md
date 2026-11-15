@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-nettiesbees-com"
 date: 2026-11-14
-target: "[[overview|www-nettiesbees-com]]"
+target: "www-nettiesbees-com"
 ---
 
 # De-obfuscated Source Maps: www-nettiesbees-com

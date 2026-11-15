@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: 360lexingtonave-com"
 date: 2026-11-15
-target: "[[overview|360lexingtonave-com]]"
+target: "360lexingtonave-com"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111213` canvas, `#fff` ink, `#000` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111213` canvas
 
 > **360 Lexington Avenue** (https://360lexingtonave.com) — Located at 40th Street and Lexington Avenue, just a two-minute walk from Grand Central Terminal.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111213` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

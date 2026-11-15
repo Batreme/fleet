@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sleutelaar-xyz"
 date: 2026-11-14
-target: "[[overview|sleutelaar-xyz]]"
+target: "sleutelaar-xyz"
 ---
 
 # Data Models & Client Storage: sleutelaar-xyz

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-pragenhatlen-com"
 date: 2026-11-14
-target: "[[overview|www-pragenhatlen-com]]"
+target: "www-pragenhatlen-com"
 ---
 
 # Discovered APIs & Protocols: www-pragenhatlen-com

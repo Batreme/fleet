@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: crun-ai"
 date: 2026-11-14
-target: "[[overview|crun-ai]]"
+target: "crun-ai"
 ---
 
 # De-obfuscated Source Maps: crun-ai

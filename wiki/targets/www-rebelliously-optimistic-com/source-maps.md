@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-rebelliously-optimistic-com"
 date: 2026-11-14
-target: "[[overview|www-rebelliously-optimistic-com]]"
+target: "www-rebelliously-optimistic-com"
 ---
 
 # De-obfuscated Source Maps: www-rebelliously-optimistic-com

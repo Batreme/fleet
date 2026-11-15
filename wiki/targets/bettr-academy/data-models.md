@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: bettr-academy"
 date: 2026-11-14
-target: "[[overview|bettr-academy]]"
+target: "bettr-academy"
 ---
 
 # Data Models & Client Storage: bettr-academy

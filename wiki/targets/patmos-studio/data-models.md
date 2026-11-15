@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: patmos-studio"
 date: 2026-11-14
-target: "[[overview|patmos-studio]]"
+target: "patmos-studio"
 ---
 
 # Data Models & Client Storage: patmos-studio

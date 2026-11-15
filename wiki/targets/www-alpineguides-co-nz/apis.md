@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-alpineguides-co-nz"
 date: 2026-11-14
-target: "[[overview|www-alpineguides-co-nz]]"
+target: "www-alpineguides-co-nz"
 ---
 
 # Discovered APIs & Protocols: www-alpineguides-co-nz

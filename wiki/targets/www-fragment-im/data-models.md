@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-fragment-im"
 date: 2026-11-14
-target: "[[overview|www-fragment-im]]"
+target: "www-fragment-im"
 ---
 
 # Data Models & Client Storage: www-fragment-im

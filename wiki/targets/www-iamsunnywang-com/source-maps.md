@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-iamsunnywang-com"
 date: 2026-11-14
-target: "[[overview|www-iamsunnywang-com]]"
+target: "www-iamsunnywang-com"
 ---
 
 # De-obfuscated Source Maps: www-iamsunnywang-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pixvibe-ai"
 date: 2026-11-14
-target: "[[overview|pixvibe-ai]]"
+target: "pixvibe-ai"
 ---
 
 # Discovered APIs & Protocols: pixvibe-ai

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: tamasolajos-com"
 date: 2026-10-31
-target: "[[overview|tamasolajos-com]]"
+target: "tamasolajos-com"
 ---
 
 # De-obfuscated Source Maps: tamasolajos-com

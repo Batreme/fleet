@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-vanderhotel-com"
 date: 2026-11-14
-target: "[[overview|www-vanderhotel-com]]"
+target: "www-vanderhotel-com"
 ---
 
 # Data Models & Client Storage: www-vanderhotel-com

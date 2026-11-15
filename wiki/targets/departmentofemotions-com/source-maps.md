@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: departmentofemotions-com"
 date: 2026-11-14
-target: "[[overview|departmentofemotions-com]]"
+target: "departmentofemotions-com"
 ---
 
 # De-obfuscated Source Maps: departmentofemotions-com

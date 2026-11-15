@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: performeurope-eu"
 date: 2026-11-14
-target: "[[overview|performeurope-eu]]"
+target: "performeurope-eu"
 ---
 
 # De-obfuscated Source Maps: performeurope-eu

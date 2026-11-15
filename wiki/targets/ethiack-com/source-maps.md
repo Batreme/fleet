@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ethiack-com"
 date: 2026-11-14
-target: "[[overview|ethiack-com]]"
+target: "ethiack-com"
 ---
 
 # De-obfuscated Source Maps: ethiack-com

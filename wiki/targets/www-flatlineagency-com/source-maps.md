@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-flatlineagency-com"
 date: 2026-11-14
-target: "[[overview|www-flatlineagency-com]]"
+target: "www-flatlineagency-com"
 ---
 
 # De-obfuscated Source Maps: www-flatlineagency-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: cinetic-creatives-com"
 date: 2026-11-14
-target: "[[overview|cinetic-creatives-com]]"
+target: "cinetic-creatives-com"
 ---
 
 # De-obfuscated Source Maps: cinetic-creatives-com

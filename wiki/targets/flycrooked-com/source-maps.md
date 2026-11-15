@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: flycrooked-com"
 date: 2026-11-14
-target: "[[overview|flycrooked-com]]"
+target: "flycrooked-com"
 ---
 
 # De-obfuscated Source Maps: flycrooked-com

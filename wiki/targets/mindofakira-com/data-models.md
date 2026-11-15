@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mindofakira-com"
 date: 2026-11-14
-target: "[[overview|mindofakira-com]]"
+target: "mindofakira-com"
 ---
 
 # Data Models & Client Storage: mindofakira-com

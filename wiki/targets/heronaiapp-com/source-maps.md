@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: heronaiapp-com"
 date: 2026-11-14
-target: "[[overview|heronaiapp-com]]"
+target: "heronaiapp-com"
 ---
 
 # De-obfuscated Source Maps: heronaiapp-com

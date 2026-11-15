@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: altamedfoundation-org"
 date: 2026-11-14
-target: "[[overview|altamedfoundation-org]]"
+target: "altamedfoundation-org"
 ---
 
 # Discovered APIs & Protocols: altamedfoundation-org

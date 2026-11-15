@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tej-as_story"
 date: 2026-11-14
-target: "[[overview|tej-as_story]]"
+target: "tej-as_story"
 ---
 
 # Data Models & Client Storage: tej-as_story

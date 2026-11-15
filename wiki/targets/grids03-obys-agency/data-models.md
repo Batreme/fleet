@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: grids03-obys-agency"
 date: 2026-11-14
-target: "[[overview|grids03-obys-agency]]"
+target: "grids03-obys-agency"
 ---
 
 # Data Models & Client Storage: grids03-obys-agency

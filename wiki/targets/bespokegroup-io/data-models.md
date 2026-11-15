@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: bespokegroup-io"
 date: 2026-11-14
-target: "[[overview|bespokegroup-io]]"
+target: "bespokegroup-io"
 ---
 
 # Data Models & Client Storage: bespokegroup-io

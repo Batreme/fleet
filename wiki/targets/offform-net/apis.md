@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: offform-net"
 date: 2026-11-14
-target: "[[overview|offform-net]]"
+target: "offform-net"
 ---
 
 # Discovered APIs & Protocols: offform-net

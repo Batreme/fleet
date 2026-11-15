@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-3moons-it"
 date: 2026-11-14
-target: "[[overview|www-3moons-it]]"
+target: "www-3moons-it"
 ---
 
 # Discovered APIs & Protocols: www-3moons-it

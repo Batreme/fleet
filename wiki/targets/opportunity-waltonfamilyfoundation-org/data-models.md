@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: opportunity-waltonfamilyfoundation-org"
 date: 2026-11-14
-target: "[[overview|opportunity-waltonfamilyfoundation-org]]"
+target: "opportunity-waltonfamilyfoundation-org"
 ---
 
 # Data Models & Client Storage: opportunity-waltonfamilyfoundation-org

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: digitalofthings-studio"
 date: 2026-11-14
-target: "[[overview|digitalofthings-studio]]"
+target: "digitalofthings-studio"
 ---
 
 # Data Models & Client Storage: digitalofthings-studio

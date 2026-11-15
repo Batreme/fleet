@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: loot-games-ru"
 date: 2026-11-14
-target: "[[overview|loot-games-ru]]"
+target: "loot-games-ru"
 ---
 
 # Discovered APIs & Protocols: loot-games-ru

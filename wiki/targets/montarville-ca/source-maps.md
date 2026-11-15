@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: montarville-ca"
 date: 2026-11-14
-target: "[[overview|montarville-ca]]"
+target: "montarville-ca"
 ---
 
 # De-obfuscated Source Maps: montarville-ca

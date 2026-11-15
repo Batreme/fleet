@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: santionispirits-com"
 date: 2026-11-14
-target: "[[overview|santionispirits-com]]"
+target: "santionispirits-com"
 ---
 
 # De-obfuscated Source Maps: santionispirits-com

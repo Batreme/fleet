@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mejuma-tuscany-com"
 date: 2026-11-14
-target: "[[overview|mejuma-tuscany-com]]"
+target: "mejuma-tuscany-com"
 ---
 
 # De-obfuscated Source Maps: mejuma-tuscany-com

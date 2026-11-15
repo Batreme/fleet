@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: allsorts-andrew-rip"
 date: 2026-11-14
-target: "[[overview|allsorts-andrew-rip]]"
+target: "allsorts-andrew-rip"
 ---
 
 # Data Models & Client Storage: allsorts-andrew-rip

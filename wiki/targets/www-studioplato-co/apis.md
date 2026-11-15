@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-studioplato-co"
 date: 2026-11-14
-target: "[[overview|www-studioplato-co]]"
+target: "www-studioplato-co"
 ---
 
 # Discovered APIs & Protocols: www-studioplato-co

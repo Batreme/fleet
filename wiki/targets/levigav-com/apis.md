@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: levigav-com"
 date: 2026-11-14
-target: "[[overview|levigav-com]]"
+target: "levigav-com"
 ---
 
 # Discovered APIs & Protocols: levigav-com

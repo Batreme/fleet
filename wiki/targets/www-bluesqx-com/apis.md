@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-bluesqx-com"
 date: 2026-11-14
-target: "[[overview|www-bluesqx-com]]"
+target: "www-bluesqx-com"
 ---
 
 # Discovered APIs & Protocols: www-bluesqx-com

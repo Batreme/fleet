@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tabletales-crz-studio"
 date: 2026-11-14
-target: "[[overview|tabletales-crz-studio]]"
+target: "tabletales-crz-studio"
 ---
 
 # Data Models & Client Storage: tabletales-crz-studio

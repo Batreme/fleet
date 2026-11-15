@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-gravelleduparc-com"
 date: 2026-11-14
-target: "[[overview|www-gravelleduparc-com]]"
+target: "www-gravelleduparc-com"
 ---
 
 # Data Models & Client Storage: www-gravelleduparc-com

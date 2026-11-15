@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: pinreply-com"
 date: 2026-11-14
-target: "[[overview|pinreply-com]]"
+target: "pinreply-com"
 ---
 
 # Data Models & Client Storage: pinreply-com

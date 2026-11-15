@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: mosaic-flabbergast-agency"
 date: 2026-11-15
-target: "[[overview|mosaic-flabbergast-agency]]"
+target: "mosaic-flabbergast-agency"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#4b4b4b`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 > **Mosaic – Split & Back Up Your Seed Phrase** (https://mosaic.flabbergast.agency) — Back up your seed phrase or password by splitting it between friends you trust. Any 3 of 5 shares recover it; fewer reveal nothing. No se...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

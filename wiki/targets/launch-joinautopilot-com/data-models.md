@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: launch-joinautopilot-com"
 date: 2026-11-14
-target: "[[overview|launch-joinautopilot-com]]"
+target: "launch-joinautopilot-com"
 ---
 
 # Data Models & Client Storage: launch-joinautopilot-com

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: alexandracapitanescu-com"
 date: 2026-11-15
-target: "[[overview|alexandracapitanescu-com]]"
+target: "alexandracapitanescu-com"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba1818` canvas, `#e2d9d0` ink, `#0000` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba1818` canvas
 
 > **Alexandra Căpitănescu - Official Website** (https://alexandracapitanescu.com/) — Romanian artist Alexandra Căpitănescu and her band blend alternative rock, raw emotion and explosive live energy.
 
-![Desktop Viewport Capture (1440x11875)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba1818` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11875px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

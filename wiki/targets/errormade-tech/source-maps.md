@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: errormade-tech"
 date: 2026-11-14
-target: "[[overview|errormade-tech]]"
+target: "errormade-tech"
 ---
 
 # De-obfuscated Source Maps: errormade-tech

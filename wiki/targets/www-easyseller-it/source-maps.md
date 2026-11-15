@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-easyseller-it"
 date: 2026-11-14
-target: "[[overview|www-easyseller-it]]"
+target: "www-easyseller-it"
 ---
 
 # De-obfuscated Source Maps: www-easyseller-it

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: davaris-gr"
 date: 2026-11-14
-target: "[[overview|davaris-gr]]"
+target: "davaris-gr"
 ---
 
 # De-obfuscated Source Maps: davaris-gr

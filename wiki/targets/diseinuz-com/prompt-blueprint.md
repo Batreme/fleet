@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: diseinuz-com"
 date: 2026-11-15
-target: "[[overview|diseinuz-com]]"
+target: "diseinuz-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#000000` ink, `#830100` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#0
 
 > **DISEINUZ — Bilbao Bizkaia Design Summit** (https://diseinuz.com/) — Un encuentro para impulsar el diseño como herramienta de transformación económica, empresarial y social. 19 y 20 de noviembre de 2026 en...
 
-![Desktop Viewport Capture (1440x11606)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#0000` canvas, `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11606px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

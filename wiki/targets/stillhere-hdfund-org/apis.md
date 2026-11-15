@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: stillhere-hdfund-org"
 date: 2026-11-14
-target: "[[overview|stillhere-hdfund-org]]"
+target: "stillhere-hdfund-org"
 ---
 
 # Discovered APIs & Protocols: stillhere-hdfund-org

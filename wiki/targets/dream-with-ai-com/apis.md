@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dream-with-ai-com"
 date: 2026-11-14
-target: "[[overview|dream-with-ai-com]]"
+target: "dream-with-ai-com"
 ---
 
 # Discovered APIs & Protocols: dream-with-ai-com

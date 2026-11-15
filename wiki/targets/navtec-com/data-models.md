@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: navtec-com"
 date: 2026-11-14
-target: "[[overview|navtec-com]]"
+target: "navtec-com"
 ---
 
 # Data Models & Client Storage: navtec-com

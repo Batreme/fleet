@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: emmaus-agir-31-fr"
 date: 2026-11-14
-target: "[[overview|emmaus-agir-31-fr]]"
+target: "emmaus-agir-31-fr"
 ---
 
 # Discovered APIs & Protocols: emmaus-agir-31-fr

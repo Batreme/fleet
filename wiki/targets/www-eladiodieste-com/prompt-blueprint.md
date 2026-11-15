@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-eladiodieste-com"
 date: 2026-11-15
-target: "[[overview|www-eladiodieste-com]]"
+target: "www-eladiodieste-com"
+status: analyzed
+capture: dom
 archetype: "Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (`--background: #eadfd2` + `--foreground: #a55f2d`)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (
 
 > **Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)** — An architectural monograph celebrating Uruguayan structural engineer Eladio Dieste (1917–2000), crafted entirely from two earthen pigments: warm mortar sand (`--background: #eadfd2`, `--off-white: #f1ece8`) and kiln-fired terracotta brick (`--foreground: #a55f2d`), choreographed with long-duration exponential character reveals (`--ease-out-expo: cubic-bezier(.19,1,.22,1)`).
 
-![Desktop Viewport Capture (1440x14025)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x10165)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×14025px` (`assets/desktop.png`), Mobile `390×10165px` (`assets/mobile.png`).

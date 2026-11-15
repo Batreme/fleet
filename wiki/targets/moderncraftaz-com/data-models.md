@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: moderncraftaz-com"
 date: 2026-11-14
-target: "[[overview|moderncraftaz-com]]"
+target: "moderncraftaz-com"
 ---
 
 # Data Models & Client Storage: moderncraftaz-com

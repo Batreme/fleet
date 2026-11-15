@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ads-apple-com"
 date: 2026-11-14
-target: "[[overview|ads-apple-com]]"
+target: "ads-apple-com"
 ---
 
 # Discovered APIs & Protocols: ads-apple-com

@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-sigma-imaging-se"
 date: 2026-11-15
-target: "[[overview|www-sigma-imaging-se]]"
+target: "www-sigma-imaging-se"
+status: analyzed
+capture: dom
 archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigma Sans` + `Sigma Serif`)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigm
 
 > **SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses** — An industrial optical engineering and e-commerce platform built on pure optical white (`--ps-white: #fefefd`), matte lens-barrel charcoal (`--ps-text: #333333`), subtle light tint (`--ps-tint: #f7f7f7`), and precision blue/amber indicators (`#4eb5e6`, `#ff9a19`).
 
-![Desktop Viewport Capture (1440x7696)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigm
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x10390)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×7696px` (`assets/desktop.png`), Mobile `390×10390px` (`assets/mobile.png`).

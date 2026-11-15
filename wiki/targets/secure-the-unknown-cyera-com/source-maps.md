@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: secure-the-unknown-cyera-com"
 date: 2026-11-14
-target: "[[overview|secure-the-unknown-cyera-com]]"
+target: "secure-the-unknown-cyera-com"
 ---
 
 # De-obfuscated Source Maps: secure-the-unknown-cyera-com

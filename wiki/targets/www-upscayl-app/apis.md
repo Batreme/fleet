@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-upscayl-app"
 date: 2026-11-14
-target: "[[overview|www-upscayl-app]]"
+target: "www-upscayl-app"
 ---
 
 # Discovered APIs & Protocols: www-upscayl-app

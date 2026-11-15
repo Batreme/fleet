@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-extrafazant-nl"
 date: 2026-11-14
-target: "[[overview|www-extrafazant-nl]]"
+target: "www-extrafazant-nl"
 ---
 
 # De-obfuscated Source Maps: www-extrafazant-nl

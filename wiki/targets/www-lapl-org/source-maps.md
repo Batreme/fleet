@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-lapl-org"
 date: 2026-11-14
-target: "[[overview|www-lapl-org]]"
+target: "www-lapl-org"
 ---
 
 # De-obfuscated Source Maps: www-lapl-org

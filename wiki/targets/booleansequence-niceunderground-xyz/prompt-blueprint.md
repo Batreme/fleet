@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: booleansequence-niceunderground-xyz"
 date: 2026-11-15
-target: "[[overview|booleansequence-niceunderground-xyz]]"
+target: "booleansequence-niceunderground-xyz"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#ff0000` / `#000000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#ff0000` / `#
 
 > **booleanSequence · generative art by niceunderground** (https://booleansequence.niceunderground.xyz/) — booleanSequence by niceunderground: generative visuals built on two values and nothing else. A modern yin and yang of contrasts that swap...
 
-![Desktop Viewport Capture (1440x21109)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#ff0000` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×21109px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

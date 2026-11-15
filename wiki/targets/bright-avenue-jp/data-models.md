@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: bright-avenue-jp"
 date: 2026-11-14
-target: "[[overview|bright-avenue-jp]]"
+target: "bright-avenue-jp"
 ---
 
 # Data Models & Client Storage: bright-avenue-jp

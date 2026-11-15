@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: newminds-studio_concept-elune"
 date: 2026-11-15
-target: "[[overview|newminds-studio_concept-elune]]"
+target: "newminds-studio_concept-elune"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas, `#fff` ink, `#c9d1cc` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas
 
 > **ELUNE Women's Health App UX/UI Concept · New Minds** (https://newminds.studio/concept-elune) — Women's health app UX/UI concept by New Minds: cycle tracking, bloodwork records and a separate pregnancy journey. Explore the complete c...
 
-![Desktop Viewport Capture (1440x11083)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11083px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

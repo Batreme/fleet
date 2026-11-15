@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: pixlpin-com_designs"
 date: 2026-11-14
-target: "[[overview|pixlpin-com_designs]]"
+target: "pixlpin-com_designs"
 ---
 
 # Data Models & Client Storage: pixlpin-com_designs

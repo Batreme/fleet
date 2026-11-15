@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-selkirk-com_pages-omni-pickleball-paddle"
 date: 2026-11-15
-target: "[[overview|www-selkirk-com_pages-omni-pickleball-paddle]]"
+target: "www-selkirk-com_pages-omni-pickleball-paddle"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#5046e4` canvas, `#ffffff` ink, `#333333` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#5046e4` canvas
 
 > **Selkirk OMNI™ Pickleball Paddle · Selkirk Sport - We Are Pickleball** (https://www.selkirk.com/pages/omni-pickleball-paddle) — The Selkirk OMNI™ pickleball paddle redefines all-court performance for the modern fast-paced pickleball game. Featuring ReactCore™ techn...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#5046e4` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

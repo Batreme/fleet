@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: residences-loamhouse-com-au"
 date: 2026-11-14
-target: "[[overview|residences-loamhouse-com-au]]"
+target: "residences-loamhouse-com-au"
 ---
 
 # De-obfuscated Source Maps: residences-loamhouse-com-au

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: vivmgmt-com"
 date: 2026-11-14
-target: "[[overview|vivmgmt-com]]"
+target: "vivmgmt-com"
 ---
 
 # De-obfuscated Source Maps: vivmgmt-com

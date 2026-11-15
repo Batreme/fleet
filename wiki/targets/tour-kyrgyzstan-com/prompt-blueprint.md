@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: tour-kyrgyzstan-com"
 date: 2026-11-15
-target: "[[overview|tour-kyrgyzstan-com]]"
+target: "tour-kyrgyzstan-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#FFFFFF` canvas, `#000000` ink, `#fff` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FFFFFF` canvas, `
 
 > **Tour Kyrgyzstan — Central Asia, unmapped** (https://tour-kyrgyzstan.com/) — Discover authentic Kyrgyzstan tours. Mountain trekking, nomadic culture, and professional video production services.
 
-![Desktop Viewport Capture (1440x11869)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FFFFFF` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11869px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

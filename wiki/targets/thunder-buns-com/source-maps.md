@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: thunder-buns-com"
 date: 2026-11-14
-target: "[[overview|thunder-buns-com]]"
+target: "thunder-buns-com"
 ---
 
 # De-obfuscated Source Maps: thunder-buns-com

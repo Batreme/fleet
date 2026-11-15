@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-197historiasilustradas-com"
 date: 2026-11-14
-target: "[[overview|www-197historiasilustradas-com]]"
+target: "www-197historiasilustradas-com"
 ---
 
 # De-obfuscated Source Maps: www-197historiasilustradas-com

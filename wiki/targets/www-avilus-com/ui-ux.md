@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: www-avilus-com"
 date: 2026-11-15
-target: "[[overview|www-avilus-com]]"
+target: "www-avilus-com"
 ---
 
 # UI Architecture & Design Tokens: www-avilus-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-avilus-com` (`Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Surveillance`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-avilus-com` (`Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Surveillance`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

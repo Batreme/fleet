@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: kamdalej-sk_en"
 date: 2026-11-15
-target: "[[overview|kamdalej-sk_en]]"
+target: "kamdalej-sk_en"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `#141413` ink, `#D6C4BB` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 
 > **Mastercard · Where Next** (https://kamdalej.sk/en) — A digital tool helping people in Slovakia find better career opportunities by matching their skills with real labour market needs
 
-![Desktop Viewport Capture (1440x5687)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5687px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

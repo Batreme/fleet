@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: nakagawa-corp-com"
 date: 2026-11-14
-target: "[[overview|nakagawa-corp-com]]"
+target: "nakagawa-corp-com"
 ---
 
 # De-obfuscated Source Maps: nakagawa-corp-com

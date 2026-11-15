@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: ascension-pegassi-be"
 date: 2026-11-15
-target: "[[overview|ascension-pegassi-be]]"
+target: "ascension-pegassi-be"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#232323`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#232
 
 > **Ascension — Pegassi** (https://ascension.pegassi.be/) — The debut EP from Belgian electronic artist Pegassi. Four tracks — Ascension, Circles, Forest Walk, Twinflame. Out 4 September 2026.
 
-![Desktop Viewport Capture (1440x5425)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#232
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5425px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

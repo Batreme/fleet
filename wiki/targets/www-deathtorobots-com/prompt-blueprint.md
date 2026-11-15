@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-deathtorobots-com"
 date: 2026-11-15
-target: "[[overview|www-deathtorobots-com]]"
+target: "www-deathtorobots-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#facfd7` canvas, `#09090a` ink, `#f4f0f1` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#facfd7` canvas, `
 
 > **Death to Robots** (https://www.deathtorobots.com/) — Death To Robots is a multi disciplinary creative agency working with brands to bring their stories to life.
 
-![Desktop Viewport Capture (1440x8825)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#facfd7` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×8825px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

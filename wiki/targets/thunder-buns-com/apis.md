@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thunder-buns-com"
 date: 2026-11-14
-target: "[[overview|thunder-buns-com]]"
+target: "thunder-buns-com"
 ---
 
 # Discovered APIs & Protocols: thunder-buns-com

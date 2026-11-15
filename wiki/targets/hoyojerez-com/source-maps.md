@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: hoyojerez-com"
 date: 2026-11-14
-target: "[[overview|hoyojerez-com]]"
+target: "hoyojerez-com"
 ---
 
 # De-obfuscated Source Maps: hoyojerez-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-alpineguides-co-nz"
 date: 2026-11-14
-target: "[[overview|www-alpineguides-co-nz]]"
+target: "www-alpineguides-co-nz"
 ---
 
 # Data Models & Client Storage: www-alpineguides-co-nz

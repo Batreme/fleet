@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-lucaslima-design"
 date: 2026-11-14
-target: "[[overview|www-lucaslima-design]]"
+target: "www-lucaslima-design"
 ---
 
 # De-obfuscated Source Maps: www-lucaslima-design

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: 100yearsmonet-com"
 date: 2026-11-14
-target: "[[overview|100yearsmonet-com]]"
+target: "100yearsmonet-com"
 ---
 
 # De-obfuscated Source Maps: 100yearsmonet-com

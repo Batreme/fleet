@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: awmedia-marketing"
 date: 2026-11-14
-target: "[[overview|awmedia-marketing]]"
+target: "awmedia-marketing"
 ---
 
 # Data Models & Client Storage: awmedia-marketing

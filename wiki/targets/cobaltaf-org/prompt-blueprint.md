@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: cobaltaf-org"
 date: 2026-11-15
-target: "[[overview|cobaltaf-org]]"
+target: "cobaltaf-org"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0047ba` canvas, `#f2f2f2` ink, `#e6d2ee` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0047ba` canvas
 
 > **Cobalt Abortion Fund** (https://cobaltaf.org/) — Read privacy and digital security tips here →
 
-![Desktop Viewport Capture (1440x7641)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0047ba` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7641px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

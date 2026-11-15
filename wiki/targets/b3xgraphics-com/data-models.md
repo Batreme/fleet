@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: b3xgraphics-com"
 date: 2026-11-14
-target: "[[overview|b3xgraphics-com]]"
+target: "b3xgraphics-com"
 ---
 
 # Data Models & Client Storage: b3xgraphics-com

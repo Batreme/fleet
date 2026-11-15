@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: nodenza-com"
 date: 2026-11-14
-target: "[[overview|nodenza-com]]"
+target: "nodenza-com"
 ---
 
 # Data Models & Client Storage: nodenza-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: xiloteca-it_en"
 date: 2026-11-14
-target: "[[overview|xiloteca-it_en]]"
+target: "xiloteca-it_en"
 ---
 
 # De-obfuscated Source Maps: xiloteca-it_en

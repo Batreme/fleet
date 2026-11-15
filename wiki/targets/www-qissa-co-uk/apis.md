@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-qissa-co-uk"
 date: 2026-11-14
-target: "[[overview|www-qissa-co-uk]]"
+target: "www-qissa-co-uk"
 ---
 
 # Discovered APIs & Protocols: www-qissa-co-uk

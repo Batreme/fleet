@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: stateofaidesign-com"
 date: 2026-11-14
-target: "[[overview|stateofaidesign-com]]"
+target: "stateofaidesign-com"
 ---
 
 # Discovered APIs & Protocols: stateofaidesign-com

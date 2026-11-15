@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: seedance3-si"
 date: 2026-11-14
-target: "[[overview|seedance3-si]]"
+target: "seedance3-si"
 ---
 
 # Discovered APIs & Protocols: seedance3-si

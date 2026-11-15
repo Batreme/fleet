@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: b3xgraphics-com"
 date: 2026-11-15
-target: "[[overview|b3xgraphics-com]]"
+target: "b3xgraphics-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#04b5ff` canvas, `#a00` ink, `#008a20` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#04b5ff` canvas, `
 
 > **B3X Graphics · Freelance Sports Art Director & Designer** (https://b3xgraphics.com/) — B3X Graphics: freelance art direction and design specialising in sport. Branding, campaign design and socials content for some of the big...
 
-![Desktop Viewport Capture (1440x5914)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#04b5ff` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5914px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

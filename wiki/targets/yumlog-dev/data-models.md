@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: yumlog-dev"
 date: 2026-11-14
-target: "[[overview|yumlog-dev]]"
+target: "yumlog-dev"
 ---
 
 # Data Models & Client Storage: yumlog-dev

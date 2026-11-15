@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-fragment-im"
 date: 2026-11-14
-target: "[[overview|www-fragment-im]]"
+target: "www-fragment-im"
 ---
 
 # De-obfuscated Source Maps: www-fragment-im

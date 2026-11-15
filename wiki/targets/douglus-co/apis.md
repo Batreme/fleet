@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: douglus-co"
 date: 2026-11-14
-target: "[[overview|douglus-co]]"
+target: "douglus-co"
 ---
 
 # Discovered APIs & Protocols: douglus-co

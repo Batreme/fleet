@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: bybang-co"
 date: 2026-11-14
-target: "[[overview|bybang-co]]"
+target: "bybang-co"
 ---
 
 # De-obfuscated Source Maps: bybang-co

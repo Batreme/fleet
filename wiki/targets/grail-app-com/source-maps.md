@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: grail-app-com"
 date: 2026-11-14
-target: "[[overview|grail-app-com]]"
+target: "grail-app-com"
 ---
 
 # De-obfuscated Source Maps: grail-app-com

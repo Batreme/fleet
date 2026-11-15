@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-baseline-agency"
 date: 2026-11-14
-target: "[[overview|www-baseline-agency]]"
+target: "www-baseline-agency"
 ---
 
 # De-obfuscated Source Maps: www-baseline-agency

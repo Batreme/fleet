@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-lesgmstudios-com"
 date: 2026-11-15
-target: "[[overview|www-lesgmstudios-com]]"
+target: "www-lesgmstudios-com"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#0c0c0c` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 > **GM Studios — Du contenu qui dépasse les chiffres** (https://www.lesgmstudios.com/) — Agence de contenu & studio d'enregistrement à Montréal. 1 milliard de vues générées pour nos clients.
 
-![Desktop Viewport Capture (1440x7873)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×7873px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

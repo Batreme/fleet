@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jaspreetsingh-xyz"
 date: 2026-11-14
-target: "[[overview|jaspreetsingh-xyz]]"
+target: "jaspreetsingh-xyz"
 ---
 
 # Data Models & Client Storage: jaspreetsingh-xyz

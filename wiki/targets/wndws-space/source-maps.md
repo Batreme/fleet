@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: wndws-space"
 date: 2026-10-31
-target: "[[overview|wndws-space]]"
+target: "wndws-space"
 ---
 
 # De-obfuscated Source Maps: wndws-space

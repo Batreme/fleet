@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: santalarch-com"
 date: 2026-11-14
-target: "[[overview|santalarch-com]]"
+target: "santalarch-com"
 ---
 
 # Discovered APIs & Protocols: santalarch-com

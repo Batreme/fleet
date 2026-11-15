@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: sparkle-ankatms-com"
 date: 2026-11-14
-target: "[[overview|sparkle-ankatms-com]]"
+target: "sparkle-ankatms-com"
 ---
 
 # De-obfuscated Source Maps: sparkle-ankatms-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: dennypratama-com"
 date: 2026-11-14
-target: "[[overview|dennypratama-com]]"
+target: "dennypratama-com"
 ---
 
 # De-obfuscated Source Maps: dennypratama-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: velourproductions-com"
 date: 2026-10-31
-target: "[[overview|velourproductions-com]]"
+target: "velourproductions-com"
 ---
 
 # De-obfuscated Source Maps: velourproductions-com

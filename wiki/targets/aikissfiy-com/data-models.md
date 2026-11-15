@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aikissfiy-com"
 date: 2026-11-14
-target: "[[overview|aikissfiy-com]]"
+target: "aikissfiy-com"
 ---
 
 # Data Models & Client Storage: aikissfiy-com

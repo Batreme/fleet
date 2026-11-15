@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: microdose-studio"
 date: 2026-11-14
-target: "[[overview|microdose-studio]]"
+target: "microdose-studio"
 ---
 
 # Data Models & Client Storage: microdose-studio

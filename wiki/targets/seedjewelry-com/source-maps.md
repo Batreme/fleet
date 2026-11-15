@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: seedjewelry-com"
 date: 2026-11-14
-target: "[[overview|seedjewelry-com]]"
+target: "seedjewelry-com"
 ---
 
 # De-obfuscated Source Maps: seedjewelry-com

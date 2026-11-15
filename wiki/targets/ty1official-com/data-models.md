@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ty1official-com"
 date: 2026-11-14
-target: "[[overview|ty1official-com]]"
+target: "ty1official-com"
 ---
 
 # Data Models & Client Storage: ty1official-com

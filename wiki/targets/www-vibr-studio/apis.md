@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-vibr-studio"
 date: 2026-11-14
-target: "[[overview|www-vibr-studio]]"
+target: "www-vibr-studio"
 ---
 
 # Discovered APIs & Protocols: www-vibr-studio

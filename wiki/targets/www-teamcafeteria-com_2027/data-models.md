@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-teamcafeteria-com_2027"
 date: 2026-11-14
-target: "[[overview|www-teamcafeteria-com_2027]]"
+target: "www-teamcafeteria-com_2027"
 ---
 
 # Data Models & Client Storage: www-teamcafeteria-com_2027

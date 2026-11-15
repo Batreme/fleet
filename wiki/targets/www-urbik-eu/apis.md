@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-urbik-eu"
 date: 2026-11-14
-target: "[[overview|www-urbik-eu]]"
+target: "www-urbik-eu"
 ---
 
 # Discovered APIs & Protocols: www-urbik-eu

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: clipdance-ai"
 date: 2026-11-14
-target: "[[overview|clipdance-ai]]"
+target: "clipdance-ai"
 ---
 
 # Discovered APIs & Protocols: clipdance-ai

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: matthisgarnier-com"
 date: 2026-11-14
-target: "[[overview|matthisgarnier-com]]"
+target: "matthisgarnier-com"
 ---
 
 # De-obfuscated Source Maps: matthisgarnier-com

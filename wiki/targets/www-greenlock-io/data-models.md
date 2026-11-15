@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-greenlock-io"
 date: 2026-11-14
-target: "[[overview|www-greenlock-io]]"
+target: "www-greenlock-io"
 ---
 
 # Data Models & Client Storage: www-greenlock-io

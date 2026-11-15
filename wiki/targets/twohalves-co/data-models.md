@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: twohalves-co"
 date: 2026-11-14
-target: "[[overview|twohalves-co]]"
+target: "twohalves-co"
 ---
 
 # Data Models & Client Storage: twohalves-co

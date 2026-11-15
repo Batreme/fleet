@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: armor-bd-com"
 date: 2026-11-14
-target: "[[overview|armor-bd-com]]"
+target: "armor-bd-com"
 ---
 
 # Data Models & Client Storage: armor-bd-com

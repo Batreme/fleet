@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-apc-pallets-nl"
 date: 2026-11-14
-target: "[[overview|www-apc-pallets-nl]]"
+target: "www-apc-pallets-nl"
 ---
 
 # Data Models & Client Storage: www-apc-pallets-nl

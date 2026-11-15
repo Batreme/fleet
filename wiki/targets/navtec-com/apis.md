@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: navtec-com"
 date: 2026-11-14
-target: "[[overview|navtec-com]]"
+target: "navtec-com"
 ---
 
 # Discovered APIs & Protocols: navtec-com

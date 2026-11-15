@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: almadalabel-com"
 date: 2026-11-14
-target: "[[overview|almadalabel-com]]"
+target: "almadalabel-com"
 ---
 
 # Data Models & Client Storage: almadalabel-com

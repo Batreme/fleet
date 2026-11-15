@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-jarnket-com"
 date: 2026-11-14
-target: "[[overview|www-jarnket-com]]"
+target: "www-jarnket-com"
 ---
 
 # Discovered APIs & Protocols: www-jarnket-com

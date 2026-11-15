@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: equitifyasset-com"
 date: 2026-11-14
-target: "[[overview|equitifyasset-com]]"
+target: "equitifyasset-com"
 ---
 
 # Discovered APIs & Protocols: equitifyasset-com

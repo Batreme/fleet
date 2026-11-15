@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: agnestoth-com"
 date: 2026-11-15
-target: "[[overview|agnestoth-com]]"
+target: "agnestoth-com"
 ---
 
 # UI Architecture & Design Tokens: agnestoth-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `agnestoth-com` (`AGNESTOTH · House of Luxurious Embroidery`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `agnestoth-com` (`AGNESTOTH · House of Luxurious Embroidery`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

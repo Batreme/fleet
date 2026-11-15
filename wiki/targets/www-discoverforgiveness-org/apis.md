@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-discoverforgiveness-org"
 date: 2026-11-14
-target: "[[overview|www-discoverforgiveness-org]]"
+target: "www-discoverforgiveness-org"
 ---
 
 # Discovered APIs & Protocols: www-discoverforgiveness-org

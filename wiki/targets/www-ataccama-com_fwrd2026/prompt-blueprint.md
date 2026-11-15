@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-ataccama-com_fwrd2026"
 date: 2026-11-15
-target: "[[overview|www-ataccama-com_fwrd2026]]"
+target: "www-ataccama-com_fwrd2026"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d6efd` / `#fd7e14`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d6efd` / `#
 
 > **Ataccama FWRD 2026: Press play on what's next in data trust · Ataccama** (https://www.ataccama.com/fwrd2026) — Rewind through the shifts in data quality, agentic data management, and governed context that shaped trusted AI in 2026, then fast-forwar...
 
-![Desktop Viewport Capture (1440x5116)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d6efd` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×5116px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

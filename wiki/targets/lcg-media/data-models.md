@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lcg-media"
 date: 2026-11-14
-target: "[[overview|lcg-media]]"
+target: "lcg-media"
 ---
 
 # Data Models & Client Storage: lcg-media

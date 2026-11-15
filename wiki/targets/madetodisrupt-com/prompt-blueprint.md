@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: madetodisrupt-com"
 date: 2026-11-15
-target: "[[overview|madetodisrupt-com]]"
+target: "madetodisrupt-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#6EC1E4` / `#61CE70`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#6EC1E4` / `#6
 
 > **Disrupt · Creative Brand Experience Agency** (https://madetodisrupt.com) — Disrupt is a creative brand experience agency shaping strategy, identity, events and activations into ideas people can see, feel and expe...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#6EC1E4` / `#6
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

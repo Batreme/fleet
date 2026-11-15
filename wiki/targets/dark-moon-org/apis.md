@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dark-moon-org"
 date: 2026-11-14
-target: "[[overview|dark-moon-org]]"
+target: "dark-moon-org"
 ---
 
 # Discovered APIs & Protocols: dark-moon-org

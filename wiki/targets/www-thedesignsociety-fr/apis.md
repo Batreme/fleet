@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-thedesignsociety-fr"
 date: 2026-11-14
-target: "[[overview|www-thedesignsociety-fr]]"
+target: "www-thedesignsociety-fr"
 ---
 
 # Discovered APIs & Protocols: www-thedesignsociety-fr

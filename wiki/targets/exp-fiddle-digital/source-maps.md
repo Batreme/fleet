@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: exp-fiddle-digital"
 date: 2026-11-14
-target: "[[overview|exp-fiddle-digital]]"
+target: "exp-fiddle-digital"
 ---
 
 # De-obfuscated Source Maps: exp-fiddle-digital

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-incroy-com"
 date: 2026-11-14
-target: "[[overview|www-incroy-com]]"
+target: "www-incroy-com"
 ---
 
 # Discovered APIs & Protocols: www-incroy-com

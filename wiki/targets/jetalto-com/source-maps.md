@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: jetalto-com"
 date: 2026-11-14
-target: "[[overview|jetalto-com]]"
+target: "jetalto-com"
 ---
 
 # De-obfuscated Source Maps: jetalto-com

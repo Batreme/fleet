@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-leadoff-fr"
 date: 2026-11-14
-target: "[[overview|www-leadoff-fr]]"
+target: "www-leadoff-fr"
 ---
 
 # Discovered APIs & Protocols: www-leadoff-fr

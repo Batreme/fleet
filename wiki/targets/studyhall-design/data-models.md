@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: studyhall-design"
 date: 2026-11-14
-target: "[[overview|studyhall-design]]"
+target: "studyhall-design"
 ---
 
 # Data Models & Client Storage: studyhall-design

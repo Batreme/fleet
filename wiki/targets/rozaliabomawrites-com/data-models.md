@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: rozaliabomawrites-com"
 date: 2026-11-14
-target: "[[overview|rozaliabomawrites-com]]"
+target: "rozaliabomawrites-com"
 ---
 
 # Data Models & Client Storage: rozaliabomawrites-com

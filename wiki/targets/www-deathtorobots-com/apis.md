@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-deathtorobots-com"
 date: 2026-11-14
-target: "[[overview|www-deathtorobots-com]]"
+target: "www-deathtorobots-com"
 ---
 
 # Discovered APIs & Protocols: www-deathtorobots-com

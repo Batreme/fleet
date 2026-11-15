@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-arsenals-com"
 date: 2026-11-14
-target: "[[overview|www-arsenals-com]]"
+target: "www-arsenals-com"
 ---
 
 # Discovered APIs & Protocols: www-arsenals-com

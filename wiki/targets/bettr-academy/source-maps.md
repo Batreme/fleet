@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: bettr-academy"
 date: 2026-11-14
-target: "[[overview|bettr-academy]]"
+target: "bettr-academy"
 ---
 
 # De-obfuscated Source Maps: bettr-academy

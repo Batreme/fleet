@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: santalarch-com"
 date: 2026-11-14
-target: "[[overview|santalarch-com]]"
+target: "santalarch-com"
 ---
 
 # Data Models & Client Storage: santalarch-com

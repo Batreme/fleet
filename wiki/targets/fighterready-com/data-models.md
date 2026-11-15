@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: fighterready-com"
 date: 2026-11-14
-target: "[[overview|fighterready-com]]"
+target: "fighterready-com"
 ---
 
 # Data Models & Client Storage: fighterready-com

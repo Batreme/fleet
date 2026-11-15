@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-vineyard-co-za"
 date: 2026-11-14
-target: "[[overview|www-vineyard-co-za]]"
+target: "www-vineyard-co-za"
 ---
 
 # De-obfuscated Source Maps: www-vineyard-co-za

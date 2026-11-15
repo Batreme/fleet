@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-sztanki-com"
 date: 2026-11-14
-target: "[[overview|www-sztanki-com]]"
+target: "www-sztanki-com"
 ---
 
 # Data Models & Client Storage: www-sztanki-com

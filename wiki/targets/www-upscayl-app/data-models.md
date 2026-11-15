@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-upscayl-app"
 date: 2026-11-14
-target: "[[overview|www-upscayl-app]]"
+target: "www-upscayl-app"
 ---
 
 # Data Models & Client Storage: www-upscayl-app

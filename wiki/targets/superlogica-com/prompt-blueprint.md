@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: superlogica-com"
 date: 2026-11-15
-target: "[[overview|superlogica-com]]"
+target: "superlogica-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#121212` ink, `#3498db` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#12
 
 > **Superlógica: Plataforma de Gestão para Condomínios e Imobiliárias** (https://superlogica.com/) — A plataforma parceira das administradoras de condomínios e imobiliárias, com gestão autônoma, financeira e customizável para escalar a su...
 
-![Desktop Viewport Capture (1440x12985)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#12
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×12985px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

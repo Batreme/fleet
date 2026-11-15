@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: daikifujita-com"
 date: 2026-11-14
-target: "[[overview|daikifujita-com]]"
+target: "daikifujita-com"
 ---
 
 # De-obfuscated Source Maps: daikifujita-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: becore-se"
 date: 2026-11-14
-target: "[[overview|becore-se]]"
+target: "becore-se"
 ---
 
 # De-obfuscated Source Maps: becore-se

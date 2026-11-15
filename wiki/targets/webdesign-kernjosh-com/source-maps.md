@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: webdesign-kernjosh-com"
 date: 2026-11-14
-target: "[[overview|webdesign-kernjosh-com]]"
+target: "webdesign-kernjosh-com"
 ---
 
 # De-obfuscated Source Maps: webdesign-kernjosh-com

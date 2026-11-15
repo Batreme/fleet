@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: michellekayewashington-com"
 date: 2026-11-14
-target: "[[overview|michellekayewashington-com]]"
+target: "michellekayewashington-com"
 ---
 
 # De-obfuscated Source Maps: michellekayewashington-com

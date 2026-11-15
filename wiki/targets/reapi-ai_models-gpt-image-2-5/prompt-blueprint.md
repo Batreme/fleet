@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: reapi-ai_models-gpt-image-2-5"
 date: 2026-11-15
-target: "[[overview|reapi-ai_models-gpt-image-2-5]]"
+target: "reapi-ai_models-gpt-image-2-5"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fef2f2` / `#ffa3a3`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fef2f2` / `#f
 
 > **GPT Image 2.5 — Sharper Detail, Precise Editing** (https://reapi.ai/models/gpt-image-2-5) — GPT Image 2.5 is OpenAI's image generation and editing model with precision edits, reference fidelity and two speed tiers. Pay per image...
 
-![Desktop Viewport Capture (1440x14542)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fef2f2` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×14542px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

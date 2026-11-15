@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kelvin-8b-com"
 date: 2026-11-14
-target: "[[overview|kelvin-8b-com]]"
+target: "kelvin-8b-com"
 ---
 
 # Data Models & Client Storage: kelvin-8b-com

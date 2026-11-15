@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-danielebuser-com"
 date: 2026-11-14
-target: "[[overview|www-danielebuser-com]]"
+target: "www-danielebuser-com"
 ---
 
 # Discovered APIs & Protocols: www-danielebuser-com

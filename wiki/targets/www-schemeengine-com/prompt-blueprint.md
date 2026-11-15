@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-schemeengine-com"
 date: 2026-11-15
-target: "[[overview|www-schemeengine-com]]"
+target: "www-schemeengine-com"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1d0524` / `#b47054`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1d0524` / `#
 
 > **Home - Scheme Engine** (https://www.schemeengine.com/) — Scheme Engine is a BIPOC-owned production company and TV/Film studio founded to provoke and reimagine the status quo.
 
-![Desktop Viewport Capture (1440x17325)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1d0524` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×17325px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

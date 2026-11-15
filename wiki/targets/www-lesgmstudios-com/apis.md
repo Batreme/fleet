@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-lesgmstudios-com"
 date: 2026-11-14
-target: "[[overview|www-lesgmstudios-com]]"
+target: "www-lesgmstudios-com"
 ---
 
 # Discovered APIs & Protocols: www-lesgmstudios-com

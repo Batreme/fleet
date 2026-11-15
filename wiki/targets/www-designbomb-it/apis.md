@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-designbomb-it"
 date: 2026-11-14
-target: "[[overview|www-designbomb-it]]"
+target: "www-designbomb-it"
 ---
 
 # Discovered APIs & Protocols: www-designbomb-it

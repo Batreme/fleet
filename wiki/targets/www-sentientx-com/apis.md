@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-sentientx-com"
 date: 2026-11-14
-target: "[[overview|www-sentientx-com]]"
+target: "www-sentientx-com"
 ---
 
 # Discovered APIs & Protocols: www-sentientx-com

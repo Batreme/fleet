@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-pragenhatlen-com"
 date: 2026-11-14
-target: "[[overview|www-pragenhatlen-com]]"
+target: "www-pragenhatlen-com"
 ---
 
 # Data Models & Client Storage: www-pragenhatlen-com

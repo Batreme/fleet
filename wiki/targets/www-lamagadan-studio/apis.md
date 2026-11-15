@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-lamagadan-studio"
 date: 2026-11-14
-target: "[[overview|www-lamagadan-studio]]"
+target: "www-lamagadan-studio"
 ---
 
 # Discovered APIs & Protocols: www-lamagadan-studio

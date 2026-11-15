@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tibdigital-com"
 date: 2026-11-14
-target: "[[overview|tibdigital-com]]"
+target: "tibdigital-com"
 ---
 
 # Discovered APIs & Protocols: tibdigital-com

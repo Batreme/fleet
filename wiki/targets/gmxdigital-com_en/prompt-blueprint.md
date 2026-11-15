@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: gmxdigital-com_en"
 date: 2026-11-15
-target: "[[overview|gmxdigital-com_en]]"
+target: "gmxdigital-com_en"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#07090c` / `#bcb4c7`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#07090c` / `#
 
 > **GMX Digital — Visual Engineering for Real Estate Launches** (https://gmxdigital.com/en/) — Launch films, 3D visualization and immersive digital experiences for real estate. GMX turns unbuilt architecture into desire before const...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#07090c` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

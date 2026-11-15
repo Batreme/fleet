@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: lenvalproperties-com"
 date: 2026-11-14
-target: "[[overview|lenvalproperties-com]]"
+target: "lenvalproperties-com"
 ---
 
 # Data Models & Client Storage: lenvalproperties-com

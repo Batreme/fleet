@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: residences-loamhouse-com-au"
 date: 2026-11-14
-target: "[[overview|residences-loamhouse-com-au]]"
+target: "residences-loamhouse-com-au"
 ---
 
 # Data Models & Client Storage: residences-loamhouse-com-au

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-discoverforgiveness-org"
 date: 2026-11-14
-target: "[[overview|www-discoverforgiveness-org]]"
+target: "www-discoverforgiveness-org"
 ---
 
 # De-obfuscated Source Maps: www-discoverforgiveness-org

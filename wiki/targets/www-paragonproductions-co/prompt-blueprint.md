@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-paragonproductions-co"
 date: 2026-11-15
-target: "[[overview|www-paragonproductions-co]]"
+target: "www-paragonproductions-co"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ff5b4b` canvas, `#f8f8f8` ink, `#ffcdd2` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ff5b4b` canvas, `
 
 > **PARAGON · Creative Production Studio** (https://www.paragonproductions.co/) — PARAGON is a production partner driven by pursuit. We team up with brands and agencies to craft commercials, branded films, and campaigns...
 
-![Desktop Viewport Capture (1440x13738)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ff5b4b` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×13738px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

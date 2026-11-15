@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-unbelievablycrap-com"
 date: 2026-11-15
-target: "[[overview|www-unbelievablycrap-com]]"
+target: "www-unbelievablycrap-com"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#afafaf`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Liubomyr Ulytskyi - Digital Designer** (https://www.unbelievablycrap.com/) — Liubomyr Ulytskyi — Digital Designer, award-winning UI/UX Designer, art director, conceptualist.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

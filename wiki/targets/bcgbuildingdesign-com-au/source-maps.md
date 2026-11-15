@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: bcgbuildingdesign-com-au"
 date: 2026-11-14
-target: "[[overview|bcgbuildingdesign-com-au]]"
+target: "bcgbuildingdesign-com-au"
 ---
 
 # De-obfuscated Source Maps: bcgbuildingdesign-com-au

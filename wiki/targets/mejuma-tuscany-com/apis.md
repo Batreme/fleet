@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mejuma-tuscany-com"
 date: 2026-11-14
-target: "[[overview|mejuma-tuscany-com]]"
+target: "mejuma-tuscany-com"
 ---
 
 # Discovered APIs & Protocols: mejuma-tuscany-com

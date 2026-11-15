@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: xavierjoliot-com"
 date: 2026-11-14
-target: "[[overview|xavierjoliot-com]]"
+target: "xavierjoliot-com"
 ---
 
 # Discovered APIs & Protocols: xavierjoliot-com

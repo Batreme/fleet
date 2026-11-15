@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-mbidirectmail-com"
 date: 2026-11-14
-target: "[[overview|www-mbidirectmail-com]]"
+target: "www-mbidirectmail-com"
 ---
 
 # Data Models & Client Storage: www-mbidirectmail-com

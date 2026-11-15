@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: magicshot-ai"
 date: 2026-11-14
-target: "[[overview|magicshot-ai]]"
+target: "magicshot-ai"
 ---
 
 # De-obfuscated Source Maps: magicshot-ai

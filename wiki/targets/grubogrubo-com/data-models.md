@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: grubogrubo-com"
 date: 2026-11-14
-target: "[[overview|grubogrubo-com]]"
+target: "grubogrubo-com"
 ---
 
 # Data Models & Client Storage: grubogrubo-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: abhayrohit-com"
 date: 2026-11-14
-target: "[[overview|abhayrohit-com]]"
+target: "abhayrohit-com"
 ---
 
 # Data Models & Client Storage: abhayrohit-com

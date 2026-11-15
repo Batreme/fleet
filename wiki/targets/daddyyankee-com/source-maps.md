@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: daddyyankee-com"
 date: 2026-11-14
-target: "[[overview|daddyyankee-com]]"
+target: "daddyyankee-com"
 ---
 
 # De-obfuscated Source Maps: daddyyankee-com

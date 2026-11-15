@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: jockey-stuudio-xyz"
 date: 2026-11-15
-target: "[[overview|jockey-stuudio-xyz]]"
+target: "jockey-stuudio-xyz"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#a3a3a3` / `#000`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#a3a3a3` / `#0
 
 > **Jockey by TwelveLabs: The Video Intelligence Agent** (https://jockey.stuudio.xyz/) — The TwelveLabs agent that organizes, searches, and assembles across your entire video library. Built on Pegasus and Marengo. Now in resea...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#a3a3a3` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

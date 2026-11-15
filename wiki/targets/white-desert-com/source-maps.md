@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: white-desert-com"
 date: 2026-11-14
-target: "[[overview|white-desert-com]]"
+target: "white-desert-com"
 ---
 
 # De-obfuscated Source Maps: white-desert-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: bennos-light-org"
 date: 2026-11-14
-target: "[[overview|bennos-light-org]]"
+target: "bennos-light-org"
 ---
 
 # De-obfuscated Source Maps: bennos-light-org

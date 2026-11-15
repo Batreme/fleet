@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: stillhere-hdfund-org"
 date: 2026-11-14
-target: "[[overview|stillhere-hdfund-org]]"
+target: "stillhere-hdfund-org"
 ---
 
 # Data Models & Client Storage: stillhere-hdfund-org

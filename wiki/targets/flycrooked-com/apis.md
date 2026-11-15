@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: flycrooked-com"
 date: 2026-11-14
-target: "[[overview|flycrooked-com]]"
+target: "flycrooked-com"
 ---
 
 # Discovered APIs & Protocols: flycrooked-com

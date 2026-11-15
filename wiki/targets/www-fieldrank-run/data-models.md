@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-fieldrank-run"
 date: 2026-11-14
-target: "[[overview|www-fieldrank-run]]"
+target: "www-fieldrank-run"
 ---
 
 # Data Models & Client Storage: www-fieldrank-run

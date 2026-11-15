@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pyzhevsky-estate"
 date: 2026-11-14
-target: "[[overview|pyzhevsky-estate]]"
+target: "pyzhevsky-estate"
 ---
 
 # Discovered APIs & Protocols: pyzhevsky-estate

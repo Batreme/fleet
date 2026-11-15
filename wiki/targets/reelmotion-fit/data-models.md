@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: reelmotion-fit"
 date: 2026-11-14
-target: "[[overview|reelmotion-fit]]"
+target: "reelmotion-fit"
 ---
 
 # Data Models & Client Storage: reelmotion-fit

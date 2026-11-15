@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: peaches-world"
 date: 2026-10-31
-target: "[[overview|peaches-world]]"
+target: "peaches-world"
 ---
 
 # Data Models & Client Storage: peaches-world

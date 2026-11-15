@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-offforum-com"
 date: 2026-11-14
-target: "[[overview|www-offforum-com]]"
+target: "www-offforum-com"
 ---
 
 # De-obfuscated Source Maps: www-offforum-com

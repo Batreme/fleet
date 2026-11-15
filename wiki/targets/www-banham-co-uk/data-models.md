@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-banham-co-uk"
 date: 2026-11-14
-target: "[[overview|www-banham-co-uk]]"
+target: "www-banham-co-uk"
 ---
 
 # Data Models & Client Storage: www-banham-co-uk

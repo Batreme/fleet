@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-flatlineagency-com"
 date: 2026-11-14
-target: "[[overview|www-flatlineagency-com]]"
+target: "www-flatlineagency-com"
 ---
 
 # Data Models & Client Storage: www-flatlineagency-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: plastic-ocean-com"
 date: 2026-11-14
-target: "[[overview|plastic-ocean-com]]"
+target: "plastic-ocean-com"
 ---
 
 # De-obfuscated Source Maps: plastic-ocean-com

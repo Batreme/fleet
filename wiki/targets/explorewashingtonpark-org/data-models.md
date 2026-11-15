@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: explorewashingtonpark-org"
 date: 2026-11-14
-target: "[[overview|explorewashingtonpark-org]]"
+target: "explorewashingtonpark-org"
 ---
 
 # Data Models & Client Storage: explorewashingtonpark-org

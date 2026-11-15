@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: anemone-mina-massoud-com"
 date: 2026-11-14
-target: "[[overview|anemone-mina-massoud-com]]"
+target: "anemone-mina-massoud-com"
 ---
 
 # Data Models & Client Storage: anemone-mina-massoud-com

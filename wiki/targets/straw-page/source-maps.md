@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: straw-page"
 date: 2026-11-14
-target: "[[overview|straw-page]]"
+target: "straw-page"
 ---
 
 # De-obfuscated Source Maps: straw-page

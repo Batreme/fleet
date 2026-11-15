@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: rialto-com-au"
 date: 2026-11-14
-target: "[[overview|rialto-com-au]]"
+target: "rialto-com-au"
 ---
 
 # De-obfuscated Source Maps: rialto-com-au

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: fondation-canadiens-com"
 date: 2026-11-14
-target: "[[overview|fondation-canadiens-com]]"
+target: "fondation-canadiens-com"
 ---
 
 # Discovered APIs & Protocols: fondation-canadiens-com

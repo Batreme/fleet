@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: estudioniksen-com"
 date: 2026-11-14
-target: "[[overview|estudioniksen-com]]"
+target: "estudioniksen-com"
 ---
 
 # De-obfuscated Source Maps: estudioniksen-com

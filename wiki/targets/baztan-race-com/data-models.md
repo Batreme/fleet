@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: baztan-race-com"
 date: 2026-11-14
-target: "[[overview|baztan-race-com]]"
+target: "baztan-race-com"
 ---
 
 # Data Models & Client Storage: baztan-race-com

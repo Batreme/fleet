@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sleutelaar-xyz"
 date: 2026-11-14
-target: "[[overview|sleutelaar-xyz]]"
+target: "sleutelaar-xyz"
 ---
 
 # Discovered APIs & Protocols: sleutelaar-xyz

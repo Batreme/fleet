@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-barebonescollective-com"
 date: 2026-11-14
-target: "[[overview|www-barebonescollective-com]]"
+target: "www-barebonescollective-com"
 ---
 
 # De-obfuscated Source Maps: www-barebonescollective-com

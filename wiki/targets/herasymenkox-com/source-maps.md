@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: herasymenkox-com"
 date: 2026-11-14
-target: "[[overview|herasymenkox-com]]"
+target: "herasymenkox-com"
 ---
 
 # De-obfuscated Source Maps: herasymenkox-com

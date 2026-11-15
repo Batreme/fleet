@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-serko-ai"
 date: 2026-11-15
-target: "[[overview|www-serko-ai]]"
+target: "www-serko-ai"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#f6f6f6`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#
 
 > **Serko.ai · AI Travel Agent** (https://www.serko.ai) — Explore a smarter way to manage business travel with Serko.ai, the AI-native travel platform. It learns how you like to travel and handle...
 
-![Desktop Viewport Capture (1440x11035)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×11035px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

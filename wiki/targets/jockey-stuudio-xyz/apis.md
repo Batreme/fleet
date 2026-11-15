@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: jockey-stuudio-xyz"
 date: 2026-11-14
-target: "[[overview|jockey-stuudio-xyz]]"
+target: "jockey-stuudio-xyz"
 ---
 
 # Discovered APIs & Protocols: jockey-stuudio-xyz

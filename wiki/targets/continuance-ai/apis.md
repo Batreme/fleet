@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: continuance-ai"
 date: 2026-11-14
-target: "[[overview|continuance-ai]]"
+target: "continuance-ai"
 ---
 
 # Discovered APIs & Protocols: continuance-ai

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-unbelievablycrap-com"
 date: 2026-11-14
-target: "[[overview|www-unbelievablycrap-com]]"
+target: "www-unbelievablycrap-com"
 ---
 
 # Discovered APIs & Protocols: www-unbelievablycrap-com

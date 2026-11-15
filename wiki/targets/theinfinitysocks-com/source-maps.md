@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: theinfinitysocks-com"
 date: 2026-11-14
-target: "[[overview|theinfinitysocks-com]]"
+target: "theinfinitysocks-com"
 ---
 
 # De-obfuscated Source Maps: theinfinitysocks-com

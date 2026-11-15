@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lifetimepastapass-com"
 date: 2026-11-14
-target: "[[overview|lifetimepastapass-com]]"
+target: "lifetimepastapass-com"
 ---
 
 # De-obfuscated Source Maps: lifetimepastapass-com

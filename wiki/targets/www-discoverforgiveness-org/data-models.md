@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-discoverforgiveness-org"
 date: 2026-11-14
-target: "[[overview|www-discoverforgiveness-org]]"
+target: "www-discoverforgiveness-org"
 ---
 
 # Data Models & Client Storage: www-discoverforgiveness-org

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: bb-b-net"
 date: 2026-11-14
-target: "[[overview|bb-b-net]]"
+target: "bb-b-net"
 ---
 
 # Discovered APIs & Protocols: bb-b-net

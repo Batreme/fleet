@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: chicago-com"
 date: 2026-11-14
-target: "[[overview|chicago-com]]"
+target: "chicago-com"
 ---
 
 # Data Models & Client Storage: chicago-com

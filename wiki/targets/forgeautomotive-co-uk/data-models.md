@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: forgeautomotive-co-uk"
 date: 2026-11-14
-target: "[[overview|forgeautomotive-co-uk]]"
+target: "forgeautomotive-co-uk"
 ---
 
 # Data Models & Client Storage: forgeautomotive-co-uk

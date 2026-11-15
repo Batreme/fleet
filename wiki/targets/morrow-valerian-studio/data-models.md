@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: morrow-valerian-studio"
 date: 2026-11-14
-target: "[[overview|morrow-valerian-studio]]"
+target: "morrow-valerian-studio"
 ---
 
 # Data Models & Client Storage: morrow-valerian-studio

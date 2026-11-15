@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-lev-com"
 date: 2026-11-14
-target: "[[overview|www-lev-com]]"
+target: "www-lev-com"
 ---
 
 # De-obfuscated Source Maps: www-lev-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: offpossible-com"
 date: 2026-11-14
-target: "[[overview|offpossible-com]]"
+target: "offpossible-com"
 ---
 
 # De-obfuscated Source Maps: offpossible-com

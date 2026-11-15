@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: jozue-fr"
 date: 2026-11-14
-target: "[[overview|jozue-fr]]"
+target: "jozue-fr"
 ---
 
 # Discovered APIs & Protocols: jozue-fr

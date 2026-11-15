@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-zrk-technology"
 date: 2026-11-14
-target: "[[overview|www-zrk-technology]]"
+target: "www-zrk-technology"
 ---
 
 # Discovered APIs & Protocols: www-zrk-technology

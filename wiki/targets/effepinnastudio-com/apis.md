@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: effepinnastudio-com"
 date: 2026-11-14
-target: "[[overview|effepinnastudio-com]]"
+target: "effepinnastudio-com"
 ---
 
 # Discovered APIs & Protocols: effepinnastudio-com

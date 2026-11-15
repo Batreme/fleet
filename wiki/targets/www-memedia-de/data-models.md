@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-memedia-de"
 date: 2026-11-14
-target: "[[overview|www-memedia-de]]"
+target: "www-memedia-de"
 ---
 
 # Data Models & Client Storage: www-memedia-de

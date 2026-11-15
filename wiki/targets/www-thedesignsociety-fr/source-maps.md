@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-thedesignsociety-fr"
 date: 2026-11-14
-target: "[[overview|www-thedesignsociety-fr]]"
+target: "www-thedesignsociety-fr"
 ---
 
 # De-obfuscated Source Maps: www-thedesignsociety-fr

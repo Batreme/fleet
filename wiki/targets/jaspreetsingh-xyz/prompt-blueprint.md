@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: jaspreetsingh-xyz"
 date: 2026-11-15
-target: "[[overview|jaspreetsingh-xyz]]"
+target: "jaspreetsingh-xyz"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2f2c29`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2f2
 
 > **Jaspreet Singh · Designer & Developer** (https://jaspreetsingh.xyz/) — Jaspreet Singh designs and builds products that make complex things feel simple, from UX and design systems to production front-end engin...
 
-![Desktop Viewport Capture (1440x4265)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2f2
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×4265px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

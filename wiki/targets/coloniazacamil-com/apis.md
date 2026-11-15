@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: coloniazacamil-com"
 date: 2026-11-14
-target: "[[overview|coloniazacamil-com]]"
+target: "coloniazacamil-com"
 ---
 
 # Discovered APIs & Protocols: coloniazacamil-com

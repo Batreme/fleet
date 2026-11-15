@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-worksruthi-com"
 date: 2026-11-14
-target: "[[overview|www-worksruthi-com]]"
+target: "www-worksruthi-com"
 ---
 
 # Data Models & Client Storage: www-worksruthi-com

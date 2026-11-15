@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-dontlookup-app"
 date: 2026-11-14
-target: "[[overview|www-dontlookup-app]]"
+target: "www-dontlookup-app"
 ---
 
 # Data Models & Client Storage: www-dontlookup-app

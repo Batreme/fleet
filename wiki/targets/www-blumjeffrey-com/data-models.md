@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-blumjeffrey-com"
 date: 2026-11-14
-target: "[[overview|www-blumjeffrey-com]]"
+target: "www-blumjeffrey-com"
 ---
 
 # Data Models & Client Storage: www-blumjeffrey-com

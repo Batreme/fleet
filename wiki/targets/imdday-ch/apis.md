@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: imdday-ch"
 date: 2026-11-14
-target: "[[overview|imdday-ch]]"
+target: "imdday-ch"
 ---
 
 # Discovered APIs & Protocols: imdday-ch

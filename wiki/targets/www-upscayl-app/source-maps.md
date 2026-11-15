@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-upscayl-app"
 date: 2026-11-14
-target: "[[overview|www-upscayl-app]]"
+target: "www-upscayl-app"
 ---
 
 # De-obfuscated Source Maps: www-upscayl-app

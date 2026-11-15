@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-zzdp-nl"
 date: 2026-11-14
-target: "[[overview|www-zzdp-nl]]"
+target: "www-zzdp-nl"
 ---
 
 # De-obfuscated Source Maps: www-zzdp-nl

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kingriver-com-au"
 date: 2026-11-14
-target: "[[overview|kingriver-com-au]]"
+target: "kingriver-com-au"
 ---
 
 # Data Models & Client Storage: kingriver-com-au

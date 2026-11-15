@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-glowingcheetah-com"
 date: 2026-11-14
-target: "[[overview|www-glowingcheetah-com]]"
+target: "www-glowingcheetah-com"
 ---
 
 # De-obfuscated Source Maps: www-glowingcheetah-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: withwise-com"
 date: 2026-11-14
-target: "[[overview|withwise-com]]"
+target: "withwise-com"
 ---
 
 # Data Models & Client Storage: withwise-com

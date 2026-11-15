@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: diseinuz-com"
 date: 2026-11-14
-target: "[[overview|diseinuz-com]]"
+target: "diseinuz-com"
 ---
 
 # De-obfuscated Source Maps: diseinuz-com

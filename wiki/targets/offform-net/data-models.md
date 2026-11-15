@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: offform-net"
 date: 2026-11-14
-target: "[[overview|offform-net]]"
+target: "offform-net"
 ---
 
 # Data Models & Client Storage: offform-net

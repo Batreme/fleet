@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: hotelaurelia-online"
 date: 2026-11-14
-target: "[[overview|hotelaurelia-online]]"
+target: "hotelaurelia-online"
 ---
 
 # Discovered APIs & Protocols: hotelaurelia-online

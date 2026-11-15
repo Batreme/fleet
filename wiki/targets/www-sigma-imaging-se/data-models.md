@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-sigma-imaging-se"
 date: 2026-11-14
-target: "[[overview|www-sigma-imaging-se]]"
+target: "www-sigma-imaging-se"
 ---
 
 # Data Models & Client Storage: www-sigma-imaging-se

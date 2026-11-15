@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-terakawaoffice-com_en"
 date: 2026-11-14
-target: "[[overview|www-terakawaoffice-com_en]]"
+target: "www-terakawaoffice-com_en"
 ---
 
 # De-obfuscated Source Maps: www-terakawaoffice-com_en

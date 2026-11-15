@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ellioteriksson-com"
 date: 2026-11-14
-target: "[[overview|ellioteriksson-com]]"
+target: "ellioteriksson-com"
 ---
 
 # Discovered APIs & Protocols: ellioteriksson-com

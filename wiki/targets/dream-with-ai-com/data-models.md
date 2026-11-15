@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dream-with-ai-com"
 date: 2026-11-14
-target: "[[overview|dream-with-ai-com]]"
+target: "dream-with-ai-com"
 ---
 
 # Data Models & Client Storage: dream-with-ai-com

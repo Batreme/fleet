@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-concretemanagement-fr"
 date: 2026-11-14
-target: "[[overview|www-concretemanagement-fr]]"
+target: "www-concretemanagement-fr"
 ---
 
 # Discovered APIs & Protocols: www-concretemanagement-fr

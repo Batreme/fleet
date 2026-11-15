@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-gianpaolotucci-com_work-html"
 date: 2026-11-14
-target: "[[overview|www-gianpaolotucci-com_work-html]]"
+target: "www-gianpaolotucci-com_work-html"
 ---
 
 # Data Models & Client Storage: www-gianpaolotucci-com_work-html

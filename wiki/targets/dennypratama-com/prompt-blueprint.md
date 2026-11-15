@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: dennypratama-com"
 date: 2026-11-15
-target: "[[overview|dennypratama-com]]"
+target: "dennypratama-com"
+status: analyzed
+capture: dom
 archetype: "Monolith Ink & Bone Editorial Grid (`Archivo` + Mechanical Ease-Out)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Monolith Ink & Bone Editorial Grid (`Archivo` + Mechanical Ease-Out)
 
 > **Denny Pratama · Product Designer & Design Engineer Portfolio** — A precision-engineered product design and code portfolio built on a carbon-ink substrate (`#0c0c0b`) and warm bone editorial chapters (`#eceae4`), governed by a 1680px 12-column hairline grid and damped mechanical transitions.
 
-![Desktop Viewport Capture (1440x16914)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Monolith Ink & Bone Editorial Grid (`Archivo` + Mechanical Ease-Out)
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x16750)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×16914px` (`assets/desktop.png`), Mobile `390×16750px` (`assets/mobile.png`).

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: flycrooked-com"
 date: 2026-11-14
-target: "[[overview|flycrooked-com]]"
+target: "flycrooked-com"
 ---
 
 # Data Models & Client Storage: flycrooked-com

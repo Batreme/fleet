@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-thefriedegg-com"
 date: 2026-11-14
-target: "[[overview|www-thefriedegg-com]]"
+target: "www-thefriedegg-com"
 ---
 
 # Discovered APIs & Protocols: www-thefriedegg-com

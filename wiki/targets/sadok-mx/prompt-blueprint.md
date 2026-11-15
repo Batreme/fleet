@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: sadok-mx"
 date: 2026-11-15
-target: "[[overview|sadok-mx]]"
+target: "sadok-mx"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#202020` / `#3890f8`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#202020` / `#
 
 > **Sadok Cervantes · \Designer \Engineer \Entrepreneur** (https://sadok.mx/) — Sadok Cervantes designs and builds products that have reached over 100 million people. He is one of Fast Company’s Most Innovative People.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#202020` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

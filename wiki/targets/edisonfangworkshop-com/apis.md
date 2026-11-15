@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: edisonfangworkshop-com"
 date: 2026-11-14
-target: "[[overview|edisonfangworkshop-com]]"
+target: "edisonfangworkshop-com"
 ---
 
 # Discovered APIs & Protocols: edisonfangworkshop-com

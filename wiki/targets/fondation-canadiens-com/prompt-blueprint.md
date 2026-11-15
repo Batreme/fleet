@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: fondation-canadiens-com"
 date: 2026-11-15
-target: "[[overview|fondation-canadiens-com]]"
+target: "fondation-canadiens-com"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f4f4`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f
 
 > **Fondation des Canadiens pour l'enfance - Bouger pour grandir** (https://fondation.canadiens.com/) — La Fondation des Canadiens de Montréal encourage l’activité physique et l’adoption de saines habitudes de vie chez les jeunes défavorisés...
 
-![Desktop Viewport Capture (1440x10722)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10722px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: deltacafes-com_en"
 date: 2026-11-14
-target: "[[overview|deltacafes-com_en]]"
+target: "deltacafes-com_en"
 ---
 
 # Discovered APIs & Protocols: deltacafes-com_en

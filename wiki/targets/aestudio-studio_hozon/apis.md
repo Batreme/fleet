@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aestudio-studio_hozon"
 date: 2026-11-14
-target: "[[overview|aestudio-studio_hozon]]"
+target: "aestudio-studio_hozon"
 ---
 
 # Discovered APIs & Protocols: aestudio-studio_hozon

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: uimaven-art"
 date: 2026-11-14
-target: "[[overview|uimaven-art]]"
+target: "uimaven-art"
 ---
 
 # Discovered APIs & Protocols: uimaven-art

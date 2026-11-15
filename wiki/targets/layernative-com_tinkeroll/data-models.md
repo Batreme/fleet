@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: layernative-com_tinkeroll"
 date: 2026-11-14
-target: "[[overview|layernative-com_tinkeroll]]"
+target: "layernative-com_tinkeroll"
 ---
 
 # Data Models & Client Storage: layernative-com_tinkeroll

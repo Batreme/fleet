@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tour-kyrgyzstan-com"
 date: 2026-11-14
-target: "[[overview|tour-kyrgyzstan-com]]"
+target: "tour-kyrgyzstan-com"
 ---
 
 # Data Models & Client Storage: tour-kyrgyzstan-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: dennypratama-com"
 date: 2026-11-14
-target: "[[overview|dennypratama-com]]"
+target: "dennypratama-com"
 ---
 
 # Discovered APIs & Protocols: dennypratama-com

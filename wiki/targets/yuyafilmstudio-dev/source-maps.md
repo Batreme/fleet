@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: yuyafilmstudio-dev"
 date: 2026-11-14
-target: "[[overview|yuyafilmstudio-dev]]"
+target: "yuyafilmstudio-dev"
 ---
 
 # De-obfuscated Source Maps: yuyafilmstudio-dev

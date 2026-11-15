@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: departmentofemotions-com"
 date: 2026-11-14
-target: "[[overview|departmentofemotions-com]]"
+target: "departmentofemotions-com"
 ---
 
 # Data Models & Client Storage: departmentofemotions-com

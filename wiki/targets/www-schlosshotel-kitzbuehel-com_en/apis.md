@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-schlosshotel-kitzbuehel-com_en"
 date: 2026-11-14
-target: "[[overview|www-schlosshotel-kitzbuehel-com_en]]"
+target: "www-schlosshotel-kitzbuehel-com_en"
 ---
 
 # Discovered APIs & Protocols: www-schlosshotel-kitzbuehel-com_en

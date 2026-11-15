@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: thecassandravale-com"
 date: 2026-11-14
-target: "[[overview|thecassandravale-com]]"
+target: "thecassandravale-com"
 ---
 
 # De-obfuscated Source Maps: thecassandravale-com

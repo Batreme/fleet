@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: madetodisrupt-com"
 date: 2026-11-14
-target: "[[overview|madetodisrupt-com]]"
+target: "madetodisrupt-com"
 ---
 
 # Discovered APIs & Protocols: madetodisrupt-com

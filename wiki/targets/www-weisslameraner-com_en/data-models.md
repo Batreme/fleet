@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-weisslameraner-com_en"
 date: 2026-11-14
-target: "[[overview|www-weisslameraner-com_en]]"
+target: "www-weisslameraner-com_en"
 ---
 
 # Data Models & Client Storage: www-weisslameraner-com_en

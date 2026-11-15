@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: thecontenders-co"
 date: 2026-11-15
-target: "[[overview|thecontenders-co]]"
+target: "thecontenders-co"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e40014` / `#f3f4f6`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e40014` / `#
 
 > **The Contenders · Strategic Brand & Design Consultancy** (https://thecontenders.co/) — Where business meets brand. The Contenders is an independent Australian consultancy creating distinctive brands that deliver measurable i...
 
-![Desktop Viewport Capture (1440x1312)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e40014` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×1312px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

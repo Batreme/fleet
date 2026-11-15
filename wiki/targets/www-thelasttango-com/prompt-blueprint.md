@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-thelasttango-com"
 date: 2026-11-15
-target: "[[overview|www-thelasttango-com]]"
+target: "www-thelasttango-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eff6ff` / `#1447e6`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eff6ff` / `#1
 
 > **The Last Tango / For the one who made us happy.** (https://www.thelasttango.com/) — An interactive tribute to Lionel Messi and the World Cup that brought millions of people together again. Every point, every goal, and eve...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eff6ff` / `#1
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

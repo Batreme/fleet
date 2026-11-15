@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: monument-tv"
 date: 2026-11-14
-target: "[[overview|monument-tv]]"
+target: "monument-tv"
 ---
 
 # Discovered APIs & Protocols: monument-tv

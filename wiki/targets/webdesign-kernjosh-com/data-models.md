@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: webdesign-kernjosh-com"
 date: 2026-11-14
-target: "[[overview|webdesign-kernjosh-com]]"
+target: "webdesign-kernjosh-com"
 ---
 
 # Data Models & Client Storage: webdesign-kernjosh-com

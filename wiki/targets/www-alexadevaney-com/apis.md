@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-alexadevaney-com"
 date: 2026-11-14
-target: "[[overview|www-alexadevaney-com]]"
+target: "www-alexadevaney-com"
 ---
 
 # Discovered APIs & Protocols: www-alexadevaney-com

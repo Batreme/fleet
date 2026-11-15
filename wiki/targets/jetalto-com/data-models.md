@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jetalto-com"
 date: 2026-11-14
-target: "[[overview|jetalto-com]]"
+target: "jetalto-com"
 ---
 
 # Data Models & Client Storage: jetalto-com

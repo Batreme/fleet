@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: useguidely-co"
 date: 2026-11-15
-target: "[[overview|useguidely-co]]"
+target: "useguidely-co"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas, `#fff` ink, `#222` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 
 > **guidely - the hospitality of the future** (https://useguidely.co/) — A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
 
-![Desktop Viewport Capture (1440x3643)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×3643px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

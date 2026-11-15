@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: tigris-lorolabs-ai"
 date: 2026-11-14
-target: "[[overview|tigris-lorolabs-ai]]"
+target: "tigris-lorolabs-ai"
 ---
 
 # Discovered APIs & Protocols: tigris-lorolabs-ai

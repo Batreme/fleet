@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-ataccama-com_fwrd2026"
 date: 2026-11-14
-target: "[[overview|www-ataccama-com_fwrd2026]]"
+target: "www-ataccama-com_fwrd2026"
 ---
 
 # Data Models & Client Storage: www-ataccama-com_fwrd2026

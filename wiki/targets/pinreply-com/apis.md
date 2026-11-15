@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pinreply-com"
 date: 2026-11-14
-target: "[[overview|pinreply-com]]"
+target: "pinreply-com"
 ---
 
 # Discovered APIs & Protocols: pinreply-com

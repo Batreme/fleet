@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: turismo-gov-st_fr"
 date: 2026-11-14
-target: "[[overview|turismo-gov-st_fr]]"
+target: "turismo-gov-st_fr"
 ---
 
 # De-obfuscated Source Maps: turismo-gov-st_fr

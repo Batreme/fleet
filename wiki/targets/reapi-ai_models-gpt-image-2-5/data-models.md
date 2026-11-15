@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: reapi-ai_models-gpt-image-2-5"
 date: 2026-11-14
-target: "[[overview|reapi-ai_models-gpt-image-2-5]]"
+target: "reapi-ai_models-gpt-image-2-5"
 ---
 
 # Data Models & Client Storage: reapi-ai_models-gpt-image-2-5

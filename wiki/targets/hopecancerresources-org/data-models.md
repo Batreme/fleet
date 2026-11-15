@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: hopecancerresources-org"
 date: 2026-11-14
-target: "[[overview|hopecancerresources-org]]"
+target: "hopecancerresources-org"
 ---
 
 # Data Models & Client Storage: hopecancerresources-org

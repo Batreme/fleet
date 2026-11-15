@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lolawilde-com"
 date: 2026-11-14
-target: "[[overview|lolawilde-com]]"
+target: "lolawilde-com"
 ---
 
 # Discovered APIs & Protocols: lolawilde-com

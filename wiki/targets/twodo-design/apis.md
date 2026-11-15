@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: twodo-design"
 date: 2026-11-14
-target: "[[overview|twodo-design]]"
+target: "twodo-design"
 ---
 
 # Discovered APIs & Protocols: twodo-design

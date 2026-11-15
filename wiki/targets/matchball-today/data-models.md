@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: matchball-today"
 date: 2026-11-14
-target: "[[overview|matchball-today]]"
+target: "matchball-today"
 ---
 
 # Data Models & Client Storage: matchball-today

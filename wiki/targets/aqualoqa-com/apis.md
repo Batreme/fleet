@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aqualoqa-com"
 date: 2026-11-14
-target: "[[overview|aqualoqa-com]]"
+target: "aqualoqa-com"
 ---
 
 # Discovered APIs & Protocols: aqualoqa-com

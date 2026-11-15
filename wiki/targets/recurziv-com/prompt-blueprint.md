@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: recurziv-com"
 date: 2026-11-15
-target: "[[overview|recurziv-com]]"
+target: "recurziv-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00d4ff` / `#fff`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00d4ff` / `#f
 
 > **Recurziv — Web & App Development Studio in Goa** (https://recurziv.com) — A digital studio in Panaji, Goa building websites, e-commerce, and mobile apps since 2014 — designed and built in-house, iterated until t...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00d4ff` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

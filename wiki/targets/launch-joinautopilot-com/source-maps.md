@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: launch-joinautopilot-com"
 date: 2026-11-14
-target: "[[overview|launch-joinautopilot-com]]"
+target: "launch-joinautopilot-com"
 ---
 
 # De-obfuscated Source Maps: launch-joinautopilot-com

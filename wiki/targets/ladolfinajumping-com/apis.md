@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ladolfinajumping-com"
 date: 2026-11-14
-target: "[[overview|ladolfinajumping-com]]"
+target: "ladolfinajumping-com"
 ---
 
 # Discovered APIs & Protocols: ladolfinajumping-com

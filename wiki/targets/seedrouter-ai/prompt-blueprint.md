@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: seedrouter-ai"
 date: 2026-11-15
-target: "[[overview|seedrouter-ai]]"
+target: "seedrouter-ai"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#e40014` ink, `#ff6568` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 
 > **SeedRouter · One API for Image, Video, LLM and Audio Models** (https://seedrouter.ai) — SeedRouter puts image, video, language and audio models behind one API key with pay-per-request billing. Failed requests cost nothing. Ge...
 
-![Desktop Viewport Capture (1440x10504)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10504px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

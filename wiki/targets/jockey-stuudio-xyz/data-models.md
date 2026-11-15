@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jockey-stuudio-xyz"
 date: 2026-11-14
-target: "[[overview|jockey-stuudio-xyz]]"
+target: "jockey-stuudio-xyz"
 ---
 
 # Data Models & Client Storage: jockey-stuudio-xyz

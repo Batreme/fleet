@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: peabodyhouse-com"
 date: 2026-11-14
-target: "[[overview|peabodyhouse-com]]"
+target: "peabodyhouse-com"
 ---
 
 # Data Models & Client Storage: peabodyhouse-com

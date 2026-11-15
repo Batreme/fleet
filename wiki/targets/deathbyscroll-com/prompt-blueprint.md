@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: deathbyscroll-com"
 date: 2026-11-15
-target: "[[overview|deathbyscroll-com]]"
+target: "deathbyscroll-com"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#111` / `#777`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#111` / `#777
 
 > **Death by Scroll** (https://deathbyscroll.com) — Killer scroll animation. Perfect for product launches, microsites, and explainers. Create a cult-like devotion to your brand.
 
-![Desktop Viewport Capture (1440x32360)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#111` / `#777
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×32360px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

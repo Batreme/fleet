@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: wndws-space"
 date: 2026-10-31
-target: "[[overview|wndws-space]]"
+target: "wndws-space"
 ---
 
 # Data Models & Client Storage: wndws-space

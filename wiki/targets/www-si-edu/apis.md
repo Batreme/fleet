@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-si-edu"
 date: 2026-11-14
-target: "[[overview|www-si-edu]]"
+target: "www-si-edu"
 ---
 
 # Discovered APIs & Protocols: www-si-edu

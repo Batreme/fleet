@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: anokhee-dev_albatross"
 date: 2026-11-15
-target: "[[overview|anokhee-dev_albatross]]"
+target: "anokhee-dev_albatross"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#c9cfdd` canvas, `#7d879e` ink, `#e7dfc9` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#c9cfdd` canvas, `
 
 > **The Albatross** (https://anokhee.dev/albatross) — A lone albatross makes first contact with a strange place.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#c9cfdd` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

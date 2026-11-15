@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aikissfiy-com"
 date: 2026-11-14
-target: "[[overview|aikissfiy-com]]"
+target: "aikissfiy-com"
 ---
 
 # Discovered APIs & Protocols: aikissfiy-com

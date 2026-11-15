@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: hole-money"
 date: 2026-11-14
-target: "[[overview|hole-money]]"
+target: "hole-money"
 ---
 
 # Discovered APIs & Protocols: hole-money

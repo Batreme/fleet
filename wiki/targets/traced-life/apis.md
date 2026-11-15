@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: traced-life"
 date: 2026-11-14
-target: "[[overview|traced-life]]"
+target: "traced-life"
 ---
 
 # Discovered APIs & Protocols: traced-life

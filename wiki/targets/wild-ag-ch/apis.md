@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: wild-ag-ch"
 date: 2026-11-14
-target: "[[overview|wild-ag-ch]]"
+target: "wild-ag-ch"
 ---
 
 # Discovered APIs & Protocols: wild-ag-ch

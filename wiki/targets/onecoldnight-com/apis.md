@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: onecoldnight-com"
 date: 2026-11-14
-target: "[[overview|onecoldnight-com]]"
+target: "onecoldnight-com"
 ---
 
 # Discovered APIs & Protocols: onecoldnight-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: agnestoth-com"
 date: 2026-11-14
-target: "[[overview|agnestoth-com]]"
+target: "agnestoth-com"
 ---
 
 # Data Models & Client Storage: agnestoth-com

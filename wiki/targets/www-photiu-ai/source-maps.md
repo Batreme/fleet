@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-photiu-ai"
 date: 2026-11-14
-target: "[[overview|www-photiu-ai]]"
+target: "www-photiu-ai"
 ---
 
 # De-obfuscated Source Maps: www-photiu-ai

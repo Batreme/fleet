@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: booleansequence-niceunderground-xyz"
 date: 2026-11-14
-target: "[[overview|booleansequence-niceunderground-xyz]]"
+target: "booleansequence-niceunderground-xyz"
 ---
 
 # De-obfuscated Source Maps: booleansequence-niceunderground-xyz

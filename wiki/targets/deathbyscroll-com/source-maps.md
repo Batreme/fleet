@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: deathbyscroll-com"
 date: 2026-11-14
-target: "[[overview|deathbyscroll-com]]"
+target: "deathbyscroll-com"
 ---
 
 # De-obfuscated Source Maps: deathbyscroll-com

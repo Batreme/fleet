@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: pda-archi_en"
 date: 2026-11-14
-target: "[[overview|pda-archi_en]]"
+target: "pda-archi_en"
 ---
 
 # Discovered APIs & Protocols: pda-archi_en

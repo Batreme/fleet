@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: explorewashingtonpark-org"
 date: 2026-11-14
-target: "[[overview|explorewashingtonpark-org]]"
+target: "explorewashingtonpark-org"
 ---
 
 # De-obfuscated Source Maps: explorewashingtonpark-org

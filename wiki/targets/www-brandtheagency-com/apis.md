@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-brandtheagency-com"
 date: 2026-11-14
-target: "[[overview|www-brandtheagency-com]]"
+target: "www-brandtheagency-com"
 ---
 
 # Discovered APIs & Protocols: www-brandtheagency-com

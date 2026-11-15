@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: helmetverse-ai"
 date: 2026-11-14
-target: "[[overview|helmetverse-ai]]"
+target: "helmetverse-ai"
 ---
 
 # Discovered APIs & Protocols: helmetverse-ai

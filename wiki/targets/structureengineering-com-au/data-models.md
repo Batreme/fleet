@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: structureengineering-com-au"
 date: 2026-11-14
-target: "[[overview|structureengineering-com-au]]"
+target: "structureengineering-com-au"
 ---
 
 # Data Models & Client Storage: structureengineering-com-au

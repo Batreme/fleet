@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: karma-tracks-com"
 date: 2026-11-14
-target: "[[overview|karma-tracks-com]]"
+target: "karma-tracks-com"
 ---
 
 # Data Models & Client Storage: karma-tracks-com

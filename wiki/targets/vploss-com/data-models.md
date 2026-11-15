@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: vploss-com"
 date: 2026-11-14
-target: "[[overview|vploss-com]]"
+target: "vploss-com"
 ---
 
 # Data Models & Client Storage: vploss-com

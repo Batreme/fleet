@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: the-family-rice-tray-vercel-app"
 date: 2026-11-14
-target: "[[overview|the-family-rice-tray-vercel-app]]"
+target: "the-family-rice-tray-vercel-app"
 ---
 
 # Data Models & Client Storage: the-family-rice-tray-vercel-app

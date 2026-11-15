@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: clubcharlestown-com-au"
 date: 2026-11-14
-target: "[[overview|clubcharlestown-com-au]]"
+target: "clubcharlestown-com-au"
 ---
 
 # Data Models & Client Storage: clubcharlestown-com-au

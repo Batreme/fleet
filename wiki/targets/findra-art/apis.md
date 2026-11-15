@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: findra-art"
 date: 2026-11-14
-target: "[[overview|findra-art]]"
+target: "findra-art"
 ---
 
 # Discovered APIs & Protocols: findra-art

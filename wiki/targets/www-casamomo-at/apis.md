@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-casamomo-at"
 date: 2026-11-14
-target: "[[overview|www-casamomo-at]]"
+target: "www-casamomo-at"
 ---
 
 # Discovered APIs & Protocols: www-casamomo-at

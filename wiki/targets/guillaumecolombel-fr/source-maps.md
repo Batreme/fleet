@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: guillaumecolombel-fr"
 date: 2026-11-14
-target: "[[overview|guillaumecolombel-fr]]"
+target: "guillaumecolombel-fr"
 ---
 
 # De-obfuscated Source Maps: guillaumecolombel-fr

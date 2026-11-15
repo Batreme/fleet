@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: ringpopcandy-com"
 date: 2026-11-14
-target: "[[overview|ringpopcandy-com]]"
+target: "ringpopcandy-com"
 ---
 
 # De-obfuscated Source Maps: ringpopcandy-com

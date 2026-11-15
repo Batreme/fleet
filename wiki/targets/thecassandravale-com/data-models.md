@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thecassandravale-com"
 date: 2026-11-14
-target: "[[overview|thecassandravale-com]]"
+target: "thecassandravale-com"
 ---
 
 # Data Models & Client Storage: thecassandravale-com

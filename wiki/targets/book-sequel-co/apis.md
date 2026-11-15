@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: book-sequel-co"
 date: 2026-11-14
-target: "[[overview|book-sequel-co]]"
+target: "book-sequel-co"
 ---
 
 # Discovered APIs & Protocols: book-sequel-co

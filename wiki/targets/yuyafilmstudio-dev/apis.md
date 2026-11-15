@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: yuyafilmstudio-dev"
 date: 2026-11-14
-target: "[[overview|yuyafilmstudio-dev]]"
+target: "yuyafilmstudio-dev"
 ---
 
 # Discovered APIs & Protocols: yuyafilmstudio-dev

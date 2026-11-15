@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: crl-2026-webflow-io"
 date: 2026-11-15
-target: "[[overview|crl-2026-webflow-io]]"
+target: "crl-2026-webflow-io"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c6fb50` / `#d9d9d9`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c6fb50` / `#d
 
 > **Creative Reference Library · CRL** (https://crl-2026.webflow.io/) — CRL® is a curated library of creative references — music, film, books, and writing that shape how ideas are developed, tested, and made....
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c6fb50` / `#d
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

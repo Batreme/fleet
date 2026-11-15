@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: premotio-com"
 date: 2026-11-14
-target: "[[overview|premotio-com]]"
+target: "premotio-com"
 ---
 
 # Discovered APIs & Protocols: premotio-com

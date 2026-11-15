@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: derive-ocean-com"
 date: 2026-11-14
-target: "[[overview|derive-ocean-com]]"
+target: "derive-ocean-com"
 ---
 
 # Discovered APIs & Protocols: derive-ocean-com

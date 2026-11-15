@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dsquaredmedia-net"
 date: 2026-11-14
-target: "[[overview|dsquaredmedia-net]]"
+target: "dsquaredmedia-net"
 ---
 
 # Data Models & Client Storage: dsquaredmedia-net

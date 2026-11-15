@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: carnilove-ashfall-studio"
 date: 2026-11-14
-target: "[[overview|carnilove-ashfall-studio]]"
+target: "carnilove-ashfall-studio"
 ---
 
 # Data Models & Client Storage: carnilove-ashfall-studio

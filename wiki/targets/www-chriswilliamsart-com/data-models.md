@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-chriswilliamsart-com"
 date: 2026-11-14
-target: "[[overview|www-chriswilliamsart-com]]"
+target: "www-chriswilliamsart-com"
 ---
 
 # Data Models & Client Storage: www-chriswilliamsart-com

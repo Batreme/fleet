@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: productionportugal-com"
 date: 2026-11-14
-target: "[[overview|productionportugal-com]]"
+target: "productionportugal-com"
 ---
 
 # Data Models & Client Storage: productionportugal-com

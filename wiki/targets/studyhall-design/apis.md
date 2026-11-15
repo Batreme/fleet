@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: studyhall-design"
 date: 2026-11-14
-target: "[[overview|studyhall-design]]"
+target: "studyhall-design"
 ---
 
 # Discovered APIs & Protocols: studyhall-design

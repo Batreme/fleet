@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: zeropact-co"
 date: 2026-11-14
-target: "[[overview|zeropact-co]]"
+target: "zeropact-co"
 ---
 
 # Discovered APIs & Protocols: zeropact-co

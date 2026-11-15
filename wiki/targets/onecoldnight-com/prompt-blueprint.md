@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: onecoldnight-com"
 date: 2026-11-15
-target: "[[overview|onecoldnight-com]]"
+target: "onecoldnight-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f2efe6` / `#fff`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f2efe6` / `#f
 
 > **The Little Match Girl** (https://onecoldnight.com/) — Andersen's Little Match Girl as a scroll-through noir picture book: open the pages, step into the snow, and strike the matches one by one.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f2efe6` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

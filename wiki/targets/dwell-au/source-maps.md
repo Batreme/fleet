@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: dwell-au"
 date: 2026-11-14
-target: "[[overview|dwell-au]]"
+target: "dwell-au"
 ---
 
 # De-obfuscated Source Maps: dwell-au

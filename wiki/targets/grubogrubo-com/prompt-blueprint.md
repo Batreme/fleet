@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: grubogrubo-com"
 date: 2026-11-15
-target: "[[overview|grubogrubo-com]]"
+target: "grubogrubo-com"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4c0aaf` / `#bcb8c5`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4c0aaf` / `#
 
 > **GruboGrubo — Creative Ideas & Visual Production Studio · Warsaw** (https://grubogrubo.com) — Independent creative studio in Warsaw: creative concepts, campaigns, storytelling, animation, 3D, CGI and interactive experiences.
 
-![Desktop Viewport Capture (1440x10408)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4c0aaf` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10408px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

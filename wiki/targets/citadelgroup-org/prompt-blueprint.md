@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: citadelgroup-org"
 date: 2026-11-15
-target: "[[overview|citadelgroup-org]]"
+target: "citadelgroup-org"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7953e` / `#e3e3e4`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7953e` / `#e
 
 > **Citadel National Construction Group · Nationwide Construction** (https://citadelgroup.org/) — Citadel connects leading regional construction firms into one nationwide network, combining local expertise with national resources to de...
 
-![Desktop Viewport Capture (1440x10151)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7953e` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×10151px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: later-com_made-you-look"
 date: 2026-11-15
-target: "[[overview|later-com_made-you-look]]"
+target: "later-com_made-you-look"
 status: analyzed
+capture: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#fff6cc` ink, `#ffd200` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 > **Made You Look: Campaigns so good you break the algorithm.** (https://later.com/made-you-look/) — Meet the creators shaping culture through bold ideas and obsessive craft—and see how brands partner with them to build standout influence...
 
-![Desktop Viewport Capture (1440x18396)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×18396px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

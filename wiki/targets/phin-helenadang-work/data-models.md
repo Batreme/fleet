@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: phin-helenadang-work"
 date: 2026-11-14
-target: "[[overview|phin-helenadang-work]]"
+target: "phin-helenadang-work"
 ---
 
 # Data Models & Client Storage: phin-helenadang-work

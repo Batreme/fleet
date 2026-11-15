@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: concretaceramiche-it"
 date: 2026-11-14
-target: "[[overview|concretaceramiche-it]]"
+target: "concretaceramiche-it"
 ---
 
 # Data Models & Client Storage: concretaceramiche-it

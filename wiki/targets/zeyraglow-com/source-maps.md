@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: zeyraglow-com"
 date: 2026-10-31
-target: "[[overview|zeyraglow-com]]"
+target: "zeyraglow-com"
 ---
 
 # De-obfuscated Source Maps: zeyraglow-com

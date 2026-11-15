@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-avilus-com"
 date: 2026-11-14
-target: "[[overview|www-avilus-com]]"
+target: "www-avilus-com"
 ---
 
 # Data Models & Client Storage: www-avilus-com

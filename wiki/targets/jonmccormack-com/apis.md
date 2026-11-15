@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: jonmccormack-com"
 date: 2026-11-14
-target: "[[overview|jonmccormack-com]]"
+target: "jonmccormack-com"
 ---
 
 # Discovered APIs & Protocols: jonmccormack-com

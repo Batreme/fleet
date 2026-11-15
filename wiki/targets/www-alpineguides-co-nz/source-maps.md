@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-alpineguides-co-nz"
 date: 2026-11-14
-target: "[[overview|www-alpineguides-co-nz]]"
+target: "www-alpineguides-co-nz"
 ---
 
 # De-obfuscated Source Maps: www-alpineguides-co-nz

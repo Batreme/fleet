@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: serus-ai"
 date: 2026-11-14
-target: "[[overview|serus-ai]]"
+target: "serus-ai"
 ---
 
 # Discovered APIs & Protocols: serus-ai

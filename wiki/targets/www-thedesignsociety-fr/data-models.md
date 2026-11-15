@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-thedesignsociety-fr"
 date: 2026-11-14
-target: "[[overview|www-thedesignsociety-fr]]"
+target: "www-thedesignsociety-fr"
 ---
 
 # Data Models & Client Storage: www-thedesignsociety-fr

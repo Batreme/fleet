@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: powa-snp-agency"
 date: 2026-11-14
-target: "[[overview|powa-snp-agency]]"
+target: "powa-snp-agency"
 ---
 
 # Discovered APIs & Protocols: powa-snp-agency

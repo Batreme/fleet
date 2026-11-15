@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: thefwa-net"
 date: 2026-11-14
-target: "[[overview|thefwa-net]]"
+target: "thefwa-net"
 ---
 
 # Discovered APIs & Protocols: thefwa-net

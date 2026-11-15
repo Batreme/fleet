@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: chanpan-com-ar"
 date: 2026-11-14
-target: "[[overview|chanpan-com-ar]]"
+target: "chanpan-com-ar"
 ---
 
 # De-obfuscated Source Maps: chanpan-com-ar

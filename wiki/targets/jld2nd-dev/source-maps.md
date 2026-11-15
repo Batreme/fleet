@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: jld2nd-dev"
 date: 2026-11-14
-target: "[[overview|jld2nd-dev]]"
+target: "jld2nd-dev"
 ---
 
 # De-obfuscated Source Maps: jld2nd-dev

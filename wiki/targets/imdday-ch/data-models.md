@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: imdday-ch"
 date: 2026-11-14
-target: "[[overview|imdday-ch]]"
+target: "imdday-ch"
 ---
 
 # Data Models & Client Storage: imdday-ch

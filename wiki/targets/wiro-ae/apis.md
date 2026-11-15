@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: wiro-ae"
 date: 2026-11-14
-target: "[[overview|wiro-ae]]"
+target: "wiro-ae"
 ---
 
 # Discovered APIs & Protocols: wiro-ae

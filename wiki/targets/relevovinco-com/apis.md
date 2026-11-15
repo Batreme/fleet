@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: relevovinco-com"
 date: 2026-11-14
-target: "[[overview|relevovinco-com]]"
+target: "relevovinco-com"
 ---
 
 # Discovered APIs & Protocols: relevovinco-com

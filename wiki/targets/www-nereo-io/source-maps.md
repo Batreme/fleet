@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-nereo-io"
 date: 2026-11-14
-target: "[[overview|www-nereo-io]]"
+target: "www-nereo-io"
 ---
 
 # De-obfuscated Source Maps: www-nereo-io

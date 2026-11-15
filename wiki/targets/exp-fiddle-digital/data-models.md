@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: exp-fiddle-digital"
 date: 2026-11-14
-target: "[[overview|exp-fiddle-digital]]"
+target: "exp-fiddle-digital"
 ---
 
 # Data Models & Client Storage: exp-fiddle-digital

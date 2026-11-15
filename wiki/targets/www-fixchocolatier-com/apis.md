@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-fixchocolatier-com"
 date: 2026-11-14
-target: "[[overview|www-fixchocolatier-com]]"
+target: "www-fixchocolatier-com"
 ---
 
 # Discovered APIs & Protocols: www-fixchocolatier-com

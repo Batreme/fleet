@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: equitifyasset-com"
 date: 2026-11-14
-target: "[[overview|equitifyasset-com]]"
+target: "equitifyasset-com"
 ---
 
 # De-obfuscated Source Maps: equitifyasset-com

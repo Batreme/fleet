@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-tokonoma-xyz"
 date: 2026-10-31
-target: "[[overview|www-tokonoma-xyz]]"
+target: "www-tokonoma-xyz"
 ---
 
 # De-obfuscated Source Maps: www-tokonoma-xyz

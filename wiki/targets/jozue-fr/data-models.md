@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jozue-fr"
 date: 2026-11-14
-target: "[[overview|jozue-fr]]"
+target: "jozue-fr"
 ---
 
 # Data Models & Client Storage: jozue-fr

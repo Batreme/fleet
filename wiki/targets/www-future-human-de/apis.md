@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-future-human-de"
 date: 2026-11-14
-target: "[[overview|www-future-human-de]]"
+target: "www-future-human-de"
 ---
 
 # Discovered APIs & Protocols: www-future-human-de

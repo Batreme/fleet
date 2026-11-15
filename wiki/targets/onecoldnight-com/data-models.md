@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: onecoldnight-com"
 date: 2026-11-14
-target: "[[overview|onecoldnight-com]]"
+target: "onecoldnight-com"
 ---
 
 # Data Models & Client Storage: onecoldnight-com

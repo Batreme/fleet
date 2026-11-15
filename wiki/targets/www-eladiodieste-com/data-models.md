@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-eladiodieste-com"
 date: 2026-11-14
-target: "[[overview|www-eladiodieste-com]]"
+target: "www-eladiodieste-com"
 ---
 
 # Data Models & Client Storage: www-eladiodieste-com

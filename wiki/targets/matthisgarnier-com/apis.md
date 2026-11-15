@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: matthisgarnier-com"
 date: 2026-11-14
-target: "[[overview|matthisgarnier-com]]"
+target: "matthisgarnier-com"
 ---
 
 # Discovered APIs & Protocols: matthisgarnier-com

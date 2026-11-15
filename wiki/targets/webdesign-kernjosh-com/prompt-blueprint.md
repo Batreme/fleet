@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: webdesign-kernjosh-com"
 date: 2026-11-15
-target: "[[overview|webdesign-kernjosh-com]]"
+target: "webdesign-kernjosh-com"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3f3f3f`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 
 > **Josh Kern** (https://webdesign.kernjosh.com) — Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

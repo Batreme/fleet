@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: about-centra-com"
 date: 2026-11-14
-target: "[[overview|about-centra-com]]"
+target: "about-centra-com"
 ---
 
 # De-obfuscated Source Maps: about-centra-com

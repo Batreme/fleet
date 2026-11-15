@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: fabiantjoeaon-com"
 date: 2026-11-14
-target: "[[overview|fabiantjoeaon-com]]"
+target: "fabiantjoeaon-com"
 ---
 
 # De-obfuscated Source Maps: fabiantjoeaon-com

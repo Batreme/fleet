@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jld2nd-dev"
 date: 2026-11-14
-target: "[[overview|jld2nd-dev]]"
+target: "jld2nd-dev"
 ---
 
 # Data Models & Client Storage: jld2nd-dev

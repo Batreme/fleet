@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: akaiito-ai"
 date: 2026-11-14
-target: "[[overview|akaiito-ai]]"
+target: "akaiito-ai"
 ---
 
 # Data Models & Client Storage: akaiito-ai

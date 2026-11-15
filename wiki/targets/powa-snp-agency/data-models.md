@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: powa-snp-agency"
 date: 2026-11-14
-target: "[[overview|powa-snp-agency]]"
+target: "powa-snp-agency"
 ---
 
 # Data Models & Client Storage: powa-snp-agency

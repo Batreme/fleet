@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: milledollars-fr"
 date: 2026-11-14
-target: "[[overview|milledollars-fr]]"
+target: "milledollars-fr"
 ---
 
 # Data Models & Client Storage: milledollars-fr

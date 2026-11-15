@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: useguidely-co"
 date: 2026-11-14
-target: "[[overview|useguidely-co]]"
+target: "useguidely-co"
 ---
 
 # Discovered APIs & Protocols: useguidely-co

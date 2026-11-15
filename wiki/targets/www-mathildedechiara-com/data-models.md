@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-mathildedechiara-com"
 date: 2026-11-14
-target: "[[overview|www-mathildedechiara-com]]"
+target: "www-mathildedechiara-com"
 ---
 
 # Data Models & Client Storage: www-mathildedechiara-com

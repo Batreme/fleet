@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-brandtheagency-com"
 date: 2026-11-14
-target: "[[overview|www-brandtheagency-com]]"
+target: "www-brandtheagency-com"
 ---
 
 # De-obfuscated Source Maps: www-brandtheagency-com

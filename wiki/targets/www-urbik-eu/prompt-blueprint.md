@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-urbik-eu"
 date: 2026-11-15
-target: "[[overview|www-urbik-eu]]"
+target: "www-urbik-eu"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080909` / `#131515`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080909` / `#
 
 > **Jakub 'Urbik' Urbanec · Web Developer · DJ · AV artist** (https://www.urbik.eu/) — Senior web developer and DJ with alias Urbik created this personal portfolio
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080909` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

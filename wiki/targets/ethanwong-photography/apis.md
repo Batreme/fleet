@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ethanwong-photography"
 date: 2026-11-14
-target: "[[overview|ethanwong-photography]]"
+target: "ethanwong-photography"
 ---
 
 # Discovered APIs & Protocols: ethanwong-photography

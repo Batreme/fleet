@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: serus-ai"
 date: 2026-11-14
-target: "[[overview|serus-ai]]"
+target: "serus-ai"
 ---
 
 # Data Models & Client Storage: serus-ai

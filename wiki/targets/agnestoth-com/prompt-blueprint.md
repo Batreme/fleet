@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: agnestoth-com"
 date: 2026-11-15
-target: "[[overview|agnestoth-com]]"
+target: "agnestoth-com"
+status: analyzed
+capture: dom
 archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightBig Pro` + `Jost`)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightB
 
 > **AGNESTOTH · House of Luxurious Embroidery** — A serene, museum-grade luxury fashion and bespoke embroidery house designed around pure gallery white (`rgb(255,255,255)`), warm alabaster stone (`#f0eee9`), charcoal ink (`rgb(18,18,18)`), and crimson thread accents (`#9a3b2e`).
 
-![Desktop Viewport Capture (1440x9759)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Haute Couture Embroidery Atelier & Quiet Luxury Editorial (`FreightB
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x4200)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×9759px` (`assets/desktop.png`), Mobile `390×4200px` (`assets/mobile.png`).

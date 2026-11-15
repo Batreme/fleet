@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-raomuhammadhamza-tech"
 date: 2026-11-14
-target: "[[overview|www-raomuhammadhamza-tech]]"
+target: "www-raomuhammadhamza-tech"
 ---
 
 # Data Models & Client Storage: www-raomuhammadhamza-tech

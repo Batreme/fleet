@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-worksruthi-com"
 date: 2026-11-14
-target: "[[overview|www-worksruthi-com]]"
+target: "www-worksruthi-com"
 ---
 
 # De-obfuscated Source Maps: www-worksruthi-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: nakagawa-corp-com"
 date: 2026-11-14
-target: "[[overview|nakagawa-corp-com]]"
+target: "nakagawa-corp-com"
 ---
 
 # Discovered APIs & Protocols: nakagawa-corp-com

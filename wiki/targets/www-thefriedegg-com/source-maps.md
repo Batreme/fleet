@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-thefriedegg-com"
 date: 2026-11-14
-target: "[[overview|www-thefriedegg-com]]"
+target: "www-thefriedegg-com"
 ---
 
 # De-obfuscated Source Maps: www-thefriedegg-com

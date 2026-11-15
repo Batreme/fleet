@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-zrk-technology"
 date: 2026-11-14
-target: "[[overview|www-zrk-technology]]"
+target: "www-zrk-technology"
 ---
 
 # Data Models & Client Storage: www-zrk-technology

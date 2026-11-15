@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: jjettas-com"
 date: 2026-11-14
-target: "[[overview|jjettas-com]]"
+target: "jjettas-com"
 ---
 
 # Discovered APIs & Protocols: jjettas-com

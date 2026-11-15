@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: aviator-yakudoo-games"
 date: 2026-11-14
-target: "[[overview|aviator-yakudoo-games]]"
+target: "aviator-yakudoo-games"
 ---
 
 # De-obfuscated Source Maps: aviator-yakudoo-games

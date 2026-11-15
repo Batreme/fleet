@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: bespokegroup-io"
 date: 2026-11-14
-target: "[[overview|bespokegroup-io]]"
+target: "bespokegroup-io"
 ---
 
 # Discovered APIs & Protocols: bespokegroup-io

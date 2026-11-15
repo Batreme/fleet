@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: zarcerog-com"
 date: 2026-11-14
-target: "[[overview|zarcerog-com]]"
+target: "zarcerog-com"
 ---
 
 # De-obfuscated Source Maps: zarcerog-com

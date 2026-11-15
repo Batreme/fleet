@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: palominoprod-com"
 date: 2026-11-14
-target: "[[overview|palominoprod-com]]"
+target: "palominoprod-com"
 ---
 
 # Discovered APIs & Protocols: palominoprod-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: fineacts-co"
 date: 2026-11-14
-target: "[[overview|fineacts-co]]"
+target: "fineacts-co"
 ---
 
 # Data Models & Client Storage: fineacts-co

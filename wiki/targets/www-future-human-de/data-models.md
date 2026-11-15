@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-future-human-de"
 date: 2026-11-14
-target: "[[overview|www-future-human-de]]"
+target: "www-future-human-de"
 ---
 
 # Data Models & Client Storage: www-future-human-de

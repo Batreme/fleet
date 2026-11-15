@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-areyoudami-com"
 date: 2026-11-14
-target: "[[overview|www-areyoudami-com]]"
+target: "www-areyoudami-com"
 ---
 
 # Data Models & Client Storage: www-areyoudami-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: chandebootcamp-com"
 date: 2026-11-14
-target: "[[overview|chandebootcamp-com]]"
+target: "chandebootcamp-com"
 ---
 
 # Data Models & Client Storage: chandebootcamp-com

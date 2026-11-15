@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mms-inherited-band"
 date: 2026-11-14
-target: "[[overview|mms-inherited-band]]"
+target: "mms-inherited-band"
 ---
 
 # De-obfuscated Source Maps: mms-inherited-band

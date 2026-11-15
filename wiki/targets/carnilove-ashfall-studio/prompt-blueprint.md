@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: carnilove-ashfall-studio"
 date: 2026-11-15
-target: "[[overview|carnilove-ashfall-studio]]"
+target: "carnilove-ashfall-studio"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f6e1ce`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f6e
 
 > **Carnilove · Home** (https://carnilove.ashfall.studio/) — Rotate your device to portrait mode.
 
-![Desktop Viewport Capture (1440x8547)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f6e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×8547px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

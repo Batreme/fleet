@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-motorq-com"
 date: 2026-11-14
-target: "[[overview|www-motorq-com]]"
+target: "www-motorq-com"
 ---
 
 # Discovered APIs & Protocols: www-motorq-com

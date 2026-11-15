@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: sixescricket-com"
 date: 2026-11-14
-target: "[[overview|sixescricket-com]]"
+target: "sixescricket-com"
 ---
 
 # Data Models & Client Storage: sixescricket-com

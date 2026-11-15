@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: guillaumecolombel-fr"
 date: 2026-11-14
-target: "[[overview|guillaumecolombel-fr]]"
+target: "guillaumecolombel-fr"
 ---
 
 # Data Models & Client Storage: guillaumecolombel-fr

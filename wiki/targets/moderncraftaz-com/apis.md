@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: moderncraftaz-com"
 date: 2026-11-14
-target: "[[overview|moderncraftaz-com]]"
+target: "moderncraftaz-com"
 ---
 
 # Discovered APIs & Protocols: moderncraftaz-com

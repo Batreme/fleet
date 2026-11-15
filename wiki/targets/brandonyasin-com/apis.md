@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: brandonyasin-com"
 date: 2026-11-14
-target: "[[overview|brandonyasin-com]]"
+target: "brandonyasin-com"
 ---
 
 # Discovered APIs & Protocols: brandonyasin-com

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-johnbolster-design"
 date: 2026-11-15
-target: "[[overview|www-johnbolster-design]]"
+target: "www-johnbolster-design"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ECEAE2` / `#D3D0C6`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ECEAE2` / `#D
 
 > **John Bolster · Brand Identity Designer and Art Director, Saratoga Spring...** (https://www.johnbolster.design/) — Independent brand identity designer and art director in Saratoga Springs, NY. Brand strategy, identity, print and web for businesses, hig...
 
-![Desktop Viewport Capture (1440x24580)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ECEAE2` / `#D
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×24580px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

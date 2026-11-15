@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-palaraiffeisen-ch"
 date: 2026-11-14
-target: "[[overview|www-palaraiffeisen-ch]]"
+target: "www-palaraiffeisen-ch"
 ---
 
 # Data Models & Client Storage: www-palaraiffeisen-ch

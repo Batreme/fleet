@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-casamomo-at"
 date: 2026-11-14
-target: "[[overview|www-casamomo-at]]"
+target: "www-casamomo-at"
 ---
 
 # De-obfuscated Source Maps: www-casamomo-at

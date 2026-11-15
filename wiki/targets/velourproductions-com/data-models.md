@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: velourproductions-com"
 date: 2026-10-31
-target: "[[overview|velourproductions-com]]"
+target: "velourproductions-com"
 ---
 
 # Data Models & Client Storage: velourproductions-com

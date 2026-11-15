@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kissbranding-co-uk"
 date: 2026-11-14
-target: "[[overview|kissbranding-co-uk]]"
+target: "kissbranding-co-uk"
 ---
 
 # Data Models & Client Storage: kissbranding-co-uk

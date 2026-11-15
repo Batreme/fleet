@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: kinoria-studio"
 date: 2026-11-14
-target: "[[overview|kinoria-studio]]"
+target: "kinoria-studio"
 ---
 
 # Discovered APIs & Protocols: kinoria-studio

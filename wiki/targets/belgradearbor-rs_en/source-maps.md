@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: belgradearbor-rs_en"
 date: 2026-11-14
-target: "[[overview|belgradearbor-rs_en]]"
+target: "belgradearbor-rs_en"
 ---
 
 # De-obfuscated Source Maps: belgradearbor-rs_en

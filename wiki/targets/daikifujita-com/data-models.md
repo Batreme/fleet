@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: daikifujita-com"
 date: 2026-11-14
-target: "[[overview|daikifujita-com]]"
+target: "daikifujita-com"
 ---
 
 # Data Models & Client Storage: daikifujita-com

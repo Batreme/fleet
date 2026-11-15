@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: kamdalej-sk_en"
 date: 2026-11-14
-target: "[[overview|kamdalej-sk_en]]"
+target: "kamdalej-sk_en"
 ---
 
 # Data Models & Client Storage: kamdalej-sk_en

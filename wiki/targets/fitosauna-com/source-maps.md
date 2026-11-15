@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: fitosauna-com"
 date: 2026-11-14
-target: "[[overview|fitosauna-com]]"
+target: "fitosauna-com"
 ---
 
 # De-obfuscated Source Maps: fitosauna-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: mubien-com"
 date: 2026-11-14
-target: "[[overview|mubien-com]]"
+target: "mubien-com"
 ---
 
 # De-obfuscated Source Maps: mubien-com

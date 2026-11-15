@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-sentientx-com"
 date: 2026-11-14
-target: "[[overview|www-sentientx-com]]"
+target: "www-sentientx-com"
 ---
 
 # De-obfuscated Source Maps: www-sentientx-com

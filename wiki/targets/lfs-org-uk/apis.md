@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lfs-org-uk"
 date: 2026-11-14
-target: "[[overview|lfs-org-uk]]"
+target: "lfs-org-uk"
 ---
 
 # Discovered APIs & Protocols: lfs-org-uk

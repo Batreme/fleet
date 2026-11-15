@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-theboringblog-ai"
 date: 2026-11-14
-target: "[[overview|www-theboringblog-ai]]"
+target: "www-theboringblog-ai"
 ---
 
 # De-obfuscated Source Maps: www-theboringblog-ai

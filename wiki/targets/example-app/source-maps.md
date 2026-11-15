@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: example-app"
 date: 2026-10-31
-target: "[[overview|example-app]]"
+target: "example-app"
 ---
 
 # De-obfuscated Source Maps: example-app

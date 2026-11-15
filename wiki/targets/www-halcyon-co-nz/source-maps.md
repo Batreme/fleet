@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-halcyon-co-nz"
 date: 2026-11-14
-target: "[[overview|www-halcyon-co-nz]]"
+target: "www-halcyon-co-nz"
 ---
 
 # De-obfuscated Source Maps: www-halcyon-co-nz

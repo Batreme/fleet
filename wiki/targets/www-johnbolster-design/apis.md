@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-johnbolster-design"
 date: 2026-11-14
-target: "[[overview|www-johnbolster-design]]"
+target: "www-johnbolster-design"
 ---
 
 # Discovered APIs & Protocols: www-johnbolster-design

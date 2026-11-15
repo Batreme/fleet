@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-davidecarusio-it"
 date: 2026-11-14
-target: "[[overview|www-davidecarusio-it]]"
+target: "www-davidecarusio-it"
 ---
 
 # Discovered APIs & Protocols: www-davidecarusio-it

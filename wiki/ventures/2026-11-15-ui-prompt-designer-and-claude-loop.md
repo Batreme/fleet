@@ -17,7 +17,7 @@ Upgrade the entire Fleet Knowledge Base (`wiki/`) across all **575 cataloged web
 3. **Evaluation & Audit Infrastructure**:
    - `/root/projects/reverse-harness/evaluate_batch.py`: 14-check deterministic verification suite (`C1`–`C14`) scoring `25.0/25.0` across all `556/556` analyzable targets.
    - `/root/projects/reverse-harness/run_all_rounds.py` & `/root/projects/reverse-harness/build_full_dashboard.py`: Full-catalog ground-truth pipeline and dashboard generator.
-   - `[[UI_EVALS_DASHBOARD]]` & `[[traces/round-01-trace]]` .. `[[traces/round-58-trace]]`: Complete 58-round audit trail and scorecard.
+   - [UI_EVALS_DASHBOARD](../UI_EVALS_DASHBOARD.md) & [round-01-trace](../traces/round-01-trace.md) .. [round-58-trace](../traces/round-58-trace.md): Complete 58-round audit trail and scorecard.
 
 ## 3. Lessons Learned
 - **WAF / Anti-Bot Honesty (`C1`)**: Edge WAF block pages (`Access Denied`, `Checking your browser...`) must be detected and marked `status: blocked` rather than passed through token synthesis.

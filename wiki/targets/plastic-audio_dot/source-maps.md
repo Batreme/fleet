@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: plastic-audio_dot"
 date: 2026-11-14
-target: "[[overview|plastic-audio_dot]]"
+target: "plastic-audio_dot"
 ---
 
 # De-obfuscated Source Maps: plastic-audio_dot

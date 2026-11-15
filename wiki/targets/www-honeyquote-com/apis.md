@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-honeyquote-com"
 date: 2026-11-14
-target: "[[overview|www-honeyquote-com]]"
+target: "www-honeyquote-com"
 ---
 
 # Discovered APIs & Protocols: www-honeyquote-com

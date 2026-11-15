@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-impastofornoantico-com"
 date: 2026-11-14
-target: "[[overview|www-impastofornoantico-com]]"
+target: "www-impastofornoantico-com"
 ---
 
 # De-obfuscated Source Maps: www-impastofornoantico-com

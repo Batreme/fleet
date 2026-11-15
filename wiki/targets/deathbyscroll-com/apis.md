@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: deathbyscroll-com"
 date: 2026-11-14
-target: "[[overview|deathbyscroll-com]]"
+target: "deathbyscroll-com"
 ---
 
 # Discovered APIs & Protocols: deathbyscroll-com

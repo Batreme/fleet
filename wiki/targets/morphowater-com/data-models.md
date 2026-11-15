@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: morphowater-com"
 date: 2026-11-14
-target: "[[overview|morphowater-com]]"
+target: "morphowater-com"
 ---
 
 # Data Models & Client Storage: morphowater-com

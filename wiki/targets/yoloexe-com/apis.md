@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: yoloexe-com"
 date: 2026-11-14
-target: "[[overview|yoloexe-com]]"
+target: "yoloexe-com"
 ---
 
 # Discovered APIs & Protocols: yoloexe-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-theboringblog-ai"
 date: 2026-11-14
-target: "[[overview|www-theboringblog-ai]]"
+target: "www-theboringblog-ai"
 ---
 
 # Data Models & Client Storage: www-theboringblog-ai

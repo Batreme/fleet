@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: aizeitgeist-tv"
 date: 2026-11-14
-target: "[[overview|aizeitgeist-tv]]"
+target: "aizeitgeist-tv"
 ---
 
 # Discovered APIs & Protocols: aizeitgeist-tv

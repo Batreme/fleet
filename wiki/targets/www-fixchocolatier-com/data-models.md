@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-fixchocolatier-com"
 date: 2026-11-14
-target: "[[overview|www-fixchocolatier-com]]"
+target: "www-fixchocolatier-com"
 ---
 
 # Data Models & Client Storage: www-fixchocolatier-com

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: lpas-com"
 date: 2026-11-14
-target: "[[overview|lpas-com]]"
+target: "lpas-com"
 ---
 
 # De-obfuscated Source Maps: lpas-com

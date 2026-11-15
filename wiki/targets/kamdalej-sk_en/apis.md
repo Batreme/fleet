@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: kamdalej-sk_en"
 date: 2026-11-14
-target: "[[overview|kamdalej-sk_en]]"
+target: "kamdalej-sk_en"
 ---
 
 # Discovered APIs & Protocols: kamdalej-sk_en

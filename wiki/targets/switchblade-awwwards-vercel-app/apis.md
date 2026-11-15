@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: switchblade-awwwards-vercel-app"
 date: 2026-11-14
-target: "[[overview|switchblade-awwwards-vercel-app]]"
+target: "switchblade-awwwards-vercel-app"
 ---
 
 # Discovered APIs & Protocols: switchblade-awwwards-vercel-app

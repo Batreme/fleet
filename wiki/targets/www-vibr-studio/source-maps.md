@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-vibr-studio"
 date: 2026-11-14
-target: "[[overview|www-vibr-studio]]"
+target: "www-vibr-studio"
 ---
 
 # De-obfuscated Source Maps: www-vibr-studio

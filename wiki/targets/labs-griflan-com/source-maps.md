@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: labs-griflan-com"
 date: 2026-11-14
-target: "[[overview|labs-griflan-com]]"
+target: "labs-griflan-com"
 ---
 
 # De-obfuscated Source Maps: labs-griflan-com

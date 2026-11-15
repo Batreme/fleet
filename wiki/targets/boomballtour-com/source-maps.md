@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: boomballtour-com"
 date: 2026-11-14
-target: "[[overview|boomballtour-com]]"
+target: "boomballtour-com"
 ---
 
 # De-obfuscated Source Maps: boomballtour-com

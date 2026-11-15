@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: serus-ai"
 date: 2026-11-14
-target: "[[overview|serus-ai]]"
+target: "serus-ai"
 ---
 
 # De-obfuscated Source Maps: serus-ai

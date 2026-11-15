@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: no-merci-michel-com"
 date: 2026-11-14
-target: "[[overview|no-merci-michel-com]]"
+target: "no-merci-michel-com"
 ---
 
 # Discovered APIs & Protocols: no-merci-michel-com

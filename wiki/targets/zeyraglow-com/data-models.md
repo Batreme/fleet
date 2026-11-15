@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: zeyraglow-com"
 date: 2026-10-31
-target: "[[overview|zeyraglow-com]]"
+target: "zeyraglow-com"
 ---
 
 # Data Models & Client Storage: zeyraglow-com

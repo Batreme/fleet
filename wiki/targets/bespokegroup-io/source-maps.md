@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: bespokegroup-io"
 date: 2026-11-14
-target: "[[overview|bespokegroup-io]]"
+target: "bespokegroup-io"
 ---
 
 # De-obfuscated Source Maps: bespokegroup-io

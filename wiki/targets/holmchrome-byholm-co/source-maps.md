@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: holmchrome-byholm-co"
 date: 2026-11-14
-target: "[[overview|holmchrome-byholm-co]]"
+target: "holmchrome-byholm-co"
 ---
 
 # De-obfuscated Source Maps: holmchrome-byholm-co

@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: aizeitgeist-tv"
 date: 2026-11-15
-target: "[[overview|aizeitgeist-tv]]"
+target: "aizeitgeist-tv"
 status: analyzed
+capture: specimen
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007a33`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007
 
 > **AI Zeitgeist · What the world says about AI** (https://aizeitgeist.tv) — What the world says about AI, one quote at a time. A running wall of the global conversation about artificial intelligence, updated daily.
 
-![Desktop Viewport Capture (1440x13433)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×13433px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

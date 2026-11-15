@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-tomdekoning-work"
 date: 2026-11-14
-target: "[[overview|www-tomdekoning-work]]"
+target: "www-tomdekoning-work"
 ---
 
 # Data Models & Client Storage: www-tomdekoning-work

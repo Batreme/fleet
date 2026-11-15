@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: tengilemalamala-com"
 date: 2026-11-14
-target: "[[overview|tengilemalamala-com]]"
+target: "tengilemalamala-com"
 ---
 
 # Data Models & Client Storage: tengilemalamala-com

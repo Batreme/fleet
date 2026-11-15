@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-davidecarusio-it"
 date: 2026-11-14
-target: "[[overview|www-davidecarusio-it]]"
+target: "www-davidecarusio-it"
 ---
 
 # Data Models & Client Storage: www-davidecarusio-it

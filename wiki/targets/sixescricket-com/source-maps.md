@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: sixescricket-com"
 date: 2026-11-14
-target: "[[overview|sixescricket-com]]"
+target: "sixescricket-com"
 ---
 
 # De-obfuscated Source Maps: sixescricket-com

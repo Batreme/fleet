@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: noravale-framer-website"
 date: 2026-11-14
-target: "[[overview|noravale-framer-website]]"
+target: "noravale-framer-website"
 ---
 
 # De-obfuscated Source Maps: noravale-framer-website

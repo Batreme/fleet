@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: ieqtechnology-com"
 date: 2026-11-15
-target: "[[overview|ieqtechnology-com]]"
+target: "ieqtechnology-com"
 status: analyzed
+capture: dom
 archetype: "Light-Substrate Editorial & Modular Grid System (`#0d91d0` canvas, `#fff` ink, `#e1eff6` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#0d91d0` canvas, `
 
 > **IEQ Technology · Innovation. Experience. Quality.** (https://ieqtechnology.com/) — Managed IT, legacy system modernization, custom software and custom websites from a 100% U.S.-based team in Springfield, Oregon. Since 2011.
 
-![Desktop Viewport Capture (1440x9002)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#0d91d0` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×9002px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

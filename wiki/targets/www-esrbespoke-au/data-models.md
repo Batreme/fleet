@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-esrbespoke-au"
 date: 2026-11-14
-target: "[[overview|www-esrbespoke-au]]"
+target: "www-esrbespoke-au"
 ---
 
 # Data Models & Client Storage: www-esrbespoke-au

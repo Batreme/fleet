@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: matthisgarnier-com"
 date: 2026-11-14
-target: "[[overview|matthisgarnier-com]]"
+target: "matthisgarnier-com"
 ---
 
 # Data Models & Client Storage: matthisgarnier-com

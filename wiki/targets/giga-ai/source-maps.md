@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: giga-ai"
 date: 2026-11-14
-target: "[[overview|giga-ai]]"
+target: "giga-ai"
 ---
 
 # De-obfuscated Source Maps: giga-ai

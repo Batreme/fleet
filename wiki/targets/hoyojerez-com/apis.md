@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: hoyojerez-com"
 date: 2026-11-14
-target: "[[overview|hoyojerez-com]]"
+target: "hoyojerez-com"
 ---
 
 # Discovered APIs & Protocols: hoyojerez-com

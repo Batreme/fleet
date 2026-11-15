@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-villiers-ai"
 date: 2026-11-14
-target: "[[overview|www-villiers-ai]]"
+target: "www-villiers-ai"
 ---
 
 # Discovered APIs & Protocols: www-villiers-ai

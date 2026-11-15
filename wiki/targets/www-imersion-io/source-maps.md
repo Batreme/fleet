@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-imersion-io"
 date: 2026-11-14
-target: "[[overview|www-imersion-io]]"
+target: "www-imersion-io"
 ---
 
 # De-obfuscated Source Maps: www-imersion-io

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: almirakho-com"
 date: 2026-10-31
-target: "[[overview|almirakho-com]]"
+target: "almirakho-com"
 ---
 
 # Data Models & Client Storage: almirakho-com

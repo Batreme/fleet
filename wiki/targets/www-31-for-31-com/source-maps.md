@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-31-for-31-com"
 date: 2026-11-14
-target: "[[overview|www-31-for-31-com]]"
+target: "www-31-for-31-com"
 ---
 
 # De-obfuscated Source Maps: www-31-for-31-com

@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: wiro-ae"
 date: 2026-11-15
-target: "[[overview|wiro-ae]]"
+target: "wiro-ae"
 ---
 
 # UI Architecture & Design Tokens: wiro-ae
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `wiro-ae` (`Wiro · Operating System for All Agencies`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `wiro-ae` (`Wiro · Operating System for All Agencies`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

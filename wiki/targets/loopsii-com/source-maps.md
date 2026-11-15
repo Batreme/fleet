@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: loopsii-com"
 date: 2026-11-14
-target: "[[overview|loopsii-com]]"
+target: "loopsii-com"
 ---
 
 # De-obfuscated Source Maps: loopsii-com

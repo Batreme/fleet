@@ -1,7 +1,9 @@
 ---
 title: "UI Prompt Blueprint: seedjewelry-com"
 date: 2026-11-15
-target: "[[overview|seedjewelry-com]]"
+target: "seedjewelry-com"
+status: analyzed
+capture: dom
 archetype: "Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jakarta Sans` + `Poppins` + `GTStandard-M`)"
 ---
 
@@ -9,7 +11,7 @@ archetype: "Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jaka
 
 > **Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai** — A Dubai-based lab-grown diamond high jewelry flagship pairing crisp diamond-white surfaces (`#ffffff`) with deep botanical emerald green (`#162924` and `rgb(48, 79, 72)` / `#304f48`), warm champagne gold CTAs (`--seed-cta-bg: #e8d3a8`), and a 6-tier responsive rem container ladder (`27.5rem` to `1920px`).
 
-![Desktop Viewport Capture (1440x7802)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +29,7 @@ archetype: "Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jaka
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x4200)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Full-Page Dimensions**: Desktop `1440×7802px` (`assets/desktop.png`), Mobile `390×4200px` (`assets/mobile.png`).

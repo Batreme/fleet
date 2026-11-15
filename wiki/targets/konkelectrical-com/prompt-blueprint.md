@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: konkelectrical-com"
 date: 2026-11-15
-target: "[[overview|konkelectrical-com]]"
+target: "konkelectrical-com"
 status: analyzed
+capture: dom
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0b0c` canvas, `#f2f0eb` ink, `#26262a` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0b0c` canvas
 
 > **Konk Electrical · Eastern Suburbs Electricians, Sydney** (https://konkelectrical.com/) — Electrical and automation specialists for high-end homes across Sydney's Eastern Suburbs. Lighting, smart home, data and audio visual, wi...
 
-![Desktop Viewport Capture (1440x20749)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0b0c` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×20749px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

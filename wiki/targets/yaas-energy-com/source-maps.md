@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: yaas-energy-com"
 date: 2026-11-14
-target: "[[overview|yaas-energy-com]]"
+target: "yaas-energy-com"
 ---
 
 # De-obfuscated Source Maps: yaas-energy-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: example-app"
 date: 2026-10-31
-target: "[[overview|example-app]]"
+target: "example-app"
 ---
 
 # Discovered APIs & Protocols: example-app

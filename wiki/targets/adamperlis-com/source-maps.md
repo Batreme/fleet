@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: adamperlis-com"
 date: 2026-11-14
-target: "[[overview|adamperlis-com]]"
+target: "adamperlis-com"
 ---
 
 # De-obfuscated Source Maps: adamperlis-com

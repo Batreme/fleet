@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: palaceskateboards-com"
 date: 2026-11-14
-target: "[[overview|palaceskateboards-com]]"
+target: "palaceskateboards-com"
 ---
 
 # Data Models & Client Storage: palaceskateboards-com

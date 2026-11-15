@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sibaldesign-com"
 date: 2026-11-14
-target: "[[overview|sibaldesign-com]]"
+target: "sibaldesign-com"
 ---
 
 # Discovered APIs & Protocols: sibaldesign-com

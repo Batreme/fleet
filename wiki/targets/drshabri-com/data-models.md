@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: drshabri-com"
 date: 2026-11-14
-target: "[[overview|drshabri-com]]"
+target: "drshabri-com"
 ---
 
 # Data Models & Client Storage: drshabri-com

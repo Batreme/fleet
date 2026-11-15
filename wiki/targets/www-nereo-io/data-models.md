@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-nereo-io"
 date: 2026-11-14
-target: "[[overview|www-nereo-io]]"
+target: "www-nereo-io"
 ---
 
 # Data Models & Client Storage: www-nereo-io

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: ieqtechnology-com"
 date: 2026-11-14
-target: "[[overview|ieqtechnology-com]]"
+target: "ieqtechnology-com"
 ---
 
 # Data Models & Client Storage: ieqtechnology-com

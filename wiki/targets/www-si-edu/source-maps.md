@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-si-edu"
 date: 2026-11-14
-target: "[[overview|www-si-edu]]"
+target: "www-si-edu"
 ---
 
 # De-obfuscated Source Maps: www-si-edu

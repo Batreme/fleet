@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: www-cybear-it_world"
 date: 2026-11-15
-target: "[[overview|www-cybear-it_world]]"
+target: "www-cybear-it_world"
 status: analyzed
+capture: dom
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#7fc4ef` / `#2b211b`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#7fc4ef` / `#2
 
 > **Cybear World** (https://www.cybear.it/world/) — Cybear World: il mondo 3D di Cybear da esplorare con l'orso, tra i cinque amici del Metodo Ecosistema, i case history, la mostra fotograf...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#7fc4ef` / `#2
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

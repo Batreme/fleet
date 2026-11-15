@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thefwa-net"
 date: 2026-11-14
-target: "[[overview|thefwa-net]]"
+target: "thefwa-net"
 ---
 
 # Data Models & Client Storage: thefwa-net

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: dennypratama-com"
 date: 2026-11-14
-target: "[[overview|dennypratama-com]]"
+target: "dennypratama-com"
 ---
 
 # Data Models & Client Storage: dennypratama-com

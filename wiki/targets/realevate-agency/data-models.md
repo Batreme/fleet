@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: realevate-agency"
 date: 2026-11-14
-target: "[[overview|realevate-agency]]"
+target: "realevate-agency"
 ---
 
 # Data Models & Client Storage: realevate-agency

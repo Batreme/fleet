@@ -1,12 +1,12 @@
 ---
 title: "UI & Design System: dennypratama-com"
 date: 2026-11-15
-target: "[[overview|dennypratama-com]]"
+target: "dennypratama-com"
 ---
 
 # UI Architecture & Design Tokens: dennypratama-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `dennypratama-com` (`Denny Pratama · Product Designer & Design Engineer Portfolio`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `dennypratama-com` (`Denny Pratama · Product Designer & Design Engineer Portfolio`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
 
 ## 🎨 Design Tokens (CSS Variables)
 

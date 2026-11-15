@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: tridentstars-maserati-com_en"
 date: 2026-11-15
-target: "[[overview|tridentstars-maserati-com_en]]"
+target: "tridentstars-maserati-com_en"
 status: analyzed
+capture: dom
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2d2d2d`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2d2
 
 > **Discover Maserati’s Trident Constellation in the Sky** (https://tridentstars.maserati.com/en/) — A real constellation of stars created to celebrate 100 years of vision, performance and iconic design.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#2d2
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Viewport Capture](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-impastofornoantico-com"
 date: 2026-11-14
-target: "[[overview|www-impastofornoantico-com]]"
+target: "www-impastofornoantico-com"
 ---
 
 # Data Models & Client Storage: www-impastofornoantico-com

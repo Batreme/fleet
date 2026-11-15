@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: jonmccormack-com"
 date: 2026-11-14
-target: "[[overview|jonmccormack-com]]"
+target: "jonmccormack-com"
 ---
 
 # Data Models & Client Storage: jonmccormack-com

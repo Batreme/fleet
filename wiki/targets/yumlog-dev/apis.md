@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: yumlog-dev"
 date: 2026-11-14
-target: "[[overview|yumlog-dev]]"
+target: "yumlog-dev"
 ---
 
 # Discovered APIs & Protocols: yumlog-dev

@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: re-cycle-org"
 date: 2026-11-14
-target: "[[overview|re-cycle-org]]"
+target: "re-cycle-org"
 ---
 
 # De-obfuscated Source Maps: re-cycle-org

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: white-desert-com"
 date: 2026-11-14
-target: "[[overview|white-desert-com]]"
+target: "white-desert-com"
 ---
 
 # Discovered APIs & Protocols: white-desert-com

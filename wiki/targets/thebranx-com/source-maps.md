@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: thebranx-com"
 date: 2026-11-14
-target: "[[overview|thebranx-com]]"
+target: "thebranx-com"
 ---
 
 # De-obfuscated Source Maps: thebranx-com

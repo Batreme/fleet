@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: karma-tracks-com"
 date: 2026-11-14
-target: "[[overview|karma-tracks-com]]"
+target: "karma-tracks-com"
 ---
 
 # De-obfuscated Source Maps: karma-tracks-com

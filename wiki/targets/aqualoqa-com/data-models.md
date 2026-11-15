@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: aqualoqa-com"
 date: 2026-11-14
-target: "[[overview|aqualoqa-com]]"
+target: "aqualoqa-com"
 ---
 
 # Data Models & Client Storage: aqualoqa-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-tedxportland-com"
 date: 2026-11-14
-target: "[[overview|www-tedxportland-com]]"
+target: "www-tedxportland-com"
 ---
 
 # Discovered APIs & Protocols: www-tedxportland-com

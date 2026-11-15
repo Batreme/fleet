@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: mrcresidencesbocaraton-com"
 date: 2026-11-14
-target: "[[overview|mrcresidencesbocaraton-com]]"
+target: "mrcresidencesbocaraton-com"
 ---
 
 # Data Models & Client Storage: mrcresidencesbocaraton-com

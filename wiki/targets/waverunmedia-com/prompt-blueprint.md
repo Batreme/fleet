@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: waverunmedia-com"
 date: 2026-11-15
-target: "[[overview|waverunmedia-com]]"
+target: "waverunmedia-com"
 status: analyzed
+capture: specimen
 archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `#f7f7f8` ink, `#e5e5e9` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `
 
 > **WaveRun Media** (https://waverunmedia.com/) — WaveRun Media captures the pulse of real stories that move markets and shape culture.
 
-![Desktop Viewport Capture (1440x6506)](assets/desktop.png)
+![Desktop Viewport Capture](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#6c6c89` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×6506px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

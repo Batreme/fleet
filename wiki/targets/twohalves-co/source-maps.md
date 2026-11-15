@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: twohalves-co"
 date: 2026-11-14
-target: "[[overview|twohalves-co]]"
+target: "twohalves-co"
 ---
 
 # De-obfuscated Source Maps: twohalves-co

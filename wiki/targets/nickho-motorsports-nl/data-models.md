@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: nickho-motorsports-nl"
 date: 2026-11-14
-target: "[[overview|nickho-motorsports-nl]]"
+target: "nickho-motorsports-nl"
 ---
 
 # Data Models & Client Storage: nickho-motorsports-nl

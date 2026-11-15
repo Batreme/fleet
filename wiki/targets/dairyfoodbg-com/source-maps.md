@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: dairyfoodbg-com"
 date: 2026-11-14
-target: "[[overview|dairyfoodbg-com]]"
+target: "dairyfoodbg-com"
 ---
 
 # De-obfuscated Source Maps: dairyfoodbg-com

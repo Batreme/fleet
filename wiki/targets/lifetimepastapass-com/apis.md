@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: lifetimepastapass-com"
 date: 2026-11-14
-target: "[[overview|lifetimepastapass-com]]"
+target: "lifetimepastapass-com"
 ---
 
 # Discovered APIs & Protocols: lifetimepastapass-com

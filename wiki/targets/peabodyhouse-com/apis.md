@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: peabodyhouse-com"
 date: 2026-11-14
-target: "[[overview|peabodyhouse-com]]"
+target: "peabodyhouse-com"
 ---
 
 # Discovered APIs & Protocols: peabodyhouse-com

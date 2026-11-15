@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: members-play-lacoste-com_ace-breaker-rg"
 date: 2026-11-15
-target: "[[overview|members-play-lacoste-com_ace-breaker-rg]]"
+target: "members-play-lacoste-com_ace-breaker-rg"
 status: analyzed
+capture: specimen
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b762ff` / `#ee5f62`)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b762ff` / `#e
 
 > **Lacoste - Ace breaker** (https://members-play.lacoste.com/ace-breaker-rg) — Play and break as many bricks as you can
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b762ff` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

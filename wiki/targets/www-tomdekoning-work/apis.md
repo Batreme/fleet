@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-tomdekoning-work"
 date: 2026-11-14
-target: "[[overview|www-tomdekoning-work]]"
+target: "www-tomdekoning-work"
 ---
 
 # Discovered APIs & Protocols: www-tomdekoning-work

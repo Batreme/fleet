@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: mosaic-flabbergast-agency"
 date: 2026-11-14
-target: "[[overview|mosaic-flabbergast-agency]]"
+target: "mosaic-flabbergast-agency"
 ---
 
 # Discovered APIs & Protocols: mosaic-flabbergast-agency

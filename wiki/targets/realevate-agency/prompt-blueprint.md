@@ -1,8 +1,9 @@
 ---
 title: "UI Prompt Blueprint: realevate-agency"
 date: 2026-11-15
-target: "[[overview|realevate-agency]]"
+target: "realevate-agency"
 status: analyzed
+capture: specimen
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1F2B5E` canvas, `#FFFFFF` ink, `#222A4C` accent)"
 ---
 
@@ -10,7 +11,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1F2B5E` canvas
 
 > **Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...** (https://realevate.agency/) — Realevate is a global real estate agency specializing in unique properties and exceptional developments in high-demand markets, offering...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
 
 ---
 
@@ -27,7 +28,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1F2B5E` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
+![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
 - **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thecontenders-co"
 date: 2026-11-14
-target: "[[overview|thecontenders-co]]"
+target: "thecontenders-co"
 ---
 
 # Data Models & Client Storage: thecontenders-co

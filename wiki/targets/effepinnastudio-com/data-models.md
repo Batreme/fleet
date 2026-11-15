@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: effepinnastudio-com"
 date: 2026-11-14
-target: "[[overview|effepinnastudio-com]]"
+target: "effepinnastudio-com"
 ---
 
 # Data Models & Client Storage: effepinnastudio-com

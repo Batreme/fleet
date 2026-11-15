@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-mynobs-co"
 date: 2026-11-14
-target: "[[overview|www-mynobs-co]]"
+target: "www-mynobs-co"
 ---
 
 # Data Models & Client Storage: www-mynobs-co

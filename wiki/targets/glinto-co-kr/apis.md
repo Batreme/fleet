@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: glinto-co-kr"
 date: 2026-11-14
-target: "[[overview|glinto-co-kr]]"
+target: "glinto-co-kr"
 ---
 
 # Discovered APIs & Protocols: glinto-co-kr

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: deathbyscroll-com"
 date: 2026-11-14
-target: "[[overview|deathbyscroll-com]]"
+target: "deathbyscroll-com"
 ---
 
 # Data Models & Client Storage: deathbyscroll-com

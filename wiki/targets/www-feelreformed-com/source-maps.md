@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: www-feelreformed-com"
 date: 2026-11-14
-target: "[[overview|www-feelreformed-com]]"
+target: "www-feelreformed-com"
 ---
 
 # De-obfuscated Source Maps: www-feelreformed-com

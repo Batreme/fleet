@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: www-anduril-com"
 date: 2026-11-14
-target: "[[overview|www-anduril-com]]"
+target: "www-anduril-com"
 ---
 
 # Discovered APIs & Protocols: www-anduril-com

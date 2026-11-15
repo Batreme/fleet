@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-era-residence-com"
 date: 2026-11-14
-target: "[[overview|www-era-residence-com]]"
+target: "www-era-residence-com"
 ---
 
 # Data Models & Client Storage: www-era-residence-com

@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-zagrebwebusluge-com"
 date: 2026-11-14
-target: "[[overview|www-zagrebwebusluge-com]]"
+target: "www-zagrebwebusluge-com"
 ---
 
 # Data Models & Client Storage: www-zagrebwebusluge-com

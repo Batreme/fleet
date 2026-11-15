@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: findra-art"
 date: 2026-11-14
-target: "[[overview|findra-art]]"
+target: "findra-art"
 ---
 
 # Data Models & Client Storage: findra-art

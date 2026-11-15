@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: thetiebreak-merci-michel-com"
 date: 2026-11-14
-target: "[[overview|thetiebreak-merci-michel-com]]"
+target: "thetiebreak-merci-michel-com"
 ---
 
 # Data Models & Client Storage: thetiebreak-merci-michel-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: sincro-es_en-us"
 date: 2026-11-14
-target: "[[overview|sincro-es_en-us]]"
+target: "sincro-es_en-us"
 ---
 
 # Discovered APIs & Protocols: sincro-es_en-us

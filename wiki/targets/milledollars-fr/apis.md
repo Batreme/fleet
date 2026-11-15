@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: milledollars-fr"
 date: 2026-11-14
-target: "[[overview|milledollars-fr]]"
+target: "milledollars-fr"
 ---
 
 # Discovered APIs & Protocols: milledollars-fr

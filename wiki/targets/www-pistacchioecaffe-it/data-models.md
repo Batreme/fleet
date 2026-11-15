@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-pistacchioecaffe-it"
 date: 2026-11-14
-target: "[[overview|www-pistacchioecaffe-it]]"
+target: "www-pistacchioecaffe-it"
 ---
 
 # Data Models & Client Storage: www-pistacchioecaffe-it

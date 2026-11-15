@@ -1,7 +1,7 @@
 ---
 title: "Data Models & Local State: www-oregonoutdooralliance-org"
 date: 2026-11-14
-target: "[[overview|www-oregonoutdooralliance-org]]"
+target: "www-oregonoutdooralliance-org"
 ---
 
 # Data Models & Client Storage: www-oregonoutdooralliance-org

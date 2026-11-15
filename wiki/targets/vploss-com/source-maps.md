@@ -1,7 +1,7 @@
 ---
 title: "Source Maps & Client AST: vploss-com"
 date: 2026-11-14
-target: "[[overview|vploss-com]]"
+target: "vploss-com"
 ---
 
 # De-obfuscated Source Maps: vploss-com

@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: ringpopcandy-com"
 date: 2026-11-14
-target: "[[overview|ringpopcandy-com]]"
+target: "ringpopcandy-com"
 ---
 
 # Discovered APIs & Protocols: ringpopcandy-com

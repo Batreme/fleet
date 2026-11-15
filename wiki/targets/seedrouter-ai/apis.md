@@ -1,7 +1,7 @@
 ---
 title: "APIs & Protocols: seedrouter-ai"
 date: 2026-11-14
-target: "[[overview|seedrouter-ai]]"
+target: "seedrouter-ai"
 ---
 
 # Discovered APIs & Protocols: seedrouter-ai
