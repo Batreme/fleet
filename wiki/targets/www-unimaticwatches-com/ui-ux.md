@@ -1,40 +1,32 @@
 ---
 title: "UI & Design System: www-unimaticwatches-com"
-date: 2026-11-14
+date: 2026-11-15
 target: "[[overview|www-unimaticwatches-com]]"
 ---
 
 # UI Architecture & Design Tokens: www-unimaticwatches-com
 
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-unimaticwatches-com` (`UNIMATIC Watches · Italian Minimalist Tool Watch Lab`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+
 ## 🎨 Design Tokens (CSS Variables)
 
-| Token Name | Inferred Value |
-|---|---|
-| `--space-1` | `.4rem` |
-| `--space-2` | `.8rem` |
-| `--space-2-5` | `1rem` |
-| `--space-3` | `1.2rem` |
-| `--space-4` | `1.6rem` |
-| `--space-5` | `2.4rem` |
-| `--space-6` | `3.2rem` |
-| `--color-tag-ink` | `#222` |
-| `--editorial-sticky-top` | `6.4rem` |
-| `--drawer-top-base` | `calc(var(--space-4) + var(--space-2-5) * 2 + 1.6rem + var(--` |
-| `--drawer-top` | `var(--drawer-top-base)` |
-| `--drawer-width` | `33rem` |
-| `--sticky-top` | `calc(var(--drawer-top-base) + var(--space-6))}.container{wid` |
-| `--padding-block-start` | `0px` |
-| `--padding-block-end` | `0px` |
-| `--slider-gap` | `var(--space-3)` |
-| `--card-basis` | `var(--col)` |
-| `--slider-gap` | `var(--gutter)}}.slider__track::-webkit-scrollbar{display:non` |
-| `--drawer-top` | `calc(max(env(safe-area-inset-top), 6.4rem) + 4rem) }}@media(` |
-| `--coin-image` | `url(https://cdn.shopify.com/shop-assets/static_uploads/shop-` |
-| `--coin-image-checked` | `url(https://cdn.shopify.com/shop-assets/static_uploads/shop-` |
-| `--x-opacity-disabled` | `1}[dir=ltr] .yY3sV [type=checkbox]{left:-.14285714285714285e` |
-| `--unbranded` | `hover:not([disabled]){background-color:#136f99}.shopify-paym` |
-| `--i6e6fx0` | `calc((var(--x-typography-size-default) * 40) / 14)` |
-| `--i6e6fx1` | `calc((var(--x-typography-size-default) * 24) / 14)` |
+| Token Name | Extracted Value | Semantic UI Role |
+|---|---|---|
+| `--color-bg` | `#F6F6F6` | Primary laboratory light gray background |
+| `--color-surface-page` | `#F6F6F6` | Page wrapper background surface |
+| `--color-ink` | `#000000` | Primary pure black typography & icon ink |
+| `--color-accent` | `#AFFF00` | High-visibility Super-LumiNova volt-lime accent |
+| `--color-media` | `#D9D9D9` | Neutral gray backdrop for studio watch photography |
+| `--color-white` | `#ffffff` | Pure white highlight surface |
+| `--color-ink-70` | `color-mix(in srgb, var(--color-ink) 70%, transparent)` | Secondary body copy ink (70% black) |
+| `--color-ink-50` | `color-mix(in srgb, var(--color-ink) 50%, transparent)` | Muted specification label ink (50% black) |
+| `--color-ink-30` | `color-mix(in srgb, var(--color-ink) 30%, transparent)` | Disabled / inactive slider control ink |
+| `--color-hairline` | `color-mix(in srgb, var(--color-ink) 15%, transparent)` | 1px structural grid hairline rule |
+| `--color-border` | `color-mix(in srgb, var(--color-ink) 20%, transparent)` | Interactive button & input border |
+| `--color-surface` | `color-mix(in srgb, var(--color-ink) 5%, transparent)` | Subtle elevated spec table surface |
+| `--color-scrim` | `color-mix(in srgb, var(--color-ink) 60%, transparent)` | Modal & drawer backdrop scrim |
+| `--color-glass-base` | `#FFFFFF` | Base color for frosted navigation pills |
+| `--color-glass-80` | `color-mix(in srgb, var(--color-glass-base) 80%, transparent)` | 80% translucent frosted pill background |
 
 ---
 
@@ -42,16 +34,16 @@ target: "[[overview|www-unimaticwatches-com]]"
 
 | Primitive | ID | Classes / Selectors |
 |---|---|---|
+| `<header>` | `shopify-section-sections--30951437533514__header` | `shopify-section shopify-section-group-header-group header-se` |
 | `<nav>` | `-` | `header__nav nav-pill` |
 | `<nav>` | `-` | `header__actions nav-pill nav-pill--sm` |
 | `<nav>` | `-` | `header__mobile` |
 | `<nav>` | `-` | `footer-column__links t-body` |
-| `<nav>` | `-` | `footer-column__links t-body` |
-| `<nav>` | `-` | `footer-column__links t-body` |
-| `<nav>` | `-` | `footer-column__links t-body` |
 | `<nav>` | `-` | `footer-utilities__widget footer-utilities__legal t-eyebrow` |
-| `<header>` | `shopify-section-sections--30951437533514__header` | `shopify-section shopify-section-group-header-group header-section` |
 | `<main>` | `MainContent` | `main` |
+| `<section>` | `shopify-pc__banner` | `shopify-pc__banner__dialog` |
+| `<section>` | `shopify-section-template--30951437730122__hero_XxHWhT` | `shopify-section hero` |
+| `<section>` | `shopify-section-template--30951437730122__bestseller` | `shopify-section product-carousel-section` |
+| `<section>` | `shopify-section-template--30951437730122__editorial` | `shopify-section editorial` |
+| `<section>` | `shopify-section-template--30951437730122__product-row` | `shopify-section prodrow-section` |
 | `<footer>` | `shopify-section-sections--30951437500746__footer` | `shopify-section shopify-section-group-footer-group footer` |
-| `<dialog>` | `-` | `header__drawer` |
-| `<dialog>` | `-` | `drawer cart-drawer` |

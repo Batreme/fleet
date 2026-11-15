@@ -15,6 +15,13 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 - [[2026-11-14-awwwards-photography-expansion]] — Scale reverse-harness knowledge base with 50 live Awwwards photography portfolio targets, vector indexing, and new design DNA archetypes.
 - [[2026-11-14-awwwards-multi-category-expansion]] — Massive multi-vertical expansion across all 25 Awwwards industry categories (575 production targets cataloged).
 - [[2026-11-14-custom-city-streetwear-embroidery]] — Dark heavyweight industrial streetwear e-commerce platform with interactive 2D live embroidery simulator, 3D puff relief preview, Tech Pack generator, and BLIK checkout.
+- [[2026-11-15-ui-prompt-designer-and-claude-loop]] — UI Prompt Designer skill, Anthropic `claude-loop` verification workflow, Batch 1 zero-shot UI Prompt Blueprints (`prompt-blueprint.md`) with full-page desktop/mobile captures, and `[[UI_EVALS_DASHBOARD]]`.
+
+---
+
+### 📊 Dashboards & Execution Traces (`wiki/`)
+- [[UI_EVALS_DASHBOARD]] — Master Obsidian dashboard tracking Batch 1 UI Prompt Blueprints, viewport captures, deterministic truth evaluations (`25.0/25.0`), and `claude-loop` review scores (`VERDICT: APPROVE`, `24/25`).
+- [[traces/round-01-trace]] — Round 1 execution trace and `C1`–`C13` remediation ledger audited by `claude-sonnet-5-5-high`.
 
 ---
 

@@ -1,40 +1,32 @@
 ---
 title: "UI & Design System: www-anduril-com"
-date: 2026-11-14
+date: 2026-11-15
 target: "[[overview|www-anduril-com]]"
 ---
 
 # UI Architecture & Design Tokens: www-anduril-com
 
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-anduril-com` (`Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+
 ## 🎨 Design Tokens (CSS Variables)
 
-| Token Name | Inferred Value |
-|---|---|
-| `--is-mob` | `0}@media (max-width:768px){:root{--is-mob:1}}body,html,#Stag` |
-| `--theme-color-background` | `#010101` |
-| `--theme-color-text` | `#fff}:root{--theme-color-background:#010101` |
-| `--theme-color-text` | `#fff}.theme-light{--theme-color-background:#fff` |
-| `--theme-color-text` | `#010101}.st{position:relative}.st .stega{visibility:hidden` |
-| `--base-color` | `black` |
-| `--contrast-color` | `white` |
-| `--base-color` | `white` |
-| `--contrast-color` | `black}.CircleButton.dark .button{border:1px solid #fff}.Circ` |
-| `--linkbutton-color` | `#fff` |
-| `--linkbutton-hover-color` | `#010101` |
-| `--linkbutton-color` | `#010101` |
-| `--linkbutton-hover-color` | `#fff}.LinkButton.icon-download .iconWrapper{width:1rem` |
-| `--roller-scale` | `1` |
-| `--roller-font-size` | `calc(3rem*var(--roller-scale))` |
-| `--roller-column-height` | `calc(2.5rem*var(--roller-scale))` |
-| `--roller-digit-width` | `calc(1.8rem*var(--roller-scale))` |
-| `--links-height` | `0px` |
-| `--frosted` | `0` |
-| `--backgroundOpacity` | `0` |
-| `--links-height` | `0px` |
-| `--frosted` | `0` |
-| `--backgroundOpacity` | `0` |
-| `--in-production-h` | `max(505px,100vw*505/403)` |
-| `--focus-ring-color` | `currentColor` |
+| Token Name | Extracted Value | Semantic UI Role |
+|---|---|---|
+| `--is-mob` | `0` | Viewport breakpoint flag (switches to `1` at `max-width: 768px`) |
+| `--theme-color-background` | `#010101` | Primary stealth carbon background surface |
+| `--theme-color-text` | `#fff` | Primary high-contrast text ink |
+| `--base-color` | `black` | Base substrate color keyword |
+| `--contrast-color` | `white` | High-contrast foreground keyword |
+| `--linkbutton-color` | `#fff` | Default `.LinkButton` & `.CircleButton` foreground |
+| `--linkbutton-hover-color` | `#010101` | Inverted button label ink on hover fill |
+| `--roller-scale` | `1` | Scale multiplier for mechanical odometer counters |
+| `--roller-font-size` | `calc(3rem*var(--roller-scale))` | Odometer digit font size |
+| `--roller-column-height` | `calc(2.5rem*var(--roller-scale))` | Odometer vertical slot height |
+| `--roller-digit-width` | `calc(1.8rem*var(--roller-scale))` | Odometer fixed monospace digit width |
+| `--links-height` | `0px` | Collapsible navigation submenu height state |
+| `--frosted` | `0` | Header backdrop frosted glass state toggle |
+| `--backgroundOpacity` | `0` | Dynamic scroll overlay opacity value |
+| `--in-production-h` | `max(505px,100vw*505/403)` | Responsive aspect-ratio height for production showcase |
 
 ---
 
@@ -42,8 +34,8 @@ target: "[[overview|www-anduril-com]]"
 
 | Primitive | ID | Classes / Selectors |
 |---|---|---|
+| `<header>` | `-` | `header` |
 | `<nav>` | `-` | `HeaderDesktop` |
 | `<nav>` | `-` | `HeaderMobile lenis` |
-| `<header>` | `-` | `header` |
-| `<main>` | `-` | `` |
+| `<main>` | `-` | `-` |
 | `<footer>` | `-` | `Footer` |

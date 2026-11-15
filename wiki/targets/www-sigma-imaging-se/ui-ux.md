@@ -1,40 +1,36 @@
 ---
 title: "UI & Design System: www-sigma-imaging-se"
-date: 2026-11-14
+date: 2026-11-15
 target: "[[overview|www-sigma-imaging-se]]"
 ---
 
 # UI Architecture & Design Tokens: www-sigma-imaging-se
 
+> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-sigma-imaging-se` (`SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [[prompt-blueprint|UI Prompt Blueprint]].
+
 ## 🎨 Design Tokens (CSS Variables)
 
-| Token Name | Inferred Value |
-|---|---|
-| `--action` | `hover{background:var(--adp-background-color-hover)}.air-date` |
-| `--title` | `hover{background:var(--adp-background-color-hover)}.air-date` |
-| `--current-hours` | `after,.air-datepicker-time--current-minutes:after{content:""` |
-| `--row` | `first-child{margin-bottom:4px}.air-datepicker-time--row inpu` |
-| `--adp-font-family` | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve` |
-| `--adp-font-size` | `14px` |
-| `--adp-width` | `246px` |
-| `--adp-z-index` | `100` |
-| `--adp-padding` | `4px` |
-| `--adp-grid-areas` | `"nav" "body" "timepicker" "buttons"` |
-| `--adp-transition-duration` | `.3s` |
-| `--adp-transition-ease` | `ease-out` |
-| `--adp-transition-offset` | `8px` |
-| `--adp-background-color` | `#fff` |
-| `--adp-background-color-hover` | `#f0f0f0` |
-| `--adp-background-color-active` | `#eaeaea` |
-| `--adp-background-color-in-range` | `rgba(92, 196, 239, .1)` |
-| `--adp-background-color-in-range-focused` | `rgba(92, 196, 239, .2)` |
-| `--adp-background-color-selected-other-month-focused` | `#8ad5f4` |
-| `--adp-background-color-selected-other-month` | `#a2ddf6` |
-| `--adp-color` | `#4a4a4a` |
-| `--adp-color-secondary` | `#9c9c9c` |
-| `--adp-accent-color` | `#4eb5e6` |
-| `--adp-color-current-date` | `var(--adp-accent-color)` |
-| `--adp-color-other-month` | `#dedede` |
+| Token Name | Extracted Value | Semantic UI Role |
+|---|---|---|
+| `--ps-white` | `#fefefd` | Primary optical white substrate |
+| `--ps-tint` | `#f7f7f7` | Secondary product card tint surface |
+| `--ps-text` | `#333` | Primary charcoal typography ink |
+| `--ps-text-muted` | `rgba(51, 51, 51, 0.5)` | Muted technical specification ink |
+| `--ps-font-ui` | `"Sigma Sans", sans-serif` | Primary technical UI & lens designation font |
+| `--ps-font-body` | `"Sigma Serif", serif` | Editorial monograph & body serif font |
+| `--snap-cols` | `1` | Responsive scroll-snap column divisor |
+| `--snap-gap` | `1rem` | Scroll-snap grid gutter spacing |
+| `--snap-size` | `calc((100% - var(--snap-gap)*(var(--snap-cols) - 1))/var(--snap-cols))` | Dynamic card width calculation |
+| `--ammenu-main-menu-background` | `#fefefd` | Header mega-menu background |
+| `--ammenu-main-menu-text` | `#333333` | Header navigation link ink |
+| `--ammenu-submenu-text-hover` | `#4d4d4d` | Submenu hover ink state |
+| `--ammenu-border` | `#757575` | Navigation structural divider color |
+| `--amcart-background` | `#FFFFFF` | Cart drawer background surface |
+| `--amcart-product-name` | `#000000` | Cart product title ink |
+| `--amscroll--transition-duration` | `.2s` | Fast UI transition duration |
+| `--amscroll--hover-filter` | `brightness(.8)` | Optical image hover darkening filter |
+| `--amscroll-border-color` | `#cccfd6` | Card & pagination border token |
+| `--ambar-toggle-active-color` | `#2563eb` | Active interactive toggle accent |
 
 ---
 
@@ -42,18 +38,17 @@ target: "[[overview|www-sigma-imaging-se]]"
 
 | Primitive | ID | Classes / Selectors |
 |---|---|---|
-| `<nav>` | `-` | `navigation sr-only` |
-| `<nav>` | `-` | `` |
-| `<nav>` | `am-account-menu` | `flex flex-col` |
-| `<nav>` | `-` | `` |
-| `<nav>` | `-` | `` |
 | `<header>` | `ammenu-header-container` | `ammenu-header-container page-header` |
 | `<header>` | `-` | `relative p-4` |
-| `<header>` | `-` | `relative p-4` |
 | `<header>` | `-` | `relative p-4 flex items-center justify-between` |
-| `<header>` | `-` | `relative p-4` |
-| `<header>` | `-` | `relative p-4` |
-| `<aside>` | `-` | `box-content fixed z-50 font-normal text-base shadow-lg pb-5 w-screen max-sm:max-w-full max-w-[390px]` |
-| `<aside>` | `-` | `bg-[var(--ammenu-main-menu-background)] box-content fixed z-50 font-normal text-base shadow-lg pt-5 ` |
+| `<nav>` | `-` | `navigation sr-only` |
+| `<nav>` | `-` | `-` |
+| `<nav>` | `am-account-menu` | `flex flex-col` |
 | `<main>` | `maincontent` | `page-main` |
-| `<footer>` | `-` | `page-footer` |
+| `<section>` | `-` | `message global noscript border-b-2 border-blue-500 bg-blue-5` |
+| `<section>` | `cart-drawer` | `-` |
+| `<section>` | `search-drawer` | `-` |
+| `<section>` | `store-switcher-drawer` | `-` |
+| `<section>` | `customer-drawer` | `-` |
+| `<section>` | `messages` | `-` |
+| `<section>` | `-` | `-` |
