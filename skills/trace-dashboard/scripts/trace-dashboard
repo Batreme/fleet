@@ -1,0 +1,3842 @@
+#!/usr/bin/env python3
+"""
+Fleet Agent Trace & Token Telemetry Dashboard (`trace-dashboard`)
+Obsidian Dark Telemetry Edition: Multi-View HUD & Agent Control Plane
+
+Engineered for precision agent observability, modeled after modern design engineering
+targets (Linear, Anduril, Vercel, Revelatio, Peaches, Vadim Carazan) from Fleet's Knowledge Base.
+"""
+
+from __future__ import annotations
+
+import argparse
+import glob
+import html
+import json
+import math
+import os
+import re
+import subprocess
+import time
+from collections import Counter
+from datetime import datetime, timezone
+from http.server import BaseHTTPRequestHandler, HTTPServer, ThreadingHTTPServer
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Tuple
+from urllib.parse import parse_qs, quote, urlparse
+
+BRAIN_DIR = Path.home() / ".gemini" / "antigravity-cli" / "brain"
+ANNOTATIONS_DIR = Path.home() / ".gemini" / "antigravity-cli" / "annotations"
+FLEET_ROOT = Path(__file__).resolve().parents[3]
+
+# Provider Rate Cards ($ per 1 Million Tokens)
+DEFAULT_RATE_CARDS: Dict[str, Dict[str, Any]] = {
+    "gemini-3.8-flash": {
+        "display": "Gemini 3.8 Flash",
+        "provider": "Google DeepMind",
+        "input": 0.10,
+        "cache": 0.025,
+        "reasoning": 0.40,
+        "output": 0.40,
+        "context_limit": 1000000,
+    },
+    "gemini-4-argon": {
+        "display": "Gemini 4 Argon",
+        "provider": "Google DeepMind",
+        "input": 1.25,
+        "cache": 0.3125,
+        "reasoning": 5.00,
+        "output": 5.00,
+        "context_limit": 2000000,
+    },
+    "gemini-3": {
+        "display": "Gemini 3",
+        "provider": "Google DeepMind",
+        "input": 0.50,
+        "cache": 0.125,
+        "reasoning": 2.00,
+        "output": 2.00,
+        "context_limit": 1000000,
+    },
+    "gemini-2.0-flash": {
+        "display": "Gemini 2.0 Flash",
+        "provider": "Google DeepMind",
+        "input": 0.10,
+        "cache": 0.025,
+        "reasoning": 0.40,
+        "output": 0.40,
+        "context_limit": 1000000,
+    },
+    "gemini-1.5-pro": {
+        "display": "Gemini 1.5 Pro",
+        "provider": "Google DeepMind",
+        "input": 1.25,
+        "cache": 0.3125,
+        "reasoning": 5.00,
+        "output": 5.00,
+        "context_limit": 2000000,
+    },
+    "gemini-1.5-flash": {
+        "display": "Gemini 1.5 Flash",
+        "provider": "Google DeepMind",
+        "input": 0.075,
+        "cache": 0.01875,
+        "reasoning": 0.30,
+        "output": 0.30,
+        "context_limit": 1000000,
+    },
+    "claude-3-7-sonnet": {
+        "display": "Claude 3.7 Sonnet",
+        "provider": "Anthropic",
+        "input": 3.00,
+        "cache": 0.30,
+        "reasoning": 15.00,
+        "output": 15.00,
+        "context_limit": 200000,
+    },
+    "claude-sonnet-5": {
+        "display": "Claude Sonnet 5",
+        "provider": "Anthropic",
+        "input": 3.00,
+        "cache": 0.30,
+        "reasoning": 15.00,
+        "output": 15.00,
+        "context_limit": 200000,
+    },
+    "claude-3-5-sonnet": {
+        "display": "Claude 3.5 Sonnet",
+        "provider": "Anthropic",
+        "input": 3.00,
+        "cache": 0.30,
+        "reasoning": 15.00,
+        "output": 15.00,
+        "context_limit": 200000,
+    },
+    "claude-opus-5-5": {
+        "display": "Claude Opus 5.5",
+        "provider": "Anthropic",
+        "input": 15.00,
+        "cache": 1.50,
+        "reasoning": 75.00,
+        "output": 75.00,
+        "context_limit": 200000,
+    },
+    "claude-3-5-haiku": {
+        "display": "Claude 3.5 Haiku",
+        "provider": "Anthropic",
+        "input": 0.80,
+        "cache": 0.08,
+        "reasoning": 4.00,
+        "output": 4.00,
+        "context_limit": 200000,
+    },
+    "gpt-4o": {
+        "display": "GPT-4o",
+        "provider": "OpenAI",
+        "input": 2.50,
+        "cache": 1.25,
+        "reasoning": 10.00,
+        "output": 10.00,
+        "context_limit": 128000,
+    },
+    "gpt-4o-mini": {
+        "display": "GPT-4o Mini",
+        "provider": "OpenAI",
+        "input": 0.15,
+        "cache": 0.075,
+        "reasoning": 0.60,
+        "output": 0.60,
+        "context_limit": 128000,
+    },
+    "default": {
+        "display": "Standard Model",
+        "provider": "Generic",
+        "input": 1.00,
+        "cache": 0.25,
+        "reasoning": 4.00,
+        "output": 4.00,
+        "context_limit": 200000,
+    },
+}
+
+
+def load_rate_cards() -> Dict[str, Dict[str, Any]]:
+    rates = dict(DEFAULT_RATE_CARDS)
+    override_paths = [
+        Path.home() / ".gemini" / "antigravity-cli" / "model_rates.json",
+        FLEET_ROOT / "config" / "model_rates.json",
+    ]
+    for p in override_paths:
+        if p.exists():
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+                for k, v in data.items():
+                    rates[k.lower()] = v
+            except Exception:
+                pass
+    return rates
+
+
+def match_rate_card(model_str: str, rate_cards: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
+    m_lower = model_str.lower()
+    if "flash" in m_lower and "3.8" in m_lower:
+        return rate_cards.get("gemini-3.8-flash", rate_cards["default"])
+    if "argon" in m_lower or "gemini 4" in m_lower:
+        return rate_cards.get("gemini-4-argon", rate_cards["default"])
+    if "claude" in m_lower and "3.7" in m_lower:
+        return rate_cards.get("claude-3-7-sonnet", rate_cards["default"])
+    if "claude" in m_lower and "opus" in m_lower:
+        return rate_cards.get("claude-opus-5-5", rate_cards["default"])
+    if "claude" in m_lower and "sonnet" in m_lower:
+        return rate_cards.get("claude-3-5-sonnet", rate_cards["default"])
+    if "claude" in m_lower and "haiku" in m_lower:
+        return rate_cards.get("claude-3-5-haiku", rate_cards["default"])
+    if "gpt-4o-mini" in m_lower:
+        return rate_cards.get("gpt-4o-mini", rate_cards["default"])
+    if "gpt-4o" in m_lower:
+        return rate_cards.get("gpt-4o", rate_cards["default"])
+    if "1.5-pro" in m_lower or "1.5 pro" in m_lower:
+        return rate_cards.get("gemini-1.5-pro", rate_cards["default"])
+    if "1.5-flash" in m_lower or "1.5 flash" in m_lower:
+        return rate_cards.get("gemini-1.5-flash", rate_cards["default"])
+    if "2.0-flash" in m_lower or "2.0 flash" in m_lower:
+        return rate_cards.get("gemini-2.0-flash", rate_cards["default"])
+    if "gemini" in m_lower:
+        return rate_cards.get("gemini-3.8-flash", rate_cards["default"])
+    return rate_cards["default"]
+
+
+def calculate_turn_cost(
+    model_str: str,
+    cached_context_tokens: int,
+    input_tokens: int,
+    thinking_tokens: int,
+    tool_tokens: int,
+    output_tokens: int,
+    rate_cards: Dict[str, Dict[str, Any]],
+) -> Dict[str, Any]:
+    card = match_rate_card(model_str, rate_cards)
+    p_in = card.get("input", 1.0)
+    p_cache = card.get("cache", 0.25)
+    p_think = card.get("reasoning", p_in)
+    p_out = card.get("output", 4.0)
+
+    cached_cost = (cached_context_tokens / 1_000_000.0) * p_cache
+    input_cost = (input_tokens / 1_000_000.0) * p_in
+    think_cost = (thinking_tokens / 1_000_000.0) * p_think
+    tool_cost = (tool_tokens / 1_000_000.0) * p_in
+    output_cost = (output_tokens / 1_000_000.0) * p_out
+
+    total = cached_cost + input_cost + think_cost + tool_cost + output_cost
+    return {
+        "cached_cost": cached_cost,
+        "input_cost": input_cost,
+        "think_cost": think_cost,
+        "tool_cost": tool_cost,
+        "output_cost": output_cost,
+        "total_cost": total,
+        "formatted": f"${total:.4f}" if total >= 0.0001 else "< $0.0001",
+        "rate_card": card,
+    }
+
+
+def estimate_tokens(text: str) -> int:
+    if not text:
+        return 0
+    return max(1, len(text) // 4)
+
+
+def clean_user_prompt(raw: str) -> str:
+    if not raw:
+        return ""
+    m = re.search(r"<USER_REQUEST>\s*(.*?)\s*</USER_REQUEST>", raw, flags=re.DOTALL)
+    if m:
+        return m.group(1).strip()
+    cleaned = re.sub(r"<[A-Z_]+>.*?</[A-Z_]+>", "", raw, flags=re.DOTALL).strip()
+    return cleaned or raw.strip()
+
+
+def parse_user_step_content(content: str) -> Dict[str, Any]:
+    if not content:
+        return {
+            "raw": "",
+            "user_request": "",
+            "additional_metadata": "",
+            "user_settings": "",
+            "context_summary": "",
+            "is_compacted": False,
+        }
+
+    m_req = re.search(r"<USER_REQUEST>(.*?)</USER_REQUEST>", content, re.DOTALL)
+    user_request = m_req.group(1).strip() if m_req else clean_user_prompt(content)
+
+    m_meta = re.search(r"<ADDITIONAL_METADATA>(.*?)</ADDITIONAL_METADATA>", content, re.DOTALL)
+    additional_metadata = m_meta.group(1).strip() if m_meta else ""
+
+    m_sett = re.search(r"<USER_SETTINGS_CHANGE>(.*?)</USER_SETTINGS_CHANGE>", content, re.DOTALL)
+    user_settings = m_sett.group(1).strip() if m_sett else ""
+
+    m_summ = re.search(r"<CONTEXT_SUMMARY>(.*?)</CONTEXT_SUMMARY>", content, re.DOTALL)
+    context_summary = m_summ.group(1).strip() if m_summ else ""
+
+    return {
+        "raw": content,
+        "user_request": user_request,
+        "additional_metadata": additional_metadata,
+        "user_settings": user_settings,
+        "context_summary": context_summary,
+        "is_compacted": bool(m_summ),
+    }
+
+
+def extract_model_changes(raw: str) -> List[str]:
+    if not raw or "Model" not in raw:
+        return []
+    settings_blocks = re.findall(r"<USER_SETTINGS_CHANGE>(.*?)</USER_SETTINGS_CHANGE>", raw, flags=re.DOTALL)
+    if not settings_blocks:
+        return []
+    res = []
+    for blk in settings_blocks:
+        m = re.search(r"setting\s+[`'\"]?(?:Model|Model Selection)[`'\"]?\s+from\s+[`'\"]?.*?[`'\"]?\s+to\s+[`'\"]?([A-Za-z0-9\.\-\s\(\)]+?)(?:\.\s*(?:No need to comment|$)|[`'\"]?\n|[`'\"]?$)", blk)
+        if m:
+            val = m.group(1).strip()
+            if val and len(val) < 60:
+                res.append(val)
+    return res
+
+
+def load_title(conv_id: str) -> str:
+    pbtxt = ANNOTATIONS_DIR / f"{conv_id}.pbtxt"
+    if pbtxt.exists():
+        try:
+            content = pbtxt.read_text(encoding="utf-8", errors="replace")
+            m = re.search(r'title:\s*"([^"]+)"', content)
+            if m:
+                return m.group(1)
+        except Exception:
+            pass
+    return ""
+
+
+def parse_iso_ts(ts_str: str) -> Optional[float]:
+    if not ts_str:
+        return None
+    try:
+        dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+        return dt.timestamp()
+    except Exception:
+        return None
+
+
+def fmt_duration(seconds: int) -> str:
+    if seconds < 0:
+        return "0s"
+    h = seconds // 3600
+    m = (seconds % 3600) // 60
+    s = seconds % 60
+    if h > 0:
+        return f"{h}h {m:02d}m {s:02d}s"
+    if m > 0:
+        return f"{m}m {s:02d}s"
+    return f"{s}s"
+
+
+def find_git_root(path: str) -> Optional[str]:
+    try:
+        p = Path(path).resolve()
+        if p.is_file():
+            p = p.parent
+        for candidate in [p] + list(p.parents):
+            if (candidate / ".git").exists():
+                return str(candidate)
+    except Exception:
+        pass
+    return None
+
+
+def get_git_diff_data(workspace_dir: Optional[str], edited_files: Optional[List[str]] = None) -> Dict[str, Any]:
+    repo_path = Path(workspace_dir) if workspace_dir else FLEET_ROOT
+    git_dir = repo_path / ".git"
+
+    if not git_dir.exists():
+        return {
+            "is_git": False,
+            "workspace": str(repo_path),
+            "branch": "",
+            "files_modified_count": 0,
+            "untracked_count": 0,
+            "total_additions": 0,
+            "total_deletions": 0,
+            "diffs_by_file": {},
+            "raw_diff": "(Workspace is not a Git repository)",
+        }
+
+    branch = "unknown"
+    try:
+        res = subprocess.run(
+            ["git", "-C", str(repo_path), "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=2,
+            check=False,
+        )
+        if res.returncode == 0:
+            branch = res.stdout.strip()
+    except Exception:
+        pass
+
+    untracked_files: List[str] = []
+    try:
+        res = subprocess.run(
+            ["git", "-C", str(repo_path), "status", "--porcelain"],
+            capture_output=True,
+            text=True,
+            timeout=2,
+            check=False,
+        )
+        if res.returncode == 0:
+            for line in res.stdout.splitlines():
+                if line.startswith("??"):
+                    untracked_files.append(line[3:].strip())
+    except Exception:
+        pass
+
+    diff_cmd = ["git", "-C", str(repo_path), "diff", "HEAD"]
+    raw_diff = ""
+    try:
+        res = subprocess.run(diff_cmd, capture_output=True, text=True, timeout=3, check=False)
+        if res.returncode == 0:
+            raw_diff = res.stdout
+    except Exception:
+        pass
+
+    if not raw_diff:
+        try:
+            res = subprocess.run(
+                ["git", "-C", str(repo_path), "diff"],
+                capture_output=True,
+                text=True,
+                timeout=3,
+                check=False,
+            )
+            if res.returncode == 0:
+                raw_diff = res.stdout
+        except Exception:
+            pass
+
+    file_diffs: Dict[str, Dict[str, Any]] = {}
+    current_file: Optional[str] = None
+    current_lines: List[str] = []
+    total_adds = 0
+    total_dels = 0
+
+    if raw_diff:
+        for line in raw_diff.splitlines():
+            if line.startswith("diff --git"):
+                if current_file:
+                    file_diffs[current_file] = {
+                        "path": current_file,
+                        "lines": current_lines,
+                        "additions": sum(1 for l in current_lines if l.startswith("+") and not l.startswith("+++")),
+                        "deletions": sum(1 for l in current_lines if l.startswith("-") and not l.startswith("---")),
+                    }
+                m = re.search(r" b/(.+)$", line)
+                current_file = m.group(1) if m else "unknown"
+                current_lines = [line]
+            else:
+                if current_file:
+                    current_lines.append(line)
+                    if line.startswith("+") and not line.startswith("+++"):
+                        total_adds += 1
+                    elif line.startswith("-") and not line.startswith("---"):
+                        total_dels += 1
+
+        if current_file:
+            file_diffs[current_file] = {
+                "path": current_file,
+                "lines": current_lines,
+                "additions": sum(1 for l in current_lines if l.startswith("+") and not l.startswith("+++")),
+                "deletions": sum(1 for l in current_lines if l.startswith("-") and not l.startswith("---")),
+            }
+
+    for uf in untracked_files:
+        if uf not in file_diffs:
+            full_path = repo_path / uf
+            u_lines = [f"diff --untracked a/{uf} b/{uf}", "--- /dev/null", f"+++ b/{uf}"]
+            u_adds = 0
+            if full_path.exists() and full_path.is_file():
+                try:
+                    for l in full_path.read_text(encoding="utf-8", errors="replace").splitlines()[:100]:
+                        u_lines.append(f"+{l}")
+                        u_adds += 1
+                except Exception:
+                    u_lines.append("+(Binary or unreadable untracked file)")
+            file_diffs[uf] = {
+                "path": uf,
+                "lines": u_lines,
+                "additions": u_adds,
+                "deletions": 0,
+                "untracked": True,
+            }
+            total_adds += u_adds
+
+    return {
+        "is_git": True,
+        "workspace": str(repo_path),
+        "branch": branch,
+        "files_modified_count": len(file_diffs),
+        "untracked_count": len(untracked_files),
+        "total_additions": total_adds,
+        "total_deletions": total_dels,
+        "diffs_by_file": file_diffs,
+        "raw_diff": raw_diff or "(No uncommitted diffs)",
+    }
+
+
+def get_system_prompt_info(workspace_dir: str, conv_id: str) -> Dict[str, Any]:
+    ws = Path(workspace_dir) if workspace_dir else FLEET_ROOT
+    if not ws.exists():
+        ws = FLEET_ROOT
+
+    # 1. Rules from AGENTS.md
+    agents_path = ws / "AGENTS.md"
+    if not agents_path.exists():
+        agents_path = FLEET_ROOT / "AGENTS.md"
+
+    agents_rules: List[Dict[str, Any]] = []
+    raw_agents_text = ""
+    if agents_path.exists():
+        try:
+            raw_agents_text = agents_path.read_text(encoding="utf-8", errors="replace")
+            current_rule: Optional[Dict[str, Any]] = None
+            for line in raw_agents_text.splitlines():
+                line_s = line.strip()
+                if line_s.startswith("## ") or (line_s.startswith("# ") and not line_s.startswith("# Workspace Rules")):
+                    if current_rule:
+                        agents_rules.append(current_rule)
+                    current_rule = {"title": line_s.lstrip("#").strip(), "points": []}
+                elif current_rule and (line_s.startswith("- ") or line_s.startswith("* ") or re.match(r"^\d+\.", line_s)):
+                    current_rule["points"].append(line_s)
+            if current_rule:
+                agents_rules.append(current_rule)
+        except Exception:
+            pass
+
+    # 2. Installed Skills
+    skills: List[Dict[str, Any]] = []
+    skills_search_dirs = [
+        ws / ".agents" / "skills",
+        ws / "skills",
+        FLEET_ROOT / ".agents" / "skills",
+        FLEET_ROOT / "skills",
+    ]
+    seen_skills: Set[str] = set()
+    for sdir in skills_search_dirs:
+        if sdir.exists():
+            for child in sorted(sdir.iterdir()):
+                if child.name not in seen_skills and (child.is_dir() or child.is_symlink()):
+                    sm = child / "SKILL.md"
+                    if sm.exists():
+                        try:
+                            txt = sm.read_text(encoding="utf-8", errors="replace")
+                            m_desc = re.search(r"description:\s*(?:>-\s*)?([^\n\r]+(?:\n\s+[^\n\r]+)*)", txt)
+                            desc = re.sub(r"\s+", " ", m_desc.group(1).strip()) if m_desc else "No description provided."
+                            skills.append({
+                                "name": child.name,
+                                "description": desc,
+                                "path": str(sm),
+                            })
+                            seen_skills.add(child.name)
+                        except Exception:
+                            pass
+
+    # 3. Subagents Roster
+    subagent_types = [
+        {
+            "name": "self",
+            "role": "Recursive Subagent",
+            "desc": "Inherits parent agent full configuration including all tools, system prompt, and active model. Used for task isolation.",
+        },
+        {
+            "name": "research",
+            "role": "Codebase & Web Researcher",
+            "desc": "Read-only sandbox specialist with web search, file reading, and symbol exploration. Runs without network write access.",
+        },
+        {
+            "name": "image-generator",
+            "role": "Visual Designer",
+            "desc": "Generates, edits, and crops visual diagrams, icons, and UI assets from text briefs, saving them to disk.",
+        },
+        {
+            "name": "firestore-rules-author",
+            "role": "Firestore Rules Specialist",
+            "desc": "Mandatory specialist subagent for authoring, auditing, and hardening Cloud Firestore Security Rules (firestore.rules).",
+        },
+        {
+            "name": "swarm-worker",
+            "role": "Collaborative Swarm Agent",
+            "desc": "Autonomous swarm worker communicating asynchronously via shared message board with dedicated roster name and workspace.",
+        },
+    ]
+
+    # 4. Native Tools Catalog
+    native_tools = [
+        {"name": "run_command", "cat": "Execution", "desc": "Execute shell commands in the workspace with background task persistence."},
+        {"name": "read_file", "cat": "Filesystem", "desc": "Read text, source code, images, PDF, and audio files with line offsets."},
+        {"name": "write_file", "cat": "Filesystem", "desc": "Create a new file or append to an existing file with artifact metadata."},
+        {"name": "edit_file", "cat": "Filesystem", "desc": "Perform exact string replacements for surgical contiguous block edits."},
+        {"name": "invoke_subagent", "cat": "Multi-Agent", "desc": "Launch specialized subagents asynchronously with dedicated roles and prompts."},
+        {"name": "send_message", "cat": "Multi-Agent", "desc": "Deliver messages to other agent conversations via unique conversation IDs."},
+        {"name": "manage_subagents", "cat": "Multi-Agent", "desc": "List active direct subagents or terminate running subagents."},
+        {"name": "manage_task", "cat": "Orchestration", "desc": "List running background tasks, check status, send input, or kill tasks."},
+        {"name": "schedule", "cat": "Orchestration", "desc": "Schedule one-shot timers or recurring cron jobs with reactive wakeups."},
+        {"name": "run_workflow", "cat": "Orchestration", "desc": "Run dynamic Python workflow scripts to coordinate fan-out and pipeline stages."},
+        {"name": "swarm", "cat": "Swarm", "desc": "Manage swarm roster (add, status, models, model, kill, title) on shared message board."},
+        {"name": "post_message", "cat": "Swarm", "desc": "Post public updates or @mentions to the shared swarm message board."},
+        {"name": "read_board", "cat": "Swarm", "desc": "Read chronological messages from the shared swarm message board."},
+        {"name": "swarm_wait", "cat": "Swarm", "desc": "Sleep cost-free until another swarm worker posts on the shared board."},
+        {"name": "ask_question", "cat": "Interaction", "desc": "Prompt user with structured multiple-choice interactive questions."},
+        {"name": "search_web", "cat": "Research", "desc": "Execute live web searches with domain filters and URL citations."},
+    ]
+
+    # 5. MCP Tools Catalog
+    mcp_tools: List[Dict[str, Any]] = []
+    mcp_dir = Path.home() / ".gemini" / "antigravity-cli" / "mcp"
+    if mcp_dir.exists():
+        for sdir in mcp_dir.iterdir():
+            if sdir.is_dir():
+                for jf in sdir.glob("*.json"):
+                    try:
+                        d = json.loads(jf.read_text(encoding="utf-8"))
+                        mcp_tools.append({
+                            "server": sdir.name,
+                            "name": jf.stem,
+                            "desc": d.get("description", "MCP external tool"),
+                            "path": str(jf),
+                        })
+                    except Exception:
+                        pass
+
+    # 6. Reconstructed Full System Prompt Assembly
+    skills_text_block = "\n".join(f"- {s['name']}: {s['description']}" for s in skills)
+    native_tools_block = "\n".join(f"- {t['name']} ({t['cat']}): {t['desc']}" for t in native_tools)
+    mcp_tools_block = "\n".join(f"- {m['name']} [{m['server']}]: {m['desc']}" for m in mcp_tools)
+
+    assembled_prompt = f"""<identity>
+You are Antigravity, a powerful agentic AI assistant designed by the Google DeepMind team.
+You are working with a USER to solve their task.
+The USER will send you requests, which you must always prioritize addressing. User requests are enclosed within <USER_REQUEST> tags.
+</identity>
+
+<user_rules>
+{raw_agents_text.strip()}
+</user_rules>
+
+<skills>
+{skills_text_block}
+</skills>
+
+<native_tools>
+{native_tools_block}
+</native_tools>
+
+<mcp_tools>
+{mcp_tools_block}
+</mcp_tools>
+
+<user_information>
+The USER's OS version is mac.
+Active Workspace: {ws}
+Command Working Directory: {ws}
+Conversation ID: {conv_id}
+App Data Directory: {Path.home() / ".gemini" / "antigravity-cli"}
+</user_information>"""
+
+    return {
+        "identity": "Antigravity by Google DeepMind",
+        "workspace": str(ws),
+        "agents_rules_path": str(agents_path),
+        "agents_rules": agents_rules,
+        "raw_agents_text": raw_agents_text,
+        "skills": skills,
+        "subagent_types": subagent_types,
+        "native_tools": native_tools,
+        "mcp_tools": mcp_tools,
+        "assembled_prompt": assembled_prompt,
+    }
+
+
+def parse_conversation(conv_dir: Path, rate_cards: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    conv_id = conv_dir.name
+    logs_dir = conv_dir / ".system_generated" / "logs"
+    transcript_path = logs_dir / "transcript_full.jsonl"
+    if not transcript_path.exists():
+        transcript_path = logs_dir / "transcript.jsonl"
+    if not transcript_path.exists():
+        return None
+
+    try:
+        mtime = transcript_path.stat().st_mtime
+    except OSError:
+        return None
+
+    steps: List[Dict[str, Any]] = []
+    try:
+        with open(transcript_path, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    steps.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
+    except OSError:
+        return None
+
+    if not steps:
+        return None
+
+    current_model = "Default (Inherited)"
+    models_seen: List[str] = []
+    subagents: List[Dict[str, Any]] = []
+    prompts: List[Dict[str, Any]] = []
+
+    current_turn: Optional[Dict[str, Any]] = None
+    cumulative_context_tokens = 0
+    total_input_tokens = 0
+    total_thinking_tokens = 0
+    total_tool_tokens = 0
+    total_output_tokens = 0
+    total_estimated_spend = 0.0
+
+    touched_paths: Dict[str, Dict[str, Any]] = {}
+    detected_git_roots: List[str] = []
+
+    first_step_time = steps[0].get("created_at", "")
+    last_step_time = steps[-1].get("created_at", "")
+
+    for i, step in enumerate(steps):
+        source = step.get("source", "")
+        stype = step.get("type", "")
+        status = step.get("status", "")
+        created_at = step.get("created_at", "")
+        content = str(step.get("content", "") or "")
+        thinking = str(step.get("thinking", "") or "")
+        tool_calls = step.get("tool_calls", []) or []
+
+        for m in extract_model_changes(content):
+            current_model = m
+            if m not in models_seen:
+                models_seen.append(m)
+
+        for tc in tool_calls:
+            tname = tc.get("name", "")
+            args = tc.get("args", {}) or {}
+            for path_key in ("Path", "Cwd"):
+                if path_key in args:
+                    p_val = str(args[path_key]).strip('"')
+                    if os.path.isabs(p_val):
+                        root = find_git_root(p_val)
+                        if root:
+                            detected_git_roots.append(root)
+                        mode = "EDITED" if tname in ("write_file", "edit_file") else "READ"
+                        if p_val not in touched_paths or mode == "EDITED":
+                            touched_paths[p_val] = {
+                                "path": p_val,
+                                "name": os.path.basename(p_val),
+                                "mode": mode,
+                                "tool": tname,
+                                "step": step.get("step_index", i),
+                            }
+            if tname == "run_command" and "CommandLine" in args:
+                cmd = str(args["CommandLine"])
+                for match in re.findall(r"(?:/Users/[^\s\"']+|/\w+/[^\s\"']+)", cmd):
+                    root = find_git_root(match)
+                    if root:
+                        detected_git_roots.append(root)
+
+        if source == "USER_EXPLICIT" and stype == "USER_INPUT":
+            parsed_step = parse_user_step_content(content)
+            in_tok = estimate_tokens(content)
+            cached_context = cumulative_context_tokens
+            cumulative_context_tokens += in_tok
+            total_input_tokens += in_tok
+
+            t_cost = calculate_turn_cost(
+                current_model,
+                cached_context,
+                in_tok,
+                0,
+                0,
+                0,
+                rate_cards,
+            )
+            total_estimated_spend += t_cost["total_cost"]
+
+            m_changes = extract_model_changes(content)
+            current_turn = {
+                "turn_index": len(prompts) + 1,
+                "step_index": step.get("step_index", i),
+                "timestamp": created_at,
+                "model": current_model,
+                "model_switched": m_changes[0] if m_changes else None,
+                "prompt": parsed_step["user_request"],
+                "raw_payload": parsed_step["raw"],
+                "additional_metadata": parsed_step["additional_metadata"],
+                "user_settings": parsed_step["user_settings"],
+                "context_summary": parsed_step["context_summary"],
+                "is_compacted": parsed_step["is_compacted"],
+                "prior_context_tokens": cached_context,
+                "input_tokens": in_tok,
+                "thinking_tokens": 0,
+                "tool_tokens": 0,
+                "output_tokens": 0,
+                "turn_total_tokens": in_tok,
+                "cumulative_context_tokens": cumulative_context_tokens,
+                "cost": t_cost,
+                "tools_used": [],
+                "steps": [],
+                "flow_nodes": [
+                    {
+                        "id": f"p-{len(prompts)+1}",
+                        "type": "prompt",
+                        "category": "prompt",
+                        "title": f"Turn #{len(prompts)+1}",
+                        "subtitle": parsed_step["user_request"][:50] + ("..." if len(parsed_step["user_request"]) > 50 else ""),
+                        "full_text": parsed_step["user_request"],
+                        "tokens": in_tok,
+                        "timestamp": created_at,
+                    }
+                ],
+                "status": status,
+            }
+            prompts.append(current_turn)
+            continue
+
+        if current_turn is None:
+            current_turn = {
+                "turn_index": 1,
+                "step_index": step.get("step_index", i),
+                "timestamp": created_at,
+                "model": current_model,
+                "model_switched": None,
+                "prompt": "(System / Subagent Initialized Thread)",
+                "raw_payload": content,
+                "additional_metadata": "",
+                "user_settings": "",
+                "context_summary": "",
+                "is_compacted": False,
+                "prior_context_tokens": 0,
+                "input_tokens": 0,
+                "thinking_tokens": 0,
+                "tool_tokens": 0,
+                "output_tokens": 0,
+                "turn_total_tokens": 0,
+                "cumulative_context_tokens": cumulative_context_tokens,
+                "cost": calculate_turn_cost(current_model, 0, 0, 0, 0, 0, rate_cards),
+                "tools_used": [],
+                "steps": [],
+                "flow_nodes": [],
+                "status": status,
+            }
+            prompts.append(current_turn)
+
+        current_turn["model"] = current_model
+        current_turn["status"] = status
+
+        step_record = {
+            "step_index": step.get("step_index", i),
+            "source": source,
+            "type": stype,
+            "status": status,
+            "timestamp": created_at,
+            "tool_calls": [],
+            "thinking_preview": thinking[:280] + ("..." if len(thinking) > 280 else "") if thinking else "",
+            "has_full_thinking": len(thinking) > 280,
+            "content_preview": content[:360] + ("..." if len(content) > 360 else "") if content else "",
+            "has_full_output": len(content) > 360 or bool(step.get("truncated_fields")),
+        }
+
+        if thinking:
+            current_turn["flow_nodes"].append({
+                "id": f"think-{step.get('step_index', i)}",
+                "type": "thinking",
+                "category": "thinking",
+                "title": f"Thought #{step.get('step_index', i)}",
+                "subtitle": thinking[:56] + ("..." if len(thinking) > 56 else ""),
+                "full_text": thinking,
+                "step_index": step.get("step_index", i),
+                "timestamp": created_at,
+            })
+
+        if stype == "PLANNER_RESPONSE":
+            th_tok = estimate_tokens(thinking)
+            out_tok = estimate_tokens(content)
+            tc_str = json.dumps(tool_calls, ensure_ascii=False) if tool_calls else ""
+            tc_tok = estimate_tokens(tc_str) if tool_calls else 0
+
+            current_turn["thinking_tokens"] += th_tok
+            current_turn["output_tokens"] += out_tok
+            current_turn["tool_tokens"] += tc_tok
+
+            total_thinking_tokens += th_tok
+            total_output_tokens += out_tok
+            total_tool_tokens += tc_tok
+
+            cumulative_context_tokens += (out_tok + tc_tok)
+            current_turn["turn_total_tokens"] += (th_tok + out_tok + tc_tok)
+            current_turn["cumulative_context_tokens"] = cumulative_context_tokens
+
+            for tc_idx, tc in enumerate(tool_calls):
+                tname = tc.get("name", "unknown")
+                current_turn["tools_used"].append(tname)
+                args = tc.get("args", {}) or {}
+                summary = tc.get("toolSummary") or str(args.get("toolSummary") or "")
+
+                step_record["tool_calls"].append({
+                    "name": tname,
+                    "summary": summary,
+                    "args": args,
+                })
+
+                cat = (
+                    "shell"
+                    if tname == "run_command"
+                    else (
+                        "fs_edit"
+                        if tname in ("write_file", "edit_file")
+                        else ("fs_read" if tname == "read_file" else ("agent" if tname in ("invoke_subagent", "swarm") else "mcp"))
+                    )
+                )
+                cmd_or_path = str(args.get("CommandLine") or args.get("Path") or summary or "")
+                current_turn["flow_nodes"].append({
+                    "id": f"tool-{step.get('step_index', i)}-{tc_idx}",
+                    "type": "tool",
+                    "category": cat,
+                    "title": tname,
+                    "subtitle": cmd_or_path[:48] + ("..." if len(cmd_or_path) > 48 else ""),
+                    "args": args,
+                    "summary": summary,
+                    "step_index": step.get("step_index", i),
+                    "timestamp": created_at,
+                    "output_preview": content[:180] if content else "",
+                })
+
+                if tname == "invoke_subagent":
+                    subagents.append({
+                        "kind": "subagent",
+                        "role": str(args.get("Role", "")).strip('"'),
+                        "type": str(args.get("TypeName", "")).strip('"'),
+                        "model": str(args.get("Model", "inherit")).strip('"'),
+                        "timestamp": created_at,
+                    })
+                elif tname == "swarm":
+                    action = str(args.get("action", "")).strip('"')
+                    if action == "add":
+                        subagents.append({
+                            "kind": "swarm-worker",
+                            "role": str(args.get("name", "worker")).strip('"'),
+                            "type": "swarm",
+                            "model": str(args.get("model", current_model)).strip('"') or current_model,
+                            "timestamp": created_at,
+                        })
+        else:
+            tok = estimate_tokens(content)
+            current_turn["tool_tokens"] += tok
+            total_tool_tokens += tok
+            cumulative_context_tokens += tok
+            current_turn["turn_total_tokens"] += tok
+            current_turn["cumulative_context_tokens"] = cumulative_context_tokens
+
+        # Recalculate cost
+        current_turn["cost"] = calculate_turn_cost(
+            current_turn["model"],
+            current_turn["cumulative_context_tokens"] - current_turn["turn_total_tokens"],
+            current_turn["input_tokens"],
+            current_turn["thinking_tokens"],
+            current_turn["tool_tokens"],
+            current_turn["output_tokens"],
+            rate_cards,
+        )
+        current_turn["steps"].append(step_record)
+
+    last_step = steps[-1]
+    last_status = last_step.get("status", "DONE")
+    last_type = last_step.get("type", "")
+    last_has_tools = bool(last_step.get("tool_calls"))
+    age_seconds = time.time() - mtime
+
+    is_working = (
+        age_seconds < 120
+        and (
+            last_status == "RUNNING"
+            or (last_type == "PLANNER_RESPONSE" and last_has_tools)
+            or last_type == "USER_INPUT"
+        )
+    )
+    live_state = "WORKING" if is_working else ("RECENT" if age_seconds < 900 else "IDLE")
+
+    title = load_title(conv_id)
+    if not title and prompts:
+        first_p = prompts[0]["prompt"]
+        title = (first_p[:56] + "…") if len(first_p) > 56 else first_p
+    if not title:
+        title = conv_id[:8]
+
+    session_rate = match_rate_card(current_model, rate_cards)
+    ctx_limit = session_rate.get("context_limit", 200000)
+    saturation_pct = min(100.0, round((cumulative_context_tokens / max(1, ctx_limit)) * 100, 1))
+    saturation_status = "healthy" if saturation_pct < 70 else ("warning" if saturation_pct < 90 else "critical")
+
+    primary_workspace = str(FLEET_ROOT)
+    if detected_git_roots:
+        counts = Counter(detected_git_roots)
+        primary_workspace = counts.most_common(1)[0][0]
+
+    # Timing & duration calculation
+    start_ts = parse_iso_ts(first_step_time) or mtime
+    last_ts = parse_iso_ts(last_step_time) or mtime
+    if is_working:
+        duration_sec = max(1, int(time.time() - start_ts))
+    else:
+        duration_sec = max(1, int(last_ts - start_ts)) if last_ts > start_ts else int(mtime - start_ts if mtime > start_ts else 1)
+
+    return {
+        "id": conv_id,
+        "title": title,
+        "mtime": mtime,
+        "start_time": first_step_time,
+        "start_ts_ms": int(start_ts * 1000),
+        "duration_seconds": duration_sec,
+        "duration_formatted": fmt_duration(duration_sec),
+        "last_updated": datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S"),
+        "live_state": live_state,
+        "is_active": is_working,
+        "current_model": current_model,
+        "models_seen": models_seen or [current_model],
+        "subagents": subagents,
+        "steps_count": len(steps),
+        "prompts_count": len(prompts),
+        "total_input_tokens": total_input_tokens,
+        "total_thinking_tokens": total_thinking_tokens,
+        "total_tool_tokens": total_tool_tokens,
+        "total_output_tokens": total_output_tokens,
+        "total_context_tokens": cumulative_context_tokens,
+        "total_tokens": cumulative_context_tokens + total_thinking_tokens,
+        "estimated_spend": total_estimated_spend,
+        "cost_formatted": f"${total_estimated_spend:.4f}" if total_estimated_spend >= 0.0001 else "< $0.0001",
+        "context_saturation": {
+            "limit": ctx_limit,
+            "tokens": cumulative_context_tokens,
+            "percent": saturation_pct,
+            "status": saturation_status,
+        },
+        "workspace": primary_workspace,
+        "touched_files": list(touched_paths.values()),
+        "prompts": prompts,
+    }
+
+
+def collect_all_traces() -> List[Dict[str, Any]]:
+    rate_cards = load_rate_cards()
+    convs: List[Dict[str, Any]] = []
+    if not BRAIN_DIR.exists():
+        return convs
+    for child in BRAIN_DIR.iterdir():
+        if child.is_dir():
+            parsed = parse_conversation(child, rate_cards)
+            if parsed:
+                convs.append(parsed)
+    convs.sort(key=lambda c: c["mtime"], reverse=True)
+    return convs
+
+
+def fmt_num(n: int) -> str:
+    return f"{n:,}"
+
+
+def generate_markdown(convs: List[Dict[str, Any]]) -> str:
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    total_convs = len(convs)
+    total_prompts = sum(c["prompts_count"] for c in convs)
+    total_steps = sum(c["steps_count"] for c in convs)
+    grand_tokens = sum(c["total_tokens"] for c in convs)
+    grand_in = sum(c["total_input_tokens"] for c in convs)
+    grand_think = sum(c["total_thinking_tokens"] for c in convs)
+    grand_tool = sum(c["total_tool_tokens"] for c in convs)
+    grand_out = sum(c["total_output_tokens"] for c in convs)
+    grand_cost = sum(c["estimated_spend"] for c in convs)
+
+    working_convs = [c for c in convs if c["live_state"] in ("WORKING", "RECENT")]
+    all_models = sorted({m for c in convs for m in c["models_seen"]})
+
+    lines = [
+        "# Agent Trace, Token & Dollar Cost Telemetry Dashboard",
+        "",
+        f"> **Last Synced**: `{now_str}` · **Live UI**: [http://127.0.0.1:8765](http://127.0.0.1:8765) · **Visual System**: Obsidian Telemetry HUD (Linear/Anduril/Stripe Precision Dark)",
+        "",
+        "---",
+        "",
+        "## Global Telemetry & Cost Summary",
+        "",
+        "| Metric | Value | Breakdown / Estimation Basis |",
+        "| :--- | :--- | :--- |",
+        f"| **Tracked Conversations** | **{total_convs}** | `{len(working_convs)}` Active/Recent · `{total_convs - len(working_convs)}` Idle |",
+        f"| **Total Prompts / Steps** | **{fmt_num(total_prompts)} prompts** | **{fmt_num(total_steps)}** total execution steps |",
+        f"| **Estimated API Spend ($ USD)** | **${grand_cost:.4f}** | Estimated via standard rate cards (~chars/4 heuristic) |",
+        f"| **Cumulative Token Volume** | **~{fmt_num(grand_tokens)} tokens** | Input: `{fmt_num(grand_in)}` · Thinking: `{fmt_num(grand_think)}` · Tools: `{fmt_num(grand_tool)}` · Output: `{fmt_num(grand_out)}` |",
+        f"| **Models Detected** | **{len(all_models)} models** | {', '.join(f'`{m}`' for m in all_models)} |",
+        "",
+        "---",
+        "",
+        "## Active & Recent Sessions (Model, Cost & Context Saturation)",
+        "",
+        "| Status | Conversation | Active Model | Runtime | Prompts | Context Saturation | Est. Cost ($) | Input Tok | Thinking Tok | Tool IO Tok | Output Tok | Last Active |",
+        "| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |",
+    ]
+
+    for c in convs[:25]:
+        badge = "WORKING" if c["live_state"] == "WORKING" else ("RECENT" if c["live_state"] == "RECENT" else "IDLE")
+        sat = c["context_saturation"]
+        sat_str = f"`{sat['percent']}%` ({fmt_num(sat['tokens'])}/{fmt_num(sat['limit'])})"
+        safe_title = c["title"].replace("|", "·").replace("\n", " ")[:40]
+        lines.append(
+            f"| {badge} | **{safe_title}**<br>`{c['id'][:8]}` | `{c['current_model']}` | `{c['duration_formatted']}` | {c['prompts_count']} | "
+            f"{sat_str} | **`{c['cost_formatted']}`** | `{fmt_num(c['total_input_tokens'])}` | `{fmt_num(c['total_thinking_tokens'])}` | "
+            f"`{fmt_num(c['total_tool_tokens'])}` | `{fmt_num(c['total_output_tokens'])}` | `{c['last_updated']}` |"
+        )
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## Subagents & Multi-Model Workers Spawned",
+        "",
+        "| Parent Session | Worker Role / Name | Type | Assigned Model | Timestamp |",
+        "| :--- | :--- | :--- | :--- | :--- |",
+    ])
+
+    any_sub = False
+    for c in convs:
+        for s in c["subagents"]:
+            any_sub = True
+            lines.append(
+                f"| **{c['title'][:32]}** (`{c['id'][:8]}`) | `{s['role']}` | `{s['type']}` | **`{s['model']}`** | `{s['timestamp']}` |"
+            )
+    if not any_sub:
+        lines.append("| *(None recorded)* | — | — | — | — |")
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## Deep Prompt & Turn Traces (Latest 10 Conversations)",
+        "",
+    ])
+
+    for c in convs[:10]:
+        badge = "WORKING" if c["live_state"] == "WORKING" else ("RECENT" if c["live_state"] == "RECENT" else "IDLE")
+        sat = c["context_saturation"]
+        lines.extend([
+            f"### [{badge}] {c['title']} (`{c['id']}`)",
+            f"- **Active Model**: `{c['current_model']}` · **Duration**: `{c['duration_formatted']}` · **Est. Spend**: `{c['cost_formatted']}` · **Context Ceiling**: `{sat['percent']}%` of `{fmt_num(sat['limit'])} tok` · **Workspace**: `{c['workspace']}`",
+            "",
+            "| Turn | Prompt Preview | Model | Est. Cost | Prompt In | Thinking | Tool IO | Reply | Context Accum | Tools Invocations |",
+            "| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |",
+        ])
+        for p in c["prompts"]:
+            preview = p["prompt"].replace("|", "·").replace("\n", " ").strip()
+            if len(preview) > 52:
+                preview = preview[:49] + "..."
+            tools_summary = ", ".join(dict.fromkeys(p["tools_used"])) if p["tools_used"] else "—"
+            if len(tools_summary) > 36:
+                tools_summary = tools_summary[:33] + "..."
+            lines.append(
+                f"| `#{p['turn_index']}` | {preview} | `{p['model']}` | **`{p['cost']['formatted']}`** | `{fmt_num(p['input_tokens'])}` | "
+                f"`{fmt_num(p['thinking_tokens'])}` | `{fmt_num(p['tool_tokens'])}` | `{fmt_num(p['output_tokens'])}` | "
+                f"`{fmt_num(p['cumulative_context_tokens'])}` | `{tools_summary}` |"
+            )
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def sync_markdown_files(convs: List[Dict[str, Any]]) -> List[Path]:
+    md = generate_markdown(convs)
+    written = []
+    targets = [
+        FLEET_ROOT / "wiki" / "AGENT_TRACES_DASHBOARD.md",
+        FLEET_ROOT / "GIT" / "wiki" / "AGENT_TRACES_DASHBOARD.md",
+    ]
+    for t in targets:
+        try:
+            t.parent.mkdir(parents=True, exist_ok=True)
+            t.write_text(md, encoding="utf-8")
+            written.append(t)
+        except Exception:
+            pass
+    return written
+
+
+def render_html(
+    convs: List[Dict[str, Any]],
+    selected_id: Optional[str] = None,
+    current_view: str = "overview",
+    active_tab: str = "prompts",
+    active_turn: Optional[int] = None,
+) -> str:
+    rate_cards = load_rate_cards()
+    total_convs = len(convs)
+    total_prompts = sum(c["prompts_count"] for c in convs)
+    total_steps = sum(c["steps_count"] for c in convs)
+    grand_tokens = sum(c["total_tokens"] for c in convs)
+    grand_cost = sum(c["estimated_spend"] for c in convs)
+
+    working_sessions = [c for c in convs if c["live_state"] == "WORKING"]
+    recent_sessions = [c for c in convs if c["live_state"] == "RECENT"]
+    active_pool = working_sessions or recent_sessions or convs[:4]
+
+    selected = next((c for c in convs if c["id"] == selected_id), convs[0] if convs else None)
+    edited_paths = [tf["path"] for tf in (selected.get("touched_files", []) if selected else []) if tf.get("mode") == "EDITED"]
+    git_data = get_git_diff_data(selected["workspace"] if selected else None, edited_paths)
+    system_config = get_system_prompt_info(selected["workspace"] if selected else str(FLEET_ROOT), selected["id"] if selected else "")
+
+    # Fleet Chart Computations
+    model_counts: Counter = Counter()
+    model_tokens: Counter = Counter()
+    tool_counts: Counter = Counter()
+    repo_spend: Counter = Counter()
+
+    for c in convs:
+        model_counts[c["current_model"]] += 1
+        model_tokens[c["current_model"]] += c["total_tokens"]
+        repo_spend[os.path.basename(c["workspace"]) or "fleet"] += c["estimated_spend"]
+        for p in c.get("prompts", []):
+            for t in p.get("tools_used", []):
+                tool_counts[t] += 1
+
+    # SVG Chart 1: Model Token Share
+    total_m_tok = max(1, sum(model_tokens.values()))
+    top_models = model_tokens.most_common(5)
+    palette = ["#38BDF8", "#10B981", "#A855F7", "#F59E0B", "#64748B"]
+    m_bars_svg = []
+    m_legend_html = []
+    x_offset = 0.0
+    for idx, (m_name, m_tok) in enumerate(top_models):
+        pct = (m_tok / total_m_tok) * 100.0
+        w = (m_tok / total_m_tok) * 480.0
+        c_color = palette[idx % len(palette)]
+        m_bars_svg.append(f'<rect x="{x_offset:.1f}" y="0" width="{w:.1f}" height="14" fill="{c_color}"/>')
+        x_offset += w
+        m_legend_html.append(f"""
+        <div class="legend-item">
+          <span class="legend-swatch" style="background:{c_color};"></span>
+          <span class="mono">{html.escape(m_name)}</span>
+          <span class="mono muted">{pct:.1f}% ({fmt_num(m_tok)} tok)</span>
+        </div>
+        """)
+    model_share_svg = f"""
+    <svg width="100%" height="14" viewBox="0 0 480 14" preserveAspectRatio="none" style="border-radius:4px; overflow:hidden;">
+      {''.join(m_bars_svg)}
+    </svg>
+    """
+
+    # SVG Chart 2: Top Invoked Tools
+    top_tools = tool_counts.most_common(6)
+    max_t_val = max((v for _, v in top_tools), default=1)
+    tool_bars_svg = []
+    y_pos = 6
+    for t_name, t_val in top_tools:
+        bw = int((t_val / max_t_val) * 240)
+        tool_bars_svg.append(f"""
+        <g class="chart-row">
+          <text x="0" y="{y_pos+11}" fill="#94A3B8" font-size="11" font-family="JetBrains Mono, monospace">{html.escape(t_name)}</text>
+          <rect x="120" y="{y_pos}" width="{bw}" height="13" rx="3" fill="#38BDF8" opacity="0.85"/>
+          <text x="{120 + bw + 8}" y="{y_pos+11}" fill="#F1F5F9" font-size="11" font-weight="600" font-family="JetBrains Mono, monospace">{fmt_num(t_val)}</text>
+        </g>
+        """)
+        y_pos += 22
+    tools_chart_svg = f"""
+    <svg width="100%" height="{y_pos+4}" viewBox="0 0 440 {y_pos+4}" xmlns="http://www.w3.org/2000/svg">
+      {''.join(tool_bars_svg)}
+    </svg>
+    """
+
+    clock_svg = '<svg class="clock-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-1px; margin-right:4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
+
+    # Sidebar / Traces Session Rows
+    conv_rows = []
+    for c in convs:
+        is_sel = selected and c["id"] == selected["id"]
+        state_cls = (
+            "badge-working"
+            if c["live_state"] == "WORKING"
+            else ("badge-recent" if c["live_state"] == "RECENT" else "badge-idle")
+        )
+        sat = c["context_saturation"]
+        sat_color = "#10B981" if sat["status"] == "healthy" else ("#F59E0B" if sat["status"] == "warning" else "#EF4444")
+        row_cls = "conv-item active" if is_sel else "conv-item"
+        conv_rows.append(f"""
+        <div class="{row_cls}" onclick="switchSession('{c['id']}')" data-title="{html.escape(c['title'].lower())}" data-model="{html.escape(c['current_model'].lower())}">
+          <div class="conv-top">
+            <span class="badge {state_cls}">{html.escape(c['live_state'])}</span>
+            <span class="cost-pill mono">{html.escape(c['cost_formatted'])}</span>
+          </div>
+          <div class="conv-title">{html.escape(c['title'])}</div>
+          <div class="conv-meta">
+            <span class="model-pill">{html.escape(c['current_model'])}</span>
+            <span class="mono duration-pill" data-start-time-ms="{c['start_ts_ms']}" data-is-active="{str(c['is_active']).lower()}">{clock_svg}<span class="duration-time">{c['duration_formatted']}</span></span>
+          </div>
+          <div class="sat-mini-track" title="Context Saturation: {sat['percent']}% of {fmt_num(sat['limit'])}">
+            <div class="sat-mini-fill" style="width:{sat['percent']}%; background:{sat_color};"></div>
+          </div>
+          <div class="conv-time">{html.escape(c['last_updated'])} · {html.escape(c['id'][:8])}</div>
+        </div>
+        """)
+
+    # Active Working Sessions Cards (Overview)
+    active_cards_html = []
+    for ac in active_pool:
+        state_cls = "badge-working" if ac["live_state"] == "WORKING" else "badge-recent"
+        last_tool = ac["prompts"][-1]["tools_used"][-1] if (ac["prompts"] and ac["prompts"][-1]["tools_used"]) else "LLM Generation"
+        active_cards_html.append(f"""
+        <div class="active-session-card">
+          <div class="active-card-top">
+            <div class="active-card-title-wrap">
+              <span class="badge {state_cls}">{ac['live_state']}</span>
+              <strong class="active-card-title">{html.escape(ac['title'])}</strong>
+            </div>
+            <span class="live-clock-pill mono" data-start-time-ms="{ac['start_ts_ms']}" data-is-active="{str(ac['is_active']).lower()}">
+              {clock_svg}<span class="duration-time">{ac['duration_formatted']}</span>
+            </span>
+          </div>
+          <div class="active-card-meta mono">
+            <span>Model: <strong class="text-cyan">{html.escape(ac['current_model'])}</strong></span> ·
+            <span>Tokens: <strong>{fmt_num(ac['total_tokens'])}</strong></span> ·
+            <span>Spend: <strong class="text-emerald">{ac['cost_formatted']}</strong></span>
+          </div>
+          <div class="active-card-sub mono muted">
+            Last Tool Action: <span class="tool-tag mono">{html.escape(last_tool)}</span> · {html.escape(ac['id'][:8])}
+          </div>
+          <div class="active-card-actions">
+            <button class="btn btn-sm mono" onclick="switchView('traces', '{ac['id']}')">Inspect Traces &rarr;</button>
+            <button class="btn btn-sm mono" onclick="switchView('map', '{ac['id']}')">View Flow Map &rarr;</button>
+          </div>
+        </div>
+        """)
+
+    # Audit Table Rows (Overview)
+    audit_table_rows = []
+    for c in convs[:35]:
+        badge = "badge-working" if c["live_state"] == "WORKING" else ("badge-recent" if c["live_state"] == "RECENT" else "badge-idle")
+        sat = c["context_saturation"]
+        sat_color = "#10B981" if sat["status"] == "healthy" else ("#F59E0B" if sat["status"] == "warning" else "#EF4444")
+        audit_table_rows.append(f"""
+        <tr>
+          <td><span class="badge {badge}">{c['live_state']}</span></td>
+          <td>
+            <strong>{html.escape(c['title'])}</strong>
+            <div class="mono muted" style="font-size:10px;">{html.escape(c['id'])}</div>
+          </td>
+          <td><span class="model-pill">{html.escape(c['current_model'])}</span></td>
+          <td class="mono" data-start-time-ms="{c['start_ts_ms']}" data-is-active="{str(c['is_active']).lower()}">{clock_svg}<span class="duration-time">{c['duration_formatted']}</span></td>
+          <td class="mono">{c['prompts_count']}</td>
+          <td>
+            <div class="mono" style="color:{sat_color};">{sat['percent']}%</div>
+            <div class="sat-mini-track" style="width:70px;"><div class="sat-mini-fill" style="width:{sat['percent']}%; background:{sat_color};"></div></div>
+          </td>
+          <td class="mono text-cyan">{c['cost_formatted']}</td>
+          <td class="mono muted" style="font-size:11px;">{html.escape(c['last_updated'])}</td>
+          <td>
+            <button class="btn btn-sm mono" onclick="switchView('traces', '{c['id']}')">Traces</button>
+            <button class="btn btn-sm mono" onclick="switchView('map', '{c['id']}')">Map</button>
+          </td>
+        </tr>
+        """)
+
+    # Trace Map Graph Nodes Generation
+    map_turn_buttons = []
+    map_turn_buttons.append(f"""
+    <button class="turn-filter-btn mono {'active' if active_turn is None else ''}" onclick="setMapTurn(null)">
+      All Turns Combined
+    </button>
+    """)
+
+    filtered_prompts = selected["prompts"] if selected else []
+    if active_turn is not None and selected:
+        filtered_prompts = [p for p in selected["prompts"] if p["turn_index"] == active_turn]
+
+    for p in (selected["prompts"] if selected else []):
+        is_t_sel = active_turn == p["turn_index"]
+        map_turn_buttons.append(f"""
+        <button class="turn-filter-btn mono {'active' if is_t_sel else ''}" onclick="setMapTurn({p['turn_index']})">
+          Turn #{p['turn_index']}
+        </button>
+        """)
+
+    map_tracks_html = []
+    for p in filtered_prompts:
+        flow_node_elements = []
+        flow_arrow_html = '<div class="flow-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>'
+        for n in p.get("flow_nodes", []):
+            node_cat = n.get("category", "tool")
+            cat_cls = f"node-{node_cat}"
+            node_payload_json = quote(json.dumps(n, ensure_ascii=False))
+            flow_node_elements.append(f"""
+            <div class="flow-node {cat_cls}" onclick="inspectNode(decodeURIComponent('{node_payload_json}'))">
+              <div class="flow-node-badge mono">{n['title']}</div>
+              <div class="flow-node-sub mono">{html.escape(n.get('subtitle', ''))}</div>
+            </div>
+            {flow_arrow_html}
+            """)
+
+        # Strip trailing arrow
+        flow_chain = "".join(flow_node_elements)
+        if flow_chain.endswith(flow_arrow_html):
+            flow_chain = flow_chain[:-len(flow_arrow_html)]
+
+        map_tracks_html.append(f"""
+        <div class="map-turn-track">
+          <div class="map-turn-header mono">
+            <span class="text-cyan">Turn #{p['turn_index']}</span> ·
+            <span>{html.escape(p['model'])}</span> ·
+            <span class="text-emerald">{p['cost']['formatted']}</span> ·
+            <span>+{fmt_num(p['turn_total_tokens'])} tok</span>
+          </div>
+          <div class="map-chain-row">
+            {flow_chain}
+          </div>
+        </div>
+        """)
+
+    if not map_tracks_html:
+        map_tracks_html.append("<div class='empty'>No execution nodes recorded for this selection.</div>")
+
+    # Selected Session Traces View Generation
+    detail_html = "<div class='empty'>No conversation selected.</div>"
+    if selected:
+        sat = selected["context_saturation"]
+        sat_badge_cls = (
+            "sat-healthy" if sat["status"] == "healthy" else ("sat-warning" if sat["status"] == "warning" else "sat-critical")
+        )
+        sat_color = "#10B981" if sat["status"] == "healthy" else ("#F59E0B" if sat["status"] == "warning" else "#EF4444")
+
+        # SVG Circle Calculations
+        r = 26
+        circ = 2 * math.pi * r
+        dashoffset = circ * (1.0 - (min(100.0, sat["percent"]) / 100.0))
+
+        svg_ring_html = f"""
+        <div class="sat-ring-wrap" title="Context Saturation: {sat['percent']}%">
+          <svg class="sat-svg" width="68" height="68" viewBox="0 0 68 68">
+            <circle class="sat-bg" cx="34" cy="34" r="{r}" stroke-width="5" fill="none" />
+            <circle class="sat-meter" cx="34" cy="34" r="{r}" stroke-width="5" fill="none"
+              stroke="{sat_color}" stroke-dasharray="{circ:.2f}" stroke-dashoffset="{dashoffset:.2f}" stroke-linecap="round" />
+          </svg>
+          <div class="sat-ring-text mono">{sat['percent']}%</div>
+        </div>
+        """
+
+        compact_notice = (
+            f"""
+            <div class="alert-compact">
+              <div class="alert-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                  <line x1="12" y1="9" x2="12" y2="13"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="alert-body">
+                <strong>Context Ceiling Warning ({sat['percent']}%):</strong> Conversation has consumed {fmt_num(sat['tokens'])} of {fmt_num(sat['limit'])} tokens.
+                Run <code class="mono">/compact</code> in chat to summarize prior turns and compress memory.
+              </div>
+            </div>
+            """
+            if sat["status"] == "critical"
+            else ""
+        )
+
+        prompt_cards = []
+        for p in reversed(selected["prompts"]):
+            tot = max(1, p["turn_total_tokens"])
+            w_in = round(p["input_tokens"] / tot * 100, 1)
+            w_th = round(p["thinking_tokens"] / tot * 100, 1)
+            w_tl = round(p["tool_tokens"] / tot * 100, 1)
+            w_out = max(0.0, round(100.0 - w_in - w_th - w_tl, 1))
+
+            tools_badges = "".join(
+                f'<span class="tool-tag mono">{html.escape(t)}</span>'
+                for t in dict.fromkeys(p["tools_used"])
+            ) or '<span class="muted font-sans">No external tools invoked</span>'
+
+            model_switch_badge = (
+                f'<span class="model-switch-pill mono">Model switched to {html.escape(p["model_switched"])}</span>'
+                if p.get("model_switched")
+                else ""
+            )
+
+            raw_meta_html = ""
+            if p.get("additional_metadata"):
+                raw_meta_html = f"""
+                <div class="raw-section">
+                  <div class="raw-section-title mono">&lt;ADDITIONAL_METADATA&gt;</div>
+                  <pre class="raw-section-code mono">{html.escape(p['additional_metadata'])}</pre>
+                </div>
+                """
+
+            raw_settings_html = ""
+            if p.get("user_settings"):
+                raw_settings_html = f"""
+                <div class="raw-section">
+                  <div class="raw-section-title mono">&lt;USER_SETTINGS_CHANGE&gt;</div>
+                  <pre class="raw-section-code mono">{html.escape(p['user_settings'])}</pre>
+                </div>
+                """
+
+            raw_summary_html = ""
+            if p.get("context_summary"):
+                raw_summary_html = f"""
+                <div class="raw-section">
+                  <div class="raw-section-title mono">&lt;CONTEXT_SUMMARY&gt; (Compacted History)</div>
+                  <pre class="raw-section-code mono">{html.escape(p['context_summary'])}</pre>
+                </div>
+                """
+
+            raw_turn_drawer = f"""
+            <details class="raw-turn-details">
+              <summary class="mono raw-summary-toggle">
+                <span>View Raw Turn Context &amp; Metadata Payload ({len(p.get('raw_payload', ''))} chars)</span>
+                <span class="mono raw-expand-btn">Expand Payload</span>
+              </summary>
+              <div class="raw-turn-body">
+                <div class="raw-metrics-grid mono">
+                  <div>Prior Context: <strong>{fmt_num(p.get('prior_context_tokens', 0))} tok</strong></div>
+                  <div>Turn Tokens: <strong>+{fmt_num(p.get('turn_total_tokens', 0))} tok</strong></div>
+                  <div>Post Context: <strong>{fmt_num(p.get('cumulative_context_tokens', 0))} tok</strong></div>
+                  <div>Model In Effect: <strong>{html.escape(p.get('model', ''))}</strong></div>
+                </div>
+                <div class="raw-section">
+                  <div class="raw-section-title mono">&lt;USER_REQUEST&gt;</div>
+                  <pre class="raw-section-code mono">{html.escape(p.get('prompt', ''))}</pre>
+                </div>
+                {raw_meta_html}
+                {raw_settings_html}
+                {raw_summary_html}
+                <div class="raw-actions-bar">
+                  <button class="btn btn-sm mono" onclick="copyText(this, decodeURIComponent('{quote(p.get('raw_payload', ''))}'))">Copy Full Raw Turn Payload</button>
+                </div>
+              </div>
+            </details>
+            """
+
+            step_items = []
+            for s in p.get("steps", []):
+                t_calls_html = []
+                for tc in s.get("tool_calls", []):
+                    tname = tc.get("name", "tool")
+                    args = tc.get("args", {})
+                    summary = tc.get("summary", "")
+
+                    cmd_line_html = ""
+                    if tname == "run_command" and "CommandLine" in args:
+                        cmd_line_html = f"""
+                        <div class="terminal-cmd-row">
+                          <span class="cmd-prompt mono">$</span>
+                          <span class="cmd-text mono">{html.escape(str(args.get("CommandLine")))}</span>
+                        </div>
+                        """
+                    elif tname in ("write_file", "edit_file") and "Path" in args:
+                        cmd_line_html = f"""
+                        <div class="terminal-cmd-row">
+                          <span class="cmd-prompt mono">[{html.escape(tname)}]</span>
+                          <span class="cmd-text mono">{html.escape(str(args.get("Path")))}</span>
+                        </div>
+                        """
+
+                    args_pretty = json.dumps(args, indent=2, ensure_ascii=False)
+                    t_calls_html.append(f"""
+                    <div class="tool-call-block">
+                      <div class="tool-call-header">
+                        <span class="tool-call-badge mono">{html.escape(tname)}</span>
+                        <span class="tool-summary-text">{html.escape(summary)}</span>
+                      </div>
+                      {cmd_line_html}
+                      <details class="tool-args-details">
+                        <summary class="mono">Parameters ({len(args)} args)</summary>
+                        <pre class="args-code mono">{html.escape(args_pretty)}</pre>
+                      </details>
+                    </div>
+                    """)
+
+                output_preview = s.get("content_preview", "")
+                has_full = s.get("has_full_output", False)
+                full_btn = (
+                    f'<button class="btn-load-output mono" onclick="loadStepData(\'{selected["id"]}\', {s["step_index"]}, \'content\', this)">Load Full Output</button>'
+                    if has_full
+                    else ""
+                )
+
+                thinking_preview = s.get("thinking_preview", "")
+                has_full_th = s.get("has_full_thinking", False)
+                th_btn = (
+                    f'<button class="btn-load-output mono" onclick="loadStepData(\'{selected["id"]}\', {s["step_index"]}, \'thinking\', this)">Load Full Reasoning</button>'
+                    if has_full_th
+                    else ""
+                )
+
+                thinking_html = (
+                    f"""
+                    <div class="thinking-box">
+                      <div class="thinking-header">
+                        <span class="thinking-label mono">Reasoning / Thought Trace</span>
+                        {th_btn}
+                      </div>
+                      <div class="thinking-text mono">{html.escape(thinking_preview)}</div>
+                    </div>
+                    """
+                    if thinking_preview
+                    else ""
+                )
+
+                output_html = (
+                    f"""
+                    <div class="output-box">
+                      <div class="output-header">
+                        <span class="mono">Payload / Output</span>
+                        {full_btn}
+                      </div>
+                      <pre class="mono output-pre">{html.escape(output_preview)}</pre>
+                    </div>
+                    """
+                    if output_preview
+                    else ""
+                )
+
+                step_items.append(f"""
+                <div class="step-trace-row">
+                  <div class="step-meta">
+                    <span class="step-index mono">Step #{s['step_index']}</span>
+                    <span class="step-source badge">{html.escape(s['source'])}</span>
+                    <span class="step-type badge">{html.escape(s['type'])}</span>
+                    <span class="step-status badge badge-{html.escape(s['status'].lower())}">{html.escape(s['status'])}</span>
+                    <span class="step-time mono muted">{html.escape(s['timestamp'])}</span>
+                  </div>
+                  {''.join(t_calls_html)}
+                  {thinking_html}
+                  {output_html}
+                </div>
+                """)
+
+            steps_accordion = (
+                f"""
+                <details class="trace-drawer" id="drawer-{selected['id']}-{p['turn_index']}" ontoggle="onDrawerToggle(this)">
+                  <summary class="trace-drawer-summary">
+                    <span>Execution Trace Drawer ({len(p.get('steps', []))} steps executed)</span>
+                    <span class="mono text-cyan inspect-label">Inspect Steps</span>
+                  </summary>
+                  <div class="steps-container">
+                    {''.join(step_items)}
+                  </div>
+                </details>
+                """
+                if step_items
+                else ""
+            )
+
+            prompt_cards.append(f"""
+            <div class="turn-card">
+              <div class="turn-header">
+                <div class="turn-header-left">
+                  <span class="turn-num mono">Turn #{p['turn_index']}</span>
+                  <span class="model-pill">{html.escape(p['model'])}</span>
+                  {model_switch_badge}
+                  <span class="turn-cost-badge mono">{html.escape(p['cost']['formatted'])}</span>
+                  <span class="muted mono">{html.escape(p['timestamp'])}</span>
+                </div>
+                <div class="mono turn-totals">
+                  Turn: <strong>+{fmt_num(p['turn_total_tokens'])} tok</strong> ·
+                  Context Window: <strong>{fmt_num(p['cumulative_context_tokens'])} tok</strong>
+                </div>
+              </div>
+              <div class="prompt-box">
+                <div class="prompt-author-label">User Request</div>
+                <div class="prompt-body">{html.escape(p['prompt'])}</div>
+              </div>
+              {raw_turn_drawer}
+              <div class="bar-track" title="Input Prompt / Reasoning / Tool IO / Response">
+                <div class="bar-seg seg-in" style="width:{w_in}%" title="Input Prompt: {fmt_num(p['input_tokens'])} tok"></div>
+                <div class="bar-seg seg-think" style="width:{w_th}%" title="Thinking / Reasoning: {fmt_num(p['thinking_tokens'])} tok"></div>
+                <div class="bar-seg seg-tool" style="width:{w_tl}%" title="Tool IO: {fmt_num(p['tool_tokens'])} tok"></div>
+                <div class="bar-seg seg-out" style="width:{w_out}%" title="Response: {fmt_num(p['output_tokens'])} tok"></div>
+              </div>
+              <div class="token-grid mono">
+                <div><span class="dot seg-in"></span>Prompt: <strong>{fmt_num(p['input_tokens'])}</strong> <span class="muted">(${p['cost']['input_cost']:.4f})</span></div>
+                <div><span class="dot seg-think"></span>Reasoning: <strong>{fmt_num(p['thinking_tokens'])}</strong> <span class="muted">(${p['cost']['think_cost']:.4f})</span></div>
+                <div><span class="dot seg-tool"></span>Tool IO ({len(p.get('steps', []))} steps): <strong>{fmt_num(p['tool_tokens'])}</strong> <span class="muted">(${p['cost']['tool_cost']:.4f})</span></div>
+                <div><span class="dot seg-out"></span>Response: <strong>{fmt_num(p['output_tokens'])}</strong> <span class="muted">(${p['cost']['output_cost']:.4f})</span></div>
+              </div>
+              <div class="tools-row">{tools_badges}</div>
+              {steps_accordion}
+            </div>
+            """)
+
+        sub_rows = ""
+        if selected["subagents"]:
+            sub_items = "".join(
+                f'<div class="sub-pill"><strong>{html.escape(s["role"])}</strong> '
+                f'<span class="muted">({html.escape(s["type"])})</span> · '
+                f'<span class="model-pill">{html.escape(s["model"])}</span></div>'
+                for s in selected["subagents"]
+            )
+            sub_rows = f"""
+            <div class="subagents-row">
+              <span class="sub-label mono">Subagents / Swarm Workers ({len(selected['subagents'])}):</span>
+              <div class="sub-items">{sub_items}</div>
+            </div>
+            """
+
+        touched_html = "".join(
+            f"""
+            <div class="touched-row">
+              <span class="badge {'badge-modified' if tf['mode'] == 'EDITED' else 'badge-read'}">{tf['mode']}</span>
+              <span class="mono touched-name">{html.escape(tf['name'])}</span>
+              <span class="mono touched-path muted">{html.escape(tf['path'])}</span>
+            </div>
+            """
+            for tf in selected.get("touched_files", [])
+        ) or "<div class='empty'>No files touched in this session.</div>"
+
+        diff_content_html = ""
+        if git_data.get("diffs_by_file"):
+            diff_cards = []
+            for fname, dinfo in git_data["diffs_by_file"].items():
+                d_lines = dinfo.get("lines", [])
+                rendered_lines = []
+                for dl in d_lines:
+                    cls = "diff-ctx"
+                    if dl.startswith("+") and not dl.startswith("+++"):
+                        cls = "diff-add"
+                    elif dl.startswith("-") and not dl.startswith("---"):
+                        cls = "diff-del"
+                    elif dl.startswith("@@"):
+                        cls = "diff-hunk"
+                    rendered_lines.append(f'<div class="diff-line {cls}">{html.escape(dl)}</div>')
+
+                f_lines_text = "\n".join(rendered_lines)
+                diff_cards.append(f"""
+                <div class="diff-file-card">
+                  <div class="diff-file-header">
+                    <span class="diff-filename mono">{html.escape(fname)}</span>
+                    <div class="diff-stats mono">
+                      <span class="count-add">+{dinfo.get('additions', 0)}</span>
+                      <span class="count-del">-{dinfo.get('deletions', 0)}</span>
+                    </div>
+                  </div>
+                  <pre class="diff-code mono">{f_lines_text}</pre>
+                </div>
+                """)
+            diff_content_html = "".join(diff_cards)
+        else:
+            diff_content_html = "<div class='empty'>No uncommitted git diffs detected. Working tree is clean.</div>"
+
+        # System Prompt Tab HTML Generation
+        rules_html = ""
+        for r in system_config.get("agents_rules", []):
+            points_li = "".join(f"<li>{html.escape(p.lstrip('- *').strip())}</li>" for p in r.get("points", []))
+            rules_html += f"""
+            <div class="rule-card">
+              <div class="rule-title">{html.escape(r['title'])}</div>
+              <ul class="rule-points">{points_li}</ul>
+            </div>
+            """
+        if not rules_html:
+            rules_html = "<div class='empty'>No workspace rules loaded.</div>"
+
+        skills_html = ""
+        for sk in system_config.get("skills", []):
+            skills_html += f"""
+            <div class="skill-card">
+              <div class="skill-name mono">{html.escape(sk['name'])}</div>
+              <div class="skill-desc">{html.escape(sk['description'])}</div>
+              <div class="skill-path mono muted">{html.escape(sk['path'])}</div>
+            </div>
+            """
+
+        subagents_types_html = ""
+        for st in system_config.get("subagent_types", []):
+            subagents_types_html += f"""
+            <div class="sub-type-card">
+              <div class="sub-type-header">
+                <span class="sub-type-name mono">{html.escape(st['name'])}</span>
+                <span class="sub-type-role">{html.escape(st['role'])}</span>
+              </div>
+              <div class="sub-type-desc">{html.escape(st['desc'])}</div>
+            </div>
+            """
+
+        native_tools_html = ""
+        for nt in system_config.get("native_tools", []):
+            native_tools_html += f"""
+            <div class="tool-item-card">
+              <div class="tool-item-header">
+                <span class="tool-item-name mono">{html.escape(nt['name'])}</span>
+                <span class="tool-item-cat mono">{html.escape(nt['cat'])}</span>
+              </div>
+              <div class="tool-item-desc">{html.escape(nt['desc'])}</div>
+            </div>
+            """
+
+        mcp_tools_html = ""
+        for mt in system_config.get("mcp_tools", []):
+            mcp_tools_html += f"""
+            <div class="tool-item-card">
+              <div class="tool-item-header">
+                <span class="tool-item-name mono">{html.escape(mt['name'])}</span>
+                <span class="tool-item-cat mono">{html.escape(mt['server'])}</span>
+              </div>
+              <div class="tool-item-desc">{html.escape(mt['desc'])}</div>
+            </div>
+            """
+        if not mcp_tools_html:
+            mcp_tools_html = "<div class='empty'>No external MCP servers registered.</div>"
+
+        raw_sys_prompt_encoded = quote(system_config.get("assembled_prompt", ""))
+
+        rates_rows = []
+        active_display_name = match_rate_card(selected["current_model"], rate_cards).get("display")
+        for k, v in rate_cards.items():
+            is_active = 'class="active-model-row"' if v.get("display") == active_display_name else ""
+            rates_rows.append(f"""
+            <tr {is_active}>
+              <td><strong>{html.escape(v.get('display', k))}</strong></td>
+              <td><span class="provider-pill mono">{html.escape(v.get('provider', 'Generic'))}</span></td>
+              <td>${v['input']:.2f}</td>
+              <td>${v['cache']:.3f}</td>
+              <td>${v['reasoning']:.2f}</td>
+              <td>${v['output']:.2f}</td>
+              <td>{fmt_num(v.get('context_limit', 200000))} tok</td>
+            </tr>
+            """)
+        rates_table_html = "".join(rates_rows)
+
+        detail_html = f"""
+        <div class="detail-header">
+          <div>
+            <div class="conv-heading-row">
+              <h2>{html.escape(selected['title'])}</h2>
+              <span class="badge badge-{html.escape(selected['live_state'].lower())}">{html.escape(selected['live_state'])}</span>
+            </div>
+            <div class="muted mono session-subinfo">
+              <span>ID: <strong>{html.escape(selected['id'])}</strong></span> ·
+              <span>Workspace: <strong>{html.escape(selected['workspace'])}</strong></span> ·
+              <span class="mono" data-start-time-ms="{selected['start_ts_ms']}" data-is-active="{str(selected['is_active']).lower()}">{clock_svg}<span class="duration-time">{selected['duration_formatted']}</span></span> ·
+              <span>Updated: {html.escape(selected['last_updated'])}</span>
+            </div>
+          </div>
+          <div class="detail-badges">
+            <span class="model-pill lg">{html.escape(selected['current_model'])}</span>
+            <span class="cost-pill lg mono">{html.escape(selected['cost_formatted'])} spend</span>
+          </div>
+        </div>
+
+        {compact_notice}
+
+        <div class="kpi-row">
+          <div class="kpi kpi-ring-card">
+            {svg_ring_html}
+            <div>
+              <div class="kpi-label">Context Saturation</div>
+              <div class="kpi-sub mono muted">{fmt_num(sat['tokens'])} / {fmt_num(sat['limit'])} tok</div>
+              <div class="kpi-sub-label {sat_badge_cls}">Capacity {sat['status'].capitalize()}</div>
+            </div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Estimated Spend</div>
+            <div class="kpi-val mono text-cyan">{selected['cost_formatted']}</div>
+            <div class="kpi-sub mono muted">{fmt_num(selected['total_tokens'])} total tokens (~chars/4)</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Prompt Input</div>
+            <div class="kpi-val mono">{fmt_num(selected['total_input_tokens'])}</div>
+            <div class="kpi-sub mono muted">Fresh user prompt stream</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Reasoning / Thinking</div>
+            <div class="kpi-val mono">{fmt_num(selected['total_thinking_tokens'])}</div>
+            <div class="kpi-sub mono muted">Internal thought tokens</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Tool IO Overhead</div>
+            <div class="kpi-val mono">{fmt_num(selected['total_tool_tokens'])}</div>
+            <div class="kpi-sub mono muted">{selected['steps_count']} execution steps</div>
+          </div>
+        </div>
+
+        {sub_rows}
+
+        <div class="tabs-bar">
+          <button class="tab-btn {'active' if active_tab == 'prompts' else ''}" onclick="switchTab('prompts')">
+            Prompts &amp; Deep Traces ({len(selected['prompts'])})
+          </button>
+          <button class="tab-btn {'active' if active_tab == 'system' else ''}" onclick="switchTab('system')">
+            System Prompt &amp; Agent Config
+          </button>
+          <button class="tab-btn {'active' if active_tab == 'diff' else ''}" onclick="switchTab('diff')">
+            Git Diffs &amp; Touched Files ({len(selected.get('touched_files', []))})
+          </button>
+          <button class="tab-btn {'active' if active_tab == 'rates' else ''}" onclick="switchTab('rates')">
+            Rate Cards &amp; Pricing Matrix
+          </button>
+        </div>
+
+        <div id="tab-prompts" class="tab-pane {'active' if active_tab == 'prompts' else ''}">
+          <div class="turns-list">
+            {''.join(prompt_cards)}
+          </div>
+        </div>
+
+        <div id="tab-system" class="tab-pane {'active' if active_tab == 'system' else ''}">
+          <div class="system-panel">
+            <div class="system-section-header">
+              <div>
+                <h3>Agent Architecture &amp; Identity</h3>
+                <div class="muted">Underlying agent identity and system configuration for Antigravity</div>
+              </div>
+              <button class="btn mono" onclick="copyText(this, decodeURIComponent('{raw_sys_prompt_encoded}'))">Copy Full System Prompt</button>
+            </div>
+
+            <div class="sys-id-grid">
+              <div class="sys-id-card">
+                <div class="sys-id-label mono">Agent Persona</div>
+                <div class="sys-id-value">Google DeepMind Antigravity</div>
+              </div>
+              <div class="sys-id-card">
+                <div class="sys-id-label mono">Active Workspace</div>
+                <div class="sys-id-value mono">{html.escape(system_config.get('workspace', ''))}</div>
+              </div>
+              <div class="sys-id-card">
+                <div class="sys-id-label mono">Rules Specification</div>
+                <div class="sys-id-value mono">{html.escape(system_config.get('agents_rules_path', ''))}</div>
+              </div>
+              <div class="sys-id-card">
+                <div class="sys-id-label mono">Active Model</div>
+                <div class="sys-id-value mono">{html.escape(selected['current_model'])}</div>
+              </div>
+            </div>
+
+            <h4 class="subhead">Active Workspace Rules (AGENTS.md)</h4>
+            <div class="rules-container">
+              {rules_html}
+            </div>
+
+            <h4 class="subhead">Registered Agent Skills ({len(system_config.get('skills', []))})</h4>
+            <div class="skills-grid">
+              {skills_html}
+            </div>
+
+            <h4 class="subhead">Subagents Architecture</h4>
+            <div class="sub-types-grid">
+              {subagents_types_html}
+            </div>
+
+            <h4 class="subhead">Native Tools ({len(system_config.get('native_tools', []))})</h4>
+            <div class="tools-grid">
+              {native_tools_html}
+            </div>
+
+            <h4 class="subhead">MCP Tools ({len(system_config.get('mcp_tools', []))})</h4>
+            <div class="tools-grid">
+              {mcp_tools_html}
+            </div>
+
+            <h4 class="subhead">Reconstructed System Prompt Stream</h4>
+            <div class="sys-prompt-viewer">
+              <div class="sys-prompt-header">
+                <span class="mono">Full Reconstructed System Prompt Payload</span>
+                <button class="btn btn-sm mono" onclick="copyText(this, decodeURIComponent('{raw_sys_prompt_encoded}'))">Copy Assembled System Prompt</button>
+              </div>
+              <pre class="sys-prompt-code mono">{html.escape(system_config.get('assembled_prompt', ''))}</pre>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-diff" class="tab-pane {'active' if active_tab == 'diff' else ''}">
+          <div class="git-panel">
+            <div class="git-header">
+              <div>
+                <strong>Workspace Repository:</strong> <code class="mono">{html.escape(git_data.get('workspace', ''))}</code>
+                {f'<span class="branch-pill mono">Branch: {html.escape(git_data.get("branch", ""))}</span>' if git_data.get("branch") else ''}
+              </div>
+              <div class="mono muted">
+                Uncommitted Files: <strong>{git_data.get('files_modified_count', 0)}</strong> ·
+                Untracked: <strong>{git_data.get('untracked_count', 0)}</strong> ·
+                Net: <span class="count-add">+{git_data.get('total_additions', 0)}</span> <span class="count-del">-{git_data.get('total_deletions', 0)}</span>
+              </div>
+            </div>
+
+            <h4 class="subhead">Files Touched in this Session</h4>
+            <div class="touched-list">
+              {touched_html}
+            </div>
+
+            <h4 class="subhead">Scoped Unified Diffs (Per File)</h4>
+            <div class="diff-files-list">
+              {diff_content_html}
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-rates" class="tab-pane {'active' if active_tab == 'rates' else ''}">
+          <div class="rates-table-wrap">
+            <table class="rates-table mono">
+              <thead>
+                <tr>
+                  <th>Model Profile</th>
+                  <th>Provider</th>
+                  <th>Input ($/1M)</th>
+                  <th>Cache Read ($/1M)</th>
+                  <th>Reasoning ($/1M)</th>
+                  <th>Output ($/1M)</th>
+                  <th>Max Context Limit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rates_table_html}
+              </tbody>
+            </table>
+            <div class="rates-footnote muted">
+              Provider rate cards as of Nov 2026. Token counts and spend metrics are estimated via a ~chars/4 heuristic. Custom local rate overrides can be placed in <code>~/.gemini/antigravity-cli/model_rates.json</code>.
+            </div>
+          </div>
+        </div>
+        """
+
+    # Analytics View: Session Deep-Dive SVG Curves
+    session_points = []
+    if selected and selected.get("prompts"):
+        s_turns = selected["prompts"]
+        max_ctx_limit = max(1, selected["context_saturation"]["limit"])
+        max_turn_tokens = max((p["turn_total_tokens"] for p in s_turns), default=1)
+
+        ctx_points = []
+        cost_points = []
+        w_step = 420.0 / max(1, len(s_turns) - 1) if len(s_turns) > 1 else 420.0
+        running_cost = 0.0
+
+        for idx, p in enumerate(s_turns):
+            px = idx * w_step if len(s_turns) > 1 else 210.0
+            ctx_y = 140.0 - ((p["cumulative_context_tokens"] / max_ctx_limit) * 120.0)
+            ctx_points.append(f"{px:.1f},{ctx_y:.1f}")
+
+            running_cost += p["cost"]["total_cost"]
+            cost_y = 140.0 - min(130.0, (running_cost / max(0.01, selected["estimated_spend"])) * 120.0)
+            cost_points.append(f"{px:.1f},{cost_y:.1f}")
+
+        ctx_polyline = " ".join(ctx_points)
+        cost_polyline = " ".join(cost_points)
+
+        session_curves_svg = f"""
+        <svg width="100%" height="160" viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="20" x2="430" y2="20" stroke="#EF4444" stroke-dasharray="4,4" stroke-width="1"/>
+          <text x="330" y="16" fill="#EF4444" font-size="10" font-family="JetBrains Mono, monospace">Model Ceiling (100%)</text>
+          <line x1="10" y1="140" x2="430" y2="140" stroke="#1E2638" stroke-width="1"/>
+          <polyline points="{ctx_polyline}" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <polyline points="{cost_polyline}" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        """
+    else:
+        session_curves_svg = "<div class='empty'>No prompt turns available to generate session curves.</div>"
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fleet · Obsidian Telemetry &amp; Trace Observability HUD</title>
+  <style>
+    :root {{
+      --bg: #060708;
+      --bg-sidebar: #0B0E14;
+      --panel: #10141D;
+      --panel-elevated: #161D2A;
+      --panel-hover: #1C2433;
+      --border: #1E2638;
+      --border-subtle: #141A26;
+      --border-highlight: #2E3A52;
+      --text: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --muted: #64748B;
+
+      --cyan: #38BDF8;
+      --cyan-light: #7DD3FC;
+      --cyan-bg: rgba(56, 189, 248, 0.10);
+      --cyan-border: rgba(56, 189, 248, 0.30);
+
+      --emerald: #10B981;
+      --emerald-bg: rgba(16, 185, 129, 0.12);
+      --emerald-border: rgba(16, 185, 129, 0.35);
+
+      --amber: #F59E0B;
+      --amber-bg: rgba(245, 158, 11, 0.12);
+      --amber-border: rgba(245, 158, 11, 0.35);
+
+      --crimson: #EF4444;
+      --crimson-bg: rgba(239, 68, 68, 0.14);
+      --crimson-border: rgba(239, 68, 68, 0.35);
+
+      --violet: #A855F7;
+      --violet-bg: rgba(168, 85, 247, 0.12);
+      --violet-border: rgba(168, 85, 247, 0.30);
+
+      --in: #38BDF8;
+      --think: #A855F7;
+      --tool: #64748B;
+      --out: #10B981;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }}
+    .mono {{
+      font-family: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+      font-variant-numeric: tabular-nums;
+    }}
+    .muted {{ color: var(--muted); }}
+    .text-cyan {{ color: var(--cyan); }}
+    .text-emerald {{ color: var(--emerald); }}
+    .text-amber {{ color: var(--amber); }}
+    .text-crimson {{ color: var(--crimson); }}
+    .text-violet {{ color: var(--violet); }}
+
+    /* Layout: Fixed Left Nav Rail + Main Canvas */
+    .app-shell {{
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }}
+
+    /* Left Navigation Rail */
+    .nav-rail {{
+      width: 220px;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 50;
+      transition: width 0.2s ease;
+    }}
+    .nav-rail.collapsed {{
+      width: 68px;
+    }}
+    .rail-header {{
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--border);
+    }}
+    .brand-wrap {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+    }}
+    .brand-mark {{
+      padding: 3px 8px;
+      background: var(--cyan-bg);
+      border: 1px solid var(--cyan-border);
+      border-radius: 4px;
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }}
+    .brand-title {{
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }}
+    .nav-rail.collapsed .brand-title {{
+      display: none;
+    }}
+    .btn-collapse {{
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 4px;
+      font-size: 12px;
+    }}
+    .btn-collapse:hover {{
+      color: var(--text);
+      background: var(--panel);
+    }}
+
+    .rail-beacon-strip {{
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.06);
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--emerald);
+    }}
+    .nav-rail.collapsed .rail-beacon-strip span:last-child {{
+      display: none;
+    }}
+    .beacon-dot {{
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      animation: pulse 2s infinite ease-in-out;
+      flex-shrink: 0;
+    }}
+    @keyframes pulse {{
+      0%, 100% {{ opacity: 1; transform: scale(1); }}
+      50% {{ opacity: 0.35; transform: scale(0.85); }}
+    }}
+
+    .rail-menu {{
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }}
+    .nav-item {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      user-select: none;
+      white-space: nowrap;
+    }}
+    .nav-item:hover {{
+      background: var(--panel);
+      color: var(--text);
+    }}
+    .nav-item.active {{
+      background: var(--panel-elevated);
+      color: var(--cyan);
+      font-weight: 600;
+      border-left: 3px solid var(--cyan);
+    }}
+    .nav-icon {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: inherit;
+    }}
+    .nav-icon svg {{
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+    }}
+    .nav-rail.collapsed .nav-label {{
+      display: none;
+    }}
+
+    .rail-footer {{
+      padding: 14px 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }}
+    .nav-rail.collapsed .rail-footer {{
+      display: none;
+    }}
+
+    /* Main View Container */
+    .view-container {{
+      flex: 1;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg);
+    }}
+    .view-pane {{
+      display: none;
+      height: 100%;
+      overflow-y: auto;
+    }}
+    .view-pane.active {{
+      display: block;
+    }}
+
+    /* View 1: Command Overview */
+    .overview-stage {{
+      padding: 24px 32px;
+    }}
+    .stage-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }}
+    .stage-title h1 {{
+      margin: 0 0 4px 0;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }}
+    .kpi-row {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }}
+    .kpi {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }}
+    .kpi-ring-card {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }}
+    .kpi-label {{
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }}
+    .kpi-val {{
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }}
+    .kpi-sub {{
+      font-size: 11px;
+      margin-top: 3px;
+    }}
+
+    .section-title {{
+      font-size: 16px;
+      font-weight: 600;
+      margin: 24px 0 14px 0;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+    .active-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }}
+    .active-session-card {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }}
+    .active-card-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }}
+    .active-card-title-wrap {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+    }}
+    .active-card-title {{
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+    .live-clock-pill {{
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid var(--emerald-border);
+      color: var(--emerald);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }}
+    .active-card-meta {{
+      font-size: 12px;
+      color: var(--text-secondary);
+    }}
+    .active-card-sub {{
+      font-size: 11px;
+    }}
+    .active-card-actions {{
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }}
+
+    .charts-deck {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }}
+    .chart-panel {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }}
+    .chart-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }}
+    .legend-row {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 11px;
+    }}
+    .legend-item {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .legend-swatch {{
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+    }}
+
+    .audit-table-wrap {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      overflow-x: auto;
+    }}
+    .audit-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }}
+    .audit-table th, .audit-table td {{
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }}
+    .audit-table th {{
+      color: var(--text-secondary);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }}
+
+    /* View 2: Traces Inspector (Dual-Pane) */
+    .traces-layout {{
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      height: 100%;
+    }}
+    .traces-layout.drawer-collapsed {{
+      grid-template-columns: 0px 1fr;
+    }}
+    .traces-sidebar {{
+      border-right: 1px solid var(--border);
+      background: var(--bg-sidebar);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }}
+    .traces-sidebar-header {{
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg-sidebar);
+      z-index: 10;
+    }}
+    .traces-main {{
+      overflow-y: auto;
+      padding: 24px 32px;
+      height: 100%;
+    }}
+
+    /* View 3: Trace Flow Map */
+    .map-stage {{
+      padding: 24px 32px;
+      height: 100%;
+      overflow-y: auto;
+    }}
+    .map-controls-bar {{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }}
+    .turn-filter-btn {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      cursor: pointer;
+      white-space: nowrap;
+    }}
+    .turn-filter-btn.active {{
+      background: var(--cyan-bg);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      font-weight: 600;
+    }}
+    .map-turn-track {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }}
+    .map-turn-header {{
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 12px;
+    }}
+    .map-chain-row {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 6px 0;
+    }}
+    .flow-node {{
+      background: var(--panel-elevated);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+      max-width: 220px;
+    }}
+    .flow-node:hover {{
+      border-color: var(--cyan);
+      transform: translateY(-1px);
+    }}
+    .node-prompt {{ border-left: 3px solid #38BDF8; }}
+    .node-thinking {{ border-left: 3px solid #A855F7; }}
+    .node-shell {{ border-left: 3px solid #00F0FF; }}
+    .node-fs_edit {{ border-left: 3px solid #10B981; }}
+    .node-fs_read {{ border-left: 3px solid #64748B; }}
+    .node-agent {{ border-left: 3px solid #A855F7; }}
+    .node-mcp {{ border-left: 3px solid #F59E0B; }}
+    .node-response {{ border-left: 3px solid #10B981; }}
+
+    .flow-node-badge {{
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }}
+    .flow-node-sub {{
+      font-size: 10px;
+      color: var(--text-secondary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }}
+    .flow-arrow {{
+      color: var(--muted);
+      font-size: 12px;
+      user-select: none;
+      flex-shrink: 0;
+    }}
+
+    /* Slide-Over Inspector Drawer */
+    .slide-over {{
+      position: fixed;
+      top: 0;
+      right: -520px;
+      width: 500px;
+      height: 100vh;
+      background: var(--bg-sidebar);
+      border-left: 1px solid var(--border);
+      z-index: 100;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+      transition: right 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }}
+    .slide-over.open {{
+      right: 0;
+    }}
+    .slide-over-header {{
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+    .slide-over-body {{
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+    }}
+
+    /* Global UI Elements */
+    .btn {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }}
+    .btn:hover {{
+      background: var(--panel-elevated);
+      border-color: var(--border-highlight);
+    }}
+    .btn-sm {{
+      padding: 4px 10px;
+      font-size: 11px;
+    }}
+    .badge {{
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+      display: inline-block;
+    }}
+    .badge-working {{
+      background: var(--emerald-bg);
+      color: #34D399;
+      border: 1px solid var(--emerald-border);
+    }}
+    .badge-recent {{
+      background: var(--amber-bg);
+      color: #FBBF24;
+      border: 1px solid var(--amber-border);
+    }}
+    .badge-idle {{
+      background: rgba(100, 116, 139, 0.14);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }}
+    .badge-modified {{
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }}
+    .badge-read {{
+      background: rgba(100, 116, 139, 0.14);
+      color: #94A3B8;
+      border: 1px solid var(--border);
+    }}
+    .model-pill {{
+      background: var(--cyan-bg);
+      color: var(--cyan);
+      border: 1px solid var(--cyan-border);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }}
+    .model-pill.lg {{
+      font-size: 12px;
+      padding: 4px 10px;
+    }}
+    .model-switch-pill {{
+      background: var(--violet-bg);
+      color: #C084FC;
+      border: 1px solid var(--violet-border);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }}
+    .cost-pill {{
+      background: var(--cyan-bg);
+      color: var(--cyan);
+      border: 1px solid var(--cyan-border);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }}
+    .cost-pill.lg {{
+      font-size: 13px;
+      padding: 4px 12px;
+    }}
+    .tool-tag {{
+      background: rgba(100, 116, 139, 0.15);
+      border: 1px solid var(--border);
+      color: #CBD5E1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+    }}
+
+    .conv-item {{
+      display: block;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.12s;
+    }}
+    .conv-item:hover {{
+      background: var(--panel-hover);
+    }}
+    .conv-item.active {{
+      background: var(--panel);
+      border-left: 3px solid var(--cyan);
+    }}
+    .conv-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }}
+    .conv-title {{
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 13px;
+      line-height: 1.4;
+      word-break: break-word;
+    }}
+    .conv-meta {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }}
+    .sat-mini-track {{
+      height: 3px;
+      background: #141A26;
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 4px;
+    }}
+    .sat-mini-fill {{
+      height: 100%;
+      transition: width 0.3s;
+    }}
+    .conv-time {{
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 5px;
+    }}
+
+    .sat-ring-wrap {{
+      position: relative;
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+    }}
+    .sat-svg {{
+      transform: rotate(-90deg);
+    }}
+    .sat-bg {{
+      stroke: var(--panel-elevated);
+    }}
+    .sat-meter {{
+      transition: stroke-dashoffset 0.6s ease;
+    }}
+    .sat-ring-text {{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 68px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }}
+    .sat-healthy {{ color: var(--emerald); }}
+    .sat-warning {{ color: var(--amber); }}
+    .sat-critical {{ color: var(--crimson); }}
+
+    .search-input {{
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+    }}
+    .search-input:focus {{
+      border-color: var(--cyan);
+    }}
+
+    /* Turn card styling */
+    .turn-card {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }}
+    .turn-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+    }}
+    .turn-header-left {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .turn-num {{
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--cyan);
+    }}
+    .turn-cost-badge {{
+      background: var(--cyan-bg);
+      color: var(--cyan);
+      border: 1px solid var(--cyan-border);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }}
+    .turn-totals {{
+      font-size: 12px;
+      color: var(--text-secondary);
+    }}
+    .prompt-box {{
+      background: var(--panel-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }}
+    .prompt-author-label {{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }}
+    .prompt-body {{
+      font-size: 13px;
+      color: #F8FAFC;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }}
+    .bar-track {{
+      height: 8px;
+      background: #141A26;
+      border-radius: 4px;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }}
+    .bar-seg {{ height: 100%; transition: width 0.3s; }}
+    .seg-in {{ background: var(--in); }}
+    .seg-think {{ background: var(--think); }}
+    .seg-tool {{ background: var(--tool); }}
+    .seg-out {{ background: var(--out); }}
+    .token-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      font-size: 11px;
+      background: var(--panel-elevated);
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border-subtle);
+    }}
+    .dot {{ display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; }}
+    .tools-row {{ display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }}
+
+    .raw-turn-details {{
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }}
+    .raw-summary-toggle {{
+      padding: 8px 12px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--panel);
+      user-select: none;
+    }}
+    .raw-turn-body {{
+      padding: 14px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }}
+    .raw-metrics-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 11px;
+      margin-bottom: 12px;
+    }}
+    .raw-section {{ margin-bottom: 10px; }}
+    .raw-section-title {{ font-size: 11px; font-weight: 600; color: var(--cyan); margin-bottom: 4px; }}
+    .raw-section-code {{
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid var(--border-subtle);
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #E2E8F0;
+      max-height: 240px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }}
+
+    .trace-drawer {{
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg-sidebar);
+    }}
+    .trace-drawer-summary {{
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--panel);
+      user-select: none;
+    }}
+    .steps-container {{
+      padding: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }}
+    .step-trace-row {{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }}
+    .step-meta {{ display: flex; gap: 8px; align-items: center; margin-bottom: 10px; font-size: 11px; }}
+    .step-index {{ font-weight: 700; color: var(--cyan); }}
+    .terminal-cmd-row {{
+      background: #040507;
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 6px 10px;
+      display: flex;
+      gap: 8px;
+      margin: 6px 0;
+      align-items: flex-start;
+    }}
+    .cmd-prompt {{ color: var(--cyan); font-weight: 700; }}
+    .cmd-text {{ color: #F8FAFC; word-break: break-all; }}
+    .tool-call-block {{
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }}
+    .tool-call-header {{ display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }}
+    .thinking-box {{
+      background: #08070D;
+      border-left: 3px solid var(--violet);
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }}
+    .output-box {{
+      background: #040507;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }}
+    .output-pre {{ margin: 0; font-size: 11px; color: #94A3B8; max-height: 180px; overflow-y: auto; white-space: pre-wrap; }}
+
+    /* Tabs Bar in Traces View */
+    .tabs-bar {{
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+      gap: 4px;
+    }}
+    .tab-btn {{
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }}
+    .tab-btn:hover {{ color: var(--text); background: var(--panel); }}
+    .tab-btn.active {{
+      color: var(--cyan);
+      border-bottom-color: var(--cyan);
+      background: var(--panel);
+      font-weight: 600;
+    }}
+    .tab-pane {{ display: none; }}
+    .tab-pane.active {{ display: block; }}
+
+    /* Modal */
+    .modal-backdrop {{
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }}
+    .modal-box {{
+      background: var(--panel);
+      border: 1px solid var(--border-highlight);
+      border-radius: 8px;
+      width: 80vw;
+      max-width: 900px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    }}
+    .modal-header {{
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+    }}
+    .modal-content {{ padding: 18px; overflow-y: auto; flex: 1; }}
+    .modal-pre {{ margin: 0; font-size: 12px; color: #E2E8F0; white-space: pre-wrap; word-break: break-word; line-height: 1.5; }}
+    .empty {{ padding: 30px; text-align: center; color: var(--muted); font-size: 13px; }}
+
+    /* Responsive Adaptations */
+    @media (max-width: 1024px) {{
+      .nav-rail {{
+        width: 64px;
+      }}
+      .nav-rail .brand-title,
+      .nav-rail .rail-beacon-strip,
+      .nav-rail .nav-label,
+      .nav-rail .rail-footer,
+      .nav-rail .btn-collapse {{
+        display: none !important;
+      }}
+      .nav-item {{
+        justify-content: center;
+        padding: 12px 0;
+      }}
+      .overview-grid {{
+        grid-template-columns: repeat(2, 1fr);
+      }}
+      .charts-dual-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .traces-layout {{
+        flex-direction: column;
+      }}
+      .sidebar {{
+        width: 100%;
+        max-height: 280px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }}
+    }}
+
+    @media (max-width: 768px) {{
+      .app-shell {{
+        flex-direction: column;
+      }}
+      .nav-rail {{
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }}
+      .rail-menu {{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 6px;
+      }}
+      .overview-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .kpi-row {{
+        grid-template-columns: 1fr;
+      }}
+      .active-cards-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .slide-over {{
+        width: 100vw;
+      }}
+    }}
+
+    @media (prefers-reduced-motion: reduce) {{
+      *, *::before, *::after {{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }}
+      .beacon-dot {{
+        animation: none !important;
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Left Navigation Rail -->
+    <nav class="nav-rail" id="main-nav-rail">
+      <div class="rail-header">
+        <div class="brand-wrap">
+          <div class="brand-mark mono">// FLT</div>
+          <div class="brand-title">Fleet Command</div>
+        </div>
+        <button class="btn-collapse mono" onclick="toggleNavCollapse()" title="Toggle Navigation Width"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+      </div>
+
+      <div class="rail-beacon-strip">
+        <span class="beacon-dot"></span>
+        <span class="mono" id="active-workers-label">{len(working_sessions)} RUNNING</span>
+      </div>
+
+      <div class="rail-menu">
+        <div class="nav-item {'active' if current_view == 'overview' else ''}" id="nav-btn-overview" onclick="switchView('overview')">
+          <span class="nav-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg></span>
+          <span class="nav-label">Command Overview</span>
+        </div>
+        <div class="nav-item {'active' if current_view == 'traces' else ''}" id="nav-btn-traces" onclick="switchView('traces')">
+          <span class="nav-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+          <span class="nav-label">Traces Inspector</span>
+        </div>
+        <div class="nav-item {'active' if current_view == 'map' else ''}" id="nav-btn-map" onclick="switchView('map')">
+          <span class="nav-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></span>
+          <span class="nav-label">Trace Flow Map</span>
+        </div>
+        <div class="nav-item {'active' if current_view == 'analytics' else ''}" id="nav-btn-analytics" onclick="switchView('analytics')">
+          <span class="nav-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
+          <span class="nav-label">Analytics &amp; Charts</span>
+        </div>
+      </div>
+
+      <div class="rail-footer">
+        <button class="btn btn-sm mono" id="auto-refresh-btn" onclick="toggleAutoRefresh()">Auto-Refresh (4s): OFF</button>
+        <button class="btn btn-sm mono" onclick="triggerSync(this)">Sync Wiki Markdown</button>
+        <a class="btn btn-sm mono" href="/api/traces" target="_blank" style="text-align:center;">API JSON</a>
+      </div>
+    </nav>
+
+    <!-- Main View Switcher Stage -->
+    <div class="view-container">
+      <!-- VIEW 1: Command Overview -->
+      <div class="view-pane {'active' if current_view == 'overview' else ''}" id="view-overview">
+        <div class="overview-stage">
+          <div class="stage-header">
+            <div class="stage-title">
+              <h1>Command Overview</h1>
+              <div class="muted">Active agent sessions, live runtime telemetry, model distribution, and cumulative dollar spend</div>
+            </div>
+            <div class="mono muted">
+              Fleet Capacity: <strong class="text-emerald">{len(working_sessions)} Active</strong> · {total_convs} Total Sessions
+            </div>
+          </div>
+
+          <div class="kpi-row">
+            <div class="kpi">
+              <div class="kpi-label">Active Running Workers</div>
+              <div class="kpi-val mono text-emerald">{len(working_sessions)}</div>
+              <div class="kpi-sub mono muted">{len(recent_sessions)} recent sessions</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Cumulative Spend</div>
+              <div class="kpi-val mono text-cyan">${grand_cost:.4f}</div>
+              <div class="kpi-sub mono muted">All tracked providers</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Token Volume</div>
+              <div class="kpi-val mono">{fmt_num(grand_tokens)}</div>
+              <div class="kpi-sub mono muted">{fmt_num(total_prompts)} user turns</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Total Execution Steps</div>
+              <div class="kpi-val mono">{fmt_num(total_steps)}</div>
+              <div class="kpi-sub mono muted">{fmt_num(len(tool_counts))} unique tools</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Tracked Workspaces</div>
+              <div class="kpi-val mono">{len(repo_spend)}</div>
+              <div class="kpi-sub mono muted">Git repositories detected</div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span>Active &amp; Working Sessions</span>
+            <span class="badge badge-working mono">LIVE RUNTIMES</span>
+          </div>
+          <div class="active-grid">
+            {''.join(active_cards_html)}
+          </div>
+
+          <div class="charts-deck">
+            <div class="chart-panel">
+              <div class="chart-header">
+                <span>Model Token Allocation</span>
+                <span class="mono muted">{len(model_tokens)} Models</span>
+              </div>
+              {model_share_svg}
+              <div class="legend-row">
+                {''.join(m_legend_html)}
+              </div>
+            </div>
+
+            <div class="chart-panel">
+              <div class="chart-header">
+                <span>Top Invoked Tools</span>
+                <span class="mono muted">{fmt_num(sum(tool_counts.values()))} Tool Calls</span>
+              </div>
+              {tools_chart_svg}
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span>Historical Sessions Audit</span>
+            <span class="mono muted" style="font-size:12px;">(Latest 35 sessions)</span>
+          </div>
+          <div class="audit-table-wrap">
+            <table class="audit-table mono">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Session Title &amp; ID</th>
+                  <th>Active Model</th>
+                  <th>Duration</th>
+                  <th>Prompts</th>
+                  <th>Saturation</th>
+                  <th>Spend</th>
+                  <th>Last Active</th>
+                  <th>Inspect</th>
+                </tr>
+              </thead>
+              <tbody>
+                {''.join(audit_table_rows)}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: Session Traces Inspector -->
+      <div class="view-pane {'active' if current_view == 'traces' else ''}" id="view-traces">
+        <div class="traces-layout" id="traces-dual-pane">
+          <div class="traces-sidebar">
+            <div class="traces-sidebar-header">
+              <input type="text" id="traces-filter-input" class="search-input mono" placeholder="Filter sessions..." onkeyup="filterTracesSessions()">
+            </div>
+            <div class="sidebar-list" id="traces-sessions-list">
+              {''.join(conv_rows)}
+            </div>
+          </div>
+          <div class="traces-main" id="traces-main-stage">
+            {detail_html}
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 3: Trace Flow Map -->
+      <div class="view-pane {'active' if current_view == 'map' else ''}" id="view-map">
+        <div class="map-stage">
+          <div class="stage-header">
+            <div class="stage-title">
+              <h1>Trace Flow Map &amp; Execution DAG</h1>
+              <div class="muted">Interactive spatial map connecting Prompts &rarr; Reasoning &rarr; Tools &rarr; Artifacts</div>
+            </div>
+            <div class="mono muted">
+              Session: <strong>{html.escape(selected['title'] if selected else '')}</strong>
+            </div>
+          </div>
+
+          <div class="map-controls-bar">
+            {''.join(map_turn_buttons)}
+          </div>
+
+          <div class="map-tracks-container">
+            {''.join(map_tracks_html)}
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 4: Analytics & Charts -->
+      <div class="view-pane {'active' if current_view == 'analytics' else ''}" id="view-analytics">
+        <div class="overview-stage">
+          <div class="stage-header">
+            <div class="stage-title">
+              <h1>Telemetry Analytics &amp; Performance Curves</h1>
+              <div class="muted">Fleet token consumption, cost burn rates, step latency, and context window trajectories</div>
+            </div>
+            <div class="mono muted">Active Model Matrix</div>
+          </div>
+
+          <div class="charts-deck">
+            <div class="chart-panel">
+              <div class="chart-header">
+                <span>Selected Session Context Burn &amp; Spend Curve</span>
+                <span class="mono text-cyan">{html.escape(selected['title'] if selected else '')}</span>
+              </div>
+              {session_curves_svg}
+              <div class="legend-row">
+                <div class="legend-item"><span class="legend-swatch" style="background:#38BDF8;"></span><span class="mono">Context Saturation Curve</span></div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#10B981;"></span><span class="mono">Cumulative Spend ($)</span></div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#EF4444;"></span><span class="mono">Ceiling Threshold</span></div>
+              </div>
+            </div>
+
+            <div class="chart-panel">
+              <div class="chart-header">
+                <span>Top Invoked Tooling Distribution</span>
+                <span class="mono muted">Across All Sessions</span>
+              </div>
+              {tools_chart_svg}
+            </div>
+          </div>
+
+          <div class="section-title">Model Rate Matrix &amp; Limits</div>
+          <div class="audit-table-wrap">
+            <table class="audit-table mono">
+              <thead>
+                <tr>
+                  <th>Model Profile</th>
+                  <th>Provider</th>
+                  <th>Input ($/1M)</th>
+                  <th>Cache Read ($/1M)</th>
+                  <th>Reasoning ($/1M)</th>
+                  <th>Output ($/1M)</th>
+                  <th>Context Limit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {''.join(rates_rows)}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-Over Inspector Drawer -->
+  <div class="slide-over" id="node-inspector">
+    <div class="slide-over-header">
+      <span id="node-inspector-title" class="mono text-cyan" style="font-weight:700;">Node Telemetry</span>
+      <button class="btn btn-sm mono" onclick="closeNodeInspector()">Close [&times;]</button>
+    </div>
+    <div class="slide-over-body">
+      <div id="node-inspector-meta" class="mono muted" style="font-size:11px; margin-bottom:12px;"></div>
+      <div class="raw-section">
+        <div class="raw-section-title mono">Parameters / Payload</div>
+        <pre id="node-inspector-code" class="mono raw-section-code"></pre>
+      </div>
+      <div class="raw-actions-bar" style="margin-top:14px;">
+        <button class="btn btn-sm mono" id="node-copy-btn" onclick="copyNodeText()">Copy Node Payload</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step Output Modal -->
+  <div class="modal-backdrop" id="output-modal" onclick="closeModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span id="modal-title" class="mono">Step Output</span>
+        <button class="btn btn-sm mono" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-content">
+        <pre id="modal-body" class="mono modal-pre"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let autoRefreshTimer = null;
+    let openDrawerIds = new Set();
+    let currentNodeText = '';
+
+    // Real-Time Second-by-Second Live Duration Clock Engine
+    setInterval(() => {{
+      document.querySelectorAll('[data-start-time-ms]').forEach(el => {{
+        if (el.getAttribute('data-is-active') === 'true') {{
+          const startMs = parseInt(el.getAttribute('data-start-time-ms'), 10);
+          const elapsedSec = Math.max(0, Math.floor((Date.now() - startMs) / 1000));
+          const h = Math.floor(elapsedSec / 3600);
+          const m = Math.floor((elapsedSec % 3600) / 60);
+          const s = elapsedSec % 60;
+          const pad = n => String(n).padStart(2, '0');
+          const timeStr = `${{pad(h)}}:${{pad(m)}}:${{pad(s)}}`;
+          const timeSpan = el.querySelector('.duration-time');
+          if (timeSpan) {{
+            timeSpan.textContent = timeStr;
+          }} else {{
+            el.textContent = timeStr;
+          }}
+        }}
+      }});
+    }}, 1000);
+
+    function toggleNavCollapse() {{
+      const rail = document.getElementById('main-nav-rail');
+      rail.classList.toggle('collapsed');
+    }}
+
+    function switchView(viewName, optConvId) {{
+      document.querySelectorAll('.view-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+
+      const pane = document.getElementById('view-' + viewName);
+      if (pane) pane.classList.add('active');
+
+      const navBtn = document.getElementById('nav-btn-' + viewName);
+      if (navBtn) navBtn.classList.add('active');
+
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', viewName);
+      if (optConvId) {{
+        url.searchParams.set('conv', optConvId);
+      }}
+      window.history.pushState({{}}, '', url.toString());
+
+      if (optConvId) {{
+        window.location.href = url.toString();
+      }}
+    }}
+
+    function switchSession(convId) {{
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', 'traces');
+      url.searchParams.set('conv', convId);
+      window.location.href = url.toString();
+    }}
+
+    function setMapTurn(turnNum) {{
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', 'map');
+      if (turnNum === null) {{
+        url.searchParams.delete('turn');
+      }} else {{
+        url.searchParams.set('turn', turnNum);
+      }}
+      window.location.href = url.toString();
+    }}
+
+    function filterTracesSessions() {{
+      const q = document.getElementById('traces-filter-input').value.toLowerCase().trim();
+      document.querySelectorAll('.conv-item').forEach(el => {{
+        const title = el.getAttribute('data-title') || '';
+        const model = el.getAttribute('data-model') || '';
+        if (!q || title.includes(q) || model.includes(q)) {{
+          el.style.display = 'block';
+        }} else {{
+          el.style.display = 'none';
+        }}
+      }});
+    }}
+
+    function switchTab(tabName) {{
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabName));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const targetPane = document.getElementById('tab-' + tabName);
+      if (targetPane) targetPane.classList.add('active');
+
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', tabName);
+      window.history.replaceState({{}}, '', url.toString());
+    }}
+
+    function onDrawerToggle(detailsEl) {{
+      if (detailsEl.id) {{
+        if (detailsEl.open) {{
+          openDrawerIds.add(detailsEl.id);
+        }} else {{
+          openDrawerIds.delete(detailsEl.id);
+        }}
+      }}
+    }}
+
+    function inspectNode(nodeJsonStr) {{
+      try {{
+        const n = JSON.parse(nodeJsonStr);
+        document.getElementById('node-inspector-title').textContent = (n.title || 'Node') + ` [${{n.category || 'tool'}}]`;
+        document.getElementById('node-inspector-meta').textContent = `Timestamp: ${{n.timestamp || 'N/A'}} · Step: #${{n.step_index || 'N/A'}}`;
+        const codeText = n.full_text || (n.args ? JSON.stringify(n.args, null, 2) : n.output_preview || n.subtitle || '');
+        document.getElementById('node-inspector-code').textContent = codeText;
+        currentNodeText = codeText;
+        document.getElementById('node-inspector').classList.add('open');
+      }} catch (err) {{
+        console.error('Inspect node failed:', err);
+      }}
+    }}
+
+    function closeNodeInspector() {{
+      document.getElementById('node-inspector').classList.remove('open');
+    }}
+
+    function copyNodeText() {{
+      const btn = document.getElementById('node-copy-btn');
+      navigator.clipboard.writeText(currentNodeText).then(() => {{
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => {{ btn.textContent = orig; }}, 1800);
+      }});
+    }}
+
+    function toggleAutoRefresh() {{
+      const btn = document.getElementById('auto-refresh-btn');
+      if (autoRefreshTimer) {{
+        clearInterval(autoRefreshTimer);
+        autoRefreshTimer = null;
+        btn.textContent = 'Auto-Refresh (4s): OFF';
+        btn.style.borderColor = 'var(--border)';
+        btn.style.color = 'var(--text)';
+      }} else {{
+        autoRefreshTimer = setInterval(() => {{
+          refreshSilently();
+        }}, 4000);
+        btn.textContent = 'Auto-Refresh (4s): ON';
+        btn.style.borderColor = 'var(--cyan)';
+        btn.style.color = 'var(--cyan)';
+      }}
+    }}
+
+    async function refreshSilently() {{
+      try {{
+        const res = await fetch(window.location.href, {{ headers: {{ 'Accept': 'text/html' }} }});
+        if (!res.ok) return;
+        const htmlText = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+
+        const activePaneId = document.querySelector('.view-pane.active')?.id;
+        if (activePaneId) {{
+          const freshPane = doc.getElementById(activePaneId);
+          const currentPane = document.getElementById(activePaneId);
+          if (freshPane && currentPane) {{
+            const sTop = currentPane.scrollTop;
+            currentPane.innerHTML = freshPane.innerHTML;
+            currentPane.scrollTop = sTop;
+          }}
+        }}
+
+        openDrawerIds.forEach(id => {{
+          const el = document.getElementById(id);
+          if (el) el.open = true;
+        }});
+      }} catch (err) {{
+        console.error('Silent refresh failed:', err);
+      }}
+    }}
+
+    async function loadStepData(convId, stepIndex, field, btn) {{
+      const origText = btn.textContent;
+      btn.textContent = 'Loading...';
+      try {{
+        const res = await fetch(`/api/step_output?conv=${{convId}}&step=${{stepIndex}}&field=${{field}}`);
+        const data = await res.json();
+        document.getElementById('modal-title').textContent = (field === 'thinking' ? 'Reasoning / Thought Trace' : 'Step Output') + ` (Step #${{stepIndex}})`;
+        document.getElementById('modal-body').textContent = data.output;
+        document.getElementById('output-modal').style.display = 'flex';
+      }} catch (err) {{
+        alert('Failed to load step data: ' + err.message);
+      }} finally {{
+        btn.textContent = origText;
+      }}
+    }}
+
+    function closeModal() {{
+      document.getElementById('output-modal').style.display = 'none';
+    }}
+
+    function copyText(btn, text) {{
+      navigator.clipboard.writeText(text).then(() => {{
+        const orig = btn.textContent;
+        btn.textContent = 'Copied to Clipboard!';
+        setTimeout(() => {{ btn.textContent = orig; }}, 1800);
+      }}).catch(err => {{
+        alert('Could not copy: ' + err);
+      }});
+    }}
+
+    async function triggerSync(btn) {{
+      const orig = btn.textContent;
+      btn.textContent = 'Syncing...';
+      try {{
+        const res = await fetch('/api/sync');
+        if (res.ok) {{
+          btn.textContent = 'Synced to Wiki!';
+          setTimeout(() => {{ btn.textContent = orig; }}, 1800);
+        }} else {{
+          btn.textContent = 'Sync Failed';
+          setTimeout(() => {{ btn.textContent = orig; }}, 1800);
+        }}
+      }} catch (err) {{
+        btn.textContent = 'Error';
+        setTimeout(() => {{ btn.textContent = orig; }}, 1800);
+      }}
+    }}
+  </script>
+</body>
+</html>"""
+
+
+class TraceHandler(BaseHTTPRequestHandler):
+    def do_HEAD(self):
+        self.do_GET()
+
+    def send_safe_response(self, content_type: str, body: bytes, status: int = 200):
+        try:
+            self.send_response(status)
+            self.send_header("Content-Type", content_type)
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
+
+    def do_GET(self):
+        try:
+            parsed = urlparse(self.path)
+            qs = parse_qs(parsed.query)
+
+            allowed_routes = {"/", "/api/traces", "/api/step_output", "/api/system_prompt", "/api/diff", "/api/sync"}
+            if parsed.path not in allowed_routes:
+                self.send_safe_response("text/plain; charset=utf-8", b"404 Not Found", status=404)
+                return
+
+            conv_id = qs.get("conv", [""])[0]
+            if conv_id and not re.match(r"^[0-9a-fA-F-]+$", conv_id):
+                self.send_safe_response("text/plain; charset=utf-8", b"400 Invalid conversation ID format", status=400)
+                return
+
+            step_idx = qs.get("step", [""])[0]
+            if step_idx and not re.match(r"^\d+$", step_idx):
+                self.send_safe_response("text/plain; charset=utf-8", b"400 Invalid step index format", status=400)
+                return
+
+            view = qs.get("view", ["overview"])[0]
+            tab = qs.get("tab", ["prompts"])[0]
+            turn_str = qs.get("turn", [""])[0]
+            active_turn = int(turn_str) if turn_str.isdigit() else None
+
+            if parsed.path == "/api/sync":
+                convs = collect_all_traces()
+                written = sync_markdown_files(convs)
+                body = json.dumps({"status": "ok", "synced": [str(w) for w in written]}, ensure_ascii=False).encode("utf-8")
+                self.send_safe_response("application/json; charset=utf-8", body)
+                return
+
+            if parsed.path == "/api/traces":
+                convs = collect_all_traces()
+                limit_str = qs.get("limit", [""])[0]
+                if limit_str.isdigit():
+                    limit = int(limit_str)
+                    if limit > 0:
+                        convs = convs[:limit]
+                body = json.dumps(convs, ensure_ascii=False, indent=2).encode("utf-8")
+                self.send_safe_response("application/json; charset=utf-8", body)
+                return
+
+            if parsed.path == "/api/step_output":
+                field = qs.get("field", ["content"])[0]
+                output_text = "No output available"
+
+                if conv_id and step_idx:
+                    target_conv_dir = (BRAIN_DIR / conv_id).resolve()
+                    if target_conv_dir.parent == BRAIN_DIR.resolve() and target_conv_dir.exists() and target_conv_dir.is_dir():
+                        full_log = target_conv_dir / ".system_generated" / "logs" / "transcript_full.jsonl"
+                        if full_log.exists():
+                            with open(full_log, "r", encoding="utf-8", errors="replace") as f:
+                                for line in f:
+                                    try:
+                                        d = json.loads(line)
+                                        if str(d.get("step_index")) == str(step_idx):
+                                            if field == "thinking":
+                                                output_text = str(d.get("thinking", "")) or "(No thinking trace recorded)"
+                                            else:
+                                                output_text = str(d.get("content", "")) or "(Empty content output)"
+                                            break
+                                    except Exception:
+                                        pass
+
+                        if output_text == "No output available" and field == "content":
+                            step_file = target_conv_dir / ".system_generated" / "steps" / step_idx / "output.txt"
+                            if step_file.exists():
+                                output_text = step_file.read_text(encoding="utf-8", errors="replace")
+
+                resp_data = {"step": step_idx, "field": field, "output": output_text, "length": len(output_text)}
+                body = json.dumps(resp_data, ensure_ascii=False).encode("utf-8")
+                self.send_safe_response("application/json; charset=utf-8", body)
+                return
+
+            if parsed.path == "/api/system_prompt":
+                convs = collect_all_traces()
+                selected = next((c for c in convs if c["id"] == conv_id), convs[0] if convs else None)
+                sys_info = get_system_prompt_info(selected["workspace"] if selected else str(FLEET_ROOT), conv_id or "")
+                body = json.dumps(sys_info, ensure_ascii=False, indent=2).encode("utf-8")
+                self.send_safe_response("application/json; charset=utf-8", body)
+                return
+
+            if parsed.path == "/api/diff":
+                convs = collect_all_traces()
+                selected = next((c for c in convs if c["id"] == conv_id), convs[0] if convs else None)
+                edited_paths = [tf["path"] for tf in (selected.get("touched_files", []) if selected else []) if tf.get("mode") == "EDITED"]
+                diff_data = get_git_diff_data(selected["workspace"] if selected else None, edited_paths)
+                body = json.dumps(diff_data, ensure_ascii=False).encode("utf-8")
+                self.send_safe_response("application/json; charset=utf-8", body)
+                return
+
+            convs = collect_all_traces()
+            body = render_html(convs, conv_id or None, view, tab, active_turn).encode("utf-8")
+            self.send_safe_response("text/html; charset=utf-8", body)
+
+        except Exception as exc:
+            err_body = f"500 Internal Server Error: {exc}\n".encode("utf-8")
+            self.send_safe_response("text/plain; charset=utf-8", err_body, status=500)
+
+    def log_message(self, format, *args):
+        # Suppress noisy HTTP request logging in daemon mode
+        return
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Fleet Agent Trace & Token Telemetry Dashboard")
+    parser.add_argument("--serve", action="store_true", help="Launch live HTTP telemetry daemon")
+    parser.add_argument("--port", type=int, default=8765, help="Port to bind server (default: 8765)")
+    parser.add_argument("--sync", action="store_true", help="Sync traces to wiki/AGENT_TRACES_DASHBOARD.md")
+    parser.add_argument("--json", action="store_true", help="Output all traces as JSON to stdout")
+    parser.add_argument("--open-obsidian", action="store_true", help="Open synced Markdown file in Obsidian")
+    args = parser.parse_args()
+
+    convs = collect_all_traces()
+
+    if args.json:
+        print(json.dumps(convs, ensure_ascii=False, indent=2))
+        return
+
+    if args.sync or not args.serve:
+        written = sync_markdown_files(convs)
+        for w in written:
+            print(f"[fleet-telemetry] Synced traces to {w}")
+
+    if args.open_obsidian:
+        target_md = FLEET_ROOT / "wiki" / "AGENT_TRACES_DASHBOARD.md"
+        try:
+            subprocess.run(["open", "-a", "Obsidian", str(target_md)], check=False)
+            print(f"[fleet-telemetry] Opened {target_md} in Obsidian")
+        except Exception as e:
+            print(f"[fleet-telemetry] Could not open Obsidian: {e}")
+
+    if args.serve:
+        server_address = ("127.0.0.1", args.port)
+        httpd = ThreadingHTTPServer(server_address, TraceHandler)
+        print("==================================================================")
+        print(f"  Fleet Obsidian Telemetry HUD running at http://127.0.0.1:{args.port}")
+        print("  Visual System: Obsidian Dark Telemetry (Linear/Anduril/Stripe HUD)")
+        print("  Left Nav Rail: Overview, Traces Inspector, Flow Map, Analytics")
+        print("  Endpoints: /, /api/traces, /api/step_output, /api/diff, /api/system_prompt, /api/sync")
+        print("==================================================================")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("\n[fleet-telemetry] Server shutting down.")
+            httpd.server_close()
+
+
+if __name__ == "__main__":
+    main()
