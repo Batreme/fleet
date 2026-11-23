@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: pinreply-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: pinreply-com
 
 ## Overview & Design Identity
-- **Target**: `pinreply-com` (**PinReply — Design feedback, in the right place**)
+- **Target**: `pinreply-com` (**Website Feedback Tool for Chrome · PinReply**)
 - **Production URL**: [https://pinreply.com/](https://pinreply.com/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#101828` canvas, `#f8fafc` ink, `#e4e7ec` accent)
-- **Summary**: PinReply is a design feedback tool for visual comments on websites. Point to a change, share a review, and keep replies in context.
-- **Total Clean CSS Variables Extracted**: `11` (curated ground-truth set below)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#101828` ink, `#5b4cee` accent)
+- **Summary**: Pin visual comments on websites, share screenshot reviews, and collect client replies without accounts. A free-at-launch website feedback...
+- **Total Clean CSS Variables Extracted**: `11` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Inter`
 - **Body Font Stack**: `Inter`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 46px`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 36px`)
-- **Body Copy**: rule `p` (`font-size: 14px`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `16px`, `clamp(42px,5.5vw,72px)`, `clamp(30px,4vw,44px)`, `22px`, `23px`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 82.8px`, `font-weight: 700`, `letter-spacing: -3.24px`); rule `h1` (`font-size: 46px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 44px`, `line-height: 50.6px`, `font-weight: 700`, `letter-spacing: -1.98px`); rule `h2` (`font-size: 36px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); rule `p` (`font-size: 14px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 22.4px`, `font-weight: 600`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#101828` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#344054` | `var(--secondary)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#667085` | `var(--muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#e4e7ec` | `var(--line)` in `:root` |
-| **Secondary / Muted Copy** | `#f8fafc` | `var(--canvas)` in `:root` |
-| **Structural Hairline Border** | `#5b4cee` | `var(--brand)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#101828` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f8fafc` | `var(--canvas)` in `:root` |
+| **Interactive Accent / Highlight** | `#5b4cee` | `var(--brand)` in `:root` |
+| **Secondary / Muted Copy** | `#667085` | `var(--muted)` in `:root` |
+| **Structural Hairline Border** | `#e4e7ec` | `var(--line)` in `:root` |
+| **Variable Token (`--secondary`)** | `#344054` | `var(--secondary)` in `:root` |
 | **Variable Token (`--hover`)** | `#4938d1` | `var(--hover)` in `:root` |
 | **Variable Token (`--soft`)** | `#f5f3ff` | `var(--soft)` in `:root` |
 | **Variable Token (`--mint`)** | `#087c6f` | `var(--mint)` in `:root` |
@@ -50,22 +62,22 @@
 | `--mint` | `#087c6f` | Color / Atmospheric Token |
 | `--mint-soft` | `#f0fdf9` | Color / Atmospheric Token |
 | `--radius` | `18px` | Elevation / Border Token |
-| `--pinreply-com-bg` | `#101828` | Canvas Substrate (from `var(--ink)` in `:root`) |
-| `--pinreply-com-ink` | `#f8fafc` | Primary Typography Ink (stylesheet-derived) |
-| `--pinreply-com-surface` | `#667085` | Surface Substrate (stylesheet-derived) |
-| `--pinreply-com-accent` | `#e4e7ec` | Interactive Accent (stylesheet-derived) |
-| `--pinreply-com-muted` | `#f8fafc` | Secondary Ink (stylesheet-derived) |
+| `--pinreply-com-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--pinreply-com-ink` | `#101828` | Primary Typography Ink (computed-derived) |
+| `--pinreply-com-surface` | `#f8fafc` | Surface Substrate (computed-derived) |
+| `--pinreply-com-accent` | `#5b4cee` | Interactive Accent (computed-derived) |
+| `--pinreply-com-muted` | `#667085` | Secondary Ink (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `pinreply-com`)**:
-   - Landmark `<header class="header">` hosting `PinReply — Design feedback, in the r` navigation (`How it works · For clients · FAQ · Add to Chrome`), DOM attributes (`data-ads-conversion="add-to-chrome"`, `data-ads-conversion="add-to-chrome"`, `data-ads-conversion="add-to-chrome"`, `data-ads-choice="decline"`), and stylesheet rule `html { scroll-behavior:smooth;scroll-padding-top:100px }`.
+   - Landmark `<header class="header">` (`1440x81px`) hosting `Website Feedback Tool for Chrome · P` navigation (`How it works · For clients · FAQ · Guides · Add to Chrome`), DOM attributes (`data-ads-conversion="add-to-chrome"`, `data-ads-conversion="add-to-chrome"`, `data-ads-conversion="add-to-chrome"`, `data-ads-choice="decline"`), and stylesheet rule `html { scroll-behavior:smooth;scroll-padding-top:100px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Website feedback. Without the back`)**:
-   - Landmark `<section class="hero">` presenting display lead `Website feedback. Without the back-and-forth.` and copy excerpt *"Point to what needs changing. Add a visual comment. Keep client r"* over `#101828` canvas and `#f8fafc` ink.
+   - Landmark `<section class="hero">` presenting display lead `Website feedback. Without the back-and-forth.` and copy excerpt *"A website feedback tool for Chrome. Pin a visual comment, share a"* over `#ffffff` canvas and `#101828` ink.
 3. **Primary Showcase & Content Grid (<section.section> — `1 Spaces for everyday living.`)**:
    - Landmark `<section class="section">` rendering section `1 Spaces for everyday living.` with copy *"For Chrome on desktop. Free at launch. No account or payment card"*, asset references (`favicon.png`, `site.css`, `ads.js`, `pinreply-mark.svg`), and grid rule `textarea { font:inherit }`.
 4. **Interactive Detail & Feature Matrix (<article.card> — `Point. Explain. Move forward.`)**:
-   - Landmark `<article class="card">` framing `Point. Explain. Move forward.` and `Pin the change` (*"Give the headline more room above the button."*) with `#667085` surface cards, `#e4e7ec` accents, and `summary { -webkit-tap-highlight-color:transparent }`.
+   - Landmark `<article class="card">` framing `Point. Explain. Move forward.` and `Pin the change` (*"Give the headline more room above the button."*) with `#f8fafc` surface cards, `#5b4cee` accents, and `summary { -webkit-tap-highlight-color:transparent }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://pinreply.com/`)**:
-   - Landmark `<footer class="footer">` anchoring `PinReply — Design feedback, in t` footer links (`How it works · For clients · FAQ · Add to Chrome`), copy *"An example review, with demonstration content."*, and `#5b4cee` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Website Feedback Tool for Chrome` footer links (`How it works · For clients · FAQ · Guides · Add to Chrome`), copy *"An example review, with demonstration content."*, and `#e4e7ec` structural dividers.

@@ -1,34 +1,48 @@
+---
+title: "UI & UX Architecture: constellations-icilalune-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: constellations-icilalune-com
 
 ## Overview & Design Identity
 - **Target**: `constellations-icilalune-com` (**Constellation(s) — Immersive virtual 3D art exhibitions**)
 - **Production URL**: [https://constellations.icilalune.com/](https://constellations.icilalune.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent)
-- **Summary**: Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam Krypel, Pia Be...
-- **Total Clean CSS Variables Extracted**: `48` (curated ground-truth set below)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f8f8f8` canvas, `#111111` ink, `#ec3013` accent)
+- **Summary**: Immersive virtual galleries: step into the worlds of AG Z, David Bartus, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam...
+- **Total Clean CSS Variables Extracted**: `48` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Archivo`
-- **Body Font Stack**: `Arimo`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 42px`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`)
-- **Body Copy**: CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `42px`, `32px`, `25px`, `20px`)
+- **Display Font Stack**: `Arimo`
+- **Body Font Stack**: `Helvetica Neue`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 42px`, `line-height: 47.04px`, `font-weight: 800`, `letter-spacing: -0.63px`); rule `h1` (`font-size: 42px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 53.2px`, `font-weight: 800`, `letter-spacing: -1.12px`); rule `h2` (`font-size: 32px`)
+- **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`); CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f3f2f2` | `var(--color-bg)` in `:root` |
-| **Primary Typography Ink** | `#eae9e9` | `var(--color-surface)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#201e1d` | `var(--color-text)` in `:root` |
+| **Primary Canvas Substrate** | `#f8f8f8` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#111111` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f3f2f2` | `var(--color-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#ec3013` | `var(--color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#e15b47` | `var(--color-accent-2)` in `:root` |
-| **Structural Hairline Border** | `#f8f4f4` | `var(--color-neutral-100)` in `:root` |
+| **Secondary / Muted Copy** | `#201e1d` | `var(--color-text)` in `:root` |
+| **Structural Hairline Border** | `#201e1d` | `var(--color-divider)` in `:root` |
+| **Variable Token (`--color-surface`)** | `#eae9e9` | `var(--color-surface)` in `:root` |
+| **Variable Token (`--color-accent-2`)** | `#e15b47` | `var(--color-accent-2)` in `:root` |
+| **Variable Token (`--color-neutral-100`)** | `#f8f4f4` | `var(--color-neutral-100)` in `:root` |
 | **Variable Token (`--color-neutral-200`)** | `#eae7e7` | `var(--color-neutral-200)` in `:root` |
 | **Variable Token (`--color-neutral-300`)** | `#d7d3d3` | `var(--color-neutral-300)` in `:root` |
 | **Variable Token (`--color-neutral-400`)** | `#bab6b6` | `var(--color-neutral-400)` in `:root` |
@@ -65,12 +79,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.sc-host> — `constellations-icilalune-com`)**:
-   - Landmark `<header class="sc-host">` hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+   - Landmark `<header class="sc-host">` (`1440px`) hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.sc-interp> — `Constellation(s)`)**:
-   - Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, Palash"* over `#f3f2f2` canvas and `#201e1d` ink.
-3. **Primary Showcase & Content Grid (<section.scp0> — `Artists`)**:
-   - Landmark `<section class="scp0">` rendering section `Artists` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
-4. **Interactive Detail & Feature Matrix (<section.scp1> — `Exhibit on Constellation(s)`)**:
-   - Landmark `<section class="scp1">` framing `Exhibit on Constellation(s)` and `AG Z — Ten Thousand Li` (*"AG Z — Ten Thousand Li"*) with `#201e1d` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
+   - Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, David "* over `#f8f8f8` canvas and `#111111` ink.
+3. **Primary Showcase & Content Grid (<section.scp0> — `Immersive virtual galleries: step `)**:
+   - Landmark `<section class="scp0">` rendering section `Immersive virtual galleries: step into the world` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
+4. **Interactive Detail & Feature Matrix (<section.scp1> — `AG Z — Ten Thousand Li · Travel an`)**:
+   - Landmark `<section class="scp1">` framing `AG Z — Ten Thousand Li · Travel and street photo` and `David Bartus — From Above · Landscape and drone ` (*"David Bartus — From Above · Landscape and drone photography, Hung"*) with `#f3f2f2` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
 5. **Colophon & Global Directory Footer (<footer.scp2> — `https://constellations.icilalune.com/`)**:
-   - Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#f8f4f4` structural dividers.
+   - Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#201e1d` structural dividers.

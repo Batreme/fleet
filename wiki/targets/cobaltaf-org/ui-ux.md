@@ -1,68 +1,84 @@
+---
+title: "UI & UX Architecture: cobaltaf-org"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: cobaltaf-org
 
 ## Overview & Design Identity
 - **Target**: `cobaltaf-org` (**Cobalt Abortion Fund**)
 - **Production URL**: [https://cobaltaf.org/](https://cobaltaf.org/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0047ba` canvas, `#f2f2f2` ink, `#e6d2ee` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)
 - **Summary**: Read privacy and digital security tips here →
-- **Total Clean CSS Variables Extracted**: `249` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `249` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Poppins`
-- **Body Font Stack**: `bookmania`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `,h1` (`font-size: clamp(2.5658rem,1.4795rem + 5...`, `font-weight: 400`)
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: clamp(2.0273rem,1.4553rem + 2...`, `font-weight: 500`)
-- **Body Copy**: rule `p` (`line-height: inherit`)
-- **Metadata & Labels**: CSS variables `--container-small: 76rem`, `--label-color: #344054`, `--label-padding: 0px 0px 5px 0px`; rule `,small` (`font-size: clamp(.8rem,.9173rem + -.1422...`)
+- **Display Font Stack**: `bookmania`
+- **Body Font Stack**: `Poppins`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 95.368px`, `line-height: 100.136px`, `font-weight: 400`); rule `,h1` (`font-size: clamp(2.5658rem,1.4795rem + 5...`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 61.0352px`, `line-height: 64.087px`, `font-weight: 500`); rule `,h2` (`font-size: clamp(2.0273rem,1.4553rem + 2...`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 19.2px`, `font-weight: 400`); rule `p` (`font-size: var(--form-desc-size)`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 19.2px`, `font-weight: 400`); CSS variables `--container-small: 76rem`, `--label-padding: 0px 0px 5px 0px`; rule `,small` (`font-size: clamp(.8rem,.9173rem + -.1422...`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0047ba` | `var(--color-cobalt-blue)` in `:root` |
-| **Primary Typography Ink** | `#132048` | `var(--color-navy-blue)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#c79fe5` | `var(--color-lavender)` in `:root` |
-| **Interactive Accent / Highlight** | `#e6d2ee` | `var(--color-lavender-light)` in `:root` |
-| **Secondary / Muted Copy** | `#f86` | `var(--color-chartreuse)` in `:root` |
-| **Structural Hairline Border** | `#f2f2f2` | `var(--color-gray)` in `:root` |
-| **Variable Token (`--color-white`)** | `#fff` | `var(--color-white)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
+| **Interactive Accent / Highlight** | `#0000ff` | `#sb_instagram .sbi_follow_btn a { background: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#468847` | `var(--success-text-color)` in `:root` |
+| **Structural Hairline Border** | `#dcdee2` | `var(--ss-border-color)` in `:root` |
+| **Variable Token (`--ss-primary-color`)** | `#5897fb` | `var(--ss-primary-color)` in `:root` |
+| **Variable Token (`--ss-font-color`)** | `#4d4d4d` | `var(--ss-font-color)` in `:root` |
+| **Variable Token (`--ss-font-placeholder-color`)** | `#8d8d8d` | `var(--ss-font-placeholder-color)` in `:root` |
+| **Variable Token (`--ss-highlight-color`)** | `#fffb8c` | `var(--ss-highlight-color)` in `:root` |
+| **Variable Token (`--ss-success-color`)** | `#00b755` | `var(--ss-success-color)` in `:root` |
+| **Variable Token (`--ss-error-color`)** | `#dc3545` | `var(--ss-error-color)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--color-cobalt-blue` | `#0047ba` | Brand / Palette Token |
-| `--color-navy-blue` | `#132048` | Brand / Palette Token |
-| `--color-lavender` | `#c79fe5` | Brand / Palette Token |
-| `--color-lavender-light` | `#e6d2ee` | Canvas / Surface Token |
-| `--color-chartreuse` | `#f86` | Brand / Palette Token |
-| `--color-gray` | `#f2f2f2` | Brand / Palette Token |
-| `--color-white` | `#fff` | Canvas / Surface Token |
-| `--anim-time` | `0.3s` | Motion / Easing Token |
-| `--anim-time-long` | `0.6s` | Motion / Easing Token |
-| `--anim-ease` | `ease-in` | Motion / Easing Token |
-| `--container-fluid` | `100rem` | Layout / Spatial Grid Token |
-| `--container` | `83rem` | Layout / Spatial Grid Token |
-| `--container-small` | `76rem` | Layout / Spatial Grid Token |
-| `--container-padding` | `var(--space-m)` | Layout / Spatial Grid Token |
-| `--header-spacing` | `9rem` | Layout / Spatial Grid Token |
-| `--font-bookmania` | `"bookmania",serif` | Typography / Scale Token |
+| `--ss-primary-color` | `#5897fb` | Brand / Palette Token |
+| `--ss-bg-color` | `#ffffff` | Canvas / Surface Token |
+| `--ss-font-color` | `#4d4d4d` | Brand / Palette Token |
+| `--ss-font-placeholder-color` | `#8d8d8d` | Brand / Palette Token |
+| `--ss-disabled-color` | `#dcdee2` | Brand / Palette Token |
+| `--ss-border-color` | `#dcdee2` | Brand / Palette Token |
+| `--ss-highlight-color` | `#fffb8c` | Canvas / Surface Token |
+| `--ss-success-color` | `#00b755` | Brand / Palette Token |
+| `--ss-error-color` | `#dc3545` | Brand / Palette Token |
+| `--ss-focus-color` | `#5897fb` | Brand / Palette Token |
+| `--ss-main-height` | `30px` | Layout / Spatial Grid Token |
+| `--ss-content-height` | `300px` | Layout / Spatial Grid Token |
+| `--ss-spacing-l` | `7px` | Layout / Spatial Grid Token |
+| `--ss-spacing-m` | `5px` | Layout / Spatial Grid Token |
+| `--ss-spacing-s` | `3px` | Layout / Spatial Grid Token |
+| `--ss-animation-timing` | `0.2s` | Motion / Easing Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `cobaltaf-org`)**:
-   - Landmark `<header class="header js-header">` hosting `Cobalt Abortion Fund` navigation (`Support · Services · Find A Clinic · Resources · Necesito Apoyo`), DOM attributes (`data-acsb-sr-alert="true"`, `data-acsb-sr-only="true"`, `data-acsb-force-visible="true"`, `data-acsb`), and stylesheet rule `.addtoany_content { clear:both;margin:16px auto }`.
+   - Landmark `<header class="header js-header">` (`1440x89px`) hosting `Cobalt Abortion Fund` navigation (`Support · Services · Find A Clinic · Resources · Necesito Apoyo`), DOM attributes (`data-acsb-sr-alert="true"`, `data-acsb-sr-only="true"`, `data-acsb-force-visible="true"`, `data-acsb`), and stylesheet rule `.with_frm_style .frm_button.frm_h... { display:none; }`.
 2. **Hero Stage & Focal Lead (<section.section> — `Abortion Seekers`)**:
-   - Landmark `<section class="section section-1">` presenting display lead `Abortion Seekers` and copy excerpt *"Press Option+1 for screen-reader mode, Option+0 to cancel"* over `#0047ba` canvas and `#f2f2f2` ink.
-3. **Primary Showcase & Content Grid (<section.section> — `Cobalt Abortion Fund provides dire`)**:
-   - Landmark `<section class="section section-2">` rendering section `Cobalt Abortion Fund provides direct financial as...` with copy *"Accessibility Screen-Reader Guide, Feedback, and Issue Reporting "*, asset references (`analytics.js`, `gtm.js`, `static.addtoany.com`, `maps.googleapis.com`), and grid rule `.addtoany_header { margin:0 0 16px }`.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Whatever your reason is for gettin`)**:
-   - Landmark `<section class="section section-3">` framing `Whatever your reason is for getting an abortion,...` and `Our Services` (*"Read privacy and digital security tips here →"*) with `#c79fe5` surface cards, `#e6d2ee` accents, and `.addtoany_list { display:inline;line-height:16px }`.
+   - Landmark `<section class="section section-1">` presenting display lead `Abortion Seekers` and copy excerpt *"Read privacy and digital security tips here →"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.section-2> — `Cobalt Abortion Fund provides dire`)**:
+   - Landmark `<section class="section section-2">` rendering section `Cobalt Abortion Fund provides direct financial as...` with copy *"Cobalt Abortion Fund provides direct financial assistance for abo"*, asset references (`analytics.js`, `gtm.js`, `static.addtoany.com`, `maps.googleapis.com`), and grid rule `le .frm-show-form div.frm_descrip... { text-align: var(--form-align); }`.
+4. **Interactive Detail & Feature Matrix (<section.section-3> — `Whatever your reason is for gettin`)**:
+   - Landmark `<section class="section section-3">` framing `Whatever your reason is for getting an abortion,...` and `Our Services` (*"We exist to support anyone seeking abortion care at one of the cl"*) with `#dddddd` surface cards, `#0000ff` accents, and `input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px white inset; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://cobaltaf.org/`)**:
-   - Landmark `<footer class="footer">` anchoring `Cobalt Abortion Fund` footer links (`Support · Services · Find A Clinic · Resources · Necesito Apoyo`), copy *"Lea consejos de privacidad y seguridad digital aquí →"*, and `#f2f2f2` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Cobalt Abortion Fund` footer links (`Support · Services · Find A Clinic · Resources · Necesito Apoyo`), copy *"We know there are many barriers people face while trying to "*, and `#dcdee2` structural dividers.

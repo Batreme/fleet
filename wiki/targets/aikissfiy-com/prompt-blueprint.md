@@ -1,61 +1,67 @@
 ---
 title: "UI Prompt Blueprint: aikissfiy-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "aikissfiy-com"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f172a` ink, `#64748b` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020617` ink, `#6c63ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: aikissfiy-com
 
 > **Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy** (https://aikissfiy.com) — Description: AIKissfiy creates realistic AI kissing videos from your photos. Choose different kiss styles, keep faces recognizable, and e...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy** (`https://aikissfiy.com`). Description: AIKissfiy creates realistic AI kissing videos from your photos. Choose different kiss styles, keep faces recognizable, and e...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f172a` ink, `#64748b` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020617` ink, `#6c63ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--aikiss-surface-solid)` in `:root`) paired with `#0f172a` primary typography and `#64748b` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Plus Jakarta Sans` for display copy (`Free AI Kissing Video Generator`) with `Inter` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: .5rem`, padding `13px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#020617` primary typography and `#6c63ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Plus Jakarta Sans` for display copy (`Free AI Kissing Video Generator`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1196px` container bounds (`gap: 4px`, padding `8px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `800px` extracted from `aikissfiy-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `13px` lateral canvas padding with `.5rem` grid gap.
-- **Border Radius Scale**: `27px`, `9999px`, `30px`, `.75rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1196px` (measured `<main>` bounding box width within `1440px` desktop viewport).
+- **Canvas Lateral Padding & Spacing**: `8px` lateral canvas padding with `4px` grid gap.
+- **Border Radius Scale**: `10px`, `var(--ak-border-radius-base)`, `var(--ak-border-radius-round)`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: .5rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `13px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:1024px)`.
+- **Desktop Layout**: 2-column persistent left sidebar (`232px`, <nav.app-navigation__nav>) + `1196px` main content stage at `1440px` (`max-width: 1196px`, `gap: 4px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with collapsed `<nav.app-navigation__nav>` drawer navigation and `8px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:768px)`, `@media (max-width:767px)`, `@media (max-width:767px)and (any-hover:hover)and (any-pointer:fine)`, `@media (max-width:639px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--aikiss-surface-solid)` in `:root` |
-| **Primary Typography Ink** | `#0f172a` | `var(--aikiss-text)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#475569` | `var(--aikiss-muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#64748b` | `var(--aikiss-soft-muted)` in `:root` |
-| **Secondary / Muted Copy** | `#6c63ff` | `var(--halo-border-fallback)` in `:root` |
-| **Structural Hairline Border** | `#ffdce5` | `var(--hologram-pink)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#020617` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f7f8fb` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#6c63ff` | `var(--gradient-primary)` in `:root` |
+| **Secondary / Muted Copy** | `#64748b` | `var(--aikiss-soft-muted)` in `:root` |
+| **Structural Hairline Border** | `#d1d5db` | `var(--border-color)` in `:root` |
+| **Variable Token (`--aikiss-text`)** | `#0f172a` | `var(--aikiss-text)` in `:root` |
+| **Variable Token (`--aikiss-muted`)** | `#475569` | `var(--aikiss-muted)` in `:root` |
 | **Variable Token (`--gradient-primary`)** | `#8b81ff` | `var(--gradient-primary)` in `:root` |
 | **Variable Token (`--gradient-primary`)** | `#b941ff` | `var(--gradient-primary)` in `:root` |
 | **Variable Token (`--gradient-primary`)** | `#ec4899` | `var(--gradient-primary)` in `:root` |
@@ -87,66 +93,83 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f
 ### Font Family Stacks
 - **Display Typography**: `Plus Jakarta Sans`.
 - **Primary Body Stack**: `Inter`.
-- **Technical / Metadata Stack**: `SFMono-Regular`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: 1.11111`, `--text-5xl: 3rem`; rule `h1` (`font-size: 2em!important`).
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`, `--text-3xl: 1.875rem`; rule `h2` (`line-height: 1.33`, `font-weight: 600`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`, `--ak-font-size-base: 14px`.
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 50px`, `line-height: 54px`, `font-weight: 800`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: 1.11111`, `--text-5xl: 3rem`; rule `h1` (`font-size: 2em`).
+- **Section Heading (`H2`)**: live computed `h2 (largest visible desktop heading)` (`font-size: 60px`, `line-height: 1.2`, `font-weight: 900`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.5em`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0,0,.2,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.23,1,.32,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `guage-popover-leave-active[data-v...`**: `transition: opacity .12s ease,transform .12s ease` extracted from `aikissfiy-com` stylesheet.
-- **Selector `.overlay-scrollbar__thumb[data-v-...`**: `transition: background-color .15s ease,width .15s ease` extracted from `aikissfiy-com` stylesheet.
-- **Selector `.btn:before`**: `transition: .5s` extracted from `aikissfiy-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.navigate-new>` and `<section.flex>`.
-- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+- **Selector `.ak-button`**: `transition: .1s` extracted from `aikissfiy-com` stylesheet.
+- **Selector `.ak-button:focus-visible`**: `transition: outline-offset 0s,outline 0s` extracted from `aikissfiy-com` stylesheet.
+- **Selector `ton.is-text:not(.is-disabled):foc...`**: `transition: outline-offset 0s,outline 0s` extracted from `aikissfiy-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.navigate-new>` and `<article.gap-3>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.home-section>` and `<article.gap-3>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — Free AI Kissing Video Generator: Create AI │
+│ DESKTOP VIEWPORT (1440px) — Sidebar (232px) + Main (1196px)            │
 │ ====================================================================== │
-│ [ <header.navigate-new>    | Home · Nano Banana Pro · AI Effects    ]  │
+│ +--[ SIDEBAR (232px) ]--+--[ MAIN CONTENT STAGE (1196px) ]-----------+ │
+│ | <nav.app-navigation__ | [ <header.navigate- | Home · Nano Banana ] | │
+│ | - Home                | ------------------------------------------ | │
+│ | - Nano Banana Pro     | HERO STAGE: <section.home-section>         | │
+│ | - AI Effects          | H1: Free AI Kissing Video Generator        | │
+│ | - Explore             | Bg:#ffffff Ink:#020617 Acc:#6c63ff         | │
+│ | x=11 h=608px rail     | ------------------------------------------ | │
+│ |                       | SHOWCASE: <article.gap-3> max:1196px       | │
+│ |                       | [Generate AI Kiss V] [What Else Can You ]  | │
+│ |                       | DETAIL: <article.px-3>                     | │
+│ +-----------------------+--------------------------------------------+ │
+│ [ FOOTER (<footer.border-slate) | https://aikissfiy.com                │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Collapsed Sidebar + 1-Col Stack       │
+│ ====================================================================== │
+│ [ DRAWER (<nav.app-navigation__n) | <header.navigate-new>              │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.flex>                                       |   │
-│ | H1: Free AI Kissing Video Generator                              |   │
-│ | Substrate: #fff       | Ink: #0f172a    | Accent: #64748b        |   │
+│ | HERO STAGE (<section.home-section>) — 390px Full-Width             | │
+│ | H1: Free AI Kissing Video Generator                                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.flex>            ) max-w: 800px          |   │
-│ | +------------------------------+  +------------------------------+ | │
-│ | | Realistic                    |  | Diverse                      | | │
-│ | +------------------------------+  +------------------------------+ | │
+│ | SHOWCASE STACK (<article.gap-3>) — 1-Col (gap: 4px)                | │
+│ | [ Card 1: Generate AI Kiss Videos in Any Style                   ] | │
+│ | [ Card 2: What Else Can You Create with AIKissfiy?               ] | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .5rem ) | │
-│ | [<header.navigate-n] -> [<section.flex>] -> [<section.flex>] |       │
+│ | DETAIL STACK (<article.px-3>) — 1-Col (Generate Romantic )         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.w-full>       ) | https://aikissfiy.com              │
+│ [ FOOTER (<footer.border-slate-2) | Stacked 390px Colophon             │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.navigate-new> — `aikissfiy-com`)**:
-   - Landmark `<header class="navigate-new sticky">` hosting `Free AI Kissing Video Generator: Cre` navigation (`Home · Nano Banana Pro · AI Effects`), DOM attributes (`data-hid="page-structured-data"`, `data-gtag`, `data-v-8a6150fd`, `data-v-a6b3f275`), and stylesheet rule `before { border:1px solid hsla(0,0%,100%,.68);border-radius:27px;content:"";inset... }`.
-2. **Hero Stage & Focal Lead (<section.flex> — `Free AI Kissing Video Generator`)**:
-   - Landmark `<section class="flex flex-col">` presenting display lead `Free AI Kissing Video Generator` and copy excerpt *"AI Kissing Generator"* over `#fff` canvas and `#0f172a` ink.
-3. **Primary Showcase & Content Grid (<section.flex> — `Realistic`)**:
-   - Landmark `<section class="flex flex-col">` rendering section `Realistic` with copy *"Love Compatibility"*, asset references (`cdn.aikissfiy.com`, `entry.D5yMvS4u.css`, `OverlayScrollbar.CrLIJdLh.css`, `LanguageSwitch.BsPr10ru.css`), and grid rule `webkit-scrollbar { display:none }`.
-4. **Interactive Detail & Feature Matrix (<section.flex> — `Diverse`)**:
-   - Landmark `<section class="flex flex-col">` framing `Diverse` and `Fast` (*"AI Character Generator"*) with `#475569` surface cards, `#64748b` accents, and `body { line-height:inherit;margin:0 }`.
-5. **Colophon & Global Directory Footer (<footer.w-full> — `https://aikissfiy.com`)**:
-   - Landmark `<footer class="w-full border-t">` anchoring `Free AI Kissing Video Generator:` footer links (`Home · Nano Banana Pro · AI Effects`), copy *"AI Kissing Generator Hot"*, and `#ffdce5` structural dividers.
+1. **Persistent Left Sidebar Navigation (<nav.app-navigation__nav> — `232×608px` at `x=11`)**:
+   - Fixed/sticky left rail `<nav class="app-navigation__nav desktop-only">` (`232px` wide) paired with top bar `<header class="navigate-new top-0">` hosting `Free AI Kissing Video Generato` navigation (`Home · Nano Banana Pro · AI Effects`), DOM attributes (`data-hid="page-structured-data"`, `data-gtag`, `data-v-3c617593`, `data-v-122af031`), and rule `webkit-scrollbar { display:none }`.
+2. **Hero Stage & Focal Lead (<section.home-section> — `Free AI Kissing Video Generator`)**:
+   - Landmark `<section class="home-section aikiss-ambient-section">` inside `1196px` main stage presenting display lead `Free AI Kissing Video Generator` and copy excerpt *"Upload two photos, choose a kiss style, and create a realistic AI"* over `#ffffff` canvas and `#020617` ink.
+3. **Primary Showcase & Content Grid (<article.gap-3> — `Generate AI Kiss Videos in Any Sty`)**:
+   - Landmark `<article class="gap-3 px-3">` rendering section `Generate AI Kiss Videos in Any Style` with copy *"AI Kissing Video Generator"*, asset references (`cdn.aikissfiy.com`, `entry.BRsH49Xa.css`, `OverlayScrollbar.CrLIJdLh.css`, `LanguageSwitch.BsPr10ru.css`), and grid rule `.ak-button:focus-visible { outline:2px solid var(--ak-button-outline-color);outline-offset:1px;tran... }`.
+4. **Interactive Detail & Feature Matrix (<article.px-3> — `What Else Can You Create with AIKi`)**:
+   - Landmark `<article class="gap-3 px-3">` framing `What Else Can You Create with AIKissfiy?` and `Generate Romantic Videos & Love Stories` (*"Start Creating Now"*) with `#f7f8fb` surface cards, `#6c63ff` accents, and `.ak-button>span { align-items:center;display:inline-flex }`.
+5. **Colophon & Global Directory Footer (<footer.border-slate-200> — `https://aikissfiy.com`)**:
+   - Landmark `<footer class="border-slate-200 pt-8">` anchoring `Free AI Kissing Video Generator:` footer links (`Home · Nano Banana Pro · AI Effects`), copy *"Your Photos Stay Private"*, and `#d1d5db` structural dividers.
 
 ---
 
@@ -158,19 +181,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `aikissfiy-com` (**Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy** — `https://aikissfiy.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#0f172a` ink, `#64748b` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020617` ink, `#6c63ff` accent).
 - **Identity & Domain Context**: Description: AIKissfiy creates realistic AI kissing videos from your photos. Choose different kiss styles, keep faces recognizable, and e...
-- **Primary Substrate**: `#fff` (`var(--aikiss-surface-solid)` in `:root`), **Primary Ink**: `#0f172a`, **Accent / Highlight**: `#64748b`.
+- **Primary Substrate**: `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)), **Primary Ink**: `#020617`, **Accent / Highlight**: `#6c63ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--aikiss-surface-solid)` in `:root`) paired with `#0f172a` primary typography and `#64748b` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Plus Jakarta Sans` for display copy (`Free AI Kissing Video Generator`) with `Inter` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: .5rem`, padding `13px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#020617` primary typography and `#6c63ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Plus Jakarta Sans` for display copy (`Free AI Kissing Video Generator`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1196px` container bounds (`gap: 4px`, padding `8px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `aikissfiy-com` in your global stylesheet:
 
 :root {
-  /* Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy (aikissfiy-com) — Ground-Truth Extracted CSS Variables */
+  /* Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy (aikissfiy-com) — Live-Grounded CSS Variables */
   --font-sans: Inter,system-ui,sans-serif; /* Typography / Scale Token (aikissfiy-com) */
   --default-font-family: var(--font-sans); /* Typography / Scale Token (aikissfiy-com) */
   --aikiss-section-bg: transparent; /* Canvas / Surface Token (aikissfiy-com) */
@@ -191,73 +214,75 @@ Declare and consume these exact custom properties extracted from `aikissfiy-com`
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--aikiss-surface-solid)` in `:root`
-- **Primary Typography Ink**: `#0f172a` — grounded in `var(--aikiss-text)` in `:root`
-- **Elevated Surface / Card Substrate**: `#475569` — grounded in `var(--aikiss-muted)` in `:root`
-- **Interactive Accent / Highlight**: `#64748b` — grounded in `var(--aikiss-soft-muted)` in `:root`
-- **Secondary / Muted Copy**: `#6c63ff` — grounded in `var(--halo-border-fallback)` in `:root`
-- **Structural Hairline Border**: `#ffdce5` — grounded in `var(--hologram-pink)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#020617` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f7f8fb` — grounded in live computed `footer` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#6c63ff` — grounded in `var(--gradient-primary)` in `:root`
+- **Secondary / Muted Copy**: `#64748b` — grounded in `var(--aikiss-soft-muted)` in `:root`
+- **Structural Hairline Border**: `#d1d5db` — grounded in `var(--border-color)` in `:root`
+- **Variable Token (`--aikiss-text`)**: `#0f172a` — grounded in `var(--aikiss-text)` in `:root`
+- **Variable Token (`--aikiss-muted`)**: `#475569` — grounded in `var(--aikiss-muted)` in `:root`
 - **Variable Token (`--gradient-primary`)**: `#8b81ff` — grounded in `var(--gradient-primary)` in `:root`
 - **Variable Token (`--gradient-primary`)**: `#b941ff` — grounded in `var(--gradient-primary)` in `:root`
 - **Variable Token (`--gradient-primary`)**: `#ec4899` — grounded in `var(--gradient-primary)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `800px` extracted from `aikissfiy-com` stylesheet
-- **Padding & Gutters**: `13px` lateral canvas padding with `.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: .5rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `13px` horizontal padding
-- **Media Queries**: `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:1024px)`
-- **Corner Radii**: `27px`, `9999px`, `30px`, `.75rem`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1196px` (measured `<main>` bounding box width within `1440px` desktop viewport)
+- **Padding & Gutters**: `8px` lateral canvas padding with `4px` grid gap
+- **Desktop Grid**: 2-column persistent left sidebar (`232px`, <nav.app-navigation__nav>) + `1196px` main content stage at `1440px` (`max-width: 1196px`, `gap: 4px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with collapsed `<nav.app-navigation__nav>` drawer navigation and `8px` horizontal padding
+- **Media Queries**: `@media (min-width:768px)`, `@media (max-width:767px)`, `@media (max-width:767px)and (any-hover:hover)and (any-pointer:fine)`, `@media (max-width:639px)`
+- **Corner Radii**: `10px`, `var(--ak-border-radius-base)`, `var(--ak-border-radius-round)`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Plus Jakarta Sans`
 - **Body Font Stack**: `Inter`
-- **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: 1.11111`, `--text-5xl: 3rem`; rule `h1` (`font-size: 2em!important`)
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`, `--text-3xl: 1.875rem`; rule `h2` (`line-height: 1.33`, `font-weight: 600`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`, `--ak-font-size-base: 14px`
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 50px`, `line-height: 54px`, `font-weight: 800`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: 1.11111`, `--text-5xl: 3rem`; rule `h1` (`font-size: 2em`)
+- **H2 Section Rule**: live computed `h2 (largest visible desktop heading)` (`font-size: 60px`, `line-height: 1.2`, `font-weight: 900`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.5em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `aikissfiy-com` (`Free AI Kissing Video Generator: Create AI Kiss Videos Online - AIKissfiy`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.navigate-new> — `aikissfiy-com`)**:
-   - DOM & Selectors: Landmark `<header class="navigate-new sticky">` hosting `Free AI Kissing Video Generator: Cre` navigation (`Home · Nano Banana Pro · AI Effects`), DOM attributes (`data-hid="page-structured-data"`, `data-gtag`, `data-v-8a6150fd`, `data-v-a6b3f275`), and stylesheet rule `before { border:1px solid hsla(0,0%,100%,.68);border-radius:27px;content:"";inset... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navigate-new> — `aikissfiy-com`)` (`aikissfiy-com`) adapts across `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:1024px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0,0,.2,1)` transitions and links `Home · Nano Banana Pro · AI Effects`.
-2. **Hero Stage & Focal Lead (<section.flex> — `Free AI Kissing Video Generator`)**:
-   - DOM & Selectors: Landmark `<section class="flex flex-col">` presenting display lead `Free AI Kissing Video Generator` and copy excerpt *"AI Kissing Generator"* over `#fff` canvas and `#0f172a` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff` background with `#0f172a` headline `Free AI Kissing Video Generator`.
-3. **Primary Showcase & Content Grid (<section.flex> — `Realistic`)**:
-   - DOM & Selectors: Landmark `<section class="flex flex-col">` rendering section `Realistic` with copy *"Love Compatibility"*, asset references (`cdn.aikissfiy.com`, `entry.D5yMvS4u.css`, `OverlayScrollbar.CrLIJdLh.css`, `LanguageSwitch.BsPr10ru.css`), and grid rule `webkit-scrollbar { display:none }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.flex> — `Realistic`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: .5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `13px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.flex> — `Diverse`)**:
-   - DOM & Selectors: Landmark `<section class="flex flex-col">` framing `Diverse` and `Fast` (*"AI Character Generator"*) with `#475569` surface cards, `#64748b` accents, and `body { line-height:inherit;margin:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.flex> — `Diverse`)` uses `27px`, `9999px`, `30px`, `.75rem` radii, `#64748b` highlights, and assets (cdn.aikissfiy.com, entry.D5yMvS4u.css, OverlayScrollbar.CrLIJdLh.css).
-5. **Colophon & Global Directory Footer (<footer.w-full> — `https://aikissfiy.com`)**:
-   - DOM & Selectors: Landmark `<footer class="w-full border-t">` anchoring `Free AI Kissing Video Generator:` footer links (`Home · Nano Banana Pro · AI Effects`), copy *"AI Kissing Generator Hot"*, and `#ffdce5` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.w-full> — `https://aikissfiy.com`)` aligns to `800px` extracted from `aikissfiy-com` stylesheet with `13px` lateral canvas padding with `.5rem` grid gap and attributes (data-hid="page-structured-data", data-gtag, data-v-8a6150fd).
+1. **Persistent Left Sidebar Navigation (<nav.app-navigation__nav> — `232×608px` at `x=11`)**:
+   - DOM & Selectors: Fixed/sticky left rail `<nav class="app-navigation__nav desktop-only">` (`232px` wide) paired with top bar `<header class="navigate-new top-0">` hosting `Free AI Kissing Video Generato` navigation (`Home · Nano Banana Pro · AI Effects`), DOM attributes (`data-hid="page-structured-data"`, `data-gtag`, `data-v-3c617593`, `data-v-122af031`), and rule `webkit-scrollbar { display:none }`.
+   - Responsive Contract: Header `Persistent Left Sidebar Navigation (<nav.app-navigation__nav> — `232×608px` at `x=11`)` (`aikissfiy-com`) adapts across `@media (min-width:768px)`, `@media (max-width:767px)`, `@media (max-width:767px)and (any-hover:hover)and (any-pointer:fine)`, `@media (max-width:639px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.23,1,.32,1)` transitions and links `Home · Nano Banana Pro · AI Effects`.
+2. **Hero Stage & Focal Lead (<section.home-section> — `Free AI Kissing Video Generator`)**:
+   - DOM & Selectors: Landmark `<section class="home-section aikiss-ambient-section">` inside `1196px` main stage presenting display lead `Free AI Kissing Video Generator` and copy excerpt *"Upload two photos, choose a kiss style, and create a realistic AI"* over `#ffffff` canvas and `#020617` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#020617` headline `Free AI Kissing Video Generator`.
+3. **Primary Showcase & Content Grid (<article.gap-3> — `Generate AI Kiss Videos in Any Sty`)**:
+   - DOM & Selectors: Landmark `<article class="gap-3 px-3">` rendering section `Generate AI Kiss Videos in Any Style` with copy *"AI Kissing Video Generator"*, asset references (`cdn.aikissfiy.com`, `entry.BRsH49Xa.css`, `OverlayScrollbar.CrLIJdLh.css`, `LanguageSwitch.BsPr10ru.css`), and grid rule `.ak-button:focus-visible { outline:2px solid var(--ak-button-outline-color);outline-offset:1px;tran... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.gap-3> — `Generate AI Kiss Videos in Any Sty`)` applies 2-column persistent left sidebar (`232px`, <nav.app-navigation__nav>) + `1196px` main content stage at `1440px` (`max-width: 1196px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with collapsed `<nav.app-navigation__nav>` drawer navigation and `8px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<article.px-3> — `What Else Can You Create with AIKi`)**:
+   - DOM & Selectors: Landmark `<article class="gap-3 px-3">` framing `What Else Can You Create with AIKissfiy?` and `Generate Romantic Videos & Love Stories` (*"Start Creating Now"*) with `#f7f8fb` surface cards, `#6c63ff` accents, and `.ak-button>span { align-items:center;display:inline-flex }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.px-3> — `What Else Can You Create with AIKi`)` uses `10px`, `var(--ak-border-radius-base)`, `var(--ak-border-radius-round)`, `50%` radii, `#6c63ff` highlights, and assets (cdn.aikissfiy.com, entry.BRsH49Xa.css, OverlayScrollbar.CrLIJdLh.css).
+5. **Colophon & Global Directory Footer (<footer.border-slate-200> — `https://aikissfiy.com`)**:
+   - DOM & Selectors: Landmark `<footer class="border-slate-200 pt-8">` anchoring `Free AI Kissing Video Generator:` footer links (`Home · Nano Banana Pro · AI Effects`), copy *"Your Photos Stay Private"*, and `#d1d5db` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-slate-200> — `https://aikissfiy.com`)` aligns to `1196px` (measured `<main>` bounding box width within `1440px` desktop viewport) with `8px` lateral canvas padding with `4px` grid gap and attributes (data-hid="page-structured-data", data-gtag, data-v-3c617593).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"AI Kissing Generator"*
-- Copy Excerpt 2: *"Love Compatibility"*
-- Copy Excerpt 3: *"AI Character Generator"*
-- Copy Excerpt 4: *"AI Kissing Generator Hot"*
+- Copy Excerpt 1: *"Upload two photos, choose a kiss style, and create a realistic AI kiss video with..."*
+- Copy Excerpt 2: *"AI Kissing Video Generator"*
+- Copy Excerpt 3: *"Start Creating Now"*
+- Copy Excerpt 4: *"Your Photos Stay Private"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0,0,.2,1)`
+- **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.23,1,.32,1)`
 - **Extracted Stylesheet Rules (`aikissfiy-com`)**:
-- `before { border:1px solid hsla(0,0%,100%,.68);border-radius:27px;content:"";inset... }`
 - `webkit-scrollbar { display:none }`
-- `body { line-height:inherit;margin:0 }`
-- `strong { font-weight:bolder }`
-- `small { font-size:80% }`
+- `.ak-button:focus-visible { outline:2px solid var(--ak-button-outline-color);outline-offset:1px;tran... }`
+- `.ak-button>span { align-items:center;display:inline-flex }`
+- `.ak-button { margin-left:12px }`
+- `.ak-button.is-round { padding:8px 15px }`
 - **Per-Selector Transition Rules**:
-- **Selector `guage-popover-leave-active[data-v...`**: `transition: opacity .12s ease,transform .12s ease` extracted from `aikissfiy-com` stylesheet.
-- **Selector `.overlay-scrollbar__thumb[data-v-...`**: `transition: background-color .15s ease,width .15s ease` extracted from `aikissfiy-com` stylesheet.
-- **Selector `.btn:before`**: `transition: .5s` extracted from `aikissfiy-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.navigate-new>` and `<section.flex>`.
-- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+- **Selector `.ak-button`**: `transition: .1s` extracted from `aikissfiy-com` stylesheet.
+- **Selector `.ak-button:focus-visible`**: `transition: outline-offset 0s,outline 0s` extracted from `aikissfiy-com` stylesheet.
+- **Selector `ton.is-text:not(.is-disabled):foc...`**: `transition: outline-offset 0s,outline 0s` extracted from `aikissfiy-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.navigate-new>` and `<article.gap-3>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.home-section>` and `<article.gap-3>` interactive targets.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `aikissfiy-com`.

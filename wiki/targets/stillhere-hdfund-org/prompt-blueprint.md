@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: stillhere-hdfund-org"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "stillhere-hdfund-org"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas, `#eeeee8` ink, `#FED545` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: stillhere-hdfund-org
 
 > **STILL HERE. · Three Years in Gaza · HDF** (https://stillhere.hdfund.org/) — Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **STILL HERE. · Three Years in Gaza · HDF** (`https://stillhere.hdfund.org/`). Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas, `#eeeee8` ink, `#FED545` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#101210` (`var(--ink)` in `:root`) paired with `#eeeee8` primary typography and `#FED545` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED .`) with `Opening Inter` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1100px` container bounds (`gap: 15px`, padding `30px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#111111` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 32px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1100px` extracted from `stillhere-hdfund-org` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `30px` lateral canvas padding with `15px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1260px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `32px` grid gap.
 - **Border Radius Scale**: `50%`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1100px`, `gap: 15px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 32px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:1600px)`, `@media (max-width:1100px)`, `@media (max-width:700px)`, `@media (max-height:700px) and (min-width:701px)`.
 
 ---
@@ -48,16 +52,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#101210` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#eeeee8` | `var(--paper)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#a8aaa1` | `var(--muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#FED545` | `var(--gold)` in `:root` |
-| **Secondary / Muted Copy** | `#2564AA` | `var(--blue)` in `:root` |
-| **Structural Hairline Border** | `#111111` | `var(--n-ink)` in `:root` |
-| **Variable Token (`--n-paper`)** | `#F7F5F0` | `var(--n-paper)` in `:root` |
-| **Variable Token (`--campaign-red`)** | `#BB0305` | `var(--campaign-red)` in `:root` |
+| **Primary Canvas Substrate** | `#111111` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `footer` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#090a09` | `.intro { background: #090a09 }` |
+| **Interactive Accent / Highlight** | `#0000ff` | `.button-outline:hover { color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#a8aaa1` | `var(--muted)` in `:root` |
+| **Structural Hairline Border** | `#20201e` | `.year-ghost { stroke: #20201e }` |
+| **Variable Token (`--ink`)** | `#101210` | `var(--ink)` in `:root` |
+| **Variable Token (`--paper`)** | `#eeeee8` | `var(--paper)` in `:root` |
+| **Variable Token (`--gold`)** | `#fed545` | `var(--gold)` in `:root` |
+| **Variable Token (`--blue`)** | `#2564aa` | `var(--blue)` in `:root` |
+| **Variable Token (`--n-paper`)** | `#f7f5f0` | `var(--n-paper)` in `:root` |
+| **Variable Token (`--campaign-red`)** | `#bb0305` | `var(--campaign-red)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -75,8 +83,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas
 | `--n-blue` | `#2564AA` | Color / Atmospheric Token |
 | `--n-yellow` | `#FED545` | Color / Atmospheric Token |
 | `--n-gutter` | `clamp(26px,6.25vw,120px)` | Layout / Spatial Grid Token |
-| `--chapter-gutter` | `var(--n-gutter)` | Layout / Spatial Grid Token |
 | `--campaign-red` | `#BB0305` | Color / Atmospheric Token |
+| `--chapter-gutter` | `var(--n-gutter)` | Layout / Spatial Grid Token |
 | `--doc-paper` | `#F7F5F0` | Canvas / Surface Token |
 
 ---
@@ -85,14 +93,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `Opening Barlow`.
-- **Primary Body Stack**: `Opening Inter`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Inter`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`).
-- **Body Copy**: CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`).
-- **Metadata & Navigation Labels**: rule `small` (`font-size: 12px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 126.72px`, `line-height: 117.85px`, `font-weight: 700`, `letter-spacing: -1.9008px`); CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 172.8px`, `line-height: 152.064px`, `font-weight: 900`, `letter-spacing: -3.456px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 600`, `letter-spacing: 1.05px`); rule `small` (`font-size: 12px`).
 
 ---
 
@@ -112,40 +120,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — STILL HERE. · Three Years in Gaza · HDF    │
 │ ====================================================================== │
-│ [ <header.site-header>     | Overview · Index · Archive · About · C ]  │
+│ [ <header.site-header> (1440x112px)   | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.intro>                                      |   │
-│ | H1: THE WORLD WATCHED .                                          |   │
-│ | Substrate: #101210    | Ink: #eeeee8    | Accent: #FED545        |   │
+│ | HERO STAGE: <section.intro> (w=1440px)                             | │
+│ | H1: THE WORLD WATCHED.                                             | │
+│ | Substrate: #111111 | Ink: #ffffff | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.first-days>      ) max-w: 1100px         |   │
+│ | SHOWCASE GRID (<section.first-days>) max-w: 1260px                 | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | THE FIRST DAYS               |  | THREE YEARS . STILL HERE .   | | │
+│ | | THE WORLD WATCHED .          |  | THE FIRST DAYS               | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 15px  ) | │
-│ | [<header.site-heade] -> [<section.intro>] -> [<section.first-day] |  │
+│ | DETAIL MODULE (<section.timeline-intro>) — THREE YEARS . STILL H   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.campaign-foote) | https://stillhere.hdfund.org/      │
+│ [ FOOTER (<footer.campaign-foo) | https://stillhere.hdfund.org/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 32px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.intro>) — 390px Vertical Lead                 | │
+│ | H1: THE WORLD WATCHED.                                             | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.first-days>) — 1-Col Stack                | │
+│ | [ Item 1: THE WORLD WATCHED .                                    ] | │
+│ | [ Item 2: THE FIRST DAYS                                         ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.timeline-intro>) — 1-Col (THREE YEARS . STIL) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.campaign-foo) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `stillhere-hdfund-org`)**:
-   - Landmark `<header class="site-header">` hosting `STILL HERE. · Three Years in Gaza · ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-opening-bootstrap`, `data-site-webpage`, `data-campaign-identity="3e"`, `data-campaign-identity="3e"`), and stylesheet rule `html { scroll-padding-top:100px }`.
-2. **Hero Stage & Focal Lead (<section.intro> — `THE WORLD WATCHED .`)**:
-   - Landmark `<section class="intro scroll-scene">` presenting display lead `THE WORLD WATCHED .` and copy excerpt *"The opening couldn’t load."* over `#101210` canvas and `#eeeee8` ink.
-3. **Primary Showcase & Content Grid (<section.first-days> — `THE FIRST DAYS`)**:
-   - Landmark `<section class="first-days scroll-scene">` rendering section `THE FIRST DAYS` with copy *"TIME KEPT MOVING ."*, asset references (`door-leaf.webp`, `al-aqsa-wall-print.webp`, `door-leaf-mono.webp`, `al-aqsa-wall-print-mono.webp`), and grid rule `button:focus-visible { outline:2px solid var(--gold);outline-offset:7px }`.
-4. **Interactive Detail & Feature Matrix (<section.timeline-intro> — `THREE YEARS . STILL HERE .`)**:
-   - Landmark `<section class="timeline-intro">` framing `THREE YEARS . STILL HERE .` and `From the first water tanks to bread baked in Gaza.` (*"SCROLL UP TO BEGIN"*) with `#a8aaa1` surface cards, `#FED545` accents, and `img { display:block;max-width:100% }`.
+   - Landmark `<header class="site-header">` (`1440x112px`) hosting `STILL HERE. · Three Years in Gaza · ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-opening-bootstrap`, `data-site-webpage`, `data-campaign-identity="3e"`, `data-campaign-identity="3e"`), and stylesheet rule `html { scroll-padding-top:100px }`.
+2. **Hero Stage & Focal Lead (<section.intro> — `THE WORLD WATCHED.`)**:
+   - Landmark `<section class="intro scroll-scene">` presenting display lead `THE WORLD WATCHED.` and copy excerpt *"The opening couldn’t load."* over `#111111` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.first-days> — `THE WORLD WATCHED .`)**:
+   - Landmark `<section class="first-days scroll-scene">` rendering section `THE WORLD WATCHED .` with copy *"TIME KEPT MOVING ."*, asset references (`door-leaf.webp`, `al-aqsa-wall-print.webp`, `door-leaf-mono.webp`, `al-aqsa-wall-print-mono.webp`), and grid rule `button:focus-visible { outline:2px solid var(--gold);outline-offset:7px }`.
+4. **Interactive Detail & Feature Matrix (<section.timeline-intro> — `THE FIRST DAYS`)**:
+   - Landmark `<section class="timeline-intro">` framing `THE FIRST DAYS` and `THREE YEARS . STILL HERE .` (*"SCROLL UP TO BEGIN"*) with `#090a09` surface cards, `#0000ff` accents, and `img { display:block;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.campaign-footer> — `https://stillhere.hdfund.org/`)**:
-   - Landmark `<footer class="campaign-footer">` anchoring `STILL HERE. · Three Years in Gaz` footer links (`Overview · Index · Archive · About · Contact`), copy *"GAZA CRISIS RESPONSE"*, and `#111111` structural dividers.
+   - Landmark `<footer class="campaign-footer">` anchoring `STILL HERE. · Three Years in Gaz` footer links (`Overview · Index · Archive · About · Contact`), copy *"GAZA CRISIS RESPONSE"*, and `#20201e` structural dividers.
 
 ---
 
@@ -157,19 +184,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `stillhere-hdfund-org` (**STILL HERE. · Three Years in Gaza · HDF** — `https://stillhere.hdfund.org/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#101210` canvas, `#eeeee8` ink, `#FED545` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent).
 - **Identity & Domain Context**: Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
-- **Primary Substrate**: `#101210` (`var(--ink)` in `:root`), **Primary Ink**: `#eeeee8`, **Accent / Highlight**: `#FED545`.
+- **Primary Substrate**: `#111111` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#101210` (`var(--ink)` in `:root`) paired with `#eeeee8` primary typography and `#FED545` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED .`) with `Opening Inter` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1100px` container bounds (`gap: 15px`, padding `30px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#111111` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 32px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `stillhere-hdfund-org` in your global stylesheet:
 
 :root {
-  /* STILL HERE. · Three Years in Gaza · HDF (stillhere-hdfund-org) — Ground-Truth Extracted CSS Variables */
+  /* STILL HERE. · Three Years in Gaza · HDF (stillhere-hdfund-org) — Live-Grounded CSS Variables */
   --ink: #101210; /* Typography Ink Token (stillhere-hdfund-org) */
   --paper: #eeeee8; /* Canvas / Surface Token (stillhere-hdfund-org) */
   --muted: #a8aaa1; /* Color / Atmospheric Token (stillhere-hdfund-org) */
@@ -183,58 +210,62 @@ Declare and consume these exact custom properties extracted from `stillhere-hdfu
   --n-blue: #2564AA; /* Color / Atmospheric Token (stillhere-hdfund-org) */
   --n-yellow: #FED545; /* Color / Atmospheric Token (stillhere-hdfund-org) */
   --n-gutter: clamp(26px,6.25vw,120px); /* Layout / Spatial Grid Token (stillhere-hdfund-org) */
-  --chapter-gutter: var(--n-gutter); /* Layout / Spatial Grid Token (stillhere-hdfund-org) */
   --campaign-red: #BB0305; /* Color / Atmospheric Token (stillhere-hdfund-org) */
+  --chapter-gutter: var(--n-gutter); /* Layout / Spatial Grid Token (stillhere-hdfund-org) */
   --doc-paper: #F7F5F0; /* Canvas / Surface Token (stillhere-hdfund-org) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#101210` — grounded in `var(--ink)` in `:root`
-- **Primary Typography Ink**: `#eeeee8` — grounded in `var(--paper)` in `:root`
-- **Elevated Surface / Card Substrate**: `#a8aaa1` — grounded in `var(--muted)` in `:root`
-- **Interactive Accent / Highlight**: `#FED545` — grounded in `var(--gold)` in `:root`
-- **Secondary / Muted Copy**: `#2564AA` — grounded in `var(--blue)` in `:root`
-- **Structural Hairline Border**: `#111111` — grounded in `var(--n-ink)` in `:root`
-- **Variable Token (`--n-paper`)**: `#F7F5F0` — grounded in `var(--n-paper)` in `:root`
-- **Variable Token (`--campaign-red`)**: `#BB0305` — grounded in `var(--campaign-red)` in `:root`
+- **Primary Canvas Substrate**: `#111111` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `footer` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#090a09` — grounded in `.intro { background: #090a09 }`
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.button-outline:hover { color: blue }` (`#0000ff`)
+- **Secondary / Muted Copy**: `#a8aaa1` — grounded in `var(--muted)` in `:root`
+- **Structural Hairline Border**: `#20201e` — grounded in `.year-ghost { stroke: #20201e }`
+- **Variable Token (`--ink`)**: `#101210` — grounded in `var(--ink)` in `:root`
+- **Variable Token (`--paper`)**: `#eeeee8` — grounded in `var(--paper)` in `:root`
+- **Variable Token (`--gold`)**: `#fed545` — grounded in `var(--gold)` in `:root`
+- **Variable Token (`--blue`)**: `#2564aa` — grounded in `var(--blue)` in `:root`
+- **Variable Token (`--n-paper`)**: `#f7f5f0` — grounded in `var(--n-paper)` in `:root`
+- **Variable Token (`--campaign-red`)**: `#bb0305` — grounded in `var(--campaign-red)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1100px` extracted from `stillhere-hdfund-org` stylesheet
-- **Padding & Gutters**: `30px` lateral canvas padding with `15px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1100px`, `gap: 15px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1260px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `57.6px` lateral canvas padding with `32px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 32px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding
 - **Media Queries**: `@media (min-width:1600px)`, `@media (max-width:1100px)`, `@media (max-width:700px)`, `@media (max-height:700px) and (min-width:701px)`
 - **Corner Radii**: `50%`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Opening Barlow`
-- **Body Font Stack**: `Opening Inter`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
-- **Body Copy Rule**: CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`)
-- **Metadata & Index Rule**: rule `small` (`font-size: 12px`)
+- **Body Font Stack**: `Inter`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 126.72px`, `line-height: 117.85px`, `font-weight: 700`, `letter-spacing: -1.9008px`); CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 172.8px`, `line-height: 152.064px`, `font-weight: 900`, `letter-spacing: -3.456px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 600`, `letter-spacing: 1.05px`); rule `small` (`font-size: 12px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `stillhere-hdfund-org` (`STILL HERE. · Three Years in Gaza · HDF`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `stillhere-hdfund-org`)**:
-   - DOM & Selectors: Landmark `<header class="site-header">` hosting `STILL HERE. · Three Years in Gaza · ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-opening-bootstrap`, `data-site-webpage`, `data-campaign-identity="3e"`, `data-campaign-identity="3e"`), and stylesheet rule `html { scroll-padding-top:100px }`.
+   - DOM & Selectors: Landmark `<header class="site-header">` (`1440x112px`) hosting `STILL HERE. · Three Years in Gaza · ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-opening-bootstrap`, `data-site-webpage`, `data-campaign-identity="3e"`, `data-campaign-identity="3e"`), and stylesheet rule `html { scroll-padding-top:100px }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `stillhere-hdfund-org`)` (`stillhere-hdfund-org`) adapts across `@media (min-width:1600px)`, `@media (max-width:1100px)`, `@media (max-width:700px)`, `@media (max-height:700px) and (min-width:701px)` with `cubic-bezier(.22,1,.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.intro> — `THE WORLD WATCHED .`)**:
-   - DOM & Selectors: Landmark `<section class="intro scroll-scene">` presenting display lead `THE WORLD WATCHED .` and copy excerpt *"The opening couldn’t load."* over `#101210` canvas and `#eeeee8` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#101210` background with `#eeeee8` headline `THE WORLD WATCHED .`.
-3. **Primary Showcase & Content Grid (<section.first-days> — `THE FIRST DAYS`)**:
-   - DOM & Selectors: Landmark `<section class="first-days scroll-scene">` rendering section `THE FIRST DAYS` with copy *"TIME KEPT MOVING ."*, asset references (`door-leaf.webp`, `al-aqsa-wall-print.webp`, `door-leaf-mono.webp`, `al-aqsa-wall-print-mono.webp`), and grid rule `button:focus-visible { outline:2px solid var(--gold);outline-offset:7px }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.first-days> — `THE FIRST DAYS`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1100px`, `gap: 15px`) on desktop and Single-column vertical stack at `390px` viewport width with `30px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.timeline-intro> — `THREE YEARS . STILL HERE .`)**:
-   - DOM & Selectors: Landmark `<section class="timeline-intro">` framing `THREE YEARS . STILL HERE .` and `From the first water tanks to bread baked in Gaza.` (*"SCROLL UP TO BEGIN"*) with `#a8aaa1` surface cards, `#FED545` accents, and `img { display:block;max-width:100% }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.timeline-intro> — `THREE YEARS . STILL HERE .`)` uses `50%`, `2px` radii, `#FED545` highlights, and assets (door-leaf.webp, al-aqsa-wall-print.webp, door-leaf-mono.webp).
+2. **Hero Stage & Focal Lead (<section.intro> — `THE WORLD WATCHED.`)**:
+   - DOM & Selectors: Landmark `<section class="intro scroll-scene">` presenting display lead `THE WORLD WATCHED.` and copy excerpt *"The opening couldn’t load."* over `#111111` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#111111` background with `#ffffff` headline `THE WORLD WATCHED.`.
+3. **Primary Showcase & Content Grid (<section.first-days> — `THE WORLD WATCHED .`)**:
+   - DOM & Selectors: Landmark `<section class="first-days scroll-scene">` rendering section `THE WORLD WATCHED .` with copy *"TIME KEPT MOVING ."*, asset references (`door-leaf.webp`, `al-aqsa-wall-print.webp`, `door-leaf-mono.webp`, `al-aqsa-wall-print-mono.webp`), and grid rule `button:focus-visible { outline:2px solid var(--gold);outline-offset:7px }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.first-days> — `THE WORLD WATCHED .`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.timeline-intro> — `THE FIRST DAYS`)**:
+   - DOM & Selectors: Landmark `<section class="timeline-intro">` framing `THE FIRST DAYS` and `THREE YEARS . STILL HERE .` (*"SCROLL UP TO BEGIN"*) with `#090a09` surface cards, `#0000ff` accents, and `img { display:block;max-width:100% }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.timeline-intro> — `THE FIRST DAYS`)` uses `50%`, `2px` radii, `#0000ff` highlights, and assets (door-leaf.webp, al-aqsa-wall-print.webp, door-leaf-mono.webp).
 5. **Colophon & Global Directory Footer (<footer.campaign-footer> — `https://stillhere.hdfund.org/`)**:
-   - DOM & Selectors: Landmark `<footer class="campaign-footer">` anchoring `STILL HERE. · Three Years in Gaz` footer links (`Overview · Index · Archive · About · Contact`), copy *"GAZA CRISIS RESPONSE"*, and `#111111` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.campaign-footer> — `https://stillhere.hdfund.org/`)` aligns to `1100px` extracted from `stillhere-hdfund-org` stylesheet with `30px` lateral canvas padding with `15px` grid gap and attributes (data-opening-bootstrap, data-site-webpage, data-campaign-identity="3e").
+   - DOM & Selectors: Landmark `<footer class="campaign-footer">` anchoring `STILL HERE. · Three Years in Gaz` footer links (`Overview · Index · Archive · About · Contact`), copy *"GAZA CRISIS RESPONSE"*, and `#20201e` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.campaign-footer> — `https://stillhere.hdfund.org/`)` aligns to `1260px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `57.6px` lateral canvas padding with `32px` grid gap and attributes (data-opening-bootstrap, data-site-webpage, data-campaign-identity="3e").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"The opening couldn’t load."*

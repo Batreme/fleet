@@ -1,51 +1,78 @@
 ---
-title: "UI & Design System: www-avilus-com"
-date: 2026-11-15
-target: "www-avilus-com"
+title: "UI & UX Architecture: www-avilus-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
 ---
 
-# UI Architecture & Design Tokens: www-avilus-com
+# UI & UX Architecture: www-avilus-com
 
-> Ground-truth CSS custom properties and DOM layout primitives extracted from `www-avilus-com` (`Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Surveillance`). All values are sanitized, deduplicated, and mapped to their semantic UI roles. Also see [UI Prompt Blueprint](prompt-blueprint.md).
-
-## 🎨 Design Tokens (CSS Variables)
-
-| Token Name | Extracted Value | Semantic UI Role |
-|---|---|---|
-| `--swatch--light-200` | `#f7f7f7` | Primary technical light gray canvas (`--_theme---background`) |
-| `--swatch--light-100` | `white` | Secondary elevated surface (`--_theme---background-2`) |
-| `--swatch--dark-900` | `#183032` | Primary deep petrol-teal ink & border color (`--_theme---text`) |
-| `--swatch--dark-800` | `#2f2b2d` | Dark tactical section surface |
-| `--swatch--brand-500` | `#ddff2c` | High-visibility aviation chartreuse accent (`--_theme---button-primary--background`) |
-| `--_theme---error` | `#b3261e` | Medical evacuation rescue red indicator |
-| `--_typography---font--primary-family` | `Inter,Verdana,sans-serif` | Primary structural UI & heading sans stack |
-| `--_typography---font--secondary-family` | `Robotomono,Impact,sans-serif` | Technical monospace callout & spec font stack |
-| `--_typography---letter-spacing--tight` | `-.03em` | Tight display headline tracking |
-| `--site--column-count` | `12` | Master 12-column layout grid count |
-| `--site--viewport-max` | `90` | Max container width in rem (90rem = 1440px) |
-| `--max-width--small` | `50rem` | Narrative & spec block max-width (800px) |
-| `--bar-height` | `3.125rem` | Fixed navigation bar height (50px) |
-| `--closed-width` | `min(90vw, 27.375rem)` | Compact floating navbar width (438px) |
-| `--nav--menu-open-duration` | `400ms` | Navigation drawer open duration |
-| `--border-width--main` | `.125rem` | 2px structural engineering border width |
-| `--radius--main` | `.5rem` | 8px primary component border radius |
-| `--button-size--medium` | `2.5rem` | Standard 40px tactical button height |
-| `--button-size--large` | `5rem` | Large 80px primary mission CTA height |
+## Overview & Design Identity
+- **Target**: `www-avilus-com` (**Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Survei...**)
+- **Production URL**: [https://www.avilus.com/](https://www.avilus.com/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f7f7` canvas, `#183032` ink, `#0082f3` accent)
+- **Summary**: Manufacturer and certified operator of dual-use uncrewed aircraft for medical evacuation, logistics, surveillance, and reconnaissance.
+- **Total Clean CSS Variables Extracted**: `164` (curated live-grounded set below)
 
 ---
 
-## 🧱 Layout Primitives & Component Tree
+## Typography & Hierarchy
+- **Display Font Stack**: `Inter`
+- **Body Font Stack**: `Inter`
+- **Monospace / Technical Font Stack**: `Robotomono`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`, `letter-spacing: -2.16px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 30px`, `line-height: 33px`, `font-weight: 700`, `letter-spacing: -0.9px`)
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 400`); CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--normal)`, `--_responsive---small: 0`, `--_responsive---xsmall: 0`
 
-| Primitive | ID | Classes / Selectors |
+---
+
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| `<header>` | `-` | `nav_desktop_wrap` |
-| `<nav>` | `-` | `nav_links_component w-variant-23049969-09ac-2789-520b-3c6ae8` |
-| `<nav>` | `w-dropdown-list-0` | `dropdown_list w-variant-23049969-09ac-2789-520b-3c6ae895bbc6` |
-| `<nav>` | `-` | `nav_links_component` |
-| `<nav>` | `w-dropdown-list-1` | `dropdown_list w-dropdown-list` |
-| `<main>` | `main` | `page_main` |
-| `<section>` | `-` | `u-section u-min-height-screen u-padding-bottom-sitemargin u-` |
-| `<section>` | `-` | `u-section u-padding-top-small u-padding-bottom-small u-radiu` |
-| `<section>` | `-` | `u-section u-padding-top-small u-padding-bottom-small u-backg` |
-| `<section>` | `-` | `u-section u-padding-top-small u-padding-bottom-small` |
-| `<footer>` | `-` | `footer_inner` |
+| **Primary Canvas Substrate** | `#f7f7f7` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#183032` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#ddff2c` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+
+---
+
+## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
+| Variable Name | Extracted Value | Semantic Role |
+|---|---|---|
+| `--_theme---background` | `var(--swatch--light-200)` | Canvas / Surface Token |
+| `--_text-style---font-family` | `var(--_typography---font--primary-family)` | Typography Ink Token |
+| `--_theme---text` | `var(--swatch--dark-900)` | Typography Ink Token |
+| `--_text-style---font-size` | `var(--_typography---font-size--text-main)` | Typography Ink Token |
+| `--_text-style---line-height` | `var(--_typography---line-height--huge)` | Typography Ink Token |
+| `--_text-style---font-weight` | `var(--_typography---font--primary-regular)` | Typography Ink Token |
+| `--_text-style---letter-spacing` | `var(--_typography---letter-spacing--normal)` | Typography Ink Token |
+| `--_text-style---text-wrap` | `pretty` | Typography Ink Token |
+| `--radius--main` | `.5rem` | Elevation / Border Token |
+| `--_theme---background-2` | `var(--swatch--light-100)` | Canvas / Surface Token |
+| `--site--column-count` | `12` | Layout / Spatial Grid Token |
+| `--_responsive---large` | `1` | Design System Custom Token |
+| `--_responsive---medium` | `0` | Design System Custom Token |
+| `--_responsive---small` | `0` | Design System Custom Token |
+| `--_responsive---xsmall` | `0` | Design System Custom Token |
+| `--max-width--small` | `50rem` | Layout / Spatial Grid Token |
+
+---
+
+## Structural DOM Landmarks (`dom.html`)
+1. **Brand Header & Navigation Bar (<header.nav_desktop_wrap> — `www-avilus-com`)**:
+   - Landmark `<header class="nav_desktop_wrap">` (`1440x50px`) hosting `Avilus · Dual-Use Uncrewed Aircraft ` navigation (`01 Grille · 02 Wespe · 03 Bussard · 04 RasCore · 05 Missions`), DOM attributes (`data-wf-domain="www.avilus.com"`, `data-wf-page="6a3f87ff2dc47a02eacbeb15"`, `data-wf-site="6a3f87fb2dc47a02eacbead0"`, `data-padding-bottom="none"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.u-section> — `Rescue. Protect. Provide.`)**:
+   - Landmark `<section class="u-section u-min-height-screen">` presenting display lead `Rescue. Protect. Provide.` and copy excerpt *"Avilus builds autonomous critical air support for a world where h"* over `#f7f7f7` canvas and `#183032` ink.
+3. **Primary Showcase & Content Grid (<section.u-padding-top-small> — `9Z - Bussard`)**:
+   - Landmark `<section class="u-section u-padding-top-small">` rendering section `9Z - Bussard` with copy *"Evacuation. Resupply."*, asset references (`cdn.prod.website-files.com`, `avilus-staging.webflow.shared.f03...`, `gtm.js`, `6a521a02912e539c1f3a6bbb_avilus_w...`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.u-padding-bottom-small> — `Aircraft as a Service`)**:
+   - Landmark `<section class="u-section u-padding-top-small">` framing `Aircraft as a Service` and `Elevate your career at Avilus` (*"Multi-Role. Cargo."*) with `#ffff00` surface cards, `#0082f3` accents, and `video { vertical-align:baseline;display:inline-block }`.
+5. **Colophon & Global Directory Footer (<footer.footer_inner> — `https://www.avilus.com/`)**:
+   - Landmark `<footer class="footer_inner">` anchoring `Avilus · Dual-Use Uncrewed Aircr` footer links (`01 Grille · 02 Wespe · 03 Bussard · 04 RasCore · 05 Missions`), copy *"Intelligence. Surveillance."*, and `#e2e2e2` structural dividers.

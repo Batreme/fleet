@@ -1,61 +1,68 @@
 ---
 title: "UI Prompt Blueprint: lfs-org-uk"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "lfs-org-uk"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#30363c` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: lfs-org-uk
 
 > **London Film School** (https://lfs.org.uk/) — The oldest film school in the UK, dedicated to the education of filmmakers.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **London Film School** (`https://lfs.org.uk/`). The oldest film school in the UK, dedicated to the education of filmmakers.
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#30363c` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--cc-bg)` in `:root`) paired with `#000` primary typography and `#30363c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Waldenburg Condensed Black` for display copy (`Late applications for MA Filmmaking `) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `24rem` container bounds (`gap: .1875rem`, padding `1rem`) with `cubic-bezier(0,.658,.203,1.005)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Waldenburg Condensed Black` for display copy (`Find your voice in film`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `74em` container bounds (`gap: 20px 5px`, padding `50px`) with `cubic-bezier(0,.658,.203,1.005)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×6928px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `24rem` extracted from `lfs-org-uk` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `.1875rem` grid gap.
-- **Border Radius Scale**: `.5rem`, `.4rem`, `1rem`, `var(--cc-modal-border-radius)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `74em` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `50px` lateral canvas padding with `20px 5px` grid gap.
+- **Border Radius Scale**: `100%`, `.5rem`, `.4rem`, `1rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24rem`, `gap: .1875rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)`, `@media screen and (width>=56.25em)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 74em`, `gap: 20px 5px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `50px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--cc-bg)` in `:root` |
-| **Primary Typography Ink** | `#2c2f31` | `var(--cc-primary-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#30363c` | `var(--cc-btn-primary-bg)` in `:root` |
-| **Secondary / Muted Copy** | `#000` | `var(--cc-btn-primary-hover-bg)` in `:root` |
-| **Structural Hairline Border** | `#eaeff2` | `var(--cc-btn-secondary-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#23282d` | `.wpcf7-spinner { background-color: #23282d }` |
+| **Interactive Accent / Highlight** | `#0000ff` | `.page--short-courses .pill-btn { background-color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
+| **Structural Hairline Border** | `#d4dae0` | `var(--cc-btn-secondary-hover-border-color)` in `:root` |
+| **Variable Token (`--cc-primary-color`)** | `#2c2f31` | `var(--cc-primary-color)` in `:root` |
+| **Variable Token (`--cc-btn-primary-bg`)** | `#30363c` | `var(--cc-btn-primary-bg)` in `:root` |
+| **Variable Token (`--cc-btn-secondary-bg`)** | `#eaeff2` | `var(--cc-btn-secondary-bg)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -84,13 +91,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#00
 ### Font Family Stacks
 - **Display Typography**: `Waldenburg Condensed Black`.
 - **Primary Body Stack**: `Segoe UI`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`).
-- **Body Copy**: rule `p` (`line-height: 1.2!important`).
-- **Metadata & Navigation Labels**: CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 160px`, `line-height: 144px`, `font-weight: 400`, `letter-spacing: -3.2px`); rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`); rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); rule `p` (`line-height: 1.2`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`.
 
 ---
 
@@ -103,47 +110,66 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#00
 - **Selector `:root`**: `transition: .25s` extracted from `lfs-org-uk` stylesheet.
 - **Selector `#cc-main a`**: `transition: background-size .25s,color .25s` extracted from `lfs-org-uk` stylesheet.
 - **Selector `media (prefers-reduced-motion)`**: `transition: 0s` extracted from `lfs-org-uk` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,.658,.203,1.005)`)**: Governs interactive state transitions across `<header.header>` and `<section.homepage-hero>`.
+- **Extracted Easing Curve (`cubic-bezier(0,.658,.203,1.005)`)**: Governs interactive state transitions across `<header.header>` and `<section.homepage-courses>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — London Film School                         │
 │ ====================================================================== │
-│ [ <header.header>          | Full time courses · MA Filmmaking · MA ]  │
+│ [ <header.header> (1440x40px)         | Full time courses · MA Filmm ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.menu>                                       |   │
-│ | H1: Late applications for MA Filmmaking January intak...         |   │
-│ | Substrate: #fff       | Ink: #000       | Accent: #30363c        |   │
+│ | HERO STAGE: <section.homepage-hero> (w=1440px)                     | │
+│ | H1: Find your voice in film                                        | │
+│ | Substrate: #000000 | Ink: #ffffff | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.homepage-hero>   ) max-w: 24rem          |   │
+│ | SHOWCASE GRID (<section.homepage-courses>) max-w: 74em             | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Courses                      |  | Study at LFS                 | | │
+│ | | Training the world’s next gr |  | MA Filmmaking                | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .1875r) | │
-│ | [<header.header>] -> [<section.menu>] -> [<section.homepage-] |      │
+│ | DETAIL MODULE (<section.featured-film>) — MA Screenwriting         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://lfs.org.uk/                │
+│ [ FOOTER (<footer.footer>     ) | https://lfs.org.uk/                  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 20px 5px)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.homepage-hero>) — 390px Vertical Lead         | │
+│ | H1: Find your voice in film                                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.homepage-cour) — 1-Col Stack              | │
+│ | [ Item 1: Training the world’s next great filmmakers and st...   ] | │
+│ | [ Item 2: MA Filmmaking                                          ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.featured-film>) — 1-Col (MA Screenwriting)  | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `lfs-org-uk`)**:
-   - Landmark `<header class="header js-header">` hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `cc-main span { all:unset;box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.menu> — `Late applications for MA Filmmakin`)**:
-   - Landmark `<section class="menu js-overlay-menu">` presenting display lead `Late applications for MA Filmmaking January intak...` and copy excerpt *"London Film School"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.homepage-hero> — `Courses`)**:
-   - Landmark `<section class="homepage-hero homepage-hero--announcement">` rendering section `Courses` with copy *"Full time courses MA Filmmaking MA Screenwriting MA Film Marketin"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `cc-main button { all:initial;box-sizing:border-box;color:unset;visibility:unset }`.
-4. **Interactive Detail & Feature Matrix (<section.homepage-courses> — `Study at LFS`)**:
-   - Landmark `<section class="homepage-courses background-grey">` framing `Study at LFS` and `About` (*"MA International Film Business"*) with `#5e6266` surface cards, `#30363c` accents, and `cc-main tr { all:revert;color:inherit;font-family:inherit;font-size:inherit;font-weig... }`.
+   - Landmark `<header class="header js-header">` (`1440x40px`) hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+2. **Hero Stage & Focal Lead (<section.homepage-hero> — `Find your voice in film`)**:
+   - Landmark `<section class="homepage-hero homepage-hero--announcement">` presenting display lead `Find your voice in film` and copy excerpt *"A 17-year-old Ada spends the school vacation helping her father s"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.homepage-courses> — `Training the world’s next great fi`)**:
+   - Landmark `<section class="homepage-courses background-grey">` rendering section `Training the world’s next great filmmakers and st...` with copy *"Explore London Film School from anywhere"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+4. **Interactive Detail & Feature Matrix (<section.featured-film> — `MA Filmmaking`)**:
+   - Landmark `<section class="featured-film js-featured-film">` framing `MA Filmmaking` and `MA Screenwriting` (*"Elísabet Ronaldsdóttir"*) with `#23282d` surface cards, `#0000ff` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://lfs.org.uk/`)**:
-   - Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"Study at LFS How to apply Facilities Life in London Funding "*, and `#eaeff2` structural dividers.
+   - Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"LFS is the UK's oldest dedicated film school. Based in the c"*, and `#d4dae0` structural dividers.
 
 ---
 
@@ -155,19 +181,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#00
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `lfs-org-uk` (**London Film School** — `https://lfs.org.uk/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#30363c` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent).
 - **Identity & Domain Context**: The oldest film school in the UK, dedicated to the education of filmmakers.
-- **Primary Substrate**: `#fff` (`var(--cc-bg)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#30363c`.
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--cc-bg)` in `:root`) paired with `#000` primary typography and `#30363c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Waldenburg Condensed Black` for display copy (`Late applications for MA Filmmaking `) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `24rem` container bounds (`gap: .1875rem`, padding `1rem`) with `cubic-bezier(0,.658,.203,1.005)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Waldenburg Condensed Black` for display copy (`Find your voice in film`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `74em` container bounds (`gap: 20px 5px`, padding `50px`) with `cubic-bezier(0,.658,.203,1.005)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `lfs-org-uk` in your global stylesheet:
 
 :root {
-  /* London Film School (lfs-org-uk) — Ground-Truth Extracted CSS Variables */
+  /* London Film School (lfs-org-uk) — Live-Grounded CSS Variables */
   --cc-modal-border-radius: .5rem; /* Elevation / Border Token (lfs-org-uk) */
   --cc-btn-border-radius: .4rem; /* Elevation / Border Token (lfs-org-uk) */
   --cc-modal-transition-duration: .25s; /* Motion / Easing Token (lfs-org-uk) */
@@ -188,69 +214,72 @@ Declare and consume these exact custom properties extracted from `lfs-org-uk` in
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--cc-bg)` in `:root`
-- **Primary Typography Ink**: `#2c2f31` — grounded in `var(--cc-primary-color)` in `:root`
-- **Elevated Surface / Card Substrate**: `#5e6266` — grounded in `var(--cc-secondary-color)` in `:root`
-- **Interactive Accent / Highlight**: `#30363c` — grounded in `var(--cc-btn-primary-bg)` in `:root`
-- **Secondary / Muted Copy**: `#000` — grounded in `var(--cc-btn-primary-hover-bg)` in `:root`
-- **Structural Hairline Border**: `#eaeff2` — grounded in `var(--cc-btn-secondary-bg)` in `:root`
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#23282d` — grounded in `.wpcf7-spinner { background-color: #23282d }`
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.page--short-courses .pill-btn { background-color: blue }` (`#0000ff`)
+- **Secondary / Muted Copy**: `#5e6266` — grounded in `var(--cc-secondary-color)` in `:root`
+- **Structural Hairline Border**: `#d4dae0` — grounded in `var(--cc-btn-secondary-hover-border-color)` in `:root`
+- **Variable Token (`--cc-primary-color`)**: `#2c2f31` — grounded in `var(--cc-primary-color)` in `:root`
+- **Variable Token (`--cc-btn-primary-bg`)**: `#30363c` — grounded in `var(--cc-btn-primary-bg)` in `:root`
+- **Variable Token (`--cc-btn-secondary-bg`)**: `#eaeff2` — grounded in `var(--cc-btn-secondary-bg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×6928px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `24rem` extracted from `lfs-org-uk` stylesheet
-- **Padding & Gutters**: `1rem` lateral canvas padding with `.1875rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24rem`, `gap: .1875rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding
-- **Media Queries**: `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)`, `@media screen and (width>=56.25em)`
-- **Corner Radii**: `.5rem`, `.4rem`, `1rem`, `var(--cc-modal-border-radius)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `74em` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `50px` lateral canvas padding with `20px 5px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 74em`, `gap: 20px 5px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `50px` horizontal padding
+- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)`
+- **Corner Radii**: `100%`, `.5rem`, `.4rem`, `1rem`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Waldenburg Condensed Black`
 - **Body Font Stack**: `Segoe UI`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`)
-- **H2 Section Rule**: rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
-- **Body Copy Rule**: rule `p` (`line-height: 1.2!important`)
-- **Metadata & Index Rule**: CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 160px`, `line-height: 144px`, `font-weight: 400`, `letter-spacing: -3.2px`); rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`); rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); rule `p` (`line-height: 1.2`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `lfs-org-uk` (`London Film School`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `lfs-org-uk`)**:
-   - DOM & Selectors: Landmark `<header class="header js-header">` hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `cc-main span { all:unset;box-sizing:border-box }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `lfs-org-uk`)` (`lfs-org-uk`) adapts across `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)`, `@media screen and (width>=56.25em)` with `cubic-bezier(0,.658,.203,1.005)`, `cubic-bezier(.49,.78,.46,1.34)` transitions and links `Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`.
-2. **Hero Stage & Focal Lead (<section.menu> — `Late applications for MA Filmmakin`)**:
-   - DOM & Selectors: Landmark `<section class="menu js-overlay-menu">` presenting display lead `Late applications for MA Filmmaking January intak...` and copy excerpt *"London Film School"* over `#fff` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×6928px` desktop / `390×2400px` mobile) sets `#fff` background with `#000` headline `Late applications for MA Filmmaking January intak...`.
-3. **Primary Showcase & Content Grid (<section.homepage-hero> — `Courses`)**:
-   - DOM & Selectors: Landmark `<section class="homepage-hero homepage-hero--announcement">` rendering section `Courses` with copy *"Full time courses MA Filmmaking MA Screenwriting MA Film Marketin"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `cc-main button { all:initial;box-sizing:border-box;color:unset;visibility:unset }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.homepage-hero> — `Courses`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24rem`, `gap: .1875rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.homepage-courses> — `Study at LFS`)**:
-   - DOM & Selectors: Landmark `<section class="homepage-courses background-grey">` framing `Study at LFS` and `About` (*"MA International Film Business"*) with `#5e6266` surface cards, `#30363c` accents, and `cc-main tr { all:revert;color:inherit;font-family:inherit;font-size:inherit;font-weig... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.homepage-courses> — `Study at LFS`)` uses `.5rem`, `.4rem`, `1rem`, `var(--cc-modal-border-radius)` radii, `#30363c` highlights, and assets (recaptcha__en.js, favicon-96x96.png, favicon.svg).
+   - DOM & Selectors: Landmark `<header class="header js-header">` (`1440x40px`) hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `lfs-org-uk`)` (`lfs-org-uk`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media screen and (width>=640px)`, `@media (prefers-reduced-motion)`, `@media screen and (width<=640px)` with `cubic-bezier(0,.658,.203,1.005)`, `cubic-bezier(.49,.78,.46,1.34)` transitions and links `Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`.
+2. **Hero Stage & Focal Lead (<section.homepage-hero> — `Find your voice in film`)**:
+   - DOM & Selectors: Landmark `<section class="homepage-hero homepage-hero--announcement">` presenting display lead `Find your voice in film` and copy excerpt *"A 17-year-old Ada spends the school vacation helping her father s"* over `#000000` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `Find your voice in film`.
+3. **Primary Showcase & Content Grid (<section.homepage-courses> — `Training the world’s next great fi`)**:
+   - DOM & Selectors: Landmark `<section class="homepage-courses background-grey">` rendering section `Training the world’s next great filmmakers and st...` with copy *"Explore London Film School from anywhere"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.homepage-courses> — `Training the world’s next great fi`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 74em`, `gap: 20px 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `50px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.featured-film> — `MA Filmmaking`)**:
+   - DOM & Selectors: Landmark `<section class="featured-film js-featured-film">` framing `MA Filmmaking` and `MA Screenwriting` (*"Elísabet Ronaldsdóttir"*) with `#23282d` surface cards, `#0000ff` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.featured-film> — `MA Filmmaking`)` uses `100%`, `.5rem`, `.4rem`, `1rem` radii, `#0000ff` highlights, and assets (recaptcha__en.js, favicon-96x96.png, favicon.svg).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://lfs.org.uk/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"Study at LFS How to apply Facilities Life in London Funding "*, and `#eaeff2` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://lfs.org.uk/`)` aligns to `24rem` extracted from `lfs-org-uk` stylesheet with `1rem` lateral canvas padding with `.1875rem` grid gap and attributes (data-category="analytics", data-service="Google Analytics", data-category="analytics").
+   - DOM & Selectors: Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"LFS is the UK's oldest dedicated film school. Based in the c"*, and `#d4dae0` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://lfs.org.uk/`)` aligns to `74em` (non-`@media` desktop container stylesheet rule) with `50px` lateral canvas padding with `20px 5px` grid gap and attributes (data-category="analytics", data-service="Google Analytics", data-category="analytics").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"London Film School"*
-- Copy Excerpt 2: *"Full time courses MA Filmmaking MA Screenwriting MA Film Marketing MA Film Produci..."*
-- Copy Excerpt 3: *"MA International Film Business"*
-- Copy Excerpt 4: *"Study at LFS How to apply Facilities Life in London Funding Ask a student"*
+- Copy Excerpt 1: *"A 17-year-old Ada spends the school vacation helping her father sell contraband ci..."*
+- Copy Excerpt 2: *"Explore London Film School from anywhere"*
+- Copy Excerpt 3: *"Elísabet Ronaldsdóttir"*
+- Copy Excerpt 4: *"LFS is the UK's oldest dedicated film school. Based in the centre of London. Two n..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,.658,.203,1.005)`, `cubic-bezier(.49,.78,.46,1.34)`
 - **Extracted Stylesheet Rules (`lfs-org-uk`)**:
-- `cc-main span { all:unset;box-sizing:border-box }`
-- `cc-main button { all:initial;box-sizing:border-box;color:unset;visibility:unset }`
-- `cc-main tr { all:revert;color:inherit;font-family:inherit;font-size:inherit;font-weig... }`
-- `cc-main.cc--rtl { direction:rtl }`
-- `cc-main strong { font-weight:600 }`
+- `.wpcf7 .hidden-fields-container { display: none; }`
+- `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`
+- `form.submitting .wpcf7-response-o... { display: none; }`
+- `.wpcf7 form.sent .wpcf7-response-... { border-color: 46b450; }`
+- `cf7 form.aborted .wpcf7-response-... { border-color: dc3232; }`
 - **Per-Selector Transition Rules**:
 - **Selector `:root`**: `transition: .25s` extracted from `lfs-org-uk` stylesheet.
 - **Selector `#cc-main a`**: `transition: background-size .25s,color .25s` extracted from `lfs-org-uk` stylesheet.
 - **Selector `media (prefers-reduced-motion)`**: `transition: 0s` extracted from `lfs-org-uk` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,.658,.203,1.005)`)**: Governs interactive state transitions across `<header.header>` and `<section.homepage-hero>`.
+- **Extracted Easing Curve (`cubic-bezier(0,.658,.203,1.005)`)**: Governs interactive state transitions across `<header.header>` and `<section.homepage-courses>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

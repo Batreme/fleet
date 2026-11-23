@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: uimaven-art"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "uimaven-art"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#ffdb43`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3670e` / `#fe0000`)"
 ---
 
 # UI Design System & Master Generation Blueprint: uimaven-art
 
 > **uimaven.art** (https://uimaven.art) — UI/UX design portfolio of Leila Abbassova.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **uimaven.art** (`https://uimaven.art`). UI/UX design portfolio of Leila Abbassova.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#ffdb43`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f3670e` / `#fe0000`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fb3748` (`var(--color-red-100)` in `:root`) paired with `#ffdb43` primary typography and `#ffdb43` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`uimaven.art`) with `Jost Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 2.63px`, padding `2px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3670e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#fe0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jost` for display copy (`uimaven.art`) with `Jost` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 2.63px`, padding `2px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `uimaven-art` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `2px` lateral canvas padding with `2.63px` grid gap.
 - **Border Radius Scale**: `.25rem`, `1px`, `2px`, `3.5px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2.63px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2.63px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,23 +52,29 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fb3748` | `var(--color-red-100)` in `:root` |
-| **Primary Typography Ink** | `#fb2c36` | `var(--color-red-500)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#9f0712` | `var(--color-red-800)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffdb43` | `var(--color-yellow-100)` in `:root` |
-| **Secondary / Muted Copy** | `#dfb400` | `var(--color-yellow-200)` in `:root` |
-| **Structural Hairline Border** | `#edb200` | `var(--color-yellow-500)` in `:root` |
+| **Primary Canvas Substrate** | `#f3670e` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#4a4a4a` | `.bg-neutral-900 { background-color: #4a4a4a }` |
+| **Interactive Accent / Highlight** | `#fe0000` | `var(--color-red-accent)` in `:root` |
+| **Secondary / Muted Copy** | `#002af0` | `var(--color-secondary-300)` in `:root` |
+| **Structural Hairline Border** | `#000000` | `var(--color-border-dark)` in `:root` |
+| **Variable Token (`--color-red-100`)** | `#fb3748` | `var(--color-red-100)` in `:root` |
+| **Variable Token (`--color-red-500`)** | `#fb2c36` | `var(--color-red-500)` in `:root` |
+| **Variable Token (`--color-red-800`)** | `#9f0712` | `var(--color-red-800)` in `:root` |
+| **Variable Token (`--color-yellow-100`)** | `#ffdb43` | `var(--color-yellow-100)` in `:root` |
+| **Variable Token (`--color-yellow-200`)** | `#dfb400` | `var(--color-yellow-200)` in `:root` |
+| **Variable Token (`--color-yellow-500`)** | `#edb200` | `var(--color-yellow-500)` in `:root` |
 | **Variable Token (`--color-green-200`)** | `#1fc16b` | `var(--color-green-200)` in `:root` |
-| **Variable Token (`--color-neutral-100`)** | `#fff` | `var(--color-neutral-100)` in `:root` |
+| **Variable Token (`--color-neutral-100`)** | `#ffffff` | `var(--color-neutral-100)` in `:root` |
 | **Variable Token (`--color-neutral-200`)** | `#e8e8e8` | `var(--color-neutral-200)` in `:root` |
 | **Variable Token (`--color-neutral-300`)** | `#d2d2d2` | `var(--color-neutral-300)` in `:root` |
-| **Variable Token (`--color-black`)** | `#000` | `var(--color-black)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--site-header-h` | `60px` | Layout / Spatial Grid Token |
 | `--font-jost` | `"Jost","Jost Fallback"` | Typography / Scale Token |
 | `--type-weight` | `initial` | Typography / Scale Token |
 | `--color-red-100` | `#fb3748` | Brand / Palette Token |
@@ -80,7 +90,6 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#
 | `--color-black` | `#000` | Canvas / Surface Token |
 | `--color-white` | `#fff` | Canvas / Surface Token |
 | `--spacing` | `.25rem` | Layout / Spatial Grid Token |
-| `--text-xs` | `.75rem` | Typography Ink Token |
 
 ---
 
@@ -88,13 +97,13 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `Jost`.
-- **Primary Body Stack**: `Jost Fallback`.
+- **Primary Body Stack**: `Jost`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: CSS variables `--text-display: 64px`, `--text-display--line-height: .95`, `--text-display-phone: 40px`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-heading)`, `var(--text-heading-phone)`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--text-body: 16px`.
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `1em`, `80%`, `75%`, `var(--text-heading)`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--text-body: 16px`.
 - **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`.
 
 ---
@@ -108,47 +117,66 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#
 - **Selector `layer theme`**: `transition: .15s` extracted from `uimaven-art` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `uimaven-art` stylesheet.
 - **Selector `translate\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `uimaven-art` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.relative>` and `<main.mobile-stripes>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.shrink-0>` and `<main.bg-primary-300>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — uimaven.art                                │
 │ ====================================================================== │
-│ [ <header.relative>        | Overview · Index · Archive · About · C ]  │
+│ [ <header.shrink-0> (1440x0px)        | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.mobile-stripes>                                |   │
-│ | H1: uimaven.art                                                  |   │
-│ | Substrate: #fb3748    | Ink: #ffdb43    | Accent: #ffdb43        |   │
+│ | HERO STAGE: <main.mobile-stripes> (w=1440px)                       | │
+│ | H1: uimaven.art                                                    | │
+│ | Substrate: #f3670e | Ink: #000000 | Accent: #fe0000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.mobile-stripes>     ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<main.bg-primary-300>) max-w: 96rem                 | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2.63px) | │
-│ | [<header.relative>] -> [<main.mobile-strip] -> [<main.mobile-strip]  │
+│ | DETAIL MODULE (<main.mobile-stripes:nth(2) — Global Directory & Co | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.bg-primary-300) | https://uimaven.art                │
+│ [ FOOTER (<footer.bg-primary-3) | https://uimaven.art                  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2.63px)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.shrink-0>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.mobile-stripes>) — 390px Vertical Lead           | │
+│ | H1: uimaven.art                                                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.bg-primary-300>) — 1-Col Stack               | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.mobile-stripes:nth) — 1-Col (Global Directory &) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.bg-primary-3) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.relative> — `uimaven-art`)**:
-   - Landmark `<header class="relative shrink-0">` hosting `uimaven.art` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-home`), and stylesheet rule `jost_bd43172b-module__QzW_JW__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
+1. **Brand Header & Navigation Bar (<header.shrink-0> — `uimaven-art`)**:
+   - Landmark `<header class="shrink-0 relative">` (`1440x0px`) hosting `uimaven.art` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-home`), and stylesheet rule `jost_bd43172b-module__QzW_JW__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<main.mobile-stripes> — `uimaven.art`)**:
-   - Landmark `<main class="mobile-stripes bg-primary-300">` presenting display lead `uimaven.art` and copy excerpt *"UI/UX design portfolio of Leila Abbassova."* over `#fb3748` canvas and `#ffdb43` ink.
-3. **Primary Showcase & Content Grid (<main.mobile-stripes> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<main class="mobile-stripes bg-primary-300">` presenting display lead `uimaven.art` and copy excerpt *"UI/UX design portfolio of Leila Abbassova."* over `#f3670e` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.bg-primary-300> — `Featured Work & Interactive Showca`)**:
    - Landmark `<main class="mobile-stripes bg-primary-300">` rendering section `Featured Work & Interactive Showcase` with copy *"uimaven.art"*, asset references (`81cef6a21128489e-s.p.6cf41120.woff2`, `d7f27077a988d3d1.css`, `e48a17b7f69aeb46.js`, `2677990b2b1206f6.js`), and grid rule `.jost_bd43172b-module__QzW_JW__va... { --font-jost:"Jost","Jost Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<main.mobile-stripes> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="mobile-stripes bg-primary-300">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#9f0712` surface cards, `#ffdb43` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<main.mobile-stripes:nth(2)> — `Technical Architecture & Narrative`)**:
+   - Landmark `<main class="mobile-stripes bg-primary-300">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#4a4a4a` surface cards, `#fe0000` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.bg-primary-300> — `https://uimaven.art`)**:
-   - Landmark `<footer class="bg-primary-300">` anchoring `uimaven.art` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#edb200` structural dividers.
+   - Landmark `<footer class="bg-primary-300">` anchoring `uimaven.art` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#000000` structural dividers.
 
 ---
 
@@ -160,19 +188,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `uimaven-art` (**uimaven.art** — `https://uimaven.art`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#fb3748` / `#ffdb43`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f3670e` / `#fe0000`).
 - **Identity & Domain Context**: UI/UX design portfolio of Leila Abbassova.
-- **Primary Substrate**: `#fb3748` (`var(--color-red-100)` in `:root`), **Primary Ink**: `#ffdb43`, **Accent / Highlight**: `#ffdb43`.
+- **Primary Substrate**: `#f3670e` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#fe0000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fb3748` (`var(--color-red-100)` in `:root`) paired with `#ffdb43` primary typography and `#ffdb43` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`uimaven.art`) with `Jost Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 2.63px`, padding `2px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3670e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#fe0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jost` for display copy (`uimaven.art`) with `Jost` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 2.63px`, padding `2px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `uimaven-art` in your global stylesheet:
 
 :root {
-  /* uimaven.art (uimaven-art) — Ground-Truth Extracted CSS Variables */
+  /* uimaven.art (uimaven-art) — Live-Grounded CSS Variables */
+  --site-header-h: 60px; /* Layout / Spatial Grid Token (uimaven-art) */
   --font-jost: "Jost","Jost Fallback"; /* Typography / Scale Token (uimaven-art) */
   --type-weight: initial; /* Typography / Scale Token (uimaven-art) */
   --color-red-100: #fb3748; /* Brand / Palette Token (uimaven-art) */
@@ -188,59 +217,63 @@ Declare and consume these exact custom properties extracted from `uimaven-art` i
   --color-black: #000; /* Canvas / Surface Token (uimaven-art) */
   --color-white: #fff; /* Canvas / Surface Token (uimaven-art) */
   --spacing: .25rem; /* Layout / Spatial Grid Token (uimaven-art) */
-  --text-xs: .75rem; /* Typography Ink Token (uimaven-art) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fb3748` — grounded in `var(--color-red-100)` in `:root`
-- **Primary Typography Ink**: `#fb2c36` — grounded in `var(--color-red-500)` in `:root`
-- **Elevated Surface / Card Substrate**: `#9f0712` — grounded in `var(--color-red-800)` in `:root`
-- **Interactive Accent / Highlight**: `#ffdb43` — grounded in `var(--color-yellow-100)` in `:root`
-- **Secondary / Muted Copy**: `#dfb400` — grounded in `var(--color-yellow-200)` in `:root`
-- **Structural Hairline Border**: `#edb200` — grounded in `var(--color-yellow-500)` in `:root`
+- **Primary Canvas Substrate**: `#f3670e` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#4a4a4a` — grounded in `.bg-neutral-900 { background-color: #4a4a4a }`
+- **Interactive Accent / Highlight**: `#fe0000` — grounded in `var(--color-red-accent)` in `:root`
+- **Secondary / Muted Copy**: `#002af0` — grounded in `var(--color-secondary-300)` in `:root`
+- **Structural Hairline Border**: `#000000` — grounded in `var(--color-border-dark)` in `:root`
+- **Variable Token (`--color-red-100`)**: `#fb3748` — grounded in `var(--color-red-100)` in `:root`
+- **Variable Token (`--color-red-500`)**: `#fb2c36` — grounded in `var(--color-red-500)` in `:root`
+- **Variable Token (`--color-red-800`)**: `#9f0712` — grounded in `var(--color-red-800)` in `:root`
+- **Variable Token (`--color-yellow-100`)**: `#ffdb43` — grounded in `var(--color-yellow-100)` in `:root`
+- **Variable Token (`--color-yellow-200`)**: `#dfb400` — grounded in `var(--color-yellow-200)` in `:root`
+- **Variable Token (`--color-yellow-500`)**: `#edb200` — grounded in `var(--color-yellow-500)` in `:root`
 - **Variable Token (`--color-green-200`)**: `#1fc16b` — grounded in `var(--color-green-200)` in `:root`
-- **Variable Token (`--color-neutral-100`)**: `#fff` — grounded in `var(--color-neutral-100)` in `:root`
+- **Variable Token (`--color-neutral-100`)**: `#ffffff` — grounded in `var(--color-neutral-100)` in `:root`
 - **Variable Token (`--color-neutral-200`)**: `#e8e8e8` — grounded in `var(--color-neutral-200)` in `:root`
 - **Variable Token (`--color-neutral-300`)**: `#d2d2d2` — grounded in `var(--color-neutral-300)` in `:root`
-- **Variable Token (`--color-black`)**: `#000` — grounded in `var(--color-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `uimaven-art` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `2px` lateral canvas padding with `2.63px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2.63px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2.63px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
 - **Corner Radii**: `.25rem`, `1px`, `2px`, `3.5px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Jost`
-- **Body Font Stack**: `Jost Fallback`
+- **Body Font Stack**: `Jost`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: CSS variables `--text-display: 64px`, `--text-display--line-height: .95`, `--text-display-phone: 40px`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-heading)`, `var(--text-heading-phone)`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--text-body: 16px`
+- **H2 Section Rule**: observed font-size ladder: `16px`, `1em`, `80%`, `75%`, `var(--text-heading)`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--text-body: 16px`
 - **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `uimaven-art` (`uimaven.art`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.relative> — `uimaven-art`)**:
-   - DOM & Selectors: Landmark `<header class="relative shrink-0">` hosting `uimaven.art` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-home`), and stylesheet rule `jost_bd43172b-module__QzW_JW__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.relative> — `uimaven-art`)` (`uimaven-art`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+1. **Brand Header & Navigation Bar (<header.shrink-0> — `uimaven-art`)**:
+   - DOM & Selectors: Landmark `<header class="shrink-0 relative">` (`1440x0px`) hosting `uimaven.art` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-home`), and stylesheet rule `jost_bd43172b-module__QzW_JW__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.shrink-0> — `uimaven-art`)` (`uimaven-art`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.mobile-stripes> — `uimaven.art`)**:
-   - DOM & Selectors: Landmark `<main class="mobile-stripes bg-primary-300">` presenting display lead `uimaven.art` and copy excerpt *"UI/UX design portfolio of Leila Abbassova."* over `#fb3748` canvas and `#ffdb43` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fb3748` background with `#ffdb43` headline `uimaven.art`.
-3. **Primary Showcase & Content Grid (<main.mobile-stripes> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<main class="mobile-stripes bg-primary-300">` presenting display lead `uimaven.art` and copy excerpt *"UI/UX design portfolio of Leila Abbassova."* over `#f3670e` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f3670e` background with `#000000` headline `uimaven.art`.
+3. **Primary Showcase & Content Grid (<main.bg-primary-300> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<main class="mobile-stripes bg-primary-300">` rendering section `Featured Work & Interactive Showcase` with copy *"uimaven.art"*, asset references (`81cef6a21128489e-s.p.6cf41120.woff2`, `d7f27077a988d3d1.css`, `e48a17b7f69aeb46.js`, `2677990b2b1206f6.js`), and grid rule `.jost_bd43172b-module__QzW_JW__va... { --font-jost:"Jost","Jost Fallback" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.mobile-stripes> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2.63px`) on desktop and Single-column vertical stack at `390px` viewport width with `2px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.mobile-stripes> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<main class="mobile-stripes bg-primary-300">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#9f0712` surface cards, `#ffdb43` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.mobile-stripes> — `Technical Architecture & Narrative`)` uses `.25rem`, `1px`, `2px`, `3.5px` radii, `#ffdb43` highlights, and assets (81cef6a21128489e-s.p.6cf41120.woff2, d7f27077a988d3d1.css, e48a17b7f69aeb46.js).
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.bg-primary-300> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2.63px`) on desktop and Single-column vertical stack at `390px` viewport width with `2px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.mobile-stripes:nth(2)> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<main class="mobile-stripes bg-primary-300">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#4a4a4a` surface cards, `#fe0000` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.mobile-stripes:nth(2)> — `Technical Architecture & Narrative`)` uses `.25rem`, `1px`, `2px`, `3.5px` radii, `#fe0000` highlights, and assets (81cef6a21128489e-s.p.6cf41120.woff2, d7f27077a988d3d1.css, e48a17b7f69aeb46.js).
 5. **Colophon & Global Directory Footer (<footer.bg-primary-300> — `https://uimaven.art`)**:
-   - DOM & Selectors: Landmark `<footer class="bg-primary-300">` anchoring `uimaven.art` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#edb200` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-primary-300> — `https://uimaven.art`)` aligns to `40rem` extracted from `uimaven-art` stylesheet with `2px` lateral canvas padding with `2.63px` grid gap and attributes (data-precedence="next", data-home).
+   - DOM & Selectors: Landmark `<footer class="bg-primary-300">` anchoring `uimaven.art` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#000000` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-primary-300> — `https://uimaven.art`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `2px` lateral canvas padding with `2.63px` grid gap and attributes (data-precedence="next", data-home).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Lead Copy: *"UI/UX design portfolio of Leila Abbassova."*
@@ -257,7 +290,7 @@ Scaffold `uimaven-art` (`uimaven.art`) with these exact structural regions, extr
 - **Selector `layer theme`**: `transition: .15s` extracted from `uimaven-art` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `uimaven-art` stylesheet.
 - **Selector `translate\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `uimaven-art` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.relative>` and `<main.mobile-stripes>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.shrink-0>` and `<main.bg-primary-300>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

@@ -1,67 +1,70 @@
 ---
 title: "UI Prompt Blueprint: tochi-sanwa-jp"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "tochi-sanwa-jp"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `#D03030` ink, `#EB3535` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#393533` ink, `#e17738` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: tochi-sanwa-jp
 
 > **岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店** (https://tochi-sanwa.jp/) — サンワ（SANWA）は岐阜県美濃加茂市で注文住宅・建売分譲・規格住宅を手がけています。自社土地×自社一貫施工を活かしたコストパフォーマンス◎のおしゃれな住まいをご提案。どんな難しいご要望にも「どうすれば実現できるか」を本気で考えます。
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店** (`https://tochi-sanwa.jp/`). サンワ（SANWA）は岐阜県美濃加茂市で注文住宅・建売分譲・規格住宅を手がけています。自社土地×自社一貫施工を活かしたコストパフォーマンス◎のおしゃれな住まいをご提案。どんな難しいご要望にも「どうすれば実現できるか」を本気で考えます。
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `#D03030` ink, `#EB3535` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#393533` ink, `#e17738` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#E17738` (`var(--clr-primary-default)` in `:root`) paired with `#D03030` primary typography and `#EB3535` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Lato` for display copy (`岐阜で注文住宅、規格、分譲を手掛ける工務店`) with `Oswald` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 24px`, padding `1.5rem`) with `cubic-bezier(0.175,0.885,0.32,1.275)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#393533` primary typography and `#e17738` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `TsukuOldGothicStd-B` for display copy (`岐阜で注文住宅、規格、分譲を手掛ける工務店`) with `TsukuOldGothicStd-B` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 24px`, padding `1.5rem`) with `cubic-bezier(0.175,0.885,0.32,1.275)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `767px` extracted from `tochi-sanwa-jp` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `24px` grid gap.
-- **Border Radius Scale**: `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)`, `100%`.
+- **Border Radius Scale**: `100%`, `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 24px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 24px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media (prefers-reduced-motion: reduce)`, `@media print,screen and (min-width: 768px)`.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media print,screen and (min-width: 768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#E17738` | `var(--clr-primary-default)` in `:root` |
-| **Primary Typography Ink** | `#B25722` | `var(--clr-primary-dark)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#E88E58` | `var(--clr-primary-light)` in `:root` |
-| **Interactive Accent / Highlight** | `#EB3535` | `var(--clr-secondary-default)` in `:root` |
-| **Secondary / Muted Copy** | `#D03030` | `var(--clr-secondary-dark)` in `:root` |
-| **Structural Hairline Border** | `#F25353` | `var(--clr-secondary-light)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#393533` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f2eee9` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#e17738` | `var(--clr-primary-default)` in `:root` |
+| **Secondary / Muted Copy** | `#bab5b5` | `var(--clr-text-placeholder)` in `:root` |
+| **Structural Hairline Border** | `#00a0d2` | `.wpcf7 form .wpcf7-response-output { border: #00a0d2 }` |
 | **Variable Token (`--leap-project-main`)** | `#0073aa` | `var(--leap-project-main)` in `:root` |
 | **Variable Token (`--leap-project-text-primary`)** | `#404044` | `var(--leap-project-text-primary)` in `:root` |
-| **Variable Token (`--leap-project-wh`)** | `#fff` | `var(--leap-project-wh)` in `:root` |
-| **Variable Token (`--leap-project-bg`)** | `#F7F7F4` | `var(--leap-project-bg)` in `:root` |
-| **Variable Token (`--leap-project-mono-01`)** | `#F2F2F2` | `var(--leap-project-mono-01)` in `:root` |
-| **Variable Token (`--leap-project-mono-02`)** | `#BABDC4` | `var(--leap-project-mono-02)` in `:root` |
+| **Variable Token (`--leap-project-bg`)** | `#f7f7f4` | `var(--leap-project-bg)` in `:root` |
+| **Variable Token (`--leap-project-mono-01`)** | `#f2f2f2` | `var(--leap-project-mono-01)` in `:root` |
+| **Variable Token (`--leap-project-mono-02`)** | `#babdc4` | `var(--leap-project-mono-02)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -88,22 +91,22 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Lato`.
-- **Primary Body Stack**: `Oswald`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `TsukuOldGothicStd-B`.
+- **Primary Body Stack**: `TsukuOldGothicStd-B`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-en-display: "Yellowtail", cursive`, `--display-lg: 160`, `--display-lg-sp: 80`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(12px, 1rem, 14px)`, `clamp(10px, 0.875rem, 12px)`, `0.875rem`, `1rem`, `1.125rem`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(12px, 1rem, 14px)`, `clamp(10px, 0.875rem, 12px)`, `0.875rem`, `1rem`, `1.125rem`).
-- **Metadata & Navigation Labels**: CSS variables `--leap-project-mono-01: var(--clr-mono-01, #F2F2F2)`, `--leap-project-mono-02: var(--clr-mono-03, #BABDC4)`, `--clr-mono-01: #EEEEEE`; rule `.label` (`font-size: 0.875rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 14.1667px`, `line-height: 19.8333px`, `font-weight: 700`, `letter-spacing: 0.425px`); CSS variables `--font-en-display: "Yellowtail", cursive`, `--display-lg: 160`, `--display-lg-sp: 80`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 14.1667px`, `line-height: 19.8333px`, `font-weight: 700`, `letter-spacing: 0.425px`).
+- **Body Copy**: live computed `body` (`font-size: 14.1667px`, `line-height: 25.5px`, `font-weight: 800`, `letter-spacing: 0.425px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14.1667px`, `line-height: 25.5px`, `font-weight: 800`, `letter-spacing: 0.425px`); rule `.label` (`font-size: 0.875rem`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(0.175,0.885,0.32,1.275)`.
+- **Extracted Timing Functions**: `cubic-bezier(0.175,0.885,0.32,1.275)`, `cubic-bezier(0.25,1,0.5,1)`.
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `tochi-sanwa-jp` stylesheet.
@@ -116,40 +119,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — 岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店   │
 │ ====================================================================== │
-│ [ <header.header>          | サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセ ]  │
+│ [ <header.header> (1392x60px)         | サンワの家づくり · ローコストができる理由 · 家づく ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: 岐阜で注文住宅、規格、分譲を手掛ける工務店                                        |   │
-│ | Substrate: #E17738    | Ink: #D03030    | Accent: #EB3535        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: 岐阜で注文住宅、規格、分譲を手掛ける工務店                                          | │
+│ | Substrate: #ffffff | Ink: #393533 | Accent: #e17738                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.home_event>      ) max-w: 767px          |   │
+│ | SHOWCASE GRID (<section.home_event>) max-w: 1600px                 | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | EVENT LIST イベント情報            |  | THANKS CAMPAIGN 開催！！         | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px  ) | │
-│ | [<header.header>] -> [<section.hero>] -> [<section.home_even] |      │
+│ | DETAIL MODULE (<article.post>) — おうちづくり応援！10000円分ギフトカー             | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://tochi-sanwa.jp/            │
+│ [ FOOTER (<footer.footer>     ) | https://tochi-sanwa.jp/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: 岐阜で注文住宅、規格、分譲を手掛ける工務店                                          | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.home_event>) — 1-Col Stack                | │
+│ | [ Item 1: EVENT LIST イベント情報                                      ] | │
+│ | [ Item 2: THANKS CAMPAIGN 開催！！                                   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<article.post>) — 1-Col (おうちづくり応援！10000円分ギフ)         | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `tochi-sanwa-jp`)**:
-   - Landmark `<header class="header">` hosting `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%` navigation (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), DOM attributes (`data-target="tochi-sanwa-jp"`), and stylesheet rule `.wpcf7-back { float:left;margin-top:5px;position:relative;width:70px }`.
+   - Landmark `<header class="header">` (`1392x60px`) hosting `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%` navigation (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), DOM attributes (`data-target="tochi-sanwa-jp"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `岐阜で注文住宅、規格、分譲を手掛ける工務店`)**:
-   - Landmark `<section class="hero scroll_active">` presenting display lead `岐阜で注文住宅、規格、分譲を手掛ける工務店` and copy excerpt *"岐阜で注文住宅、規格、分譲を手掛ける工務店"* over `#E17738` canvas and `#D03030` ink.
+   - Landmark `<section class="hero scroll_active">` presenting display lead `岐阜で注文住宅、規格、分譲を手掛ける工務店` and copy excerpt *"1,000万円後半〜の家づくり。注文も、規格・セミオーダーも、分譲建売も。"* over `#ffffff` canvas and `#393533` ink.
 3. **Primary Showcase & Content Grid (<section.home_event> — `EVENT LIST イベント情報`)**:
-   - Landmark `<section class="home_event section_pdg-sm">` rendering section `EVENT LIST イベント情報` with copy *"サンワの家づくり CONCEPT サンワの家づくり ローコストができる理由 家づくりの流れ コンセプト・約束 サンワの住宅性能"*, asset references (`gtm.js`, `embed`, `styles.css`, `cf7msm.css`), and grid rule `.cf7msm-ro { white-space:pre-wrap }`.
+   - Landmark `<section class="home_event section_pdg-sm">` rendering section `EVENT LIST イベント情報` with copy *"1,000万円後半〜 の家づくり。 注文も、規格・セミオーダーも、分譲建売も。"*, asset references (`gtm.js`, `embed`, `styles.css`, `cf7msm.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
 4. **Interactive Detail & Feature Matrix (<article.post> — `THANKS CAMPAIGN 開催！！`)**:
-   - Landmark `<article class="post">` framing `THANKS CAMPAIGN 開催！！` and `おうちづくり応援！10000円分ギフトカードがもらえる【予約制】` (*"ラインナップ LINE UP ラインナップ 注文住宅 規格・セミオーダー住宅 建売分譲"*) with `#E88E58` surface cards, `#EB3535` accents, and `.leap_table thead th { background-color: var(--leap-project-main); color: var(--leap-project-wh); }`.
+   - Landmark `<article class="post">` framing `THANKS CAMPAIGN 開催！！` and `おうちづくり応援！10000円分ギフトカードがもらえる【予約制】` (*"サンワは背伸びしない価格で、家族のうち色をカタチにします。"*) with `#f2eee9` surface cards, `#e17738` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://tochi-sanwa.jp/`)**:
-   - Landmark `<footer class="footer">` anchoring `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率` footer links (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), copy *"物件・土地を探す HOME & LAND 物件・土地を探す 建売分譲を探す 土地を探す 見つける間取り"*, and `#F25353` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率` footer links (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), copy *"CONCEPT サンワの家づくりのコンセプト"*, and `#00a0d2` structural dividers.
 
 ---
 
@@ -161,19 +183,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `tochi-sanwa-jp` (**岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店** — `https://tochi-sanwa.jp/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#E17738` canvas, `#D03030` ink, `#EB3535` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#393533` ink, `#e17738` accent).
 - **Identity & Domain Context**: サンワ（SANWA）は岐阜県美濃加茂市で注文住宅・建売分譲・規格住宅を手がけています。自社土地×自社一貫施工を活かしたコストパフォーマンス◎のおしゃれな住まいをご提案。どんな難しいご要望にも「どうすれば実現できるか」を本気で考えます。
-- **Primary Substrate**: `#E17738` (`var(--clr-primary-default)` in `:root`), **Primary Ink**: `#D03030`, **Accent / Highlight**: `#EB3535`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#393533`, **Accent / Highlight**: `#e17738`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#E17738` (`var(--clr-primary-default)` in `:root`) paired with `#D03030` primary typography and `#EB3535` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Lato` for display copy (`岐阜で注文住宅、規格、分譲を手掛ける工務店`) with `Oswald` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 24px`, padding `1.5rem`) with `cubic-bezier(0.175,0.885,0.32,1.275)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#393533` primary typography and `#e17738` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `TsukuOldGothicStd-B` for display copy (`岐阜で注文住宅、規格、分譲を手掛ける工務店`) with `TsukuOldGothicStd-B` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 24px`, padding `1.5rem`) with `cubic-bezier(0.175,0.885,0.32,1.275)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `tochi-sanwa-jp` in your global stylesheet:
 
 :root {
-  /* 岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店 (tochi-sanwa-jp) — Ground-Truth Extracted CSS Variables */
+  /* 岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店 (tochi-sanwa-jp) — Live-Grounded CSS Variables */
   --leap-project-main: var(--clr-primary-default, #0073aa); /* Color / Atmospheric Token (tochi-sanwa-jp) */
   --leap-project-text-primary: var(--clr-text-primary, #404044); /* Typography Ink Token (tochi-sanwa-jp) */
   --leap-project-wh: var(--clr-wht, #fff); /* Color / Atmospheric Token (tochi-sanwa-jp) */
@@ -194,70 +216,69 @@ Declare and consume these exact custom properties extracted from `tochi-sanwa-jp
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#E17738` — grounded in `var(--clr-primary-default)` in `:root`
-- **Primary Typography Ink**: `#B25722` — grounded in `var(--clr-primary-dark)` in `:root`
-- **Elevated Surface / Card Substrate**: `#E88E58` — grounded in `var(--clr-primary-light)` in `:root`
-- **Interactive Accent / Highlight**: `#EB3535` — grounded in `var(--clr-secondary-default)` in `:root`
-- **Secondary / Muted Copy**: `#D03030` — grounded in `var(--clr-secondary-dark)` in `:root`
-- **Structural Hairline Border**: `#F25353` — grounded in `var(--clr-secondary-light)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#393533` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f2eee9` — grounded in live computed `footer` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#e17738` — grounded in `var(--clr-primary-default)` in `:root`
+- **Secondary / Muted Copy**: `#bab5b5` — grounded in `var(--clr-text-placeholder)` in `:root`
+- **Structural Hairline Border**: `#00a0d2` — grounded in `.wpcf7 form .wpcf7-response-output { border: #00a0d2 }`
 - **Variable Token (`--leap-project-main`)**: `#0073aa` — grounded in `var(--leap-project-main)` in `:root`
 - **Variable Token (`--leap-project-text-primary`)**: `#404044` — grounded in `var(--leap-project-text-primary)` in `:root`
-- **Variable Token (`--leap-project-wh`)**: `#fff` — grounded in `var(--leap-project-wh)` in `:root`
-- **Variable Token (`--leap-project-bg`)**: `#F7F7F4` — grounded in `var(--leap-project-bg)` in `:root`
-- **Variable Token (`--leap-project-mono-01`)**: `#F2F2F2` — grounded in `var(--leap-project-mono-01)` in `:root`
-- **Variable Token (`--leap-project-mono-02`)**: `#BABDC4` — grounded in `var(--leap-project-mono-02)` in `:root`
+- **Variable Token (`--leap-project-bg`)**: `#f7f7f4` — grounded in `var(--leap-project-bg)` in `:root`
+- **Variable Token (`--leap-project-mono-01`)**: `#f2f2f2` — grounded in `var(--leap-project-mono-01)` in `:root`
+- **Variable Token (`--leap-project-mono-02`)**: `#babdc4` — grounded in `var(--leap-project-mono-02)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `767px` extracted from `tochi-sanwa-jp` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `1.5rem` lateral canvas padding with `24px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 24px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 24px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
-- **Media Queries**: `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media (prefers-reduced-motion: reduce)`, `@media print,screen and (min-width: 768px)`
-- **Corner Radii**: `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)`, `100%`
+- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media print,screen and (min-width: 768px)`
+- **Corner Radii**: `100%`, `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Lato`
-- **Body Font Stack**: `Oswald`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--font-en-display: "Yellowtail", cursive`, `--display-lg: 160`, `--display-lg-sp: 80`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(12px, 1rem, 14px)`, `clamp(10px, 0.875rem, 12px)`, `0.875rem`, `1rem`, `1.125rem`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(12px, 1rem, 14px)`, `clamp(10px, 0.875rem, 12px)`, `0.875rem`, `1rem`, `1.125rem`)
-- **Metadata & Index Rule**: CSS variables `--leap-project-mono-01: var(--clr-mono-01, #F2F2F2)`, `--leap-project-mono-02: var(--clr-mono-03, #BABDC4)`, `--clr-mono-01: #E17738`; rule `.label` (`font-size: 0.875rem`)
+- **Display Font Stack**: `TsukuOldGothicStd-B`
+- **Body Font Stack**: `TsukuOldGothicStd-B`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 14.1667px`, `line-height: 19.8333px`, `font-weight: 700`, `letter-spacing: 0.425px`); CSS variables `--font-en-display: "Yellowtail", cursive`, `--display-lg: 160`, `--display-lg-sp: 80`
+- **H2 Section Rule**: live computed `h2` (`font-size: 14.1667px`, `line-height: 19.8333px`, `font-weight: 700`, `letter-spacing: 0.425px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 14.1667px`, `line-height: 25.5px`, `font-weight: 800`, `letter-spacing: 0.425px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14.1667px`, `line-height: 25.5px`, `font-weight: 800`, `letter-spacing: 0.425px`); rule `.label` (`font-size: 0.875rem`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `tochi-sanwa-jp` (`岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `tochi-sanwa-jp`)**:
-   - DOM & Selectors: Landmark `<header class="header">` hosting `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%` navigation (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), DOM attributes (`data-target="tochi-sanwa-jp"`), and stylesheet rule `.wpcf7-back { float:left;margin-top:5px;position:relative;width:70px }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `tochi-sanwa-jp`)` (`tochi-sanwa-jp`) adapts across `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media (prefers-reduced-motion: reduce)`, `@media print,screen and (min-width: 768px)` with `cubic-bezier(0.175,0.885,0.32,1.275)` transitions and links `サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`.
+   - DOM & Selectors: Landmark `<header class="header">` (`1392x60px`) hosting `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%` navigation (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), DOM attributes (`data-target="tochi-sanwa-jp"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `tochi-sanwa-jp`)` (`tochi-sanwa-jp`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media screen and (max-width: 767px)`, `@media screen and (min-width: 768px)`, `@media print,screen and (min-width: 768px)` with `cubic-bezier(0.175,0.885,0.32,1.275)`, `cubic-bezier(0.25,1,0.5,1)` transitions and links `サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`.
 2. **Hero Stage & Focal Lead (<section.hero> — `岐阜で注文住宅、規格、分譲を手掛ける工務店`)**:
-   - DOM & Selectors: Landmark `<section class="hero scroll_active">` presenting display lead `岐阜で注文住宅、規格、分譲を手掛ける工務店` and copy excerpt *"岐阜で注文住宅、規格、分譲を手掛ける工務店"* over `#E17738` canvas and `#D03030` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#E17738` background with `#D03030` headline `岐阜で注文住宅、規格、分譲を手掛ける工務店`.
+   - DOM & Selectors: Landmark `<section class="hero scroll_active">` presenting display lead `岐阜で注文住宅、規格、分譲を手掛ける工務店` and copy excerpt *"1,000万円後半〜の家づくり。注文も、規格・セミオーダーも、分譲建売も。"* over `#ffffff` canvas and `#393533` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#393533` headline `岐阜で注文住宅、規格、分譲を手掛ける工務店`.
 3. **Primary Showcase & Content Grid (<section.home_event> — `EVENT LIST イベント情報`)**:
-   - DOM & Selectors: Landmark `<section class="home_event section_pdg-sm">` rendering section `EVENT LIST イベント情報` with copy *"サンワの家づくり CONCEPT サンワの家づくり ローコストができる理由 家づくりの流れ コンセプト・約束 サンワの住宅性能"*, asset references (`gtm.js`, `embed`, `styles.css`, `cf7msm.css`), and grid rule `.cf7msm-ro { white-space:pre-wrap }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home_event> — `EVENT LIST イベント情報`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="home_event section_pdg-sm">` rendering section `EVENT LIST イベント情報` with copy *"1,000万円後半〜 の家づくり。 注文も、規格・セミオーダーも、分譲建売も。"*, asset references (`gtm.js`, `embed`, `styles.css`, `cf7msm.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home_event> — `EVENT LIST イベント情報`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.post> — `THANKS CAMPAIGN 開催！！`)**:
-   - DOM & Selectors: Landmark `<article class="post">` framing `THANKS CAMPAIGN 開催！！` and `おうちづくり応援！10000円分ギフトカードがもらえる【予約制】` (*"ラインナップ LINE UP ラインナップ 注文住宅 規格・セミオーダー住宅 建売分譲"*) with `#E88E58` surface cards, `#EB3535` accents, and `.leap_table thead th { background-color: var(--leap-project-main); color: var(--leap-project-wh); }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.post> — `THANKS CAMPAIGN 開催！！`)` uses `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)`, `100%` radii, `#EB3535` highlights, and assets (gtm.js, embed, styles.css).
+   - DOM & Selectors: Landmark `<article class="post">` framing `THANKS CAMPAIGN 開催！！` and `おうちづくり応援！10000円分ギフトカードがもらえる【予約制】` (*"サンワは背伸びしない価格で、家族のうち色をカタチにします。"*) with `#f2eee9` surface cards, `#e17738` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.post> — `THANKS CAMPAIGN 開催！！`)` uses `100%`, `var(--leap-project-radius-default)`, `var(--leap-project-radius-none)`, `var(--leap-project-radius-max)` radii, `#e17738` highlights, and assets (gtm.js, embed, styles.css).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://tochi-sanwa.jp/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率` footer links (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), copy *"物件・土地を探す HOME & LAND 物件・土地を探す 建売分譲を探す 土地を探す 見つける間取り"*, and `#F25353` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://tochi-sanwa.jp/`)` aligns to `767px` extracted from `tochi-sanwa-jp` stylesheet with `1.5rem` lateral canvas padding with `24px` grid gap and attributes (tochi-sanwa-jp).
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率` footer links (`サンワの家づくり · ローコストができる理由 · 家づくりの流れ · コンセプト・約束 · サンワの住宅性能`), copy *"CONCEPT サンワの家づくりのコンセプト"*, and `#00a0d2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://tochi-sanwa.jp/`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `1.5rem` lateral canvas padding with `24px` grid gap and attributes (tochi-sanwa-jp).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"岐阜で注文住宅、規格、分譲を手掛ける工務店"*
-- Copy Excerpt 2: *"サンワの家づくり CONCEPT サンワの家づくり ローコストができる理由 家づくりの流れ コンセプト・約束 サンワの住宅性能"*
-- Copy Excerpt 3: *"ラインナップ LINE UP ラインナップ 注文住宅 規格・セミオーダー住宅 建売分譲"*
-- Copy Excerpt 4: *"物件・土地を探す HOME & LAND 物件・土地を探す 建売分譲を探す 土地を探す 見つける間取り"*
+- Copy Excerpt 1: *"1,000万円後半〜の家づくり。注文も、規格・セミオーダーも、分譲建売も。"*
+- Copy Excerpt 2: *"1,000万円後半〜 の家づくり。 注文も、規格・セミオーダーも、分譲建売も。"*
+- Copy Excerpt 3: *"サンワは背伸びしない価格で、家族のうち色をカタチにします。"*
+- Copy Excerpt 4: *"CONCEPT サンワの家づくりのコンセプト"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(0.175,0.885,0.32,1.275)`
+- **Primary Easing Functions**: `cubic-bezier(0.175,0.885,0.32,1.275)`, `cubic-bezier(0.25,1,0.5,1)`
 - **Extracted Stylesheet Rules (`tochi-sanwa-jp`)**:
-- `.wpcf7-back { float:left;margin-top:5px;position:relative;width:70px }`
-- `.cf7msm-ro { white-space:pre-wrap }`
-- `.leap_table thead th { background-color: var(--leap-project-main); color: var(--leap-project-wh); }`
-- `.leap_table.table-row-1 tbody th { background-color: color-mix(in srgb, var(--leap-project-main) 20%, trans... }`
-- `.box--ttl { font-size: max(16px, 1.25rem); line-height: 2.2; }`
+- `.wpcf7 .hidden-fields-container { display: none; }`
+- `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`
+- `form.submitting .wpcf7-response-o... { display: none; }`
+- `.wpcf7 form.sent .wpcf7-response-... { border-color: 46b450; }`
+- `cf7 form.aborted .wpcf7-response-... { border-color: dc3232; }`
 - **Per-Selector Transition Rules**:
 - **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `tochi-sanwa-jp` stylesheet.
 - **Selector `.swiper-pagination`**: `transition: .3s opacity` extracted from `tochi-sanwa-jp` stylesheet.

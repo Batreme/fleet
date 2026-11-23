@@ -1,34 +1,49 @@
+---
+title: "UI & UX Architecture: www-agencejacquesparis-fr"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-agencejacquesparis-fr
 
 ## Overview & Design Identity
 - **Target**: `www-agencejacquesparis-fr` (**Jacques Paris - Agence à impact positif**)
 - **Production URL**: [https://www.agencejacquesparis.fr/](https://www.agencejacquesparis.fr/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#F0F0DC` canvas, `#001847` ink, `#1a3a6b` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f0f0dc` canvas, `#001847` ink, `#ffffff` accent)
 - **Summary**: La créativité au service des marques qui veulent changer les choses et prendre soin de ce qui compte.
-- **Total Clean CSS Variables Extracted**: `21` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `21` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `ClashGrotesk`
-- **Body Font Stack**: `SF Mono`
-- **Monospace / Technical Font Stack**: `SF Mono`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-xs)`, `10px`, `var(--text-sm)`, `20px`, `var(--text-lg)`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--text-md)`, `letter-spacing: .01em`, `font-weight: 600`)
-- **Body Copy**: CSS variables `--text-base: 15px`; rule `p` (`font-size: var(--text-base)`, `line-height: 1.7`)
-- **Metadata & Labels**: CSS variables `--text-xs: 11px`, `--text-sm: 14px`
+- **Body Font Stack**: `ClashGrotesk`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `22.4px`, `14px`, `13.3333px`, `var(--text-xs)`
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `22.4px`, `14px`, `13.3333px`, `var(--text-xs)`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-base: 15px`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-xs: 11px`, `--text-sm: 14px`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#F0F0DC` | `var(--color-cream)` in `:root` |
-| **Primary Typography Ink** | `#F7F7ED` | `var(--color-cream-light)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#001847` | `var(--color-cobalt)` in `:root` |
-| **Interactive Accent / Highlight** | `#1a3a6b` | `var(--color-cobalt-light)` in `:root` |
-| **Secondary / Muted Copy** | `#0E9AA7` | `var(--color-teal)` in `:root` |
-| **Structural Hairline Border** | `#E8442A` | `var(--color-coral)` in `:root` |
+| **Primary Canvas Substrate** | `#f0f0dc` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#001847` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.ZoneCard_caseBtn__MWFpY { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#ffffff` | `.ZoneCard_caseBtn__MWFpY { background: #ffffff }` |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#c0c5be` | `.InvitationForm_textarea__Xo0Zw { border-bottom: #c0c5be }` |
+| **Variable Token (`--color-cream-light`)** | `#f7f7ed` | `var(--color-cream-light)` in `:root` |
+| **Variable Token (`--color-cobalt-light`)** | `#1a3a6b` | `var(--color-cobalt-light)` in `:root` |
+| **Variable Token (`--color-teal`)** | `#0e9aa7` | `var(--color-teal)` in `:root` |
+| **Variable Token (`--color-coral`)** | `#e8442a` | `var(--color-coral)` in `:root` |
 
 ---
 
@@ -56,12 +71,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.Navbar_navbar__UMdIx> — `www-agencejacquesparis-fr`)**:
-   - Landmark `<nav class="Navbar_navbar__UMdIx">` hosting `Jacques Paris - Agence à impact posi` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-nscript="afterInteractive"`), and stylesheet rule `.PosterCanvas_canvas__BduZz { position:absolute;inset:0;overflow:hidden;background-color:var(--color-c... }`.
+   - Landmark `<nav class="Navbar_navbar__UMdIx">` (`1440x50px`) hosting `Jacques Paris - Agence à impact posi` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-nscript="afterInteractive"`), and stylesheet rule `.PosterCanvas_canvas__BduZz { position:absolute;inset:0;overflow:hidden;background-color:var(--color-c... }`.
 2. **Hero Stage & Focal Lead (<main.ScrollEngine_scrollSpace__HfjIP> — `Jacques Paris - Agence à impact po`)**:
-   - Landmark `<main class="ScrollEngine_scrollSpace__HfjIP">` presenting display lead `Jacques Paris - Agence à impact positif` and copy excerpt *"Politique de protection des données personnelles"* over `#F0F0DC` canvas and `#001847` ink.
+   - Landmark `<main class="ScrollEngine_scrollSpace__HfjIP">` presenting display lead `Jacques Paris - Agence à impact positif` and copy excerpt *"Assistant Art Director"* over `#f0f0dc` canvas and `#001847` ink.
 3. **Primary Showcase & Content Grid (<main.ScrollEngine_viewport__JJVIB> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<main class="ScrollEngine_viewport__JJVIB">` rendering section `Featured Work & Interactive Showcase` with copy *"marine.moreau@jacques.com"*, asset references (`jacques-logo.png`, `ad44a6578bd60804.css`, `074517235421c822.css`, `webpack-8fefb68f87553cee.js`), and grid rule `.ZoneLabel_primary__tb_mD { font-size:var(--text-xs);opacity:.35;letter-spacing:.05em }`.
+   - Landmark `<main class="ScrollEngine_viewport__JJVIB">` rendering section `Featured Work & Interactive Showcase` with copy *"Junior Business Partner"*, asset references (`jacques-logo.png`, `ad44a6578bd60804.css`, `074517235421c822.css`, `webpack-8fefb68f87553cee.js`), and grid rule `.ZoneLabel_primary__tb_mD { font-size:var(--text-xs);opacity:.35;letter-spacing:.05em }`.
 4. **Interactive Detail & Feature Matrix (<main.PosterCanvas_canvas__BduZz> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="PosterCanvas_canvas__BduZz">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Assistant Art Director"*) with `#001847` surface cards, `#1a3a6b` accents, and `.ZoneLabel_secondary__sFo9Q { font-weight:300;color:var(--color-cobalt);line-height:1.4 }`.
+   - Landmark `<main class="PosterCanvas_canvas__BduZz">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Creative Copywriter"*) with `#ffffff` surface cards, `#ffffff` accents, and `.ZoneLabel_secondary__sFo9Q { font-weight:300;color:var(--color-cobalt);line-height:1.4 }`.
 5. **Colophon & Global Directory Footer (<footer.PosterCanvas_poster__O791U> — `https://www.agencejacquesparis.fr/`)**:
-   - Landmark `<footer class="PosterCanvas_poster__O791U">` anchoring `Jacques Paris - Agence à impact ` footer links (`Overview · Index · Archive · About · Contact`), copy *"adrien.jamin@jacques.com"*, and `#E8442A` structural dividers.
+   - Landmark `<footer class="PosterCanvas_poster__O791U">` anchoring `Jacques Paris - Agence à impact ` footer links (`Overview · Index · Archive · About · Contact`), copy *"Senior Art Director"*, and `#c0c5be` structural dividers.

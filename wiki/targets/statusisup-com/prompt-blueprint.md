@@ -1,89 +1,92 @@
 ---
 title: "UI Prompt Blueprint: statusisup-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "statusisup-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas, `#fffef8` ink, `#fffef8` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f3ea` canvas, `#111d2f` ink, `#f2a30f` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: statusisup-com
 
 > **Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit** (https://statusisup.com/) — Entdecken Sie Dienste mit geringer beobachteter Ausfallaktivität über einen quellverknüpften Index für Service-Uptime, Performance und Zu...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit** (`https://statusisup.com/`). Entdecken Sie Dienste mit geringer beobachteter Ausfallaktivität über einen quellverknüpften Index für Service-Uptime, Performance und Zu...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas, `#fffef8` ink, `#fffef8` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f5f3ea` canvas, `#111d2f` ink, `#f2a30f` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#111d2f` (`var(--siu-guide-navy)` in `:root`) paired with `#fffef8` primary typography and `#fffef8` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo Black` for display copy (`WEITERMACHEN.`) with `DM Mono` and `DM Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `112px` container bounds (`gap: .36rem`, padding `.32rem`) with `cubic-bezier(.23,1,.32,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f3ea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#111d2f` primary typography and `#f2a30f` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo Black` for display copy (`WEITERMACHEN.`) with `Manrope` and `DM Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1344px` container bounds (`gap: 31.68px`, padding `57.6px`) with `cubic-bezier(.23,1,.32,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×11173px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `112px` extracted from `statusisup-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `.32rem` lateral canvas padding with `.36rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1344px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `31.68px` grid gap.
 - **Border Radius Scale**: `50%`, `999px`, `9px`, `2.4rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 112px`, `gap: .36rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.32rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:720px)`, `@media (max-width: 1120px)`, `@media (max-width: 720px)`, `@media (max-width: 430px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1344px`, `gap: 31.68px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:720px)`, `@media (max-width: 1320px)`, `@media (max-width: 1120px)`, `@media (max-width: 960px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#111d2f` | `var(--siu-guide-navy)` in `:root` |
-| **Primary Typography Ink** | `#14b65b` | `var(--siu-guide-green)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#c7f42b` | `var(--siu-guide-lime)` in `:root` |
-| **Interactive Accent / Highlight** | `#fffef8` | `var(--siu-guide-cream)` in `:root` |
-| **Secondary / Muted Copy** | `#435064` | `var(--siu-guide-ink)` in `:root` |
-| **Structural Hairline Border** | `#17202a` | `var(--action-card-ink)` in `:root` |
-| **Variable Token (`--action-card-muted`)** | `#52606d` | `var(--action-card-muted)` in `:root` |
-| **Variable Token (`--action-card-border`)** | `#cbd5df` | `var(--action-card-border)` in `:root` |
-| **Variable Token (`--action-card-surface`)** | `#ffffff` | `var(--action-card-surface)` in `:root` |
-| **Variable Token (`--action-card-subtle`)** | `#f4f7fa` | `var(--action-card-subtle)` in `:root` |
-| **Variable Token (`--action-card-accent`)** | `#085cc7` | `var(--action-card-accent)` in `:root` |
-| **Variable Token (`--action-card-focus`)** | `#f59e0b` | `var(--action-card-focus)` in `:root` |
-| **Variable Token (`--signal-ink`)** | `#08733a` | `var(--signal-ink)` in `:root` |
-| **Variable Token (`--signal-cobalt`)** | `#1d4ed8` | `var(--signal-cobalt)` in `:root` |
+| **Primary Canvas Substrate** | `#f5f3ea` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#111d2f` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fffef8` | `var(--card)` in `:root` |
+| **Interactive Accent / Highlight** | `#f2a30f` | `.rating-stars button.is-selected { color: #f2a30f }` |
+| **Secondary / Muted Copy** | `#8f9a91` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#cbd3c9` | `var(--border)` in `:root` |
+| **Variable Token (`--primary`)** | `#14b65b` | `var(--primary)` in `:root` |
+| **Variable Token (`--primary-foreground`)** | `#112235` | `var(--primary-foreground)` in `:root` |
+| **Variable Token (`--secondary`)** | `#e6ece5` | `var(--secondary)` in `:root` |
+| **Variable Token (`--muted`)** | `#e9e9e1` | `var(--muted)` in `:root` |
+| **Variable Token (`--muted-foreground`)** | `#526073` | `var(--muted-foreground)` in `:root` |
+| **Variable Token (`--accent`)** | `#c7f42b` | `var(--accent)` in `:root` |
+| **Variable Token (`--destructive`)** | `#dc4d42` | `var(--destructive)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--siu-guide-navy` | `#111d2f` | Layout / Spatial Grid Token |
-| `--siu-guide-green` | `#14b65b` | Color / Atmospheric Token |
-| `--siu-guide-lime` | `#c7f42b` | Color / Atmospheric Token |
-| `--siu-guide-cream` | `#fffef8` | Color / Atmospheric Token |
-| `--siu-guide-ink` | `#435064` | Typography Ink Token |
-| `--action-card-ink` | `#17202a` | Typography Ink Token |
-| `--action-card-muted` | `#52606d` | Color / Atmospheric Token |
-| `--action-card-border` | `#cbd5df` | Elevation / Border Token |
-| `--action-card-surface` | `#ffffff` | Canvas / Surface Token |
-| `--action-card-subtle` | `#f4f7fa` | Color / Atmospheric Token |
-| `--action-card-accent` | `#085cc7` | Brand / Palette Token |
-| `--action-card-focus` | `#f59e0b` | Color / Atmospheric Token |
-| `--signal-tone` | `#14b65b` | Color / Atmospheric Token |
-| `--signal-ink` | `#08733a` | Typography Ink Token |
-| `--signal-wash` | `rgba(20,182,91,.12)` | Color / Atmospheric Token |
-| `--signal-cobalt` | `#1d4ed8` | Color / Atmospheric Token |
+| `--radius` | `.5rem` | Elevation / Border Token |
+| `--background` | `#f5f3ea` | Canvas / Surface Token |
+| `--foreground` | `#111d2f` | Typography Ink Token |
+| `--card` | `#fffef8` | Color / Atmospheric Token |
+| `--card-foreground` | `#111d2f` | Typography Ink Token |
+| `--popover` | `#fffef8` | Color / Atmospheric Token |
+| `--popover-foreground` | `#111d2f` | Typography Ink Token |
+| `--primary` | `#14b65b` | Brand / Palette Token |
+| `--primary-foreground` | `#112235` | Typography Ink Token |
+| `--secondary` | `#e6ece5` | Brand / Palette Token |
+| `--secondary-foreground` | `#112235` | Typography Ink Token |
+| `--muted` | `#e9e9e1` | Color / Atmospheric Token |
+| `--muted-foreground` | `#526073` | Typography Ink Token |
+| `--accent` | `#c7f42b` | Brand / Palette Token |
+| `--accent-foreground` | `#112235` | Typography Ink Token |
+| `--destructive` | `#dc4d42` | Color / Atmospheric Token |
 
 ---
 
@@ -91,14 +94,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `Archivo Black`.
-- **Primary Body Stack**: `DM Mono`.
+- **Primary Body Stack**: `Manrope`.
 - **Technical / Metadata Stack**: `DM Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.075em`).
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`letter-spacing: -.065em`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`, `--siu-body: "Manrope",sans-serif`; rule `p` (`font-size: .76rem`, `line-height: 1.65`).
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`; rule `small` (`letter-spacing: .09em`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 158.4px`, `line-height: 131.472px`, `font-weight: 400`, `letter-spacing: -13.464px`); CSS variables `--siu-display: "Archivo Black",sans-serif`, `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`; rule `h1` (`letter-spacing: -.075em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 74.88px`, `line-height: 65.8944px`, `font-weight: 400`, `letter-spacing: -4.8672px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`letter-spacing: -.065em`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--siu-body: "Manrope",sans-serif`, `--text-base: 1rem`, `--text-base--line-height: 1.5`; rule `p` (`font-size: .76rem`, `line-height: 1.65`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--siu-label: "DM Mono",ui-monospace,monospace`, `--siu-label-size: .62rem`, `--siu-label-line: 1.35`; rule `small` (`letter-spacing: .09em`).
 
 ---
 
@@ -111,47 +114,66 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas
 - **Selector `.siu-site-footer-brand img`**: `transition: transform .18s cubic-bezier(.23,1,.32,1)` extracted from `statusisup-com` stylesheet.
 - **Selector `.siu-site-nav-link`**: `transition: color .16s cubic-bezier(.23,1,.32,1),background-color .16s cub...` extracted from `statusisup-com` stylesheet.
 - **Selector `.siu-site-nav-link:after`**: `transition: transform .18s cubic-bezier(.23,1,.32,1)` extracted from `statusisup-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.siu-site-header>` and `<section.hero-shell>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.min-h-screen>` and `<section.hero-shell>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.siu-site-header>` and `<section.ticker-bar>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.hero-shell>` and `<section.ticker-bar>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Status Is UP — Index für Service-Uptime, P │
 │ ====================================================================== │
-│ [ <header.siu-site-header> | Launch Kit · Toolkits · Preise         ]  │
+│ [ <header.siu-site-heade (1440x78px)  | Launch Kit · Toolkits · Prei ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.min-h-screen>                               |   │
-│ | H1: WEITERMACHEN.                                                |   │
-│ | Substrate: #111d2f    | Ink: #fffef8    | Accent: #fffef8        |   │
+│ | HERO STAGE: <section.hero-shell> (w=1440px)                        | │
+│ | H1: WEITERMACHEN.                                                  | │
+│ | Substrate: #f5f3ea | Ink: #111d2f | Accent: #f2a30f                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.hero-shell>      ) max-w: 112px          |   │
+│ | SHOWCASE GRID (<section.ticker-bar>) max-w: 1344px                 | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Teste auf dem Smartphone, da |  | Finden Sie Dienste, die bere | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .36rem) | │
-│ | [<header.siu-site-h] -> [<section.min-h-scr] -> [<section.hero-shel] │
+│ | DETAIL MODULE (<section.siu-app-promo>) — Gute Nachrichten brau    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.siu-site-foote) | https://statusisup.com/            │
+│ [ FOOTER (<footer.siu-site-foo) | https://statusisup.com/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 31.68px)    │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.siu-site-header>) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero-shell>) — 390px Vertical Lead            | │
+│ | H1: WEITERMACHEN.                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.ticker-bar>) — 1-Col Stack                | │
+│ | [ Item 1: Teste auf dem Smartphone, das deine Besucher nutzen.   ] | │
+│ | [ Item 2: Finden Sie Dienste, die bereit bleiben.                ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.siu-app-promo>) — 1-Col (Gute Nachrichten b)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.siu-site-foo) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.siu-site-header> — `statusisup-com`)**:
-   - Landmark `<header class="siu-site-header">` hosting `Status Is UP — Index für Service-Upt` navigation (`Launch Kit · Toolkits · Preise`), DOM attributes (`data-siu-asset-recovery`, `data-checked-head="true"`, `data-loc="client/src/pages/Home..."`, `data-loc="client/src/components..."`), and stylesheet rule `.language-selector svg { width:.88rem;height:.88rem;color:08733a }`.
-2. **Hero Stage & Focal Lead (<section.min-h-screen> — `WEITERMACHEN.`)**:
-   - Landmark `<section class="min-h-screen">` presenting display lead `WEITERMACHEN.` and copy excerpt *"STATUS IS UP UNTERSTÜTZUNG VERFÜGBARKEIT"* over `#111d2f` canvas and `#fffef8` ink.
-3. **Primary Showcase & Content Grid (<section.hero-shell> — `Teste auf dem Smartphone, das dein`)**:
-   - Landmark `<section class="hero-shell relative">` rendering section `Teste auf dem Smartphone, das deine Besucher nutzen.` with copy *"Website‑Optimierungs‑Wiki"*, asset references (`get_counts`, `show_ads_impl_fy2021.js`, `6a949f167c6f97b4640555e1.js`, `favicon.ico`), and grid rule `.language-selector select { max-width:112px;border:0;background:transparent;color:inherit;font:inher... }`.
-4. **Interactive Detail & Feature Matrix (<section.ticker-bar> — `Finden Sie Dienste, die bereit ble`)**:
-   - Landmark `<section class="ticker-bar">` framing `Finden Sie Dienste, die bereit bleiben.` and `Gute Nachrichten brauchen gute Belege.` (*"Anzeigesprache wählen"*) with `#c7f42b` surface cards, `#fffef8` accents, and `.language-selector:focus-within { border-color:14b65b;box-shadow:0 0 0 2px 14b65b33 }`.
+   - Landmark `<header class="siu-site-header">` (`1440x78px`) hosting `Status Is UP — Index für Service-Upt` navigation (`Launch Kit · Toolkits · Preise · Lerne Siu kennen`), DOM attributes (`data-siu-asset-recovery`, `data-checked-head="true"`, `data-loc="client/src/pages/Home..."`, `data-loc="client/src/components..."`), and stylesheet rule `.language-selector svg { width:.88rem;height:.88rem;color:08733a }`.
+2. **Hero Stage & Focal Lead (<section.hero-shell> — `WEITERMACHEN.`)**:
+   - Landmark `<section class="hero-shell px-5">` presenting display lead `WEITERMACHEN.` and copy excerpt *"Status Is Up (SIU) ist eine Plattform zur Unterstützung der Verfü"* over `#f5f3ea` canvas and `#111d2f` ink.
+3. **Primary Showcase & Content Grid (<section.ticker-bar> — `Teste auf dem Smartphone, das dein`)**:
+   - Landmark `<section class="ticker-bar">` rendering section `Teste auf dem Smartphone, das deine Besucher nutzen.` with copy *"Von Status Is Down überwachte Dienste"*, asset references (`get_counts`, `show_ads_impl_fy2021.js`, `6a949f167c6f97b4640555e1.js`, `favicon.ico`), and grid rule `.language-selector select { max-width:112px;border:0;background:transparent;color:inherit;font:inher... }`.
+4. **Interactive Detail & Feature Matrix (<section.siu-app-promo> — `Finden Sie Dienste, die bereit ble`)**:
+   - Landmark `<section class="siu-app-promo">` framing `Finden Sie Dienste, die bereit bleiben.` and `Gute Nachrichten brauchen gute Belege.` (*"Von Status Is Down überwachte Websites"*) with `#fffef8` surface cards, `#f2a30f` accents, and `.language-selector:focus-within { border-color:14b65b;box-shadow:0 0 0 2px 14b65b33 }`.
 5. **Colophon & Global Directory Footer (<footer.siu-site-footer> — `https://statusisup.com/`)**:
-   - Landmark `<footer class="siu-site-footer">` anchoring `Status Is UP — Index für Service` footer links (`Launch Kit · Toolkits · Preise`), copy *"Live-Status auf SID"*, and `#17202a` structural dividers.
+   - Landmark `<footer class="siu-site-footer">` anchoring `Status Is UP — Index für Service` footer links (`Launch Kit · Toolkits · Preise · Lerne Siu kennen`), copy *"Belege beginnen bei Status Is Down"*, and `#cbd3c9` structural dividers.
 
 ---
 
@@ -163,96 +185,95 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `statusisup-com` (**Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit** — `https://statusisup.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111d2f` canvas, `#fffef8` ink, `#fffef8` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f3ea` canvas, `#111d2f` ink, `#f2a30f` accent).
 - **Identity & Domain Context**: Entdecken Sie Dienste mit geringer beobachteter Ausfallaktivität über einen quellverknüpften Index für Service-Uptime, Performance und Zu...
-- **Primary Substrate**: `#111d2f` (`var(--siu-guide-navy)` in `:root`), **Primary Ink**: `#fffef8`, **Accent / Highlight**: `#fffef8`.
+- **Primary Substrate**: `#f5f3ea` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#111d2f`, **Accent / Highlight**: `#f2a30f`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#111d2f` (`var(--siu-guide-navy)` in `:root`) paired with `#fffef8` primary typography and `#fffef8` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo Black` for display copy (`WEITERMACHEN.`) with `DM Mono` and `DM Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `112px` container bounds (`gap: .36rem`, padding `.32rem`) with `cubic-bezier(.23,1,.32,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f3ea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#111d2f` primary typography and `#f2a30f` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo Black` for display copy (`WEITERMACHEN.`) with `Manrope` and `DM Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1344px` container bounds (`gap: 31.68px`, padding `57.6px`) with `cubic-bezier(.23,1,.32,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `statusisup-com` in your global stylesheet:
 
 :root {
-  /* Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit (statusisup-com) — Ground-Truth Extracted CSS Variables */
-  --siu-guide-navy: #111d2f; /* Layout / Spatial Grid Token (statusisup-com) */
-  --siu-guide-green: #14b65b; /* Color / Atmospheric Token (statusisup-com) */
-  --siu-guide-lime: #c7f42b; /* Color / Atmospheric Token (statusisup-com) */
-  --siu-guide-cream: #fffef8; /* Color / Atmospheric Token (statusisup-com) */
-  --siu-guide-ink: #435064; /* Typography Ink Token (statusisup-com) */
-  --action-card-ink: #17202a; /* Typography Ink Token (statusisup-com) */
-  --action-card-muted: #52606d; /* Color / Atmospheric Token (statusisup-com) */
-  --action-card-border: #cbd5df; /* Elevation / Border Token (statusisup-com) */
-  --action-card-surface: #ffffff; /* Canvas / Surface Token (statusisup-com) */
-  --action-card-subtle: #f4f7fa; /* Color / Atmospheric Token (statusisup-com) */
-  --action-card-accent: #085cc7; /* Brand / Palette Token (statusisup-com) */
-  --action-card-focus: #f59e0b; /* Color / Atmospheric Token (statusisup-com) */
-  --signal-tone: #14b65b; /* Color / Atmospheric Token (statusisup-com) */
-  --signal-ink: #08733a; /* Typography Ink Token (statusisup-com) */
-  --signal-wash: rgba(20,182,91,.12); /* Color / Atmospheric Token (statusisup-com) */
-  --signal-cobalt: #1d4ed8; /* Color / Atmospheric Token (statusisup-com) */
+  /* Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit (statusisup-com) — Live-Grounded CSS Variables */
+  --radius: .5rem; /* Elevation / Border Token (statusisup-com) */
+  --background: #f5f3ea; /* Canvas / Surface Token (statusisup-com) */
+  --foreground: #111d2f; /* Typography Ink Token (statusisup-com) */
+  --card: #fffef8; /* Color / Atmospheric Token (statusisup-com) */
+  --card-foreground: #111d2f; /* Typography Ink Token (statusisup-com) */
+  --popover: #fffef8; /* Color / Atmospheric Token (statusisup-com) */
+  --popover-foreground: #111d2f; /* Typography Ink Token (statusisup-com) */
+  --primary: #14b65b; /* Brand / Palette Token (statusisup-com) */
+  --primary-foreground: #112235; /* Typography Ink Token (statusisup-com) */
+  --secondary: #e6ece5; /* Brand / Palette Token (statusisup-com) */
+  --secondary-foreground: #112235; /* Typography Ink Token (statusisup-com) */
+  --muted: #e9e9e1; /* Color / Atmospheric Token (statusisup-com) */
+  --muted-foreground: #526073; /* Typography Ink Token (statusisup-com) */
+  --accent: #c7f42b; /* Brand / Palette Token (statusisup-com) */
+  --accent-foreground: #112235; /* Typography Ink Token (statusisup-com) */
+  --destructive: #dc4d42; /* Color / Atmospheric Token (statusisup-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#111d2f` — grounded in `var(--siu-guide-navy)` in `:root`
-- **Primary Typography Ink**: `#14b65b` — grounded in `var(--siu-guide-green)` in `:root`
-- **Elevated Surface / Card Substrate**: `#c7f42b` — grounded in `var(--siu-guide-lime)` in `:root`
-- **Interactive Accent / Highlight**: `#fffef8` — grounded in `var(--siu-guide-cream)` in `:root`
-- **Secondary / Muted Copy**: `#435064` — grounded in `var(--siu-guide-ink)` in `:root`
-- **Structural Hairline Border**: `#17202a` — grounded in `var(--action-card-ink)` in `:root`
-- **Variable Token (`--action-card-muted`)**: `#52606d` — grounded in `var(--action-card-muted)` in `:root`
-- **Variable Token (`--action-card-border`)**: `#cbd5df` — grounded in `var(--action-card-border)` in `:root`
-- **Variable Token (`--action-card-surface`)**: `#ffffff` — grounded in `var(--action-card-surface)` in `:root`
-- **Variable Token (`--action-card-subtle`)**: `#f4f7fa` — grounded in `var(--action-card-subtle)` in `:root`
-- **Variable Token (`--action-card-accent`)**: `#085cc7` — grounded in `var(--action-card-accent)` in `:root`
-- **Variable Token (`--action-card-focus`)**: `#f59e0b` — grounded in `var(--action-card-focus)` in `:root`
-- **Variable Token (`--signal-ink`)**: `#08733a` — grounded in `var(--signal-ink)` in `:root`
-- **Variable Token (`--signal-cobalt`)**: `#1d4ed8` — grounded in `var(--signal-cobalt)` in `:root`
+- **Primary Canvas Substrate**: `#f5f3ea` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#111d2f` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fffef8` — grounded in `var(--card)` in `:root`
+- **Interactive Accent / Highlight**: `#f2a30f` — grounded in `.rating-stars button.is-selected { color: #f2a30f }`
+- **Secondary / Muted Copy**: `#8f9a91` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#cbd3c9` — grounded in `var(--border)` in `:root`
+- **Variable Token (`--primary`)**: `#14b65b` — grounded in `var(--primary)` in `:root`
+- **Variable Token (`--primary-foreground`)**: `#112235` — grounded in `var(--primary-foreground)` in `:root`
+- **Variable Token (`--secondary`)**: `#e6ece5` — grounded in `var(--secondary)` in `:root`
+- **Variable Token (`--muted`)**: `#e9e9e1` — grounded in `var(--muted)` in `:root`
+- **Variable Token (`--muted-foreground`)**: `#526073` — grounded in `var(--muted-foreground)` in `:root`
+- **Variable Token (`--accent`)**: `#c7f42b` — grounded in `var(--accent)` in `:root`
+- **Variable Token (`--destructive`)**: `#dc4d42` — grounded in `var(--destructive)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×11173px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `112px` extracted from `statusisup-com` stylesheet
-- **Padding & Gutters**: `.32rem` lateral canvas padding with `.36rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 112px`, `gap: .36rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.32rem` horizontal padding
-- **Media Queries**: `@media (max-width:720px)`, `@media (max-width: 1120px)`, `@media (max-width: 720px)`, `@media (max-width: 430px)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1344px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `57.6px` lateral canvas padding with `31.68px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1344px`, `gap: 31.68px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding
+- **Media Queries**: `@media (max-width:720px)`, `@media (max-width: 1320px)`, `@media (max-width: 1120px)`, `@media (max-width: 960px)`
 - **Corner Radii**: `50%`, `999px`, `9px`, `2.4rem`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Archivo Black`
-- **Body Font Stack**: `DM Mono`
+- **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: `DM Mono`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.075em`)
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`letter-spacing: -.065em`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`, `--siu-body: "Manrope",sans-serif`; rule `p` (`font-size: .76rem`, `line-height: 1.65`)
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`; rule `small` (`letter-spacing: .09em`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 158.4px`, `line-height: 131.472px`, `font-weight: 400`, `letter-spacing: -13.464px`); CSS variables `--siu-display: "Archivo Black",sans-serif`, `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`; rule `h1` (`letter-spacing: -.075em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 74.88px`, `line-height: 65.8944px`, `font-weight: 400`, `letter-spacing: -4.8672px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`letter-spacing: -.065em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--siu-body: "Manrope",sans-serif`, `--text-base: 1rem`, `--text-base--line-height: 1.5`; rule `p` (`font-size: .76rem`, `line-height: 1.65`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--siu-label: "DM Mono",ui-monospace,monospace`, `--siu-label-size: .62rem`, `--siu-label-line: 1.35`; rule `small` (`letter-spacing: .09em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `statusisup-com` (`Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.siu-site-header> — `statusisup-com`)**:
-   - DOM & Selectors: Landmark `<header class="siu-site-header">` hosting `Status Is UP — Index für Service-Upt` navigation (`Launch Kit · Toolkits · Preise`), DOM attributes (`data-siu-asset-recovery`, `data-checked-head="true"`, `data-loc="client/src/pages/Home..."`, `data-loc="client/src/components..."`), and stylesheet rule `.language-selector svg { width:.88rem;height:.88rem;color:08733a }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.siu-site-header> — `statusisup-com`)` (`statusisup-com`) adapts across `@media (max-width:720px)`, `@media (max-width: 1120px)`, `@media (max-width: 720px)`, `@media (max-width: 430px)` with `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Launch Kit · Toolkits · Preise`.
-2. **Hero Stage & Focal Lead (<section.min-h-screen> — `WEITERMACHEN.`)**:
-   - DOM & Selectors: Landmark `<section class="min-h-screen">` presenting display lead `WEITERMACHEN.` and copy excerpt *"STATUS IS UP UNTERSTÜTZUNG VERFÜGBARKEIT"* over `#111d2f` canvas and `#fffef8` ink.
-   - Responsive Contract: Hero stage (`1440×11173px` desktop / `390×2400px` mobile) sets `#111d2f` background with `#fffef8` headline `WEITERMACHEN.`.
-3. **Primary Showcase & Content Grid (<section.hero-shell> — `Teste auf dem Smartphone, das dein`)**:
-   - DOM & Selectors: Landmark `<section class="hero-shell relative">` rendering section `Teste auf dem Smartphone, das deine Besucher nutzen.` with copy *"Website‑Optimierungs‑Wiki"*, asset references (`get_counts`, `show_ads_impl_fy2021.js`, `6a949f167c6f97b4640555e1.js`, `favicon.ico`), and grid rule `.language-selector select { max-width:112px;border:0;background:transparent;color:inherit;font:inher... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hero-shell> — `Teste auf dem Smartphone, das dein`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 112px`, `gap: .36rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.32rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.ticker-bar> — `Finden Sie Dienste, die bereit ble`)**:
-   - DOM & Selectors: Landmark `<section class="ticker-bar">` framing `Finden Sie Dienste, die bereit bleiben.` and `Gute Nachrichten brauchen gute Belege.` (*"Anzeigesprache wählen"*) with `#c7f42b` surface cards, `#fffef8` accents, and `.language-selector:focus-within { border-color:14b65b;box-shadow:0 0 0 2px 14b65b33 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.ticker-bar> — `Finden Sie Dienste, die bereit ble`)` uses `50%`, `999px`, `9px`, `2.4rem` radii, `#fffef8` highlights, and assets (get_counts, show_ads_impl_fy2021.js, 6a949f167c6f97b4640555e1.js).
+   - DOM & Selectors: Landmark `<header class="siu-site-header">` (`1440x78px`) hosting `Status Is UP — Index für Service-Upt` navigation (`Launch Kit · Toolkits · Preise · Lerne Siu kennen`), DOM attributes (`data-siu-asset-recovery`, `data-checked-head="true"`, `data-loc="client/src/pages/Home..."`, `data-loc="client/src/components..."`), and stylesheet rule `.language-selector svg { width:.88rem;height:.88rem;color:08733a }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.siu-site-header> — `statusisup-com`)` (`statusisup-com`) adapts across `@media (max-width:720px)`, `@media (max-width: 1320px)`, `@media (max-width: 1120px)`, `@media (max-width: 960px)` with `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Launch Kit · Toolkits · Preise · Lerne Siu kennen`.
+2. **Hero Stage & Focal Lead (<section.hero-shell> — `WEITERMACHEN.`)**:
+   - DOM & Selectors: Landmark `<section class="hero-shell px-5">` presenting display lead `WEITERMACHEN.` and copy excerpt *"Status Is Up (SIU) ist eine Plattform zur Unterstützung der Verfü"* over `#f5f3ea` canvas and `#111d2f` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f5f3ea` background with `#111d2f` headline `WEITERMACHEN.`.
+3. **Primary Showcase & Content Grid (<section.ticker-bar> — `Teste auf dem Smartphone, das dein`)**:
+   - DOM & Selectors: Landmark `<section class="ticker-bar">` rendering section `Teste auf dem Smartphone, das deine Besucher nutzen.` with copy *"Von Status Is Down überwachte Dienste"*, asset references (`get_counts`, `show_ads_impl_fy2021.js`, `6a949f167c6f97b4640555e1.js`, `favicon.ico`), and grid rule `.language-selector select { max-width:112px;border:0;background:transparent;color:inherit;font:inher... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.ticker-bar> — `Teste auf dem Smartphone, das dein`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1344px`, `gap: 31.68px`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.siu-app-promo> — `Finden Sie Dienste, die bereit ble`)**:
+   - DOM & Selectors: Landmark `<section class="siu-app-promo">` framing `Finden Sie Dienste, die bereit bleiben.` and `Gute Nachrichten brauchen gute Belege.` (*"Von Status Is Down überwachte Websites"*) with `#fffef8` surface cards, `#f2a30f` accents, and `.language-selector:focus-within { border-color:14b65b;box-shadow:0 0 0 2px 14b65b33 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.siu-app-promo> — `Finden Sie Dienste, die bereit ble`)` uses `50%`, `999px`, `9px`, `2.4rem` radii, `#f2a30f` highlights, and assets (get_counts, show_ads_impl_fy2021.js, 6a949f167c6f97b4640555e1.js).
 5. **Colophon & Global Directory Footer (<footer.siu-site-footer> — `https://statusisup.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="siu-site-footer">` anchoring `Status Is UP — Index für Service` footer links (`Launch Kit · Toolkits · Preise`), copy *"Live-Status auf SID"*, and `#17202a` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.siu-site-footer> — `https://statusisup.com/`)` aligns to `112px` extracted from `statusisup-com` stylesheet with `.32rem` lateral canvas padding with `.36rem` grid gap and attributes (data-siu-asset-recovery, data-checked-head="true", data-loc="client/src/pages/Home...").
+   - DOM & Selectors: Landmark `<footer class="siu-site-footer">` anchoring `Status Is UP — Index für Service` footer links (`Launch Kit · Toolkits · Preise · Lerne Siu kennen`), copy *"Belege beginnen bei Status Is Down"*, and `#cbd3c9` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.siu-site-footer> — `https://statusisup.com/`)` aligns to `1344px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `57.6px` lateral canvas padding with `31.68px` grid gap and attributes (data-siu-asset-recovery, data-checked-head="true", data-loc="client/src/pages/Home...").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"STATUS IS UP UNTERSTÜTZUNG VERFÜGBARKEIT"*
-- Copy Excerpt 2: *"Website‑Optimierungs‑Wiki"*
-- Copy Excerpt 3: *"Anzeigesprache wählen"*
-- Copy Excerpt 4: *"Live-Status auf SID"*
+- Copy Excerpt 1: *"Status Is Up (SIU) ist eine Plattform zur Unterstützung der Verfügbarkeit für Webs..."*
+- Copy Excerpt 2: *"Von Status Is Down überwachte Dienste"*
+- Copy Excerpt 3: *"Von Status Is Down überwachte Websites"*
+- Copy Excerpt 4: *"Belege beginnen bei Status Is Down"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
@@ -266,8 +287,8 @@ Scaffold `statusisup-com` (`Status Is UP — Index für Service-Uptime, Performa
 - **Selector `.siu-site-footer-brand img`**: `transition: transform .18s cubic-bezier(.23,1,.32,1)` extracted from `statusisup-com` stylesheet.
 - **Selector `.siu-site-nav-link`**: `transition: color .16s cubic-bezier(.23,1,.32,1),background-color .16s cub...` extracted from `statusisup-com` stylesheet.
 - **Selector `.siu-site-nav-link:after`**: `transition: transform .18s cubic-bezier(.23,1,.32,1)` extracted from `statusisup-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.siu-site-header>` and `<section.hero-shell>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.min-h-screen>` and `<section.hero-shell>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.siu-site-header>` and `<section.ticker-bar>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.hero-shell>` and `<section.ticker-bar>` interactive targets.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `statusisup-com`.

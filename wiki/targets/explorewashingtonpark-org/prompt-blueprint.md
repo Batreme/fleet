@@ -1,153 +1,173 @@
 ---
 title: "UI Prompt Blueprint: explorewashingtonpark-org"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "explorewashingtonpark-org"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `#243746` ink, `#aac0d2` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#fdfbf8` canvas, `#313232` ink, `#ffff00` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: explorewashingtonpark-org
 
 > **Explore Washington Park** (https://explorewashingtonpark.org) — Washington Park in Portland, Oregon is home to the Oregon Zoo, Hoyt Arboretum, world-class gardens, museums, and miles of trails. Find ho...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Explore Washington Park** (`https://explorewashingtonpark.org`). Washington Park in Portland, Oregon is home to the Oregon Zoo, Hoyt Arboretum, world-class gardens, museums, and miles of trails. Find ho...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `#243746` ink, `#aac0d2` accent)**.
+- **Final Redirected URL**: [https://www.explorewashingtonpark.org/](https://www.explorewashingtonpark.org/)
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fdfbf8` canvas, `#313232` ink, `#ffff00` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f3c73e` (`var(--yellow)` in `:root`) paired with `#243746` primary typography and `#aac0d2` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `squarespace-ui-font` for display copy (`Portland’s Premier Park`) with `FlodeskSans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 15px`, padding `44px`) with `cubic-bezier(0,0,0.25,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdfbf8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#313232` primary typography and `#ffff00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `national-ygefsl` for display copy (`Portland’s Premier Park`) with `National` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1000px` container bounds (`gap: var(--stack-gap)`, padding `6px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `767px` extracted from `explorewashingtonpark-org` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `44px` lateral canvas padding with `15px` grid gap.
-- **Border Radius Scale**: `2px`, `50%`, `999px`, `8px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1000px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `6px` lateral canvas padding with `var(--stack-gap)` grid gap.
+- **Border Radius Scale**: `1000px`, `var(--stack-radius)`, `50%`, `5px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 15px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `44px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (max-width:768px)`, `@media (prefers-reduced-motion: reduce)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1000px`, `gap: var(--stack-gap)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `6px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (min-width:768px)`, `@media screen and (max-width:767px)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f3c73e` | `var(--yellow)` in `:root` |
-| **Primary Typography Ink** | `#9bbd3c` | `var(--green)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#dc6638` | `var(--red)` in `:root` |
-| **Interactive Accent / Highlight** | `#aac0d2` | `var(--blue)` in `:root` |
-| **Secondary / Muted Copy** | `#7a8ea3` | `var(--mediumblue)` in `:root` |
-| **Structural Hairline Border** | `#243746` | `var(--navy)` in `:root` |
-| **Variable Token (`--darkgreen`)** | `#404d2e` | `var(--darkgreen)` in `:root` |
-| **Variable Token (`--rollinghillsgreen`)** | `#869646` | `var(--rollinghillsgreen)` in `:root` |
-| **Variable Token (`--black`)** | `#313232` | `var(--black)` in `:root` |
-| **Variable Token (`--brown`)** | `#2e2925` | `var(--brown)` in `:root` |
+| **Primary Canvas Substrate** | `#fdfbf8` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#313232` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#9bbd3c` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ffff00` | `.icon-button:hover { color: yellow }` (`#ffff00`) |
+| **Secondary / Muted Copy** | `#6b7280` | `var(--weather-modal-text-muted)` in `:root` |
+| **Structural Hairline Border** | `#f1ebe2` | `var(--wm-accordion-item-border-color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--palette-1` | `hsla(var(--white-hsl), 1)` | Brand / Palette Token |
-| `--palette-2` | `hsla(var(--lightAccent-hsl), 1)` | Brand / Palette Token |
-| `--palette-3` | `hsla(var(--accent-hsl), 1)` | Brand / Palette Token |
-| `--palette-4` | `hsla(var(--darkAccent-hsl), 1)` | Brand / Palette Token |
-| `--palette-5` | `hsla(var(--black-hsl), 1)` | Brand / Palette Token |
-| `--yellow` | `#f3c73e` | Color / Atmospheric Token |
-| `--green` | `#9bbd3c` | Color / Atmospheric Token |
-| `--red` | `#dc6638` | Color / Atmospheric Token |
-| `--blue` | `#aac0d2` | Color / Atmospheric Token |
-| `--offwhite` | `linen` | Canvas / Surface Token |
-| `--mediumblue` | `#7a8ea3` | Color / Atmospheric Token |
-| `--navy` | `#243746` | Layout / Spatial Grid Token |
-| `--darkgreen` | `#404d2e` | Canvas / Surface Token |
-| `--rollinghillsgreen` | `#869646` | Color / Atmospheric Token |
-| `--black` | `#313232` | Canvas / Surface Token |
-| `--brown` | `#2e2925` | Color / Atmospheric Token |
+| `--course-item-nav-text-color` | `hsla(var(--black-hsl),1)` | Typography Ink Token |
+| `--tweak-blog-item-pagination-icon-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--tweak-quote-block-source-color-on-background` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--product-basic-item-add-ons-title-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--product-block-text-color-on-background` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--paragraphSmallColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--sqsp-paragraph-3-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--list-section-simple-button-background-color` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--gradientHeaderBorderColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--solidHeaderDropShadowColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--tweak-summary-block-background-color` | `hsla(var(--white-hsl),1)` | Canvas / Surface Token |
+| `--tweak-form-block-survey-title-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--list-section-carousel-card-description-color` | `hsla(var(--white-hsl),1)` | Brand / Palette Token |
+| `--scheduling-block-scheduler-background-color` | `hsla(var(--lightAccent-hsl),1)` | Canvas / Surface Token |
+| `--image-block-card-inline-link-color` | `hsla(var(--black-hsl),1)` | Typography Ink Token |
+| `--paragraphLargeColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `squarespace-ui-font`.
-- **Primary Body Stack**: `FlodeskSans`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `national-ygefsl`.
+- **Primary Body Stack**: `National`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--sqsp-heading-1-color: hsla(var(--black-hsl),1)`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`letter-spacing: .5px`, `font-weight: 500`).
-- **Section Heading (`H2`)**: CSS variables `--image-block-collage-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-card-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-poster-image-subtitle-color: hsla(var(--white-hsl),1)`; rule `h2` (`font-size: 1.88em`).
-- **Body Copy**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--sqsp-paragraph-3-color: hsla(var(--black-hsl),1)`, `--paragraphLargeColor: hsla(var(--black-hsl),1)`; rule `p` (`line-height: 1.4`).
-- **Metadata & Navigation Labels**: CSS variables `--itinerary-meta-text: #000`, `--it2-time-label-value-text: #24322b`, `--it2-slider-label-text: #24322b`; rule `.caption` (`font-size: 12px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--child-display: initial`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`font-size: 1rem`, `line-height: 1.4`, `font-weight: 500`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--heading-2-size: 2.71rem`, `--heading-2-size-value: 2.71`; rule `h2` (`font-size: 1.88em`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font-font-family: "national-ygefsl"`, `--body-font-font-style: normal`, `--body-font-font-weight: 500`; rule `p` (`line-height: 1`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 18.0368px`, `line-height: 18.0368px`, `font-weight: 500`); CSS variables `--heading-font-letter-spacing: 0em`, `--body-font-letter-spacing: 0em`, `--meta-font-font-family: "national-ygefsl"`; rule `.caption` (`font-size: 12px`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.175,.885,.32,1.275)`, `cubic-bezier(.445,.05,.55,.95)`, `cubic-bezier(.5,0,1,.5)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `ion-id="6931d08b35b3016a24911ec2"...`**: `transition: width .3s ease` extracted from `explorewashingtonpark-org` stylesheet.
-- **Selector `id*="hover"] .list-item`**: `transition: all .3s ease` extracted from `explorewashingtonpark-org` stylesheet.
-- **Selector `.icon-heading-pair.star svg`**: `transition: transform .1s linear` extracted from `explorewashingtonpark-org` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,0.25,1)`)**: Governs interactive state transitions across `<header.white>` and `<section.page-section>`.
+- **Selector `.HJfcnBEmS6s00rth`**: `transition: background-color .1s ease-out` extracted from `explorewashingtonpark-org` stylesheet.
+- **Selector `block-animations] .sqs-block-butt...`**: `transition: none!important` extracted from `explorewashingtonpark-org` stylesheet.
+- **Selector `.sqs-use--mask)`**: `transition: fill .17s ease-in-out` extracted from `explorewashingtonpark-org` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.white>` and `<section.region>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Explore Washington Park                    │
 │ ====================================================================== │
-│ [ <header.white>           | Plan Your Visit · Explore The Park     ]  │
+│ [ <header.white> (1440x198px)         | Plan Your Visit · Explore Th ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.page-section>                               |   │
-│ | H1: Portland’s Premier Park                                      |   │
-│ | Substrate: #f3c73e    | Ink: #243746    | Accent: #aac0d2        |   │
+│ | HERO STAGE: <article.page-regions> (w=1440px)                      | │
+│ | H1: Portland’s Premier Park                                        | │
+│ | Substrate: #fdfbf8 | Ink: #313232 | Accent: #ffff00                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.page-section>    ) max-w: 767px          |   │
+│ | SHOWCASE GRID (<section.region>) max-w: 1000px                     | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | 7 Spots to See Fall Color fo |  | Reservoir & Reflecting Pools | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 15px  ) | │
-│ | [<header.white>] -> [<section.page-sect] -> [<section.page-sect] |   │
+│ | DETAIL MODULE (<section.page-section>) — TriMet Gets You Here      | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.sections>     ) | https://explorewashingtonpark.org  │
+│ [ FOOTER (<footer.sections>   ) | https://explorewashingtonpark.org    │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--st)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.white>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<article.page-regions>) — 390px Vertical Lead          | │
+│ | H1: Portland’s Premier Park                                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.region>) — 1-Col Stack                    | │
+│ | [ Item 1: 7 Spots to See Fall Color for Free                     ] | │
+│ | [ Item 2: Reservoir & Reflecting Pools Are Now Open              ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.page-section>) — 1-Col (TriMet Gets You He) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.sections>   ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.white> — `explorewashingtonpark-org`)**:
-   - Landmark `<header class="white header">` hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.list-item-content { padding:44px }`.
-2. **Hero Stage & Focal Lead (<section.page-section> — `Portland’s Premier Park`)**:
-   - Landmark `<section class="page-section full-bleed-section">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#f3c73e` canvas and `#243746` ink.
-3. **Primary Showcase & Content Grid (<section.page-section> — `7 Spots to See Fall Color for Free`)**:
-   - Landmark `<section class="page-section full-bleed-section">` rendering section `7 Spots to See Fall Color for Free` with copy *"Parking fills fast, and payment is required at all lots. The Wash"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-7afaba259a8e252a-mi...`), and grid rule `.list-item-content__button-container { padding-top:22px }`.
+   - Landmark `<header class="white header">` (`1440x198px`) hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
+2. **Hero Stage & Focal Lead (<article.page-regions> — `Portland’s Premier Park`)**:
+   - Landmark `<article class="page-regions">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#fdfbf8` canvas and `#313232` ink.
+3. **Primary Showcase & Content Grid (<section.region> — `7 Spots to See Fall Color for Free`)**:
+   - Landmark `<section class="region">` rendering section `7 Spots to See Fall Color for Free` with copy *"Portland’s Premier Park Explore Attractions & Amenities"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-eb69d574e194d111-mi...`), and grid rule `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `Reservoir & Reflecting Pools Are N`)**:
-   - Landmark `<section class="page-section full-bleed-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"Washington Park Free Shuttle"*) with `#dc6638` surface cards, `#aac0d2` accents, and `.accordion-title .text { text-overflow:unset !important }`.
+   - Landmark `<section class="page-section user-items-list-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"7 Spots to See Fall Color for Free Read the Blog"*) with `#9bbd3c` surface cards, `#ffff00` accents, and `.hWuyu_pGCLQnxiCx { animation-name:fadein;animation-iteration-count:1 }`.
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://explorewashingtonpark.org`)**:
-   - Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"View Parking Availability"*, and `#243746` structural dividers.
+   - Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"Reservoir & Reflecting Pools Are Now Open Explore the Reserv"*, and `#f1ebe2` structural dividers.
 
 ---
 
@@ -159,106 +179,102 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `explorewashingtonpark-org` (**Explore Washington Park** — `https://explorewashingtonpark.org`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `#243746` ink, `#aac0d2` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fdfbf8` canvas, `#313232` ink, `#ffff00` accent).
 - **Identity & Domain Context**: Washington Park in Portland, Oregon is home to the Oregon Zoo, Hoyt Arboretum, world-class gardens, museums, and miles of trails. Find ho...
-- **Primary Substrate**: `#f3c73e` (`var(--yellow)` in `:root`), **Primary Ink**: `#243746`, **Accent / Highlight**: `#aac0d2`.
+- **Primary Substrate**: `#fdfbf8` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#313232`, **Accent / Highlight**: `#ffff00`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f3c73e` (`var(--yellow)` in `:root`) paired with `#243746` primary typography and `#aac0d2` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `squarespace-ui-font` for display copy (`Portland’s Premier Park`) with `FlodeskSans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 15px`, padding `44px`) with `cubic-bezier(0,0,0.25,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdfbf8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#313232` primary typography and `#ffff00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `national-ygefsl` for display copy (`Portland’s Premier Park`) with `National` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1000px` container bounds (`gap: var(--stack-gap)`, padding `6px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `explorewashingtonpark-org` in your global stylesheet:
 
 :root {
-  /* Explore Washington Park (explorewashingtonpark-org) — Ground-Truth Extracted CSS Variables */
-  --palette-1: hsla(var(--white-hsl), 1); /* Brand / Palette Token (explorewashingtonpark-org) */
-  --palette-2: hsla(var(--lightAccent-hsl), 1); /* Brand / Palette Token (explorewashingtonpark-org) */
-  --palette-3: hsla(var(--accent-hsl), 1); /* Brand / Palette Token (explorewashingtonpark-org) */
-  --palette-4: hsla(var(--darkAccent-hsl), 1); /* Brand / Palette Token (explorewashingtonpark-org) */
-  --palette-5: hsla(var(--black-hsl), 1); /* Brand / Palette Token (explorewashingtonpark-org) */
-  --yellow: #f3c73e; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --green: #9bbd3c; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --red: #dc6638; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --blue: #aac0d2; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --offwhite: linen; /* Canvas / Surface Token (explorewashingtonpark-org) */
-  --mediumblue: #7a8ea3; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --navy: #243746; /* Layout / Spatial Grid Token (explorewashingtonpark-org) */
-  --darkgreen: #404d2e; /* Canvas / Surface Token (explorewashingtonpark-org) */
-  --rollinghillsgreen: #869646; /* Color / Atmospheric Token (explorewashingtonpark-org) */
-  --black: #313232; /* Canvas / Surface Token (explorewashingtonpark-org) */
-  --brown: #2e2925; /* Color / Atmospheric Token (explorewashingtonpark-org) */
+  /* Explore Washington Park (explorewashingtonpark-org) — Live-Grounded CSS Variables */
+  --course-item-nav-text-color: hsla(var(--black-hsl),1); /* Typography Ink Token (explorewashingtonpark-org) */
+  --tweak-blog-item-pagination-icon-color: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --tweak-quote-block-source-color-on-background: hsla(var(--safeDarkAccent-hsl),1); /* Canvas / Surface Token (explorewashingtonpark-org) */
+  --product-basic-item-add-ons-title-color: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --product-block-text-color-on-background: hsla(var(--safeDarkAccent-hsl),1); /* Canvas / Surface Token (explorewashingtonpark-org) */
+  --paragraphSmallColor: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --sqsp-paragraph-3-color: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --list-section-simple-button-background-color: hsla(var(--safeDarkAccent-hsl),1); /* Canvas / Surface Token (explorewashingtonpark-org) */
+  --gradientHeaderBorderColor: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --solidHeaderDropShadowColor: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --tweak-summary-block-background-color: hsla(var(--white-hsl),1); /* Canvas / Surface Token (explorewashingtonpark-org) */
+  --tweak-form-block-survey-title-color: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --list-section-carousel-card-description-color: hsla(var(--white-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
+  --scheduling-block-scheduler-background-color: hsla(var(--lightAccent-hsl),1); /* Canvas / Surface Token (explorewashingtonpark-org) */
+  --image-block-card-inline-link-color: hsla(var(--black-hsl),1); /* Typography Ink Token (explorewashingtonpark-org) */
+  --paragraphLargeColor: hsla(var(--black-hsl),1); /* Brand / Palette Token (explorewashingtonpark-org) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f3c73e` — grounded in `var(--yellow)` in `:root`
-- **Primary Typography Ink**: `#9bbd3c` — grounded in `var(--green)` in `:root`
-- **Elevated Surface / Card Substrate**: `#dc6638` — grounded in `var(--red)` in `:root`
-- **Interactive Accent / Highlight**: `#aac0d2` — grounded in `var(--blue)` in `:root`
-- **Secondary / Muted Copy**: `#7a8ea3` — grounded in `var(--mediumblue)` in `:root`
-- **Structural Hairline Border**: `#243746` — grounded in `var(--navy)` in `:root`
-- **Variable Token (`--darkgreen`)**: `#404d2e` — grounded in `var(--darkgreen)` in `:root`
-- **Variable Token (`--rollinghillsgreen`)**: `#869646` — grounded in `var(--rollinghillsgreen)` in `:root`
-- **Variable Token (`--black`)**: `#313232` — grounded in `var(--black)` in `:root`
-- **Variable Token (`--brown`)**: `#2e2925` — grounded in `var(--brown)` in `:root`
+- **Primary Canvas Substrate**: `#fdfbf8` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#313232` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#9bbd3c` — grounded in live computed `a` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#ffff00` — grounded in `.icon-button:hover { color: yellow }` (`#ffff00`)
+- **Secondary / Muted Copy**: `#6b7280` — grounded in `var(--weather-modal-text-muted)` in `:root`
+- **Structural Hairline Border**: `#f1ebe2` — grounded in `var(--wm-accordion-item-border-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `767px` extracted from `explorewashingtonpark-org` stylesheet
-- **Padding & Gutters**: `44px` lateral canvas padding with `15px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 15px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `44px` horizontal padding
-- **Media Queries**: `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (max-width:768px)`, `@media (prefers-reduced-motion: reduce)`
-- **Corner Radii**: `2px`, `50%`, `999px`, `8px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1000px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `6px` lateral canvas padding with `var(--stack-gap)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1000px`, `gap: var(--stack-gap)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `6px` horizontal padding
+- **Media Queries**: `@media screen and (min-width:768px)`, `@media screen and (max-width:767px)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:reduce)`
+- **Corner Radii**: `1000px`, `var(--stack-radius)`, `50%`, `5px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `squarespace-ui-font`
-- **Body Font Stack**: `FlodeskSans`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--sqsp-heading-1-color: hsla(var(--black-hsl),1)`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`letter-spacing: .5px`, `font-weight: 500`)
-- **H2 Section Rule**: CSS variables `--image-block-collage-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-card-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-poster-image-subtitle-color: hsla(var(--white-hsl),1)`; rule `h2` (`font-size: 1.88em`)
-- **Body Copy Rule**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--sqsp-paragraph-3-color: hsla(var(--black-hsl),1)`, `--paragraphLargeColor: hsla(var(--black-hsl),1)`; rule `p` (`line-height: 1.4`)
-- **Metadata & Index Rule**: CSS variables `--itinerary-meta-text: #f3c73e`, `--it2-time-label-value-text: #f3c73e`, `--it2-slider-label-text: #f3c73e`; rule `.caption` (`font-size: 12px`)
+- **Display Font Stack**: `national-ygefsl`
+- **Body Font Stack**: `National`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--child-display: initial`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`font-size: 1rem`, `line-height: 1.4`, `font-weight: 500`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--heading-2-size: 2.71rem`, `--heading-2-size-value: 2.71`; rule `h2` (`font-size: 1.88em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font-font-family: "national-ygefsl"`, `--body-font-font-style: normal`, `--body-font-font-weight: 500`; rule `p` (`line-height: 1`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 18.0368px`, `line-height: 18.0368px`, `font-weight: 500`); CSS variables `--heading-font-letter-spacing: 0em`, `--body-font-letter-spacing: 0em`, `--meta-font-font-family: "national-ygefsl"`; rule `.caption` (`font-size: 12px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `explorewashingtonpark-org` (`Explore Washington Park`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.white> — `explorewashingtonpark-org`)**:
-   - DOM & Selectors: Landmark `<header class="white header">` hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.list-item-content { padding:44px }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.white> — `explorewashingtonpark-org`)` (`explorewashingtonpark-org`) adapts across `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (max-width:768px)`, `@media (prefers-reduced-motion: reduce)` with `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Plan Your Visit · Explore The Park`.
-2. **Hero Stage & Focal Lead (<section.page-section> — `Portland’s Premier Park`)**:
-   - DOM & Selectors: Landmark `<section class="page-section full-bleed-section">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#f3c73e` canvas and `#243746` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f3c73e` background with `#243746` headline `Portland’s Premier Park`.
-3. **Primary Showcase & Content Grid (<section.page-section> — `7 Spots to See Fall Color for Free`)**:
-   - DOM & Selectors: Landmark `<section class="page-section full-bleed-section">` rendering section `7 Spots to See Fall Color for Free` with copy *"Parking fills fast, and payment is required at all lots. The Wash"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-7afaba259a8e252a-mi...`), and grid rule `.list-item-content__button-container { padding-top:22px }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page-section> — `7 Spots to See Fall Color for Free`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 15px`) on desktop and Single-column vertical stack at `390px` viewport width with `44px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<header class="white header">` (`1440x198px`) hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.white> — `explorewashingtonpark-org`)` (`explorewashingtonpark-org`) adapts across `@media screen and (min-width:768px)`, `@media screen and (max-width:767px)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.175,.885,.32,1.275)`, `cubic-bezier(.445,.05,.55,.95)`, `cubic-bezier(.5,0,1,.5)` transitions and links `Plan Your Visit · Explore The Park`.
+2. **Hero Stage & Focal Lead (<article.page-regions> — `Portland’s Premier Park`)**:
+   - DOM & Selectors: Landmark `<article class="page-regions">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#fdfbf8` canvas and `#313232` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fdfbf8` background with `#313232` headline `Portland’s Premier Park`.
+3. **Primary Showcase & Content Grid (<section.region> — `7 Spots to See Fall Color for Free`)**:
+   - DOM & Selectors: Landmark `<section class="region">` rendering section `7 Spots to See Fall Color for Free` with copy *"Portland’s Premier Park Explore Attractions & Amenities"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-eb69d574e194d111-mi...`), and grid rule `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.region> — `7 Spots to See Fall Color for Free`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1000px`, `gap: var(--stack-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `6px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `Reservoir & Reflecting Pools Are N`)**:
-   - DOM & Selectors: Landmark `<section class="page-section full-bleed-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"Washington Park Free Shuttle"*) with `#dc6638` surface cards, `#aac0d2` accents, and `.accordion-title .text { text-overflow:unset !important }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-section> — `Reservoir & Reflecting Pools Are N`)` uses `2px`, `50%`, `999px`, `8px` radii, `#aac0d2` highlights, and assets (twk-main.js, announcement-bar-ff2c04748aa19f8b..., popup-overlay-f39ec8cdc95ccd84-mi...).
+   - DOM & Selectors: Landmark `<section class="page-section user-items-list-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"7 Spots to See Fall Color for Free Read the Blog"*) with `#9bbd3c` surface cards, `#ffff00` accents, and `.hWuyu_pGCLQnxiCx { animation-name:fadein;animation-iteration-count:1 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-section> — `Reservoir & Reflecting Pools Are N`)` uses `1000px`, `var(--stack-radius)`, `50%`, `5px` radii, `#ffff00` highlights, and assets (twk-main.js, announcement-bar-ff2c04748aa19f8b..., popup-overlay-f39ec8cdc95ccd84-mi...).
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://explorewashingtonpark.org`)**:
-   - DOM & Selectors: Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"View Parking Availability"*, and `#243746` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://explorewashingtonpark.org`)` aligns to `767px` extracted from `explorewashingtonpark-org` stylesheet with `44px` lateral canvas padding with `15px` grid gap and attributes (data-tippy-stylesheet, data-name="static-context", data-tawk-font-preconnect).
+   - DOM & Selectors: Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"Reservoir & Reflecting Pools Are Now Open Explore the Reserv"*, and `#f1ebe2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://explorewashingtonpark.org`)` aligns to `1000px` (non-`@media` desktop container stylesheet rule) with `6px` lateral canvas padding with `var(--stack-gap)` grid gap and attributes (data-tippy-stylesheet, data-name="static-context", data-tawk-font-preconnect).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Know Before You Go"*
-- Copy Excerpt 2: *"Parking fills fast, and payment is required at all lots. The Washington Park Free..."*
-- Copy Excerpt 3: *"Washington Park Free Shuttle"*
-- Copy Excerpt 4: *"View Parking Availability"*
+- Copy Excerpt 2: *"Portland’s Premier Park Explore Attractions & Amenities"*
+- Copy Excerpt 3: *"7 Spots to See Fall Color for Free Read the Blog"*
+- Copy Excerpt 4: *"Reservoir & Reflecting Pools Are Now Open Explore the Reservoir"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)`
+- **Primary Easing Functions**: `cubic-bezier(.175,.885,.32,1.275)`, `cubic-bezier(.445,.05,.55,.95)`, `cubic-bezier(.5,0,1,.5)`
 - **Extracted Stylesheet Rules (`explorewashingtonpark-org`)**:
-- `.list-item-content { padding:44px }`
-- `.list-item-content__button-container { padding-top:22px }`
-- `.accordion-title .text { text-overflow:unset !important }`
-- `ol.header-menu-controls-control--... { padding-left:0px !important;margin-left:0px !important }`
-- `body.header--menu-open { overflow:hidden !important }`
+- `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`
+- `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`
+- `.hWuyu_pGCLQnxiCx { animation-name:fadein;animation-iteration-count:1 }`
+- `.ZW7PDoaiuIANOlaf { animation-name:riseandfadein;animation-iteration-count:1 }`
+- `.HJfcnBEmS6s00rth.mVW8qfAVC5cSpu5x { background-color:0000 }`
 - **Per-Selector Transition Rules**:
-- **Selector `ion-id="6931d08b35b3016a24911ec2"...`**: `transition: width .3s ease` extracted from `explorewashingtonpark-org` stylesheet.
-- **Selector `id*="hover"] .list-item`**: `transition: all .3s ease` extracted from `explorewashingtonpark-org` stylesheet.
-- **Selector `.icon-heading-pair.star svg`**: `transition: transform .1s linear` extracted from `explorewashingtonpark-org` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,0.25,1)`)**: Governs interactive state transitions across `<header.white>` and `<section.page-section>`.
+- **Selector `.HJfcnBEmS6s00rth`**: `transition: background-color .1s ease-out` extracted from `explorewashingtonpark-org` stylesheet.
+- **Selector `block-animations] .sqs-block-butt...`**: `transition: none!important` extracted from `explorewashingtonpark-org` stylesheet.
+- **Selector `.sqs-use--mask)`**: `transition: fill .17s ease-in-out` extracted from `explorewashingtonpark-org` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.white>` and `<section.region>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

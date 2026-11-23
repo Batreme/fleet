@@ -1,65 +1,73 @@
 ---
 title: "UI Prompt Blueprint: bespokegroup-io"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "bespokegroup-io"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#474747` ink, `#9c9c9c` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffa500` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: bespokegroup-io
 
 > **Bespoke Group · Private Wealth & Estate Planning Advisory** (https://bespokegroup.io/) — Bespoke Group provides expert wealth management, estate planning, and advisory services for HNWIs and families. Tailored strategies for a...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Bespoke Group · Private Wealth & Estate Planning Advisory** (`https://bespokegroup.io/`). Bespoke Group provides expert wealth management, estate planning, and advisory services for HNWIs and families. Tailored strategies for a...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#474747` ink, `#9c9c9c` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffa500` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#474747` primary typography and `#9c9c9c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Booton` for display copy (`Bespoke Wealth Operating Systems`) with `Segoe UI` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1680px` container bounds (`gap: 16px`, padding `20px`) with `cubic-bezier(0.215,0.61,0.355,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffa500` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Booton` for display copy (`Bespoke Wealth Operating Systems`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1073px` container bounds (`gap: 16px`, padding `20px`) with `cubic-bezier(0.215,0.61,0.355,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×7760px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1680px` extracted from `bespokegroup-io` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1073px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `50%`, `100%`, `8px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: 16px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1073px`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1280px)`, `@media (hover:hover)and (pointer:fine)and (min-width:1024px)`.
+- **Extracted CSS Media Queries**: `@media only screen and (max-width:991px)`, `@media only screen and (max-width:767px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#f4f5f2` | `var(--color-off-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#cdcdcd` | `var(--color-grey-300)` in `:root` |
-| **Interactive Accent / Highlight** | `#9c9c9c` | `var(--color-grey-400)` in `:root` |
-| **Secondary / Muted Copy** | `#636363` | `var(--color-grey-600)` in `:root` |
-| **Structural Hairline Border** | `#474747` | `var(--color-grey-700)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fef7f3` | `var(--color-seashell)` in `:root` |
+| **Interactive Accent / Highlight** | `#ffa500` | `.socialButton:hover { background: orange }` (`#ffa500`) |
+| **Secondary / Muted Copy** | `#0000ee` | live computed `a` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#808080` | `.border-grey-300 { border-color: #808080 }` |
+| **Variable Token (`--color-off-white`)** | `#f4f5f2` | `var(--color-off-white)` in `:root` |
+| **Variable Token (`--color-grey-300`)** | `#cdcdcd` | `var(--color-grey-300)` in `:root` |
+| **Variable Token (`--color-grey-400`)** | `#9c9c9c` | `var(--color-grey-400)` in `:root` |
+| **Variable Token (`--color-grey-600`)** | `#636363` | `var(--color-grey-600)` in `:root` |
+| **Variable Token (`--color-grey-700`)** | `#474747` | `var(--color-grey-700)` in `:root` |
 | **Variable Token (`--color-grey-900`)** | `#2a2a2a` | `var(--color-grey-900)` in `:root` |
 | **Variable Token (`--color-grey-1000`)** | `#0d0d0d` | `var(--color-grey-1000)` in `:root` |
-| **Variable Token (`--color-black`)** | `#000` | `var(--color-black)` in `:root` |
-| **Variable Token (`--color-off-black`)** | `#333` | `var(--color-off-black)` in `:root` |
+| **Variable Token (`--color-off-black`)** | `#333333` | `var(--color-off-black)` in `:root` |
 | **Variable Token (`--color-linen`)** | `#f7e9e0` | `var(--color-linen)` in `:root` |
 | **Variable Token (`--color-champagne`)** | `#dac9be` | `var(--color-champagne)` in `:root` |
 | **Variable Token (`--color-beige`)** | `#ebcfbc` | `var(--color-beige)` in `:root` |
@@ -93,11 +101,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#47
 - **Primary Body Stack**: `Segoe UI`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 42px`, `line-height: 50px`).
-- **Section Heading (`H2`)**: rule `h2` (`letter-spacing: -.02em`, `font-weight: 300`).
-- **Body Copy**: rule `p` (`letter-spacing: 0!important`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `64px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 78px`, `line-height: 94px`, `font-weight: 300`, `letter-spacing: -1.56px`); rule `h1` (`font-size: 42px`, `line-height: 50px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 67px`, `font-weight: 300`, `letter-spacing: -1.12px`); rule `h2` (`letter-spacing: -.02em`, `font-weight: 300`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); rule `p` (`letter-spacing: 0`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`).
 
 ---
 
@@ -117,40 +125,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#47
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Bespoke Group · Private Wealth & Estate Pl │
 │ ====================================================================== │
-│ [ <header.header>          | S e r v i c e s · A d v i s o r y · A  ]  │
+│ [ <header.header> (1440x93px)         | S e r v i c e s · A d v i s  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.acf_hero-scene>                             |   │
-│ | H1: Bespoke Wealth Operating Systems                             |   │
-│ | Substrate: #fff       | Ink: #474747    | Accent: #9c9c9c        |   │
+│ | HERO STAGE: <section.acf_hero-scene> (w=1440px)                    | │
+│ | H1: Bespoke Wealth Operating Systems                               | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #ffa500                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.acf_text-animatio) max-w: 1680px         |   │
+│ | SHOWCASE GRID (<section.acf_text-animatio) max-w: 1073px           | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Transform Chaos into Order   |  | We help the world’s most suc | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.header>] -> [<section.acf_hero-] -> [<section.acf_text-] |  │
+│ | DETAIL MODULE (<article.acf_text-animatio) — Tailored and Integrat | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://bespokegroup.io/           │
+│ [ FOOTER (<footer.footer>     ) | https://bespokegroup.io/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.acf_hero-scene>) — 390px Vertical Lead        | │
+│ | H1: Bespoke Wealth Operating Systems                               | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.acf_text-anim) — 1-Col Stack              | │
+│ | [ Item 1: Transform Chaos into Order                             ] | │
+│ | [ Item 2: We help the world’s most successful entrepreneurs...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<article.acf_text-animat) — 1-Col (Tailored and Integ) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `bespokegroup-io`)**:
-   - Landmark `<header class="header header--dark">` hosting `Bespoke Group · Private Wealth & Est` navigation (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), DOM attributes (`data-cfasync="false"`, `data-pagespeed-no-defer`, `data-cfasync="false"`, `data-cfasync="false"`), and stylesheet rule `before { box-sizing:border-box }`.
+   - Landmark `<header class="header header--dark">` (`1440x93px`) hosting `Bespoke Group · Private Wealth & Est` navigation (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), DOM attributes (`data-cfasync="false"`, `data-pagespeed-no-defer`, `data-cfasync="false"`, `data-cfasync="false"`), and stylesheet rule `.cfm-episodes-grid:before { content:"";display:table;clear:both }`.
 2. **Hero Stage & Focal Lead (<section.acf_hero-scene> — `Bespoke Wealth Operating Systems`)**:
-   - Landmark `<section class="acf_hero-scene">` presenting display lead `Bespoke Wealth Operating Systems` and copy excerpt *"We value your privacy"* over `#fff` canvas and `#474747` ink.
+   - Landmark `<section class="acf_hero-scene">` presenting display lead `Bespoke Wealth Operating Systems` and copy excerpt *"Transformational philanthropy"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.acf_text-animation> — `Transform Chaos into Order`)**:
-   - Landmark `<section class="acf_text-animation">` rendering section `Transform Chaos into Order` with copy *"We use cookies to enhance your browsing experience, serve persona"*, asset references (`gtm.js`, `www.googletagmanager.com`, `hero.home_.webp`, `logomark.png`), and grid rule `strong { font-weight:bolder }`.
+   - Landmark `<section class="acf_text-animation">` rendering section `Transform Chaos into Order` with copy *"Comprehensive Bitcoin wealth strategies"*, asset references (`gtm.js`, `www.googletagmanager.com`, `hero.home_.webp`, `logomark.png`), and grid rule `episodes-grid .cfm-episode-wrap:b... { content:"";display:table;clear:both }`.
 4. **Interactive Detail & Feature Matrix (<article.acf_text-animation__content> — `We help the world’s most successfu`)**:
-   - Landmark `<article class="acf_text-animation__content grid">` framing `We help the world’s most successful entrepreneurs...` and `Tailored and Integrated Wealth Systems` (*"Customise Consent Preferences"*) with `#cdcdcd` surface cards, `#9c9c9c` accents, and `samp { font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,m... }`.
+   - Landmark `<article class="acf_text-animation__content grid">` framing `We help the world’s most successful entrepreneurs...` and `Tailored and Integrated Wealth Systems` (*"Strengthen privacy in life and finance"*) with `#fef7f3` surface cards, `#ffa500` accents, and `d.cfm-episodes-cols-2 .cfm-episod... { width:50%;-webkit-box-flex:0;-ms-flex:0 1 50%;flex:0 1 50% }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://bespokegroup.io/`)**:
-   - Landmark `<footer class="footer footer--no-newsletter">` anchoring `Bespoke Group · Private Wealth &` footer links (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), copy *"We use cookies to help you navigate efficiently and perform "*, and `#474747` structural dividers.
+   - Landmark `<footer class="footer footer--no-newsletter">` anchoring `Bespoke Group · Private Wealth &` footer links (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), copy *"Minimize and manage tax exposure"*, and `#808080` structural dividers.
 
 ---
 
@@ -162,19 +189,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#47
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `bespokegroup-io` (**Bespoke Group · Private Wealth & Estate Planning Advisory** — `https://bespokegroup.io/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#474747` ink, `#9c9c9c` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffa500` accent).
 - **Identity & Domain Context**: Bespoke Group provides expert wealth management, estate planning, and advisory services for HNWIs and families. Tailored strategies for a...
-- **Primary Substrate**: `#fff` (`var(--color-white)` in `:root`), **Primary Ink**: `#474747`, **Accent / Highlight**: `#9c9c9c`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffa500`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#474747` primary typography and `#9c9c9c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Booton` for display copy (`Bespoke Wealth Operating Systems`) with `Segoe UI` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1680px` container bounds (`gap: 16px`, padding `20px`) with `cubic-bezier(0.215,0.61,0.355,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffa500` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Booton` for display copy (`Bespoke Wealth Operating Systems`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1073px` container bounds (`gap: 16px`, padding `20px`) with `cubic-bezier(0.215,0.61,0.355,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `bespokegroup-io` in your global stylesheet:
 
 :root {
-  /* Bespoke Group · Private Wealth & Estate Planning Advisory (bespokegroup-io) — Ground-Truth Extracted CSS Variables */
+  /* Bespoke Group · Private Wealth & Estate Planning Advisory (bespokegroup-io) — Live-Grounded CSS Variables */
   --cubic-easing: cubic-bezier(0.215,0.61,0.355,1); /* Motion / Easing Token (bespokegroup-io) */
   --color-white: #fff; /* Canvas / Surface Token (bespokegroup-io) */
   --color-off-white: #f4f5f2; /* Canvas / Surface Token (bespokegroup-io) */
@@ -195,71 +222,75 @@ Declare and consume these exact custom properties extracted from `bespokegroup-i
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Primary Typography Ink**: `#f4f5f2` — grounded in `var(--color-off-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#cdcdcd` — grounded in `var(--color-grey-300)` in `:root`
-- **Interactive Accent / Highlight**: `#9c9c9c` — grounded in `var(--color-grey-400)` in `:root`
-- **Secondary / Muted Copy**: `#636363` — grounded in `var(--color-grey-600)` in `:root`
-- **Structural Hairline Border**: `#474747` — grounded in `var(--color-grey-700)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fef7f3` — grounded in `var(--color-seashell)` in `:root`
+- **Interactive Accent / Highlight**: `#ffa500` — grounded in `.socialButton:hover { background: orange }` (`#ffa500`)
+- **Secondary / Muted Copy**: `#0000ee` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#808080` — grounded in `.border-grey-300 { border-color: #808080 }`
+- **Variable Token (`--color-off-white`)**: `#f4f5f2` — grounded in `var(--color-off-white)` in `:root`
+- **Variable Token (`--color-grey-300`)**: `#cdcdcd` — grounded in `var(--color-grey-300)` in `:root`
+- **Variable Token (`--color-grey-400`)**: `#9c9c9c` — grounded in `var(--color-grey-400)` in `:root`
+- **Variable Token (`--color-grey-600`)**: `#636363` — grounded in `var(--color-grey-600)` in `:root`
+- **Variable Token (`--color-grey-700`)**: `#474747` — grounded in `var(--color-grey-700)` in `:root`
 - **Variable Token (`--color-grey-900`)**: `#2a2a2a` — grounded in `var(--color-grey-900)` in `:root`
 - **Variable Token (`--color-grey-1000`)**: `#0d0d0d` — grounded in `var(--color-grey-1000)` in `:root`
-- **Variable Token (`--color-black`)**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Variable Token (`--color-off-black`)**: `#333` — grounded in `var(--color-off-black)` in `:root`
+- **Variable Token (`--color-off-black`)**: `#333333` — grounded in `var(--color-off-black)` in `:root`
 - **Variable Token (`--color-linen`)**: `#f7e9e0` — grounded in `var(--color-linen)` in `:root`
 - **Variable Token (`--color-champagne`)**: `#dac9be` — grounded in `var(--color-champagne)` in `:root`
 - **Variable Token (`--color-beige`)**: `#ebcfbc` — grounded in `var(--color-beige)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×7760px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1680px` extracted from `bespokegroup-io` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1073px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `20px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: 16px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1073px`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
-- **Media Queries**: `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1280px)`, `@media (hover:hover)and (pointer:fine)and (min-width:1024px)`
+- **Media Queries**: `@media only screen and (max-width:991px)`, `@media only screen and (max-width:767px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`
 - **Corner Radii**: `50%`, `100%`, `8px`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Booton`
 - **Body Font Stack**: `Segoe UI`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: rule `h1` (`font-size: 42px`, `line-height: 50px`)
-- **H2 Section Rule**: rule `h2` (`letter-spacing: -.02em`, `font-weight: 300`)
-- **Body Copy Rule**: rule `p` (`letter-spacing: 0!important`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `64px`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 78px`, `line-height: 94px`, `font-weight: 300`, `letter-spacing: -1.56px`); rule `h1` (`font-size: 42px`, `line-height: 50px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 67px`, `font-weight: 300`, `letter-spacing: -1.12px`); rule `h2` (`letter-spacing: -.02em`, `font-weight: 300`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); rule `p` (`letter-spacing: 0`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `bespokegroup-io` (`Bespoke Group · Private Wealth & Estate Planning Advisory`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `bespokegroup-io`)**:
-   - DOM & Selectors: Landmark `<header class="header header--dark">` hosting `Bespoke Group · Private Wealth & Est` navigation (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), DOM attributes (`data-cfasync="false"`, `data-pagespeed-no-defer`, `data-cfasync="false"`, `data-cfasync="false"`), and stylesheet rule `before { box-sizing:border-box }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `bespokegroup-io`)` (`bespokegroup-io`) adapts across `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1280px)`, `@media (hover:hover)and (pointer:fine)and (min-width:1024px)` with `cubic-bezier(0.215,0.61,0.355,1)`, `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`.
+   - DOM & Selectors: Landmark `<header class="header header--dark">` (`1440x93px`) hosting `Bespoke Group · Private Wealth & Est` navigation (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), DOM attributes (`data-cfasync="false"`, `data-pagespeed-no-defer`, `data-cfasync="false"`, `data-cfasync="false"`), and stylesheet rule `.cfm-episodes-grid:before { content:"";display:table;clear:both }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `bespokegroup-io`)` (`bespokegroup-io`) adapts across `@media only screen and (max-width:991px)`, `@media only screen and (max-width:767px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)` with `cubic-bezier(0.215,0.61,0.355,1)`, `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`.
 2. **Hero Stage & Focal Lead (<section.acf_hero-scene> — `Bespoke Wealth Operating Systems`)**:
-   - DOM & Selectors: Landmark `<section class="acf_hero-scene">` presenting display lead `Bespoke Wealth Operating Systems` and copy excerpt *"We value your privacy"* over `#fff` canvas and `#474747` ink.
-   - Responsive Contract: Hero stage (`1440×7760px` desktop / `390×2400px` mobile) sets `#fff` background with `#474747` headline `Bespoke Wealth Operating Systems`.
+   - DOM & Selectors: Landmark `<section class="acf_hero-scene">` presenting display lead `Bespoke Wealth Operating Systems` and copy excerpt *"Transformational philanthropy"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Bespoke Wealth Operating Systems`.
 3. **Primary Showcase & Content Grid (<section.acf_text-animation> — `Transform Chaos into Order`)**:
-   - DOM & Selectors: Landmark `<section class="acf_text-animation">` rendering section `Transform Chaos into Order` with copy *"We use cookies to enhance your browsing experience, serve persona"*, asset references (`gtm.js`, `www.googletagmanager.com`, `hero.home_.webp`, `logomark.png`), and grid rule `strong { font-weight:bolder }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.acf_text-animation> — `Transform Chaos into Order`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="acf_text-animation">` rendering section `Transform Chaos into Order` with copy *"Comprehensive Bitcoin wealth strategies"*, asset references (`gtm.js`, `www.googletagmanager.com`, `hero.home_.webp`, `logomark.png`), and grid rule `episodes-grid .cfm-episode-wrap:b... { content:"";display:table;clear:both }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.acf_text-animation> — `Transform Chaos into Order`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1073px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.acf_text-animation__content> — `We help the world’s most successfu`)**:
-   - DOM & Selectors: Landmark `<article class="acf_text-animation__content grid">` framing `We help the world’s most successful entrepreneurs...` and `Tailored and Integrated Wealth Systems` (*"Customise Consent Preferences"*) with `#cdcdcd` surface cards, `#9c9c9c` accents, and `samp { font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,m... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.acf_text-animation__content> — `We help the world’s most successfu`)` uses `50%`, `100%`, `8px`, `4px` radii, `#9c9c9c` highlights, and assets (gtm.js, www.googletagmanager.com, hero.home_.webp).
+   - DOM & Selectors: Landmark `<article class="acf_text-animation__content grid">` framing `We help the world’s most successful entrepreneurs...` and `Tailored and Integrated Wealth Systems` (*"Strengthen privacy in life and finance"*) with `#fef7f3` surface cards, `#ffa500` accents, and `d.cfm-episodes-cols-2 .cfm-episod... { width:50%;-webkit-box-flex:0;-ms-flex:0 1 50%;flex:0 1 50% }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.acf_text-animation__content> — `We help the world’s most successfu`)` uses `50%`, `100%`, `8px`, `4px` radii, `#ffa500` highlights, and assets (gtm.js, www.googletagmanager.com, hero.home_.webp).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://bespokegroup.io/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer footer--no-newsletter">` anchoring `Bespoke Group · Private Wealth &` footer links (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), copy *"We use cookies to help you navigate efficiently and perform "*, and `#474747` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://bespokegroup.io/`)` aligns to `1680px` extracted from `bespokegroup-io` stylesheet with `20px` lateral canvas padding with `16px` grid gap and attributes (data-cfasync="false", data-pagespeed-no-defer, data-cfasync="false").
+   - DOM & Selectors: Landmark `<footer class="footer footer--no-newsletter">` anchoring `Bespoke Group · Private Wealth &` footer links (`S e r v i c e s · A d v i s o r y · A b o u t · P e o p l e · R e s o u r c e s`), copy *"Minimize and manage tax exposure"*, and `#808080` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://bespokegroup.io/`)` aligns to `1073px` (non-`@media` desktop container stylesheet rule) with `20px` lateral canvas padding with `16px` grid gap and attributes (data-cfasync="false", data-pagespeed-no-defer, data-cfasync="false").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"We value your privacy"*
-- Copy Excerpt 2: *"We use cookies to enhance your browsing experience, serve personalised ads or cont..."*
-- Copy Excerpt 3: *"Customise Consent Preferences"*
-- Copy Excerpt 4: *"We use cookies to help you navigate efficiently and perform certain functions. You..."*
+- Copy Excerpt 1: *"Transformational philanthropy"*
+- Copy Excerpt 2: *"Comprehensive Bitcoin wealth strategies"*
+- Copy Excerpt 3: *"Strengthen privacy in life and finance"*
+- Copy Excerpt 4: *"Minimize and manage tax exposure"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.215,0.61,0.355,1)`, `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.19,1,.22,1)`
 - **Extracted Stylesheet Rules (`bespokegroup-io`)**:
-- `before { box-sizing:border-box }`
-- `strong { font-weight:bolder }`
-- `samp { font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,m... }`
-- `small { font-size:80% }`
-- `sup { font-size:75%;line-height:0;position:relative;vertical-align:baseline }`
+- `.cfm-episodes-grid:before { content:"";display:table;clear:both }`
+- `episodes-grid .cfm-episode-wrap:b... { content:"";display:table;clear:both }`
+- `d.cfm-episodes-cols-2 .cfm-episod... { width:50%;-webkit-box-flex:0;-ms-flex:0 1 50%;flex:0 1 50% }`
+- `d.cfm-episodes-cols-3 .cfm-episod... { width:33.33%;-webkit-box-flex:0;-ms-flex:0 1 33.33%;flex:0 1 33.33% }`
+- `d.cfm-episodes-cols-4 .cfm-episod... { width:25%;-webkit-box-flex:0;-ms-flex:0 1 25%;flex:0 1 25% }`
 - **Per-Selector Transition Rules**:
 - **Selector `.intersection-active--default`**: `transition: opacity .75s cubic-bezier(0.215,0.61,0.355,1),transform .75s cubi...` extracted from `bespokegroup-io` stylesheet.
 - **Selector `ntrast-override-dark span:not(.no...`**: `transition: color .1s ease` extracted from `bespokegroup-io` stylesheet.

@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: www-serko-ai"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-serko-ai"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#f6f6f6`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e8f3fe` / `#0082f3`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-serko-ai
 
-> **Serko.ai · AI Travel Agent** (https://www.serko.ai) — Explore a smarter way to manage business travel with Serko.ai, the AI-native travel platform. It learns how you like to travel and handle...
+> **Serko.ai · AI Travel Agent for Business Trips** (https://www.serko.ai) — Serko.ai is an AI travel agent for work. Book personalized flights and hotels, follow company policy, manage disruptions and cancel with...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Serko.ai · AI Travel Agent** (`https://www.serko.ai`). Explore a smarter way to manage business travel with Serko.ai, the AI-native travel platform. It learns how you like to travel and handle...
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#f6f6f6`)**.
+- **Brand Essence & Persona**: **Serko.ai · AI Travel Agent for Business Trips** (`https://www.serko.ai`). Serko.ai is an AI travel agent for work. Book personalized flights and hotels, follow company policy, manage disruptions and cancel with...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#e8f3fe` / `#0082f3`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b93fce` (`var(--library---swatch--purple-500)` in `:root`) paired with `#f6f6f6` primary typography and `#f6f6f6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jokker` for display copy (`AI travel agent`) with `pretty` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--max-width--main)` container bounds (`gap: var(--_spacing---space--2)`, padding `1.5rem`) with `cubic-bezier(0.525,0,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8f3fe` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jokker` for display copy (`AI travel agent for business`) with `Jokker` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0.525,0,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×11035px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `var(--max-width--main)` extracted from `www-serko-ai` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `var(--_spacing---space--2)` grid gap.
-- **Border Radius Scale**: `var(--radius--medium)`, `var(--radius--small)`, `.75rem`, `var(--radius--main)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `3px`, `100%`, `50%`, `var(--radius--medium)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max-width--main)`, `gap: var(--_spacing---space--2)`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`.
 
 ---
@@ -48,34 +52,38 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#b93fce` | `var(--library---swatch--purple-500)` in `:root` |
-| **Primary Typography Ink** | `#0078d4` | `var(--library---swatch--blue-500)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f13931` | `var(--_swatch---error)` in `:root` |
-| **Interactive Accent / Highlight** | `#f6f6f6` | `var(--_swatch---light-2)` in `:root` |
-| **Secondary / Muted Copy** | `#e8f3fe` | `var(--_swatch---light-3)` in `:root` |
-| **Structural Hairline Border** | `#c0f2b5` | `var(--_swatch---positive-200)` in `:root` |
+| **Primary Canvas Substrate** | `#e8f3fe` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ebebeb` | `var(--osano-info-dialog-selected-background-color)` in `:root` |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#058a5e` | `var(--osano-gpc-foreground-color)` in `:root` |
+| **Structural Hairline Border** | `#d8d8d8` | `var(--osano-info-dialog-border-color)` in `:root` |
+| **Variable Token (`--osano-info-dialog-border-subtle-color`)** | `#e9e9e9` | `var(--osano-info-dialog-border-subtle-color)` in `:root` |
+| **Variable Token (`--osano-info-dialog-inset-color`)** | `#f4f4f4` | `var(--osano-info-dialog-inset-color)` in `:root` |
+| **Variable Token (`--osano-info-dialog-gpc-tint-color`)** | `#e7f9f0` | `var(--osano-info-dialog-gpc-tint-color)` in `:root` |
+| **Variable Token (`--osano-button-foreground-color`)** | `#ffffff` | `var(--osano-button-foreground-color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--library_text-style---font-family` | `var(--library_typography---font--primary-family)` | Typography Ink Token |
-| `--library_text-style---font-size` | `var(--library_typography---font-size--text-main)` | Typography Ink Token |
-| `--library_text-style---line-height` | `var(--library_typography---line-height--1-5)` | Typography Ink Token |
-| `--library_text-style---font-weight` | `var(--library_typography---font--primary-medium)` | Typography Ink Token |
-| `--library_heading-style---margin-top` | `var(--library_spacing---space--4)` | Typography Ink Token |
-| `--library_heading-style---margin-bottom` | `var(--library_spacing---space--4)` | Typography Ink Token |
-| `--library_heading-style---font-family` | `var(--library_typography---font--primary-family)` | Typography Ink Token |
-| `--library_heading-style---font-size` | `var(--library_typography---font-size--text-main)` | Typography Ink Token |
-| `--library_heading-style---line-height` | `var(--library_typography---line-height--1-5)` | Typography Ink Token |
-| `--library_heading-style---font-weight` | `var(--library_typography---font--primary-regular)` | Typography Ink Token |
-| `--library_heading-style---letter-spacing` | `var(--library_typography---letter-spacing--0em)` | Typography Ink Token |
-| `--library_text-style---margin-top` | `var(--library_spacing---space--4)` | Typography Ink Token |
-| `--library_text-style---margin-bottom` | `var(--library_spacing---space--4)` | Typography Ink Token |
-| `--library_spacing---space--6` | `2rem` | Layout / Spatial Grid Token |
-| `--library_text-style---letter-spacing` | `var(--library_typography---letter-spacing--0em)` | Typography Ink Token |
-| `--library_spacing---space--7` | `3rem` | Layout / Spatial Grid Token |
+| `--osano-clear-dialog-background` | `rgba(0,0,0,0)` | Canvas / Surface Token |
+| `--osano-info-dialog-border-color` | `#d8d8d8` | Brand / Palette Token |
+| `--osano-info-dialog-border-subtle-color` | `#e9e9e9` | Brand / Palette Token |
+| `--osano-info-dialog-inset-color` | `#f4f4f4` | Brand / Palette Token |
+| `--osano-info-dialog-selected-background-color` | `#ebebeb` | Canvas / Surface Token |
+| `--osano-info-dialog-gpc-tint-color` | `#e7f9f0` | Canvas / Surface Token |
+| `--osano-theme` | `modern` | Brand / Palette Token |
+| `--osano-button-border-color` | `var(--osano-button-foreground-color)` | Brand / Palette Token |
+| `--osano-dialog-type` | `box` | Typography / Scale Token |
+| `--osano-display-position` | `"bottom-left"` | Design System Custom Token |
+| `--osano-info-dialog-position` | `right` | Design System Custom Token |
+| `--osano-widget-position` | `right` | Design System Custom Token |
+| `--osano-opt-out-widget-position` | `right` | Design System Custom Token |
+| `--osano-button-background-color` | `#000000` | Canvas / Surface Token |
+| `--osano-button-foreground-color` | `#FFFFFF` | Typography Ink Token |
+| `--osano-dialog-background-color` | `#ffffff` | Canvas / Surface Token |
 
 ---
 
@@ -83,14 +91,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `Jokker`.
-- **Primary Body Stack**: `pretty`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Jokker`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--library_typography---font-size--h1: 5.25rem`, `--library_typography---font-size--display: 6rem`, `--osano-display-position: "bottom-left"`.
-- **Section Heading (`H2`)**: CSS variables `--library_typography---font-size--h2: 4rem`.
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--library_typography---font-s...`, `var(--_typography---font-size--te...`, `var(--_text-style---font-size)`, `var(--_heading-style---font-size)`, `var(--_typography---font-size--h4)`).
-- **Metadata & Navigation Labels**: CSS variables `--library_heading-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_text-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_spacing---section-space--small: 5rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 16px`, `font-weight: 500`); CSS variables `--osano-display-position: "bottom-left"`, `--library_typography---font-size--h1: 5.25rem`, `--library_typography---font-size--display: 6rem`.
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 62.3271px`, `line-height: 62.3271px`, `font-weight: 500`, `letter-spacing: -1.86981px`); CSS variables `--library_typography---font-size--h2: 4rem`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--library_heading-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_text-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_spacing---section-space--small: 5rem`.
 
 ---
 
@@ -103,154 +111,177 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#
 - **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `www-serko-ai` stylesheet.
 - **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `www-serko-ai` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-serko-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.525,0,0,1)`)**: Governs interactive state transitions across `<header.nav1_header>` and `<section.feature1_wrap>`.
+- **Extracted Easing Curve (`cubic-bezier(0.525,0,0,1)`)**: Governs interactive state transitions across `<header.nav1_header>` and `<section.col3_wrap>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — Serko.ai · AI Travel Agent                 │
+│ DESKTOP VIEWPORT (1440px) — Serko.ai · AI Travel Agent for Business Tr │
 │ ====================================================================== │
-│ [ <header.nav1_header>     | Home · Platform · For companies · Abou ]  │
+│ [ <header.nav1_header> (1440x75px)    | Home · Platform · For compan ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero1_wrap>                                 |   │
-│ | H1: AI travel agent                                              |   │
-│ | Substrate: #b93fce    | Ink: #f6f6f6    | Accent: #f6f6f6        |   │
+│ | HERO STAGE: <section.hero1_wrap> (w=1440px)                        | │
+│ | H1: AI travel agent for business                                   | │
+│ | Substrate: #e8f3fe | Ink: #000000 | Accent: #0082f3                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.feature1_wrap>   ) max-w: var(--max-widt |   │
+│ | SHOWCASE GRID (<section.col3_wrap>) max-w: 1440px                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | The last travel agent you’ll |  | Stress-free cancellation     | | │
+│ | | The last travel agent you’ll |  | How Serko.ai works           | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.nav1_heade] -> [<section.hero1_wra] -> [<section.feature1_] │
+│ | DETAIL MODULE (<section.feature1_wrap>) — Business travel, book    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.osano-cm-windo) | https://www.serko.ai               │
+│ [ FOOTER (<footer.osano-cm-win) | https://www.serko.ai                 │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.nav1_header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero1_wrap>) — 390px Vertical Lead            | │
+│ | H1: AI travel agent for business                                   | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.col3_wrap>) — 1-Col Stack                 | │
+│ | [ Item 1: The last travel agent you’ll ever need.                ] | │
+│ | [ Item 2: How Serko.ai works                                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.feature1_wrap>) — 1-Col (Business travel, b)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.osano-cm-win) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav1_header> — `www-serko-ai`)**:
-   - Landmark `<header class="nav1_header">` hosting `Serko.ai · AI Travel Agent` navigation (`Home · Platform · For companies · About · Log in`), DOM attributes (`data-wf-domain="www.serko.ai"`, `data-wf-page="6aa12b65e6dd0b96a2a83430"`, `data-wf-site="6aa12b65e6dd0b96a2a8345b"`, `data-wf-intellimize-customer-id="117114932"`), and stylesheet rule `img { object-fit:cover;width:100%;max-width:100% }`.
-2. **Hero Stage & Focal Lead (<section.hero1_wrap> — `AI travel agent`)**:
-   - Landmark `<section class="hero1_wrap u-gradient-bg-1">` presenting display lead `AI travel agent` and copy excerpt *"Opens in a new window"* over `#b93fce` canvas and `#f6f6f6` ink.
-3. **Primary Showcase & Content Grid (<section.feature1_wrap> — `The last travel agent you’ll ever `)**:
-   - Landmark `<section class="feature1_wrap u-background-3">` rendering section `The last travel agent you’ll ever need.` with copy *"Opens an external website"*, asset references (`cdn.prod.website-files.com`, `serko-ai.webflow.shared.96cab25cb...`, `serko-ai.webflow.6aa12b65e6dd0b96...`, `gtm.js`), and grid rule `strong { font-weight:700 }`.
-4. **Interactive Detail & Feature Matrix (<section.feature2_wrap> — `Stress-free cancellation`)**:
-   - Landmark `<section class="feature2_wrap">` framing `Stress-free cancellation` and `Book like it's refundable. Because it is.` (*"Opens an external website in a new window"*) with `#f13931` surface cards, `#f6f6f6` accents, and `blockquote { border-style:none;padding:0 }`.
+   - Landmark `<header class="nav1_header">` (`1440x75px`) hosting `Serko.ai · AI Travel Agent for Busin` navigation (`Home · Platform · For companies · About · Sign up free`), DOM attributes (`data-wf-domain="www.serko.ai"`, `data-wf-page="6aa12b65e6dd0b96a2a83430"`, `data-wf-site="6aa12b65e6dd0b96a2a8345b"`, `data-wf-intellimize-customer-id="117114932"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.hero1_wrap> — `AI travel agent for business`)**:
+   - Landmark `<section class="hero1_wrap u-gradient-bg-1">` presenting display lead `AI travel agent for business` and copy excerpt *"Serko learns how you like to travel, finds the best flights and h"* over `#e8f3fe` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.col3_wrap> — `The last travel agent you’ll ever `)**:
+   - Landmark `<section class="col3_wrap">` rendering section `The last travel agent you’ll ever need.` with copy *"Venue, location, address..."*, asset references (`cdn.prod.website-files.com`, `serko-ai.webflow.shared.96cab25cb...`, `serko-ai.webflow.6aa12b65e6dd0b96...`, `0.8.77`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.feature1_wrap> — `How Serko.ai works`)**:
+   - Landmark `<section class="feature1_wrap u-background-3">` framing `How Serko.ai works` and `Business travel, booked in one chat.` (*"Trip details and preferences"*) with `#ebebeb` surface cards, `#0082f3` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.osano-cm-window> — `https://www.serko.ai`)**:
-   - Landmark `<footer class="osano-cm-window">` anchoring `Serko.ai · AI Travel Agent` footer links (`Home · Platform · For companies · About · Log in`), copy *"<!---->Close this consent banner<!---->"*, and `#c0f2b5` structural dividers.
+   - Landmark `<footer class="osano-cm-window">` anchoring `Serko.ai · AI Travel Agent for B` footer links (`Home · Platform · For companies · About · Sign up free`), copy *"I've got a client meeting in New York Friday , but I wan"*, and `#d8d8d8` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: www-serko-ai (Serko.ai · AI Travel Agent)
+# Master Zero-Shot Frontend Generation Prompt: www-serko-ai (Serko.ai · AI Travel Agent for Business Trips)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-serko-ai` (**Serko.ai · AI Travel Agent** — `https://www.serko.ai`).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-serko-ai` (**Serko.ai · AI Travel Agent for Business Trips** — `https://www.serko.ai`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#b93fce` / `#f6f6f6`).
-- **Identity & Domain Context**: Explore a smarter way to manage business travel with Serko.ai, the AI-native travel platform. It learns how you like to travel and handle...
-- **Primary Substrate**: `#b93fce` (`var(--library---swatch--purple-500)` in `:root`), **Primary Ink**: `#f6f6f6`, **Accent / Highlight**: `#f6f6f6`.
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#e8f3fe` / `#0082f3`).
+- **Identity & Domain Context**: Serko.ai is an AI travel agent for work. Book personalized flights and hotels, follow company policy, manage disruptions and cancel with...
+- **Primary Substrate**: `#e8f3fe` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b93fce` (`var(--library---swatch--purple-500)` in `:root`) paired with `#f6f6f6` primary typography and `#f6f6f6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jokker` for display copy (`AI travel agent`) with `pretty` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--max-width--main)` container bounds (`gap: var(--_spacing---space--2)`, padding `1.5rem`) with `cubic-bezier(0.525,0,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8f3fe` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jokker` for display copy (`AI travel agent for business`) with `Jokker` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0.525,0,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-serko-ai` in your global stylesheet:
 
 :root {
-  /* Serko.ai · AI Travel Agent (www-serko-ai) — Ground-Truth Extracted CSS Variables */
-  --library_text-style---font-family: var(--library_typography---font--primary-family); /* Typography Ink Token (www-serko-ai) */
-  --library_text-style---font-size: var(--library_typography---font-size--text-main); /* Typography Ink Token (www-serko-ai) */
-  --library_text-style---line-height: var(--library_typography---line-height--1-5); /* Typography Ink Token (www-serko-ai) */
-  --library_text-style---font-weight: var(--library_typography---font--primary-medium); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---margin-top: var(--library_spacing---space--4); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---margin-bottom: var(--library_spacing---space--4); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---font-family: var(--library_typography---font--primary-family); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---font-size: var(--library_typography---font-size--text-main); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---line-height: var(--library_typography---line-height--1-5); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---font-weight: var(--library_typography---font--primary-regular); /* Typography Ink Token (www-serko-ai) */
-  --library_heading-style---letter-spacing: var(--library_typography---letter-spacing--0em); /* Typography Ink Token (www-serko-ai) */
-  --library_text-style---margin-top: var(--library_spacing---space--4); /* Typography Ink Token (www-serko-ai) */
-  --library_text-style---margin-bottom: var(--library_spacing---space--4); /* Typography Ink Token (www-serko-ai) */
-  --library_spacing---space--6: 2rem; /* Layout / Spatial Grid Token (www-serko-ai) */
-  --library_text-style---letter-spacing: var(--library_typography---letter-spacing--0em); /* Typography Ink Token (www-serko-ai) */
-  --library_spacing---space--7: 3rem; /* Layout / Spatial Grid Token (www-serko-ai) */
+  /* Serko.ai · AI Travel Agent for Business Trips (www-serko-ai) — Live-Grounded CSS Variables */
+  --osano-clear-dialog-background: rgba(0,0,0,0); /* Canvas / Surface Token (www-serko-ai) */
+  --osano-info-dialog-border-color: #d8d8d8; /* Brand / Palette Token (www-serko-ai) */
+  --osano-info-dialog-border-subtle-color: #e9e9e9; /* Brand / Palette Token (www-serko-ai) */
+  --osano-info-dialog-inset-color: #f4f4f4; /* Brand / Palette Token (www-serko-ai) */
+  --osano-info-dialog-selected-background-color: #ebebeb; /* Canvas / Surface Token (www-serko-ai) */
+  --osano-info-dialog-gpc-tint-color: #e7f9f0; /* Canvas / Surface Token (www-serko-ai) */
+  --osano-theme: modern; /* Brand / Palette Token (www-serko-ai) */
+  --osano-button-border-color: var(--osano-button-foreground-color); /* Brand / Palette Token (www-serko-ai) */
+  --osano-dialog-type: box; /* Typography / Scale Token (www-serko-ai) */
+  --osano-display-position: "bottom-left"; /* Design System Custom Token (www-serko-ai) */
+  --osano-info-dialog-position: right; /* Design System Custom Token (www-serko-ai) */
+  --osano-widget-position: right; /* Design System Custom Token (www-serko-ai) */
+  --osano-opt-out-widget-position: right; /* Design System Custom Token (www-serko-ai) */
+  --osano-button-background-color: #000000; /* Canvas / Surface Token (www-serko-ai) */
+  --osano-button-foreground-color: #FFFFFF; /* Typography Ink Token (www-serko-ai) */
+  --osano-dialog-background-color: #ffffff; /* Canvas / Surface Token (www-serko-ai) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#b93fce` — grounded in `var(--library---swatch--purple-500)` in `:root`
-- **Primary Typography Ink**: `#0078d4` — grounded in `var(--library---swatch--blue-500)` in `:root`
-- **Elevated Surface / Card Substrate**: `#f13931` — grounded in `var(--_swatch---error)` in `:root`
-- **Interactive Accent / Highlight**: `#f6f6f6` — grounded in `var(--_swatch---light-2)` in `:root`
-- **Secondary / Muted Copy**: `#e8f3fe` — grounded in `var(--_swatch---light-3)` in `:root`
-- **Structural Hairline Border**: `#c0f2b5` — grounded in `var(--_swatch---positive-200)` in `:root`
+- **Primary Canvas Substrate**: `#e8f3fe` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ebebeb` — grounded in `var(--osano-info-dialog-selected-background-color)` in `:root`
+- **Interactive Accent / Highlight**: `#0082f3` — grounded in `.w-dropdown-link.w--current { color: #0082f3 }`
+- **Secondary / Muted Copy**: `#058a5e` — grounded in `var(--osano-gpc-foreground-color)` in `:root`
+- **Structural Hairline Border**: `#d8d8d8` — grounded in `var(--osano-info-dialog-border-color)` in `:root`
+- **Variable Token (`--osano-info-dialog-border-subtle-color`)**: `#e9e9e9` — grounded in `var(--osano-info-dialog-border-subtle-color)` in `:root`
+- **Variable Token (`--osano-info-dialog-inset-color`)**: `#f4f4f4` — grounded in `var(--osano-info-dialog-inset-color)` in `:root`
+- **Variable Token (`--osano-info-dialog-gpc-tint-color`)**: `#e7f9f0` — grounded in `var(--osano-info-dialog-gpc-tint-color)` in `:root`
+- **Variable Token (`--osano-button-foreground-color`)**: `#ffffff` — grounded in `var(--osano-button-foreground-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×11035px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `var(--max-width--main)` extracted from `www-serko-ai` stylesheet
-- **Padding & Gutters**: `1.5rem` lateral canvas padding with `var(--_spacing---space--2)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max-width--main)`, `gap: var(--_spacing---space--2)`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`
-- **Corner Radii**: `var(--radius--medium)`, `var(--radius--small)`, `.75rem`, `var(--radius--main)`
+- **Corner Radii**: `3px`, `100%`, `50%`, `var(--radius--medium)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Jokker`
-- **Body Font Stack**: `pretty`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--library_typography---font-size--h1: 5.25rem`, `--library_typography---font-size--display: 6rem`, `--osano-display-position: "bottom-left"`
-- **H2 Section Rule**: CSS variables `--library_typography---font-size--h2: 4rem`
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--library_typography---font-s...`, `var(--_typography---font-size--te...`, `var(--_text-style---font-size)`, `var(--_heading-style---font-size)`, `var(--_typography---font-size--h4)`)
-- **Metadata & Index Rule**: CSS variables `--library_heading-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_text-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_spacing---section-space--small: 5rem`
+- **Body Font Stack**: `Jokker`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 16px`, `line-height: 16px`, `font-weight: 500`); CSS variables `--osano-display-position: "bottom-left"`, `--library_typography---font-size--h1: 5.25rem`, `--library_typography---font-size--display: 6rem`
+- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 62.3271px`, `line-height: 62.3271px`, `font-weight: 500`, `letter-spacing: -1.86981px`); CSS variables `--library_typography---font-size--h2: 4rem`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--library_heading-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_text-style---letter-spacing: var(--library_typography---letter-spacing--0em)`, `--library_spacing---section-space--small: 5rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
-Scaffold `www-serko-ai` (`Serko.ai · AI Travel Agent`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+Scaffold `www-serko-ai` (`Serko.ai · AI Travel Agent for Business Trips`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav1_header> — `www-serko-ai`)**:
-   - DOM & Selectors: Landmark `<header class="nav1_header">` hosting `Serko.ai · AI Travel Agent` navigation (`Home · Platform · For companies · About · Log in`), DOM attributes (`data-wf-domain="www.serko.ai"`, `data-wf-page="6aa12b65e6dd0b96a2a83430"`, `data-wf-site="6aa12b65e6dd0b96a2a8345b"`, `data-wf-intellimize-customer-id="117114932"`), and stylesheet rule `img { object-fit:cover;width:100%;max-width:100% }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav1_header> — `www-serko-ai`)` (`www-serko-ai`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(0.525,0,0,1)`, `cubic-bezier(.22,1.15,.36,1)` transitions and links `Home · Platform · For companies · About · Log in`.
-2. **Hero Stage & Focal Lead (<section.hero1_wrap> — `AI travel agent`)**:
-   - DOM & Selectors: Landmark `<section class="hero1_wrap u-gradient-bg-1">` presenting display lead `AI travel agent` and copy excerpt *"Opens in a new window"* over `#b93fce` canvas and `#f6f6f6` ink.
-   - Responsive Contract: Hero stage (`1440×11035px` desktop / `390×2400px` mobile) sets `#b93fce` background with `#f6f6f6` headline `AI travel agent`.
-3. **Primary Showcase & Content Grid (<section.feature1_wrap> — `The last travel agent you’ll ever `)**:
-   - DOM & Selectors: Landmark `<section class="feature1_wrap u-background-3">` rendering section `The last travel agent you’ll ever need.` with copy *"Opens an external website"*, asset references (`cdn.prod.website-files.com`, `serko-ai.webflow.shared.96cab25cb...`, `serko-ai.webflow.6aa12b65e6dd0b96...`, `gtm.js`), and grid rule `strong { font-weight:700 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.feature1_wrap> — `The last travel agent you’ll ever `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max-width--main)`, `gap: var(--_spacing---space--2)`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.feature2_wrap> — `Stress-free cancellation`)**:
-   - DOM & Selectors: Landmark `<section class="feature2_wrap">` framing `Stress-free cancellation` and `Book like it's refundable. Because it is.` (*"Opens an external website in a new window"*) with `#f13931` surface cards, `#f6f6f6` accents, and `blockquote { border-style:none;padding:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.feature2_wrap> — `Stress-free cancellation`)` uses `var(--radius--medium)`, `var(--radius--small)`, `.75rem`, `var(--radius--main)` radii, `#f6f6f6` highlights, and assets (cdn.prod.website-files.com, serko-ai.webflow.shared.96cab25cb..., serko-ai.webflow.6aa12b65e6dd0b96...).
+   - DOM & Selectors: Landmark `<header class="nav1_header">` (`1440x75px`) hosting `Serko.ai · AI Travel Agent for Busin` navigation (`Home · Platform · For companies · About · Sign up free`), DOM attributes (`data-wf-domain="www.serko.ai"`, `data-wf-page="6aa12b65e6dd0b96a2a83430"`, `data-wf-site="6aa12b65e6dd0b96a2a8345b"`, `data-wf-intellimize-customer-id="117114932"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav1_header> — `www-serko-ai`)` (`www-serko-ai`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(0.525,0,0,1)`, `cubic-bezier(.22,1.15,.36,1)` transitions and links `Home · Platform · For companies · About · Sign up free`.
+2. **Hero Stage & Focal Lead (<section.hero1_wrap> — `AI travel agent for business`)**:
+   - DOM & Selectors: Landmark `<section class="hero1_wrap u-gradient-bg-1">` presenting display lead `AI travel agent for business` and copy excerpt *"Serko learns how you like to travel, finds the best flights and h"* over `#e8f3fe` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e8f3fe` background with `#000000` headline `AI travel agent for business`.
+3. **Primary Showcase & Content Grid (<section.col3_wrap> — `The last travel agent you’ll ever `)**:
+   - DOM & Selectors: Landmark `<section class="col3_wrap">` rendering section `The last travel agent you’ll ever need.` with copy *"Venue, location, address..."*, asset references (`cdn.prod.website-files.com`, `serko-ai.webflow.shared.96cab25cb...`, `serko-ai.webflow.6aa12b65e6dd0b96...`, `0.8.77`), and grid rule `summary { display:block }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.col3_wrap> — `The last travel agent you’ll ever `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.feature1_wrap> — `How Serko.ai works`)**:
+   - DOM & Selectors: Landmark `<section class="feature1_wrap u-background-3">` framing `How Serko.ai works` and `Business travel, booked in one chat.` (*"Trip details and preferences"*) with `#ebebeb` surface cards, `#0082f3` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.feature1_wrap> — `How Serko.ai works`)` uses `3px`, `100%`, `50%`, `var(--radius--medium)` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, serko-ai.webflow.shared.96cab25cb..., serko-ai.webflow.6aa12b65e6dd0b96...).
 5. **Colophon & Global Directory Footer (<footer.osano-cm-window> — `https://www.serko.ai`)**:
-   - DOM & Selectors: Landmark `<footer class="osano-cm-window">` anchoring `Serko.ai · AI Travel Agent` footer links (`Home · Platform · For companies · About · Log in`), copy *"<!---->Close this consent banner<!---->"*, and `#c0f2b5` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.osano-cm-window> — `https://www.serko.ai`)` aligns to `var(--max-width--main)` extracted from `www-serko-ai` stylesheet with `1.5rem` lateral canvas padding with `var(--_spacing---space--2)` grid gap and attributes (data-wf-domain="www.serko.ai", data-wf-page="6aa12b65e6dd0b96a2a83430", data-wf-site="6aa12b65e6dd0b96a2a8345b").
+   - DOM & Selectors: Landmark `<footer class="osano-cm-window">` anchoring `Serko.ai · AI Travel Agent for B` footer links (`Home · Platform · For companies · About · Sign up free`), copy *"I've got a client meeting in New York Friday , but I wan"*, and `#d8d8d8` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.osano-cm-window> — `https://www.serko.ai`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.serko.ai", data-wf-page="6aa12b65e6dd0b96a2a83430", data-wf-site="6aa12b65e6dd0b96a2a8345b").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Opens in a new window"*
-- Copy Excerpt 2: *"Opens an external website"*
-- Copy Excerpt 3: *"Opens an external website in a new window"*
-- Copy Excerpt 4: *"<!---->Close this consent banner<!---->"*
+- Copy Excerpt 1: *"Serko learns how you like to travel, finds the best flights and hotels for you to..."*
+- Copy Excerpt 2: *"Venue, location, address..."*
+- Copy Excerpt 3: *"Trip details and preferences"*
+- Copy Excerpt 4: *"I've got a client meeting in New York Friday , but I wan"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.525,0,0,1)`, `cubic-bezier(.22,1.15,.36,1)`
 - **Extracted Stylesheet Rules (`www-serko-ai`)**:
-- `img { object-fit:cover;width:100%;max-width:100% }`
+- `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`
+- `summary { display:block }`
+- `video { vertical-align:baseline;display:inline-block }`
+- `template { display:none }`
 - `strong { font-weight:700 }`
-- `blockquote { border-style:none;padding:0 }`
-- `figure { margin-bottom:0 }`
-- `.u-rich-text p { margin-top:var(--_text-style---margin-top);margin-bottom:var(--_text-sty... }`
 - **Per-Selector Transition Rules**:
 - **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `www-serko-ai` stylesheet.
 - **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `www-serko-ai` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-serko-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.525,0,0,1)`)**: Governs interactive state transitions across `<header.nav1_header>` and `<section.feature1_wrap>`.
+- **Extracted Easing Curve (`cubic-bezier(0.525,0,0,1)`)**: Governs interactive state transitions across `<header.nav1_header>` and `<section.col3_wrap>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

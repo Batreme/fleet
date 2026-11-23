@@ -1,61 +1,66 @@
 ---
 title: "UI Prompt Blueprint: grids03-obys-agency"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "grids03-obys-agency"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1e1`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#000000`)"
 ---
 
 # UI Design System & Master Generation Blueprint: grids03-obys-agency
 
 > **Grids — DES Season 03** (https://grids03.obys.agency/) — Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 202...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Grids — DES Season 03** (`https://grids03.obys.agency/`). Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 202...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1e1`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#000000`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-bg)` in `:root`) paired with `#000` primary typography and `#e1e1e1` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Obys Sans` for display copy (`G r i d s S 0 3`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `260px` container bounds (`gap: 0px (flush layout)`, padding `4px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Obys Sans` for display copy (`G R I D S S 0 3`) with `Obys Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `4px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `260px` extracted from `grids03-obys-agency` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `0px (flush layout)` grid gap.
 - **Border Radius Scale**: `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 260px`, `gap: 0px (flush layout)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding.
-- **Extracted CSS Media Queries**: no `@media` queries in static stylesheet (fluid viewport scaling).
+- **Extracted CSS Media Queries**: no `@media` queries in captured stylesheet (fluid viewport scaling).
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-bg)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--color-ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#dedfd9` | `var(--color-ground)` in `:root` |
-| **Interactive Accent / Highlight** | `#e1e1e1` | `var(--color-rule)` in `:root` |
-| **Secondary / Muted Copy** | `#d9d9d9` | `.grid-entry__picture { background: #d9d9d9 }` |
-| **Structural Hairline Border** | `#b2b2b2` | `.about__line--quiet i { color: #b2b2b2 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#d9d9d9` | `.grid-entry__picture { background: #d9d9d9 }` |
+| **Interactive Accent / Highlight** | `#000000` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#b2b2b2` | `.about__line--quiet i { color: #b2b2b2 }` |
+| **Structural Hairline Border** | `#e1e1e1` | `var(--color-rule)` in `:root` |
+| **Variable Token (`--color-ground`)** | `#dedfd9` | `var(--color-ground)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +88,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1
 
 ### Font Family Stacks
 - **Display Typography**: `Obys Sans`.
-- **Primary Body Stack**: `Helvetica Neue`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Obys Sans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`).
-- **Metadata & Navigation Labels**: CSS variables `--caption-size: 90px`, `--small-size: 12px`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 90px`, `line-height: 108px`, `font-weight: 400`, `letter-spacing: -5.4px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 90px`, `line-height: 108px`, `font-weight: 400`, `letter-spacing: -5.4px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 14px`, `font-weight: 400`, `letter-spacing: -0.24px`); CSS variables `--caption-size: 90px`, `--small-size: 12px`.
 
 ---
 
@@ -103,47 +108,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1
 - **Selector `.intro__link`**: `transition: opacity .3s` extracted from `grids03-obys-agency` stylesheet.
 - **Selector `.about__copy .about__link`**: `transition: opacity .3s` extracted from `grids03-obys-agency` stylesheet.
 - **Selector `.about__row`**: `transition: opacity .35s` extracted from `grids03-obys-agency` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Grids — DES Season 03                      │
 │ ====================================================================== │
-│ [ <header.lenis>           | Grids · More About Season · Enroll Now ]  │
+│ [ <header.is-up> (1440px)             | Grids · More About Season ·  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.intro>                                      |   │
-│ | H1: G r i d s S 0 3                                              |   │
-│ | Substrate: #fff       | Ink: #000       | Accent: #e1e1e1        |   │
+│ | HERO STAGE: <section.intro> (w=1440px)                             | │
+│ | H1: G R I D S S 0 3                                                | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #000000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.grid-block>      ) max-w: 260px          |   │
+│ | SHOWCASE GRID (<section.grid-block>) max-w: 1440px                 | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | 4 - C o l u m n              |  | G r i d                      | | │
+│ | | G r i d s S 0 3              |  | 4 - C o l u m n              | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (f) | │
-│ | [<header.lenis>] -> [<section.intro>] -> [<section.grid-bloc] |      │
+│ | DETAIL MODULE (<section.story>) — G r i d                          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.preloader>    ) | https://grids03.obys.agency/       │
+│ [ FOOTER (<footer.preloader__g) | https://grids03.obys.agency/         │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (flu)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.is-up>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.intro>) — 390px Vertical Lead                 | │
+│ | H1: G R I D S S 0 3                                                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.grid-block>) — 1-Col Stack                | │
+│ | [ Item 1: G r i d s S 0 3                                        ] | │
+│ | [ Item 2: 4 - C o l u m n                                        ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.story>) — 1-Col (G r i d)                   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.preloader__g) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.lenis> — `grids03-obys-agency`)**:
-   - Landmark `<header class="lenis">` hosting `Grids — DES Season 03` navigation (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), DOM attributes (`data-preloader`, `data-ground`, `data-bar`, `data-letter="G"`), and stylesheet rule `body { overflow-x:hidden }`.
-2. **Hero Stage & Focal Lead (<section.intro> — `G r i d s S 0 3`)**:
-   - Landmark `<section class="intro">` presenting display lead `G r i d s S 0 3` and copy excerpt *"Design Education Series® Obys"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.grid-block> — `4 - C o l u m n`)**:
-   - Landmark `<section class="grid-block">` rendering section `4 - C o l u m n` with copy *"Grids — DES Season 03. 17 lectures."*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-180.png`, `ObysSans-Regular.woff2`), and grid rule `.stage { width:100%;height:100%;z-index:var(--layer-gl);pointer-events:none;posit... }`.
-4. **Interactive Detail & Feature Matrix (<section.story> — `G r i d`)**:
-   - Landmark `<section class="story">` framing `G r i d` and `1 0 p x` (*"4+ hours on grids and composition."*) with `#dedfd9` surface cards, `#e1e1e1` accents, and `.preloader { z-index:var(--layer-preloader);pointer-events:none;position:fixed;inset:... }`.
-5. **Colophon & Global Directory Footer (<footer.preloader> — `https://grids03.obys.agency/`)**:
-   - Landmark `<footer class="preloader">` anchoring `Grids — DES Season 03` footer links (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), copy *"About Grids, Season"*, and `#b2b2b2` structural dividers.
+1. **Brand Header & Navigation Bar (<header.is-up> — `grids03-obys-agency`)**:
+   - Landmark `<header class="is-up">` (`1440px`) hosting `Grids — DES Season 03` navigation (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), DOM attributes (`data-preloader`, `data-ground`, `data-bar`, `data-letter="G"`), and stylesheet rule `body { overflow-x:hidden }`.
+2. **Hero Stage & Focal Lead (<section.intro> — `G R I D S S 0 3`)**:
+   - Landmark `<section class="intro">` presenting display lead `G R I D S S 0 3` and copy excerpt *"Design Education Series®Obys"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.grid-block> — `G r i d s S 0 3`)**:
+   - Landmark `<section class="grid-block">` rendering section `G r i d s S 0 3` with copy *"Design Education Series® Obys"*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-180.png`, `ObysSans-Regular.woff2`), and grid rule `.stage { width:100%;height:100%;z-index:var(--layer-gl);pointer-events:none;posit... }`.
+4. **Interactive Detail & Feature Matrix (<section.story> — `4 - C o l u m n`)**:
+   - Landmark `<section class="story">` framing `4 - C o l u m n` and `G r i d` (*"Grids — DES Season 03. 17 lectures."*) with `#d9d9d9` surface cards, `#000000` accents, and `.preloader { z-index:var(--layer-preloader);pointer-events:none;position:fixed;inset:... }`.
+5. **Colophon & Global Directory Footer (<footer.preloader__ground> — `https://grids03.obys.agency/`)**:
+   - Landmark `<footer class="preloader__ground">` anchoring `Grids — DES Season 03` footer links (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), copy *"4+ hours on grids and composition."*, and `#e1e1e1` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `grids03-obys-agency` (**Grids — DES Season 03** — `https://grids03.obys.agency/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#e1e1e1`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#000000`).
 - **Identity & Domain Context**: Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 202...
-- **Primary Substrate**: `#fff` (`var(--color-bg)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#e1e1e1`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#000000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-bg)` in `:root`) paired with `#000` primary typography and `#e1e1e1` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Obys Sans` for display copy (`G r i d s S 0 3`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `260px` container bounds (`gap: 0px (flush layout)`, padding `4px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Obys Sans` for display copy (`G R I D S S 0 3`) with `Obys Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `4px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `grids03-obys-agency` in your global stylesheet:
 
 :root {
-  /* Grids — DES Season 03 (grids03-obys-agency) — Ground-Truth Extracted CSS Variables */
+  /* Grids — DES Season 03 (grids03-obys-agency) — Live-Grounded CSS Variables */
   --color-bg: #fff; /* Canvas / Surface Token (grids03-obys-agency) */
   --color-ink: #000; /* Typography Ink Token (grids03-obys-agency) */
   --color-ground: #dedfd9; /* Brand / Palette Token (grids03-obys-agency) */
@@ -188,55 +212,56 @@ Declare and consume these exact custom properties extracted from `grids03-obys-a
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--color-bg)` in `:root`
-- **Primary Typography Ink**: `#000` — grounded in `var(--color-ink)` in `:root`
-- **Elevated Surface / Card Substrate**: `#dedfd9` — grounded in `var(--color-ground)` in `:root`
-- **Interactive Accent / Highlight**: `#e1e1e1` — grounded in `var(--color-rule)` in `:root`
-- **Secondary / Muted Copy**: `#d9d9d9` — grounded in `.grid-entry__picture { background: #d9d9d9 }`
-- **Structural Hairline Border**: `#b2b2b2` — grounded in `.about__line--quiet i { color: #b2b2b2 }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#d9d9d9` — grounded in `.grid-entry__picture { background: #d9d9d9 }`
+- **Interactive Accent / Highlight**: `#000000` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#b2b2b2` — grounded in `.about__line--quiet i { color: #b2b2b2 }`
+- **Structural Hairline Border**: `#e1e1e1` — grounded in `var(--color-rule)` in `:root`
+- **Variable Token (`--color-ground`)**: `#dedfd9` — grounded in `var(--color-ground)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `260px` extracted from `grids03-obys-agency` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `4px` lateral canvas padding with `0px (flush layout)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 260px`, `gap: 0px (flush layout)`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
-- **Media Queries**: no `@media` queries in static stylesheet (fluid viewport scaling)
+- **Media Queries**: no `@media` queries in captured stylesheet (fluid viewport scaling)
 - **Corner Radii**: `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Obys Sans`
-- **Body Font Stack**: `Helvetica Neue`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--small-size)`, `var(--caption-size)`, `var(--size)`, `var(--about-size)`, `12px`)
-- **Metadata & Index Rule**: CSS variables `--caption-size: 90px`, `--small-size: 12px`
+- **Body Font Stack**: `Obys Sans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 90px`, `line-height: 108px`, `font-weight: 400`, `letter-spacing: -5.4px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 90px`, `line-height: 108px`, `font-weight: 400`, `letter-spacing: -5.4px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 14px`, `font-weight: 400`, `letter-spacing: -0.24px`); CSS variables `--caption-size: 90px`, `--small-size: 12px`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `grids03-obys-agency` (`Grids — DES Season 03`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.lenis> — `grids03-obys-agency`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` hosting `Grids — DES Season 03` navigation (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), DOM attributes (`data-preloader`, `data-ground`, `data-bar`, `data-letter="G"`), and stylesheet rule `body { overflow-x:hidden }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `grids03-obys-agency`)` (`grids03-obys-agency`) adapts across no `@media` queries in static stylesheet (fluid viewport scaling) with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Grids · More About Season · Enroll Now · Learn for Free · Obys`.
-2. **Hero Stage & Focal Lead (<section.intro> — `G r i d s S 0 3`)**:
-   - DOM & Selectors: Landmark `<section class="intro">` presenting display lead `G r i d s S 0 3` and copy excerpt *"Design Education Series® Obys"* over `#fff` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff` background with `#000` headline `G r i d s S 0 3`.
-3. **Primary Showcase & Content Grid (<section.grid-block> — `4 - C o l u m n`)**:
-   - DOM & Selectors: Landmark `<section class="grid-block">` rendering section `4 - C o l u m n` with copy *"Grids — DES Season 03. 17 lectures."*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-180.png`, `ObysSans-Regular.woff2`), and grid rule `.stage { width:100%;height:100%;z-index:var(--layer-gl);pointer-events:none;posit... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.grid-block> — `4 - C o l u m n`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 260px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.story> — `G r i d`)**:
-   - DOM & Selectors: Landmark `<section class="story">` framing `G r i d` and `1 0 p x` (*"4+ hours on grids and composition."*) with `#dedfd9` surface cards, `#e1e1e1` accents, and `.preloader { z-index:var(--layer-preloader);pointer-events:none;position:fixed;inset:... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.story> — `G r i d`)` uses `50%` radii, `#e1e1e1` highlights, and assets (favicon.svg, favicon-32.png, favicon-180.png).
-5. **Colophon & Global Directory Footer (<footer.preloader> — `https://grids03.obys.agency/`)**:
-   - DOM & Selectors: Landmark `<footer class="preloader">` anchoring `Grids — DES Season 03` footer links (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), copy *"About Grids, Season"*, and `#b2b2b2` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.preloader> — `https://grids03.obys.agency/`)` aligns to `260px` extracted from `grids03-obys-agency` stylesheet with `4px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-preloader, data-ground, data-bar).
+1. **Brand Header & Navigation Bar (<header.is-up> — `grids03-obys-agency`)**:
+   - DOM & Selectors: Landmark `<header class="is-up">` (`1440px`) hosting `Grids — DES Season 03` navigation (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), DOM attributes (`data-preloader`, `data-ground`, `data-bar`, `data-letter="G"`), and stylesheet rule `body { overflow-x:hidden }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.is-up> — `grids03-obys-agency`)` (`grids03-obys-agency`) adapts across no `@media` queries in captured stylesheet (fluid viewport scaling) with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Grids · More About Season · Enroll Now · Learn for Free · Obys`.
+2. **Hero Stage & Focal Lead (<section.intro> — `G R I D S S 0 3`)**:
+   - DOM & Selectors: Landmark `<section class="intro">` presenting display lead `G R I D S S 0 3` and copy excerpt *"Design Education Series®Obys"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×844px` mobile) sets `#ffffff` background with `#000000` headline `G R I D S S 0 3`.
+3. **Primary Showcase & Content Grid (<section.grid-block> — `G r i d s S 0 3`)**:
+   - DOM & Selectors: Landmark `<section class="grid-block">` rendering section `G r i d s S 0 3` with copy *"Design Education Series® Obys"*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-180.png`, `ObysSans-Regular.woff2`), and grid rule `.stage { width:100%;height:100%;z-index:var(--layer-gl);pointer-events:none;posit... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.grid-block> — `G r i d s S 0 3`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.story> — `4 - C o l u m n`)**:
+   - DOM & Selectors: Landmark `<section class="story">` framing `4 - C o l u m n` and `G r i d` (*"Grids — DES Season 03. 17 lectures."*) with `#d9d9d9` surface cards, `#000000` accents, and `.preloader { z-index:var(--layer-preloader);pointer-events:none;position:fixed;inset:... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.story> — `4 - C o l u m n`)` uses `50%` radii, `#000000` highlights, and assets (favicon.svg, favicon-32.png, favicon-180.png).
+5. **Colophon & Global Directory Footer (<footer.preloader__ground> — `https://grids03.obys.agency/`)**:
+   - DOM & Selectors: Landmark `<footer class="preloader__ground">` anchoring `Grids — DES Season 03` footer links (`Grids · More About Season · Enroll Now · Learn for Free · Obys`), copy *"4+ hours on grids and composition."*, and `#e1e1e1` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.preloader__ground> — `https://grids03.obys.agency/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `4px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-preloader, data-ground, data-bar).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Design Education Series® Obys"*
-- Copy Excerpt 2: *"Grids — DES Season 03. 17 lectures."*
-- Copy Excerpt 3: *"4+ hours on grids and composition."*
-- Copy Excerpt 4: *"About Grids, Season"*
+- Copy Excerpt 1: *"Design Education Series®Obys"*
+- Copy Excerpt 2: *"Design Education Series® Obys"*
+- Copy Excerpt 3: *"Grids — DES Season 03. 17 lectures."*
+- Copy Excerpt 4: *"4+ hours on grids and composition."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
@@ -250,7 +275,7 @@ Scaffold `grids03-obys-agency` (`Grids — DES Season 03`) with these exact stru
 - **Selector `.intro__link`**: `transition: opacity .3s` extracted from `grids03-obys-agency` stylesheet.
 - **Selector `.about__copy .about__link`**: `transition: opacity .3s` extracted from `grids03-obys-agency` stylesheet.
 - **Selector `.about__row`**: `transition: opacity .35s` extracted from `grids03-obys-agency` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

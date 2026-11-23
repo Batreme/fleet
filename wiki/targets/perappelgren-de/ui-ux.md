@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: perappelgren-de"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: perappelgren-de
 
 ## Overview & Design Identity
 - **Target**: `perappelgren-de` (**Per Appelgren**)
 - **Production URL**: [https://perappelgren.de/](https://perappelgren.de/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ffffff`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#213547`)
 - **Summary**: Per Appelgren is a Paris and Berlin based photographer working across fashion, beauty, editorial, and commercial image-making.
-- **Total Clean CSS Variables Extracted**: `30` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `neueMontreal`
-- **Body Font Stack**: `neueMontreal Fallback`
+- **Body Font Stack**: `neueMontreal`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **Metadata & Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **Hero Display (`H1`)**: observed font-size ladder: `22px`, `16px`, `29px`, `10px`, `1em`
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 22px`, `line-height: 28px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0000` | `textarea { background-color: #0000 }` |
-| **Interactive Accent / Highlight** | `#ffffff` | `.border-white { border-color: white }` (`#ffffff`) |
-| **Secondary / Muted Copy** | `#fffc` | `80 { border-color: #fffc }` |
-| **Structural Hairline Border** | `#000000` | `.bg-black { background-color: black }` (`#000000`) |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0f0f15` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#1f1f2b` | `:hover { background-color: #1f1f2b }` |
+| **Interactive Accent / Highlight** | `#213547` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#33333d` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#33333d` | hairline divider derived from live computed `p` `color` (`computed_styles.json`) |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
 
 ---
 
@@ -56,12 +68,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.home-nav> — `perappelgren-de`)**:
-   - Landmark `<nav class="home-nav fixed">` hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Studio`)**:
-   - Landmark `<section class="relative w-full">` presenting display lead `Studio` and copy excerpt *"CASABLANCA PRE-FALL ´26 CAMPAIGN"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `Office`)**:
-   - Landmark `<section class="relative w-full">` rendering section `Office` with copy *"ARCHIVE A R C H I V E"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Represented in Europe`)**:
-   - Landmark `<section class="relative h-auto">` framing `Represented in Europe` and `CONTACT C O N T A C T` (*"CONTACT C O N T A C T"*) with `#0000` surface cards, `#ffffff` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://perappelgren.de/`)**:
-   - Landmark `<footer class="relative z-42">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"Hi! I am Per! I'm a German-Swedish photographer based betwee"*, and `#000000` structural dividers.
+   - Landmark `<nav class="home-nav top-0">` (`1440x40px`) hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
+2. **Hero Stage & Focal Lead (<section.relative> — `Per Appelgren`)**:
+   - Landmark `<section class="relative w-full">` presenting display lead `Per Appelgren` and copy excerpt *"Hi! I am Per! I'm a German-Swedish photographer based between Par"* over `#ffffff` canvas and `#0f0f15` ink.
+3. **Primary Showcase & Content Grid (<section.w-full> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="relative w-full">` rendering section `Featured Work & Interactive Showcase` with copy *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.h-auto> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="h-auto relative">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"ARCHIVE A R C H I V E"*) with `#1f1f2b` surface cards, `#213547` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
+5. **Colophon & Global Directory Footer (<footer.z-42> — `https://perappelgren.de/`)**:
+   - Landmark `<footer class="z-42 relative">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"CONTACT C O N T A C T"*, and `#33333d` structural dividers.

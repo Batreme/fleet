@@ -1,67 +1,78 @@
+---
+title: "UI & UX Architecture: jozue-fr"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: jozue-fr
 
 ## Overview & Design Identity
 - **Target**: `jozue-fr` (**Josué Pichot, freelance art director and photographer in Paris**)
 - **Production URL**: [https://jozue.fr](https://jozue.fr)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111319` canvas, `#fff` ink, `#dcdbdb` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#111319` ink, `#f73326` accent)
 - **Summary**: Paris-based freelance art director, photographer, director and product designer. 15+ years in advertising and digital. Available in-house...
-- **Total Clean CSS Variables Extracted**: `104` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `103` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Neue Haas Grotesk Display`
-- **Body Font Stack**: `Helvetica Neue`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.5rem`, `4.2rem`, `62.5%`, `1.6rem`, `1.5rem`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.5rem`, `4.2rem`, `62.5%`, `1.6rem`, `1.5rem`)
-- **Body Copy**: rule `p` (`font-size: 2.3rem`, `line-height: 1.22`, `letter-spacing: .03em`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.5rem`, `4.2rem`, `62.5%`, `1.6rem`, `1.5rem`)
+- **Body Font Stack**: `Neue Haas Grotesk Display`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 170px`, `line-height: 125.8px`, `font-weight: 700`, `letter-spacing: -5.1px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 170px`, `line-height: 125.8px`, `font-weight: 700`, `letter-spacing: -5.1px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); rule `p` (`font-size: 2.3rem`, `line-height: 1.22`, `letter-spacing: .03em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#111319` | `var(--pill-bg)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--roll-from)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#050507` | `var(--intro-signature-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#dcdbdb` | `var(--home-j-color)` in `:root` |
-| **Secondary / Muted Copy** | `#f73326` | `var(--hint-color)` in `:root` |
-| **Structural Hairline Border** | `#0000` | `button { background-color: #0000 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#111319` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#dcdcd9` | `.scroll-pagination { background-color: #dcdcd9 }` |
+| **Interactive Accent / Highlight** | `#f73326` | `.button-selected:hover { color: #f73326 }` |
+| **Secondary / Muted Copy** | `#999999` | `.lightbox { color: #999999 }` |
+| **Structural Hairline Border** | `#8c8c8c` | `.button-slide:hover path { stroke: #8c8c8c }` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--paletteCount` | `5` | Brand / Palette Token |
-| `--title-delay` | `var(--home-title-delay)` | Motion / Easing Token |
-| `--island-side` | `1.6rem` | Dimension / Scale Token |
-| `--island-bottom` | `calc(1.6rem + env(safe-area-inset-bottom,0px))` | Dimension / Scale Token |
-| `--island-bar` | `5.2rem` | Dimension / Scale Token |
-| `--island-r` | `2.6rem` | Dimension / Scale Token |
-| `--island-fs` | `1.5rem` | Dimension / Scale Token |
-| `--island-count` | `3.6rem` | Dimension / Scale Token |
-| `--signature-word-y` | `-35.8%` | Dimension / Scale Token |
-| `--pill-bg` | `#111319` | Canvas / Surface Token |
-| `--roll-from` | `#fff` | Color / Atmospheric Token |
-| `--roll-to` | `#fff` | Color / Atmospheric Token |
-| `--roll-ink` | `var(--pill-bg,#111319)` | Typography Ink Token |
-| `--pagination-off` | `.25` | Design System Custom Token |
-| `--pagination-dot` | `.4` | Design System Custom Token |
-| `--pagination-bar` | `2.8` | Design System Custom Token |
+| `--motion-fast` | `200ms` | Motion / Easing Token |
+| `--motion-base` | `300ms` | Motion / Easing Token |
+| `--motion-slow` | `1000ms` | Motion / Easing Token |
+| `--ease-default` | `ease` | Motion / Easing Token |
+| `--ease-in` | `ease-in` | Motion / Easing Token |
+| `--ease-in-out` | `ease-in-out` | Motion / Easing Token |
+| `--transition-fade-in` | `300ms` | Motion / Easing Token |
+| `--transition-hold` | `1000ms` | Motion / Easing Token |
+| `--transition-fade-out` | `300ms` | Motion / Easing Token |
+| `--dur-micro` | `160ms` | Motion / Timing Token |
+| `--dur-base` | `380ms` | Motion / Timing Token |
+| `--dur-move` | `720ms` | Motion / Timing Token |
+| `--dur-cine` | `1400ms` | Motion / Timing Token |
+| `--ease-enter` | `cubic-bezier(0.22,0.61,0.36,1)` | Motion / Easing Token |
+| `--ease-exit` | `cubic-bezier(0.4,0,1,1)` | Motion / Easing Token |
+| `--ease-move` | `cubic-bezier(0.4,0,0.2,1)` | Motion / Easing Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.menu> — `jozue-fr`)**:
-   - Landmark `<nav class="menu menu--site">` hosting `Josué Pichot, freelance art director` navigation (`About. · Works. · Contact. · Français.`), DOM attributes (`data-intro="done"`, `data-color="111319"`, `data-color="F73326"`, `data-title="About"`), and stylesheet rule `root { --paletteCount:5 }`.
-2. **Hero Stage & Focal Lead (<article.homepage> — `a r t d i r e c t o r + p h o t o `)**:
-   - Landmark `<article class="homepage">` presenting display lead `a r t d i r e c t o r + p h o t o g r a p h e r c...` and copy excerpt *"English. Français."* over `#111319` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.js-infos> — `selected works 18`)**:
-   - Landmark `<section class="js-infos homepage__infos">` rendering section `selected works 18` with copy *"a r t d i r e c t o r + p h o t o g r a p h e r"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `jozue-logo-full.DpMZCk-F.svg`), and grid rule `.stop { overflow:hidden }`.
-4. **Interactive Detail & Feature Matrix (<section.wrapper> — `let's talk`)**:
-   - Landmark `<section class="wrapper wrapper--infos">` framing `let's talk` and `Awards & Archives` (*"a r t d i r e c t o r"*) with `#050507` surface cards, `#dcdbdb` accents, and `.transi { opacity:0;z-index:-1;width:100vw;height:100vh;display:flex;position:fixe... }`.
-5. **Colophon & Global Directory Footer (<footer.transi> — `https://jozue.fr`)**:
-   - Landmark `<footer class="transi">` anchoring `Josué Pichot, freelance art dire` footer links (`About. · Works. · Contact. · Français.`), copy *"+ p h o t o g r a p h e r"*, and `#0000` structural dividers.
+   - Landmark `<nav class="menu menu--site">` (`1440x900px`) hosting `Josué Pichot, freelance art director` navigation (`About. · Works. · Contact. · Français.`), DOM attributes (`data-intro="full"`, `data-period="917"`, `data-written="561"`, `data-fade="799"`), and stylesheet rule `.project-hero-image--drawn { --reveal-duration:.9s;--reveal-distance:32px }`.
+2. **Hero Stage & Focal Lead (<article.homepage> — `art director + photo grapher`)**:
+   - Landmark `<article class="homepage">` presenting display lead `art director + photo grapher` and copy excerpt *"English. Français."* over `#ffffff` canvas and `#111319` ink.
+3. **Primary Showcase & Content Grid (<section.js-infos> — `a r t d i r e c t o r + p h o t o `)**:
+   - Landmark `<section class="js-infos homepage__infos">` rendering section `a r t d i r e c t o r + p h o t o g r a p h e r c...` with copy *"a r t d i r e c t o r + p h o t o g r a p h e r"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `jozue-logo-full.DpMZCk-F.svg`), and grid rule `.is-in { opacity:1;transform:none }`.
+4. **Interactive Detail & Feature Matrix (<section.wrapper> — `selected works 18`)**:
+   - Landmark `<section class="wrapper wrapper--infos">` framing `selected works 18` and `Awards & Archives` (*"a r t d i r e c t o r"*) with `#dcdcd9` surface cards, `#f73326` accents, and `.panel-host { z-index:200;pointer-events:none;position:fixed;top:0;bottom:0;left:0;rig... }`.
+5. **Colophon & Global Directory Footer (<footer.main> — `https://jozue.fr`)**:
+   - Landmark `<footer class="main">` anchoring `Josué Pichot, freelance art dire` footer links (`About. · Works. · Contact. · Français.`), copy *"+ p h o t o g r a p h e r"*, and `#8c8c8c` structural dividers.

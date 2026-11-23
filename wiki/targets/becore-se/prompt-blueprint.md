@@ -1,96 +1,100 @@
 ---
 title: "UI Prompt Blueprint: becore-se"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "becore-se"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `#fff` ink, `#121212` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#007bff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: becore-se
 
 > **Becore** (https://becore.se/) — Experience the latest in activewear from our new Becore collection
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Becore** (`https://becore.se/`). Experience the latest in activewear from our new Becore collection
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `#fff` ink, `#121212` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#007bff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1990c6` (`.shopify-payment-button__button... { background-color: #1990c6 }`) paired with `#fff` primary typography and `#121212` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Roboto` for display copy (`Cookie consent`) with `Cabin` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--drawer-max-width)` container bounds (`gap: .75rem`, padding `.875rem`) with `cubic-bezier(.19,1,.22,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#007bff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Cabin` for display copy (`Becore`) with `Cabin` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `78rem` container bounds (`gap: .75rem`, padding `.875rem`) with `cubic-bezier(.19,1,.22,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×6489px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `var(--drawer-max-width)` extracted from `becore-se` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `78rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `.875rem` lateral canvas padding with `.75rem` grid gap.
-- **Border Radius Scale**: `4px`, `var(--button-border-radius)`, `100%`, `20px`.
+- **Border Radius Scale**: `var(--button-border-radius)`, `100%`, `20px`, `var(--rounded-full)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--drawer-max-width)`, `gap: .75rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78rem`, `gap: .75rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.875rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)`.
+- **Extracted CSS Media Queries**: `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)`, `@media screen and (min-width:1000px)`, `@media screen and (min-width:1150px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#1990c6` | `.shopify-payment-button__button... { background-color: #1990c6 }` |
-| **Primary Typography Ink** | `#0000` | `pify-payment-button__button.but... { color: #0000 }` |
-| **Elevated Surface / Card Substrate** | `#fff` | `on.loading>.loading-overlay__sp... { stroke: #fff }` |
-| **Interactive Accent / Highlight** | `#121212` | `.shopify-payment-button__button... { stroke: #121212 }` |
-| **Secondary / Muted Copy** | `#1a1a1a` | `.toast__message { background: #1a1a1a }` |
-| **Structural Hairline Border** | `#e51c00` | `.toast__message--error { background: #e51c00 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#56b6c2` | `.spinner>div { background-color: #56b6c2 }` |
+| **Interactive Accent / Highlight** | `#007bff` | `.btn-primary { background-color: #007bff }` |
+| **Secondary / Muted Copy** | `#392d2b` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#007bff` | `.btn-primary { border-color: #007bff }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--border-color` | `var(--text-color) / .6` | Brand / Palette Token |
-| `--accordion-block-padding` | `.875rem` | Layout / Spatial Grid Token |
-| `--accordion-inline-padding` | `0` | Layout / Spatial Grid Token |
-| `--button-padding-block` | `.75rem` | Layout / Spatial Grid Token |
-| `--button-padding-inline` | `1.5rem` | Layout / Spatial Grid Token |
-| `--button-background` | `var(--button-background-primary)` | Canvas / Surface Token |
-| `--button-text-color` | `var(--button-text-primary)` | Typography Ink Token |
-| `--button-border-color` | `0 0 0 / 0` | Brand / Palette Token |
-| `--glowing-shape-width` | `min(40px, 60%)` | Layout / Spatial Grid Token |
-| `--button-size` | `1.75rem` | Layout / Spatial Grid Token |
-| `--content-box-spacing` | `max(1.5rem, var(--container-gutter))` | Layout / Spatial Grid Token |
-| `--scroll-marker-group-gap` | `.3125rem .75rem` | Layout / Spatial Grid Token |
-| `--scroll-marker-size` | `.375rem` | Layout / Spatial Grid Token |
-| `--scroll-marker-width` | `.5rem` | Layout / Spatial Grid Token |
-| `--scroll-marker-height` | `1px` | Layout / Spatial Grid Token |
-| `--scroll-marker-group-justify-content` | `start` | Design System Custom Token |
+| `--container-max-width` | `100%` | Layout / Spatial Grid Token |
+| `--container-gutter` | `1.25rem` | Layout / Spatial Grid Token |
+| `--section-vertical-spacing` | `2rem` | Layout / Spatial Grid Token |
+| `--section-stack-row-gap` | `1.5rem` | Layout / Spatial Grid Token |
+| `--form-gap` | `1rem` | Layout / Spatial Grid Token |
+| `--fieldset-gap` | `0.5rem` | Layout / Spatial Grid Token |
+| `--form-control-gap` | `0.5rem` | Layout / Spatial Grid Token |
+| `--checkbox-control-gap` | `0.75rem` | Layout / Spatial Grid Token |
+| `--input-padding-block` | `0.65rem` | Layout / Spatial Grid Token |
+| `--input-padding-inline` | `1rem` | Layout / Spatial Grid Token |
+| `--checkbox-size` | `0.875rem` | Layout / Spatial Grid Token |
+| `--product-list-column-gap` | `0.125rem` | Layout / Spatial Grid Token |
+| `--product-list-row-gap` | `1.5rem` | Layout / Spatial Grid Token |
+| `--transform-logical-flip` | `1` | Design System Custom Token |
+| `--transform-origin-start` | `left` | Design System Custom Token |
+| `--transform-origin-end` | `right` | Design System Custom Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Roboto`.
+- **Display Typography**: `Cabin`.
 - **Primary Body Stack**: `Cabin`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `100%`, `.6875rem`, `.8125rem`, `.625rem`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 120%`, `font-weight: bold`).
-- **Body Copy**: CSS variables `--drawer-body-padding-block: min(2rem, var(--container-gutter))`, `--drawer-body-padding-inline: min(2rem, var(--container-gutter))`, `--modal-body-padding-block: 1.25rem`; rule `p` (`line-height: 1.3`).
-- **Metadata & Navigation Labels**: CSS variables `--subheading-letter-spacing: -0.01em`, `--heading-letter-spacing: 0.01em`, `--text-letter-spacing: -0.01em`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 28px`, `line-height: 39.2px`, `font-weight: 700`, `letter-spacing: -0.14px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 28.8925px`, `line-height: 37.5602px`, `font-weight: 400`, `letter-spacing: 0.288925px`); rule `h2` (`font-size: 120%`, `font-weight: bold`).
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.14px`); CSS variables `--text-base: 0.875rem`, `--drawer-body-padding-block: min(2rem, var(--container-gutter))`, `--drawer-body-padding-inline: min(2rem, var(--container-gutter))`; rule `p` (`line-height: 1.3`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.14px`); CSS variables `--subheading-letter-spacing: -0.01em`, `--heading-letter-spacing: 0.01em`, `--text-letter-spacing: -0.01em`.
 
 ---
 
@@ -100,50 +104,69 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `becore-se` stylesheet.
 - **Selector `.accordion`**: `transition: color .2s` extracted from `becore-se` stylesheet.
 - **Selector `.accordion__summary`**: `transition: color .2s` extracted from `becore-se` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.hydrated>` and `<section.shopify-section>`.
+- **Selector `ordion__summary .icon-accordion-s...`**: `transition: transform .3s ease-in-out` extracted from `becore-se` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.hydrated>` and `<section.shopify-section--vg-media-tabs>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Becore                                     │
 │ ====================================================================== │
-│ [ <header.hydrated>        | MOVE · SHOP                            ]  │
+│ [ <header.hydrated> (1440x48px)       | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.shopify-pc__banner__dialog>                 |   │
-│ | H1: Cookie consent                                               |   │
-│ | Substrate: #1990c6    | Ink: #fff       | Accent: #121212        |   │
+│ | HERO STAGE: <section.shopify-section> (w=1440px)                   | │
+│ | H1: Becore                                                         | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #007bff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.shopify-section> ) max-w: var(--drawer-m |   │
+│ | SHOWCASE GRID (<section.shopify-section--) max-w: 78rem            | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Becore                       |  | Cart                         | | │
+│ | | Welcome to Becore            |  | Move with us                 | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .75rem) | │
-│ | [<header.hydrated>] -> [<section.shopify-p] -> [<section.shopify-s]  │
+│ | DETAIL MODULE (<section.shopify-section:n) — Digital studio        | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.shopify-pc__ba) | https://becore.se/                 │
+│ [ FOOTER (<footer.shopify-pc__) | https://becore.se/                   │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .75rem)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.hydrated>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.shopify-section) — 390px Vertical Lead        | │
+│ | H1: Becore                                                         | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.shopify-secti) — 1-Col Stack              | │
+│ | [ Item 1: Welcome to Becore                                      ] | │
+│ | [ Item 2: Move with us                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.shopify-section) — 1-Col (Digital studio)   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.shopify-pc__) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.hydrated> — `becore-se`)**:
-   - Landmark `<header class="hydrated">` hosting `Becore` navigation (`MOVE · SHOP`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-locksmith`, `data-styles`, `data-shop-id="85529952592"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
-2. **Hero Stage & Focal Lead (<section.shopify-pc__banner__dialog> — `Cookie consent`)**:
-   - Landmark `<section class="shopify-pc__banner__dialog">` presenting display lead `Cookie consent` and copy excerpt *"We and our partners, including Shopify, use cookies and other tec"* over `#1990c6` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.shopify-section> — `Becore`)**:
-   - Landmark `<section class="shopify-section shopify-section-group-overlay-group">` rendering section `Becore` with copy *"Manage preferences"*, asset references (`mixpanel-2-latest.min.js`, `jquery-3.6.4.min-dad6fdf250e31dfa...`, `jquery-migrate-3.4.1.min-6a381abc...`, `jquery-ui-1.13.2.widget-32e3429b3...`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
-4. **Interactive Detail & Feature Matrix (<section.shopify-section> — `Cart`)**:
-   - Landmark `<section class="shopify-section shopify-section-group-overlay-group">` framing `Cart` and `Favourites ( 0 )` (*"BLACK FRIDAY · 10 CREDITS FOR 2 500 SEK · SHOP NOW"*) with `#fff` surface cards, `#121212` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+   - Landmark `<header class="hydrated">` (`1440x48px`) hosting `Becore` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-locksmith`, `data-styles`, `data-shop-id="85529952592"`), and stylesheet rule `after { box-sizing:border-box;border-style:solid;border-width:0;border-color:rgb... }`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Becore`)**:
+   - Landmark `<section class="shopify-section shopify-section--slideshow">` presenting display lead `Becore` and copy excerpt *"Becore is a Swedish boutique fitness and wellness brand, bringing"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.shopify-section--vg-media-tabs> — `Welcome to Becore`)**:
+   - Landmark `<section class="shopify-section shopify-section--vg-media-tabs">` rendering section `Welcome to Becore` with copy *"Five studios across Stockholm, open seven days a week from early "*, asset references (`mixpanel-2-latest.min.js`, `255516463088201`, `fbevents.js`, `jquery-3.6.4.min-dad6fdf250e31dfa...`), and grid rule `hr.horizontal-separator { border-width:0 0 0 1px;width:1px;height:100% }`.
+4. **Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Move with us`)**:
+   - Landmark `<section class="shopify-section shopify-section--vg-media-tabs">` framing `Move with us` and `Digital studio` (*"Becore Signature class"*) with `#56b6c2` surface cards, `#007bff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.shopify-pc__banner__dialog> — `https://becore.se/`)**:
-   - Landmark `<footer class="shopify-pc__banner__dialog">` anchoring `Becore` footer links (`MOVE · SHOP`), copy *"Studio Join Membership & credits Gift card FAQ Studio login "*, and `#e51c00` structural dividers.
+   - Landmark `<footer class="shopify-pc__banner__dialog">` anchoring `Becore` footer links (`Overview · Index · Archive · About · Contact`), copy *"A 50-minute, full-body strength workout on the Becore Reform"*, and `#007bff` structural dividers.
 
 ---
 
@@ -155,102 +178,102 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `becore-se` (**Becore** — `https://becore.se/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#1990c6` canvas, `#fff` ink, `#121212` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#007bff` accent).
 - **Identity & Domain Context**: Experience the latest in activewear from our new Becore collection
-- **Primary Substrate**: `#1990c6` (`.shopify-payment-button__button... { background-color: #1990c6 }`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#121212`.
+- **Primary Substrate**: `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#007bff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1990c6` (`.shopify-payment-button__button... { background-color: #1990c6 }`) paired with `#fff` primary typography and `#121212` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Roboto` for display copy (`Cookie consent`) with `Cabin` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--drawer-max-width)` container bounds (`gap: .75rem`, padding `.875rem`) with `cubic-bezier(.19,1,.22,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#007bff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Cabin` for display copy (`Becore`) with `Cabin` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `78rem` container bounds (`gap: .75rem`, padding `.875rem`) with `cubic-bezier(.19,1,.22,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `becore-se` in your global stylesheet:
 
 :root {
-  /* Becore (becore-se) — Ground-Truth Extracted CSS Variables */
-  --border-color: var(--text-color) / .6; /* Brand / Palette Token (becore-se) */
-  --accordion-block-padding: .875rem; /* Layout / Spatial Grid Token (becore-se) */
-  --accordion-inline-padding: 0; /* Layout / Spatial Grid Token (becore-se) */
-  --button-padding-block: .75rem; /* Layout / Spatial Grid Token (becore-se) */
-  --button-padding-inline: 1.5rem; /* Layout / Spatial Grid Token (becore-se) */
-  --button-background: var(--button-background-primary); /* Canvas / Surface Token (becore-se) */
-  --button-text-color: var(--button-text-primary); /* Typography Ink Token (becore-se) */
-  --button-border-color: 0 0 0 / 0; /* Brand / Palette Token (becore-se) */
-  --glowing-shape-width: min(40px, 60%); /* Layout / Spatial Grid Token (becore-se) */
-  --button-size: 1.75rem; /* Layout / Spatial Grid Token (becore-se) */
-  --content-box-spacing: max(1.5rem, var(--container-gutter)); /* Layout / Spatial Grid Token (becore-se) */
-  --scroll-marker-group-gap: .3125rem .75rem; /* Layout / Spatial Grid Token (becore-se) */
-  --scroll-marker-size: .375rem; /* Layout / Spatial Grid Token (becore-se) */
-  --scroll-marker-width: .5rem; /* Layout / Spatial Grid Token (becore-se) */
-  --scroll-marker-height: 1px; /* Layout / Spatial Grid Token (becore-se) */
-  --scroll-marker-group-justify-content: start; /* Design System Custom Token (becore-se) */
+  /* Becore (becore-se) — Live-Grounded CSS Variables */
+  --container-max-width: 100%; /* Layout / Spatial Grid Token (becore-se) */
+  --container-gutter: 1.25rem; /* Layout / Spatial Grid Token (becore-se) */
+  --section-vertical-spacing: 2rem; /* Layout / Spatial Grid Token (becore-se) */
+  --section-stack-row-gap: 1.5rem; /* Layout / Spatial Grid Token (becore-se) */
+  --form-gap: 1rem; /* Layout / Spatial Grid Token (becore-se) */
+  --fieldset-gap: 0.5rem; /* Layout / Spatial Grid Token (becore-se) */
+  --form-control-gap: 0.5rem; /* Layout / Spatial Grid Token (becore-se) */
+  --checkbox-control-gap: 0.75rem; /* Layout / Spatial Grid Token (becore-se) */
+  --input-padding-block: 0.65rem; /* Layout / Spatial Grid Token (becore-se) */
+  --input-padding-inline: 1rem; /* Layout / Spatial Grid Token (becore-se) */
+  --checkbox-size: 0.875rem; /* Layout / Spatial Grid Token (becore-se) */
+  --product-list-column-gap: 0.125rem; /* Layout / Spatial Grid Token (becore-se) */
+  --product-list-row-gap: 1.5rem; /* Layout / Spatial Grid Token (becore-se) */
+  --transform-logical-flip: 1; /* Design System Custom Token (becore-se) */
+  --transform-origin-start: left; /* Design System Custom Token (becore-se) */
+  --transform-origin-end: right; /* Design System Custom Token (becore-se) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#1990c6` — grounded in `.shopify-payment-button__button... { background-color: #1990c6 }`
-- **Primary Typography Ink**: `#0000` — grounded in `pify-payment-button__button.but... { color: #0000 }`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `on.loading>.loading-overlay__sp... { stroke: #fff }`
-- **Interactive Accent / Highlight**: `#121212` — grounded in `.shopify-payment-button__button... { stroke: #121212 }`
-- **Secondary / Muted Copy**: `#1a1a1a` — grounded in `.toast__message { background: #1a1a1a }`
-- **Structural Hairline Border**: `#e51c00` — grounded in `.toast__message--error { background: #e51c00 }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#56b6c2` — grounded in `.spinner>div { background-color: #56b6c2 }`
+- **Interactive Accent / Highlight**: `#007bff` — grounded in `.btn-primary { background-color: #007bff }`
+- **Secondary / Muted Copy**: `#392d2b` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#007bff` — grounded in `.btn-primary { border-color: #007bff }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×6489px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `var(--drawer-max-width)` extracted from `becore-se` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `78rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `.875rem` lateral canvas padding with `.75rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--drawer-max-width)`, `gap: .75rem`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78rem`, `gap: .75rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.875rem` horizontal padding
-- **Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)`
-- **Corner Radii**: `4px`, `var(--button-border-radius)`, `100%`, `20px`
+- **Media Queries**: `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)`, `@media screen and (min-width:1000px)`, `@media screen and (min-width:1150px)`
+- **Corner Radii**: `var(--button-border-radius)`, `100%`, `20px`, `var(--rounded-full)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Roboto`
+- **Display Font Stack**: `Cabin`
 - **Body Font Stack**: `Cabin`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `100%`, `.6875rem`, `.8125rem`, `.625rem`)
-- **H2 Section Rule**: rule `h2` (`font-size: 120%`, `font-weight: bold`)
-- **Body Copy Rule**: CSS variables `--drawer-body-padding-block: min(2rem, var(--container-gutter))`, `--drawer-body-padding-inline: min(2rem, var(--container-gutter))`, `--modal-body-padding-block: 1.25rem`; rule `p` (`line-height: 1.3`)
-- **Metadata & Index Rule**: CSS variables `--subheading-letter-spacing: -0.01em`, `--heading-letter-spacing: 0.01em`, `--text-letter-spacing: -0.01em`
+- **H1 Display Rule**: live computed `h1` (`font-size: 28px`, `line-height: 39.2px`, `font-weight: 700`, `letter-spacing: -0.14px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 28.8925px`, `line-height: 37.5602px`, `font-weight: 400`, `letter-spacing: 0.288925px`); rule `h2` (`font-size: 120%`, `font-weight: bold`)
+- **Body Copy Rule**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.14px`); CSS variables `--text-base: 0.875rem`, `--drawer-body-padding-block: min(2rem, var(--container-gutter))`, `--drawer-body-padding-inline: min(2rem, var(--container-gutter))`; rule `p` (`line-height: 1.3`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.14px`); CSS variables `--subheading-letter-spacing: -0.01em`, `--heading-letter-spacing: 0.01em`, `--text-letter-spacing: -0.01em`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `becore-se` (`Becore`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.hydrated> — `becore-se`)**:
-   - DOM & Selectors: Landmark `<header class="hydrated">` hosting `Becore` navigation (`MOVE · SHOP`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-locksmith`, `data-styles`, `data-shop-id="85529952592"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hydrated> — `becore-se`)` (`becore-se`) adapts across `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)` with `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `MOVE · SHOP`.
-2. **Hero Stage & Focal Lead (<section.shopify-pc__banner__dialog> — `Cookie consent`)**:
-   - DOM & Selectors: Landmark `<section class="shopify-pc__banner__dialog">` presenting display lead `Cookie consent` and copy excerpt *"We and our partners, including Shopify, use cookies and other tec"* over `#1990c6` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×6489px` desktop / `390×2400px` mobile) sets `#1990c6` background with `#fff` headline `Cookie consent`.
-3. **Primary Showcase & Content Grid (<section.shopify-section> — `Becore`)**:
-   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section-group-overlay-group">` rendering section `Becore` with copy *"Manage preferences"*, asset references (`mixpanel-2-latest.min.js`, `jquery-3.6.4.min-dad6fdf250e31dfa...`, `jquery-migrate-3.4.1.min-6a381abc...`, `jquery-ui-1.13.2.widget-32e3429b3...`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.shopify-section> — `Becore`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--drawer-max-width)`, `gap: .75rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.875rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.shopify-section> — `Cart`)**:
-   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section-group-overlay-group">` framing `Cart` and `Favourites ( 0 )` (*"BLACK FRIDAY · 10 CREDITS FOR 2 500 SEK · SHOP NOW"*) with `#fff` surface cards, `#121212` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.shopify-section> — `Cart`)` uses `4px`, `var(--button-border-radius)`, `100%`, `20px` radii, `#121212` highlights, and assets (mixpanel-2-latest.min.js, jquery-3.6.4.min-dad6fdf250e31dfa..., jquery-migrate-3.4.1.min-6a381abc...).
+   - DOM & Selectors: Landmark `<header class="hydrated">` (`1440x48px`) hosting `Becore` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-locksmith`, `data-styles`, `data-shop-id="85529952592"`), and stylesheet rule `after { box-sizing:border-box;border-style:solid;border-width:0;border-color:rgb... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hydrated> — `becore-se`)` (`becore-se`) adapts across `@media screen and (min-width:700px)`, `@media screen and (pointer:fine)`, `@media screen and (min-width:1000px)`, `@media screen and (min-width:1150px)` with `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Becore`)**:
+   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--slideshow">` presenting display lead `Becore` and copy excerpt *"Becore is a Swedish boutique fitness and wellness brand, bringing"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Becore`.
+3. **Primary Showcase & Content Grid (<section.shopify-section--vg-media-tabs> — `Welcome to Becore`)**:
+   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--vg-media-tabs">` rendering section `Welcome to Becore` with copy *"Five studios across Stockholm, open seven days a week from early "*, asset references (`mixpanel-2-latest.min.js`, `255516463088201`, `fbevents.js`, `jquery-3.6.4.min-dad6fdf250e31dfa...`), and grid rule `hr.horizontal-separator { border-width:0 0 0 1px;width:1px;height:100% }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.shopify-section--vg-media-tabs> — `Welcome to Becore`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78rem`, `gap: .75rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.875rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Move with us`)**:
+   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--vg-media-tabs">` framing `Move with us` and `Digital studio` (*"Becore Signature class"*) with `#56b6c2` surface cards, `#007bff` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Move with us`)` uses `var(--button-border-radius)`, `100%`, `20px`, `var(--rounded-full)` radii, `#007bff` highlights, and assets (mixpanel-2-latest.min.js, 255516463088201, fbevents.js).
 5. **Colophon & Global Directory Footer (<footer.shopify-pc__banner__dialog> — `https://becore.se/`)**:
-   - DOM & Selectors: Landmark `<footer class="shopify-pc__banner__dialog">` anchoring `Becore` footer links (`MOVE · SHOP`), copy *"Studio Join Membership & credits Gift card FAQ Studio login "*, and `#e51c00` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.shopify-pc__banner__dialog> — `https://becore.se/`)` aligns to `var(--drawer-max-width)` extracted from `becore-se` stylesheet with `.875rem` lateral canvas padding with `.75rem` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-locksmith, data-styles).
+   - DOM & Selectors: Landmark `<footer class="shopify-pc__banner__dialog">` anchoring `Becore` footer links (`Overview · Index · Archive · About · Contact`), copy *"A 50-minute, full-body strength workout on the Becore Reform"*, and `#007bff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.shopify-pc__banner__dialog> — `https://becore.se/`)` aligns to `78rem` (non-`@media` desktop container stylesheet rule) with `.875rem` lateral canvas padding with `.75rem` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-locksmith, data-styles).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"We and our partners, including Shopify, use cookies and other technologies to pers..."*
-- Copy Excerpt 2: *"Manage preferences"*
-- Copy Excerpt 3: *"BLACK FRIDAY · 10 CREDITS FOR 2 500 SEK · SHOP NOW"*
-- Copy Excerpt 4: *"Studio Join Membership & credits Gift card FAQ Studio login Classes Signature Mat..."*
+- Copy Excerpt 1: *"Becore is a Swedish boutique fitness and wellness brand, bringing together strengt..."*
+- Copy Excerpt 2: *"Five studios across Stockholm, open seven days a week from early morning to late e..."*
+- Copy Excerpt 3: *"Becore Signature class"*
+- Copy Excerpt 4: *"A 50-minute, full-body strength workout on the Becore Reformer. Slow, controlled m..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`becore-se`)**:
-- `.shopify-payment-button__button--... { visibility:hidden }`
-- `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`
-- `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`
-- `shopify-payment-button__button--b... { z-index:1;flex-direction:column;display:flex;position:relative }`
-- `on__button--branded .shopify-clea... { flex-direction:column!important;flex:1!important;display:flex!important }`
+- `after { box-sizing:border-box;border-style:solid;border-width:0;border-color:rgb... }`
+- `hr.horizontal-separator { border-width:0 0 0 1px;width:1px;height:100% }`
+- `strong { font-weight:bolder }`
+- `pre { font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation... }`
+- `table { text-indent:0;border-color:inherit;border-collapse:collapse }`
 - **Per-Selector Transition Rules**:
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `becore-se` stylesheet.
 - **Selector `.accordion`**: `transition: color .2s` extracted from `becore-se` stylesheet.
 - **Selector `.accordion__summary`**: `transition: color .2s` extracted from `becore-se` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.hydrated>` and `<section.shopify-section>`.
+- **Selector `ordion__summary .icon-accordion-s...`**: `transition: transform .3s ease-in-out` extracted from `becore-se` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.hydrated>` and `<section.shopify-section--vg-media-tabs>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

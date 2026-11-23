@@ -1,34 +1,51 @@
+---
+title: "UI & UX Architecture: about-centra-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: about-centra-com
 
 ## Overview & Design Identity
 - **Target**: `about-centra-com` (**Centra? Centra! The definitive guide.**)
 - **Production URL**: [https://about.centra.com](https://about.centra.com)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#d9d9d9` canvas, `#191919` ink, `#f85943` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#ffff00` accent)
 - **Summary**: The commerce platform for fashion brands.
-- **Total Clean CSS Variables Extracted**: `150` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `31` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `neue-haas-grotesk-display`
 - **Body Font Stack**: `neue-haas-grotesk-text`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2em`, `80%`, `75%`, `1em`, `14px`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2em`, `80%`, `75%`, `1em`, `14px`)
-- **Body Copy**: rule `p` (`font-size: inherit`, `font-weight: inherit`)
-- **Metadata & Labels**: CSS variables `--_colours---mono--0: white`, `--_colours---mono--900: black`, `--_colours---mono--300: darkgrey`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 144px`, `line-height: 122.4px`, `font-weight: 900`, `letter-spacing: 0.12px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 70px`, `line-height: 70px`, `font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--_colours---mono--0: white`, `--_colours---mono--900: black`, `--_colours---mono--300: darkgrey`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#d9d9d9` | `var(--_colours---mono--200)` in `:root` |
-| **Primary Typography Ink** | `#fecf48` | `var(--_colours---yellow--main)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#191919` | `var(--_colours---mono--800)` in `:root` |
-| **Interactive Accent / Highlight** | `#f85943` | `var(--_colours---red--main)` in `:root` |
-| **Secondary / Muted Copy** | `#333` | `var(--_colours---mono--600)` in `:root` |
-| **Structural Hairline Border** | `#1cad56` | `var(--_colours---green--main)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#222222` | `.w-slider-nav-invert>div.w-active { background-color: #222222 }` |
+| **Interactive Accent / Highlight** | `#ffff00` | `.hs-button.submit:hover { background-color: yellow }` (`#ffff00`) |
+| **Secondary / Muted Copy** | `#a9a9a9` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#3898ec` | `.w-select:focus { border-color: #3898ec }` |
+| **Variable Token (`--_colours---mono--200`)** | `#d9d9d9` | `var(--_colours---mono--200)` in `:root` |
+| **Variable Token (`--_colours---yellow--main`)** | `#fecf48` | `var(--_colours---yellow--main)` in `:root` |
+| **Variable Token (`--_colours---mono--800`)** | `#191919` | `var(--_colours---mono--800)` in `:root` |
+| **Variable Token (`--_colours---red--main`)** | `#f85943` | `var(--_colours---red--main)` in `:root` |
+| **Variable Token (`--_colours---mono--600`)** | `#333333` | `var(--_colours---mono--600)` in `:root` |
+| **Variable Token (`--_colours---green--main`)** | `#1cad56` | `var(--_colours---green--main)` in `:root` |
 | **Variable Token (`--_colours---blue--main`)** | `#1d80f6` | `var(--_colours---blue--main)` in `:root` |
 | **Variable Token (`--_colours---mono--400`)** | `#787878` | `var(--_colours---mono--400)` in `:root` |
 | **Variable Token (`--_colours---mono--700`)** | `#252525` | `var(--_colours---mono--700)` in `:root` |
@@ -59,12 +76,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.navigation-glass-wrapper> — `about-centra-com`)**:
-   - Landmark `<nav class="navigation-glass-wrapper mobile-navigation">` hosting `Centra? Centra! The definitive guide` navigation (`13 ½ Centra Facts · Brands on Centra`), DOM attributes (`data-wf-domain="about.centra.com"`, `data-wf-page="6a0af5d1e1f707540842bee4"`, `data-wf-site="6a0af5d1e1f707540842bf02"`, `data-cbid="93a8c043-1906-4454-86..."`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
-2. **Hero Stage & Focal Lead (<section.heading-animation> — `Centra? Centra!`)**:
-   - Landmark `<section class="heading-animation">` presenting display lead `Centra? Centra!` and copy excerpt *"Necessary 10 Necessary cookies help make a website usable by enab"* over `#d9d9d9` canvas and `#191919` ink.
-3. **Primary Showcase & Content Grid (<section.section-parallax> — `Yes, it’s us. Centra. The famously`)**:
-   - Landmark `<section class="section-parallax">` rendering section `Yes, it’s us. Centra. The famously unfamous comme...` with copy *"Cookiebot 1 Learn more about this provider CookieConsent Stores t"*, asset references (`cdn.prod.website-files.com`, `centra-centra.webflow.shared.3f63...`, `cc.js`, `configuration.js`), and grid rule `summary { display:block }`.
-4. **Interactive Detail & Feature Matrix (<section.section-call-to-action> — `Centra preview in 60 seconds`)**:
-   - Landmark `<section class="section-call-to-action">` framing `Centra preview in 60 seconds` and `Learn more about this provider` (*"Learn more about this provider"*) with `#191919` surface cards, `#f85943` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Landmark `<nav class="navigation-glass-wrapper mobile-navigation">` (`675x60px`) hosting `Centra? Centra! The definitive guide` navigation (`13 ½ Centra Facts · Brands on Centra`), DOM attributes (`data-wf-domain="about.centra.com"`, `data-wf-page="6a0af5d1e1f707540842bee4"`, `data-wf-site="6a0af5d1e1f707540842bf02"`, `data-global-dreamdata-analytics-key="dreamdata"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.heading-animation> — `CENTRA? CENTRA!`)**:
+   - Landmark `<section class="heading-animation">` presenting display lead `CENTRA? CENTRA!` and copy excerpt *"Centra uses your contact information to send product and service "* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.section-parallax> — `Centra? Centra!`)**:
+   - Landmark `<section class="section-parallax">` rendering section `Centra? Centra!` with copy *"CENTRA? CENTRA!"*, asset references (`cdn.prod.website-files.com`, `centra-centra.webflow.shared.3f63...`, `dreamdata.min.js`, `lftracker_v1_ywVkO4XVlwx8Z6Bj.js`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.section-call-to-action> — `about-centra-com Interactive Matri`)**:
+   - Landmark `<section class="section-call-to-action">` framing `about-centra-com Interactive Matrix` and `about-centra-com Archive & Directory` (*"Centra? Centra!"*) with `#222222` surface cards, `#ffff00` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.wf-neuehaasgrotesktext-n4-active> — `https://about.centra.com`)**:
-   - Landmark `<footer class="wf-neuehaasgrotesktext-n4-active">` anchoring `Centra? Centra! The definitive g` footer links (`13 ½ Centra Facts · Brands on Centra`), copy *"Stores the user's cookie consent state for the current domai"*, and `#1cad56` structural dividers.
+   - Landmark `<footer class="wf-neuehaasgrotesktext-n4-active">` anchoring `Centra? Centra! The definitive g` footer links (`13 ½ Centra Facts · Brands on Centra`), copy *"about-centra-com Interactive Matrix"*, and `#3898ec` structural dividers.

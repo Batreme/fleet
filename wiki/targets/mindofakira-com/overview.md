@@ -1,8 +1,13 @@
 ---
 title: "Target Overview: mindofakira-com"
-date: 2026-11-14
+date: 2026-11-23
+captured_at: 2026-11-23
 url: "http://mindofakira.com"
-status: analyzed
+final_url: "https://mindofakira.com/"
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'http://mindofakira.com/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -12,26 +17,26 @@ auth_required: false
 
 # Target Overview: mindofakira-com
 
-## 🧭 Dossier Navigation
+## Dossier Navigation
+- [UI Prompt Blueprint](prompt-blueprint.md)
+- [UI Architecture & Design Tokens](ui-ux.md)
 - [Discovered APIs & Network Protocols](apis.md)
 - [Data Models & Local State](data-models.md)
-- [UI Architecture & Design Tokens](ui-ux.md)
 - [De-obfuscated Source Maps](source-maps.md)
 
 ---
 
-## 🏗️ Architecture & Stack Fingerprint
-- **Target URL**: `http://mindofakira.com`
-- **Page Title**: Mind of Akira
+## Architecture & Stack Fingerprint
+- **Target URL**: [http://mindofakira.com](http://mindofakira.com)
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'http://mindofakira.com/', waiting until 'domcontentloaded' )
+- **Page Title**: mindofakira-com
 - **Identified Frameworks**: Modern Web Application
-- **Auth Profile Used**: None (Public session)
-- **Recorded API Endpoints**: 0
-- **Recovered Scripts**: 10
-- **Recovered Stylesheets**: 2
+- **Recovered Scripts**: `10`
+- **Recovered Stylesheets**: `2`
 
 ---
 
-## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
-- **Domain Modeling**: See [data-models](data-models.md) for concrete entity structures observed in network requests and local storage.
-- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
-- **[UI Prompt Blueprint](prompt-blueprint.md)** — 7-part design system analysis, desktop/mobile visual captures, and zero-shot generation prompt.
+## Key Architectural Lessons
+- **UI & Design System**: See [ui-ux.md](ui-ux.md) and [prompt-blueprint.md](prompt-blueprint.md) for live computed design tokens and viewport captures.
+- **Client State & APIs**: See [data-models.md](data-models.md) and [apis.md](apis.md) for observed endpoints and storage keys.

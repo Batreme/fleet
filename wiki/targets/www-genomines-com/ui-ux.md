@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: www-genomines-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: www-genomines-com
 
 ## Overview & Design Identity
-- **Target**: `www-genomines-com` (**Home**)
+- **Target**: `www-genomines-com` (**Genomines — We Grow Metal**)
 - **Production URL**: [https://www.genomines.com/](https://www.genomines.com/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#efebe1` / `#fff`)
-- **Summary**: Genomines pioneers sustainable mineral extraction using hyperaccumulator plants, harnessing genomics to mine critical metals from soil, a...
-- **Total Clean CSS Variables Extracted**: `22` (curated ground-truth set below)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#efebe1` / `#b3261e`)
+- **Summary**: Plants that grow metal. Genomines uses phytomining and genomics to extract battery-grade nickel from low-grade soils, with no waste rock...
+- **Total Clean CSS Variables Extracted**: `22` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Causten`
-- **Body Font Stack**: `Geist Mono`
+- **Body Font Stack**: `Causten`
 - **Monospace / Technical Font Stack**: `Geist Mono`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(1.19rem,.9722222222vw,1.61rem)`, `clamp(3.6rem,4.1666666667vw,7.8rem)`, `62.5%`, `10px`, `1.2rem`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(1.19rem,.9722222222vw,1.61rem)`, `clamp(3.6rem,4.1666666667vw,7.8rem)`, `62.5%`, `10px`, `1.2rem`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(1.19rem,.9722222222vw,1.61rem)`, `clamp(3.6rem,4.1666666667vw,7.8rem)`, `62.5%`, `10px`, `1.2rem`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(1.19rem,.9722222222vw,1.61rem)`, `clamp(3.6rem,4.1666666667vw,7.8rem)`, `62.5%`, `10px`, `1.2rem`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 60px`, `line-height: 57px`, `font-weight: 500`, `letter-spacing: -1.8px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 45.6px`, `font-weight: 500`, `letter-spacing: -1.44px`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#efebe1` | `body { background: #efebe1 }` |
-| **Primary Typography Ink** | `#373735` | `body { color: #373735 }` |
-| **Elevated Surface / Card Substrate** | `#000` | `.grid__visualizer-toggle { background: #000 }` |
-| **Interactive Accent / Highlight** | `#fff` | `.grid__visualizer-toggle { color: #fff }` |
-| **Secondary / Muted Copy** | `#d4ff8f` | `header__nav>ul .nav__item .nav_... { background: #d4ff8f }` |
-| **Structural Hairline Border** | `#b3261e` | `al__form .contact-modal__feedba... { color: #b3261e }` |
+| **Primary Canvas Substrate** | `#efebe1` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#373735` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#d4ff8f` | `header__nav>ul .nav__item .nav_... { background: #d4ff8f }` |
+| **Interactive Accent / Highlight** | `#b3261e` | `al__form .contact-modal__feedba... { color: #b3261e }` |
+| **Secondary / Muted Copy** | `#cec5b0` | `apper .team__content .team__hea... { color: #cec5b0 }` |
+| **Structural Hairline Border** | `#c1beb6` | `ntact-modal__form .contact-moda... { border: #c1beb6 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.global__header> — `www-genomines-com`)**:
-   - Landmark `<header class="global__header">` hosting `Home` navigation (`Homepage · Technology · Systemic Return · About us · Work with us`), DOM attributes (`data-taxi-ignore="true"`, `data-action="contact"`, `data-taxi-ignore="true"`, `data-action="contact"`), and stylesheet rule `after { margin:0;padding:0;box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.section__hero> — `Let's grow together.`)**:
-   - Landmark `<section class="section__hero">` presenting display lead `Let's grow together.` and copy excerpt *"Company About us Work with us"* over `#efebe1` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.section__paradigm-shift> — `We Grow Metal`)**:
-   - Landmark `<section class="section__paradigm-shift">` rendering section `We Grow Metal` with copy *"Biological infrastructure for critical metal extraction."*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `video { max-width:100%;display:block }`.
-4. **Interactive Detail & Feature Matrix (<section.section__scenes> — `At scale.`)**:
-   - Landmark `<section class="section__scenes">` framing `At scale.` and `The payload.` (*"Battery-grade nickel, harvested at best-in-class costs."*) with `#000` surface cards, `#fff` accents, and `button { background:none;border:none;cursor:pointer;font:inherit;color:inherit }`.
+   - Landmark `<header class="global__header">` (`1440x90px`) hosting `Genomines — We Grow Metal` navigation (`Homepage · Technology · Systemic Return · About us · Work with us`), DOM attributes (`data-taxi-ignore="true"`, `data-action="contact"`, `data-taxi-ignore="true"`, `data-action="contact"`), and stylesheet rule `after { margin:0;padding:0;box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.section__hero> — `We Grow Metal`)**:
+   - Landmark `<section class="section__hero">` presenting display lead `We Grow Metal` and copy excerpt *"Biological infrastructure for critical metal extraction."* over `#efebe1` canvas and `#373735` ink.
+3. **Primary Showcase & Content Grid (<section.section__paradigm-shift> — `The payload.`)**:
+   - Landmark `<section class="section__paradigm-shift">` rendering section `The payload.` with copy *"Battery-grade nickel, harvested at best-in-class costs."*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `video { max-width:100%;display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.section__scenes> — `More than profit. More than sustai`)**:
+   - Landmark `<section class="section__scenes">` framing `More than profit. More than sustainability. Syste...` and `We’re growing. Genomines in the News.` (*"Inside the team replacing the"*) with `#d4ff8f` surface cards, `#b3261e` accents, and `button { background:none;border:none;cursor:pointer;font:inherit;color:inherit }`.
 5. **Colophon & Global Directory Footer (<footer.global__footer> — `https://www.genomines.com/`)**:
-   - Landmark `<footer class="global__footer">` anchoring `Home` footer links (`Homepage · Technology · Systemic Return · About us · Work with us`), copy *"Inside the team replacing the"*, and `#b3261e` structural dividers.
+   - Landmark `<footer class="global__footer">` anchoring `Genomines — We Grow Metal` footer links (`Homepage · Technology · Systemic Return · About us · Work with us`), copy *"excavator with plants, and the"*, and `#c1beb6` structural dividers.

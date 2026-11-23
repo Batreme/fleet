@@ -1,61 +1,66 @@
 ---
 title: "UI Prompt Blueprint: plastic-ocean-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "plastic-ocean-com"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#4f4f4f` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d70ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: plastic-ocean-com
 
 > **Plastic Ocean** (http://plastic-ocean.com/) — Plastic Ocean
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Plastic Ocean** (`http://plastic-ocean.com/`). Plastic Ocean
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#4f4f4f` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d70ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--pswp-bg)` in `:root`) paired with `#fff` primary typography and `#4f4f4f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Plastic Ocean`) with `Host Grotesk Regular` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `991px` container bounds (`gap: 20px`, padding `20px`) with `cubic-bezier(0.4,0,0.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d70ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Host Grotesk Regular` for display copy (`Plastic Ocean`) with `Inter Tight` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 5px`, padding `10px`) with `cubic-bezier(0.4,0,0.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `991px` extracted from `plastic-ocean-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `20px` grid gap.
-- **Border Radius Scale**: `5px`, `3px`, `50%`, `6px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `5px` grid gap.
+- **Border Radius Scale**: `3px`, `5px`, `50%`, `6px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 20px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width: 991px)`, `@media screen and (not (max-width: 991px))`, `@media screen and (not (max-width: 479px))`, `@media (max-width: 479px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 5px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-width:479px)`, `@media (min-width:480px) and (max-width:767px)`, `@media (min-width:768px) and (max-width:991px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--pswp-bg)` in `:root` |
-| **Primary Typography Ink** | `#222` | `var(--pswp-placeholder-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--pswp-icon-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#4f4f4f` | `var(--pswp-icon-color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#ffffff` | `body { background: white }` (`#ffffff`) |
-| **Structural Hairline Border** | `#000000` | `.mosaic-wrap { color: #000000 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#eeeeee` | `.form .tt-form__captcha .form__... { background-color: #eeeeee }` |
+| **Interactive Accent / Highlight** | `#0d70ff` | `.tt-rich-link { color: #0d70ff }` |
+| **Secondary / Muted Copy** | `#4f4f4f` | `var(--pswp-icon-color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#4f4f4f` | `var(--pswp-icon-stroke-color)` in `:root` |
+| **Variable Token (`--pswp-placeholder-bg`)** | `#222222` | `var(--pswp-placeholder-bg)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -74,23 +79,23 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 | `--custom-fade` | `1` | Design System Custom Token |
 | `--webp-bottle-opacity` | `0` | Design System Custom Token |
 | `--white-bg-opacity` | `1` | Canvas / Surface Token |
-| `--plastic-ocean-co-bg` | `#000` | Canvas Substrate (from `var(--pswp-bg)` in `:root`) |
-| `--plastic-ocean-co-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
+| `--plastic-ocean-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--plastic-ocean-co-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Inter Tight`.
-- **Primary Body Stack**: `Host Grotesk Regular`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Host Grotesk Regular`.
+- **Primary Body Stack**: `Inter Tight`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`.
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -100,50 +105,69 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(0.4,0,0.22,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.pop-up__inside-close-button--u-i...`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Selector `.button--u-i04d40wq6`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Selector `.list--u-ioy7dxvwt`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.4,0,0.22,1)`)**: Governs interactive state transitions across `<header.wf-displayswap-n4-inactive>` and `<section.section>`.
+- **Selector `.icon *`**: `transition: inherit` extracted from `plastic-ocean-com` stylesheet.
+- **Selector `media (prefers-reduced-motion:red...`**: `transition: .01ms!important` extracted from `plastic-ocean-com` stylesheet.
+- **Selector `.slider__list`**: `transition: linear` extracted from `plastic-ocean-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.4,0,0.22,1)`)**: Governs interactive state transitions across `<header.wf-displayswap-n4-inactive>` and `<section.section--u-i8upocq6y>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Plastic Ocean                              │
 │ ====================================================================== │
-│ [ <header.wf-displayswap-n | get in touch · Case · Nikolai Kudriavt ]  │
+│ [ <header.wf-displayswap (1440px)     | get in touch · Case · Nikola ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.section>                                    |   │
-│ | H1: Plastic Ocean                                                |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #4f4f4f        |   │
+│ | HERO STAGE: <section.section> (w=1440px)                           | │
+│ | H1: Plastic Ocean                                                  | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0d70ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.section>         ) max-w: 991px          |   │
+│ | SHOWCASE GRID (<section.section--u-i8upoc) max-w: 100vw            | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 20px  ) | │
-│ | [<header.wf-display] -> [<section.section>] -> [<section.section>] | │
+│ | DETAIL MODULE (<section.section--u-ir9wd7) — Global Directory & Co | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.lenis-smooth> ) | http://plastic-ocean.com/          │
+│ [ FOOTER (<footer.lenis-smooth) | http://plastic-ocean.com/            │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 5px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.wf-displayswap-n) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.section>) — 390px Vertical Lead               | │
+│ | H1: Plastic Ocean                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.section--u-i8) — 1-Col Stack              | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.section--u-ir9w) — 1-Col (Global Directory &) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.lenis-smooth) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)**:
-   - Landmark `<header class="wf-displayswap-n4-inactive">` hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `.div--u-iww1jyf2k { width: 78.13vw; height: 100%; transform: translate3D(0px, 0vh, 0px); }`.
+   - Landmark `<header class="wf-displayswap-n4-inactive">` (`1440px`) hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`.
 2. **Hero Stage & Focal Lead (<section.section> — `Plastic Ocean`)**:
-   - Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.section> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `.text--u-ise53ezbe { opacity: 0; transform: translate3D(0px, 0px, 0px); }`.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Technical Architecture & Narrative`)**:
-   - Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#fff` surface cards, `#4f4f4f` accents, and `.image--u-it5s3ovyb { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3D(0px, 0p... }`.
+   - Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.section--u-i8upocq6y> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `a:hover { text-decoration:none }`.
+4. **Interactive Detail & Feature Matrix (<section.section--u-ir9wd7wkv> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#eeeeee` surface cards, `#0d70ff` accents, and `.text-block-wrap-div { flex-grow:1;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.lenis-smooth> — `http://plastic-ocean.com/`)**:
-   - Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#000000` structural dividers.
+   - Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#4f4f4f` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `plastic-ocean-com` (**Plastic Ocean** — `http://plastic-ocean.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#4f4f4f` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d70ff` accent).
 - **Identity & Domain Context**: Plastic Ocean
-- **Primary Substrate**: `#000` (`var(--pswp-bg)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#4f4f4f`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0d70ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--pswp-bg)` in `:root`) paired with `#fff` primary typography and `#4f4f4f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Plastic Ocean`) with `Host Grotesk Regular` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `991px` container bounds (`gap: 20px`, padding `20px`) with `cubic-bezier(0.4,0,0.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d70ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Host Grotesk Regular` for display copy (`Plastic Ocean`) with `Inter Tight` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 5px`, padding `10px`) with `cubic-bezier(0.4,0,0.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `plastic-ocean-com` in your global stylesheet:
 
 :root {
-  /* Plastic Ocean (plastic-ocean-com) — Ground-Truth Extracted CSS Variables */
+  /* Plastic Ocean (plastic-ocean-com) — Live-Grounded CSS Variables */
   --default-cell-min-width: 35px; /* Layout / Spatial Grid Token (plastic-ocean-com) */
   --pswp-bg: #000; /* Canvas / Surface Token (plastic-ocean-com) */
   --pswp-placeholder-bg: #222; /* Canvas / Surface Token (plastic-ocean-com) */
@@ -182,55 +206,56 @@ Declare and consume these exact custom properties extracted from `plastic-ocean-
   --custom-fade: 1; /* Design System Custom Token (plastic-ocean-com) */
   --webp-bottle-opacity: 0; /* Design System Custom Token (plastic-ocean-com) */
   --white-bg-opacity: 1; /* Canvas / Surface Token (plastic-ocean-com) */
-  --plastic-ocean-co-bg: #000; /* Canvas Substrate (from `var(--pswp-bg)` in `:root`) (plastic-ocean-com) */
-  --plastic-ocean-co-ink: #fff; /* Primary Typography Ink (stylesheet-derived) (plastic-ocean-com) */
+  --plastic-ocean-co-bg: #ffffff; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (plastic-ocean-com) */
+  --plastic-ocean-co-ink: #000000; /* Primary Typography Ink (computed-derived) (plastic-ocean-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--pswp-bg)` in `:root`
-- **Primary Typography Ink**: `#222` — grounded in `var(--pswp-placeholder-bg)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `var(--pswp-icon-color)` in `:root`
-- **Interactive Accent / Highlight**: `#4f4f4f` — grounded in `var(--pswp-icon-color-secondary)` in `:root`
-- **Secondary / Muted Copy**: `#ffffff` — grounded in `body { background: white }` (`#ffffff`)
-- **Structural Hairline Border**: `#000000` — grounded in `.mosaic-wrap { color: #000000 }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#eeeeee` — grounded in `.form .tt-form__captcha .form__... { background-color: #eeeeee }`
+- **Interactive Accent / Highlight**: `#0d70ff` — grounded in `.tt-rich-link { color: #0d70ff }`
+- **Secondary / Muted Copy**: `#4f4f4f` — grounded in `var(--pswp-icon-color-secondary)` in `:root`
+- **Structural Hairline Border**: `#4f4f4f` — grounded in `var(--pswp-icon-stroke-color)` in `:root`
+- **Variable Token (`--pswp-placeholder-bg`)**: `#222222` — grounded in `var(--pswp-placeholder-bg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `991px` extracted from `plastic-ocean-com` stylesheet
-- **Padding & Gutters**: `20px` lateral canvas padding with `20px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 20px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
-- **Media Queries**: `@media (max-width: 991px)`, `@media screen and (not (max-width: 991px))`, `@media screen and (not (max-width: 479px))`, `@media (max-width: 479px)`
-- **Corner Radii**: `5px`, `3px`, `50%`, `6px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `10px` lateral canvas padding with `5px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 5px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
+- **Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-width:479px)`, `@media (min-width:480px) and (max-width:767px)`, `@media (min-width:768px) and (max-width:991px)`
+- **Corner Radii**: `3px`, `5px`, `50%`, `6px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Inter Tight`
-- **Body Font Stack**: `Host Grotesk Regular`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
+- **Display Font Stack**: `Host Grotesk Regular`
+- **Body Font Stack**: `Inter Tight`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
+- **H2 Section Rule**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `plastic-ocean-com` (`Plastic Ocean`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)**:
-   - DOM & Selectors: Landmark `<header class="wf-displayswap-n4-inactive">` hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `.div--u-iww1jyf2k { width: 78.13vw; height: 100%; transform: translate3D(0px, 0vh, 0px); }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)` (`plastic-ocean-com`) adapts across `@media (max-width: 991px)`, `@media screen and (not (max-width: 991px))`, `@media screen and (not (max-width: 479px))`, `@media (max-width: 479px)` with `cubic-bezier(0.4,0,0.22,1)` transitions and links `get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`.
+   - DOM & Selectors: Landmark `<header class="wf-displayswap-n4-inactive">` (`1440px`) hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)` (`plastic-ocean-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-width:479px)`, `@media (min-width:480px) and (max-width:767px)`, `@media (min-width:768px) and (max-width:991px)` with `cubic-bezier(0.4,0,0.22,1)` transitions and links `get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`.
 2. **Hero Stage & Focal Lead (<section.section> — `Plastic Ocean`)**:
-   - DOM & Selectors: Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Plastic Ocean`.
-3. **Primary Showcase & Content Grid (<section.section> — `Featured Work & Interactive Showca`)**:
-   - DOM & Selectors: Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `.text--u-ise53ezbe { opacity: 0; transform: translate3D(0px, 0px, 0px); }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 20px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#fff` surface cards, `#4f4f4f` accents, and `.image--u-it5s3ovyb { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3D(0px, 0p... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `Technical Architecture & Narrative`)` uses `5px`, `3px`, `50%`, `6px` radii, `#4f4f4f` highlights, and assets (tt_default_styles.css, design-i8z5xo3zc-1649318570_style..., shared-design-styles.css).
+   - DOM & Selectors: Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Plastic Ocean`.
+3. **Primary Showcase & Content Grid (<section.section--u-i8upocq6y> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `a:hover { text-decoration:none }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section--u-i8upocq6y> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.section--u-ir9wd7wkv> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#eeeeee` surface cards, `#0d70ff` accents, and `.text-block-wrap-div { flex-grow:1;max-width:100% }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section--u-ir9wd7wkv> — `Technical Architecture & Narrative`)` uses `3px`, `5px`, `50%`, `6px` radii, `#0d70ff` highlights, and assets (tt_default_styles.css, design-i8z5xo3zc-1649318570_style..., shared-design-styles.css).
 5. **Colophon & Global Directory Footer (<footer.lenis-smooth> — `http://plastic-ocean.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#000000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lenis-smooth> — `http://plastic-ocean.com/`)` aligns to `991px` extracted from `plastic-ocean-com` stylesheet with `20px` lateral canvas padding with `20px` grid gap and attributes (data-size="1920x1080", data-origin-src="/thumb/2/evC8fvcePJXD...", data-lenis-prevent="true").
+   - DOM & Selectors: Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#4f4f4f` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lenis-smooth> — `http://plastic-ocean.com/`)` aligns to `100vw` (non-`@media` desktop container stylesheet rule) with `10px` lateral canvas padding with `5px` grid gap and attributes (data-size="1920x1080", data-origin-src="/thumb/2/evC8fvcePJXD...", data-lenis-prevent="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"This website is a non-commercial demonstration project. We do not use contact form..."*
@@ -241,16 +266,16 @@ Scaffold `plastic-ocean-com` (`Plastic Ocean`) with these exact structural regio
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.4,0,0.22,1)`
 - **Extracted Stylesheet Rules (`plastic-ocean-com`)**:
-- `.div--u-iww1jyf2k { width: 78.13vw; height: 100%; transform: translate3D(0px, 0vh, 0px); }`
-- `.text--u-ise53ezbe { opacity: 0; transform: translate3D(0px, 0px, 0px); }`
-- `.image--u-it5s3ovyb { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3D(0px, 0p... }`
-- `.div--u-ia1mnlrch { width: 100vw; height: 100vh; transform: translate3D(0px, 0px, 0px); }`
-- `.div--u-i6z6x9gef { width: 100vw; height: 100vh; transform: translate3D(0px, 0px, 0px); }`
+- `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`
+- `a:hover { text-decoration:none }`
+- `.text-block-wrap-div { flex-grow:1;max-width:100% }`
+- `.text-block span a { color:inherit }`
+- `.is-removed { display:none!important }`
 - **Per-Selector Transition Rules**:
-- **Selector `.pop-up__inside-close-button--u-i...`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Selector `.button--u-i04d40wq6`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Selector `.list--u-ioy7dxvwt`**: `transition: 300ms` extracted from `plastic-ocean-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.4,0,0.22,1)`)**: Governs interactive state transitions across `<header.wf-displayswap-n4-inactive>` and `<section.section>`.
+- **Selector `.icon *`**: `transition: inherit` extracted from `plastic-ocean-com` stylesheet.
+- **Selector `media (prefers-reduced-motion:red...`**: `transition: .01ms!important` extracted from `plastic-ocean-com` stylesheet.
+- **Selector `.slider__list`**: `transition: linear` extracted from `plastic-ocean-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.4,0,0.22,1)`)**: Governs interactive state transitions across `<header.wf-displayswap-n4-inactive>` and `<section.section--u-i8upocq6y>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

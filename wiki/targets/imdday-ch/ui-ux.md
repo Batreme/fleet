@@ -1,33 +1,45 @@
+---
+title: "UI & UX Architecture: imdday-ch"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: imdday-ch
 
 ## Overview & Design Identity
 - **Target**: `imdday-ch` (**IMDDay 2026**)
 - **Production URL**: [https://imdday.ch/](https://imdday.ch/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b2b2b2` / `#808080`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b2b2b2` / `#bbbcc4`)
 - **Summary**: Dirk Koy, born in 1977, is a Basel-based artist active in various fields of moving image creation. He is a digital world-builder who samp...
-- **Total Clean CSS Variables Extracted**: `53` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `53` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Neue Montreal`
 - **Body Font Stack**: `Neue Montreal`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-xs)`, `var(--text-s)`, `var(--text-xl)`, `var(--text-l)`, `var(--text-m)`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-xs)`, `var(--text-s)`, `var(--text-xl)`, `var(--text-l)`, `var(--text-m)`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-xs)`, `var(--text-s)`, `var(--text-xl)`, `var(--text-l)`, `var(--text-m)`)
-- **Metadata & Labels**: CSS variables `--text-xs: calc(0.4231rem + 0.8974vw)`
+- **Monospace / Technical Font Stack**: `Roboto Mono`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 114.307px`, `line-height: 114.307px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 114.307px`, `line-height: 114.307px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 19.6922px`, `line-height: 23.6306px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 19.6922px`, `line-height: 19.6922px`, `font-weight: 400`); CSS variables `--text-xs: calc(0.4231rem + 0.8974vw)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#b2b2b2` | `var(--grey)` in `:root` |
-| **Primary Typography Ink** | `#ffffff` | `var(--white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#a1a1a1` | `::selection { background: #a1a1a1 }` |
-| **Interactive Accent / Highlight** | `#808080` | `.Footer_Main { color: grey }` (`#808080`) |
-| **Secondary / Muted Copy** | `#fff` | `.tp-svpv:focus .tp-svpv_m { border-color: #fff }` |
+| **Primary Canvas Substrate** | `#b2b2b2` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#bbbcc4` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#bbbcc4` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#8e8e8e` | `.Speakers_Item { border-bottom: #8e8e8e }` |
 
 ---
 
@@ -55,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.Navigation_Main> — `imdday-ch`)**:
-   - Landmark `<header class="Navigation_Main">` hosting `IMDDay 2026` navigation (`T ickets · L ineup · T imetable · G etting there · A bout`), DOM attributes (`data-tp-style="plugin-default"`, `data-engine="three.js r181"`, `data-config="%7B%22speed%22:0.2,%2..."`, `data-id="lineup"`), and stylesheet rule `selection { background: a1a1a1; color: white; }`.
-2. **Hero Stage & Focal Lead (<article.Speakers_Item> — `Dirk Koy`)**:
-   - Landmark `<article class="Speakers_Item Stage_Node">` presenting display lead `Dirk Koy` and copy excerpt *"Dirk Koy, born in 1977, is a Basel-based artist active in various"* over `#b2b2b2` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<article.Speakers_Item> — `Elodie Anglade`)**:
+   - Landmark `<header class="Navigation_Main">` (`116x400px`) hosting `IMDDay 2026` navigation (`T ickets · L ineup · T imetable · G etting there · A bout`), DOM attributes (`data-tp-style="plugin-default"`, `data-engine="three.js r181"`, `data-config="%7B%22speed%22:0.2,%2..."`, `data-id="lineup"`), and stylesheet rule `selection { background: a1a1a1; color: white; }`.
+2. **Hero Stage & Focal Lead (<article.Speakers_Item> — `Getting there`)**:
+   - Landmark `<article class="Speakers_Item Stage_Node">` presenting display lead `Getting there` and copy excerpt *"Dirk Koy, born in 1977, is a Basel-based artist active in various"* over `#b2b2b2` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<article.Stage_Node> — `Elodie Anglade`)**:
    - Landmark `<article class="Speakers_Item Stage_Node">` rendering section `Elodie Anglade` with copy *"In his visual logic, traces are not static. They continue to evol"*, asset references (`favicon.image-6ZC672GS.svg`, `favicon-TJBRTTS6.png`, `index.html`, `index.js`), and grid rule `.Html_Visible { opacity: 1; }`.
-4. **Interactive Detail & Feature Matrix (<article.Speakers_Item> — `Immo Schneider`)**:
-   - Landmark `<article class="Speakers_Item Stage_Node">` framing `Immo Schneider` and `Joëlle Bitton` (*"Elodie Anglade is a media and interaction designer based in Switz"*) with `#a1a1a1` surface cards, `#808080` accents, and `canvas { position: absolute; width: 100%; height: 100%; }`.
+4. **Interactive Detail & Feature Matrix (<article.Speakers_Item:nth(2)> — `Immo Schneider`)**:
+   - Landmark `<article class="Speakers_Item Stage_Node">` framing `Immo Schneider` and `Joëlle Bitton` (*"Elodie Anglade is a media and interaction designer based in Switz"*) with `#ffffff` surface cards, `#bbbcc4` accents, and `canvas { position: absolute; width: 100%; height: 100%; }`.
 5. **Colophon & Global Directory Footer (<footer.Footer_Main> — `https://imdday.ch/`)**:
-   - Landmark `<footer class="Footer_Main">` anchoring `IMDDay 2026` footer links (`T ickets · L ineup · T imetable · G etting there · A bout`), copy *"Her work often sits at the intersection of image-making, ani"*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="Footer_Main">` anchoring `IMDDay 2026` footer links (`T ickets · L ineup · T imetable · G etting there · A bout`), copy *"Her work often sits at the intersection of image-making, ani"*, and `#8e8e8e` structural dividers.

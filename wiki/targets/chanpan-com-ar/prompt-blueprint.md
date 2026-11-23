@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: chanpan-com-ar"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "chanpan-com-ar"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `#17130D` ink, `#F15A24` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#c1bbae` canvas, `#17130d` ink, `#f15a24` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: chanpan-com-ar
 
 > **ChanPan · AI Video Production, Commercials & Creative Studio — Argentina** (https://chanpan.com.ar) — AI-driven video production, commercials, branded content, branding and 2D/3D animation. A creative studio from Corrientes, Argentina, wor...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **ChanPan · AI Video Production, Commercials & Creative Studio — Argentina** (`https://chanpan.com.ar`). AI-driven video production, commercials, branded content, branding and 2D/3D animation. A creative studio from Corrientes, Argentina, wor...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `#17130D` ink, `#F15A24` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#c1bbae` canvas, `#17130d` ink, `#f15a24` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#C1BBAE` (`var(--bg)` in `:root`) paired with `#17130D` primary typography and `#F15A24` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo` for display copy (`ChanPan — AI video production and cr`) with `Inter` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `24ch` container bounds (`gap: 26px`, padding `4px`) with `cubic-bezier(.7,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#c1bbae` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#17130d` primary typography and `#f15a24` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ChanPan — AI video production and cr`) with `Inter` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `79.2px`) with `cubic-bezier(.7,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×25422px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `24ch` extracted from `chanpan-com-ar` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `26px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `79.2px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`, `12px`, `14px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24ch`, `gap: 26px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `79.2px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`.
 
 ---
@@ -48,14 +52,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#C1BBAE` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#17130D` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#524B3D` | `var(--ink-soft)` in `:root` |
-| **Interactive Accent / Highlight** | `#F15A24` | `var(--brand)` in `:root` |
-| **Secondary / Muted Copy** | `#A8360C` | `var(--brand-text)` in `:root` |
-| **Structural Hairline Border** | `#EEE9DE` | `var(--paper)` in `:root` |
+| **Primary Canvas Substrate** | `#c1bbae` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#17130d` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#eee9de` | `var(--paper)` in `:root` |
+| **Interactive Accent / Highlight** | `#f15a24` | `var(--brand)` in `:root` |
+| **Secondary / Muted Copy** | `#524b3d` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#a6a094` | `var(--line)` in `:root` (`rgba(23,19,13,.16)`) |
+| **Variable Token (`--brand-text`)** | `#a8360c` | `var(--brand-text)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -72,10 +77,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 | `--mono` | `'JetBrains Mono',ui-monospace,monospace` | Typography / Scale Token |
 | `--mx` | `clamp(22px,5.5vw,88px)` | Dimension / Scale Token |
 | `--band-bottom` | `0px` | Dimension / Scale Token |
-| `--chanpan-com-ar-bg` | `#C1BBAE` | Canvas Substrate (from `var(--bg)` in `:root`) |
-| `--chanpan-com-ar-ink` | `#17130D` | Primary Typography Ink (stylesheet-derived) |
-| `--chanpan-com-ar-surface` | `#524B3D` | Surface Substrate (stylesheet-derived) |
-| `--chanpan-com-ar-accent` | `#F15A24` | Interactive Accent (stylesheet-derived) |
+| `--chanpan-com-ar-bg` | `#c1bbae` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--chanpan-com-ar-ink` | `#17130d` | Primary Typography Ink (computed-derived) |
+| `--chanpan-com-ar-surface` | `#eee9de` | Surface Substrate (computed-derived) |
+| `--chanpan-com-ar-accent` | `#f15a24` | Interactive Accent (computed-derived) |
 
 ---
 
@@ -86,11 +91,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 - **Primary Body Stack**: `Inter`.
 - **Technical / Metadata Stack**: `JetBrains Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--display: 'Archivo',sans-serif`.
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`).
-- **Body Copy**: CSS variables `--body: 'Inter',system-ui,sans-serif`; rule `body` (`line-height: 1.6`).
-- **Metadata & Navigation Labels**: CSS variables `--mono: 'JetBrains Mono',ui-monospace,monospace`; rule `small` (`font-size: 9.5px`, `letter-spacing: .14em`, `font-weight: 600`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 32.64px`, `font-weight: 700`, `letter-spacing: -0.64px`); CSS variables `--display: 'Archivo',sans-serif`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 33.12px`, `line-height: 33.7824px`, `font-weight: 800`, `letter-spacing: -0.6624px`); rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--body: 'Inter',system-ui,sans-serif`; rule `body` (`line-height: 1.6`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--mono: 'JetBrains Mono',ui-monospace,monospace`; rule `small` (`font-size: 9.5px`, `letter-spacing: .14em`, `font-weight: 600`).
 
 ---
 
@@ -110,40 +115,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — ChanPan · AI Video Production, Commercials │
 │ ====================================================================== │
-│ [ <header.hd>              | Home · Demo Reel · Services · Work · C ]  │
+│ [ <header.hd> (1440x89px)             | Home · Demo Reel · Services  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: ChanPan — AI video production and creative studio            |   │
-│ | Substrate: #C1BBAE    | Ink: #17130D    | Accent: #F15A24        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: ChanPan — AI video production and creative studio              | │
+│ | Substrate: #c1bbae | Ink: #17130d | Accent: #f15a24                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.drive>           ) max-w: 24ch           |   │
+│ | SHOWCASE GRID (<section.drive>) max-w: 1440px                      | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | First, perspective.          |  | Our terrain.                 | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 26px  ) | │
-│ | [<header.hd>] -> [<section.hero>] -> [<section.drive>] |             │
+│ | DETAIL MODULE (<section.drive:nth(2)>) — Twenty years climbing     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.ft>           ) | https://chanpan.com.ar             │
+│ [ FOOTER (<footer.ft>         ) | https://chanpan.com.ar               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.hd>             ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: ChanPan — AI video production and creative studio              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.drive>) — 1-Col Stack                     | │
+│ | [ Item 1: First, perspective.                                    ] | │
+│ | [ Item 2: Our terrain.                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.drive:nth(2)>) — 1-Col (Twenty years climb) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.ft>         ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.hd> — `chanpan-com-ar`)**:
-   - Landmark `<header class="hd">` hosting `ChanPan · AI Video Production, Comme` navigation (`Home · Demo Reel · Services · Work · Contact`), DOM attributes (`data-clip="s1-loop"`, `data-clip="s2-scrub"`, `data-scrub`, `data-clip="s3-scrub"`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
+   - Landmark `<header class="hd">` (`1440x89px`) hosting `ChanPan · AI Video Production, Comme` navigation (`Home · Demo Reel · Services · Work · Contact`), DOM attributes (`data-clip="s1-loop"`, `data-clip="s2-scrub"`, `data-scrub`, `data-clip="s3-scrub"`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `ChanPan — AI video production and `)**:
-   - Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"Message us on WhatsApp"* over `#C1BBAE` canvas and `#17130D` ink.
+   - Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"AI as a production tool, not a shortcut."* over `#c1bbae` canvas and `#17130d` ink.
 3. **Primary Showcase & Content Grid (<section.drive> — `First, perspective.`)**:
    - Landmark `<section class="drive">` rendering section `First, perspective.` with copy *"Corrientes, Argentina"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `body.is-loading { overflow:hidden }`.
-4. **Interactive Detail & Feature Matrix (<section.drive> — `Our terrain.`)**:
-   - Landmark `<section class="drive">` framing `Our terrain.` and `Twenty years climbing.` (*"Production company"*) with `#524B3D` surface cards, `#F15A24` accents, and `button { font:inherit;color:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.drive:nth(2)> — `Our terrain.`)**:
+   - Landmark `<section class="drive">` framing `Our terrain.` and `Twenty years climbing.` (*"Production company"*) with `#eee9de` surface cards, `#f15a24` accents, and `button { font:inherit;color:inherit }`.
 5. **Colophon & Global Directory Footer (<footer.ft> — `https://chanpan.com.ar`)**:
-   - Landmark `<footer class="ft">` anchoring `ChanPan · AI Video Production, C` footer links (`Home · Demo Reel · Services · Work · Contact`), copy *"AI · Film · Design"*, and `#EEE9DE` structural dividers.
+   - Landmark `<footer class="ft">` anchoring `ChanPan · AI Video Production, C` footer links (`Home · Demo Reel · Services · Work · Contact`), copy *"AI · Film · Design"*, and `#a6a094` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `chanpan-com-ar` (**ChanPan · AI Video Production, Commercials & Creative Studio — Argentina** — `https://chanpan.com.ar`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#C1BBAE` canvas, `#17130D` ink, `#F15A24` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#c1bbae` canvas, `#17130d` ink, `#f15a24` accent).
 - **Identity & Domain Context**: AI-driven video production, commercials, branded content, branding and 2D/3D animation. A creative studio from Corrientes, Argentina, wor...
-- **Primary Substrate**: `#C1BBAE` (`var(--bg)` in `:root`), **Primary Ink**: `#17130D`, **Accent / Highlight**: `#F15A24`.
+- **Primary Substrate**: `#c1bbae` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#17130d`, **Accent / Highlight**: `#f15a24`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#C1BBAE` (`var(--bg)` in `:root`) paired with `#17130D` primary typography and `#F15A24` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo` for display copy (`ChanPan — AI video production and cr`) with `Inter` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `24ch` container bounds (`gap: 26px`, padding `4px`) with `cubic-bezier(.7,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#c1bbae` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#17130d` primary typography and `#f15a24` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ChanPan — AI video production and cr`) with `Inter` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `79.2px`) with `cubic-bezier(.7,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `chanpan-com-ar` in your global stylesheet:
 
 :root {
-  /* ChanPan · AI Video Production, Commercials & Creative Studio — Argentina (chanpan-com-ar) — Ground-Truth Extracted CSS Variables */
+  /* ChanPan · AI Video Production, Commercials & Creative Studio — Argentina (chanpan-com-ar) — Live-Grounded CSS Variables */
   --bg: #C1BBAE; /* Canvas / Surface Token (chanpan-com-ar) */
   --ink: #17130D; /* Typography Ink Token (chanpan-com-ar) */
   --ink-soft: #524B3D; /* Typography Ink Token (chanpan-com-ar) */
@@ -180,28 +204,29 @@ Declare and consume these exact custom properties extracted from `chanpan-com-ar
   --mono: 'JetBrains Mono',ui-monospace,monospace; /* Typography / Scale Token (chanpan-com-ar) */
   --mx: clamp(22px,5.5vw,88px); /* Dimension / Scale Token (chanpan-com-ar) */
   --band-bottom: 0px; /* Dimension / Scale Token (chanpan-com-ar) */
-  --chanpan-com-ar-bg: #C1BBAE; /* Canvas Substrate (from `var(--bg)` in `:root`) (chanpan-com-ar) */
-  --chanpan-com-ar-ink: #17130D; /* Primary Typography Ink (stylesheet-derived) (chanpan-com-ar) */
-  --chanpan-com-ar-surface: #524B3D; /* Surface Substrate (stylesheet-derived) (chanpan-com-ar) */
-  --chanpan-com-ar-accent: #F15A24; /* Interactive Accent (stylesheet-derived) (chanpan-com-ar) */
+  --chanpan-com-ar-bg: #c1bbae; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (chanpan-com-ar) */
+  --chanpan-com-ar-ink: #17130d; /* Primary Typography Ink (computed-derived) (chanpan-com-ar) */
+  --chanpan-com-ar-surface: #eee9de; /* Surface Substrate (computed-derived) (chanpan-com-ar) */
+  --chanpan-com-ar-accent: #f15a24; /* Interactive Accent (computed-derived) (chanpan-com-ar) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#C1BBAE` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#17130D` — grounded in `var(--ink)` in `:root`
-- **Elevated Surface / Card Substrate**: `#524B3D` — grounded in `var(--ink-soft)` in `:root`
-- **Interactive Accent / Highlight**: `#F15A24` — grounded in `var(--brand)` in `:root`
-- **Secondary / Muted Copy**: `#A8360C` — grounded in `var(--brand-text)` in `:root`
-- **Structural Hairline Border**: `#EEE9DE` — grounded in `var(--paper)` in `:root`
+- **Primary Canvas Substrate**: `#c1bbae` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#17130d` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#eee9de` — grounded in `var(--paper)` in `:root`
+- **Interactive Accent / Highlight**: `#f15a24` — grounded in `var(--brand)` in `:root`
+- **Secondary / Muted Copy**: `#524b3d` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#a6a094` — grounded in `var(--line)` in `:root` (`rgba(23,19,13,.16)`)
+- **Variable Token (`--brand-text`)**: `#a8360c` — grounded in `var(--brand-text)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×25422px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `24ch` extracted from `chanpan-com-ar` stylesheet
-- **Padding & Gutters**: `4px` lateral canvas padding with `26px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24ch`, `gap: 26px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `79.2px` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `79.2px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion:reduce)`
 - **Corner Radii**: `999px`, `50%`, `12px`, `14px`
 
@@ -209,31 +234,31 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Display Font Stack**: `Archivo`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **H1 Display Rule**: CSS variables `--display: 'Archivo',sans-serif`
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`)
-- **Body Copy Rule**: CSS variables `--body: 'Inter',system-ui,sans-serif`; rule `body` (`line-height: 1.6`)
-- **Metadata & Index Rule**: CSS variables `--mono: 'JetBrains Mono',ui-monospace,monospace`; rule `small` (`font-size: 9.5px`, `letter-spacing: .14em`, `font-weight: 600`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 32.64px`, `font-weight: 700`, `letter-spacing: -0.64px`); CSS variables `--display: 'Archivo',sans-serif`
+- **H2 Section Rule**: live computed `h2` (`font-size: 33.12px`, `line-height: 33.7824px`, `font-weight: 800`, `letter-spacing: -0.6624px`); rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--body: 'Inter',system-ui,sans-serif`; rule `body` (`line-height: 1.6`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--mono: 'JetBrains Mono',ui-monospace,monospace`; rule `small` (`font-size: 9.5px`, `letter-spacing: .14em`, `font-weight: 600`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `chanpan-com-ar` (`ChanPan · AI Video Production, Commercials & Creative Studio — Argentina`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.hd> — `chanpan-com-ar`)**:
-   - DOM & Selectors: Landmark `<header class="hd">` hosting `ChanPan · AI Video Production, Comme` navigation (`Home · Demo Reel · Services · Work · Contact`), DOM attributes (`data-clip="s1-loop"`, `data-clip="s2-scrub"`, `data-scrub`, `data-clip="s3-scrub"`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
+   - DOM & Selectors: Landmark `<header class="hd">` (`1440x89px`) hosting `ChanPan · AI Video Production, Comme` navigation (`Home · Demo Reel · Services · Work · Contact`), DOM attributes (`data-clip="s1-loop"`, `data-clip="s2-scrub"`, `data-scrub`, `data-clip="s3-scrub"`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hd> — `chanpan-com-ar`)` (`chanpan-com-ar`) adapts across `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.7,0,.2,1)`, `cubic-bezier(.2,.8,.2,1)` transitions and links `Home · Demo Reel · Services · Work · Contact`.
 2. **Hero Stage & Focal Lead (<section.hero> — `ChanPan — AI video production and `)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"Message us on WhatsApp"* over `#C1BBAE` canvas and `#17130D` ink.
-   - Responsive Contract: Hero stage (`1440×25422px` desktop / `390×2400px` mobile) sets `#C1BBAE` background with `#17130D` headline `ChanPan — AI video production and creative studio`.
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"AI as a production tool, not a shortcut."* over `#c1bbae` canvas and `#17130d` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#c1bbae` background with `#17130d` headline `ChanPan — AI video production and creative studio`.
 3. **Primary Showcase & Content Grid (<section.drive> — `First, perspective.`)**:
    - DOM & Selectors: Landmark `<section class="drive">` rendering section `First, perspective.` with copy *"Corrientes, Argentina"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `body.is-loading { overflow:hidden }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.drive> — `First, perspective.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 24ch`, `gap: 26px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.drive> — `Our terrain.`)**:
-   - DOM & Selectors: Landmark `<section class="drive">` framing `Our terrain.` and `Twenty years climbing.` (*"Production company"*) with `#524B3D` surface cards, `#F15A24` accents, and `button { font:inherit;color:inherit }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.drive> — `Our terrain.`)` uses `999px`, `50%`, `12px`, `14px` radii, `#F15A24` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.drive> — `First, perspective.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `79.2px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.drive:nth(2)> — `Our terrain.`)**:
+   - DOM & Selectors: Landmark `<section class="drive">` framing `Our terrain.` and `Twenty years climbing.` (*"Production company"*) with `#eee9de` surface cards, `#f15a24` accents, and `button { font:inherit;color:inherit }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.drive:nth(2)> — `Our terrain.`)` uses `999px`, `50%`, `12px`, `14px` radii, `#f15a24` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.ft> — `https://chanpan.com.ar`)**:
-   - DOM & Selectors: Landmark `<footer class="ft">` anchoring `ChanPan · AI Video Production, C` footer links (`Home · Demo Reel · Services · Work · Contact`), copy *"AI · Film · Design"*, and `#EEE9DE` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.ft> — `https://chanpan.com.ar`)` aligns to `24ch` extracted from `chanpan-com-ar` stylesheet with `4px` lateral canvas padding with `26px` grid gap and attributes (data-clip="s1-loop", data-clip="s2-scrub", data-scrub).
+   - DOM & Selectors: Landmark `<footer class="ft">` anchoring `ChanPan · AI Video Production, C` footer links (`Home · Demo Reel · Services · Work · Contact`), copy *"AI · Film · Design"*, and `#a6a094` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.ft> — `https://chanpan.com.ar`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `79.2px` lateral canvas padding with `16px` grid gap and attributes (data-clip="s1-loop", data-clip="s2-scrub", data-scrub).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Message us on WhatsApp"*
+- Copy Excerpt 1: *"AI as a production tool, not a shortcut."*
 - Copy Excerpt 2: *"Corrientes, Argentina"*
 - Copy Excerpt 3: *"Production company"*
 - Copy Excerpt 4: *"AI · Film · Design"*

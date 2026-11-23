@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: perappelgren-de"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "perappelgren-de"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ffffff`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#213547`)"
 ---
 
 # UI Design System & Master Generation Blueprint: perappelgren-de
 
 > **Per Appelgren** (https://perappelgren.de/) — Per Appelgren is a Paris and Berlin based photographer working across fashion, beauty, editorial, and commercial image-making.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Per Appelgren** (`https://perappelgren.de/`). Per Appelgren is a Paris and Berlin based photographer working across fashion, beauty, editorial, and commercial image-making.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ffffff`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#213547`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#ffffff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `neueMontreal` for display copy (`Studio`) with `neueMontreal Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 2px`, padding `216px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f0f15` primary typography and `#213547` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `neueMontreal` for display copy (`Per Appelgren`) with `neueMontreal` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 2px`, padding `216px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `perappelgren-de` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `216px` lateral canvas padding with `2px` grid gap.
 - **Border Radius Scale**: `4px`, `32px`, `var(--radius-lg)`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `216px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,14 +52,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#fff
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0000` | `textarea { background-color: #0000 }` |
-| **Interactive Accent / Highlight** | `#ffffff` | `.border-white { border-color: white }` (`#ffffff`) |
-| **Secondary / Muted Copy** | `#fffc` | `80 { border-color: #fffc }` |
-| **Structural Hairline Border** | `#000000` | `.bg-black { background-color: black }` (`#000000`) |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0f0f15` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#1f1f2b` | `:hover { background-color: #1f1f2b }` |
+| **Interactive Accent / Highlight** | `#213547` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#33333d` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#33333d` | hairline divider derived from live computed `p` `color` (`computed_styles.json`) |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +88,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#fff
 
 ### Font Family Stacks
 - **Display Typography**: `neueMontreal`.
-- **Primary Body Stack**: `neueMontreal Fallback`.
+- **Primary Body Stack**: `neueMontreal`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`).
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: observed font-size ladder: `22px`, `16px`, `29px`, `10px`, `1em`.
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 22px`, `line-height: 28px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
 
 ---
 
@@ -103,47 +108,66 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#fff
 - **Selector `layer theme`**: `transition: .15s` extracted from `perappelgren-de` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `perappelgren-de` stylesheet.
 - **Selector `transform\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `perappelgren-de` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.home-nav>` and `<section.relative>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.home-nav>` and `<section.w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Per Appelgren                              │
 │ ====================================================================== │
-│ [ <nav.home-nav>           | Overview · Index · Archive · About · C ]  │
+│ [ <nav.home-nav> (1440x40px)          | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.relative>                                   |   │
-│ | H1: Studio                                                       |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #ffffff        |   │
+│ | HERO STAGE: <section.relative> (w=1440px)                          | │
+│ | H1: Per Appelgren                                                  | │
+│ | Substrate: #ffffff | Ink: #0f0f15 | Accent: #213547                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.relative>        ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.w-full>) max-w: 96rem                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Office                       |  | Represented in Europe        | | │
+│ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2px   ) | │
-│ | [<nav.home-nav>] -> [<section.relative>] -> [<section.relative>] |   │
+│ | DETAIL MODULE (<section.h-auto>) — Global Directory & Co           | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.relative>     ) | https://perappelgren.de/           │
+│ [ FOOTER (<footer.z-42>       ) | https://perappelgren.de/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.home-nav>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.relative>) — 390px Vertical Lead              | │
+│ | H1: Per Appelgren                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.w-full>) — 1-Col Stack                    | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.h-auto>) — 1-Col (Global Directory &)       | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.z-42>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.home-nav> — `perappelgren-de`)**:
-   - Landmark `<nav class="home-nav fixed">` hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Studio`)**:
-   - Landmark `<section class="relative w-full">` presenting display lead `Studio` and copy excerpt *"CASABLANCA PRE-FALL ´26 CAMPAIGN"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `Office`)**:
-   - Landmark `<section class="relative w-full">` rendering section `Office` with copy *"ARCHIVE A R C H I V E"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Represented in Europe`)**:
-   - Landmark `<section class="relative h-auto">` framing `Represented in Europe` and `CONTACT C O N T A C T` (*"CONTACT C O N T A C T"*) with `#0000` surface cards, `#ffffff` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://perappelgren.de/`)**:
-   - Landmark `<footer class="relative z-42">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"Hi! I am Per! I'm a German-Swedish photographer based betwee"*, and `#000000` structural dividers.
+   - Landmark `<nav class="home-nav top-0">` (`1440x40px`) hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
+2. **Hero Stage & Focal Lead (<section.relative> — `Per Appelgren`)**:
+   - Landmark `<section class="relative w-full">` presenting display lead `Per Appelgren` and copy excerpt *"Hi! I am Per! I'm a German-Swedish photographer based between Par"* over `#ffffff` canvas and `#0f0f15` ink.
+3. **Primary Showcase & Content Grid (<section.w-full> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="relative w-full">` rendering section `Featured Work & Interactive Showcase` with copy *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.h-auto> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="h-auto relative">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"ARCHIVE A R C H I V E"*) with `#1f1f2b` surface cards, `#213547` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
+5. **Colophon & Global Directory Footer (<footer.z-42> — `https://perappelgren.de/`)**:
+   - Landmark `<footer class="z-42 relative">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"CONTACT C O N T A C T"*, and `#33333d` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#fff
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `perappelgren-de` (**Per Appelgren** — `https://perappelgren.de/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ffffff`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#213547`).
 - **Identity & Domain Context**: Per Appelgren is a Paris and Berlin based photographer working across fashion, beauty, editorial, and commercial image-making.
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#ffffff`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0f0f15`, **Accent / Highlight**: `#213547`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#ffffff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `neueMontreal` for display copy (`Studio`) with `neueMontreal Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 2px`, padding `216px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f0f15` primary typography and `#213547` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `neueMontreal` for display copy (`Per Appelgren`) with `neueMontreal` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 2px`, padding `216px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `perappelgren-de` in your global stylesheet:
 
 :root {
-  /* Per Appelgren (perappelgren-de) — Ground-Truth Extracted CSS Variables */
+  /* Per Appelgren (perappelgren-de) — Live-Grounded CSS Variables */
   --font-neue-montreal: "neueMontreal", "neueMontreal Fallback"; /* Typography / Scale Token (perappelgren-de) */
   --font-vemior: "vemior", "vemior Fallback"; /* Typography / Scale Token (perappelgren-de) */
   --font-sans: var(--font-neue-montreal); /* Typography / Scale Token (perappelgren-de) */
@@ -188,55 +212,56 @@ Declare and consume these exact custom properties extracted from `perappelgren-d
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#0000` — grounded in `textarea { background-color: #0000 }`
-- **Interactive Accent / Highlight**: `#ffffff` — grounded in `.border-white { border-color: white }` (`#ffffff`)
-- **Secondary / Muted Copy**: `#fffc` — grounded in `80 { border-color: #fffc }`
-- **Structural Hairline Border**: `#000000` — grounded in `.bg-black { background-color: black }` (`#000000`)
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0f0f15` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#1f1f2b` — grounded in `:hover { background-color: #1f1f2b }`
+- **Interactive Accent / Highlight**: `#213547` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#33333d` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#33333d` — grounded in hairline divider derived from live computed `p` `color` (`computed_styles.json`)
+- **Variable Token (`--color-black`)**: `#000000` — grounded in `var(--color-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `perappelgren-de` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `216px` lateral canvas padding with `2px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `216px` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
 - **Corner Radii**: `4px`, `32px`, `var(--radius-lg)`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `neueMontreal`
-- **Body Font Stack**: `neueMontreal Fallback`
+- **Body Font Stack**: `neueMontreal`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-sm)`, `var(--text-xs)`)
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **H1 Display Rule**: observed font-size ladder: `22px`, `16px`, `29px`, `10px`, `1em`
+- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 22px`, `line-height: 28px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `perappelgren-de` (`Per Appelgren`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.home-nav> — `perappelgren-de`)**:
-   - DOM & Selectors: Landmark `<nav class="home-nav fixed">` hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
+   - DOM & Selectors: Landmark `<nav class="home-nav top-0">` (`1440x40px`) hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.home-nav> — `perappelgren-de`)` (`perappelgren-de`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Studio`)**:
-   - DOM & Selectors: Landmark `<section class="relative w-full">` presenting display lead `Studio` and copy excerpt *"CASABLANCA PRE-FALL ´26 CAMPAIGN"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Studio`.
-3. **Primary Showcase & Content Grid (<section.relative> — `Office`)**:
-   - DOM & Selectors: Landmark `<section class="relative w-full">` rendering section `Office` with copy *"ARCHIVE A R C H I V E"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.relative> — `Office`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `216px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Represented in Europe`)**:
-   - DOM & Selectors: Landmark `<section class="relative h-auto">` framing `Represented in Europe` and `CONTACT C O N T A C T` (*"CONTACT C O N T A C T"*) with `#0000` surface cards, `#ffffff` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Represented in Europe`)` uses `4px`, `32px`, `var(--radius-lg)`, `999px` radii, `#ffffff` highlights, and assets (vemior-s.p.0loat6znd6m5-.otf, 12mrv9~q-_9yg.css, 0wjx1qarcnur7.js).
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://perappelgren.de/`)**:
-   - DOM & Selectors: Landmark `<footer class="relative z-42">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"Hi! I am Per! I'm a German-Swedish photographer based betwee"*, and `#000000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://perappelgren.de/`)` aligns to `40rem` extracted from `perappelgren-de` stylesheet with `216px` lateral canvas padding with `2px` grid gap and attributes (data-precedence="next", data-engine="three.js r182", data-gallery-title-track="true").
+2. **Hero Stage & Focal Lead (<section.relative> — `Per Appelgren`)**:
+   - DOM & Selectors: Landmark `<section class="relative w-full">` presenting display lead `Per Appelgren` and copy excerpt *"Hi! I am Per! I'm a German-Swedish photographer based between Par"* over `#ffffff` canvas and `#0f0f15` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0f0f15` headline `Per Appelgren`.
+3. **Primary Showcase & Content Grid (<section.w-full> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<section class="relative w-full">` rendering section `Featured Work & Interactive Showcase` with copy *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.w-full> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `216px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.h-auto> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<section class="h-auto relative">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"ARCHIVE A R C H I V E"*) with `#1f1f2b` surface cards, `#213547` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.h-auto> — `Technical Architecture & Narrative`)` uses `4px`, `32px`, `var(--radius-lg)`, `999px` radii, `#213547` highlights, and assets (vemior-s.p.0loat6znd6m5-.otf, 12mrv9~q-_9yg.css, 0wjx1qarcnur7.js).
+5. **Colophon & Global Directory Footer (<footer.z-42> — `https://perappelgren.de/`)**:
+   - DOM & Selectors: Landmark `<footer class="z-42 relative">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"CONTACT C O N T A C T"*, and `#33333d` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.z-42> — `https://perappelgren.de/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `216px` lateral canvas padding with `2px` grid gap and attributes (data-precedence="next", data-engine="three.js r182", data-gallery-title-track="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*
-- Copy Excerpt 2: *"ARCHIVE A R C H I V E"*
-- Copy Excerpt 3: *"CONTACT C O N T A C T"*
-- Copy Excerpt 4: *"Hi! I am Per! I'm a German-Swedish photographer based between Paris and Berlin, wi..."*
+- Copy Excerpt 1: *"Hi! I am Per! I'm a German-Swedish photographer based between Paris and Berlin, wi..."*
+- Copy Excerpt 2: *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*
+- Copy Excerpt 3: *"ARCHIVE A R C H I V E"*
+- Copy Excerpt 4: *"CONTACT C O N T A C T"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)`
@@ -250,7 +275,7 @@ Scaffold `perappelgren-de` (`Per Appelgren`) with these exact structural regions
 - **Selector `layer theme`**: `transition: .15s` extracted from `perappelgren-de` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `perappelgren-de` stylesheet.
 - **Selector `transform\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `perappelgren-de` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.home-nav>` and `<section.relative>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.home-nav>` and `<section.w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

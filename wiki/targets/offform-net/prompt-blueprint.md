@@ -1,24 +1,20 @@
 ---
 title: "UI Prompt Blueprint: offform-net"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "offform-net"
 status: blocked
 capture: none
 capture_desktop: none
 capture_mobile: none
-block_reason: "Empty raw DOM capture (39 bytes, 0 stylesheets)"
-archetype: "Blocked / WAF-Gated Target (Excluded from Tally)"
+http_status: 502
+block_reason: "Upstream HTTP 502 (502 Bad Gateway)"
+archetype: "Blocked / Unreachable Target (Excluded from Tally)"
 ---
 
 # UI Design System & Master Generation Blueprint: offform-net (`status: blocked`)
-capture: none
-capture_desktop: none
-capture_mobile: none
 
 > [!WARNING]
-> **Target Status**: `status: blocked` (`Empty raw DOM capture (39 bytes, 0 stylesheets)`)  
-capture: none
-capture_desktop: none
-capture_mobile: none
+> **Target Status**: `status: blocked` (`http_status: 502` — `Upstream HTTP 502 (502 Bad Gateway)`)  
 > **Production URL**: [https://offform.net/](https://offform.net/)  
-> **Verification Policy**: Excluded from the `25.0` truth evaluation tally per `claude-loop` `C1` (zero fabricated tokens on WAF-gated/error captures).
+> **Verification Policy**: Excluded from the `25.0` truth evaluation tally per `claude-loop` `C1` / `C15` (zero fabricated tokens, zero WAF/CAPTCHA bypass, zero stray screenshots).

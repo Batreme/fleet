@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: webdesign-kernjosh-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "webdesign-kernjosh-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3f3f3f`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`)"
 ---
 
 # UI Design System & Master Generation Blueprint: webdesign-kernjosh-com
 
 > **Josh Kern** (https://webdesign.kernjosh.com) — Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Josh Kern** (`https://webdesign.kernjosh.com`). Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3f3f3f`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (`var(--base-100)` in `:root`) paired with `#0c0908` primary typography and `#3f3f3f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `UglyDave` for display copy (`Hey my name is Josh and I cool websi`) with `Outfit` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `6rem` container bounds (`gap: .5rem`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c0908` primary typography and `#007aff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Hey my name is Josh and I cool websi`) with `DM Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 12px`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x886)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `6rem` extracted from `webdesign-kernjosh-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `.45rem` lateral canvas padding with `.5rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×886px` (`assets/mobile.png`, full-page live capture (886px)).
+- **Master Container Bounds**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `.45rem` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `999px`, `6px`, `4px`, `1px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 6rem`, `gap: .5rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 12px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (width<=600px)`, `@media (width<=1000px)`, `@media (width<=560px)`.
 
@@ -48,14 +52,17 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f5f1e6` | `var(--base-100)` in `:root` |
-| **Primary Typography Ink** | `#e0dfd7` | `var(--base-200)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#5f5f5f` | `var(--base-300)` in `:root` |
-| **Interactive Accent / Highlight** | `#3f3f3f` | `var(--base-350)` in `:root` |
-| **Secondary / Muted Copy** | `#0c0908` | `var(--base-400)` in `:root` |
-| **Structural Hairline Border** | `#e6dfd0` | `var(--kuli-ground)` in `:root` |
+| **Primary Canvas Substrate** | `#f5f1e6` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0c0908` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ece3cb` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#007aff` | `.mail-nav__btn { color: #007aff }` |
+| **Secondary / Muted Copy** | `#3f3f3f` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#8b8983` | `.nico-batt { border: #8b8983 }` |
+| **Variable Token (`--base-200`)** | `#e0dfd7` | `var(--base-200)` in `:root` |
+| **Variable Token (`--base-300`)** | `#5f5f5f` | `var(--base-300)` in `:root` |
+| **Variable Token (`--kuli-ground`)** | `#e6dfd0` | `var(--kuli-ground)` in `:root` |
 | **Variable Token (`--buy-bg`)** | `#2a1d15` | `var(--buy-bg)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -83,15 +90,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `UglyDave`.
-- **Primary Body Stack**: `Outfit`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `DM Sans`.
+- **Primary Body Stack**: `DM Sans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--about-font-display: "UglyDave", cursive`; rule `h1` (`font-size: clamp(.9rem,1.7vmin,1.1rem)`, `line-height: 1.75`, `font-weight: inherit`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `1.075rem`, `1.15rem`, `.75rem`, `34px`).
-- **Body Copy**: CSS variables `--about-font-body: "DM Sans", sans-serif`.
-- **Metadata & Navigation Labels**: CSS variables `--about-font-label: "DM Sans", sans-serif`, `--about-label-size: .98rem`, `--about-label-tracking: -.005em`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 15.3px`, `line-height: 26.775px`, `font-weight: 400`); CSS variables `--about-font-display: "UglyDave", cursive`; rule `h1` (`font-size: clamp(.9rem,1.7vmin,1.1rem)`, `line-height: 1.75`, `font-weight: inherit`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: 26.4px`, `font-weight: 400`, `letter-spacing: -0.24px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--about-font-body: "DM Sans", sans-serif`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--about-font-label: "DM Sans", sans-serif`, `--about-label-size: .98rem`, `--about-label-tracking: -.005em`.
 
 ---
 
@@ -111,40 +118,59 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Josh Kern                                  │
 │ ====================================================================== │
-│ [ <nav.nav>                | Overview · Index · Archive · About · C ]  │
+│ [ <nav.nav> (1440x42px)               | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.desk>                                       |   │
-│ | H1: Hey my name is Josh and I cool websites :)                   |   │
-│ | Substrate: #f5f1e6    | Ink: #0c0908    | Accent: #3f3f3f        |   │
+│ | HERO STAGE: <section.desk> (w=1440px)                              | │
+│ | H1: Hey my name is Josh and I cool websites :)                     | │
+│ | Substrate: #f5f1e6 | Ink: #0c0908 | Accent: #007aff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.work-stage>      ) max-w: 6rem           |   │
+│ | SHOWCASE GRID (<section.work-stage>) max-w: 1400px                 | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Getting to know you          |  | Designing the site           | | │
+│ | | Getting to know you          |  | Building the site            | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .5rem ) | │
-│ | [<nav.nav>] -> [<section.desk>] -> [<section.work-stag] |            │
+│ | DETAIL MODULE (<section.process-shell>) — Handover & going live    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.legal-footer> ) | https://webdesign.kernjosh.com     │
+│ [ FOOTER (<footer.legal-footer) | https://webdesign.kernjosh.com       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 12px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.nav>               ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.desk>) — 390px Vertical Lead                  | │
+│ | H1: Hey my name is Josh and I cool websites :)                     | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.work-stage>) — 1-Col Stack                | │
+│ | [ Item 1: Getting to know you                                    ] | │
+│ | [ Item 2: Building the site                                      ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.process-shell>) — 1-Col (Handover & going l)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.legal-footer) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.nav> — `webdesign-kernjosh-com`)**:
-   - Landmark `<nav class="nav">` hosting `Josh Kern` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-landscape="primary"`, `data-back-pill`, `data-back-arrow-path`, `data-work-open`), and stylesheet rule `selection { color:0a0a0a;background:fff19a }`.
+   - Landmark `<nav class="nav">` (`1440x42px`) hosting `Josh Kern` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-landscape="primary"`, `data-back-pill`, `data-back-arrow-path`, `data-work-open`), and stylesheet rule `selection { color:0a0a0a;background:fff19a }`.
 2. **Hero Stage & Focal Lead (<section.desk> — `Hey my name is Josh and I cool web`)**:
-   - Landmark `<section class="desk">` presenting display lead `Hey my name is Josh and I cool websites :)` and copy excerpt *"c e d r i c c a r r . c o m"* over `#f5f1e6` canvas and `#0c0908` ink.
+   - Landmark `<section class="desk">` presenting display lead `Hey my name is Josh and I cool websites :)` and copy excerpt *"I ask a lot of questions because I want the website to feel like "* over `#f5f1e6` canvas and `#0c0908` ink.
 3. **Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)**:
-   - Landmark `<section class="work-stage">` rendering section `Getting to know you` with copy *"C l i c k t o o p e n p r o j e c t"*, asset references (`favicon.png`, `apple-touch-icon.png`, `challenges.cloudflare.com`, `main-CwptEoZ4.js`), and grid rule `font-face { font-family:Outfit;src:url(/assets/Outfit-Variable-D6ftewdU.woff2)format... }`.
-4. **Interactive Detail & Feature Matrix (<section.process-shell> — `Designing the site`)**:
-   - Landmark `<section class="process-shell">` framing `Designing the site` and `Building the site` (*"1 Getting to know you I ask a lot of questions because I want the"*) with `#5f5f5f` surface cards, `#3f3f3f` accents, and `root { --base-100:f5f1e6;--base-200:e0dfd7;--base-300:5f5f5f;--base-350:3f3f3f;... }`.
+   - Landmark `<section class="work-stage">` rendering section `Getting to know you` with copy *"1 Getting to know you I ask a lot of questions because I want the"*, asset references (`favicon.png`, `apple-touch-icon.png`, `challenges.cloudflare.com`, `main-CwptEoZ4.js`), and grid rule `font-face { font-family:Outfit;src:url(/assets/Outfit-Variable-D6ftewdU.woff2)format... }`.
+4. **Interactive Detail & Feature Matrix (<section.process-shell> — `Building the site`)**:
+   - Landmark `<section class="process-shell">` framing `Building the site` and `Handover & going live` (*"I start exploring ideas for the landing page by throwing a lot of"*) with `#ece3cb` surface cards, `#007aff` accents, and `root { --base-100:f5f1e6;--base-200:e0dfd7;--base-300:5f5f5f;--base-350:3f3f3f;... }`.
 5. **Colophon & Global Directory Footer (<footer.legal-footer> — `https://webdesign.kernjosh.com`)**:
-   - Landmark `<footer class="legal-footer">` anchoring `Josh Kern` footer links (`Overview · Index · Archive · About · Contact`), copy *"I ask a lot of questions because I want the website to feel "*, and `#e6dfd0` structural dividers.
+   - Landmark `<footer class="legal-footer">` anchoring `Josh Kern` footer links (`Overview · Index · Archive · About · Contact`), copy *"3 Building the site I build everything with custom code, add"*, and `#8b8983` structural dividers.
 
 ---
 
@@ -156,19 +182,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `webdesign-kernjosh-com` (**Josh Kern** — `https://webdesign.kernjosh.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#3f3f3f`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`).
 - **Identity & Domain Context**: Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
-- **Primary Substrate**: `#f5f1e6` (`var(--base-100)` in `:root`), **Primary Ink**: `#0c0908`, **Accent / Highlight**: `#3f3f3f`.
+- **Primary Substrate**: `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0c0908`, **Accent / Highlight**: `#007aff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (`var(--base-100)` in `:root`) paired with `#0c0908` primary typography and `#3f3f3f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `UglyDave` for display copy (`Hey my name is Josh and I cool websi`) with `Outfit` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `6rem` container bounds (`gap: .5rem`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c0908` primary typography and `#007aff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Hey my name is Josh and I cool websi`) with `DM Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 12px`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `webdesign-kernjosh-com` in your global stylesheet:
 
 :root {
-  /* Josh Kern (webdesign-kernjosh-com) — Ground-Truth Extracted CSS Variables */
+  /* Josh Kern (webdesign-kernjosh-com) — Live-Grounded CSS Variables */
   --base-100: #f5f1e6; /* Color / Atmospheric Token (webdesign-kernjosh-com) */
   --base-200: #e0dfd7; /* Color / Atmospheric Token (webdesign-kernjosh-com) */
   --base-300: #5f5f5f; /* Color / Atmospheric Token (webdesign-kernjosh-com) */
@@ -189,56 +215,59 @@ Declare and consume these exact custom properties extracted from `webdesign-kern
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f5f1e6` — grounded in `var(--base-100)` in `:root`
-- **Primary Typography Ink**: `#e0dfd7` — grounded in `var(--base-200)` in `:root`
-- **Elevated Surface / Card Substrate**: `#5f5f5f` — grounded in `var(--base-300)` in `:root`
-- **Interactive Accent / Highlight**: `#3f3f3f` — grounded in `var(--base-350)` in `:root`
-- **Secondary / Muted Copy**: `#0c0908` — grounded in `var(--base-400)` in `:root`
-- **Structural Hairline Border**: `#e6dfd0` — grounded in `var(--kuli-ground)` in `:root`
+- **Primary Canvas Substrate**: `#f5f1e6` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0c0908` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ece3cb` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#007aff` — grounded in `.mail-nav__btn { color: #007aff }`
+- **Secondary / Muted Copy**: `#3f3f3f` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#8b8983` — grounded in `.nico-batt { border: #8b8983 }`
+- **Variable Token (`--base-200`)**: `#e0dfd7` — grounded in `var(--base-200)` in `:root`
+- **Variable Token (`--base-300`)**: `#5f5f5f` — grounded in `var(--base-300)` in `:root`
+- **Variable Token (`--kuli-ground`)**: `#e6dfd0` — grounded in `var(--kuli-ground)` in `:root`
 - **Variable Token (`--buy-bg`)**: `#2a1d15` — grounded in `var(--buy-bg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `6rem` extracted from `webdesign-kernjosh-com` stylesheet
-- **Padding & Gutters**: `.45rem` lateral canvas padding with `.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 6rem`, `gap: .5rem`)
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×886px` (full-page live capture (886px), `390px` standard mobile width).
+- **Container Max-Width**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `.45rem` lateral canvas padding with `12px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 12px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (width<=600px)`, `@media (width<=1000px)`, `@media (width<=560px)`
 - **Corner Radii**: `999px`, `6px`, `4px`, `1px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `UglyDave`
-- **Body Font Stack**: `Outfit`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--about-font-display: "UglyDave", cursive`; rule `h1` (`font-size: clamp(.9rem,1.7vmin,1.1rem)`, `line-height: 1.75`, `font-weight: inherit`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `1.075rem`, `1.15rem`, `.75rem`, `34px`)
-- **Body Copy Rule**: CSS variables `--about-font-body: "DM Sans", sans-serif`
-- **Metadata & Index Rule**: CSS variables `--about-font-label: "DM Sans", sans-serif`, `--about-label-size: .98rem`, `--about-label-tracking: -.005em`
+- **Display Font Stack**: `DM Sans`
+- **Body Font Stack**: `DM Sans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 15.3px`, `line-height: 26.775px`, `font-weight: 400`); CSS variables `--about-font-display: "UglyDave", cursive`; rule `h1` (`font-size: clamp(.9rem,1.7vmin,1.1rem)`, `line-height: 1.75`, `font-weight: inherit`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: 26.4px`, `font-weight: 400`, `letter-spacing: -0.24px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--about-font-body: "DM Sans", sans-serif`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--about-font-label: "DM Sans", sans-serif`, `--about-label-size: .98rem`, `--about-label-tracking: -.005em`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `webdesign-kernjosh-com` (`Josh Kern`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.nav> — `webdesign-kernjosh-com`)**:
-   - DOM & Selectors: Landmark `<nav class="nav">` hosting `Josh Kern` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-landscape="primary"`, `data-back-pill`, `data-back-arrow-path`, `data-work-open`), and stylesheet rule `selection { color:0a0a0a;background:fff19a }`.
+   - DOM & Selectors: Landmark `<nav class="nav">` (`1440x42px`) hosting `Josh Kern` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-landscape="primary"`, `data-back-pill`, `data-back-arrow-path`, `data-work-open`), and stylesheet rule `selection { color:0a0a0a;background:fff19a }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav> — `webdesign-kernjosh-com`)` (`webdesign-kernjosh-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (width<=600px)`, `@media (width<=1000px)`, `@media (width<=560px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.33,1,.68,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.desk> — `Hey my name is Josh and I cool web`)**:
-   - DOM & Selectors: Landmark `<section class="desk">` presenting display lead `Hey my name is Josh and I cool websites :)` and copy excerpt *"c e d r i c c a r r . c o m"* over `#f5f1e6` canvas and `#0c0908` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f5f1e6` background with `#0c0908` headline `Hey my name is Josh and I cool websites :)`.
+   - DOM & Selectors: Landmark `<section class="desk">` presenting display lead `Hey my name is Josh and I cool websites :)` and copy excerpt *"I ask a lot of questions because I want the website to feel like "* over `#f5f1e6` canvas and `#0c0908` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×886px` mobile) sets `#f5f1e6` background with `#0c0908` headline `Hey my name is Josh and I cool websites :)`.
 3. **Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)**:
-   - DOM & Selectors: Landmark `<section class="work-stage">` rendering section `Getting to know you` with copy *"C l i c k t o o p e n p r o j e c t"*, asset references (`favicon.png`, `apple-touch-icon.png`, `challenges.cloudflare.com`, `main-CwptEoZ4.js`), and grid rule `font-face { font-family:Outfit;src:url(/assets/Outfit-Variable-D6ftewdU.woff2)format... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 6rem`, `gap: .5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.process-shell> — `Designing the site`)**:
-   - DOM & Selectors: Landmark `<section class="process-shell">` framing `Designing the site` and `Building the site` (*"1 Getting to know you I ask a lot of questions because I want the"*) with `#5f5f5f` surface cards, `#3f3f3f` accents, and `root { --base-100:f5f1e6;--base-200:e0dfd7;--base-300:5f5f5f;--base-350:3f3f3f;... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.process-shell> — `Designing the site`)` uses `999px`, `6px`, `4px`, `1px` radii, `#3f3f3f` highlights, and assets (favicon.png, apple-touch-icon.png, challenges.cloudflare.com).
+   - DOM & Selectors: Landmark `<section class="work-stage">` rendering section `Getting to know you` with copy *"1 Getting to know you I ask a lot of questions because I want the"*, asset references (`favicon.png`, `apple-touch-icon.png`, `challenges.cloudflare.com`, `main-CwptEoZ4.js`), and grid rule `font-face { font-family:Outfit;src:url(/assets/Outfit-Variable-D6ftewdU.woff2)format... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.process-shell> — `Building the site`)**:
+   - DOM & Selectors: Landmark `<section class="process-shell">` framing `Building the site` and `Handover & going live` (*"I start exploring ideas for the landing page by throwing a lot of"*) with `#ece3cb` surface cards, `#007aff` accents, and `root { --base-100:f5f1e6;--base-200:e0dfd7;--base-300:5f5f5f;--base-350:3f3f3f;... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.process-shell> — `Building the site`)` uses `999px`, `6px`, `4px`, `1px` radii, `#007aff` highlights, and assets (favicon.png, apple-touch-icon.png, challenges.cloudflare.com).
 5. **Colophon & Global Directory Footer (<footer.legal-footer> — `https://webdesign.kernjosh.com`)**:
-   - DOM & Selectors: Landmark `<footer class="legal-footer">` anchoring `Josh Kern` footer links (`Overview · Index · Archive · About · Contact`), copy *"I ask a lot of questions because I want the website to feel "*, and `#e6dfd0` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.legal-footer> — `https://webdesign.kernjosh.com`)` aligns to `6rem` extracted from `webdesign-kernjosh-com` stylesheet with `.45rem` lateral canvas padding with `.5rem` grid gap and attributes (data-landscape="primary", data-back-pill, data-back-arrow-path).
+   - DOM & Selectors: Landmark `<footer class="legal-footer">` anchoring `Josh Kern` footer links (`Overview · Index · Archive · About · Contact`), copy *"3 Building the site I build everything with custom code, add"*, and `#8b8983` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.legal-footer> — `https://webdesign.kernjosh.com`)` aligns to `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `.45rem` lateral canvas padding with `12px` grid gap and attributes (data-landscape="primary", data-back-pill, data-back-arrow-path).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"c e d r i c c a r r . c o m"*
-- Copy Excerpt 2: *"C l i c k t o o p e n p r o j e c t"*
-- Copy Excerpt 3: *"1 Getting to know you I ask a lot of questions because I want the website to feel..."*
-- Copy Excerpt 4: *"I ask a lot of questions because I want the website to feel like something that is..."*
+- Copy Excerpt 1: *"I ask a lot of questions because I want the website to feel like something that is..."*
+- Copy Excerpt 2: *"1 Getting to know you I ask a lot of questions because I want the website to feel..."*
+- Copy Excerpt 3: *"I start exploring ideas for the landing page by throwing a lot of stuff at the wal..."*
+- Copy Excerpt 4: *"3 Building the site I build everything with custom code, adding animations and int..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.33,1,.68,1)`

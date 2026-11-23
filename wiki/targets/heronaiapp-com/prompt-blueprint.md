@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: heronaiapp-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "heronaiapp-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b4b4b0`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fa3600`)"
 ---
 
 # UI Design System & Master Generation Blueprint: heronaiapp-com
 
 > **Heron AI · Works inside your design tools** (https://heronaiapp.com/) — Heron sees your model, spots problems, and suggests fixes as you design. When you approve, it makes the edit itself, all without leaving...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Heron AI · Works inside your design tools** (`https://heronaiapp.com/`). Heron sees your model, spots problems, and suggests fixes as you design. When you approve, it makes the edit itself, all without leaving...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b4b4b0`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fa3600`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b3b3af` (`var(--content--border)` in `:root`) paired with `#282828` primary typography and `#b4b4b0` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geistmono` for display copy (`An AI agent that works inside your d`) with `BT Grotesk` and `Geistmono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#282828` primary typography and `#fa3600` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `BT Grotesk` for display copy (`AN AI AGENT THAT WORKS INSIDE YOUR D`) with `BT Grotesk` and `Geistmono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `60rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `940px` extracted from `heronaiapp-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `60rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `99%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60rem`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`.
 
@@ -48,15 +52,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#b3b3af` | `var(--content--border)` in `:root` |
-| **Primary Typography Ink** | `#fa3600` | `var(--content--brand)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#282828` | `var(--content--primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#b4b4b0` | `var(--content--disable)` in `:root` |
-| **Secondary / Muted Copy** | `#72726f` | `var(--content--surface)` in `:root` |
-| **Structural Hairline Border** | `#626260` | `var(--content--granite-gray)` in `:root` |
-| **Variable Token (`--content--terriary`)** | `#282828b8` | `var(--content--terriary)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#282828` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#efefef` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#fa3600` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#b4b4b0` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#b3b3af` | `var(--content--border)` in `:root` |
+| **Variable Token (`--content--surface`)** | `#72726f` | `var(--content--surface)` in `:root` |
+| **Variable Token (`--content--granite-gray`)** | `#626260` | `var(--content--granite-gray)` in `:root` |
 | **Variable Token (`--content--secondary`)** | `#414140` | `var(--content--secondary)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -84,15 +89,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Geistmono`.
+- **Display Typography**: `BT Grotesk`.
 - **Primary Body Stack**: `BT Grotesk`.
 - **Technical / Metadata Stack**: `Geistmono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`).
-- **Body Copy**: rule `p` (`font-size: 1rem`, `line-height: 1.1em`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2em`, `80%`, `75%`, `1em`, `14px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 46.6667px`, `line-height: 46.6667px`, `font-weight: 700`, `letter-spacing: -0.933333px`); rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 33.3333px`, `line-height: 33.3333px`, `font-weight: 600`, `letter-spacing: -0.666667px`); rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`).
+- **Body Copy**: live computed `body` (`font-size: 13.3333px`, `line-height: 17.3333px`, `font-weight: 500`, `letter-spacing: -0.266667px`); rule `p` (`font-size: 1rem`, `line-height: 1.1em`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 11.6667px`, `line-height: 15.1667px`, `font-weight: 500`, `letter-spacing: -0.266667px`).
 
 ---
 
@@ -112,40 +117,59 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Heron AI · Works inside your design tools  │
 │ ====================================================================== │
-│ [ <header.header>          | Menu · Pricing Pricing · Insights Insi ]  │
+│ [ <header.header> (1427x56px)         | Menu · Pricing Pricing · Ins ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.home-hero>                                  |   │
-│ | H1: An AI agent that works inside your design tools              |   │
-│ | Substrate: #b3b3af    | Ink: #282828    | Accent: #b4b4b0        |   │
+│ | HERO STAGE: <section.home-hero> (w=1427px)                         | │
+│ | H1: AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS                | │
+│ | Substrate: #ffffff | Ink: #282828 | Accent: #fa3600                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.home-intro>      ) max-w: 940px          |   │
+│ | SHOWCASE GRID (<section.home-intro>) max-w: 60rem                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | T H E R E P E T I T I V E P  |  | Your design tools do what yo | | │
+│ | | An AI agent that works insid |  | T H E R E P E T I T I V E P  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.header>] -> [<section.home-hero] -> [<section.home-intr] |  │
+│ | DETAIL MODULE (<section.home-problem>) — Your design tools do      | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://heronaiapp.com/            │
+│ [ FOOTER (<footer.footer>     ) | https://heronaiapp.com/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.home-hero>) — 390px Vertical Lead             | │
+│ | H1: AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.home-intro>) — 1-Col Stack                | │
+│ | [ Item 1: An AI agent that works inside your design tools        ] | │
+│ | [ Item 2: T H E R E P E T I T I V E P A R T S O F M O D E L...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.home-problem>) — 1-Col (Your design tools ) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `heronaiapp-com`)**:
-   - Landmark `<header class="header">` hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
-2. **Hero Stage & Focal Lead (<section.home-hero> — `An AI agent that works inside your`)**:
-   - Landmark `<section class="home-hero">` presenting display lead `An AI agent that works inside your design tools` and copy excerpt *"This website uses cookies. Learn more"* over `#b3b3af` canvas and `#282828` ink.
-3. **Primary Showcase & Content Grid (<section.home-intro> — `T H E R E P E T I T I V E P A R T `)**:
-   - Landmark `<section class="home-intro">` rendering section `T H E R E P E T I T I V E P A R T S O F M O D E L...` with copy *"Heron Chat Widget Heron Chat Widget"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
-4. **Interactive Detail & Feature Matrix (<section.home-problem> — `Your design tools do what you tell`)**:
-   - Landmark `<section class="home-problem">` framing `Your design tools do what you tell them, nothing...` and `RUN AN AGENT NATIVELY IN YOUR MODEL` (*"Heron Dashboard Heron Dashboard"*) with `#282828` surface cards, `#b4b4b0` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Landmark `<header class="header">` (`1427x56px`) hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.home-hero> — `AN AI AGENT THAT WORKS INSIDE YOUR`)**:
+   - Landmark `<section class="home-hero">` presenting display lead `AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS` and copy excerpt *"This website uses cookies. LEARN MORE"* over `#ffffff` canvas and `#282828` ink.
+3. **Primary Showcase & Content Grid (<section.home-intro> — `An AI agent that works inside your`)**:
+   - Landmark `<section class="home-intro">` rendering section `An AI agent that works inside your design tools` with copy *"©2026 HERON AI. All rights reserved. Concept Crafted by Bearplus"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.home-problem> — `T H E R E P E T I T I V E P A R T `)**:
+   - Landmark `<section class="home-problem">` framing `T H E R E P E T I T I V E P A R T S O F M O D E L...` and `Your design tools do what you tell them, nothing...` (*"An AI agent that works inside your design tools"*) with `#efefef` surface cards, `#fa3600` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://heronaiapp.com/`)**:
-   - Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"Resources Resources"*, and `#626260` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"T H E R E P E T I T I V E P A R T S O F M O D E L..."*, and `#b3b3af` structural dividers.
 
 ---
 
@@ -157,19 +181,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `heronaiapp-com` (**Heron AI · Works inside your design tools** — `https://heronaiapp.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b4b4b0`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fa3600`).
 - **Identity & Domain Context**: Heron sees your model, spots problems, and suggests fixes as you design. When you approve, it makes the edit itself, all without leaving...
-- **Primary Substrate**: `#b3b3af` (`var(--content--border)` in `:root`), **Primary Ink**: `#282828`, **Accent / Highlight**: `#b4b4b0`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#282828`, **Accent / Highlight**: `#fa3600`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b3b3af` (`var(--content--border)` in `:root`) paired with `#282828` primary typography and `#b4b4b0` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geistmono` for display copy (`An AI agent that works inside your d`) with `BT Grotesk` and `Geistmono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#282828` primary typography and `#fa3600` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `BT Grotesk` for display copy (`AN AI AGENT THAT WORKS INSIDE YOUR D`) with `BT Grotesk` and `Geistmono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `60rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `heronaiapp-com` in your global stylesheet:
 
 :root {
-  /* Heron AI · Works inside your design tools (heronaiapp-com) — Ground-Truth Extracted CSS Variables */
+  /* Heron AI · Works inside your design tools (heronaiapp-com) — Live-Grounded CSS Variables */
   --content--terriary: #282828b8; /* Color / Atmospheric Token (heronaiapp-com) */
   --size--padding-hero: calc(4.4rem + 1rem*2); /* Layout / Spatial Grid Token (heronaiapp-com) */
   --size--max-screen-height: calc(100dvh - 1.6rem); /* Layout / Spatial Grid Token (heronaiapp-com) */
@@ -190,57 +214,56 @@ Declare and consume these exact custom properties extracted from `heronaiapp-com
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#b3b3af` — grounded in `var(--content--border)` in `:root`
-- **Primary Typography Ink**: `#fa3600` — grounded in `var(--content--brand)` in `:root`
-- **Elevated Surface / Card Substrate**: `#282828` — grounded in `var(--content--primary)` in `:root`
-- **Interactive Accent / Highlight**: `#b4b4b0` — grounded in `var(--content--disable)` in `:root`
-- **Secondary / Muted Copy**: `#72726f` — grounded in `var(--content--surface)` in `:root`
-- **Structural Hairline Border**: `#626260` — grounded in `var(--content--granite-gray)` in `:root`
-- **Variable Token (`--content--terriary`)**: `#282828b8` — grounded in `var(--content--terriary)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#282828` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#efefef` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#fa3600` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#b4b4b0` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#b3b3af` — grounded in `var(--content--border)` in `:root`
+- **Variable Token (`--content--surface`)**: `#72726f` — grounded in `var(--content--surface)` in `:root`
+- **Variable Token (`--content--granite-gray`)**: `#626260` — grounded in `var(--content--granite-gray)` in `:root`
 - **Variable Token (`--content--secondary`)**: `#414140` — grounded in `var(--content--secondary)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `940px` extracted from `heronaiapp-com` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `60rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60rem`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`
 - **Corner Radii**: `3px`, `100%`, `50%`, `99%`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Geistmono`
+- **Display Font Stack**: `BT Grotesk`
 - **Body Font Stack**: `BT Grotesk`
 - **Monospace / Technical Font Stack**: `Geistmono`
-- **H1 Display Rule**: rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`)
-- **H2 Section Rule**: rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`)
-- **Body Copy Rule**: rule `p` (`font-size: 1rem`, `line-height: 1.1em`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2em`, `80%`, `75%`, `1em`, `14px`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 46.6667px`, `line-height: 46.6667px`, `font-weight: 700`, `letter-spacing: -0.933333px`); rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 33.3333px`, `line-height: 33.3333px`, `font-weight: 600`, `letter-spacing: -0.666667px`); rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`)
+- **Body Copy Rule**: live computed `body` (`font-size: 13.3333px`, `line-height: 17.3333px`, `font-weight: 500`, `letter-spacing: -0.266667px`); rule `p` (`font-size: 1rem`, `line-height: 1.1em`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 11.6667px`, `line-height: 15.1667px`, `font-weight: 500`, `letter-spacing: -0.266667px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `heronaiapp-com` (`Heron AI · Works inside your design tools`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `heronaiapp-com`)**:
-   - DOM & Selectors: Landmark `<header class="header">` hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+   - DOM & Selectors: Landmark `<header class="header">` (`1427x56px`) hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `heronaiapp-com`)` (`heronaiapp-com`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.59,.23,.22,.96)`, `cubic-bezier(.625,.05,0,1)` transitions and links `Menu · Pricing Pricing · Insights Insights · About About`.
-2. **Hero Stage & Focal Lead (<section.home-hero> — `An AI agent that works inside your`)**:
-   - DOM & Selectors: Landmark `<section class="home-hero">` presenting display lead `An AI agent that works inside your design tools` and copy excerpt *"This website uses cookies. Learn more"* over `#b3b3af` canvas and `#282828` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#b3b3af` background with `#282828` headline `An AI agent that works inside your design tools`.
-3. **Primary Showcase & Content Grid (<section.home-intro> — `T H E R E P E T I T I V E P A R T `)**:
-   - DOM & Selectors: Landmark `<section class="home-intro">` rendering section `T H E R E P E T I T I V E P A R T S O F M O D E L...` with copy *"Heron Chat Widget Heron Chat Widget"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home-intro> — `T H E R E P E T I T I V E P A R T `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.home-problem> — `Your design tools do what you tell`)**:
-   - DOM & Selectors: Landmark `<section class="home-problem">` framing `Your design tools do what you tell them, nothing...` and `RUN AN AGENT NATIVELY IN YOUR MODEL` (*"Heron Dashboard Heron Dashboard"*) with `#282828` surface cards, `#b4b4b0` accents, and `video { vertical-align:baseline;display:inline-block }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.home-problem> — `Your design tools do what you tell`)` uses `3px`, `100%`, `50%`, `99%` radii, `#b4b4b0` highlights, and assets (cdn.prod.website-files.com, heronai.webflow.shared.9f21166e0...., clarity.js).
+2. **Hero Stage & Focal Lead (<section.home-hero> — `AN AI AGENT THAT WORKS INSIDE YOUR`)**:
+   - DOM & Selectors: Landmark `<section class="home-hero">` presenting display lead `AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS` and copy excerpt *"This website uses cookies. LEARN MORE"* over `#ffffff` canvas and `#282828` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#282828` headline `AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS`.
+3. **Primary Showcase & Content Grid (<section.home-intro> — `An AI agent that works inside your`)**:
+   - DOM & Selectors: Landmark `<section class="home-intro">` rendering section `An AI agent that works inside your design tools` with copy *"©2026 HERON AI. All rights reserved. Concept Crafted by Bearplus"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home-intro> — `An AI agent that works inside your`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.home-problem> — `T H E R E P E T I T I V E P A R T `)**:
+   - DOM & Selectors: Landmark `<section class="home-problem">` framing `T H E R E P E T I T I V E P A R T S O F M O D E L...` and `Your design tools do what you tell them, nothing...` (*"An AI agent that works inside your design tools"*) with `#efefef` surface cards, `#fa3600` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.home-problem> — `T H E R E P E T I T I V E P A R T `)` uses `3px`, `100%`, `50%`, `99%` radii, `#fa3600` highlights, and assets (cdn.prod.website-files.com, heronai.webflow.shared.9f21166e0...., clarity.js).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://heronaiapp.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"Resources Resources"*, and `#626260` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://heronaiapp.com/`)` aligns to `940px` extracted from `heronaiapp-com` stylesheet with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="heronai.webflow.io", data-wf-page="6a4b5161f0d11f1602cc3ba1", data-wf-site="6a4b5161f0d11f1602cc3bbf").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"T H E R E P E T I T I V E P A R T S O F M O D E L..."*, and `#b3b3af` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://heronaiapp.com/`)` aligns to `60rem` (non-`@media` desktop container stylesheet rule) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="heronai.webflow.io", data-wf-page="6a4b5161f0d11f1602cc3ba1", data-wf-site="6a4b5161f0d11f1602cc3bbf").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"This website uses cookies. Learn more"*
-- Copy Excerpt 2: *"Heron Chat Widget Heron Chat Widget"*
-- Copy Excerpt 3: *"Heron Dashboard Heron Dashboard"*
-- Copy Excerpt 4: *"Resources Resources"*
+- Copy Excerpt 1: *"This website uses cookies. LEARN MORE"*
+- Copy Excerpt 2: *"©2026 HERON AI. All rights reserved. Concept Crafted by Bearplus"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.59,.23,.22,.96)`, `cubic-bezier(.625,.05,0,1)`

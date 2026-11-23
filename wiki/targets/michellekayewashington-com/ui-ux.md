@@ -1,36 +1,48 @@
+---
+title: "UI & UX Architecture: michellekayewashington-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: michellekayewashington-com
 
 ## Overview & Design Identity
 - **Target**: `michellekayewashington-com` (**Michelle Kaye — Fine Arts · Contemporary Artist, Charleston SC**)
 - **Production URL**: [https://michellekayewashington.com/](https://michellekayewashington.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#2b201d` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#7a6560` accent)
 - **Summary**: Michelle Kaye is a contemporary artist in Charleston, SC, exploring humanity’s relationship with the natural world. See Against the Grain...
-- **Total Clean CSS Variables Extracted**: `42` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Cormorant`
 - **Body Font Stack**: `Cormorant`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(17px, 1.05vw + 10px, 21px)`, `1.35rem`, `0.85rem`, `1.15rem`, `0.75rem`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(17px, 1.05vw + 10px, 21px)`, `1.35rem`, `0.85rem`, `1.15rem`, `0.75rem`)
-- **Body Copy**: rule `body` (`font-size: clamp(17px, 1.05vw + 10px, 21px)`, `line-height: 1.45`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(17px, 1.05vw + 10px, 21px)`, `1.35rem`, `0.85rem`, `1.15rem`, `0.75rem`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 115.2px`, `line-height: 103.68px`, `font-weight: 300`, `letter-spacing: -2.304px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 12.48px`, `line-height: 18.096px`, `font-weight: 500`, `letter-spacing: 2.7456px`)
+- **Body Copy**: live computed `body` (`font-size: 21px`, `line-height: 30.45px`, `font-weight: 400`); rule `body` (`font-size: clamp(17px, 1.05vw + 10px, 21px)`, `line-height: 1.45`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 21px`, `line-height: 30.45px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fffdf8` | `var(--paper)` in `:root` |
-| **Primary Typography Ink** | `#f6f0e8` | `var(--paper-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#120a09` | `var(--ink)` in `:root` |
-| **Interactive Accent / Highlight** | `#2b201d` | `var(--ink-2)` in `:root` |
-| **Secondary / Muted Copy** | `#9a675c` | `var(--rose)` in `:root` |
-| **Structural Hairline Border** | `#c68f81` | `var(--rose-2)` in `:root` |
+| **Primary Canvas Substrate** | `#fffdf8` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#120a09` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6f0e8` | `var(--paper-2)` in `:root` |
+| **Interactive Accent / Highlight** | `#7a6560` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#9a675c` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#dedbd7` | `var(--rule)` in `:root` (`rgb(18 10 9 / 14%)`) |
+| **Variable Token (`--ink-2`)** | `#2b201d` | `var(--ink-2)` in `:root` |
+| **Variable Token (`--rose-2`)** | `#c68f81` | `var(--rose-2)` in `:root` |
 | **Variable Token (`--tan`)** | `#b7a397` | `var(--tan)` in `:root` |
-| **Variable Token (`--muted`)** | `#7a6560` | `var(--muted)` in `:root` |
 
 ---
 
@@ -58,12 +70,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.shell> — `michellekayewashington-com`)**:
-   - Landmark `<header class="shell">` hosting `Michelle Kaye — Fine Arts · Contempo` navigation (`01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`), DOM attributes (`data-page="index"`, `data-ready="index"`, `data-shell`, `data-nav="index"`), and stylesheet rule `html { --room-title: var(--fg); }`.
+   - Landmark `<header class="shell">` (`216x900px`) hosting `Michelle Kaye — Fine Arts · Contempo` navigation (`01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`), DOM attributes (`data-page="index"`, `data-ready="index"`, `data-shell`, `data-nav="index"`), and stylesheet rule `html { --room-title: var(--fg); }`.
 2. **Hero Stage & Focal Lead (<section.home> — `Michelle Kaye`)**:
-   - Landmark `<section class="home">` presenting display lead `Michelle Kaye` and copy excerpt *"Michelle Kaye Fine Arts"* over `#fffdf8` canvas and `#120a09` ink.
-3. **Primary Showcase & Content Grid (<section.home> — `About the Artist`)**:
-   - Landmark `<section class="home">` rendering section `About the Artist` with copy *"Drummond Studio Gallery"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `after { box-sizing: border-box; }`.
-4. **Interactive Detail & Feature Matrix (<section.home> — `Questions for the Artist?`)**:
-   - Landmark `<section class="home">` framing `Questions for the Artist?` and `Leaving this site` (*"Charleston City Paper"*) with `#120a09` surface cards, `#2b201d` accents, and `body { margin: 0; height: 100%; }`.
-5. **Colophon & Global Directory Footer (<footer.mkl-cam> — `https://michellekayewashington.com/`)**:
-   - Landmark `<footer class="mkl-cam">` anchoring `Michelle Kaye — Fine Arts · Cont` footer links (`01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`), copy *"Charleston Magazine"*, and `#c68f81` structural dividers.
+   - Landmark `<section class="home">` presenting display lead `Michelle Kaye` and copy excerpt *"Michelle Kaye explores the human condition through humanity’s rel"* over `#fffdf8` canvas and `#120a09` ink.
+3. **Primary Showcase & Content Grid (<section.home:nth(2)> — `About the Artist`)**:
+   - Landmark `<section class="home">` rendering section `About the Artist` with copy *"Ways to get in touch"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `after { box-sizing: border-box; }`.
+4. **Interactive Detail & Feature Matrix (<section.home:nth(3)> — `Ways to get in touch`)**:
+   - Landmark `<section class="home">` framing `Ways to get in touch` and `Keep scrolling to the Gallery` (*"Keep scrolling to the Gallery"*) with `#f6f0e8` surface cards, `#7a6560` accents, and `body { margin: 0; height: 100%; }`.
+5. **Colophon & Global Directory Footer (<footer.wordmark-name> — `https://michellekayewashington.com/`)**:
+   - Landmark `<footer class="wordmark-name">` anchoring `Michelle Kaye — Fine Arts · Cont` footer links (`01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`), copy *"Ways to get in touch"*, and `#dedbd7` structural dividers.

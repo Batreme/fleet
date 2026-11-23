@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: sinedogma-com-tr"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: sinedogma-com-tr
 
 ## Overview & Design Identity
 - **Target**: `sinedogma-com-tr` (**sinedogma**)
 - **Production URL**: [https://sinedogma.com.tr/](https://sinedogma.com.tr/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#d9d9d9` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#111111` ink, `#ffcc00` accent)
 - **Summary**: sinedogma ve dogma yayın: dijital arşiv, dergiler, kitaplar, haberler ve satış noktaları.
-- **Total Clean CSS Variables Extracted**: `201` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `203` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `EB Garamond Local`
-- **Body Font Stack**: `Garamond`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-weight: 400`)
-- **Section Heading (`H2`)**: rule `h2` (`font-weight: 400`)
-- **Body Copy**: rule `p` (`font-size: 15px`)
-- **Metadata & Labels**: rule `small` (`font-size: .72rem`)
+- **Body Font Stack**: `EB Garamond Local`
+- **Monospace / Technical Font Stack**: `Consolas`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 78px`, `line-height: 73.32px`, `font-weight: 400`, `letter-spacing: -3.12px`); rule `h1` (`font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54px`, `line-height: 54px`, `font-weight: 400`, `letter-spacing: -1.62px`); rule `h2` (`font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 24.65px`, `font-weight: 400`); rule `p` (`font-size: 15px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20.3px`, `font-weight: 400`); rule `small` (`font-size: .72rem`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--paper)` in `:root` |
-| **Primary Typography Ink** | `#111` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6f6f6f` | `var(--muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#d9d9d9` | `var(--line)` in `:root` |
-| **Secondary / Muted Copy** | `#f5f5f3` | `var(--soft)` in `:root` |
-| **Structural Hairline Border** | `#000` | `var(--w2w-start-background-color)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#111111` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#dddddd` | `.community-card { background: #dddddd }` |
+| **Interactive Accent / Highlight** | `#ffcc00` | `crubber-button.ytp-swatch-backg... { background-color: #ffcc00 }` |
+| **Secondary / Muted Copy** | `#6f6f6f` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#d9d9d9` | `var(--line)` in `:root` |
+| **Variable Token (`--soft`)** | `#f5f5f3` | `var(--soft)` in `:root` |
 
 ---
 
@@ -46,22 +58,22 @@
 | `--motion-base` | `220ms` | Motion / Easing Token |
 | `--motion-slow` | `300ms` | Motion / Easing Token |
 | `--motion-ease` | `cubic-bezier(.22,.61,.36,1)` | Motion / Easing Token |
-| `--mobile-gutter` | `16px` | Layout / Spatial Grid Token |
-| `--mobile-radius` | `0px` | Elevation / Border Token |
-| `--circulation-progress` | `0` | Design System Custom Token |
 | `--garamond-tracking` | `0em` | Typography / Scale Token |
 | `--garamond-heading-tracking` | `-0.025em` | Typography Ink Token |
+| `--link-underline-offset` | `.16em` | Typography Ink Token |
+| `--link-underline-thickness` | `1px` | Typography Ink Token |
+| `--link-underline-color` | `rgba(17,17,17,.48)` | Typography Ink Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `sinedogma-com-tr`)**:
-   - Landmark `<header class="site-header">` hosting `sinedogma` navigation (`haberler · satış noktaları · hakkımızda`), DOM attributes (`data-path="/"`, `data-path="/haberler"`, `data-path="/satis-noktalari"`, `data-path="/hakkimizda"`), and stylesheet rule `root { --paper: fff; --ink: 111; --muted: 6f6f6f; --line: d9d9d9; --soft: f5f5f3; }`.
+   - Landmark `<header class="site-header">` (`1440x57px`) hosting `sinedogma` navigation (`haberler · satış noktaları · hakkımızda`), DOM attributes (`data-path="/"`, `data-path="/haberler"`, `data-path="/satis-noktalari"`, `data-path="/hakkimizda"`), and stylesheet rule `root { --paper: fff; --ink: 111; --muted: 6f6f6f; --line: d9d9d9; --soft: f5f5f3; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `iki yayın tek dolaşım`)**:
-   - Landmark `<section class="hero shell">` presenting display lead `iki yayın tek dolaşım` and copy excerpt *"yazı gönder / kitap dosyası gönder yazı / kitap gönder"* over `#fff` canvas and `#000` ink.
+   - Landmark `<section class="hero shell">` presenting display lead `iki yayın tek dolaşım` and copy excerpt *"sinedogma / dogma yayın"* over `#ffffff` canvas and `#111111` ink.
 3. **Primary Showcase & Content Grid (<section.section> — `sinedogma dijital arşiv`)**:
-   - Landmark `<section class="section shell">` rendering section `sinedogma dijital arşiv` with copy *"yazı gönder / kitap dosyası gönder"*, asset references (`EBGaramond-VariableFont_wght.woff2`, `favicon-32x32.png`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `html { scroll-behavior: smooth; }`.
+   - Landmark `<section class="section shell">` rendering section `sinedogma dijital arşiv` with copy *"sinedogma · güz 2026 güz 2026 beş sayı antoloji koleksiyonu özel "*, asset references (`EBGaramond-VariableFont_wght.woff2`, `favicon-32x32.png`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `html { scroll-behavior: smooth; }`.
 4. **Interactive Detail & Feature Matrix (<article.article-card> — `“bu ben değilim” yönetmenleri ile `)**:
-   - Landmark `<article class="article-card">` framing `“bu ben değilim” yönetmenleri ile bir söyleşi` and `+1 belgesel: jim’le tanışmak "kısa incelemesi"` (*"yazı / kitap gönder"*) with `#6f6f6f` surface cards, `#d9d9d9` accents, and `input { font: inherit; text-transform: lowercase; }`.
+   - Landmark `<article class="article-card">` framing `“bu ben değilim” yönetmenleri ile bir söyleşi` and `+1 belgesel: jim’le tanışmak "kısa incelemesi"` (*"sinedogma · güz 2026"*) with `#dddddd` surface cards, `#ffcc00` accents, and `input { font: inherit; text-transform: lowercase; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://sinedogma.com.tr/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `sinedogma` footer links (`haberler · satış noktaları · hakkımızda`), copy *"sinedogma · güz 2026 güz 2026 beş sayı antoloji koleksiyonu "*, and `#000` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `sinedogma` footer links (`haberler · satış noktaları · hakkımızda`), copy *"dogma yayın · atakan akar max stirner'in biricik felsefesi i"*, and `#d9d9d9` structural dividers.

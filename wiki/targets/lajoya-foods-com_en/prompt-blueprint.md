@@ -1,61 +1,66 @@
 ---
 title: "UI Prompt Blueprint: lajoya-foods-com_en"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "lajoya-foods-com_en"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#000000`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00ef84` / `#ea3323`)"
 ---
 
 # UI Design System & Master Generation Blueprint: lajoya-foods-com_en
 
 > **LAJOYA GOURMET** (https://lajoya-foods.com/en) — Optimal preservation of porcelain interior
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LAJOYA GOURMET** (`https://lajoya-foods.com/en`). Optimal preservation of porcelain interior
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#000000`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#00ef84` / `#ea3323`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#00EF84` (`var(--color-primary)` in `:root`) paired with `#000000` primary typography and `#000000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `JoyaMaison` for display copy (`Lajoya Gourmet`) with `JoyaAmbiant` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 24px`, padding `24px`) with `cubic-bezier(.65,.05,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#00ef84` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ea3323` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Ambiant Light Sans` for display copy (`Lajoya Gourmet`) with `Maison Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `83rem` container bounds (`gap: 2.4rem`, padding `22px`) with `cubic-bezier(.65,.05,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1200px` extracted from `lajoya-foods-com_en` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `24px` grid gap.
-- **Border Radius Scale**: `4px`, `22px`, `8px`, `6px`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `83rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `22px` lateral canvas padding with `2.4rem` grid gap.
+- **Border Radius Scale**: `50%`, `10px`, `100%`, `8px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 24px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 83rem`, `gap: 2.4rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `22px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:1024px)`, `@media (min-width:1025px)`, `@media (max-width:1023px)`, `@media (min-width:1024px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#00EF84` | `var(--color-primary)` in `:root` |
-| **Primary Typography Ink** | `#EA3323` | `var(--color-secondary)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#FFFF54` | `var(--color-tertiary)` in `:root` |
-| **Interactive Accent / Highlight** | `#000000` | `var(--text-color)` in `:root` |
-| **Secondary / Muted Copy** | `#ffffff` | `var(--background-color)` in `:root` |
-| **Structural Hairline Border** | `#1990c6` | `.shopify-payment-button__button... { background-color: #1990c6 }` |
+| **Primary Canvas Substrate** | `#00ef84` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--background-color)` in `:root` |
+| **Interactive Accent / Highlight** | `#ea3323` | `.header__button-cart-quantity { background-color: #ea3323 }` |
+| **Secondary / Muted Copy** | `#ea3323` | `var(--color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#ffffff` | `on.loading>.loading-overlay__sp... { stroke: #ffffff }` |
+| **Variable Token (`--color-tertiary`)** | `#ffff54` | `var(--color-tertiary)` in `:root` |
 | **Variable Token (`--swiper-theme-color`)** | `#007aff` | `var(--swiper-theme-color)` in stylesheet |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -75,23 +80,23 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#0
 | `--text-color` | `#000000` | Typography Ink Token |
 | `--background-color` | `#ffffff` | Canvas / Surface Token |
 | `--swiper-theme-color` | `#007aff` | Brand / Palette Token |
-| `--lajoya-foods-com-bg` | `#00EF84` | Canvas Substrate (from `var(--color-primary)` in `:root`) |
-| `--lajoya-foods-com-ink` | `#000000` | Primary Typography Ink (stylesheet-derived) |
+| `--lajoya-foods-com-bg` | `#00ef84` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--lajoya-foods-com-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `JoyaMaison`.
-- **Primary Body Stack**: `JoyaAmbiant`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Ambiant Light Sans`.
+- **Primary Body Stack**: `Maison Neue`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`letter-spacing: -2px`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 28px`).
-- **Body Copy**: rule `p` (`font-size: 12px`, `letter-spacing: 2px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `12px`, `19px`, `14px`, `13px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`).
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 68px`, `line-height: 48px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: 10px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`).
 
 ---
 
@@ -101,9 +106,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#0
 - **Extracted Timing Functions**: `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(.1,0,.3,1)`, `cubic-bezier(.215,.61,.355,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `lajoya-foods-com_en` stylesheet.
 - **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `lajoya-foods-com_en` stylesheet.
 - **Selector `.swiper-pagination`**: `transition: .3s opacity` extracted from `lajoya-foods-com_en` stylesheet.
+- **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s top` extracted from `lajoya-foods-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,.05,.36,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.tiles>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -111,40 +116,59 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#0
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — LAJOYA GOURMET                             │
 │ ====================================================================== │
-│ [ <header.header>          | Overview · Index · Archive · About · C ]  │
+│ [ <header.header> (1440x92px)         | Contact · About · Shop · Sho ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Lajoya Gourmet                                               |   │
-│ | Substrate: #00EF84    | Ink: #000000    | Accent: #000000        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: Lajoya Gourmet                                                 | │
+│ | Substrate: #00ef84 | Ink: #000000 | Accent: #ea3323                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.tiles>           ) max-w: 1200px         |   │
+│ | SHOWCASE GRID (<section.tiles>) max-w: 83rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Shopping Cart                |  | Chopped Peeled Tomato Choppe | | │
+│ | | Chopped Peeled Tomato Choppe |  | Whole Peeled Tomato Whole Pe | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px  ) | │
-│ | [<header.header>] -> [<section.hero>] -> [<section.tiles>] |         │
+│ | DETAIL MODULE (<section.tiles:nth(2)>) — Artichoke Hearts Arti     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.header--mobile) | https://lajoya-foods.com/en        │
+│ [ FOOTER (<footer.header--mobi) | https://lajoya-foods.com/en          │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2.4rem)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: Lajoya Gourmet                                                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.tiles>) — 1-Col Stack                     | │
+│ | [ Item 1: Chopped Peeled Tomato Chopped Peeled Tomato Chopp...   ] | │
+│ | [ Item 2: Whole Peeled Tomato Whole Peeled Tomato Whole Pee...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.tiles:nth(2)>) — 1-Col (Artichoke Hearts A) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.header--mobi) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `lajoya-foods-com_en`)**:
-   - Landmark `<header class="header">` hosting `LAJOYA GOURMET` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+   - Landmark `<header class="header">` (`1440x92px`) hosting `LAJOYA GOURMET` navigation (`Contact · About · Shop · Shop Shop`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Lajoya Gourmet`)**:
-   - Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Privacy policy Privacy policy"* over `#00EF84` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.tiles> — `Shopping Cart`)**:
-   - Landmark `<section class="tiles">` rendering section `Shopping Cart` with copy *"Terms of service Terms of service"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
-4. **Interactive Detail & Feature Matrix (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
-   - Landmark `<section class="tiles">` framing `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` and `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` (*"Legal notice Legal notice"*) with `#FFFF54` surface cards, `#000000` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+   - Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Chopped Peeled Tomato"* over `#00ef84` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
+   - Landmark `<section class="tiles">` rendering section `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` with copy *"Whole Peeled Tomato"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+4. **Interactive Detail & Feature Matrix (<section.tiles:nth(2)> — `Whole Peeled Tomato Whole Peeled T`)**:
+   - Landmark `<section class="tiles">` framing `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` and `Artichoke Hearts Artichoke Hearts Artichoke Heart...` (*"Optimal preservation of porcelain interior"*) with `#ffffff` surface cards, `#ea3323` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
 5. **Colophon & Global Directory Footer (<footer.header--mobile> — `https://lajoya-foods.com/en`)**:
-   - Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Overview · Index · Archive · About · Contact`), copy *"© LaJoya 2026 © LaJoya 2026"*, and `#1990c6` structural dividers.
+   - Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Contact · About · Shop · Shop Shop`), copy *"Extra virgin olive oil"*, and `#ffffff` structural dividers.
 
 ---
 
@@ -156,19 +180,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#0
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `lajoya-foods-com_en` (**LAJOYA GOURMET** — `https://lajoya-foods.com/en`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#000000`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#00ef84` / `#ea3323`).
 - **Identity & Domain Context**: Optimal preservation of porcelain interior
-- **Primary Substrate**: `#00EF84` (`var(--color-primary)` in `:root`), **Primary Ink**: `#000000`, **Accent / Highlight**: `#000000`.
+- **Primary Substrate**: `#00ef84` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ea3323`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#00EF84` (`var(--color-primary)` in `:root`) paired with `#000000` primary typography and `#000000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `JoyaMaison` for display copy (`Lajoya Gourmet`) with `JoyaAmbiant` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 24px`, padding `24px`) with `cubic-bezier(.65,.05,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#00ef84` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ea3323` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Ambiant Light Sans` for display copy (`Lajoya Gourmet`) with `Maison Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `83rem` container bounds (`gap: 2.4rem`, padding `22px`) with `cubic-bezier(.65,.05,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `lajoya-foods-com_en` in your global stylesheet:
 
 :root {
-  /* LAJOYA GOURMET (lajoya-foods-com_en) — Ground-Truth Extracted CSS Variables */
+  /* LAJOYA GOURMET (lajoya-foods-com_en) — Live-Grounded CSS Variables */
   --color-primary: #00EF84; /* Brand / Palette Token (lajoya-foods-com_en) */
   --color-secondary: #EA3323; /* Brand / Palette Token (lajoya-foods-com_en) */
   --color-tertiary: #FFFF54; /* Brand / Palette Token (lajoya-foods-com_en) */
@@ -183,75 +207,76 @@ Declare and consume these exact custom properties extracted from `lajoya-foods-c
   --text-color: #000000; /* Typography Ink Token (lajoya-foods-com_en) */
   --background-color: #ffffff; /* Canvas / Surface Token (lajoya-foods-com_en) */
   --swiper-theme-color: #007aff; /* Brand / Palette Token (lajoya-foods-com_en) */
-  --lajoya-foods-com-bg: #00EF84; /* Canvas Substrate (from `var(--color-primary)` in `:root`) (lajoya-foods-com_en) */
-  --lajoya-foods-com-ink: #000000; /* Primary Typography Ink (stylesheet-derived) (lajoya-foods-com_en) */
+  --lajoya-foods-com-bg: #00ef84; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (lajoya-foods-com_en) */
+  --lajoya-foods-com-ink: #000000; /* Primary Typography Ink (computed-derived) (lajoya-foods-com_en) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#00EF84` — grounded in `var(--color-primary)` in `:root`
-- **Primary Typography Ink**: `#EA3323` — grounded in `var(--color-secondary)` in `:root`
-- **Elevated Surface / Card Substrate**: `#FFFF54` — grounded in `var(--color-tertiary)` in `:root`
-- **Interactive Accent / Highlight**: `#000000` — grounded in `var(--text-color)` in `:root`
-- **Secondary / Muted Copy**: `#ffffff` — grounded in `var(--background-color)` in `:root`
-- **Structural Hairline Border**: `#1990c6` — grounded in `.shopify-payment-button__button... { background-color: #1990c6 }`
+- **Primary Canvas Substrate**: `#00ef84` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `var(--background-color)` in `:root`
+- **Interactive Accent / Highlight**: `#ea3323` — grounded in `.header__button-cart-quantity { background-color: #ea3323 }`
+- **Secondary / Muted Copy**: `#ea3323` — grounded in `var(--color-secondary)` in `:root`
+- **Structural Hairline Border**: `#ffffff` — grounded in `on.loading>.loading-overlay__sp... { stroke: #ffffff }`
+- **Variable Token (`--color-tertiary`)**: `#ffff54` — grounded in `var(--color-tertiary)` in `:root`
 - **Variable Token (`--swiper-theme-color`)**: `#007aff` — grounded in `var(--swiper-theme-color)` in stylesheet
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1200px` extracted from `lajoya-foods-com_en` stylesheet
-- **Padding & Gutters**: `24px` lateral canvas padding with `24px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 24px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
-- **Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)`
-- **Corner Radii**: `4px`, `22px`, `8px`, `6px`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `83rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `22px` lateral canvas padding with `2.4rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 83rem`, `gap: 2.4rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `22px` horizontal padding
+- **Media Queries**: `@media (max-width:1024px)`, `@media (min-width:1025px)`, `@media (max-width:1023px)`, `@media (min-width:1024px)`
+- **Corner Radii**: `50%`, `10px`, `100%`, `8px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `JoyaMaison`
-- **Body Font Stack**: `JoyaAmbiant`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`letter-spacing: -2px`)
-- **H2 Section Rule**: rule `h2` (`font-size: 28px`)
-- **Body Copy Rule**: rule `p` (`font-size: 12px`, `letter-spacing: 2px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `12px`, `19px`, `14px`, `13px`)
+- **Display Font Stack**: `Ambiant Light Sans`
+- **Body Font Stack**: `Maison Neue`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`)
+- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 68px`, `line-height: 48px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 10px`, `line-height: 10px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `lajoya-foods-com_en` (`LAJOYA GOURMET`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `lajoya-foods-com_en`)**:
-   - DOM & Selectors: Landmark `<header class="header">` hosting `LAJOYA GOURMET` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `lajoya-foods-com_en`)` (`lajoya-foods-com_en`) adapts across `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(.1,0,.3,1)`, `cubic-bezier(.215,.61,.355,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - DOM & Selectors: Landmark `<header class="header">` (`1440x92px`) hosting `LAJOYA GOURMET` navigation (`Contact · About · Shop · Shop Shop`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `lajoya-foods-com_en`)` (`lajoya-foods-com_en`) adapts across `@media (max-width:1024px)`, `@media (min-width:1025px)`, `@media (max-width:1023px)`, `@media (min-width:1024px)` with `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(.1,0,.3,1)`, `cubic-bezier(.215,.61,.355,1)` transitions and links `Contact · About · Shop · Shop Shop`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Lajoya Gourmet`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Privacy policy Privacy policy"* over `#00EF84` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#00EF84` background with `#000000` headline `Lajoya Gourmet`.
-3. **Primary Showcase & Content Grid (<section.tiles> — `Shopping Cart`)**:
-   - DOM & Selectors: Landmark `<section class="tiles">` rendering section `Shopping Cart` with copy *"Terms of service Terms of service"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.tiles> — `Shopping Cart`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
-   - DOM & Selectors: Landmark `<section class="tiles">` framing `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` and `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` (*"Legal notice Legal notice"*) with `#FFFF54` surface cards, `#000000` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)` uses `4px`, `22px`, `8px`, `6px` radii, `#000000` highlights, and assets (171ed732002c6631efbca8f91.js, klaviyo.js, 1349771745561073).
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Chopped Peeled Tomato"* over `#00ef84` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#00ef84` background with `#000000` headline `Lajoya Gourmet`.
+3. **Primary Showcase & Content Grid (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
+   - DOM & Selectors: Landmark `<section class="tiles">` rendering section `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` with copy *"Whole Peeled Tomato"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 83rem`, `gap: 2.4rem`) on desktop and Single-column vertical stack at `390px` viewport width with `22px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.tiles:nth(2)> — `Whole Peeled Tomato Whole Peeled T`)**:
+   - DOM & Selectors: Landmark `<section class="tiles">` framing `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` and `Artichoke Hearts Artichoke Hearts Artichoke Heart...` (*"Optimal preservation of porcelain interior"*) with `#ffffff` surface cards, `#ea3323` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.tiles:nth(2)> — `Whole Peeled Tomato Whole Peeled T`)` uses `50%`, `10px`, `100%`, `8px` radii, `#ea3323` highlights, and assets (171ed732002c6631efbca8f91.js, klaviyo.js, 1349771745561073).
 5. **Colophon & Global Directory Footer (<footer.header--mobile> — `https://lajoya-foods.com/en`)**:
-   - DOM & Selectors: Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Overview · Index · Archive · About · Contact`), copy *"© LaJoya 2026 © LaJoya 2026"*, and `#1990c6` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.header--mobile> — `https://lajoya-foods.com/en`)` aligns to `1200px` extracted from `lajoya-foods-com_en` stylesheet with `24px` lateral canvas padding with `24px` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-shop-id="57685803183", data-venmo-supported="false").
+   - DOM & Selectors: Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Contact · About · Shop · Shop Shop`), copy *"Extra virgin olive oil"*, and `#ffffff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.header--mobile> — `https://lajoya-foods.com/en`)` aligns to `83rem` (non-`@media` desktop container stylesheet rule) with `22px` lateral canvas padding with `2.4rem` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-shop-id="57685803183", data-venmo-supported="false").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Privacy policy Privacy policy"*
-- Copy Excerpt 2: *"Terms of service Terms of service"*
-- Copy Excerpt 3: *"Legal notice Legal notice"*
-- Copy Excerpt 4: *"© LaJoya 2026 © LaJoya 2026"*
+- Copy Excerpt 1: *"Chopped Peeled Tomato"*
+- Copy Excerpt 2: *"Whole Peeled Tomato"*
+- Copy Excerpt 3: *"Optimal preservation of porcelain interior"*
+- Copy Excerpt 4: *"Extra virgin olive oil"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(.1,0,.3,1)`, `cubic-bezier(.215,.61,.355,1)`
 - **Extracted Stylesheet Rules (`lajoya-foods-com_en`)**:
-- `.shopify-payment-button__button--... { visibility:hidden }`
-- `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`
-- `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`
-- `shopify-payment-button__button--b... { z-index:1;flex-direction:column;display:flex;position:relative }`
-- `on__button--branded .shopify-clea... { flex-direction:column!important;flex:1!important;display:flex!important }`
+- `root { --swiper-theme-color:007aff }`
+- `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`
+- `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`
+- `.swiper-vertical>.swiper-wrapper { flex-direction:column }`
+- `.swiper-wrapper { transform:translate3d(0px,0,0) }`
 - **Per-Selector Transition Rules**:
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `lajoya-foods-com_en` stylesheet.
 - **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `lajoya-foods-com_en` stylesheet.
 - **Selector `.swiper-pagination`**: `transition: .3s opacity` extracted from `lajoya-foods-com_en` stylesheet.
+- **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s top` extracted from `lajoya-foods-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,.05,.36,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.tiles>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 

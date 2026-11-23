@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: sparkle-ankatms-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "sparkle-ankatms-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#fbfaf6`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#ff3b30`)"
 ---
 
 # UI Design System & Master Generation Blueprint: sparkle-ankatms-com
 
 > **Kids Reward Chart & Chore App · Sparkle** (https://sparkle.ankatms.com) — Organize tasks, earn stars and choose rewards together. Sparkle is a private reward-chart app for families and groups on iPhone and iPad....
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Kids Reward Chart & Chore App · Sparkle** (`https://sparkle.ankatms.com`). Organize tasks, earn stars and choose rewards together. Sparkle is a private reward-chart app for families and groups on iPhone and iPad....
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#fbfaf6`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#ff3b30`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1c1736` (`var(--ink)` in `:root`) paired with `#fbfaf6` primary typography and `#fbfaf6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Apple Color Emoji` for display copy (`S t a r s T o d a y . H a b i t s T `) with `Hiragino Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `65ch` container bounds (`gap: .7rem`, padding `1.5rem`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#1c1736` primary typography and `#ff3b30` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `SF Pro Display` for display copy (`Stars Today. Habits Tomorrow.`) with `SF Pro Display` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 11.2px 19.2px`, padding `63.36px`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×25386px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `65ch` extracted from `sparkle-ankatms-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `.7rem` grid gap.
-- **Border Radius Scale**: `10px`, `100px`, `32px`, `24px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `63.36px` lateral canvas padding with `11.2px 19.2px` grid gap.
+- **Border Radius Scale**: `50%`, `12px`, `10px`, `100px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65ch`, `gap: .7rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 11.2px 19.2px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `63.36px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width: 1180px)`, `@media (max-width: 959px)`.
 
 ---
@@ -48,17 +52,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#1c1736` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#48425f` | `var(--ink-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#68637d` | `var(--ink-3)` in `:root` |
-| **Interactive Accent / Highlight** | `#fbfaf6` | `var(--paper)` in `:root` |
-| **Secondary / Muted Copy** | `#6b4ff0` | `var(--violet)` in `:root` |
-| **Structural Hairline Border** | `#8d75ff` | `var(--violet-2)` in `:root` |
+| **Primary Canvas Substrate** | `#fbfaf6` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1c1736` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | live computed `p` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ff3b30` | `.ctl-badge.is-hot { background: #ff3b30 }` |
+| **Secondary / Muted Copy** | `#b85f00` | `var(--amber-ink)` in `:root` |
+| **Structural Hairline Border** | `#e3dfef` | `.search-steps li { border: #e3dfef }` |
+| **Variable Token (`--ink-2`)** | `#48425f` | `var(--ink-2)` in `:root` |
+| **Variable Token (`--ink-3`)** | `#68637d` | `var(--ink-3)` in `:root` |
+| **Variable Token (`--violet`)** | `#6b4ff0` | `var(--violet)` in `:root` |
+| **Variable Token (`--violet-2`)** | `#8d75ff` | `var(--violet-2)` in `:root` |
 | **Variable Token (`--gold`)** | `#f5a623` | `var(--gold)` in `:root` |
 | **Variable Token (`--gold-2`)** | `#ffcf4a` | `var(--gold-2)` in `:root` |
-| **Variable Token (`--amber-ink`)** | `#b85f00` | `var(--amber-ink)` in `:root` |
 | **Variable Token (`--rose`)** | `#e2478f` | `var(--rose)` in `:root` |
 | **Variable Token (`--mint`)** | `#22c55e` | `var(--mint)` in `:root` |
 | **Variable Token (`--night-ink`)** | `#f5f2ff` | `var(--night-ink)` in `:root` |
@@ -88,15 +95,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Apple Color Emoji`.
-- **Primary Body Stack**: `Hiragino Sans`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `SF Pro Display`.
+- **Primary Body Stack**: `SF Pro Display`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(2.3rem,4.5vw,4rem)`, `line-height: 1.15`, `letter-spacing: -.035em`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.6rem,3vw,2.3rem)`, `line-height: 1.3`, `letter-spacing: -.025em`).
-- **Body Copy**: rule `p` (`font-size: .9rem`).
-- **Metadata & Navigation Labels**: rule `small` (`font-size: 13px`, `font-weight: 650`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 123.1px`, `line-height: 103.404px`, `font-weight: 820`, `letter-spacing: -7.1398px`); rule `h1` (`font-size: clamp(2.3rem,4.5vw,4rem)`, `line-height: 1.15`, `letter-spacing: -.035em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 84.96px`, `line-height: 79.8624px`, `font-weight: 800`, `letter-spacing: -4.248px`); rule `h2` (`font-size: clamp(1.6rem,3vw,2.3rem)`, `line-height: 1.3`, `letter-spacing: -.025em`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: .9rem`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14.4px`, `line-height: 21.6px`, `font-weight: 500`); rule `small` (`font-size: 13px`, `font-weight: 650`).
 
 ---
 
@@ -116,40 +123,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Kids Reward Chart & Chore App · Sparkle    │
 │ ====================================================================== │
-│ [ <header.nav>             | English · Deutsch · Español · Français ]  │
+│ [ <header.nav> (1440x76px)            | English · Deutsch · Español  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: S t a r s T o d a y . H a b i t s T o m o r r o w .          |   │
-│ | Substrate: #1c1736    | Ink: #fbfaf6    | Accent: #fbfaf6        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: Stars Today. Habits Tomorrow.                                  | │
+│ | Substrate: #fbfaf6 | Ink: #1c1736 | Accent: #ff3b30                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.scene>           ) max-w: 65ch           |   │
+│ | SHOWCASE GRID (<section.scene>) max-w: 1440px                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Everyday tasks become achiev |  | Get Moving                   | | │
+│ | | S t a r s T o d a y . H a b  |  | Everyday tasks become achiev | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .7rem ) | │
-│ | [<header.nav>] -> [<section.hero>] -> [<section.scene>] |            │
+│ | DETAIL MODULE (<article.tcard>) — Write something                  | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.foot>         ) | https://sparkle.ankatms.com        │
+│ [ FOOTER (<footer.foot>       ) | https://sparkle.ankatms.com          │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 11.2px 1)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.nav>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: Stars Today. Habits Tomorrow.                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.scene>) — 1-Col Stack                     | │
+│ | [ Item 1: S t a r s T o d a y . H a b i t s T o m o r r o w .    ] | │
+│ | [ Item 2: Everyday tasks become achievements.                    ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<article.tcard>) — 1-Col (Write something)           | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.foot>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)**:
-   - Landmark `<header class="nav">` hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `S t a r s T o d a y . H a b i t s `)**:
-   - Landmark `<section class="hero">` presenting display lead `S t a r s T o d a y . H a b i t s T o m o r r o w .` and copy excerpt *"Scroll to earn your first star"* over `#1c1736` canvas and `#fbfaf6` ink.
-3. **Primary Showcase & Content Grid (<section.scene> — `Everyday tasks become achievements`)**:
-   - Landmark `<section class="scene scene--tasks">` rendering section `Everyday tasks become achievements.` with copy *"🇧🇷 Português (Brasil)"*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `avatar-luca.jpg`, `sparkle-story.css`), and grid rule `.search-page img { display:block;max-width:100%;height:auto }`.
-4. **Interactive Detail & Feature Matrix (<article.tcard> — `Get Moving`)**:
-   - Landmark `<article class="tcard">` framing `Get Moving` and `Write something` (*"Português (Brasil)"*) with `#68637d` surface cards, `#fbfaf6` accents, and `.search-page a { color:4c3fba;text-underline-offset:.2em }`.
+   - Landmark `<header class="nav is-scrolled">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `Stars Today. Habits Tomorrow.`)**:
+   - Landmark `<section class="hero">` presenting display lead `Stars Today. Habits Tomorrow.` and copy excerpt *"A reward-chart app for families and groups"* over `#fbfaf6` canvas and `#1c1736` ink.
+3. **Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)**:
+   - Landmark `<section class="scene scene--tasks">` rendering section `S t a r s T o d a y . H a b i t s T o m o r r o w .` with copy *"Sparkle turns everyday tasks into stars children can see, collect"*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `avatar-luca.jpg`, `sparkle-story.css`), and grid rule `.search-page img { display:block;max-width:100%;height:auto }`.
+4. **Interactive Detail & Feature Matrix (<article.tcard> — `Everyday tasks become achievements`)**:
+   - Landmark `<article class="tcard">` framing `Everyday tasks become achievements.` and `Write something` (*"Watch the film 0:30"*) with `#ffffff` surface cards, `#ff3b30` accents, and `.search-page a { color:4c3fba;text-underline-offset:.2em }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://sparkle.ankatms.com`)**:
-   - Landmark `<footer class="foot">` anchoring `Kids Reward Chart & Chore App · ` footer links (`English · Deutsch · Español · Français · Türkçe`), copy *"A reward-chart app for families and groups"*, and `#8d75ff` structural dividers.
+   - Landmark `<footer class="foot">` anchoring `Kids Reward Chart & Chore App · ` footer links (`English · Deutsch · Español · Français · Türkçe`), copy *"Get Moving 30 minutes of movement. Sport, dance… 30 min 3 st"*, and `#e3dfef` structural dividers.
 
 ---
 
@@ -161,19 +187,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `sparkle-ankatms-com` (**Kids Reward Chart & Chore App · Sparkle** — `https://sparkle.ankatms.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1736` / `#fbfaf6`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#ff3b30`).
 - **Identity & Domain Context**: Organize tasks, earn stars and choose rewards together. Sparkle is a private reward-chart app for families and groups on iPhone and iPad....
-- **Primary Substrate**: `#1c1736` (`var(--ink)` in `:root`), **Primary Ink**: `#fbfaf6`, **Accent / Highlight**: `#fbfaf6`.
+- **Primary Substrate**: `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1c1736`, **Accent / Highlight**: `#ff3b30`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1c1736` (`var(--ink)` in `:root`) paired with `#fbfaf6` primary typography and `#fbfaf6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Apple Color Emoji` for display copy (`S t a r s T o d a y . H a b i t s T `) with `Hiragino Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `65ch` container bounds (`gap: .7rem`, padding `1.5rem`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#1c1736` primary typography and `#ff3b30` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `SF Pro Display` for display copy (`Stars Today. Habits Tomorrow.`) with `SF Pro Display` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 11.2px 19.2px`, padding `63.36px`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `sparkle-ankatms-com` in your global stylesheet:
 
 :root {
-  /* Kids Reward Chart & Chore App · Sparkle (sparkle-ankatms-com) — Ground-Truth Extracted CSS Variables */
+  /* Kids Reward Chart & Chore App · Sparkle (sparkle-ankatms-com) — Live-Grounded CSS Variables */
   --ink: #1c1736; /* Typography Ink Token (sparkle-ankatms-com) */
   --ink-2: #48425f; /* Typography Ink Token (sparkle-ankatms-com) */
   --ink-3: #68637d; /* Typography Ink Token (sparkle-ankatms-com) */
@@ -194,61 +220,64 @@ Declare and consume these exact custom properties extracted from `sparkle-ankatm
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#1c1736` — grounded in `var(--ink)` in `:root`
-- **Primary Typography Ink**: `#48425f` — grounded in `var(--ink-2)` in `:root`
-- **Elevated Surface / Card Substrate**: `#68637d` — grounded in `var(--ink-3)` in `:root`
-- **Interactive Accent / Highlight**: `#fbfaf6` — grounded in `var(--paper)` in `:root`
-- **Secondary / Muted Copy**: `#6b4ff0` — grounded in `var(--violet)` in `:root`
-- **Structural Hairline Border**: `#8d75ff` — grounded in `var(--violet-2)` in `:root`
+- **Primary Canvas Substrate**: `#fbfaf6` — grounded in live computed `html` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#1c1736` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in live computed `p` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#ff3b30` — grounded in `.ctl-badge.is-hot { background: #ff3b30 }`
+- **Secondary / Muted Copy**: `#b85f00` — grounded in `var(--amber-ink)` in `:root`
+- **Structural Hairline Border**: `#e3dfef` — grounded in `.search-steps li { border: #e3dfef }`
+- **Variable Token (`--ink-2`)**: `#48425f` — grounded in `var(--ink-2)` in `:root`
+- **Variable Token (`--ink-3`)**: `#68637d` — grounded in `var(--ink-3)` in `:root`
+- **Variable Token (`--violet`)**: `#6b4ff0` — grounded in `var(--violet)` in `:root`
+- **Variable Token (`--violet-2`)**: `#8d75ff` — grounded in `var(--violet-2)` in `:root`
 - **Variable Token (`--gold`)**: `#f5a623` — grounded in `var(--gold)` in `:root`
 - **Variable Token (`--gold-2`)**: `#ffcf4a` — grounded in `var(--gold-2)` in `:root`
-- **Variable Token (`--amber-ink`)**: `#b85f00` — grounded in `var(--amber-ink)` in `:root`
 - **Variable Token (`--rose`)**: `#e2478f` — grounded in `var(--rose)` in `:root`
 - **Variable Token (`--mint`)**: `#22c55e` — grounded in `var(--mint)` in `:root`
 - **Variable Token (`--night-ink`)**: `#f5f2ff` — grounded in `var(--night-ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×25386px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `65ch` extracted from `sparkle-ankatms-com` stylesheet
-- **Padding & Gutters**: `1.5rem` lateral canvas padding with `.7rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65ch`, `gap: .7rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `63.36px` lateral canvas padding with `11.2px 19.2px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 11.2px 19.2px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `63.36px` horizontal padding
 - **Media Queries**: `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width: 1180px)`, `@media (max-width: 959px)`
-- **Corner Radii**: `10px`, `100px`, `32px`, `24px`
+- **Corner Radii**: `50%`, `12px`, `10px`, `100px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Apple Color Emoji`
-- **Body Font Stack**: `Hiragino Sans`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: clamp(2.3rem,4.5vw,4rem)`, `line-height: 1.15`, `letter-spacing: -.035em`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(1.6rem,3vw,2.3rem)`, `line-height: 1.3`, `letter-spacing: -.025em`)
-- **Body Copy Rule**: rule `p` (`font-size: .9rem`)
-- **Metadata & Index Rule**: rule `small` (`font-size: 13px`, `font-weight: 650`)
+- **Display Font Stack**: `SF Pro Display`
+- **Body Font Stack**: `SF Pro Display`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 123.1px`, `line-height: 103.404px`, `font-weight: 820`, `letter-spacing: -7.1398px`); rule `h1` (`font-size: clamp(2.3rem,4.5vw,4rem)`, `line-height: 1.15`, `letter-spacing: -.035em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 84.96px`, `line-height: 79.8624px`, `font-weight: 800`, `letter-spacing: -4.248px`); rule `h2` (`font-size: clamp(1.6rem,3vw,2.3rem)`, `line-height: 1.3`, `letter-spacing: -.025em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: .9rem`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14.4px`, `line-height: 21.6px`, `font-weight: 500`); rule `small` (`font-size: 13px`, `font-weight: 650`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `sparkle-ankatms-com` (`Kids Reward Chart & Chore App · Sparkle`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)**:
-   - DOM & Selectors: Landmark `<header class="nav">` hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
+   - DOM & Selectors: Landmark `<header class="nav is-scrolled">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)` (`sparkle-ankatms-com`) adapts across `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width: 1180px)`, `@media (max-width: 959px)` with `cubic-bezier(0.16,1,0.3,1)`, `cubic-bezier(0.2,1.45,0.35,1)`, `cubic-bezier(0.25,1.25,0.4,1)` transitions and links `English · Deutsch · Español · Français · Türkçe`.
-2. **Hero Stage & Focal Lead (<section.hero> — `S t a r s T o d a y . H a b i t s `)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `S t a r s T o d a y . H a b i t s T o m o r r o w .` and copy excerpt *"Scroll to earn your first star"* over `#1c1736` canvas and `#fbfaf6` ink.
-   - Responsive Contract: Hero stage (`1440×25386px` desktop / `390×2400px` mobile) sets `#1c1736` background with `#fbfaf6` headline `S t a r s T o d a y . H a b i t s T o m o r r o w .`.
-3. **Primary Showcase & Content Grid (<section.scene> — `Everyday tasks become achievements`)**:
-   - DOM & Selectors: Landmark `<section class="scene scene--tasks">` rendering section `Everyday tasks become achievements.` with copy *"🇧🇷 Português (Brasil)"*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `avatar-luca.jpg`, `sparkle-story.css`), and grid rule `.search-page img { display:block;max-width:100%;height:auto }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scene> — `Everyday tasks become achievements`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65ch`, `gap: .7rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<article.tcard> — `Get Moving`)**:
-   - DOM & Selectors: Landmark `<article class="tcard">` framing `Get Moving` and `Write something` (*"Português (Brasil)"*) with `#68637d` surface cards, `#fbfaf6` accents, and `.search-page a { color:4c3fba;text-underline-offset:.2em }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.tcard> — `Get Moving`)` uses `10px`, `100px`, `32px`, `24px` radii, `#fbfaf6` highlights, and assets (favicon-32.png, apple-touch-icon.png, avatar-luca.jpg).
+2. **Hero Stage & Focal Lead (<section.hero> — `Stars Today. Habits Tomorrow.`)**:
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Stars Today. Habits Tomorrow.` and copy excerpt *"A reward-chart app for families and groups"* over `#fbfaf6` canvas and `#1c1736` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fbfaf6` background with `#1c1736` headline `Stars Today. Habits Tomorrow.`.
+3. **Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)**:
+   - DOM & Selectors: Landmark `<section class="scene scene--tasks">` rendering section `S t a r s T o d a y . H a b i t s T o m o r r o w .` with copy *"Sparkle turns everyday tasks into stars children can see, collect"*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `avatar-luca.jpg`, `sparkle-story.css`), and grid rule `.search-page img { display:block;max-width:100%;height:auto }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 11.2px 19.2px`) on desktop and Single-column vertical stack at `390px` viewport width with `63.36px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<article.tcard> — `Everyday tasks become achievements`)**:
+   - DOM & Selectors: Landmark `<article class="tcard">` framing `Everyday tasks become achievements.` and `Write something` (*"Watch the film 0:30"*) with `#ffffff` surface cards, `#ff3b30` accents, and `.search-page a { color:4c3fba;text-underline-offset:.2em }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.tcard> — `Everyday tasks become achievements`)` uses `50%`, `12px`, `10px`, `100px` radii, `#ff3b30` highlights, and assets (favicon-32.png, apple-touch-icon.png, avatar-luca.jpg).
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://sparkle.ankatms.com`)**:
-   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `Kids Reward Chart & Chore App · ` footer links (`English · Deutsch · Español · Français · Türkçe`), copy *"A reward-chart app for families and groups"*, and `#8d75ff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://sparkle.ankatms.com`)` aligns to `65ch` extracted from `sparkle-ankatms-com` stylesheet with `1.5rem` lateral canvas padding with `.7rem` grid gap and attributes (data-nav, data-logo, data-hud).
+   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `Kids Reward Chart & Chore App · ` footer links (`English · Deutsch · Español · Français · Türkçe`), copy *"Get Moving 30 minutes of movement. Sport, dance… 30 min 3 st"*, and `#e3dfef` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://sparkle.ankatms.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `63.36px` lateral canvas padding with `11.2px 19.2px` grid gap and attributes (data-nav, data-logo, data-hud).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Scroll to earn your first star"*
-- Copy Excerpt 2: *"🇧🇷 Português (Brasil)"*
-- Copy Excerpt 3: *"Português (Brasil)"*
-- Copy Excerpt 4: *"A reward-chart app for families and groups"*
+- Copy Excerpt 1: *"A reward-chart app for families and groups"*
+- Copy Excerpt 2: *"Sparkle turns everyday tasks into stars children can see, collect and be proud of..."*
+- Copy Excerpt 3: *"Watch the film 0:30"*
+- Copy Excerpt 4: *"Get Moving 30 minutes of movement. Sport, dance… 30 min 3 stars"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.16,1,0.3,1)`, `cubic-bezier(0.2,1.45,0.35,1)`, `cubic-bezier(0.25,1.25,0.4,1)`

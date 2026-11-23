@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: giordanobetti-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: giordanobetti-com
 
 ## Overview & Design Identity
 - **Target**: `giordanobetti-com` (**Giordano Betti - Independent Cinematographer**)
 - **Production URL**: [https://giordanobetti.com/](https://giordanobetti.com/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#0000`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#171717` / `#ffffff`)
 - **Summary**: Giordano Betti is an independent cinematographer and Director of Photography based in Tuscany, Italy.
-- **Total Clean CSS Variables Extracted**: `20` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `20` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Instrument Serif`
+- **Display Font Stack**: `Host Grotesk`
 - **Body Font Stack**: `Host Grotesk`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `clamp(40px,2.07vw + 32.24px,72px)`, `clamp(16px,.26vw + 15.03px,20px)`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `clamp(40px,2.07vw + 32.24px,72px)`, `clamp(16px,.26vw + 15.03px,20px)`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `clamp(40px,2.07vw + 32.24px,72px)`, `clamp(16px,.26vw + 15.03px,20px)`)
-- **Metadata & Labels**: CSS variables `--default-mono-font-family: var(--font-mono)`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 62.048px`, `line-height: 49.6384px`, `font-weight: 400`, `letter-spacing: -1%`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#171717` | `var(--color-background)` in `:root` |
-| **Interactive Accent / Highlight** | `#0000` | `textarea { background-color: #0000 }` |
-| **Secondary / Muted Copy** | `#000000` | `50 { background-color: black }` (`#000000`) |
-| **Structural Hairline Border** | `#ffffff` | `.debug .f-cell { background-color: white }` (`#ffffff`) |
+| **Primary Canvas Substrate** | `#171717` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `50 { background-color: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#ffffff` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#ffffff` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `giordanobetti-com`)**:
-   - Landmark `<header class="header js-header">` hosting `Giordano Betti - Independent Cinemat` navigation (`instagram instagram · youtube youtube · linkedin linkedin`), DOM attributes (`data-v-ad171e27`, `data-v-67aeeb6a`, `data-v-6d80a5f8`, `data-v-794a89b8`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.contact-modal> — `Something in mind?`)**:
-   - Landmark `<section class="contact-modal f-grid">` presenting display lead `Something in mind?` and copy excerpt *"Giordano Betti Independent Cinematographer"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.home-content> — `Giordano Betti - Independent Cinem`)**:
-   - Landmark `<section class="home-content f-grid">` rendering section `Giordano Betti - Independent Cinematographer` with copy *"Independent Cinematographer"*, asset references (`entry.B8GcDMgn.css`, `Footer.BHv6vXkB.css`, `Action.C2i8mHMB.css`, `MoZuWBAS.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.home-content__footer> — `Jupiter`)**:
-   - Landmark `<section class="home-content__footer f-grid">` framing `Jupiter` and `AVAVAV X ADIDAS SS25` (*"Something in mind?"*) with `#171717` surface cards, `#0000` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<header class="header js-header">` (`1440x123px`) hosting `Giordano Betti - Independent Cinemat` navigation (`instagram instagram · youtube youtube · linkedin linkedin`), DOM attributes (`data-v-ad171e27`, `data-v-67aeeb6a`, `data-v-6d80a5f8`, `data-v-794a89b8`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.home-content> — `Giordano Betti - Independent Cinem`)**:
+   - Landmark `<section class="home-content f-grid">` presenting display lead `Giordano Betti - Independent Cinematographer` and copy excerpt *"Accademia Bizantina"* over `#171717` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.home-content__footer> — `AVAVAV X ADIDAS SS25`)**:
+   - Landmark `<section class="home-content__footer f-grid">` rendering section `AVAVAV X ADIDAS SS25` with copy *"Cinematographer 1AC Colorist"*, asset references (`entry.B8GcDMgn.css`, `Footer.BHv6vXkB.css`, `Action.C2i8mHMB.css`, `MoZuWBAS.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.f-grid> — `Parlami D'Amore Mariu`)**:
+   - Landmark `<section class="home-content__footer f-grid">` framing `Parlami D'Amore Mariu` and `60 years of Felsina` (*"Livestream director"*) with `#000000` surface cards, `#ffffff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.header__section> — `https://giordanobetti.com/`)**:
-   - Landmark `<footer class="header__section">` anchoring `Giordano Betti - Independent Cin` footer links (`instagram instagram · youtube youtube · linkedin linkedin`), copy *"Let's create something meaningful together."*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="header__section">` anchoring `Giordano Betti - Independent Cin` footer links (`instagram instagram · youtube youtube · linkedin linkedin`), copy *"An independent cinematographer and director of photography b"*, and `#ffffff` structural dividers.

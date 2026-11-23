@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: relevovinco-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "relevovinco-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#1f140b` ink, `#6b4c34` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#36261a` ink, `#6b4c34` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: relevovinco-com
 
 > **Relevo & Vinco — inkless packaging, pressed into the board** (https://relevovinco.com/) — Relevo & Vinco is an inkless packaging workshop in Porto. We emboss, deboss, die-cut and fold raw board so a brand is something people fe...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Relevo & Vinco — inkless packaging, pressed into the board** (`https://relevovinco.com/`). Relevo & Vinco is an inkless packaging workshop in Porto. We emboss, deboss, die-cut and fold raw board so a brand is something people fe...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#1f140b` ink, `#6b4c34` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#36261a` ink, `#6b4c34` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#d4b08f` (`var(--color-1)` in `:root`) paired with `#1f140b` primary typography and `#6b4c34` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Gabarito` for display copy (`Stand out. Press in.`) with `Instrument Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `900px` container bounds (`gap: 8px`, padding `4px`) with `cubic-bezier(.3,.7,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#d4b08f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#36261a` primary typography and `#6b4c34` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`STAND OUT. PRESS IN.`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `4px`) with `cubic-bezier(.3,.7,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `900px` extracted from `relevovinco-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)`, `999px`.
+- **Border Radius Scale**: `6px`, `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 900px`, `gap: 8px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:no-preference)and (max-width:767px)`.
 
@@ -48,14 +52,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#d4b08f` | `var(--color-1)` in `:root` |
-| **Primary Typography Ink** | `#36261a` | `var(--color-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f7e8d2` | `var(--color-3)` in `:root` |
+| **Primary Canvas Substrate** | `#d4b08f` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#36261a` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#d4b08f` | transparent/inherited card surface over live computed `body` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#6b4c34` | `var(--color-4)` in `:root` |
-| **Secondary / Muted Copy** | `#47331f` | `var(--color-5)` in `:root` |
-| **Structural Hairline Border** | `#1f140b` | `var(--color-6)` in `:root` |
+| **Secondary / Muted Copy** | `#36261a` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#36261a` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Variable Token (`--color-3`)** | `#f7e8d2` | `var(--color-3)` in `:root` |
+| **Variable Token (`--color-5`)** | `#47331f` | `var(--color-5)` in `:root` |
+| **Variable Token (`--color-6`)** | `#1f140b` | `var(--color-6)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +89,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Gabarito`.
+- **Display Typography**: `Instrument Sans`.
 - **Primary Body Stack**: `Instrument Sans`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`).
-- **Body Copy**: rule `p` (`font-size: clamp(26px,2.8vw,42px)`, `line-height: 1.12`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 34px`, `line-height: 52.7px`, `font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 25.5px`, `line-height: 39.525px`, `font-weight: 700`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: clamp(26px,2.8vw,42px)`, `line-height: 1.12`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`).
 
 ---
 
@@ -110,40 +117,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Relevo & Vinco — inkless packaging, presse │
 │ ====================================================================== │
-│ [ <header.lenis>           | Finishes · Process · Work · Boards · C ]  │
+│ [ <header.lenis> (1440x68px)          | Finishes · Process · Work ·  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.relief-defs>                                |   │
-│ | H1: Stand out. Press in.                                         |   │
-│ | Substrate: #d4b08f    | Ink: #1f140b    | Accent: #6b4c34        |   │
+│ | HERO STAGE: <section.relief-defs> (w=1440px)                       | │
+│ | H1: STAND OUT. PRESS IN.                                           | │
+│ | Substrate: #d4b08f | Ink: #36261a | Accent: #6b4c34                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.relief-defs__shad) max-w: 900px          |   │
+│ | SHOWCASE GRID (<section.relief-defs__shad) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Ink fades. Foil peels. Press |  | Six ways to say it without i | | │
+│ | | Stand out. Press in.         |  | Ink fades. Foil peels. Press | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px   ) | │
-│ | [<header.lenis>] -> [<section.relief-de] -> [<section.relief-de] |   │
+│ | DETAIL MODULE (<section.nav__bar>) — Six ways to say it wi         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.m-text-3>     ) | https://relevovinco.com/           │
+│ [ FOOTER (<footer.m-text-3>   ) | https://relevovinco.com/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.lenis>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.relief-defs>) — 390px Vertical Lead           | │
+│ | H1: STAND OUT. PRESS IN.                                           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.relief-defs__) — 1-Col Stack              | │
+│ | [ Item 1: Stand out. Press in.                                   ] | │
+│ | [ Item 2: Ink fades. Foil peels. Pressure stays.                 ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.nav__bar>) — 1-Col (Six ways to say it)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.m-text-3>   ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.lenis> — `relevovinco-com`)**:
-   - Landmark `<header class="lenis">` hosting `Relevo & Vinco — inkless packaging, ` navigation (`Finishes · Process · Work · Boards · Contact`), DOM attributes (`data-fonts`, `data-part="layers"`, `data-part="tokens"`, `data-part="base"`), and stylesheet rule `after { box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.relief-defs> — `Stand out. Press in.`)**:
-   - Landmark `<section class="relief-defs">` presenting display lead `Stand out. Press in.` and copy excerpt *"Relevo & Vinco is an inkless packaging workshop in Porto. We embo"* over `#d4b08f` canvas and `#1f140b` ink.
-3. **Primary Showcase & Content Grid (<section.relief-defs__shade> — `Ink fades. Foil peels. Pressure st`)**:
-   - Landmark `<section class="relief-defs__shade">` rendering section `Ink fades. Foil peels. Pressure stays.` with copy *"Order a sample kit"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `gabarito-a94f9001.woff2`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
-4. **Interactive Detail & Feature Matrix (<section.nav__bar> — `Six ways to say it without ink`)**:
-   - Landmark `<section class="nav__bar">` framing `Six ways to say it without ink` and `Blind emboss` (*"Every box we make carries its brand in the board itself: raised w"*) with `#f7e8d2` surface cards, `#6b4c34` accents, and `img { display:block;max-width:100%;height:auto }`.
+   - Landmark `<header class="lenis">` (`1440x68px`) hosting `Relevo & Vinco — inkless packaging, ` navigation (`Finishes · Process · Work · Boards · Contact`), DOM attributes (`data-fonts`, `data-part="layers"`, `data-part="tokens"`, `data-part="base"`), and stylesheet rule `after { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.relief-defs> — `STAND OUT. PRESS IN.`)**:
+   - Landmark `<section class="relief-defs">` presenting display lead `STAND OUT. PRESS IN.` and copy excerpt *"Relevo & Vinco is an inkless packaging workshop in Porto. We embo"* over `#d4b08f` canvas and `#36261a` ink.
+3. **Primary Showcase & Content Grid (<section.relief-defs__shade> — `Stand out. Press in.`)**:
+   - Landmark `<section class="relief-defs__shade">` rendering section `Stand out. Press in.` with copy *"Order a sample kit"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `gabarito-a94f9001.woff2`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+4. **Interactive Detail & Feature Matrix (<section.nav__bar> — `Ink fades. Foil peels. Pressure st`)**:
+   - Landmark `<section class="nav__bar">` framing `Ink fades. Foil peels. Pressure stays.` and `Six ways to say it without ink` (*"Every box we make carries its brand in the board itself: raised w"*) with `#d4b08f` surface cards, `#6b4c34` accents, and `img { display:block;max-width:100%;height:auto }`.
 5. **Colophon & Global Directory Footer (<footer.m-text-3> — `https://relevovinco.com/`)**:
-   - Landmark `<footer class="m-text-3">` anchoring `Relevo & Vinco — inkless packagi` footer links (`Finishes · Process · Work · Boards · Contact`), copy *"Nothing to scuff off in transit and nothing to separate at t"*, and `#1f140b` structural dividers.
+   - Landmark `<footer class="m-text-3">` anchoring `Relevo & Vinco — inkless packagi` footer links (`Finishes · Process · Work · Boards · Contact`), copy *"Nothing to scuff off in transit and nothing to separate at t"*, and `#36261a` structural dividers.
 
 ---
 
@@ -155,19 +181,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `relevovinco-com` (**Relevo & Vinco — inkless packaging, pressed into the board** — `https://relevovinco.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#1f140b` ink, `#6b4c34` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#d4b08f` canvas, `#36261a` ink, `#6b4c34` accent).
 - **Identity & Domain Context**: Relevo & Vinco is an inkless packaging workshop in Porto. We emboss, deboss, die-cut and fold raw board so a brand is something people fe...
-- **Primary Substrate**: `#d4b08f` (`var(--color-1)` in `:root`), **Primary Ink**: `#1f140b`, **Accent / Highlight**: `#6b4c34`.
+- **Primary Substrate**: `#d4b08f` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#36261a`, **Accent / Highlight**: `#6b4c34`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#d4b08f` (`var(--color-1)` in `:root`) paired with `#1f140b` primary typography and `#6b4c34` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Gabarito` for display copy (`Stand out. Press in.`) with `Instrument Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `900px` container bounds (`gap: 8px`, padding `4px`) with `cubic-bezier(.3,.7,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#d4b08f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#36261a` primary typography and `#6b4c34` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`STAND OUT. PRESS IN.`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `4px`) with `cubic-bezier(.3,.7,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `relevovinco-com` in your global stylesheet:
 
 :root {
-  /* Relevo & Vinco — inkless packaging, pressed into the board (relevovinco-com) — Ground-Truth Extracted CSS Variables */
+  /* Relevo & Vinco — inkless packaging, pressed into the board (relevovinco-com) — Live-Grounded CSS Variables */
   --color-1: #d4b08f; /* Brand / Palette Token (relevovinco-com) */
   --color-2: #36261a; /* Brand / Palette Token (relevovinco-com) */
   --color-3: #f7e8d2; /* Brand / Palette Token (relevovinco-com) */
@@ -188,49 +214,52 @@ Declare and consume these exact custom properties extracted from `relevovinco-co
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#d4b08f` — grounded in `var(--color-1)` in `:root`
-- **Primary Typography Ink**: `#36261a` — grounded in `var(--color-2)` in `:root`
-- **Elevated Surface / Card Substrate**: `#f7e8d2` — grounded in `var(--color-3)` in `:root`
+- **Primary Canvas Substrate**: `#d4b08f` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#36261a` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#d4b08f` — grounded in transparent/inherited card surface over live computed `body` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#6b4c34` — grounded in `var(--color-4)` in `:root`
-- **Secondary / Muted Copy**: `#47331f` — grounded in `var(--color-5)` in `:root`
-- **Structural Hairline Border**: `#1f140b` — grounded in `var(--color-6)` in `:root`
+- **Secondary / Muted Copy**: `#36261a` — grounded in secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#36261a` — grounded in hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
+- **Variable Token (`--color-3`)**: `#f7e8d2` — grounded in `var(--color-3)` in `:root`
+- **Variable Token (`--color-5`)**: `#47331f` — grounded in `var(--color-5)` in `:root`
+- **Variable Token (`--color-6`)**: `#1f140b` — grounded in `var(--color-6)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `900px` extracted from `relevovinco-com` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `4px` lateral canvas padding with `8px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 900px`, `gap: 8px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
 - **Media Queries**: `@media (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:no-preference)and (max-width:767px)`
-- **Corner Radii**: `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)`, `999px`
+- **Corner Radii**: `6px`, `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Gabarito`
+- **Display Font Stack**: `Instrument Sans`
 - **Body Font Stack**: `Instrument Sans`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`)
-- **Body Copy Rule**: rule `p` (`font-size: clamp(26px,2.8vw,42px)`, `line-height: 1.12`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `clamp(18px,1.45vw,21px)`, `13px`, `clamp(22px,1.9vw,27px)`, `clamp(44px,6vw,92px)`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 34px`, `line-height: 52.7px`, `font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 25.5px`, `line-height: 39.525px`, `font-weight: 700`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: clamp(26px,2.8vw,42px)`, `line-height: 1.12`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `relevovinco-com` (`Relevo & Vinco — inkless packaging, pressed into the board`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.lenis> — `relevovinco-com`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` hosting `Relevo & Vinco — inkless packaging, ` navigation (`Finishes · Process · Work · Boards · Contact`), DOM attributes (`data-fonts`, `data-part="layers"`, `data-part="tokens"`, `data-part="base"`), and stylesheet rule `after { box-sizing:border-box }`.
+   - DOM & Selectors: Landmark `<header class="lenis">` (`1440x68px`) hosting `Relevo & Vinco — inkless packaging, ` navigation (`Finishes · Process · Work · Boards · Contact`), DOM attributes (`data-fonts`, `data-part="layers"`, `data-part="tokens"`, `data-part="base"`), and stylesheet rule `after { box-sizing:border-box }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `relevovinco-com`)` (`relevovinco-com`) adapts across `@media (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:767px)`, `@media (prefers-reduced-motion:no-preference)and (max-width:767px)` with `cubic-bezier(.3,.7,.2,1)`, `cubic-bezier(.2,.7,.2,1)`, `cubic-bezier(.2,.75,.15,1)` transitions and links `Finishes · Process · Work · Boards · Contact`.
-2. **Hero Stage & Focal Lead (<section.relief-defs> — `Stand out. Press in.`)**:
-   - DOM & Selectors: Landmark `<section class="relief-defs">` presenting display lead `Stand out. Press in.` and copy excerpt *"Relevo & Vinco is an inkless packaging workshop in Porto. We embo"* over `#d4b08f` canvas and `#1f140b` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#d4b08f` background with `#1f140b` headline `Stand out. Press in.`.
-3. **Primary Showcase & Content Grid (<section.relief-defs__shade> — `Ink fades. Foil peels. Pressure st`)**:
-   - DOM & Selectors: Landmark `<section class="relief-defs__shade">` rendering section `Ink fades. Foil peels. Pressure stays.` with copy *"Order a sample kit"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `gabarito-a94f9001.woff2`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.relief-defs__shade> — `Ink fades. Foil peels. Pressure st`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 900px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.nav__bar> — `Six ways to say it without ink`)**:
-   - DOM & Selectors: Landmark `<section class="nav__bar">` framing `Six ways to say it without ink` and `Blind emboss` (*"Every box we make carries its brand in the board itself: raised w"*) with `#f7e8d2` surface cards, `#6b4c34` accents, and `img { display:block;max-width:100%;height:auto }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.nav__bar> — `Six ways to say it without ink`)` uses `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)`, `999px` radii, `#6b4c34` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
+2. **Hero Stage & Focal Lead (<section.relief-defs> — `STAND OUT. PRESS IN.`)**:
+   - DOM & Selectors: Landmark `<section class="relief-defs">` presenting display lead `STAND OUT. PRESS IN.` and copy excerpt *"Relevo & Vinco is an inkless packaging workshop in Porto. We embo"* over `#d4b08f` canvas and `#36261a` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#d4b08f` background with `#36261a` headline `STAND OUT. PRESS IN.`.
+3. **Primary Showcase & Content Grid (<section.relief-defs__shade> — `Stand out. Press in.`)**:
+   - DOM & Selectors: Landmark `<section class="relief-defs__shade">` rendering section `Stand out. Press in.` with copy *"Order a sample kit"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `gabarito-a94f9001.woff2`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.relief-defs__shade> — `Stand out. Press in.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.nav__bar> — `Ink fades. Foil peels. Pressure st`)**:
+   - DOM & Selectors: Landmark `<section class="nav__bar">` framing `Ink fades. Foil peels. Pressure stays.` and `Six ways to say it without ink` (*"Every box we make carries its brand in the board itself: raised w"*) with `#d4b08f` surface cards, `#6b4c34` accents, and `img { display:block;max-width:100%;height:auto }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.nav__bar> — `Ink fades. Foil peels. Pressure st`)` uses `6px`, `var(--radius-1)`, `var(--radius-2)`, `var(--radius-3)` radii, `#6b4c34` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.m-text-3> — `https://relevovinco.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="m-text-3">` anchoring `Relevo & Vinco — inkless packagi` footer links (`Finishes · Process · Work · Boards · Contact`), copy *"Nothing to scuff off in transit and nothing to separate at t"*, and `#1f140b` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.m-text-3> — `https://relevovinco.com/`)` aligns to `900px` extracted from `relevovinco-com` stylesheet with `4px` lateral canvas padding with `8px` grid gap and attributes (data-fonts, data-part="layers", data-part="tokens").
+   - DOM & Selectors: Landmark `<footer class="m-text-3">` anchoring `Relevo & Vinco — inkless packagi` footer links (`Finishes · Process · Work · Boards · Contact`), copy *"Nothing to scuff off in transit and nothing to separate at t"*, and `#36261a` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.m-text-3> — `https://relevovinco.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `4px` lateral canvas padding with `8px` grid gap and attributes (data-fonts, data-part="layers", data-part="tokens").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Relevo & Vinco is an inkless packaging workshop in Porto. We emboss, deboss, cut a..."*

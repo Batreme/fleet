@@ -1,34 +1,49 @@
+---
+title: "UI & UX Architecture: www-1centre-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-1centre-com
 
 ## Overview & Design Identity
 - **Target**: `www-1centre-com` (**1Centre — Trade Credit Software for NZ & Australia**)
 - **Production URL**: [https://www.1centre.com/](https://www.1centre.com/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f99c00` / `#fff`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fafbfa` / `#4ab0ff`)
 - **Summary**: Trade credit software for suppliers in New Zealand and Australia: digital account applications, ID checks, credit decisions, 24/7 monitor...
-- **Total Clean CSS Variables Extracted**: `87` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `87` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Inter`
-- **Body Font Stack**: `Inter Fallback`
+- **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `15.5px`, `13.5px`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `15.5px`, `13.5px`)
-- **Metadata & Labels**: CSS variables `--default-mono-font-family: var(--font-mono)`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 55.6667px`, `line-height: 54.5533px`, `font-weight: 500`, `letter-spacing: -1.94833px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 58.8px`, `font-weight: 500`, `letter-spacing: -1.96px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f99c00` | `var(--color-amber-500)` in `:root` |
-| **Primary Typography Ink** | `#b75000` | `var(--color-amber-700)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `var(--color-white)` in `:root` |
-| **Secondary / Muted Copy** | `#fafbfa` | `var(--color-canvas)` in `:root` |
-| **Structural Hairline Border** | `#101112` | `var(--color-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#fafbfa` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#101112` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6f5f2` | `var(--color-paper)` in `:root` |
+| **Interactive Accent / Highlight** | `#4ab0ff` | `.btn-dots.btn-candy { background-color: #4ab0ff }` |
+| **Secondary / Muted Copy** | `#9a9da0` | `var(--color-muted-2)` in `:root` |
+| **Structural Hairline Border** | `#e7e9e8` | `var(--color-line)` in `:root` |
+| **Variable Token (`--color-amber-500`)** | `#f99c00` | `var(--color-amber-500)` in `:root` |
+| **Variable Token (`--color-amber-700`)** | `#b75000` | `var(--color-amber-700)` in `:root` |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
+| **Variable Token (`--color-white`)** | `#ffffff` | `var(--color-white)` in `:root` |
 
 ---
 
@@ -55,13 +70,13 @@
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.sticky> — `www-1centre-com`)**:
-   - Landmark `<header class="sticky top-0">` hosting `1Centre — Trade Credit Software for ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-nimg="1"`, `data-dark="true"`), and stylesheet rule `host { --color-amber-500:lab(72.7183% 31.8672 97.9407);--color-amber-700:lab(47... }`.
+1. **Brand Header & Navigation Bar (<header.top-0> — `www-1centre-com`)**:
+   - Landmark `<header class="top-0 transition-colors">` (`1440x64px`) hosting `1Centre — Trade Credit Software for ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-nimg="1"`, `data-dark="true"`), and stylesheet rule `host { --color-amber-500:lab(72.7183% 31.8672 97.9407);--color-amber-700:lab(47... }`.
 2. **Hero Stage & Focal Lead (<section.relative> — `Trade credit at scale, so you can `)**:
-   - Landmark `<section class="relative overflow-hidden">` presenting display lead `Trade credit at scale, so you can focus on sales.` and copy excerpt *"Trade credit at scale,"* over `#f99c00` canvas and `#000` ink.
+   - Landmark `<section class="relative overflow-hidden">` presenting display lead `Trade credit at scale, so you can focus on sales.` and copy excerpt *"1Centre helps businesses across all industries trade with trust. "* over `#fafbfa` canvas and `#101112` ink.
 3. **Primary Showcase & Content Grid (<section.group> — `Build trade credit workflows on ev`)**:
-   - Landmark `<section class="group border-y">` rendering section `Build trade credit workflows on everything your b...` with copy *"so you can focus on sales."*, asset references (`5e4d537aaa9e154b-s.p.0g9-.3zp53cu...`, `83afe278b6a6bb3c-s.p.0q-301v4kxxn...`, `logo-mark.svg`, `mitre10.svg`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.mx-auto> — `Open trade accounts from the count`)**:
-   - Landmark `<section class="mx-auto scroll-mt-20">` framing `Open trade accounts from the counter, the web, yo...` and `Write your own credit rules — and let them decide...` (*"1Centre helps businesses across all industries trade with trust. "*) with `#000` surface cards, `#fff` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="group border-y">` rendering section `Build trade credit workflows on everything your b...` with copy *"Trade credit at scale,"*, asset references (`5e4d537aaa9e154b-s.p.0g9-.3zp53cu...`, `83afe278b6a6bb3c-s.p.0q-301v4kxxn...`, `logo-mark.svg`, `mitre10.svg`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.scroll-mt-20> — `Open trade accounts from the count`)**:
+   - Landmark `<section class="scroll-mt-20 pb-16">` framing `Open trade accounts from the counter, the web, yo...` and `Write your own credit rules — and let them decide...` (*"so you can focus on sales."*) with `#f6f5f2` surface cards, `#4ab0ff` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.1centre.com/`)**:
-   - Landmark `<footer class="relative overflow-hidden">` anchoring `1Centre — Trade Credit Software ` footer links (`Overview · Index · Archive · About · Contact`), copy *"1Centre helps businesses across all industries"*, and `#101112` structural dividers.
+   - Landmark `<footer class="relative overflow-hidden">` anchoring `1Centre — Trade Credit Software ` footer links (`Overview · Index · Archive · About · Contact`), copy *"1Centre helps businesses across all industries"*, and `#e7e9e8` structural dividers.

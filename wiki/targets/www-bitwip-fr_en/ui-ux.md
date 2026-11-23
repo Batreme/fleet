@@ -1,37 +1,51 @@
+---
+title: "UI & UX Architecture: www-bitwip-fr_en"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-bitwip-fr_en
 
 ## Overview & Design Identity
 - **Target**: `www-bitwip-fr_en` (**Communications consulting agency for Overseas France · Bitwip**)
 - **Production URL**: [https://www.bitwip.fr/en](https://www.bitwip.fr/en)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#FC622A` ink, `#FC622A` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#121414` canvas, `#ffffff` ink, `#fc622a` accent)
 - **Summary**: Communications consulting agency in Overseas France and Occitanie: strategy, branding, web and campaigns. French Guiana, Martinique, Guad...
-- **Total Clean CSS Variables Extracted**: `184` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `184` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Cabinet Grotesk`
-- **Body Font Stack**: `Clash Display`
+- **Body Font Stack**: `Cabinet Grotesk`
 - **Monospace / Technical Font Stack**: `SF Mono`
-- **Hero Display (`H1`)**: CSS variables `--t-h1: clamp(2.75rem,1.6rem + 4.6vw,6rem)`
-- **Section Heading (`H2`)**: CSS variables `--t-h2: clamp(2.375rem,1.55rem + 3.4vw,5rem)`; rule `h2` (`font-size: var(--t-h3)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 500`)
-- **Body Copy**: CSS variables `--t-body: clamp(1.0625rem,1rem + .2vw,1.1875rem)`; rule `p` (`font-size: clamp(1.625rem,.9rem + 1.6vw,...`, `line-height: 1.16`, `letter-spacing: -.03em`)
-- **Metadata & Labels**: CSS variables `--f-label: "Clash Display","Cabinet Grotesk","Helvetica Neue",Arial,sans-serif`, `--t-small: .9375rem`, `--t-label: .75rem`; rule `.label` (`font-size: .6875rem`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 37.76px`, `line-height: 58.528px`, `font-weight: 400`); CSS variables `--t-h1: clamp(2.75rem,1.6rem + 4.6vw,6rem)`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 73.76px`, `line-height: 73.76px`, `font-weight: 500`, `letter-spacing: -2.5816px`); CSS variables `--t-h2: clamp(2.375rem,1.55rem + 3.4vw,5rem)`; rule `h2` (`font-size: var(--t-h3)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 18.88px`, `line-height: 29.264px`, `font-weight: 400`); CSS variables `--t-body: clamp(1.0625rem,1rem + .2vw,1.1875rem)`; rule `p` (`font-size: clamp(1.625rem,.9rem + 1.6vw,...`, `line-height: 1.16`, `letter-spacing: -.03em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18.88px`, `line-height: 29.264px`, `font-weight: 400`); CSS variables `--f-label: "Clash Display","Cabinet Grotesk","Helvetica Neue",Arial,sans-serif`, `--t-small: .9375rem`, `--t-label: .75rem`; rule `.label` (`font-size: .6875rem`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--noir)` in `:root` |
-| **Primary Typography Ink** | `#0B0B0B` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#141414` | `var(--ink-2)` in `:root` |
-| **Interactive Accent / Highlight** | `#FC622A` | `var(--papaye)` in `:root` |
-| **Secondary / Muted Copy** | `#EE5520` | `var(--papaye-titre)` in `:root` |
-| **Structural Hairline Border** | `#B23C0B` | `var(--papaye-ink)` in `:root` |
-| **Variable Token (`--papier`)** | `#F4EFE7` | `var(--papier)` in `:root` |
-| **Variable Token (`--papier-2`)** | `#EAE3D8` | `var(--papier-2)` in `:root` |
-| **Variable Token (`--blanc`)** | `#FFF` | `var(--blanc)` in `:root` |
+| **Primary Canvas Substrate** | `#121414` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0a0a0a` | `.nav__bar::before { background: #0a0a0a }` |
+| **Interactive Accent / Highlight** | `#fc622a` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#b23c0b` | `var(--papaye-ink)` in `:root` |
+| **Structural Hairline Border** | `#333535` | `var(--line)` in `:root` (`rgba(255,255,255,.14)`) |
+| **Variable Token (`--noir`)** | `#000000` | `var(--noir)` in `:root` |
+| **Variable Token (`--ink`)** | `#0b0b0b` | `var(--ink)` in `:root` |
+| **Variable Token (`--ink-2`)** | `#141414` | `var(--ink-2)` in `:root` |
+| **Variable Token (`--papaye-titre`)** | `#ee5520` | `var(--papaye-titre)` in `:root` |
+| **Variable Token (`--papier`)** | `#f4efe7` | `var(--papier)` in `:root` |
+| **Variable Token (`--papier-2`)** | `#eae3d8` | `var(--papier-2)` in `:root` |
 | **Variable Token (`--encre`)** | `#121212` | `var(--encre)` in `:root` |
 
 ---
@@ -60,12 +74,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.nav> — `www-bitwip-fr_en`)**:
-   - Landmark `<header class="nav nav--allegee">` hosting `Communications consulting agency for` navigation (`Services · All our services · Work · View all work · Culture & tourism`), DOM attributes (`data-gdifilm="direct"`, `data-page="accueil"`, `data-variante="allegee"`, `data-entree`), and stylesheet rule `root { --gc-x:0px }`.
+   - Landmark `<header class="nav nav--allegee">` (`721x76px`) hosting `Communications consulting agency for` navigation (`Services · All our services · Work · View all work · Culture & tourism`), DOM attributes (`data-gdifilm="direct"`, `data-page="accueil"`, `data-variante="allegee"`, `data-entree`), and stylesheet rule `root { --gc-x:0px }`.
 2. **Hero Stage & Focal Lead (<section.hh> — `Bitwip, tech and creative communic`)**:
-   - Landmark `<section class="hh mj">` presenting display lead `Bitwip, tech and creative communications agency T...` and copy excerpt *"Four disciplines, one team"* over `#000` canvas and `#FC622A` ink.
+   - Landmark `<section class="hh mj">` presenting display lead `Bitwip, tech and creative communications agency T...` and copy excerpt *"Bitwip supports impact-driven projects in Overseas France and acr"* over `#121414` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.sec> — `We believe in meaningful communica`)**:
-   - Landmark `<section class="sec papier">` rendering section `We believe in meaningful communication` with copy *"Strategy & consulting Give your communications a clear structure"*, asset references (`mesure.js`, `consentement.js`, `favicon-b-fond-noir.webp`, `CabinetGrotesk-900.woff2`), and grid rule `after { box-sizing:border-box }`.
-4. **Interactive Detail & Feature Matrix (<section.sec> — `Our services`)**:
-   - Landmark `<section class="sec">` framing `Our services` and `Strategy & consulting` (*"Strategy & consulting"*) with `#141414` surface cards, `#FC622A` accents, and `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:1... }`.
+   - Landmark `<section class="sec papier">` rendering section `We believe in meaningful communication` with copy *"Bitwip, tech and creative communications agency"*, asset references (`mesure.js`, `consentement.js`, `favicon-b-fond-noir.webp`, `CabinetGrotesk-900.woff2`), and grid rule `after { box-sizing:border-box }`.
+4. **Interactive Detail & Feature Matrix (<section.sec:nth(2)> — `Our services`)**:
+   - Landmark `<section class="sec">` framing `Our services` and `Strategy & consulting` (*"The communications agency where"*) with `#0a0a0a` surface cards, `#fc622a` accents, and `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:1... }`.
 5. **Colophon & Global Directory Footer (<footer.pied> — `https://www.bitwip.fr/en`)**:
-   - Landmark `<footer class="pied">` anchoring `Communications consulting agency` footer links (`Services · All our services · Work · View all work · Culture & tourism`), copy *"Give your communications a clear structure"*, and `#B23C0B` structural dividers.
+   - Landmark `<footer class="pied">` anchoring `Communications consulting agency` footer links (`Services · All our services · Work · View all work · Culture & tourism`), copy *"c r e a t i v i t y"*, and `#333535` structural dividers.

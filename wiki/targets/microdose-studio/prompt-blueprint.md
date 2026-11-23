@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: microdose-studio"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "microdose-studio"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#ffffff`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)"
 ---
 
 # UI Design System & Master Generation Blueprint: microdose-studio
 
 > **Microdose Studio - Design & Development Agency for Startups** (https://microdose.studio/) — Microdose Studio helps tech startups turn ideas into products through strategy, brand and product design, React/Next.js development, and...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Microdose Studio - Design & Development Agency for Startups** (`https://microdose.studio/`). Microdose Studio helps tech startups turn ideas into products through strategy, brand and product design, React/Next.js development, and...
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#ffffff`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#19171b` (`var(--color-black)` in `:root`) paired with `#ffffff` primary typography and `#ffffff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geist` for display copy (`W e b u i l d A I - f i r s t p r o `) with `Instrument Serif` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1530px` container bounds (`gap: 4px`, padding `195px`) with `cubic-bezier(0.87,0.45,0.33,0.88)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#0c152a` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`We build AI-first products for start`) with `Geist` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 4px`, padding `195px`) with `cubic-bezier(0.87,0.45,0.33,0.88)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×15031px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1530px` extracted from `microdose-studio` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `195px` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `var(--radius-pill)`, `6.25rem`, `100px`, `1px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1530px`, `gap: 4px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `195px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 768px) and (max-width: 819px)`, `@media (max-width: 1640px)`, `@media (max-width: 1520px)`.
 
@@ -48,14 +52,17 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#19171b` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#0c152a` | `var(--color-dark)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6b6c71` | `var(--color-muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffffff` | `var(--color-white)` in `:root` |
-| **Secondary / Muted Copy** | `#121113` | `var(--color-bg-dark)` in `:root` |
-| **Structural Hairline Border** | `#e8e8ec` | `var(--color-card-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0c152a` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e8e8ec` | `var(--color-card-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#0000ff` | `.legal-block a:hover { color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#6b7280` | `var(--cal-text-subtle)` in `:root` |
+| **Structural Hairline Border** | `#9ca3b0` | `var(--cal-border-emphasis)` in `:root` |
+| **Variable Token (`--color-black`)** | `#19171b` | `var(--color-black)` in `:root` |
+| **Variable Token (`--color-muted`)** | `#6b6c71` | `var(--color-muted)` in `:root` |
+| **Variable Token (`--color-bg-dark`)** | `#121113` | `var(--color-bg-dark)` in `:root` |
 | **Variable Token (`--color-blue-start`)** | `#1935d9` | `var(--color-blue-start)` in `:root` |
 | **Variable Token (`--color-blue-end`)** | `#2f2be2` | `var(--color-blue-end)` in `:root` |
 | **Variable Token (`--color-blue-border`)** | `#1f34c9` | `var(--color-blue-border)` in `:root` |
@@ -87,14 +94,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `Geist`.
-- **Primary Body Stack**: `Instrument Serif`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Geist`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `18px`, `16px`, `14px`, `10px`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 26px`, `line-height: 42px`, `letter-spacing: -1.56px`, `font-weight: 400`).
-- **Body Copy**: rule `body` (`font-weight: 400`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `18px`, `16px`, `14px`, `10px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: -4.32px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `h1` (`font-size: var(--text-base)`, `line-height: var(--tw-leading,var(...`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -3.36px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 26px`, `line-height: 42px`, `letter-spacing: -1.56px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `body` (`font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`.
 
 ---
 
@@ -114,40 +121,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Microdose Studio - Design & Development Ag │
 │ ====================================================================== │
-│ [ <nav.nav>                | microdose .studio · About us 01 · Case ]  │
+│ [ <nav.nav> (1440x80px)               | microdose .studio · About us ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: W e b u i l d A I - f i r s t p r o d u c t s f o...         |   │
-│ | Substrate: #19171b    | Ink: #ffffff    | Accent: #ffffff        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: We build AI-first products for startups and enter...           | │
+│ | Substrate: #ffffff | Ink: #0c152a | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.portfolio-carouse) max-w: 1530px         |   │
+│ | SHOWCASE GRID (<section.portfolio-carouse) max-w: 1600px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | O u r s e l e c t e d p r o  |  | M o b i l e A p p f o r H y  | | │
+│ | | W e b u i l d A I - f i r s  |  | O u r s e l e c t e d p r o  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px   ) | │
-│ | [<nav.nav>] -> [<section.hero>] -> [<section.portfolio] |            │
+│ | DETAIL MODULE (<section.about>) — M o b i l e A p p f o            | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://microdose.studio/          │
+│ [ FOOTER (<footer.footer>     ) | https://microdose.studio/            │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.nav>               ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: We build AI-first products for startups and enter...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.portfolio-car) — 1-Col Stack              | │
+│ | [ Item 1: W e b u i l d A I - f i r s t p r o d u c t s f o...   ] | │
+│ | [ Item 2: O u r s e l e c t e d p r o j e c t s .                ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.about>) — 1-Col (M o b i l e A p p )        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.nav> — `microdose-studio`)**:
-   - Landmark `<nav class="nav blur-fade-in">` hosting `Microdose Studio - Design & Developm` navigation (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), DOM attributes (`data-scroll-indicator="home"`, `data-chrome="nav"`, `data-gt-open="call"`, `data-btn-hover-ready="true"`), and stylesheet rule `after { margin: 0; padding: 0; box-sizing: border-box; }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `W e b u i l d A I - f i r s t p r `)**:
-   - Landmark `<section class="hero blur-fade-in">` presenting display lead `W e b u i l d A I - f i r s t p r o d u c t s f o...` and copy excerpt *"Accepting new projects"* over `#19171b` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.portfolio-carousel> — `O u r s e l e c t e d p r o j e c `)**:
-   - Landmark `<section class="portfolio-carousel">` rendering section `O u r s e l e c t e d p r o j e c t s .` with copy *"Your Design & Dev Partner."*, asset references (`favicon-96x96.png`, `favicon.ico`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `selection { background-color: var(--color-blue-start); color: var(--color-white); te... }`.
-4. **Interactive Detail & Feature Matrix (<section.about> — `M o b i l e A p p f o r H y p e r `)**:
-   - Landmark `<section class="about">` framing `M o b i l e A p p f o r H y p e r P e r s o n a l...` and `U n i f y i n g a G l o b a l G T M A n a l y t i...` (*"e n t e r p r i s e s ."*) with `#6b6c71` surface cards, `#ffffff` accents, and `html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;... }`.
+   - Landmark `<nav class="nav blur-fade-in">` (`1440x80px`) hosting `Microdose Studio - Design & Developm` navigation (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), DOM attributes (`data-scroll-indicator="home"`, `data-consent="deny"`, `data-consent="accept"`, `data-chrome="nav"`), and stylesheet rule `after { margin: 0; padding: 0; box-sizing: border-box; }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `We build AI-first products for sta`)**:
+   - Landmark `<section class="hero blur-fade-in">` presenting display lead `We build AI-first products for startups and enter...` and copy excerpt *"Your Design & Dev Partner."* over `#ffffff` canvas and `#0c152a` ink.
+3. **Primary Showcase & Content Grid (<section.portfolio-carousel> — `W e b u i l d A I - f i r s t p r `)**:
+   - Landmark `<section class="portfolio-carousel">` rendering section `W e b u i l d A I - f i r s t p r o d u c t s f o...` with copy *"Accepting new projects"*, asset references (`favicon-96x96.png`, `favicon.ico`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `selection { background-color: var(--color-blue-start); color: var(--color-white); te... }`.
+4. **Interactive Detail & Feature Matrix (<section.about> — `O u r s e l e c t e d p r o j e c `)**:
+   - Landmark `<section class="about">` framing `O u r s e l e c t e d p r o j e c t s .` and `M o b i l e A p p f o r H y p e r P e r s o n a l...` (*"e n t e r p r i s e s ."*) with `#e8e8ec` surface cards, `#0000ff` accents, and `html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://microdose.studio/`)**:
-   - Landmark `<footer class="footer">` anchoring `Microdose Studio - Design & Deve` footer links (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), copy *"Microdose Studio shapes your ideas, drives your launch, and "*, and `#e8e8ec` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Microdose Studio - Design & Deve` footer links (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), copy *"Microdose Studio shapes your ideas, drives your launch, and "*, and `#9ca3b0` structural dividers.
 
 ---
 
@@ -159,19 +185,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `microdose-studio` (**Microdose Studio - Design & Development Agency for Startups** — `https://microdose.studio/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#19171b` / `#ffffff`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`).
 - **Identity & Domain Context**: Microdose Studio helps tech startups turn ideas into products through strategy, brand and product design, React/Next.js development, and...
-- **Primary Substrate**: `#19171b` (`var(--color-black)` in `:root`), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ffffff`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0c152a`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#19171b` (`var(--color-black)` in `:root`) paired with `#ffffff` primary typography and `#ffffff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geist` for display copy (`W e b u i l d A I - f i r s t p r o `) with `Instrument Serif` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1530px` container bounds (`gap: 4px`, padding `195px`) with `cubic-bezier(0.87,0.45,0.33,0.88)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#0c152a` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`We build AI-first products for start`) with `Geist` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 4px`, padding `195px`) with `cubic-bezier(0.87,0.45,0.33,0.88)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `microdose-studio` in your global stylesheet:
 
 :root {
-  /* Microdose Studio - Design & Development Agency for Startups (microdose-studio) — Ground-Truth Extracted CSS Variables */
+  /* Microdose Studio - Design & Development Agency for Startups (microdose-studio) — Live-Grounded CSS Variables */
   --color-black: #19171b; /* Canvas / Surface Token (microdose-studio) */
   --color-dark: #0c152a; /* Canvas / Surface Token (microdose-studio) */
   --color-muted: #6b6c71; /* Brand / Palette Token (microdose-studio) */
@@ -192,57 +218,60 @@ Declare and consume these exact custom properties extracted from `microdose-stud
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#19171b` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#0c152a` — grounded in `var(--color-dark)` in `:root`
-- **Elevated Surface / Card Substrate**: `#6b6c71` — grounded in `var(--color-muted)` in `:root`
-- **Interactive Accent / Highlight**: `#ffffff` — grounded in `var(--color-white)` in `:root`
-- **Secondary / Muted Copy**: `#121113` — grounded in `var(--color-bg-dark)` in `:root`
-- **Structural Hairline Border**: `#e8e8ec` — grounded in `var(--color-card-bg)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0c152a` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e8e8ec` — grounded in `var(--color-card-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.legal-block a:hover { color: blue }` (`#0000ff`)
+- **Secondary / Muted Copy**: `#6b7280` — grounded in `var(--cal-text-subtle)` in `:root`
+- **Structural Hairline Border**: `#9ca3b0` — grounded in `var(--cal-border-emphasis)` in `:root`
+- **Variable Token (`--color-black`)**: `#19171b` — grounded in `var(--color-black)` in `:root`
+- **Variable Token (`--color-muted`)**: `#6b6c71` — grounded in `var(--color-muted)` in `:root`
+- **Variable Token (`--color-bg-dark`)**: `#121113` — grounded in `var(--color-bg-dark)` in `:root`
 - **Variable Token (`--color-blue-start`)**: `#1935d9` — grounded in `var(--color-blue-start)` in `:root`
 - **Variable Token (`--color-blue-end`)**: `#2f2be2` — grounded in `var(--color-blue-end)` in `:root`
 - **Variable Token (`--color-blue-border`)**: `#1f34c9` — grounded in `var(--color-blue-border)` in `:root`
 - **Variable Token (`--color-grey-cool`)**: `#818a94` — grounded in `var(--color-grey-cool)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×15031px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1530px` extracted from `microdose-studio` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `195px` lateral canvas padding with `4px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1530px`, `gap: 4px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `195px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 768px) and (max-width: 819px)`, `@media (max-width: 1640px)`, `@media (max-width: 1520px)`
 - **Corner Radii**: `var(--radius-pill)`, `6.25rem`, `100px`, `1px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Geist`
-- **Body Font Stack**: `Instrument Serif`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `18px`, `16px`, `14px`, `10px`)
-- **H2 Section Rule**: rule `h2` (`font-size: 26px`, `line-height: 42px`, `letter-spacing: -1.56px`, `font-weight: 400`)
-- **Body Copy Rule**: rule `body` (`font-weight: 400`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `18px`, `16px`, `14px`, `10px`)
+- **Body Font Stack**: `Geist`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: -4.32px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `h1` (`font-size: var(--text-base)`, `line-height: var(--tw-leading,var(...`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -3.36px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 26px`, `line-height: 42px`, `letter-spacing: -1.56px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `body` (`font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `microdose-studio` (`Microdose Studio - Design & Development Agency for Startups`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.nav> — `microdose-studio`)**:
-   - DOM & Selectors: Landmark `<nav class="nav blur-fade-in">` hosting `Microdose Studio - Design & Developm` navigation (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), DOM attributes (`data-scroll-indicator="home"`, `data-chrome="nav"`, `data-gt-open="call"`, `data-btn-hover-ready="true"`), and stylesheet rule `after { margin: 0; padding: 0; box-sizing: border-box; }`.
+   - DOM & Selectors: Landmark `<nav class="nav blur-fade-in">` (`1440x80px`) hosting `Microdose Studio - Design & Developm` navigation (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), DOM attributes (`data-scroll-indicator="home"`, `data-consent="deny"`, `data-consent="accept"`, `data-chrome="nav"`), and stylesheet rule `after { margin: 0; padding: 0; box-sizing: border-box; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav> — `microdose-studio`)` (`microdose-studio`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 768px) and (max-width: 819px)`, `@media (max-width: 1640px)`, `@media (max-width: 1520px)` with `cubic-bezier(0.87,0.45,0.33,0.88)`, `cubic-bezier(0.22,1,0.36,1)`, `cubic-bezier(0.43,0.98,0.87,1)` transitions and links `microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`.
-2. **Hero Stage & Focal Lead (<section.hero> — `W e b u i l d A I - f i r s t p r `)**:
-   - DOM & Selectors: Landmark `<section class="hero blur-fade-in">` presenting display lead `W e b u i l d A I - f i r s t p r o d u c t s f o...` and copy excerpt *"Accepting new projects"* over `#19171b` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×15031px` desktop / `390×2400px` mobile) sets `#19171b` background with `#ffffff` headline `W e b u i l d A I - f i r s t p r o d u c t s f o...`.
-3. **Primary Showcase & Content Grid (<section.portfolio-carousel> — `O u r s e l e c t e d p r o j e c `)**:
-   - DOM & Selectors: Landmark `<section class="portfolio-carousel">` rendering section `O u r s e l e c t e d p r o j e c t s .` with copy *"Your Design & Dev Partner."*, asset references (`favicon-96x96.png`, `favicon.ico`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `selection { background-color: var(--color-blue-start); color: var(--color-white); te... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.portfolio-carousel> — `O u r s e l e c t e d p r o j e c `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1530px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `195px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.about> — `M o b i l e A p p f o r H y p e r `)**:
-   - DOM & Selectors: Landmark `<section class="about">` framing `M o b i l e A p p f o r H y p e r P e r s o n a l...` and `U n i f y i n g a G l o b a l G T M A n a l y t i...` (*"e n t e r p r i s e s ."*) with `#6b6c71` surface cards, `#ffffff` accents, and `html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.about> — `M o b i l e A p p f o r H y p e r `)` uses `var(--radius-pill)`, `6.25rem`, `100px`, `1px` radii, `#ffffff` highlights, and assets (favicon-96x96.png, favicon.ico, apple-touch-icon.png).
+2. **Hero Stage & Focal Lead (<section.hero> — `We build AI-first products for sta`)**:
+   - DOM & Selectors: Landmark `<section class="hero blur-fade-in">` presenting display lead `We build AI-first products for startups and enter...` and copy excerpt *"Your Design & Dev Partner."* over `#ffffff` canvas and `#0c152a` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0c152a` headline `We build AI-first products for startups and enter...`.
+3. **Primary Showcase & Content Grid (<section.portfolio-carousel> — `W e b u i l d A I - f i r s t p r `)**:
+   - DOM & Selectors: Landmark `<section class="portfolio-carousel">` rendering section `W e b u i l d A I - f i r s t p r o d u c t s f o...` with copy *"Accepting new projects"*, asset references (`favicon-96x96.png`, `favicon.ico`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `selection { background-color: var(--color-blue-start); color: var(--color-white); te... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.portfolio-carousel> — `W e b u i l d A I - f i r s t p r `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `195px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.about> — `O u r s e l e c t e d p r o j e c `)**:
+   - DOM & Selectors: Landmark `<section class="about">` framing `O u r s e l e c t e d p r o j e c t s .` and `M o b i l e A p p f o r H y p e r P e r s o n a l...` (*"e n t e r p r i s e s ."*) with `#e8e8ec` surface cards, `#0000ff` accents, and `html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.about> — `O u r s e l e c t e d p r o j e c `)` uses `var(--radius-pill)`, `6.25rem`, `100px`, `1px` radii, `#0000ff` highlights, and assets (favicon-96x96.png, favicon.ico, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://microdose.studio/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Microdose Studio - Design & Deve` footer links (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), copy *"Microdose Studio shapes your ideas, drives your launch, and "*, and `#e8e8ec` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://microdose.studio/`)` aligns to `1530px` extracted from `microdose-studio` stylesheet with `195px` lateral canvas padding with `4px` grid gap and attributes (data-scroll-indicator="home", data-chrome="nav", data-gt-open="call").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Microdose Studio - Design & Deve` footer links (`microdose .studio · About us 01 · Case Studies 02 · Services 03 · Labs 04`), copy *"Microdose Studio shapes your ideas, drives your launch, and "*, and `#9ca3b0` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://microdose.studio/`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `195px` lateral canvas padding with `4px` grid gap and attributes (data-scroll-indicator="home", data-consent="deny", data-consent="accept").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Accepting new projects"*
-- Copy Excerpt 2: *"Your Design & Dev Partner."*
+- Copy Excerpt 1: *"Your Design & Dev Partner."*
+- Copy Excerpt 2: *"Accepting new projects"*
 - Copy Excerpt 3: *"e n t e r p r i s e s ."*
 - Copy Excerpt 4: *"Microdose Studio shapes your ideas, drives your launch, and partners with you for..."*
 

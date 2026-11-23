@@ -1,73 +1,69 @@
 ---
 title: "UI Prompt Blueprint: continuance-ai"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "continuance-ai"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9d9`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#343849`)"
 ---
 
 # UI Design System & Master Generation Blueprint: continuance-ai
 
 > **Continuance - A novel by Chris Bennett** (https://continuance.ai/) — A near-future thriller about the people we'd do anything to keep — and what it costs when we succeed.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Continuance - A novel by Chris Bennett** (`https://continuance.ai/`). A near-future thriller about the people we'd do anything to keep — and what it costs when we succeed.
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9d9`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#343849`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`4Ye .AnimatedButtonReveal_cr-fi... { color: #fff }`) paired with `#000` primary typography and `#d9d9d9` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Roboto Mono` for display copy (`Continuance - A novel by Chris Benne`) with `Roboto Mono Fallback` and `Roboto Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: .8125rem`, padding `20px`) with `cubic-bezier(.85,0,.15,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#343849` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `objectSans` for display copy (`C O N T I N U A N C E`) with `Roboto Mono` and `Roboto Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 47.9806px`, padding `20.3398px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1023px` extracted from `continuance-ai` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `.8125rem` grid gap.
-- **Border Radius Scale**: `4px`, `50%`, `.5rem`, `5px`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (live computed `body` `max-width`).
+- **Canvas Lateral Padding & Spacing**: `20.3398px` lateral canvas padding with `47.9806px` grid gap.
+- **Border Radius Scale**: `43px`, `999px`, `7.201px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: .8125rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:1023px)`, `@media (min-width:1921px)`, `@media (min-width:1440px)`, `@media (min-width:600px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 47.9806px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20.3398px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:1023px)`, `@media (max-width:767px)`, `@media (min-width:1024px)`, `@media (min-width:768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `4Ye .AnimatedButtonReveal_cr-fi... { color: #fff }` |
-| **Primary Typography Ink** | `#ffa500` | `to { stroke: orange }` (`#ffa500`) |
-| **Elevated Surface / Card Substrate** | `#808080` | `meraAccessError_camera-access-e... { color: gray }` (`#808080`) |
-| **Interactive Accent / Highlight** | `#d9d9d9` | `.CubeLine_cube-line__dot__A1usj { background-color: #d9d9d9 }` |
-| **Secondary / Muted Copy** | `#ff0000` | `.Hero_line__TlETo { background: red }` (`#ff0000`) |
-| **Structural Hairline Border** | `#000` | `HeaderNav_header__nav--active-b... { background-color: #000 }` |
+| **Primary Canvas Substrate** | `#f4f4f4` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#c8c8ca` | live computed `main` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#343849` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#343849` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffa500` | `to { stroke: #ffa500 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--after-height` | `20px` | Layout / Spatial Grid Token |
-| `--after-rotate` | `0deg` | Design System Custom Token |
-| `--frame-stroke` | `var(--c-brand-secondary)` | Elevation / Border Token |
-| `--hover-bg` | `var(--c-brand-primary)` | Canvas / Surface Token |
-| `--text-color-active` | `rgba(var(--c-brand-primary-rgb),0.5)` | Typography Ink Token |
-| `--font-family-body` | `"Roboto Mono","Roboto Mono Fallback"` | Typography / Scale Token |
-| `--card-back-radius` | `calc(13rem / var(--fz-base))` | Elevation / Border Token |
-| `--font-family-title` | `"objectSans","objectSans Fallback"` | Typography / Scale Token |
 | `--hero-tilt-gap` | `5px` | Layout / Spatial Grid Token |
 | `--c-brand-primary-rgb` | `52,56,73` | Brand / Palette Token |
 | `--c-brand-primary` | `rgb(var(--c-brand-primary-rgb))` | Brand / Palette Token |
@@ -76,74 +72,101 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9
 | `--c-light-gray-rgb` | `217,217,217` | Canvas / Surface Token |
 | `--c-light-gray` | `rgb(var(--c-light-gray-rgb))` | Canvas / Surface Token |
 | `--c-orange-rgb` | `255,153,0,1` | Design System Custom Token |
+| `--c-orange` | `rgb(var(--c-orange-rgb))` | Color / Atmospheric Token |
+| `--c-bg-primary-rgb` | `244,244,244` | Canvas / Surface Token |
+| `--c-bg-primary` | `rgb(var(--c-bg-primary-rgb))` | Canvas / Surface Token |
+| `--c-bg-secondary-rgb` | `0,0,0` | Canvas / Surface Token |
+| `--c-bg-secondary` | `rgb(var(--c-bg-secondary-rgb))` | Canvas / Surface Token |
+| `--c-bg-tertiary-rgb` | `255,255,255` | Canvas / Surface Token |
+| `--c-bg-tertiary` | `rgb(var(--c-bg-tertiary-rgb))` | Canvas / Surface Token |
+| `--c-bg-soft-gray-rgb` | `244,244,244` | Canvas / Surface Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Roboto Mono`.
-- **Primary Body Stack**: `Roboto Mono Fallback`.
+- **Display Typography**: `objectSans`.
+- **Primary Body Stack**: `Roboto Mono`.
 - **Technical / Metadata Stack**: `Roboto Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `,h1` (`font-size: var(--font-size-4xl)`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size-sm)`, `.875rem`, `clamp(.6875rem,calc(.6875rem + .3...`, `var(--font-size-ssm)`, `var(--font-size-4xl)`).
-- **Body Copy**: CSS variables `--font-family-body: "Roboto Mono","Roboto Mono Fallback"`.
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size-sm)`, `.875rem`, `clamp(.6875rem,calc(.6875rem + .3...`, `var(--font-size-ssm)`, `var(--font-size-4xl)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 187.864px`, `line-height: 216.044px`, `font-weight: 400`, `letter-spacing: -3px`); rule `,h1` (`font-size: var(--font-size-4xl)`).
+- **Section Heading (`H2`)**: observed font-size ladder: `187.864px`, `16px`, `11.068px`, `.75rem`, `var(--font-size-sx)`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); CSS variables `--font-family-body: "Roboto Mono","Roboto Mono Fallback"`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.8,0,.2,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `imatedButtonReveal_btn__inner__jJ...`**: `transition: transform .3s ease-out` extracted from `continuance-ai` stylesheet.
-- **Selector `imatedButtonReveal_btn__inner__jJ...`**: `transition: transform .3s cubic-bezier(.85,0,.15,1)` extracted from `continuance-ai` stylesheet.
-- **Selector `oUEb .AnimatedButtonReveal_cr-obj...`**: `transition: .3s cubic-bezier(.85,0,.15,1)` extracted from `continuance-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.85,0,.15,1)`)**: Governs interactive state transitions across `<header.page>` and `<main.home>`.
+- **Selector `oter_hp-footer__disclaimer-btn__T...`**: `transition: transform .5s ease` extracted from `continuance-ai` stylesheet.
+- **Selector `.HpFooter_hp-footer__disclaimer__...`**: `transition: max-height .5s ease` extracted from `continuance-ai` stylesheet.
+- **Selector `media(max-width:767px)`**: `transition: transform .1s ease .1s` extracted from `continuance-ai` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.SiteIndexNav_site-index-nav__60kV3>` and `<main.home:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Continuance - A novel by Chris Bennett     │
 │ ====================================================================== │
-│ [ <header.page>            | Overview · Index · Archive · About · C ]  │
+│ [ <nav.SiteIndexNav_site (1x1px)      | Get the book · Why now · Abo ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.home>                                          |   │
-│ | H1: Continuance - A novel by Chris Bennett                       |   │
-│ | Substrate: #fff       | Ink: #000       | Accent: #d9d9d9        |   │
+│ | HERO STAGE: <main.home> (w=1440px)                                 | │
+│ | H1: C O N T I N U A N C E                                          | │
+│ | Substrate: #f4f4f4 | Ink: #000000 | Accent: #343849                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.home>               ) max-w: 1023px         |   │
+│ | SHOWCASE GRID (<main.home:nth(2)>) max-w: 1440px                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
+│ | | C o n t i n u a n c e        |  | Mapping neural signatures... | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .8125r) | │
-│ | [<header.page>] -> [<main.home>] -> [<main.home>] |                  │
+│ | DETAIL MODULE (<main.home:nth(3)>) — Synchronizing with Ka         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.Footer_footer_) | https://continuance.ai/            │
+│ [ FOOTER (<footer.Footer_foote) | https://continuance.ai/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 47.9806p)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.SiteIndexNav_site-i) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.home>) — 390px Vertical Lead                     | │
+│ | H1: C O N T I N U A N C E                                          | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.home:nth(2)>) — 1-Col Stack                  | │
+│ | [ Item 1: C o n t i n u a n c e                                  ] | │
+│ | [ Item 2: Mapping neural signatures...                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.home:nth(3)>) — 1-Col (Synchronizing with)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.Footer_foote) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.page> — `continuance-ai`)**:
-   - Landmark `<header class="page">` hosting `Continuance - A novel by Chris Benne` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `kItem_answers-block-item__lottie_... { width:100%;height:100%;position:absolute }`.
-2. **Hero Stage & Focal Lead (<main.home> — `Continuance - A novel by Chris Ben`)**:
-   - Landmark `<main class="home">` presenting display lead `Continuance - A novel by Chris Bennett` and copy excerpt *"Mapping neural signatures..."* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<main.home> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<main class="home">` rendering section `Featured Work & Interactive Showcase` with copy *"34-year-old researcher fighting to save rare-variant patients the"*, asset references (`0807ff31c16ab04c.css`, `1ee6f0f6dd8fb3fa.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `.AnswersBlock_answers-block__vC9vt { left:10.6770833333% }`.
-4. **Interactive Detail & Feature Matrix (<main.home> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="home">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Kaiku / V2030 1125 K a i k u / V 2 0 3 0 1 1 2 5"*) with `#808080` surface cards, `#d9d9d9` accents, and `nswersBlock_answers-block__items_... { flex-direction:column }`.
+1. **Brand Header & Navigation Bar (<nav.SiteIndexNav_site-index-nav__60kV3> — `continuance-ai`)**:
+   - Landmark `<nav class="SiteIndexNav_site-index-nav__60kV3">` (`1x1px`) hosting `Continuance - A novel by Chris Benne` navigation (`Get the book · Why now · About the author · Top secret · Privacy policy`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.Device_device__yuADF { position:absolute;top:0;left:0;width:100%;height:100% }`.
+2. **Hero Stage & Focal Lead (<main.home> — `C O N T I N U A N C E`)**:
+   - Landmark `<main class="home">` presenting display lead `C O N T I N U A N C E` and copy excerpt *"MAPPING NEURAL SIGNATURES..."* over `#f4f4f4` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.home:nth(2)> — `C o n t i n u a n c e`)**:
+   - Landmark `<main class="home">` rendering section `C o n t i n u a n c e` with copy *"Mapping neural signatures..."*, asset references (`0807ff31c16ab04c.css`, `a4eac32ba22d1fcc.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `.Device_device__rune___9Rho { border:0;outline:0;box-shadow:none;-webkit-appearance:none;-moz-appearan... }`.
+4. **Interactive Detail & Feature Matrix (<main.home:nth(3)> — `Mapping neural signatures...`)**:
+   - Landmark `<main class="home">` framing `Mapping neural signatures...` and `Synchronizing with Kaiku System _` (*"Synchronizing with Kaiku System _"*) with `#c8c8ca` surface cards, `#343849` accents, and `evice_device__rune___9Rho:focus-v... { outline:0;box-shadow:none }`.
 5. **Colophon & Global Directory Footer (<footer.Footer_footer__2_6CR> — `https://continuance.ai/`)**:
-   - Landmark `<footer class="Footer_footer__2_6CR">` anchoring `Continuance - A novel by Chris B` footer links (`Overview · Index · Archive · About · Contact`), copy *"Kaiku / V2030 1125"*, and `#000` structural dividers.
+   - Landmark `<footer class="Footer_footer__2_6CR">` anchoring `Continuance - A novel by Chris B` footer links (`Get the book · Why now · About the author · Top secret · Privacy policy`), copy *"Synchronizing with Kaiku System"*, and `#ffa500` structural dividers.
 
 ---
 
@@ -155,27 +178,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `continuance-ai` (**Continuance - A novel by Chris Bennett** — `https://continuance.ai/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#d9d9d9`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#343849`).
 - **Identity & Domain Context**: A near-future thriller about the people we'd do anything to keep — and what it costs when we succeed.
-- **Primary Substrate**: `#fff` (`4Ye .AnimatedButtonReveal_cr-fi... { color: #fff }`), **Primary Ink**: `#000`, **Accent / Highlight**: `#d9d9d9`.
+- **Primary Substrate**: `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#343849`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`4Ye .AnimatedButtonReveal_cr-fi... { color: #fff }`) paired with `#000` primary typography and `#d9d9d9` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Roboto Mono` for display copy (`Continuance - A novel by Chris Benne`) with `Roboto Mono Fallback` and `Roboto Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: .8125rem`, padding `20px`) with `cubic-bezier(.85,0,.15,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#343849` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `objectSans` for display copy (`C O N T I N U A N C E`) with `Roboto Mono` and `Roboto Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 47.9806px`, padding `20.3398px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `continuance-ai` in your global stylesheet:
 
 :root {
-  /* Continuance - A novel by Chris Bennett (continuance-ai) — Ground-Truth Extracted CSS Variables */
-  --after-height: 20px; /* Layout / Spatial Grid Token (continuance-ai) */
-  --after-rotate: 0deg; /* Design System Custom Token (continuance-ai) */
-  --frame-stroke: var(--c-brand-secondary); /* Elevation / Border Token (continuance-ai) */
-  --hover-bg: var(--c-brand-primary); /* Canvas / Surface Token (continuance-ai) */
-  --text-color-active: rgba(var(--c-brand-primary-rgb),0.5); /* Typography Ink Token (continuance-ai) */
-  --font-family-body: "Roboto Mono","Roboto Mono Fallback"; /* Typography / Scale Token (continuance-ai) */
-  --card-back-radius: calc(13rem / var(--fz-base)); /* Elevation / Border Token (continuance-ai) */
-  --font-family-title: "objectSans","objectSans Fallback"; /* Typography / Scale Token (continuance-ai) */
+  /* Continuance - A novel by Chris Bennett (continuance-ai) — Live-Grounded CSS Variables */
   --hero-tilt-gap: 5px; /* Layout / Spatial Grid Token (continuance-ai) */
   --c-brand-primary-rgb: 52,56,73; /* Brand / Palette Token (continuance-ai) */
   --c-brand-primary: rgb(var(--c-brand-primary-rgb)); /* Brand / Palette Token (continuance-ai) */
@@ -184,73 +199,81 @@ Declare and consume these exact custom properties extracted from `continuance-ai
   --c-light-gray-rgb: 217,217,217; /* Canvas / Surface Token (continuance-ai) */
   --c-light-gray: rgb(var(--c-light-gray-rgb)); /* Canvas / Surface Token (continuance-ai) */
   --c-orange-rgb: 255,153,0,1; /* Design System Custom Token (continuance-ai) */
+  --c-orange: rgb(var(--c-orange-rgb)); /* Color / Atmospheric Token (continuance-ai) */
+  --c-bg-primary-rgb: 244,244,244; /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-primary: rgb(var(--c-bg-primary-rgb)); /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-secondary-rgb: 0,0,0; /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-secondary: rgb(var(--c-bg-secondary-rgb)); /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-tertiary-rgb: 255,255,255; /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-tertiary: rgb(var(--c-bg-tertiary-rgb)); /* Canvas / Surface Token (continuance-ai) */
+  --c-bg-soft-gray-rgb: 244,244,244; /* Canvas / Surface Token (continuance-ai) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `4Ye .AnimatedButtonReveal_cr-fi... { color: #fff }`
-- **Primary Typography Ink**: `#ffa500` — grounded in `to { stroke: orange }` (`#ffa500`)
-- **Elevated Surface / Card Substrate**: `#808080` — grounded in `meraAccessError_camera-access-e... { color: gray }` (`#808080`)
-- **Interactive Accent / Highlight**: `#d9d9d9` — grounded in `.CubeLine_cube-line__dot__A1usj { background-color: #d9d9d9 }`
-- **Secondary / Muted Copy**: `#ff0000` — grounded in `.Hero_line__TlETo { background: red }` (`#ff0000`)
-- **Structural Hairline Border**: `#000` — grounded in `HeaderNav_header__nav--active-b... { background-color: #000 }`
+- **Primary Canvas Substrate**: `#f4f4f4` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#c8c8ca` — grounded in live computed `main` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#343849` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#343849` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ffa500` — grounded in `to { stroke: #ffa500 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1023px` extracted from `continuance-ai` stylesheet
-- **Padding & Gutters**: `20px` lateral canvas padding with `.8125rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: .8125rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
-- **Media Queries**: `@media (max-width:1023px)`, `@media (min-width:1921px)`, `@media (min-width:1440px)`, `@media (min-width:600px)`
-- **Corner Radii**: `4px`, `50%`, `.5rem`, `5px`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (live computed `body` `max-width`)
+- **Padding & Gutters**: `20.3398px` lateral canvas padding with `47.9806px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 47.9806px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20.3398px` horizontal padding
+- **Media Queries**: `@media (max-width:1023px)`, `@media (max-width:767px)`, `@media (min-width:1024px)`, `@media (min-width:768px)`
+- **Corner Radii**: `43px`, `999px`, `7.201px`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Roboto Mono`
-- **Body Font Stack**: `Roboto Mono Fallback`
+- **Display Font Stack**: `objectSans`
+- **Body Font Stack**: `Roboto Mono`
 - **Monospace / Technical Font Stack**: `Roboto Mono`
-- **H1 Display Rule**: rule `,h1` (`font-size: var(--font-size-4xl)`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size-sm)`, `.875rem`, `clamp(.6875rem,calc(.6875rem + .3...`, `var(--font-size-ssm)`, `var(--font-size-4xl)`)
-- **Body Copy Rule**: CSS variables `--font-family-body: "Roboto Mono","Roboto Mono Fallback"`
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size-sm)`, `.875rem`, `clamp(.6875rem,calc(.6875rem + .3...`, `var(--font-size-ssm)`, `var(--font-size-4xl)`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 187.864px`, `line-height: 216.044px`, `font-weight: 400`, `letter-spacing: -3px`); rule `,h1` (`font-size: var(--font-size-4xl)`)
+- **H2 Section Rule**: observed font-size ladder: `187.864px`, `16px`, `11.068px`, `.75rem`, `var(--font-size-sx)`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); CSS variables `--font-family-body: "Roboto Mono","Roboto Mono Fallback"`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `continuance-ai` (`Continuance - A novel by Chris Bennett`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.page> — `continuance-ai`)**:
-   - DOM & Selectors: Landmark `<header class="page">` hosting `Continuance - A novel by Chris Benne` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `kItem_answers-block-item__lottie_... { width:100%;height:100%;position:absolute }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.page> — `continuance-ai`)` (`continuance-ai`) adapts across `@media (max-width:1023px)`, `@media (min-width:1921px)`, `@media (min-width:1440px)`, `@media (min-width:600px)` with `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.8,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<main.home> — `Continuance - A novel by Chris Ben`)**:
-   - DOM & Selectors: Landmark `<main class="home">` presenting display lead `Continuance - A novel by Chris Bennett` and copy excerpt *"Mapping neural signatures..."* over `#fff` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff` background with `#000` headline `Continuance - A novel by Chris Bennett`.
-3. **Primary Showcase & Content Grid (<main.home> — `Featured Work & Interactive Showca`)**:
-   - DOM & Selectors: Landmark `<main class="home">` rendering section `Featured Work & Interactive Showcase` with copy *"34-year-old researcher fighting to save rare-variant patients the"*, asset references (`0807ff31c16ab04c.css`, `1ee6f0f6dd8fb3fa.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `.AnswersBlock_answers-block__vC9vt { left:10.6770833333% }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.home> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: .8125rem`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.home> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<main class="home">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Kaiku / V2030 1125 K a i k u / V 2 0 3 0 1 1 2 5"*) with `#808080` surface cards, `#d9d9d9` accents, and `nswersBlock_answers-block__items_... { flex-direction:column }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.home> — `Technical Architecture & Narrative`)` uses `4px`, `50%`, `.5rem`, `5px` radii, `#d9d9d9` highlights, and assets (0807ff31c16ab04c.css, 1ee6f0f6dd8fb3fa.css, a5188067206b89ec.css).
+1. **Brand Header & Navigation Bar (<nav.SiteIndexNav_site-index-nav__60kV3> — `continuance-ai`)**:
+   - DOM & Selectors: Landmark `<nav class="SiteIndexNav_site-index-nav__60kV3">` (`1x1px`) hosting `Continuance - A novel by Chris Benne` navigation (`Get the book · Why now · About the author · Top secret · Privacy policy`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.Device_device__yuADF { position:absolute;top:0;left:0;width:100%;height:100% }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.SiteIndexNav_site-index-nav__60kV3> — `continuance-ai`)` (`continuance-ai`) adapts across `@media (max-width:1023px)`, `@media (max-width:767px)`, `@media (min-width:1024px)`, `@media (min-width:768px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)` transitions and links `Get the book · Why now · About the author · Top secret · Privacy policy`.
+2. **Hero Stage & Focal Lead (<main.home> — `C O N T I N U A N C E`)**:
+   - DOM & Selectors: Landmark `<main class="home">` presenting display lead `C O N T I N U A N C E` and copy excerpt *"MAPPING NEURAL SIGNATURES..."* over `#f4f4f4` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f4f4f4` background with `#000000` headline `C O N T I N U A N C E`.
+3. **Primary Showcase & Content Grid (<main.home:nth(2)> — `C o n t i n u a n c e`)**:
+   - DOM & Selectors: Landmark `<main class="home">` rendering section `C o n t i n u a n c e` with copy *"Mapping neural signatures..."*, asset references (`0807ff31c16ab04c.css`, `a4eac32ba22d1fcc.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `.Device_device__rune___9Rho { border:0;outline:0;box-shadow:none;-webkit-appearance:none;-moz-appearan... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.home:nth(2)> — `C o n t i n u a n c e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 47.9806px`) on desktop and Single-column vertical stack at `390px` viewport width with `20.3398px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.home:nth(3)> — `Mapping neural signatures...`)**:
+   - DOM & Selectors: Landmark `<main class="home">` framing `Mapping neural signatures...` and `Synchronizing with Kaiku System _` (*"Synchronizing with Kaiku System _"*) with `#c8c8ca` surface cards, `#343849` accents, and `evice_device__rune___9Rho:focus-v... { outline:0;box-shadow:none }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.home:nth(3)> — `Mapping neural signatures...`)` uses `43px`, `999px`, `7.201px`, `4px` radii, `#343849` highlights, and assets (0807ff31c16ab04c.css, a4eac32ba22d1fcc.css, a5188067206b89ec.css).
 5. **Colophon & Global Directory Footer (<footer.Footer_footer__2_6CR> — `https://continuance.ai/`)**:
-   - DOM & Selectors: Landmark `<footer class="Footer_footer__2_6CR">` anchoring `Continuance - A novel by Chris B` footer links (`Overview · Index · Archive · About · Contact`), copy *"Kaiku / V2030 1125"*, and `#000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.Footer_footer__2_6CR> — `https://continuance.ai/`)` aligns to `1023px` extracted from `continuance-ai` stylesheet with `20px` lateral canvas padding with `.8125rem` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="Footer_footer__2_6CR">` anchoring `Continuance - A novel by Chris B` footer links (`Get the book · Why now · About the author · Top secret · Privacy policy`), copy *"Synchronizing with Kaiku System"*, and `#ffa500` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.Footer_footer__2_6CR> — `https://continuance.ai/`)` aligns to `1440px` (live computed `body` `max-width`) with `20.3398px` lateral canvas padding with `47.9806px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Mapping neural signatures..."*
-- Copy Excerpt 2: *"34-year-old researcher fighting to save rare-variant patients the system abandoned"*
-- Copy Excerpt 3: *"Kaiku / V2030 1125 K a i k u / V 2 0 3 0 1 1 2 5"*
-- Copy Excerpt 4: *"Kaiku / V2030 1125"*
+- Copy Excerpt 1: *"MAPPING NEURAL SIGNATURES..."*
+- Copy Excerpt 2: *"Mapping neural signatures..."*
+- Copy Excerpt 3: *"Synchronizing with Kaiku System _"*
+- Copy Excerpt 4: *"Synchronizing with Kaiku System"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.8,0,.2,1)`
+- **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.85,0,.15,1)`, `cubic-bezier(.87,0,.13,1)`
 - **Extracted Stylesheet Rules (`continuance-ai`)**:
-- `kItem_answers-block-item__lottie_... { width:100%;height:100%;position:absolute }`
-- `.AnswersBlock_answers-block__vC9vt { left:10.6770833333% }`
-- `nswersBlock_answers-block__items_... { flex-direction:column }`
-- `wersBlock_answers-block__counter_... { margin-right:0 }`
-- `Reveal_mute-button__inner__omo_4:... { position:absolute;top:0;left:0;width:100%;height:100% }`
+- `.Device_device__yuADF { position:absolute;top:0;left:0;width:100%;height:100% }`
+- `.Device_device__rune___9Rho { border:0;outline:0;box-shadow:none;-webkit-appearance:none;-moz-appearan... }`
+- `evice_device__rune___9Rho:focus-v... { outline:0;box-shadow:none }`
+- `.Device_device__video__OqNOo { opacity:0;pointer-events:none;will-change:opacity }`
+- `video__OqNOo.Device_--is-active__... { animation:fadeIn .3s linear forwards }`
 - **Per-Selector Transition Rules**:
-- **Selector `imatedButtonReveal_btn__inner__jJ...`**: `transition: transform .3s ease-out` extracted from `continuance-ai` stylesheet.
-- **Selector `imatedButtonReveal_btn__inner__jJ...`**: `transition: transform .3s cubic-bezier(.85,0,.15,1)` extracted from `continuance-ai` stylesheet.
-- **Selector `oUEb .AnimatedButtonReveal_cr-obj...`**: `transition: .3s cubic-bezier(.85,0,.15,1)` extracted from `continuance-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.85,0,.15,1)`)**: Governs interactive state transitions across `<header.page>` and `<main.home>`.
+- **Selector `oter_hp-footer__disclaimer-btn__T...`**: `transition: transform .5s ease` extracted from `continuance-ai` stylesheet.
+- **Selector `.HpFooter_hp-footer__disclaimer__...`**: `transition: max-height .5s ease` extracted from `continuance-ai` stylesheet.
+- **Selector `media(max-width:767px)`**: `transition: transform .1s ease .1s` extracted from `continuance-ai` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.SiteIndexNav_site-index-nav__60kV3>` and `<main.home:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

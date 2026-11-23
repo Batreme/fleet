@@ -1,61 +1,68 @@
 ---
 title: "UI Prompt Blueprint: dailymoscow-ru_mirpay"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "dailymoscow-ru_mirpay"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#7b7b81` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f7fc` canvas, `#000000` ink, `#007bff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: dailymoscow-ru_mirpay
 
 > **Спорт без лишних действий — Mir Pay × Daily Moscow** (https://dailymoscow.ru/mirpay) — Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишнего движения, когда дело доходит до оплаты
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Спорт без лишних действий — Mir Pay × Daily Moscow** (`https://dailymoscow.ru/mirpay`). Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишнего движения, когда дело доходит до оплаты
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#7b7b81` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f7fc` canvas, `#000000` ink, `#007bff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--dmf-bg)` in `:root`) paired with `#fff` primary typography and `#7b7b81` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Manrope` for display copy (`Спорт без лишних действий`) with `Lora` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 10px`, padding `5px`) with `cubic-bezier(.16,1,.3,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f7fc` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#007bff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `MP Graphik` for display copy (`СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 2px`, padding `48px`) with `cubic-bezier(.16,1,.3,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×13262px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `640px` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `5px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `6px`, `.5px`, `.5rem`, `3px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `48px` lateral canvas padding with `2px` grid gap.
+- **Border Radius Scale**: `50%`, `6px`, `.5px`, `.5rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `5px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width: 769px)`, `@media only screen and (max-width:1200px)`, `@media only screen and (max-width:940px)`, `@media only screen and (max-width:450px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 2px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `48px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media only screen and (max-width: 1100px)`, `@media only screen and (max-width: 940px)`, `@media only screen and (max-width: 630px)`, `@media (prefers-reduced-motion: reduce)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--dmf-bg)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--dmf-ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#9d9da4` | `var(--dmf-muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#7b7b81` | `var(--dmf-dim)` in `:root` |
-| **Secondary / Muted Copy** | `#1f5bd7` | `var(--blue)` in `:root` |
-| **Structural Hairline Border** | `#00aaff` | `var(--sky)` in `:root` |
+| **Primary Canvas Substrate** | `#f4f7fc` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.main-btn.active { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#007bff` | `.privacy-consent__link { color: #007bff }` |
+| **Secondary / Muted Copy** | `#9d9da4` | `var(--dmf-muted)` in `:root` |
+| **Structural Hairline Border** | `#f6f8fc` | `var(--dmf-rule)` in `:root` (`rgba(255, 255, 255, .14)`) |
+| **Variable Token (`--dmf-dim`)** | `#7b7b81` | `var(--dmf-dim)` in `:root` |
+| **Variable Token (`--blue`)** | `#1f5bd7` | `var(--blue)` in `:root` |
+| **Variable Token (`--sky`)** | `#00aaff` | `var(--sky)` in `:root` |
 | **Variable Token (`--green`)** | `#00a263` | `var(--green)` in `:root` |
 | **Variable Token (`--green-t`)** | `#008452` | `var(--green-t)` in `:root` |
 | **Variable Token (`--green-d`)** | `#0b4d31` | `var(--green-d)` in `:root` |
@@ -88,15 +95,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Manrope`.
-- **Primary Body Stack**: `Lora`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `MP Graphik`.
+- **Primary Body Stack**: `Manrope`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `6px`, `14px`, `10px`, `12px`).
-- **Section Heading (`H2`)**: rule `.section-title` (`font-weight: 800`).
-- **Body Copy**: rule `p` (`font-size: 14px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `6px`, `14px`, `10px`, `12px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 103.68px`, `line-height: 101.606px`, `font-weight: 700`, `letter-spacing: -3.1104px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 67.68px`, `line-height: 67.68px`, `font-weight: 700`, `letter-spacing: -2.7072px`); rule `.section-title` (`font-weight: 800`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `p` (`font-size: 14px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`).
 
 ---
 
@@ -106,50 +113,69 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.2,.7,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.modal`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Selector `.main-tabs li a::after`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Selector `.main-slider .slick-arrow svg path`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<article.m3-body>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.main>` and `<article.m3-body>` interactive targets.
+- **Selector `.dm-awards__item`**: `transition: opacity .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Selector `.dm-col__list a`**: `transition: color .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Selector `.dm-action`**: `transition: border-color .18s ease, background .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.m3-sec>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<article.m3-body>` and `<section.m3-sec>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Спорт без лишних действий — Mir Pay × Dail │
 │ ====================================================================== │
-│ [ <header.header>          | Бокс · Гольф · Бассейн · Падел · Скало ]  │
+│ [ <header.header> (1440x120px)        | Бокс · Гольф · Бассейн · Пад ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.main>                                       |   │
-│ | H1: Спорт без лишних действий                                    |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #7b7b81        |   │
+│ | HERO STAGE: <article.m3-body> (w=1440px)                           | │
+│ | H1: СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ                                      | │
+│ | Substrate: #f4f7fc | Ink: #000000 | Accent: #007bff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.m3-body>         ) max-w: 640px          |   │
+│ | SHOWCASE GRID (<section.m3-sec>) max-w: 1392px                     | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Начинала я с бокса           |  | Потом был гольф              | | │
+│ | | Спорт без лишних действий    |  | Начинала я с бокса           | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.header>] -> [<section.main>] -> [<article.m3-body>] |       │
+│ | DETAIL MODULE (<section.m3-sec:nth(2)>) — Потом был гольф          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://dailymoscow.ru/mirpay      │
+│ [ FOOTER (<footer.footer>     ) | https://dailymoscow.ru/mirpay        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<article.m3-body>) — 390px Vertical Lead               | │
+│ | H1: СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ                                      | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.m3-sec>) — 1-Col Stack                    | │
+│ | [ Item 1: Спорт без лишних действий                              ] | │
+│ | [ Item 2: Начинала я с бокса                                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.m3-sec:nth(2)>) — 1-Col (Потом был гольф)   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `dailymoscow-ru_mirpay`)**:
-   - Landmark `<header class="header header-news">` hosting `Спорт без лишних действий — Mir Pay ` navigation (`Бокс · Гольф · Бассейн · Падел · Скалодром`), DOM attributes (`data-pd="26"`, `data-mx="-.4"`, `data-sp=".5"`, `data-pd="-40"`), and stylesheet rule `body.body-dark .category-main { border-color:1f1f1f }`.
-2. **Hero Stage & Focal Lead (<section.main> — `Спорт без лишних действий`)**:
-   - Landmark `<section class="main m3">` presenting display lead `Спорт без лишних действий` and copy excerpt *"Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишне"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<article.m3-body> — `Начинала я с бокса`)**:
-   - Landmark `<article class="m3-body">` rendering section `Начинала я с бокса` with copy *"ЕК Елена Карнеева редактор Daily Moscow"*, asset references (`tag.js`, `mirpay`, `footer-v2.css`, `components.css`), and grid rule `body.body-dark .category-main__name { color:fff }`.
-4. **Interactive Detail & Feature Matrix (<section.m3-sec> — `Потом был гольф`)**:
-   - Landmark `<section class="m3-sec">` framing `Потом был гольф` and `Дальше была вода, то есть аквакомплекс` (*"Елена Карнеева редактор Daily Moscow"*) with `#9d9da4` surface cards, `#7b7b81` accents, and `body.body-dark .category-quote__s... { color:7b7b81 }`.
+   - Landmark `<header class="header header-news">` (`1440x120px`) hosting `Спорт без лишних действий — Mir Pay ` navigation (`Бокс · Гольф · Бассейн · Падел · Скалодром`), DOM attributes (`data-pd="26"`, `data-mx="-.4"`, `data-sp=".5"`, `data-pd="-40"`), and stylesheet rule `.dm-footer__wrapper { max-width: 1280px; margin: 0 auto; padding: 0 16px; }`.
+2. **Hero Stage & Focal Lead (<article.m3-body> — `СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ`)**:
+   - Landmark `<article class="m3-body">` presenting display lead `СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ` and copy excerpt *"Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишне"* over `#f4f7fc` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.m3-sec> — `Спорт без лишних действий`)**:
+   - Landmark `<section class="m3-sec">` rendering section `Спорт без лишних действий` with copy *"Елена Карнеева редактор Daily Moscow"*, asset references (`tag.js`, `mirpay`, `footer-v2.css`, `components.css`), and grid rule `.dm-footer__logo { display: block; line-height: 0; }`.
+4. **Interactive Detail & Feature Matrix (<section.m3-sec:nth(2)> — `Начинала я с бокса`)**:
+   - Landmark `<section class="m3-sec">` framing `Начинала я с бокса` and `Потом был гольф` (*"редактор Daily Moscow"*) with `#ffffff` surface cards, `#007bff` accents, and `.dm-footer__logo img { width: 220px; height: auto; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://dailymoscow.ru/mirpay`)**:
-   - Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"редактор Daily Moscow"*, and `#00aaff` structural dividers.
+   - Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"Я не спортсменка. Я женщина, которая время от времени вспоми"*, and `#f6f8fc` structural dividers.
 
 ---
 
@@ -161,19 +187,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `dailymoscow-ru_mirpay` (**Спорт без лишних действий — Mir Pay × Daily Moscow** — `https://dailymoscow.ru/mirpay`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#7b7b81` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f7fc` canvas, `#000000` ink, `#007bff` accent).
 - **Identity & Domain Context**: Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишнего движения, когда дело доходит до оплаты
-- **Primary Substrate**: `#000` (`var(--dmf-bg)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#7b7b81`.
+- **Primary Substrate**: `#f4f7fc` (live computed `section` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#007bff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--dmf-bg)` in `:root`) paired with `#fff` primary typography and `#7b7b81` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Manrope` for display copy (`Спорт без лишних действий`) with `Lora` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 10px`, padding `5px`) with `cubic-bezier(.16,1,.3,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f7fc` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#007bff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `MP Graphik` for display copy (`СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 2px`, padding `48px`) with `cubic-bezier(.16,1,.3,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `dailymoscow-ru_mirpay` in your global stylesheet:
 
 :root {
-  /* Спорт без лишних действий — Mir Pay × Daily Moscow (dailymoscow-ru_mirpay) — Ground-Truth Extracted CSS Variables */
+  /* Спорт без лишних действий — Mir Pay × Daily Moscow (dailymoscow-ru_mirpay) — Live-Grounded CSS Variables */
   --dmf-bg: #000; /* Canvas / Surface Token (dailymoscow-ru_mirpay) */
   --dmf-ink: #fff; /* Typography Ink Token (dailymoscow-ru_mirpay) */
   --dmf-muted: #9d9da4; /* Color / Atmospheric Token (dailymoscow-ru_mirpay) */
@@ -194,12 +220,15 @@ Declare and consume these exact custom properties extracted from `dailymoscow-ru
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--dmf-bg)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--dmf-ink)` in `:root`
-- **Elevated Surface / Card Substrate**: `#9d9da4` — grounded in `var(--dmf-muted)` in `:root`
-- **Interactive Accent / Highlight**: `#7b7b81` — grounded in `var(--dmf-dim)` in `:root`
-- **Secondary / Muted Copy**: `#1f5bd7` — grounded in `var(--blue)` in `:root`
-- **Structural Hairline Border**: `#00aaff` — grounded in `var(--sky)` in `:root`
+- **Primary Canvas Substrate**: `#f4f7fc` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.main-btn.active { background: #ffffff }`
+- **Interactive Accent / Highlight**: `#007bff` — grounded in `.privacy-consent__link { color: #007bff }`
+- **Secondary / Muted Copy**: `#9d9da4` — grounded in `var(--dmf-muted)` in `:root`
+- **Structural Hairline Border**: `#f6f8fc` — grounded in `var(--dmf-rule)` in `:root` (`rgba(255, 255, 255, .14)`)
+- **Variable Token (`--dmf-dim`)**: `#7b7b81` — grounded in `var(--dmf-dim)` in `:root`
+- **Variable Token (`--blue`)**: `#1f5bd7` — grounded in `var(--blue)` in `:root`
+- **Variable Token (`--sky`)**: `#00aaff` — grounded in `var(--sky)` in `:root`
 - **Variable Token (`--green`)**: `#00a263` — grounded in `var(--green)` in `:root`
 - **Variable Token (`--green-t`)**: `#008452` — grounded in `var(--green-t)` in `:root`
 - **Variable Token (`--green-d`)**: `#0b4d31` — grounded in `var(--green-d)` in `:root`
@@ -208,62 +237,62 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--mute`)**: `#5d6683` — grounded in `var(--mute)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×13262px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `640px` extracted from `dailymoscow-ru_mirpay` stylesheet
-- **Padding & Gutters**: `5px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `5px` horizontal padding
-- **Media Queries**: `@media (min-width: 769px)`, `@media only screen and (max-width:1200px)`, `@media only screen and (max-width:940px)`, `@media only screen and (max-width:450px)`
-- **Corner Radii**: `6px`, `.5px`, `.5rem`, `3px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `48px` lateral canvas padding with `2px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 2px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `48px` horizontal padding
+- **Media Queries**: `@media only screen and (max-width: 1100px)`, `@media only screen and (max-width: 940px)`, `@media only screen and (max-width: 630px)`, `@media (prefers-reduced-motion: reduce)`
+- **Corner Radii**: `50%`, `6px`, `.5px`, `.5rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Manrope`
-- **Body Font Stack**: `Lora`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `6px`, `14px`, `10px`, `12px`)
-- **H2 Section Rule**: rule `.section-title` (`font-weight: 800`)
-- **Body Copy Rule**: rule `p` (`font-size: 14px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `6px`, `14px`, `10px`, `12px`)
+- **Display Font Stack**: `MP Graphik`
+- **Body Font Stack**: `Manrope`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 103.68px`, `line-height: 101.606px`, `font-weight: 700`, `letter-spacing: -3.1104px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 67.68px`, `line-height: 67.68px`, `font-weight: 700`, `letter-spacing: -2.7072px`); rule `.section-title` (`font-weight: 800`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `p` (`font-size: 14px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `dailymoscow-ru_mirpay` (`Спорт без лишних действий — Mir Pay × Daily Moscow`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `dailymoscow-ru_mirpay`)**:
-   - DOM & Selectors: Landmark `<header class="header header-news">` hosting `Спорт без лишних действий — Mir Pay ` navigation (`Бокс · Гольф · Бассейн · Падел · Скалодром`), DOM attributes (`data-pd="26"`, `data-mx="-.4"`, `data-sp=".5"`, `data-pd="-40"`), and stylesheet rule `body.body-dark .category-main { border-color:1f1f1f }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `dailymoscow-ru_mirpay`)` (`dailymoscow-ru_mirpay`) adapts across `@media (min-width: 769px)`, `@media only screen and (max-width:1200px)`, `@media only screen and (max-width:940px)`, `@media only screen and (max-width:450px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.2,.7,.2,1)` transitions and links `Бокс · Гольф · Бассейн · Падел · Скалодром`.
-2. **Hero Stage & Focal Lead (<section.main> — `Спорт без лишних действий`)**:
-   - DOM & Selectors: Landmark `<section class="main m3">` presenting display lead `Спорт без лишних действий` and copy excerpt *"Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишне"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×13262px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Спорт без лишних действий`.
-3. **Primary Showcase & Content Grid (<article.m3-body> — `Начинала я с бокса`)**:
-   - DOM & Selectors: Landmark `<article class="m3-body">` rendering section `Начинала я с бокса` with copy *"ЕК Елена Карнеева редактор Daily Moscow"*, asset references (`tag.js`, `mirpay`, `footer-v2.css`, `components.css`), and grid rule `body.body-dark .category-main__name { color:fff }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.m3-body> — `Начинала я с бокса`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `5px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.m3-sec> — `Потом был гольф`)**:
-   - DOM & Selectors: Landmark `<section class="m3-sec">` framing `Потом был гольф` and `Дальше была вода, то есть аквакомплекс` (*"Елена Карнеева редактор Daily Moscow"*) with `#9d9da4` surface cards, `#7b7b81` accents, and `body.body-dark .category-quote__s... { color:7b7b81 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.m3-sec> — `Потом был гольф`)` uses `6px`, `.5px`, `.5rem`, `3px` radii, `#7b7b81` highlights, and assets (tag.js, mirpay, footer-v2.css).
+   - DOM & Selectors: Landmark `<header class="header header-news">` (`1440x120px`) hosting `Спорт без лишних действий — Mir Pay ` navigation (`Бокс · Гольф · Бассейн · Падел · Скалодром`), DOM attributes (`data-pd="26"`, `data-mx="-.4"`, `data-sp=".5"`, `data-pd="-40"`), and stylesheet rule `.dm-footer__wrapper { max-width: 1280px; margin: 0 auto; padding: 0 16px; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `dailymoscow-ru_mirpay`)` (`dailymoscow-ru_mirpay`) adapts across `@media only screen and (max-width: 1100px)`, `@media only screen and (max-width: 940px)`, `@media only screen and (max-width: 630px)`, `@media (prefers-reduced-motion: reduce)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.2,.7,.2,1)` transitions and links `Бокс · Гольф · Бассейн · Падел · Скалодром`.
+2. **Hero Stage & Focal Lead (<article.m3-body> — `СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ`)**:
+   - DOM & Selectors: Landmark `<article class="m3-body">` presenting display lead `СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ` and copy excerpt *"Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишне"* over `#f4f7fc` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f7fc` background with `#000000` headline `СПОРТ БЕЗ ЛИШНИХ ДЕЙСТВИЙ`.
+3. **Primary Showcase & Content Grid (<section.m3-sec> — `Спорт без лишних действий`)**:
+   - DOM & Selectors: Landmark `<section class="m3-sec">` rendering section `Спорт без лишних действий` with copy *"Елена Карнеева редактор Daily Moscow"*, asset references (`tag.js`, `mirpay`, `footer-v2.css`, `components.css`), and grid rule `.dm-footer__logo { display: block; line-height: 0; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.m3-sec> — `Спорт без лишних действий`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `48px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.m3-sec:nth(2)> — `Начинала я с бокса`)**:
+   - DOM & Selectors: Landmark `<section class="m3-sec">` framing `Начинала я с бокса` and `Потом был гольф` (*"редактор Daily Moscow"*) with `#ffffff` surface cards, `#007bff` accents, and `.dm-footer__logo img { width: 220px; height: auto; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.m3-sec:nth(2)> — `Начинала я с бокса`)` uses `50%`, `6px`, `.5px`, `.5rem` radii, `#007bff` highlights, and assets (tag.js, mirpay, footer-v2.css).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://dailymoscow.ru/mirpay`)**:
-   - DOM & Selectors: Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"редактор Daily Moscow"*, and `#00aaff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://dailymoscow.ru/mirpay`)` aligns to `640px` extracted from `dailymoscow-ru_mirpay` stylesheet with `5px` lateral canvas padding with `10px` grid gap and attributes (data-pd="26", data-mx="-.4", data-sp=".5").
+   - DOM & Selectors: Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"Я не спортсменка. Я женщина, которая время от времени вспоми"*, and `#f6f8fc` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://dailymoscow.ru/mirpay`)` aligns to `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `48px` lateral canvas padding with `2px` grid gap and attributes (data-pd="26", data-mx="-.4", data-sp=".5").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишнего движения, когд..."*
-- Copy Excerpt 2: *"ЕК Елена Карнеева редактор Daily Moscow"*
-- Copy Excerpt 3: *"Елена Карнеева редактор Daily Moscow"*
-- Copy Excerpt 4: *"редактор Daily Moscow"*
+- Copy Excerpt 2: *"Елена Карнеева редактор Daily Moscow"*
+- Copy Excerpt 3: *"редактор Daily Moscow"*
+- Copy Excerpt 4: *"Я не спортсменка. Я женщина, которая время от времени вспоминает, что тело — это т..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.2,.7,.2,1)`
 - **Extracted Stylesheet Rules (`dailymoscow-ru_mirpay`)**:
-- `body.body-dark .category-main { border-color:1f1f1f }`
-- `body.body-dark .category-main__name { color:fff }`
-- `body.body-dark .category-quote__s... { color:7b7b81 }`
-- `ody.body-dark .category-quote__st... { color:7b7b81 }`
-- `strong { font-weight:bolder }`
+- `.dm-footer__wrapper { max-width: 1280px; margin: 0 auto; padding: 0 16px; }`
+- `.dm-footer__logo { display: block; line-height: 0; }`
+- `.dm-footer__logo img { width: 220px; height: auto; }`
+- `.dm-awards { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }`
+- `.dm-awards__item { display: block; line-height: 0; opacity: .75; transition: opacity .18s e... }`
 - **Per-Selector Transition Rules**:
-- **Selector `.modal`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Selector `.main-tabs li a::after`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Selector `.main-slider .slick-arrow svg path`**: `transition: .2s` extracted from `dailymoscow-ru_mirpay` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<article.m3-body>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.main>` and `<article.m3-body>` interactive targets.
+- **Selector `.dm-awards__item`**: `transition: opacity .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Selector `.dm-col__list a`**: `transition: color .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Selector `.dm-action`**: `transition: border-color .18s ease, background .18s ease` extracted from `dailymoscow-ru_mirpay` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.m3-sec>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<article.m3-body>` and `<section.m3-sec>` interactive targets.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `dailymoscow-ru_mirpay`.

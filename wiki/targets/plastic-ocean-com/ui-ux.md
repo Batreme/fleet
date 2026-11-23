@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: plastic-ocean-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: plastic-ocean-com
 
 ## Overview & Design Identity
 - **Target**: `plastic-ocean-com` (**Plastic Ocean**)
 - **Production URL**: [http://plastic-ocean.com/](http://plastic-ocean.com/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#4f4f4f` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d70ff` accent)
 - **Summary**: Plastic Ocean
-- **Total Clean CSS Variables Extracted**: `14` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Inter Tight`
-- **Body Font Stack**: `Host Grotesk Regular`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `20px`, `1.04vw`, `3.33vw`, `1.67vw`)
+- **Display Font Stack**: `Host Grotesk Regular`
+- **Body Font Stack**: `Inter Tight`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--pswp-bg)` in `:root` |
-| **Primary Typography Ink** | `#222` | `var(--pswp-placeholder-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--pswp-icon-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#4f4f4f` | `var(--pswp-icon-color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#ffffff` | `body { background: white }` (`#ffffff`) |
-| **Structural Hairline Border** | `#000000` | `.mosaic-wrap { color: #000000 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#eeeeee` | `.form .tt-form__captcha .form__... { background-color: #eeeeee }` |
+| **Interactive Accent / Highlight** | `#0d70ff` | `.tt-rich-link { color: #0d70ff }` |
+| **Secondary / Muted Copy** | `#4f4f4f` | `var(--pswp-icon-color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#4f4f4f` | `var(--pswp-icon-stroke-color)` in `:root` |
+| **Variable Token (`--pswp-placeholder-bg`)** | `#222222` | `var(--pswp-placeholder-bg)` in `:root` |
 
 ---
 
@@ -49,19 +61,19 @@
 | `--custom-fade` | `1` | Design System Custom Token |
 | `--webp-bottle-opacity` | `0` | Design System Custom Token |
 | `--white-bg-opacity` | `1` | Canvas / Surface Token |
-| `--plastic-ocean-co-bg` | `#000` | Canvas Substrate (from `var(--pswp-bg)` in `:root`) |
-| `--plastic-ocean-co-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
+| `--plastic-ocean-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--plastic-ocean-co-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)**:
-   - Landmark `<header class="wf-displayswap-n4-inactive">` hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `.div--u-iww1jyf2k { width: 78.13vw; height: 100%; transform: translate3D(0px, 0vh, 0px); }`.
+   - Landmark `<header class="wf-displayswap-n4-inactive">` (`1440px`) hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`.
 2. **Hero Stage & Focal Lead (<section.section> — `Plastic Ocean`)**:
-   - Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.section> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `.text--u-ise53ezbe { opacity: 0; transform: translate3D(0px, 0px, 0px); }`.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Technical Architecture & Narrative`)**:
-   - Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#fff` surface cards, `#4f4f4f` accents, and `.image--u-it5s3ovyb { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3D(0px, 0p... }`.
+   - Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.section--u-i8upocq6y> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="section section--u-i8upocq6y">` rendering section `Featured Work & Interactive Showcase` with copy *"If you’re interested in this format of storytelling — get in touc"*, asset references (`tt_default_styles.css`, `design-i8z5xo3zc-1649318570_style...`, `shared-design-styles.css`, `animation-design-styles.css`), and grid rule `a:hover { text-decoration:none }`.
+4. **Interactive Detail & Feature Matrix (<section.section--u-ir9wd7wkv> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="section section--u-ir9wd7wkv">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Plastic pollution is often communicated through overwhelming stat"*) with `#eeeeee` surface cards, `#0d70ff` accents, and `.text-block-wrap-div { flex-grow:1;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.lenis-smooth> — `http://plastic-ocean.com/`)**:
-   - Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#000000` structural dividers.
+   - Landmark `<footer class="lenis-smooth">` anchoring `Plastic Ocean` footer links (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), copy *"The vertical scroll acts as a timeline. As the user scrolls "*, and `#4f4f4f` structural dividers.

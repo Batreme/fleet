@@ -1,63 +1,75 @@
+---
+title: "UI & UX Architecture: namaha-healthcare"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: namaha-healthcare
 
 ## Overview & Design Identity
 - **Target**: `namaha-healthcare` (**Namaha Healthcare**)
 - **Production URL**: [https://namaha.healthcare](https://namaha.healthcare)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000000` ink, `#0000` accent)
+- **Final Redirected URL**: [https://www.namaha.healthcare/](https://www.namaha.healthcare/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fffbf6` canvas, `#0000ee` ink, `#0082f3` accent)
 - **Summary**: With over seventy years in healthcare, the Kapadia family has nurtured a legacy built on trust, compassion, and clinical integrity.
-- **Total Clean CSS Variables Extracted**: `0` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `0` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Geist`
-- **Body Font Stack**: `Victorserif 50`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Display Font Stack**: `Victorserif 50`
+- **Body Font Stack**: `Helvetica Neue`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`, `line-height: 36px`)
-- **Body Copy**: rule `body` (`font-size: 14px`, `line-height: 20px`)
-- **Metadata & Labels**: rule `small` (`font-size: 80%`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 42px`, `line-height: 46.2px`, `font-weight: 500`, `letter-spacing: -0.924px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `small` (`font-size: 80%`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `.slick-loading .slick-list { background: #fff }` |
-| **Primary Typography Ink** | `#ffffff` | `.slick-next:before { color: white }` (`#ffffff`) |
-| **Elevated Surface / Card Substrate** | `#000000` | `.slick-dots li.slick-active but... { color: black }` (`#000000`) |
-| **Interactive Accent / Highlight** | `#0000` | `a { background-color: #0000 }` |
-| **Secondary / Muted Copy** | `#000` | `mark { color: #000 }` |
-| **Structural Hairline Border** | `#ff0` | `mark { background: #ff0 }` |
+| **Primary Canvas Substrate** | `#fffbf6` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0000ee` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#a05941` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--namaha-healthcar-bg` | `#fff` | Canvas Substrate (from `.slick-loading .slick-list { background: #fff }`) |
-| `--namaha-healthcar-ink` | `#000000` | Primary Typography Ink (stylesheet-derived) |
-| `--namaha-healthcar-surface` | `#000000` | Surface Substrate (stylesheet-derived) |
-| `--namaha-healthcar-accent` | `#0000` | Interactive Accent (stylesheet-derived) |
-| `--namaha-healthcar-muted` | `#000` | Secondary Ink (stylesheet-derived) |
-| `--namaha-healthcar-border` | `#ff0` | Structural Border (stylesheet-derived) |
-| `--namaha-healthcar-container` | `940px` | Container Bound (stylesheet-derived) |
-| `--namaha-healthcar-gap` | `7px` | Grid Gutter (stylesheet-derived) |
-| `--namaha-healthcar-pad` | `5px` | Lateral Padding (stylesheet-derived) |
+| `--namaha-healthcar-bg` | `#fffbf6` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--namaha-healthcar-ink` | `#0000ee` | Primary Typography Ink (computed-derived) |
+| `--namaha-healthcar-surface` | `#ffff00` | Surface Substrate (computed-derived) |
+| `--namaha-healthcar-accent` | `#0082f3` | Interactive Accent (computed-derived) |
+| `--namaha-healthcar-muted` | `#a05941` | Secondary Ink (computed-derived) |
+| `--namaha-healthcar-border` | `#e2e2e2` | Structural Border (computed-derived) |
+| `--namaha-healthcar-container` | `1411px` | Container Bound (computed-derived) |
+| `--namaha-healthcar-gap` | `7px` | Grid Gutter (computed-derived) |
+| `--namaha-healthcar-pad` | `9px` | Lateral Padding (computed-derived) |
 | `--namaha-healthcar-ease` | `cubic-bezier(.645,.045,.355,1)` | Primary Easing Function |
-| `--namaha-healthcar-radius` | `3px` | Corner Radius (stylesheet-derived) |
-| `--namaha-healthcar-fs-base` | `20px` | Observed Font Size Token |
+| `--namaha-healthcar-radius` | `3px` | Corner Radius (computed-derived) |
+| `--namaha-healthcar-fs-base` | `42px` | Observed Font Size Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `namaha-healthcare`)**:
-   - Landmark `<header class="w-mod-js">` hosting `Namaha Healthcare` navigation (`1 Our Philosophy · 2 Our Team · 3 Departments · 5 Our Facilities · 6 Guides`), DOM attributes (`data-wf-domain="www.namaha.healthcare"`, `data-wf-page="68949db83756970449601627"`, `data-wf-site="68949db8375697044960161c"`, `data-w-id="2086974e-b9c8-7268-e0..."`), and stylesheet rule `.slick-loading .slick-list { background: fff url('./ajax-loader.gif') center center no-repeat; }`.
-2. **Hero Stage & Focal Lead (<section.headersection> — `S e v e n d e c a d e s o f s e r `)**:
-   - Landmark `<section class="headersection scrolled-over">` presenting display lead `S e v e n d e c a d e s o f s e r v i c e i n h e...` and copy excerpt *"4 Specialised healthcare for women"* over `#fff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.header> — `B e c a u s e t h e i r h e a l t `)**:
-   - Landmark `<section class="header">` rendering section `B e c a u s e t h e i r h e a l t h s h a p e s g...` with copy *"Your well-being matters to us. We are here to assist you with car"*, asset references (`cdn.prod.website-files.com`, `namaha-v2.webflow.shared.a69184c8...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `.slick-next:focus { color: transparent; outline: none; background: transparent; }`.
-4. **Interactive Detail & Feature Matrix (<section.hero_section> — `Specialty Departments`)**:
-   - Landmark `<section class="hero_section gsapherosection">` framing `Specialty Departments` and `P i o n e e r s i n R o b o t i c K n e e R e p l...` (*"CALL TO BOOK (+91 22) 6123 6123"*) with `#000000` surface cards, `#0000` accents, and `.slick-next:focus:before { opacity: 1; }`.
+   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Namaha Healthcare` navigation (`1 Our Philosophy · 2 Our Team · 3 Departments · 5 Our Facilities · 6 Guides`), DOM attributes (`data-wf-domain="www.namaha.healthcare"`, `data-wf-page="68949db83756970449601627"`, `data-wf-site="68949db8375697044960161c"`, `data-w-id="2086974e-b9c8-7268-e0..."`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+2. **Hero Stage & Focal Lead (<section.headersection> — `Namaha Healthcare`)**:
+   - Landmark `<section class="headersection scrolled-over">` presenting display lead `Namaha Healthcare` and copy excerpt *"Our lines are available 24/7. Reach out to us to get in touch wit"* over `#fffbf6` canvas and `#0000ee` ink.
+3. **Primary Showcase & Content Grid (<section.header> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="header">` rendering section `Featured Work & Interactive Showcase` with copy *"Your well-being matters to us. We are here to assist you with car"*, asset references (`cdn.prod.website-files.com`, `namaha-v2.webflow.shared.a69184c8...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
+4. **Interactive Detail & Feature Matrix (<section.hero_section> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="hero_section gsapherosection">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Women are at the centre of family and relationships. At Namaha, w"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.wf-geist-n6-active> — `https://namaha.healthcare`)**:
-   - Landmark `<footer class="wf-geist-n6-active">` anchoring `Namaha Healthcare` footer links (`1 Our Philosophy · 2 Our Team · 3 Departments · 5 Our Facilities · 6 Guides`), copy *"Call us Our lines are available 24/7. Reach out to us to get"*, and `#ff0` structural dividers.
+   - Landmark `<footer class="wf-geist-n6-active">` anchoring `Namaha Healthcare` footer links (`1 Our Philosophy · 2 Our Team · 3 Departments · 5 Our Facilities · 6 Guides`), copy *"Consult with the best specialists in every field. We assure "*, and `#e2e2e2` structural dividers.

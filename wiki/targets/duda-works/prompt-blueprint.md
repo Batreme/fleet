@@ -1,46 +1,51 @@
 ---
 title: "UI Prompt Blueprint: duda-works"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "duda-works"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#fff` ink, `#fff` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#ffffff` ink, `#ffffff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: duda-works
 
 > **Duda Lima** (http://duda.works) — Production web application and digital experience at http://duda.works.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Duda Lima** (`http://duda.works`). Production web application and digital experience at http://duda.works.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#fff` ink, `#fff` accent)**.
+- **Final Redirected URL**: [https://www.duda.works/](https://www.duda.works/)
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#ffffff` ink, `#ffffff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#060403` (`var(--bg)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Aeonik Pro` for display copy (`Duda Lima`) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#060403` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffffff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Aeonik Pro` for display copy (`Duda Lima`) with `Aeonik Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: normal 16px`, padding `71px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2121)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1400px` extracted from `duda-works` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `16px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2121px` (`assets/mobile.png`, full-page live capture (2121px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `71px` lateral canvas padding with `normal 16px` grid gap.
 - **Border Radius Scale**: `8px`, `2px`, `50%`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 16px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `71px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width: 720px)`, `@media (min-width: 501px) and (max-width: 1400px)`, `@media (max-width: 500px)`.
 
 ---
@@ -48,10 +53,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#060403` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--text)` in `:root` |
+| **Primary Canvas Substrate** | `#060403` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.custom-cursor.is-dot { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#ffffff` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#ffffff` | secondary opacity step of live computed `main` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#1f1d1c` | `var(--border)` in `:root` (`rgba(255, 255, 255, 0.1)`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -61,17 +70,17 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas
 | `--text-dim` | `rgba(255, 255, 255, 0.62)` | Typography Ink Token |
 | `--border` | `rgba(255, 255, 255, 0.1)` | Elevation / Border Token |
 | `--border-strong` | `rgba(255, 255, 255, 0.28)` | Elevation / Border Token |
-| `--duda-works-bg` | `#060403` | Canvas Substrate (from `var(--bg)` in `:root`) |
-| `--duda-works-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
-| `--duda-works-surface` | `#060403` | Surface Substrate (stylesheet-derived) |
-| `--duda-works-accent` | `#fff` | Interactive Accent (stylesheet-derived) |
-| `--duda-works-muted` | `#fff` | Secondary Ink (stylesheet-derived) |
-| `--duda-works-border` | `#fff` | Structural Border (stylesheet-derived) |
-| `--duda-works-container` | `1400px` | Container Bound (stylesheet-derived) |
-| `--duda-works-gap` | `16px` | Grid Gutter (stylesheet-derived) |
-| `--duda-works-pad` | `24px` | Lateral Padding (stylesheet-derived) |
+| `--duda-works-bg` | `#060403` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--duda-works-ink` | `#ffffff` | Primary Typography Ink (computed-derived) |
+| `--duda-works-surface` | `#ffffff` | Surface Substrate (computed-derived) |
+| `--duda-works-accent` | `#ffffff` | Interactive Accent (computed-derived) |
+| `--duda-works-muted` | `#ffffff` | Secondary Ink (computed-derived) |
+| `--duda-works-border` | `#1f1d1c` | Structural Border (computed-derived) |
+| `--duda-works-container` | `1440px` | Container Bound (computed-derived) |
+| `--duda-works-gap` | `normal` | Grid Gutter (computed-derived) |
+| `--duda-works-pad` | `71px` | Lateral Padding (computed-derived) |
 | `--duda-works-ease` | `cubic-bezier(0.22,1,0.36,1)` | Primary Easing Function |
-| `--duda-works-radius` | `8px` | Corner Radius (stylesheet-derived) |
+| `--duda-works-radius` | `8px` | Corner Radius (computed-derived) |
 
 ---
 
@@ -79,14 +88,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `Aeonik Pro`.
-- **Primary Body Stack**: `Segoe UI`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Aeonik Pro`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `11px`, `13.3333px`, `15px`, `12px`.
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `11px`, `13.3333px`, `15px`, `12px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -99,47 +108,66 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas
 - **Selector `nav[aria-label="Primary"]`**: `transition: max-height 0.35s ease, opacity 0.25s ease` extracted from `duda-works` stylesheet.
 - **Selector `.nav-links a`**: `transition: color 0.3s ease` extracted from `duda-works` stylesheet.
 - **Selector `.linkedin-link`**: `transition: color 0.3s ease` extracted from `duda-works` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.mwg_effect107>`.
+- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.mwg_effect107:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Duda Lima                                  │
 │ ====================================================================== │
-│ [ <header.site-header>     | P r o j e c t s · A b o u t            ]  │
+│ [ <header.site-header> (1440x78px)    | P r o j e c t s · A b o u t  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.mwg_effect107>                              |   │
-│ | H1: Duda Lima                                                    |   │
-│ | Substrate: #060403    | Ink: #fff       | Accent: #fff           |   │
+│ | HERO STAGE: <section.mwg_effect107> (w=1440px)                     | │
+│ | H1: Duda Lima                                                      | │
+│ | Substrate: #060403 | Ink: #ffffff | Accent: #ffffff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.mwg_effect107>   ) max-w: 1400px         |   │
+│ | SHOWCASE GRID (<section.mwg_effect107:nth) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.site-heade] -> [<section.mwg_effec] -> [<section.mwg_effec] │
+│ | DETAIL MODULE (<section.mwg_effect107:nth) — Global Directory & Co | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.icon-menu>    ) | http://duda.works                  │
+│ [ FOOTER (<footer.icon-menu>  ) | http://duda.works                    │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: normal 1)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.mwg_effect107>) — 390px Vertical Lead         | │
+│ | H1: Duda Lima                                                      | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.mwg_effect107) — 1-Col Stack              | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.mwg_effect107:n) — 1-Col (Global Directory &) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.icon-menu>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `duda-works`)**:
-   - Landmark `<header class="site-header">` hosting `Duda Lima` navigation (`P r o j e c t s · A b o u t`), DOM attributes (`data-char="P"`, `data-char="r"`, `data-char="o"`, `data-char="j"`), and stylesheet rule `view-transition { navigation: auto; }`.
+   - Landmark `<header class="site-header">` (`1440x78px`) hosting `Duda Lima` navigation (`P r o j e c t s · A b o u t`), DOM attributes (`data-char="P"`, `data-char="r"`, `data-char="o"`, `data-char="j"`), and stylesheet rule `view-transition { navigation: auto; }`.
 2. **Hero Stage & Focal Lead (<section.mwg_effect107> — `Duda Lima`)**:
-   - Landmark `<section class="mwg_effect107">` presenting display lead `Duda Lima` and copy excerpt *"Production web application and digital experience at http://duda."* over `#060403` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.mwg_effect107> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<section class="mwg_effect107">` rendering section `Featured Work & Interactive Showcase` with copy *"Duda Lima"*, asset references (`hotjar-6782564.js`, `modules.47ae0ae40a423a71e31f.js`, `02.png`, `24.png`), and grid rule `html { background: var(--bg); }`.
-4. **Interactive Detail & Feature Matrix (<section.mwg_effect107> — `Technical Architecture & Narrative`)**:
-   - Landmark `<section class="mwg_effect107">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#060403` surface cards, `#fff` accents, and `.wordmark svg { display: block; filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.75)) drop-... }`.
+   - Landmark `<section class="mwg_effect107">` presenting display lead `Duda Lima` and copy excerpt *"Production web application and digital experience at http://duda."* over `#060403` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.mwg_effect107:nth(2)> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="mwg_effect107">` rendering section `Featured Work & Interactive Showcase` with copy *"Duda Lima"*, asset references (`hotjar-6782564.js`, `modules.07f6e16cfaafa9e41bab.js`, `02.png`, `24.png`), and grid rule `html { background: var(--bg); }`.
+4. **Interactive Detail & Feature Matrix (<section.mwg_effect107:nth(3)> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="mwg_effect107">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#ffffff` surface cards, `#ffffff` accents, and `.wordmark svg { display: block; filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.75)) drop-... }`.
 5. **Colophon & Global Directory Footer (<footer.icon-menu> — `http://duda.works`)**:
-   - Landmark `<footer class="icon-menu">` anchoring `Duda Lima` footer links (`P r o j e c t s · A b o u t`), copy *"Technical Architecture & Narrative"*, and `#fff` structural dividers.
+   - Landmark `<footer class="icon-menu">` anchoring `Duda Lima` footer links (`P r o j e c t s · A b o u t`), copy *"Technical Architecture & Narrative"*, and `#1f1d1c` structural dividers.
 
 ---
 
@@ -151,78 +179,82 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `duda-works` (**Duda Lima** — `http://duda.works`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#fff` ink, `#fff` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#ffffff` ink, `#ffffff` accent).
 - **Identity & Domain Context**: Production web application and digital experience at http://duda.works.
-- **Primary Substrate**: `#060403` (`var(--bg)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#060403` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#060403` (`var(--bg)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Aeonik Pro` for display copy (`Duda Lima`) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#060403` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffffff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Aeonik Pro` for display copy (`Duda Lima`) with `Aeonik Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: normal 16px`, padding `71px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `duda-works` in your global stylesheet:
 
 :root {
-  /* Duda Lima (duda-works) — Ground-Truth Extracted CSS Variables */
+  /* Duda Lima (duda-works) — Live-Grounded CSS Variables */
   --bg: #060403; /* Canvas / Surface Token (duda-works) */
   --text: #fff; /* Typography Ink Token (duda-works) */
   --text-dim: rgba(255, 255, 255, 0.62); /* Typography Ink Token (duda-works) */
   --border: rgba(255, 255, 255, 0.1); /* Elevation / Border Token (duda-works) */
   --border-strong: rgba(255, 255, 255, 0.28); /* Elevation / Border Token (duda-works) */
-  --duda-works-bg: #060403; /* Canvas Substrate (from `var(--bg)` in `:root`) (duda-works) */
-  --duda-works-ink: #fff; /* Primary Typography Ink (stylesheet-derived) (duda-works) */
-  --duda-works-surface: #060403; /* Surface Substrate (stylesheet-derived) (duda-works) */
-  --duda-works-accent: #fff; /* Interactive Accent (stylesheet-derived) (duda-works) */
-  --duda-works-muted: #fff; /* Secondary Ink (stylesheet-derived) (duda-works) */
-  --duda-works-border: #fff; /* Structural Border (stylesheet-derived) (duda-works) */
-  --duda-works-container: 1400px; /* Container Bound (stylesheet-derived) (duda-works) */
-  --duda-works-gap: 16px; /* Grid Gutter (stylesheet-derived) (duda-works) */
-  --duda-works-pad: 24px; /* Lateral Padding (stylesheet-derived) (duda-works) */
+  --duda-works-bg: #060403; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (duda-works) */
+  --duda-works-ink: #ffffff; /* Primary Typography Ink (computed-derived) (duda-works) */
+  --duda-works-surface: #ffffff; /* Surface Substrate (computed-derived) (duda-works) */
+  --duda-works-accent: #ffffff; /* Interactive Accent (computed-derived) (duda-works) */
+  --duda-works-muted: #ffffff; /* Secondary Ink (computed-derived) (duda-works) */
+  --duda-works-border: #1f1d1c; /* Structural Border (computed-derived) (duda-works) */
+  --duda-works-container: 1440px; /* Container Bound (computed-derived) (duda-works) */
+  --duda-works-gap: normal; /* Grid Gutter (computed-derived) (duda-works) */
+  --duda-works-pad: 71px; /* Lateral Padding (computed-derived) (duda-works) */
   --duda-works-ease: cubic-bezier(0.22,1,0.36,1); /* Primary Easing Function (duda-works) */
-  --duda-works-radius: 8px; /* Corner Radius (stylesheet-derived) (duda-works) */
+  --duda-works-radius: 8px; /* Corner Radius (computed-derived) (duda-works) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#060403` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--text)` in `:root`
+- **Primary Canvas Substrate**: `#060403` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.custom-cursor.is-dot { background: #ffffff }`
+- **Interactive Accent / Highlight**: `#ffffff` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#ffffff` — grounded in secondary opacity step of live computed `main` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#1f1d1c` — grounded in `var(--border)` in `:root` (`rgba(255, 255, 255, 0.1)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1400px` extracted from `duda-works` stylesheet
-- **Padding & Gutters**: `24px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 16px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2121px` (full-page live capture (2121px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `71px` lateral canvas padding with `normal 16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `71px` horizontal padding
 - **Media Queries**: `@media (min-width: 720px)`, `@media (min-width: 501px) and (max-width: 1400px)`, `@media (max-width: 500px)`
 - **Corner Radii**: `8px`, `2px`, `50%`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Aeonik Pro`
-- **Body Font Stack**: `Segoe UI`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `12px`, `11px`)
+- **Body Font Stack**: `Aeonik Pro`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: observed font-size ladder: `16px`, `11px`, `13.3333px`, `15px`, `12px`
+- **H2 Section Rule**: observed font-size ladder: `16px`, `11px`, `13.3333px`, `15px`, `12px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `duda-works` (`Duda Lima`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `duda-works`)**:
-   - DOM & Selectors: Landmark `<header class="site-header">` hosting `Duda Lima` navigation (`P r o j e c t s · A b o u t`), DOM attributes (`data-char="P"`, `data-char="r"`, `data-char="o"`, `data-char="j"`), and stylesheet rule `view-transition { navigation: auto; }`.
+   - DOM & Selectors: Landmark `<header class="site-header">` (`1440x78px`) hosting `Duda Lima` navigation (`P r o j e c t s · A b o u t`), DOM attributes (`data-char="P"`, `data-char="r"`, `data-char="o"`, `data-char="j"`), and stylesheet rule `view-transition { navigation: auto; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `duda-works`)` (`duda-works`) adapts across `@media (min-width: 720px)`, `@media (min-width: 501px) and (max-width: 1400px)`, `@media (max-width: 500px)` with `cubic-bezier(0.22,1,0.36,1)` transitions and links `P r o j e c t s · A b o u t`.
 2. **Hero Stage & Focal Lead (<section.mwg_effect107> — `Duda Lima`)**:
-   - DOM & Selectors: Landmark `<section class="mwg_effect107">` presenting display lead `Duda Lima` and copy excerpt *"Production web application and digital experience at http://duda."* over `#060403` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#060403` background with `#fff` headline `Duda Lima`.
-3. **Primary Showcase & Content Grid (<section.mwg_effect107> — `Featured Work & Interactive Showca`)**:
-   - DOM & Selectors: Landmark `<section class="mwg_effect107">` rendering section `Featured Work & Interactive Showcase` with copy *"Duda Lima"*, asset references (`hotjar-6782564.js`, `modules.47ae0ae40a423a71e31f.js`, `02.png`, `24.png`), and grid rule `html { background: var(--bg); }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.mwg_effect107> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.mwg_effect107> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<section class="mwg_effect107">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#060403` surface cards, `#fff` accents, and `.wordmark svg { display: block; filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.75)) drop-... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.mwg_effect107> — `Technical Architecture & Narrative`)` uses `8px`, `2px`, `50%`, `999px` radii, `#fff` highlights, and assets (hotjar-6782564.js, modules.47ae0ae40a423a71e31f.js, 02.png).
+   - DOM & Selectors: Landmark `<section class="mwg_effect107">` presenting display lead `Duda Lima` and copy excerpt *"Production web application and digital experience at http://duda."* over `#060403` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2121px` mobile) sets `#060403` background with `#ffffff` headline `Duda Lima`.
+3. **Primary Showcase & Content Grid (<section.mwg_effect107:nth(2)> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<section class="mwg_effect107">` rendering section `Featured Work & Interactive Showcase` with copy *"Duda Lima"*, asset references (`hotjar-6782564.js`, `modules.07f6e16cfaafa9e41bab.js`, `02.png`, `24.png`), and grid rule `html { background: var(--bg); }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.mwg_effect107:nth(2)> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `71px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.mwg_effect107:nth(3)> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<section class="mwg_effect107">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#ffffff` surface cards, `#ffffff` accents, and `.wordmark svg { display: block; filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.75)) drop-... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.mwg_effect107:nth(3)> — `Technical Architecture & Narrative`)` uses `8px`, `2px`, `50%`, `999px` radii, `#ffffff` highlights, and assets (hotjar-6782564.js, modules.07f6e16cfaafa9e41bab.js, 02.png).
 5. **Colophon & Global Directory Footer (<footer.icon-menu> — `http://duda.works`)**:
-   - DOM & Selectors: Landmark `<footer class="icon-menu">` anchoring `Duda Lima` footer links (`P r o j e c t s · A b o u t`), copy *"Technical Architecture & Narrative"*, and `#fff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.icon-menu> — `http://duda.works`)` aligns to `1400px` extracted from `duda-works` stylesheet with `24px` lateral canvas padding with `16px` grid gap and attributes (data-char="P", data-char="r", data-char="o").
+   - DOM & Selectors: Landmark `<footer class="icon-menu">` anchoring `Duda Lima` footer links (`P r o j e c t s · A b o u t`), copy *"Technical Architecture & Narrative"*, and `#1f1d1c` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.icon-menu> — `http://duda.works`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `71px` lateral canvas padding with `normal 16px` grid gap and attributes (data-char="P", data-char="r", data-char="o").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Lead Copy: *"Production web application and digital experience at http://duda.works."*
@@ -239,7 +271,7 @@ Scaffold `duda-works` (`Duda Lima`) with these exact structural regions, extract
 - **Selector `nav[aria-label="Primary"]`**: `transition: max-height 0.35s ease, opacity 0.25s ease` extracted from `duda-works` stylesheet.
 - **Selector `.nav-links a`**: `transition: color 0.3s ease` extracted from `duda-works` stylesheet.
 - **Selector `.linkedin-link`**: `transition: color 0.3s ease` extracted from `duda-works` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.mwg_effect107>`.
+- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.mwg_effect107:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

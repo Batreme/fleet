@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: www-schlosshotel-kitzbuehel-com_en"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-schlosshotel-kitzbuehel-com_en
 
 ## Overview & Design Identity
 - **Target**: `www-schlosshotel-kitzbuehel-com_en` (**Schlosshotel Kitzbühel – a premium experience**)
 - **Production URL**: [https://www.schlosshotel-kitzbuehel.com/en](https://www.schlosshotel-kitzbuehel.com/en)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#300316` canvas, `#FFFFFF` ink, `#6e4e5b` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#300316` canvas, `#ffffff` ink, `#42041e` accent)
 - **Summary**: A beacon of elegance, exclusivity, and warmth – Schlosshotel Kitzbühel is a truly unparalleled retreat.
-- **Total Clean CSS Variables Extracted**: `36` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Assistant`
-- **Body Font Stack**: `lg`
+- **Body Font Stack**: `Assistant`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: rule `h1` (`line-height: 1.2`, `font-weight: 500`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1em !important`, `line-height: 1.2`, `font-weight: 500`)
-- **Body Copy**: rule `p` (`font-size: 12px`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(1rem,11.5vw,22.9em)`, `6.8em`, `4em`, `3.5em`, `2em`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 9.008px`, `line-height: 10.8096px`, `font-weight: 600`, `letter-spacing: 2.2px`); rule `h1` (`line-height: 1.2`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 18.9168px`, `line-height: 29.5102px`, `font-weight: 700`); rule `h2` (`font-size: 1em`, `line-height: 1.2`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 9.008px`, `line-height: 14.0525px`, `font-weight: 400`); rule `p` (`font-size: 12px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 9.008px`, `line-height: 14.0525px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#300316` | `var(--dna-tldr-bg)` in `:root` |
-| **Primary Typography Ink** | `#FFFFFF` | `var(--dna-tldr-text)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#000000` | `var(--bl-trigger-text)` in `:root` |
-| **Interactive Accent / Highlight** | `#6e4e5b` | `var(--bl-color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#42041e` | `.MOD-Banner .MOD-Banner__frame { background-color: #42041e }` |
-| **Structural Hairline Border** | `#fff` | `-OffersTeaser__item__request__w... { color: #fff }` |
+| **Primary Canvas Substrate** | `#300316` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#42041e` | `.branDNAmic .DNA-button--cta-bo... { color: #42041e }` |
+| **Secondary / Muted Copy** | `#999999` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#999999` | `blockquote { border: #999999 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.SECT-Header> — `www-schlosshotel-kitzbuehel-com_en`)**:
-   - Landmark `<header class="SECT-Header DNA-section">` hosting `Schlosshotel Kitzbühel – a premium e` navigation (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), DOM attributes (`data-asset-id="Scss/presets"`, `data-asset-id="Scss/vendors"`, `data-asset-id="Globals/Main"`, `data-asset-id="Sections/Header"`), and stylesheet rule `from { transform:translateX(0) }`.
-2. **Hero Stage & Focal Lead (<section.MOD-RoomsTeaser> — `Schlosshotel Kitzbühel`)**:
-   - Landmark `<section class="MOD-RoomsTeaser DNA-module">` presenting display lead `Schlosshotel Kitzbühel` and copy excerpt *"Kitzbühel For families For sports enthusiasts For culture lovers "* over `#300316` canvas and `#FFFFFF` ink.
-3. **Primary Showcase & Content Grid (<section.MOD-OffersTeaser> — `Welcome to the threshold of the ex`)**:
-   - Landmark `<section class="MOD-OffersTeaser DNA-module">` rendering section `Welcome to the threshold of the extraordinary` with copy *"For sports enthusiasts"*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `.MOD-Banner .MOD-Banner__outer { display:flex }`.
-4. **Interactive Detail & Feature Matrix (<section.MOD-Text> — `For people of refined taste. For y`)**:
-   - Landmark `<section class="MOD-Text DNA-module">` framing `For people of refined taste. For you.` and `Schlosshotel offers Not for all. But definitely f...` (*"For culture lovers"*) with `#000000` surface cards, `#6e4e5b` accents, and `.MOD-Banner .MOD-Banner__frame { padding:6.5em 0;flex:1;position:relative;background-color:42041e;overflo... }`.
+   - Landmark `<header class="SECT-Header DNA-section">` (`1440x0px`) hosting `Schlosshotel Kitzbühel – a premium e` navigation (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), DOM attributes (`data-asset-id="Scss/presets"`, `data-asset-id="Scss/vendors"`, `data-asset-id="Globals/Main"`, `data-asset-id="Sections/Header"`), and stylesheet rule `from { transform:translateX(0) }`.
+2. **Hero Stage & Focal Lead (<section.MOD-RoomsTeaser> — `SCHLOSSHOTEL KITZBÜHEL`)**:
+   - Landmark `<section class="MOD-RoomsTeaser DNA-module">` presenting display lead `SCHLOSSHOTEL KITZBÜHEL` and copy excerpt *"Some places whisper rather than shout. Schlosshotel Kitzbühel is "* over `#300316` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.MOD-OffersTeaser> — `Schlosshotel Kitzbühel`)**:
+   - Landmark `<section class="MOD-OffersTeaser DNA-module">` rendering section `Schlosshotel Kitzbühel` with copy *"Schlosshotel Kitzbühel"*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `page { margin:.5cm }`.
+4. **Interactive Detail & Feature Matrix (<section.MOD-Text> — `Welcome to the threshold of the ex`)**:
+   - Landmark `<section class="MOD-Text DNA-module">` framing `Welcome to the threshold of the extraordinary` and `For people of refined taste. For you.` (*"Welcome to the threshold of the extraordinary"*) with `#000000` surface cards, `#42041e` accents, and `body { font-family:Arial,sans-serif;font-size:12px }`.
 5. **Colophon & Global Directory Footer (<footer.SECT-Footer> — `https://www.schlosshotel-kitzbuehel.com/en`)**:
-   - Landmark `<footer class="SECT-Footer DNA-section">` anchoring `Schlosshotel Kitzbühel – a premi` footer links (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), copy *"Rooms and Suites Packages Inclusive services"*, and `#fff` structural dividers.
+   - Landmark `<footer class="SECT-Footer DNA-section">` anchoring `Schlosshotel Kitzbühel – a premi` footer links (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), copy *"No flashy façade. No hollow shine. Instead: real stone benea"*, and `#999999` structural dividers.

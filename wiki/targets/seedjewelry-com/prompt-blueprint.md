@@ -1,253 +1,282 @@
 ---
 title: "UI Prompt Blueprint: seedjewelry-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "seedjewelry-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jakarta Sans` + `Poppins` + `GTStandard-M`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#1990c6` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: seedjewelry-com
 
-> **Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai** — A Dubai-based lab-grown diamond high jewelry flagship pairing crisp diamond-white surfaces (`#ffffff`) with deep botanical emerald green (`#162924` and `rgb(48, 79, 72)` / `#304f48`), warm champagne gold CTAs (`--seed-cta-bg: #e8d3a8`), and a 6-tier responsive rem container ladder (`27.5rem` to `1920px`).
+> **Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai** (https://seedjewelry.com/) — Lab-grown diamond jewelry and transformable designs, crafted in the UAE. Explore Be Free, Kohana, Be True and Always Be, with a tree plan...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai**. A Dubai-based lab-grown diamond high jewelry flagship pairing crisp diamond-white surfaces (`#ffffff`) with deep botanical emerald green (`#162924` and `rgb(48, 79, 72)` / `#304f48`), warm champagne gold CTAs (`--seed-cta-bg: #e8d3a8`), and a 6-tier responsive rem container ladder (`27.5rem` to `1920px`).
-- **Visual Archetype**: **Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jakarta Sans` + `Poppins` + `GTStandard-M`)**.
+- **Brand Essence & Persona**: **Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai** (`https://seedjewelry.com/`). Lab-grown diamond jewelry and transformable designs, crafted in the UAE. Explore Be Free, Kohana, Be True and Always Be, with a tree plan...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#1990c6` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  1. **Botanical Emerald & Champagne Gold Contrast**: Pairs deep emerald (`#162924` and `--accent: 48 79 72` / `--button-background: 48 79 72`) with warm champagne gold (`--seed-cta-bg: #e8d3a8`, `--seed-cta-color: #000000`) over pure white (`#ffffff`).
-  2. **Tri-Zone CSS Grid Header (`--header-grid`)**: Uses explicit named grid template areas `--header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` with `--header-logo-width: 70px`.
-  3. **Parameterized 4-to-2 Product Grid (`--seed-grid-cols`)**: Product collections (`header.seed-product-grid__header`, `H2: Best Sellers`, `H2: Discover Our Collections`) scale automatically from `--seed-grid-cols: 4` on desktop to `--seed-grid-cols-mobile: 2`.
-  4. **6-Tier Container Width System**: Defines exact container bounds from `--container-xxs-max-width: 27.5rem` up to `--container-lg-max-width: 90rem` (`1440px`) and `--container-xl-max-width: 1920px`.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#1990c6` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Seed Jewelry`) with `Poppins` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1536px` container bounds (`gap: 10px 40px`, padding `1.5rem`) with `cubic-bezier(.785,.135,.15,.86)` easing and Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Full-Page Dimensions**: Desktop `1440×7802px` (`assets/desktop.png`), Mobile `390×4200px` (`assets/mobile.png`).
-- **Master Container Bounds**: `--container-lg-max-width: 90rem` (1440px) and `--container-xl-max-width: 1920px` with `--container-gutter: 1.25rem` (20px).
-- **Canvas Lateral Padding & Spacing**: `--container-gutter: 1.25rem`, vertical rhythm `--section-vertical-spacing: 2.5rem`, stack gap `--section-stack-gap: 2.25rem`.
-- **Border Radius Scale**: `--button-border-radius: 3.125rem` (50px pill CTAs), `--input-border-radius: 0.0rem` (sharp rectangular inputs), `--seed-chat-radius: 8px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1536px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `10px 40px` grid gap.
+- **Border Radius Scale**: `var(--button-border-radius)`, `var(--rounded-full)`, `var(--input-border-radius)`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: `--seed-grid-cols: 4` for high-jewelry product matrices; `--header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)`.
-- **Mobile Layout**: `--seed-grid-cols-mobile: 2` (2-up mobile jewelry grid) with slide-out drawer (`--drawer-max-width: min(94vw, 30rem)`).
-- **Extracted CSS Media Queries**: `@media (min-width:448px)`, `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width: 1440px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: 10px 40px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:767px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)`, `@media screen and (min-width:1000px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| Primary Diamond White Canvas | `#ffffff` | `--background-without-opacity: 255 255 255` (`:root`) |
-| Deep Botanical Emerald Surface | `#162924` | Extracted stylesheet luxury dark emerald (`#162924`) |
-| Emerald Primary Button & Accent | `#304f48` | `--accent: 48 79 72` / `--button-background: 48 79 72` (`rgb(48,79,72)`) |
-| Warm Champagne Gold CTA Fill | `#e8d3a8` | `--seed-cta-bg` (`:root`) |
-| Champagne CTA Label Ink | `#000000` | `--seed-cta-color` / `--text-color: 0 0 0` (`:root`) |
-| Subtle Gallery Hairline Border | `#d9d9d9` | `--border-color: 217 217 217` (`rgb(217,217,217)`) |
-| Translucent Header Border | `rgba(255, 255, 255, 0.4)` | `--header-border-color` (`:root`) |
-| Soft Card Elevation Shadow | `0 5px 15px rgb(0 0 0 / 0.05)` | `--shadow` (`:root`) |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f3f0eb` | `var(--seed-pdp-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#1990c6` | `.shopify-payment-button__button... { background-color: #1990c6 }` |
+| **Secondary / Muted Copy** | `#6b716e` | `var(--seed-pdp-ink-muted)` in `:root` |
+| **Structural Hairline Border** | `#e3e0d8` | `var(--seed-pdp-border)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--container-lg-max-width` | `90rem` | 1440px primary desktop container width |
-| `--container-xl-max-width` | `1920px` | Full-bleed widescreen showcase max-width |
-| `--container-md-max-width` | `71.875rem` | 1150px medium editorial container width |
-| `--container-gutter` | `1.25rem` | 20px horizontal container gutter |
-| `--section-vertical-spacing` | `2.5rem` | 40px vertical section rhythm |
-| `--section-stack-gap` | `2.25rem` | 36px internal stack gap |
-| `--header-grid` | `"primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` | Tri-zone CSS Grid template for sticky header |
-| `--header-logo-width` | `70px` | Centered Seed Jewelry emblem width |
-| `--seed-grid-cols` | `4` | 4-column desktop jewelry product grid |
-| `--seed-grid-cols-mobile` | `2` | 2-column mobile jewelry product grid |
-| `--seed-cta-bg` | `#e8d3a8` | Warm champagne gold primary CTA background |
-| `--seed-cta-color` | `#000000` | Black text ink on champagne gold CTA |
-| `--accent` | `48 79 72` | Botanical emerald RGB triplet (#304f48) |
-| `--button-background` | `48 79 72` | Emerald button background RGB triplet |
-| `--border-color` | `217 217 217` | 1px neutral border RGB triplet (#d9d9d9) |
-| `--heading-font-family` | `"Plus Jakarta Sans", sans-serif` | Primary geometric heading font family |
-| `--text-font-family` | `Poppins, sans-serif` | Primary body copy font family |
-| `--button-border-radius` | `3.125rem` | 50px pill radius for primary buttons |
-| `--drawer-max-width` | `min(94vw, 30rem)` | Slide-over cart & filter drawer width (480px) |
+| `--container-max-width` | `100%` | Layout / Spatial Grid Token |
+| `--container-xxs-max-width` | `27.5rem` | Layout / Spatial Grid Token |
+| `--container-xs-max-width` | `42.5rem` | Layout / Spatial Grid Token |
+| `--container-sm-max-width` | `61.25rem` | Layout / Spatial Grid Token |
+| `--container-md-max-width` | `71.875rem` | Layout / Spatial Grid Token |
+| `--container-lg-max-width` | `90rem` | Layout / Spatial Grid Token |
+| `--container-xl-max-width` | `1920px` | Layout / Spatial Grid Token |
+| `--container-gutter` | `1.25rem` | Layout / Spatial Grid Token |
+| `--section-vertical-spacing` | `2.5rem` | Layout / Spatial Grid Token |
+| `--section-vertical-spacing-tight` | `2.5rem` | Layout / Spatial Grid Token |
+| `--section-stack-gap` | `2.25rem` | Layout / Spatial Grid Token |
+| `--section-stack-gap-tight` | `2.25rem` | Layout / Spatial Grid Token |
+| `--form-gap` | `1.25rem` | Layout / Spatial Grid Token |
+| `--fieldset-gap` | `1rem` | Layout / Spatial Grid Token |
+| `--form-control-gap` | `0.625rem` | Layout / Spatial Grid Token |
+| `--checkbox-control-gap` | `0.75rem` | Layout / Spatial Grid Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `"Plus Jakarta Sans", "GTStandard-M", sans-serif` (`--heading-font-family`).
-- **Primary Body Stack**: `Poppins, sans-serif` (`--text-font-family`).
-- **Technical / Metadata Stack**: `ui-monospace, "SF Mono", monospace` (Carat weight, VVS clarity grades, AED/USD pricing).
+- **Display Typography**: `Poppins`.
+- **Primary Body Stack**: `Poppins`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules
-- **Hero Display (`H1`)**: `clamp(2.25rem, 4.5vw, 4rem)`, `font-family: var(--heading-font-family)`, `font-weight: 400` (`--heading-font-weight`), `letter-spacing: 0.0em` ("Seed Jewelry" / "Born from the earth, refined by art").
-- **Section Heading (`H2`)**: `clamp(1.5rem, 2.8vw, 2.25rem)`, `font-family: var(--heading-font-family)`, `font-weight: 400` ("Best Sellers", "Discover Our Collections").
-- **Body Copy**: `var(--text-base)` (`1.0rem`), `font-family: var(--text-font-family)` (`Poppins`), `font-weight: 400`, `line-height: 1.6`.
-- **Metadata & Navigation Labels**: `var(--text-xs)` (`0.875rem`), `text-transform: uppercase` (`--button-text-transform`), pill buttons with `--button-border-radius: 3.125rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 52.8px`, `font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 57.6px`, `line-height: 57.6px`, `font-weight: 400`); rule `h2` (`font-size: 120%`, `font-weight: bold`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 400`); CSS variables `--text-base: 1.0rem`, `--modal-body-padding-block: 1.25rem`, `--modal-body-padding-inline: 1.25rem`; rule `,body` (`font-size: 1rem`, `line-height: 1.5rem`, `letter-spacing: initial`, `font-weight: 450`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 400`); CSS variables `--heading-letter-spacing: 0.0em`, `--text-letter-spacing: 0.0em`, `--button-letter-spacing: 0.0em`; rule `.label` (`font-size: 14px`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.25,.46,.45,.94)` (quad ease-out) and `cubic-bezier(.34,1.56,.64,1)` (spring reveal).
+- **Extracted Timing Functions**: `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.45,0,.55,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- `Header Icon Transitions` -> `--header-icon-exit-duration: .2s`
-- `Product Card Image Hover` -> `cubic-bezier(.25,.46,.45,.94)` (`400ms` secondary macro-angle crossfade)
-- `.seed-chat__panel` -> `transition: opacity .25s ease, transform .25s ease, visibility .25s`
-- `Badge & Drawer entrances` -> `cubic-bezier(.34,1.56,.64,1)`
+- **Selector `.accordion :is(svg)`**: `transition: transform .2s` extracted from `seedjewelry-com` stylesheet.
+- **Selector `.shopify-payment-button__button--...`**: `transition: background-size .45s cubic-bezier(.785,.135,.15,.86),backgroun...` extracted from `seedjewelry-com` stylesheet.
+- **Selector `.shopify-payment-button__button--...`**: `transition: background-size .45s cubic-bezier(.785,.135,.15,.86),backgroun...` extracted from `seedjewelry-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.785,.135,.15,.86)`)**: Governs interactive state transitions across `<header.analytics>` and `<section.seed-hero>`.
+- **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html`)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ <header id="shopify-section-sections--24564126580933__header">         │
-│   Grid: "primary-nav logo secondary-nav" / 1fr auto(70px) 1fr          │
-│   <nav class="header__primary-nav">  [SEED]  <nav class="header__secon │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="hero-stage"> (Bg: #162924 Emerald / Text: #ffffff)     │
-│   H1: Born from the earth, refined by art                              │
-│   [ Pill CTA (--seed-cta-bg #e8d3a8, radius 3.125rem): Explore High Je │
-├────────────────────────────────────────────────────────────────────────┤
-│ <header class="seed-product-grid__header"> H2: Best Sellers (--seed-gr │
-│   [ Ring 01 ]  [ Necklace 02 ]  [ Bracelet 03 ]  [ Earrings 04 ] (xl:  │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="collections"> H2: Discover Our Collections             │
-├────────────────────────────────────────────────────────────────────────┤
-│ <nav class="seed-footer__nav--shop"> & <.seed-footer__nav--about> Duba │
+│ DESKTOP VIEWPORT (1440px) — Seed Jewelry · Lab-Grown Diamond High Jewe │
+│ ====================================================================== │
+│ [ <header.analytics> (1440x91px)      | Search Search                ] │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE: <section.shopify-section> (w=1440px)                   | │
+│ | H1: Seed Jewelry                                                   | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #1990c6                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE GRID (<section.seed-hero>) max-w: 1536px                  | │
+│ | +------------------------------+  +------------------------------+ | │
+│ | | Born from the earth, refined |  | Best Sellers                 | | │
+│ | +------------------------------+  +------------------------------+ | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL MODULE (<section.seed-product-grid) — Kohana Ring , Big Siz | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.color-scheme) | https://seedjewelry.com/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px 40p)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.analytics>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.shopify-section) — 390px Vertical Lead        | │
+│ | H1: Seed Jewelry                                                   | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.seed-hero>) — 1-Col Stack                 | │
+│ | [ Item 1: Born from the earth, refined by art                    ] | │
+│ | [ Item 2: Best Sellers                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.seed-product-gr) — 1-Col (Kohana Ring , Big ) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.color-scheme) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Tri-Zone Sticky Header (`--header-grid` and `<nav class="header__primary-nav">`)**:
-   - Uses `"primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` with `--header-logo-width: 70px` and `--header-border-color: rgba(255, 255, 255, 0.4)`.
-2. **Emerald & Diamond Hero (`H1: Born from the earth, refined by art`)**:
-   - High-contrast botanical emerald (`#162924`) hero viewport with champagne gold pill CTA (`--seed-cta-bg: #e8d3a8`, `--seed-cta-color: #000000`, `--button-border-radius: 3.125rem`).
-3. **Best Sellers 4-Column Product Grid (`<header class="seed-product-grid__header">` and `H2: Best Sellers`)**:
-   - Driven by `--seed-grid-cols: 4` on desktop and `--seed-grid-cols-mobile: 2` on mobile inside `--container-xl-max-width: 1920px` with `rgb(var(--border-color))` (`#d9d9d9`) borders.
-4. **Collections Showcase (`H2: Discover Our Collections`)**:
-   - Editorial category cards spaced by `--section-vertical-spacing: 2.5rem` and `--section-stack-gap: 2.25rem` with `--button-background: 48 79 72` (`#304f48`) triggers.
-5. **Multi-Nav Atelier Footer (`.seed-footer__nav--shop`, `.seed-footer__nav--about`, `.seed-footer__nav--contact`)**:
-   - Dubai flagship directory with slide-out cart drawer (`--drawer-max-width: min(94vw, 30rem)`) and concierge chat launcher (`.seed-chat__panel`).
+1. **Brand Header & Navigation Bar (<header.analytics> — `seedjewelry-com`)**:
+   - Landmark `<header class="analytics">` (`1440x91px`) hosting `Seed Jewelry · Lab-Grown Diamond Hig` navigation (`Search Search`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `.page-width { max-width:var(--container-xl-max-width);margin:0 auto;padding:0 25px }`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Seed Jewelry`)**:
+   - Landmark `<section class="shopify-section seed-hero-section">` presenting display lead `Seed Jewelry` and copy excerpt *"Celebrating our launch: 20% off every piece until 30 November."* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.seed-hero> — `Born from the earth, refined by ar`)**:
+   - Landmark `<section class="seed-hero">` rendering section `Born from the earth, refined by art` with copy *"Lab-grown diamonds, transformable designs, and sustainable luxury"*, asset references (`gtm.js`, `2113812439524310`, `fbevents.js`, `clarity.js`), and grid rule `.page-width-lg { max-width:var(--container-lg-max-width);margin:0 auto;padding:0 25px }`.
+4. **Interactive Detail & Feature Matrix (<section.seed-product-grid-section> — `Best Sellers`)**:
+   - Landmark `<section class="shopify-section seed-product-grid-section">` framing `Best Sellers` and `Kohana Ring , Big Size, Reverse` (*"Kohana Ring , Big Size, Reverse 18K (750) White Gold · 1 total ca"*) with `#f3f0eb` surface cards, `#1990c6` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.color-scheme--scheme-1> — `https://seedjewelry.com/`)**:
+   - Landmark `<footer class="color-scheme--scheme-1">` anchoring `Seed Jewelry · Lab-Grown Diamond` footer links (`Search Search`), copy *"18K (750) White Gold · 1 total carat weight ·..."*, and `#e3e0d8` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: seedjewelry-com (Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai)
+# Master Zero-Shot Frontend Generation Prompt: seedjewelry-com (Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `seedjewelry-com` (Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `seedjewelry-com` (**Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai** — `https://seedjewelry.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Botanical Emerald & Champagne-Gold High Jewelry Flagship (`Plus Jakarta Sans` + `Poppins` + `GTStandard-M`).
-- **Primary Substrate**: `#ffffff` (`--background-without-opacity: 255 255 255` (`:root`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `0 5px 15px rgb(0 0 0 / 0.05)`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#1990c6` accent).
+- **Identity & Domain Context**: Lab-grown diamond jewelry and transformable designs, crafted in the UAE. Explore Be Free, Kohana, Be True and Always Be, with a tree plan...
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#1990c6`.
 - **Site-Specific Differentiators**:
-  1. **Botanical Emerald & Champagne Gold Contrast**: Pairs deep emerald (`#162924` and `--accent: 48 79 72` / `--button-background: 48 79 72`) with warm champagne gold (`--seed-cta-bg: #e8d3a8`, `--seed-cta-color: #000000`) over pure white (`#ffffff`).
-  2. **Tri-Zone CSS Grid Header (`--header-grid`)**: Uses explicit named grid template areas `--header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` with `--header-logo-width: 70px`.
-  3. **Parameterized 4-to-2 Product Grid (`--seed-grid-cols`)**: Product collections (`header.seed-product-grid__header`, `H2: Best Sellers`, `H2: Discover Our Collections`) scale automatically from `--seed-grid-cols: 4` on desktop to `--seed-grid-cols-mobile: 2`.
-  4. **6-Tier Container Width System**: Defines exact container bounds from `--container-xxs-max-width: 27.5rem` up to `--container-lg-max-width: 90rem` (`1440px`) and `--container-xl-max-width: 1920px`.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#1990c6` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Seed Jewelry`) with `Poppins` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1536px` container bounds (`gap: 10px 40px`, padding `1.5rem`) with `cubic-bezier(.785,.135,.15,.86)` easing and Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `seedjewelry-com` in your global stylesheet:
 
 :root {
-  /* Seed Jewelry · Lab-Grown Diamond High Jewelry Atelier, Dubai — Ground-Truth Extracted CSS Variables */
-  --container-lg-max-width: 90rem; /* 1440px primary desktop container width */
-  --container-xl-max-width: 1920px; /* Full-bleed widescreen showcase max-width */
-  --container-md-max-width: 71.875rem; /* 1150px medium editorial container width */
-  --container-gutter: 1.25rem; /* 20px horizontal container gutter */
-  --section-vertical-spacing: 2.5rem; /* 40px vertical section rhythm */
-  --section-stack-gap: 2.25rem; /* 36px internal stack gap */
-  --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr); /* Tri-zone CSS Grid template for sticky header */
-  --header-logo-width: 70px; /* Centered Seed Jewelry emblem width */
-  --seed-grid-cols: 4; /* 4-column desktop jewelry product grid */
-  --seed-grid-cols-mobile: 2; /* 2-column mobile jewelry product grid */
-  --seed-cta-bg: #e8d3a8; /* Warm champagne gold primary CTA background */
-  --seed-cta-color: #000000; /* Black text ink on champagne gold CTA */
-  --accent: 48 79 72; /* Botanical emerald RGB triplet (#304f48) */
-  --button-background: 48 79 72; /* Emerald button background RGB triplet */
-  --border-color: 217 217 217; /* 1px neutral border RGB triplet (#d9d9d9) */
-  --heading-font-family: "Plus Jakarta Sans", sans-serif; /* Primary geometric heading font family */
-  --text-font-family: Poppins, sans-serif; /* Primary body copy font family */
-  --button-border-radius: 3.125rem; /* 50px pill radius for primary buttons */
-  --drawer-max-width: min(94vw, 30rem); /* Slide-over cart & filter drawer width (480px) */
+  /* Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai (seedjewelry-com) — Live-Grounded CSS Variables */
+  --container-max-width: 100%; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-xxs-max-width: 27.5rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-xs-max-width: 42.5rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-sm-max-width: 61.25rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-md-max-width: 71.875rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-lg-max-width: 90rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-xl-max-width: 1920px; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --container-gutter: 1.25rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --section-vertical-spacing: 2.5rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --section-vertical-spacing-tight: 2.5rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --section-stack-gap: 2.25rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --section-stack-gap-tight: 2.25rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --form-gap: 1.25rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --fieldset-gap: 1rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --form-control-gap: 0.625rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
+  --checkbox-control-gap: 0.75rem; /* Layout / Spatial Grid Token (seedjewelry-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Diamond White Canvas**: `#ffffff` — grounded in `--background-without-opacity: 255 255 255` (`:root`)
-- **Deep Botanical Emerald Surface**: `#162924` — grounded in Extracted stylesheet luxury dark emerald (`#162924`)
-- **Emerald Primary Button & Accent**: `#304f48` — grounded in `--accent: 48 79 72` / `--button-background: 48 79 72` (`rgb(48,79,72)`)
-- **Warm Champagne Gold CTA Fill**: `#e8d3a8` — grounded in `--seed-cta-bg` (`:root`)
-- **Champagne CTA Label Ink**: `#000000` — grounded in `--seed-cta-color` / `--text-color: 0 0 0` (`:root`)
-- **Subtle Gallery Hairline Border**: `#d9d9d9` — grounded in `--border-color: 217 217 217` (`rgb(217,217,217)`)
-- **Translucent Header Border**: `rgba(255, 255, 255, 0.4)` — grounded in `--header-border-color` (`:root`)
-- **Soft Card Elevation Shadow**: `0 5px 15px rgb(0 0 0 / 0.05)` — grounded in `--shadow` (`:root`)
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f3f0eb` — grounded in `var(--seed-pdp-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#1990c6` — grounded in `.shopify-payment-button__button... { background-color: #1990c6 }`
+- **Secondary / Muted Copy**: `#6b716e` — grounded in `var(--seed-pdp-ink-muted)` in `:root`
+- **Structural Hairline Border**: `#e3e0d8` — grounded in `var(--seed-pdp-border)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×7802px` full-page capture (`1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×4200px` full-page capture (`390px` standard mobile width).
-- **Container Max-Width**: `--container-lg-max-width: 90rem` (1440px) and `--container-xl-max-width: 1920px` with `--container-gutter: 1.25rem` (20px)
-- **Padding & Gutters**: `--container-gutter: 1.25rem`, vertical rhythm `--section-vertical-spacing: 2.5rem`, stack gap `--section-stack-gap: 2.25rem`
-- **Desktop Grid**: `--seed-grid-cols: 4` for high-jewelry product matrices; `--header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)`
-- **Mobile Adaptation**: `--seed-grid-cols-mobile: 2` (2-up mobile jewelry grid) with slide-out drawer (`--drawer-max-width: min(94vw, 30rem)`)
-- **Media Queries**: `@media (min-width:448px)`, `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width: 1440px)`
-- **Corner Radii**: `--button-border-radius: 3.125rem` (50px pill CTAs), `--input-border-radius: 0.0rem` (sharp rectangular inputs), `--seed-chat-radius: 8px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1536px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `1.5rem` lateral canvas padding with `10px 40px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: 10px 40px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
+- **Media Queries**: `@media (min-width:767px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)`, `@media screen and (min-width:1000px)`
+- **Corner Radii**: `var(--button-border-radius)`, `var(--rounded-full)`, `var(--input-border-radius)`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `"Plus Jakarta Sans", "GTStandard-M", sans-serif` (`--heading-font-family`)
-- **Body Font Stack**: `Poppins, sans-serif` (`--text-font-family`)
-- **Monospace / Technical Font Stack**: `ui-monospace, "SF Mono", monospace` (Carat weight, VVS clarity grades, AED/USD pricing)
-- **H1 Display Rule**: `clamp(2.25rem, 4.5vw, 4rem)`, `font-family: var(--heading-font-family)`, `font-weight: 400` (`--heading-font-weight`), `letter-spacing: 0.0em` ("Seed Jewelry" / "Born from the earth, refined by art")
-- **H2 Section Rule**: `clamp(1.5rem, 2.8vw, 2.25rem)`, `font-family: var(--heading-font-family)`, `font-weight: 400` ("Best Sellers", "Discover Our Collections")
-- **Body Copy Rule**: `var(--text-base)` (`1.0rem`), `font-family: var(--text-font-family)` (`Poppins`), `font-weight: 400`, `line-height: 1.6`
-- **Metadata & Index Rule**: `var(--text-xs)` (`0.875rem`), `text-transform: uppercase` (`--button-text-transform`), pill buttons with `--button-border-radius: 3.125rem`
+- **Display Font Stack**: `Poppins`
+- **Body Font Stack**: `Poppins`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 52.8px`, `font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 57.6px`, `line-height: 57.6px`, `font-weight: 400`); rule `h2` (`font-size: 120%`, `font-weight: bold`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 400`); CSS variables `--text-base: 1.0rem`, `--modal-body-padding-block: 1.25rem`, `--modal-body-padding-inline: 1.25rem`; rule `,body` (`font-size: 1rem`, `line-height: 1.5rem`, `letter-spacing: initial`, `font-weight: 450`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 400`); CSS variables `--heading-letter-spacing: 0.0em`, `--text-letter-spacing: 0.0em`, `--button-letter-spacing: 0.0em`; rule `.label` (`font-size: 14px`)
 
-### 6. Component Hierarchy & Real DOM Landmarks
-Scaffold the interface with these exact structural regions and class selectors from `seedjewelry-com`:
-1. **Tri-Zone Sticky Header (`--header-grid` and `<nav class="header__primary-nav">`)**:
-   - Architecture & Selectors: Uses `"primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` with `--header-logo-width: 70px` and `--header-border-color: rgba(255, 255, 255, 0.4)`.
-   - Layout & State Contract: Sticky/fixed top header navigation adapting across `@media (min-width:448px)`, `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width: 1440px)` with `cubic-bezier(.25,.46,.45,.94)` (quad ease-out) and `cubic-bezier(.34,1.56,.64,1)` (spring reveal) menu transitions.
-2. **Emerald & Diamond Hero (`H1: Born from the earth, refined by art`)**:
-   - Architecture & Selectors: High-contrast botanical emerald (`#162924`) hero viewport with champagne gold pill CTA (`--seed-cta-bg: #e8d3a8`, `--seed-cta-color: #000000`, `--button-border-radius: 3.125rem`).
-   - Layout & State Contract: Full-viewport hero stage (`1440px` desktop / `390px` mobile) pairing `#ffffff` substrate with `#000000` display typography (`H1`).
-3. **Best Sellers 4-Column Product Grid (`<header class="seed-product-grid__header">` and `H2: Best Sellers`)**:
-   - Architecture & Selectors: Driven by `--seed-grid-cols: 4` on desktop and `--seed-grid-cols-mobile: 2` on mobile inside `--container-xl-max-width: 1920px` with `rgb(var(--border-color))` (`#d9d9d9`) borders.
-   - Layout & State Contract: Primary showcase grid executing `--seed-grid-cols: 4` for high-jewelry product matrices; `--header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr)` on desktop and `--seed-grid-cols-mobile: 2` (2-up mobile jewelry grid) with slide-out drawer (`--drawer-max-width: min(94vw, 30rem)`) on mobile.
-4. **Collections Showcase (`H2: Discover Our Collections`)**:
-   - Architecture & Selectors: Editorial category cards spaced by `--section-vertical-spacing: 2.5rem` and `--section-stack-gap: 2.25rem` with `--button-background: 48 79 72` (`#304f48`) triggers.
-   - Layout & State Contract: Interactive specification & narrative module framed by `--button-border-radius: 3.125rem` (50px pill CTAs), `--input-border-radius: 0.0rem` (sharp rectangular inputs), `--seed-chat-radius: 8px` and `0 5px 15px rgb(0 0 0 / 0.05)` highlights.
-5. **Multi-Nav Atelier Footer (`.seed-footer__nav--shop`, `.seed-footer__nav--about`, `.seed-footer__nav--contact`)**:
-   - Architecture & Selectors: Dubai flagship directory with slide-out cart drawer (`--drawer-max-width: min(94vw, 30rem)`) and concierge chat launcher (`.seed-chat__panel`).
-   - Layout & State Contract: Footer directory and utility bar anchored to `--container-lg-max-width: 90rem` (1440px) and `--container-xl-max-width: 1920px` with `--container-gutter: 1.25rem` (20px) with `--container-gutter: 1.25rem`, vertical rhythm `--section-vertical-spacing: 2.5rem`, stack gap `--section-stack-gap: 2.25rem` lateral gutters.
+### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
+Scaffold `seedjewelry-com` (`Seed Jewelry · Lab-Grown Diamond High Jewelry, Dubai`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.analytics> — `seedjewelry-com`)**:
+   - DOM & Selectors: Landmark `<header class="analytics">` (`1440x91px`) hosting `Seed Jewelry · Lab-Grown Diamond Hig` navigation (`Search Search`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `.page-width { max-width:var(--container-xl-max-width);margin:0 auto;padding:0 25px }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.analytics> — `seedjewelry-com`)` (`seedjewelry-com`) adapts across `@media (min-width:767px)`, `@media (max-width:700px)`, `@media (prefers-reduced-motion:reduce)`, `@media screen and (min-width:1000px)` with `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.45,0,.55,1)` transitions and links `Search Search`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Seed Jewelry`)**:
+   - DOM & Selectors: Landmark `<section class="shopify-section seed-hero-section">` presenting display lead `Seed Jewelry` and copy excerpt *"Celebrating our launch: 20% off every piece until 30 November."* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Seed Jewelry`.
+3. **Primary Showcase & Content Grid (<section.seed-hero> — `Born from the earth, refined by ar`)**:
+   - DOM & Selectors: Landmark `<section class="seed-hero">` rendering section `Born from the earth, refined by art` with copy *"Lab-grown diamonds, transformable designs, and sustainable luxury"*, asset references (`gtm.js`, `2113812439524310`, `fbevents.js`, `clarity.js`), and grid rule `.page-width-lg { max-width:var(--container-lg-max-width);margin:0 auto;padding:0 25px }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.seed-hero> — `Born from the earth, refined by ar`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: 10px 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.seed-product-grid-section> — `Best Sellers`)**:
+   - DOM & Selectors: Landmark `<section class="shopify-section seed-product-grid-section">` framing `Best Sellers` and `Kohana Ring , Big Size, Reverse` (*"Kohana Ring , Big Size, Reverse 18K (750) White Gold · 1 total ca"*) with `#f3f0eb` surface cards, `#1990c6` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.seed-product-grid-section> — `Best Sellers`)` uses `var(--button-border-radius)`, `var(--rounded-full)`, `var(--input-border-radius)`, `2px` radii, `#1990c6` highlights, and assets (gtm.js, 2113812439524310, fbevents.js).
+5. **Colophon & Global Directory Footer (<footer.color-scheme--scheme-1> — `https://seedjewelry.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="color-scheme--scheme-1">` anchoring `Seed Jewelry · Lab-Grown Diamond` footer links (`Search Search`), copy *"18K (750) White Gold · 1 total carat weight ·..."*, and `#e3e0d8` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.color-scheme--scheme-1> — `https://seedjewelry.com/`)` aligns to `1536px` (non-`@media` desktop container stylesheet rule) with `1.5rem` lateral canvas padding with `10px 40px` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-source-attribution="shopify.loadfeatures", data-source-attribution="shopify.dynamic_check...").
 
-### 7. Motion & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.25,.46,.45,.94)` (quad ease-out) and `cubic-bezier(.34,1.56,.64,1)` (spring reveal)
+#### Verbatim DOM Copy Excerpts (`dom.html`)
+- Copy Excerpt 1: *"Celebrating our launch: 20% off every piece until 30 November."*
+- Copy Excerpt 2: *"Lab-grown diamonds, transformable designs, and sustainable luxury. Each piece tell..."*
+- Copy Excerpt 3: *"Kohana Ring , Big Size, Reverse 18K (750) White Gold · 1 total carat weight ·... €..."*
+- Copy Excerpt 4: *"18K (750) White Gold · 1 total carat weight ·..."*
+
+### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
+- **Primary Easing Functions**: `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)`, `cubic-bezier(.45,0,.55,1)`
+- **Extracted Stylesheet Rules (`seedjewelry-com`)**:
+- `.page-width { max-width:var(--container-xl-max-width);margin:0 auto;padding:0 25px }`
+- `.page-width-lg { max-width:var(--container-lg-max-width);margin:0 auto;padding:0 25px }`
+- `strong { font-weight:bolder }`
+- `pre { font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation... }`
+- `table { text-indent:0;border-color:inherit;border-collapse:collapse }`
 - **Per-Selector Transition Rules**:
-- `Header Icon Transitions` -> `--header-icon-exit-duration: .2s`
-- `Product Card Image Hover` -> `cubic-bezier(.25,.46,.45,.94)` (`400ms` secondary macro-angle crossfade)
-- `.seed-chat__panel` -> `transition: opacity .25s ease, transform .25s ease, visibility .25s`
-- `Badge & Drawer entrances` -> `cubic-bezier(.34,1.56,.64,1)`
+- **Selector `.accordion :is(svg)`**: `transition: transform .2s` extracted from `seedjewelry-com` stylesheet.
+- **Selector `.shopify-payment-button__button--...`**: `transition: background-size .45s cubic-bezier(.785,.135,.15,.86),backgroun...` extracted from `seedjewelry-com` stylesheet.
+- **Selector `.shopify-payment-button__button--...`**: `transition: background-size .45s cubic-bezier(.785,.135,.15,.86),backgroun...` extracted from `seedjewelry-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.785,.135,.15,.86)`)**: Governs interactive state transitions across `<header.analytics>` and `<section.seed-hero>`.
+- **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
-- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above.
+- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `seedjewelry-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```

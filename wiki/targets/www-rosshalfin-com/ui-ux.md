@@ -1,67 +1,83 @@
+---
+title: "UI & UX Architecture: www-rosshalfin-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-rosshalfin-com
 
 ## Overview & Design Identity
 - **Target**: `www-rosshalfin-com` (**Ross Halfin Photography · Music Images + Fine Art Prints**)
 - **Production URL**: [https://www.rosshalfin.com](https://www.rosshalfin.com)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#161618` ink, `#161618` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#161618` canvas, `#c1c5cb` ink, `#0073e6` accent)
 - **Summary**: Unparalleled music photography by Ross Halfin - Limited edition Fine-Art prints, signed & embossed. Worldwide shipping
-- **Total Clean CSS Variables Extracted**: `68` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `67` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Barlow Semi Condensed`
 - **Body Font Stack**: `Barlow`
-- **Monospace / Technical Font Stack**: `IBM Plex Sans`
-- **Hero Display (`H1`)**: rule `.title` (`font-size: large`, `font-weight: bold`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.375rem,.9939rem + 1.2...`, `letter-spacing: -.01em`)
-- **Body Copy**: CSS variables `--cmplz_category_body_font_size: 12px`, `--wp--custom--line-height--body: 1.618`; rule `p` (`font-size: 12px`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `14px`, `11px`, `12px`, `13px`)
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **Hero Display (`H1`)**: rule `h1` (`font-size: 30px`, `letter-spacing: -.01em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 56px`, `font-weight: 500`, `letter-spacing: 1.2px`); rule `h2` (`font-size: clamp(1.375rem,.9939rem + 1.2...`, `letter-spacing: -.01em`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: 0.7px`); CSS variables `--wp--custom--line-height--body: 1.618`, `--cmplz_category_body_font_size: 12px`; rule `p` (`font-size: 12px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: 0.7px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ffffff` | `var(--cmplz_banner_background_color)` in `:root` |
-| **Primary Typography Ink** | `#f2f2f2` | `var(--cmplz_banner_border_color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#222222` | `var(--cmplz_text_color)` in `:root` |
-| **Interactive Accent / Highlight** | `#161618` | `var(--cmplz_hyperlink_color)` in `:root` |
-| **Secondary / Muted Copy** | `#f9f9f9` | `var(--cmplz_button_deny_background_color)` in `:root` |
-| **Structural Hairline Border** | `#333333` | `var(--cmplz_button_settings_text_color)` in `:root` |
+| **Primary Canvas Substrate** | `#161618` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#c1c5cb` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#222222` | `.menu-toggle .bar { background-color: #222222 }` |
+| **Interactive Accent / Highlight** | `#0073e6` | `var(--wc-stripe-accent-color)` in `:root` |
+| **Secondary / Muted Copy** | `#333333` | `var(--cmplz_button_settings_text_color)` in `:root` |
+| **Structural Hairline Border** | `#e6e6e6` | `var(--wc-stripe-saved-token-border-color)` in `:root` |
+| **Variable Token (`--wp-block-synced-color`)** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
+| **Variable Token (`--wp-editor-canvas-background`)** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color`)** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-10`)** | `#006ba1` | `var(--wp-admin-theme-color-darker-10)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-20`)** | `#005a87` | `var(--wp-admin-theme-color-darker-20)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--cmplz_banner_width` | `490px` | Layout / Spatial Grid Token |
-| `--cmplz_banner_background_color` | `#ffffff` | Canvas / Surface Token |
-| `--cmplz_banner_border_color` | `#f2f2f2` | Brand / Palette Token |
-| `--cmplz_banner_border_width` | `0px 0px 0px 0px` | Layout / Spatial Grid Token |
-| `--cmplz_banner_border_radius` | `15px 15px 15px 15px` | Elevation / Border Token |
-| `--cmplz_banner_margin` | `10px` | Layout / Spatial Grid Token |
-| `--cmplz_categories-height` | `216px` | Layout / Spatial Grid Token |
-| `--cmplz_title_font_size` | `15px` | Typography / Scale Token |
-| `--cmplz_text_line_height` | `calc(var(--cmplz_text_font_size) * 1.5)` | Typography Ink Token |
-| `--cmplz_text_color` | `#222222` | Typography Ink Token |
-| `--cmplz_hyperlink_color` | `#161618` | Typography Ink Token |
-| `--cmplz_text_font_size` | `12px` | Typography Ink Token |
-| `--cmplz_link_font_size` | `12px` | Typography Ink Token |
-| `--cmplz_category_body_font_size` | `12px` | Typography / Scale Token |
-| `--cmplz_button_accept_background_color` | `#161618` | Canvas / Surface Token |
-| `--cmplz_button_accept_border_color` | `#161618` | Brand / Palette Token |
+| `--wp-block-synced-color` | `#7a00df` | Brand / Palette Token |
+| `--wp-block-synced-color--rgb` | `122,0,223` | Brand / Palette Token |
+| `--wp-bound-block-color` | `var(--wp-block-synced-color)` | Brand / Palette Token |
+| `--wp-editor-canvas-background` | `#ddd` | Canvas / Surface Token |
+| `--wp-admin-theme-color` | `#007cba` | Brand / Palette Token |
+| `--wp-admin-theme-color--rgb` | `0,124,186` | Brand / Palette Token |
+| `--wp-admin-theme-color-darker-10` | `#006ba1` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-10--rgb` | `0,107,160.5` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20` | `#005a87` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20--rgb` | `0,90,135` | Canvas / Surface Token |
+| `--wp-admin-border-width-focus` | `2px` | Layout / Spatial Grid Token |
+| `--wp-admin--admin-bar--position-offset` | `var(--wp-admin--admin-bar--height,0px)` | Dimension / Scale Token |
+| `--wp--custom--line-height--none` | `1` | Typography / Scale Token |
+| `--wp--custom--line-height--tight` | `1.1` | Typography / Scale Token |
+| `--wp--custom--line-height--snug` | `1.2` | Typography / Scale Token |
+| `--wp--custom--line-height--normal` | `1.5` | Typography / Scale Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-rosshalfin-com`)**:
-   - Landmark `<header class="site-header">` hosting `Ross Halfin Photography · Music Imag` navigation (`€ 0.00 0`), DOM attributes (`data-partner-attribution-id="PaymentPlugins_PCP"`, `data-uid-auto="uid_znuqasiucahxrfuik..."`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body .is-layout-constrained>.alig... { max-width:var(--wp--style--global--wide-size) }`.
+   - Landmark `<header class="site-header">` (`234x50px`) hosting `Ross Halfin Photography · Music Imag` navigation (`€ 0.00 0`), DOM attributes (`data-partner-attribution-id="PaymentPlugins_PCP"`, `data-uid-auto="uid_znuqasiucahxrfuik..."`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `before { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.pageSection> — `Welcome To Ross Halfin Photography`)**:
-   - Landmark `<section class="pageSection home__sec__hl">` presenting display lead `Welcome To Ross Halfin Photography` and copy excerpt *"We use cookies to improve site performance and functionality. You"* over `#ffffff` canvas and `#161618` ink.
-3. **Primary Showcase & Content Grid (<section.pageSection> — `Latest Diaries + Updates`)**:
-   - Landmark `<section class="pageSection home__sec__latest_news">` rendering section `Latest Diaries + Updates` with copy *"Functional Always active"*, asset references (`clarity.js`, `recaptcha__en.js`, `xmlrpc.php`, `banner-2-optin.css`), and grid rule `.has-text-align-center { text-align:center }`.
-4. **Interactive Detail & Feature Matrix (<section.pageSection> — `Most Popular Prints`)**:
-   - Landmark `<section class="pageSection home__sec__text">` framing `Most Popular Prints` and `Metallica` (*"Required to enable core site functionality and services you reque"*) with `#222222` surface cards, `#161618` accents, and `.site .wc-block-grid__products { display:grid;gap:30px;margin:0 }`.
+   - Landmark `<section class="pageSection home__sec__hl">` presenting display lead `Welcome To Ross Halfin Photography` and copy excerpt *"No products in the basket."* over `#161618` canvas and `#c1c5cb` ink.
+3. **Primary Showcase & Content Grid (<section.home__sec__latest_news> — `No products in the basket.`)**:
+   - Landmark `<section class="pageSection home__sec__latest_news">` rendering section `No products in the basket.` with copy *"Functional Always active"*, asset references (`recaptcha__en.js`, `xmlrpc.php`, `banner-2-optin.css`, `banner-2-optout.css`), and grid rule `strong { font-weight:bolder }`.
+4. **Interactive Detail & Feature Matrix (<section.home__sec__text> — `Functional Always active`)**:
+   - Landmark `<section class="pageSection home__sec__text">` framing `Functional Always active` and `Required to enable core site functionality and s` (*"Required to enable core site functionality and services you reque"*) with `#222222` surface cards, `#0073e6` accents, and `samp { font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo... }`.
 5. **Colophon & Global Directory Footer (<footer.page-template-template-homepage> — `https://www.rosshalfin.com`)**:
-   - Landmark `<footer class="page-template-template-homepage">` anchoring `Ross Halfin Photography · Music ` footer links (`€ 0.00 0`), copy *"Used to store your preferences, such as language or display "*, and `#333333` structural dividers.
+   - Landmark `<footer class="page-template-template-homepage">` anchoring `Ross Halfin Photography · Music ` footer links (`€ 0.00 0`), copy *"Used to store your preferences, such as language or display "*, and `#e6e6e6` structural dividers.

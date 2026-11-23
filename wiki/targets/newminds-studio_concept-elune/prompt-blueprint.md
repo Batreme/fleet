@@ -1,92 +1,100 @@
 ---
 title: "UI Prompt Blueprint: newminds-studio_concept-elune"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "newminds-studio_concept-elune"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas, `#fff` ink, `#c9d1cc` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#faf7f3` canvas, `#4b303a` ink, `#6a4956` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: newminds-studio_concept-elune
 
-> **ELUNE Women's Health App UX/UI Concept · New Minds** (https://newminds.studio/concept-elune) — Women's health app UX/UI concept by New Minds: cycle tracking, bloodwork records and a separate pregnancy journey. Explore the complete c...
+> **ELUNE — A Private Symptom Diary · New Minds Product Case** (https://newminds.studio/concept-elune) — Inside ELUNE by New Minds: a calm daily check-in, a searchable symptom diary and privacy by design. Explore the iOS and Android product i...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **ELUNE Women's Health App UX/UI Concept · New Minds** (`https://newminds.studio/concept-elune`). Women's health app UX/UI concept by New Minds: cycle tracking, bloodwork records and a separate pregnancy journey. Explore the complete c...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas, `#fff` ink, `#c9d1cc` accent)**.
+- **Brand Essence & Persona**: **ELUNE — A Private Symptom Diary · New Minds Product Case** (`https://newminds.studio/concept-elune`). Inside ELUNE by New Minds: a calm daily check-in, a searchable symptom diary and privacy by design. Explore the iOS and Android product i...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#faf7f3` canvas, `#4b303a` ink, `#6a4956` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#151a18` (`body { background: #151a18 }`) paired with `#fff` primary typography and `#c9d1cc` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted) for display copy (`Women's health, with room for contex`) with `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted) and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 15px`, padding `24px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#faf7f3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#4b303a` primary typography and `#6a4956` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `EluneSerif` for display copy (`A little space to understand yoursel`) with `EluneSans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 24px`, padding `72px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×11083px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1400px` extracted from `newminds-studio_concept-elune` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `15px` grid gap.
-- **Border Radius Scale**: `7px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (live computed `main` `max-width`).
+- **Canvas Lateral Padding & Spacing**: `72px` lateral canvas padding with `24px` grid gap.
+- **Border Radius Scale**: `100px`, `50%`, `160px`, `40px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 15px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:600px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 24px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `72px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:1500px)`, `@media (max-width:960px)`, `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#151a18` | `body { background: #151a18 }` |
-| **Primary Typography Ink** | `#fff` | `body { color: #fff }` |
-| **Elevated Surface / Card Substrate** | `#d5fc65` | `a { color: #d5fc65 }` |
-| **Interactive Accent / Highlight** | `#c9d1cc` | `.case-context p { color: #c9d1cc }` |
-| **Secondary / Muted Copy** | `#7e8c77` | `.case-actions a { border: #7e8c77 }` |
-| **Structural Hairline Border** | `#a9b6ac` | `footer { color: #a9b6ac }` |
+| **Primary Canvas Substrate** | `#faf7f3` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#4b303a` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e6e0ef` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#6a4956` | `.ec-button:hover { background: #6a4956 }` |
+| **Secondary / Muted Copy** | `#74666b` | `var(--ec-muted)` in `:root` |
+| **Structural Hairline Border** | `#e6ddd7` | `var(--ec-line)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--newminds-studio--bg` | `#151a18` | Canvas Substrate (from `body { background: #151a18 }`) |
-| `--newminds-studio--ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
-| `--newminds-studio--surface` | `#d5fc65` | Surface Substrate (stylesheet-derived) |
-| `--newminds-studio--accent` | `#c9d1cc` | Interactive Accent (stylesheet-derived) |
-| `--newminds-studio--muted` | `#7e8c77` | Secondary Ink (stylesheet-derived) |
-| `--newminds-studio--border` | `#a9b6ac` | Structural Border (stylesheet-derived) |
-| `--newminds-studio--container` | `1400px` | Container Bound (stylesheet-derived) |
-| `--newminds-studio--gap` | `15px` | Grid Gutter (stylesheet-derived) |
-| `--newminds-studio--pad` | `24px` | Lateral Padding (stylesheet-derived) |
+| `--ec-ink` | `#4b303a` | Typography Ink Token |
+| `--ec-muted` | `#74666b` | Color / Atmospheric Token |
+| `--ec-paper` | `#faf7f3` | Canvas / Surface Token |
+| `--ec-line` | `#e6ddd7` | Color / Atmospheric Token |
+| `--swatch` | `#4b303a` | Brand / Palette Token |
+| `--newminds-studio--bg` | `#faf7f3` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--newminds-studio--ink` | `#4b303a` | Primary Typography Ink (computed-derived) |
+| `--newminds-studio--surface` | `#e6e0ef` | Surface Substrate (computed-derived) |
+| `--newminds-studio--accent` | `#6a4956` | Interactive Accent (computed-derived) |
+| `--newminds-studio--muted` | `#74666b` | Secondary Ink (computed-derived) |
+| `--newminds-studio--border` | `#e6ddd7` | Structural Border (computed-derived) |
+| `--newminds-studio--container` | `1440px` | Container Bound (computed-derived) |
+| `--newminds-studio--gap` | `24px` | Grid Gutter (computed-derived) |
+| `--newminds-studio--pad` | `72px` | Lateral Padding (computed-derived) |
 | `--newminds-studio--ease` | `cubic-bezier(0.25,0.1,0.25,1)` | Primary Easing Function |
-| `--newminds-studio--radius` | `7px` | Corner Radius (stylesheet-derived) |
-| `--newminds-studio--fs-base` | `11px` | Observed Font Size Token |
+| `--newminds-studio--radius` | `100px` | Corner Radius (computed-derived) |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted).
-- **Primary Body Stack**: `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted).
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `EluneSerif`.
+- **Primary Body Stack**: `EluneSans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(38px,6vw,76px)`, `line-height: 1.06`, `letter-spacing: -.045em`, `font-weight: 500`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(26px,3.5vw,42px)`, `line-height: 1.15`, `letter-spacing: -.03em`, `font-weight: 500`).
-- **Body Copy**: rule `p` (`font-size: clamp(16px,1.7vw,20px)`, `line-height: 1.75`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `11px`, `clamp(38px,6vw,76px)`, `clamp(16px,1.7vw,20px)`, `14px`, `clamp(26px,3.5vw,42px)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 99px`, `line-height: 100.98px`, `font-weight: 400`, `letter-spacing: -4.455px`); rule `h1` (`font-size: clamp(60px,6.9vw,99px)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 63.36px`, `line-height: 64.6272px`, `font-weight: 400`, `letter-spacing: -2.8512px`); rule `h2` (`line-height: 1.02`, `letter-spacing: -.045em`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 28px`, `font-weight: 400`); rule `p` (`font-size: 12px`, `line-height: 1.7`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 21px`, `font-weight: 400`); rule `nav` (`font-size: 12px`).
 
 ---
 
@@ -96,148 +104,175 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas
 - **Extracted Timing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.case-intro>` and `<section.case-context>` interactive targets.
+- **Selector `.ec-button`**: `transition: background .15s` extracted from `newminds-studio_concept-elune` stylesheet.
+- **Selector `media(prefers-reduced-motion:reduce)`**: `transition: none` extracted from `newminds-studio_concept-elune` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — ELUNE Women's Health App UX/UI Concept · N │
+│ DESKTOP VIEWPORT (1440px) — ELUNE — A Private Symptom Diary · New Mind │
 │ ====================================================================== │
-│ [ <header.skip-case>       | More concepts                          ]  │
+│ [ <header.ec-header> (1440x96px)      | Our work · Meet ELUNE ↗      ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.case-intro>                                 |   │
-│ | H1: Women's health, with room for context.                       |   │
-│ | Substrate: #151a18    | Ink: #fff       | Accent: #c9d1cc        |   │
+│ | HERO STAGE: <section.ec-hero> (w=1440px)                           | │
+│ | H1: A little space to understand yourself.                         | │
+│ | Substrate: #faf7f3 | Ink: #4b303a | Accent: #6a4956                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.case-context>    ) max-w: 1400px         |   │
+│ | SHOWCASE GRID (<section.ec-section>) max-w: 1440px                 | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Design scope and interactive |  | Try interactive prototype ↗  | | │
+│ | | Less to navigate. More room  |  | A quick check-in. At your ow | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 15px  ) | │
-│ | [<header.skip-case>] -> [<section.case-intr] -> [<section.case-cont] │
+│ | DETAIL MODULE (<section.ec-feature>) — Your own starting poi       | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.case-context> ) | https://newminds.studio/concept-el │
+│ [ FOOTER (<footer.ec-footer>  ) | https://newminds.studio/concept-elu  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.ec-header>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.ec-hero>) — 390px Vertical Lead               | │
+│ | H1: A little space to understand yourself.                         | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.ec-section>) — 1-Col Stack                | │
+│ | [ Item 1: Less to navigate. More room to notice.                 ] | │
+│ | [ Item 2: A quick check-in. At your own pace.                    ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.ec-feature>) — 1-Col (Your own starting )   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.ec-footer>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.skip-case> — `newminds-studio_concept-elune`)**:
-   - Landmark `<header class="skip-case">` hosting `ELUNE Women's Health App UX/UI Conce` navigation (`More concepts`), DOM attributes (`data-target="newminds-studio_concept-elune"`), and stylesheet rule `body { margin:0;background:151a18;font:16px Arial;color:fff }`.
-2. **Hero Stage & Focal Lead (<section.case-intro> — `Women's health, with room for cont`)**:
-   - Landmark `<section class="case-intro">` presenting display lead `Women's health, with room for context.` and copy excerpt *"Skip to case study"* over `#151a18` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.case-context> — `Design scope and interactive proto`)**:
-   - Landmark `<section class="case-context">` rendering section `Design scope and interactive prototype` with copy *"Try interactive prototype ↗"*, asset references (`concept-elune`, `elune-case-01.jpg (ELUNE, a fictional women’s health mob...)`, `elune-case-02.jpg (Product framing, design objectives an...)`, `elune-case-03.jpg (Cycle overview, calendar with dashed...)`), and grid rule `main { max-width:1400px;margin:auto }`.
-4. **Interactive Detail & Feature Matrix (<section.case-context> — `Try interactive prototype ↗`)**:
-   - Landmark `<section class="case-context">` framing `Try interactive prototype ↗` and `ELUNE / MOBILE APP UX/UI DESIGN CONCEPT` (*"ELUNE / MOBILE APP UX/UI DESIGN CONCEPT"*) with `#d5fc65` surface cards, `#c9d1cc` accents, and `img { display:block;width:100%;height:auto }`.
-5. **Colophon & Global Directory Footer (<footer.case-context> — `https://newminds.studio/concept-elune`)**:
-   - Landmark `<footer class="case-context">` anchoring `ELUNE Women's Health App UX/UI C` footer links (`More concepts`), copy *"ELUNE is an independent women's health app design concept by"*, and `#a9b6ac` structural dividers.
+1. **Brand Header & Navigation Bar (<header.ec-header> — `newminds-studio_concept-elune`)**:
+   - Landmark `<header class="ec-header">` (`1440x96px`) hosting `ELUNE — A Private Symptom Diary · Ne` navigation (`Our work · Meet ELUNE ↗`), DOM attributes (`data-target="newminds-studio_concept-elune"`), and stylesheet rule `font-face { font-family:EluneSerif;src:url('/elune-newsreader.ttf') format('truetype... }`.
+2. **Hero Stage & Focal Lead (<section.ec-hero> — `A little space to understand yours`)**:
+   - Landmark `<section class="ec-hero">` presenting display lead `A little space to understand yourself.` and copy excerpt *"A NEW MINDS PRODUCT / iOS + ANDROID"* over `#faf7f3` canvas and `#4b303a` ink.
+3. **Primary Showcase & Content Grid (<section.ec-section> — `Less to navigate. More room to not`)**:
+   - Landmark `<section class="ec-section ec-opening">` rendering section `Less to navigate. More room to notice.` with copy *"A private symptom and cycle diary. Designed to make daily recordi"*, asset references (`concept-elune`, `elune-product-case.css`, `elune-product-today.jpg (ELUNE Today screen with a cycle overv...)`, `elune-product-symptoms.jpg (ELUNE check-in with optional intensit...)`), and grid rule `.elune-case a { color:inherit;text-decoration:none }`.
+4. **Interactive Detail & Feature Matrix (<section.ec-feature> — `A quick check-in. At your own pace`)**:
+   - Landmark `<section class="ec-feature ec-feature-warm">` framing `A quick check-in. At your own pace.` and `Your own starting point` (*"In private testing on iPhone and Android."*) with `#e6e0ef` surface cards, `#6a4956` accents, and `.elune-case a:focus-visible { outline:3px solid 6c4960;outline-offset:5px }`.
+5. **Colophon & Global Directory Footer (<footer.ec-footer> — `https://newminds.studio/concept-elune`)**:
+   - Landmark `<footer class="ec-footer">` anchoring `ELUNE — A Private Symptom Diary ` footer links (`Our work · Meet ELUNE ↗`), copy *"Actual product interface · Example records"*, and `#e6ddd7` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: newminds-studio_concept-elune (ELUNE Women's Health App UX/UI Concept · New Minds)
+# Master Zero-Shot Frontend Generation Prompt: newminds-studio_concept-elune (ELUNE — A Private Symptom Diary · New Minds Product Case)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `newminds-studio_concept-elune` (**ELUNE Women's Health App UX/UI Concept · New Minds** — `https://newminds.studio/concept-elune`).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `newminds-studio_concept-elune` (**ELUNE — A Private Symptom Diary · New Minds Product Case** — `https://newminds.studio/concept-elune`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#151a18` canvas, `#fff` ink, `#c9d1cc` accent).
-- **Identity & Domain Context**: Women's health app UX/UI concept by New Minds: cycle tracking, bloodwork records and a separate pregnancy journey. Explore the complete c...
-- **Primary Substrate**: `#151a18` (`body { background: #151a18 }`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#c9d1cc`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#faf7f3` canvas, `#4b303a` ink, `#6a4956` accent).
+- **Identity & Domain Context**: Inside ELUNE by New Minds: a calm daily check-in, a searchable symptom diary and privacy by design. Explore the iOS and Android product i...
+- **Primary Substrate**: `#faf7f3` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#4b303a`, **Accent / Highlight**: `#6a4956`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#151a18` (`body { background: #151a18 }`) paired with `#fff` primary typography and `#c9d1cc` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted) for display copy (`Women's health, with room for contex`) with `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted) and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 15px`, padding `24px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#faf7f3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#4b303a` primary typography and `#6a4956` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `EluneSerif` for display copy (`A little space to understand yoursel`) with `EluneSans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 24px`, padding `72px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `newminds-studio_concept-elune` in your global stylesheet:
 
 :root {
-  /* ELUNE Women's Health App UX/UI Concept · New Minds (newminds-studio_concept-elune) — Ground-Truth Extracted CSS Variables */
-  --newminds-studio--bg: #151a18; /* Canvas Substrate (from `body { background: #151a18 }`) (newminds-studio_concept-elune) */
-  --newminds-studio--ink: #fff; /* Primary Typography Ink (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--surface: #d5fc65; /* Surface Substrate (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--accent: #c9d1cc; /* Interactive Accent (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--muted: #7e8c77; /* Secondary Ink (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--border: #a9b6ac; /* Structural Border (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--container: 1400px; /* Container Bound (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--gap: 15px; /* Grid Gutter (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--pad: 24px; /* Lateral Padding (stylesheet-derived) (newminds-studio_concept-elune) */
+  /* ELUNE — A Private Symptom Diary · New Minds Product Case (newminds-studio_concept-elune) — Live-Grounded CSS Variables */
+  --ec-ink: #4b303a; /* Typography Ink Token (newminds-studio_concept-elune) */
+  --ec-muted: #74666b; /* Color / Atmospheric Token (newminds-studio_concept-elune) */
+  --ec-paper: #faf7f3; /* Canvas / Surface Token (newminds-studio_concept-elune) */
+  --ec-line: #e6ddd7; /* Color / Atmospheric Token (newminds-studio_concept-elune) */
+  --swatch: #4b303a; /* Brand / Palette Token (newminds-studio_concept-elune) */
+  --newminds-studio--bg: #faf7f3; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (newminds-studio_concept-elune) */
+  --newminds-studio--ink: #4b303a; /* Primary Typography Ink (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--surface: #e6e0ef; /* Surface Substrate (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--accent: #6a4956; /* Interactive Accent (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--muted: #74666b; /* Secondary Ink (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--border: #e6ddd7; /* Structural Border (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--container: 1440px; /* Container Bound (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--gap: 24px; /* Grid Gutter (computed-derived) (newminds-studio_concept-elune) */
+  --newminds-studio--pad: 72px; /* Lateral Padding (computed-derived) (newminds-studio_concept-elune) */
   --newminds-studio--ease: cubic-bezier(0.25,0.1,0.25,1); /* Primary Easing Function (newminds-studio_concept-elune) */
-  --newminds-studio--radius: 7px; /* Corner Radius (stylesheet-derived) (newminds-studio_concept-elune) */
-  --newminds-studio--fs-base: 11px; /* Observed Font Size Token (newminds-studio_concept-elune) */
+  --newminds-studio--radius: 100px; /* Corner Radius (computed-derived) (newminds-studio_concept-elune) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#151a18` — grounded in `body { background: #151a18 }`
-- **Primary Typography Ink**: `#fff` — grounded in `body { color: #fff }`
-- **Elevated Surface / Card Substrate**: `#d5fc65` — grounded in `a { color: #d5fc65 }`
-- **Interactive Accent / Highlight**: `#c9d1cc` — grounded in `.case-context p { color: #c9d1cc }`
-- **Secondary / Muted Copy**: `#7e8c77` — grounded in `.case-actions a { border: #7e8c77 }`
-- **Structural Hairline Border**: `#a9b6ac` — grounded in `footer { color: #a9b6ac }`
+- **Primary Canvas Substrate**: `#faf7f3` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#4b303a` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e6e0ef` — grounded in live computed `a` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#6a4956` — grounded in `.ec-button:hover { background: #6a4956 }`
+- **Secondary / Muted Copy**: `#74666b` — grounded in `var(--ec-muted)` in `:root`
+- **Structural Hairline Border**: `#e6ddd7` — grounded in `var(--ec-line)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×11083px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1400px` extracted from `newminds-studio_concept-elune` stylesheet
-- **Padding & Gutters**: `24px` lateral canvas padding with `15px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 15px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
-- **Media Queries**: `@media (max-width:600px)`
-- **Corner Radii**: `7px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (live computed `main` `max-width`)
+- **Padding & Gutters**: `72px` lateral canvas padding with `24px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 24px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `72px` horizontal padding
+- **Media Queries**: `@media (min-width:1500px)`, `@media (max-width:960px)`, `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`
+- **Corner Radii**: `100px`, `50%`, `160px`, `40px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted)
-- **Body Font Stack**: `system-ui, -apple-system, sans-serif` (no custom `@font-face` extracted)
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: clamp(38px,6vw,76px)`, `line-height: 1.06`, `letter-spacing: -.045em`, `font-weight: 500`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(26px,3.5vw,42px)`, `line-height: 1.15`, `letter-spacing: -.03em`, `font-weight: 500`)
-- **Body Copy Rule**: rule `p` (`font-size: clamp(16px,1.7vw,20px)`, `line-height: 1.75`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `11px`, `clamp(38px,6vw,76px)`, `clamp(16px,1.7vw,20px)`, `14px`, `clamp(26px,3.5vw,42px)`)
+- **Display Font Stack**: `EluneSerif`
+- **Body Font Stack**: `EluneSans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 99px`, `line-height: 100.98px`, `font-weight: 400`, `letter-spacing: -4.455px`); rule `h1` (`font-size: clamp(60px,6.9vw,99px)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 63.36px`, `line-height: 64.6272px`, `font-weight: 400`, `letter-spacing: -2.8512px`); rule `h2` (`line-height: 1.02`, `letter-spacing: -.045em`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 28px`, `font-weight: 400`); rule `p` (`font-size: 12px`, `line-height: 1.7`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 21px`, `font-weight: 400`); rule `nav` (`font-size: 12px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
-Scaffold `newminds-studio_concept-elune` (`ELUNE Women's Health App UX/UI Concept · New Minds`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.skip-case> — `newminds-studio_concept-elune`)**:
-   - DOM & Selectors: Landmark `<header class="skip-case">` hosting `ELUNE Women's Health App UX/UI Conce` navigation (`More concepts`), DOM attributes (`data-target="newminds-studio_concept-elune"`), and stylesheet rule `body { margin:0;background:151a18;font:16px Arial;color:fff }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.skip-case> — `newminds-studio_concept-elune`)` (`newminds-studio_concept-elune`) adapts across `@media (max-width:600px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `More concepts`.
-2. **Hero Stage & Focal Lead (<section.case-intro> — `Women's health, with room for cont`)**:
-   - DOM & Selectors: Landmark `<section class="case-intro">` presenting display lead `Women's health, with room for context.` and copy excerpt *"Skip to case study"* over `#151a18` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×11083px` desktop / `390×2400px` mobile) sets `#151a18` background with `#fff` headline `Women's health, with room for context.`.
-3. **Primary Showcase & Content Grid (<section.case-context> — `Design scope and interactive proto`)**:
-   - DOM & Selectors: Landmark `<section class="case-context">` rendering section `Design scope and interactive prototype` with copy *"Try interactive prototype ↗"*, asset references (`concept-elune`, `elune-case-01.jpg (ELUNE, a fictional women’s health mob...)`, `elune-case-02.jpg (Product framing, design objectives an...)`, `elune-case-03.jpg (Cycle overview, calendar with dashed...)`), and grid rule `main { max-width:1400px;margin:auto }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.case-context> — `Design scope and interactive proto`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 15px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.case-context> — `Try interactive prototype ↗`)**:
-   - DOM & Selectors: Landmark `<section class="case-context">` framing `Try interactive prototype ↗` and `ELUNE / MOBILE APP UX/UI DESIGN CONCEPT` (*"ELUNE / MOBILE APP UX/UI DESIGN CONCEPT"*) with `#d5fc65` surface cards, `#c9d1cc` accents, and `img { display:block;width:100%;height:auto }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.case-context> — `Try interactive prototype ↗`)` uses `7px` radii, `#c9d1cc` highlights, and assets (concept-elune, elune-case-01.jpg (ELUNE, a fictional women’s health mob...), elune-case-02.jpg (Product framing, design objectives an...)).
-5. **Colophon & Global Directory Footer (<footer.case-context> — `https://newminds.studio/concept-elune`)**:
-   - DOM & Selectors: Landmark `<footer class="case-context">` anchoring `ELUNE Women's Health App UX/UI C` footer links (`More concepts`), copy *"ELUNE is an independent women's health app design concept by"*, and `#a9b6ac` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.case-context> — `https://newminds.studio/concept-elune`)` aligns to `1400px` extracted from `newminds-studio_concept-elune` stylesheet with `24px` lateral canvas padding with `15px` grid gap and attributes (newminds-studio_concept-elune).
+Scaffold `newminds-studio_concept-elune` (`ELUNE — A Private Symptom Diary · New Minds Product Case`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.ec-header> — `newminds-studio_concept-elune`)**:
+   - DOM & Selectors: Landmark `<header class="ec-header">` (`1440x96px`) hosting `ELUNE — A Private Symptom Diary · Ne` navigation (`Our work · Meet ELUNE ↗`), DOM attributes (`data-target="newminds-studio_concept-elune"`), and stylesheet rule `font-face { font-family:EluneSerif;src:url('/elune-newsreader.ttf') format('truetype... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.ec-header> — `newminds-studio_concept-elune`)` (`newminds-studio_concept-elune`) adapts across `@media (min-width:1500px)`, `@media (max-width:960px)`, `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Our work · Meet ELUNE ↗`.
+2. **Hero Stage & Focal Lead (<section.ec-hero> — `A little space to understand yours`)**:
+   - DOM & Selectors: Landmark `<section class="ec-hero">` presenting display lead `A little space to understand yourself.` and copy excerpt *"A NEW MINDS PRODUCT / iOS + ANDROID"* over `#faf7f3` canvas and `#4b303a` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#faf7f3` background with `#4b303a` headline `A little space to understand yourself.`.
+3. **Primary Showcase & Content Grid (<section.ec-section> — `Less to navigate. More room to not`)**:
+   - DOM & Selectors: Landmark `<section class="ec-section ec-opening">` rendering section `Less to navigate. More room to notice.` with copy *"A private symptom and cycle diary. Designed to make daily recordi"*, asset references (`concept-elune`, `elune-product-case.css`, `elune-product-today.jpg (ELUNE Today screen with a cycle overv...)`, `elune-product-symptoms.jpg (ELUNE check-in with optional intensit...)`), and grid rule `.elune-case a { color:inherit;text-decoration:none }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.ec-section> — `Less to navigate. More room to not`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `72px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.ec-feature> — `A quick check-in. At your own pace`)**:
+   - DOM & Selectors: Landmark `<section class="ec-feature ec-feature-warm">` framing `A quick check-in. At your own pace.` and `Your own starting point` (*"In private testing on iPhone and Android."*) with `#e6e0ef` surface cards, `#6a4956` accents, and `.elune-case a:focus-visible { outline:3px solid 6c4960;outline-offset:5px }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.ec-feature> — `A quick check-in. At your own pace`)` uses `100px`, `50%`, `160px`, `40px` radii, `#6a4956` highlights, and assets (concept-elune, elune-product-case.css, elune-product-today.jpg (ELUNE Today screen with a cycle overv...)).
+5. **Colophon & Global Directory Footer (<footer.ec-footer> — `https://newminds.studio/concept-elune`)**:
+   - DOM & Selectors: Landmark `<footer class="ec-footer">` anchoring `ELUNE — A Private Symptom Diary ` footer links (`Our work · Meet ELUNE ↗`), copy *"Actual product interface · Example records"*, and `#e6ddd7` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.ec-footer> — `https://newminds.studio/concept-elune`)` aligns to `1440px` (live computed `main` `max-width`) with `72px` lateral canvas padding with `24px` grid gap and attributes (newminds-studio_concept-elune).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Skip to case study"*
-- Copy Excerpt 2: *"Try interactive prototype ↗"*
-- Copy Excerpt 3: *"ELUNE / MOBILE APP UX/UI DESIGN CONCEPT"*
-- Copy Excerpt 4: *"ELUNE is an independent women's health app design concept by New Minds. It brings..."*
+- Copy Excerpt 1: *"A NEW MINDS PRODUCT / iOS + ANDROID"*
+- Copy Excerpt 2: *"A private symptom and cycle diary. Designed to make daily recording feel simple, a..."*
+- Copy Excerpt 3: *"In private testing on iPhone and Android."*
+- Copy Excerpt 4: *"Actual product interface · Example records"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
 - **Extracted Stylesheet Rules (`newminds-studio_concept-elune`)**:
-- `body { margin:0;background:151a18;font:16px Arial;color:fff }`
-- `main { max-width:1400px;margin:auto }`
-- `img { display:block;width:100%;height:auto }`
-- `footer { padding:40px;line-height:1.7 }`
-- `a:focus-visible { outline:2px solid white }`
+- `font-face { font-family:EluneSerif;src:url('/elune-newsreader.ttf') format('truetype... }`
+- `.elune-case a { color:inherit;text-decoration:none }`
+- `.elune-case a:focus-visible { outline:3px solid 6c4960;outline-offset:5px }`
+- `.elune-case img { max-width:100%;height:auto;display:block }`
+- `.elune-case h2 { font-family:EluneSerif,Georgia,serif;font-weight:400;letter-spacing:-.04... }`
 - **Per-Selector Transition Rules**:
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
-- **State & Hover Choreography**: Opacity and transform transitions on `<section.case-intro>` and `<section.case-context>` interactive targets.
+- **Selector `.ec-button`**: `transition: background .15s` extracted from `newminds-studio_concept-elune` stylesheet.
+- **Selector `media(prefers-reduced-motion:reduce)`**: `transition: none` extracted from `newminds-studio_concept-elune` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `newminds-studio_concept-elune`.

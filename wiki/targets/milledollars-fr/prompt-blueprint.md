@@ -1,70 +1,69 @@
 ---
 title: "UI Prompt Blueprint: milledollars-fr"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "milledollars-fr"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#fff`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e0dee1` / `#c2a1c7`)"
 ---
 
 # UI Design System & Master Generation Blueprint: milledollars-fr
 
 > **MilleDollars** (https://milledollars.fr/) — Creative bureau focused on high-end video production. Working worldwide.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **MilleDollars** (`https://milledollars.fr/`). Creative bureau focused on high-end video production. Working worldwide.
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#fff`)**.
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#e0dee1` / `#c2a1c7`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#c2a1c7` (`var(--color-action)` in `:root`) paired with `#181818` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Redacted Script` for display copy (`MilleDollars`) with `ABCDiatype` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `768px` container bounds (`gap: 4px`, padding `var(--header-spacing-y)`) with `cubic-bezier(.55,.085,.68,.53)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e0dee1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c2a1c7` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `ABCDiatype` for display copy (`MilleDollars`) with `ABCDiatype` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 4px`, padding `var(--header-spacing-y)`) with `cubic-bezier(.55,.085,.68,.53)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `768px` extracted from `milledollars-fr` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1200px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--header-spacing-y)` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `50%`, `.5rem`, `.4rem`, `1rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 768px`, `gap: 4px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--header-spacing-y)` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (min-width:1200px)`.
+- **Extracted CSS Media Queries**: `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (max-width:768px)and (max-width:768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#c2a1c7` | `var(--color-action)` in `:root` |
-| **Primary Typography Ink** | `#e0dee1` | `var(--bg-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#181818` | `var(--text-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `var(--accent-bg-color)` in `:root` |
-| **Secondary / Muted Copy** | `#2c2f31` | `var(--cc-primary-color)` in `:root` |
-| **Structural Hairline Border** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
+| **Primary Canvas Substrate** | `#e0dee1` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `header` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--cc-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#c2a1c7` | `#cc-main .cm__btn:before { background: #c2a1c7 }` |
+| **Secondary / Muted Copy** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
+| **Structural Hairline Border** | `#ffffff` | `var(--accent-border-color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--appear-y` | `var(--y,120%)` | Dimension / Scale Token |
-| `--font-size` | `var(--font-size-top,.625rem)` | Typography / Scale Token |
-| `--section-padding-y` | `6rem` | Layout / Spatial Grid Token |
-| `--font-size-top` | `.75rem` | Typography / Scale Token |
-| `--header-spacing-y` | `2rem` | Layout / Spatial Grid Token |
 | `--ease-in-quad` | `cubic-bezier(.55,.085,.68,.53)` | Motion / Easing Token |
 | `--ease-in-cubic` | `cubic-bezier(.55,.055,.675,.19)` | Motion / Easing Token |
 | `--ease-in-quart` | `cubic-bezier(.895,.03,.685,.22)` | Motion / Easing Token |
@@ -76,21 +75,26 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#f
 | `--ease-out-quart` | `cubic-bezier(.165,.84,.44,1)` | Motion / Easing Token |
 | `--ease-out-quint` | `cubic-bezier(.23,1,.32,1)` | Motion / Easing Token |
 | `--ease-out-expo` | `cubic-bezier(.19,1,.22,1)` | Motion / Easing Token |
+| `--ease-out-circ` | `cubic-bezier(.075,.82,.165,1)` | Motion / Easing Token |
+| `--ease-in-out-quad` | `cubic-bezier(.455,.03,.515,.955)` | Motion / Easing Token |
+| `--ease-in-out-cubic` | `cubic-bezier(.645,.045,.355,1)` | Motion / Easing Token |
+| `--ease-in-out-quart` | `cubic-bezier(.77,0,.175,1)` | Motion / Easing Token |
+| `--ease-in-out-quint` | `cubic-bezier(.86,0,.07,1)` | Motion / Easing Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Redacted Script`.
+- **Display Typography**: `ABCDiatype`.
 - **Primary Body Stack**: `ABCDiatype`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 18px`, `line-height: 18px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
 
 ---
 
@@ -100,50 +104,69 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#f
 - **Extracted Timing Functions**: `cubic-bezier(.55,.085,.68,.53)`, `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.55,.055,.675,.19)`.
 
 ### Per-Element Transition & Choreography Rules
+- **Selector `.o-header-top-item`**: `transition: color .2s linear` extracted from `milledollars-fr` stylesheet.
 - **Selector `.a-lines_inner`**: `transition: transform .26s cubic-bezier(.55,.085,.68,.53) var(--delay-out,0s)` extracted from `milledollars-fr` stylesheet.
 - **Selector `.a-lines.-instant .a-lines_inner`**: `transition: 0s` extracted from `milledollars-fr` stylesheet.
-- **Selector `-inview .a-lines.-controlled .a-l...`**: `transition: 1.5s` extracted from `milledollars-fr` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.55,.085,.68,.53)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.sr-only>`.
+- **Extracted Easing Curve (`cubic-bezier(.55,.085,.68,.53)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.sr-only:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — MilleDollars                               │
 │ ====================================================================== │
-│ [ <header.c-header>        | Home · Works · Info · Contact          ]  │
+│ [ <header.c-header> (1440x64px)       | Home · Works · Info · Contac ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sr-only>                                    |   │
-│ | H1: MilleDollars                                                 |   │
-│ | Substrate: #c2a1c7    | Ink: #181818    | Accent: #fff           |   │
+│ | HERO STAGE: <section.sr-only> (w=1440px)                           | │
+│ | H1: MilleDollars                                                   | │
+│ | Substrate: #e0dee1 | Ink: #000000 | Accent: #c2a1c7                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.sr-only>         ) max-w: 768px          |   │
+│ | SHOWCASE GRID (<section.sr-only:nth(2)>) max-w: 1200px             | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | The Dazzling Division        |  | Ultimate Shield              | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px   ) | │
-│ | [<header.c-header>] -> [<section.sr-only>] -> [<section.sr-only>] |  │
+│ | DETAIL MODULE (<section.sr-only:nth(3)>) — Eternal Snow            | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.c-preloader-lo) | https://milledollars.fr/           │
+│ [ FOOTER (<footer.c-preloader-) | https://milledollars.fr/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.c-header>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.sr-only>) — 390px Vertical Lead               | │
+│ | H1: MilleDollars                                                   | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.sr-only:nth(2) — 1-Col Stack              | │
+│ | [ Item 1: The Dazzling Division                                  ] | │
+│ | [ Item 2: Ultimate Shield                                        ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.sr-only:nth(3)>) — 1-Col (Eternal Snow)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.c-preloader-) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.c-header> — `milledollars-fr`)**:
-   - Landmark `<header class="c-header">` hosting `MilleDollars` navigation (`Home · Works · Info · Contact`), DOM attributes (`data-hid="prismic-preview"`, `data-hid="jsonld-seo"`, `data-symbol="logo"`, `data-symbol="logo-mille"`), and stylesheet rule `.a-mask-lines_inner-mask { margin-bottom:-.2lh }`.
+   - Landmark `<header class="c-header">` (`1440x64px`) hosting `MilleDollars` navigation (`Home · Works · Info · Contact`), DOM attributes (`data-hid="prismic-preview"`, `data-hid="jsonld-seo"`, `data-symbol="logo"`, `data-symbol="logo-mille"`), and stylesheet rule `.o-header-top-item { display:none }`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `MilleDollars`)**:
-   - Landmark `<section class="sr-only">` presenting display lead `MilleDollars` and copy excerpt *"✺ Creative bureau focused on high-end video production."* over `#c2a1c7` canvas and `#181818` ink.
-3. **Primary Showcase & Content Grid (<section.sr-only> — `The Dazzling Division`)**:
-   - Landmark `<section class="sr-only">` rendering section `The Dazzling Division` with copy *"Creative bureau focused on high-end video production. Working wor"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `prismic.min.js`, `css2`), and grid rule `.a-lines { --appear-y:var(--y,120%) }`.
-4. **Interactive Detail & Feature Matrix (<section.sr-only> — `Ultimate Shield`)**:
-   - Landmark `<section class="sr-only">` framing `Ultimate Shield` and `Eternal Snow` (*"The Dazzling Division — Richard Mille (2026)"*) with `#181818` surface cards, `#fff` accents, and `.u-anim.is-inview .a-lines.-contr... { --appear-y:0 }`.
+   - Landmark `<section class="sr-only">` presenting display lead `MilleDollars` and copy excerpt *"Creative bureau focused on high-end video production. Working wor"* over `#e0dee1` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.sr-only:nth(2)> — `The Dazzling Division`)**:
+   - Landmark `<section class="sr-only">` rendering section `The Dazzling Division` with copy *"The Dazzling Division — Richard Mille (2026)"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `prismic.min.js`, `css2`), and grid rule `.a-mask-lines_inner-mask { margin-bottom:-.2lh }`.
+4. **Interactive Detail & Feature Matrix (<section.sr-only:nth(3)> — `Ultimate Shield`)**:
+   - Landmark `<section class="sr-only">` framing `Ultimate Shield` and `Eternal Snow` (*"Ultimate Shield — EviDenS de Beauté (2026)"*) with `#ffffff` surface cards, `#c2a1c7` accents, and `.a-lines { --appear-y:var(--y,120%) }`.
 5. **Colophon & Global Directory Footer (<footer.c-preloader-logo-loop> — `https://milledollars.fr/`)**:
-   - Landmark `<footer class="c-preloader-logo-loop">` anchoring `MilleDollars` footer links (`Home · Works · Info · Contact`), copy *"Ultimate Shield — EviDenS de Beauté (2026)"*, and `#5e6266` structural dividers.
+   - Landmark `<footer class="c-preloader-logo-loop">` anchoring `MilleDollars` footer links (`Home · Works · Info · Contact`), copy *"Eternal Snow — Richard Mille (2026)"*, and `#ffffff` structural dividers.
 
 ---
 
@@ -155,24 +178,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#f
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `milledollars-fr` (**MilleDollars** — `https://milledollars.fr/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#c2a1c7` / `#fff`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#e0dee1` / `#c2a1c7`).
 - **Identity & Domain Context**: Creative bureau focused on high-end video production. Working worldwide.
-- **Primary Substrate**: `#c2a1c7` (`var(--color-action)` in `:root`), **Primary Ink**: `#181818`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#e0dee1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#c2a1c7`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#c2a1c7` (`var(--color-action)` in `:root`) paired with `#181818` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Redacted Script` for display copy (`MilleDollars`) with `ABCDiatype` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `768px` container bounds (`gap: 4px`, padding `var(--header-spacing-y)`) with `cubic-bezier(.55,.085,.68,.53)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e0dee1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c2a1c7` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `ABCDiatype` for display copy (`MilleDollars`) with `ABCDiatype` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 4px`, padding `var(--header-spacing-y)`) with `cubic-bezier(.55,.085,.68,.53)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `milledollars-fr` in your global stylesheet:
 
 :root {
-  /* MilleDollars (milledollars-fr) — Ground-Truth Extracted CSS Variables */
-  --appear-y: var(--y,120%); /* Dimension / Scale Token (milledollars-fr) */
-  --font-size: var(--font-size-top,.625rem); /* Typography / Scale Token (milledollars-fr) */
-  --section-padding-y: 6rem; /* Layout / Spatial Grid Token (milledollars-fr) */
-  --font-size-top: .75rem; /* Typography / Scale Token (milledollars-fr) */
-  --header-spacing-y: 2rem; /* Layout / Spatial Grid Token (milledollars-fr) */
+  /* MilleDollars (milledollars-fr) — Live-Grounded CSS Variables */
   --ease-in-quad: cubic-bezier(.55,.085,.68,.53); /* Motion / Easing Token (milledollars-fr) */
   --ease-in-cubic: cubic-bezier(.55,.055,.675,.19); /* Motion / Easing Token (milledollars-fr) */
   --ease-in-quart: cubic-bezier(.895,.03,.685,.22); /* Motion / Easing Token (milledollars-fr) */
@@ -184,73 +202,78 @@ Declare and consume these exact custom properties extracted from `milledollars-f
   --ease-out-quart: cubic-bezier(.165,.84,.44,1); /* Motion / Easing Token (milledollars-fr) */
   --ease-out-quint: cubic-bezier(.23,1,.32,1); /* Motion / Easing Token (milledollars-fr) */
   --ease-out-expo: cubic-bezier(.19,1,.22,1); /* Motion / Easing Token (milledollars-fr) */
+  --ease-out-circ: cubic-bezier(.075,.82,.165,1); /* Motion / Easing Token (milledollars-fr) */
+  --ease-in-out-quad: cubic-bezier(.455,.03,.515,.955); /* Motion / Easing Token (milledollars-fr) */
+  --ease-in-out-cubic: cubic-bezier(.645,.045,.355,1); /* Motion / Easing Token (milledollars-fr) */
+  --ease-in-out-quart: cubic-bezier(.77,0,.175,1); /* Motion / Easing Token (milledollars-fr) */
+  --ease-in-out-quint: cubic-bezier(.86,0,.07,1); /* Motion / Easing Token (milledollars-fr) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#c2a1c7` — grounded in `var(--color-action)` in `:root`
-- **Primary Typography Ink**: `#e0dee1` — grounded in `var(--bg-color)` in `:root`
-- **Elevated Surface / Card Substrate**: `#181818` — grounded in `var(--text-color)` in `:root`
-- **Interactive Accent / Highlight**: `#fff` — grounded in `var(--accent-bg-color)` in `:root`
-- **Secondary / Muted Copy**: `#2c2f31` — grounded in `var(--cc-primary-color)` in `:root`
-- **Structural Hairline Border**: `#5e6266` — grounded in `var(--cc-secondary-color)` in `:root`
+- **Primary Canvas Substrate**: `#e0dee1` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `header` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `var(--cc-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#c2a1c7` — grounded in `#cc-main .cm__btn:before { background: #c2a1c7 }`
+- **Secondary / Muted Copy**: `#5e6266` — grounded in `var(--cc-secondary-color)` in `:root`
+- **Structural Hairline Border**: `#ffffff` — grounded in `var(--accent-border-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `768px` extracted from `milledollars-fr` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1200px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--header-spacing-y)` lateral canvas padding with `4px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 768px`, `gap: 4px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--header-spacing-y)` horizontal padding
-- **Media Queries**: `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (min-width:1200px)`
+- **Media Queries**: `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (max-width:768px)and (max-width:768px)`
 - **Corner Radii**: `50%`, `.5rem`, `.4rem`, `1rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Redacted Script`
+- **Display Font Stack**: `ABCDiatype`
 - **Body Font Stack**: `ABCDiatype`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--font-size)`, `1.125rem`, `.625rem`, `1rem`, `.75rem`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 18px`, `line-height: 18px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `milledollars-fr` (`MilleDollars`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.c-header> — `milledollars-fr`)**:
-   - DOM & Selectors: Landmark `<header class="c-header">` hosting `MilleDollars` navigation (`Home · Works · Info · Contact`), DOM attributes (`data-hid="prismic-preview"`, `data-hid="jsonld-seo"`, `data-symbol="logo"`, `data-symbol="logo-mille"`), and stylesheet rule `.a-mask-lines_inner-mask { margin-bottom:-.2lh }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.c-header> — `milledollars-fr`)` (`milledollars-fr`) adapts across `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (min-width:1200px)` with `cubic-bezier(.55,.085,.68,.53)`, `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.55,.055,.675,.19)` transitions and links `Home · Works · Info · Contact`.
+   - DOM & Selectors: Landmark `<header class="c-header">` (`1440x64px`) hosting `MilleDollars` navigation (`Home · Works · Info · Contact`), DOM attributes (`data-hid="prismic-preview"`, `data-hid="jsonld-seo"`, `data-symbol="logo"`, `data-symbol="logo-mille"`), and stylesheet rule `.o-header-top-item { display:none }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.c-header> — `milledollars-fr`)` (`milledollars-fr`) adapts across `@media (max-width:768px)`, `@media (min-width:768px)`, `@media (pointer:fine)and (min-width:768px)`, `@media (max-width:768px)and (max-width:768px)` with `cubic-bezier(.55,.085,.68,.53)`, `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.55,.055,.675,.19)` transitions and links `Home · Works · Info · Contact`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `MilleDollars`)**:
-   - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `MilleDollars` and copy excerpt *"✺ Creative bureau focused on high-end video production."* over `#c2a1c7` canvas and `#181818` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#c2a1c7` background with `#181818` headline `MilleDollars`.
-3. **Primary Showcase & Content Grid (<section.sr-only> — `The Dazzling Division`)**:
-   - DOM & Selectors: Landmark `<section class="sr-only">` rendering section `The Dazzling Division` with copy *"Creative bureau focused on high-end video production. Working wor"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `prismic.min.js`, `css2`), and grid rule `.a-lines { --appear-y:var(--y,120%) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sr-only> — `The Dazzling Division`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 768px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--header-spacing-y)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.sr-only> — `Ultimate Shield`)**:
-   - DOM & Selectors: Landmark `<section class="sr-only">` framing `Ultimate Shield` and `Eternal Snow` (*"The Dazzling Division — Richard Mille (2026)"*) with `#181818` surface cards, `#fff` accents, and `.u-anim.is-inview .a-lines.-contr... { --appear-y:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sr-only> — `Ultimate Shield`)` uses `50%`, `.5rem`, `.4rem`, `1rem` radii, `#fff` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, prismic.min.js).
+   - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `MilleDollars` and copy excerpt *"Creative bureau focused on high-end video production. Working wor"* over `#e0dee1` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#e0dee1` background with `#000000` headline `MilleDollars`.
+3. **Primary Showcase & Content Grid (<section.sr-only:nth(2)> — `The Dazzling Division`)**:
+   - DOM & Selectors: Landmark `<section class="sr-only">` rendering section `The Dazzling Division` with copy *"The Dazzling Division — Richard Mille (2026)"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `prismic.min.js`, `css2`), and grid rule `.a-mask-lines_inner-mask { margin-bottom:-.2lh }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sr-only:nth(2)> — `The Dazzling Division`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--header-spacing-y)` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.sr-only:nth(3)> — `Ultimate Shield`)**:
+   - DOM & Selectors: Landmark `<section class="sr-only">` framing `Ultimate Shield` and `Eternal Snow` (*"Ultimate Shield — EviDenS de Beauté (2026)"*) with `#ffffff` surface cards, `#c2a1c7` accents, and `.a-lines { --appear-y:var(--y,120%) }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sr-only:nth(3)> — `Ultimate Shield`)` uses `50%`, `.5rem`, `.4rem`, `1rem` radii, `#c2a1c7` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, prismic.min.js).
 5. **Colophon & Global Directory Footer (<footer.c-preloader-logo-loop> — `https://milledollars.fr/`)**:
-   - DOM & Selectors: Landmark `<footer class="c-preloader-logo-loop">` anchoring `MilleDollars` footer links (`Home · Works · Info · Contact`), copy *"Ultimate Shield — EviDenS de Beauté (2026)"*, and `#5e6266` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.c-preloader-logo-loop> — `https://milledollars.fr/`)` aligns to `768px` extracted from `milledollars-fr` stylesheet with `var(--header-spacing-y)` lateral canvas padding with `4px` grid gap and attributes (data-hid="prismic-preview", data-hid="jsonld-seo", data-symbol="logo").
+   - DOM & Selectors: Landmark `<footer class="c-preloader-logo-loop">` anchoring `MilleDollars` footer links (`Home · Works · Info · Contact`), copy *"Eternal Snow — Richard Mille (2026)"*, and `#ffffff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.c-preloader-logo-loop> — `https://milledollars.fr/`)` aligns to `1200px` (non-`@media` desktop container stylesheet rule) with `var(--header-spacing-y)` lateral canvas padding with `4px` grid gap and attributes (data-hid="prismic-preview", data-hid="jsonld-seo", data-symbol="logo").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"✺ Creative bureau focused on high-end video production."*
-- Copy Excerpt 2: *"Creative bureau focused on high-end video production. Working worldwide."*
-- Copy Excerpt 3: *"The Dazzling Division — Richard Mille (2026)"*
-- Copy Excerpt 4: *"Ultimate Shield — EviDenS de Beauté (2026)"*
+- Copy Excerpt 1: *"Creative bureau focused on high-end video production. Working worldwide."*
+- Copy Excerpt 2: *"The Dazzling Division — Richard Mille (2026)"*
+- Copy Excerpt 3: *"Ultimate Shield — EviDenS de Beauté (2026)"*
+- Copy Excerpt 4: *"Eternal Snow — Richard Mille (2026)"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.55,.085,.68,.53)`, `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.55,.055,.675,.19)`
 - **Extracted Stylesheet Rules (`milledollars-fr`)**:
+- `.o-header-top-item { display:none }`
 - `.a-mask-lines_inner-mask { margin-bottom:-.2lh }`
 - `.a-lines { --appear-y:var(--y,120%) }`
 - `.u-anim.is-inview .a-lines.-contr... { --appear-y:0 }`
 - `.a-lines.-instant .a-lines_inner { transition-duration:0s }`
-- `.a-lines.-centered div { text-align:center!important }`
 - **Per-Selector Transition Rules**:
+- **Selector `.o-header-top-item`**: `transition: color .2s linear` extracted from `milledollars-fr` stylesheet.
 - **Selector `.a-lines_inner`**: `transition: transform .26s cubic-bezier(.55,.085,.68,.53) var(--delay-out,0s)` extracted from `milledollars-fr` stylesheet.
 - **Selector `.a-lines.-instant .a-lines_inner`**: `transition: 0s` extracted from `milledollars-fr` stylesheet.
-- **Selector `-inview .a-lines.-controlled .a-l...`**: `transition: 1.5s` extracted from `milledollars-fr` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.55,.085,.68,.53)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.sr-only>`.
+- **Extracted Easing Curve (`cubic-bezier(.55,.085,.68,.53)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.sr-only:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

@@ -1,35 +1,48 @@
+---
+title: "UI & UX Architecture: brandonyasin-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: brandonyasin-com
 
 ## Overview & Design Identity
 - **Target**: `brandonyasin-com` (**Brandon Yasin — Creative Director & Designer**)
 - **Production URL**: [https://brandonyasin.com](https://brandonyasin.com)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `#fff` ink, `#fff` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#363229` canvas, `#c3beb1` ink, `#ffeb48` accent)
 - **Summary**: Brand, digital and spatial design within lifestyle and luxury. AI scales the production, not the craft. Based in Denmark, working globally.
-- **Total Clean CSS Variables Extracted**: `18` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `18` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Neue Haas Unica Pro`
-- **Body Font Stack**: `Helvetica Now Variable`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
+- **Body Font Stack**: `Neue Haas Unica Pro`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 90.144px`, `line-height: 111.779px`, `font-weight: 400`, `letter-spacing: -3.60576px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40.032px`, `line-height: 48.0384px`, `font-weight: 400`, `letter-spacing: -1.60128px`)
+- **Body Copy**: live computed `body` (`font-size: 15.984px`, `line-height: 20.7792px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#111` | `var(--color-main)` in `:root` |
-| **Primary Typography Ink** | `#f8f6f2` | `var(--color-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#263b1c` | `var(--color-green)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `:before { border: #fff }` |
-| **Secondary / Muted Copy** | `#0000` | `html { color: #0000 }` |
-| **Structural Hairline Border** | `#000` | `.img-wrap:after { background-color: #000 }` |
-| **Variable Token (`--selection-bg`)** | `#44300033` | `var(--selection-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#363229` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#c3beb1` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `.img-wrap:after { background-color: #000000 }` |
+| **Interactive Accent / Highlight** | `#ffeb48` | `::-moz-placeholder { color: #ffeb48 }` |
+| **Secondary / Muted Copy** | `#111111` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | `:before { border: #ffffff }` |
+| **Variable Token (`--color-bg`)** | `#f8f6f2` | `var(--color-bg)` in `:root` |
+| **Variable Token (`--selection-bg`)** | `#443000` | `var(--selection-bg)` in `:root` |
+| **Variable Token (`--color-green`)** | `#263b1c` | `var(--color-green)` in `:root` |
 
 ---
 
@@ -51,18 +64,18 @@
 | `--color-green` | `#263b1c` | Brand / Palette Token |
 | `--line-x` | `0px` | Dimension / Scale Token |
 | `--line-w` | `0` | Design System Custom Token |
-| `--before-w` | `.9` | Design System Custom Token |
+| `--rows-tile-h` | `19.9rem` | Dimension / Scale Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `brandonyasin-com`)**:
-   - Landmark `<header class="header font-body-12">` hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `last-child { margin-bottom:0 }`.
-2. **Hero Stage & Focal Lead (<section.container> — `archive`)**:
-   - Landmark `<section class="container archive-container">` presenting display lead `archive` and copy excerpt *"Brandon Brandon Yasin Yasin Brandon Awwwards Site of the day SOTD"* over `#111` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.header> — `I build refined brands and experie`)**:
-   - Landmark `<section class="header about-header">` rendering section `I build refined brands and experiences across dig...` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.Di9rGxLO.css`, `useSeo.HvQkUdpq.css`, `PageTitle.DBPCFnbI.css`, `about.D7v35ChA.css`), and grid rule `focus-visible { background-color:var(--focus-bg);color:var(--focus-color);outline:none }`.
-4. **Interactive Detail & Feature Matrix (<section.holder> — `my signature approach is guided by`)**:
-   - Landmark `<section class="holder">` framing `my signature approach is guided by core values` and `established design process tried and tested on sm...` (*"Brandon Awwwards Site of the day SOTD"*) with `#263b1c` surface cards, `#fff` accents, and `before { height:.07vw }`.
+   - Landmark `<header class="header font-body-12">` (`1440x84px`) hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `.font-headline-1 { letter-spacing:-.04em;font:400 5.4rem/1.24 Neue Haas Unica Pro,Helvetica... }`.
+2. **Hero Stage & Focal Lead (<section.archive-container> — `archive`)**:
+   - Landmark `<section class="archive-container container">` presenting display lead `archive` and copy excerpt *"Every project begins with observation. Understanding the context,"* over `#363229` canvas and `#c3beb1` ink.
+3. **Primary Showcase & Content Grid (<section.header> — `Every project begins with observat`)**:
+   - Landmark `<section class="header about-header">` rendering section `Every project begins with observation. Understan` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.CxmSBJR3.css`, `BUkWhEWa.js`, `DK3Fl9T5.js`, `IQKDJ7dv.js`), and grid rule `.font-headline-2 { letter-spacing:0;font:251 2.8rem/1.2 Neue Haas Unica Pro,Helvetica Neue,... }`.
+4. **Interactive Detail & Feature Matrix (<section.holder> — `Brandon Awwwards Site of the day S`)**:
+   - Landmark `<section class="holder">` framing `Brandon Awwwards Site of the day SOTD Yasin Site` and `Brandon Awwwards Site of the day SOTD` (*"Brandon Awwwards Site of the day SOTD"*) with `#000000` surface cards, `#ffeb48` accents, and `.font-headline-2-large { letter-spacing:0;font:251 5.5rem/1.24 Neue Haas Unica Pro,Helvetica Neue... }`.
 5. **Colophon & Global Directory Footer (<footer.menu-tile> — `https://brandonyasin.com`)**:
-   - Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#000` structural dividers.
+   - Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#ffffff` structural dividers.

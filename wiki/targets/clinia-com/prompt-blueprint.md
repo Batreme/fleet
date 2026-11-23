@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: clinia-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "clinia-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5c00`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#785d24`)"
 ---
 
 # UI Design System & Master Generation Blueprint: clinia-com
 
 > **Patient Context for Healthcare AI · Clinia** (https://clinia.com) — Fragmented health data breaks AI. Clinia reconciles it into graph-based context so your healthcare AI agents stay reliable and support op...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Patient Context for Healthcare AI · Clinia** (`https://clinia.com`). Fragmented health data breaks AI. Clinia reconciles it into graph-based context so your healthcare AI agents stay reliable and support op...
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5c00`)**.
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#785d24`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#ff5c00` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `NaN Serf B Text` for display copy (`Health data, turned into a patient s`) with `Circular XX` and `Circular XX Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1476px` container bounds (`gap: 5px`, padding `10px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1e` primary typography and `#785d24` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `NaN Serf B Text` for display copy (`Health data, turned into a patient s`) with `Circular XX` and `Circular XX Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `78.9333333333vw` container bounds (`gap: 5px`, padding `80px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1476px` extracted from `clinia-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `5px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `78.9333333333vw` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `80px` lateral canvas padding with `5px` grid gap.
 - **Border Radius Scale**: `var(--blossom-dot-radius)`, `var(--btn-radius)`, `12px`, `8px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1476px`, `gap: 5px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78.9333333333vw`, `gap: 5px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `80px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1200px)`, `@media (min-width:1441px)`.
 
 ---
@@ -48,14 +52,17 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#1a1a1e` | `var(--color-primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#ff5c00` | `var(--color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#cca44f` | `var(--color-noble)` in `:root` |
-| **Structural Hairline Border** | `#95795c` | `var(--color-trust)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1a1a1e` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ebf0f5` | `.hsfc-Step .hsfc-Step__Banner { background-color: #ebf0f5 }` |
+| **Interactive Accent / Highlight** | `#785d24` | `.btn.--tag.--tag-noble { color: #785d24 }` |
+| **Secondary / Muted Copy** | `#ff5c00` | `var(--color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#cccccc` | `var(--hsf-default-datepicker__border-color)` in `:root` |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
+| **Variable Token (`--color-noble`)** | `#cca44f` | `var(--color-noble)` in `:root` |
+| **Variable Token (`--color-trust`)** | `#95795c` | `var(--color-trust)` in `:root` |
 | **Variable Token (`--color-trust-dark`)** | `#53402c` | `var(--color-trust-dark)` in `:root` |
 | **Variable Token (`--color-remedy`)** | `#fcf8ef` | `var(--color-remedy)` in `:root` |
 | **Variable Token (`--color-remedy-dark`)** | `#ecd9b9` | `var(--color-remedy-dark)` in `:root` |
@@ -93,11 +100,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5
 - **Primary Body Stack**: `Circular XX`.
 - **Technical / Metadata Stack**: `Circular XX Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `18px`).
-- **Section Heading (`H2`)**: CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`).
-- **Body Copy**: CSS variables `--ff-body: Circular XX,sans-serif`, `--body-text-color: light-dark(var(--color-primary),var(--color-white))`, `--body-bg-color: light-dark(var(--color-white),var(--gray-900))`.
-- **Metadata & Navigation Labels**: CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__color: currentColor!important`, `--hsf-default-field-label__font-family: Circular XX,sans-serif!important`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 350`, `letter-spacing: -1.12px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 44px`, `font-weight: 350`, `letter-spacing: -0.8px`); CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`).
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-body: Circular XX,sans-serif`, `--paragraph-height: 0px`; rule `p` (`font-size: inherit`, `font-weight: inherit`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__font-family: Helvetica`, `--hsf-default-field-label__font-size: 1em`.
 
 ---
 
@@ -110,47 +117,66 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5
 - **Selector `:where([data-blossom-dot-marker])`**: `transition: opacity .2s` extracted from `clinia-com` stylesheet.
 - **Selector `data-blossom-dot-marker]`**: `transition: inline-size 250ms linear` extracted from `clinia-com` stylesheet.
 - **Selector `tn.--cta:not(.pointer-events-none...`**: `transition: background-color 200ms linear` extracted from `clinia-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<main.flex-grow-1>`.
+- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<main.flex-grow-1:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Patient Context for Healthcare AI · Clinia │
 │ ====================================================================== │
-│ [ <header.site-header>     | Documentation · Changelog · Blog · Tru ]  │
+│ [ <header.site-header> (1425x900px)   | Documentation · Changelog ·  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.flex-grow-1>                                   |   │
-│ | H1: Health data, turned into a patient story                     |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #ff5c00        |   │
+│ | HERO STAGE: <main.flex-grow-1> (w=1425px)                          | │
+│ | H1: Health data, turned into a patient story                       | │
+│ | Substrate: #ffffff | Ink: #1a1a1e | Accent: #785d24                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.flex-grow-1>        ) max-w: 1476px         |   │
+│ | SHOWCASE GRID (<main.flex-grow-1:nth(2)>) max-w: 78.9333333333v    | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Engineered for AI agents in  |  | Health-native                | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 5px   ) | │
-│ | [<header.site-heade] -> [<main.flex-grow-1>] -> [<main.flex-grow-1>] │
+│ | DETAIL MODULE (<main.flex-grow-1:nth(3)>) — Evaluation-first       | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.site-footer>  ) | https://clinia.com                 │
+│ [ FOOTER (<footer.site-footer>) | https://clinia.com                   │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 5px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.flex-grow-1>) — 390px Vertical Lead              | │
+│ | H1: Health data, turned into a patient story                       | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.flex-grow-1:nth() — 1-Col Stack              | │
+│ | [ Item 1: Engineered for AI agents in mission-critical heal...   ] | │
+│ | [ Item 2: Health-native                                          ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.flex-grow-1:nth(3)) — 1-Col (Evaluation-first) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.site-footer>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `clinia-com`)**:
-   - Landmark `<header class="site-header position-fixed">` hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-wp-strategy="async"`, `data-site-loader`, `data-site-transition`), and stylesheet rule `webkit-scrollbar { display:none }`.
+   - Landmark `<header class="site-header position-fixed">` (`1425x900px`) hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-leadin-portal-id="8816539"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`), and stylesheet rule `webkit-scrollbar { display:none }`.
 2. **Hero Stage & Focal Lead (<main.flex-grow-1> — `Health data, turned into a patient`)**:
-   - Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"Product Clinia Context Engine Product A health-specific context l"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<main.flex-grow-1> — `Engineered for AI agents in missio`)**:
-   - Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Clinia Context Engine"*, asset references (`humans.txt`, `xmlrpc.php`, `gtm.js`, `embed`), and grid rule `active { cursor:grabbing }`.
-4. **Interactive Detail & Feature Matrix (<main.flex-grow-1> — `Health-native`)**:
-   - Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Product A health-specific context layer that sits between patient"*) with `#1a1a1e` surface cards, `#ff5c00` accents, and `blossom-dots>blossom-dot { display:none }`.
+   - Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"PATIENT CONTEXT FOR HEALTHCARE AI"* over `#ffffff` canvas and `#1a1a1e` ink.
+3. **Primary Showcase & Content Grid (<main.flex-grow-1:nth(2)> — `Engineered for AI agents in missio`)**:
+   - Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Patient Context for Healthcare AI"*, asset references (`humans.txt`, `xmlrpc.php`, `collectedforms.js`, `banner.js`), and grid rule `active { cursor:grabbing }`.
+4. **Interactive Detail & Feature Matrix (<main.flex-grow-1:nth(3)> — `Health-native`)**:
+   - Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Assemble and serve the right context to your agents, so every run"*) with `#ebf0f5` surface cards, `#785d24` accents, and `blossom-dots>blossom-dot { display:none }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)**:
-   - Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"A health-specific context layer that sits between patient da"*, and `#95795c` structural dividers.
+   - Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"Built for frontier teams, trusted by ambitious builders"*, and `#cccccc` structural dividers.
 
 ---
 
@@ -162,19 +188,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `clinia-com` (**Patient Context for Healthcare AI · Clinia** — `https://clinia.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5c00`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#785d24`).
 - **Identity & Domain Context**: Fragmented health data breaks AI. Clinia reconciles it into graph-based context so your healthcare AI agents stay reliable and support op...
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#ff5c00`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1a1a1e`, **Accent / Highlight**: `#785d24`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#ff5c00` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `NaN Serf B Text` for display copy (`Health data, turned into a patient s`) with `Circular XX` and `Circular XX Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1476px` container bounds (`gap: 5px`, padding `10px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1e` primary typography and `#785d24` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `NaN Serf B Text` for display copy (`Health data, turned into a patient s`) with `Circular XX` and `Circular XX Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `78.9333333333vw` container bounds (`gap: 5px`, padding `80px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `clinia-com` in your global stylesheet:
 
 :root {
-  /* Patient Context for Healthcare AI · Clinia (clinia-com) — Ground-Truth Extracted CSS Variables */
+  /* Patient Context for Healthcare AI · Clinia (clinia-com) — Live-Grounded CSS Variables */
   --color-transparent: transparent; /* Brand / Palette Token (clinia-com) */
   --color-current: currentColor; /* Brand / Palette Token (clinia-com) */
   --color-black: #000; /* Canvas / Surface Token (clinia-com) */
@@ -195,12 +221,15 @@ Declare and consume these exact custom properties extracted from `clinia-com` in
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#1a1a1e` — grounded in `var(--color-primary)` in `:root`
-- **Interactive Accent / Highlight**: `#ff5c00` — grounded in `var(--color-secondary)` in `:root`
-- **Secondary / Muted Copy**: `#cca44f` — grounded in `var(--color-noble)` in `:root`
-- **Structural Hairline Border**: `#95795c` — grounded in `var(--color-trust)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#1a1a1e` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ebf0f5` — grounded in `.hsfc-Step .hsfc-Step__Banner { background-color: #ebf0f5 }`
+- **Interactive Accent / Highlight**: `#785d24` — grounded in `.btn.--tag.--tag-noble { color: #785d24 }`
+- **Secondary / Muted Copy**: `#ff5c00` — grounded in `var(--color-secondary)` in `:root`
+- **Structural Hairline Border**: `#cccccc` — grounded in `var(--hsf-default-datepicker__border-color)` in `:root`
+- **Variable Token (`--color-black`)**: `#000000` — grounded in `var(--color-black)` in `:root`
+- **Variable Token (`--color-noble`)**: `#cca44f` — grounded in `var(--color-noble)` in `:root`
+- **Variable Token (`--color-trust`)**: `#95795c` — grounded in `var(--color-trust)` in `:root`
 - **Variable Token (`--color-trust-dark`)**: `#53402c` — grounded in `var(--color-trust-dark)` in `:root`
 - **Variable Token (`--color-remedy`)**: `#fcf8ef` — grounded in `var(--color-remedy)` in `:root`
 - **Variable Token (`--color-remedy-dark`)**: `#ecd9b9` — grounded in `var(--color-remedy-dark)` in `:root`
@@ -210,12 +239,12 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-aura-dark`)**: `#cabbdb` — grounded in `var(--color-aura-dark)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1476px` extracted from `clinia-com` stylesheet
-- **Padding & Gutters**: `10px` lateral canvas padding with `5px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1476px`, `gap: 5px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `78.9333333333vw` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `80px` lateral canvas padding with `5px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78.9333333333vw`, `gap: 5px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `80px` horizontal padding
 - **Media Queries**: `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1200px)`, `@media (min-width:1441px)`
 - **Corner Radii**: `var(--blossom-dot-radius)`, `var(--btn-radius)`, `12px`, `8px`
 
@@ -223,34 +252,34 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Display Font Stack**: `NaN Serf B Text`
 - **Body Font Stack**: `Circular XX`
 - **Monospace / Technical Font Stack**: `Circular XX Mono`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `18px`)
-- **H2 Section Rule**: CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`)
-- **Body Copy Rule**: CSS variables `--ff-body: Circular XX,sans-serif`, `--body-text-color: light-dark(var(--color-primary),var(--color-white))`, `--body-bg-color: light-dark(var(--color-white),var(--gray-900))`
-- **Metadata & Index Rule**: CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__color: currentColor!important`, `--hsf-default-field-label__font-family: Circular XX,sans-serif!important`
+- **H1 Display Rule**: live computed `h1` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 350`, `letter-spacing: -1.12px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 44px`, `font-weight: 350`, `letter-spacing: -0.8px`); CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`)
+- **Body Copy Rule**: live computed `body` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-body: Circular XX,sans-serif`, `--paragraph-height: 0px`; rule `p` (`font-size: inherit`, `font-weight: inherit`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__font-family: Helvetica`, `--hsf-default-field-label__font-size: 1em`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `clinia-com` (`Patient Context for Healthcare AI · Clinia`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `clinia-com`)**:
-   - DOM & Selectors: Landmark `<header class="site-header position-fixed">` hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-wp-strategy="async"`, `data-site-loader`, `data-site-transition`), and stylesheet rule `webkit-scrollbar { display:none }`.
+   - DOM & Selectors: Landmark `<header class="site-header position-fixed">` (`1425x900px`) hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-leadin-portal-id="8816539"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`), and stylesheet rule `webkit-scrollbar { display:none }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `clinia-com`)` (`clinia-com`) adapts across `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1200px)`, `@media (min-width:1441px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.19,1,.22,1)` transitions and links `Documentation · Changelog · Blog · Trust Center · About us`.
 2. **Hero Stage & Focal Lead (<main.flex-grow-1> — `Health data, turned into a patient`)**:
-   - DOM & Selectors: Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"Product Clinia Context Engine Product A health-specific context l"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Health data, turned into a patient story`.
-3. **Primary Showcase & Content Grid (<main.flex-grow-1> — `Engineered for AI agents in missio`)**:
-   - DOM & Selectors: Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Clinia Context Engine"*, asset references (`humans.txt`, `xmlrpc.php`, `gtm.js`, `embed`), and grid rule `active { cursor:grabbing }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.flex-grow-1> — `Engineered for AI agents in missio`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1476px`, `gap: 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.flex-grow-1> — `Health-native`)**:
-   - DOM & Selectors: Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Product A health-specific context layer that sits between patient"*) with `#1a1a1e` surface cards, `#ff5c00` accents, and `blossom-dots>blossom-dot { display:none }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.flex-grow-1> — `Health-native`)` uses `var(--blossom-dot-radius)`, `var(--btn-radius)`, `12px`, `8px` radii, `#ff5c00` highlights, and assets (humans.txt, xmlrpc.php, gtm.js).
+   - DOM & Selectors: Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"PATIENT CONTEXT FOR HEALTHCARE AI"* over `#ffffff` canvas and `#1a1a1e` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#1a1a1e` headline `Health data, turned into a patient story`.
+3. **Primary Showcase & Content Grid (<main.flex-grow-1:nth(2)> — `Engineered for AI agents in missio`)**:
+   - DOM & Selectors: Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Patient Context for Healthcare AI"*, asset references (`humans.txt`, `xmlrpc.php`, `collectedforms.js`, `banner.js`), and grid rule `active { cursor:grabbing }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.flex-grow-1:nth(2)> — `Engineered for AI agents in missio`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 78.9333333333vw`, `gap: 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `80px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.flex-grow-1:nth(3)> — `Health-native`)**:
+   - DOM & Selectors: Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Assemble and serve the right context to your agents, so every run"*) with `#ebf0f5` surface cards, `#785d24` accents, and `blossom-dots>blossom-dot { display:none }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.flex-grow-1:nth(3)> — `Health-native`)` uses `var(--blossom-dot-radius)`, `var(--btn-radius)`, `12px`, `8px` radii, `#785d24` highlights, and assets (humans.txt, xmlrpc.php, collectedforms.js).
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)**:
-   - DOM & Selectors: Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"A health-specific context layer that sits between patient da"*, and `#95795c` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)` aligns to `1476px` extracted from `clinia-com` stylesheet with `10px` lateral canvas padding with `5px` grid gap and attributes (data-env="production", data-wp-strategy="async", data-site-loader).
+   - DOM & Selectors: Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"Built for frontier teams, trusted by ambitious builders"*, and `#cccccc` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)` aligns to `78.9333333333vw` (non-`@media` desktop container stylesheet rule) with `80px` lateral canvas padding with `5px` grid gap and attributes (data-env="production", data-leadin-portal-id="8816539", data-leadin-env="prod").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Product Clinia Context Engine Product A health-specific context layer that sits be..."*
-- Copy Excerpt 2: *"Clinia Context Engine"*
-- Copy Excerpt 3: *"Product A health-specific context layer that sits between patient data and the AI..."*
-- Copy Excerpt 4: *"A health-specific context layer that sits between patient data and the AI agents b..."*
+- Copy Excerpt 1: *"PATIENT CONTEXT FOR HEALTHCARE AI"*
+- Copy Excerpt 2: *"Patient Context for Healthcare AI"*
+- Copy Excerpt 3: *"Assemble and serve the right context to your agents, so every run is accurate, con..."*
+- Copy Excerpt 4: *"Built for frontier teams, trusted by ambitious builders"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.19,1,.22,1)`
@@ -264,7 +293,7 @@ Scaffold `clinia-com` (`Patient Context for Healthcare AI · Clinia`) with these
 - **Selector `:where([data-blossom-dot-marker])`**: `transition: opacity .2s` extracted from `clinia-com` stylesheet.
 - **Selector `data-blossom-dot-marker]`**: `transition: inline-size 250ms linear` extracted from `clinia-com` stylesheet.
 - **Selector `tn.--cta:not(.pointer-events-none...`**: `transition: background-color 200ms linear` extracted from `clinia-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<main.flex-grow-1>`.
+- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<main.flex-grow-1:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

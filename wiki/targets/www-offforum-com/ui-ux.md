@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: www-offforum-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-offforum-com
 
 ## Overview & Design Identity
 - **Target**: `www-offforum-com` (**A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM · SEPT 15, 2027 · OFFF S...**)
 - **Production URL**: [https://www.offforum.com/](https://www.offforum.com/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#c5c5c5` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×1397px`, Mobile `390×1280px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#808080` accent)
 - **Summary**: A one-week festival convening designers, artists, and digital culture practitioners.
-- **Total Clean CSS Variables Extracted**: `149` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `149` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Baikal`
-- **Body Font Stack**: `Forvm`
+- **Display Font Stack**: `Forvm`
+- **Body Font Stack**: `Baikal`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--text-h1-mobile-offf: 3.2rem`, `--text-h1-mobile-offf--line-height: 3.1rem`, `--text-h1-mobile-offf--font-weight: 600`
-- **Section Heading (`H2`)**: CSS variables `--text-h2-mobile-offf: 3.2rem`, `--text-h2-mobile-offf--line-height: 3.1rem`, `--text-h2-mobile-offf--font-weight: 600`; rule `h2` (`font-size: var(--text-body-mobile)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--tw-font...`)
-- **Body Copy**: CSS variables `--text-body-mobile: 1.8rem`, `--text-body-mobile--line-height: 2rem`, `--text-body-mobile--font-weight: 600`
-- **Metadata & Labels**: CSS variables `--text-body-mobile--letter-spacing: -.04em`, `--text-body-desktop--letter-spacing: -.04em`, `--text-body-2-mobile--letter-spacing: -.02em`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 45px`, `line-height: 43px`, `font-weight: 400`, `letter-spacing: -0.9px`); CSS variables `--text-h1-mobile-offf: 3.2rem`, `--text-h1-mobile-offf--line-height: 3.1rem`, `--text-h1-mobile-offf--font-weight: 600`
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 32px`, `line-height: 31px`, `font-weight: 600`, `letter-spacing: -1.28px`); CSS variables `--text-h2-mobile-offf: 3.2rem`, `--text-h2-mobile-offf--line-height: 3.1rem`, `--text-h2-mobile-offf--font-weight: 600`; rule `h2` (`font-size: var(--text-body-mobile)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--tw-font...`)
+- **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: 15px`, `font-weight: 400`); CSS variables `--text-body-mobile: 1.8rem`, `--text-body-mobile--line-height: 2rem`, `--text-body-mobile--font-weight: 600`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 10px`, `line-height: 15px`, `font-weight: 400`); CSS variables `--text-body-mobile--letter-spacing: -.04em`, `--text-body-desktop--letter-spacing: -.04em`, `--text-body-2-mobile--letter-spacing: -.02em`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ee3338` | `var(--color-red)` in `:root` |
-| **Interactive Accent / Highlight** | `#c5c5c5` | `var(--color-grey)` in `:root` |
-| **Secondary / Muted Copy** | `#0000` | `textarea { background-color: #0000 }` |
-| **Structural Hairline Border** | `#000000` | `html { background-color: black }` (`#000000`) |
+| **Primary Canvas Substrate** | `#000000` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ff0000` | `.bg-red { background-color: red }` (`#ff0000`) |
+| **Interactive Accent / Highlight** | `#808080` | `.button-basic-primary:disabled { background-color: grey }` (`#808080`) |
+| **Secondary / Muted Copy** | `#808080` | `.button-basic-secondary:disabled { color: grey }` (`#808080`) |
+| **Structural Hairline Border** | `#808080` | `.button-basic-primary:disabled { border-color: #808080 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `www-offforum-com`)**:
-   - Landmark `<header class="header h-header-height">` hosting `A WEEK OF DESIGN, ART & DIGITAL CULT` navigation (`About`), DOM attributes (`data-svg-origin="609.3610229492188 0"`, `data-svg-origin="-0.09765620529651642..."`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="header h-header-height">` (`1440x120px`) hosting `A WEEK OF DESIGN, ART & DIGITAL CULT` navigation (`About`), DOM attributes (`data-svg-origin="609.3610229492188 0"`, `data-svg-origin="-0.09765620529651642..."`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<main.min-h-screen> — `A WEEK OF DESIGN, ART & DIGITAL CU`)**:
-   - Landmark `<main class="min-h-screen">` presenting display lead `A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM ·...` and copy excerpt *"We use cookies on this site"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<main.min-h-screen> — `Join our community and get updates`)**:
-   - Landmark `<main class="min-h-screen">` rendering section `Join our community and get updates, offers, and e...` with copy *"Our cookies and those of our partners help improve your experienc"*, asset references (`gtm.js`, `entry.CI2s3_W4.css`, `_payload.json`, `f8tcD554.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<main.min-h-screen> — `Our cookies and those of our partn`)**:
-   - Landmark `<main class="min-h-screen">` framing `Our cookies and those of our partners help impro` and `Allow necessary cookies` (*"Allow necessary cookies"*) with `#ee3338` surface cards, `#c5c5c5` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<main class="min-h-screen">` presenting display lead `A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM ·...` and copy excerpt *"We use cookies on this site"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<main.min-h-screen:nth(2)> — `Join our community and get updates`)**:
+   - Landmark `<main class="min-h-screen">` rendering section `Join our community and get updates, offers, and e...` with copy *"GET YOUR FORUM TICKET"*, asset references (`gtm.js`, `entry.CI2s3_W4.css`, `_payload.json`, `f8tcD554.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<main.min-h-screen:nth(3)> — `GET YOUR FORUM TICKET`)**:
+   - Landmark `<main class="min-h-screen">` framing `GET YOUR FORUM TICKET` and `©OFFFORUM 2026. All rights reserved.` (*"©OFFFORUM 2026. All rights reserved."*) with `#ff0000` surface cards, `#808080` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.container-main> — `https://www.offforum.com/`)**:
-   - Landmark `<footer class="container-main">` anchoring `A WEEK OF DESIGN, ART & DIGITAL ` footer links (`About`), copy *"GET YOUR FORUM TICKET"*, and `#000000` structural dividers.
+   - Landmark `<footer class="container-main">` anchoring `A WEEK OF DESIGN, ART & DIGITAL ` footer links (`About`), copy *"GET YOUR FORUM TICKET"*, and `#808080` structural dividers.

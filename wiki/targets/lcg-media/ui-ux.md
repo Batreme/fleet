@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: lcg-media"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: lcg-media
 
 ## Overview & Design Identity
 - **Target**: `lcg-media` (**LCG · The Agency That Fights for American Families**)
 - **Production URL**: [https://lcg.media](https://lcg.media)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#eeede7` / `#121212`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#de204e`)
 - **Summary**: LCG provides hands-on consulting and creative solutions to support conservative campaigns and drive results for American Families.
-- **Total Clean CSS Variables Extracted**: `36` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `PP Mori`
-- **Body Font Stack**: `Soehne Breit Kraftig`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.7142857143vw`, `1.2345679012vw`, `2.5641025641vw`, `7.2rem`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.7142857143vw`, `1.2345679012vw`, `2.5641025641vw`, `7.2rem`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.7142857143vw`, `1.2345679012vw`, `2.5641025641vw`, `7.2rem`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.7142857143vw`, `1.2345679012vw`, `2.5641025641vw`, `7.2rem`)
+- **Display Font Stack**: `Soehne Breit Kraftig`
+- **Body Font Stack**: `PP Mori`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 74.0571px`, `line-height: 99.9771px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 41.1429px`, `line-height: 57.6px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 10.2857px`, `line-height: 10.2857px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 10.2857px`, `line-height: 10.2857px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#eeede7` | `var(--color-background)` in `:root` |
-| **Primary Typography Ink** | `#e5e4dc` | `var(--color-background-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#dcdbd1` | `var(--color-background-3)` in `:root` |
-| **Interactive Accent / Highlight** | `#121212` | `var(--color-black)` in `:root` |
-| **Secondary / Muted Copy** | `#fff` | `var(--color-white)` in `:root` |
-| **Structural Hairline Border** | `#de204e` | `var(--color-highlight)` in `:root` |
+| **Primary Canvas Substrate** | `#121212` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `.rendered body { background: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#de204e` | `var(--color-highlight)` in `:root` |
+| **Secondary / Muted Copy** | `#68675f` | `nimated .subheader__wrapper spa... { color: #68675f }` |
+| **Structural Hairline Border** | `#000000` | `.cursor__bullet { border: #000000 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.navigation> — `lcg-media`)**:
-   - Landmark `<nav class="navigation">` hosting `LCG · The Agency That Fights for Ame` navigation (`Home · Cases · Capabilities · Creed · Contact`), DOM attributes (`data-template="page"`, `data-svg-origin="121 36"`, `data-svg-origin="121 36"`, `data-svg-origin="0 0"`), and stylesheet rule `.app { height:100%;overflow:clip;position:relative;width:100% }`.
-2. **Hero Stage & Focal Lead (<section.header> — `O n e m e s s a g e a w a y f r o `)**:
-   - Landmark `<section class="header header--left">` presenting display lead `O n e m e s s a g e a w a y f r o m d e l i v e r...` and copy excerpt *"This site uses sound and cookies to enhance your experience"* over `#eeede7` canvas and `#121212` ink.
+   - Landmark `<nav class="navigation">` (`1440px`) hosting `LCG · The Agency That Fights for Ame` navigation (`Home · Cases · Capabilities · Creed · Contact`), DOM attributes (`data-template="page"`, `data-svg-origin="121 36"`, `data-svg-origin="121 36"`, `data-svg-origin="0 0"`), and stylesheet rule `.app { height:100%;overflow:clip;position:relative;width:100% }`.
+2. **Hero Stage & Focal Lead (<section.header> — `The Agency That Fights for America`)**:
+   - Landmark `<section class="header header--left">` presenting display lead `The Agency That Fights for American Families Cons...` and copy excerpt *"The Agency That Fights for"* over `#121212` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.logo-video> — `The Agency That Fights for A m e r`)**:
-   - Landmark `<section class="logo-video">` rendering section `The Agency That Fights for A m e r i c a n F a m...` with copy *"This site uses sound and cookies"*, asset references (`mask.svg`, `bundle.ea4ceea.css`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `before { box-sizing:border-box }`.
-4. **Interactive Detail & Feature Matrix (<section.subheader> — `Fathers Wanted`)**:
-   - Landmark `<section class="subheader subheader--right">` framing `Fathers Wanted` and `Julia Letlow for Louisiana` (*"Do Not Track Tracking Off"*) with `#dcdbd1` surface cards, `#121212` accents, and `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
+   - Landmark `<section class="logo-video">` rendering section `The Agency That Fights for A m e r i c a n F a m...` with copy *"C a s e s C a s e s"*, asset references (`mask.svg`, `bundle.ea4ceea.css`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `before { box-sizing:border-box }`.
+4. **Interactive Detail & Feature Matrix (<section.subheader> — `C a s e s C a s e s`)**:
+   - Landmark `<section class="subheader subheader--right">` framing `C a s e s C a s e s` and `C a p a b i l i t i e s C a p a b i l i t i e s` (*"C a p a b i l i t i e s C a p a b i l i t i e s"*) with `#000000` surface cards, `#de204e` accents, and `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://lcg.media`)**:
-   - Landmark `<footer class="footer">` anchoring `LCG · The Agency That Fights for` footer links (`Home · Cases · Capabilities · Creed · Contact`), copy *"C a s e s C a s e s"*, and `#de204e` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `LCG · The Agency That Fights for` footer links (`Home · Cases · Capabilities · Creed · Contact`), copy *"C r e e d C r e e d"*, and `#000000` structural dividers.

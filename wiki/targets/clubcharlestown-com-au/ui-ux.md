@@ -1,67 +1,83 @@
+---
+title: "UI & UX Architecture: clubcharlestown-com-au"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: clubcharlestown-com-au
 
 ## Overview & Design Identity
 - **Target**: `clubcharlestown-com-au` (**Home · Club Charlestown**)
 - **Production URL**: [https://clubcharlestown.com.au/](https://clubcharlestown.com.au/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#98A2B3` ink, `#344054` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#333333` ink, `#eb8f00` accent)
 - **Summary**: We're a vibrant, family-friendly club where everyone belongs. Come in and discover a place to relax, have fun, and connect with friends a...
-- **Total Clean CSS Variables Extracted**: `429` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `430` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Roboto`
-- **Body Font Stack**: `gotham-xnarrow`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--display: flex`, `--n-menu-wrapper-display: flex`
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2.5em`, `100px`, `15px`, `13px`, `16px`)
-- **Body Copy**: rule `p` (`font-size: var(--form-desc-size)`)
-- **Metadata & Labels**: CSS variables `--label-color: #344054`, `--label-padding: 0px 0px 5px 0px`, `--check-label-color: #1D2939`
+- **Display Font Stack**: `gotham`
+- **Body Font Stack**: `Segoe UI`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); CSS variables `--page-title-display: block`, `--display: flex`, `--n-menu-wrapper-display: flex`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 90px`, `line-height: 90px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: var(--form-desc-size)`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--label-padding: 0px 0px 5px 0px`, `--arrow-prev-caption-spacing: 15px`, `--arrow-next-caption-spacing: 15px`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000000` | `var(--fieldset-color)` in `:root` |
-| **Primary Typography Ink** | `#444444` | `var(--title-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#98A2B3` | `var(--form-desc-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#344054` | `var(--label-color)` in `:root` |
-| **Secondary / Muted Copy** | `#F04438` | `var(--required-color)` in `:root` |
-| **Structural Hairline Border** | `#667085` | `var(--description-color)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#333333` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f9fafb` | `var(--bg-color-disabled)` in `:root` |
+| **Interactive Accent / Highlight** | `#eb8f00` | `.ui-state-active a:visited { color: #eb8f00 }` |
+| **Secondary / Muted Copy** | `#8d8d8d` | `var(--ss-font-placeholder-color)` in `:root` |
+| **Structural Hairline Border** | `#dcdee2` | `var(--ss-border-color)` in `:root` |
+| **Variable Token (`--ss-primary-color`)** | `#5897fb` | `var(--ss-primary-color)` in `:root` |
+| **Variable Token (`--ss-font-color`)** | `#4d4d4d` | `var(--ss-font-color)` in `:root` |
+| **Variable Token (`--ss-highlight-color`)** | `#fffb8c` | `var(--ss-highlight-color)` in `:root` |
+| **Variable Token (`--ss-success-color`)** | `#00b755` | `var(--ss-success-color)` in `:root` |
+| **Variable Token (`--ss-error-color`)** | `#dc3545` | `var(--ss-error-color)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--direction-multiplier` | `1` | Design System Custom Token |
-| `--flex-direction` | `initial` | Design System Custom Token |
-| `--flex-wrap` | `initial` | Layout / Spatial Grid Token |
-| `--justify-content` | `initial` | Design System Custom Token |
-| `--align-items` | `initial` | Design System Custom Token |
-| `--align-content` | `initial` | Design System Custom Token |
-| `--gap` | `initial` | Layout / Spatial Grid Token |
-| `--flex-basis` | `initial` | Design System Custom Token |
-| `--flex-grow` | `initial` | Design System Custom Token |
-| `--flex-shrink` | `initial` | Typography Ink Token |
-| `--order` | `initial` | Design System Custom Token |
-| `--align-self` | `initial` | Design System Custom Token |
-| `--page-title-display` | `block` | Design System Custom Token |
-| `--border-radius` | `0` | Elevation / Border Token |
-| `--border-top-width` | `0px` | Layout / Spatial Grid Token |
-| `--border-right-width` | `0px` | Layout / Spatial Grid Token |
+| `--ss-primary-color` | `#5897fb` | Brand / Palette Token |
+| `--ss-bg-color` | `#ffffff` | Canvas / Surface Token |
+| `--ss-font-color` | `#4d4d4d` | Brand / Palette Token |
+| `--ss-font-placeholder-color` | `#8d8d8d` | Brand / Palette Token |
+| `--ss-disabled-color` | `#dcdee2` | Brand / Palette Token |
+| `--ss-border-color` | `#dcdee2` | Brand / Palette Token |
+| `--ss-highlight-color` | `#fffb8c` | Canvas / Surface Token |
+| `--ss-success-color` | `#00b755` | Brand / Palette Token |
+| `--ss-error-color` | `#dc3545` | Brand / Palette Token |
+| `--ss-focus-color` | `#5897fb` | Brand / Palette Token |
+| `--ss-main-height` | `30px` | Layout / Spatial Grid Token |
+| `--ss-content-height` | `300px` | Layout / Spatial Grid Token |
+| `--ss-spacing-l` | `7px` | Layout / Spatial Grid Token |
+| `--ss-spacing-m` | `5px` | Layout / Spatial Grid Token |
+| `--ss-spacing-s` | `3px` | Layout / Spatial Grid Token |
+| `--ss-animation-timing` | `0.2s` | Motion / Easing Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.elementor> — `clubcharlestown-com-au`)**:
-   - Landmark `<header class="elementor elementor-27">` hosting `Home · Club Charlestown` navigation (`What's On What's On · What's On · Functions · Courtesy Bus · Bowls Bowls`), DOM attributes (`data-elementor-device-mode="desktop"`, `data-elementor-type="header"`, `data-elementor-id="27"`, `data-elementor-post-type="elementor_library"`), and stylesheet rule `.tk-gotham-xnarrow { font-family: "gotham-xnarrow",sans-serif; }`.
-2. **Hero Stage & Focal Lead (<main.site-main> — `Welcome to Club Charlestown`)**:
-   - Landmark `<main class="site-main post-7">` presenting display lead `Welcome to Club Charlestown` and copy excerpt *"Club Lambton Venue Club Lambton Venue"* over `#000000` canvas and `#98A2B3` ink.
-3. **Primary Showcase & Content Grid (<main.site-main> — `Beyond a Club, It's a Community`)**:
-   - Landmark `<main class="site-main post-7">` rendering section `Beyond a Club, It's a Community` with copy *"Club Lambton Venue"*, asset references (`recaptcha__en.js`, `www.googletagmanager.com`, `embed`, `ckx4srt.css`), and grid rule `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
-4. **Interactive Detail & Feature Matrix (<main.site-main> — `Club Lambton`)**:
-   - Landmark `<main class="site-main post-7">` framing `Club Lambton` and `Where Locals Meet` (*"Drink & Dine Drink & Dine"*) with `#98A2B3` surface cards, `#344054` accents, and `.tk-gotham-condensed { font-family: "gotham-condensed",sans-serif; }`.
+   - Landmark `<header class="elementor elementor-27">` (`1440x163px`) hosting `Home · Club Charlestown` navigation (`What's On What's On · What's On · Functions · Courtesy Bus · Bowls Bowls`), DOM attributes (`data-elementor-device-mode="desktop"`, `data-elementor-type="header"`, `data-elementor-id="27"`, `data-elementor-post-type="elementor_library"`), and stylesheet rule `.tk-gotham-xnarrow { font-family: "gotham-xnarrow",sans-serif; }`.
+2. **Hero Stage & Focal Lead (<main.site-main> — `Welcome To Club Charlestown`)**:
+   - Landmark `<main class="site-main post-7">` presenting display lead `Welcome To Club Charlestown` and copy excerpt *"We’re a vibrant, family-friendly club where everyone belongs. Com"* over `#ffffff` canvas and `#333333` ink.
+3. **Primary Showcase & Content Grid (<main.post-7> — `Welcome to Club Charlestown`)**:
+   - Landmark `<main class="site-main post-7">` rendering section `Welcome to Club Charlestown` with copy *"Explore our Bistro & Bars Explore our Bistro & Bars"*, asset references (`recaptcha__en.js`, `www.googletagmanager.com`, `embed`, `ckx4srt.css`), and grid rule `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
+4. **Interactive Detail & Feature Matrix (<main.page> — `Beyond a Club, It's a Community`)**:
+   - Landmark `<main class="site-main post-7">` framing `Beyond a Club, It's a Community` and `Club Lambton` (*"Explore our Bistro & Bars"*) with `#f9fafb` surface cards, `#eb8f00` accents, and `.tk-gotham-condensed { font-family: "gotham-condensed",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://clubcharlestown.com.au/`)**:
-   - Landmark `<footer class="elementor elementor-63">` anchoring `Home · Club Charlestown` footer links (`What's On What's On · What's On · Functions · Courtesy Bus · Bowls Bowls`), copy *"Memberships Memberships"*, and `#667085` structural dividers.
+   - Landmark `<footer class="elementor elementor-63">` anchoring `Home · Club Charlestown` footer links (`What's On What's On · What's On · Functions · Courtesy Bus · Bowls Bowls`), copy *"Book a Table Book a Table"*, and `#dcdee2` structural dividers.

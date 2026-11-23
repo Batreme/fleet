@@ -1,81 +1,85 @@
 ---
 title: "UI Prompt Blueprint: gallery-play-be"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "gallery-play-be"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1E1E1E`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#1e1e1e` / `#ff3700`)"
 ---
 
 # UI Design System & Master Generation Blueprint: gallery-play-be
 
 > **Home - Gallery Play** (https://gallery-play.be/) — We craft bold campaigns, authentic stories and premium collaborations that move sport and culture forward.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Home - Gallery Play** (`https://gallery-play.be/`). We craft bold campaigns, authentic stories and premium collaborations that move sport and culture forward.
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1E1E1E`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#1e1e1e` / `#ff3700`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ccd6df` (`var(--e-rating-icon-color)` in `:root`) paired with `#000000` primary typography and `#1E1E1E` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PP Telegraf` for display copy (`Culture-shifting creativity for the `) with `block` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `200px` container bounds (`gap: .5rem`, padding `10px`) with `cubic-bezier(0.44,0.96,0.5,0.98)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#1e1e1e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff3700` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Telegraf` for display copy (`CULTURE-SHIFTING CREATIVITY FOR THE `) with `PP Telegraf` and `Inconsolata`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1800px` container bounds (`gap: .5rem`, padding `10px`) with `cubic-bezier(0.44,0.96,0.5,0.98)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×10973px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `200px` extracted from `gallery-play-be` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1800px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `.5rem` grid gap.
-- **Border Radius Scale**: `3px`, `50%`, `var(--border-radius)`, `2px`.
+- **Border Radius Scale**: `4px`, `3px`, `var(--border-radius)`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 200px`, `gap: .5rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1800px`, `gap: .5rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)`, `@media (min-width:576px)and (max-width:767px)`.
+- **Extracted CSS Media Queries**: `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ccd6df` | `var(--e-rating-icon-color)` in `:root` |
-| **Primary Typography Ink** | `#f0ad4e` | `var(--e-rating-icon-marked-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#FFFFFF` | `var(--e-global-color-primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#1E1E1E` | `var(--e-global-color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#000000` | `var(--e-global-color-0560f42)` in `:root` |
-| **Structural Hairline Border** | `#E1E1E1` | `var(--e-global-color-160fc90)` in `:root` |
+| **Primary Canvas Substrate** | `#1e1e1e` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#55595c` | `on-dropdown ul.menu li.current-... { background: #55595c }` |
+| **Interactive Accent / Highlight** | `#ff3700` | `var(--gradient-5)` in `:root` |
+| **Secondary / Muted Copy** | `#cc3366` | live computed `a` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#f2f2f2` | `var(--cmplz_banner_border_color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
 | `--direction-multiplier` | `1` | Design System Custom Token |
-| `--flex-direction` | `initial` | Design System Custom Token |
-| `--flex-wrap` | `initial` | Layout / Spatial Grid Token |
-| `--justify-content` | `initial` | Design System Custom Token |
-| `--align-items` | `initial` | Design System Custom Token |
-| `--align-content` | `initial` | Design System Custom Token |
-| `--gap` | `initial` | Layout / Spatial Grid Token |
-| `--flex-basis` | `initial` | Design System Custom Token |
-| `--flex-grow` | `initial` | Design System Custom Token |
-| `--flex-shrink` | `initial` | Typography Ink Token |
-| `--order` | `initial` | Design System Custom Token |
-| `--align-self` | `initial` | Design System Custom Token |
 | `--page-title-display` | `block` | Design System Custom Token |
-| `--border-radius` | `0` | Elevation / Border Token |
-| `--border-top-width` | `0px` | Layout / Spatial Grid Token |
-| `--border-right-width` | `0px` | Layout / Spatial Grid Token |
+| `--cmplz_banner_width` | `526px` | Layout / Spatial Grid Token |
+| `--cmplz_banner_background_color` | `#ffffff` | Canvas / Surface Token |
+| `--cmplz_banner_border_color` | `#f2f2f2` | Brand / Palette Token |
+| `--cmplz_banner_border_width` | `0px 0px 0px 0px` | Layout / Spatial Grid Token |
+| `--cmplz_banner_border_radius` | `0px 0px 0px 0px` | Elevation / Border Token |
+| `--cmplz_banner_margin` | `10px` | Layout / Spatial Grid Token |
+| `--cmplz_categories-height` | `163px` | Layout / Spatial Grid Token |
+| `--cmplz_title_font_size` | `15px` | Typography / Scale Token |
+| `--cmplz_text_line_height` | `calc(var(--cmplz_text_font_size) * 1.5)` | Typography Ink Token |
+| `--cmplz_text_color` | `#1e1e1e` | Typography Ink Token |
+| `--cmplz_hyperlink_color` | `#1e1e1e` | Typography Ink Token |
+| `--cmplz_text_font_size` | `12px` | Typography Ink Token |
+| `--cmplz_link_font_size` | `12px` | Typography Ink Token |
+| `--cmplz_category_body_font_size` | `12px` | Typography / Scale Token |
 
 ---
 
@@ -83,14 +87,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1
 
 ### Font Family Stacks
 - **Display Typography**: `PP Telegraf`.
-- **Primary Body Stack**: `block`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `PP Telegraf`.
+- **Technical / Metadata Stack**: `Inconsolata`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: var( --e-global-typography-pr...`, `line-height: var( --e-global-typog...`, `font-weight: var( --e-glob...`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`, `line-height: 0.9em`, `font-weight: 400`).
-- **Body Copy**: CSS variables `--cmplz_category_body_font_size: 12px`.
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `14px`, `1rem`, `2.5rem`, `2rem`, `1.75rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 57.6px`, `font-weight: 700`); CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: var( --e-global-typography-pr...`, `line-height: var( --e-global-typog...`, `font-weight: var( --e-glob...`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 28.8px`, `font-weight: 700`); rule `h2` (`font-size: 32px`, `line-height: 0.9em`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 300`); CSS variables `--cmplz_category_body_font_size: 12px`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20px`, `font-weight: 300`).
 
 ---
 
@@ -100,50 +104,69 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1
 - **Extracted Timing Functions**: `cubic-bezier(0.44,0.96,0.5,0.98)`, `cubic-bezier(0.26,0.69,0.37,0.96)`, `cubic-bezier(0.83,0.08,0.16,0.97)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `textarea`**: `transition: all .3s` extracted from `gallery-play-be` stylesheet.
-- **Selector `button`**: `transition: all .3s` extracted from `gallery-play-be` stylesheet.
 - **Selector `-holder .site-navigation-toggle-i...`**: `transition: all .2s ease-in-out` extracted from `gallery-play-be` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.44,0.96,0.5,0.98)`)**: Governs interactive state transitions across `<header.elementor>` and `<main.site-main>`.
+- **Selector `.site-navigation-dropdown`**: `transition: max-height .3s,transform .3s` extracted from `gallery-play-be` stylesheet.
+- **Selector `.site-navigation-dropdown ul.menu...`**: `transition: max-height .3s,transform .3s` extracted from `gallery-play-be` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.44,0.96,0.5,0.98)`)**: Governs interactive state transitions across `<header.elementor>` and `<main.post-15>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Home - Gallery Play                        │
 │ ====================================================================== │
-│ [ <header.elementor>       | Projects · Services · Athletes · Team  ]  │
+│ [ <header.elementor> (1440x0px)       | Projects · Services · Athlet ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.site-main>                                     |   │
-│ | H1: Culture-shifting creativity for the world of sports          |   │
-│ | Substrate: #ccd6df    | Ink: #000000    | Accent: #1E1E1E        |   │
+│ | HERO STAGE: <main.site-main> (w=1440px)                            | │
+│ | H1: CULTURE-SHIFTING CREATIVITY FOR THE WORLD OF SPORTS            | │
+│ | Substrate: #1e1e1e | Ink: #ffffff | Accent: #ff3700                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.site-main>          ) max-w: 200px          |   │
+│ | SHOWCASE GRID (<main.post-15>) max-w: 1800px                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Rooted in top-level football |  | Work that speaks louder than | | │
+│ | | Culture-shifting creativity  |  | Rooted in top-level football | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .5rem ) | │
-│ | [<header.elementor>] -> [<main.site-main>] -> [<main.site-main>] |   │
+│ | DETAIL MODULE (<main.page>) — Work that speaks loud                | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.elementor>    ) | https://gallery-play.be/           │
+│ [ FOOTER (<footer.elementor>  ) | https://gallery-play.be/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .5rem)      │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.elementor>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.site-main>) — 390px Vertical Lead                | │
+│ | H1: CULTURE-SHIFTING CREATIVITY FOR THE WORLD OF SPORTS            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.post-15>) — 1-Col Stack                      | │
+│ | [ Item 1: Culture-shifting creativity for the world of sports    ] | │
+│ | [ Item 2: Rooted in top-level football, fluent in branding,...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.page>) — 1-Col (Work that speaks l)            | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.elementor>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.elementor> — `gallery-play-be`)**:
-   - Landmark `<header class="elementor elementor-100">` hosting `Home - Gallery Play` navigation (`Projects · Services · Athletes · Team · Contact`), DOM attributes (`data-mp="true"`, `data-cfasync="false"`, `data-mp="true"`, `data-cfasync="false"`), and stylesheet rule `.cmplz-video.cmplz-iframe-styles { background-color:transparent }`.
-2. **Hero Stage & Focal Lead (<main.site-main> — `Culture-shifting creativity for th`)**:
-   - Landmark `<main class="site-main post-15">` presenting display lead `Culture-shifting creativity for the world of sports` and copy excerpt *"To provide the best experience, we use technologies such as cooki"* over `#ccd6df` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<main.site-main> — `Rooted in top-level football, flue`)**:
-   - Landmark `<main class="site-main post-15">` rendering section `Rooted in top-level football, fluent in branding,...` with copy *"Functional Altijd actief"*, asset references (`player.js`, `recaptcha__en.js`, `embed`, `cookieblocker.min.css`), and grid rule `.cmplz-video.cmplz-hidden { visibility:hidden !important }`.
-4. **Interactive Detail & Feature Matrix (<main.site-main> — `Work that speaks louder than words`)**:
-   - Landmark `<main class="site-main post-15">` framing `Work that speaks louder than words.` and `125 Years of AFC Ajax` (*"The technical storage or access is strictly necessary for the leg"*) with `#FFFFFF` surface cards, `#1E1E1E` accents, and `.cmplz-blocked-content-notice { display:none }`.
+   - Landmark `<header class="elementor elementor-100">` (`1440x0px`) hosting `Home - Gallery Play` navigation (`Projects · Services · Athletes · Team · Contact`), DOM attributes (`data-mp="true"`, `data-cfasync="false"`, `data-mp="true"`, `data-cfasync="false"`), and stylesheet rule `.elementor-kit-5 e-page-transition { background-color:FFBC7D; }`.
+2. **Hero Stage & Focal Lead (<main.site-main> — `CULTURE-SHIFTING CREATIVITY FOR TH`)**:
+   - Landmark `<main class="site-main post-15">` presenting display lead `CULTURE-SHIFTING CREATIVITY FOR THE WORLD OF SPORTS` and copy excerpt *"We craft bold campaigns, authentic stories and premium collaborat"* over `#1e1e1e` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<main.post-15> — `Culture-shifting creativity for th`)**:
+   - Landmark `<main class="site-main post-15">` rendering section `Culture-shifting creativity for the world of sports` with copy *"Start the conversation"*, asset references (`player.js`, `recaptcha__en.js`, `embed`, `cookieblocker.min.css`), and grid rule `or-section-boxed > .elementor-con... { max-width:1800px; }`.
+4. **Interactive Detail & Feature Matrix (<main.page> — `Rooted in top-level football, flue`)**:
+   - Landmark `<main class="site-main post-15">` framing `Rooted in top-level football, fluent in branding,...` and `Work that speaks louder than words.` (*"From shirt launches and transfer announcements to player branding"*) with `#55595c` surface cards, `#ff3700` accents, and `.elementor-element { --widgets-spacing:0px 0px;--widgets-spacing-row:0px;--widgets-spacing-co... }`.
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://gallery-play.be/`)**:
-   - Landmark `<footer class="elementor elementor-102">` anchoring `Home - Gallery Play` footer links (`Projects · Services · Athletes · Team · Contact`), copy *"De technische opslag of toegang is noodzakelijk voor het leg"*, and `#E1E1E1` structural dividers.
+   - Landmark `<footer class="elementor elementor-102">` anchoring `Home - Gallery Play` footer links (`Projects · Services · Athletes · Team · Contact`), copy *"We tailor every collaboration to the client. Brands, athlete"*, and `#f2f2f2` structural dividers.
 
 ---
 
@@ -155,102 +178,102 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `gallery-play-be` (**Home - Gallery Play** — `https://gallery-play.be/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ccd6df` / `#1E1E1E`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#1e1e1e` / `#ff3700`).
 - **Identity & Domain Context**: We craft bold campaigns, authentic stories and premium collaborations that move sport and culture forward.
-- **Primary Substrate**: `#ccd6df` (`var(--e-rating-icon-color)` in `:root`), **Primary Ink**: `#000000`, **Accent / Highlight**: `#1E1E1E`.
+- **Primary Substrate**: `#1e1e1e` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff3700`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ccd6df` (`var(--e-rating-icon-color)` in `:root`) paired with `#000000` primary typography and `#1E1E1E` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PP Telegraf` for display copy (`Culture-shifting creativity for the `) with `block` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `200px` container bounds (`gap: .5rem`, padding `10px`) with `cubic-bezier(0.44,0.96,0.5,0.98)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#1e1e1e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff3700` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Telegraf` for display copy (`CULTURE-SHIFTING CREATIVITY FOR THE `) with `PP Telegraf` and `Inconsolata`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1800px` container bounds (`gap: .5rem`, padding `10px`) with `cubic-bezier(0.44,0.96,0.5,0.98)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `gallery-play-be` in your global stylesheet:
 
 :root {
-  /* Home - Gallery Play (gallery-play-be) — Ground-Truth Extracted CSS Variables */
+  /* Home - Gallery Play (gallery-play-be) — Live-Grounded CSS Variables */
   --direction-multiplier: 1; /* Design System Custom Token (gallery-play-be) */
-  --flex-direction: initial; /* Design System Custom Token (gallery-play-be) */
-  --flex-wrap: initial; /* Layout / Spatial Grid Token (gallery-play-be) */
-  --justify-content: initial; /* Design System Custom Token (gallery-play-be) */
-  --align-items: initial; /* Design System Custom Token (gallery-play-be) */
-  --align-content: initial; /* Design System Custom Token (gallery-play-be) */
-  --gap: initial; /* Layout / Spatial Grid Token (gallery-play-be) */
-  --flex-basis: initial; /* Design System Custom Token (gallery-play-be) */
-  --flex-grow: initial; /* Design System Custom Token (gallery-play-be) */
-  --flex-shrink: initial; /* Typography Ink Token (gallery-play-be) */
-  --order: initial; /* Design System Custom Token (gallery-play-be) */
-  --align-self: initial; /* Design System Custom Token (gallery-play-be) */
   --page-title-display: block; /* Design System Custom Token (gallery-play-be) */
-  --border-radius: 0; /* Elevation / Border Token (gallery-play-be) */
-  --border-top-width: 0px; /* Layout / Spatial Grid Token (gallery-play-be) */
-  --border-right-width: 0px; /* Layout / Spatial Grid Token (gallery-play-be) */
+  --cmplz_banner_width: 526px; /* Layout / Spatial Grid Token (gallery-play-be) */
+  --cmplz_banner_background_color: #ffffff; /* Canvas / Surface Token (gallery-play-be) */
+  --cmplz_banner_border_color: #f2f2f2; /* Brand / Palette Token (gallery-play-be) */
+  --cmplz_banner_border_width: 0px 0px 0px 0px; /* Layout / Spatial Grid Token (gallery-play-be) */
+  --cmplz_banner_border_radius: 0px 0px 0px 0px; /* Elevation / Border Token (gallery-play-be) */
+  --cmplz_banner_margin: 10px; /* Layout / Spatial Grid Token (gallery-play-be) */
+  --cmplz_categories-height: 163px; /* Layout / Spatial Grid Token (gallery-play-be) */
+  --cmplz_title_font_size: 15px; /* Typography / Scale Token (gallery-play-be) */
+  --cmplz_text_line_height: calc(var(--cmplz_text_font_size) * 1.5); /* Typography Ink Token (gallery-play-be) */
+  --cmplz_text_color: #1e1e1e; /* Typography Ink Token (gallery-play-be) */
+  --cmplz_hyperlink_color: #1e1e1e; /* Typography Ink Token (gallery-play-be) */
+  --cmplz_text_font_size: 12px; /* Typography Ink Token (gallery-play-be) */
+  --cmplz_link_font_size: 12px; /* Typography Ink Token (gallery-play-be) */
+  --cmplz_category_body_font_size: 12px; /* Typography / Scale Token (gallery-play-be) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ccd6df` — grounded in `var(--e-rating-icon-color)` in `:root`
-- **Primary Typography Ink**: `#f0ad4e` — grounded in `var(--e-rating-icon-marked-color)` in `:root`
-- **Elevated Surface / Card Substrate**: `#FFFFFF` — grounded in `var(--e-global-color-primary)` in `:root`
-- **Interactive Accent / Highlight**: `#1E1E1E` — grounded in `var(--e-global-color-accent)` in `:root`
-- **Secondary / Muted Copy**: `#000000` — grounded in `var(--e-global-color-0560f42)` in `:root`
-- **Structural Hairline Border**: `#E1E1E1` — grounded in `var(--e-global-color-160fc90)` in `:root`
+- **Primary Canvas Substrate**: `#1e1e1e` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#55595c` — grounded in `on-dropdown ul.menu li.current-... { background: #55595c }`
+- **Interactive Accent / Highlight**: `#ff3700` — grounded in `var(--gradient-5)` in `:root`
+- **Secondary / Muted Copy**: `#cc3366` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#f2f2f2` — grounded in `var(--cmplz_banner_border_color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×10973px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `200px` extracted from `gallery-play-be` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1800px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `10px` lateral canvas padding with `.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 200px`, `gap: .5rem`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1800px`, `gap: .5rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
-- **Media Queries**: `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)`, `@media (min-width:576px)and (max-width:767px)`
-- **Corner Radii**: `3px`, `50%`, `var(--border-radius)`, `2px`
+- **Media Queries**: `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)`
+- **Corner Radii**: `4px`, `3px`, `var(--border-radius)`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `PP Telegraf`
-- **Body Font Stack**: `block`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: var( --e-global-typography-pr...`, `line-height: var( --e-global-typog...`, `font-weight: var( --e-glob...`)
-- **H2 Section Rule**: rule `h2` (`font-size: 32px`, `line-height: 0.9em`, `font-weight: 400`)
-- **Body Copy Rule**: CSS variables `--cmplz_category_body_font_size: 12px`
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `14px`, `1rem`, `2.5rem`, `2rem`, `1.75rem`)
+- **Body Font Stack**: `PP Telegraf`
+- **Monospace / Technical Font Stack**: `Inconsolata`
+- **H1 Display Rule**: live computed `h1` (`font-size: 64px`, `line-height: 57.6px`, `font-weight: 700`); CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: var( --e-global-typography-pr...`, `line-height: var( --e-global-typog...`, `font-weight: var( --e-glob...`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 32px`, `line-height: 28.8px`, `font-weight: 700`); rule `h2` (`font-size: 32px`, `line-height: 0.9em`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 300`); CSS variables `--cmplz_category_body_font_size: 12px`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 20px`, `font-weight: 300`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `gallery-play-be` (`Home - Gallery Play`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.elementor> — `gallery-play-be`)**:
-   - DOM & Selectors: Landmark `<header class="elementor elementor-100">` hosting `Home - Gallery Play` navigation (`Projects · Services · Athletes · Team · Contact`), DOM attributes (`data-mp="true"`, `data-cfasync="false"`, `data-mp="true"`, `data-cfasync="false"`), and stylesheet rule `.cmplz-video.cmplz-iframe-styles { background-color:transparent }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `gallery-play-be`)` (`gallery-play-be`) adapts across `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)`, `@media (min-width:576px)and (max-width:767px)` with `cubic-bezier(0.44,0.96,0.5,0.98)`, `cubic-bezier(0.26,0.69,0.37,0.96)`, `cubic-bezier(0.83,0.08,0.16,0.97)` transitions and links `Projects · Services · Athletes · Team · Contact`.
-2. **Hero Stage & Focal Lead (<main.site-main> — `Culture-shifting creativity for th`)**:
-   - DOM & Selectors: Landmark `<main class="site-main post-15">` presenting display lead `Culture-shifting creativity for the world of sports` and copy excerpt *"To provide the best experience, we use technologies such as cooki"* over `#ccd6df` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×10973px` desktop / `390×2400px` mobile) sets `#ccd6df` background with `#000000` headline `Culture-shifting creativity for the world of sports`.
-3. **Primary Showcase & Content Grid (<main.site-main> — `Rooted in top-level football, flue`)**:
-   - DOM & Selectors: Landmark `<main class="site-main post-15">` rendering section `Rooted in top-level football, fluent in branding,...` with copy *"Functional Altijd actief"*, asset references (`player.js`, `recaptcha__en.js`, `embed`, `cookieblocker.min.css`), and grid rule `.cmplz-video.cmplz-hidden { visibility:hidden !important }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.site-main> — `Rooted in top-level football, flue`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 200px`, `gap: .5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.site-main> — `Work that speaks louder than words`)**:
-   - DOM & Selectors: Landmark `<main class="site-main post-15">` framing `Work that speaks louder than words.` and `125 Years of AFC Ajax` (*"The technical storage or access is strictly necessary for the leg"*) with `#FFFFFF` surface cards, `#1E1E1E` accents, and `.cmplz-blocked-content-notice { display:none }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.site-main> — `Work that speaks louder than words`)` uses `3px`, `50%`, `var(--border-radius)`, `2px` radii, `#1E1E1E` highlights, and assets (player.js, recaptcha__en.js, embed).
+   - DOM & Selectors: Landmark `<header class="elementor elementor-100">` (`1440x0px`) hosting `Home - Gallery Play` navigation (`Projects · Services · Athletes · Team · Contact`), DOM attributes (`data-mp="true"`, `data-cfasync="false"`, `data-mp="true"`, `data-cfasync="false"`), and stylesheet rule `.elementor-kit-5 e-page-transition { background-color:FFBC7D; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `gallery-play-be`)` (`gallery-play-be`) adapts across `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (max-width:576px)`, `@media (min-width:768px)` with `cubic-bezier(0.44,0.96,0.5,0.98)`, `cubic-bezier(0.26,0.69,0.37,0.96)`, `cubic-bezier(0.83,0.08,0.16,0.97)` transitions and links `Projects · Services · Athletes · Team · Contact`.
+2. **Hero Stage & Focal Lead (<main.site-main> — `CULTURE-SHIFTING CREATIVITY FOR TH`)**:
+   - DOM & Selectors: Landmark `<main class="site-main post-15">` presenting display lead `CULTURE-SHIFTING CREATIVITY FOR THE WORLD OF SPORTS` and copy excerpt *"We craft bold campaigns, authentic stories and premium collaborat"* over `#1e1e1e` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#1e1e1e` background with `#ffffff` headline `CULTURE-SHIFTING CREATIVITY FOR THE WORLD OF SPORTS`.
+3. **Primary Showcase & Content Grid (<main.post-15> — `Culture-shifting creativity for th`)**:
+   - DOM & Selectors: Landmark `<main class="site-main post-15">` rendering section `Culture-shifting creativity for the world of sports` with copy *"Start the conversation"*, asset references (`player.js`, `recaptcha__en.js`, `embed`, `cookieblocker.min.css`), and grid rule `or-section-boxed > .elementor-con... { max-width:1800px; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.post-15> — `Culture-shifting creativity for th`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1800px`, `gap: .5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.page> — `Rooted in top-level football, flue`)**:
+   - DOM & Selectors: Landmark `<main class="site-main post-15">` framing `Rooted in top-level football, fluent in branding,...` and `Work that speaks louder than words.` (*"From shirt launches and transfer announcements to player branding"*) with `#55595c` surface cards, `#ff3700` accents, and `.elementor-element { --widgets-spacing:0px 0px;--widgets-spacing-row:0px;--widgets-spacing-co... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.page> — `Rooted in top-level football, flue`)` uses `4px`, `3px`, `var(--border-radius)`, `2px` radii, `#ff3700` highlights, and assets (player.js, recaptcha__en.js, embed).
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://gallery-play.be/`)**:
-   - DOM & Selectors: Landmark `<footer class="elementor elementor-102">` anchoring `Home - Gallery Play` footer links (`Projects · Services · Athletes · Team · Contact`), copy *"De technische opslag of toegang is noodzakelijk voor het leg"*, and `#E1E1E1` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.elementor> — `https://gallery-play.be/`)` aligns to `200px` extracted from `gallery-play-be` stylesheet with `10px` lateral canvas padding with `.5rem` grid gap and attributes (data-mp="true", data-cfasync="false", data-mp="true").
+   - DOM & Selectors: Landmark `<footer class="elementor elementor-102">` anchoring `Home - Gallery Play` footer links (`Projects · Services · Athletes · Team · Contact`), copy *"We tailor every collaboration to the client. Brands, athlete"*, and `#f2f2f2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.elementor> — `https://gallery-play.be/`)` aligns to `1800px` (non-`@media` desktop container stylesheet rule) with `10px` lateral canvas padding with `.5rem` grid gap and attributes (data-mp="true", data-cfasync="false", data-mp="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"To provide the best experience, we use technologies such as cookies to store and/o..."*
-- Copy Excerpt 2: *"Functional Altijd actief"*
-- Copy Excerpt 3: *"The technical storage or access is strictly necessary for the legitimate purpose o..."*
-- Copy Excerpt 4: *"De technische opslag of toegang is noodzakelijk voor het legitieme doel voorkeuren..."*
+- Copy Excerpt 1: *"We craft bold campaigns, authentic stories and premium collaborations that move sp..."*
+- Copy Excerpt 2: *"Start the conversation"*
+- Copy Excerpt 3: *"From shirt launches and transfer announcements to player branding and cultural col..."*
+- Copy Excerpt 4: *"We tailor every collaboration to the client. Brands, athletes, clubs and federations."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.44,0.96,0.5,0.98)`, `cubic-bezier(0.26,0.69,0.37,0.96)`, `cubic-bezier(0.83,0.08,0.16,0.97)`
 - **Extracted Stylesheet Rules (`gallery-play-be`)**:
-- `.cmplz-video.cmplz-iframe-styles { background-color:transparent }`
-- `.cmplz-video.cmplz-hidden { visibility:hidden !important }`
-- `.cmplz-blocked-content-notice { display:none }`
-- `.cmplz-placeholder-parent { height:inherit }`
-- `wp-video .cmplz-blocked-content-n... { display:block }`
+- `.elementor-kit-5 e-page-transition { background-color:FFBC7D; }`
+- `or-section-boxed > .elementor-con... { max-width:1800px; }`
+- `.elementor-element { --widgets-spacing:0px 0px;--widgets-spacing-row:0px;--widgets-spacing-co... }`
+- `h1.entry-title { display:var(--page-title-display); }`
+- `.site-header .site-branding { flex-direction:column;align-items:stretch; }`
 - **Per-Selector Transition Rules**:
-- **Selector `textarea`**: `transition: all .3s` extracted from `gallery-play-be` stylesheet.
-- **Selector `button`**: `transition: all .3s` extracted from `gallery-play-be` stylesheet.
 - **Selector `-holder .site-navigation-toggle-i...`**: `transition: all .2s ease-in-out` extracted from `gallery-play-be` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.44,0.96,0.5,0.98)`)**: Governs interactive state transitions across `<header.elementor>` and `<main.site-main>`.
+- **Selector `.site-navigation-dropdown`**: `transition: max-height .3s,transform .3s` extracted from `gallery-play-be` stylesheet.
+- **Selector `.site-navigation-dropdown ul.menu...`**: `transition: max-height .3s,transform .3s` extracted from `gallery-play-be` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.44,0.96,0.5,0.98)`)**: Governs interactive state transitions across `<header.elementor>` and `<main.post-15>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

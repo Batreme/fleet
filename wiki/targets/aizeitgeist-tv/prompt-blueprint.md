@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: aizeitgeist-tv"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "aizeitgeist-tv"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007a33`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#00ff66`)"
 ---
 
 # UI Design System & Master Generation Blueprint: aizeitgeist-tv
 
-> **AI Zeitgeist · What the world says about AI** (https://aizeitgeist.tv) — What the world says about AI, one quote at a time. A running wall of the global conversation about artificial intelligence, updated daily.
+> **AI Zeitgeist: AI quotes from the people shaping it** (https://aizeitgeist.tv) — AI quotes from the people shaping it: what researchers, founders, politicians and critics say about artificial intelligence, one quote at...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **AI Zeitgeist · What the world says about AI** (`https://aizeitgeist.tv`). What the world says about AI, one quote at a time. A running wall of the global conversation about artificial intelligence, updated daily.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007a33`)**.
+- **Brand Essence & Persona**: **AI Zeitgeist: AI quotes from the people shaping it** (`https://aizeitgeist.tv`). AI quotes from the people shaping it: what researchers, founders, politicians and critics say about artificial intelligence, one quote at...
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#00ff66`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--bg)` in `:root`) paired with `#f5f5f7` primary typography and `#007a33` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`AI Zeitgeist: what the world says ab`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 2px`, padding `12px`) with `cubic-bezier(.55,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f7` primary typography and `#00ff66` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`AI Zeitgeist: what the world says ab`) with `Schibsted Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1760px` container bounds (`gap: 10px`, padding `72px`) with `cubic-bezier(.55,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×13433px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `640px` extracted from `aizeitgeist-tv` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `12px` lateral canvas padding with `2px` grid gap.
-- **Border Radius Scale**: `4px`, `50%`, `999px`, `12px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1760px` (live computed `main` `max-width`).
+- **Canvas Lateral Padding & Spacing**: `72px` lateral canvas padding with `10px` grid gap.
+- **Border Radius Scale**: `999px`, `4px`, `50%`, `12px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 2px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1760px`, `gap: 10px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `72px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference)and (pointer:coarse)`, `@media (min-width:641px)and (max-width:1919px)`.
 
 ---
@@ -48,14 +52,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#f5f5f7` | `var(--fg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#00ff66` | `var(--accent)` in `:root` |
-| **Interactive Accent / Highlight** | `#007a33` | `.award:hover { color: #007a33 }` |
-| **Secondary / Muted Copy** | `#101010` | `.intro-actions { background: #101010 }` |
-| **Structural Hairline Border** | `#00c853` | `:hover { color: #00c853 }` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f7` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#141414` | live computed `nav` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#00ff66` | `var(--accent)` in `:root` |
+| **Secondary / Muted Copy** | `#00c853` | `:hover { color: #00c853 }` |
+| **Structural Hairline Border** | `#222223` | `var(--line)` in `:root` (`rgb(245 245 247 / .14)`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +87,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007
 
 ### Font Family Stacks
 - **Display Typography**: `Schibsted Grotesk`.
-- **Primary Body Stack**: `Helvetica Neue`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Schibsted Grotesk`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(1.9rem,4vw,2.6rem)`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(2.4rem,8vw,7rem)`, `line-height: 1`, `letter-spacing: -.03em`, `font-weight: 800`).
-- **Body Copy**: rule `p` (`font-size: 1rem`, `line-height: 1.5`).
-- **Metadata & Navigation Labels**: CSS variables `--av3-meta-gap: 16px`, `--av3-label-fs: clamp(1.3rem, 2.5vw, 1.7rem)`; rule `small` (`font-size: .78rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 46.4px`, `font-weight: 700`); rule `h1` (`font-size: clamp(1.9rem,4vw,2.6rem)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 800`, `letter-spacing: -2.4px`); rule `h2` (`font-size: clamp(2.4rem,8vw,7rem)`, `line-height: 1`, `letter-spacing: -.03em`, `font-weight: 800`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); rule `p` (`font-size: 1rem`, `line-height: 1.5`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); CSS variables `--av3-meta-gap: 16px`, `--av3-label-fs: clamp(1.3rem, 2.5vw, 1.7rem)`; rule `small` (`font-size: .78rem`).
 
 ---
 
@@ -103,71 +107,90 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007
 - **Selector `.lead-more`**: `transition: color .15s,text-decoration-color .15s` extracted from `aizeitgeist-tv` stylesheet.
 - **Selector `.hero-cube`**: `transition: transform 1.1s cubic-bezier(.55,0,.2,1)` extracted from `aizeitgeist-tv` stylesheet.
 - **Selector `.hero-face:after`**: `transition: opacity .3s` extracted from `aizeitgeist-tv` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.55,0,.2,1)`)**: Governs interactive state transitions across `<header.brand>` and `<article.hero-noscript>`.
+- **Extracted Easing Curve (`cubic-bezier(.55,0,.2,1)`)**: Governs interactive state transitions across `<header.brand>` and `<section.hot-home>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — AI Zeitgeist · What the world says about A │
+│ DESKTOP VIEWPORT (1440px) — AI Zeitgeist: AI quotes from the people sh │
 │ ====================================================================== │
-│ [ <header.brand>           | The Wall live · What's hot · Archive · ]  │
+│ [ <header.brand> (407x44px)           | The Wall live · What's hot 5 ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: AI Zeitgeist: what the world says about AI, one q...         |   │
-│ | Substrate: #000       | Ink: #f5f5f7    | Accent: #007a33        |   │
+│ | HERO STAGE: <section.archive> (w=1440px)                           | │
+│ | H1: AI Zeitgeist: what the world says about AI, one q...           | │
+│ | Substrate: #000000 | Ink: #f5f5f7 | Accent: #00ff66                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.hero-noscript>   ) max-w: 640px          |   │
+│ | SHOWCASE GRID (<section.hot-home>) max-w: 1760px                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Can machines think?          |  | Daily by mail                | | │
+│ | | The people on the wall       |  | Share the wall               | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2px   ) | │
-│ | [<header.brand>] -> [<section.hero>] -> [<article.hero-nosc] |       │
+│ | DETAIL MODULE (<section.people>) — Follow the wall                 | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.foot>         ) | https://aizeitgeist.tv             │
+│ [ FOOTER (<footer.foot>       ) | https://aizeitgeist.tv               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.brand>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.archive>) — 390px Vertical Lead               | │
+│ | H1: AI Zeitgeist: what the world says about AI, one q...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.hot-home>) — 1-Col Stack                  | │
+│ | [ Item 1: The people on the wall                                 ] | │
+│ | [ Item 2: Share the wall                                         ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.people>) — 1-Col (Follow the wall)          | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.foot>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.brand> — `aizeitgeist-tv`)**:
-   - Landmark `<header class="brand">` hosting `AI Zeitgeist · What the world says a` navigation (`The Wall live · What's hot · Archive · Speakers · Topics`), DOM attributes (`data-theme="dark"`, `data-themes="off"`, `data-consent-state="ask"`, `data-archive="v3"`), and stylesheet rule `html { scroll-padding-top:var(--jump, 100px) }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `AI Zeitgeist: what the world says `)**:
-   - Landmark `<section class="hero">` presenting display lead `AI Zeitgeist: what the world says about AI, one q...` and copy excerpt *"What the world says about artificial intelligence. No commentary,"* over `#000` canvas and `#f5f5f7` ink.
-3. **Primary Showcase & Content Grid (<article.hero-noscript> — `Can machines think?`)**:
-   - Landmark `<article class="hero-noscript">` rendering section `Can machines think?` with copy *"May we count your visit with Google Analytics?"*, asset references (`@AIZeitgeist`, `feed.xml`, `live.json`, `sitemap.xml`), and grid rule `body { margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);fo... }`.
-4. **Interactive Detail & Feature Matrix (<section.menu-it> — `Daily by mail`)**:
-   - Landmark `<section class="menu-it">` framing `Daily by mail` and `Archive` (*"No ads, no profiles. Privacy"*) with `#00ff66` surface cards, `#007a33` accents, and `.archive-count { font-variant-numeric:tabular-nums }`.
+   - Landmark `<header class="brand">` (`407x44px`) hosting `AI Zeitgeist: AI quotes from the peo` navigation (`The Wall live · What's hot 59 · Archive 2,670 · Speakers 283 · Topics 10`), DOM attributes (`data-theme="dark"`, `data-themes="off"`, `data-consent-state="ask"`, `data-archive="v3"`), and stylesheet rule `html { scroll-padding-top:var(--jump, 100px) }`.
+2. **Hero Stage & Focal Lead (<section.archive> — `AI Zeitgeist: what the world says `)**:
+   - Landmark `<section class="archive reveal">` presenting display lead `AI Zeitgeist: what the world says about AI, one q...` and copy excerpt *"What the world says about artificial intelligence. No commentary,"* over `#000000` canvas and `#f5f5f7` ink.
+3. **Primary Showcase & Content Grid (<section.hot-home> — `The people on the wall`)**:
+   - Landmark `<section class="hot-home">` rendering section `The people on the wall` with copy *"What everyone said about AI over the years containing"*, asset references (`@AIZeitgeist`, `feed.xml`, `live.json`, `sitemap.xml`), and grid rule `body { margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);fo... }`.
+4. **Interactive Detail & Feature Matrix (<section.people> — `Share the wall`)**:
+   - Landmark `<section class="people rv-on">` framing `Share the wall` and `Follow the wall` (*"2,670 quotes Newest · Most often quoted people Clear all Play on "*) with `#141414` surface cards, `#00ff66` accents, and `.archive-count { font-variant-numeric:tabular-nums }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://aizeitgeist.tv`)**:
-   - Landmark `<footer class="foot">` anchoring `AI Zeitgeist · What the world sa` footer links (`The Wall live · What's hot · Archive · Speakers · Topics`), copy *"Alan Turing, 1950. Source and context . The moving wall need"*, and `#00c853` structural dividers.
+   - Landmark `<footer class="foot">` anchoring `AI Zeitgeist: AI quotes from the` footer links (`The Wall live · What's hot 59 · Archive 2,670 · Speakers 283 · Topics 10`), copy *"2,670 quotes Newest · Most often quoted people"*, and `#222223` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: aizeitgeist-tv (AI Zeitgeist · What the world says about AI)
+# Master Zero-Shot Frontend Generation Prompt: aizeitgeist-tv (AI Zeitgeist: AI quotes from the people shaping it)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `aizeitgeist-tv` (**AI Zeitgeist · What the world says about AI** — `https://aizeitgeist.tv`).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `aizeitgeist-tv` (**AI Zeitgeist: AI quotes from the people shaping it** — `https://aizeitgeist.tv`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#007a33`).
-- **Identity & Domain Context**: What the world says about AI, one quote at a time. A running wall of the global conversation about artificial intelligence, updated daily.
-- **Primary Substrate**: `#000` (`var(--bg)` in `:root`), **Primary Ink**: `#f5f5f7`, **Accent / Highlight**: `#007a33`.
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#00ff66`).
+- **Identity & Domain Context**: AI quotes from the people shaping it: what researchers, founders, politicians and critics say about artificial intelligence, one quote at...
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f5f7`, **Accent / Highlight**: `#00ff66`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--bg)` in `:root`) paired with `#f5f5f7` primary typography and `#007a33` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`AI Zeitgeist: what the world says ab`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 2px`, padding `12px`) with `cubic-bezier(.55,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f7` primary typography and `#00ff66` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`AI Zeitgeist: what the world says ab`) with `Schibsted Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1760px` container bounds (`gap: 10px`, padding `72px`) with `cubic-bezier(.55,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `aizeitgeist-tv` in your global stylesheet:
 
 :root {
-  /* AI Zeitgeist · What the world says about AI (aizeitgeist-tv) — Ground-Truth Extracted CSS Variables */
+  /* AI Zeitgeist: AI quotes from the people shaping it (aizeitgeist-tv) — Live-Grounded CSS Variables */
   --bg: #000; /* Canvas / Surface Token (aizeitgeist-tv) */
   --fg: #f5f5f7; /* Typography Ink Token (aizeitgeist-tv) */
   --fg-2: rgb(245 245 247 / .62); /* Typography Ink Token (aizeitgeist-tv) */
@@ -188,55 +211,55 @@ Declare and consume these exact custom properties extracted from `aizeitgeist-tv
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#f5f5f7` — grounded in `var(--fg)` in `:root`
-- **Elevated Surface / Card Substrate**: `#00ff66` — grounded in `var(--accent)` in `:root`
-- **Interactive Accent / Highlight**: `#007a33` — grounded in `.award:hover { color: #007a33 }`
-- **Secondary / Muted Copy**: `#101010` — grounded in `.intro-actions { background: #101010 }`
-- **Structural Hairline Border**: `#00c853` — grounded in `:hover { color: #00c853 }`
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f5f5f7` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#141414` — grounded in live computed `nav` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#00ff66` — grounded in `var(--accent)` in `:root`
+- **Secondary / Muted Copy**: `#00c853` — grounded in `:hover { color: #00c853 }`
+- **Structural Hairline Border**: `#222223` — grounded in `var(--line)` in `:root` (`rgb(245 245 247 / .14)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×13433px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `640px` extracted from `aizeitgeist-tv` stylesheet
-- **Padding & Gutters**: `12px` lateral canvas padding with `2px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 2px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1760px` (live computed `main` `max-width`)
+- **Padding & Gutters**: `72px` lateral canvas padding with `10px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1760px`, `gap: 10px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `72px` horizontal padding
 - **Media Queries**: `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference)and (pointer:coarse)`, `@media (min-width:641px)and (max-width:1919px)`
-- **Corner Radii**: `4px`, `50%`, `999px`, `12px`
+- **Corner Radii**: `999px`, `4px`, `50%`, `12px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Schibsted Grotesk`
-- **Body Font Stack**: `Helvetica Neue`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: clamp(1.9rem,4vw,2.6rem)`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(2.4rem,8vw,7rem)`, `line-height: 1`, `letter-spacing: -.03em`, `font-weight: 800`)
-- **Body Copy Rule**: rule `p` (`font-size: 1rem`, `line-height: 1.5`)
-- **Metadata & Index Rule**: CSS variables `--av3-meta-gap: 16px`, `--av3-label-fs: clamp(1.3rem, 2.5vw, 1.7rem)`; rule `small` (`font-size: .78rem`)
+- **Body Font Stack**: `Schibsted Grotesk`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 46.4px`, `font-weight: 700`); rule `h1` (`font-size: clamp(1.9rem,4vw,2.6rem)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 800`, `letter-spacing: -2.4px`); rule `h2` (`font-size: clamp(2.4rem,8vw,7rem)`, `line-height: 1`, `letter-spacing: -.03em`, `font-weight: 800`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); rule `p` (`font-size: 1rem`, `line-height: 1.5`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); CSS variables `--av3-meta-gap: 16px`, `--av3-label-fs: clamp(1.3rem, 2.5vw, 1.7rem)`; rule `small` (`font-size: .78rem`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
-Scaffold `aizeitgeist-tv` (`AI Zeitgeist · What the world says about AI`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+Scaffold `aizeitgeist-tv` (`AI Zeitgeist: AI quotes from the people shaping it`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.brand> — `aizeitgeist-tv`)**:
-   - DOM & Selectors: Landmark `<header class="brand">` hosting `AI Zeitgeist · What the world says a` navigation (`The Wall live · What's hot · Archive · Speakers · Topics`), DOM attributes (`data-theme="dark"`, `data-themes="off"`, `data-consent-state="ask"`, `data-archive="v3"`), and stylesheet rule `html { scroll-padding-top:var(--jump, 100px) }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.brand> — `aizeitgeist-tv`)` (`aizeitgeist-tv`) adapts across `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference)and (pointer:coarse)`, `@media (min-width:641px)and (max-width:1919px)` with `cubic-bezier(.55,0,.2,1)`, `cubic-bezier(.2,.8,.3,1)`, `cubic-bezier(.25,.9,.3,1)` transitions and links `The Wall live · What's hot · Archive · Speakers · Topics`.
-2. **Hero Stage & Focal Lead (<section.hero> — `AI Zeitgeist: what the world says `)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `AI Zeitgeist: what the world says about AI, one q...` and copy excerpt *"What the world says about artificial intelligence. No commentary,"* over `#000` canvas and `#f5f5f7` ink.
-   - Responsive Contract: Hero stage (`1440×13433px` desktop / `390×2400px` mobile) sets `#000` background with `#f5f5f7` headline `AI Zeitgeist: what the world says about AI, one q...`.
-3. **Primary Showcase & Content Grid (<article.hero-noscript> — `Can machines think?`)**:
-   - DOM & Selectors: Landmark `<article class="hero-noscript">` rendering section `Can machines think?` with copy *"May we count your visit with Google Analytics?"*, asset references (`@AIZeitgeist`, `feed.xml`, `live.json`, `sitemap.xml`), and grid rule `body { margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);fo... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.hero-noscript> — `Can machines think?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `12px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.menu-it> — `Daily by mail`)**:
-   - DOM & Selectors: Landmark `<section class="menu-it">` framing `Daily by mail` and `Archive` (*"No ads, no profiles. Privacy"*) with `#00ff66` surface cards, `#007a33` accents, and `.archive-count { font-variant-numeric:tabular-nums }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.menu-it> — `Daily by mail`)` uses `4px`, `50%`, `999px`, `12px` radii, `#007a33` highlights, and assets (@AIZeitgeist, feed.xml, live.json).
+   - DOM & Selectors: Landmark `<header class="brand">` (`407x44px`) hosting `AI Zeitgeist: AI quotes from the peo` navigation (`The Wall live · What's hot 59 · Archive 2,670 · Speakers 283 · Topics 10`), DOM attributes (`data-theme="dark"`, `data-themes="off"`, `data-consent-state="ask"`, `data-archive="v3"`), and stylesheet rule `html { scroll-padding-top:var(--jump, 100px) }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.brand> — `aizeitgeist-tv`)` (`aizeitgeist-tv`) adapts across `@media (max-width:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference)and (pointer:coarse)`, `@media (min-width:641px)and (max-width:1919px)` with `cubic-bezier(.55,0,.2,1)`, `cubic-bezier(.2,.8,.3,1)`, `cubic-bezier(.25,.9,.3,1)` transitions and links `The Wall live · What's hot 59 · Archive 2,670 · Speakers 283 · Topics 10`.
+2. **Hero Stage & Focal Lead (<section.archive> — `AI Zeitgeist: what the world says `)**:
+   - DOM & Selectors: Landmark `<section class="archive reveal">` presenting display lead `AI Zeitgeist: what the world says about AI, one q...` and copy excerpt *"What the world says about artificial intelligence. No commentary,"* over `#000000` canvas and `#f5f5f7` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×844px` mobile) sets `#000000` background with `#f5f5f7` headline `AI Zeitgeist: what the world says about AI, one q...`.
+3. **Primary Showcase & Content Grid (<section.hot-home> — `The people on the wall`)**:
+   - DOM & Selectors: Landmark `<section class="hot-home">` rendering section `The people on the wall` with copy *"What everyone said about AI over the years containing"*, asset references (`@AIZeitgeist`, `feed.xml`, `live.json`, `sitemap.xml`), and grid rule `body { margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);fo... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hot-home> — `The people on the wall`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1760px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `72px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.people> — `Share the wall`)**:
+   - DOM & Selectors: Landmark `<section class="people rv-on">` framing `Share the wall` and `Follow the wall` (*"2,670 quotes Newest · Most often quoted people Clear all Play on "*) with `#141414` surface cards, `#00ff66` accents, and `.archive-count { font-variant-numeric:tabular-nums }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.people> — `Share the wall`)` uses `999px`, `4px`, `50%`, `12px` radii, `#00ff66` highlights, and assets (@AIZeitgeist, feed.xml, live.json).
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://aizeitgeist.tv`)**:
-   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `AI Zeitgeist · What the world sa` footer links (`The Wall live · What's hot · Archive · Speakers · Topics`), copy *"Alan Turing, 1950. Source and context . The moving wall need"*, and `#00c853` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://aizeitgeist.tv`)` aligns to `640px` extracted from `aizeitgeist-tv` stylesheet with `12px` lateral canvas padding with `2px` grid gap and attributes (data-theme="dark", data-themes="off", data-consent-state="ask").
+   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `AI Zeitgeist: AI quotes from the` footer links (`The Wall live · What's hot 59 · Archive 2,670 · Speakers 283 · Topics 10`), copy *"2,670 quotes Newest · Most often quoted people"*, and `#222223` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://aizeitgeist.tv`)` aligns to `1760px` (live computed `main` `max-width`) with `72px` lateral canvas padding with `10px` grid gap and attributes (data-theme="dark", data-themes="off", data-consent-state="ask").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"What the world says about artificial intelligence. No commentary, no ranking, no f..."*
-- Copy Excerpt 2: *"May we count your visit with Google Analytics?"*
-- Copy Excerpt 3: *"No ads, no profiles. Privacy"*
-- Copy Excerpt 4: *"Alan Turing, 1950. Source and context . The moving wall needs JavaScript; the arch..."*
+- Copy Excerpt 2: *"What everyone said about AI over the years containing"*
+- Copy Excerpt 3: *"2,670 quotes Newest · Most often quoted people Clear all Play on the wall"*
+- Copy Excerpt 4: *"2,670 quotes Newest · Most often quoted people"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.55,0,.2,1)`, `cubic-bezier(.2,.8,.3,1)`, `cubic-bezier(.25,.9,.3,1)`
@@ -250,7 +273,7 @@ Scaffold `aizeitgeist-tv` (`AI Zeitgeist · What the world says about AI`) with 
 - **Selector `.lead-more`**: `transition: color .15s,text-decoration-color .15s` extracted from `aizeitgeist-tv` stylesheet.
 - **Selector `.hero-cube`**: `transition: transform 1.1s cubic-bezier(.55,0,.2,1)` extracted from `aizeitgeist-tv` stylesheet.
 - **Selector `.hero-face:after`**: `transition: opacity .3s` extracted from `aizeitgeist-tv` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.55,0,.2,1)`)**: Governs interactive state transitions across `<header.brand>` and `<article.hero-noscript>`.
+- **Extracted Easing Curve (`cubic-bezier(.55,0,.2,1)`)**: Governs interactive state transitions across `<header.brand>` and `<section.hot-home>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: altamedfoundation-org"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "altamedfoundation-org"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas, `#f9fafb` ink, `#155dfc` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: altamedfoundation-org
 
 > **AltaMed Foundation · AltaMed Foundation** (https://altamedfoundation.org/) — AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **AltaMed Foundation · AltaMed Foundation** (`https://altamedfoundation.org/`). AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas, `#f9fafb` ink, `#155dfc` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fb2c36` (`var(--color-red-500)` in `:root`) paired with `#f9fafb` primary typography and `#155dfc` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `gotham-xnarrow` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#242029` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×4182px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `altamedfoundation-org` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `.25rem`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing)`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,44 +52,38 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fb2c36` | `var(--color-red-500)` in `:root` |
-| **Primary Typography Ink** | `#bf000f` | `var(--color-red-700)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#3080ff` | `var(--color-blue-500)` in `:root` |
-| **Interactive Accent / Highlight** | `#155dfc` | `var(--color-blue-600)` in `:root` |
-| **Secondary / Muted Copy** | `#f9fafb` | `var(--color-gray-50)` in `:root` |
-| **Structural Hairline Border** | `#f3f4f6` | `var(--color-gray-100)` in `:root` |
-| **Variable Token (`--color-gray-200`)** | `#e5e7eb` | `var(--color-gray-200)` in `:root` |
-| **Variable Token (`--color-gray-300`)** | `#d1d5db` | `var(--color-gray-300)` in `:root` |
-| **Variable Token (`--color-gray-400`)** | `#9ca3af` | `var(--color-gray-400)` in `:root` |
-| **Variable Token (`--color-gray-500`)** | `#6b7280` | `var(--color-gray-500)` in `:root` |
-| **Variable Token (`--color-gray-600`)** | `#5e5668` | `var(--color-gray-600)` in `:root` |
-| **Variable Token (`--color-gray-700`)** | `#374151` | `var(--color-gray-700)` in `:root` |
-| **Variable Token (`--color-gray-800`)** | `#1f2937` | `var(--color-gray-800)` in `:root` |
-| **Variable Token (`--color-gray-900`)** | `#242029` | `var(--color-gray-900)` in `:root` |
-| **Variable Token (`--color-black`)** | `#000` | `var(--color-black)` in `:root` |
-| **Variable Token (`--color-white`)** | `#fff` | `var(--color-white)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `p` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffa500` | `.bg-campaign-orange { background-color: orange }` (`#ffa500`) |
+| **Interactive Accent / Highlight** | `#242029` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#737373` | `var(--muted-foreground)` in `:root` |
+| **Structural Hairline Border** | `#e5e5e5` | `var(--border)` in `:root` |
+| **Variable Token (`--foreground`)** | `#0a0a0a` | `var(--foreground)` in `:root` |
+| **Variable Token (`--primary`)** | `#171717` | `var(--primary)` in `:root` |
+| **Variable Token (`--primary-foreground`)** | `#fafafa` | `var(--primary-foreground)` in `:root` |
+| **Variable Token (`--secondary`)** | `#f5f5f5` | `var(--secondary)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--color-red-500` | `#fb2c36` | Brand / Palette Token |
-| `--color-red-700` | `#bf000f` | Brand / Palette Token |
-| `--color-blue-500` | `#3080ff` | Brand / Palette Token |
-| `--color-blue-600` | `#155dfc` | Brand / Palette Token |
-| `--color-gray-50` | `#f9fafb` | Brand / Palette Token |
-| `--color-gray-100` | `#f3f4f6` | Brand / Palette Token |
-| `--color-gray-200` | `#e5e7eb` | Brand / Palette Token |
-| `--color-gray-300` | `#d1d5db` | Brand / Palette Token |
-| `--color-gray-400` | `#9ca3af` | Brand / Palette Token |
-| `--color-gray-500` | `#6b7280` | Brand / Palette Token |
-| `--color-gray-600` | `#5e5668` | Brand / Palette Token |
-| `--color-gray-700` | `#374151` | Brand / Palette Token |
-| `--color-gray-800` | `#1f2937` | Brand / Palette Token |
-| `--color-gray-900` | `#242029` | Brand / Palette Token |
-| `--color-black` | `#000` | Canvas / Surface Token |
-| `--color-white` | `#fff` | Canvas / Surface Token |
+| `--sticky-cta-height` | `calc(.75rem + 3.5rem + max(.75rem, env(safe-area-inset-bottom)))` | Brand / Palette Token |
+| `--radius` | `.5rem` | Elevation / Border Token |
+| `--background` | `#fff` | Canvas / Surface Token |
+| `--foreground` | `#0a0a0a` | Typography Ink Token |
+| `--card` | `#fff` | Color / Atmospheric Token |
+| `--card-foreground` | `#0a0a0a` | Typography Ink Token |
+| `--popover` | `#fff` | Color / Atmospheric Token |
+| `--popover-foreground` | `#0a0a0a` | Typography Ink Token |
+| `--primary` | `#171717` | Brand / Palette Token |
+| `--primary-foreground` | `#fafafa` | Typography Ink Token |
+| `--secondary` | `#f5f5f5` | Brand / Palette Token |
+| `--secondary-foreground` | `#171717` | Typography Ink Token |
+| `--muted` | `#f5f5f5` | Color / Atmospheric Token |
+| `--muted-foreground` | `#737373` | Typography Ink Token |
+| `--accent` | `#f5f5f5` | Brand / Palette Token |
+| `--accent-foreground` | `#171717` | Typography Ink Token |
 
 ---
 
@@ -93,14 +91,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `proxima-nova`.
-- **Primary Body Stack**: `gotham-xnarrow`.
-- **Technical / Metadata Stack**: `SFMono-Regular`.
+- **Primary Body Stack**: `proxima-nova`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`.
-- **Section Heading (`H2`)**: CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`, `--text-title-lg: 34px`.
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-size-body: 18px`.
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 45px`, `line-height: 50px`, `font-weight: 600`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`, `--text-title-lg: 34px`.
+- **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-size-body: 18px`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
 
 ---
 
@@ -120,40 +118,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — AltaMed Foundation · AltaMed Foundation    │
 │ ====================================================================== │
-│ [ <header.relative>        | Overview · Index · Archive · About · C ]  │
+│ [ <header.relative> (1440x129px)      | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.bg-white>                                   |   │
-│ | H1: H.E.L.P. Campaign                                            |   │
-│ | Substrate: #fb2c36    | Ink: #f9fafb    | Accent: #155dfc        |   │
+│ | HERO STAGE: <section.bg-white> (w=1440px)                          | │
+│ | H1: H.E.L.P. Campaign                                              | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #242029                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.scroll-mt-24>    ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.scroll-mt-24>) max-w: 96rem                | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Impact Stories               |  | Homeward Bound: Preemie Twin | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.relative>] -> [<section.bg-white>] -> [<section.scroll-mt]  │
+│ | DETAIL MODULE (<section.py-12>) — Make a Difference                | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.bg-white>     ) | https://altamedfoundation.org/     │
+│ [ FOOTER (<footer.pt-8>       ) | https://altamedfoundation.org/       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--sp)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.relative>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.bg-white>) — 390px Vertical Lead              | │
+│ | H1: H.E.L.P. Campaign                                              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.scroll-mt-24>) — 1-Col Stack              | │
+│ | [ Item 1: Impact Stories                                         ] | │
+│ | [ Item 2: Homeward Bound: Preemie Twins’ Incredible Journey...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.py-12>) — 1-Col (Make a Difference)         | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.pt-8>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.relative> — `altamedfoundation-org`)**:
-   - Landmark `<header class="relative z-50">` hosting `AltaMed Foundation · AltaMed Foundat` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-href="/_next/static/immutab..."`, `data-nimg="1"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
+   - Landmark `<header class="relative z-50">` (`1440x129px`) hosting `AltaMed Foundation · AltaMed Foundat` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-href="/_next/static/immutab..."`, `data-nimg="1"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
 2. **Hero Stage & Focal Lead (<section.bg-white> — `H.E.L.P. Campaign`)**:
-   - Landmark `<section class="bg-white py-12">` presenting display lead `H.E.L.P. Campaign` and copy excerpt *"AltaMed ensures everyone in our community has access to quality h"* over `#fb2c36` canvas and `#f9fafb` ink.
+   - Landmark `<section class="bg-white py-12">` presenting display lead `H.E.L.P. Campaign` and copy excerpt *"AltaMed ensures everyone in our community has access to quality h"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)**:
    - Landmark `<section class="scroll-mt-24 bg-purple">` rendering section `Impact Stories` with copy *"Health. Equity. Life. Programs."*, asset references (`vdqo9h3n.api.sanity.io`, `altamed-foundation-logo.svg`, `3kc4s5-t1h7ps.js`, `1h6ujiewnnn1_.js`), and grid rule `.tk-gotham-xnarrow { font-family: "gotham-xnarrow",sans-serif; }`.
-4. **Interactive Detail & Feature Matrix (<section.scroll-mt-24> — `Homeward Bound: Preemie Twins’ Inc`)**:
-   - Landmark `<section class="scroll-mt-24 bg-white">` framing `Homeward Bound: Preemie Twins’ Incredible Journey...` and `Make a Difference` (*"Learn More about the H.E.L.P. Campaign"*) with `#3080ff` surface cards, `#155dfc` accents, and `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
-5. **Colophon & Global Directory Footer (<footer.bg-white> — `https://altamedfoundation.org/`)**:
-   - Landmark `<footer class="bg-white pt-8">` anchoring `AltaMed Foundation · AltaMed Fou` footer links (`Overview · Index · Archive · About · Contact`), copy *"about the H.E.L.P. Campaign"*, and `#f3f4f6` structural dividers.
+4. **Interactive Detail & Feature Matrix (<section.py-12> — `Homeward Bound: Preemie Twins’ Inc`)**:
+   - Landmark `<section class="scroll-mt-24 bg-white">` framing `Homeward Bound: Preemie Twins’ Incredible Journey...` and `Make a Difference` (*"Learn More about the H.E.L.P. Campaign"*) with `#ffa500` surface cards, `#242029` accents, and `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
+5. **Colophon & Global Directory Footer (<footer.pt-8> — `https://altamedfoundation.org/`)**:
+   - Landmark `<footer class="pt-8 pb-8">` anchoring `AltaMed Foundation · AltaMed Fou` footer links (`Overview · Index · Archive · About · Contact`), copy *"about the H.E.L.P. Campaign"*, and `#e5e5e5` structural dividers.
 
 ---
 
@@ -165,92 +182,86 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `altamedfoundation-org` (**AltaMed Foundation · AltaMed Foundation** — `https://altamedfoundation.org/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#fb2c36` canvas, `#f9fafb` ink, `#155dfc` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent).
 - **Identity & Domain Context**: AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
-- **Primary Substrate**: `#fb2c36` (`var(--color-red-500)` in `:root`), **Primary Ink**: `#f9fafb`, **Accent / Highlight**: `#155dfc`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#242029`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fb2c36` (`var(--color-red-500)` in `:root`) paired with `#f9fafb` primary typography and `#155dfc` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `gotham-xnarrow` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#242029` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `altamedfoundation-org` in your global stylesheet:
 
 :root {
-  /* AltaMed Foundation · AltaMed Foundation (altamedfoundation-org) — Ground-Truth Extracted CSS Variables */
-  --color-red-500: #fb2c36; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-red-700: #bf000f; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-blue-500: #3080ff; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-blue-600: #155dfc; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-50: #f9fafb; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-100: #f3f4f6; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-200: #e5e7eb; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-300: #d1d5db; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-400: #9ca3af; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-500: #6b7280; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-600: #5e5668; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-700: #374151; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-800: #1f2937; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-gray-900: #242029; /* Brand / Palette Token (altamedfoundation-org) */
-  --color-black: #000; /* Canvas / Surface Token (altamedfoundation-org) */
-  --color-white: #fff; /* Canvas / Surface Token (altamedfoundation-org) */
+  /* AltaMed Foundation · AltaMed Foundation (altamedfoundation-org) — Live-Grounded CSS Variables */
+  --sticky-cta-height: calc(.75rem + 3.5rem + max(.75rem, env(safe-area-inset-bottom))); /* Brand / Palette Token (altamedfoundation-org) */
+  --radius: .5rem; /* Elevation / Border Token (altamedfoundation-org) */
+  --background: #fff; /* Canvas / Surface Token (altamedfoundation-org) */
+  --foreground: #0a0a0a; /* Typography Ink Token (altamedfoundation-org) */
+  --card: #fff; /* Color / Atmospheric Token (altamedfoundation-org) */
+  --card-foreground: #0a0a0a; /* Typography Ink Token (altamedfoundation-org) */
+  --popover: #fff; /* Color / Atmospheric Token (altamedfoundation-org) */
+  --popover-foreground: #0a0a0a; /* Typography Ink Token (altamedfoundation-org) */
+  --primary: #171717; /* Brand / Palette Token (altamedfoundation-org) */
+  --primary-foreground: #fafafa; /* Typography Ink Token (altamedfoundation-org) */
+  --secondary: #f5f5f5; /* Brand / Palette Token (altamedfoundation-org) */
+  --secondary-foreground: #171717; /* Typography Ink Token (altamedfoundation-org) */
+  --muted: #f5f5f5; /* Color / Atmospheric Token (altamedfoundation-org) */
+  --muted-foreground: #737373; /* Typography Ink Token (altamedfoundation-org) */
+  --accent: #f5f5f5; /* Brand / Palette Token (altamedfoundation-org) */
+  --accent-foreground: #171717; /* Typography Ink Token (altamedfoundation-org) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fb2c36` — grounded in `var(--color-red-500)` in `:root`
-- **Primary Typography Ink**: `#bf000f` — grounded in `var(--color-red-700)` in `:root`
-- **Elevated Surface / Card Substrate**: `#3080ff` — grounded in `var(--color-blue-500)` in `:root`
-- **Interactive Accent / Highlight**: `#155dfc` — grounded in `var(--color-blue-600)` in `:root`
-- **Secondary / Muted Copy**: `#f9fafb` — grounded in `var(--color-gray-50)` in `:root`
-- **Structural Hairline Border**: `#f3f4f6` — grounded in `var(--color-gray-100)` in `:root`
-- **Variable Token (`--color-gray-200`)**: `#e5e7eb` — grounded in `var(--color-gray-200)` in `:root`
-- **Variable Token (`--color-gray-300`)**: `#d1d5db` — grounded in `var(--color-gray-300)` in `:root`
-- **Variable Token (`--color-gray-400`)**: `#9ca3af` — grounded in `var(--color-gray-400)` in `:root`
-- **Variable Token (`--color-gray-500`)**: `#6b7280` — grounded in `var(--color-gray-500)` in `:root`
-- **Variable Token (`--color-gray-600`)**: `#5e5668` — grounded in `var(--color-gray-600)` in `:root`
-- **Variable Token (`--color-gray-700`)**: `#374151` — grounded in `var(--color-gray-700)` in `:root`
-- **Variable Token (`--color-gray-800`)**: `#1f2937` — grounded in `var(--color-gray-800)` in `:root`
-- **Variable Token (`--color-gray-900`)**: `#242029` — grounded in `var(--color-gray-900)` in `:root`
-- **Variable Token (`--color-black`)**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Variable Token (`--color-white`)**: `#fff` — grounded in `var(--color-white)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffa500` — grounded in `.bg-campaign-orange { background-color: orange }` (`#ffa500`)
+- **Interactive Accent / Highlight**: `#242029` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#737373` — grounded in `var(--muted-foreground)` in `:root`
+- **Structural Hairline Border**: `#e5e5e5` — grounded in `var(--border)` in `:root`
+- **Variable Token (`--foreground`)**: `#0a0a0a` — grounded in `var(--foreground)` in `:root`
+- **Variable Token (`--primary`)**: `#171717` — grounded in `var(--primary)` in `:root`
+- **Variable Token (`--primary-foreground`)**: `#fafafa` — grounded in `var(--primary-foreground)` in `:root`
+- **Variable Token (`--secondary`)**: `#f5f5f5` — grounded in `var(--secondary)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×4182px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `altamedfoundation-org` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing)`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
 - **Corner Radii**: `.3125rem`, `.375rem`, `.25rem`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `proxima-nova`
-- **Body Font Stack**: `gotham-xnarrow`
-- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **Body Font Stack**: `proxima-nova`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`
-- **H2 Section Rule**: CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`, `--text-title-lg: 34px`
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-size-body: 18px`
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 45px`, `line-height: 50px`, `font-weight: 600`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`, `--text-title-lg: 34px`
+- **Body Copy Rule**: live computed `body` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-size-body: 18px`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `altamedfoundation-org` (`AltaMed Foundation · AltaMed Foundation`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.relative> — `altamedfoundation-org`)**:
-   - DOM & Selectors: Landmark `<header class="relative z-50">` hosting `AltaMed Foundation · AltaMed Foundat` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-href="/_next/static/immutab..."`, `data-nimg="1"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
+   - DOM & Selectors: Landmark `<header class="relative z-50">` (`1440x129px`) hosting `AltaMed Foundation · AltaMed Foundat` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-href="/_next/static/immutab..."`, `data-nimg="1"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.relative> — `altamedfoundation-org`)` (`altamedfoundation-org`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.bg-white> — `H.E.L.P. Campaign`)**:
-   - DOM & Selectors: Landmark `<section class="bg-white py-12">` presenting display lead `H.E.L.P. Campaign` and copy excerpt *"AltaMed ensures everyone in our community has access to quality h"* over `#fb2c36` canvas and `#f9fafb` ink.
-   - Responsive Contract: Hero stage (`1440×4182px` desktop / `390×2400px` mobile) sets `#fb2c36` background with `#f9fafb` headline `H.E.L.P. Campaign`.
+   - DOM & Selectors: Landmark `<section class="bg-white py-12">` presenting display lead `H.E.L.P. Campaign` and copy excerpt *"AltaMed ensures everyone in our community has access to quality h"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `H.E.L.P. Campaign`.
 3. **Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)**:
    - DOM & Selectors: Landmark `<section class="scroll-mt-24 bg-purple">` rendering section `Impact Stories` with copy *"Health. Equity. Life. Programs."*, asset references (`vdqo9h3n.api.sanity.io`, `altamed-foundation-logo.svg`, `3kc4s5-t1h7ps.js`, `1h6ujiewnnn1_.js`), and grid rule `.tk-gotham-xnarrow { font-family: "gotham-xnarrow",sans-serif; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.scroll-mt-24> — `Homeward Bound: Preemie Twins’ Inc`)**:
-   - DOM & Selectors: Landmark `<section class="scroll-mt-24 bg-white">` framing `Homeward Bound: Preemie Twins’ Incredible Journey...` and `Make a Difference` (*"Learn More about the H.E.L.P. Campaign"*) with `#3080ff` surface cards, `#155dfc` accents, and `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.scroll-mt-24> — `Homeward Bound: Preemie Twins’ Inc`)` uses `.3125rem`, `.375rem`, `.25rem`, `4px` radii, `#155dfc` highlights, and assets (vdqo9h3n.api.sanity.io, altamed-foundation-logo.svg, 3kc4s5-t1h7ps.js).
-5. **Colophon & Global Directory Footer (<footer.bg-white> — `https://altamedfoundation.org/`)**:
-   - DOM & Selectors: Landmark `<footer class="bg-white pt-8">` anchoring `AltaMed Foundation · AltaMed Fou` footer links (`Overview · Index · Archive · About · Contact`), copy *"about the H.E.L.P. Campaign"*, and `#f3f4f6` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-white> — `https://altamedfoundation.org/`)` aligns to `40rem` extracted from `altamedfoundation-org` stylesheet with `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-scroll-behavior="smooth", data-precedence="next", data-href="/_next/static/immutab...").
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.py-12> — `Homeward Bound: Preemie Twins’ Inc`)**:
+   - DOM & Selectors: Landmark `<section class="scroll-mt-24 bg-white">` framing `Homeward Bound: Preemie Twins’ Incredible Journey...` and `Make a Difference` (*"Learn More about the H.E.L.P. Campaign"*) with `#ffa500` surface cards, `#242029` accents, and `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-12> — `Homeward Bound: Preemie Twins’ Inc`)` uses `.3125rem`, `.375rem`, `.25rem`, `4px` radii, `#242029` highlights, and assets (vdqo9h3n.api.sanity.io, altamed-foundation-logo.svg, 3kc4s5-t1h7ps.js).
+5. **Colophon & Global Directory Footer (<footer.pt-8> — `https://altamedfoundation.org/`)**:
+   - DOM & Selectors: Landmark `<footer class="pt-8 pb-8">` anchoring `AltaMed Foundation · AltaMed Fou` footer links (`Overview · Index · Archive · About · Contact`), copy *"about the H.E.L.P. Campaign"*, and `#e5e5e5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.pt-8> — `https://altamedfoundation.org/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-scroll-behavior="smooth", data-precedence="next", data-href="/_next/static/immutab...").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"AltaMed ensures everyone in our community has access to quality health care, enabl..."*

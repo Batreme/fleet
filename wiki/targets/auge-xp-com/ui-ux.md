@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: auge-xp-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: auge-xp-com
 
 ## Overview & Design Identity
 - **Target**: `auge-xp-com` (**Digital Experience Studio · AUGE Experience**)
 - **Production URL**: [https://auge-xp.com/](https://auge-xp.com/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#fdf48b`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×940px`, Mobile `390×884px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#edeee5` / `#fdf48b`)
 - **Summary**: AUGE Experience is an independent digital experience studio creating websites, digital products, interactive installations and creative t...
-- **Total Clean CSS Variables Extracted**: `37` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `ppNeueMontreal`
-- **Body Font Stack**: `ppNeueMontreal Fallback`
+- **Body Font Stack**: `ppNeueMontreal`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--font-farnham-display: "farnhamDisplay", "farnhamDisplay Fallback"`
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-content-lg)`, `var(--text-content-md)`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--text-content-lg)`, `var(--text-content-md)`)
-- **Metadata & Labels**: CSS variables `--default-mono-font-family: var(--font-mono)`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); CSS variables `--font-farnham-display: "farnhamDisplay", "farnhamDisplay Fallback"`
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 28.5px`, `line-height: 24.225px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 38px`, `line-height: 38px`, `font-weight: 400`); CSS variables `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#edeee5` | `var(--color-background)` in `:root` |
+| **Primary Canvas Substrate** | `#edeee5` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `40 { background-color: white }` (`#ffffff`) |
 | **Interactive Accent / Highlight** | `#fdf48b` | `var(--color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#0000` | `textarea { background-color: #0000 }` |
-| **Structural Hairline Border** | `#000000` | `.bg-black { background-color: black }` (`#000000`) |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#000000` | `botDialogBodyLevelButtonLevelOp... { border-color: #000000 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.text-foreground> — `auge-xp-com`)**:
-   - Landmark `<header class="text-foreground">` hosting `Digital Experience Studio · AUGE Exp` navigation (`Works · About · Let's talk`), DOM attributes (`data-precedence="next"`, `data-cbid="ced38b07-60a9-4c9f-ba..."`, `data-blockingmode="auto"`, `data-culture="EN"`), and stylesheet rule `real_f02daa13-module__qtcTEa__cla... { font-family:ppNeueMontreal,ppNeueMontreal Fallback }`.
-2. **Hero Stage & Focal Lead (<main.relative> — `Viru Group`)**:
-   - Landmark `<main class="relative min-h-dvh">` presenting display lead `Viru Group` and copy excerpt *"Necessary 2 Necessary cookies help make a website usable by enabl"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<main.relative> — `Maison AUGE`)**:
-   - Landmark `<main class="relative min-h-dvh">` rendering section `Maison AUGE` with copy *"Cookiebot 1 Learn more about this provider CookieConsent Stores t"*, asset references (`HJGhjOeW_p3Yd8NW_viru-cover.3.jpg`, `nTk2Qb6LITpLW8TG_maison_cover.jpg`, `pUkcTZHGA7KhlJZ0_lunarossa_cover_...`, `VsNqcjWTy0U8igpA_don-molinico-cov...`), and grid rule `treal_f02daa13-module__qtcTEa__va... { --font-sans:"ppNeueMontreal", "ppNeueMontreal Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<main.relative> — `AC40 Lunarossa`)**:
-   - Landmark `<main class="relative min-h-dvh">` framing `AC40 Lunarossa` and `Don Molinico` (*"Learn more about this provider"*) with `#edeee5` surface cards, `#fdf48b` accents, and `font-face { font-family:greedBold;src:url(../media/Greed_Bold-s.p.2gpcionblp7lf.woff... }`.
+   - Landmark `<header class="text-foreground">` (`1440x0px`) hosting `Digital Experience Studio · AUGE Exp` navigation (`Works · About · Let's talk`), DOM attributes (`data-precedence="next"`, `data-cbid="ced38b07-60a9-4c9f-ba..."`, `data-blockingmode="auto"`, `data-culture="EN"`), and stylesheet rule `real_f02daa13-module__qtcTEa__cla... { font-family:ppNeueMontreal,ppNeueMontreal Fallback }`.
+2. **Hero Stage & Focal Lead (<main.min-h-dvh> — `AUGE EXPERIENCE© RCCS YFZVYTYHHV©`)**:
+   - Landmark `<main class="min-h-dvh relative">` presenting display lead `AUGE EXPERIENCE© RCCS YFZVYTYHHV©` and copy excerpt *"An award-winning digital experience studio partnering with ambiti"* over `#edeee5` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.relative> — `AC40 Lunarossa`)**:
+   - Landmark `<main class="min-h-dvh relative">` rendering section `AC40 Lunarossa` with copy *"An award-winning digital experience studio partnering with ambiti"*, asset references (`logo.svg`, `HJGhjOeW_p3Yd8NW_viru-cover.3.jpg`, `nTk2Qb6LITpLW8TG_maison_cover.jpg`, `pUkcTZHGA7KhlJZ0_lunarossa_cover_...`), and grid rule `treal_f02daa13-module__qtcTEa__va... { --font-sans:"ppNeueMontreal", "ppNeueMontreal Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<main.min-h-dvh:nth(2)> — `Don Molinico`)**:
+   - Landmark `<main class="min-h-dvh relative">` framing `Don Molinico` and `Il Capo Production` (*"create distinctive experiences through"*) with `#ffffff` surface cards, `#fdf48b` accents, and `font-face { font-family:greedBold;src:url(../media/Greed_Bold-s.p.2gpcionblp7lf.woff... }`.
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotDialogContentWrapper> — `https://auge-xp.com/`)**:
-   - Landmark `<footer class="CybotCookiebotDialogContentWrapper">` anchoring `Digital Experience Studio · AUGE` footer links (`Works · About · Let's talk`), copy *"Stores the user's cookie consent state for the current domai"*, and `#000000` structural dividers.
+   - Landmark `<footer class="CybotCookiebotDialogContentWrapper">` anchoring `Digital Experience Studio · AUGE` footer links (`Works · About · Let's talk`), copy *"design, technology and creative"*, and `#000000` structural dividers.

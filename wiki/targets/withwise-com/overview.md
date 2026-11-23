@@ -1,8 +1,12 @@
 ---
 title: "Target Overview: withwise-com"
-date: 2026-11-14
+date: 2026-11-23
+captured_at: 2026-11-23
 url: "https://withwise.com/"
+final_url: "https://withwise.com/"
 status: analyzed
+http_status: 200
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -12,26 +16,25 @@ auth_required: false
 
 # Target Overview: withwise-com
 
-## 🧭 Dossier Navigation
+## Dossier Navigation
+- [UI Prompt Blueprint](prompt-blueprint.md)
+- [UI Architecture & Design Tokens](ui-ux.md)
 - [Discovered APIs & Network Protocols](apis.md)
 - [Data Models & Local State](data-models.md)
-- [UI Architecture & Design Tokens](ui-ux.md)
 - [De-obfuscated Source Maps](source-maps.md)
 
 ---
 
-## 🏗️ Architecture & Stack Fingerprint
-- **Target URL**: `https://withwise.com/`
-- **Page Title**: Compliance-First Onboarding Software | Wise
-- **Identified Frameworks**: Modern Web Application
-- **Auth Profile Used**: None (Public session)
-- **Recorded API Endpoints**: 10
-- **Recovered Scripts**: 34
-- **Recovered Stylesheets**: 12
+## Architecture & Stack Fingerprint
+- **Target URL**: [https://withwise.com/](https://withwise.com/)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: Compliance-First Onboarding Software · Wise
+- **Identified Frameworks**: Tailwind CSS
+- **Recovered Scripts**: `36`
+- **Recovered Stylesheets**: `11`
 
 ---
 
-## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
-- **Domain Modeling**: See [data-models](data-models.md) for concrete entity structures observed in network requests and local storage.
-- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
-- **[UI Prompt Blueprint](prompt-blueprint.md)** — 7-part design system analysis, desktop/mobile visual captures, and zero-shot generation prompt.
+## Key Architectural Lessons
+- **UI & Design System**: See [ui-ux.md](ui-ux.md) and [prompt-blueprint.md](prompt-blueprint.md) for live computed design tokens and viewport captures.
+- **Client State & APIs**: See [data-models.md](data-models.md) and [apis.md](apis.md) for observed endpoints and storage keys.

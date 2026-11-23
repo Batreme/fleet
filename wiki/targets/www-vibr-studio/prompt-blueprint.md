@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: www-vibr-studio"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-vibr-studio"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1d1d1f`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#faf6ec` / `#586aea`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-vibr-studio
 
-> **Vibr — Figma to code for designers who ship** (https://www.vibr.studio/) — Your design is the code. Vibr compiles your Figma file into a real, responsive Next.js site you own, edit with Claude Code or Codex, and...
+> **Vibr — Figma to code for designers who ship** (https://www.vibr.studio/) — Your design is the code. Vibr compiles your Figma file into a responsive Next.js site you own, edit with Claude Code or Codex and ship. J...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Vibr — Figma to code for designers who ship** (`https://www.vibr.studio/`). Your design is the code. Vibr compiles your Figma file into a real, responsive Next.js site you own, edit with Claude Code or Codex, and...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1d1d1f`)**.
+- **Brand Essence & Persona**: **Vibr — Figma to code for designers who ship** (`https://www.vibr.studio/`). Your design is the code. Vibr compiles your Figma file into a responsive Next.js site you own, edit with Claude Code or Codex and ship. J...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#faf6ec` / `#586aea`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f5f5f7` (`var(--bg)` in `:root`) paired with `#1d1d1f` primary typography and `#1d1d1f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Vibr : Figma to code for designers w`) with `Inter Fallback` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 6px`, padding `2px`) with `cubic-bezier(.34,1.6,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#faf6ec` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#586aea` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Onest` for display copy (`VIBR : FIGMA TO CODE FOR DESIGNERS W`) with `grain` and `SF Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1822px` container bounds (`gap: 52.56px`, padding `37.44px`) with `cubic-bezier(.34,1.6,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `800px` extracted from `www-vibr-studio` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `2px` lateral canvas padding with `6px` grid gap.
-- **Border Radius Scale**: `20px`, `6px`, `50%`, `.75px`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1822px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `37.44px` lateral canvas padding with `52.56px` grid gap.
+- **Border Radius Scale**: `4px`, `6px`, `20px`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 6px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1822px`, `gap: 52.56px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `37.44px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (min-width:900px) and (min-height:720px) and (prefers-red...`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
@@ -48,49 +52,60 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f5f5f7` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--surface)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#e8e8ed` | `var(--surface-hover)` in `:root` |
-| **Interactive Accent / Highlight** | `#1d1d1f` | `var(--text)` in `:root` |
+| **Primary Canvas Substrate** | `#faf6ec` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f5f5f7` | `var(--bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#586aea` | live computed `a` `background-color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#6e6e73` | `var(--text-secondary)` in `:root` |
-| **Structural Hairline Border** | `#aeaeb2` | `var(--text-tertiary)` in `:root` |
+| **Structural Hairline Border** | `#e6e3d9` | `var(--border)` in `:root` (`00000014`) |
+| **Variable Token (`--surface`)** | `#ffffff` | `var(--surface)` in `:root` |
+| **Variable Token (`--surface-hover`)** | `#e8e8ed` | `var(--surface-hover)` in `:root` |
+| **Variable Token (`--text`)** | `#1d1d1f` | `var(--text)` in `:root` |
+| **Variable Token (`--text-tertiary`)** | `#aeaeb2` | `var(--text-tertiary)` in `:root` |
+| **Variable Token (`--accent`)** | `#6e5ce6` | `var(--accent)` in `:root` |
+| **Variable Token (`--accent-hover`)** | `#5b48d4` | `var(--accent-hover)` in `:root` |
+| **Variable Token (`--success`)** | `#30d158` | `var(--success)` in `:root` |
+| **Variable Token (`--error`)** | `#ff453a` | `var(--error)` in `:root` |
+| **Variable Token (`--coal`)** | `#40474b` | `var(--coal)` in `:root` |
+| **Variable Token (`--dusty-brick`)** | `#d97070` | `var(--dusty-brick)` in `:root` |
+| **Variable Token (`--warm-stone`)** | `#b8afa8` | `var(--warm-stone)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--panel-w` | `min(440px,calc(100vw - 40px))` | Dimension / Scale Token |
-| `--panel-h` | `calc(100dvh - 100px)` | Dimension / Scale Token |
-| `--panel-inset` | `20px` | Dimension / Scale Token |
-| `--content-top` | `65px` | Dimension / Scale Token |
-| `--bleed` | `32px` | Dimension / Scale Token |
-| `--gutter` | `clamp(20px,7vw,56px)` | Layout / Spatial Grid Token |
-| `--card-zoom` | `.6` | Design System Custom Token |
-| `--hero-mark` | `316px` | Dimension / Scale Token |
-| `--hero-gap` | `clamp(32px,3.34cqw,64px)` | Layout / Spatial Grid Token |
-| `--hero-bottom-block` | `199px` | Dimension / Scale Token |
-| `--hero-bottom-offset` | `clamp(90px,8cqw,154px)` | Dimension / Scale Token |
-| `--hero-clear` | `24px` | Dimension / Scale Token |
-| `--hero-phone-top` | `70px` | Dimension / Scale Token |
-| `--watch-card-w` | `246px` | Dimension / Scale Token |
-| `--watch-card-h` | `239.38px` | Dimension / Scale Token |
-| `--watch-card-right` | `clamp(20px,2.76cqw,53px)` | Dimension / Scale Token |
+| `--bg` | `#f5f5f7` | Canvas / Surface Token |
+| `--surface` | `#fff` | Canvas / Surface Token |
+| `--surface-hover` | `#e8e8ed` | Canvas / Surface Token |
+| `--surface-elevated` | `#fff` | Canvas / Surface Token |
+| `--text` | `#1d1d1f` | Typography Ink Token |
+| `--text-secondary` | `#6e6e73` | Typography Ink Token |
+| `--text-tertiary` | `#aeaeb2` | Typography Ink Token |
+| `--accent` | `#6e5ce6` | Brand / Palette Token |
+| `--accent-hover` | `#5b48d4` | Brand / Palette Token |
+| `--border` | `#00000014` | Elevation / Border Token |
+| `--success` | `#30d158` | Color / Atmospheric Token |
+| `--error` | `#ff453a` | Color / Atmospheric Token |
+| `--sand` | `#faf6ec` | Color / Atmospheric Token |
+| `--coal` | `#40474b` | Color / Atmospheric Token |
+| `--dusty-brick` | `#d97070` | Color / Atmospheric Token |
+| `--warm-stone` | `#b8afa8` | Color / Atmospheric Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Inter`.
-- **Primary Body Stack**: `Inter Fallback`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Onest`.
+- **Primary Body Stack**: `grain`.
+- **Technical / Metadata Stack**: `SF Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--m-h1: 32px`, `--m-h1-lh: 1.1`.
-- **Section Heading (`H2`)**: CSS variables `--m-h2: 24px`, `--m-h2-lh: 1.2`.
-- **Body Copy**: CSS variables `--m-body: 16px`, `--m-body-lh: 1.4`.
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,5.8cqi,42px)`, `clamp(16px,1.04cqw,20px)`, `15px`, `var(--m-h2)`, `var(--m-body)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 80px`, `line-height: 72px`, `font-weight: 900`); CSS variables `--m-h1: 32px`, `--m-h1-lh: 1.1`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60.048px`, `line-height: 60.048px`, `font-weight: 600`, `letter-spacing: -1.5012px`); CSS variables `--m-h2: 24px`, `--m-h2-lh: 1.2`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--m-body: 16px`, `--m-body-lh: 1.4`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -103,47 +118,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1
 - **Selector `.clock-section-module__aYA5Ra__ring`**: `transition: opacity .25s` extracted from `www-vibr-studio` stylesheet.
 - **Selector `.clock-section-module__aYA5Ra__disc`**: `transition: opacity .2s,transform .28s cubic-bezier(.34,1.6,.64,1)` extracted from `www-vibr-studio` stylesheet.
 - **Selector `.clock-section-module__aYA5Ra__check`**: `transition: opacity .18s 60ms,transform .28s cubic-bezier(.34,1.6,.64,1) 60ms` extracted from `www-vibr-studio` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.34,1.6,.64,1)`)**: Governs interactive state transitions across `<header.hero-module__sup1Jq__hero>` and `<main.landing-page-module__p_mWBW__page>`.
+- **Extracted Easing Curve (`cubic-bezier(.34,1.6,.64,1)`)**: Governs interactive state transitions across `<header.hero-module__sup1Jq__hero>` and `<main.landing-page-module__p_mWBW__page:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Vibr — Figma to code for designers who shi │
 │ ====================================================================== │
-│ [ <header.hero-module__sup | Overview · Index · Archive · About · C ]  │
+│ [ <header.hero-module__s (1440x900px) | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.landing-page-module__p_mWBW__page>             |   │
-│ | H1: Vibr : Figma to code for designers who ship                  |   │
-│ | Substrate: #f5f5f7    | Ink: #1d1d1f    | Accent: #1d1d1f        |   │
+│ | HERO STAGE: <main.landing-page-module__p_mWBW__p (w=1440px)        | │
+│ | H1: VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP                    | │
+│ | Substrate: #faf6ec | Ink: #000000 | Accent: #586aea                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.landing-page-module_) max-w: 800px          |   │
+│ | SHOWCASE GRID (<main.landing-page-module_) max-w: 1822px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Vibr starts with your actual |  | Figma Build your sections    | | │
+│ | | Vibr : Figma to code for des |  | Vibr starts with your actual | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 6px   ) | │
-│ | [<header.hero-modul] -> [<main.landing-page] -> [<main.landing-page] │
+│ | DETAIL MODULE (<main.landing-page-module_) — Figma Build your sect | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.landing-footer) | https://www.vibr.studio/           │
+│ [ FOOTER (<footer.landing-foot) | https://www.vibr.studio/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 52.56px)    │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.hero-module__sup) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.landing-page-modul) — 390px Vertical Lead        | │
+│ | H1: VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.landing-page-mod) — 1-Col Stack              | │
+│ | [ Item 1: Vibr : Figma to code for designers who ship            ] | │
+│ | [ Item 2: Vibr starts with your actual design.                   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.landing-page-modul) — 1-Col (Figma Build your s) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.landing-foot) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.hero-module__sup1Jq__hero> — `www-vibr-studio`)**:
-   - Landmark `<header class="hero-module__sup1Jq__hero">` hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-dgst="BAILOUT_TO_CLIENT_SID..."`, `data-landing-section="hero"`), and stylesheet rule `.about-me-module__qpLcqW__headlin... { width:100%;display:block }`.
-2. **Hero Stage & Focal Lead (<main.landing-page-module__p_mWBW__page> — `Vibr : Figma to code for designers`)**:
-   - Landmark `<main class="landing-page-module__p_mWBW__page">` presenting display lead `Vibr : Figma to code for designers who ship` and copy excerpt *"Your design is the code - Your design is the code - Your design i"* over `#f5f5f7` canvas and `#1d1d1f` ink.
-3. **Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page> — `Vibr starts with your actual desig`)**:
-   - Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr starts with your actual design.` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `.about-me-module__qpLcqW__authorIcon { flex-shrink:0;width:22px;height:22px;position:relative }`.
-4. **Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page> — `Figma Build your sections`)**:
-   - Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Figma Build your sections` and `Compile Click to edit anything` (*": Figma to code for designers who ship"*) with `#e8e8ed` surface cards, `#1d1d1f` accents, and `.about-me-module__qpLcqW__authorG... { width:62.5%;height:62.5%;position:absolute;top:18.87%;left:18.75%;overfl... }`.
+   - Landmark `<header class="hero-module__sup1Jq__hero">` (`1440x900px`) hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`), and stylesheet rule `.about-me-module__qpLcqW__headlin... { width:100%;display:block }`.
+2. **Hero Stage & Focal Lead (<main.landing-page-module__p_mWBW__page> — `VIBR : FIGMA TO CODE FOR DESIGNERS`)**:
+   - Landmark `<main class="landing-page-module__p_mWBW__page">` presenting display lead `VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP` and copy excerpt *"Your design is the code - Your design is the code - Your design i"* over `#faf6ec` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page:nth(2)> — `Vibr : Figma to code for designers`)**:
+   - Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr : Figma to code for designers who ship` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `.about-me-module__qpLcqW__authorIcon { flex-shrink:0;width:22px;height:22px;position:relative }`.
+4. **Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page:nth(3)> — `Vibr starts with your actual desig`)**:
+   - Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Vibr starts with your actual design.` and `Figma Build your sections` (*": Figma to code for designers who ship"*) with `#f5f5f7` surface cards, `#586aea` accents, and `.about-me-module__qpLcqW__authorG... { width:62.5%;height:62.5%;position:absolute;top:18.87%;left:18.75%;overfl... }`.
 5. **Colophon & Global Directory Footer (<footer.landing-footer-module__8-2yDa__root> — `https://www.vibr.studio/`)**:
-   - Landmark `<footer class="landing-footer-module__8-2yDa__root">` anchoring `Vibr — Figma to code for designe` footer links (`Overview · Index · Archive · About · Contact`), copy *"Vibr Studio came out of years of handoff frustration. I got "*, and `#aeaeb2` structural dividers.
+   - Landmark `<footer class="landing-footer-module__8-2yDa__root">` anchoring `Vibr — Figma to code for designe` footer links (`Overview · Index · Archive · About · Contact`), copy *"Vibr Studio came out of years of handoff frustration. I got "*, and `#e6e3d9` structural dividers.
 
 ---
 
@@ -155,82 +189,93 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-vibr-studio` (**Vibr — Figma to code for designers who ship** — `https://www.vibr.studio/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f7` / `#1d1d1f`).
-- **Identity & Domain Context**: Your design is the code. Vibr compiles your Figma file into a real, responsive Next.js site you own, edit with Claude Code or Codex, and...
-- **Primary Substrate**: `#f5f5f7` (`var(--bg)` in `:root`), **Primary Ink**: `#1d1d1f`, **Accent / Highlight**: `#1d1d1f`.
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#faf6ec` / `#586aea`).
+- **Identity & Domain Context**: Your design is the code. Vibr compiles your Figma file into a responsive Next.js site you own, edit with Claude Code or Codex and ship. J...
+- **Primary Substrate**: `#faf6ec` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#586aea`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f5f5f7` (`var(--bg)` in `:root`) paired with `#1d1d1f` primary typography and `#1d1d1f` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Vibr : Figma to code for designers w`) with `Inter Fallback` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 6px`, padding `2px`) with `cubic-bezier(.34,1.6,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#faf6ec` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#586aea` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Onest` for display copy (`VIBR : FIGMA TO CODE FOR DESIGNERS W`) with `grain` and `SF Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1822px` container bounds (`gap: 52.56px`, padding `37.44px`) with `cubic-bezier(.34,1.6,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-vibr-studio` in your global stylesheet:
 
 :root {
-  /* Vibr — Figma to code for designers who ship (www-vibr-studio) — Ground-Truth Extracted CSS Variables */
-  --panel-w: min(440px,calc(100vw - 40px)); /* Dimension / Scale Token (www-vibr-studio) */
-  --panel-h: calc(100dvh - 100px); /* Dimension / Scale Token (www-vibr-studio) */
-  --panel-inset: 20px; /* Dimension / Scale Token (www-vibr-studio) */
-  --content-top: 65px; /* Dimension / Scale Token (www-vibr-studio) */
-  --bleed: 32px; /* Dimension / Scale Token (www-vibr-studio) */
-  --gutter: clamp(20px,7vw,56px); /* Layout / Spatial Grid Token (www-vibr-studio) */
-  --card-zoom: .6; /* Design System Custom Token (www-vibr-studio) */
-  --hero-mark: 316px; /* Dimension / Scale Token (www-vibr-studio) */
-  --hero-gap: clamp(32px,3.34cqw,64px); /* Layout / Spatial Grid Token (www-vibr-studio) */
-  --hero-bottom-block: 199px; /* Dimension / Scale Token (www-vibr-studio) */
-  --hero-bottom-offset: clamp(90px,8cqw,154px); /* Dimension / Scale Token (www-vibr-studio) */
-  --hero-clear: 24px; /* Dimension / Scale Token (www-vibr-studio) */
-  --hero-phone-top: 70px; /* Dimension / Scale Token (www-vibr-studio) */
-  --watch-card-w: 246px; /* Dimension / Scale Token (www-vibr-studio) */
-  --watch-card-h: 239.38px; /* Dimension / Scale Token (www-vibr-studio) */
-  --watch-card-right: clamp(20px,2.76cqw,53px); /* Dimension / Scale Token (www-vibr-studio) */
+  /* Vibr — Figma to code for designers who ship (www-vibr-studio) — Live-Grounded CSS Variables */
+  --bg: #f5f5f7; /* Canvas / Surface Token (www-vibr-studio) */
+  --surface: #fff; /* Canvas / Surface Token (www-vibr-studio) */
+  --surface-hover: #e8e8ed; /* Canvas / Surface Token (www-vibr-studio) */
+  --surface-elevated: #fff; /* Canvas / Surface Token (www-vibr-studio) */
+  --text: #1d1d1f; /* Typography Ink Token (www-vibr-studio) */
+  --text-secondary: #6e6e73; /* Typography Ink Token (www-vibr-studio) */
+  --text-tertiary: #aeaeb2; /* Typography Ink Token (www-vibr-studio) */
+  --accent: #6e5ce6; /* Brand / Palette Token (www-vibr-studio) */
+  --accent-hover: #5b48d4; /* Brand / Palette Token (www-vibr-studio) */
+  --border: #00000014; /* Elevation / Border Token (www-vibr-studio) */
+  --success: #30d158; /* Color / Atmospheric Token (www-vibr-studio) */
+  --error: #ff453a; /* Color / Atmospheric Token (www-vibr-studio) */
+  --sand: #faf6ec; /* Color / Atmospheric Token (www-vibr-studio) */
+  --coal: #40474b; /* Color / Atmospheric Token (www-vibr-studio) */
+  --dusty-brick: #d97070; /* Color / Atmospheric Token (www-vibr-studio) */
+  --warm-stone: #b8afa8; /* Color / Atmospheric Token (www-vibr-studio) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f5f5f7` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--surface)` in `:root`
-- **Elevated Surface / Card Substrate**: `#e8e8ed` — grounded in `var(--surface-hover)` in `:root`
-- **Interactive Accent / Highlight**: `#1d1d1f` — grounded in `var(--text)` in `:root`
+- **Primary Canvas Substrate**: `#faf6ec` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f5f5f7` — grounded in `var(--bg)` in `:root`
+- **Interactive Accent / Highlight**: `#586aea` — grounded in live computed `a` `background-color` (`computed_styles.json`)
 - **Secondary / Muted Copy**: `#6e6e73` — grounded in `var(--text-secondary)` in `:root`
-- **Structural Hairline Border**: `#aeaeb2` — grounded in `var(--text-tertiary)` in `:root`
+- **Structural Hairline Border**: `#e6e3d9` — grounded in `var(--border)` in `:root` (`00000014`)
+- **Variable Token (`--surface`)**: `#ffffff` — grounded in `var(--surface)` in `:root`
+- **Variable Token (`--surface-hover`)**: `#e8e8ed` — grounded in `var(--surface-hover)` in `:root`
+- **Variable Token (`--text`)**: `#1d1d1f` — grounded in `var(--text)` in `:root`
+- **Variable Token (`--text-tertiary`)**: `#aeaeb2` — grounded in `var(--text-tertiary)` in `:root`
+- **Variable Token (`--accent`)**: `#6e5ce6` — grounded in `var(--accent)` in `:root`
+- **Variable Token (`--accent-hover`)**: `#5b48d4` — grounded in `var(--accent-hover)` in `:root`
+- **Variable Token (`--success`)**: `#30d158` — grounded in `var(--success)` in `:root`
+- **Variable Token (`--error`)**: `#ff453a` — grounded in `var(--error)` in `:root`
+- **Variable Token (`--coal`)**: `#40474b` — grounded in `var(--coal)` in `:root`
+- **Variable Token (`--dusty-brick`)**: `#d97070` — grounded in `var(--dusty-brick)` in `:root`
+- **Variable Token (`--warm-stone`)**: `#b8afa8` — grounded in `var(--warm-stone)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `800px` extracted from `www-vibr-studio` stylesheet
-- **Padding & Gutters**: `2px` lateral canvas padding with `6px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 6px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1822px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `37.44px` lateral canvas padding with `52.56px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1822px`, `gap: 52.56px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `37.44px` horizontal padding
 - **Media Queries**: `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (min-width:900px) and (min-height:720px) and (prefers-red...`, `@media (prefers-reduced-motion:reduce)`
-- **Corner Radii**: `20px`, `6px`, `50%`, `.75px`
+- **Corner Radii**: `4px`, `6px`, `20px`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Inter`
-- **Body Font Stack**: `Inter Fallback`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--m-h1: 32px`, `--m-h1-lh: 1.1`
-- **H2 Section Rule**: CSS variables `--m-h2: 24px`, `--m-h2-lh: 1.2`
-- **Body Copy Rule**: CSS variables `--m-body: 16px`, `--m-body-lh: 1.4`
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,5.8cqi,42px)`, `clamp(16px,1.04cqw,20px)`, `15px`, `var(--m-h2)`, `var(--m-body)`)
+- **Display Font Stack**: `Onest`
+- **Body Font Stack**: `grain`
+- **Monospace / Technical Font Stack**: `SF Mono`
+- **H1 Display Rule**: live computed `h1` (`font-size: 80px`, `line-height: 72px`, `font-weight: 900`); CSS variables `--m-h1: 32px`, `--m-h1-lh: 1.1`
+- **H2 Section Rule**: live computed `h2` (`font-size: 60.048px`, `line-height: 60.048px`, `font-weight: 600`, `letter-spacing: -1.5012px`); CSS variables `--m-h2: 24px`, `--m-h2-lh: 1.2`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--m-body: 16px`, `--m-body-lh: 1.4`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-vibr-studio` (`Vibr — Figma to code for designers who ship`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.hero-module__sup1Jq__hero> — `www-vibr-studio`)**:
-   - DOM & Selectors: Landmark `<header class="hero-module__sup1Jq__hero">` hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-dgst="BAILOUT_TO_CLIENT_SID..."`, `data-landing-section="hero"`), and stylesheet rule `.about-me-module__qpLcqW__headlin... { width:100%;display:block }`.
+   - DOM & Selectors: Landmark `<header class="hero-module__sup1Jq__hero">` (`1440x900px`) hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`), and stylesheet rule `.about-me-module__qpLcqW__headlin... { width:100%;display:block }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hero-module__sup1Jq__hero> — `www-vibr-studio`)` (`www-vibr-studio`) adapts across `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (min-width:900px) and (min-height:720px) and (prefers-red...`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.34,1.6,.64,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.22,.7,.24,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<main.landing-page-module__p_mWBW__page> — `Vibr : Figma to code for designers`)**:
-   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` presenting display lead `Vibr : Figma to code for designers who ship` and copy excerpt *"Your design is the code - Your design is the code - Your design i"* over `#f5f5f7` canvas and `#1d1d1f` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f5f5f7` background with `#1d1d1f` headline `Vibr : Figma to code for designers who ship`.
-3. **Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page> — `Vibr starts with your actual desig`)**:
-   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr starts with your actual design.` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `.about-me-module__qpLcqW__authorIcon { flex-shrink:0;width:22px;height:22px;position:relative }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page> — `Vibr starts with your actual desig`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 6px`) on desktop and Single-column vertical stack at `390px` viewport width with `2px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page> — `Figma Build your sections`)**:
-   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Figma Build your sections` and `Compile Click to edit anything` (*": Figma to code for designers who ship"*) with `#e8e8ed` surface cards, `#1d1d1f` accents, and `.about-me-module__qpLcqW__authorG... { width:62.5%;height:62.5%;position:absolute;top:18.87%;left:18.75%;overfl... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page> — `Figma Build your sections`)` uses `20px`, `6px`, `50%`, `.75px` radii, `#1d1d1f` highlights, and assets (83afe278b6a6bb3c-s.p.3a6ba036.woff2, 8780dfd0812b997c-s.p.5704523e.woff2, 8800dfc60902df36-s.p.d48c4d68.woff2).
+2. **Hero Stage & Focal Lead (<main.landing-page-module__p_mWBW__page> — `VIBR : FIGMA TO CODE FOR DESIGNERS`)**:
+   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` presenting display lead `VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP` and copy excerpt *"Your design is the code - Your design is the code - Your design i"* over `#faf6ec` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#faf6ec` background with `#000000` headline `VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP`.
+3. **Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page:nth(2)> — `Vibr : Figma to code for designers`)**:
+   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr : Figma to code for designers who ship` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `.about-me-module__qpLcqW__authorIcon { flex-shrink:0;width:22px;height:22px;position:relative }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page:nth(2)> — `Vibr : Figma to code for designers`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1822px`, `gap: 52.56px`) on desktop and Single-column vertical stack at `390px` viewport width with `37.44px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page:nth(3)> — `Vibr starts with your actual desig`)**:
+   - DOM & Selectors: Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Vibr starts with your actual design.` and `Figma Build your sections` (*": Figma to code for designers who ship"*) with `#f5f5f7` surface cards, `#586aea` accents, and `.about-me-module__qpLcqW__authorG... { width:62.5%;height:62.5%;position:absolute;top:18.87%;left:18.75%;overfl... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page:nth(3)> — `Vibr starts with your actual desig`)` uses `4px`, `6px`, `20px`, `50%` radii, `#586aea` highlights, and assets (83afe278b6a6bb3c-s.p.3a6ba036.woff2, 8780dfd0812b997c-s.p.5704523e.woff2, 8800dfc60902df36-s.p.d48c4d68.woff2).
 5. **Colophon & Global Directory Footer (<footer.landing-footer-module__8-2yDa__root> — `https://www.vibr.studio/`)**:
-   - DOM & Selectors: Landmark `<footer class="landing-footer-module__8-2yDa__root">` anchoring `Vibr — Figma to code for designe` footer links (`Overview · Index · Archive · About · Contact`), copy *"Vibr Studio came out of years of handoff frustration. I got "*, and `#aeaeb2` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.landing-footer-module__8-2yDa__root> — `https://www.vibr.studio/`)` aligns to `800px` extracted from `www-vibr-studio` stylesheet with `2px` lateral canvas padding with `6px` grid gap and attributes (data-precedence="next", data-precedence="next", data-dgst="BAILOUT_TO_CLIENT_SID...").
+   - DOM & Selectors: Landmark `<footer class="landing-footer-module__8-2yDa__root">` anchoring `Vibr — Figma to code for designe` footer links (`Overview · Index · Archive · About · Contact`), copy *"Vibr Studio came out of years of handoff frustration. I got "*, and `#e6e3d9` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.landing-footer-module__8-2yDa__root> — `https://www.vibr.studio/`)` aligns to `1822px` (non-`@media` desktop container stylesheet rule) with `37.44px` lateral canvas padding with `52.56px` grid gap and attributes (data-precedence="next", data-precedence="next", data-sdkn="@vercel/analytics/next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Your design is the code - Your design is the code - Your design is the code - Your..."*
@@ -250,7 +295,7 @@ Scaffold `www-vibr-studio` (`Vibr — Figma to code for designers who ship`) wit
 - **Selector `.clock-section-module__aYA5Ra__ring`**: `transition: opacity .25s` extracted from `www-vibr-studio` stylesheet.
 - **Selector `.clock-section-module__aYA5Ra__disc`**: `transition: opacity .2s,transform .28s cubic-bezier(.34,1.6,.64,1)` extracted from `www-vibr-studio` stylesheet.
 - **Selector `.clock-section-module__aYA5Ra__check`**: `transition: opacity .18s 60ms,transform .28s cubic-bezier(.34,1.6,.64,1) 60ms` extracted from `www-vibr-studio` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.34,1.6,.64,1)`)**: Governs interactive state transitions across `<header.hero-module__sup1Jq__hero>` and `<main.landing-page-module__p_mWBW__page>`.
+- **Extracted Easing Curve (`cubic-bezier(.34,1.6,.64,1)`)**: Governs interactive state transitions across `<header.hero-module__sup1Jq__hero>` and `<main.landing-page-module__p_mWBW__page:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

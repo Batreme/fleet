@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: www-blumjeffrey-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-blumjeffrey-com
 
 ## Overview & Design Identity
 - **Target**: `www-blumjeffrey-com` (**Jeffrey Blum — AI Digital Creative Director**)
 - **Production URL**: [https://www.blumjeffrey.com](https://www.blumjeffrey.com)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#080808` canvas, `#555` ink, `#1e1e1e` accent)
+- **Final Redirected URL**: [https://blumjeffrey.com/](https://blumjeffrey.com/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#080808` canvas, `#f5f5f0` ink, `#378ef0` accent)
 - **Summary**: Jeffrey Blum is a New York-based AI Digital Creative Director building creative systems, intelligent workflows, brand platforms, and digi...
-- **Total Clean CSS Variables Extracted**: `46` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `46` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Barlow`
-- **Body Font Stack**: `Barlow Fallback`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(64px,9.6vw,180px)`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(64px,9vw,170px)`)
-- **Body Copy**: rule `p` (`letter-spacing: .22em`)
-- **Metadata & Labels**: rule `small` (`font-size: .6rem`, `letter-spacing: .22em`, `font-weight: 600`)
+- **Display Font Stack**: `Barlow Condensed`
+- **Body Font Stack**: `Barlow`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 138.24px`, `line-height: 121.651px`, `font-weight: 900`, `letter-spacing: -2.7648px`); rule `h1` (`font-size: clamp(64px,9.6vw,180px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 129.6px`, `line-height: 114.048px`, `font-weight: 900`, `letter-spacing: -2.592px`); rule `h2` (`font-size: clamp(64px,9vw,170px)`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 300`); rule `p` (`font-size: clamp(1.3rem,2.5vw,2rem)`, `line-height: 1.25`, `font-weight: 300`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 300`); rule `small` (`font-size: .6rem`, `letter-spacing: .22em`, `font-weight: 600`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#080808` | `var(--black)` in `:root` |
-| **Primary Typography Ink** | `#0f0f0f` | `var(--off-black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#141414` | `var(--dark)` in `:root` |
-| **Interactive Accent / Highlight** | `#1e1e1e` | `var(--mid)` in `:root` |
-| **Secondary / Muted Copy** | `#2a2a2a` | `var(--border)` in `:root` |
-| **Structural Hairline Border** | `#555` | `var(--muted)` in `:root` |
+| **Primary Canvas Substrate** | `#080808` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f0` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `.wcs .cs-bg { background: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#378ef0` | `.home-v2 .damBtn { background: #378ef0 }` |
+| **Secondary / Muted Copy** | `#888888` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#2a2a2a` | `var(--border)` in `:root` |
 
 ---
 
@@ -56,12 +68,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.cs-hero> — `www-blumjeffrey-com`)**:
-   - Landmark `<header class="cs-hero">` hosting `Jeffrey Blum — AI Digital Creative D` navigation (`Work · Lab · Speaking · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-motion="gsap"`), and stylesheet rule `services { overflow-x:clip }`.
-2. **Hero Stage & Focal Lead (<section.home> — `Shape vision. Build systems.`)**:
-   - Landmark `<section class="home">` presenting display lead `Shape vision. Build systems.` and copy excerpt *"Module / What's New"* over `#080808` canvas and `#555` ink.
-3. **Primary Showcase & Content Grid (<section.home-v2> — `Recent projects`)**:
-   - Landmark `<section class="home-v2">` rendering section `Recent projects` with copy *"Regular Upper case"*, asset references (`235a0ef330592118-s.p.b3cd1641.woff2`, `303804218d80822e-s.p.9b40bd6c.woff2`, `4f530f52d514af96-s.p.52297690.woff2`, `81cef6a21128489e-s.p.6cf41120.woff2`), and grid rule `after { box-sizing:border-box;border-radius:0;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.clients-scene> — `M·A·C Design System`)**:
-   - Landmark `<section class="clients-scene">` framing `M·A·C Design System` and `AI Creative Agents` (*"01 M·A·C Figma Design System"*) with `#141414` surface cards, `#1e1e1e` accents, and `.home-v2 img { max-width:100% }`.
+   - Landmark `<header class="cs-hero">` (`1440px`) hosting `Jeffrey Blum — AI Digital Creative D` navigation (`Work · Lab · Speaking · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-motion="gsap"`), and stylesheet rule `.wcs .disp { font-family:var(--fd);text-transform:uppercase;letter-spacing:-.02em;fon... }`.
+2. **Hero Stage & Focal Lead (<section.lenis-scrolling> — `SHAPE VISION. BUILD SYSTEMS.`)**:
+   - Landmark `<section class="lenis-scrolling">` presenting display lead `SHAPE VISION. BUILD SYSTEMS.` and copy excerpt *"AI DIGITAL CREATIVE DIRECTOR · NEW YORK"* over `#080808` canvas and `#f5f5f0` ink.
+3. **Primary Showcase & Content Grid (<section.home> — `Shape vision. Build systems.`)**:
+   - Landmark `<section class="home">` rendering section `Shape vision. Build systems.` with copy *"AI Digital Creative Director · New York"*, asset references (`235a0ef330592118-s.p.b3cd1641.woff2`, `303804218d80822e-s.p.9b40bd6c.woff2`, `4f530f52d514af96-s.p.52297690.woff2`, `81cef6a21128489e-s.p.6cf41120.woff2`), and grid rule `.wcs .mask .ln { padding-top:.06em;display:block;overflow:hidden }`.
+4. **Interactive Detail & Feature Matrix (<section.clients-scene> — `Recent projects`)**:
+   - Landmark `<section class="clients-scene">` framing `Recent projects` and `M·A·C Design System` (*"Hey, Jeffrey here. I design digital experiences and the intellige"*) with `#000000` surface cards, `#378ef0` accents, and `.wcs .mask .ln>span { display:block }`.
 5. **Colophon & Global Directory Footer (<footer.ft> — `https://www.blumjeffrey.com`)**:
-   - Landmark `<footer class="ft fixed">` anchoring `Jeffrey Blum — AI Digital Creati` footer links (`Work · Lab · Speaking · About · Contact`), copy *"M·A·C Figma Design System"*, and `#555` structural dividers.
+   - Landmark `<footer class="ft fixed">` anchoring `Jeffrey Blum — AI Digital Creati` footer links (`Work · Lab · Speaking · About · Contact`), copy *"From Swiss watchmakers to global beauty. Digital products, c"*, and `#2a2a2a` structural dividers.

@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: useguidely-co"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "useguidely-co"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas, `#fff` ink, `#222` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14110d` ink, `#9b7b4d` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: useguidely-co
 
 > **guidely - the hospitality of the future** (https://useguidely.co/) — A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **guidely - the hospitality of the future** (`https://useguidely.co/`). A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas, `#fff` ink, `#222` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14110d` ink, `#9b7b4d` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1f1d1a` (`var(--brand)` in `:root`) paired with `#fff` primary typography and `#222` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Satoshi` for display copy (`The smart app for your guests.`) with `PP Mori` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: .125rem`, padding `.125rem`) with `cubic-bezier(0,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14110d` primary typography and `#9b7b4d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`The smart app for your guests.`) with `Inter` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1120px` container bounds (`gap: 10px normal`, padding `24px`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×3643px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `640px` extracted from `useguidely-co` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `.125rem` lateral canvas padding with `.125rem` grid gap.
-- **Border Radius Scale**: `.25rem`, `1rem`, `1.5rem`, `.95rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1120px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `10px normal` grid gap.
+- **Border Radius Scale**: `9999px`, `.25rem`, `1rem`, `1.5rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: .125rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.125rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1120px`, `gap: 10px normal`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)`.
 
 ---
@@ -48,14 +52,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#1f1d1a` | `var(--brand)` in `:root` |
-| **Primary Typography Ink** | `#9b7b4d` | `var(--accent)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--surface)` in `:root` |
-| **Interactive Accent / Highlight** | `#222` | `var(--ink)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#14110d` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f4d5c2` | `.flood-cover { background: #f4d5c2 }` |
+| **Interactive Accent / Highlight** | `#9b7b4d` | `var(--accent)` in `:root` |
 | **Secondary / Muted Copy** | `#6f6f6f` | `var(--muted)` in `:root` |
-| **Structural Hairline Border** | `#e5e7eb` | `:before { border: #e5e7eb }` |
+| **Structural Hairline Border** | `#ebebeb` | `var(--line)` in `:root` (`rgba(0,0,0,.08)`) |
+| **Variable Token (`--brand`)** | `#1f1d1a` | `var(--brand)` in `:root` |
+| **Variable Token (`--ink`)** | `#222222` | `var(--ink)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -74,23 +80,23 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 | `--font-mono` | `ui-monospace,SFMono-Regular,Menlo,monospace` | Typography / Scale Token |
 | `--hero-ready` | `1` | Design System Custom Token |
 | `--reveal-delay` | `0ms` | Motion / Easing Token |
-| `--useguidely-co-bg` | `#1f1d1a` | Canvas Substrate (from `var(--brand)` in `:root`) |
-| `--useguidely-co-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
+| `--useguidely-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--useguidely-co-ink` | `#14110d` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Satoshi`.
-- **Primary Body Stack**: `PP Mori`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Geist`.
+- **Primary Body Stack**: `Inter`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: Georgia,"Times New Roman",serif`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.5rem`).
-- **Body Copy**: CSS variables `--font-body: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`.
-- **Metadata & Navigation Labels**: CSS variables `--font-mono: ui-monospace,SFMono-Regular,Menlo,monospace`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 87.84px`, `line-height: 74.664px`, `font-weight: 700`, `letter-spacing: -3.9528px`); CSS variables `--font-display: Georgia,"Times New Roman",serif`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60px`, `line-height: 55.2px`, `font-weight: 600`, `letter-spacing: -2.1px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); CSS variables `--font-mono: ui-monospace,SFMono-Regular,Menlo,monospace`.
 
 ---
 
@@ -103,47 +109,66 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 - **Selector `.transition`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
 - **Selector `.transition-\[padding\]`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
 - **Selector `.transition-\[width\]`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.relative>` and `<section.mt-12>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.max-w-6xl>` and `<section.mt-12>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero-sec>` and `<section.mt-12>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — guidely - the hospitality of the future    │
 │ ====================================================================== │
-│ [ <header.relative>        | Home · About · Hotels & lodges · Featu ]  │
+│ [ <header.max-w-6xl> (1152x80px)      | Home · About · Hotels & lodg ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero-sec>                                   |   │
-│ | H1: The smart app for your guests.                               |   │
-│ | Substrate: #1f1d1a    | Ink: #fff       | Accent: #222           |   │
+│ | HERO STAGE: <section.hero-sec> (w=1440px)                          | │
+│ | H1: The smart app for your guests.                                 | │
+│ | Substrate: #ffffff | Ink: #14110d | Accent: #9b7b4d                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.mt-12>           ) max-w: 640px          |   │
+│ | SHOWCASE GRID (<section.mt-12>) max-w: 1120px                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | What is a smart app?         |  | B&Bs & guest houses          | | │
+│ | | Check-in, Wi-Fi, house detai |  | Smart picks for right now    | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .125re) | │
-│ | [<header.relative>] -> [<section.hero-sec>] -> [<section.mt-12>] |   │
+│ | DETAIL MODULE (<section.mx-auto>) — Experiences & activit          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.mt-16>        ) | https://useguidely.co/             │
+│ [ FOOTER (<footer.mt-16>      ) | https://useguidely.co/               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px nor)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.max-w-6xl>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero-sec>) — 390px Vertical Lead              | │
+│ | H1: The smart app for your guests.                                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.mt-12>) — 1-Col Stack                     | │
+│ | [ Item 1: Check-in, Wi-Fi, house details, local recommenda       ] | │
+│ | [ Item 2: Smart picks for right now                              ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.mx-auto>) — 1-Col (Experiences & acti)      | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.mt-16>      ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.relative> — `useguidely-co`)**:
-   - Landmark `<header class="relative mx-auto">` hosting `guidely - the hospitality of the fut` navigation (`Home · About · Hotels & lodges · Features · Pricing`), DOM attributes (`data-precedence="next"`, `data-foldout-prefetch`, `data-spark="true"`, `data-reveal="stagger"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
+1. **Brand Header & Navigation Bar (<header.max-w-6xl> — `useguidely-co`)**:
+   - Landmark `<header class="max-w-6xl py-5">` (`1152x80px`) hosting `guidely - the hospitality of the fut` navigation (`Home · About · Hotels & lodges · Features · Pricing`), DOM attributes (`data-precedence="next"`, `data-foldout-prefetch`, `data-spark="true"`, `data-reveal="stagger"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
 2. **Hero Stage & Focal Lead (<section.hero-sec> — `The smart app for your guests.`)**:
-   - Landmark `<section class="hero-sec mx-auto">` presenting display lead `The smart app for your guests.` and copy excerpt *"Check-in, Wi-Fi, house details, local recommendations, guest ques"* over `#1f1d1a` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.mt-12> — `What is a smart app?`)**:
-   - Landmark `<section class="mt-12">` rendering section `What is a smart app?` with copy *"Smart picks for right now"*, asset references (`logo.png`, `hero-cover-19.jpg`, `001c094435c96c6a.css`, `webpack-61e7ac9f112b97ad.js`), and grid rule `body { margin:0;line-height:inherit }`.
-4. **Interactive Detail & Feature Matrix (<section.mx-auto> — `B&Bs & guest houses`)**:
-   - Landmark `<section class="mx-auto px-6">` framing `B&Bs & guest houses` and `Boutique hotels` (*"Experiences & activities"*) with `#fff` surface cards, `#222` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="hero-sec pt-3">` presenting display lead `The smart app for your guests.` and copy excerpt *"Check-in, Wi-Fi, house details, local recommendations, guest ques"* over `#ffffff` canvas and `#14110d` ink.
+3. **Primary Showcase & Content Grid (<section.mt-12> — `Check-in, Wi-Fi, house details, lo`)**:
+   - Landmark `<section class="mt-12">` rendering section `Check-in, Wi-Fi, house details, local recommenda` with copy *"Smart picks for right now"*, asset references (`logo.png`, `hero-cover-19.jpg`, `001c094435c96c6a.css`, `webpack-61e7ac9f112b97ad.js`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.mx-auto> — `Smart picks for right now`)**:
+   - Landmark `<section class="mx-auto px-6">` framing `Smart picks for right now` and `Experiences & activities` (*"Experiences & activities"*) with `#f4d5c2` surface cards, `#9b7b4d` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.mt-16> — `https://useguidely.co/`)**:
-   - Landmark `<footer class="mt-16">` anchoring `guidely - the hospitality of the` footer links (`Home · About · Hotels & lodges · Features · Pricing`), copy *"Room service ordering"*, and `#e5e7eb` structural dividers.
+   - Landmark `<footer class="mt-16">` anchoring `guidely - the hospitality of the` footer links (`Home · About · Hotels & lodges · Features · Pricing`), copy *"Room service ordering"*, and `#ebebeb` structural dividers.
 
 ---
 
@@ -155,19 +180,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `useguidely-co` (**guidely - the hospitality of the future** — `https://useguidely.co/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#1f1d1a` canvas, `#fff` ink, `#222` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14110d` ink, `#9b7b4d` accent).
 - **Identity & Domain Context**: A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
-- **Primary Substrate**: `#1f1d1a` (`var(--brand)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#222`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#14110d`, **Accent / Highlight**: `#9b7b4d`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#1f1d1a` (`var(--brand)` in `:root`) paired with `#fff` primary typography and `#222` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Satoshi` for display copy (`The smart app for your guests.`) with `PP Mori` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: .125rem`, padding `.125rem`) with `cubic-bezier(0,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14110d` primary typography and `#9b7b4d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`The smart app for your guests.`) with `Inter` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1120px` container bounds (`gap: 10px normal`, padding `24px`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `useguidely-co` in your global stylesheet:
 
 :root {
-  /* guidely - the hospitality of the future (useguidely-co) — Ground-Truth Extracted CSS Variables */
+  /* guidely - the hospitality of the future (useguidely-co) — Live-Grounded CSS Variables */
   --brand: #1f1d1a; /* Brand / Palette Token (useguidely-co) */
   --accent: #9b7b4d; /* Brand / Palette Token (useguidely-co) */
   --surface: #fff; /* Canvas / Surface Token (useguidely-co) */
@@ -182,55 +207,57 @@ Declare and consume these exact custom properties extracted from `useguidely-co`
   --font-mono: ui-monospace,SFMono-Regular,Menlo,monospace; /* Typography / Scale Token (useguidely-co) */
   --hero-ready: 1; /* Design System Custom Token (useguidely-co) */
   --reveal-delay: 0ms; /* Motion / Easing Token (useguidely-co) */
-  --useguidely-co-bg: #1f1d1a; /* Canvas Substrate (from `var(--brand)` in `:root`) (useguidely-co) */
-  --useguidely-co-ink: #fff; /* Primary Typography Ink (stylesheet-derived) (useguidely-co) */
+  --useguidely-co-bg: #ffffff; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (useguidely-co) */
+  --useguidely-co-ink: #14110d; /* Primary Typography Ink (computed-derived) (useguidely-co) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#1f1d1a` — grounded in `var(--brand)` in `:root`
-- **Primary Typography Ink**: `#9b7b4d` — grounded in `var(--accent)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `var(--surface)` in `:root`
-- **Interactive Accent / Highlight**: `#222` — grounded in `var(--ink)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#14110d` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f4d5c2` — grounded in `.flood-cover { background: #f4d5c2 }`
+- **Interactive Accent / Highlight**: `#9b7b4d` — grounded in `var(--accent)` in `:root`
 - **Secondary / Muted Copy**: `#6f6f6f` — grounded in `var(--muted)` in `:root`
-- **Structural Hairline Border**: `#e5e7eb` — grounded in `:before { border: #e5e7eb }`
+- **Structural Hairline Border**: `#ebebeb` — grounded in `var(--line)` in `:root` (`rgba(0,0,0,.08)`)
+- **Variable Token (`--brand`)**: `#1f1d1a` — grounded in `var(--brand)` in `:root`
+- **Variable Token (`--ink`)**: `#222222` — grounded in `var(--ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×3643px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `640px` extracted from `useguidely-co` stylesheet
-- **Padding & Gutters**: `.125rem` lateral canvas padding with `.125rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: .125rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.125rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1120px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `24px` lateral canvas padding with `10px normal` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1120px`, `gap: 10px normal`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
 - **Media Queries**: `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)`
-- **Corner Radii**: `.25rem`, `1rem`, `1.5rem`, `.95rem`
+- **Corner Radii**: `9999px`, `.25rem`, `1rem`, `1.5rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Satoshi`
-- **Body Font Stack**: `PP Mori`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--font-display: Georgia,"Times New Roman",serif`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.5rem`)
-- **Body Copy Rule**: CSS variables `--font-body: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`
-- **Metadata & Index Rule**: CSS variables `--font-mono: ui-monospace,SFMono-Regular,Menlo,monospace`
+- **Display Font Stack**: `Geist`
+- **Body Font Stack**: `Inter`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 87.84px`, `line-height: 74.664px`, `font-weight: 700`, `letter-spacing: -3.9528px`); CSS variables `--font-display: Georgia,"Times New Roman",serif`
+- **H2 Section Rule**: live computed `h2` (`font-size: 60px`, `line-height: 55.2px`, `font-weight: 600`, `letter-spacing: -2.1px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); CSS variables `--font-mono: ui-monospace,SFMono-Regular,Menlo,monospace`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `useguidely-co` (`guidely - the hospitality of the future`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.relative> — `useguidely-co`)**:
-   - DOM & Selectors: Landmark `<header class="relative mx-auto">` hosting `guidely - the hospitality of the fut` navigation (`Home · About · Hotels & lodges · Features · Pricing`), DOM attributes (`data-precedence="next"`, `data-foldout-prefetch`, `data-spark="true"`, `data-reveal="stagger"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.relative> — `useguidely-co`)` (`useguidely-co`) adapts across `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Home · About · Hotels & lodges · Features · Pricing`.
+1. **Brand Header & Navigation Bar (<header.max-w-6xl> — `useguidely-co`)**:
+   - DOM & Selectors: Landmark `<header class="max-w-6xl py-5">` (`1152x80px`) hosting `guidely - the hospitality of the fut` navigation (`Home · About · Hotels & lodges · Features · Pricing`), DOM attributes (`data-precedence="next"`, `data-foldout-prefetch`, `data-spark="true"`, `data-reveal="stagger"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.max-w-6xl> — `useguidely-co`)` (`useguidely-co`) adapts across `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Home · About · Hotels & lodges · Features · Pricing`.
 2. **Hero Stage & Focal Lead (<section.hero-sec> — `The smart app for your guests.`)**:
-   - DOM & Selectors: Landmark `<section class="hero-sec mx-auto">` presenting display lead `The smart app for your guests.` and copy excerpt *"Check-in, Wi-Fi, house details, local recommendations, guest ques"* over `#1f1d1a` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×3643px` desktop / `390×2400px` mobile) sets `#1f1d1a` background with `#fff` headline `The smart app for your guests.`.
-3. **Primary Showcase & Content Grid (<section.mt-12> — `What is a smart app?`)**:
-   - DOM & Selectors: Landmark `<section class="mt-12">` rendering section `What is a smart app?` with copy *"Smart picks for right now"*, asset references (`logo.png`, `hero-cover-19.jpg`, `001c094435c96c6a.css`, `webpack-61e7ac9f112b97ad.js`), and grid rule `body { margin:0;line-height:inherit }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.mt-12> — `What is a smart app?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: .125rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.125rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.mx-auto> — `B&Bs & guest houses`)**:
-   - DOM & Selectors: Landmark `<section class="mx-auto px-6">` framing `B&Bs & guest houses` and `Boutique hotels` (*"Experiences & activities"*) with `#fff` surface cards, `#222` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.mx-auto> — `B&Bs & guest houses`)` uses `.25rem`, `1rem`, `1.5rem`, `.95rem` radii, `#222` highlights, and assets (logo.png, hero-cover-19.jpg, 001c094435c96c6a.css).
+   - DOM & Selectors: Landmark `<section class="hero-sec pt-3">` presenting display lead `The smart app for your guests.` and copy excerpt *"Check-in, Wi-Fi, house details, local recommendations, guest ques"* over `#ffffff` canvas and `#14110d` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#14110d` headline `The smart app for your guests.`.
+3. **Primary Showcase & Content Grid (<section.mt-12> — `Check-in, Wi-Fi, house details, lo`)**:
+   - DOM & Selectors: Landmark `<section class="mt-12">` rendering section `Check-in, Wi-Fi, house details, local recommenda` with copy *"Smart picks for right now"*, asset references (`logo.png`, `hero-cover-19.jpg`, `001c094435c96c6a.css`, `webpack-61e7ac9f112b97ad.js`), and grid rule `body { margin:0;line-height:inherit }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.mt-12> — `Check-in, Wi-Fi, house details, lo`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1120px`, `gap: 10px normal`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.mx-auto> — `Smart picks for right now`)**:
+   - DOM & Selectors: Landmark `<section class="mx-auto px-6">` framing `Smart picks for right now` and `Experiences & activities` (*"Experiences & activities"*) with `#f4d5c2` surface cards, `#9b7b4d` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.mx-auto> — `Smart picks for right now`)` uses `9999px`, `.25rem`, `1rem`, `1.5rem` radii, `#9b7b4d` highlights, and assets (logo.png, hero-cover-19.jpg, 001c094435c96c6a.css).
 5. **Colophon & Global Directory Footer (<footer.mt-16> — `https://useguidely.co/`)**:
-   - DOM & Selectors: Landmark `<footer class="mt-16">` anchoring `guidely - the hospitality of the` footer links (`Home · About · Hotels & lodges · Features · Pricing`), copy *"Room service ordering"*, and `#e5e7eb` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mt-16> — `https://useguidely.co/`)` aligns to `640px` extracted from `useguidely-co` stylesheet with `.125rem` lateral canvas padding with `.125rem` grid gap and attributes (data-precedence="next", data-foldout-prefetch, data-spark="true").
+   - DOM & Selectors: Landmark `<footer class="mt-16">` anchoring `guidely - the hospitality of the` footer links (`Home · About · Hotels & lodges · Features · Pricing`), copy *"Room service ordering"*, and `#ebebeb` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mt-16> — `https://useguidely.co/`)` aligns to `1120px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `24px` lateral canvas padding with `10px normal` grid gap and attributes (data-precedence="next", data-foldout-prefetch, data-spark="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Check-in, Wi-Fi, house details, local recommendations, guest questions, orders and..."*
@@ -250,7 +277,7 @@ Scaffold `useguidely-co` (`guidely - the hospitality of the future`) with these 
 - **Selector `.transition`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
 - **Selector `.transition-\[padding\]`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
 - **Selector `.transition-\[width\]`**: `transition: cubic-bezier(0,0,.2,1)` extracted from `useguidely-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.relative>` and `<section.mt-12>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.max-w-6xl>` and `<section.mt-12>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero-sec>` and `<section.mt-12>` interactive targets.
 
 ### 8. Technical Deliverables

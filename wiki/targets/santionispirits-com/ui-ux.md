@@ -1,14 +1,17 @@
 ---
 title: "UI & UX Architecture: santionispirits-com"
+date: 2026-11-23
+captured_at: 2026-11-23
 status: blocked
-block_reason: "Browser Compatibility Gate (Your browser is not supported, 0 external stylesheets)"
+http_status: 200
+block_reason: "Browser Compatibility Gate (Not Supported)"
 ---
 
 # UI & UX Architecture: santionispirits-com (`status: blocked`)
 
 > [!WARNING]
-> **Target Status**: `status: blocked`  
+> **Target Status**: `status: blocked` (`http_status: 200`)  
 > **Production URL**: [https://santionispirits.com/](https://santionispirits.com/)  
-> **Block / Unreachable Reason**: Browser Compatibility Gate (Your browser is not supported, 0 external stylesheets)
+> **Block / Unreachable Reason**: Browser Compatibility Gate (Not Supported)
 
-This target's raw capture in `raw/santionispirits-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.
+This target terminated at an upstream edge WAF challenge, anti-bot verification gate, browser compatibility block, or origin HTTP/network error during live capture. Per strict ethical and ground-truth integrity rules, zero WAF/CAPTCHA bypasses were attempted, no synthetic design tokens were fabricated, and this target is excluded from the `25.0` evaluation tally.

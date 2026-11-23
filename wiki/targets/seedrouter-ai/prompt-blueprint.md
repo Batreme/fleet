@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: seedrouter-ai"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "seedrouter-ai"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#e40014` ink, `#ff6568` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f7f5f1` canvas, `#090e12` ink, `#d1f53b` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: seedrouter-ai
 
 > **SeedRouter · One API for Image, Video, LLM and Audio Models** (https://seedrouter.ai) — SeedRouter puts image, video, language and audio models behind one API key with pay-per-request billing. Failed requests cost nothing. Ge...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **SeedRouter · One API for Image, Video, LLM and Audio Models** (`https://seedrouter.ai`). SeedRouter puts image, video, language and audio models behind one API key with pay-per-request billing. Failed requests cost nothing. Ge...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#e40014` ink, `#ff6568` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f7f5f1` canvas, `#090e12` ink, `#d1f53b` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fef2f2` (`var(--color-red-50)` in `:root`) paired with `#e40014` primary typography and `#ff6568` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `JetBrains Mono` for display copy (`SeedRouter: one API for every model `) with `JetBrains Mono Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--gap)`, padding `var(--card-spacing)`) with `cubic-bezier(0,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#090e12` primary typography and `#d1f53b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Outfit` for display copy (`SeedRouter: one API for every model `) with `Outfit` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 20px`, padding `var(--card-spacing)`) with `cubic-bezier(0,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×10504px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `seedrouter-ai` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `var(--card-spacing)` lateral canvas padding with `var(--gap)` grid gap.
-- **Border Radius Scale**: `var(--radius)`, `.25rem`, `var(--cell-radius)`, `2px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `var(--card-spacing)` lateral canvas padding with `20px` grid gap.
+- **Border Radius Scale**: `3.35544e+07px`, `var(--radius)`, `.25rem`, `var(--cell-radius)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--gap)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 20px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--card-spacing)` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,51 +52,56 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fef2f2` | `var(--color-red-50)` in `:root` |
-| **Primary Typography Ink** | `#ffe2e2` | `var(--color-red-100)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffa3a3` | `var(--color-red-300)` in `:root` |
-| **Interactive Accent / Highlight** | `#ff6568` | `var(--color-red-400)` in `:root` |
-| **Secondary / Muted Copy** | `#fb2c36` | `var(--color-red-500)` in `:root` |
-| **Structural Hairline Border** | `#e40014` | `var(--color-red-600)` in `:root` |
-| **Variable Token (`--color-red-700`)** | `#bf000f` | `var(--color-red-700)` in `:root` |
-| **Variable Token (`--color-red-950`)** | `#460809` | `var(--color-red-950)` in `:root` |
+| **Primary Canvas Substrate** | `#f7f5f1` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#090e12` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fffdf8` | `var(--card)` in `:root` |
+| **Interactive Accent / Highlight** | `#d1f53b` | `var(--sr-hero-accent)` in `:root` |
+| **Secondary / Muted Copy** | `#737373` | `var(--color-fd-muted-foreground)` in `:root` |
+| **Structural Hairline Border** | `#e2ded4` | `var(--border)` in `:root` |
+| **Variable Token (`--primary`)** | `#18763a` | `var(--primary)` in `:root` |
+| **Variable Token (`--secondary`)** | `#ece8df` | `var(--secondary)` in `:root` |
+| **Variable Token (`--muted`)** | `#f0ede6` | `var(--muted)` in `:root` |
+| **Variable Token (`--muted-foreground`)** | `#6b6a63` | `var(--muted-foreground)` in `:root` |
+| **Variable Token (`--destructive`)** | `#d92d20` | `var(--destructive)` in `:root` |
+| **Variable Token (`--destructive-foreground`)** | `#ffffff` | `var(--destructive-foreground)` in `:root` |
+| **Variable Token (`--input`)** | `#d3cec1` | `var(--input)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--shimmer-angle` | `20deg` | Design System Custom Token |
-| `--scroll-fade-t` | `0px` | Dimension / Scale Token |
-| `--scroll-fade-b` | `0px` | Dimension / Scale Token |
-| `--scroll-fade-s` | `0px` | Dimension / Scale Token |
-| `--scroll-fade-e` | `0px` | Dimension / Scale Token |
-| `--scroll-fade-mask` | `initial` | Design System Custom Token |
-| `--shimmer-image` | `initial` | Design System Custom Token |
-| `--shimmer-text-fill` | `initial` | Typography Ink Token |
-| `--color-red-50` | `#fef2f2` | Brand / Palette Token |
-| `--color-red-100` | `#ffe2e2` | Brand / Palette Token |
-| `--color-red-300` | `#ffa3a3` | Brand / Palette Token |
-| `--color-red-400` | `#ff6568` | Brand / Palette Token |
-| `--color-red-500` | `#fb2c36` | Brand / Palette Token |
-| `--color-red-600` | `#e40014` | Brand / Palette Token |
-| `--color-red-700` | `#bf000f` | Brand / Palette Token |
-| `--color-red-950` | `#460809` | Brand / Palette Token |
+| `--card` | `#fffdf8` | Color / Atmospheric Token |
+| `--card-foreground` | `#090e12` | Typography Ink Token |
+| `--popover` | `#fffdf8` | Color / Atmospheric Token |
+| `--popover-foreground` | `#090e12` | Typography Ink Token |
+| `--primary` | `#18763a` | Brand / Palette Token |
+| `--primary-foreground` | `#f7f5f1` | Typography Ink Token |
+| `--secondary` | `#ece8df` | Brand / Palette Token |
+| `--secondary-foreground` | `#090e12` | Typography Ink Token |
+| `--muted` | `#f0ede6` | Color / Atmospheric Token |
+| `--muted-foreground` | `#6b6a63` | Typography Ink Token |
+| `--accent` | `#f0ede6` | Brand / Palette Token |
+| `--accent-foreground` | `#090e12` | Typography Ink Token |
+| `--destructive` | `#d92d20` | Color / Atmospheric Token |
+| `--destructive-foreground` | `#fff` | Typography Ink Token |
+| `--border` | `#e2ded4` | Elevation / Border Token |
+| `--input` | `#d3cec1` | Color / Atmospheric Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `JetBrains Mono`.
-- **Primary Body Stack**: `JetBrains Mono Fallback`.
+- **Display Typography**: `Outfit`.
+- **Primary Body Stack**: `Outfit`.
 - **Technical / Metadata Stack**: `JetBrains Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.025em`, `font-weight: 500`).
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`letter-spacing: -.02em`, `font-weight: 400`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-body-ext: "Nunito Sans", "Nunito Sans Fallback"`.
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 44.64px`, `line-height: 50.8896px`, `font-weight: 600`, `letter-spacing: -1.7856px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.025em`, `font-weight: 500`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40.32px`, `line-height: 44.352px`, `font-weight: 600`, `letter-spacing: -1.6128px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`letter-spacing: -.02em`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body-ext: "Nunito Sans", "Nunito Sans Fallback"`, `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: var(--font-mono-label)`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`.
 
 ---
 
@@ -112,40 +121,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — SeedRouter · One API for Image, Video, LLM │
 │ ====================================================================== │
-│ [ <header.sr-chrome>       | SeedRouter · Models · Pricing · Docs · ]  │
+│ [ <header.sr-chrome> (1440x65px)      | SeedRouter · Models · Pricin ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sr-hero>                                    |   │
-│ | H1: SeedRouter: one API for every model your product...          |   │
-│ | Substrate: #fef2f2    | Ink: #e40014    | Accent: #ff6568        |   │
+│ | HERO STAGE: <section.sr-hero> (w=1440px)                           | │
+│ | H1: SeedRouter: one API for every model your product...            | │
+│ | Substrate: #f7f5f1 | Ink: #090e12 | Accent: #d1f53b                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.pb-16>           ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.pb-16>) max-w: 96rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Models you can call on SeedR |  | Integration in 4 steps       | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.sr-chrome>] -> [<section.sr-hero>] -> [<section.pb-16>] |   │
+│ | DETAIL MODULE (<section.py-16>) — Create an API key                | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.sr-chrome-dark) | https://seedrouter.ai              │
+│ [ FOOTER (<footer.sr-chrome-da) | https://seedrouter.ai                │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 20px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.sr-chrome>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.sr-hero>) — 390px Vertical Lead               | │
+│ | H1: SeedRouter: one API for every model your product...            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.pb-16>) — 1-Col Stack                     | │
+│ | [ Item 1: Models you can call on SeedRouter today                ] | │
+│ | [ Item 2: Integration in 4 steps                                 ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.py-16>) — 1-Col (Create an API key)         | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.sr-chrome-da) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.sr-chrome> — `seedrouter-ai`)**:
-   - Landmark `<header class="sr-chrome sticky">` hosting `SeedRouter · One API for Image, Vide` navigation (`SeedRouter · Models · Pricing · Docs · Sign up`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-testid="announcement-dismiss"`, `data-nimg="1"`), and stylesheet rule `host { --shimmer-angle:20deg }`.
+   - Landmark `<header class="sr-chrome inset-x-0">` (`1440x65px`) hosting `SeedRouter · One API for Image, Vide` navigation (`SeedRouter · Models · Pricing · Docs · Sign up`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-testid="announcement-dismiss"`, `data-nimg="1"`), and stylesheet rule `mono_744f2078-module__kLS_DW__cla... { font-family:JetBrains Mono,JetBrains Mono Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.sr-hero> — `SeedRouter: one API for every mode`)**:
-   - Landmark `<section class="sr-hero sr-chrome-dark">` presenting display lead `SeedRouter: one API for every model your product...` and copy excerpt *"Seedance 2.5 is live on SeedRouter Try Seedance 2.5"* over `#fef2f2` canvas and `#e40014` ink.
+   - Landmark `<section class="sr-hero sr-chrome-dark">` presenting display lead `SeedRouter: one API for every model your product...` and copy excerpt *"01 · Image, video, language and audio · one key"* over `#f7f5f1` canvas and `#090e12` ink.
 3. **Primary Showcase & Content Grid (<section.pb-16> — `Models you can call on SeedRouter `)**:
-   - Landmark `<section class="pb-16 pt-10">` rendering section `Models you can call on SeedRouter today` with copy *"Seedance 2.5 is live on SeedRouter"*, asset references (`0c8c4ded07fff55c-s.p.2tcyrya9o07v...`, `1b99372b3eaef0c8-s.p.1gsd1jahc5dg...`, `70bc3e132a0a741e-s.p.3t6q91iet4ns...`, `bytedance.svg`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="pb-16 pt-12">` rendering section `Models you can call on SeedRouter today` with copy *"Generate and edit video from text or a first frame, at the resolu"*, asset references (`0c8c4ded07fff55c-s.p.2tcyrya9o07v...`, `1b99372b3eaef0c8-s.p.1gsd1jahc5dg...`, `70bc3e132a0a741e-s.p.3t6q91iet4ns...`, `google.svg`), and grid rule `mono_744f2078-module__kLS_DW__var... { --font-code:"JetBrains Mono", "JetBrains Mono Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.py-16> — `Integration in 4 steps`)**:
-   - Landmark `<section class="py-16">` framing `Integration in 4 steps` and `Sign up` (*"01 · Image, video, language and audio · one key"*) with `#ffa3a3` surface cards, `#ff6568` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="py-16">` framing `Integration in 4 steps` and `Create an API key` (*"$ POST /v1/videos/generations ✓ completed"*) with `#fffdf8` surface cards, `#d1f53b` accents, and `tfit_300d5b1f-module__eNyfuq__cla... { font-family:Outfit,Outfit Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.sr-chrome-dark> — `https://seedrouter.ai`)**:
-   - Landmark `<footer class="sr-chrome-dark relative">` anchoring `SeedRouter · One API for Image, ` footer links (`SeedRouter · Models · Pricing · Docs · Sign up`), copy *"one API for every model your product needs"*, and `#e40014` structural dividers.
+   - Landmark `<footer class="sr-chrome-dark relative">` anchoring `SeedRouter · One API for Image, ` footer links (`SeedRouter · Models · Pricing · Docs · Sign up`), copy *"$ POST /v1/videos/generations"*, and `#e2ded4` structural dividers.
 
 ---
 
@@ -157,99 +185,104 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `seedrouter-ai` (**SeedRouter · One API for Image, Video, LLM and Audio Models** — `https://seedrouter.ai`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#e40014` ink, `#ff6568` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f5f1` canvas, `#090e12` ink, `#d1f53b` accent).
 - **Identity & Domain Context**: SeedRouter puts image, video, language and audio models behind one API key with pay-per-request billing. Failed requests cost nothing. Ge...
-- **Primary Substrate**: `#fef2f2` (`var(--color-red-50)` in `:root`), **Primary Ink**: `#e40014`, **Accent / Highlight**: `#ff6568`.
+- **Primary Substrate**: `#f7f5f1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#090e12`, **Accent / Highlight**: `#d1f53b`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fef2f2` (`var(--color-red-50)` in `:root`) paired with `#e40014` primary typography and `#ff6568` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `JetBrains Mono` for display copy (`SeedRouter: one API for every model `) with `JetBrains Mono Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--gap)`, padding `var(--card-spacing)`) with `cubic-bezier(0,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#090e12` primary typography and `#d1f53b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Outfit` for display copy (`SeedRouter: one API for every model `) with `Outfit` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 20px`, padding `var(--card-spacing)`) with `cubic-bezier(0,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `seedrouter-ai` in your global stylesheet:
 
 :root {
-  /* SeedRouter · One API for Image, Video, LLM and Audio Models (seedrouter-ai) — Ground-Truth Extracted CSS Variables */
-  --shimmer-angle: 20deg; /* Design System Custom Token (seedrouter-ai) */
-  --scroll-fade-t: 0px; /* Dimension / Scale Token (seedrouter-ai) */
-  --scroll-fade-b: 0px; /* Dimension / Scale Token (seedrouter-ai) */
-  --scroll-fade-s: 0px; /* Dimension / Scale Token (seedrouter-ai) */
-  --scroll-fade-e: 0px; /* Dimension / Scale Token (seedrouter-ai) */
-  --scroll-fade-mask: initial; /* Design System Custom Token (seedrouter-ai) */
-  --shimmer-image: initial; /* Design System Custom Token (seedrouter-ai) */
-  --shimmer-text-fill: initial; /* Typography Ink Token (seedrouter-ai) */
-  --color-red-50: #fef2f2; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-100: #ffe2e2; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-300: #ffa3a3; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-400: #ff6568; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-500: #fb2c36; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-600: #e40014; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-700: #bf000f; /* Brand / Palette Token (seedrouter-ai) */
-  --color-red-950: #460809; /* Brand / Palette Token (seedrouter-ai) */
+  /* SeedRouter · One API for Image, Video, LLM and Audio Models (seedrouter-ai) — Live-Grounded CSS Variables */
+  --card: #fffdf8; /* Color / Atmospheric Token (seedrouter-ai) */
+  --card-foreground: #090e12; /* Typography Ink Token (seedrouter-ai) */
+  --popover: #fffdf8; /* Color / Atmospheric Token (seedrouter-ai) */
+  --popover-foreground: #090e12; /* Typography Ink Token (seedrouter-ai) */
+  --primary: #18763a; /* Brand / Palette Token (seedrouter-ai) */
+  --primary-foreground: #f7f5f1; /* Typography Ink Token (seedrouter-ai) */
+  --secondary: #ece8df; /* Brand / Palette Token (seedrouter-ai) */
+  --secondary-foreground: #090e12; /* Typography Ink Token (seedrouter-ai) */
+  --muted: #f0ede6; /* Color / Atmospheric Token (seedrouter-ai) */
+  --muted-foreground: #6b6a63; /* Typography Ink Token (seedrouter-ai) */
+  --accent: #f0ede6; /* Brand / Palette Token (seedrouter-ai) */
+  --accent-foreground: #090e12; /* Typography Ink Token (seedrouter-ai) */
+  --destructive: #d92d20; /* Color / Atmospheric Token (seedrouter-ai) */
+  --destructive-foreground: #fff; /* Typography Ink Token (seedrouter-ai) */
+  --border: #e2ded4; /* Elevation / Border Token (seedrouter-ai) */
+  --input: #d3cec1; /* Color / Atmospheric Token (seedrouter-ai) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fef2f2` — grounded in `var(--color-red-50)` in `:root`
-- **Primary Typography Ink**: `#ffe2e2` — grounded in `var(--color-red-100)` in `:root`
-- **Elevated Surface / Card Substrate**: `#ffa3a3` — grounded in `var(--color-red-300)` in `:root`
-- **Interactive Accent / Highlight**: `#ff6568` — grounded in `var(--color-red-400)` in `:root`
-- **Secondary / Muted Copy**: `#fb2c36` — grounded in `var(--color-red-500)` in `:root`
-- **Structural Hairline Border**: `#e40014` — grounded in `var(--color-red-600)` in `:root`
-- **Variable Token (`--color-red-700`)**: `#bf000f` — grounded in `var(--color-red-700)` in `:root`
-- **Variable Token (`--color-red-950`)**: `#460809` — grounded in `var(--color-red-950)` in `:root`
+- **Primary Canvas Substrate**: `#f7f5f1` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#090e12` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fffdf8` — grounded in `var(--card)` in `:root`
+- **Interactive Accent / Highlight**: `#d1f53b` — grounded in `var(--sr-hero-accent)` in `:root`
+- **Secondary / Muted Copy**: `#737373` — grounded in `var(--color-fd-muted-foreground)` in `:root`
+- **Structural Hairline Border**: `#e2ded4` — grounded in `var(--border)` in `:root`
+- **Variable Token (`--primary`)**: `#18763a` — grounded in `var(--primary)` in `:root`
+- **Variable Token (`--secondary`)**: `#ece8df` — grounded in `var(--secondary)` in `:root`
+- **Variable Token (`--muted`)**: `#f0ede6` — grounded in `var(--muted)` in `:root`
+- **Variable Token (`--muted-foreground`)**: `#6b6a63` — grounded in `var(--muted-foreground)` in `:root`
+- **Variable Token (`--destructive`)**: `#d92d20` — grounded in `var(--destructive)` in `:root`
+- **Variable Token (`--destructive-foreground`)**: `#ffffff` — grounded in `var(--destructive-foreground)` in `:root`
+- **Variable Token (`--input`)**: `#d3cec1` — grounded in `var(--input)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×10504px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `seedrouter-ai` stylesheet
-- **Padding & Gutters**: `var(--card-spacing)` lateral canvas padding with `var(--gap)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--gap)`)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `var(--card-spacing)` lateral canvas padding with `20px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 20px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--card-spacing)` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
-- **Corner Radii**: `var(--radius)`, `.25rem`, `var(--cell-radius)`, `2px`
+- **Corner Radii**: `3.35544e+07px`, `var(--radius)`, `.25rem`, `var(--cell-radius)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `JetBrains Mono`
-- **Body Font Stack**: `JetBrains Mono Fallback`
+- **Display Font Stack**: `Outfit`
+- **Body Font Stack**: `Outfit`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.025em`, `font-weight: 500`)
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`letter-spacing: -.02em`, `font-weight: 400`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-body-ext: "Nunito Sans", "Nunito Sans Fallback"`
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **H1 Display Rule**: live computed `h1` (`font-size: 44.64px`, `line-height: 50.8896px`, `font-weight: 600`, `letter-spacing: -1.7856px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`letter-spacing: -.025em`, `font-weight: 500`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 40.32px`, `line-height: 44.352px`, `font-weight: 600`, `letter-spacing: -1.6128px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`letter-spacing: -.02em`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body-ext: "Nunito Sans", "Nunito Sans Fallback"`, `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: var(--font-mono-label)`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `seedrouter-ai` (`SeedRouter · One API for Image, Video, LLM and Audio Models`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.sr-chrome> — `seedrouter-ai`)**:
-   - DOM & Selectors: Landmark `<header class="sr-chrome sticky">` hosting `SeedRouter · One API for Image, Vide` navigation (`SeedRouter · Models · Pricing · Docs · Sign up`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-testid="announcement-dismiss"`, `data-nimg="1"`), and stylesheet rule `host { --shimmer-angle:20deg }`.
+   - DOM & Selectors: Landmark `<header class="sr-chrome inset-x-0">` (`1440x65px`) hosting `SeedRouter · One API for Image, Vide` navigation (`SeedRouter · Models · Pricing · Docs · Sign up`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-testid="announcement-dismiss"`, `data-nimg="1"`), and stylesheet rule `mono_744f2078-module__kLS_DW__cla... { font-family:JetBrains Mono,JetBrains Mono Fallback;font-style:normal }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.sr-chrome> — `seedrouter-ai`)` (`seedrouter-ai`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.22,1,.36,1)` transitions and links `SeedRouter · Models · Pricing · Docs · Sign up`.
 2. **Hero Stage & Focal Lead (<section.sr-hero> — `SeedRouter: one API for every mode`)**:
-   - DOM & Selectors: Landmark `<section class="sr-hero sr-chrome-dark">` presenting display lead `SeedRouter: one API for every model your product...` and copy excerpt *"Seedance 2.5 is live on SeedRouter Try Seedance 2.5"* over `#fef2f2` canvas and `#e40014` ink.
-   - Responsive Contract: Hero stage (`1440×10504px` desktop / `390×2400px` mobile) sets `#fef2f2` background with `#e40014` headline `SeedRouter: one API for every model your product...`.
+   - DOM & Selectors: Landmark `<section class="sr-hero sr-chrome-dark">` presenting display lead `SeedRouter: one API for every model your product...` and copy excerpt *"01 · Image, video, language and audio · one key"* over `#f7f5f1` canvas and `#090e12` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f7f5f1` background with `#090e12` headline `SeedRouter: one API for every model your product...`.
 3. **Primary Showcase & Content Grid (<section.pb-16> — `Models you can call on SeedRouter `)**:
-   - DOM & Selectors: Landmark `<section class="pb-16 pt-10">` rendering section `Models you can call on SeedRouter today` with copy *"Seedance 2.5 is live on SeedRouter"*, asset references (`0c8c4ded07fff55c-s.p.2tcyrya9o07v...`, `1b99372b3eaef0c8-s.p.1gsd1jahc5dg...`, `70bc3e132a0a741e-s.p.3t6q91iet4ns...`, `bytedance.svg`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pb-16> — `Models you can call on SeedRouter `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--card-spacing)` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="pb-16 pt-12">` rendering section `Models you can call on SeedRouter today` with copy *"Generate and edit video from text or a first frame, at the resolu"*, asset references (`0c8c4ded07fff55c-s.p.2tcyrya9o07v...`, `1b99372b3eaef0c8-s.p.1gsd1jahc5dg...`, `70bc3e132a0a741e-s.p.3t6q91iet4ns...`, `google.svg`), and grid rule `mono_744f2078-module__kLS_DW__var... { --font-code:"JetBrains Mono", "JetBrains Mono Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pb-16> — `Models you can call on SeedRouter `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 20px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--card-spacing)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.py-16> — `Integration in 4 steps`)**:
-   - DOM & Selectors: Landmark `<section class="py-16">` framing `Integration in 4 steps` and `Sign up` (*"01 · Image, video, language and audio · one key"*) with `#ffa3a3` surface cards, `#ff6568` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-16> — `Integration in 4 steps`)` uses `var(--radius)`, `.25rem`, `var(--cell-radius)`, `2px` radii, `#ff6568` highlights, and assets (0c8c4ded07fff55c-s.p.2tcyrya9o07v..., 1b99372b3eaef0c8-s.p.1gsd1jahc5dg..., 70bc3e132a0a741e-s.p.3t6q91iet4ns...).
+   - DOM & Selectors: Landmark `<section class="py-16">` framing `Integration in 4 steps` and `Create an API key` (*"$ POST /v1/videos/generations ✓ completed"*) with `#fffdf8` surface cards, `#d1f53b` accents, and `tfit_300d5b1f-module__eNyfuq__cla... { font-family:Outfit,Outfit Fallback;font-style:normal }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-16> — `Integration in 4 steps`)` uses `3.35544e+07px`, `var(--radius)`, `.25rem`, `var(--cell-radius)` radii, `#d1f53b` highlights, and assets (0c8c4ded07fff55c-s.p.2tcyrya9o07v..., 1b99372b3eaef0c8-s.p.1gsd1jahc5dg..., 70bc3e132a0a741e-s.p.3t6q91iet4ns...).
 5. **Colophon & Global Directory Footer (<footer.sr-chrome-dark> — `https://seedrouter.ai`)**:
-   - DOM & Selectors: Landmark `<footer class="sr-chrome-dark relative">` anchoring `SeedRouter · One API for Image, ` footer links (`SeedRouter · Models · Pricing · Docs · Sign up`), copy *"one API for every model your product needs"*, and `#e40014` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sr-chrome-dark> — `https://seedrouter.ai`)` aligns to `40rem` extracted from `seedrouter-ai` stylesheet with `var(--card-spacing)` lateral canvas padding with `var(--gap)` grid gap and attributes (data-precedence="next", data-precedence="next", data-testid="announcement-dismiss").
+   - DOM & Selectors: Landmark `<footer class="sr-chrome-dark relative">` anchoring `SeedRouter · One API for Image, ` footer links (`SeedRouter · Models · Pricing · Docs · Sign up`), copy *"$ POST /v1/videos/generations"*, and `#e2ded4` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sr-chrome-dark> — `https://seedrouter.ai`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `var(--card-spacing)` lateral canvas padding with `20px` grid gap and attributes (data-precedence="next", data-precedence="next", data-testid="announcement-dismiss").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Seedance 2.5 is live on SeedRouter Try Seedance 2.5"*
-- Copy Excerpt 2: *"Seedance 2.5 is live on SeedRouter"*
-- Copy Excerpt 3: *"01 · Image, video, language and audio · one key"*
-- Copy Excerpt 4: *"one API for every model your product needs"*
+- Copy Excerpt 1: *"01 · Image, video, language and audio · one key"*
+- Copy Excerpt 2: *"Generate and edit video from text or a first frame, at the resolutions and duratio..."*
+- Copy Excerpt 3: *"$ POST /v1/videos/generations ✓ completed"*
+- Copy Excerpt 4: *"$ POST /v1/videos/generations"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.22,1,.36,1)`
 - **Extracted Stylesheet Rules (`seedrouter-ai`)**:
-- `host { --shimmer-angle:20deg }`
-- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `strong { font-weight:bolder }`
-- `small { font-size:80% }`
+- `mono_744f2078-module__kLS_DW__cla... { font-family:JetBrains Mono,JetBrains Mono Fallback;font-style:normal }`
+- `mono_744f2078-module__kLS_DW__var... { --font-code:"JetBrains Mono", "JetBrains Mono Fallback" }`
+- `tfit_300d5b1f-module__eNyfuq__cla... { font-family:Outfit,Outfit Fallback;font-style:normal }`
+- `utfit_300d5b1f-module__eNyfuq__va... { --font-outfit:"Outfit", "Outfit Fallback" }`
+- `t323_f18b1ad5-module__HgsYcq__cla... { font-family:VT323,VT323 Fallback;font-style:normal;font-weight:400 }`
 - **Per-Selector Transition Rules**:
 - **Selector `layer theme`**: `transition: .15s` extracted from `seedrouter-ai` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `seedrouter-ai` stylesheet.

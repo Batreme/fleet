@@ -1,14 +1,17 @@
 ---
 title: "UI & UX Architecture: secure-the-unknown-cyera-com"
+date: 2026-11-23
+captured_at: 2026-11-23
 status: blocked
-block_reason: "Browser Compatibility Gate (Not Supported, 335-byte DOM, 0 stylesheets)"
+http_status: 200
+block_reason: "Browser Compatibility Gate (Not Supported)"
 ---
 
 # UI & UX Architecture: secure-the-unknown-cyera-com (`status: blocked`)
 
 > [!WARNING]
-> **Target Status**: `status: blocked`  
+> **Target Status**: `status: blocked` (`http_status: 200`)  
 > **Production URL**: [https://secure-the-unknown.cyera.com/](https://secure-the-unknown.cyera.com/)  
-> **Block / Unreachable Reason**: Browser Compatibility Gate (Not Supported, 335-byte DOM, 0 stylesheets)
+> **Block / Unreachable Reason**: Browser Compatibility Gate (Not Supported)
 
-This target's raw capture in `raw/secure-the-unknown-cyera-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.
+This target terminated at an upstream edge WAF challenge, anti-bot verification gate, browser compatibility block, or origin HTTP/network error during live capture. Per strict ethical and ground-truth integrity rules, zero WAF/CAPTCHA bypasses were attempted, no synthetic design tokens were fabricated, and this target is excluded from the `25.0` evaluation tally.

@@ -1,260 +1,284 @@
 ---
 title: "UI Prompt Blueprint: www-sigma-imaging-se"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-sigma-imaging-se"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigma Sans` + `Sigma Serif`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefd` canvas, `#000000` ink, `#0077cb` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-sigma-imaging-se
 
-> **SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses** — An industrial optical engineering and e-commerce platform built on pure optical white (`--ps-white: #fefefd`), matte lens-barrel charcoal (`--ps-text: #333333`), subtle light tint (`--ps-tint: #f7f7f7`), and precision blue/amber indicators (`#4eb5e6`, `#ff9a19`).
+> **SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma** (https://www.sigma-imaging.se/) — Official SIGMA subsidiary for the Nordics and Baltics. Lenses and cameras Made in Aizu, Japan, with 5-year warranty, local support and fi...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses**. An industrial optical engineering and e-commerce platform built on pure optical white (`--ps-white: #fefefd`), matte lens-barrel charcoal (`--ps-text: #333333`), subtle light tint (`--ps-tint: #f7f7f7`), and precision blue/amber indicators (`#4eb5e6`, `#ff9a19`).
-- **Visual Archetype**: **Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigma Sans` + `Sigma Serif`)**.
+- **Brand Essence & Persona**: **SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma** (`https://www.sigma-imaging.se/`). Official SIGMA subsidiary for the Nordics and Baltics. Lenses and cameras Made in Aizu, Japan, with 5-year warranty, local support and fi...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fefefd` canvas, `#000000` ink, `#0077cb` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  1. **Bespoke Optical Typography Pairing**: Pairs geometric technical sans (`--ps-font-ui: "Sigma Sans", sans-serif`) for lens designations with editorial serif (`--ps-font-body: "Sigma Serif", serif`) for optical craftsmanship stories.
-  2. **Snap-Grid Product Carousel Physics**: Driven by CSS scroll-snap equations (`--snap-size: calc((100% - var(--snap-gap)*(var(--snap-cols) - 1))/var(--snap-cols))`) and `.kuCarousel .kuSlide` easing `cubic-bezier(0.47,0.13,0.15,0.89)`.
-  3. **High-Contrast Monoline Navigation (`#ammenu-header-container`)**: Precision mega-menu with `--ammenu-main-menu-background: #fefefd`, `--ammenu-main-menu-text: #333333`, and `--ammenu-border: #757575`.
-  4. **Photographer Ambassador Integration**: Pairs technical hardware grids (`H2: NEW PRODUCTS`, `H2: FEATURED PRODUCTS`) with artist monographs (`H1: Trevor Key`) and bold hero statements (`H1: SMALL, POWERFUL, ADAPTABLE`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fefefd` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0077cb` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Sigma Serif Headline` for display copy (`SMALL, POWERFUL,`) with `Sigma Serif` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1456px` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Full-Page Dimensions**: Desktop `1440×7696px` (`assets/desktop.png`), Mobile `390×10390px` (`assets/mobile.png`).
-- **Master Container Bounds**: 1440px container with `@media (min-width: 1201px)` and `@media (min-width: 1024px)` multi-column optical grids.
-- **Canvas Lateral Padding & Spacing**: Desktop `clamp(16px, 3vw, 48px)` (`p-4` utility base), mobile `16px`.
-- **Border Radius Scale**: `--adp-border-radius: 4px` for UI controls; sharp `0px` framing for optical product plates.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1456px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `1rem` grid gap.
+- **Border Radius Scale**: `100%`, `.3125rem`, `.375rem`, `.125rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: 4-column product specification matrix on desktop, dynamic `--snap-cols` carousel track.
-- **Mobile Layout**: Single-column snap track (`--snap-cols: 1`, `--snap-gap: 1rem`) below `@media (max-width: 1023px)`.
-- **Extracted CSS Media Queries**: `@media (min-width: 768px)`, `@media (max-width: 1023px)`, `@media (min-width: 1024px)`, `@media (max-width: 1200px)`, `@media (min-width: 1201px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1456px`, `gap: 1rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:768px)`, `@media (min-width:640px)`, `@media (min-width:1024px)`, `@media (min-width:1201px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| Primary Optical White Canvas | `#fefefd` | `--ps-white` / `--ammenu-main-menu-background` |
-| Secondary Light Tint Surface | `#f7f7f7` | `--ps-tint` (`:root`) |
-| Pure White Card Surface | `#FFFFFF` | `--amcart-background` / `--amscroll-background-color` |
-| Primary Lens-Barrel Charcoal Ink | `#333333` | `--ps-text` / `--ammenu-main-menu-text` |
-| Deep Black Product Title Ink | `#000000` | `--amcart-product-name` |
-| Secondary Muted Ink | `rgba(51, 51, 51, 0.5)` | `--ps-text-muted` (`:root`) |
-| Structural Border Gray | `#cccfd6` | `--amscroll-border-color` |
-| Navigation Rule Gray | `#757575` | `--ammenu-border` / `--ammenu-toggle-icon-color` |
-| Optical Cyan Accent | `#4eb5e6` | `--adp-accent-color` |
-| Interactive Blue Toggle | `#2563eb` | `--ambar-toggle-active-color` |
-| Aperture Amber Highlight | `#ff9a19` | `--adp-day-name-color` |
+| **Primary Canvas Substrate** | `#fefefd` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `p` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--amscroll-background-color)` in `:root` |
+| **Interactive Accent / Highlight** | `#0077cb` | `.mollie-buttons .button:hover { background-color: #0077cb }` |
+| **Secondary / Muted Copy** | `#9c9c9c` | `var(--adp-color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#cccfd6` | `var(--amscroll-border-color)` in `:root` |
+| **Variable Token (`--amscroll--text--color`)** | `#252525` | `var(--amscroll--text--color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--ps-white` | `#fefefd` | Primary optical white substrate |
-| `--ps-tint` | `#f7f7f7` | Secondary product card tint surface |
-| `--ps-text` | `#333` | Primary charcoal typography ink |
-| `--ps-text-muted` | `rgba(51, 51, 51, 0.5)` | Muted technical specification ink |
-| `--ps-font-ui` | `"Sigma Sans", sans-serif` | Primary technical UI & lens designation font |
-| `--ps-font-body` | `"Sigma Serif", serif` | Editorial monograph & body serif font |
-| `--snap-cols` | `1` | Responsive scroll-snap column divisor |
-| `--snap-gap` | `1rem` | Scroll-snap grid gutter spacing |
-| `--snap-size` | `calc((100% - var(--snap-gap)*(var(--snap-cols) - 1))/var(--snap-cols))` | Dynamic card width calculation |
-| `--ammenu-main-menu-background` | `#fefefd` | Header mega-menu background |
-| `--ammenu-main-menu-text` | `#333333` | Header navigation link ink |
-| `--ammenu-submenu-text-hover` | `#4d4d4d` | Submenu hover ink state |
-| `--ammenu-border` | `#757575` | Navigation structural divider color |
-| `--amcart-background` | `#FFFFFF` | Cart drawer background surface |
-| `--amcart-product-name` | `#000000` | Cart product title ink |
-| `--amscroll--transition-duration` | `.2s` | Fast UI transition duration |
-| `--amscroll--hover-filter` | `brightness(.8)` | Optical image hover darkening filter |
-| `--amscroll-border-color` | `#cccfd6` | Card & pagination border token |
-| `--ambar-toggle-active-color` | `#2563eb` | Active interactive toggle accent |
+| `--amscroll-module--path` | `"../Amasty_Scroll"` | Design System Custom Token |
+| `--amscroll--transition-duration` | `.2s` | Motion / Easing Token |
+| `--amscroll--hover-filter` | `brightness(.8)` | Design System Custom Token |
+| `--amscroll-loader--size` | `25px` | Layout / Spatial Grid Token |
+| `--amscroll--text--color` | `#252525` | Typography Ink Token |
+| `--amscroll-border-color` | `#cccfd6` | Brand / Palette Token |
+| `--amscroll-background-color` | `#fff` | Canvas / Surface Token |
+| `--amscroll--indent` | `10px` | Dimension / Scale Token |
+| `--amscroll--indent--m` | `@amscroll--indent + @amscroll--indent/2` | Design System Custom Token |
+| `--amscroll--indent--l` | `@amscroll--indent * 2` | Design System Custom Token |
+| `--amscroll--indent--xl` | `@amscroll--indent--l + @amscroll--indent/2` | Design System Custom Token |
+| `--amcart-background` | `#FFFFFF` | Canvas / Surface Token |
+| `--amcart-product-name` | `#000000` | Color / Atmospheric Token |
+| `--amcart-dialog-text` | `#000000` | Typography Ink Token |
+| `--amcart-btn-text` | `#000000` | Typography Ink Token |
+| `--amcart-continue-btn` | `#000000` | Color / Atmospheric Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `"Sigma Sans", "Century Gothic", CenturyGothic, AppleGothic, sans-serif` (`--ps-font-ui`).
-- **Primary Body Stack**: `"Sigma Serif", serif` (`--ps-font-body`) paired with `"Sigma Sans", sans-serif`.
-- **Technical / Metadata Stack**: `ui-monospace, "SF Mono", monospace` (Focal length `mm`, aperture `F1.4 DG DN`, mount codes).
+- **Display Typography**: `Sigma Serif Headline`.
+- **Primary Body Stack**: `Sigma Serif`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules
-- **Hero Display (`H1`)**: `clamp(2.5rem, 5vw, 4.5rem)`, `font-family: var(--ps-font-ui)`, `font-weight: 700`, `letter-spacing: -0.02em`, uppercase ("SMALL, POWERFUL, ADAPTABLE" / "Trevor Key").
-- **Section Heading (`H2`)**: `clamp(1.5rem, 2.8vw, 2.25rem)`, `font-family: var(--ps-font-ui)`, `font-weight: 600`, `letter-spacing: 0.04em` ("NEW PRODUCTS", "FEATURED PRODUCTS").
-- **Body Copy**: `1rem (16px)`, `font-family: var(--ps-font-body)`, `line-height: 1.65`, `color: var(--ps-text)`.
-- **Metadata & Navigation Labels**: `0.75rem (12px)`, `font-family: var(--ps-font-ui)`, `color: var(--ps-text-muted)`, `letter-spacing: 0.08em`, uppercase mount badges (`L-MOUNT`, `SONY E`, `CINE`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`, `letter-spacing: 0.08px`); rule `h1` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 300`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); rule `h2` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 300`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); CSS variables `--ps-font-body: "Sigma Serif", serif`; rule `p` (`font-size: .8125rem`, `line-height: 125%`, `letter-spacing: .02em`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); CSS variables `--amlabel-margin-between: 7px`, `--gap-amlabel-margin: var(--amlabel-margin-between)`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(0.47,0.13,0.15,0.89)` (carousel slide) and `cubic-bezier(.49,.78,.46,1.34)` (spring overshoot).
+- **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- `.kuCarousel .kuSlide` -> `transition: left .4s cubic-bezier(0.47,0.13,0.15,0.89)` (optical product carousel track)
-- `.kuCarousel .kuCarousel-content` -> `transition: width .4s` (responsive container adaptation)
-- `.kuFilterHead` -> `transition: all .3s ease` (lens mount & focal-length filter accordion)
-- `.kuFilterIcon:before` -> `transition: background 200ms` (filter checkbox state)
-- `Image Hover` -> `filter: var(--amscroll--hover-filter)` (`brightness(.8)`) over `--amscroll--transition-duration: .2s`
+- **Selector `.ambar-btn-accept`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Selector `.ambar-btn-allow`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Selector `.ambar-btn-decline`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.ammenu-header-container>` and `<section.cms-index-index>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html`)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ <header id="ammenu-header-container" class="ammenu-header-container">  │
-│   [SIGMA]   [Lenses] [Cameras] [Cine] [Ambassadors]   [Search] [Cart]  │
-├────────────────────────────────────────────────────────────────────────┤
-│ <main id="maincontent" class="page-main"> (Canvas: --ps-white #fefefd) │
-│   Hero Split Stage: H1: SMALL, POWERFUL, ADAPTABLE | H1: Trevor Key    │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="new-products"> H2: NEW PRODUCTS (Surface: --ps-tint #f │
-│   [ Art 50mm F1.2 DG DN ]  [ Contempor. 28-70mm ]  [ Sports 500mm F5.6 │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="featured-products"> H2: FEATURED PRODUCTS (.kuCarousel │
-│   Track: --snap-size calc((100% - var(--snap-gap)*(var(--snap-cols)-1) │
-├────────────────────────────────────────────────────────────────────────┤
-│ <footer> [Nordic Service] [Warranty] [Authorized Dealers] © SIGMA Nord │
+│ DESKTOP VIEWPORT (1440px) — SIGMA Imaging Nordics & Baltics · Lenses,  │
+│ ====================================================================== │
+│ [ <header.ammenu-header- (1425x0px)   | Products · Made in Aizu · In ] │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE: <section.message> (w=1425px)                           | │
+│ | H1: SMALL, POWERFUL,                                               | │
+│ | Substrate: #fefefd | Ink: #000000 | Accent: #0077cb                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE GRID (<section.cms-index-index>) max-w: 1456px            | │
+│ | +------------------------------+  +------------------------------+ | │
+│ | | ADAPTABLE                    |  | NEW PRODUCTS                 | | │
+│ | +------------------------------+  +------------------------------+ | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL MODULE (<section.page-layout-1colu) — FEATURED PRODUCTS     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.page-footer>) | https://www.sigma-imaging.se/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.ammenu-header-co) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.message>) — 390px Vertical Lead               | │
+│ | H1: SMALL, POWERFUL,                                               | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.cms-index-ind) — 1-Col Stack              | │
+│ | [ Item 1: ADAPTABLE                                              ] | │
+│ | [ Item 2: NEW PRODUCTS                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.page-layout-1co) — 1-Col (FEATURED PRODUCTS)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.page-footer>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Mega-Menu Header (`<header id="ammenu-header-container" class="ammenu-header-container page-header">`)**:
-   - Sticky optical navigation bar styled with `--ammenu-main-menu-background: #fefefd`, `--ammenu-main-menu-text: #333333`, `--ammenu-border: #757575`, and `#am-account-menu`.
-2. **Dual Hero Campaign Stage (`<main id="maincontent" class="page-main">`)**:
-   - Features high-impact hardware hero (`H1: SMALL, POWERFUL, ADAPTABLE` in `--ps-font-ui`) alongside artist monograph feature (`H1: Trevor Key` in `--ps-font-body`).
-3. **New Products Hardware Matrix (`H2: NEW PRODUCTS`)**:
-   - 4-column desktop grid of optical lenses and cameras on `--ps-tint: #f7f7f7` cards with mount badges (`L-MOUNT`, `SONY E`), focal length specs, and `--amscroll-border-color: #cccfd6` borders.
-4. **Featured Products Snap Carousel (`H2: FEATURED PRODUCTS` and `.kuCarousel`)**:
-   - Horizontal snap track driven by `--snap-size` and `cubic-bezier(0.47,0.13,0.15,0.89)` slide physics with `.kuFilterHead` faceted lens filtering.
-5. **Cart & Service Footer (`--amcart-background: #FFFFFF`)**:
-   - Slide-over cart drawer (`--amcart-product-name: #000000`) and Nordic dealer/service colophon.
+1. **Brand Header & Navigation Bar (<header.ammenu-header-container> — `www-sigma-imaging-se`)**:
+   - Landmark `<header class="ammenu-header-container page-header">` (`1425x0px`) hosting `SIGMA Imaging Nordics & Baltics · Le` navigation (`Products · Made in Aizu · Inspiration · Support · News`), DOM attributes (`data-src="//www.googletagmanage..."`, `data-cfasync="false"`, `data-dialog-ref-name="am-cookie-bar"`, `data-dispatch-action="cookiebar-action-allow"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid ccc }`.
+2. **Hero Stage & Focal Lead (<section.message> — `SMALL, POWERFUL,`)**:
+   - Landmark `<section class="message global">` presenting display lead `SMALL, POWERFUL,` and copy excerpt *"We use cookies to help improve our services, make personal offers"* over `#fefefd` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.cms-index-index> — `ADAPTABLE`)**:
+   - Landmark `<section class="cms-index-index">` rendering section `ADAPTABLE` with copy *"The Sigma FP2 is a camera fully designed around human creativity."*, asset references (`recaptcha__en.js`, `gtm.js`, `styles.css`, `eu-guarantee.css`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.page-layout-1column> — `NEW PRODUCTS`)**:
+   - Landmark `<section class="page-layout-1column">` framing `NEW PRODUCTS` and `FEATURED PRODUCTS` (*"Even in the digital age, taking a photograph is a deeply physical"*) with `#ffffff` surface cards, `#0077cb` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.page-footer> — `https://www.sigma-imaging.se/`)**:
+   - Landmark `<footer class="page-footer">` anchoring `SIGMA Imaging Nordics & Baltics ` footer links (`Products · Made in Aizu · Inspiration · Support · News`), copy *"CONTEMPORARY 50 mm F1.4 CL DG"*, and `#cccfd6` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: www-sigma-imaging-se (SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses)
+# Master Zero-Shot Frontend Generation Prompt: www-sigma-imaging-se (SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-sigma-imaging-se` (SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-sigma-imaging-se` (**SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma** — `https://www.sigma-imaging.se/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Swiss-Japanese Precision Optical Hardware & Storefront System (`Sigma Sans` + `Sigma Serif`).
-- **Primary Substrate**: `#fefefd` (`--ps-white` / `--ammenu-main-menu-background`), **Primary Ink**: `#333333`, **Accent / Highlight**: `#ff9a19`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fefefd` canvas, `#000000` ink, `#0077cb` accent).
+- **Identity & Domain Context**: Official SIGMA subsidiary for the Nordics and Baltics. Lenses and cameras Made in Aizu, Japan, with 5-year warranty, local support and fi...
+- **Primary Substrate**: `#fefefd` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0077cb`.
 - **Site-Specific Differentiators**:
-  1. **Bespoke Optical Typography Pairing**: Pairs geometric technical sans (`--ps-font-ui: "Sigma Sans", sans-serif`) for lens designations with editorial serif (`--ps-font-body: "Sigma Serif", serif`) for optical craftsmanship stories.
-  2. **Snap-Grid Product Carousel Physics**: Driven by CSS scroll-snap equations (`--snap-size: calc((100% - var(--snap-gap)*(var(--snap-cols) - 1))/var(--snap-cols))`) and `.kuCarousel .kuSlide` easing `cubic-bezier(0.47,0.13,0.15,0.89)`.
-  3. **High-Contrast Monoline Navigation (`#ammenu-header-container`)**: Precision mega-menu with `--ammenu-main-menu-background: #fefefd`, `--ammenu-main-menu-text: #333333`, and `--ammenu-border: #757575`.
-  4. **Photographer Ambassador Integration**: Pairs technical hardware grids (`H2: NEW PRODUCTS`, `H2: FEATURED PRODUCTS`) with artist monographs (`H1: Trevor Key`) and bold hero statements (`H1: SMALL, POWERFUL, ADAPTABLE`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fefefd` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0077cb` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Sigma Serif Headline` for display copy (`SMALL, POWERFUL,`) with `Sigma Serif` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1456px` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-sigma-imaging-se` in your global stylesheet:
 
 :root {
-  /* SIGMA Imaging Nordics & Baltics · Optical Lenses, Cameras & Cine-Lenses — Ground-Truth Extracted CSS Variables */
-  --ps-white: #fefefd; /* Primary optical white substrate */
-  --ps-tint: #f7f7f7; /* Secondary product card tint surface */
-  --ps-text: #333; /* Primary charcoal typography ink */
-  --ps-text-muted: rgba(51, 51, 51, 0.5); /* Muted technical specification ink */
-  --ps-font-ui: "Sigma Sans", sans-serif; /* Primary technical UI & lens designation font */
-  --ps-font-body: "Sigma Serif", serif; /* Editorial monograph & body serif font */
-  --snap-cols: 1; /* Responsive scroll-snap column divisor */
-  --snap-gap: 1rem; /* Scroll-snap grid gutter spacing */
-  --snap-size: calc((100% - var(--snap-gap)*(var(--snap-cols) - 1))/var(--snap-cols)); /* Dynamic card width calculation */
-  --ammenu-main-menu-background: #fefefd; /* Header mega-menu background */
-  --ammenu-main-menu-text: #333333; /* Header navigation link ink */
-  --ammenu-submenu-text-hover: #4d4d4d; /* Submenu hover ink state */
-  --ammenu-border: #757575; /* Navigation structural divider color */
-  --amcart-background: #FFFFFF; /* Cart drawer background surface */
-  --amcart-product-name: #000000; /* Cart product title ink */
-  --amscroll--transition-duration: .2s; /* Fast UI transition duration */
-  --amscroll--hover-filter: brightness(.8); /* Optical image hover darkening filter */
-  --amscroll-border-color: #cccfd6; /* Card & pagination border token */
-  --ambar-toggle-active-color: #2563eb; /* Active interactive toggle accent */
+  /* SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma (www-sigma-imaging-se) — Live-Grounded CSS Variables */
+  --amscroll-module--path: "../Amasty_Scroll"; /* Design System Custom Token (www-sigma-imaging-se) */
+  --amscroll--transition-duration: .2s; /* Motion / Easing Token (www-sigma-imaging-se) */
+  --amscroll--hover-filter: brightness(.8); /* Design System Custom Token (www-sigma-imaging-se) */
+  --amscroll-loader--size: 25px; /* Layout / Spatial Grid Token (www-sigma-imaging-se) */
+  --amscroll--text--color: #252525; /* Typography Ink Token (www-sigma-imaging-se) */
+  --amscroll-border-color: #cccfd6; /* Brand / Palette Token (www-sigma-imaging-se) */
+  --amscroll-background-color: #fff; /* Canvas / Surface Token (www-sigma-imaging-se) */
+  --amscroll--indent: 10px; /* Dimension / Scale Token (www-sigma-imaging-se) */
+  --amscroll--indent--m: @amscroll--indent + @amscroll--indent/2; /* Design System Custom Token (www-sigma-imaging-se) */
+  --amscroll--indent--l: @amscroll--indent * 2; /* Design System Custom Token (www-sigma-imaging-se) */
+  --amscroll--indent--xl: @amscroll--indent--l + @amscroll--indent/2; /* Design System Custom Token (www-sigma-imaging-se) */
+  --amcart-background: #FFFFFF; /* Canvas / Surface Token (www-sigma-imaging-se) */
+  --amcart-product-name: #000000; /* Color / Atmospheric Token (www-sigma-imaging-se) */
+  --amcart-dialog-text: #000000; /* Typography Ink Token (www-sigma-imaging-se) */
+  --amcart-btn-text: #000000; /* Typography Ink Token (www-sigma-imaging-se) */
+  --amcart-continue-btn: #000000; /* Color / Atmospheric Token (www-sigma-imaging-se) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Optical White Canvas**: `#fefefd` — grounded in `--ps-white` / `--ammenu-main-menu-background`
-- **Secondary Light Tint Surface**: `#f7f7f7` — grounded in `--ps-tint` (`:root`)
-- **Pure White Card Surface**: `#FFFFFF` — grounded in `--amcart-background` / `--amscroll-background-color`
-- **Primary Lens-Barrel Charcoal Ink**: `#333333` — grounded in `--ps-text` / `--ammenu-main-menu-text`
-- **Deep Black Product Title Ink**: `#000000` — grounded in `--amcart-product-name`
-- **Secondary Muted Ink**: `rgba(51, 51, 51, 0.5)` — grounded in `--ps-text-muted` (`:root`)
-- **Structural Border Gray**: `#cccfd6` — grounded in `--amscroll-border-color`
-- **Navigation Rule Gray**: `#757575` — grounded in `--ammenu-border` / `--ammenu-toggle-icon-color`
-- **Optical Cyan Accent**: `#4eb5e6` — grounded in `--adp-accent-color`
-- **Interactive Blue Toggle**: `#2563eb` — grounded in `--ambar-toggle-active-color`
-- **Aperture Amber Highlight**: `#ff9a19` — grounded in `--adp-day-name-color`
+- **Primary Canvas Substrate**: `#fefefd` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `var(--amscroll-background-color)` in `:root`
+- **Interactive Accent / Highlight**: `#0077cb` — grounded in `.mollie-buttons .button:hover { background-color: #0077cb }`
+- **Secondary / Muted Copy**: `#9c9c9c` — grounded in `var(--adp-color-secondary)` in `:root`
+- **Structural Hairline Border**: `#cccfd6` — grounded in `var(--amscroll-border-color)` in `:root`
+- **Variable Token (`--amscroll--text--color`)**: `#252525` — grounded in `var(--amscroll--text--color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×7696px` full-page capture (`1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×10390px` full-page capture (`390px` standard mobile width).
-- **Container Max-Width**: 1440px container with `@media (min-width: 1201px)` and `@media (min-width: 1024px)` multi-column optical grids
-- **Padding & Gutters**: Desktop `clamp(16px, 3vw, 48px)` (`p-4` utility base), mobile `16px`
-- **Desktop Grid**: 4-column product specification matrix on desktop, dynamic `--snap-cols` carousel track
-- **Mobile Adaptation**: Single-column snap track (`--snap-cols: 1`, `--snap-gap: 1rem`) below `@media (max-width: 1023px)`
-- **Media Queries**: `@media (min-width: 768px)`, `@media (max-width: 1023px)`, `@media (min-width: 1024px)`, `@media (max-width: 1200px)`, `@media (min-width: 1201px)`
-- **Corner Radii**: `--adp-border-radius: 4px` for UI controls; sharp `0px` framing for optical product plates
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1456px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `.5rem` lateral canvas padding with `1rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1456px`, `gap: 1rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding
+- **Media Queries**: `@media (min-width:768px)`, `@media (min-width:640px)`, `@media (min-width:1024px)`, `@media (min-width:1201px)`
+- **Corner Radii**: `100%`, `.3125rem`, `.375rem`, `.125rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `"Sigma Sans", "Century Gothic", CenturyGothic, AppleGothic, sans-serif` (`--ps-font-ui`)
-- **Body Font Stack**: `"Sigma Serif", serif` (`--ps-font-body`) paired with `"Sigma Sans", sans-serif`
-- **Monospace / Technical Font Stack**: `ui-monospace, "SF Mono", monospace` (Focal length `mm`, aperture `F1.4 DG DN`, mount codes)
-- **H1 Display Rule**: `clamp(2.5rem, 5vw, 4.5rem)`, `font-family: var(--ps-font-ui)`, `font-weight: 700`, `letter-spacing: -0.02em`, uppercase ("SMALL, POWERFUL, ADAPTABLE" / "Trevor Key")
-- **H2 Section Rule**: `clamp(1.5rem, 2.8vw, 2.25rem)`, `font-family: var(--ps-font-ui)`, `font-weight: 600`, `letter-spacing: 0.04em` ("NEW PRODUCTS", "FEATURED PRODUCTS")
-- **Body Copy Rule**: `1rem (16px)`, `font-family: var(--ps-font-body)`, `line-height: 1.65`, `color: var(--ps-text)`
-- **Metadata & Index Rule**: `0.75rem (12px)`, `font-family: var(--ps-font-ui)`, `color: var(--ps-text-muted)`, `letter-spacing: 0.08em`, uppercase mount badges (`L-MOUNT`, `SONY E`, `CINE`)
+- **Display Font Stack**: `Sigma Serif Headline`
+- **Body Font Stack**: `Sigma Serif`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`, `letter-spacing: 0.08px`); rule `h1` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 300`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); rule `h2` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 300`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); CSS variables `--ps-font-body: "Sigma Serif", serif`; rule `p` (`font-size: .8125rem`, `line-height: 125%`, `letter-spacing: .02em`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: 0.08px`); CSS variables `--amlabel-margin-between: 7px`, `--gap-amlabel-margin: var(--amlabel-margin-between)`
 
-### 6. Component Hierarchy & Real DOM Landmarks
-Scaffold the interface with these exact structural regions and class selectors from `www-sigma-imaging-se`:
-1. **Mega-Menu Header (`<header id="ammenu-header-container" class="ammenu-header-container page-header">`)**:
-   - Architecture & Selectors: Sticky optical navigation bar styled with `--ammenu-main-menu-background: #fefefd`, `--ammenu-main-menu-text: #333333`, `--ammenu-border: #757575`, and `#am-account-menu`.
-   - Layout & State Contract: Sticky/fixed top header navigation adapting across `@media (min-width: 768px)`, `@media (max-width: 1023px)`, `@media (min-width: 1024px)`, `@media (max-width: 1200px)`, `@media (min-width: 1201px)` with `cubic-bezier(0.47,0.13,0.15,0.89)` (carousel slide) and `cubic-bezier(.49,.78,.46,1.34)` (spring overshoot) menu transitions.
-2. **Dual Hero Campaign Stage (`<main id="maincontent" class="page-main">`)**:
-   - Architecture & Selectors: Features high-impact hardware hero (`H1: SMALL, POWERFUL, ADAPTABLE` in `--ps-font-ui`) alongside artist monograph feature (`H1: Trevor Key` in `--ps-font-body`).
-   - Layout & State Contract: Full-viewport hero stage (`1440px` desktop / `390px` mobile) pairing `#fefefd` substrate with `#333333` display typography (`H1`).
-3. **New Products Hardware Matrix (`H2: NEW PRODUCTS`)**:
-   - Architecture & Selectors: 4-column desktop grid of optical lenses and cameras on `--ps-tint: #f7f7f7` cards with mount badges (`L-MOUNT`, `SONY E`), focal length specs, and `--amscroll-border-color: #cccfd6` borders.
-   - Layout & State Contract: Primary showcase grid executing 4-column product specification matrix on desktop, dynamic `--snap-cols` carousel track on desktop and Single-column snap track (`--snap-cols: 1`, `--snap-gap: 1rem`) below `@media (max-width: 1023px)` on mobile.
-4. **Featured Products Snap Carousel (`H2: FEATURED PRODUCTS` and `.kuCarousel`)**:
-   - Architecture & Selectors: Horizontal snap track driven by `--snap-size` and `cubic-bezier(0.47,0.13,0.15,0.89)` slide physics with `.kuFilterHead` faceted lens filtering.
-   - Layout & State Contract: Interactive specification & narrative module framed by `--adp-border-radius: 4px` for UI controls; sharp `0px` framing for optical product plates and `#ff9a19` highlights.
-5. **Cart & Service Footer (`--amcart-background: #FFFFFF`)**:
-   - Architecture & Selectors: Slide-over cart drawer (`--amcart-product-name: #000000`) and Nordic dealer/service colophon.
-   - Layout & State Contract: Footer directory and utility bar anchored to 1440px container with `@media (min-width: 1201px)` and `@media (min-width: 1024px)` multi-column optical grids with Desktop `clamp(16px, 3vw, 48px)` (`p-4` utility base), mobile `16px` lateral gutters.
+### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
+Scaffold `www-sigma-imaging-se` (`SIGMA Imaging Nordics & Baltics · Lenses, Cameras & Cine-lenses - Sigma`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.ammenu-header-container> — `www-sigma-imaging-se`)**:
+   - DOM & Selectors: Landmark `<header class="ammenu-header-container page-header">` (`1425x0px`) hosting `SIGMA Imaging Nordics & Baltics · Le` navigation (`Products · Made in Aizu · Inspiration · Support · News`), DOM attributes (`data-src="//www.googletagmanage..."`, `data-cfasync="false"`, `data-dialog-ref-name="am-cookie-bar"`, `data-dispatch-action="cookiebar-action-allow"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid ccc }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.ammenu-header-container> — `www-sigma-imaging-se`)` (`www-sigma-imaging-se`) adapts across `@media (min-width:768px)`, `@media (min-width:640px)`, `@media (min-width:1024px)`, `@media (min-width:1201px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)` transitions and links `Products · Made in Aizu · Inspiration · Support · News`.
+2. **Hero Stage & Focal Lead (<section.message> — `SMALL, POWERFUL,`)**:
+   - DOM & Selectors: Landmark `<section class="message global">` presenting display lead `SMALL, POWERFUL,` and copy excerpt *"We use cookies to help improve our services, make personal offers"* over `#fefefd` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fefefd` background with `#000000` headline `SMALL, POWERFUL,`.
+3. **Primary Showcase & Content Grid (<section.cms-index-index> — `ADAPTABLE`)**:
+   - DOM & Selectors: Landmark `<section class="cms-index-index">` rendering section `ADAPTABLE` with copy *"The Sigma FP2 is a camera fully designed around human creativity."*, asset references (`recaptcha__en.js`, `gtm.js`, `styles.css`, `eu-guarantee.css`), and grid rule `body { margin:0;line-height:inherit }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.cms-index-index> — `ADAPTABLE`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1456px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.page-layout-1column> — `NEW PRODUCTS`)**:
+   - DOM & Selectors: Landmark `<section class="page-layout-1column">` framing `NEW PRODUCTS` and `FEATURED PRODUCTS` (*"Even in the digital age, taking a photograph is a deeply physical"*) with `#ffffff` surface cards, `#0077cb` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-layout-1column> — `NEW PRODUCTS`)` uses `100%`, `.3125rem`, `.375rem`, `.125rem` radii, `#0077cb` highlights, and assets (recaptcha__en.js, gtm.js, styles.css).
+5. **Colophon & Global Directory Footer (<footer.page-footer> — `https://www.sigma-imaging.se/`)**:
+   - DOM & Selectors: Landmark `<footer class="page-footer">` anchoring `SIGMA Imaging Nordics & Baltics ` footer links (`Products · Made in Aizu · Inspiration · Support · News`), copy *"CONTEMPORARY 50 mm F1.4 CL DG"*, and `#cccfd6` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-footer> — `https://www.sigma-imaging.se/`)` aligns to `1456px` (non-`@media` desktop container stylesheet rule) with `.5rem` lateral canvas padding with `1rem` grid gap and attributes (data-src="//www.googletagmanage...", data-cfasync="false", data-dialog-ref-name="am-cookie-bar").
 
-### 7. Motion & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(0.47,0.13,0.15,0.89)` (carousel slide) and `cubic-bezier(.49,.78,.46,1.34)` (spring overshoot)
+#### Verbatim DOM Copy Excerpts (`dom.html`)
+- Copy Excerpt 1: *"We use cookies to help improve our services, make personal offers, and enhance you..."*
+- Copy Excerpt 2: *"The Sigma FP2 is a camera fully designed around human creativity. Purposefully dec..."*
+- Copy Excerpt 3: *"Even in the digital age, taking a photograph is a deeply physical process. There i..."*
+- Copy Excerpt 4: *"CONTEMPORARY 50 mm F1.4 CL DG"*
+
+### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
+- **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`
+- **Extracted Stylesheet Rules (`www-sigma-imaging-se`)**:
+- `before { box-sizing:border-box;border:0 solid ccc }`
+- `body { margin:0;line-height:inherit }`
+- `strong { font-weight:bolder }`
+- `small { font-size:80% }`
+- `sup { font-size:75%;line-height:0;position:relative;vertical-align:initial }`
 - **Per-Selector Transition Rules**:
-- `.kuCarousel .kuSlide` -> `transition: left .4s cubic-bezier(0.47,0.13,0.15,0.89)` (optical product carousel track)
-- `.kuCarousel .kuCarousel-content` -> `transition: width .4s` (responsive container adaptation)
-- `.kuFilterHead` -> `transition: all .3s ease` (lens mount & focal-length filter accordion)
-- `.kuFilterIcon:before` -> `transition: background 200ms` (filter checkbox state)
-- `Image Hover` -> `filter: var(--amscroll--hover-filter)` (`brightness(.8)`) over `--amscroll--transition-duration: .2s`
+- **Selector `.ambar-btn-accept`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Selector `.ambar-btn-allow`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Selector `.ambar-btn-decline`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-sigma-imaging-se` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.ammenu-header-container>` and `<section.cms-index-index>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
-- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above.
+- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-sigma-imaging-se`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```

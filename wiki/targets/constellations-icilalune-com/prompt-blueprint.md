@@ -1,61 +1,68 @@
 ---
 title: "UI Prompt Blueprint: constellations-icilalune-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "constellations-icilalune-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f8f8f8` canvas, `#111111` ink, `#ec3013` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: constellations-icilalune-com
 
-> **Constellation(s) — Immersive virtual 3D art exhibitions** (https://constellations.icilalune.com/) — Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam Krypel, Pia Be...
+> **Constellation(s) — Immersive virtual 3D art exhibitions** (https://constellations.icilalune.com/) — Immersive virtual galleries: step into the worlds of AG Z, David Bartus, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Constellation(s) — Immersive virtual 3D art exhibitions** (`https://constellations.icilalune.com/`). Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam Krypel, Pia Be...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent)**.
+- **Brand Essence & Persona**: **Constellation(s) — Immersive virtual 3D art exhibitions** (`https://constellations.icilalune.com/`). Immersive virtual galleries: step into the worlds of AG Z, David Bartus, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f8f8f8` canvas, `#111111` ink, `#ec3013` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f3f2f2` (`var(--color-bg)` in `:root`) paired with `#201e1d` primary typography and `#ec3013` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo` for display copy (`Constellation(s)`) with `Arimo` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `60ch` container bounds (`gap: 6px`, padding `var(--space-2)`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f8f8f8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#111111` primary typography and `#ec3013` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Arimo` for display copy (`Constellation(s)`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px 32px`, padding `28px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2963px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `60ch` extracted from `constellations-icilalune-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `var(--space-2)` lateral canvas padding with `6px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `28px` lateral canvas padding with `16px 32px` grid gap.
 - **Border Radius Scale**: `var(--radius-md)`, `50%`, `var(--radius-lg)`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 6px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--space-2)` horizontal padding.
-- **Extracted CSS Media Queries**: no `@media` queries in static stylesheet (fluid viewport scaling).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px 32px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `28px` horizontal padding.
+- **Extracted CSS Media Queries**: no `@media` queries in captured stylesheet (fluid viewport scaling).
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f3f2f2` | `var(--color-bg)` in `:root` |
-| **Primary Typography Ink** | `#eae9e9` | `var(--color-surface)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#201e1d` | `var(--color-text)` in `:root` |
+| **Primary Canvas Substrate** | `#f8f8f8` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#111111` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f3f2f2` | `var(--color-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#ec3013` | `var(--color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#e15b47` | `var(--color-accent-2)` in `:root` |
-| **Structural Hairline Border** | `#f8f4f4` | `var(--color-neutral-100)` in `:root` |
+| **Secondary / Muted Copy** | `#201e1d` | `var(--color-text)` in `:root` |
+| **Structural Hairline Border** | `#201e1d` | `var(--color-divider)` in `:root` |
+| **Variable Token (`--color-surface`)** | `#eae9e9` | `var(--color-surface)` in `:root` |
+| **Variable Token (`--color-accent-2`)** | `#e15b47` | `var(--color-accent-2)` in `:root` |
+| **Variable Token (`--color-neutral-100`)** | `#f8f4f4` | `var(--color-neutral-100)` in `:root` |
 | **Variable Token (`--color-neutral-200`)** | `#eae7e7` | `var(--color-neutral-200)` in `:root` |
 | **Variable Token (`--color-neutral-300`)** | `#d7d3d3` | `var(--color-neutral-300)` in `:root` |
 | **Variable Token (`--color-neutral-400`)** | `#bab6b6` | `var(--color-neutral-400)` in `:root` |
@@ -91,15 +98,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Archivo`.
-- **Primary Body Stack**: `Arimo`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Arimo`.
+- **Primary Body Stack**: `Helvetica Neue`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 42px`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`).
-- **Body Copy**: CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `42px`, `32px`, `25px`, `20px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 42px`, `line-height: 47.04px`, `font-weight: 800`, `letter-spacing: -0.63px`); rule `h1` (`font-size: 42px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 53.2px`, `font-weight: 800`, `letter-spacing: -1.12px`); rule `h2` (`font-size: 32px`).
+- **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`); CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`).
 
 ---
 
@@ -112,47 +119,66 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `
 - **Selector `::after`**: `transition: 0s !important` extracted from `constellations-icilalune-com` stylesheet.
 - **Selector `style]`**: `transition: unset` extracted from `constellations-icilalune-com` stylesheet.
 - **Selector `style]`**: `transition: unset` extracted from `constellations-icilalune-com` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.sc-interp>` and `<section.scp0>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Constellation(s) — Immersive virtual 3D ar │
 │ ====================================================================== │
-│ [ <header.sc-host>         | Overview · Index · Archive · About · C ]  │
+│ [ <header.sc-host> (1440px)           | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sc-interp>                                  |   │
-│ | H1: Constellation(s)                                             |   │
-│ | Substrate: #f3f2f2    | Ink: #201e1d    | Accent: #ec3013        |   │
+│ | HERO STAGE: <section.sc-interp> (w=1440px)                         | │
+│ | H1: Constellation(s)                                               | │
+│ | Substrate: #f8f8f8 | Ink: #111111 | Accent: #ec3013                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.scp0>            ) max-w: 60ch           |   │
+│ | SHOWCASE GRID (<section.scp0>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Artists                      |  | Exhibit on Constellation(s)  | | │
+│ | | Immersive virtual galleries: |  | AG Z — Ten Thousand Li · Tra | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 6px   ) | │
-│ | [<header.sc-host>] -> [<section.sc-interp] -> [<section.scp0>] |     │
+│ | DETAIL MODULE (<section.scp1>) — David Bartus — From A             | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.scp2>         ) | https://constellations.icilalune.c │
+│ [ FOOTER (<footer.scp2>       ) | https://constellations.icilalune.co  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px 32p)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.sc-host>        ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.sc-interp>) — 390px Vertical Lead             | │
+│ | H1: Constellation(s)                                               | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.scp0>) — 1-Col Stack                      | │
+│ | [ Item 1: Immersive virtual galleries: step into the world       ] | │
+│ | [ Item 2: AG Z — Ten Thousand Li · Travel and street photo       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.scp1>) — 1-Col (David Bartus — Fro)         | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.scp2>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.sc-host> — `constellations-icilalune-com`)**:
-   - Landmark `<header class="sc-host">` hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+   - Landmark `<header class="sc-host">` (`1440px`) hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.sc-interp> — `Constellation(s)`)**:
-   - Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, Palash"* over `#f3f2f2` canvas and `#201e1d` ink.
-3. **Primary Showcase & Content Grid (<section.scp0> — `Artists`)**:
-   - Landmark `<section class="scp0">` rendering section `Artists` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
-4. **Interactive Detail & Feature Matrix (<section.scp1> — `Exhibit on Constellation(s)`)**:
-   - Landmark `<section class="scp1">` framing `Exhibit on Constellation(s)` and `AG Z — Ten Thousand Li` (*"AG Z — Ten Thousand Li"*) with `#201e1d` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
+   - Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, David "* over `#f8f8f8` canvas and `#111111` ink.
+3. **Primary Showcase & Content Grid (<section.scp0> — `Immersive virtual galleries: step `)**:
+   - Landmark `<section class="scp0">` rendering section `Immersive virtual galleries: step into the world` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
+4. **Interactive Detail & Feature Matrix (<section.scp1> — `AG Z — Ten Thousand Li · Travel an`)**:
+   - Landmark `<section class="scp1">` framing `AG Z — Ten Thousand Li · Travel and street photo` and `David Bartus — From Above · Landscape and drone ` (*"David Bartus — From Above · Landscape and drone photography, Hung"*) with `#f3f2f2` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
 5. **Colophon & Global Directory Footer (<footer.scp2> — `https://constellations.icilalune.com/`)**:
-   - Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#f8f4f4` structural dividers.
+   - Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#201e1d` structural dividers.
 
 ---
 
@@ -164,19 +190,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `constellations-icilalune-com` (**Constellation(s) — Immersive virtual 3D art exhibitions** — `https://constellations.icilalune.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3f2f2` canvas, `#201e1d` ink, `#ec3013` accent).
-- **Identity & Domain Context**: Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam Krypel, Pia Be...
-- **Primary Substrate**: `#f3f2f2` (`var(--color-bg)` in `:root`), **Primary Ink**: `#201e1d`, **Accent / Highlight**: `#ec3013`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f8f8f8` canvas, `#111111` ink, `#ec3013` accent).
+- **Identity & Domain Context**: Immersive virtual galleries: step into the worlds of AG Z, David Bartus, Palash Bag, Jonas Togo, Laura Meinhardt, François Glineur, Adam...
+- **Primary Substrate**: `#f8f8f8` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#111111`, **Accent / Highlight**: `#ec3013`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f3f2f2` (`var(--color-bg)` in `:root`) paired with `#201e1d` primary typography and `#ec3013` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Archivo` for display copy (`Constellation(s)`) with `Arimo` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `60ch` container bounds (`gap: 6px`, padding `var(--space-2)`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f8f8f8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#111111` primary typography and `#ec3013` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Arimo` for display copy (`Constellation(s)`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px 32px`, padding `28px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `constellations-icilalune-com` in your global stylesheet:
 
 :root {
-  /* Constellation(s) — Immersive virtual 3D art exhibitions (constellations-icilalune-com) — Ground-Truth Extracted CSS Variables */
+  /* Constellation(s) — Immersive virtual 3D art exhibitions (constellations-icilalune-com) — Live-Grounded CSS Variables */
   --color-bg: #f3f2f2; /* Canvas / Surface Token (constellations-icilalune-com) */
   --color-surface: #eae9e9; /* Canvas / Surface Token (constellations-icilalune-com) */
   --color-text: #201e1d; /* Typography Ink Token (constellations-icilalune-com) */
@@ -197,12 +223,15 @@ Declare and consume these exact custom properties extracted from `constellations
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f3f2f2` — grounded in `var(--color-bg)` in `:root`
-- **Primary Typography Ink**: `#eae9e9` — grounded in `var(--color-surface)` in `:root`
-- **Elevated Surface / Card Substrate**: `#201e1d` — grounded in `var(--color-text)` in `:root`
+- **Primary Canvas Substrate**: `#f8f8f8` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#111111` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f3f2f2` — grounded in `var(--color-bg)` in `:root`
 - **Interactive Accent / Highlight**: `#ec3013` — grounded in `var(--color-accent)` in `:root`
-- **Secondary / Muted Copy**: `#e15b47` — grounded in `var(--color-accent-2)` in `:root`
-- **Structural Hairline Border**: `#f8f4f4` — grounded in `var(--color-neutral-100)` in `:root`
+- **Secondary / Muted Copy**: `#201e1d` — grounded in `var(--color-text)` in `:root`
+- **Structural Hairline Border**: `#201e1d` — grounded in `var(--color-divider)` in `:root`
+- **Variable Token (`--color-surface`)**: `#eae9e9` — grounded in `var(--color-surface)` in `:root`
+- **Variable Token (`--color-accent-2`)**: `#e15b47` — grounded in `var(--color-accent-2)` in `:root`
+- **Variable Token (`--color-neutral-100`)**: `#f8f4f4` — grounded in `var(--color-neutral-100)` in `:root`
 - **Variable Token (`--color-neutral-200`)**: `#eae7e7` — grounded in `var(--color-neutral-200)` in `:root`
 - **Variable Token (`--color-neutral-300`)**: `#d7d3d3` — grounded in `var(--color-neutral-300)` in `:root`
 - **Variable Token (`--color-neutral-400`)**: `#bab6b6` — grounded in `var(--color-neutral-400)` in `:root`
@@ -214,46 +243,46 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-accent-100`)**: `#fff2ef` — grounded in `var(--color-accent-100)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2963px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `60ch` extracted from `constellations-icilalune-com` stylesheet
-- **Padding & Gutters**: `var(--space-2)` lateral canvas padding with `6px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 6px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--space-2)` horizontal padding
-- **Media Queries**: no `@media` queries in static stylesheet (fluid viewport scaling)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `28px` lateral canvas padding with `16px 32px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px 32px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `28px` horizontal padding
+- **Media Queries**: no `@media` queries in captured stylesheet (fluid viewport scaling)
 - **Corner Radii**: `var(--radius-md)`, `50%`, `var(--radius-lg)`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Archivo`
-- **Body Font Stack**: `Arimo`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: 42px`)
-- **H2 Section Rule**: rule `h2` (`font-size: 32px`)
-- **Body Copy Rule**: CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15px`, `42px`, `32px`, `25px`, `20px`)
+- **Display Font Stack**: `Arimo`
+- **Body Font Stack**: `Helvetica Neue`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 42px`, `line-height: 47.04px`, `font-weight: 800`, `letter-spacing: -0.63px`); rule `h1` (`font-size: 42px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 53.2px`, `font-weight: 800`, `letter-spacing: -1.12px`); rule `h2` (`font-size: 32px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`); CSS variables `--font-body: "Archivo", system-ui, sans-serif`; rule `body` (`font-size: 15px`, `line-height: 1.55`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `constellations-icilalune-com` (`Constellation(s) — Immersive virtual 3D art exhibitions`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.sc-host> — `constellations-icilalune-com`)**:
-   - DOM & Selectors: Landmark `<header class="sc-host">` hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.sc-host> — `constellations-icilalune-com`)` (`constellations-icilalune-com`) adapts across no `@media` queries in static stylesheet (fluid viewport scaling) with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - DOM & Selectors: Landmark `<header class="sc-host">` (`1440px`) hosting `Constellation(s) — Immersive virtual` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-sc-name="Root"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.sc-host> — `constellations-icilalune-com`)` (`constellations-icilalune-com`) adapts across no `@media` queries in captured stylesheet (fluid viewport scaling) with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.sc-interp> — `Constellation(s)`)**:
-   - DOM & Selectors: Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, Palash"* over `#f3f2f2` canvas and `#201e1d` ink.
-   - Responsive Contract: Hero stage (`1440×2963px` desktop / `390×2400px` mobile) sets `#f3f2f2` background with `#201e1d` headline `Constellation(s)`.
-3. **Primary Showcase & Content Grid (<section.scp0> — `Artists`)**:
-   - DOM & Selectors: Landmark `<section class="scp0">` rendering section `Artists` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scp0> — `Artists`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 6px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--space-2)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.scp1> — `Exhibit on Constellation(s)`)**:
-   - DOM & Selectors: Landmark `<section class="scp1">` framing `Exhibit on Constellation(s)` and `AG Z — Ten Thousand Li` (*"AG Z — Ten Thousand Li"*) with `#201e1d` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.scp1> — `Exhibit on Constellation(s)`)` uses `var(--radius-md)`, `50%`, `var(--radius-lg)`, `2px` radii, `#ec3013` highlights, and assets (manifest.webmanifest, favicon.svg, favicon-32.png).
+   - DOM & Selectors: Landmark `<section class="sc-interp">` presenting display lead `Constellation(s)` and copy excerpt *"Immersive virtual galleries: step into the worlds of AG Z, David "* over `#f8f8f8` canvas and `#111111` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f8f8f8` background with `#111111` headline `Constellation(s)`.
+3. **Primary Showcase & Content Grid (<section.scp0> — `Immersive virtual galleries: step `)**:
+   - DOM & Selectors: Landmark `<section class="scp0">` rendering section `Immersive virtual galleries: step into the world` with copy *"AG Z — Ten Thousand Li · Travel and street photography, China"*, asset references (`manifest.webmanifest`, `favicon.svg`, `favicon-32.png`, `favicon-16.png`), and grid rule `body { background: var(--color-bg); color: var(--color-text); font-family: var(... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scp0> — `Immersive virtual galleries: step `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `28px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.scp1> — `AG Z — Ten Thousand Li · Travel an`)**:
+   - DOM & Selectors: Landmark `<section class="scp1">` framing `AG Z — Ten Thousand Li · Travel and street photo` and `David Bartus — From Above · Landscape and drone ` (*"David Bartus — From Above · Landscape and drone photography, Hung"*) with `#f3f2f2` surface cards, `#ec3013` accents, and `h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.scp1> — `AG Z — Ten Thousand Li · Travel an`)` uses `var(--radius-md)`, `50%`, `var(--radius-lg)`, `2px` radii, `#ec3013` highlights, and assets (manifest.webmanifest, favicon.svg, favicon-32.png).
 5. **Colophon & Global Directory Footer (<footer.scp2> — `https://constellations.icilalune.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#f8f4f4` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.scp2> — `https://constellations.icilalune.com/`)` aligns to `60ch` extracted from `constellations-icilalune-com` stylesheet with `var(--space-2)` lateral canvas padding with `6px` grid gap and attributes (data-dc-tpl="1", data-dc-tpl="2", data-dc-tpl="3").
+   - DOM & Selectors: Landmark `<footer class="scp2">` anchoring `Constellation(s) — Immersive vir` footer links (`Overview · Index · Archive · About · Contact`), copy *"Palash Bag — Still Water · Macro photography, India"*, and `#201e1d` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.scp2> — `https://constellations.icilalune.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `28px` lateral canvas padding with `16px 32px` grid gap and attributes (data-dc-tpl="1", data-dc-tpl="2", data-dc-tpl="3").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Immersive virtual galleries: step into the worlds of AG Z, Palash Bag, Jonas Togo,..."*
+- Copy Excerpt 1: *"Immersive virtual galleries: step into the worlds of AG Z, David Bartus, Palash Ba..."*
 - Copy Excerpt 2: *"AG Z — Ten Thousand Li · Travel and street photography, China"*
-- Copy Excerpt 3: *"AG Z — Ten Thousand Li"*
+- Copy Excerpt 3: *"David Bartus — From Above · Landscape and drone photography, Hungary"*
 - Copy Excerpt 4: *"Palash Bag — Still Water · Macro photography, India"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
@@ -268,7 +297,7 @@ Scaffold `constellations-icilalune-com` (`Constellation(s) — Immersive virtual
 - **Selector `::after`**: `transition: 0s !important` extracted from `constellations-icilalune-com` stylesheet.
 - **Selector `style]`**: `transition: unset` extracted from `constellations-icilalune-com` stylesheet.
 - **Selector `style]`**: `transition: unset` extracted from `constellations-icilalune-com` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.sc-interp>` and `<section.scp0>` interactive targets.
 
 ### 8. Technical Deliverables

@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: www-xantium-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-xantium-com"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#221f25` ink, `#084432` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#221f25` canvas, `#f5f5f2` ink, `#c9ff8b` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-xantium-com
 
 > **Xantium** (https://www.xantium.com) — Xantium
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Xantium** (`https://www.xantium.com`). Xantium
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#221f25` ink, `#084432` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#221f25` canvas, `#f5f5f2` ink, `#c9ff8b` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#221f25` primary typography and `#084432` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`We build technology enhanced by huma`) with `Inter Fallback` and `Space Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 25px`, padding `6px`) with `cubic-bezier(0,0,.2,1)` easing and Lottie Vector Animation Player.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#221f25` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f2` primary typography and `#c9ff8b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Space Mono` for display copy (`WE BUILD TECHNOLOGY ENHANCED BY HUMA`) with `Inter` and `Space Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(0,0,.2,1)` easing and Lottie Vector Animation Player.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×6423px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `www-xantium-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `6px` lateral canvas padding with `25px` grid gap.
-- **Border Radius Scale**: `4px`, `10px`, `3px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `40px` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `10px`, `4px`, `3px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 25px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `6px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `40px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
 ---
@@ -48,14 +52,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#221f25` | `var(--color-cache-black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f5f5f2` | `var(--color-circuit-ivory)` in `:root` |
-| **Interactive Accent / Highlight** | `#084432` | `var(--color-neural-moss)` in `:root` |
-| **Secondary / Muted Copy** | `#00bf8b` | `var(--color-mint-engine)` in `:root` |
-| **Structural Hairline Border** | `#c9ff8b` | `var(--color-data-beam)` in `:root` |
+| **Primary Canvas Substrate** | `#221f25` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f2` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `.bg-cache-black { background-color: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#c9ff8b` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#084432` | live computed `button` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#413f44` | `15 { border-color: #413f44 }` |
+| **Variable Token (`--color-white`)** | `#ffffff` | `var(--color-white)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +87,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Inter`.
-- **Primary Body Stack**: `Inter Fallback`.
+- **Display Typography**: `Space Mono`.
+- **Primary Body Stack**: `Inter`.
 - **Technical / Metadata Stack**: `Space Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`.
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`.
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-body: system-ui,sans-serif`.
-- **Metadata & Navigation Labels**: CSS variables `--font-space-mono: "Space Mono","Space Mono Fallback"`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`.
+- **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-body: system-ui,sans-serif`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); CSS variables `--font-space-mono: "Space Mono","Space Mono Fallback"`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`.
 
 ---
 
@@ -110,40 +115,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Xantium                                    │
 │ ====================================================================== │
-│ [ <header.pointer-events-n | Home · How We Work · Our Culture · Our ]  │
+│ [ <header.pointer-events (1440x40px)  | Home · How We Work · Our Cul ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.py-16>                                      |   │
-│ | H1: We build technology enhanced by human insight to...          |   │
-│ | Substrate: #fff       | Ink: #221f25    | Accent: #084432        |   │
+│ | HERO STAGE: <section.z-3> (w=1440px)                               | │
+│ | H1: WE BUILD TECHNOLOGY ENHANCED BY HUMAN INSIGHT TO...            | │
+│ | Substrate: #221f25 | Ink: #f5f5f2 | Accent: #c9ff8b                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.py-16>           ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.py-16>) max-w: 96rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | What We Do                   |  | At a Glance                  | | │
+│ | | We build technology enhanced |  | Founded in 2019 as part of T | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 25px  ) | │
-│ | [<header.pointer-ev] -> [<section.py-16>] -> [<section.py-16>] |     │
+│ | DETAIL MODULE (<section.relative>) — 250+ people across 4          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.relative>     ) | https://www.xantium.com            │
+│ [ FOOTER (<footer.bg-cache-bla) | https://www.xantium.com              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.pointer-events-n) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.z-3>) — 390px Vertical Lead                   | │
+│ | H1: WE BUILD TECHNOLOGY ENHANCED BY HUMAN INSIGHT TO...            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.py-16>) — 1-Col Stack                     | │
+│ | [ Item 1: We build technology enhanced by human insight to...    ] | │
+│ | [ Item 2: Founded in 2019 as part of Tudor Group                 ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.relative>) — 1-Col (250+ people across)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.bg-cache-bla) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.pointer-events-none> — `www-xantium-com`)**:
-   - Landmark `<header class="pointer-events-none absolute">` hosting `Xantium` navigation (`Home · How We Work · Our Culture · Our Team · Careers`), DOM attributes (`data-precedence="next"`, `data-nimg="fill"`, `data-nimg="fill"`, `data-nimg="fill"`), and stylesheet rule `nter_fe8b9d92-module__LINzvG__cla... { font-family:Inter,Inter Fallback;font-style:normal }`.
-2. **Hero Stage & Focal Lead (<section.py-16> — `We build technology enhanced by hu`)**:
-   - Landmark `<section class="py-16 relative">` presenting display lead `We build technology enhanced by human insight to...` and copy excerpt *"At Xantium, quantitative researchers, developers, fundamental ana"* over `#fff` canvas and `#221f25` ink.
-3. **Primary Showcase & Content Grid (<section.py-16> — `What We Do`)**:
-   - Landmark `<section class="py-16 relative">` rendering section `What We Do` with copy *"We are a global multi-strategy investment firm integrating quanti"*, asset references (`28e60ca39c9ae554-s.p.7a4e9fcc.woff2`, `83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8d05cfa5faa8406c-s.p.4adea45d.woff2`, `d7a0600e467cf0bd-s.p.20ecb425.woff2`), and grid rule `inter_fe8b9d92-module__LINzvG__va... { --font-inter:"Inter","Inter Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.py-16> — `At a Glance`)**:
-   - Landmark `<section class="py-16 relative">` framing `At a Glance` and `Founded in 2019 as part of Tudor Group` (*"If you're drawn to complex problems and collaborative discovery, "*) with `#f5f5f2` surface cards, `#084432` accents, and `mono_e13c1f09-module__VyLqqa__cla... { font-family:Space Mono,Space Mono Fallback;font-style:normal }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.xantium.com`)**:
-   - Landmark `<footer class="relative z-10">` anchoring `Xantium` footer links (`Home · How We Work · Our Culture · Our Team · Careers`), copy *"Global presence, market breadth, scale"*, and `#c9ff8b` structural dividers.
+   - Landmark `<header class="pointer-events-none inset-x-0">` (`1440x40px`) hosting `Xantium` navigation (`Home · How We Work · Our Culture · Our Team · Careers`), DOM attributes (`data-precedence="next"`, `data-nimg="fill"`, `data-nimg="fill"`, `data-nimg="fill"`), and stylesheet rule `nter_fe8b9d92-module__LINzvG__cla... { font-family:Inter,Inter Fallback;font-style:normal }`.
+2. **Hero Stage & Focal Lead (<section.z-3> — `WE BUILD TECHNOLOGY ENHANCED BY HU`)**:
+   - Landmark `<section class="z-3 py-16">` presenting display lead `WE BUILD TECHNOLOGY ENHANCED BY HUMAN INSIGHT TO...` and copy excerpt *"At Xantium, quantitative researchers, developers, fundamental ana"* over `#221f25` canvas and `#f5f5f2` ink.
+3. **Primary Showcase & Content Grid (<section.py-16> — `We build technology enhanced by hu`)**:
+   - Landmark `<section class="z-3 py-16">` rendering section `We build technology enhanced by human insight to...` with copy *"We are a global multi-strategy investment firm integrating quanti"*, asset references (`28e60ca39c9ae554-s.p.7a4e9fcc.woff2`, `83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8d05cfa5faa8406c-s.p.4adea45d.woff2`, `d7a0600e467cf0bd-s.p.20ecb425.woff2`), and grid rule `inter_fe8b9d92-module__LINzvG__va... { --font-inter:"Inter","Inter Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.relative> — `Founded in 2019 as part of Tudor G`)**:
+   - Landmark `<section class="py-16 relative">` framing `Founded in 2019 as part of Tudor Group` and `250+ people across 4 offices` (*"If you're drawn to complex problems and collaborative discovery, "*) with `#000000` surface cards, `#c9ff8b` accents, and `mono_e13c1f09-module__VyLqqa__cla... { font-family:Space Mono,Space Mono Fallback;font-style:normal }`.
+5. **Colophon & Global Directory Footer (<footer.bg-cache-black> — `https://www.xantium.com`)**:
+   - Landmark `<footer class="bg-cache-black relative">` anchoring `Xantium` footer links (`Home · How We Work · Our Culture · Our Team · Careers`), copy *"Global presence, market breadth, scale"*, and `#413f44` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#22
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-xantium-com` (**Xantium** — `https://www.xantium.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#221f25` ink, `#084432` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#221f25` canvas, `#f5f5f2` ink, `#c9ff8b` accent).
 - **Identity & Domain Context**: Xantium
-- **Primary Substrate**: `#fff` (`var(--color-white)` in `:root`), **Primary Ink**: `#221f25`, **Accent / Highlight**: `#084432`.
+- **Primary Substrate**: `#221f25` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f5f2`, **Accent / Highlight**: `#c9ff8b`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#221f25` primary typography and `#084432` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`We build technology enhanced by huma`) with `Inter Fallback` and `Space Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 25px`, padding `6px`) with `cubic-bezier(0,0,.2,1)` easing and Lottie Vector Animation Player.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#221f25` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f2` primary typography and `#c9ff8b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Space Mono` for display copy (`WE BUILD TECHNOLOGY ENHANCED BY HUMA`) with `Inter` and `Space Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(0,0,.2,1)` easing and Lottie Vector Animation Player.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-xantium-com` in your global stylesheet:
 
 :root {
-  /* Xantium (www-xantium-com) — Ground-Truth Extracted CSS Variables */
+  /* Xantium (www-xantium-com) — Live-Grounded CSS Variables */
   --font-inter: "Inter","Inter Fallback"; /* Typography / Scale Token (www-xantium-com) */
   --font-space-mono: "Space Mono","Space Mono Fallback"; /* Typography / Scale Token (www-xantium-com) */
   --color-white: #fff; /* Canvas / Surface Token (www-xantium-com) */
@@ -188,49 +212,50 @@ Declare and consume these exact custom properties extracted from `www-xantium-co
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Primary Typography Ink**: `#221f25` — grounded in `var(--color-cache-black)` in `:root`
-- **Elevated Surface / Card Substrate**: `#f5f5f2` — grounded in `var(--color-circuit-ivory)` in `:root`
-- **Interactive Accent / Highlight**: `#084432` — grounded in `var(--color-neural-moss)` in `:root`
-- **Secondary / Muted Copy**: `#00bf8b` — grounded in `var(--color-mint-engine)` in `:root`
-- **Structural Hairline Border**: `#c9ff8b` — grounded in `var(--color-data-beam)` in `:root`
+- **Primary Canvas Substrate**: `#221f25` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f5f5f2` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#000000` — grounded in `.bg-cache-black { background-color: black }` (`#000000`)
+- **Interactive Accent / Highlight**: `#c9ff8b` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#084432` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#413f44` — grounded in `15 { border-color: #413f44 }`
+- **Variable Token (`--color-white`)**: `#ffffff` — grounded in `var(--color-white)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×6423px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `www-xantium-com` stylesheet
-- **Padding & Gutters**: `6px` lateral canvas padding with `25px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 25px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `6px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `40px` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `40px` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
-- **Corner Radii**: `4px`, `10px`, `3px`
+- **Corner Radii**: `10px`, `4px`, `3px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Inter`
-- **Body Font Stack**: `Inter Fallback`
+- **Display Font Stack**: `Space Mono`
+- **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `Space Mono`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-body: system-ui,sans-serif`
-- **Metadata & Index Rule**: CSS variables `--font-space-mono: "Space Mono","Space Mono Fallback"`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
+- **Body Copy Rule**: live computed `body` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-body: system-ui,sans-serif`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); CSS variables `--font-space-mono: "Space Mono","Space Mono Fallback"`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-xantium-com` (`Xantium`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.pointer-events-none> — `www-xantium-com`)**:
-   - DOM & Selectors: Landmark `<header class="pointer-events-none absolute">` hosting `Xantium` navigation (`Home · How We Work · Our Culture · Our Team · Careers`), DOM attributes (`data-precedence="next"`, `data-nimg="fill"`, `data-nimg="fill"`, `data-nimg="fill"`), and stylesheet rule `nter_fe8b9d92-module__LINzvG__cla... { font-family:Inter,Inter Fallback;font-style:normal }`.
+   - DOM & Selectors: Landmark `<header class="pointer-events-none inset-x-0">` (`1440x40px`) hosting `Xantium` navigation (`Home · How We Work · Our Culture · Our Team · Careers`), DOM attributes (`data-precedence="next"`, `data-nimg="fill"`, `data-nimg="fill"`, `data-nimg="fill"`), and stylesheet rule `nter_fe8b9d92-module__LINzvG__cla... { font-family:Inter,Inter Fallback;font-style:normal }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.pointer-events-none> — `www-xantium-com`)` (`www-xantium-com`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Home · How We Work · Our Culture · Our Team · Careers`.
-2. **Hero Stage & Focal Lead (<section.py-16> — `We build technology enhanced by hu`)**:
-   - DOM & Selectors: Landmark `<section class="py-16 relative">` presenting display lead `We build technology enhanced by human insight to...` and copy excerpt *"At Xantium, quantitative researchers, developers, fundamental ana"* over `#fff` canvas and `#221f25` ink.
-   - Responsive Contract: Hero stage (`1440×6423px` desktop / `390×2400px` mobile) sets `#fff` background with `#221f25` headline `We build technology enhanced by human insight to...`.
-3. **Primary Showcase & Content Grid (<section.py-16> — `What We Do`)**:
-   - DOM & Selectors: Landmark `<section class="py-16 relative">` rendering section `What We Do` with copy *"We are a global multi-strategy investment firm integrating quanti"*, asset references (`28e60ca39c9ae554-s.p.7a4e9fcc.woff2`, `83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8d05cfa5faa8406c-s.p.4adea45d.woff2`, `d7a0600e467cf0bd-s.p.20ecb425.woff2`), and grid rule `inter_fe8b9d92-module__LINzvG__va... { --font-inter:"Inter","Inter Fallback" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.py-16> — `What We Do`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 25px`) on desktop and Single-column vertical stack at `390px` viewport width with `6px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.py-16> — `At a Glance`)**:
-   - DOM & Selectors: Landmark `<section class="py-16 relative">` framing `At a Glance` and `Founded in 2019 as part of Tudor Group` (*"If you're drawn to complex problems and collaborative discovery, "*) with `#f5f5f2` surface cards, `#084432` accents, and `mono_e13c1f09-module__VyLqqa__cla... { font-family:Space Mono,Space Mono Fallback;font-style:normal }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-16> — `At a Glance`)` uses `4px`, `10px`, `3px` radii, `#084432` highlights, and assets (28e60ca39c9ae554-s.p.7a4e9fcc.woff2, 83afe278b6a6bb3c-s.p.3a6ba036.woff2, 8d05cfa5faa8406c-s.p.4adea45d.woff2).
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.xantium.com`)**:
-   - DOM & Selectors: Landmark `<footer class="relative z-10">` anchoring `Xantium` footer links (`Home · How We Work · Our Culture · Our Team · Careers`), copy *"Global presence, market breadth, scale"*, and `#c9ff8b` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://www.xantium.com`)` aligns to `40rem` extracted from `www-xantium-com` stylesheet with `6px` lateral canvas padding with `25px` grid gap and attributes (data-precedence="next", data-nimg="fill", data-nimg="fill").
+2. **Hero Stage & Focal Lead (<section.z-3> — `WE BUILD TECHNOLOGY ENHANCED BY HU`)**:
+   - DOM & Selectors: Landmark `<section class="z-3 py-16">` presenting display lead `WE BUILD TECHNOLOGY ENHANCED BY HUMAN INSIGHT TO...` and copy excerpt *"At Xantium, quantitative researchers, developers, fundamental ana"* over `#221f25` canvas and `#f5f5f2` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#221f25` background with `#f5f5f2` headline `WE BUILD TECHNOLOGY ENHANCED BY HUMAN INSIGHT TO...`.
+3. **Primary Showcase & Content Grid (<section.py-16> — `We build technology enhanced by hu`)**:
+   - DOM & Selectors: Landmark `<section class="z-3 py-16">` rendering section `We build technology enhanced by human insight to...` with copy *"We are a global multi-strategy investment firm integrating quanti"*, asset references (`28e60ca39c9ae554-s.p.7a4e9fcc.woff2`, `83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8d05cfa5faa8406c-s.p.4adea45d.woff2`, `d7a0600e467cf0bd-s.p.20ecb425.woff2`), and grid rule `inter_fe8b9d92-module__LINzvG__va... { --font-inter:"Inter","Inter Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.py-16> — `We build technology enhanced by hu`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `40px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.relative> — `Founded in 2019 as part of Tudor G`)**:
+   - DOM & Selectors: Landmark `<section class="py-16 relative">` framing `Founded in 2019 as part of Tudor Group` and `250+ people across 4 offices` (*"If you're drawn to complex problems and collaborative discovery, "*) with `#000000` surface cards, `#c9ff8b` accents, and `mono_e13c1f09-module__VyLqqa__cla... { font-family:Space Mono,Space Mono Fallback;font-style:normal }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Founded in 2019 as part of Tudor G`)` uses `10px`, `4px`, `3px` radii, `#c9ff8b` highlights, and assets (28e60ca39c9ae554-s.p.7a4e9fcc.woff2, 83afe278b6a6bb3c-s.p.3a6ba036.woff2, 8d05cfa5faa8406c-s.p.4adea45d.woff2).
+5. **Colophon & Global Directory Footer (<footer.bg-cache-black> — `https://www.xantium.com`)**:
+   - DOM & Selectors: Landmark `<footer class="bg-cache-black relative">` anchoring `Xantium` footer links (`Home · How We Work · Our Culture · Our Team · Careers`), copy *"Global presence, market breadth, scale"*, and `#413f44` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-cache-black> — `https://www.xantium.com`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `40px` lateral canvas padding with `16px` grid gap and attributes (data-precedence="next", data-nimg="fill", data-nimg="fill").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"At Xantium, quantitative researchers, developers, fundamental analysts and traders..."*

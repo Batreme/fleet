@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: zarcerog-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "zarcerog-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#241417` ink, `#f4e6cb` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#000000` ink, `#241417` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: zarcerog-com
 
 > **Nicolás Zarcero — Box Office** (https://zarcerog.com) — Two shows tonight: a portfolio in five acts, with an intermission; and a picture about a church that is running late. Nicolás Zarcero, en...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Nicolás Zarcero — Box Office** (`https://zarcerog.com`). Two shows tonight: a portfolio in five acts, with an intermission; and a picture about a church that is running late. Nicolás Zarcero, en...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#241417` ink, `#f4e6cb` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#000000` ink, `#241417` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e8b3a9` (`var(--pink)` in `:root`) paired with `#241417` primary typography and `#f4e6cb` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`Nicolás Zarcero : box office. Two sh`) with `Jost Fallback` and `Courier Prime`.
-  - **Calibrated Spatial Grid & Motion**: Combines `14ch` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.2,.7,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8b3a9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#241417` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jost` for display copy (`Nicolás Zarcero: box office. Two sho`) with `Jost Fallback` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.2,.7,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `14ch` extracted from `zarcerog-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `0px` lateral canvas padding with `0px (flush layout)` grid gap.
 - **Border Radius Scale**: `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 0px (flush layout)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `0px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-aspect-ratio:1)`, `@media (prefers-reduced-motion:reduce)`.
 
@@ -48,36 +52,34 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#e8b3a9` | `var(--pink)` in `:root` |
-| **Primary Typography Ink** | `#86192a` | `var(--burgundy)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#c9a24a` | `var(--gold)` in `:root` |
-| **Interactive Accent / Highlight** | `#f4e6cb` | `var(--cream)` in `:root` |
-| **Secondary / Muted Copy** | `#f2c230` | `var(--yellow)` in `:root` |
-| **Structural Hairline Border** | `#241417` | `var(--ink)` in `:root` |
-| **Variable Token (`--red`)** | `#d8262e` | `var(--red)` in `:root` |
-| **Variable Token (`--sub`)** | `#f7d23e` | `var(--sub)` in `:root` |
+| **Primary Canvas Substrate** | `#e8b3a9` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6ead0` | `.bx-ticket--theatre .bx-ticket_... { background: #f6ead0 }` |
+| **Interactive Accent / Highlight** | `#241417` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#241417` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ff0000` | `.bx-note path { stroke: #ff0000 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--f-sans` | `"Jost", "Jost Fallback"` | Typography / Scale Token |
+| `--f-serif` | `"Bodoni Moda", "Bodoni Moda Fallback"` | Typography / Scale Token |
+| `--f-type` | `"Courier Prime", "Courier Prime Fallback"` | Typography / Scale Token |
+| `--f-cinzel` | `"Cinzel", "Cinzel Fallback"` | Design System Custom Token |
+| `--f-anton` | `"Anton", "Anton Fallback"` | Design System Custom Token |
+| `--f-shrikhand` | `"Shrikhand", "Shrikhand Fallback"` | Design System Custom Token |
+| `--f-abril` | `"Abril Fatface", "Abril Fatface Fallback"` | Design System Custom Token |
+| `--f-pen` | `"Nanum Pen Script", "Nanum Pen Script Fallback"` | Design System Custom Token |
+| `--f-slab` | `"Alfa Slab One", "Alfa Slab One Fallback"` | Design System Custom Token |
+| `--f-script` | `"Yellowtail", "Yellowtail Fallback"` | Design System Custom Token |
+| `--f-marker` | `"Permanent Marker", "Permanent Marker Fallback"` | Design System Custom Token |
+| `--f-marquee` | `"Limelight", "Limelight Fallback"` | Design System Custom Token |
 | `--bx-sans` | `var(--f-sans,Jost), Jost, Futura, "Helvetica Neue", sans-serif` | Typography / Scale Token |
 | `--bx-type` | `var(--f-type,"Courier Prime"), "Courier Prime", "Courier New", monospace` | Typography / Scale Token |
 | `--bx-marquee` | `var(--f-marquee,Limelight), Limelight, var(--f-serif,"Bodoni Moda"), serif` | Design System Custom Token |
 | `--bx-anton` | `var(--f-anton,Anton), Anton, Impact, "Arial Narrow", sans-serif` | Design System Custom Token |
-| `--pink` | `#e8b3a9` | Typography Ink Token |
-| `--burgundy` | `#86192a` | Color / Atmospheric Token |
-| `--gold` | `#c9a24a` | Color / Atmospheric Token |
-| `--cream` | `#f4e6cb` | Color / Atmospheric Token |
-| `--yellow` | `#f2c230` | Color / Atmospheric Token |
-| `--ink` | `#241417` | Typography Ink Token |
-| `--red` | `#d8262e` | Color / Atmospheric Token |
-| `--sub` | `#f7d23e` | Color / Atmospheric Token |
-| `--px` | `0` | Design System Custom Token |
-| `--py` | `0` | Design System Custom Token |
-| `--tx` | `0` | Design System Custom Token |
-| `--ty` | `0` | Design System Custom Token |
 
 ---
 
@@ -86,13 +88,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `
 ### Font Family Stacks
 - **Display Typography**: `Jost`.
 - **Primary Body Stack**: `Jost Fallback`.
-- **Technical / Metadata Stack**: `Courier Prime`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`).
+- **Section Heading (`H2`)**: observed font-size ladder: `32px`, `16px`, `30px`, `clamp(16px,1.7vw,26px)`, `12px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -105,47 +107,66 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `
 - **Selector `.bx-layer`**: `transition: transform .9s cubic-bezier(.2,.7,.2,1)` extracted from `zarcerog-com` stylesheet.
 - **Selector `.bx-pupils`**: `transition: transform .25s ease-out` extracted from `zarcerog-com` stylesheet.
 - **Selector `.bx-clerk`**: `transition: transform .6s` extracted from `zarcerog-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<nav.bx-layer>` and `<main.bx-root>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<main.bx-root>` and `<main.bx-root>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<nav.bx-layer>` and `<main.bx-root:nth(2)>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<main.bx-root>` and `<main.bx-root:nth(2)>` interactive targets.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Nicolás Zarcero — Box Office               │
 │ ====================================================================== │
-│ [ <nav.bx-layer>           | Overview · Index · Archive · About · C ]  │
+│ [ <nav.bx-layer> (1440x900px)         | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.bx-root>                                       |   │
-│ | H1: Nicolás Zarcero : box office. Two shows tonight —...         |   │
-│ | Substrate: #e8b3a9    | Ink: #241417    | Accent: #f4e6cb        |   │
+│ | HERO STAGE: <main.bx-root> (w=1440px)                              | │
+│ | H1: Nicolás Zarcero: box office. Two shows tonight —...            | │
+│ | Substrate: #e8b3a9 | Ink: #000000 | Accent: #241417                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.bx-root>            ) max-w: 14ch           |   │
+│ | SHOWCASE GRID (<main.bx-root:nth(2)>) max-w: 1440px                | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | The Zarcero Theatre presents |  | The Zarcero Theatre          | | │
+│ | | Nicolás Zarcero : box office |  | The Zarcero Theatre presents | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (f) | │
-│ | [<nav.bx-layer>] -> [<main.bx-root>] -> [<main.bx-root>] |           │
+│ | DETAIL MODULE (<main.bx-root:nth(3)>) — The Zarcero Theatre        | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.bx-foot>      ) | https://zarcerog.com               │
+│ [ FOOTER (<footer.bx-foot>    ) | https://zarcerog.com                 │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (flu)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.bx-layer>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.bx-root>) — 390px Vertical Lead                  | │
+│ | H1: Nicolás Zarcero: box office. Two shows tonight —...            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.bx-root:nth(2)>) — 1-Col Stack               | │
+│ | [ Item 1: Nicolás Zarcero : box office. Two shows tonight —...   ] | │
+│ | [ Item 2: The Zarcero Theatre presents A Portfolio in Five       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.bx-root:nth(3)>) — 1-Col (The Zarcero Theatr)  | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.bx-foot>    ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.bx-layer> — `zarcerog-com`)**:
-   - Landmark `<nav class="bx-layer bx-layer--tickets">` hosting `Nicolás Zarcero — Box Office` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="1.6.1"`), and stylesheet rule `body { background:e8b3a9;margin:0 }`.
-2. **Hero Stage & Focal Lead (<main.bx-root> — `Nicolás Zarcero : box office. Two `)**:
-   - Landmark `<main class="bx-root">` presenting display lead `Nicolás Zarcero : box office. Two shows tonight —...` and copy excerpt *"The Zarcero Theatre presents A Portfolio in Five Acts with an int"* over `#e8b3a9` canvas and `#241417` ink.
-3. **Primary Showcase & Content Grid (<main.bx-root> — `The Zarcero Theatre presents A Por`)**:
-   - Landmark `<main class="bx-root">` rendering section `The Zarcero Theatre presents A Portfolio in Five` with copy *"The Zarcero Theatre"*, asset references (`52b5d5098cb87ddd-s.p.3r2y_bth_sjs...`, `5f440d3eea613716-s.p.1xmps1tcyqv3...`, `612bd71aa396cae6-s.p.0y-3ea_6ee5g...`, `81cef6a21128489e-s.p.2csanl8cs02r...`), and grid rule `.bx-sr { clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:ab... }`.
-4. **Interactive Detail & Feature Matrix (<main.bx-root> — `The Zarcero Theatre`)**:
-   - Landmark `<main class="bx-root">` framing `The Zarcero Theatre` and `A Portfolio in Five Acts` (*"A Portfolio in Five Acts"*) with `#c9a24a` surface cards, `#f4e6cb` accents, and `.bx-layer { transition:transform .9s cubic-bezier(.2,.7,.2,1);position:absolute;inset:0 }`.
+   - Landmark `<nav class="bx-layer bx-layer--tickets">` (`1440x900px`) hosting `Nicolás Zarcero — Box Office` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="1.6.1"`), and stylesheet rule `jost_65562e22-module__iZxnCa__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
+2. **Hero Stage & Focal Lead (<main.bx-root> — `Nicolás Zarcero: box office. Two s`)**:
+   - Landmark `<main class="bx-root">` presenting display lead `Nicolás Zarcero: box office. Two shows tonight —...` and copy excerpt *"The house has two shows tonight."* over `#e8b3a9` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.bx-root:nth(2)> — `Nicolás Zarcero : box office. Two `)**:
+   - Landmark `<main class="bx-root">` rendering section `Nicolás Zarcero : box office. Two shows tonight —...` with copy *"The Zarcero Theatre presents A Portfolio in Five Acts with an int"*, asset references (`52b5d5098cb87ddd-s.p.3r2y_bth_sjs...`, `5f440d3eea613716-s.p.1xmps1tcyqv3...`, `612bd71aa396cae6-s.p.0y-3ea_6ee5g...`, `81cef6a21128489e-s.p.2csanl8cs02r...`), and grid rule `.jost_65562e22-module__iZxnCa__va... { --f-sans:"Jost", "Jost Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<main.bx-root:nth(3)> — `The Zarcero Theatre presents A Por`)**:
+   - Landmark `<main class="bx-root">` framing `The Zarcero Theatre presents A Portfolio in Five` and `The Zarcero Theatre` (*"The Zarcero Theatre"*) with `#f6ead0` surface cards, `#241417` accents, and `moda_1acaef39-module__CjqdXa__cla... { font-family:Bodoni Moda,Bodoni Moda Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.bx-foot> — `https://zarcerog.com`)**:
-   - Landmark `<footer class="bx-foot">` anchoring `Nicolás Zarcero — Box Office` footer links (`Overview · Index · Archive · About · Contact`), copy *"with an intermission · starring Nicolás Zarcero"*, and `#241417` structural dividers.
+   - Landmark `<footer class="bx-foot">` anchoring `Nicolás Zarcero — Box Office` footer links (`Overview · Index · Archive · About · Contact`), copy *"A Portfolio in Five Acts"*, and `#ff0000` structural dividers.
 
 ---
 
@@ -157,54 +178,52 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `zarcerog-com` (**Nicolás Zarcero — Box Office** — `https://zarcerog.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#241417` ink, `#f4e6cb` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#e8b3a9` canvas, `#000000` ink, `#241417` accent).
 - **Identity & Domain Context**: Two shows tonight: a portfolio in five acts, with an intermission; and a picture about a church that is running late. Nicolás Zarcero, en...
-- **Primary Substrate**: `#e8b3a9` (`var(--pink)` in `:root`), **Primary Ink**: `#241417`, **Accent / Highlight**: `#f4e6cb`.
+- **Primary Substrate**: `#e8b3a9` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#241417`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e8b3a9` (`var(--pink)` in `:root`) paired with `#241417` primary typography and `#f4e6cb` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`Nicolás Zarcero : box office. Two sh`) with `Jost Fallback` and `Courier Prime`.
-  - **Calibrated Spatial Grid & Motion**: Combines `14ch` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.2,.7,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8b3a9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#241417` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Jost` for display copy (`Nicolás Zarcero: box office. Two sho`) with `Jost Fallback` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.2,.7,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `zarcerog-com` in your global stylesheet:
 
 :root {
-  /* Nicolás Zarcero — Box Office (zarcerog-com) — Ground-Truth Extracted CSS Variables */
+  /* Nicolás Zarcero — Box Office (zarcerog-com) — Live-Grounded CSS Variables */
+  --f-sans: "Jost", "Jost Fallback"; /* Typography / Scale Token (zarcerog-com) */
+  --f-serif: "Bodoni Moda", "Bodoni Moda Fallback"; /* Typography / Scale Token (zarcerog-com) */
+  --f-type: "Courier Prime", "Courier Prime Fallback"; /* Typography / Scale Token (zarcerog-com) */
+  --f-cinzel: "Cinzel", "Cinzel Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-anton: "Anton", "Anton Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-shrikhand: "Shrikhand", "Shrikhand Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-abril: "Abril Fatface", "Abril Fatface Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-pen: "Nanum Pen Script", "Nanum Pen Script Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-slab: "Alfa Slab One", "Alfa Slab One Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-script: "Yellowtail", "Yellowtail Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-marker: "Permanent Marker", "Permanent Marker Fallback"; /* Design System Custom Token (zarcerog-com) */
+  --f-marquee: "Limelight", "Limelight Fallback"; /* Design System Custom Token (zarcerog-com) */
   --bx-sans: var(--f-sans,Jost), Jost, Futura, "Helvetica Neue", sans-serif; /* Typography / Scale Token (zarcerog-com) */
   --bx-type: var(--f-type,"Courier Prime"), "Courier Prime", "Courier New", monospace; /* Typography / Scale Token (zarcerog-com) */
   --bx-marquee: var(--f-marquee,Limelight), Limelight, var(--f-serif,"Bodoni Moda"), serif; /* Design System Custom Token (zarcerog-com) */
   --bx-anton: var(--f-anton,Anton), Anton, Impact, "Arial Narrow", sans-serif; /* Design System Custom Token (zarcerog-com) */
-  --pink: #e8b3a9; /* Typography Ink Token (zarcerog-com) */
-  --burgundy: #86192a; /* Color / Atmospheric Token (zarcerog-com) */
-  --gold: #c9a24a; /* Color / Atmospheric Token (zarcerog-com) */
-  --cream: #f4e6cb; /* Color / Atmospheric Token (zarcerog-com) */
-  --yellow: #f2c230; /* Color / Atmospheric Token (zarcerog-com) */
-  --ink: #241417; /* Typography Ink Token (zarcerog-com) */
-  --red: #d8262e; /* Color / Atmospheric Token (zarcerog-com) */
-  --sub: #f7d23e; /* Color / Atmospheric Token (zarcerog-com) */
-  --px: 0; /* Design System Custom Token (zarcerog-com) */
-  --py: 0; /* Design System Custom Token (zarcerog-com) */
-  --tx: 0; /* Design System Custom Token (zarcerog-com) */
-  --ty: 0; /* Design System Custom Token (zarcerog-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#e8b3a9` — grounded in `var(--pink)` in `:root`
-- **Primary Typography Ink**: `#86192a` — grounded in `var(--burgundy)` in `:root`
-- **Elevated Surface / Card Substrate**: `#c9a24a` — grounded in `var(--gold)` in `:root`
-- **Interactive Accent / Highlight**: `#f4e6cb` — grounded in `var(--cream)` in `:root`
-- **Secondary / Muted Copy**: `#f2c230` — grounded in `var(--yellow)` in `:root`
-- **Structural Hairline Border**: `#241417` — grounded in `var(--ink)` in `:root`
-- **Variable Token (`--red`)**: `#d8262e` — grounded in `var(--red)` in `:root`
-- **Variable Token (`--sub`)**: `#f7d23e` — grounded in `var(--sub)` in `:root`
+- **Primary Canvas Substrate**: `#e8b3a9` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f6ead0` — grounded in `.bx-ticket--theatre .bx-ticket_... { background: #f6ead0 }`
+- **Interactive Accent / Highlight**: `#241417` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#241417` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ff0000` — grounded in `.bx-note path { stroke: #ff0000 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `14ch` extracted from `zarcerog-com` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `0px` lateral canvas padding with `0px (flush layout)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 0px (flush layout)`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `0px` horizontal padding
 - **Media Queries**: `@media (max-aspect-ratio:1)`, `@media (prefers-reduced-motion:reduce)`
 - **Corner Radii**: `50%`
@@ -212,50 +231,50 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Jost`
 - **Body Font Stack**: `Jost Fallback`
-- **Monospace / Technical Font Stack**: `Courier Prime`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `30px`, `clamp(16px,1.7vw,26px)`, `12px`, `clamp(34px,7vw,110px)`, `15px`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`)
+- **H2 Section Rule**: observed font-size ladder: `32px`, `16px`, `30px`, `clamp(16px,1.7vw,26px)`, `12px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `zarcerog-com` (`Nicolás Zarcero — Box Office`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.bx-layer> — `zarcerog-com`)**:
-   - DOM & Selectors: Landmark `<nav class="bx-layer bx-layer--tickets">` hosting `Nicolás Zarcero — Box Office` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="1.6.1"`), and stylesheet rule `body { background:e8b3a9;margin:0 }`.
+   - DOM & Selectors: Landmark `<nav class="bx-layer bx-layer--tickets">` (`1440x900px`) hosting `Nicolás Zarcero — Box Office` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="1.6.1"`), and stylesheet rule `jost_65562e22-module__iZxnCa__cla... { font-family:Jost,Jost Fallback;font-style:normal }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.bx-layer> — `zarcerog-com`)` (`zarcerog-com`) adapts across `@media (max-aspect-ratio:1)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.2,.7,.2,1)`, `cubic-bezier(.5,0,.3,1)`, `cubic-bezier(.4,0,.8,.4)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<main.bx-root> — `Nicolás Zarcero : box office. Two `)**:
-   - DOM & Selectors: Landmark `<main class="bx-root">` presenting display lead `Nicolás Zarcero : box office. Two shows tonight —...` and copy excerpt *"The Zarcero Theatre presents A Portfolio in Five Acts with an int"* over `#e8b3a9` canvas and `#241417` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e8b3a9` background with `#241417` headline `Nicolás Zarcero : box office. Two shows tonight —...`.
-3. **Primary Showcase & Content Grid (<main.bx-root> — `The Zarcero Theatre presents A Por`)**:
-   - DOM & Selectors: Landmark `<main class="bx-root">` rendering section `The Zarcero Theatre presents A Portfolio in Five` with copy *"The Zarcero Theatre"*, asset references (`52b5d5098cb87ddd-s.p.3r2y_bth_sjs...`, `5f440d3eea613716-s.p.1xmps1tcyqv3...`, `612bd71aa396cae6-s.p.0y-3ea_6ee5g...`, `81cef6a21128489e-s.p.2csanl8cs02r...`), and grid rule `.bx-sr { clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:ab... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.bx-root> — `The Zarcero Theatre presents A Por`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `0px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.bx-root> — `The Zarcero Theatre`)**:
-   - DOM & Selectors: Landmark `<main class="bx-root">` framing `The Zarcero Theatre` and `A Portfolio in Five Acts` (*"A Portfolio in Five Acts"*) with `#c9a24a` surface cards, `#f4e6cb` accents, and `.bx-layer { transition:transform .9s cubic-bezier(.2,.7,.2,1);position:absolute;inset:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.bx-root> — `The Zarcero Theatre`)` uses `50%` radii, `#f4e6cb` highlights, and assets (52b5d5098cb87ddd-s.p.3r2y_bth_sjs..., 5f440d3eea613716-s.p.1xmps1tcyqv3..., 612bd71aa396cae6-s.p.0y-3ea_6ee5g...).
+2. **Hero Stage & Focal Lead (<main.bx-root> — `Nicolás Zarcero: box office. Two s`)**:
+   - DOM & Selectors: Landmark `<main class="bx-root">` presenting display lead `Nicolás Zarcero: box office. Two shows tonight —...` and copy excerpt *"The house has two shows tonight."* over `#e8b3a9` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#e8b3a9` background with `#000000` headline `Nicolás Zarcero: box office. Two shows tonight —...`.
+3. **Primary Showcase & Content Grid (<main.bx-root:nth(2)> — `Nicolás Zarcero : box office. Two `)**:
+   - DOM & Selectors: Landmark `<main class="bx-root">` rendering section `Nicolás Zarcero : box office. Two shows tonight —...` with copy *"The Zarcero Theatre presents A Portfolio in Five Acts with an int"*, asset references (`52b5d5098cb87ddd-s.p.3r2y_bth_sjs...`, `5f440d3eea613716-s.p.1xmps1tcyqv3...`, `612bd71aa396cae6-s.p.0y-3ea_6ee5g...`, `81cef6a21128489e-s.p.2csanl8cs02r...`), and grid rule `.jost_65562e22-module__iZxnCa__va... { --f-sans:"Jost", "Jost Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.bx-root:nth(2)> — `Nicolás Zarcero : box office. Two `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `0px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.bx-root:nth(3)> — `The Zarcero Theatre presents A Por`)**:
+   - DOM & Selectors: Landmark `<main class="bx-root">` framing `The Zarcero Theatre presents A Portfolio in Five` and `The Zarcero Theatre` (*"The Zarcero Theatre"*) with `#f6ead0` surface cards, `#241417` accents, and `moda_1acaef39-module__CjqdXa__cla... { font-family:Bodoni Moda,Bodoni Moda Fallback }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.bx-root:nth(3)> — `The Zarcero Theatre presents A Por`)` uses `50%` radii, `#241417` highlights, and assets (52b5d5098cb87ddd-s.p.3r2y_bth_sjs..., 5f440d3eea613716-s.p.1xmps1tcyqv3..., 612bd71aa396cae6-s.p.0y-3ea_6ee5g...).
 5. **Colophon & Global Directory Footer (<footer.bx-foot> — `https://zarcerog.com`)**:
-   - DOM & Selectors: Landmark `<footer class="bx-foot">` anchoring `Nicolás Zarcero — Box Office` footer links (`Overview · Index · Archive · About · Contact`), copy *"with an intermission · starring Nicolás Zarcero"*, and `#241417` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bx-foot> — `https://zarcerog.com`)` aligns to `14ch` extracted from `zarcerog-com` stylesheet with `0px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-precedence="next", data-precedence="next", data-sdkn="@vercel/analytics/next").
+   - DOM & Selectors: Landmark `<footer class="bx-foot">` anchoring `Nicolás Zarcero — Box Office` footer links (`Overview · Index · Archive · About · Contact`), copy *"A Portfolio in Five Acts"*, and `#ff0000` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bx-foot> — `https://zarcerog.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `0px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-precedence="next", data-precedence="next", data-sdkn="@vercel/analytics/next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"The Zarcero Theatre presents A Portfolio in Five Acts with an intermission · starr..."*
-- Copy Excerpt 2: *"The Zarcero Theatre"*
-- Copy Excerpt 3: *"A Portfolio in Five Acts"*
-- Copy Excerpt 4: *"with an intermission · starring Nicolás Zarcero"*
+- Copy Excerpt 1: *"The house has two shows tonight."*
+- Copy Excerpt 2: *"The Zarcero Theatre presents A Portfolio in Five Acts with an intermission · starr..."*
+- Copy Excerpt 3: *"The Zarcero Theatre"*
+- Copy Excerpt 4: *"A Portfolio in Five Acts"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.2,.7,.2,1)`, `cubic-bezier(.5,0,.3,1)`, `cubic-bezier(.4,0,.8,.4)`
 - **Extracted Stylesheet Rules (`zarcerog-com`)**:
-- `body { background:e8b3a9;margin:0 }`
-- `.bx-sr { clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:ab... }`
-- `.bx-layer { transition:transform .9s cubic-bezier(.2,.7,.2,1);position:absolute;inset:0 }`
-- `.bx-layer--wall { transform:translate(calc(var(--px) * -0.35%), calc(var(--py) * -0.25%)) }`
-- `.bx-layer--kiosk { transform:translate(calc(var(--px) * -0.8%), calc(var(--py) * -0.5%)) }`
+- `jost_65562e22-module__iZxnCa__cla... { font-family:Jost,Jost Fallback;font-style:normal }`
+- `.jost_65562e22-module__iZxnCa__va... { --f-sans:"Jost", "Jost Fallback" }`
+- `moda_1acaef39-module__CjqdXa__cla... { font-family:Bodoni Moda,Bodoni Moda Fallback }`
+- `moda_1acaef39-module__CjqdXa__var... { --f-serif:"Bodoni Moda", "Bodoni Moda Fallback" }`
+- `rime_5f7767ab-module__fGXHCq__cla... { font-family:Courier Prime,Courier Prime Fallback;font-style:normal }`
 - **Per-Selector Transition Rules**:
 - **Selector `.bx-layer`**: `transition: transform .9s cubic-bezier(.2,.7,.2,1)` extracted from `zarcerog-com` stylesheet.
 - **Selector `.bx-pupils`**: `transition: transform .25s ease-out` extracted from `zarcerog-com` stylesheet.
 - **Selector `.bx-clerk`**: `transition: transform .6s` extracted from `zarcerog-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<nav.bx-layer>` and `<main.bx-root>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<main.bx-root>` and `<main.bx-root>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<nav.bx-layer>` and `<main.bx-root:nth(2)>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<main.bx-root>` and `<main.bx-root:nth(2)>` interactive targets.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `zarcerog-com`.

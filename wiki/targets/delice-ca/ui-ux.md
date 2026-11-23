@@ -1,34 +1,47 @@
+---
+title: "UI & UX Architecture: delice-ca"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: delice-ca
 
 ## Overview & Design Identity
 - **Target**: `delice-ca` (**Accueil - Délice**)
 - **Production URL**: [https://delice.ca/](https://delice.ca/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5dbca` / `#f8efdc`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#185abc`)
 - **Summary**: Pizza Délice depuis 1970 Au cœur de Lévis, alliant chaleur, grandeur et convivialité dans une ambiance vibrante et accueillante.
-- **Total Clean CSS Variables Extracted**: `76` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `76` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Filson Soft`
-- **Body Font Stack**: `Ivy Mode`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `13px`, `15px`, `18px`, `21px`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `13px`, `15px`, `18px`, `21px`)
-- **Body Copy**: rule `p` (`font-size: max(14px,min(14px,.875rem))`, `line-height: 1.4`, `letter-spacing: 0`, `font-weight: 400`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `13px`, `15px`, `18px`, `21px`)
+- **Body Font Stack**: `Filson Soft`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 18px`, `line-height: 24.3px`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 600`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: max(14px,min(14px,.875rem))`, `line-height: 1.4`, `letter-spacing: 0`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f5dbca` | `var(--primary-300)` in `:root` |
-| **Primary Typography Ink** | `#de2b2b` | `var(--on-primary-300)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#7c2627` | `var(--on-primary-300-alt)` in `:root` |
-| **Interactive Accent / Highlight** | `#f8efdc` | `var(--on-primary-500)` in `:root` |
+| **Primary Canvas Substrate** | `#f8efdc` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#de2b2b` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.flickity-button:hover { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#185abc` | `.rc-2fa-submit-button-holder bu... { background-color: #185abc }` |
 | **Secondary / Muted Copy** | `#91964f` | `var(--secondary-500)` in `:root` |
-| **Structural Hairline Border** | `#273e2a` | `var(--secondary-700)` in `:root` |
+| **Structural Hairline Border** | `#b2b2b2` | `kbox-hover .recaptcha-checkbox-... { border: #b2b2b2 }` |
+| **Variable Token (`--primary-300`)** | `#f5dbca` | `var(--primary-300)` in `:root` |
+| **Variable Token (`--on-primary-300-alt`)** | `#7c2627` | `var(--on-primary-300-alt)` in `:root` |
 
 ---
 
@@ -56,12 +69,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.c-header> — `delice-ca`)**:
-   - Landmark `<header class="c-header">` hosting `Accueil - Délice` navigation (`Les menus · Le restaurant`), DOM attributes (`data-module-swup="m1"`, `data-module-scroll="m2"`, `data-module-effects="m3"`, `data-module-dev-utils="m4"`), and stylesheet rule `.flickity-enabled { position:relative }`.
-2. **Hero Stage & Focal Lead (<section.c-hero> — `Pizza Délice depuis 1970 Au cœur d`)**:
-   - Landmark `<section class="c-hero">` presenting display lead `Pizza Délice depuis 1970 Au cœur de Lévis, allian...` and copy excerpt *"Tous les jours de 14 h à 18 h."* over `#f5dbca` canvas and `#273e2a` ink.
-3. **Primary Showcase & Content Grid (<section.o-section> — `Un choix pour tous les goûts`)**:
-   - Landmark `<section class="o-section u-relative">` rendering section `Un choix pour tous les goûts` with copy *"Tous les jours de 11 h à 15 h."*, asset references (`recaptcha__en.js`, `script.js`, `www.googletagmanager.com`, `mainCss.css`), and grid rule `.flickity-viewport { touch-action:pan-y;height:100%;position:relative;overflow:hidden }`.
-4. **Interactive Detail & Feature Matrix (<section.o-section> — `Plaisirs du jour`)**:
-   - Landmark `<section class="o-section">` framing `Plaisirs du jour` and `Happy Hour` (*"Tous les mardis de 11 h à 22 h."*) with `#7c2627` surface cards, `#f8efdc` accents, and `.flickity-slider { width:100%;height:100%;position:absolute;left:0 }`.
+   - Landmark `<header class="c-header">` (`1440x156px`) hosting `Accueil - Délice` navigation (`Les menus · Le restaurant`), DOM attributes (`data-module-swup="m1"`, `data-module-scroll="m2"`, `data-module-effects="m3"`, `data-module-dev-utils="m4"`), and stylesheet rule `.flickity-enabled { position:relative }`.
+2. **Hero Stage & Focal Lead (<section.c-hero> — `PIZZA DÉLICE DEPUIS 1970 Au cœur d`)**:
+   - Landmark `<section class="c-hero">` presenting display lead `PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, allian...` and copy excerpt *"Au cœur de Lévis, alliant chaleur, grandeur et convivialité dans "* over `#f8efdc` canvas and `#de2b2b` ink.
+3. **Primary Showcase & Content Grid (<section.o-section> — `Pizza Délice depuis 1970 Au cœur d`)**:
+   - Landmark `<section class="o-section u-relative">` rendering section `Pizza Délice depuis 1970 Au cœur de Lévis, allian...` with copy *"Des saveurs du monde, des ingrédients frais, et des plats pensés "*, asset references (`recaptcha__en.js`, `script.js`, `www.googletagmanager.com`, `mainCss.css`), and grid rule `.flickity-viewport { touch-action:pan-y;height:100%;position:relative;overflow:hidden }`.
+4. **Interactive Detail & Feature Matrix (<section.o-section:nth(2)> — `Un choix pour tous les goûts`)**:
+   - Landmark `<section class="o-section">` framing `Un choix pour tous les goûts` and `Plaisirs du jour` (*"Vos fins d’après-midi, rehaussées."*) with `#ffffff` surface cards, `#185abc` accents, and `.flickity-slider { width:100%;height:100%;position:absolute;left:0 }`.
 5. **Colophon & Global Directory Footer (<footer.c-footer> — `https://delice.ca/`)**:
-   - Landmark `<footer class="c-footer">` anchoring `Accueil - Délice` footer links (`Les menus · Le restaurant`), copy *"20 % de rabais en livraison et pour emporter."*, and `#273e2a` structural dividers.
+   - Landmark `<footer class="c-footer">` anchoring `Accueil - Délice` footer links (`Les menus · Le restaurant`), copy *"Tous les jours de 14 h à 18 h."*, and `#b2b2b2` structural dividers.

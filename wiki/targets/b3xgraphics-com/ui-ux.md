@@ -1,67 +1,85 @@
+---
+title: "UI & UX Architecture: b3xgraphics-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: b3xgraphics-com
 
 ## Overview & Design Identity
 - **Target**: `b3xgraphics-com` (**B3X Graphics · Freelance Sports Art Director & Designer**)
 - **Production URL**: [https://b3xgraphics.com/](https://b3xgraphics.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#04b5ff` canvas, `#a00` ink, `#008a20` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#02132c` canvas, `#ffffff` ink, `#0073ff` accent)
 - **Summary**: B3X Graphics: freelance art direction and design specialising in sport. Branding, campaign design and socials content for some of the big...
-- **Total Clean CSS Variables Extracted**: `192` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `192` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `B3XH Aileron`
-- **Body Font Stack**: `B3XH FA`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--display: flex`, `--cc-font-display: 'Palma Heavy', sans-serif`; rule `h1` (`font-size: 2.5rem`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 2rem`)
-- **Body Copy**: CSS variables `--cc-font-body: 'Aileron', sans-serif`; rule `body` (`font-size: 1rem`, `line-height: 1.5`, `font-weight: 400`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `16px`, `1rem`, `13px`, `12px`, `14.6px`)
+- **Display Font Stack**: `Palma Heavy`
+- **Body Font Stack**: `Aileron`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 110.88px`, `line-height: 110.88px`, `font-weight: 600`); CSS variables `--cc-font-display: 'Palma Heavy' , sans-serif`, `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(44px,7vw,96px)`, `line-height: 1.08`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 27.36px`, `line-height: 27.36px`, `font-weight: 600`); rule `h2` (`font-size: 2rem`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--cc-font-body: 'Aileron' , sans-serif`; rule `p` (`font-size: 15.5px`, `line-height: 1.62`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#04b5ff` | `var(--b3xh-sky)` in `:root` |
-| **Primary Typography Ink** | `#03b2cb` | `var(--PhoneInput-color--focus)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#720eec` | `var(--woocommerce)` in `:root` |
-| **Interactive Accent / Highlight** | `#008a20` | `var(--wc-green)` in `:root` |
-| **Secondary / Muted Copy** | `#a00` | `var(--wc-red)` in `:root` |
-| **Structural Hairline Border** | `#ffba00` | `var(--wc-orange)` in `:root` |
+| **Primary Canvas Substrate** | `#02132c` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#061a3a` | `var(--proj-bg-2)` in `:root` |
+| **Interactive Accent / Highlight** | `#0073ff` | `var(--e-global-color-accent)` in `:root` |
+| **Secondary / Muted Copy** | `#767676` | `var(--wc-subtext)` in `:root` |
+| **Structural Hairline Border** | `#25344a` | `var(--line)` in `:root` (`rgba(255,255,255,.14)`) |
+| **Variable Token (`--cc-ink`)** | `#031b3d` | `var(--cc-ink)` in `:root` |
+| **Variable Token (`--cc-bone`)** | `#eaf2ff` | `var(--cc-bone)` in `:root` |
+| **Variable Token (`--cc-steel`)** | `#606060` | `var(--cc-steel)` in `:root` |
+| **Variable Token (`--cc-red`)** | `#0474ff` | `var(--cc-red)` in `:root` |
+| **Variable Token (`--cc-gold`)** | `#04b5ff` | `var(--cc-gold)` in `:root` |
+| **Variable Token (`--cc-ui-raised`)** | `#0a2347` | `var(--cc-ui-raised)` in `:root` |
+| **Variable Token (`--cc-ui-raised-2`)** | `#0d2b57` | `var(--cc-ui-raised-2)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--b3xh-side` | `clamp(20px,2.2vw,50px)` | Dimension / Scale Token |
-| `--b3xh-max` | `1820px` | Dimension / Scale Token |
-| `--b3xh-sky` | `#04b5ff` | Color / Atmospheric Token |
-| `--b3xh-glass` | `linear-gradient(155deg,rgba(9,26,54,0.66) 0%,rgba(3,13,30,0.74) 100%)` | Color / Atmospheric Token |
-| `--PhoneInput-color--focus` | `#03b2cb` | Brand / Palette Token |
-| `--PhoneInputInternationalIconPhone-opacity` | `0.8` | Canvas / Surface Token |
-| `--PhoneInputInternationalIconGlobe-opacity` | `0.65` | Canvas / Surface Token |
-| `--PhoneInputCountrySelect-marginRight` | `0.35em` | Layout / Spatial Grid Token |
-| `--PhoneInputCountrySelectArrow-width` | `0.3em` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-marginLeft` | `var(--PhoneInputCountrySelect-marginRight)` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-borderWidth` | `1px` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-opacity` | `0.45` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-color` | `currentColor` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-color--focus` | `var(--PhoneInput-color--focus)` | Brand / Palette Token |
-| `--PhoneInputCountrySelectArrow-transform` | `rotate(45deg)` | Brand / Palette Token |
-| `--PhoneInputCountryFlag-aspectRatio` | `1.5` | Design System Custom Token |
+| `--cc-ink` | `#031b3d` | Typography Ink Token |
+| `--cc-bone` | `#eaf2ff` | Color / Atmospheric Token |
+| `--cc-steel` | `#606060` | Color / Atmospheric Token |
+| `--cc-red` | `#0474ff` | Color / Atmospheric Token |
+| `--cc-gold` | `#04b5ff` | Color / Atmospheric Token |
+| `--cc-navy` | `#031b3d` | Layout / Spatial Grid Token |
+| `--cc-sky` | `#04b5ff` | Color / Atmospheric Token |
+| `--cc-deep` | `#02132c` | Color / Atmospheric Token |
+| `--cc-ui-bg` | `#02132c` | Canvas / Surface Token |
+| `--cc-ui-raised` | `#0a2347` | Color / Atmospheric Token |
+| `--cc-ui-raised-2` | `#0d2b57` | Color / Atmospheric Token |
+| `--cc-ui-on-accent` | `#fff` | Brand / Palette Token |
+| `--cc-font-display` | `'Palma Heavy' , sans-serif` | Typography / Scale Token |
+| `--cc-font-body` | `'Aileron' , sans-serif` | Typography / Scale Token |
+| `--navy` | `#031b3d` | Layout / Spatial Grid Token |
+| `--sky` | `#04b5ff` | Color / Atmospheric Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.b3xh-bar> — `b3xgraphics-com`)**:
-   - Landmark `<header class="b3xh-bar">` hosting `B3X Graphics · Freelance Sports Art ` navigation (`Home · Projects · The Lab · About · Shop`), DOM attributes (`data-b3xh-page="home"`, `data-b3xh-bound="1"`, `data-elementor-type="wp-page"`, `data-elementor-id="1301"`), and stylesheet rule `after { box-sizing:border-box; }`.
-2. **Hero Stage & Focal Lead (<section.b3xr-feat> — `B3X Graphics Studio`)**:
-   - Landmark `<section class="b3xr-feat">` presenting display lead `B3X Graphics Studio` and copy excerpt *"Available for new projects"* over `#04b5ff` canvas and `#a00` ink.
-3. **Primary Showcase & Content Grid (<section.b3xt> — `Freelance Art Director & Designer`)**:
-   - Landmark `<section class="b3xt b3xt-armed">` rendering section `Freelance Art Director & Designer` with copy *"I work with some of the biggest brands in sport"*, asset references (`favicon.svg`, `chrome.css`, `chrome.js`, `fonts.css`), and grid rule `.b3xh .b3xh-defs { position:absolute;width:0;height:0;overflow:hidden;pointer-events:none; }`.
-4. **Interactive Detail & Feature Matrix (<section.b3xt> — `Featured projects`)**:
-   - Landmark `<section class="b3xt b3xt-armed">` framing `Featured projects` and `2025/26 WSL Champions` (*"2025/26 WSL Champions Social Media"*) with `#720eec` surface cards, `#008a20` accents, and `.b3xh .b3xh-burger:active { background:transparent;color:fff;border:0; }`.
+   - Landmark `<header class="b3xh-bar">` (`1377x88px`) hosting `B3X Graphics · Freelance Sports Art ` navigation (`Home · Projects · The Lab · About · Shop`), DOM attributes (`data-b3xh-page="home"`, `data-b3xh-bound="1"`, `data-elementor-type="wp-page"`, `data-elementor-id="1301"`), and stylesheet rule `html.b3x-blueprint body { background-color:02132c!important;background-image:none!important }`.
+2. **Hero Stage & Focal Lead (<section.b3xr-feat> — `B3X GRAPHICS STUDIO`)**:
+   - Landmark `<section class="b3xr-feat">` presenting display lead `B3X GRAPHICS STUDIO` and copy excerpt *"I WORK WITH SOME OF THE BIGGEST BRANDS IN SPORT"* over `#02132c` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.b3xt> — `B3X Graphics Studio`)**:
+   - Landmark `<section class="b3xt b3xt-armed">` rendering section `B3X Graphics Studio` with copy *"I work with some of the biggest brands in sport"*, asset references (`favicon.svg`, `A.chrome.css,qv=1791897283.pagesp...`, `A.fonts.css,,qv==1791378108+style...`, `home.css`), and grid rule `.b3xbp-lines { filter:drop-shadow(0 0 .6px rgba(2,14,38,.55)) }`.
+4. **Interactive Detail & Feature Matrix (<section.b3xt-armed> — `Freelance Art Director & Designer`)**:
+   - Landmark `<section class="b3xt b3xt-armed">` framing `Freelance Art Director & Designer` and `Featured projects` (*"2025/26 WSL Champions Social Media"*) with `#061a3a` surface cards, `#0073ff` accents, and `.b3xbp-line { fill:none;stroke:88b0dd;stroke-width:1.1;vector-effect:non-scaling-strok... }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://b3xgraphics.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `B3X Graphics · Freelance Sports ` footer links (`Home · Projects · The Lab · About · Shop`), copy *"Spurs 1901 Anniversary Social Media"*, and `#ffba00` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `B3X Graphics · Freelance Sports ` footer links (`Home · Projects · The Lab · About · Shop`), copy *"Spurs 1901 Anniversary Social Media"*, and `#25344a` structural dividers.

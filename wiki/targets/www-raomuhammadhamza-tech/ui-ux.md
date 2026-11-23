@@ -1,44 +1,52 @@
+---
+title: "UI & UX Architecture: www-raomuhammadhamza-tech"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-raomuhammadhamza-tech
 
 ## Overview & Design Identity
 - **Target**: `www-raomuhammadhamza-tech` (**Rao Muhammad Hamza, AI Engineer**)
 - **Production URL**: [https://www.raomuhammadhamza.tech/](https://www.raomuhammadhamza.tech/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0f1220` / `#f4e7e2`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0f1220` / `#ff9ebb`)
 - **Summary**: Rao Muhammad Hamza, AI Engineer. RAG pipelines, LLM orchestration and agentic workflows, built to hold up in production.
-- **Total Clean CSS Variables Extracted**: `27` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `32` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Space Grotesk`
-- **Body Font Stack**: `Space Mono`
+- **Body Font Stack**: `Space Grotesk`
 - **Monospace / Technical Font Stack**: `Space Mono`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `13px`, `11px`, `12px`, `clamp(15px,1.45vw,21px)`, `19px`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `13px`, `11px`, `12px`, `clamp(15px,1.45vw,21px)`, `19px`)
-- **Body Copy**: rule `p` (`letter-spacing: .16em`)
-- **Metadata & Labels**: CSS variables `--d-mono: "Space Mono", ui-monospace, monospace`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 50.4px`, `font-weight: 700`, `letter-spacing: -1.96px`)
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 31.5px`, `line-height: 31.5px`, `font-weight: 600`, `letter-spacing: -1.1025px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`letter-spacing: .16em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--d-mono: "Space Mono", ui-monospace, monospace`, `--l-mono: "Space Mono", ui-monospace, monospace`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0f1220` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#ff9ebb` | `var(--screen)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#1b1f33` | `var(--screen-ink)` in `:root` |
-| **Interactive Accent / Highlight** | `#f4e7e2` | `var(--text)` in `:root` |
+| **Primary Canvas Substrate** | `#0f1220` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f4e7e2` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0b0e17` | `.surface { background: #0b0e17 }` |
+| **Interactive Accent / Highlight** | `#ff9ebb` | live computed `a` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#b9b2c4` | `var(--muted)` in `:root` |
-| **Structural Hairline Border** | `#1a1a26` | `var(--d-surf)` in `:root` |
-| **Variable Token (`--tv-edge`)** | `#ff9ebb33` | `var(--tv-edge)` in `:root` |
-| **Variable Token (`--tv-bg`)** | `#161a30db` | `var(--tv-bg)` in `:root` |
-| **Variable Token (`--tv-bg`)** | `#0c0e1ce6` | `var(--tv-bg)` in `:root` |
-| **Variable Token (`--tv-glow`)** | `#ffffff08` | `var(--tv-glow)` in `:root` |
-| **Variable Token (`--tv-glow`)** | `#ff9ebb12` | `var(--tv-glow)` in `:root` |
-| **Variable Token (`--tv-glow`)** | `#00000073` | `var(--tv-glow)` in `:root` |
-| **Variable Token (`--scan`)** | `#ffffff09` | `var(--scan)` in `:root` |
-| **Variable Token (`--grid-line`)** | `#ffffff0f` | `var(--grid-line)` in `:root` |
+| **Structural Hairline Border** | `#1d202d` | `var(--grid-line)` in `:root` (`linear-gradient(ffffff0f, ffffff0f)`) |
+| **Variable Token (`--screen-ink`)** | `#1b1f33` | `var(--screen-ink)` in `:root` |
+| **Variable Token (`--tv-bg`)** | `#161a30` | `var(--tv-bg)` in `:root` |
+| **Variable Token (`--tv-bg`)** | `#0c0e1c` | `var(--tv-bg)` in `:root` |
+| **Variable Token (`--tv-glow`)** | `#ffffff` | `var(--tv-glow)` in `:root` |
+| **Variable Token (`--tv-glow`)** | `#000000` | `var(--tv-glow)` in `:root` |
+| **Variable Token (`--d-surf`)** | `#1a1a26` | `var(--d-surf)` in `:root` |
 | **Variable Token (`--d-surf2`)** | `#222232` | `var(--d-surf2)` in `:root` |
-| **Variable Token (`--d-line`)** | `#ffffff14` | `var(--d-line)` in `:root` |
 | **Variable Token (`--d-ink`)** | `#e9e3ef` | `var(--d-ink)` in `:root` |
 
 ---
@@ -67,12 +75,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.ui> — `www-raomuhammadhamza-tech`)**:
-   - Landmark `<header class="ui sig">` hosting `Rao Muhammad Hamza, AI Engineer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sound="on"`, `data-sound="off"`, `data-go="projects"`, `data-go="experience"`), and stylesheet rule `font-face { font-family:Space Mono;src:url(/fonts/SpaceMono-400.woff2)format("woff2"... }`.
-2. **Hero Stage & Focal Lead (<section.surface> — `R a o M u h a m m a d H a m z a`)**:
-   - Landmark `<section class="surface desk">` presenting display lead `R a o M u h a m m a d H a m z a` and copy excerpt *"$ python train.py --model hamza-1 --data ./room"* over `#0f1220` canvas and `#f4e7e2` ink.
-3. **Primary Showcase & Content Grid (<article.case> — `Projects`)**:
-   - Landmark `<article class="case">` rendering section `Projects` with copy *"step 0/6000 · 0.0k tok/s · gpu 0%"*, asset references (`favicon.svg`, `SpaceGrotesk-Variable.woff2`, `index.58LUSp4D.css`, `edi-poster.webp`), and grid rule `body { color:f4e7e2;background:0f1220;height:100%;font-family:Space Grotesk,sys... }`.
-4. **Interactive Detail & Feature Matrix (<article.case> — `EDI`)**:
-   - Landmark `<article class="case">` framing `EDI` and `ResumeWesume` (*"Drag to look around"*) with `#1b1f33` surface cards, `#f4e7e2` accents, and `.loader.done { opacity:0;visibility:hidden }`.
+   - Landmark `<header class="ui sig">` (`680x228px`) hosting `Rao Muhammad Hamza, AI Engineer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sound="on"`, `data-sound="off"`, `data-go="projects"`, `data-go="experience"`), and stylesheet rule `font-face { font-family:Space Mono;src:url(/fonts/SpaceMono-400.woff2)format("woff2"... }`.
+2. **Hero Stage & Focal Lead (<section.surface> — `R A O M U H A M M A D H A M Z A`)**:
+   - Landmark `<section class="surface desk">` presenting display lead `R A O M U H A M M A D H A M Z A` and copy excerpt *"I build AI that ships."* over `#0f1220` canvas and `#f4e7e2` ink.
+3. **Primary Showcase & Content Grid (<article.case> — `R a o M u h a m m a d H a m z a`)**:
+   - Landmark `<article class="case">` rendering section `R a o M u h a m m a d H a m z a` with copy *"Drag to look around"*, asset references (`favicon.svg`, `SpaceGrotesk-Variable.woff2`, `index.BGUfTFpU.css`, `edi-poster.webp`), and grid rule `body { color:f4e7e2;background:0f1220;height:100%;font-family:Space Grotesk,sys... }`.
+4. **Interactive Detail & Feature Matrix (<article.case:nth(2)> — `ResumeWesume`)**:
+   - Landmark `<article class="case">` framing `ResumeWesume` and `Rao Muhammad Hamza` (*"AI Engineer · Karachi"*) with `#0b0e17` surface cards, `#ff9ebb` accents, and `.loader.done { opacity:0;visibility:hidden }`.
 5. **Colophon & Global Directory Footer (<footer.train-chart> — `https://www.raomuhammadhamza.tech/`)**:
-   - Landmark `<footer class="train-chart">` anchoring `Rao Muhammad Hamza, AI Engineer` footer links (`Overview · Index · Archive · About · Contact`), copy *"I build AI that ships."*, and `#1a1a26` structural dividers.
+   - Landmark `<footer class="train-chart">` anchoring `Rao Muhammad Hamza, AI Engineer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Flat version WebGL isn't available in this browser."*, and `#1d202d` structural dividers.

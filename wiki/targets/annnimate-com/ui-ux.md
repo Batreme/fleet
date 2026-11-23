@@ -1,67 +1,83 @@
+---
+title: "UI & UX Architecture: annnimate-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: annnimate-com
 
 ## Overview & Design Identity
 - **Target**: `annnimate-com` (**GSAP Motion Components for React & Vue · Annnimate**)
 - **Production URL**: [https://annnimate.com](https://annnimate.com)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f5f5f5`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b3fca0` / `#ca4417`)
 - **Summary**: Production GSAP motion components for React and Vue. Every component is built to the standard we ship for real brands. By Good Fella.
-- **Total Clean CSS Variables Extracted**: `453` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `453` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Geist`
-- **Body Font Stack**: `Geist Mono`
-- **Monospace / Technical Font Stack**: `Geist Mono`
+- **Display Font Stack**: `geistSans`
+- **Body Font Stack**: `geistSans Fallback`
+- **Monospace / Technical Font Stack**: `geistMono`
 - **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `,.h1` (`font-size: var(--font-size-4xl)`, `line-height: 1.2`, `letter-spacing: -.04em`)
 - **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `,.h2` (`font-size: var(--font-size-2xl)`, `line-height: 1.2`, `letter-spacing: -.03em`)
 - **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-size-base: clamp(1rem,.95rem + .25vw,1.125rem)`
-- **Metadata & Labels**: CSS variables `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
+- **Metadata & Labels**: CSS variables `--font-geist-mono: "geistMono", "geistMono Fallback"`, `--ga-label: clamp(18px, 1.4vw, 28px)`, `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fafafa` | `var(--gray-50)` in `:root` |
-| **Interactive Accent / Highlight** | `#f5f5f5` | `var(--gray-100)` in `:root` |
-| **Secondary / Muted Copy** | `#eee` | `var(--gray-150)` in `:root` |
-| **Structural Hairline Border** | `#e8e8e8` | `var(--gray-200)` in `:root` |
+| **Primary Canvas Substrate** | `#b3fca0` | live computed `meta-theme-color` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | `var(--foreground)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#f2f2ef` | `var(--ga-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#ca4417` | `var(--primary)` in `:root` |
+| **Secondary / Muted Copy** | `#696869` | `var(--foreground-muted)` in `:root` |
+| **Structural Hairline Border** | `#d4d4d4` | `var(--surface-border)` in `:root` |
+| **Variable Token (`--ga-tile`)** | `#fafaf8` | `var(--ga-tile)` in `:root` |
+| **Variable Token (`--ga-tile-2`)** | `#e8e8e4` | `var(--ga-tile-2)` in `:root` |
+| **Variable Token (`--ga-fg`)** | `#141314` | `var(--ga-fg)` in `:root` |
+| **Variable Token (`--ga-fg-soft`)** | `#9a9a96` | `var(--ga-fg-soft)` in `:root` |
+| **Variable Token (`--ga-focus`)** | `#101010` | `var(--ga-focus)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--font-geist-sans` | `"geistSans", "geistSans Fallback"` | Typography / Scale Token |
+| `--font-geist-mono` | `"geistMono", "geistMono Fallback"` | Typography / Scale Token |
+| `--font-aktiv` | `"aktivGrotesk", "aktivGrotesk Fallback"` | Typography / Scale Token |
+| `--font-handwritten` | `"shadowsIntoLight", "shadowsIntoLight Fallback"` | Typography / Scale Token |
+| `--ga-bg` | `#f2f2ef` | Canvas / Surface Token |
+| `--ga-tile` | `#fafaf8` | Color / Atmospheric Token |
+| `--ga-tile-2` | `#e8e8e4` | Color / Atmospheric Token |
+| `--ga-ink` | `#fafaf8` | Typography Ink Token |
+| `--ga-fg` | `#141314` | Typography Ink Token |
+| `--ga-fg-soft` | `#9a9a96` | Typography Ink Token |
+| `--ga-fg-dim` | `#9a9a96` | Typography Ink Token |
+| `--ga-focus` | `#1010104d` | Color / Atmospheric Token |
+| `--ga-margin` | `clamp(20px, 2.8vw, 48px)` | Layout / Spatial Grid Token |
+| `--ga-gutter` | `clamp(12px, 1.4vw, 24px)` | Layout / Spatial Grid Token |
+| `--ga-label` | `clamp(18px, 1.4vw, 28px)` | Dimension / Scale Token |
 | `--angle` | `0deg` | Design System Custom Token |
-| `--font-mono` | `var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace` | Typography / Scale Token |
-| `--color-red-400` | `oklch(70.4% .191 22.216)` | Brand / Palette Token |
-| `--color-red-500` | `oklch(63.7% .237 25.331)` | Brand / Palette Token |
-| `--color-red-600` | `oklch(57.7% .245 27.325)` | Brand / Palette Token |
-| `--color-amber-400` | `oklch(82.8% .189 84.429)` | Brand / Palette Token |
-| `--color-amber-500` | `oklch(76.9% .188 70.08)` | Brand / Palette Token |
-| `--color-lime-50` | `oklch(98.6% .031 120.757)` | Brand / Palette Token |
-| `--color-lime-100` | `oklch(96.7% .067 122.328)` | Brand / Palette Token |
-| `--color-lime-200` | `oklch(93.8% .127 124.321)` | Brand / Palette Token |
-| `--color-lime-300` | `oklch(89.7% .196 126.665)` | Brand / Palette Token |
-| `--color-lime-400` | `oklch(84.1% .238 128.85)` | Brand / Palette Token |
-| `--color-lime-500` | `oklch(76.8% .233 130.85)` | Brand / Palette Token |
-| `--color-lime-600` | `oklch(64.8% .2 131.684)` | Brand / Palette Token |
-| `--color-lime-700` | `oklch(53.2% .157 131.589)` | Brand / Palette Token |
-| `--color-lime-800` | `oklch(45.3% .124 130.933)` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.v2-header> — `annnimate-com`)**:
-   - Landmark `<header class="v2-header inset-x-0">` hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `host { --glass-primary:color-mix(in srgb,var(--color-muted)70%,transparent) }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Give any site award‑level animatio`)**:
-   - Landmark `<section class="relative flex">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Get access Get access"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.bg-background> — `Try it before you copy it.`)**:
-   - Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"Curated, not a catalog dump."*, asset references (`edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`, `3e5aujvbo39dz.css`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.bg-background> — `Client-ready the moment you paste `)**:
-   - Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"Every component built to the bar we ship for real brands. Filter,"*) with `#fafafa` surface cards, `#f5f5f5` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="v2-header inset-x-0">` (`1440px`) hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.QRhTIa_className { font-family:geistSans,geistSans Fallback }`.
+2. **Hero Stage & Focal Lead (<section.bg-background> — `Give any site award‑level animatio`)**:
+   - Landmark `<section class="bg-background pt-112">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Give any site award‑level"* over `#b3fca0` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.pt-64> — `Try it before you copy it.`)**:
+   - Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"animation in minutes."*, asset references (`teaser-poster.jpg`, `edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`), and grid rule `.QRhTIa_variable { --font-geist-sans:"geistSans", "geistSans Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.py-64> — `Client-ready the moment you paste `)**:
+   - Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"The same GSAP animations we build for Coca-Cola and Powerade, rea"*) with `#f2f2ef` surface cards, `#ca4417` accents, and `.mNpjDG_className { font-family:geistMono,geistMono Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.annnimate-footer> — `https://annnimate.com`)**:
-   - Landmark `<footer class="annnimate-footer relative">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Browse the library Browse the library"*, and `#e8e8e8` structural dividers.
+   - Landmark `<footer class="annnimate-footer bg-background">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Get access -25% Get access -25%"*, and `#d4d4d4` structural dividers.

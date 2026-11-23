@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: pankow-band"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "pankow-band"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `#000000` ink, `#ddd` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: pankow-band
 
 > **Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW** (https://pankow.band) — Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW** (`https://pankow.band`). Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `#000000` ink, `#ddd` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff7ee` (`var(--farbe-schrift-auf-dunkel)` in `:root`) paired with `#000000` primary typography and `#ddd` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Rowdies` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `90%` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffff00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `90%` extracted from `pankow-band` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `0.75rem` lateral canvas padding with `0.5rem` grid gap.
-- **Border Radius Scale**: `5px`, `12px`, `10px`, `0.25rem`.
+- **Border Radius Scale**: `10px`, `5px`, `12px`, `0.25rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90%`, `gap: 0.5rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 0.5rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-height: 52rem)`, `@media (max-width: 600px)`, `@media (prefers-reduced-motion: reduce)`.
 
@@ -48,14 +52,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff7ee` | `var(--farbe-schrift-auf-dunkel)` in `:root` |
-| **Primary Typography Ink** | `#080808` | `var(--farbe-schrift-auf-hell)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#B82608` | `var(--farbe-fokus)` in `:root` |
-| **Interactive Accent / Highlight** | `#ddd` | `var(--zeitmaschine-card-border)` in `:root` |
-| **Secondary / Muted Copy** | `#000000` | `html { background: black }` (`#000000`) |
-| **Structural Hairline Border** | `#BA0108` | `.section-title-h2 { background-color: #BA0108 }` |
+| **Primary Canvas Substrate** | `#e3bd8e` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `nav` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.skip-link { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#ffff00` | `.button-consent { background: yellow }` (`#ffff00`) |
+| **Secondary / Muted Copy** | `#b95d47` | live computed `footer` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#dddddd` | `var(--zeitmaschine-card-border)` in `:root` |
+| **Variable Token (`--farbe-schrift-auf-dunkel`)** | `#fff7ee` | `var(--farbe-schrift-auf-dunkel)` in `:root` |
+| **Variable Token (`--farbe-schrift-auf-hell`)** | `#080808` | `var(--farbe-schrift-auf-hell)` in `:root` |
+| **Variable Token (`--farbe-fokus`)** | `#b82608` | `var(--farbe-fokus)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +89,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Rowdies`.
+- **Display Typography**: `Poppins`.
 - **Primary Body Stack**: `Poppins`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`).
-- **Body Copy**: rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `1.2rem`, `clamp(1.05rem, 2vw, 1.35rem)`, `2rem`, `0.9rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 31.68px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 19.2px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -103,47 +110,66 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `
 - **Selector `.main-menu-shell`**: `transition: width 0.1s ease 0.5s, height 0.1s ease 0.5s` extracted from `pankow-band` stylesheet.
 - **Selector `.main-menu-state:checked+.main-me...`**: `transition: width 0.1s ease, height 0.1s ease, padding 0.1s ease` extracted from `pankow-band` stylesheet.
 - **Selector `.main-menu-shell img`**: `transition: opacity 0.4s ease 0.1s` extracted from `pankow-band` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Die Pankow Zeitmaschine - Website der Berl │
 │ ====================================================================== │
-│ [ <header.font-global>     | Home · Info · Zeitmaschine · Kontakt   ]  │
+│ [ <header.font-global> (96x80px)      | Home · Info · Zeitmaschine · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Die Pankow-Zeitmaschine                                      |   │
-│ | Substrate: #fff7ee    | Ink: #000000    | Accent: #ddd           |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: Die Pankow-Zeitmaschine                                        | │
+│ | Substrate: #e3bd8e | Ink: #000000 | Accent: #ffff00                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.info>            ) max-w: 90%            |   │
+│ | SHOWCASE GRID (<section.info>) max-w: 100vw                        | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Willkommen auf der Website d |  | Deine Technik ist leider zu  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0.5rem) | │
-│ | [<header.font-globa] -> [<section.hero>] -> [<section.info>] |       │
+│ | DETAIL MODULE (<section.zeitmaschine-comp) — Hans im Glück         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.main-menu>    ) | https://pankow.band                │
+│ [ FOOTER (<footer.main-menu>  ) | https://pankow.band                  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0.5rem)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.font-global>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: Die Pankow-Zeitmaschine                                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.info>) — 1-Col Stack                      | │
+│ | [ Item 1: Willkommen auf der Website der Band PANKOW (1981-...   ] | │
+│ | [ Item 2: Deine Technik ist leider zu alt oder Du lässt kei...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.zeitmaschine-co) — 1-Col (Hans im Glück)    | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.main-menu>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.font-global> — `pankow-band`)**:
-   - Landmark `<header class="font-global">` hosting `Die Pankow Zeitmaschine - Website de` navigation (`Home · Info · Zeitmaschine · Kontakt`), DOM attributes (`data-nav-anchor="main"`, `data-nav-anchor="info"`, `data-nav-anchor="zeitmaschine"`, `data-nav-anchor="kontakt"`), and stylesheet rule `font-palette-values --palette0 { font-family: "pankow-icons"; base-palette: 0; }`.
+   - Landmark `<header class="font-global">` (`96x80px`) hosting `Die Pankow Zeitmaschine - Website de` navigation (`Home · Info · Zeitmaschine · Kontakt`), DOM attributes (`data-nav-anchor="main"`, `data-nav-anchor="info"`, `data-nav-anchor="zeitmaschine"`, `data-nav-anchor="kontakt"`), and stylesheet rule `font-palette-values --palette0 { font-family: "pankow-icons"; base-palette: 0; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Die Pankow-Zeitmaschine`)**:
-   - Landmark `<section class="hero">` presenting display lead `Die Pankow-Zeitmaschine` and copy excerpt *"Zum Inhalt springen"* over `#fff7ee` canvas and `#000000` ink.
+   - Landmark `<section class="hero">` presenting display lead `Die Pankow-Zeitmaschine` and copy excerpt *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PAN"* over `#e3bd8e` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)**:
-   - Landmark `<section class="info inhalts-section">` rendering section `Willkommen auf der Website der Band PANKOW (1981-...` with copy *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PAN"*, asset references (`favicon.ico`, `rubik-dirt-v2-latin-regular.woff2`, `pankow-hero-grunge-overlay-unten....`, `major.css`), and grid rule `.palette0 { font-palette: --palette0; color: currentColor; }`.
+   - Landmark `<section class="info inhalts-section">` rendering section `Willkommen auf der Website der Band PANKOW (1981-...` with copy *"Mein Dank geht an Monika Herold von SoulSite Design für die Zusam"*, asset references (`favicon.ico`, `rubik-dirt-v2-latin-regular.woff2`, `pankow-hero-grunge-overlay-unten....`, `major.css`), and grid rule `.palette0 { font-palette: --palette0; color: currentColor; }`.
 4. **Interactive Detail & Feature Matrix (<section.zeitmaschine-compat-message> — `Deine Technik ist leider zu alt od`)**:
-   - Landmark `<section class="zeitmaschine-compat-message">` framing `Deine Technik ist leider zu alt oder Du lässt kei...` and `ALBEN` (*"Mein Dank geht an Monika Herold von SoulSite Design für die Zusam"*) with `#B82608` surface cards, `#ddd` accents, and `.icon-arrows-vertical:before { content: "\fb85"; }`.
+   - Landmark `<section class="zeitmaschine-compat-message">` framing `Deine Technik ist leider zu alt oder Du lässt kei...` and `Hans im Glück` (*"Stöbere mit der Zeitmaschine durch die Band-Historie, alle Alben "*) with `#ffffff` surface cards, `#ffff00` accents, and `.icon-arrows-vertical:before { content: "\fb85"; }`.
 5. **Colophon & Global Directory Footer (<footer.main-menu> — `https://pankow.band`)**:
-   - Landmark `<footer class="main-menu">` anchoring `Die Pankow Zeitmaschine - Websit` footer links (`Home · Info · Zeitmaschine · Kontakt`), copy *"Stöbere mit der Zeitmaschine durch die Band-Historie, alle A"*, and `#BA0108` structural dividers.
+   - Landmark `<footer class="main-menu">` anchoring `Die Pankow Zeitmaschine - Websit` footer links (`Home · Info · Zeitmaschine · Kontakt`), copy *"Deshalb kann die Zeitmaschine hier nicht richtig angezeigt u"*, and `#dddddd` structural dividers.
 
 ---
 
@@ -155,19 +181,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `pankow-band` (**Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW** — `https://pankow.band`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff7ee` canvas, `#000000` ink, `#ddd` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent).
 - **Identity & Domain Context**: Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
-- **Primary Substrate**: `#fff7ee` (`var(--farbe-schrift-auf-dunkel)` in `:root`), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ddd`.
+- **Primary Substrate**: `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffff00`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff7ee` (`var(--farbe-schrift-auf-dunkel)` in `:root`) paired with `#000000` primary typography and `#ddd` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Rowdies` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `90%` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffff00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `pankow-band` in your global stylesheet:
 
 :root {
-  /* Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW (pankow-band) — Ground-Truth Extracted CSS Variables */
+  /* Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW (pankow-band) — Live-Grounded CSS Variables */
   --farbe-schrift-auf-dunkel: #fff7ee; /* Color / Atmospheric Token (pankow-band) */
   --farbe-schrift-auf-hell: #080808; /* Color / Atmospheric Token (pankow-band) */
   --farbe-link: rgba(181, 47, 14, 0.7); /* Typography Ink Token (pankow-band) */
@@ -188,55 +214,58 @@ Declare and consume these exact custom properties extracted from `pankow-band` i
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff7ee` — grounded in `var(--farbe-schrift-auf-dunkel)` in `:root`
-- **Primary Typography Ink**: `#080808` — grounded in `var(--farbe-schrift-auf-hell)` in `:root`
-- **Elevated Surface / Card Substrate**: `#B82608` — grounded in `var(--farbe-fokus)` in `:root`
-- **Interactive Accent / Highlight**: `#ddd` — grounded in `var(--zeitmaschine-card-border)` in `:root`
-- **Secondary / Muted Copy**: `#000000` — grounded in `html { background: black }` (`#000000`)
-- **Structural Hairline Border**: `#BA0108` — grounded in `.section-title-h2 { background-color: #BA0108 }`
+- **Primary Canvas Substrate**: `#e3bd8e` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `nav` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.skip-link { background: #ffffff }`
+- **Interactive Accent / Highlight**: `#ffff00` — grounded in `.button-consent { background: yellow }` (`#ffff00`)
+- **Secondary / Muted Copy**: `#b95d47` — grounded in live computed `footer` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#dddddd` — grounded in `var(--zeitmaschine-card-border)` in `:root`
+- **Variable Token (`--farbe-schrift-auf-dunkel`)**: `#fff7ee` — grounded in `var(--farbe-schrift-auf-dunkel)` in `:root`
+- **Variable Token (`--farbe-schrift-auf-hell`)**: `#080808` — grounded in `var(--farbe-schrift-auf-hell)` in `:root`
+- **Variable Token (`--farbe-fokus`)**: `#b82608` — grounded in `var(--farbe-fokus)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `90%` extracted from `pankow-band` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `0.75rem` lateral canvas padding with `0.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90%`, `gap: 0.5rem`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 0.5rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding
 - **Media Queries**: `@media (min-height: 52rem)`, `@media (max-width: 600px)`, `@media (prefers-reduced-motion: reduce)`
-- **Corner Radii**: `5px`, `12px`, `10px`, `0.25rem`
+- **Corner Radii**: `10px`, `5px`, `12px`, `0.25rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Rowdies`
+- **Display Font Stack**: `Poppins`
 - **Body Font Stack**: `Poppins`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
-- **Body Copy Rule**: rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `1.2rem`, `clamp(1.05rem, 2vw, 1.35rem)`, `2rem`, `0.9rem`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 31.68px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 19.2px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `pankow-band` (`Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.font-global> — `pankow-band`)**:
-   - DOM & Selectors: Landmark `<header class="font-global">` hosting `Die Pankow Zeitmaschine - Website de` navigation (`Home · Info · Zeitmaschine · Kontakt`), DOM attributes (`data-nav-anchor="main"`, `data-nav-anchor="info"`, `data-nav-anchor="zeitmaschine"`, `data-nav-anchor="kontakt"`), and stylesheet rule `font-palette-values --palette0 { font-family: "pankow-icons"; base-palette: 0; }`.
+   - DOM & Selectors: Landmark `<header class="font-global">` (`96x80px`) hosting `Die Pankow Zeitmaschine - Website de` navigation (`Home · Info · Zeitmaschine · Kontakt`), DOM attributes (`data-nav-anchor="main"`, `data-nav-anchor="info"`, `data-nav-anchor="zeitmaschine"`, `data-nav-anchor="kontakt"`), and stylesheet rule `font-palette-values --palette0 { font-family: "pankow-icons"; base-palette: 0; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.font-global> — `pankow-band`)` (`pankow-band`) adapts across `@media (min-height: 52rem)`, `@media (max-width: 600px)`, `@media (prefers-reduced-motion: reduce)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Home · Info · Zeitmaschine · Kontakt`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Die Pankow-Zeitmaschine`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Die Pankow-Zeitmaschine` and copy excerpt *"Zum Inhalt springen"* over `#fff7ee` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff7ee` background with `#000000` headline `Die Pankow-Zeitmaschine`.
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Die Pankow-Zeitmaschine` and copy excerpt *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PAN"* over `#e3bd8e` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e3bd8e` background with `#000000` headline `Die Pankow-Zeitmaschine`.
 3. **Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)**:
-   - DOM & Selectors: Landmark `<section class="info inhalts-section">` rendering section `Willkommen auf der Website der Band PANKOW (1981-...` with copy *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PAN"*, asset references (`favicon.ico`, `rubik-dirt-v2-latin-regular.woff2`, `pankow-hero-grunge-overlay-unten....`, `major.css`), and grid rule `.palette0 { font-palette: --palette0; color: currentColor; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90%`, `gap: 0.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="info inhalts-section">` rendering section `Willkommen auf der Website der Band PANKOW (1981-...` with copy *"Mein Dank geht an Monika Herold von SoulSite Design für die Zusam"*, asset references (`favicon.ico`, `rubik-dirt-v2-latin-regular.woff2`, `pankow-hero-grunge-overlay-unten....`, `major.css`), and grid rule `.palette0 { font-palette: --palette0; color: currentColor; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 0.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.zeitmaschine-compat-message> — `Deine Technik ist leider zu alt od`)**:
-   - DOM & Selectors: Landmark `<section class="zeitmaschine-compat-message">` framing `Deine Technik ist leider zu alt oder Du lässt kei...` and `ALBEN` (*"Mein Dank geht an Monika Herold von SoulSite Design für die Zusam"*) with `#B82608` surface cards, `#ddd` accents, and `.icon-arrows-vertical:before { content: "\fb85"; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.zeitmaschine-compat-message> — `Deine Technik ist leider zu alt od`)` uses `5px`, `12px`, `10px`, `0.25rem` radii, `#ddd` highlights, and assets (favicon.ico, rubik-dirt-v2-latin-regular.woff2, pankow-hero-grunge-overlay-unten....).
+   - DOM & Selectors: Landmark `<section class="zeitmaschine-compat-message">` framing `Deine Technik ist leider zu alt oder Du lässt kei...` and `Hans im Glück` (*"Stöbere mit der Zeitmaschine durch die Band-Historie, alle Alben "*) with `#ffffff` surface cards, `#ffff00` accents, and `.icon-arrows-vertical:before { content: "\fb85"; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.zeitmaschine-compat-message> — `Deine Technik ist leider zu alt od`)` uses `10px`, `5px`, `12px`, `0.25rem` radii, `#ffff00` highlights, and assets (favicon.ico, rubik-dirt-v2-latin-regular.woff2, pankow-hero-grunge-overlay-unten....).
 5. **Colophon & Global Directory Footer (<footer.main-menu> — `https://pankow.band`)**:
-   - DOM & Selectors: Landmark `<footer class="main-menu">` anchoring `Die Pankow Zeitmaschine - Websit` footer links (`Home · Info · Zeitmaschine · Kontakt`), copy *"Stöbere mit der Zeitmaschine durch die Band-Historie, alle A"*, and `#BA0108` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.main-menu> — `https://pankow.band`)` aligns to `90%` extracted from `pankow-band` stylesheet with `0.75rem` lateral canvas padding with `0.5rem` grid gap and attributes (data-nav-anchor="main", data-nav-anchor="info", data-nav-anchor="zeitmaschine").
+   - DOM & Selectors: Landmark `<footer class="main-menu">` anchoring `Die Pankow Zeitmaschine - Websit` footer links (`Home · Info · Zeitmaschine · Kontakt`), copy *"Deshalb kann die Zeitmaschine hier nicht richtig angezeigt u"*, and `#dddddd` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.main-menu> — `https://pankow.band`)` aligns to `100vw` (non-`@media` desktop container stylesheet rule) with `0.75rem` lateral canvas padding with `0.5rem` grid gap and attributes (data-nav-anchor="main", data-nav-anchor="info", data-nav-anchor="zeitmaschine").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Zum Inhalt springen"*
-- Copy Excerpt 2: *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PANKOW erinnern kann..."*
-- Copy Excerpt 3: *"Mein Dank geht an Monika Herold von SoulSite Design für die Zusammenarbeit und fre..."*
-- Copy Excerpt 4: *"Stöbere mit der Zeitmaschine durch die Band-Historie, alle Alben und legendäre Liv..."*
+- Copy Excerpt 1: *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PANKOW erinnern kann..."*
+- Copy Excerpt 2: *"Mein Dank geht an Monika Herold von SoulSite Design für die Zusammenarbeit und fre..."*
+- Copy Excerpt 3: *"Stöbere mit der Zeitmaschine durch die Band-Historie, alle Alben und legendäre Liv..."*
+- Copy Excerpt 4: *"Deshalb kann die Zeitmaschine hier nicht richtig angezeigt und benutzt werden. Bit..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
@@ -250,7 +279,7 @@ Scaffold `pankow-band` (`Die Pankow Zeitmaschine - Website der Berliner Rockband
 - **Selector `.main-menu-shell`**: `transition: width 0.1s ease 0.5s, height 0.1s ease 0.5s` extracted from `pankow-band` stylesheet.
 - **Selector `.main-menu-state:checked+.main-me...`**: `transition: width 0.1s ease, height 0.1s ease, padding 0.1s ease` extracted from `pankow-band` stylesheet.
 - **Selector `.main-menu-shell img`**: `transition: opacity 0.4s ease 0.1s` extracted from `pankow-band` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

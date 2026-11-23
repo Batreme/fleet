@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: twodo-design"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "twodo-design"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `#211d18` ink, `#57524a` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#1b1815` canvas, `#f1ece3` ink, `#b8842a` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: twodo-design
 
 > **Two-Do** (https://twodo.design) — Two-Do case study: a voice-first, shared to-do app for couples, where an AI agent does the legwork and nothing happens until you both agree.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Two-Do** (`https://twodo.design`). Two-Do case study: a voice-first, shared to-do app for couples, where an AI agent does the legwork and nothing happens until you both agree.
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `#211d18` ink, `#57524a` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#1b1815` canvas, `#f1ece3` ink, `#b8842a` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f6f2e9` (`var(--bg)` in `:root`) paired with `#211d18` primary typography and `#57524a` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Caveat` for display copy (`The to- do list built for two.`) with `Fraunces` and `IBM Plex Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `359px` container bounds (`gap: 10px`, padding `10px`) with `cubic-bezier(.2,.7,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#1b1815` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f1ece3` primary typography and `#b8842a` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Fraunces` for display copy (`The to-do list built for two.`) with `Manrope` and `IBM Plex Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `48px`) with `cubic-bezier(.2,.7,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×10990px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `359px` extracted from `twodo-design` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `10px`, `6px`, `50%`, `999px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
+- **Canvas Lateral Padding & Spacing**: `48px` lateral canvas padding with `22px` grid gap.
+- **Border Radius Scale**: `50%`, `10px`, `6px`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 359px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `48px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 359px)`, `@media (max-width: 900px)`, `@media (min-width: 721px)`.
 
 ---
@@ -48,16 +52,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f6f2e9` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#efe9dc` | `var(--bg-deep)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#211d18` | `var(--ink)` in `:root` |
-| **Interactive Accent / Highlight** | `#57524a` | `var(--ink-soft)` in `:root` |
+| **Primary Canvas Substrate** | `#1b1815` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f1ece3` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0b0a09` | `.island { background: #0b0a09 }` |
+| **Interactive Accent / Highlight** | `#b8842a` | `var(--glow)` in `:root` |
 | **Secondary / Muted Copy** | `#6e685a` | `var(--ink-faint)` in `:root` |
-| **Structural Hairline Border** | `#5c6e4e` | `var(--sage)` in `:root` |
+| **Structural Hairline Border** | `#1c1915` | `var(--border)` in `:root` (`rgba(33, 29, 24, 0.12)`) |
+| **Variable Token (`--bg`)** | `#f6f2e9` | `var(--bg)` in `:root` |
+| **Variable Token (`--bg-deep`)** | `#efe9dc` | `var(--bg-deep)` in `:root` |
+| **Variable Token (`--ink`)** | `#211d18` | `var(--ink)` in `:root` |
+| **Variable Token (`--ink-soft`)** | `#57524a` | `var(--ink-soft)` in `:root` |
+| **Variable Token (`--sage`)** | `#5c6e4e` | `var(--sage)` in `:root` |
 | **Variable Token (`--peach`)** | `#c97a4a` | `var(--peach)` in `:root` |
-| **Variable Token (`--glow`)** | `#b8842a` | `var(--glow)` in `:root` |
 | **Variable Token (`--sage-text`)** | `#4e6042` | `var(--sage-text)` in `:root` |
 | **Variable Token (`--peach-text`)** | `#98552c` | `var(--peach-text)` in `:root` |
 | **Variable Token (`--glow-text`)** | `#7f590f` | `var(--glow-text)` in `:root` |
@@ -88,15 +96,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Caveat`.
-- **Primary Body Stack**: `Fraunces`.
+- **Display Typography**: `Fraunces`.
+- **Primary Body Stack**: `Manrope`.
 - **Technical / Metadata Stack**: `IBM Plex Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(3.2rem, 7.4vw, 6.6rem)`, `line-height: 0.95`, `letter-spacing: -0.035em`, `font-weight: 300`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(2.2rem, 4vw, 3.6rem)`).
-- **Body Copy**: rule `body` (`font-size: 17px`, `line-height: 1.6`).
-- **Metadata & Navigation Labels**: rule `.mono` (`font-size: 0.72rem`, `letter-spacing: 0.12em`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 105.6px`, `line-height: 100.32px`, `font-weight: 300`, `letter-spacing: -3.696px`); rule `h1` (`font-size: clamp(3.2rem, 7.4vw, 6.6rem)`, `line-height: 0.95`, `letter-spacing: -0.035em`, `font-weight: 300`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 57.6px`, `line-height: 60.48px`, `font-weight: 380`, `letter-spacing: -1.152px`); rule `h2` (`font-size: clamp(2.2rem, 4vw, 3.6rem)`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); rule `body` (`font-size: 17px`, `line-height: 1.6`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 13.76px`, `line-height: 22.016px`, `font-weight: 600`); rule `.mono` (`font-size: 0.72rem`, `letter-spacing: 0.12em`).
 
 ---
 
@@ -116,40 +124,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Two-Do                                     │
 │ ====================================================================== │
-│ [ <header.bar>             | The idea · Moments · System            ]  │
+│ [ <header.bar> (1440x79px)            | The idea · Moments · System  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: The to- do list built for two.                               |   │
-│ | Substrate: #f6f2e9    | Ink: #211d18    | Accent: #57524a        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: The to-do list built for two.                                  | │
+│ | Substrate: #1b1815 | Ink: #f1ece3 | Accent: #b8842a                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.idea>            ) max-w: 359px          |   │
+│ | SHOWCASE GRID (<section.idea>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Half of running a home is th |  | Say it, don't type it.       | | │
+│ | | The to- do list built for tw |  | A product concept · 2026     | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.bar>] -> [<section.hero>] -> [<section.idea>] |             │
+│ | DETAIL MODULE (<section.grain>) — Two-Do is a shared ho            | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.credits>      ) | https://twodo.design               │
+│ [ FOOTER (<footer.credits>    ) | https://twodo.design                 │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 22px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.bar>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: The to-do list built for two.                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.idea>) — 1-Col Stack                      | │
+│ | [ Item 1: The to- do list built for two.                         ] | │
+│ | [ Item 2: A product concept · 2026                               ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.grain>) — 1-Col (Two-Do is a shared)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.credits>    ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.bar> — `twodo-design`)**:
-   - Landmark `<header class="bar">` hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `The to- do list built for two.`)**:
-   - Landmark `<section class="hero">` presenting display lead `The to- do list built for two.` and copy excerpt *"Open the app Open app ↗"* over `#f6f2e9` canvas and `#211d18` ink.
-3. **Primary Showcase & Content Grid (<section.idea> — `Half of running a home is the thin`)**:
-   - Landmark `<section class="idea">` rendering section `Half of running a home is the thinking about it.` with copy *"A product concept · 2026"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `h3 { font-family: "Fraunces", Georgia, serif; font-weight: 380; letter-spacin... }`.
-4. **Interactive Detail & Feature Matrix (<section.grain> — `Say it, don't type it.`)**:
-   - Landmark `<section class="grain">` framing `Say it, don't type it.` and `Nothing happens without both of you.` (*"Two-Do is a shared home for a couple's projects. Say what needs d"*) with `#211d18` surface cards, `#57524a` accents, and `button { font-family: inherit; }`.
+   - Landmark `<header class="bar scrolled">` (`1440x79px`) hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `The to-do list built for two.`)**:
+   - Landmark `<section class="hero">` presenting display lead `The to-do list built for two.` and copy excerpt *"A PRODUCT CONCEPT · 2026"* over `#1b1815` canvas and `#f1ece3` ink.
+3. **Primary Showcase & Content Grid (<section.idea> — `The to- do list built for two.`)**:
+   - Landmark `<section class="idea">` rendering section `The to- do list built for two.` with copy *"A product concept · 2026"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `h3 { font-family: "Fraunces", Georgia, serif; font-weight: 380; letter-spacin... }`.
+4. **Interactive Detail & Feature Matrix (<section.grain> — `A product concept · 2026`)**:
+   - Landmark `<section class="grain">` framing `A product concept · 2026` and `Two-Do is a shared home for a couple's projects.` (*"Two-Do is a shared home for a couple's projects. Say what needs d"*) with `#0b0a09` surface cards, `#b8842a` accents, and `button { font-family: inherit; }`.
 5. **Colophon & Global Directory Footer (<footer.credits> — `https://twodo.design`)**:
-   - Landmark `<footer class="credits">` anchoring `Two-Do` footer links (`The idea · Moments · System`), copy *"The phone on the right is live — tap anything"*, and `#5c6e4e` structural dividers.
+   - Landmark `<footer class="credits">` anchoring `Two-Do` footer links (`The idea · Moments · System`), copy *"The phone on the right is live — tap anything"*, and `#1c1915` structural dividers.
 
 ---
 
@@ -161,19 +188,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `twodo-design` (**Two-Do** — `https://twodo.design`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f6f2e9` canvas, `#211d18` ink, `#57524a` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#1b1815` canvas, `#f1ece3` ink, `#b8842a` accent).
 - **Identity & Domain Context**: Two-Do case study: a voice-first, shared to-do app for couples, where an AI agent does the legwork and nothing happens until you both agree.
-- **Primary Substrate**: `#f6f2e9` (`var(--bg)` in `:root`), **Primary Ink**: `#211d18`, **Accent / Highlight**: `#57524a`.
+- **Primary Substrate**: `#1b1815` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f1ece3`, **Accent / Highlight**: `#b8842a`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f6f2e9` (`var(--bg)` in `:root`) paired with `#211d18` primary typography and `#57524a` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Caveat` for display copy (`The to- do list built for two.`) with `Fraunces` and `IBM Plex Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `359px` container bounds (`gap: 10px`, padding `10px`) with `cubic-bezier(.2,.7,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#1b1815` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f1ece3` primary typography and `#b8842a` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Fraunces` for display copy (`The to-do list built for two.`) with `Manrope` and `IBM Plex Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `48px`) with `cubic-bezier(.2,.7,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `twodo-design` in your global stylesheet:
 
 :root {
-  /* Two-Do (twodo-design) — Ground-Truth Extracted CSS Variables */
+  /* Two-Do (twodo-design) — Live-Grounded CSS Variables */
   --bg: #f6f2e9; /* Canvas / Surface Token (twodo-design) */
   --bg-deep: #efe9dc; /* Canvas / Surface Token (twodo-design) */
   --surface: rgba(33, 29, 24, 0.04); /* Canvas / Surface Token (twodo-design) */
@@ -194,58 +221,62 @@ Declare and consume these exact custom properties extracted from `twodo-design` 
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f6f2e9` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#efe9dc` — grounded in `var(--bg-deep)` in `:root`
-- **Elevated Surface / Card Substrate**: `#211d18` — grounded in `var(--ink)` in `:root`
-- **Interactive Accent / Highlight**: `#57524a` — grounded in `var(--ink-soft)` in `:root`
+- **Primary Canvas Substrate**: `#1b1815` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f1ece3` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#0b0a09` — grounded in `.island { background: #0b0a09 }`
+- **Interactive Accent / Highlight**: `#b8842a` — grounded in `var(--glow)` in `:root`
 - **Secondary / Muted Copy**: `#6e685a` — grounded in `var(--ink-faint)` in `:root`
-- **Structural Hairline Border**: `#5c6e4e` — grounded in `var(--sage)` in `:root`
+- **Structural Hairline Border**: `#1c1915` — grounded in `var(--border)` in `:root` (`rgba(33, 29, 24, 0.12)`)
+- **Variable Token (`--bg`)**: `#f6f2e9` — grounded in `var(--bg)` in `:root`
+- **Variable Token (`--bg-deep`)**: `#efe9dc` — grounded in `var(--bg-deep)` in `:root`
+- **Variable Token (`--ink`)**: `#211d18` — grounded in `var(--ink)` in `:root`
+- **Variable Token (`--ink-soft`)**: `#57524a` — grounded in `var(--ink-soft)` in `:root`
+- **Variable Token (`--sage`)**: `#5c6e4e` — grounded in `var(--sage)` in `:root`
 - **Variable Token (`--peach`)**: `#c97a4a` — grounded in `var(--peach)` in `:root`
-- **Variable Token (`--glow`)**: `#b8842a` — grounded in `var(--glow)` in `:root`
 - **Variable Token (`--sage-text`)**: `#4e6042` — grounded in `var(--sage-text)` in `:root`
 - **Variable Token (`--peach-text`)**: `#98552c` — grounded in `var(--peach-text)` in `:root`
 - **Variable Token (`--glow-text`)**: `#7f590f` — grounded in `var(--glow-text)` in `:root`
 - **Variable Token (`--heart`)**: `#c1633c` — grounded in `var(--heart)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×10990px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `359px` extracted from `twodo-design` stylesheet
-- **Padding & Gutters**: `10px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 359px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
+- **Padding & Gutters**: `48px` lateral canvas padding with `22px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `48px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 359px)`, `@media (max-width: 900px)`, `@media (min-width: 721px)`
-- **Corner Radii**: `10px`, `6px`, `50%`, `999px`
+- **Corner Radii**: `50%`, `10px`, `6px`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Caveat`
-- **Body Font Stack**: `Fraunces`
+- **Display Font Stack**: `Fraunces`
+- **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
-- **H1 Display Rule**: rule `h1` (`font-size: clamp(3.2rem, 7.4vw, 6.6rem)`, `line-height: 0.95`, `letter-spacing: -0.035em`, `font-weight: 300`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(2.2rem, 4vw, 3.6rem)`)
-- **Body Copy Rule**: rule `body` (`font-size: 17px`, `line-height: 1.6`)
-- **Metadata & Index Rule**: rule `.mono` (`font-size: 0.72rem`, `letter-spacing: 0.12em`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 105.6px`, `line-height: 100.32px`, `font-weight: 300`, `letter-spacing: -3.696px`); rule `h1` (`font-size: clamp(3.2rem, 7.4vw, 6.6rem)`, `line-height: 0.95`, `letter-spacing: -0.035em`, `font-weight: 300`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 57.6px`, `line-height: 60.48px`, `font-weight: 380`, `letter-spacing: -1.152px`); rule `h2` (`font-size: clamp(2.2rem, 4vw, 3.6rem)`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); rule `body` (`font-size: 17px`, `line-height: 1.6`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 13.76px`, `line-height: 22.016px`, `font-weight: 600`); rule `.mono` (`font-size: 0.72rem`, `letter-spacing: 0.12em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `twodo-design` (`Two-Do`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.bar> — `twodo-design`)**:
-   - DOM & Selectors: Landmark `<header class="bar">` hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
+   - DOM & Selectors: Landmark `<header class="bar scrolled">` (`1440x79px`) hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bar> — `twodo-design`)` (`twodo-design`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 359px)`, `@media (max-width: 900px)`, `@media (min-width: 721px)` with `cubic-bezier(.2,.7,.2,1)`, `cubic-bezier(.3,.7,.3,1.4)`, `cubic-bezier(.3,.6,.3,1)` transitions and links `The idea · Moments · System`.
-2. **Hero Stage & Focal Lead (<section.hero> — `The to- do list built for two.`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `The to- do list built for two.` and copy excerpt *"Open the app Open app ↗"* over `#f6f2e9` canvas and `#211d18` ink.
-   - Responsive Contract: Hero stage (`1440×10990px` desktop / `390×2400px` mobile) sets `#f6f2e9` background with `#211d18` headline `The to- do list built for two.`.
-3. **Primary Showcase & Content Grid (<section.idea> — `Half of running a home is the thin`)**:
-   - DOM & Selectors: Landmark `<section class="idea">` rendering section `Half of running a home is the thinking about it.` with copy *"A product concept · 2026"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `h3 { font-family: "Fraunces", Georgia, serif; font-weight: 380; letter-spacin... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.idea> — `Half of running a home is the thin`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 359px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.grain> — `Say it, don't type it.`)**:
-   - DOM & Selectors: Landmark `<section class="grain">` framing `Say it, don't type it.` and `Nothing happens without both of you.` (*"Two-Do is a shared home for a couple's projects. Say what needs d"*) with `#211d18` surface cards, `#57524a` accents, and `button { font-family: inherit; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.grain> — `Say it, don't type it.`)` uses `10px`, `6px`, `50%`, `999px` radii, `#57524a` highlights, and assets (favicon.svg, apple-touch-icon.png, fonts.googleapis.com).
+2. **Hero Stage & Focal Lead (<section.hero> — `The to-do list built for two.`)**:
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `The to-do list built for two.` and copy excerpt *"A PRODUCT CONCEPT · 2026"* over `#1b1815` canvas and `#f1ece3` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#1b1815` background with `#f1ece3` headline `The to-do list built for two.`.
+3. **Primary Showcase & Content Grid (<section.idea> — `The to- do list built for two.`)**:
+   - DOM & Selectors: Landmark `<section class="idea">` rendering section `The to- do list built for two.` with copy *"A product concept · 2026"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `h3 { font-family: "Fraunces", Georgia, serif; font-weight: 380; letter-spacin... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.idea> — `The to- do list built for two.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`) on desktop and Single-column vertical stack at `390px` viewport width with `48px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.grain> — `A product concept · 2026`)**:
+   - DOM & Selectors: Landmark `<section class="grain">` framing `A product concept · 2026` and `Two-Do is a shared home for a couple's projects.` (*"Two-Do is a shared home for a couple's projects. Say what needs d"*) with `#0b0a09` surface cards, `#b8842a` accents, and `button { font-family: inherit; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.grain> — `A product concept · 2026`)` uses `50%`, `10px`, `6px`, `999px` radii, `#b8842a` highlights, and assets (favicon.svg, apple-touch-icon.png, fonts.googleapis.com).
 5. **Colophon & Global Directory Footer (<footer.credits> — `https://twodo.design`)**:
-   - DOM & Selectors: Landmark `<footer class="credits">` anchoring `Two-Do` footer links (`The idea · Moments · System`), copy *"The phone on the right is live — tap anything"*, and `#5c6e4e` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.credits> — `https://twodo.design`)` aligns to `359px` extracted from `twodo-design` stylesheet with `10px` lateral canvas padding with `10px` grid gap and attributes (data-theme="dark", data-action="capture", data-arg="checkup").
+   - DOM & Selectors: Landmark `<footer class="credits">` anchoring `Two-Do` footer links (`The idea · Moments · System`), copy *"The phone on the right is live — tap anything"*, and `#1c1915` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.credits> — `https://twodo.design`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `48px` lateral canvas padding with `22px` grid gap and attributes (data-theme="dark", data-action="capture", data-arg="checkup").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Open the app Open app ↗"*
+- Copy Excerpt 1: *"A PRODUCT CONCEPT · 2026"*
 - Copy Excerpt 2: *"A product concept · 2026"*
 - Copy Excerpt 3: *"Two-Do is a shared home for a couple's projects. Say what needs doing. An AI agent..."*
 - Copy Excerpt 4: *"The phone on the right is live — tap anything"*

@@ -1,74 +1,79 @@
+---
+title: "UI & UX Architecture: thenest-pl_en"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: thenest-pl_en
 
 ## Overview & Design Identity
 - **Target**: `thenest-pl_en` (**The Nest — a registered business address in central Warsaw**)
 - **Production URL**: [https://thenest.pl/en](https://thenest.pl/en)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#eef0ea` canvas, `#04191c` ink, `#ffe2e2` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#003a40` ink, `#9b7739` accent)
 - **Summary**: Register your Polish company at Piękna 49 in central Warsaw. Virtual office from 109 PLN/mo net, private offices quoted individually, mai...
-- **Total Clean CSS Variables Extracted**: `138` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `139` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Bodoni Moda`
-- **Body Font Stack**: `Bodoni Moda Fallback`
-- **Monospace / Technical Font Stack**: `SF Mono`
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Bodoni Moda", "Bodoni Moda Fallback"`, `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`
-- **Metadata & Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
+- **Body Font Stack**: `Segoe UI`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 18.4px`, `line-height: 25.3px`, `font-weight: 400`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 68.8px`, `line-height: 67.424px`, `font-weight: 400`, `letter-spacing: -1.376px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#eef0ea` | `var(--rd-ivory)` in `:root` |
-| **Primary Typography Ink** | `#04191c` | `var(--rd-deep)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fef2f2` | `var(--color-red-50)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffe2e2` | `var(--color-red-100)` in `:root` |
-| **Secondary / Muted Copy** | `#ffa3a3` | `var(--color-red-300)` in `:root` |
-| **Structural Hairline Border** | `#ff6568` | `var(--color-red-400)` in `:root` |
-| **Variable Token (`--rd-rule`)** | `#003a4024` | `var(--rd-rule)` in `:root` |
-| **Variable Token (`--rd-rule-strong`)** | `#003a4047` | `var(--rd-rule-strong)` in `:root` |
-| **Variable Token (`--rd-rule-invert`)** | `#e9ebe62e` | `var(--rd-rule-invert)` in `:root` |
-| **Variable Token (`--rd-rule-invert-strong`)** | `#e9ebe657` | `var(--rd-rule-invert-strong)` in `:root` |
-| **Variable Token (`--rd-ivory-dim`)** | `#eef0ead1` | `var(--rd-ivory-dim)` in `:root` |
-| **Variable Token (`--rd-ivory-faint`)** | `#eef0ea99` | `var(--rd-ivory-faint)` in `:root` |
-| **Variable Token (`--color-red-500`)** | `#fb2c36` | `var(--color-red-500)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#003a40` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fafaf8` | `.bg-cream { background-color: #fafaf8 }` |
+| **Interactive Accent / Highlight** | `#9b7739` | `var(--brand-gold)` in `:root` |
+| **Secondary / Muted Copy** | `#6b7280` | `var(--muted-foreground)` in `:root` |
+| **Structural Hairline Border** | `#e5e7eb` | `var(--border)` in `:root` |
+| **Variable Token (`--secondary`)** | `#f5f5f5` | `var(--secondary)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--rd-rule` | `#003a4024` | Color / Atmospheric Token |
-| `--rd-rule-strong` | `#003a4047` | Color / Atmospheric Token |
-| `--rd-rule-invert` | `#e9ebe62e` | Color / Atmospheric Token |
-| `--rd-rule-invert-strong` | `#e9ebe657` | Color / Atmospheric Token |
-| `--rd-ivory` | `#eef0ea` | Color / Atmospheric Token |
-| `--rd-ivory-dim` | `#eef0ead1` | Color / Atmospheric Token |
-| `--rd-ivory-faint` | `#eef0ea99` | Color / Atmospheric Token |
-| `--rd-deep` | `#04191c` | Color / Atmospheric Token |
-| `--rd-container` | `1200px` | Layout / Spatial Grid Token |
-| `--font-display` | `"Bodoni Moda", "Bodoni Moda Fallback"` | Typography / Scale Token |
-| `--font-serif` | `ui-serif,Georgia,Cambria,"Times New Roman",Times,serif` | Typography / Scale Token |
-| `--color-red-50` | `#fef2f2` | Brand / Palette Token |
-| `--color-red-100` | `#ffe2e2` | Brand / Palette Token |
-| `--color-red-300` | `#ffa3a3` | Brand / Palette Token |
-| `--color-red-400` | `#ff6568` | Brand / Palette Token |
-| `--color-red-500` | `#fb2c36` | Brand / Palette Token |
+| `--brand-teal` | `#003a40` | Brand / Palette Token |
+| `--brand-gold` | `#9b7739` | Brand / Palette Token |
+| `--brand-white` | `#fff` | Canvas / Surface Token |
+| `--background` | `#fff` | Canvas / Surface Token |
+| `--foreground` | `#003a40` | Typography Ink Token |
+| `--card` | `#fff` | Color / Atmospheric Token |
+| `--card-foreground` | `#003a40` | Typography Ink Token |
+| `--popover` | `#fff` | Color / Atmospheric Token |
+| `--popover-foreground` | `#003a40` | Typography Ink Token |
+| `--primary` | `#003a40` | Brand / Palette Token |
+| `--primary-foreground` | `#fff` | Typography Ink Token |
+| `--secondary` | `#f5f5f5` | Brand / Palette Token |
+| `--secondary-foreground` | `#003a40` | Typography Ink Token |
+| `--muted` | `#f5f5f5` | Color / Atmospheric Token |
+| `--muted-foreground` | `#6b7280` | Typography Ink Token |
+| `--accent` | `#9b7739` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.fixed> — `thenest-pl_en`)**:
-   - Landmark `<header class="fixed top-0">` hosting `The Nest — a registered business add` navigation (`About Us · Offers · News & Insights · FAQ · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.rd-serif { font-family:var(--font-display), "Iowan Old Style", Palatino, Georgia, s... }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `A Warsaw business address for your`)**:
-   - Landmark `<section class="relative overflow-hidden">` presenting display lead `A Warsaw business address for your company. Piękn...` and copy excerpt *"Skip to main content"* over `#eef0ea` canvas and `#04191c` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `Register your company at a real ad`)**:
-   - Landmark `<section class="relative overflow-hidden">` rendering section `Register your company at a real address.` with copy *"Register your company"*, asset references (`7665c2bcc9077b83-s.p.3nqaju0iyo2m...`, `cd9c266256ef2177-s.p.0ia0bwd-fjee...`, `thenest-logo-white.svg`, `2qf24jap9hfz0.css`), and grid rule `.rd-rule { border-color:var(--rd-rule) }`.
+1. **Brand Header & Navigation Bar (<header.top-0> — `thenest-pl_en`)**:
+   - Landmark `<header class="top-0 left-0">` (`1440x64px`) hosting `The Nest — a registered business add` navigation (`About Us · Offers · News & Insights · FAQ · Contact`), DOM attributes (`data-scroll-behavior="smooth"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.bg-cream> — `A Warsaw business address for your`)**:
+   - Landmark `<section class="bg-cream relative">` presenting display lead `A Warsaw business address for your company. Piękn...` and copy excerpt *"An address at Piękna 49 for your KRS or CEIDG registration — a vi"* over `#ffffff` canvas and `#003a40` ink.
+3. **Primary Showcase & Content Grid (<section.text-teal> — `Register your company at a real ad`)**:
+   - Landmark `<section class="bg-cream text-teal">` rendering section `Register your company at a real address.` with copy *"Register your company"*, asset references (`7665c2bcc9077b83-s.p.3nqaju0iyo2m...`, `cd9c266256ef2177-s.p.0ia0bwd-fjee...`, `thenest-logo-white.svg`, `2qf24jap9hfz0.css`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.relative> — `Everything under one address. Offi`)**:
-   - Landmark `<section class="relative overflow-hidden">` framing `Everything under one address. Office , mail , roo...` and `Office to rent — once you outgrow the virtual office` (*"at a real address."*) with `#fef2f2` surface cards, `#ffe2e2` accents, and `.rd-rule-strong { border-color:var(--rd-rule-strong) }`.
-5. **Colophon & Global Directory Footer (<footer.border-t> — `https://thenest.pl/en`)**:
-   - Landmark `<footer class="border-t border-border">` anchoring `The Nest — a registered business` footer links (`About Us · Offers · News & Insights · FAQ · Contact`), copy *"An address at Piękna 49 for your KRS or CEIDG registration —"*, and `#ff6568` structural dividers.
+   - Landmark `<section class="relative overflow-hidden">` framing `Everything under one address. Office , mail , roo...` and `Office to rent — once you outgrow the virtual office` (*"at a real address."*) with `#fafaf8` surface cards, `#9b7739` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.border-border> — `https://thenest.pl/en`)**:
+   - Landmark `<footer class="border-border bg-background">` anchoring `The Nest — a registered business` footer links (`About Us · Offers · News & Insights · FAQ · Contact`), copy *"Used by more than 500 companies since 2018, including founde"*, and `#e5e7eb` structural dividers.

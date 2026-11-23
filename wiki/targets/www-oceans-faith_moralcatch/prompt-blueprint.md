@@ -1,149 +1,172 @@
 ---
 title: "UI Prompt Blueprint: www-oceans-faith_moralcatch"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-oceans-faith_moralcatch"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#ff0` canvas, `#000` ink, `#fff` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f3ede1` canvas, `#000000` ink, `#ffffff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-oceans-faith_moralcatch
 
 > **The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans** (https://www.oceans.faith/moralcatch) — Explore fisheries, ocean life and workers’ rights. Read The Moral Catch report, take the two-minute meal test, and use the faith institut...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans** (`https://www.oceans.faith/moralcatch`). Explore fisheries, ocean life and workers’ rights. Read The Moral Catch report, take the two-minute meal test, and use the faith institut...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ff0` canvas, `#000` ink, `#fff` accent)**.
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f3ede1` canvas, `#000000` ink, `#ffffff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ff0` (`mark { background: #ff0 }`) paired with `#000` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `squarespace-ui-font` for display copy (`Stay Connected`) with `Poppins` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 10px`, padding `1.3rem`) with `cubic-bezier(.25,.46,.45,.94)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3ede1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Merriweather Sans` for display copy (`Stay Connected`) with `Lato` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `3px`) with `cubic-bezier(.23,1,.32,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `640px` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.3rem` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `3px`, `14px`, `150px`, `0px`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
+- **Canvas Lateral Padding & Spacing**: `3px` lateral canvas padding with `8px` grid gap.
+- **Border Radius Scale**: `6px`, `11px`, `50%`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.3rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:640px)`, `@media (min-width:640px)`, `@media screen and (max-width: 432px)`, `@media screen and (min-width: 433px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `3px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (max-width:640px)`, `@media (max-width:600px)`, `@media screen and (max-width:432px)`, `@media screen and (min-width:433px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ff0` | `mark { background: #ff0 }` |
-| **Primary Typography Ink** | `#000` | `mark { color: #000 }` |
-| **Elevated Surface / Card Substrate** | `#c0c0c0` | `fieldset { border: silver }` (`#c0c0c0`) |
-| **Interactive Accent / Highlight** | `#fff` | `.sqs-cookie-banner-v2.DARK a { color: #fff }` |
-| **Secondary / Muted Copy** | `#777` | `ner-v2.DARK.TEXT .sqs-cookie-ba... { border-bottom: #777 }` |
-| **Structural Hairline Border** | `#eee` | `.sqs-cookie-banner-v2.LIGHT { background-color: #eee }` |
+| **Primary Canvas Substrate** | `#f3ede1` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e7e7e7` | `.commerce-mini-cart-item-image-... { background-color: #e7e7e7 }` |
+| **Interactive Accent / Highlight** | `#ffffff` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#0f4157` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#999999` | `orm-wrapper .field-list .sectio... { border-bottom: #999999 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--white-hsl` | `0,100%,99.02%` | Canvas / Surface Token |
-| `--sqsp-palette-lightest-color` | `hsla(0,100%,99.02%,1)` | Canvas / Surface Token |
-| `--lightAccent-hsl` | `0,0%,96.08%` | Canvas / Surface Token |
-| `--sqsp-palette-light-color` | `hsla(0,0%,96.08%,1)` | Canvas / Surface Token |
-| `--accent-hsl` | `0,0%,85.1%` | Brand / Palette Token |
-| `--sqsp-palette-accent-color` | `hsla(0,0%,85.1%,1)` | Brand / Palette Token |
-| `--darkAccent-hsl` | `0,0%,47.45%` | Canvas / Surface Token |
-| `--sqsp-palette-dark-color` | `hsla(0,0%,47.45%,1)` | Canvas / Surface Token |
-| `--black-hsl` | `0,0%,0%` | Canvas / Surface Token |
-| `--sqsp-palette-darkest-color` | `hsla(0,0%,0%,1)` | Canvas / Surface Token |
-| `--safeLightAccent-hsl` | `0,0%,85.1%` | Canvas / Surface Token |
-| `--safeDarkAccent-hsl` | `0,0%,0%` | Canvas / Surface Token |
-| `--safeInverseAccent-hsl` | `0,0%,0%` | Brand / Palette Token |
-| `--safeInverseLightAccent-hsl` | `0,0%,0%` | Canvas / Surface Token |
-| `--safeInverseDarkAccent-hsl` | `0,0%,100%` | Canvas / Surface Token |
-| `--course-item-nav-text-color` | `hsla(var(--black-hsl),1)` | Typography Ink Token |
+| `--commerce-mini-cart-image-size` | `60px` | Layout / Spatial Grid Token |
+| `--commerce-mini-cart-image-placeholder-size` | `22px` | Layout / Spatial Grid Token |
+| `--grid-gutter` | `calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px)` | Layout / Spatial Grid Token |
+| `--cell-max-width` | `calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 )` | Layout / Spatial Grid Token |
+| `--inset-padding` | `calc(var(--sqs-site-gutter) * 2)` | Layout / Spatial Grid Token |
+| `--row-height-scaling-factor` | `0.0215` | Layout / Spatial Grid Token |
+| `--opacity` | `100%` | Dimension / Scale Token |
+| `--translate-x` | `0px` | Dimension / Scale Token |
+| `--translate-y` | `0px` | Dimension / Scale Token |
+| `--rotation` | `0deg` | Design System Custom Token |
+| `--scale-x` | `100%` | Dimension / Scale Token |
+| `--scale-y` | `100%` | Dimension / Scale Token |
+| `--skew-x` | `0deg` | Design System Custom Token |
+| `--skew-y` | `0deg` | Design System Custom Token |
+| `--origin-x` | `50%` | Dimension / Scale Token |
+| `--origin-y` | `50%` | Dimension / Scale Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `squarespace-ui-font`.
-- **Primary Body Stack**: `Poppins`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Merriweather Sans`.
+- **Primary Body Stack**: `Lato`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--sqsp-heading-1-color: hsla(var(--black-hsl),1)`, `--heading-1-size: 4rem`, `--heading-1-size-value: 4`; rule `.title` (`letter-spacing: .5px`, `font-weight: 500`).
-- **Section Heading (`H2`)**: CSS variables `--image-block-collage-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-card-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-poster-image-subtitle-color: hsla(var(--white-hsl),1)`.
-- **Body Copy**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--sqsp-paragraph-3-color: hsla(var(--black-hsl),1)`, `--paragraphLargeColor: hsla(var(--black-hsl),1)`; rule `p` (`font-size: 14px`, `line-height: 1.5em`).
-- **Metadata & Navigation Labels**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--tweak-paragraph-small-color-on-background: hsla(var(--black-hsl),1)`, `--tweak-form-block-caption-color-on-background: hsla(var(--black-hsl),1)`; rule `.caption` (`font-size: 12px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 40px`, `font-weight: 700`); rule `h1` (`line-height: 1em`).
+- **Section Heading (`H2`)**: observed font-size ladder: `40px`, `16px`, `22.912px`, `15px`, `12px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 16px`, `line-height: 22px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `.caption` (`font-size: 12px`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.33,0,.2,1)`, `cubic-bezier(0,.9,.33,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.sqs-image-zoom-duplicate`**: `transition: opacity .4s ease` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Selector `.sqs-system-error input`**: `transition: background-color .1s ease-in-out, opacity .1s ease-in-out` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Selector `.sqsp-tooltip .buttons a:not(.rej...`**: `transition: background-color .1s ease-in-out, opacity .1s ease-in-out` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.25,.46,.45,.94)`)**: Governs interactive state transitions across `<header.bright-inverse>` and `<section.region>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+- **Selector `.commerce-reserved-cart-container`**: `transition: top .4s` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Selector `.template-cart-item-added-popover`**: `transition: transform .15s 50ms,opacity .2s` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Selector `uttons .commerce-mini-cart-view-c...`**: `transition: background-color .1s linear,color .1s linear` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.bright-inverse>` and `<section.region>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — The Moral Catch: Fisheries & Ocean Justice │
 │ ====================================================================== │
-│ [ <header.bright-inverse>  | SIGN THE DECLARATION · SIGNATORIES · P ]  │
+│ [ <header.bright-inverse (1440px)     | EVENTS · SIGN THE DECLARATIO ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <article.page-regions>                               |   │
-│ | H1: Stay Connected                                               |   │
-│ | Substrate: #ff0       | Ink: #000       | Accent: #fff           |   │
+│ | HERO STAGE: <article.page-regions> (w=1440px)                      | │
+│ | H1: Stay Connected                                                 | │
+│ | Substrate: #f3ede1 | Ink: #000000 | Accent: #ffffff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.region>          ) max-w: 640px          |   │
+│ | SHOWCASE GRID (<section.region>) max-w: 1440px                     | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | HIGH AMBITION COALITION      |  | MULTI-FAITH DECLARATION      | | │
+│ | | Faiths for Oceans © 2026     |  | MULTI-FAITH DECLARATION      | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.bright-inv] -> [<article.page-regi] -> [<section.region>] | │
+│ | DETAIL MODULE (<section.page-section>) — The illustrated story     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.sections>     ) | https://www.oceans.faith/moralcatc │
+│ [ FOOTER (<footer.sections>   ) | https://www.oceans.faith/moralcatch  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.bright-inverse> ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<article.page-regions>) — 390px Vertical Lead          | │
+│ | H1: Stay Connected                                                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.region>) — 1-Col Stack                    | │
+│ | [ Item 1: Faiths for Oceans © 2026                               ] | │
+│ | [ Item 2: MULTI-FAITH DECLARATION                                ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.page-section>) — 1-Col (The illustrated st) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.sections>   ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.bright-inverse> — `www-oceans-faith_moralcatch`)**:
-   - Landmark `<header class="bright-inverse header">` hosting `The Moral Catch: Fisheries & Ocean J` navigation (`SIGN THE DECLARATION · SIGNATORIES · POLICY PRIMERS · GLOSSARY · REPORT`), DOM attributes (`data-sqsp-font-ids="6a3139e4691a2d058d1a1..."`, `data-name="static-context"`, `data-animation-state="booted"`, `data-test="header"`), and stylesheet rule `summary { display:block }`.
+   - Landmark `<header class="bright-inverse header">` (`1440px`) hosting `The Moral Catch: Fisheries & Ocean J` navigation (`EVENTS · SIGN THE DECLARATION · SIGNATORIES · PUBLICATIONS · GLOSSARY`), DOM attributes (`data-sqsp-font-ids="6a3136d96307d35684222..."`, `data-name="static-context"`, `data-animation-state="booted"`, `data-test="header"`), and stylesheet rule `.uppercase { text-transform:uppercase }`.
 2. **Hero Stage & Focal Lead (<article.page-regions> — `Stay Connected`)**:
-   - Landmark `<article class="page-regions">` presenting display lead `Stay Connected` and copy excerpt *"HIGH AMBITION COALITION"* over `#ff0` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.region> — `HIGH AMBITION COALITION`)**:
-   - Landmark `<section class="region">` rendering section `HIGH AMBITION COALITION` with copy *"MULTI-FAITH DECLARATION"*, asset references (`popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-7afaba259a8e252a-mi...`, `favicon.ico`, `moralcatch`), and grid rule `video { display:inline-block }`.
+   - Landmark `<article class="page-regions">` presenting display lead `Stay Connected` and copy excerpt *"Faiths for Oceans © 2026"* over `#f3ede1` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.region> — `Faiths for Oceans © 2026`)**:
+   - Landmark `<section class="region">` rendering section `Faiths for Oceans © 2026` with copy *"MULTI-FAITH DECLARATION"*, asset references (`popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-eb69d574e194d111-mi...`, `favicon.ico`, `moralcatch`), and grid rule `rce-reserved-cart-container--anim... { animation:.4s cubic-bezier(.23,1,.32,1) 1s both commerce-reserved-cart-s... }`.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `MULTI-FAITH DECLARATION`)**:
-   - Landmark `<section class="page-section full-bleed-section">` framing `MULTI-FAITH DECLARATION` and `SIGN THE DECLARATION` (*"SIGN THE DECLARATION"*) with `#c0c0c0` surface cards, `#fff` accents, and `template { display:none }`.
+   - Landmark `<section class="page-section full-bleed-section">` framing `MULTI-FAITH DECLARATION` and `The illustrated story needs JavaScript. You can ` (*"The illustrated story needs JavaScript. You can download the repo"*) with `#e7e7e7` surface cards, `#ffffff` accents, and `mmerce-reserved-cart-container--c... { animation:.35s cubic-bezier(.23,1,.32,1) forwards commerce-reserved-cart... }`.
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://www.oceans.faith/moralcatch`)**:
-   - Landmark `<footer class="sections">` anchoring `The Moral Catch: Fisheries & Oce` footer links (`SIGN THE DECLARATION · SIGNATORIES · POLICY PRIMERS · GLOSSARY · REPORT`), copy *"OCEAN INTERFAITH FORUM"*, and `#eee` structural dividers.
+   - Landmark `<footer class="sections">` anchoring `The Moral Catch: Fisheries & Oce` footer links (`EVENTS · SIGN THE DECLARATION · SIGNATORIES · PUBLICATIONS · GLOSSARY`), copy *"Join our mailing list to receive the latest news, updates an"*, and `#999999` structural dividers.
 
 ---
 
@@ -155,103 +178,103 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ff0` canvas, `#00
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-oceans-faith_moralcatch` (**The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans** — `https://www.oceans.faith/moralcatch`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ff0` canvas, `#000` ink, `#fff` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3ede1` canvas, `#000000` ink, `#ffffff` accent).
 - **Identity & Domain Context**: Explore fisheries, ocean life and workers’ rights. Read The Moral Catch report, take the two-minute meal test, and use the faith institut...
-- **Primary Substrate**: `#ff0` (`mark { background: #ff0 }`), **Primary Ink**: `#000`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#f3ede1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ff0` (`mark { background: #ff0 }`) paired with `#000` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `squarespace-ui-font` for display copy (`Stay Connected`) with `Poppins` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `640px` container bounds (`gap: 10px`, padding `1.3rem`) with `cubic-bezier(.25,.46,.45,.94)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3ede1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Merriweather Sans` for display copy (`Stay Connected`) with `Lato` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `3px`) with `cubic-bezier(.23,1,.32,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-oceans-faith_moralcatch` in your global stylesheet:
 
 :root {
-  /* The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans (www-oceans-faith_moralcatch) — Ground-Truth Extracted CSS Variables */
-  --white-hsl: 0,100%,99.02%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --sqsp-palette-lightest-color: hsla(0,100%,99.02%,1); /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --lightAccent-hsl: 0,0%,96.08%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --sqsp-palette-light-color: hsla(0,0%,96.08%,1); /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --accent-hsl: 0,0%,85.1%; /* Brand / Palette Token (www-oceans-faith_moralcatch) */
-  --sqsp-palette-accent-color: hsla(0,0%,85.1%,1); /* Brand / Palette Token (www-oceans-faith_moralcatch) */
-  --darkAccent-hsl: 0,0%,47.45%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --sqsp-palette-dark-color: hsla(0,0%,47.45%,1); /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --black-hsl: 0,0%,0%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --sqsp-palette-darkest-color: hsla(0,0%,0%,1); /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --safeLightAccent-hsl: 0,0%,85.1%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --safeDarkAccent-hsl: 0,0%,0%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --safeInverseAccent-hsl: 0,0%,0%; /* Brand / Palette Token (www-oceans-faith_moralcatch) */
-  --safeInverseLightAccent-hsl: 0,0%,0%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --safeInverseDarkAccent-hsl: 0,0%,100%; /* Canvas / Surface Token (www-oceans-faith_moralcatch) */
-  --course-item-nav-text-color: hsla(var(--black-hsl),1); /* Typography Ink Token (www-oceans-faith_moralcatch) */
+  /* The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans (www-oceans-faith_moralcatch) — Live-Grounded CSS Variables */
+  --commerce-mini-cart-image-size: 60px; /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --commerce-mini-cart-image-placeholder-size: 22px; /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --grid-gutter: calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px); /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 ); /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --inset-padding: calc(var(--sqs-site-gutter) * 2); /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --row-height-scaling-factor: 0.0215; /* Layout / Spatial Grid Token (www-oceans-faith_moralcatch) */
+  --opacity: 100%; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --translate-x: 0px; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --translate-y: 0px; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --rotation: 0deg; /* Design System Custom Token (www-oceans-faith_moralcatch) */
+  --scale-x: 100%; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --scale-y: 100%; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --skew-x: 0deg; /* Design System Custom Token (www-oceans-faith_moralcatch) */
+  --skew-y: 0deg; /* Design System Custom Token (www-oceans-faith_moralcatch) */
+  --origin-x: 50%; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
+  --origin-y: 50%; /* Dimension / Scale Token (www-oceans-faith_moralcatch) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ff0` — grounded in `mark { background: #ff0 }`
-- **Primary Typography Ink**: `#000` — grounded in `mark { color: #000 }`
-- **Elevated Surface / Card Substrate**: `#c0c0c0` — grounded in `fieldset { border: silver }` (`#c0c0c0`)
-- **Interactive Accent / Highlight**: `#fff` — grounded in `.sqs-cookie-banner-v2.DARK a { color: #fff }`
-- **Secondary / Muted Copy**: `#777` — grounded in `ner-v2.DARK.TEXT .sqs-cookie-ba... { border-bottom: #777 }`
-- **Structural Hairline Border**: `#eee` — grounded in `.sqs-cookie-banner-v2.LIGHT { background-color: #eee }`
+- **Primary Canvas Substrate**: `#f3ede1` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e7e7e7` — grounded in `.commerce-mini-cart-item-image-... { background-color: #e7e7e7 }`
+- **Interactive Accent / Highlight**: `#ffffff` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#0f4157` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#999999` — grounded in `orm-wrapper .field-list .sectio... { border-bottom: #999999 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `640px` extracted from `www-oceans-faith_moralcatch` stylesheet
-- **Padding & Gutters**: `1.3rem` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.3rem` horizontal padding
-- **Media Queries**: `@media (max-width:640px)`, `@media (min-width:640px)`, `@media screen and (max-width: 432px)`, `@media screen and (min-width: 433px)`
-- **Corner Radii**: `3px`, `14px`, `150px`, `0px`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
+- **Padding & Gutters**: `3px` lateral canvas padding with `8px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `3px` horizontal padding
+- **Media Queries**: `@media screen and (max-width:640px)`, `@media (max-width:600px)`, `@media screen and (max-width:432px)`, `@media screen and (min-width:433px)`
+- **Corner Radii**: `6px`, `11px`, `50%`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `squarespace-ui-font`
-- **Body Font Stack**: `Poppins`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--sqsp-heading-1-color: hsla(var(--black-hsl),1)`, `--heading-1-size: 4rem`, `--heading-1-size-value: 4`; rule `.title` (`letter-spacing: .5px`, `font-weight: 500`)
-- **H2 Section Rule**: CSS variables `--image-block-collage-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-card-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-poster-image-subtitle-color: hsla(var(--white-hsl),1)`
-- **Body Copy Rule**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--sqsp-paragraph-3-color: hsla(var(--black-hsl),1)`, `--paragraphLargeColor: hsla(var(--black-hsl),1)`; rule `p` (`font-size: 14px`, `line-height: 1.5em`)
-- **Metadata & Index Rule**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--tweak-paragraph-small-color-on-background: hsla(var(--black-hsl),1)`, `--tweak-form-block-caption-color-on-background: hsla(var(--black-hsl),1)`; rule `.caption` (`font-size: 12px`)
+- **Display Font Stack**: `Merriweather Sans`
+- **Body Font Stack**: `Lato`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 40px`, `line-height: 40px`, `font-weight: 700`); rule `h1` (`line-height: 1em`)
+- **H2 Section Rule**: observed font-size ladder: `40px`, `16px`, `22.912px`, `15px`, `12px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 16px`, `line-height: 22px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `.caption` (`font-size: 12px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-oceans-faith_moralcatch` (`The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.bright-inverse> — `www-oceans-faith_moralcatch`)**:
-   - DOM & Selectors: Landmark `<header class="bright-inverse header">` hosting `The Moral Catch: Fisheries & Ocean J` navigation (`SIGN THE DECLARATION · SIGNATORIES · POLICY PRIMERS · GLOSSARY · REPORT`), DOM attributes (`data-sqsp-font-ids="6a3139e4691a2d058d1a1..."`, `data-name="static-context"`, `data-animation-state="booted"`, `data-test="header"`), and stylesheet rule `summary { display:block }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bright-inverse> — `www-oceans-faith_moralcatch`)` (`www-oceans-faith_moralcatch`) adapts across `@media (max-width:640px)`, `@media (min-width:640px)`, `@media screen and (max-width: 432px)`, `@media screen and (min-width: 433px)` with `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `SIGN THE DECLARATION · SIGNATORIES · POLICY PRIMERS · GLOSSARY · REPORT`.
+   - DOM & Selectors: Landmark `<header class="bright-inverse header">` (`1440px`) hosting `The Moral Catch: Fisheries & Ocean J` navigation (`EVENTS · SIGN THE DECLARATION · SIGNATORIES · PUBLICATIONS · GLOSSARY`), DOM attributes (`data-sqsp-font-ids="6a3136d96307d35684222..."`, `data-name="static-context"`, `data-animation-state="booted"`, `data-test="header"`), and stylesheet rule `.uppercase { text-transform:uppercase }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bright-inverse> — `www-oceans-faith_moralcatch`)` (`www-oceans-faith_moralcatch`) adapts across `@media screen and (max-width:640px)`, `@media (max-width:600px)`, `@media screen and (max-width:432px)`, `@media screen and (min-width:433px)` with `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.33,0,.2,1)`, `cubic-bezier(0,.9,.33,1)` transitions and links `EVENTS · SIGN THE DECLARATION · SIGNATORIES · PUBLICATIONS · GLOSSARY`.
 2. **Hero Stage & Focal Lead (<article.page-regions> — `Stay Connected`)**:
-   - DOM & Selectors: Landmark `<article class="page-regions">` presenting display lead `Stay Connected` and copy excerpt *"HIGH AMBITION COALITION"* over `#ff0` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ff0` background with `#000` headline `Stay Connected`.
-3. **Primary Showcase & Content Grid (<section.region> — `HIGH AMBITION COALITION`)**:
-   - DOM & Selectors: Landmark `<section class="region">` rendering section `HIGH AMBITION COALITION` with copy *"MULTI-FAITH DECLARATION"*, asset references (`popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-7afaba259a8e252a-mi...`, `favicon.ico`, `moralcatch`), and grid rule `video { display:inline-block }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.region> — `HIGH AMBITION COALITION`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 640px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.3rem` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<article class="page-regions">` presenting display lead `Stay Connected` and copy excerpt *"Faiths for Oceans © 2026"* over `#f3ede1` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f3ede1` background with `#000000` headline `Stay Connected`.
+3. **Primary Showcase & Content Grid (<section.region> — `Faiths for Oceans © 2026`)**:
+   - DOM & Selectors: Landmark `<section class="region">` rendering section `Faiths for Oceans © 2026` with copy *"MULTI-FAITH DECLARATION"*, asset references (`popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-eb69d574e194d111-mi...`, `favicon.ico`, `moralcatch`), and grid rule `rce-reserved-cart-container--anim... { animation:.4s cubic-bezier(.23,1,.32,1) 1s both commerce-reserved-cart-s... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.region> — `Faiths for Oceans © 2026`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `3px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `MULTI-FAITH DECLARATION`)**:
-   - DOM & Selectors: Landmark `<section class="page-section full-bleed-section">` framing `MULTI-FAITH DECLARATION` and `SIGN THE DECLARATION` (*"SIGN THE DECLARATION"*) with `#c0c0c0` surface cards, `#fff` accents, and `template { display:none }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-section> — `MULTI-FAITH DECLARATION`)` uses `3px`, `14px`, `150px`, `0px` radii, `#fff` highlights, and assets (popup-overlay-f39ec8cdc95ccd84-mi..., popup-overlay-7afaba259a8e252a-mi..., favicon.ico).
+   - DOM & Selectors: Landmark `<section class="page-section full-bleed-section">` framing `MULTI-FAITH DECLARATION` and `The illustrated story needs JavaScript. You can ` (*"The illustrated story needs JavaScript. You can download the repo"*) with `#e7e7e7` surface cards, `#ffffff` accents, and `mmerce-reserved-cart-container--c... { animation:.35s cubic-bezier(.23,1,.32,1) forwards commerce-reserved-cart... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-section> — `MULTI-FAITH DECLARATION`)` uses `6px`, `11px`, `50%`, `2px` radii, `#ffffff` highlights, and assets (popup-overlay-f39ec8cdc95ccd84-mi..., popup-overlay-eb69d574e194d111-mi..., favicon.ico).
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://www.oceans.faith/moralcatch`)**:
-   - DOM & Selectors: Landmark `<footer class="sections">` anchoring `The Moral Catch: Fisheries & Oce` footer links (`SIGN THE DECLARATION · SIGNATORIES · POLICY PRIMERS · GLOSSARY · REPORT`), copy *"OCEAN INTERFAITH FORUM"*, and `#eee` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://www.oceans.faith/moralcatch`)` aligns to `640px` extracted from `www-oceans-faith_moralcatch` stylesheet with `1.3rem` lateral canvas padding with `10px` grid gap and attributes (data-sqsp-font-ids="6a3139e4691a2d058d1a1...", data-name="static-context", data-animation-state="booted").
+   - DOM & Selectors: Landmark `<footer class="sections">` anchoring `The Moral Catch: Fisheries & Oce` footer links (`EVENTS · SIGN THE DECLARATION · SIGNATORIES · PUBLICATIONS · GLOSSARY`), copy *"Join our mailing list to receive the latest news, updates an"*, and `#999999` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://www.oceans.faith/moralcatch`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `3px` lateral canvas padding with `8px` grid gap and attributes (data-sqsp-font-ids="6a3136d96307d35684222...", data-name="static-context", data-animation-state="booted").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"HIGH AMBITION COALITION"*
+- Copy Excerpt 1: *"Faiths for Oceans © 2026"*
 - Copy Excerpt 2: *"MULTI-FAITH DECLARATION"*
-- Copy Excerpt 3: *"SIGN THE DECLARATION"*
-- Copy Excerpt 4: *"OCEAN INTERFAITH FORUM"*
+- Copy Excerpt 3: *"The illustrated story needs JavaScript. You can download the report , read the sum..."*
+- Copy Excerpt 4: *"Join our mailing list to receive the latest news, updates and resources direct to..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)`
+- **Primary Easing Functions**: `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.33,0,.2,1)`, `cubic-bezier(0,.9,.33,1)`
 - **Extracted Stylesheet Rules (`www-oceans-faith_moralcatch`)**:
-- `summary { display:block }`
-- `video { display:inline-block }`
-- `template { display:none }`
-- `html { font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjus... }`
-- `a:focus { outline:thin dotted }`
+- `.uppercase { text-transform:uppercase }`
+- `rce-reserved-cart-container--anim... { animation:.4s cubic-bezier(.23,1,.32,1) 1s both commerce-reserved-cart-s... }`
+- `mmerce-reserved-cart-container--c... { animation:.35s cubic-bezier(.23,1,.32,1) forwards commerce-reserved-cart... }`
+- `.commerce-reserved-cart-container { left:0;right:0;top:var(--commerce-reserved-cart-margin-top,0);border-rad... }`
+- `.commerce-reserved-cart-dismiss { cursor:pointer;background:0 0;border:none;flex-shrink:0;justify-content:... }`
 - **Per-Selector Transition Rules**:
-- **Selector `.sqs-image-zoom-duplicate`**: `transition: opacity .4s ease` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Selector `.sqs-system-error input`**: `transition: background-color .1s ease-in-out, opacity .1s ease-in-out` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Selector `.sqsp-tooltip .buttons a:not(.rej...`**: `transition: background-color .1s ease-in-out, opacity .1s ease-in-out` extracted from `www-oceans-faith_moralcatch` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.25,.46,.45,.94)`)**: Governs interactive state transitions across `<header.bright-inverse>` and `<section.region>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+- **Selector `.commerce-reserved-cart-container`**: `transition: top .4s` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Selector `.template-cart-item-added-popover`**: `transition: transform .15s 50ms,opacity .2s` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Selector `uttons .commerce-mini-cart-view-c...`**: `transition: background-color .1s linear,color .1s linear` extracted from `www-oceans-faith_moralcatch` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.bright-inverse>` and `<section.region>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-oceans-faith_moralcatch`.

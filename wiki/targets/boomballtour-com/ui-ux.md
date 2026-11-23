@@ -1,73 +1,85 @@
+---
+title: "UI & UX Architecture: boomballtour-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: boomballtour-com
 
 ## Overview & Design Identity
 - **Target**: `boomballtour-com` (**Boom Ball Baseball · The Ultimate Family Sports Experience**)
 - **Production URL**: [https://boomballtour.com/](https://boomballtour.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ccc` canvas, `#6610f2` ink, `#6610f2` accent)
+- **Final Redirected URL**: [https://boomball.com/](https://boomball.com/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4eddf` canvas, `#1f335e` ink, `#ff0000` accent)
 - **Summary**: Discover Boom Ball — the interactive, family-friendly baseball show packed with energy, music, and nonstop fun for all ages.
-- **Total Clean CSS Variables Extracted**: `585` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `586` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Brooklyn-700`
-- **Body Font Stack**: `Hamburg-700`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--bbc-font-display: var(--bb-font-display, Georgia, serif)`, `--bb-font-display: "Groundout", Georgia, serif`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
-- **Body Copy**: CSS variables `--bbc-font-body: var(--bb-font-body, Arial, Helvetica, sans-serif)`, `--bs-body-color-rgb: 33,37,41`, `--bs-body-bg-rgb: 255,255,255`; rule `p` (`font-size: 16px!important`)
-- **Metadata & Labels**: CSS variables `--bbc-font-label: var(--bb-font-heading, Arial, Helvetica, sans-serif)`, `--bb-font-mono: "Roboto-600", "Courier New", monospace`, `--wpforms-label-color: rgba( 0, 0, 0, 0.85 )`; rule `,small` (`font-size: .875em`)
+- **Display Font Stack**: `Groundout`
+- **Body Font Stack**: `Inter-400`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 96px`, `line-height: 76.8px`, `font-weight: 500`); CSS variables `--bb-font-display: "Groundout", Georgia, serif`, `--bbc-font-display: var(--bb-font-display, Georgia, serif)`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 35.84px`, `font-weight: 700`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 23.4px`, `font-weight: 400`); CSS variables `--bb-font-body: "Inter-400", Arial, Helvetica, sans-serif`, `--bb-font-body-medium: "Inter-500", Arial, Helvetica, sans-serif`, `--bs-body-bg-rgb: 255,255,255`; rule `p` (`font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 23.4px`, `font-weight: 400`); CSS variables `--bb-font-mono: "Roboto-600", "Courier New", monospace`, `--bbc-font-label: var(--bb-font-heading, Arial, Helvetica, sans-serif)`, `--wpforms-field-size-sublabel-spacing: 5px`; rule `small` (`font-size: 15px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ccc` | `var(--iti-border-color)` in `:root` |
-| **Primary Typography Ink** | `#555` | `var(--iti-icon-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0d6efd` | `var(--bs-blue)` in `:root` |
-| **Interactive Accent / Highlight** | `#6610f2` | `var(--bs-indigo)` in `:root` |
-| **Secondary / Muted Copy** | `#6f42c1` | `var(--bs-purple)` in `:root` |
-| **Structural Hairline Border** | `#d63384` | `var(--bs-pink)` in `:root` |
-| **Variable Token (`--bbc-blue`)** | `#1f335e` | `var(--bbc-blue)` in `:root` |
-| **Variable Token (`--bbc-pink`)** | `#ff1e96` | `var(--bbc-pink)` in `:root` |
-| **Variable Token (`--bbc-gold`)** | `#c2a155` | `var(--bbc-gold)` in `:root` |
-| **Variable Token (`--bbc-paper`)** | `#f3ebdc` | `var(--bbc-paper)` in `:root` |
-| **Variable Token (`--bbc-ink`)** | `#43433d` | `var(--bbc-ink)` in `:root` |
-| **Variable Token (`--bbc-white`)** | `#fff` | `var(--bbc-white)` in `:root` |
+| **Primary Canvas Substrate** | `#f4eddf` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1f335e` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f3ebdc` | `var(--bb-color-paper)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff0000` | `.woocommerce a.remove { color: red }` (`#ff0000`) |
+| **Secondary / Muted Copy** | `#5ba238` | `var(--fkcart-saving-text-price-color)` in `:root` |
+| **Structural Hairline Border** | `#b8b3a8` | `var(--bb-color-divider)` in `:root` |
+| **Variable Token (`--bb-color-pink`)** | `#ff1e96` | `var(--bb-color-pink)` in `:root` |
+| **Variable Token (`--bb-color-gold`)** | `#c2a155` | `var(--bb-color-gold)` in `:root` |
+| **Variable Token (`--bb-color-ink`)** | `#43433d` | `var(--bb-color-ink)` in `:root` |
+| **Variable Token (`--bb-color-white`)** | `#ffffff` | `var(--bb-color-white)` in `:root` |
+| **Variable Token (`--bb-color-slate`)** | `#79859f` | `var(--bb-color-slate)` in `:root` |
+| **Variable Token (`--bb-color-inactive`)** | `#f894c5` | `var(--bb-color-inactive)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--fa-family-brands` | `"Font Awesome 7 Brands"` | Brand / Palette Token |
-| `--fa-font-brands` | `normal 400 1em/1 var(--fa-family-brands)` | Brand / Palette Token |
-| `--fa-family` | `var(--fa-family-brands)` | Typography / Scale Token |
-| `--fa-style` | `400` | Design System Custom Token |
-| `--bbc-blue` | `var(--bb-color-blue, #1f335e)` | Color / Atmospheric Token |
-| `--bbc-pink` | `var(--bb-color-pink, #ff1e96)` | Typography Ink Token |
-| `--bbc-gold` | `var(--bb-color-gold, #c2a155)` | Color / Atmospheric Token |
-| `--bbc-paper` | `var(--bb-color-paper, #f3ebdc)` | Canvas / Surface Token |
-| `--bbc-ink` | `var(--bb-color-ink, #43433d)` | Typography Ink Token |
-| `--bbc-white` | `var(--bb-color-white, #fff)` | Canvas / Surface Token |
-| `--bbc-radius` | `var(--bb-radius-media, 10px)` | Elevation / Border Token |
-| `--bbc-ease` | `var(--bb-motion-ease, cubic-bezier(0.22, 1, 0.36, 1))` | Motion / Easing Token |
-| `--bbc-duration` | `var(--bb-motion-duration, 0.42s)` | Motion / Easing Token |
-| `--bbc-font-body` | `var(--bb-font-body, Arial, Helvetica, sans-serif)` | Typography / Scale Token |
-| `--bbc-font-strong` | `"Inter-600", var(--bbc-font-body)` | Typography / Scale Token |
-| `--bbc-font-label` | `var(--bb-font-heading, Arial, Helvetica, sans-serif)` | Typography / Scale Token |
+| `--bb-color-pink` | `#ff1e96` | Typography Ink Token |
+| `--bb-color-blue` | `#1f335e` | Brand / Palette Token |
+| `--bb-color-gold` | `#c2a155` | Brand / Palette Token |
+| `--bb-color-ink` | `#43433d` | Typography Ink Token |
+| `--bb-color-paper` | `#f3ebdc` | Canvas / Surface Token |
+| `--bb-color-white` | `#ffffff` | Canvas / Surface Token |
+| `--bb-color-slate` | `#79859f` | Brand / Palette Token |
+| `--bb-color-frame` | `rgb(255 255 255 / 35%)` | Brand / Palette Token |
+| `--bb-color-divider` | `#B8B3A8` | Brand / Palette Token |
+| `--bb-color-inactive` | `#f894c5` | Brand / Palette Token |
+| `--bb-font-body` | `"Inter-400", Arial, Helvetica, sans-serif` | Typography / Scale Token |
+| `--bb-font-body-medium` | `"Inter-500", Arial, Helvetica, sans-serif` | Typography / Scale Token |
+| `--bb-font-heading` | `"Hamburg-700", Arial, Helvetica, sans-serif` | Typography Ink Token |
+| `--bb-font-display` | `"Groundout", Georgia, serif` | Typography / Scale Token |
+| `--bb-font-script` | `"Brooklyn-700", Georgia, serif` | Typography / Scale Token |
+| `--bb-font-mono` | `"Roboto-600", "Courier New", monospace` | Typography / Scale Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.footer-nav> — `boomballtour-com`)**:
-   - Landmark `<nav class="footer-nav">` hosting `Boom Ball Baseball · The Ultimate Fa` navigation (`What’s Boom Ball · Teams · About · Tickets · Merch`), DOM attributes (`data-id="D8BJ15BC77UDFA3HME2G"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `root { --fa-family-brands:"Font Awesome 7 Brands";--fa-font-brands:normal 400 1... }`.
+   - Landmark `<nav class="footer-nav">` (`273x144px`) hosting `Boom Ball Baseball · The Ultimate Fa` navigation (`What’s Boom Ball · Teams · About · Tickets · Merch`), DOM attributes (`data-id="D8BJ15BC77UDFA3HME2G"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `fkcart-modal { font-size:16px;color:var(--fkcart-primary-text-color);line-height:1.3;fo... }`.
 2. **Hero Stage & Focal Lead (<section.hero-banner> — `Bigger Than Baseball`)**:
-   - Landmark `<section class="hero-banner">` presenting display lead `Bigger Than Baseball` and copy excerpt *"EVERY INNING BRINGS"* over `#ccc` canvas and `#6610f2` ink.
-3. **Primary Showcase & Content Grid (<section.bb-feature> — `EVERY INNING BRINGS the WHOLE FAMI`)**:
-   - Landmark `<section class="bb-feature is-enhanced">` rendering section `EVERY INNING BRINGS the WHOLE FAMILY SOMETHING NEW` with copy *"Boom Ball is baseball reimagined for families—a fast-paced, high-"*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `.fab { --fa-family:var(--fa-family-brands);--fa-style:400 }`.
-4. **Interactive Detail & Feature Matrix (<article.bb-feature__item> — `Babe Ruth Hologram`)**:
-   - Landmark `<article class="bb-feature__item reveal-slide">` framing `Babe Ruth Hologram` and `Flips & Trick Plays` (*"Babe Ruth Hologram"*) with `#0d6efd` surface cards, `#6610f2` accents, and `.fa-firefox-browser { --fa:"\e007" }`.
+   - Landmark `<section class="hero-banner">` presenting display lead `Bigger Than Baseball` and copy excerpt *"Boom Ball is baseball reimagined for families—a fast-paced, high-"* over `#f4eddf` canvas and `#1f335e` ink.
+3. **Primary Showcase & Content Grid (<section.bb-feature> — `Boom Ball is baseball reimagined f`)**:
+   - Landmark `<section class="bb-feature is-enhanced">` rendering section `Boom Ball is baseball reimagined for families—a ` with copy *"EVERY INNING BRINGS"*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `webkit-scrollbar { width:6px;height:5px }`.
+4. **Interactive Detail & Feature Matrix (<article.bb-feature__item> — `EVERY INNING BRINGS`)**:
+   - Landmark `<article class="bb-feature__item reveal-slide">` framing `EVERY INNING BRINGS` and `Babe Ruth Hologram` (*"Babe Ruth Hologram"*) with `#f3ebdc` surface cards, `#ff0000` accents, and `webkit-scrollbar-thumb { background:666 }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://boomballtour.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Boom Ball Baseball · The Ultimat` footer links (`What’s Boom Ball · Teams · About · Tickets · Merch`), copy *"See The Great Bambino take the field and re-create his legen"*, and `#d63384` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Boom Ball Baseball · The Ultimat` footer links (`What’s Boom Ball · Teams · About · Tickets · Merch`), copy *"See The Great Bambino take the field and re-create his legen"*, and `#b8b3a8` structural dividers.

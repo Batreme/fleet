@@ -1,259 +1,296 @@
 ---
 title: "UI Prompt Blueprint: morrow-valerian-studio"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "morrow-valerian-studio"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`ppNeueMontreal` + `editorialNew`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c4c4c4` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: morrow-valerian-studio
 
-> **MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship** — An avant-garde fashion and knitwear digital flagship crafted by Valerian Studio, pairing crisp gallery white (`--color-white: #fff`) and neutral alabaster (`--color-neutral-50: #fafafa`) with deep espresso/charcoal ink (`--color-neutral-900: #171717`, `#030d07`), crimson/rose editorial accents (`#9f0712`, `#ff2357`), and a strict 12-column `h-svh` viewport grid.
+> **MORROW** (https://morrow.valerian.studio) — FALL26’ KNITWEAR PORCELAIN
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship**. An avant-garde fashion and knitwear digital flagship crafted by Valerian Studio, pairing crisp gallery white (`--color-white: #fff`) and neutral alabaster (`--color-neutral-50: #fafafa`) with deep espresso/charcoal ink (`--color-neutral-900: #171717`, `#030d07`), crimson/rose editorial accents (`#9f0712`, `#ff2357`), and a strict 12-column `h-svh` viewport grid.
-- **Visual Archetype**: **Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`ppNeueMontreal` + `editorialNew`)**.
+- **Brand Essence & Persona**: **MORROW** (`https://morrow.valerian.studio`). FALL26’ KNITWEAR PORCELAIN
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c4c4c4` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  1. **Signature Dual-Typeface Tension**: Pairs Neo-Grotesque `--font-pp-neue-montreal` (`"ppNeueMontreal"`) for geometric UI navigation with high-contrast serif `--font-editorial-new` (`"editorialNew"`) for poetic campaign headlines (`"Beyond the everyday."`, `"Same streets, new miles."`).
-  2. **Full-Viewport 12-Column SVH Stage**: Hero and lookbook sections lock to `<section class="relative grid h-svh grid-cols-12 gap-x-gutter">` with overlapping grid-cell placement (`col-start-1 row-start-1`).
-  3. **Three-Part Balanced Toolbar (`nav.site-nav-toolbar`)**: Uses `grid-cols-[1fr_auto_1fr]` so left navigation, centered `MORROW` brand mark, and right cart trigger remain mathematically centered at all viewport widths.
-  4. **Quintic Ease-Out Choreography**: Smooth lookbook transitions driven by `cubic-bezier(.22,1,.36,1)` alongside reduced-motion accessibility guards.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c4c4c4` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `editorialNew` for display copy (`Pace Base Layer`) with `ppNeueMontreal` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: normal 10px`, padding `15px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Full-Page Dimensions**: Desktop `1440×5154px` (`assets/desktop.png`), Mobile `390×6015px` (`assets/mobile.png`).
-- **Master Container Bounds**: Full-bleed `100vw` with fluid `px-page` lateral margins and `gap-x-gutter` column gutters.
-- **Canvas Lateral Padding & Spacing**: Custom `px-page` lateral padding token with `--spacing: .25rem` (4px) base unit.
-- **Border Radius Scale**: `0px` sharp editorial edges on all lookbook photography and product cards.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `15px` lateral canvas padding with `normal 10px` grid gap.
+- **Border Radius Scale**: `4px`, `.25rem`, `var(--radius-sm)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: 12-column CSS Grid (`grid-cols-12 gap-x-gutter`), asymmetric `col-span-4` sidebar nav + `col-span-10` / `col-span-8` editorial plates.
-- **Mobile Layout**: Collapses at `@media (max-width:400px)` and below `@media (min-width:48rem)` into `<nav class="site-mobile-menu-content px-page">` drawer.
-- **Extracted CSS Media Queries**: `@media (max-width:400px)`, `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: normal 10px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `15px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:400px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:40rem)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| Primary Gallery Canvas | `#ffffff` | `--color-white` (`main.bg-white`) |
-| Secondary Porcelain Surface | `#fafafa` | `--color-neutral-50` (`:root`) |
-| Tertiary Lookbook Surface | `#f5f5f5` | `--color-neutral-100` (`:root`) |
-| Primary Charcoal Ink | `#171717` | `--color-neutral-900` (`:root`) |
-| Deep Forest/Black Ink | `#030d07` | Extracted stylesheet dark tone (`#030d07` / `--color-black: #000`) |
-| Secondary Muted Copy | `#737373` | `--color-neutral-500` (`:root`) |
-| Subtle Label Gray | `#a1a1a1` | `--color-neutral-400` (`:root`) |
-| Hairline Grid Divider | `#e5e5e5` | `--color-neutral-200` (`:root`) |
-| Secondary Border Gray | `#d4d4d4` | `--color-neutral-300` (`:root`) |
-| Crimson Campaign Accent | `#9f0712` | `--color-red-800` (`:root`) |
-| Editorial Rose Highlight | `#ff2357` | `--color-rose-500` (`:root`) |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | `.text-black { color: black }` (`#000000`) |
+| **Elevated Surface / Card Substrate** | `#f5f5f5` | `.cart-item-image { background: #f5f5f5 }` |
+| **Interactive Accent / Highlight** | `#c4c4c4` | `.cart-quantity button:disabled { color: #c4c4c4 }` |
+| **Secondary / Muted Copy** | `#737373` | `.cart-item-size { color: #737373 }` |
+| **Structural Hairline Border** | `#e5e5e5` | `.cart-header { border-bottom: #e5e5e5 }` |
+| **Variable Token (`--color-red-800`)** | `#9f0712` | `var(--color-red-800)` in `:root` |
+| **Variable Token (`--color-rose-500`)** | `#ff2357` | `var(--color-rose-500)` in `:root` |
+| **Variable Token (`--color-neutral-50`)** | `#fafafa` | `var(--color-neutral-50)` in `:root` |
+| **Variable Token (`--color-neutral-300`)** | `#d4d4d4` | `var(--color-neutral-300)` in `:root` |
+| **Variable Token (`--color-neutral-400`)** | `#a1a1a1` | `var(--color-neutral-400)` in `:root` |
+| **Variable Token (`--color-neutral-600`)** | `#525252` | `var(--color-neutral-600)` in `:root` |
+| **Variable Token (`--color-neutral-900`)** | `#171717` | `var(--color-neutral-900)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--font-pp-neue-montreal` | `"ppNeueMontreal", "ppNeueMontreal Fallback"` | Primary Neo-Grotesque UI & grid sans font |
-| `--font-editorial-new` | `"editorialNew", "editorialNew Fallback"` | High-contrast editorial display serif font |
-| `--font-sans` | `var(--font-pp-neue-montreal), Arial, sans-serif` | Default sans-serif font stack |
-| `--color-white` | `#fff` | Primary canvas background |
-| `--color-black` | `#000` | Pure black contrast token |
-| `--color-neutral-50` | `#fafafa` | Porcelain soft background surface |
-| `--color-neutral-100` | `#f5f5f5` | Product card backdrop surface |
-| `--color-neutral-200` | `#e5e5e5` | 1px hairline border token |
-| `--color-neutral-300` | `#d4d4d4` | Hover border divider token |
-| `--color-neutral-400` | `#a1a1a1` | Muted index & size label ink |
-| `--color-neutral-500` | `#737373` | Secondary editorial body ink |
-| `--color-neutral-600` | `#525252` | Sub-heading ink |
-| `--color-neutral-900` | `#171717` | Primary heading & garment title ink |
-| `--color-red-800` | `#9f0712` | Deep crimson seasonal accent |
-| `--color-rose-500` | `#ff2357` | Vibrant rose campaign highlight |
-| `--spacing` | `.25rem` | Base 4px spatial unit |
-| `--container-xs` | `20rem` | Mini cart / drawer container width (320px) |
-| `--container-3xl` | `48rem` | Editorial narrative column max-width (768px) |
-| `--text-xs` | `.75rem` | 12px micro-label size (`line-height: calc(1 / .75)`) |
+| `--font-sans` | `var(--font-pp-neue-montreal), Arial, sans-serif` | Typography / Scale Token |
+| `--color-red-800` | `#9f0712` | Brand / Palette Token |
+| `--color-rose-500` | `#ff2357` | Brand / Palette Token |
+| `--color-neutral-50` | `#fafafa` | Brand / Palette Token |
+| `--color-neutral-100` | `#f5f5f5` | Brand / Palette Token |
+| `--color-neutral-200` | `#e5e5e5` | Brand / Palette Token |
+| `--color-neutral-300` | `#d4d4d4` | Brand / Palette Token |
+| `--color-neutral-400` | `#a1a1a1` | Brand / Palette Token |
+| `--color-neutral-500` | `#737373` | Brand / Palette Token |
+| `--color-neutral-600` | `#525252` | Brand / Palette Token |
+| `--color-neutral-900` | `#171717` | Brand / Palette Token |
+| `--color-black` | `#000` | Canvas / Surface Token |
+| `--color-white` | `#fff` | Canvas / Surface Token |
+| `--spacing` | `.25rem` | Layout / Spatial Grid Token |
+| `--container-xs` | `20rem` | Layout / Spatial Grid Token |
+| `--container-3xl` | `48rem` | Layout / Spatial Grid Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `"editorialNew", "editorialNew Fallback", Georgia, serif` (`--font-editorial-new`).
-- **Primary Body Stack**: `"ppNeueMontreal", "ppNeueMontreal Fallback", Arial, sans-serif` (`--font-pp-neue-montreal`).
-- **Technical / Metadata Stack**: `ui-monospace, "SF Mono", monospace` (SKU codes, garment weights, collection indices).
+- **Display Typography**: `editorialNew`.
+- **Primary Body Stack**: `ppNeueMontreal`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules
-- **Hero Display (`H1`)**: `clamp(2.75rem, 6vw, 5.25rem)`, `font-family: var(--font-editorial-new)`, `font-weight: 400`, `line-height: 0.96`, `letter-spacing: -0.02em`.
-- **Section Heading (`H2`)**: `clamp(1.5rem, 3.2vw, 2.75rem)`, `font-family: var(--font-pp-neue-montreal)` for `"FALL26’ KNITWEAR PORCELAIN"`, `"New Arrival"`, `"Categories"` and `var(--font-editorial-new)` for `"Beyond the everyday."`, `"Same streets, new miles."`.
-- **Body Copy**: `0.9375rem (15px)`, `font-family: var(--font-sans)`, `line-height: 1.55`, `color: var(--color-neutral-600)`.
-- **Metadata & Navigation Labels**: `var(--text-xs)` (`0.75rem`), `font-family: var(--font-pp-neue-montreal)`, `letter-spacing: 0.06em`, `text-transform: uppercase`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: CSS variables `--text-display: clamp(1.75rem, 3vw, 3rem)`, `--text-display--line-height: 1.2`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: 32px`, `font-weight: 500`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-body: 14px`, `--text-body--line-height: calc(1.25 / .875)`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.22,1,.36,1)` (quintic ease-out) and `cubic-bezier(0, 0, .2, 1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- `.shipping-banner-announcement` -> `transition: opacity .15s, transform .15s, visibility 0s linear .15s`
-- `.site-nav:has(:focus-visible)` -> `transform: translateY(0)` reveal from `translateY(-100%)`
-- `Lookbook & Card Image Reveals` -> `cubic-bezier(.22,1,.36,1)` over `500ms`
-- `@media (prefers-reduced-motion:reduce)` -> `transition: none`
+- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `morrow-valerian-studio` stylesheet.
+- **Selector `layer theme`**: `transition: .15s` extracted from `morrow-valerian-studio` stylesheet.
+- **Selector `.transition-colors`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `morrow-valerian-studio` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-nav>` and `<section.grid-cols-12>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html`)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ <header class="site-nav col-start-1 row-start-1">                      │
-│   <nav class="site-nav-toolbar grid grid-cols-[1fr_auto_1fr]">         │
-│   [Shop / Collections]           MORROW           [Search / Cart (0)]  │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="relative grid h-svh grid-cols-12 gap-x-gutter">        │
-│   H2: FALL26’ KNITWEAR PORCELAIN  |  H2: Beyond the everyday.          │
-├────────────────────────────────────────────────────────────────────────┤
-│ <main class="relative z-10 bg-white"> (12-Column Asymmetric Lookbook)  │
-│   <nav class="col-span-4"> H2: Categories  |  <div class="col-span-8"> │
-│   H2: New Arrival  [ Knitwear Plate 01 ]  [ Porcelain Plate 02 ]       │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="editorial-story"> H2: Same streets, new miles.         │
-├────────────────────────────────────────────────────────────────────────┤
-│ <header class="cart-header"> Slide-Over Cart Drawer (--container-xs 20 │
+│ DESKTOP VIEWPORT (1440px) — MORROW                                     │
+│ ====================================================================== │
+│ [ <header.site-nav> (1440x68px)       | MORROW · Shop · All products ] │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE: <section.h-svh> (w=1440px)                             | │
+│ | H1: Pace Base Layer                                                | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #c4c4c4                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE GRID (<section.grid-cols-12>) max-w: 96rem                | │
+│ | +------------------------------+  +------------------------------+ | │
+│ | | Everyday Long Sleeve         |  | Tempo Running Shorts         | | │
+│ | +------------------------------+  +------------------------------+ | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL MODULE (<article.group>) — Stride Windbreaker               | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.px-page>    ) | https://morrow.valerian.studio       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: normal 1)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-nav>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.h-svh>) — 390px Vertical Lead                 | │
+│ | H1: Pace Base Layer                                                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.grid-cols-12>) — 1-Col Stack              | │
+│ | [ Item 1: Everyday Long Sleeve                                   ] | │
+│ | [ Item 2: Tempo Running Shorts                                   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<article.group>) — 1-Col (Stride Windbreaker)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.px-page>    ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Tri-Balanced Navigation (`<header class="site-nav">` and `<nav class="site-nav-toolbar grid grid-cols-[1fr_auto_1fr]">`)**:
-   - Overlays the hero stage at `col-start-1 row-start-1` with a 3-column symmetric toolbar (`1fr auto 1fr`), `.shipping-banner-announcement` top bar, and `<nav class="site-mobile-menu-content px-page">` mobile sheet.
-2. **Full-Viewport SVH Hero (`<section class="relative grid h-svh grid-cols-12 gap-x-gutter">`)**:
-   - 100svh 12-column stage featuring seasonal campaign `"FALL26’ KNITWEAR PORCELAIN"` in `--font-pp-neue-montreal` and `"Beyond the everyday."` in `--font-editorial-new`.
-3. **Asymmetric Category & New Arrival Grid (`<main class="relative z-10 bg-white">`)**:
-   - Splits into `<nav class="col-span-4 min-w-0 self-start">` (`H2: Categories`) and `<nav class="col-span-12 lg:col-span-10">` (`H2: New Arrival`) on `--color-neutral-50: #fafafa` and `--color-neutral-100: #f5f5f5` cards.
-4. **Editorial Narrative Chapter (`H2: Same streets, new miles.`)**:
-   - High-contrast lookbook diptych using `--font-editorial-new`, `--container-3xl: 48rem` measure, and `--color-red-800: #9f0712` / `--color-rose-500: #ff2357` editorial accents.
-5. **Cart Drawer (`<header class="cart-header">`)**:
-   - Slide-over commerce bag constrained to `--container-xs: 20rem` (`320px`) with `--color-neutral-200: #e5e5e5` hairline dividers.
+1. **Brand Header & Navigation Bar (<header.site-nav> — `morrow-valerian-studio`)**:
+   - Landmark `<header class="site-nav col-start-1">` (`1440x68px`) hosting `MORROW` navigation (`MORROW · Shop · All products · Clothes · Accessories`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.cart-dialog::backdrop { background:0 0 }`.
+2. **Hero Stage & Focal Lead (<section.h-svh> — `Pace Base Layer`)**:
+   - Landmark `<section class="h-svh grid-cols-12">` presenting display lead `Pace Base Layer` and copy excerpt *"KNITWEAR PORCELAIN"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.grid-cols-12> — `Everyday Long Sleeve`)**:
+   - Landmark `<section class="grid-cols-12 gap-x-gutter">` rendering section `Everyday Long Sleeve` with copy *"Built for the changing rhythm of the season, Fall 2026 introduces"*, asset references (`3p45zkgyngvyk.css`, `19h1-_j7inwm4.css`, `376za7hcbsln-.css`, `2x1xg-ar74jvz.css`), and grid rule `.cart-scrim { pointer-events:none;background:00000047;position:absolute;inset:0 }`.
+4. **Interactive Detail & Feature Matrix (<article.group> — `Tempo Running Shorts`)**:
+   - Landmark `<article class="group font-sans">` framing `Tempo Running Shorts` and `Stride Windbreaker` (*"Explore the collection"*) with `#f5f5f5` surface cards, `#c4c4c4` accents, and `.cart-panel { background:fff;flex-direction:column;width:min(100%,480px);height:100%;m... }`.
+5. **Colophon & Global Directory Footer (<footer.px-page> — `https://morrow.valerian.studio`)**:
+   - Landmark `<footer class="px-page font-sans">` anchoring `MORROW` footer links (`MORROW · Shop · All products · Clothes · Accessories`), copy *"Stories of people, places and the details that shape the way"*, and `#e5e5e5` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: morrow-valerian-studio (MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship)
+# Master Zero-Shot Frontend Generation Prompt: morrow-valerian-studio (MORROW)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `morrow-valerian-studio` (MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `morrow-valerian-studio` (**MORROW** — `https://morrow.valerian.studio`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Swiss-Editorial Fashion Scrollytelling & 12-Column Viewport Grid (`ppNeueMontreal` + `editorialNew`).
-- **Primary Substrate**: `#ffffff` (`--color-white` (`main.bg-white`)), **Primary Ink**: `#171717`, **Accent / Highlight**: `#ff2357`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c4c4c4` accent).
+- **Identity & Domain Context**: FALL26’ KNITWEAR PORCELAIN
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#c4c4c4`.
 - **Site-Specific Differentiators**:
-  1. **Signature Dual-Typeface Tension**: Pairs Neo-Grotesque `--font-pp-neue-montreal` (`"ppNeueMontreal"`) for geometric UI navigation with high-contrast serif `--font-editorial-new` (`"editorialNew"`) for poetic campaign headlines (`"Beyond the everyday."`, `"Same streets, new miles."`).
-  2. **Full-Viewport 12-Column SVH Stage**: Hero and lookbook sections lock to `<section class="relative grid h-svh grid-cols-12 gap-x-gutter">` with overlapping grid-cell placement (`col-start-1 row-start-1`).
-  3. **Three-Part Balanced Toolbar (`nav.site-nav-toolbar`)**: Uses `grid-cols-[1fr_auto_1fr]` so left navigation, centered `MORROW` brand mark, and right cart trigger remain mathematically centered at all viewport widths.
-  4. **Quintic Ease-Out Choreography**: Smooth lookbook transitions driven by `cubic-bezier(.22,1,.36,1)` alongside reduced-motion accessibility guards.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c4c4c4` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `editorialNew` for display copy (`Pace Base Layer`) with `ppNeueMontreal` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: normal 10px`, padding `15px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `morrow-valerian-studio` in your global stylesheet:
 
 :root {
-  /* MORROW (by Valerian Studio) · High-Craft Editorial Knitwear & Fashion Flagship — Ground-Truth Extracted CSS Variables */
-  --font-pp-neue-montreal: "ppNeueMontreal", "ppNeueMontreal Fallback"; /* Primary Neo-Grotesque UI & grid sans font */
-  --font-editorial-new: "editorialNew", "editorialNew Fallback"; /* High-contrast editorial display serif font */
-  --font-sans: var(--font-pp-neue-montreal), Arial, sans-serif; /* Default sans-serif font stack */
-  --color-white: #fff; /* Primary canvas background */
-  --color-black: #000; /* Pure black contrast token */
-  --color-neutral-50: #fafafa; /* Porcelain soft background surface */
-  --color-neutral-100: #f5f5f5; /* Product card backdrop surface */
-  --color-neutral-200: #e5e5e5; /* 1px hairline border token */
-  --color-neutral-300: #d4d4d4; /* Hover border divider token */
-  --color-neutral-400: #a1a1a1; /* Muted index & size label ink */
-  --color-neutral-500: #737373; /* Secondary editorial body ink */
-  --color-neutral-600: #525252; /* Sub-heading ink */
-  --color-neutral-900: #171717; /* Primary heading & garment title ink */
-  --color-red-800: #9f0712; /* Deep crimson seasonal accent */
-  --color-rose-500: #ff2357; /* Vibrant rose campaign highlight */
-  --spacing: .25rem; /* Base 4px spatial unit */
-  --container-xs: 20rem; /* Mini cart / drawer container width (320px) */
-  --container-3xl: 48rem; /* Editorial narrative column max-width (768px) */
-  --text-xs: .75rem; /* 12px micro-label size (`line-height: calc(1 / .75)`) */
+  /* MORROW (morrow-valerian-studio) — Live-Grounded CSS Variables */
+  --font-sans: var(--font-pp-neue-montreal), Arial, sans-serif; /* Typography / Scale Token (morrow-valerian-studio) */
+  --color-red-800: #9f0712; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-rose-500: #ff2357; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-50: #fafafa; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-100: #f5f5f5; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-200: #e5e5e5; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-300: #d4d4d4; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-400: #a1a1a1; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-500: #737373; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-600: #525252; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-neutral-900: #171717; /* Brand / Palette Token (morrow-valerian-studio) */
+  --color-black: #000; /* Canvas / Surface Token (morrow-valerian-studio) */
+  --color-white: #fff; /* Canvas / Surface Token (morrow-valerian-studio) */
+  --spacing: .25rem; /* Layout / Spatial Grid Token (morrow-valerian-studio) */
+  --container-xs: 20rem; /* Layout / Spatial Grid Token (morrow-valerian-studio) */
+  --container-3xl: 48rem; /* Layout / Spatial Grid Token (morrow-valerian-studio) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Gallery Canvas**: `#ffffff` — grounded in `--color-white` (`main.bg-white`)
-- **Secondary Porcelain Surface**: `#fafafa` — grounded in `--color-neutral-50` (`:root`)
-- **Tertiary Lookbook Surface**: `#f5f5f5` — grounded in `--color-neutral-100` (`:root`)
-- **Primary Charcoal Ink**: `#171717` — grounded in `--color-neutral-900` (`:root`)
-- **Deep Forest/Black Ink**: `#030d07` — grounded in Extracted stylesheet dark tone (`#030d07` / `--color-black: #000`)
-- **Secondary Muted Copy**: `#737373` — grounded in `--color-neutral-500` (`:root`)
-- **Subtle Label Gray**: `#a1a1a1` — grounded in `--color-neutral-400` (`:root`)
-- **Hairline Grid Divider**: `#e5e5e5` — grounded in `--color-neutral-200` (`:root`)
-- **Secondary Border Gray**: `#d4d4d4` — grounded in `--color-neutral-300` (`:root`)
-- **Crimson Campaign Accent**: `#9f0712` — grounded in `--color-red-800` (`:root`)
-- **Editorial Rose Highlight**: `#ff2357` — grounded in `--color-rose-500` (`:root`)
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in `.text-black { color: black }` (`#000000`)
+- **Elevated Surface / Card Substrate**: `#f5f5f5` — grounded in `.cart-item-image { background: #f5f5f5 }`
+- **Interactive Accent / Highlight**: `#c4c4c4` — grounded in `.cart-quantity button:disabled { color: #c4c4c4 }`
+- **Secondary / Muted Copy**: `#737373` — grounded in `.cart-item-size { color: #737373 }`
+- **Structural Hairline Border**: `#e5e5e5` — grounded in `.cart-header { border-bottom: #e5e5e5 }`
+- **Variable Token (`--color-red-800`)**: `#9f0712` — grounded in `var(--color-red-800)` in `:root`
+- **Variable Token (`--color-rose-500`)**: `#ff2357` — grounded in `var(--color-rose-500)` in `:root`
+- **Variable Token (`--color-neutral-50`)**: `#fafafa` — grounded in `var(--color-neutral-50)` in `:root`
+- **Variable Token (`--color-neutral-300`)**: `#d4d4d4` — grounded in `var(--color-neutral-300)` in `:root`
+- **Variable Token (`--color-neutral-400`)**: `#a1a1a1` — grounded in `var(--color-neutral-400)` in `:root`
+- **Variable Token (`--color-neutral-600`)**: `#525252` — grounded in `var(--color-neutral-600)` in `:root`
+- **Variable Token (`--color-neutral-900`)**: `#171717` — grounded in `var(--color-neutral-900)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×5154px` full-page capture (`1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×6015px` full-page capture (`390px` standard mobile width).
-- **Container Max-Width**: Full-bleed `100vw` with fluid `px-page` lateral margins and `gap-x-gutter` column gutters
-- **Padding & Gutters**: Custom `px-page` lateral padding token with `--spacing: .25rem` (4px) base unit
-- **Desktop Grid**: 12-column CSS Grid (`grid-cols-12 gap-x-gutter`), asymmetric `col-span-4` sidebar nav + `col-span-10` / `col-span-8` editorial plates
-- **Mobile Adaptation**: Collapses at `@media (max-width:400px)` and below `@media (min-width:48rem)` into `<nav class="site-mobile-menu-content px-page">` drawer
-- **Media Queries**: `@media (max-width:400px)`, `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px)
-- **Corner Radii**: `0px` sharp editorial edges on all lookbook photography and product cards
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `15px` lateral canvas padding with `normal 10px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: normal 10px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `15px` horizontal padding
+- **Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:400px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:40rem)`
+- **Corner Radii**: `4px`, `.25rem`, `var(--radius-sm)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `"editorialNew", "editorialNew Fallback", Georgia, serif` (`--font-editorial-new`)
-- **Body Font Stack**: `"ppNeueMontreal", "ppNeueMontreal Fallback", Arial, sans-serif` (`--font-pp-neue-montreal`)
-- **Monospace / Technical Font Stack**: `ui-monospace, "SF Mono", monospace` (SKU codes, garment weights, collection indices)
-- **H1 Display Rule**: `clamp(2.75rem, 6vw, 5.25rem)`, `font-family: var(--font-editorial-new)`, `font-weight: 400`, `line-height: 0.96`, `letter-spacing: -0.02em`
-- **H2 Section Rule**: `clamp(1.5rem, 3.2vw, 2.75rem)`, `font-family: var(--font-pp-neue-montreal)` for `"FALL26’ KNITWEAR PORCELAIN"`, `"New Arrival"`, `"Categories"` and `var(--font-editorial-new)` for `"Beyond the everyday."`, `"Same streets, new miles."`
-- **Body Copy Rule**: `0.9375rem (15px)`, `font-family: var(--font-sans)`, `line-height: 1.55`, `color: var(--color-neutral-600)`
-- **Metadata & Index Rule**: `var(--text-xs)` (`0.75rem`), `font-family: var(--font-pp-neue-montreal)`, `letter-spacing: 0.06em`, `text-transform: uppercase`
+- **Display Font Stack**: `editorialNew`
+- **Body Font Stack**: `ppNeueMontreal`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: CSS variables `--text-display: clamp(1.75rem, 3vw, 3rem)`, `--text-display--line-height: 1.2`
+- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: 32px`, `font-weight: 500`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-body: 14px`, `--text-body--line-height: calc(1.25 / .875)`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`
 
-### 6. Component Hierarchy & Real DOM Landmarks
-Scaffold the interface with these exact structural regions and class selectors from `morrow-valerian-studio`:
-1. **Tri-Balanced Navigation (`<header class="site-nav">` and `<nav class="site-nav-toolbar grid grid-cols-[1fr_auto_1fr]">`)**:
-   - Architecture & Selectors: Overlays the hero stage at `col-start-1 row-start-1` with a 3-column symmetric toolbar (`1fr auto 1fr`), `.shipping-banner-announcement` top bar, and `<nav class="site-mobile-menu-content px-page">` mobile sheet.
-   - Layout & State Contract: Sticky/fixed top header navigation adapting across `@media (max-width:400px)`, `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px) with `cubic-bezier(.22,1,.36,1)` (quintic ease-out) and `cubic-bezier(0, 0, .2, 1)` menu transitions.
-2. **Full-Viewport SVH Hero (`<section class="relative grid h-svh grid-cols-12 gap-x-gutter">`)**:
-   - Architecture & Selectors: 100svh 12-column stage featuring seasonal campaign `"FALL26’ KNITWEAR PORCELAIN"` in `--font-pp-neue-montreal` and `"Beyond the everyday."` in `--font-editorial-new`.
-   - Layout & State Contract: Full-viewport hero stage (`1440px` desktop / `390px` mobile) pairing `#ffffff` substrate with `#171717` display typography (`H1`).
-3. **Asymmetric Category & New Arrival Grid (`<main class="relative z-10 bg-white">`)**:
-   - Architecture & Selectors: Splits into `<nav class="col-span-4 min-w-0 self-start">` (`H2: Categories`) and `<nav class="col-span-12 lg:col-span-10">` (`H2: New Arrival`) on `--color-neutral-50: #fafafa` and `--color-neutral-100: #f5f5f5` cards.
-   - Layout & State Contract: Primary showcase grid executing 12-column CSS Grid (`grid-cols-12 gap-x-gutter`), asymmetric `col-span-4` sidebar nav + `col-span-10` / `col-span-8` editorial plates on desktop and Collapses at `@media (max-width:400px)` and below `@media (min-width:48rem)` into `<nav class="site-mobile-menu-content px-page">` drawer on mobile.
-4. **Editorial Narrative Chapter (`H2: Same streets, new miles.`)**:
-   - Architecture & Selectors: High-contrast lookbook diptych using `--font-editorial-new`, `--container-3xl: 48rem` measure, and `--color-red-800: #9f0712` / `--color-rose-500: #ff2357` editorial accents.
-   - Layout & State Contract: Interactive specification & narrative module framed by `0px` sharp editorial edges on all lookbook photography and product cards and `#ff2357` highlights.
-5. **Cart Drawer (`<header class="cart-header">`)**:
-   - Architecture & Selectors: Slide-over commerce bag constrained to `--container-xs: 20rem` (`320px`) with `--color-neutral-200: #e5e5e5` hairline dividers.
-   - Layout & State Contract: Footer directory and utility bar anchored to Full-bleed `100vw` with fluid `px-page` lateral margins and `gap-x-gutter` column gutters with Custom `px-page` lateral padding token with `--spacing: .25rem` (4px) base unit lateral gutters.
+### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
+Scaffold `morrow-valerian-studio` (`MORROW`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.site-nav> — `morrow-valerian-studio`)**:
+   - DOM & Selectors: Landmark `<header class="site-nav col-start-1">` (`1440x68px`) hosting `MORROW` navigation (`MORROW · Shop · All products · Clothes · Accessories`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.cart-dialog::backdrop { background:0 0 }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-nav> — `morrow-valerian-studio`)` (`morrow-valerian-studio`) adapts across `@media (prefers-reduced-motion:no-preference)`, `@media (max-width:400px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:40rem)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)` transitions and links `MORROW · Shop · All products · Clothes · Accessories`.
+2. **Hero Stage & Focal Lead (<section.h-svh> — `Pace Base Layer`)**:
+   - DOM & Selectors: Landmark `<section class="h-svh grid-cols-12">` presenting display lead `Pace Base Layer` and copy excerpt *"KNITWEAR PORCELAIN"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Pace Base Layer`.
+3. **Primary Showcase & Content Grid (<section.grid-cols-12> — `Everyday Long Sleeve`)**:
+   - DOM & Selectors: Landmark `<section class="grid-cols-12 gap-x-gutter">` rendering section `Everyday Long Sleeve` with copy *"Built for the changing rhythm of the season, Fall 2026 introduces"*, asset references (`3p45zkgyngvyk.css`, `19h1-_j7inwm4.css`, `376za7hcbsln-.css`, `2x1xg-ar74jvz.css`), and grid rule `.cart-scrim { pointer-events:none;background:00000047;position:absolute;inset:0 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.grid-cols-12> — `Everyday Long Sleeve`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: normal 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `15px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<article.group> — `Tempo Running Shorts`)**:
+   - DOM & Selectors: Landmark `<article class="group font-sans">` framing `Tempo Running Shorts` and `Stride Windbreaker` (*"Explore the collection"*) with `#f5f5f5` surface cards, `#c4c4c4` accents, and `.cart-panel { background:fff;flex-direction:column;width:min(100%,480px);height:100%;m... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.group> — `Tempo Running Shorts`)` uses `4px`, `.25rem`, `var(--radius-sm)` radii, `#c4c4c4` highlights, and assets (3p45zkgyngvyk.css, 19h1-_j7inwm4.css, 376za7hcbsln-.css).
+5. **Colophon & Global Directory Footer (<footer.px-page> — `https://morrow.valerian.studio`)**:
+   - DOM & Selectors: Landmark `<footer class="px-page font-sans">` anchoring `MORROW` footer links (`MORROW · Shop · All products · Clothes · Accessories`), copy *"Stories of people, places and the details that shape the way"*, and `#e5e5e5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.px-page> — `https://morrow.valerian.studio`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `15px` lateral canvas padding with `normal 10px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
-### 7. Motion & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)` (quintic ease-out) and `cubic-bezier(0, 0, .2, 1)`
+#### Verbatim DOM Copy Excerpts (`dom.html`)
+- Copy Excerpt 1: *"KNITWEAR PORCELAIN"*
+- Copy Excerpt 2: *"Built for the changing rhythm of the season, Fall 2026 introduces a considered bal..."*
+- Copy Excerpt 3: *"Explore the collection"*
+- Copy Excerpt 4: *"Stories of people, places and the details that shape the way we move. From the fir..."*
+
+### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
+- **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`
+- **Extracted Stylesheet Rules (`morrow-valerian-studio`)**:
+- `.cart-dialog::backdrop { background:0 0 }`
+- `.cart-scrim { pointer-events:none;background:00000047;position:absolute;inset:0 }`
+- `.cart-panel { background:fff;flex-direction:column;width:min(100%,480px);height:100%;m... }`
+- `.cart-count { vertical-align:middle;margin-left:4px;font-size:12px }`
+- `.cart-close { cursor:pointer;place-items:center;width:40px;height:40px;display:grid }`
 - **Per-Selector Transition Rules**:
-- `.shipping-banner-announcement` -> `transition: opacity .15s, transform .15s, visibility 0s linear .15s`
-- `.site-nav:has(:focus-visible)` -> `transform: translateY(0)` reveal from `translateY(-100%)`
-- `Lookbook & Card Image Reveals` -> `cubic-bezier(.22,1,.36,1)` over `500ms`
-- `@media (prefers-reduced-motion:reduce)` -> `transition: none`
+- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `morrow-valerian-studio` stylesheet.
+- **Selector `layer theme`**: `transition: .15s` extracted from `morrow-valerian-studio` stylesheet.
+- **Selector `.transition-colors`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `morrow-valerian-studio` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-nav>` and `<section.grid-cols-12>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
-- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above.
+- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `morrow-valerian-studio`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```

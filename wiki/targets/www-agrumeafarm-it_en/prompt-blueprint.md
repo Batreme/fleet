@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: www-agrumeafarm-it_en"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-agrumeafarm-it_en"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#f39200`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-agrumeafarm-it_en
 
 > **Agrumea Farm · Jams, pestos and flavours of Sicily** (https://www.agrumeafarm.it/en) — Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Agrumea Farm · Jams, pestos and flavours of Sicily** (`https://www.agrumeafarm.it/en`). Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#f39200`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e94e1b` (`var(--color-orange)` in `:root`) paired with `#ffffff` primary typography and `#f39200` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivymode` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: var(--space-xs)`, padding `18px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#762530` primary typography and `#e94e1b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivystyle-sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0.5px`, padding `30px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1024px` extracted from `www-agrumeafarm-it_en` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `18px` lateral canvas padding with `var(--space-xs)` grid gap.
-- **Border Radius Scale**: `999px`, `14px`, `2px`, `50%`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `30px` lateral canvas padding with `0.5px` grid gap.
+- **Border Radius Scale**: `0px 0px 15px`, `999px`, `14px`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: var(--space-xs)`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0.5px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
@@ -48,34 +52,35 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#e94e1b` | `var(--color-orange)` in `:root` |
-| **Primary Typography Ink** | `#762530` | `var(--color-border)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fdf3eb` | `var(--color-white)` in `:root` |
-| **Interactive Accent / Highlight** | `#f39200` | `var(--color-yellow)` in `:root` |
+| **Primary Canvas Substrate** | `#fdf3eb` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#762530` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `body { background: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#e94e1b` | live computed `a` `background-color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#ffa500` | `:hover { color: orange }` (`#ffa500`) |
-| **Structural Hairline Border** | `#ffffff` | `:hover { color: white }` (`#ffffff`) |
+| **Structural Hairline Border** | `#762530` | `var(--color-border)` in `:root` |
+| **Variable Token (`--color-yellow`)** | `#f39200` | `var(--color-yellow)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--jar-circle-rotation` | `0deg` | Design System Custom Token |
-| `--jar-marquee-top` | `55%` | Dimension / Scale Token |
-| `--jar-marquee-w` | `100vw` | Dimension / Scale Token |
-| `--jar-marquee-h` | `560px` | Dimension / Scale Token |
-| `--jar-marquee-angle` | `10deg` | Design System Custom Token |
-| `--jar-item-w` | `200px` | Dimension / Scale Token |
-| `--jar-item-h` | `320px` | Dimension / Scale Token |
-| `--jar-shape-intro-opacity` | `0` | Design System Custom Token |
-| `--jar-shape-intro-y` | `24px` | Dimension / Scale Token |
-| `--jar-badge-intro-opacity` | `0` | Design System Custom Token |
-| `--jar-badge-intro-y` | `12px` | Dimension / Scale Token |
-| `--jar-badge-intro-rotation` | `-18deg` | Design System Custom Token |
-| `--jar-parallax-x` | `0` | Design System Custom Token |
-| `--jar-parallax-y` | `0` | Design System Custom Token |
-| `--jar-badge-shift-x` | `-52%` | Dimension / Scale Token |
 | `--color-orange` | `#e94e1b` | Brand / Palette Token |
+| `--color-border` | `#762530` | Brand / Palette Token |
+| `--color-white` | `#fdf3eb` | Canvas / Surface Token |
+| `--color-yellow` | `#f39200` | Brand / Palette Token |
+| `--border-round` | `15px` | Elevation / Border Token |
+| `--container-padding` | `clamp(30px,2vw,40px)` | Layout / Spatial Grid Token |
+| `--grid-columns` | `12` | Layout / Spatial Grid Token |
+| `--grid-gap-x` | `clamp(12px,1.45vw,30px)` | Layout / Spatial Grid Token |
+| `--grid-gap-y` | `0` | Layout / Spatial Grid Token |
+| `--header-offset` | `clamp(20px,2vw,30px)` | Layout / Spatial Grid Token |
+| `--header-logo-width` | `clamp(126px,10vw,152px)` | Layout / Spatial Grid Token |
+| `--header-pad-y` | `30px` | Layout / Spatial Grid Token |
+| `--header-brand-width` | `135px` | Brand / Palette Token |
+| `--header-safe-top` | `calc(var(--header-pad-y) + var(--header-brand-width)*130/151)` | Layout / Spatial Grid Token |
+| `--font-sans` | `"ivystyle-sans","Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif` | Typography / Scale Token |
+| `--text-small` | `.875rem` | Typography Ink Token |
 
 ---
 
@@ -83,14 +88,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `ivystyle-sans`.
-- **Primary Body Stack**: `ivymode`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `ivystyle-sans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-display: clamp(4rem, calc(2.9rem + 11vw) ,999999px)`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-base)`, `var(--text-small)`, `var(--text-medium)`, `var(--text-large)`, `.9em`).
-- **Body Copy**: CSS variables `--text-base: 1rem`.
-- **Metadata & Navigation Labels**: CSS variables `--text-small: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 41.6px`, `font-weight: 400`); CSS variables `--text-display: clamp(4rem, calc(2.9rem + 11vw) ,999999px)`.
+- **Section Heading (`H2`)**: observed font-size ladder: `32px`, `16px`, `13px`, `14px`, `var(--text-base)`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); CSS variables `--text-base: 1rem`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); CSS variables `--text-small: .875rem`.
 
 ---
 
@@ -103,47 +108,66 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#
 - **Selector `jar-slider.is-flying-out[data-v-a...`**: `transition: opacity .42s var(--ease-soft),scale .42s var(--ease-soft)` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Selector `.jar-slider__prompt[data-v-a006feed]`**: `transition: opacity .9s var(--ease-premium) .18s,transform .9s var(--ease-...` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Selector `.site-footer__link[data-v-68ac8fad]`**: `transition: color .3s var(--ease-out-expo)` extracted from `www-agrumeafarm-it_en` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.is-initial>` and `<section.jar-slider>`.
+- **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.jar-slider:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Agrumea Farm · Jams, pestos and flavours o │
 │ ====================================================================== │
-│ [ <header.is-initial>      | IT · EN                                ]  │
+│ [ <header.site-header> (1440x97px)    | IT · EN                      ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.jar-slider>                                 |   │
-│ | H1: Agrumea Farm: Sicilian artisan marmalades, spread...         |   │
-│ | Substrate: #e94e1b    | Ink: #ffffff    | Accent: #f39200        |   │
+│ | HERO STAGE: <section.jar-slider> (w=1440px)                        | │
+│ | H1: Agrumea Farm: Sicilian artisan marmalades, spread...           | │
+│ | Substrate: #fdf3eb | Ink: #762530 | Accent: #e94e1b                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.jar-slider>      ) max-w: 1024px         |   │
+│ | SHOWCASE GRID (<section.jar-slider:nth(2)) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Agrumea Farm · Jams, pestos  |  | m m e e n n u u c c l l o o  | | │
+│ | | SCROLL TO DISCOVER           |  | Scroll to discover           | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.is-initial] -> [<section.jar-slide] -> [<section.jar-slide] │
+│ | DETAIL MODULE (<section.jar-slider:nth(3)) — Agrumea Farm · Jams,  | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.site-shell__le) | https://www.agrumeafarm.it/en      │
+│ [ FOOTER (<footer.site-shell__) | https://www.agrumeafarm.it/en        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0.5px)      │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.jar-slider>) — 390px Vertical Lead            | │
+│ | H1: Agrumea Farm: Sicilian artisan marmalades, spread...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.jar-slider:nt) — 1-Col Stack              | │
+│ | [ Item 1: SCROLL TO DISCOVER                                     ] | │
+│ | [ Item 2: Scroll to discover                                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.jar-slider:nth() — 1-Col (Agrumea Farm · Jam) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.site-shell__) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.is-initial> — `www-agrumeafarm-it_en`)**:
-   - Landmark `<header class="is-initial site-header">` hosting `Agrumea Farm · Jams, pestos and flav` navigation (`IT · EN`), DOM attributes (`data-v-aa931410`, `data-v-3a145d88`, `data-header-theme="dark"`, `data-header-logo="full"`), and stylesheet rule `active { cursor:grabbing }`.
+1. **Brand Header & Navigation Bar (<header.site-header> — `www-agrumeafarm-it_en`)**:
+   - Landmark `<header class="site-header">` (`1440x97px`) hosting `Agrumea Farm · Jams, pestos and flav` navigation (`IT · EN`), DOM attributes (`data-v-aa931410`, `data-v-3a145d88`, `data-header-theme="dark"`, `data-header-logo="full"`), and stylesheet rule `active { cursor:grabbing }`.
 2. **Hero Stage & Focal Lead (<section.jar-slider> — `Agrumea Farm: Sicilian artisan mar`)**:
-   - Landmark `<section class="jar-slider">` presenting display lead `Agrumea Farm: Sicilian artisan marmalades, spread...` and copy excerpt *"Agrumea Farm · Jams, pestos and flavours of Sicily"* over `#e94e1b` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.jar-slider> — `Agrumea Farm · Jams, pestos and fl`)**:
-   - Landmark `<section class="jar-slider">` rendering section `Agrumea Farm · Jams, pestos and flavours of Sici` with copy *"m m e e n n u u c c l l o o s s e e"*, asset references (`use.typekit.net`, `p.typekit.net`, `yey3ruw.css`, `CmsHomePage.CpbPGEL3.css`), and grid rule `.tk-ivystyle-sans { font-family: "ivystyle-sans",sans-serif; }`.
-4. **Interactive Detail & Feature Matrix (<section.jar-slider> — `m m e e n n u u c c l l o o s s e `)**:
-   - Landmark `<section class="jar-slider">` framing `m m e e n n u u c c l l o o s s e e` and `c c l l o o s s e e` (*"c c l l o o s s e e"*) with `#fdf3eb` surface cards, `#f39200` accents, and `.tk-ivymode { font-family: "ivymode",sans-serif; }`.
+   - Landmark `<section class="jar-slider">` presenting display lead `Agrumea Farm: Sicilian artisan marmalades, spread...` and copy excerpt *"SCROLL TO DISCOVER"* over `#fdf3eb` canvas and `#762530` ink.
+3. **Primary Showcase & Content Grid (<section.jar-slider:nth(2)> — `SCROLL TO DISCOVER`)**:
+   - Landmark `<section class="jar-slider">` rendering section `SCROLL TO DISCOVER` with copy *"Scroll to discover"*, asset references (`use.typekit.net`, `p.typekit.net`, `yey3ruw.css`, `CmsHomePage.CpbPGEL3.css`), and grid rule `.tk-ivystyle-sans { font-family: "ivystyle-sans",sans-serif; }`.
+4. **Interactive Detail & Feature Matrix (<section.jar-slider:nth(3)> — `Scroll to discover`)**:
+   - Landmark `<section class="jar-slider">` framing `Scroll to discover` and `Agrumea Farm · Jams, pestos and flavours of Sici` (*"Agrumea Farm · Jams, pestos and flavours of Sicily"*) with `#ffffff` surface cards, `#e94e1b` accents, and `.tk-ivymode { font-family: "ivymode",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.site-shell__legal> — `https://www.agrumeafarm.it/en`)**:
-   - Landmark `<footer class="site-shell__legal">` anchoring `Agrumea Farm · Jams, pestos and ` footer links (`IT · EN`), copy *"Scroll to discover"*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="site-shell__legal">` anchoring `Agrumea Farm · Jams, pestos and ` footer links (`IT · EN`), copy *"m m e e n n u u c c l l o o s s e e"*, and `#762530` structural dividers.
 
 ---
 
@@ -155,88 +179,89 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-agrumeafarm-it_en` (**Agrumea Farm · Jams, pestos and flavours of Sicily** — `https://www.agrumeafarm.it/en`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#e94e1b` / `#f39200`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`).
 - **Identity & Domain Context**: Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
-- **Primary Substrate**: `#e94e1b` (`var(--color-orange)` in `:root`), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#f39200`.
+- **Primary Substrate**: `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#762530`, **Accent / Highlight**: `#e94e1b`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e94e1b` (`var(--color-orange)` in `:root`) paired with `#ffffff` primary typography and `#f39200` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivymode` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: var(--space-xs)`, padding `18px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#762530` primary typography and `#e94e1b` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivystyle-sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0.5px`, padding `30px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-agrumeafarm-it_en` in your global stylesheet:
 
 :root {
-  /* Agrumea Farm · Jams, pestos and flavours of Sicily (www-agrumeafarm-it_en) — Ground-Truth Extracted CSS Variables */
-  --jar-circle-rotation: 0deg; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-marquee-top: 55%; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-marquee-w: 100vw; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-marquee-h: 560px; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-marquee-angle: 10deg; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-item-w: 200px; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-item-h: 320px; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-shape-intro-opacity: 0; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-shape-intro-y: 24px; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-badge-intro-opacity: 0; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-badge-intro-y: 12px; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
-  --jar-badge-intro-rotation: -18deg; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-parallax-x: 0; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-parallax-y: 0; /* Design System Custom Token (www-agrumeafarm-it_en) */
-  --jar-badge-shift-x: -52%; /* Dimension / Scale Token (www-agrumeafarm-it_en) */
+  /* Agrumea Farm · Jams, pestos and flavours of Sicily (www-agrumeafarm-it_en) — Live-Grounded CSS Variables */
   --color-orange: #e94e1b; /* Brand / Palette Token (www-agrumeafarm-it_en) */
+  --color-border: #762530; /* Brand / Palette Token (www-agrumeafarm-it_en) */
+  --color-white: #fdf3eb; /* Canvas / Surface Token (www-agrumeafarm-it_en) */
+  --color-yellow: #f39200; /* Brand / Palette Token (www-agrumeafarm-it_en) */
+  --border-round: 15px; /* Elevation / Border Token (www-agrumeafarm-it_en) */
+  --container-padding: clamp(30px,2vw,40px); /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --grid-columns: 12; /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --grid-gap-x: clamp(12px,1.45vw,30px); /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --grid-gap-y: 0; /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --header-offset: clamp(20px,2vw,30px); /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --header-logo-width: clamp(126px,10vw,152px); /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --header-pad-y: 30px; /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --header-brand-width: 135px; /* Brand / Palette Token (www-agrumeafarm-it_en) */
+  --header-safe-top: calc(var(--header-pad-y) + var(--header-brand-width)*130/151); /* Layout / Spatial Grid Token (www-agrumeafarm-it_en) */
+  --font-sans: "ivystyle-sans","Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif; /* Typography / Scale Token (www-agrumeafarm-it_en) */
+  --text-small: .875rem; /* Typography Ink Token (www-agrumeafarm-it_en) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#e94e1b` — grounded in `var(--color-orange)` in `:root`
-- **Primary Typography Ink**: `#762530` — grounded in `var(--color-border)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fdf3eb` — grounded in `var(--color-white)` in `:root`
-- **Interactive Accent / Highlight**: `#f39200` — grounded in `var(--color-yellow)` in `:root`
+- **Primary Canvas Substrate**: `#fdf3eb` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#762530` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `body { background: white }` (`#ffffff`)
+- **Interactive Accent / Highlight**: `#e94e1b` — grounded in live computed `a` `background-color` (`computed_styles.json`)
 - **Secondary / Muted Copy**: `#ffa500` — grounded in `:hover { color: orange }` (`#ffa500`)
-- **Structural Hairline Border**: `#ffffff` — grounded in `:hover { color: white }` (`#ffffff`)
+- **Structural Hairline Border**: `#762530` — grounded in `var(--color-border)` in `:root`
+- **Variable Token (`--color-yellow`)**: `#f39200` — grounded in `var(--color-yellow)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1024px` extracted from `www-agrumeafarm-it_en` stylesheet
-- **Padding & Gutters**: `18px` lateral canvas padding with `var(--space-xs)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: var(--space-xs)`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `30px` lateral canvas padding with `0.5px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0.5px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding
 - **Media Queries**: `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (prefers-reduced-motion:reduce)`
-- **Corner Radii**: `999px`, `14px`, `2px`, `50%`
+- **Corner Radii**: `0px 0px 15px`, `999px`, `14px`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `ivystyle-sans`
-- **Body Font Stack**: `ivymode`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--text-display: clamp(4rem, calc(2.9rem + 11vw) ,999999px)`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-base)`, `var(--text-small)`, `var(--text-medium)`, `var(--text-large)`, `.9em`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`
-- **Metadata & Index Rule**: CSS variables `--text-small: .875rem`
+- **Body Font Stack**: `ivystyle-sans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 41.6px`, `font-weight: 400`); CSS variables `--text-display: clamp(4rem, calc(2.9rem + 11vw) ,999999px)`
+- **H2 Section Rule**: observed font-size ladder: `32px`, `16px`, `13px`, `14px`, `var(--text-base)`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); CSS variables `--text-base: 1rem`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); CSS variables `--text-small: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-agrumeafarm-it_en` (`Agrumea Farm · Jams, pestos and flavours of Sicily`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.is-initial> — `www-agrumeafarm-it_en`)**:
-   - DOM & Selectors: Landmark `<header class="is-initial site-header">` hosting `Agrumea Farm · Jams, pestos and flav` navigation (`IT · EN`), DOM attributes (`data-v-aa931410`, `data-v-3a145d88`, `data-header-theme="dark"`, `data-header-logo="full"`), and stylesheet rule `active { cursor:grabbing }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.is-initial> — `www-agrumeafarm-it_en`)` (`www-agrumeafarm-it_en`) adapts across `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `IT · EN`.
+1. **Brand Header & Navigation Bar (<header.site-header> — `www-agrumeafarm-it_en`)**:
+   - DOM & Selectors: Landmark `<header class="site-header">` (`1440x97px`) hosting `Agrumea Farm · Jams, pestos and flav` navigation (`IT · EN`), DOM attributes (`data-v-aa931410`, `data-v-3a145d88`, `data-header-theme="dark"`, `data-header-logo="full"`), and stylesheet rule `active { cursor:grabbing }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-agrumeafarm-it_en`)` (`www-agrumeafarm-it_en`) adapts across `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `IT · EN`.
 2. **Hero Stage & Focal Lead (<section.jar-slider> — `Agrumea Farm: Sicilian artisan mar`)**:
-   - DOM & Selectors: Landmark `<section class="jar-slider">` presenting display lead `Agrumea Farm: Sicilian artisan marmalades, spread...` and copy excerpt *"Agrumea Farm · Jams, pestos and flavours of Sicily"* over `#e94e1b` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e94e1b` background with `#ffffff` headline `Agrumea Farm: Sicilian artisan marmalades, spread...`.
-3. **Primary Showcase & Content Grid (<section.jar-slider> — `Agrumea Farm · Jams, pestos and fl`)**:
-   - DOM & Selectors: Landmark `<section class="jar-slider">` rendering section `Agrumea Farm · Jams, pestos and flavours of Sici` with copy *"m m e e n n u u c c l l o o s s e e"*, asset references (`use.typekit.net`, `p.typekit.net`, `yey3ruw.css`, `CmsHomePage.CpbPGEL3.css`), and grid rule `.tk-ivystyle-sans { font-family: "ivystyle-sans",sans-serif; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.jar-slider> — `Agrumea Farm · Jams, pestos and fl`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: var(--space-xs)`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.jar-slider> — `m m e e n n u u c c l l o o s s e `)**:
-   - DOM & Selectors: Landmark `<section class="jar-slider">` framing `m m e e n n u u c c l l o o s s e e` and `c c l l o o s s e e` (*"c c l l o o s s e e"*) with `#fdf3eb` surface cards, `#f39200` accents, and `.tk-ivymode { font-family: "ivymode",sans-serif; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.jar-slider> — `m m e e n n u u c c l l o o s s e `)` uses `999px`, `14px`, `2px`, `50%` radii, `#f39200` highlights, and assets (use.typekit.net, p.typekit.net, yey3ruw.css).
+   - DOM & Selectors: Landmark `<section class="jar-slider">` presenting display lead `Agrumea Farm: Sicilian artisan marmalades, spread...` and copy excerpt *"SCROLL TO DISCOVER"* over `#fdf3eb` canvas and `#762530` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fdf3eb` background with `#762530` headline `Agrumea Farm: Sicilian artisan marmalades, spread...`.
+3. **Primary Showcase & Content Grid (<section.jar-slider:nth(2)> — `SCROLL TO DISCOVER`)**:
+   - DOM & Selectors: Landmark `<section class="jar-slider">` rendering section `SCROLL TO DISCOVER` with copy *"Scroll to discover"*, asset references (`use.typekit.net`, `p.typekit.net`, `yey3ruw.css`, `CmsHomePage.CpbPGEL3.css`), and grid rule `.tk-ivystyle-sans { font-family: "ivystyle-sans",sans-serif; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.jar-slider:nth(2)> — `SCROLL TO DISCOVER`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0.5px`) on desktop and Single-column vertical stack at `390px` viewport width with `30px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.jar-slider:nth(3)> — `Scroll to discover`)**:
+   - DOM & Selectors: Landmark `<section class="jar-slider">` framing `Scroll to discover` and `Agrumea Farm · Jams, pestos and flavours of Sici` (*"Agrumea Farm · Jams, pestos and flavours of Sicily"*) with `#ffffff` surface cards, `#e94e1b` accents, and `.tk-ivymode { font-family: "ivymode",sans-serif; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.jar-slider:nth(3)> — `Scroll to discover`)` uses `0px 0px 15px`, `999px`, `14px`, `2px` radii, `#e94e1b` highlights, and assets (use.typekit.net, p.typekit.net, yey3ruw.css).
 5. **Colophon & Global Directory Footer (<footer.site-shell__legal> — `https://www.agrumeafarm.it/en`)**:
-   - DOM & Selectors: Landmark `<footer class="site-shell__legal">` anchoring `Agrumea Farm · Jams, pestos and ` footer links (`IT · EN`), copy *"Scroll to discover"*, and `#ffffff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-shell__legal> — `https://www.agrumeafarm.it/en`)` aligns to `1024px` extracted from `www-agrumeafarm-it_en` stylesheet with `18px` lateral canvas padding with `var(--space-xs)` grid gap and attributes (data-v-aa931410, data-v-3a145d88, data-header-theme="dark").
+   - DOM & Selectors: Landmark `<footer class="site-shell__legal">` anchoring `Agrumea Farm · Jams, pestos and ` footer links (`IT · EN`), copy *"m m e e n n u u c c l l o o s s e e"*, and `#762530` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-shell__legal> — `https://www.agrumeafarm.it/en`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `30px` lateral canvas padding with `0.5px` grid gap and attributes (data-v-aa931410, data-v-3a145d88, data-header-theme="dark").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Agrumea Farm · Jams, pestos and flavours of Sicily"*
-- Copy Excerpt 2: *"m m e e n n u u c c l l o o s s e e"*
-- Copy Excerpt 3: *"c c l l o o s s e e"*
-- Copy Excerpt 4: *"Scroll to discover"*
+- Copy Excerpt 1: *"SCROLL TO DISCOVER"*
+- Copy Excerpt 2: *"Scroll to discover"*
+- Copy Excerpt 3: *"Agrumea Farm · Jams, pestos and flavours of Sicily"*
+- Copy Excerpt 4: *"m m e e n n u u c c l l o o s s e e"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)`
@@ -250,7 +275,7 @@ Scaffold `www-agrumeafarm-it_en` (`Agrumea Farm · Jams, pestos and flavours of 
 - **Selector `jar-slider.is-flying-out[data-v-a...`**: `transition: opacity .42s var(--ease-soft),scale .42s var(--ease-soft)` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Selector `.jar-slider__prompt[data-v-a006feed]`**: `transition: opacity .9s var(--ease-premium) .18s,transform .9s var(--ease-...` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Selector `.site-footer__link[data-v-68ac8fad]`**: `transition: color .3s var(--ease-out-expo)` extracted from `www-agrumeafarm-it_en` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.is-initial>` and `<section.jar-slider>`.
+- **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.jar-slider:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

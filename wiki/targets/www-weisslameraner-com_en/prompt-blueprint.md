@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-weisslameraner-com_en"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-weisslameraner-com_en"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#bf000f` ink, `#fb2c36` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#171717` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-weisslameraner-com_en
 
 > **Weiss & Lameraner Media Group – Lifestyle Media House Vienna** (https://www.weisslameraner.com/en) — Vienna media house: STYLE UP YOUR LIFE!, Y, OBEGG and ADIWEISS.TV. Advertising in print, online, social and TV, plus content and events f...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Weiss & Lameraner Media Group – Lifestyle Media House Vienna** (`https://www.weisslameraner.com/en`). Vienna media house: STYLE UP YOUR LIFE!, Y, OBEGG and ADIWEISS.TV. Advertising in print, online, social and TV, plus content and events f...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#bf000f` ink, `#fb2c36` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#171717` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fef2f2` (`var(--color-red-50)` in `:root`) paired with `#bf000f` primary typography and `#fb2c36` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `figtreeUpright` for display copy (`Lifestyle media for your brand.`) with `figtreeUpright Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing)`, padding `1.5rem`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#171717` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `figtreeUpright` for display copy (`Lifestyle media for your brand.`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 4px`, padding `1.5rem`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×8878px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `www-weisslameraner-com_en` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `var(--spacing)` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `.25rem`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,41 +52,38 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fef2f2` | `var(--color-red-50)` in `:root` |
-| **Primary Typography Ink** | `#ffcaca` | `var(--color-red-200)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffa3a3` | `var(--color-red-300)` in `:root` |
-| **Interactive Accent / Highlight** | `#fb2c36` | `var(--color-red-500)` in `:root` |
-| **Secondary / Muted Copy** | `#e40014` | `var(--color-red-600)` in `:root` |
-| **Structural Hairline Border** | `#bf000f` | `var(--color-red-700)` in `:root` |
-| **Variable Token (`--color-amber-400`)** | `#fcbb00` | `var(--color-amber-400)` in `:root` |
-| **Variable Token (`--color-amber-500`)** | `#f99c00` | `var(--color-amber-500)` in `:root` |
-| **Variable Token (`--color-amber-600`)** | `#dd7400` | `var(--color-amber-600)` in `:root` |
-| **Variable Token (`--color-amber-700`)** | `#b75000` | `var(--color-amber-700)` in `:root` |
-| **Variable Token (`--color-green-50`)** | `#f0fdf4` | `var(--color-green-50)` in `:root` |
-| **Variable Token (`--color-green-200`)** | `#b9f8cf` | `var(--color-green-200)` in `:root` |
-| **Variable Token (`--color-green-400`)** | `#05df72` | `var(--color-green-400)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#808080` | `.bg-gray-100 { background-color: gray }` (`#808080`) |
+| **Interactive Accent / Highlight** | `#171717` | `var(--primary)` in `:root` |
+| **Secondary / Muted Copy** | `#737373` | `var(--muted-foreground)` in `:root` |
+| **Structural Hairline Border** | `#e5e5e5` | `var(--border)` in `:root` |
+| **Variable Token (`--foreground`)** | `#0a0a0a` | `var(--foreground)` in `:root` |
+| **Variable Token (`--primary-foreground`)** | `#fafafa` | `var(--primary-foreground)` in `:root` |
+| **Variable Token (`--secondary`)** | `#f5f5f5` | `var(--secondary)` in `:root` |
+| **Variable Token (`--destructive`)** | `#e40014` | `var(--destructive)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--trigger-left` | `0` | Design System Custom Token |
-| `--font-sans` | `var(--font-figtree)` | Typography / Scale Token |
-| `--font-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` | Typography / Scale Token |
-| `--color-red-50` | `#fef2f2` | Brand / Palette Token |
-| `--color-red-200` | `#ffcaca` | Brand / Palette Token |
-| `--color-red-300` | `#ffa3a3` | Brand / Palette Token |
-| `--color-red-500` | `#fb2c36` | Brand / Palette Token |
-| `--color-red-600` | `#e40014` | Brand / Palette Token |
-| `--color-red-700` | `#bf000f` | Brand / Palette Token |
-| `--color-amber-400` | `#fcbb00` | Brand / Palette Token |
-| `--color-amber-500` | `#f99c00` | Brand / Palette Token |
-| `--color-amber-600` | `#dd7400` | Brand / Palette Token |
-| `--color-amber-700` | `#b75000` | Brand / Palette Token |
-| `--color-green-50` | `#f0fdf4` | Brand / Palette Token |
-| `--color-green-200` | `#b9f8cf` | Brand / Palette Token |
-| `--color-green-400` | `#05df72` | Brand / Palette Token |
+| `--radius` | `.625rem` | Elevation / Border Token |
+| `--background` | `#fff` | Canvas / Surface Token |
+| `--foreground` | `#0a0a0a` | Typography Ink Token |
+| `--card` | `#fff` | Color / Atmospheric Token |
+| `--card-foreground` | `#0a0a0a` | Typography Ink Token |
+| `--popover` | `#fff` | Color / Atmospheric Token |
+| `--popover-foreground` | `#0a0a0a` | Typography Ink Token |
+| `--primary` | `#171717` | Brand / Palette Token |
+| `--primary-foreground` | `#fafafa` | Typography Ink Token |
+| `--secondary` | `#f5f5f5` | Brand / Palette Token |
+| `--secondary-foreground` | `#171717` | Typography Ink Token |
+| `--muted` | `#f5f5f5` | Color / Atmospheric Token |
+| `--muted-foreground` | `#737373` | Typography Ink Token |
+| `--accent` | `#f5f5f5` | Brand / Palette Token |
+| `--accent-foreground` | `#171717` | Typography Ink Token |
+| `--destructive` | `#e40014` | Color / Atmospheric Token |
 
 ---
 
@@ -90,14 +91,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `figtreeUpright`.
-- **Primary Body Stack**: `figtreeUpright Fallback`.
+- **Primary Body Stack**: `Segoe UI`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`.
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: inherit!important`, `line-height: normal`, `letter-spacing: normal`, `font-weight: inherit`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`.
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `small` (`font-size: .36em`, `letter-spacing: .02em`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 77.76px`, `font-weight: 300`, `letter-spacing: -1.8px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`.
+- **Section Heading (`H2`)**: live computed `h2 (largest visible desktop heading)` (`font-size: 60px`, `line-height: 1.2`, `font-weight: 400`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: inherit`, `line-height: normal`, `letter-spacing: normal`, `font-weight: inherit`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `small` (`font-size: .36em`, `letter-spacing: .02em`).
 
 ---
 
@@ -110,47 +111,66 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 - **Selector `layer theme`**: `transition: .15s` extracted from `www-weisslameraner-com_en` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-weisslameraner-com_en` stylesheet.
 - **Selector `.transition-\[background-size\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-weisslameraner-com_en` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.fixed>` and `<section.bg-white>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.bg-white>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Weiss & Lameraner Media Group – Lifestyle  │
 │ ====================================================================== │
-│ [ <header.fixed>           | About · Services · Media · Brand Event ]  │
+│ [ <header.top-0> (1440x85px)          | About · Services · Media · B ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.relative>                                   |   │
-│ | H1: Lifestyle media for your brand.                              |   │
-│ | Substrate: #fef2f2    | Ink: #bf000f    | Accent: #fb2c36        |   │
+│ | HERO STAGE: <section.relative> (w=1440px)                          | │
+│ | H1: Lifestyle media for your brand.                                | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #171717                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.bg-white>        ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.bg-white>) max-w: 96rem                    | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Brands that work with us.    |  | Austria's media house for li | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.fixed>] -> [<section.relative>] -> [<section.bg-white>] |   │
+│ | DETAIL MODULE (<section.bg-stone-950>) — Guide for brands What     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.border-t>     ) | https://www.weisslameraner.com/en  │
+│ [ FOOTER (<footer.bg-stone-950) | https://www.weisslameraner.com/en    │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.top-0>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.relative>) — 390px Vertical Lead              | │
+│ | H1: Lifestyle media for your brand.                                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.bg-white>) — 1-Col Stack                  | │
+│ | [ Item 1: Brands that work with us.                              ] | │
+│ | [ Item 2: Austria's media house for lifestyle.                   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.bg-stone-950>) — 1-Col (Guide for brands W) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.bg-stone-950) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.fixed> — `www-weisslameraner-com_en`)**:
-   - Landmark `<header class="fixed top-0">` hosting `Weiss & Lameraner Media Group – Life` navigation (`About · Services · Media · Brand Events · WLX`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="cms-o9gdh8"`, `data-href="cms-o9gdh8"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+1. **Brand Header & Navigation Bar (<header.top-0> — `www-weisslameraner-com_en`)**:
+   - Landmark `<header class="top-0 left-0">` (`1440x85px`) hosting `Weiss & Lameraner Media Group – Life` navigation (`About · Services · Media · Brand Events · WLX`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="cms-o9gdh8"`, `data-href="cms-o9gdh8"`), and stylesheet rule `ight_6c9c2d2c-module__T-NGCq__cla... { font-family:figtreeUpright,figtreeUpright Fallback }`.
 2. **Hero Stage & Focal Lead (<section.relative> — `Lifestyle media for your brand.`)**:
-   - Landmark `<section class="relative bg-white">` presenting display lead `Lifestyle media for your brand.` and copy excerpt *"Media Data 2027 Media Data 2027"* over `#fef2f2` canvas and `#bf000f` ink.
+   - Landmark `<section class="relative bg-white">` presenting display lead `Lifestyle media for your brand.` and copy excerpt *"Since 2009 we have been taking brands to where their audience is:"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.bg-white> — `Brands that work with us.`)**:
-   - Landmark `<section class="bg-white py-16">` rendering section `Brands that work with us.` with copy *"(opens in a new window)"*, asset references (`Figtree_VariableFont_wght-s.p.0r5...`, `3emm7imx_eab9.css`, `1lfjsiuslldzn.css`, `37mpl03i35te0.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Austria's media house for lifestyl`)**:
-   - Landmark `<section class="relative overflow-hidden">` framing `Austria's media house for lifestyle.` and `Guide for brands What do you want to achieve? Dis...` (*"Austria's media house"*) with `#ffa3a3` surface cards, `#fb2c36` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.border-t> — `https://www.weisslameraner.com/en`)**:
-   - Landmark `<footer class="border-t bg-stone-950">` anchoring `Weiss & Lameraner Media Group – ` footer links (`About · Services · Media · Brand Events · WLX`), copy *"Since 2009 we have been taking brands to where their audienc"*, and `#bf000f` structural dividers.
+   - Landmark `<section class="bg-white py-16">` rendering section `Brands that work with us.` with copy *"Media Data 2027 Media Data 2027"*, asset references (`Figtree_VariableFont_wght-s.p.0r5...`, `3emm7imx_eab9.css`, `1lfjsiuslldzn.css`, `37mpl03i35te0.js`), and grid rule `right_6c9c2d2c-module__T-NGCq__va... { --font-figtree:"figtreeUpright", "figtreeUpright Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.bg-stone-950> — `Austria's media house for lifestyl`)**:
+   - Landmark `<section class="bg-stone-950 relative">` framing `Austria's media house for lifestyle.` and `Guide for brands What do you want to achieve? Dis...` (*"(opens in a new window)"*) with `#808080` surface cards, `#171717` accents, and `alic_2112d0a2-module__njfJ-W__cla... { font-family:figtreeItalic,figtreeItalic Fallback }`.
+5. **Colophon & Global Directory Footer (<footer.bg-stone-950> — `https://www.weisslameraner.com/en`)**:
+   - Landmark `<footer class="bg-stone-950 font-sans">` anchoring `Weiss & Lameraner Media Group – ` footer links (`About · Services · Media · Brand Events · WLX`), copy *"Austria's media house"*, and `#e5e5e5` structural dividers.
 
 ---
 
@@ -162,109 +182,106 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-weisslameraner-com_en` (**Weiss & Lameraner Media Group – Lifestyle Media House Vienna** — `https://www.weisslameraner.com/en`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#fef2f2` canvas, `#bf000f` ink, `#fb2c36` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#171717` accent).
 - **Identity & Domain Context**: Vienna media house: STYLE UP YOUR LIFE!, Y, OBEGG and ADIWEISS.TV. Advertising in print, online, social and TV, plus content and events f...
-- **Primary Substrate**: `#fef2f2` (`var(--color-red-50)` in `:root`), **Primary Ink**: `#bf000f`, **Accent / Highlight**: `#fb2c36`.
+- **Primary Substrate**: `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#171717`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fef2f2` (`var(--color-red-50)` in `:root`) paired with `#bf000f` primary typography and `#fb2c36` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `figtreeUpright` for display copy (`Lifestyle media for your brand.`) with `figtreeUpright Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing)`, padding `1.5rem`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#171717` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `figtreeUpright` for display copy (`Lifestyle media for your brand.`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 4px`, padding `1.5rem`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-weisslameraner-com_en` in your global stylesheet:
 
 :root {
-  /* Weiss & Lameraner Media Group – Lifestyle Media House Vienna (www-weisslameraner-com_en) — Ground-Truth Extracted CSS Variables */
-  --trigger-left: 0; /* Design System Custom Token (www-weisslameraner-com_en) */
-  --font-sans: var(--font-figtree); /* Typography / Scale Token (www-weisslameraner-com_en) */
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; /* Typography / Scale Token (www-weisslameraner-com_en) */
-  --color-red-50: #fef2f2; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-red-200: #ffcaca; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-red-300: #ffa3a3; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-red-500: #fb2c36; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-red-600: #e40014; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-red-700: #bf000f; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-amber-400: #fcbb00; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-amber-500: #f99c00; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-amber-600: #dd7400; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-amber-700: #b75000; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-green-50: #f0fdf4; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-green-200: #b9f8cf; /* Brand / Palette Token (www-weisslameraner-com_en) */
-  --color-green-400: #05df72; /* Brand / Palette Token (www-weisslameraner-com_en) */
+  /* Weiss & Lameraner Media Group – Lifestyle Media House Vienna (www-weisslameraner-com_en) — Live-Grounded CSS Variables */
+  --radius: .625rem; /* Elevation / Border Token (www-weisslameraner-com_en) */
+  --background: #fff; /* Canvas / Surface Token (www-weisslameraner-com_en) */
+  --foreground: #0a0a0a; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --card: #fff; /* Color / Atmospheric Token (www-weisslameraner-com_en) */
+  --card-foreground: #0a0a0a; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --popover: #fff; /* Color / Atmospheric Token (www-weisslameraner-com_en) */
+  --popover-foreground: #0a0a0a; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --primary: #171717; /* Brand / Palette Token (www-weisslameraner-com_en) */
+  --primary-foreground: #fafafa; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --secondary: #f5f5f5; /* Brand / Palette Token (www-weisslameraner-com_en) */
+  --secondary-foreground: #171717; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --muted: #f5f5f5; /* Color / Atmospheric Token (www-weisslameraner-com_en) */
+  --muted-foreground: #737373; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --accent: #f5f5f5; /* Brand / Palette Token (www-weisslameraner-com_en) */
+  --accent-foreground: #171717; /* Typography Ink Token (www-weisslameraner-com_en) */
+  --destructive: #e40014; /* Color / Atmospheric Token (www-weisslameraner-com_en) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fef2f2` — grounded in `var(--color-red-50)` in `:root`
-- **Primary Typography Ink**: `#ffcaca` — grounded in `var(--color-red-200)` in `:root`
-- **Elevated Surface / Card Substrate**: `#ffa3a3` — grounded in `var(--color-red-300)` in `:root`
-- **Interactive Accent / Highlight**: `#fb2c36` — grounded in `var(--color-red-500)` in `:root`
-- **Secondary / Muted Copy**: `#e40014` — grounded in `var(--color-red-600)` in `:root`
-- **Structural Hairline Border**: `#bf000f` — grounded in `var(--color-red-700)` in `:root`
-- **Variable Token (`--color-amber-400`)**: `#fcbb00` — grounded in `var(--color-amber-400)` in `:root`
-- **Variable Token (`--color-amber-500`)**: `#f99c00` — grounded in `var(--color-amber-500)` in `:root`
-- **Variable Token (`--color-amber-600`)**: `#dd7400` — grounded in `var(--color-amber-600)` in `:root`
-- **Variable Token (`--color-amber-700`)**: `#b75000` — grounded in `var(--color-amber-700)` in `:root`
-- **Variable Token (`--color-green-50`)**: `#f0fdf4` — grounded in `var(--color-green-50)` in `:root`
-- **Variable Token (`--color-green-200`)**: `#b9f8cf` — grounded in `var(--color-green-200)` in `:root`
-- **Variable Token (`--color-green-400`)**: `#05df72` — grounded in `var(--color-green-400)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#808080` — grounded in `.bg-gray-100 { background-color: gray }` (`#808080`)
+- **Interactive Accent / Highlight**: `#171717` — grounded in `var(--primary)` in `:root`
+- **Secondary / Muted Copy**: `#737373` — grounded in `var(--muted-foreground)` in `:root`
+- **Structural Hairline Border**: `#e5e5e5` — grounded in `var(--border)` in `:root`
+- **Variable Token (`--foreground`)**: `#0a0a0a` — grounded in `var(--foreground)` in `:root`
+- **Variable Token (`--primary-foreground`)**: `#fafafa` — grounded in `var(--primary-foreground)` in `:root`
+- **Variable Token (`--secondary`)**: `#f5f5f5` — grounded in `var(--secondary)` in `:root`
+- **Variable Token (`--destructive`)**: `#e40014` — grounded in `var(--destructive)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×8878px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `www-weisslameraner-com_en` stylesheet
-- **Padding & Gutters**: `1.5rem` lateral canvas padding with `var(--spacing)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `1.5rem` lateral canvas padding with `4px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
 - **Corner Radii**: `.3125rem`, `.375rem`, `.25rem`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `figtreeUpright`
-- **Body Font Stack**: `figtreeUpright Fallback`
+- **Body Font Stack**: `Segoe UI`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: inherit!important`, `line-height: normal`, `letter-spacing: normal`, `font-weight: inherit`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `small` (`font-size: .36em`, `letter-spacing: .02em`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 77.76px`, `font-weight: 300`, `letter-spacing: -1.8px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
+- **H2 Section Rule**: live computed `h2 (largest visible desktop heading)` (`font-size: 60px`, `line-height: 1.2`, `font-weight: 400`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: inherit`, `line-height: normal`, `letter-spacing: normal`, `font-weight: inherit`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `small` (`font-size: .36em`, `letter-spacing: .02em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-weisslameraner-com_en` (`Weiss & Lameraner Media Group – Lifestyle Media House Vienna`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.fixed> — `www-weisslameraner-com_en`)**:
-   - DOM & Selectors: Landmark `<header class="fixed top-0">` hosting `Weiss & Lameraner Media Group – Life` navigation (`About · Services · Media · Brand Events · WLX`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="cms-o9gdh8"`, `data-href="cms-o9gdh8"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.fixed> — `www-weisslameraner-com_en`)` (`www-weisslameraner-com_en`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `About · Services · Media · Brand Events · WLX`.
+1. **Brand Header & Navigation Bar (<header.top-0> — `www-weisslameraner-com_en`)**:
+   - DOM & Selectors: Landmark `<header class="top-0 left-0">` (`1440x85px`) hosting `Weiss & Lameraner Media Group – Life` navigation (`About · Services · Media · Brand Events · WLX`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="cms-o9gdh8"`, `data-href="cms-o9gdh8"`), and stylesheet rule `ight_6c9c2d2c-module__T-NGCq__cla... { font-family:figtreeUpright,figtreeUpright Fallback }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `www-weisslameraner-com_en`)` (`www-weisslameraner-com_en`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `About · Services · Media · Brand Events · WLX`.
 2. **Hero Stage & Focal Lead (<section.relative> — `Lifestyle media for your brand.`)**:
-   - DOM & Selectors: Landmark `<section class="relative bg-white">` presenting display lead `Lifestyle media for your brand.` and copy excerpt *"Media Data 2027 Media Data 2027"* over `#fef2f2` canvas and `#bf000f` ink.
-   - Responsive Contract: Hero stage (`1440×8878px` desktop / `390×2400px` mobile) sets `#fef2f2` background with `#bf000f` headline `Lifestyle media for your brand.`.
+   - DOM & Selectors: Landmark `<section class="relative bg-white">` presenting display lead `Lifestyle media for your brand.` and copy excerpt *"Since 2009 we have been taking brands to where their audience is:"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Lifestyle media for your brand.`.
 3. **Primary Showcase & Content Grid (<section.bg-white> — `Brands that work with us.`)**:
-   - DOM & Selectors: Landmark `<section class="bg-white py-16">` rendering section `Brands that work with us.` with copy *"(opens in a new window)"*, asset references (`Figtree_VariableFont_wght-s.p.0r5...`, `3emm7imx_eab9.css`, `1lfjsiuslldzn.css`, `37mpl03i35te0.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-white> — `Brands that work with us.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Austria's media house for lifestyl`)**:
-   - DOM & Selectors: Landmark `<section class="relative overflow-hidden">` framing `Austria's media house for lifestyle.` and `Guide for brands What do you want to achieve? Dis...` (*"Austria's media house"*) with `#ffa3a3` surface cards, `#fb2c36` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Austria's media house for lifestyl`)` uses `.3125rem`, `.375rem`, `.25rem`, `2px` radii, `#fb2c36` highlights, and assets (Figtree_VariableFont_wght-s.p.0r5..., 3emm7imx_eab9.css, 1lfjsiuslldzn.css).
-5. **Colophon & Global Directory Footer (<footer.border-t> — `https://www.weisslameraner.com/en`)**:
-   - DOM & Selectors: Landmark `<footer class="border-t bg-stone-950">` anchoring `Weiss & Lameraner Media Group – ` footer links (`About · Services · Media · Brand Events · WLX`), copy *"Since 2009 we have been taking brands to where their audienc"*, and `#bf000f` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-t> — `https://www.weisslameraner.com/en`)` aligns to `40rem` extracted from `www-weisslameraner-com_en` stylesheet with `1.5rem` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="cms-o9gdh8").
+   - DOM & Selectors: Landmark `<section class="bg-white py-16">` rendering section `Brands that work with us.` with copy *"Media Data 2027 Media Data 2027"*, asset references (`Figtree_VariableFont_wght-s.p.0r5...`, `3emm7imx_eab9.css`, `1lfjsiuslldzn.css`, `37mpl03i35te0.js`), and grid rule `right_6c9c2d2c-module__T-NGCq__va... { --font-figtree:"figtreeUpright", "figtreeUpright Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-white> — `Brands that work with us.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.bg-stone-950> — `Austria's media house for lifestyl`)**:
+   - DOM & Selectors: Landmark `<section class="bg-stone-950 relative">` framing `Austria's media house for lifestyle.` and `Guide for brands What do you want to achieve? Dis...` (*"(opens in a new window)"*) with `#808080` surface cards, `#171717` accents, and `alic_2112d0a2-module__njfJ-W__cla... { font-family:figtreeItalic,figtreeItalic Fallback }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.bg-stone-950> — `Austria's media house for lifestyl`)` uses `.3125rem`, `.375rem`, `.25rem`, `2px` radii, `#171717` highlights, and assets (Figtree_VariableFont_wght-s.p.0r5..., 3emm7imx_eab9.css, 1lfjsiuslldzn.css).
+5. **Colophon & Global Directory Footer (<footer.bg-stone-950> — `https://www.weisslameraner.com/en`)**:
+   - DOM & Selectors: Landmark `<footer class="bg-stone-950 font-sans">` anchoring `Weiss & Lameraner Media Group – ` footer links (`About · Services · Media · Brand Events · WLX`), copy *"Austria's media house"*, and `#e5e5e5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-stone-950> — `https://www.weisslameraner.com/en`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `1.5rem` lateral canvas padding with `4px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="cms-o9gdh8").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Media Data 2027 Media Data 2027"*
-- Copy Excerpt 2: *"(opens in a new window)"*
-- Copy Excerpt 3: *"Austria's media house"*
-- Copy Excerpt 4: *"Since 2009 we have been taking brands to where their audience is: into our four me..."*
+- Copy Excerpt 1: *"Since 2009 we have been taking brands to where their audience is: into our four me..."*
+- Copy Excerpt 2: *"Media Data 2027 Media Data 2027"*
+- Copy Excerpt 3: *"(opens in a new window)"*
+- Copy Excerpt 4: *"Austria's media house"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`
 - **Extracted Stylesheet Rules (`www-weisslameraner-com_en`)**:
+- `ight_6c9c2d2c-module__T-NGCq__cla... { font-family:figtreeUpright,figtreeUpright Fallback }`
+- `right_6c9c2d2c-module__T-NGCq__va... { --font-figtree:"figtreeUpright", "figtreeUpright Fallback" }`
+- `alic_2112d0a2-module__njfJ-W__cla... { font-family:figtreeItalic,figtreeItalic Fallback }`
+- `talic_2112d0a2-module__njfJ-W__va... { --font-figtree-italic:"figtreeItalic", "figtreeItalic Fallback" }`
 - `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `strong { font-weight:bolder }`
-- `small { font-size:80% }`
-- `sup { vertical-align:baseline;font-size:75%;line-height:0;position:relative }`
 - **Per-Selector Transition Rules**:
 - **Selector `layer theme`**: `transition: .15s` extracted from `www-weisslameraner-com_en` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-weisslameraner-com_en` stylesheet.
 - **Selector `.transition-\[background-size\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-weisslameraner-com_en` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.fixed>` and `<section.bg-white>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.bg-white>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

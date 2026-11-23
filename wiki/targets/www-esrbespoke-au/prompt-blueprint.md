@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: www-esrbespoke-au"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-esrbespoke-au"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3af`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#9ca3af`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-esrbespoke-au
 
 > **ESR** (https://www.esrbespoke.au/) — Three decades of restoring excellence and reigniting the joy of the drive.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **ESR** (`https://www.esrbespoke.au/`). Three decades of restoring excellence and reigniting the joy of the drive.
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3af`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#9ca3af`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--foreground)` in `:root`) paired with `#000` primary typography and `#9ca3af` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `__bodyFont_0f148b` for display copy (`E x c e p t i o n a l i s o u r s t `) with `__bodyFont_Fallback_0f148b` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `14ch` container bounds (`gap: 1rem`, padding `1.125rem`) with `cubic-bezier(.4,0,.6,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#9ca3af` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `__bodyFont_0f148b` for display copy (`Exceptional is our standard`) with `__bodyFont_0f148b` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(.4,0,.6,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×7770px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `14ch` extracted from `www-esrbespoke-au` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.125rem` lateral canvas padding with `1rem` grid gap.
-- **Border Radius Scale**: `50%`, `2px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1920px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `2px`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 1rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.125rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:1024px)`, `@media (max-width:1023px)`.
 
 ---
@@ -48,13 +52,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--foreground)` in `:root` |
-| **Primary Typography Ink** | `#ffffff` | `var(--background)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#29d` | `#nprogress .bar { background: #29d }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#2299dd` | `#nprogress .bar { background: #2299dd }` |
 | **Interactive Accent / Highlight** | `#9ca3af` | `textarea::placeholder { color: #9ca3af }` |
-| **Secondary / Muted Copy** | `#000` | `#nprogress .bar { background: #000 }` |
+| **Secondary / Muted Copy** | `#9ca3af` | `textarea::placeholder { color: #9ca3af }` |
+| **Structural Hairline Border** | `#e6e6e6` | `var(--border)` in `:root` (`rgba(0,0,0,0.1)`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -73,8 +78,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3
 | `--tw-translate-x` | `0` | Design System Custom Token |
 | `--tw-translate-y` | `0` | Design System Custom Token |
 | `--tw-rotate` | `0` | Design System Custom Token |
-| `--www-esrbespoke-a-bg` | `#fff` | Canvas Substrate (from `var(--foreground)` in `:root`) |
-| `--www-esrbespoke-a-ink` | `#000` | Primary Typography Ink (stylesheet-derived) |
+| `--www-esrbespoke-a-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--www-esrbespoke-a-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
@@ -82,14 +87,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3
 
 ### Font Family Stacks
 - **Display Typography**: `__bodyFont_0f148b`.
-- **Primary Body Stack**: `__bodyFont_Fallback_0f148b`.
+- **Primary Body Stack**: `__bodyFont_0f148b`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`).
-- **Body Copy**: CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`.
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 62px`, `line-height: 58.9px`, `font-weight: 500`, `letter-spacing: -0.62px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 500`, `letter-spacing: -0.4px`).
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 23.4px`, `font-weight: 300`); CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 14px`, `font-weight: 300`, `letter-spacing: 1.26px`).
 
 ---
 
@@ -102,47 +107,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3
 - **Selector `.transition`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
 - **Selector `ansition-\[margin\2c transform\2c...`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
 - **Selector `.transition-colors`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.w-auto>` and `<section.w-auto>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.w-auto>` and `<section.items-end>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — ESR                                        │
 │ ====================================================================== │
-│ [ <header.w-auto>          | Overview · Index · Archive · About · C ]  │
+│ [ <header.w-auto> (1440x85px)         | Services · Partners · About  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.w-auto>                                     |   │
-│ | H1: E x c e p t i o n a l i s o u r s t a n d a r d              |   │
-│ | Substrate: #fff       | Ink: #000       | Accent: #9ca3af        |   │
+│ | HERO STAGE: <section.w-auto> (w=1440px)                            | │
+│ | H1: Exceptional is our standard                                    | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #9ca3af                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.w-auto>          ) max-w: 14ch           |   │
+│ | SHOWCASE GRID (<section.items-end>) max-w: 1920px                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | ESR is recognised as an offi |  | At ESR, we offer a complete  | | │
+│ | | E x c e p t i o n a l i s o  |  | ESR is recognised as an offi | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<header.w-auto>] -> [<section.w-auto>] -> [<section.w-auto>] |      │
+│ | DETAIL MODULE (<section.mb-8>) — At ESR, we offer a co             | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.relative>     ) | https://www.esrbespoke.au/         │
+│ [ FOOTER (<footer.clip>       ) | https://www.esrbespoke.au/           │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.w-auto>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.w-auto>) — 390px Vertical Lead                | │
+│ | H1: Exceptional is our standard                                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.items-end>) — 1-Col Stack                 | │
+│ | [ Item 1: E x c e p t i o n a l i s o u r s t a n d a r d        ] | │
+│ | [ Item 2: ESR is recognised as an official Porsche Certifie...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.mb-8>) — 1-Col (At ESR, we offer a)         | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.clip>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.w-auto> — `www-esrbespoke-au`)**:
-   - Landmark `<header class="w-auto grid-layout">` hosting `ESR` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
-2. **Hero Stage & Focal Lead (<section.w-auto> — `E x c e p t i o n a l i s o u r s `)**:
-   - Landmark `<section class="w-auto grid-layout">` presenting display lead `E x c e p t i o n a l i s o u r s t a n d a r d` and copy excerpt *"E S R B e s p o k e"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.w-auto> — `ESR is recognised as an official P`)**:
-   - Landmark `<section class="w-auto items-end">` rendering section `ESR is recognised as an official Porsche Certifie...` with copy *"A u t o m o t i v e G r o u p since 1989"*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
-4. **Interactive Detail & Feature Matrix (<section.w-auto> — `At ESR, we offer a complete end-to`)**:
-   - Landmark `<section class="w-auto mb-8">` framing `At ESR, we offer a complete end-to-end service ex...` and `@ e s r b e s p o k e` (*"@ e s r b e s p o k e"*) with `#29d` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.esrbespoke.au/`)**:
-   - Landmark `<footer class="relative clip">` anchoring `ESR` footer links (`Overview · Index · Archive · About · Contact`), copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o "*, and `#000` structural dividers.
+   - Landmark `<header class="w-auto grid-layout">` (`1440x85px`) hosting `ESR` navigation (`Services · Partners · About · Contact · Careers`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
+2. **Hero Stage & Focal Lead (<section.w-auto> — `Exceptional is our standard`)**:
+   - Landmark `<section class="w-auto grid-layout">` presenting display lead `Exceptional is our standard` and copy excerpt *"A u t o m o t i v e G r o u p since 1989"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.items-end> — `E x c e p t i o n a l i s o u r s `)**:
+   - Landmark `<section class="w-auto items-end">` rendering section `E x c e p t i o n a l i s o u r s t a n d a r d` with copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o k e ."*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
+4. **Interactive Detail & Feature Matrix (<section.mb-8> — `ESR is recognised as an official P`)**:
+   - Landmark `<section class="w-auto mb-8">` framing `ESR is recognised as an official Porsche Certifie...` and `At ESR, we offer a complete end-to-end service ex...` (*"4 1 9 - 4 3 1 C a n t e r b u r y R o a d , C a m p s i e N S W 2"*) with `#2299dd` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
+5. **Colophon & Global Directory Footer (<footer.clip> — `https://www.esrbespoke.au/`)**:
+   - Landmark `<footer class="clip mono">` anchoring `ESR` footer links (`Services · Partners · About · Contact · Careers`), copy *"E S R B e s p o k e S t u d i o"*, and `#e6e6e6` structural dividers.
 
 ---
 
@@ -154,19 +178,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-esrbespoke-au` (**ESR** — `https://www.esrbespoke.au/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3af`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#9ca3af`).
 - **Identity & Domain Context**: Three decades of restoring excellence and reigniting the joy of the drive.
-- **Primary Substrate**: `#fff` (`var(--foreground)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#9ca3af`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#9ca3af`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--foreground)` in `:root`) paired with `#000` primary typography and `#9ca3af` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `__bodyFont_0f148b` for display copy (`E x c e p t i o n a l i s o u r s t `) with `__bodyFont_Fallback_0f148b` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `14ch` container bounds (`gap: 1rem`, padding `1.125rem`) with `cubic-bezier(.4,0,.6,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#9ca3af` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `__bodyFont_0f148b` for display copy (`Exceptional is our standard`) with `__bodyFont_0f148b` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(.4,0,.6,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-esrbespoke-au` in your global stylesheet:
 
 :root {
-  /* ESR (www-esrbespoke-au) — Ground-Truth Extracted CSS Variables */
+  /* ESR (www-esrbespoke-au) — Live-Grounded CSS Variables */
   --foreground-rgb: 0,0,0; /* Typography Ink Token (www-esrbespoke-au) */
   --background-rgb: 255,255,255; /* Canvas / Surface Token (www-esrbespoke-au) */
   --border-rgb: 0,0,0; /* Elevation / Border Token (www-esrbespoke-au) */
@@ -181,60 +205,61 @@ Declare and consume these exact custom properties extracted from `www-esrbespoke
   --tw-translate-x: 0; /* Design System Custom Token (www-esrbespoke-au) */
   --tw-translate-y: 0; /* Design System Custom Token (www-esrbespoke-au) */
   --tw-rotate: 0; /* Design System Custom Token (www-esrbespoke-au) */
-  --www-esrbespoke-a-bg: #fff; /* Canvas Substrate (from `var(--foreground)` in `:root`) (www-esrbespoke-au) */
-  --www-esrbespoke-a-ink: #000; /* Primary Typography Ink (stylesheet-derived) (www-esrbespoke-au) */
+  --www-esrbespoke-a-bg: #ffffff; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (www-esrbespoke-au) */
+  --www-esrbespoke-a-ink: #000000; /* Primary Typography Ink (computed-derived) (www-esrbespoke-au) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--foreground)` in `:root`
-- **Primary Typography Ink**: `#ffffff` — grounded in `var(--background)` in `:root`
-- **Elevated Surface / Card Substrate**: `#29d` — grounded in `#nprogress .bar { background: #29d }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#2299dd` — grounded in `#nprogress .bar { background: #2299dd }`
 - **Interactive Accent / Highlight**: `#9ca3af` — grounded in `textarea::placeholder { color: #9ca3af }`
-- **Secondary / Muted Copy**: `#000` — grounded in `#nprogress .bar { background: #000 }`
+- **Secondary / Muted Copy**: `#9ca3af` — grounded in `textarea::placeholder { color: #9ca3af }`
+- **Structural Hairline Border**: `#e6e6e6` — grounded in `var(--border)` in `:root` (`rgba(0,0,0,0.1)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×7770px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `14ch` extracted from `www-esrbespoke-au` stylesheet
-- **Padding & Gutters**: `1.125rem` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 1rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.125rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1920px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `32px` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
 - **Media Queries**: `@media (min-width:1024px)`, `@media (max-width:1023px)`
-- **Corner Radii**: `50%`, `2px`
+- **Corner Radii**: `2px`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `__bodyFont_0f148b`
-- **Body Font Stack**: `__bodyFont_Fallback_0f148b`
+- **Body Font Stack**: `__bodyFont_0f148b`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
-- **Body Copy Rule**: CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 62px`, `line-height: 58.9px`, `font-weight: 500`, `letter-spacing: -0.62px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 500`, `letter-spacing: -0.4px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 18px`, `line-height: 23.4px`, `font-weight: 300`); CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 14px`, `font-weight: 300`, `letter-spacing: 1.26px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-esrbespoke-au` (`ESR`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.w-auto> — `www-esrbespoke-au`)**:
-   - DOM & Selectors: Landmark `<header class="w-auto grid-layout">` hosting `ESR` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-auto> — `www-esrbespoke-au`)` (`www-esrbespoke-au`) adapts across `@media (min-width:1024px)`, `@media (max-width:1023px)` with `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.w-auto> — `E x c e p t i o n a l i s o u r s `)**:
-   - DOM & Selectors: Landmark `<section class="w-auto grid-layout">` presenting display lead `E x c e p t i o n a l i s o u r s t a n d a r d` and copy excerpt *"E S R B e s p o k e"* over `#fff` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×7770px` desktop / `390×2400px` mobile) sets `#fff` background with `#000` headline `E x c e p t i o n a l i s o u r s t a n d a r d`.
-3. **Primary Showcase & Content Grid (<section.w-auto> — `ESR is recognised as an official P`)**:
-   - DOM & Selectors: Landmark `<section class="w-auto items-end">` rendering section `ESR is recognised as an official Porsche Certifie...` with copy *"A u t o m o t i v e G r o u p since 1989"*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.w-auto> — `ESR is recognised as an official P`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 14ch`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.125rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.w-auto> — `At ESR, we offer a complete end-to`)**:
-   - DOM & Selectors: Landmark `<section class="w-auto mb-8">` framing `At ESR, we offer a complete end-to-end service ex...` and `@ e s r b e s p o k e` (*"@ e s r b e s p o k e"*) with `#29d` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.w-auto> — `At ESR, we offer a complete end-to`)` uses `50%`, `2px` radii, `#9ca3af` highlights, and assets (apple-touch-icon.png, favicon-32x32.png, favicon-16x16.png).
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.esrbespoke.au/`)**:
-   - DOM & Selectors: Landmark `<footer class="relative clip">` anchoring `ESR` footer links (`Overview · Index · Archive · About · Contact`), copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o "*, and `#000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://www.esrbespoke.au/`)` aligns to `14ch` extracted from `www-esrbespoke-au` stylesheet with `1.125rem` lateral canvas padding with `1rem` grid gap and attributes (data-next-font="size-adjust", data-next-font="size-adjust", data-next-font="size-adjust").
+   - DOM & Selectors: Landmark `<header class="w-auto grid-layout">` (`1440x85px`) hosting `ESR` navigation (`Services · Partners · About · Contact · Careers`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-auto> — `www-esrbespoke-au`)` (`www-esrbespoke-au`) adapts across `@media (min-width:1024px)`, `@media (max-width:1023px)` with `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Services · Partners · About · Contact · Careers`.
+2. **Hero Stage & Focal Lead (<section.w-auto> — `Exceptional is our standard`)**:
+   - DOM & Selectors: Landmark `<section class="w-auto grid-layout">` presenting display lead `Exceptional is our standard` and copy excerpt *"A u t o m o t i v e G r o u p since 1989"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Exceptional is our standard`.
+3. **Primary Showcase & Content Grid (<section.items-end> — `E x c e p t i o n a l i s o u r s `)**:
+   - DOM & Selectors: Landmark `<section class="w-auto items-end">` rendering section `E x c e p t i o n a l i s o u r s t a n d a r d` with copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o k e ."*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.items-end> — `E x c e p t i o n a l i s o u r s `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.mb-8> — `ESR is recognised as an official P`)**:
+   - DOM & Selectors: Landmark `<section class="w-auto mb-8">` framing `ESR is recognised as an official Porsche Certifie...` and `At ESR, we offer a complete end-to-end service ex...` (*"4 1 9 - 4 3 1 C a n t e r b u r y R o a d , C a m p s i e N S W 2"*) with `#2299dd` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.mb-8> — `ESR is recognised as an official P`)` uses `2px`, `50%` radii, `#9ca3af` highlights, and assets (apple-touch-icon.png, favicon-32x32.png, favicon-16x16.png).
+5. **Colophon & Global Directory Footer (<footer.clip> — `https://www.esrbespoke.au/`)**:
+   - DOM & Selectors: Landmark `<footer class="clip mono">` anchoring `ESR` footer links (`Services · Partners · About · Contact · Careers`), copy *"E S R B e s p o k e S t u d i o"*, and `#e6e6e6` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.clip> — `https://www.esrbespoke.au/`)` aligns to `1920px` (non-`@media` desktop container stylesheet rule) with `32px` lateral canvas padding with `16px` grid gap and attributes (data-next-font="size-adjust", data-next-font="size-adjust", data-next-font="size-adjust").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"E S R B e s p o k e"*
-- Copy Excerpt 2: *"A u t o m o t i v e G r o u p since 1989"*
-- Copy Excerpt 3: *"@ e s r b e s p o k e"*
-- Copy Excerpt 4: *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o k e . a u 8 a m – 5 p..."*
+- Copy Excerpt 1: *"A u t o m o t i v e G r o u p since 1989"*
+- Copy Excerpt 2: *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o k e . a u 8 a m – 5 p..."*
+- Copy Excerpt 3: *"4 1 9 - 4 3 1 C a n t e r b u r y R o a d , C a m p s i e N S W 2 1 9 4 H q @ e s..."*
+- Copy Excerpt 4: *"E S R B e s p o k e S t u d i o"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)`
@@ -248,7 +273,7 @@ Scaffold `www-esrbespoke-au` (`ESR`) with these exact structural regions, extrac
 - **Selector `.transition`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
 - **Selector `ansition-\[margin\2c transform\2c...`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
 - **Selector `.transition-colors`**: `transition: cubic-bezier(.4,0,.6,1)` extracted from `www-esrbespoke-au` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.w-auto>` and `<section.w-auto>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.w-auto>` and `<section.items-end>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

@@ -1,248 +1,282 @@
 ---
 title: "UI Prompt Blueprint: www-eladiodieste-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-eladiodieste-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (`--background: #eadfd2` + `--foreground: #a55f2d`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#a55f2d`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-eladiodieste-com
 
-> **Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)** — An architectural monograph celebrating Uruguayan structural engineer Eladio Dieste (1917–2000), crafted entirely from two earthen pigments: warm mortar sand (`--background: #eadfd2`, `--off-white: #f1ece8`) and kiln-fired terracotta brick (`--foreground: #a55f2d`), choreographed with long-duration exponential character reveals (`--ease-out-expo: cubic-bezier(.19,1,.22,1)`).
+> **Eladio Dieste** (https://www.eladiodieste.com/) — Eladio Dieste (1917–2000), ingeniero uruguayo. Biografía, trayectoria y obras: bóvedas de ladrillo, estructuras de cascarón y la revoluci...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)**. An architectural monograph celebrating Uruguayan structural engineer Eladio Dieste (1917–2000), crafted entirely from two earthen pigments: warm mortar sand (`--background: #eadfd2`, `--off-white: #f1ece8`) and kiln-fired terracotta brick (`--foreground: #a55f2d`), choreographed with long-duration exponential character reveals (`--ease-out-expo: cubic-bezier(.19,1,.22,1)`).
-- **Visual Archetype**: **Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (`--background: #eadfd2` + `--foreground: #a55f2d`)**.
+- **Brand Essence & Persona**: **Eladio Dieste** (`https://www.eladiodieste.com/`). Eladio Dieste (1917–2000), ingeniero uruguayo. Biografía, trayectoria y obras: bóvedas de ladrillo, estructuras de cascarón y la revoluci...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#a55f2d`)**.
 - **Anti-AI-Slop Differentiators**:
-  1. **Bichromatic Earthen Materiality**: Every text node, divider line, and architectural diagram is rendered in burnt terracotta brick (`--foreground: #a55f2d`) over warm mortar sand (`--background: #eadfd2`) and soft lime (`--off-white: #f1ece8`).
-  2. **250lvh Scroll-Pinned Hero Monograph**: Opens with `<section class="text-background invisible relative h-[250lvh]">` that pins and reveals `H1: Eladio Dieste` and `H2: → 1917-2000 Artigas, Uruguay`.
-  3. **1.6-Second Exponential Split-Text Reveals**: Character and word masks (`.reveal-chars .char`, `.reveal-words .word`, `.reveal-divider`) animate over `1.4s`–`1.6s` using `--ease-out-expo: cubic-bezier(.19,1,.22,1)` with `--split-mask-pad: .08em`.
-  4. **Bilingual Structural Catalog (`section#work`, `section#vida`)**: Chronicles landmark Gaussian vaults (`H2: Obras`, `H2: La intersección de ingeniería con arquitectura`, `H3: Vivienda Berlingieri (Próximamente)`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f1ece8` primary typography and `#a55f2d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `font` for display copy (`Eladio Dieste`) with `font` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 0px (flush layout)`, padding `var(--split-mask-pad)`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Full-Page Dimensions**: Desktop `1440×14025px` (`assets/desktop.png`), Mobile `390×10165px` (`assets/mobile.png`).
-- **Master Container Bounds**: Fluid full-viewport layout with `px-global` lateral padding and `--container-xl: 36rem` (576px) reading columns.
-- **Canvas Lateral Padding & Spacing**: Global `px-global` horizontal padding with `--spacing: .25rem` (4px) base rhythm (`pt-6`, `pt-45`, `pb-40 md:pb-72`).
-- **Border Radius Scale**: `--radius-md: .375rem` (6px) on archival plates; crisp `1px` terracotta rules (`.reveal-divider`).
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `var(--split-mask-pad)` lateral canvas padding with `0px (flush layout)` grid gap.
+- **Border Radius Scale**: `var(--radius-md)`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Asymmetric architectural index grid across `section#work` and `section#vida` with `gap-5` (`1.25rem`).
-- **Mobile Layout**: Single-column archival stack below `@media (min-width:48rem)` with touch-adapted scroll sections.
-- **Extracted CSS Media Queries**: `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px), `@media (min-width:80rem)` (1280px), `@media (min-width:96rem)` (1536px).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 0px (flush layout)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--split-mask-pad)` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| Primary Warm Mortar Sand Canvas | `#eadfd2` | `--background` (`:root`) |
-| Secondary Lime Off-White Surface | `#f1ece8` | `--off-white` (`:root`) |
-| Primary Terracotta Brick Ink & Accent | `#a55f2d` | `--foreground` / `--color-accent` (`:root`) |
-| Pure Black Contrast Token | `#000` | `--color-black` (`:root`) |
-| Pure White Contrast Token | `#fff` | `--color-white` (`:root`) |
-| Elevation Drop Shadow | `0 25px 25px #00000026` | `--drop-shadow-2xl` (`:root`) |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f1ece8` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#eadfd2` | `var(--background)` in `:root` |
+| **Interactive Accent / Highlight** | `#a55f2d` | live computed `main` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#a55f2d` | live computed `main` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | `.border-off-white { border-color: #ffffff }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--background` | `#eadfd2` | Primary warm mortar sand canvas substrate |
-| `--foreground` | `#a55f2d` | Primary kiln-fired terracotta brick ink & border token |
-| `--off-white` | `#f1ece8` | Secondary light archival card surface |
-| `--color-accent` | `var(--foreground)` | Accent color mapped directly to terracotta `#a55f2d` |
-| `--color-black` | `#000` | Black reference token |
-| `--color-white` | `#fff` | White reference token |
-| `--ease-out-expo` | `cubic-bezier(.19,1,.22,1)` | Primary 1.4s–1.6s character & divider reveal curve |
-| `--ease-magic` | `cubic-bezier(.33,0,0,1)` | Active navigation indicator morph curve |
-| `--ease-quart` | `cubic-bezier(.41,.35,.2,1)` | Scroll parallax & image reveal curve |
-| `--ease-out` | `cubic-bezier(0,0,.2,1)` | Standard UI ease-out curve |
-| `--default-transition-duration` | `.15s` | Base micro-interaction duration |
-| `--default-transition-timing-function` | `cubic-bezier(.4,0,.2,1)` | Base timing curve |
-| `--split-mask-pad` | `.08em` | Horizontal padding on split-text reveal masks |
-| `--split-mask-bleed-y` | `.3em` | Vertical descender bleed allowance on text masks |
-| `--container-xl` | `36rem` | 576px scholarly reading measure |
-| `--tracking-tight` | `-.025em` | Display headline letter-spacing |
-| `--text-5xl` | `3rem` | 48px chapter heading size (`line-height: 1`) |
-| `--text-6xl` | `3.75rem` | 60px monument heading size (`line-height: 1`) |
-| `--text-7xl` | `4.5rem` | 72px hero display size (`line-height: 1`) |
+| `--background` | `#eadfd2` | Canvas / Surface Token |
+| `--foreground` | `#a55f2d` | Typography Ink Token |
+| `--off-white` | `#f1ece8` | Canvas / Surface Token |
+| `--color-black` | `#000` | Canvas / Surface Token |
+| `--color-white` | `#fff` | Canvas / Surface Token |
+| `--spacing` | `.25rem` | Layout / Spatial Grid Token |
+| `--container-xl` | `36rem` | Layout / Spatial Grid Token |
+| `--text-xs` | `.75rem` | Typography Ink Token |
+| `--text-xs--line-height` | `calc(1/.75)` | Typography Ink Token |
+| `--text-sm` | `.875rem` | Typography Ink Token |
+| `--text-sm--line-height` | `calc(1.25/.875)` | Typography Ink Token |
+| `--text-lg` | `1.125rem` | Typography Ink Token |
+| `--text-lg--line-height` | `calc(1.75/1.125)` | Typography Ink Token |
+| `--text-xl` | `1.25rem` | Typography Ink Token |
+| `--text-xl--line-height` | `calc(1.75/1.25)` | Typography Ink Token |
+| `--text-2xl` | `1.5rem` | Typography Ink Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `var(--font-sans)` (`"font", "font Fallback", Helvetica, Arial, sans-serif`).
-- **Primary Body Stack**: `var(--font-sans)` (`--default-font-family`).
-- **Technical / Metadata Stack**: `var(--font-mono)` (`--default-mono-font-family`, archival dates `1917-2000`, GPS coordinates).
+- **Display Typography**: `font`.
+- **Primary Body Stack**: `font`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules
-- **Hero Display (`H1`)**: `var(--text-7xl)` (`4.5rem` / scaling up on `96rem` viewport), `font-weight: 500` (`--font-weight-medium`), `line-height: 1`, `letter-spacing: var(--tracking-tight)` (`-.025em`), `color: var(--foreground)` ("Eladio Dieste").
-- **Section Heading (`H2`)**: `var(--text-5xl)` (`3rem`) to `var(--text-6xl)` (`3.75rem`), `line-height: 1` ("Obras", "→ 1917-2000 Artigas, Uruguay", "La intersección de ingeniería con arquitectura").
-- **Body Copy**: `var(--text-lg)` (`1.125rem`), `line-height: calc(1.75/1.125)`, `max-width: var(--container-xl)` (`36rem`), `color: var(--foreground)`.
-- **Metadata & Navigation Labels**: `var(--text-xs)` (`.75rem`), `font-family: var(--font-mono)`, uppercase archival catalog indices.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 400`); CSS variables `--text-5xl: 3rem`, `--text-5xl--line-height: 1`, `--text-6xl: 3.75rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 122.867px`, `line-height: 122.867px`, `font-weight: 400`, `letter-spacing: -6.14335px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`.
+- **Body Copy**: live computed `body` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 500`, `letter-spacing: -0.0175524px`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.19,1,.22,1)` (`--ease-out-expo`), `cubic-bezier(.33,0,0,1)` (`--ease-magic`), and `cubic-bezier(.41,.35,.2,1)` (`--ease-quart`).
+- **Extracted Timing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- `body` -> `transition: background-color .7s, color .7s` (smooth surface polarity shifts between `#eadfd2` and `#a55f2d`)
-- `.reveal-divider` -> `transition: transform 1.4s var(--ease-out-expo)` (horizontal hairline rule drawing)
-- `.reveal-chars .char, .reveal-words .word` -> `transition: 1.6s var(--ease-out-expo) transform` (masked typographic entrance)
-- `a[aria-current]:before` -> `transition: background-color .3s ease-in-out, transform .3s var(--ease-magic)`
+- **Selector `layer theme`**: `transition: .15s` extracted from `www-eladiodieste-com` stylesheet.
+- **Selector `body`**: `transition: background-color .7s,color .7s` extracted from `www-eladiodieste-com` stylesheet.
+- **Selector `.reveal-divider`**: `transition: transform 1.4s var(--ease-out-expo)` extracted from `www-eladiodieste-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.font-medium>` and `<section.px-global>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html`)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ <nav class="flex items-center justify-between font-medium">            │
-│   [Eladio Dieste]                      [Obras (#work)] [Vida (#vida)]  │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="text-background relative h-[250lvh]"> (Bg: #eadfd2)    │
-│   H1: Eladio Dieste  |  H2: → 1917-2000 Artigas, Uruguay (Ink: #a55f2d │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="px-global gap-5 pt-45">                                │
-│   H2: La intersección de ingeniería con arquitectura (.reveal-words)   │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section id="work" class="px-global"> H2: Obras (.reveal-divider 1.4s) │
-│   [ Cristo Obrero Church ] [H3: Vivienda Berlingieri (Próximamente)]   │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section id="vida" class="px-global pt-6 pb-40 md:pb-72"> Biography    │
+│ DESKTOP VIEWPORT (1440px) — Eladio Dieste                              │
+│ ====================================================================== │
+│ [ <nav.font-medium> (1405x26px)       | Inicio · Obra · Vida · Carre ] │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE: <section.text-background> (w=1440px)                   | │
+│ | H1: Eladio Dieste                                                  | │
+│ | Substrate: #000000 | Ink: #f1ece8 | Accent: #a55f2d                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE GRID (<section.px-global>) max-w: 96rem                   | │
+│ | +------------------------------+  +------------------------------+ | │
+│ | | Vivienda Berlingieri (Próxim |  | Iglesia de Atlántida Cristo  | | │
+│ | +------------------------------+  +------------------------------+ | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL MODULE (<section.gap-5>) — Fábrica TEM S.A. (Pró            | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.h-dvh>      ) | https://www.eladiodieste.com/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (flu)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.font-medium>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.text-background) — 390px Vertical Lead        | │
+│ | H1: Eladio Dieste                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.px-global>) — 1-Col Stack                 | │
+│ | [ Item 1: Vivienda Berlingieri (Próximamente)                    ] | │
+│ | [ Item 2: Iglesia de Atlántida Cristo Obrero y Nuestra Seño...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.gap-5>) — 1-Col (Fábrica TEM S.A. ()        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.h-dvh>      ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Archival Top Navigation (`<nav class="flex items-center justify-between font-medium">`)**:
-   - Minimalist header bar rendered in `--foreground: #a55f2d` with active dot indicator (`a[aria-current]:before`) animated via `--ease-magic: cubic-bezier(.33,0,0,1)`.
-2. **250lvh Scroll-Pinned Hero (`<section class="text-background invisible relative h-[250lvh]">`)**:
-   - Monumental opening chapter on `--background: #eadfd2` revealing `H1: Eladio Dieste` and `H2: → 1917-2000 Artigas, Uruguay` using `.reveal-chars .char` (`1.6s var(--ease-out-expo)`).
-3. **Engineering Manifesto (`<section class="px-global gap-5 pt-45">`)**:
-   - Presents `H2: La intersección de ingeniería con arquitectura` constrained to `--container-xl: 36rem` with `.reveal-divider` (`1.4s var(--ease-out-expo)`) rules.
-4. **Structural Works Catalog (`<section id="work" class="px-global">`)**:
-   - Chronicles Dieste’s reinforced ceramic vaults under `H2: Obras`, including `H3: Vivienda Berlingieri (Próximamente)` on `--off-white: #f1ece8` plates with `--radius-md: .375rem`.
-5. **Biographical Timeline (`<section id="vida" class="px-global pt-6 pb-40 md:pb-72">`)**:
-   - Historical archive of blueprints, structural calculations, and Uruguayan heritage with `body` polarity transitions (`transition: background-color .7s, color .7s`).
+1. **Brand Header & Navigation Bar (<nav.font-medium> — `www-eladiodieste-com`)**:
+   - Landmark `<nav class="font-medium pointer-events-auto">` (`1405x26px`) hosting `Eladio Dieste` navigation (`Inicio · Obra · Vida · Carrera · English`), DOM attributes (`data-scroll-orientation="vertical"`, `data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`), and stylesheet rule `webkit-scrollbar { display:none }`.
+2. **Hero Stage & Focal Lead (<section.text-background> — `Eladio Dieste`)**:
+   - Landmark `<section class="text-background invisible">` presenting display lead `Eladio Dieste` and copy excerpt *"Foto: (FADU, UDELAR)"* over `#000000` canvas and `#f1ece8` ink.
+3. **Primary Showcase & Content Grid (<section.px-global> — `Vivienda Berlingieri (Próximamente`)**:
+   - Landmark `<section class="px-global pt-6">` rendering section `Vivienda Berlingieri (Próximamente)` with copy *"Todos los derechos reservados © 2026"*, asset references (`die_grotesk_a_medium-s.p.221bfec9...`, `die_grotesk_a_regular-s.p.e93e1fc...`, `bg.webp`, `inf-4.webp`), and grid rule `active { cursor:grabbing }`.
+4. **Interactive Detail & Feature Matrix (<section.gap-5> — `Iglesia de Atlántida Cristo Obrero`)**:
+   - Landmark `<section class="px-global gap-5">` framing `Iglesia de Atlántida Cristo Obrero y Nuestra Seño...` and `Fábrica TEM S.A. (Próximamente)` (*"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el modo "*) with `#eadfd2` surface cards, `#a55f2d` accents, and `font_b50abbf3-module__9ye_bG__cla... { font-family:font,font Fallback }`.
+5. **Colophon & Global Directory Footer (<footer.h-dvh> — `https://www.eladiodieste.com/`)**:
+   - Landmark `<footer class="h-dvh overflow-hidden">` anchoring `Eladio Dieste` footer links (`Inicio · Obra · Vida · Carrera · English`), copy *"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el "*, and `#ffffff` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: www-eladiodieste-com (Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000))
+# Master Zero-Shot Frontend Generation Prompt: www-eladiodieste-com (Eladio Dieste)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-eladiodieste-com` (Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000)).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-eladiodieste-com` (**Eladio Dieste** — `https://www.eladiodieste.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Structural Ceramic-Brick Archival Monograph & Expo-Ease Typography (`--background: #eadfd2` + `--foreground: #a55f2d`).
-- **Primary Substrate**: `#eadfd2` (`--background` (`:root`)), **Primary Ink**: `#a55f2d`, **Accent / Highlight**: `0 25px 25px #00000026`.
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#a55f2d`).
+- **Identity & Domain Context**: Eladio Dieste (1917–2000), ingeniero uruguayo. Biografía, trayectoria y obras: bóvedas de ladrillo, estructuras de cascarón y la revoluci...
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f1ece8`, **Accent / Highlight**: `#a55f2d`.
 - **Site-Specific Differentiators**:
-  1. **Bichromatic Earthen Materiality**: Every text node, divider line, and architectural diagram is rendered in burnt terracotta brick (`--foreground: #a55f2d`) over warm mortar sand (`--background: #eadfd2`) and soft lime (`--off-white: #f1ece8`).
-  2. **250lvh Scroll-Pinned Hero Monograph**: Opens with `<section class="text-background invisible relative h-[250lvh]">` that pins and reveals `H1: Eladio Dieste` and `H2: → 1917-2000 Artigas, Uruguay`.
-  3. **1.6-Second Exponential Split-Text Reveals**: Character and word masks (`.reveal-chars .char`, `.reveal-words .word`, `.reveal-divider`) animate over `1.4s`–`1.6s` using `--ease-out-expo: cubic-bezier(.19,1,.22,1)` with `--split-mask-pad: .08em`.
-  4. **Bilingual Structural Catalog (`section#work`, `section#vida`)**: Chronicles landmark Gaussian vaults (`H2: Obras`, `H2: La intersección de ingeniería con arquitectura`, `H3: Vivienda Berlingieri (Próximamente)`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f1ece8` primary typography and `#a55f2d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `font` for display copy (`Eladio Dieste`) with `font` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 0px (flush layout)`, padding `var(--split-mask-pad)`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-eladiodieste-com` in your global stylesheet:
 
 :root {
-  /* Eladio Dieste · La Intersección de Ingeniería con Arquitectura (1917–2000) — Ground-Truth Extracted CSS Variables */
-  --background: #eadfd2; /* Primary warm mortar sand canvas substrate */
-  --foreground: #a55f2d; /* Primary kiln-fired terracotta brick ink & border token */
-  --off-white: #f1ece8; /* Secondary light archival card surface */
-  --color-accent: var(--foreground); /* Accent color mapped directly to terracotta `#a55f2d` */
-  --color-black: #000; /* Black reference token */
-  --color-white: #fff; /* White reference token */
-  --ease-out-expo: cubic-bezier(.19,1,.22,1); /* Primary 1.4s–1.6s character & divider reveal curve */
-  --ease-magic: cubic-bezier(.33,0,0,1); /* Active navigation indicator morph curve */
-  --ease-quart: cubic-bezier(.41,.35,.2,1); /* Scroll parallax & image reveal curve */
-  --ease-out: cubic-bezier(0,0,.2,1); /* Standard UI ease-out curve */
-  --default-transition-duration: .15s; /* Base micro-interaction duration */
-  --default-transition-timing-function: cubic-bezier(.4,0,.2,1); /* Base timing curve */
-  --split-mask-pad: .08em; /* Horizontal padding on split-text reveal masks */
-  --split-mask-bleed-y: .3em; /* Vertical descender bleed allowance on text masks */
-  --container-xl: 36rem; /* 576px scholarly reading measure */
-  --tracking-tight: -.025em; /* Display headline letter-spacing */
-  --text-5xl: 3rem; /* 48px chapter heading size (`line-height: 1`) */
-  --text-6xl: 3.75rem; /* 60px monument heading size (`line-height: 1`) */
-  --text-7xl: 4.5rem; /* 72px hero display size (`line-height: 1`) */
+  /* Eladio Dieste (www-eladiodieste-com) — Live-Grounded CSS Variables */
+  --background: #eadfd2; /* Canvas / Surface Token (www-eladiodieste-com) */
+  --foreground: #a55f2d; /* Typography Ink Token (www-eladiodieste-com) */
+  --off-white: #f1ece8; /* Canvas / Surface Token (www-eladiodieste-com) */
+  --color-black: #000; /* Canvas / Surface Token (www-eladiodieste-com) */
+  --color-white: #fff; /* Canvas / Surface Token (www-eladiodieste-com) */
+  --spacing: .25rem; /* Layout / Spatial Grid Token (www-eladiodieste-com) */
+  --container-xl: 36rem; /* Layout / Spatial Grid Token (www-eladiodieste-com) */
+  --text-xs: .75rem; /* Typography Ink Token (www-eladiodieste-com) */
+  --text-xs--line-height: calc(1/.75); /* Typography Ink Token (www-eladiodieste-com) */
+  --text-sm: .875rem; /* Typography Ink Token (www-eladiodieste-com) */
+  --text-sm--line-height: calc(1.25/.875); /* Typography Ink Token (www-eladiodieste-com) */
+  --text-lg: 1.125rem; /* Typography Ink Token (www-eladiodieste-com) */
+  --text-lg--line-height: calc(1.75/1.125); /* Typography Ink Token (www-eladiodieste-com) */
+  --text-xl: 1.25rem; /* Typography Ink Token (www-eladiodieste-com) */
+  --text-xl--line-height: calc(1.75/1.25); /* Typography Ink Token (www-eladiodieste-com) */
+  --text-2xl: 1.5rem; /* Typography Ink Token (www-eladiodieste-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Warm Mortar Sand Canvas**: `#eadfd2` — grounded in `--background` (`:root`)
-- **Secondary Lime Off-White Surface**: `#f1ece8` — grounded in `--off-white` (`:root`)
-- **Primary Terracotta Brick Ink & Accent**: `#a55f2d` — grounded in `--foreground` / `--color-accent` (`:root`)
-- **Pure Black Contrast Token**: `#000` — grounded in `--color-black` (`:root`)
-- **Pure White Contrast Token**: `#fff` — grounded in `--color-white` (`:root`)
-- **Elevation Drop Shadow**: `0 25px 25px #00000026` — grounded in `--drop-shadow-2xl` (`:root`)
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f1ece8` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#eadfd2` — grounded in `var(--background)` in `:root`
+- **Interactive Accent / Highlight**: `#a55f2d` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#a55f2d` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ffffff` — grounded in `.border-off-white { border-color: #ffffff }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×14025px` full-page capture (`1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×10165px` full-page capture (`390px` standard mobile width).
-- **Container Max-Width**: Fluid full-viewport layout with `px-global` lateral padding and `--container-xl: 36rem` (576px) reading columns
-- **Padding & Gutters**: Global `px-global` horizontal padding with `--spacing: .25rem` (4px) base rhythm (`pt-6`, `pt-45`, `pb-40 md:pb-72`)
-- **Desktop Grid**: Asymmetric architectural index grid across `section#work` and `section#vida` with `gap-5` (`1.25rem`)
-- **Mobile Adaptation**: Single-column archival stack below `@media (min-width:48rem)` with touch-adapted scroll sections
-- **Media Queries**: `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px), `@media (min-width:80rem)` (1280px), `@media (min-width:96rem)` (1536px)
-- **Corner Radii**: `--radius-md: .375rem` (6px) on archival plates; crisp `1px` terracotta rules (`.reveal-divider`)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `var(--split-mask-pad)` lateral canvas padding with `0px (flush layout)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 0px (flush layout)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--split-mask-pad)` horizontal padding
+- **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
+- **Corner Radii**: `var(--radius-md)`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `var(--font-sans)` (`"font", "font Fallback", Helvetica, Arial, sans-serif`)
-- **Body Font Stack**: `var(--font-sans)` (`--default-font-family`)
-- **Monospace / Technical Font Stack**: `var(--font-mono)` (`--default-mono-font-family`, archival dates `1917-2000`, GPS coordinates)
-- **H1 Display Rule**: `var(--text-7xl)` (`4.5rem` / scaling up on `96rem` viewport), `font-weight: 500` (`--font-weight-medium`), `line-height: 1`, `letter-spacing: var(--tracking-tight)` (`-.025em`), `color: var(--foreground)` ("Eladio Dieste")
-- **H2 Section Rule**: `var(--text-5xl)` (`3rem`) to `var(--text-6xl)` (`3.75rem`), `line-height: 1` ("Obras", "→ 1917-2000 Artigas, Uruguay", "La intersección de ingeniería con arquitectura")
-- **Body Copy Rule**: `var(--text-lg)` (`1.125rem`), `line-height: calc(1.75/1.125)`, `max-width: var(--container-xl)` (`36rem`), `color: var(--foreground)`
-- **Metadata & Index Rule**: `var(--text-xs)` (`.75rem`), `font-family: var(--font-mono)`, uppercase archival catalog indices
+- **Display Font Stack**: `font`
+- **Body Font Stack**: `font`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 400`); CSS variables `--text-5xl: 3rem`, `--text-5xl--line-height: 1`, `--text-6xl: 3.75rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 122.867px`, `line-height: 122.867px`, `font-weight: 400`, `letter-spacing: -6.14335px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
+- **Body Copy Rule**: live computed `body` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 17.5524px`, `line-height: 26.3287px`, `font-weight: 500`, `letter-spacing: -0.0175524px`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
 
-### 6. Component Hierarchy & Real DOM Landmarks
-Scaffold the interface with these exact structural regions and class selectors from `www-eladiodieste-com`:
-1. **Archival Top Navigation (`<nav class="flex items-center justify-between font-medium">`)**:
-   - Architecture & Selectors: Minimalist header bar rendered in `--foreground: #a55f2d` with active dot indicator (`a[aria-current]:before`) animated via `--ease-magic: cubic-bezier(.33,0,0,1)`.
-   - Layout & State Contract: Sticky/fixed top header navigation adapting across `@media (min-width:40rem)` (640px), `@media (min-width:48rem)` (768px), `@media (min-width:64rem)` (1024px), `@media (min-width:80rem)` (1280px), `@media (min-width:96rem)` (1536px) with `cubic-bezier(.19,1,.22,1)` (`--ease-out-expo`), `cubic-bezier(.33,0,0,1)` (`--ease-magic`), and `cubic-bezier(.41,.35,.2,1)` (`--ease-quart`) menu transitions.
-2. **250lvh Scroll-Pinned Hero (`<section class="text-background invisible relative h-[250lvh]">`)**:
-   - Architecture & Selectors: Monumental opening chapter on `--background: #eadfd2` revealing `H1: Eladio Dieste` and `H2: → 1917-2000 Artigas, Uruguay` using `.reveal-chars .char` (`1.6s var(--ease-out-expo)`).
-   - Layout & State Contract: Full-viewport hero stage (`1440px` desktop / `390px` mobile) pairing `#eadfd2` substrate with `#a55f2d` display typography (`H1`).
-3. **Engineering Manifesto (`<section class="px-global gap-5 pt-45">`)**:
-   - Architecture & Selectors: Presents `H2: La intersección de ingeniería con arquitectura` constrained to `--container-xl: 36rem` with `.reveal-divider` (`1.4s var(--ease-out-expo)`) rules.
-   - Layout & State Contract: Primary showcase grid executing Asymmetric architectural index grid across `section#work` and `section#vida` with `gap-5` (`1.25rem`) on desktop and Single-column archival stack below `@media (min-width:48rem)` with touch-adapted scroll sections on mobile.
-4. **Structural Works Catalog (`<section id="work" class="px-global">`)**:
-   - Architecture & Selectors: Chronicles Dieste’s reinforced ceramic vaults under `H2: Obras`, including `H3: Vivienda Berlingieri (Próximamente)` on `--off-white: #f1ece8` plates with `--radius-md: .375rem`.
-   - Layout & State Contract: Interactive specification & narrative module framed by `--radius-md: .375rem` (6px) on archival plates; crisp `1px` terracotta rules (`.reveal-divider`) and `0 25px 25px #00000026` highlights.
-5. **Biographical Timeline (`<section id="vida" class="px-global pt-6 pb-40 md:pb-72">`)**:
-   - Architecture & Selectors: Historical archive of blueprints, structural calculations, and Uruguayan heritage with `body` polarity transitions (`transition: background-color .7s, color .7s`).
-   - Layout & State Contract: Footer directory and utility bar anchored to Fluid full-viewport layout with `px-global` lateral padding and `--container-xl: 36rem` (576px) reading columns with Global `px-global` horizontal padding with `--spacing: .25rem` (4px) base rhythm (`pt-6`, `pt-45`, `pb-40 md:pb-72`) lateral gutters.
+### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
+Scaffold `www-eladiodieste-com` (`Eladio Dieste`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<nav.font-medium> — `www-eladiodieste-com`)**:
+   - DOM & Selectors: Landmark `<nav class="font-medium pointer-events-auto">` (`1405x26px`) hosting `Eladio Dieste` navigation (`Inicio · Obra · Vida · Carrera · English`), DOM attributes (`data-scroll-orientation="vertical"`, `data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`), and stylesheet rule `webkit-scrollbar { display:none }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.font-medium> — `www-eladiodieste-com`)` (`www-eladiodieste-com`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `Inicio · Obra · Vida · Carrera · English`.
+2. **Hero Stage & Focal Lead (<section.text-background> — `Eladio Dieste`)**:
+   - DOM & Selectors: Landmark `<section class="text-background invisible">` presenting display lead `Eladio Dieste` and copy excerpt *"Foto: (FADU, UDELAR)"* over `#000000` canvas and `#f1ece8` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#f1ece8` headline `Eladio Dieste`.
+3. **Primary Showcase & Content Grid (<section.px-global> — `Vivienda Berlingieri (Próximamente`)**:
+   - DOM & Selectors: Landmark `<section class="px-global pt-6">` rendering section `Vivienda Berlingieri (Próximamente)` with copy *"Todos los derechos reservados © 2026"*, asset references (`die_grotesk_a_medium-s.p.221bfec9...`, `die_grotesk_a_regular-s.p.e93e1fc...`, `bg.webp`, `inf-4.webp`), and grid rule `active { cursor:grabbing }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.px-global> — `Vivienda Berlingieri (Próximamente`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--split-mask-pad)` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.gap-5> — `Iglesia de Atlántida Cristo Obrero`)**:
+   - DOM & Selectors: Landmark `<section class="px-global gap-5">` framing `Iglesia de Atlántida Cristo Obrero y Nuestra Seño...` and `Fábrica TEM S.A. (Próximamente)` (*"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el modo "*) with `#eadfd2` surface cards, `#a55f2d` accents, and `font_b50abbf3-module__9ye_bG__cla... { font-family:font,font Fallback }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.gap-5> — `Iglesia de Atlántida Cristo Obrero`)` uses `var(--radius-md)`, `50%` radii, `#a55f2d` highlights, and assets (die_grotesk_a_medium-s.p.221bfec9..., die_grotesk_a_regular-s.p.e93e1fc..., bg.webp).
+5. **Colophon & Global Directory Footer (<footer.h-dvh> — `https://www.eladiodieste.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="h-dvh overflow-hidden">` anchoring `Eladio Dieste` footer links (`Inicio · Obra · Vida · Carrera · English`), copy *"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el "*, and `#ffffff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.h-dvh> — `https://www.eladiodieste.com/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `var(--split-mask-pad)` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-scroll-orientation="vertical", data-precedence="next", data-precedence="next").
 
-### 7. Motion & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.19,1,.22,1)` (`--ease-out-expo`), `cubic-bezier(.33,0,0,1)` (`--ease-magic`), and `cubic-bezier(.41,.35,.2,1)` (`--ease-quart`)
+#### Verbatim DOM Copy Excerpts (`dom.html`)
+- Copy Excerpt 1: *"Foto: (FADU, UDELAR)"*
+- Copy Excerpt 2: *"Todos los derechos reservados © 2026"*
+- Copy Excerpt 3: *"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el modo de construir, tal..."*
+- Copy Excerpt 4: *"Eladio Dieste, el ingeniero uruguayo, cuya obra hizo que el modo"*
+
+### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
+- **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.19,1,.22,1)`
+- **Extracted Stylesheet Rules (`www-eladiodieste-com`)**:
+- `webkit-scrollbar { display:none }`
+- `active { cursor:grabbing }`
+- `font_b50abbf3-module__9ye_bG__cla... { font-family:font,font Fallback }`
+- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
+- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
 - **Per-Selector Transition Rules**:
-- `body` -> `transition: background-color .7s, color .7s` (smooth surface polarity shifts between `#eadfd2` and `#a55f2d`)
-- `.reveal-divider` -> `transition: transform 1.4s var(--ease-out-expo)` (horizontal hairline rule drawing)
-- `.reveal-chars .char, .reveal-words .word` -> `transition: 1.6s var(--ease-out-expo) transform` (masked typographic entrance)
-- `a[aria-current]:before` -> `transition: background-color .3s ease-in-out, transform .3s var(--ease-magic)`
+- **Selector `layer theme`**: `transition: .15s` extracted from `www-eladiodieste-com` stylesheet.
+- **Selector `body`**: `transition: background-color .7s,color .7s` extracted from `www-eladiodieste-com` stylesheet.
+- **Selector `.reveal-divider`**: `transition: transform 1.4s var(--ease-out-expo)` extracted from `www-eladiodieste-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.font-medium>` and `<section.px-global>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
-- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above.
+- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-eladiodieste-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```

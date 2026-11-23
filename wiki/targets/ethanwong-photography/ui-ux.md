@@ -1,42 +1,56 @@
+---
+title: "UI & UX Architecture: ethanwong-photography"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: ethanwong-photography
 
 ## Overview & Design Identity
 - **Target**: `ethanwong-photography` (**Ethan W · Film-Inspired Wedding & Editorial Photographer · Washington DC...**)
 - **Production URL**: [http://ethanwong.photography](http://ethanwong.photography)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#9b1120` canvas, `#8a8174` ink, `#c01f34` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `#1c1813` ink, `#ff0000` accent)
 - **Summary**: Documentary wedding, editorial, portrait and commercial photography by Ethan Wong of Ethan W Photography. Film-inspired, vintage-leaning...
-- **Total Clean CSS Variables Extracted**: `30` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Cormorant`
-- **Body Font Stack**: `Pinyon Script`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(var(--fit-min)`, `29px`, `var(--lab-nav)`, `clamp(28px,4.4vw,72px)`, `var(--lab-quiet)`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(var(--fit-min)`, `29px`, `var(--lab-nav)`, `clamp(28px,4.4vw,72px)`, `var(--lab-quiet)`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(var(--fit-min)`, `29px`, `var(--lab-nav)`, `clamp(28px,4.4vw,72px)`, `var(--lab-quiet)`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(var(--fit-min)`, `29px`, `var(--lab-nav)`, `clamp(28px,4.4vw,72px)`, `var(--lab-quiet)`)
+- **Display Font Stack**: `Hanken Grotesk`
+- **Body Font Stack**: `Hanken Grotesk`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`)
+- **Section Heading (`H2`)**: observed font-size ladder: `32px`, `16px`, `18px`, `29px`, `var(--lab-quiet)`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#9b1120` | `var(--red)` in `:root` |
-| **Primary Typography Ink** | `#b3162a` | `var(--red-hover)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ab182c` | `var(--red-lift)` in `:root` |
-| **Interactive Accent / Highlight** | `#c01f34` | `var(--red-lift-hover)` in `:root` |
-| **Secondary / Muted Copy** | `#8a0f1e` | `var(--red-deep)` in `:root` |
-| **Structural Hairline Border** | `#8a8174` | `var(--sf-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#efede7` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1c1813` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f4efe4` | `.idx-slash { background: #f4efe4 }` |
+| **Interactive Accent / Highlight** | `#ff0000` | `.cta-fill { background: red }` (`#ff0000`) |
+| **Secondary / Muted Copy** | `#6a6154` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#d3cfc9` | `var(--sf-rule)` in `:root` (`rgba(36, 26, 16, .14)`) |
+| **Variable Token (`--red`)** | `#9b1120` | `var(--red)` in `:root` |
+| **Variable Token (`--red-hover`)** | `#b3162a` | `var(--red-hover)` in `:root` |
+| **Variable Token (`--red-lift`)** | `#ab182c` | `var(--red-lift)` in `:root` |
+| **Variable Token (`--red-lift-hover`)** | `#c01f34` | `var(--red-lift-hover)` in `:root` |
+| **Variable Token (`--red-deep`)** | `#8a0f1e` | `var(--red-deep)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--fit-lh` | `1` | Design System Custom Token |
-| `--fit-reserve` | `0px` | Dimension / Scale Token |
 | `--red` | `#9b1120` | Color / Atmospheric Token |
 | `--red-hover` | `#b3162a` | Color / Atmospheric Token |
 | `--red-lift` | `#ab182c` | Color / Atmospheric Token |
@@ -51,17 +65,19 @@
 | `--lab-w-nav` | `400` | Layout / Spatial Grid Token |
 | `--lab-w-dock` | `500` | Design System Custom Token |
 | `--head-band` | `74px` | Dimension / Scale Token |
+| `--foot-band` | `58px` | Dimension / Scale Token |
+| `--lap-vh` | `100vw` | Layout / Spatial Grid Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site> — `ethanwong-photography`)**:
-   - Landmark `<header class="site nav-on-dark">` hosting `Ethan W · Film-Inspired Wedding & Ed` navigation (`Editorial Exchange`), DOM attributes (`data-cursor="always"`, `data-nav`, `data-cta-ink`, `data-nav-theme="dark"`), and stylesheet rule `html { -ms-overflow-style:none;scrollbar-width:none;-webkit-text-size-adjust:100% }`.
+   - Landmark `<header class="site nav-on-dark">` (`1440x74px`) hosting `Ethan W · Film-Inspired Wedding & Ed` navigation (`Editorial Exchange`), DOM attributes (`data-cursor="always"`, `data-nav`, `data-cta-ink`, `data-nav-theme="dark"`), and stylesheet rule `body { --red: var(--red-lift);--red-hover: var(--red-lift-hover) }`.
 2. **Hero Stage & Focal Lead (<main.idx-main> — `Ethan W (Ethan Wong), film-inspire`)**:
-   - Landmark `<main class="idx-main">` presenting display lead `Ethan W (Ethan Wong), film-inspired documentary w...` and copy excerpt *"01 W e d d i n g s W e d d i n g s Stories & galleries"* over `#9b1120` canvas and `#8a8174` ink.
-3. **Primary Showcase & Content Grid (<main.idx-main> — `01 W e d d i n g s W e d d i n g s`)**:
-   - Landmark `<main class="idx-main">` rendering section `01 W e d d i n g s W e d d i n g s Stories & gal` with copy *"W e d d i n g s W e d d i n g s"*, asset references (`favicon-32.png`, `favicon-16.png`, `favicon-32-dark.png`, `favicon-16-dark.png`), and grid rule `html::-webkit-scrollbar { display:none }`.
-4. **Interactive Detail & Feature Matrix (<main.idx-main> — `W e d d i n g s W e d d i n g s`)**:
-   - Landmark `<main class="idx-main">` framing `W e d d i n g s W e d d i n g s` and `Stories & galleries` (*"Stories & galleries"*) with `#ab182c` surface cards, `#c01f34` accents, and `body { background:efede7 }`.
+   - Landmark `<main class="idx-main">` presenting display lead `Ethan W (Ethan Wong), film-inspired documentary w...` and copy excerpt *"The full collection in one grid. Any frame opens large."* over `#efede7` canvas and `#1c1813` ink.
+3. **Primary Showcase & Content Grid (<main.idx-main:nth(2)> — `The full collection in one grid. A`)**:
+   - Landmark `<main class="idx-main">` rendering section `The full collection in one grid. Any frame opens` with copy *"W e d d i n g s W e d d i n g s"*, asset references (`favicon-32.png`, `favicon-16.png`, `favicon-32-dark.png`, `favicon-16-dark.png`), and grid rule `.idx-wrap { position:relative;min-height:100vh;min-height:100svh;background:0f0e0c }`.
+4. **Interactive Detail & Feature Matrix (<main.idx-main:nth(3)> — `W e d d i n g s W e d d i n g s`)**:
+   - Landmark `<main class="idx-main">` framing `W e d d i n g s W e d d i n g s` and `Stories & galleries` (*"Stories & galleries"*) with `#f4efe4` surface cards, `#ff0000` accents, and `.idx-backdrop { position:absolute;inset:0;z-index:0;overflow:hidden }`.
 5. **Colophon & Global Directory Footer (<footer.sf> — `http://ethanwong.photography`)**:
-   - Landmark `<footer class="sf sf--fixed">` anchoring `Ethan W · Film-Inspired Wedding ` footer links (`Editorial Exchange`), copy *"All visual stories More coming"*, and `#8a8174` structural dividers.
+   - Landmark `<footer class="sf sf--fixed">` anchoring `Ethan W · Film-Inspired Wedding ` footer links (`Editorial Exchange`), copy *"All visual stories"*, and `#d3cfc9` structural dividers.

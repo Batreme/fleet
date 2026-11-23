@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: ty1official-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: ty1official-com
 
 ## Overview & Design Identity
 - **Target**: `ty1official-com` (**TY1 — DJ & Producer**)
 - **Production URL**: [https://ty1official.com](https://ty1official.com)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#c14e12`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)
 - **Summary**: TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
-- **Total Clean CSS Variables Extracted**: `172` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `175` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Humane`
-- **Body Font Stack**: `Thunder`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`
-- **Section Heading (`H2`)**: CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`
-- **Body Copy**: CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`
-- **Metadata & Labels**: CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`)
+- **Display Font Stack**: `Atkinson Hyperlegible`
+- **Body Font Stack**: `Atkinson Hyperlegible`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 48px`, `font-weight: 700`); CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 480px`, `line-height: 393.6px`, `font-weight: 900`); CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0d0b0c` | `var(--c-black)` in `:root` |
-| **Primary Typography Ink** | `#ec651d` | `var(--c-orange)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#d7d6d5` | `var(--c-white)` in `:root` |
-| **Interactive Accent / Highlight** | `#c14e12` | `var(--c-orange-deep)` in `:root` |
-| **Secondary / Muted Copy** | `#ff7d33` | `var(--c-orange-bright)` in `:root` |
-| **Structural Hairline Border** | `#1a1617` | `var(--c-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#181618` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f5` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0d0b0c` | `.consenso__carta { background: #0d0b0c }` |
+| **Interactive Accent / Highlight** | `#ec651d` | `.consenso__testo a:hover { color: #ec651d }` |
+| **Secondary / Muted Copy** | `#d7d6d5` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#333132` | `var(--line)` in `:root` (`rgba(215, 214, 213, .14)`) |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)**:
-   - Landmark `<header class="testata">` hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
+   - Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"J u n k i e M u s i k"* over `#0d0b0c` canvas and `#d7d6d5` ink.
-3. **Primary Showcase & Content Grid (<section.trasf> — `Fuori ora`)**:
-   - Landmark `<section class="trasf vscroll">` rendering section `Fuori ora` with copy *"Clicca il video per ingrandirlo"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Il vinile di Junkie Musik`)**:
-   - Landmark `<section class="section vinile">` framing `Il vinile di Junkie Musik` and `G i o c a e v i n c i u n i n c o n t r o c o n T...` (*"S i d e A · S i d e B"*) with `#d7d6d5` surface cards, `#c14e12` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
+3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
+   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
+   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#1a1617` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.

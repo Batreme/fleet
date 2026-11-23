@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-mathildedechiara-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-mathildedechiara-com"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0006`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-mathildedechiara-com
 
 > **Mathilde De Chiara, designer and interior architect** (https://www.mathildedechiara.com/) — Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Mathilde De Chiara, designer and interior architect** (`https://www.mathildedechiara.com/`). Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0006`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (`var(--bg)` in `:root`) paired with `#111` primary typography and `#0006` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: 60px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1024px` extracted from `www-mathildedechiara-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `5vw` lateral canvas padding with `60px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `5vw` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 60px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `5vw` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1024px) and (min-width: 769px)`, `@media (max-width: 768px)`, `@media screen and (max-width: 768px)`.
 
@@ -48,14 +52,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f7f5f2` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#333` | `body { color: #333 }` |
-| **Elevated Surface / Card Substrate** | `#111` | `.slider-overlay__category { color: #111 }` |
-| **Interactive Accent / Highlight** | `#0006` | `.grid-overlay__category { color: #0006 }` |
-| **Secondary / Muted Copy** | `#f0f0f0` | `.editorial-block__image-wrap { background: #f0f0f0 }` |
-| **Structural Hairline Border** | `#0009` | `.editorial-block__text { color: #0009 }` |
+| **Primary Canvas Substrate** | `#f7f5f2` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f0f0f0` | `.editorial-block__image-wrap { background: #f0f0f0 }` |
+| **Interactive Accent / Highlight** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#333333` | live computed `body` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#f8f6f3` | `.grid--rows-overlay .grid__item { border: #f8f6f3 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -84,13 +88,13 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 ### Font Family Stacks
 - **Display Typography**: `PP Editorial New`.
 - **Primary Body Stack**: `Helvetica Neue`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.75vw`, `.5vw`, `2.5vw`, `2vw`).
-- **Section Heading (`H2`)**: rule `,h2` (`font-weight: 500`).
-- **Body Copy**: rule `p` (`font-size: 14px`, `letter-spacing: .04em`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.75vw`, `.5vw`, `2.5vw`, `2vw`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: observed font-size ladder: `72px`, `16px`, `14.4px`, `13.3333px`, `100%`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 79.2px`, `font-weight: 500`, `letter-spacing: -1.44px`); rule `,h2` (`font-weight: 500`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `p` (`font-size: 14px`, `letter-spacing: .04em`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`).
 
 ---
 
@@ -103,47 +107,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 - **Selector `media (prefers-reduced-motion: re...`**: `transition: .01ms!important` extracted from `www-mathildedechiara-com` stylesheet.
 - **Selector `.slider-overlay__thumb`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
 - **Selector `.mode-toggle`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<main.page-content>`.
+- **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<nav.home-page__filters>` and `<main.home-page>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Mathilde De Chiara, designer and interior  │
 │ ====================================================================== │
-│ [ <header.lenis>           | Overview · Index · Archive · About · C ]  │
+│ [ <nav.home-page__filter (274x143px)  | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.page-content>                                  |   │
-│ | H1: Mathilde De Chiara, designer and interior archit             |   │
-│ | Substrate: #f7f5f2    | Ink: #111       | Accent: #0006          |   │
+│ | HERO STAGE: <main.page-content> (w=1440px)                         | │
+│ | H1: Mathilde De Chiara, designer and interior archit               | │
+│ | Substrate: #f7f5f2 | Ink: #000000 | Accent: #000000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.page-content>       ) max-w: 1024px         |   │
+│ | SHOWCASE GRID (<main.home-page>) max-w: 1440px                     | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 60px  ) | │
-│ | [<header.lenis>] -> [<main.page-content] -> [<main.page-content] |   │
+│ | DETAIL MODULE (<main.page-content:nth(2)>) — Global Directory & Co | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.home-page>    ) | https://www.mathildedechiara.com/  │
+│ [ FOOTER (<footer.home-page>  ) | https://www.mathildedechiara.com/    │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.home-page__filters>) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.page-content>) — 390px Vertical Lead             | │
+│ | H1: Mathilde De Chiara, designer and interior archit               | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.home-page>) — 1-Col Stack                    | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.page-content:nth(2) — 1-Col (Global Directory &) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.home-page>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.lenis> — `www-mathildedechiara-com`)**:
-   - Landmark `<header class="lenis">` hosting `Mathilde De Chiara, designer and int` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-rh="true"`, `data-rh="true"`, `data-rh="true"`, `data-rh="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline }`.
+1. **Brand Header & Navigation Bar (<nav.home-page__filters> — `www-mathildedechiara-com`)**:
+   - Landmark `<nav class="home-page__filters">` (`274x143px`) hosting `Mathilde De Chiara, designer and int` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-rh="true"`, `data-rh="true"`, `data-rh="true"`, `data-rh="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline }`.
 2. **Hero Stage & Focal Lead (<main.page-content> — `Mathilde De Chiara, designer and i`)**:
-   - Landmark `<main class="page-content home-page">` presenting display lead `Mathilde De Chiara, designer and interior archit` and copy excerpt *"Portfolio of Mathilde De Chiara: interior architecture, scenograp"* over `#f7f5f2` canvas and `#111` ink.
-3. **Primary Showcase & Content Grid (<main.page-content> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<main class="page-content home-page">` presenting display lead `Mathilde De Chiara, designer and interior archit` and copy excerpt *"Photography & Communication"* over `#f7f5f2` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<main.home-page> — `Featured Work & Interactive Showca`)**:
    - Landmark `<main class="page-content home-page">` rendering section `Featured Work & Interactive Showcase` with copy *"Mathilde De Chiara, designer and interior archit"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`, `b2mcdo5v.apicdn.sanity.io`), and grid rule `section { display:block }`.
-4. **Interactive Detail & Feature Matrix (<main.page-content> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="page-content home-page">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#111` surface cards, `#0006` accents, and `body { line-height:1 }`.
+4. **Interactive Detail & Feature Matrix (<main.page-content:nth(2)> — `Technical Architecture & Narrative`)**:
+   - Landmark `<main class="page-content home-page">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#f0f0f0` surface cards, `#000000` accents, and `body { line-height:1 }`.
 5. **Colophon & Global Directory Footer (<footer.home-page> — `https://www.mathildedechiara.com/`)**:
-   - Landmark `<footer class="home-page">` anchoring `Mathilde De Chiara, designer and` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#0009` structural dividers.
+   - Landmark `<footer class="home-page">` anchoring `Mathilde De Chiara, designer and` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#f8f6f3` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-mathildedechiara-com` (**Mathilde De Chiara, designer and interior architect** — `https://www.mathildedechiara.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0006`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`).
 - **Identity & Domain Context**: Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
-- **Primary Substrate**: `#f7f5f2` (`var(--bg)` in `:root`), **Primary Ink**: `#111`, **Accent / Highlight**: `#0006`.
+- **Primary Substrate**: `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#000000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (`var(--bg)` in `:root`) paired with `#111` primary typography and `#0006` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: 60px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-mathildedechiara-com` in your global stylesheet:
 
 :root {
-  /* Mathilde De Chiara, designer and interior architect (www-mathildedechiara-com) — Ground-Truth Extracted CSS Variables */
+  /* Mathilde De Chiara, designer and interior architect (www-mathildedechiara-com) — Live-Grounded CSS Variables */
   --bg: #f7f5f2; /* Canvas / Surface Token (www-mathildedechiara-com) */
   --default-padding: 5vw; /* Layout / Spatial Grid Token (www-mathildedechiara-com) */
   --spacer-3xs: 4px; /* Layout / Spatial Grid Token (www-mathildedechiara-com) */
@@ -188,19 +211,19 @@ Declare and consume these exact custom properties extracted from `www-mathildede
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f7f5f2` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#333` — grounded in `body { color: #333 }`
-- **Elevated Surface / Card Substrate**: `#111` — grounded in `.slider-overlay__category { color: #111 }`
-- **Interactive Accent / Highlight**: `#0006` — grounded in `.grid-overlay__category { color: #0006 }`
-- **Secondary / Muted Copy**: `#f0f0f0` — grounded in `.editorial-block__image-wrap { background: #f0f0f0 }`
-- **Structural Hairline Border**: `#0009` — grounded in `.editorial-block__text { color: #0009 }`
+- **Primary Canvas Substrate**: `#f7f5f2` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f0f0f0` — grounded in `.editorial-block__image-wrap { background: #f0f0f0 }`
+- **Interactive Accent / Highlight**: `#000000` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#333333` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#f8f6f3` — grounded in `.grid--rows-overlay .grid__item { border: #f8f6f3 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1024px` extracted from `www-mathildedechiara-com` stylesheet
-- **Padding & Gutters**: `5vw` lateral canvas padding with `60px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 60px`)
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `5vw` lateral canvas padding with `4px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `5vw` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1024px) and (min-width: 769px)`, `@media (max-width: 768px)`, `@media screen and (max-width: 768px)`
 - **Corner Radii**: `0px` (sharp unrounded corners)
@@ -208,32 +231,32 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `PP Editorial New`
 - **Body Font Stack**: `Helvetica Neue`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.75vw`, `.5vw`, `2.5vw`, `2vw`)
-- **H2 Section Rule**: rule `,h2` (`font-weight: 500`)
-- **Body Copy Rule**: rule `p` (`font-size: 14px`, `letter-spacing: .04em`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `.75vw`, `.5vw`, `2.5vw`, `2vw`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: observed font-size ladder: `72px`, `16px`, `14.4px`, `13.3333px`, `100%`
+- **H2 Section Rule**: live computed `h2` (`font-size: 72px`, `line-height: 79.2px`, `font-weight: 500`, `letter-spacing: -1.44px`); rule `,h2` (`font-weight: 500`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `p` (`font-size: 14px`, `letter-spacing: .04em`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-mathildedechiara-com` (`Mathilde De Chiara, designer and interior architect`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.lenis> — `www-mathildedechiara-com`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` hosting `Mathilde De Chiara, designer and int` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-rh="true"`, `data-rh="true"`, `data-rh="true"`, `data-rh="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `www-mathildedechiara-com`)` (`www-mathildedechiara-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1024px) and (min-width: 769px)`, `@media (max-width: 768px)`, `@media screen and (max-width: 768px)` with `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.22,.61,.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+1. **Brand Header & Navigation Bar (<nav.home-page__filters> — `www-mathildedechiara-com`)**:
+   - DOM & Selectors: Landmark `<nav class="home-page__filters">` (`274x143px`) hosting `Mathilde De Chiara, designer and int` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-rh="true"`, `data-rh="true"`, `data-rh="true"`, `data-rh="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.home-page__filters> — `www-mathildedechiara-com`)` (`www-mathildedechiara-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1024px) and (min-width: 769px)`, `@media (max-width: 768px)`, `@media screen and (max-width: 768px)` with `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.22,.61,.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.page-content> — `Mathilde De Chiara, designer and i`)**:
-   - DOM & Selectors: Landmark `<main class="page-content home-page">` presenting display lead `Mathilde De Chiara, designer and interior archit` and copy excerpt *"Portfolio of Mathilde De Chiara: interior architecture, scenograp"* over `#f7f5f2` canvas and `#111` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f7f5f2` background with `#111` headline `Mathilde De Chiara, designer and interior archit`.
-3. **Primary Showcase & Content Grid (<main.page-content> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<main class="page-content home-page">` presenting display lead `Mathilde De Chiara, designer and interior archit` and copy excerpt *"Photography & Communication"* over `#f7f5f2` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f7f5f2` background with `#000000` headline `Mathilde De Chiara, designer and interior archit`.
+3. **Primary Showcase & Content Grid (<main.home-page> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<main class="page-content home-page">` rendering section `Featured Work & Interactive Showcase` with copy *"Mathilde De Chiara, designer and interior archit"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`, `b2mcdo5v.apicdn.sanity.io`), and grid rule `section { display:block }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.page-content> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 60px`) on desktop and Single-column vertical stack at `390px` viewport width with `5vw` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<main.page-content> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<main class="page-content home-page">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#111` surface cards, `#0006` accents, and `body { line-height:1 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.page-content> — `Technical Architecture & Narrative`)` uses `0px` (sharp unrounded corners) radii, `#0006` highlights, and assets (favicon.svg, apple-touch-icon.png, site.webmanifest).
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.home-page> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `5vw` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.page-content:nth(2)> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<main class="page-content home-page">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#f0f0f0` surface cards, `#000000` accents, and `body { line-height:1 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.page-content:nth(2)> — `Technical Architecture & Narrative`)` uses `0px` (sharp unrounded corners) radii, `#000000` highlights, and assets (favicon.svg, apple-touch-icon.png, site.webmanifest).
 5. **Colophon & Global Directory Footer (<footer.home-page> — `https://www.mathildedechiara.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="home-page">` anchoring `Mathilde De Chiara, designer and` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#0009` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.home-page> — `https://www.mathildedechiara.com/`)` aligns to `1024px` extracted from `www-mathildedechiara-com` stylesheet with `5vw` lateral canvas padding with `60px` grid gap and attributes (data-rh="true", data-rh="true", data-rh="true").
+   - DOM & Selectors: Landmark `<footer class="home-page">` anchoring `Mathilde De Chiara, designer and` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#f8f6f3` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.home-page> — `https://www.mathildedechiara.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `5vw` lateral canvas padding with `4px` grid gap and attributes (data-rh="true", data-rh="true", data-rh="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Lead Copy: *"Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi..."*
+- Copy Excerpt 1: *"Photography & Communication"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.22,.61,.36,1)`
@@ -247,7 +270,7 @@ Scaffold `www-mathildedechiara-com` (`Mathilde De Chiara, designer and interior 
 - **Selector `media (prefers-reduced-motion: re...`**: `transition: .01ms!important` extracted from `www-mathildedechiara-com` stylesheet.
 - **Selector `.slider-overlay__thumb`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
 - **Selector `.mode-toggle`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<main.page-content>`.
+- **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<nav.home-page__filters>` and `<main.home-page>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

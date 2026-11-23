@@ -1,14 +1,17 @@
 ---
 title: "UI & UX Architecture: mubien-com"
+date: 2026-11-23
+captured_at: 2026-11-23
 status: blocked
-block_reason: "Empty raw DOM capture (39 bytes, 0 stylesheets)"
+http_status: null
+block_reason: "Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at https://mubien.com/ Call log: - navigating to 'https://mubien.com/', waiting until 'domcontentloaded)"
 ---
 
 # UI & UX Architecture: mubien-com (`status: blocked`)
 
 > [!WARNING]
-> **Target Status**: `status: blocked`  
+> **Target Status**: `status: blocked` (`http_status: N/A`)  
 > **Production URL**: [https://mubien.com/](https://mubien.com/)  
-> **Block / Unreachable Reason**: Empty raw DOM capture (39 bytes, 0 stylesheets)
+> **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at https://mubien.com/ Call log: - navigating to 'https://mubien.com/', waiting until 'domcontentloaded)
 
-This target's raw capture in `raw/mubien-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.
+This target terminated at an upstream edge WAF challenge, anti-bot verification gate, browser compatibility block, or origin HTTP/network error during live capture. Per strict ethical and ground-truth integrity rules, zero WAF/CAPTCHA bypasses were attempted, no synthetic design tokens were fabricated, and this target is excluded from the `25.0` evaluation tally.

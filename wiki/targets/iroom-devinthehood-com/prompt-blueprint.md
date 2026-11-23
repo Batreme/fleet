@@ -1,67 +1,77 @@
 ---
 title: "UI Prompt Blueprint: iroom-devinthehood-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "iroom-devinthehood-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#e3e6eb` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#1f72c7` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: iroom-devinthehood-com
 
 > **iRoom framework 3 · Get started** (https://iroom.devinthehood.com/) — iRoom, the flex CSS framework: a twelve columns grid, 30+ components, light and dark themes driven by CSS custom properties, parallax, a...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **iRoom framework 3 · Get started** (`https://iroom.devinthehood.com/`). iRoom, the flex CSS framework: a twelve columns grid, 30+ components, light and dark themes driven by CSS custom properties, parallax, a...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#e3e6eb` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#1f72c7` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--ir-bg)` in `:root`) paired with `#14181f` primary typography and `#e3e6eb` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Poppins` for display copy (`The flex one, in a flex world.`) with `Libre Barcode 128 Text` and `Libre Barcode 128 Text`.
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--ir-container)` container bounds (`gap: 1rem`, padding `1.375rem`) with `cubic-bezier(0.2,0.7,0.3,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14181f` primary typography and `#1f72c7` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`The flex one, in a flex world.`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `2rem`) with `cubic-bezier(0.2,0.7,0.3,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×3944px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `var(--ir-container)` extracted from `iroom-devinthehood-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.375rem` lateral canvas padding with `1rem` grid gap.
-- **Border Radius Scale**: `var(--ir-radius-sm)`, `var(--ir-radius)`, `50%`, `var(--ir-radius-full)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `8px`, `50%`, `var(--ir-radius)`, `var(--ir-radius-full)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--ir-container)`, `gap: 1rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.375rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)`, `@media (min-width: 993px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width: 992px)`, `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ffffff` | `var(--ir-bg)` in `:root` |
-| **Primary Typography Ink** | `#f6f7f9` | `var(--ir-surface-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#eceef2` | `var(--ir-surface-3)` in `:root` |
-| **Interactive Accent / Highlight** | `#e3e6eb` | `var(--ir-border)` in `:root` |
-| **Secondary / Muted Copy** | `#cdd2da` | `var(--ir-border-strong)` in `:root` |
-| **Structural Hairline Border** | `#14181f` | `var(--ir-text)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#14181f` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6f7f9` | `var(--ir-surface-2)` in `:root` |
+| **Interactive Accent / Highlight** | `#1f72c7` | `var(--ir-primary)` in `:root` |
+| **Secondary / Muted Copy** | `#8b93a1` | `var(--ir-text-subtle)` in `:root` |
+| **Structural Hairline Border** | `#e3e6eb` | `var(--ir-border)` in `:root` |
+| **Variable Token (`--ir-surface-3`)** | `#eceef2` | `var(--ir-surface-3)` in `:root` |
+| **Variable Token (`--ir-border-strong`)** | `#cdd2da` | `var(--ir-border-strong)` in `:root` |
 | **Variable Token (`--ir-text-muted`)** | `#5d6675` | `var(--ir-text-muted)` in `:root` |
-| **Variable Token (`--ir-text-subtle`)** | `#8b93a1` | `var(--ir-text-subtle)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--btn-bg` | `rgb(255 255 255 / .1)` | Canvas / Surface Token |
+| `--btn-fg` | `#ffffff` | Typography Ink Token |
+| `--btn-border` | `rgb(255 255 255 / .35)` | Elevation / Border Token |
+| `--btn-bg-hover` | `rgb(255 255 255 / .2)` | Canvas / Surface Token |
+| `--ir-sticky-top` | `calc(var(--ir-navbar-height) + 1.5rem)` | Dimension / Scale Token |
 | `--ir-bg` | `#ffffff` | Canvas / Surface Token |
 | `--ir-surface` | `#ffffff` | Canvas / Surface Token |
 | `--ir-surface-2` | `#f6f7f9` | Canvas / Surface Token |
@@ -73,11 +83,6 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 | `--ir-text-subtle` | `#8b93a1` | Typography Ink Token |
 | `--ir-inverse-bg` | `#14181f` | Canvas / Surface Token |
 | `--ir-inverse-fg` | `#f6f7f9` | Typography Ink Token |
-| `--ir-overlay` | `rgba(10, 12, 16, 0.55)` | Color / Atmospheric Token |
-| `--ir-shadow-sm` | `0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08)` | Elevation / Border Token |
-| `--ir-shadow-xl` | `0 28px 56px -14px rgba(16, 24, 40, 0.28)` | Elevation / Border Token |
-| `--ir-soft-mix` | `11%` | Dimension / Scale Token |
-| `--ir-border-mix` | `32%` | Elevation / Border Token |
 
 ---
 
@@ -85,14 +90,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `Poppins`.
-- **Primary Body Stack**: `Libre Barcode 128 Text`.
-- **Technical / Metadata Stack**: `Libre Barcode 128 Text`.
+- **Primary Body Stack**: `Segoe UI`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `,.h1` (`font-size: clamp(2rem,1.55rem + 1.9vw,2....`, `letter-spacing: -0.02em`).
-- **Section Heading (`H2`)**: rule `,.h2` (`font-size: clamp(1.5rem,1.3rem + .9vw,2rem)`, `letter-spacing: -0.015em`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1em`, `1rem`, `100%`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1em`, `1rem`, `100%`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 76px`, `line-height: 79.04px`, `font-weight: 700`, `letter-spacing: -2.66px`); rule `,.h1` (`font-size: clamp(2rem,1.55rem + 1.9vw,2....`, `letter-spacing: -0.02em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 38.4px`, `font-weight: 600`, `letter-spacing: -0.48px`); rule `,.h2` (`font-size: clamp(1.5rem,1.3rem + .9vw,2rem)`, `letter-spacing: -0.015em`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`).
 
 ---
 
@@ -102,9 +107,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(0.2,0.7,0.3,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `media(prefers-reduced-motion: red...`**: `transition: .01ms !important` extracted from `iroom-devinthehood-com` stylesheet.
-- **Selector `textarea)`**: `transition: border-color var(--ir-duration) var(--ir-ease),box-shadow var(...` extracted from `iroom-devinthehood-com` stylesheet.
-- **Selector `input[type=radio]`**: `transition: background-color var(--ir-duration) var(--ir-ease),border-colo...` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-swatch`**: `transition: scale var(--ir-duration) var(--ir-ease)` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-anchor`**: `transition: opacity var(--ir-duration) var(--ir-ease)` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-copy`**: `transition: opacity var(--ir-duration) var(--ir-ease), color var(--ir-dura...` extracted from `iroom-devinthehood-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,0.7,0.3,1)`)**: Governs interactive state transitions across `<header.navbar>` and `<section.demo-section>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.demo-hero>` and `<section.demo-section>` interactive targets.
 
@@ -112,40 +117,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — iRoom framework 3 · Get started            │
 │ ====================================================================== │
-│ [ <header.navbar>          | Get started · Components · CSS · JavaS ]  │
+│ [ <header.navbar> (1440x65px)         | Get started · Components · C ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.demo-hero>                                  |   │
-│ | H1: The flex one, in a flex world.                               |   │
-│ | Substrate: #ffffff    | Ink: #14181f    | Accent: #e3e6eb        |   │
+│ | HERO STAGE: <section.demo-hero> (w=1440px)                         | │
+│ | H1: The flex one, in a flex world.                                 | │
+│ | Substrate: #ffffff | Ink: #14181f | Accent: #1f72c7                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.demo-section>    ) max-w: var(--ir-conta |   │
+│ | SHOWCASE GRID (<section.demo-section>) max-w: 1440px               | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Everything a page needs, not |  | A real flex grid             | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<header.navbar>] -> [<section.demo-hero] -> [<section.demo-sect] |  │
+│ | DETAIL MODULE (<section.bg-subtle>) — Cascade layers               | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.demo-footer>  ) | https://iroom.devinthehood.com/    │
+│ [ FOOTER (<footer.demo-footer>) | https://iroom.devinthehood.com/      │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.navbar>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.demo-hero>) — 390px Vertical Lead             | │
+│ | H1: The flex one, in a flex world.                                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.demo-section>) — 1-Col Stack              | │
+│ | [ Item 1: Everything a page needs, nothing it does not           ] | │
+│ | [ Item 2: A real flex grid                                       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.bg-subtle>) — 1-Col (Cascade layers)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.demo-footer>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.navbar> — `iroom-devinthehood-com`)**:
-   - Landmark `<header class="navbar navbar-sticky">` hosting `iRoom framework 3 · Get started` navigation (`Get started · Components · CSS · JavaScript · Download`), DOM attributes (`data-theme="auto"`, `data-theme-toggle`, `data-tooltip="Dark theme"`, `data-tooltip-position="bottom"`), and stylesheet rule `after { box-sizing:border-box }`.
+   - Landmark `<header class="navbar navbar-sticky">` (`1440x65px`) hosting `iRoom framework 3 · Get started` navigation (`Get started · Components · CSS · JavaScript · Download`), DOM attributes (`data-theme="auto"`, `data-theme-toggle`, `data-tooltip="Dark theme"`, `data-tooltip-position="bottom"`), and stylesheet rule `.demo-brand { font-family: 'Libre Barcode 128 Text', cursive; font-size: 2.75rem; font... }`.
 2. **Hero Stage & Focal Lead (<section.demo-hero> — `The flex one, in a flex world.`)**:
    - Landmark `<section class="demo-hero parallax">` presenting display lead `The flex one, in a flex world.` and copy excerpt *"A CSS framework built on flexbox, cascade layers and custom prope"* over `#ffffff` canvas and `#14181f` ink.
 3. **Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)**:
-   - Landmark `<section class="demo-section">` rendering section `Everything a page needs, nothing it does not` with copy *"Classes that read like what they do, a grid that bends to every s"*, asset references (`iroom.ico`, `favicon.png`, `iroom.min.css`, `demo.css`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highligh... }`.
-4. **Interactive Detail & Feature Matrix (<section.demo-section> — `A real flex grid`)**:
-   - Landmark `<section class="demo-section bg-subtle">` framing `A real flex grid` and `Cascade layers` (*"Twelve columns, four sizes, true gaps instead of negative margins"*) with `#eceef2` surface cards, `#e3e6eb` accents, and `body { margin:0;min-height:100vh;min-height:100dvh }`.
+   - Landmark `<section class="demo-section">` rendering section `Everything a page needs, nothing it does not` with copy *"Classes that read like what they do, a grid that bends to every s"*, asset references (`iroom.ico`, `favicon.png`, `iroom.min.css`, `demo.css`), and grid rule `.demo-logo-pending .demo-hero-bar... { visibility: hidden; }`.
+4. **Interactive Detail & Feature Matrix (<section.bg-subtle> — `A real flex grid`)**:
+   - Landmark `<section class="demo-section bg-subtle">` framing `A real flex grid` and `Cascade layers` (*"Twelve columns, four sizes, true gaps instead of negative margins"*) with `#f6f7f9` surface cards, `#1f72c7` accents, and `.demo-hero .lead { max-width: 40rem; color: rgb(255 255 255 / .88); text-shadow: 0 1px 12px... }`.
 5. **Colophon & Global Directory Footer (<footer.demo-footer> — `https://iroom.devinthehood.com/`)**:
-   - Landmark `<footer class="demo-footer">` anchoring `iRoom framework 3 · Get started` footer links (`Get started · Components · CSS · JavaScript · Download`), copy *"Reset, tokens, base, layout, components, utilities: an utili"*, and `#14181f` structural dividers.
+   - Landmark `<footer class="demo-footer">` anchoring `iRoom framework 3 · Get started` footer links (`Get started · Components · CSS · JavaScript · Download`), copy *"Reset, tokens, base, layout, components, utilities: an utili"*, and `#e3e6eb` structural dividers.
 
 ---
 
@@ -157,19 +181,24 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `iroom-devinthehood-com` (**iRoom framework 3 · Get started** — `https://iroom.devinthehood.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#e3e6eb` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#1f72c7` accent).
 - **Identity & Domain Context**: iRoom, the flex CSS framework: a twelve columns grid, 30+ components, light and dark themes driven by CSS custom properties, parallax, a...
-- **Primary Substrate**: `#ffffff` (`var(--ir-bg)` in `:root`), **Primary Ink**: `#14181f`, **Accent / Highlight**: `#e3e6eb`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#14181f`, **Accent / Highlight**: `#1f72c7`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--ir-bg)` in `:root`) paired with `#14181f` primary typography and `#e3e6eb` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Poppins` for display copy (`The flex one, in a flex world.`) with `Libre Barcode 128 Text` and `Libre Barcode 128 Text`.
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--ir-container)` container bounds (`gap: 1rem`, padding `1.375rem`) with `cubic-bezier(0.2,0.7,0.3,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14181f` primary typography and `#1f72c7` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`The flex one, in a flex world.`) with `Segoe UI` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `2rem`) with `cubic-bezier(0.2,0.7,0.3,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `iroom-devinthehood-com` in your global stylesheet:
 
 :root {
-  /* iRoom framework 3 · Get started (iroom-devinthehood-com) — Ground-Truth Extracted CSS Variables */
+  /* iRoom framework 3 · Get started (iroom-devinthehood-com) — Live-Grounded CSS Variables */
+  --btn-bg: rgb(255 255 255 / .1); /* Canvas / Surface Token (iroom-devinthehood-com) */
+  --btn-fg: #ffffff; /* Typography Ink Token (iroom-devinthehood-com) */
+  --btn-border: rgb(255 255 255 / .35); /* Elevation / Border Token (iroom-devinthehood-com) */
+  --btn-bg-hover: rgb(255 255 255 / .2); /* Canvas / Surface Token (iroom-devinthehood-com) */
+  --ir-sticky-top: calc(var(--ir-navbar-height) + 1.5rem); /* Dimension / Scale Token (iroom-devinthehood-com) */
   --ir-bg: #ffffff; /* Canvas / Surface Token (iroom-devinthehood-com) */
   --ir-surface: #ffffff; /* Canvas / Surface Token (iroom-devinthehood-com) */
   --ir-surface-2: #f6f7f9; /* Canvas / Surface Token (iroom-devinthehood-com) */
@@ -181,60 +210,56 @@ Declare and consume these exact custom properties extracted from `iroom-devinthe
   --ir-text-subtle: #8b93a1; /* Typography Ink Token (iroom-devinthehood-com) */
   --ir-inverse-bg: #14181f; /* Canvas / Surface Token (iroom-devinthehood-com) */
   --ir-inverse-fg: #f6f7f9; /* Typography Ink Token (iroom-devinthehood-com) */
-  --ir-overlay: rgba(10, 12, 16, 0.55); /* Color / Atmospheric Token (iroom-devinthehood-com) */
-  --ir-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08); /* Elevation / Border Token (iroom-devinthehood-com) */
-  --ir-shadow-xl: 0 28px 56px -14px rgba(16, 24, 40, 0.28); /* Elevation / Border Token (iroom-devinthehood-com) */
-  --ir-soft-mix: 11%; /* Dimension / Scale Token (iroom-devinthehood-com) */
-  --ir-border-mix: 32%; /* Elevation / Border Token (iroom-devinthehood-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ffffff` — grounded in `var(--ir-bg)` in `:root`
-- **Primary Typography Ink**: `#f6f7f9` — grounded in `var(--ir-surface-2)` in `:root`
-- **Elevated Surface / Card Substrate**: `#eceef2` — grounded in `var(--ir-surface-3)` in `:root`
-- **Interactive Accent / Highlight**: `#e3e6eb` — grounded in `var(--ir-border)` in `:root`
-- **Secondary / Muted Copy**: `#cdd2da` — grounded in `var(--ir-border-strong)` in `:root`
-- **Structural Hairline Border**: `#14181f` — grounded in `var(--ir-text)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#14181f` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f6f7f9` — grounded in `var(--ir-surface-2)` in `:root`
+- **Interactive Accent / Highlight**: `#1f72c7` — grounded in `var(--ir-primary)` in `:root`
+- **Secondary / Muted Copy**: `#8b93a1` — grounded in `var(--ir-text-subtle)` in `:root`
+- **Structural Hairline Border**: `#e3e6eb` — grounded in `var(--ir-border)` in `:root`
+- **Variable Token (`--ir-surface-3`)**: `#eceef2` — grounded in `var(--ir-surface-3)` in `:root`
+- **Variable Token (`--ir-border-strong`)**: `#cdd2da` — grounded in `var(--ir-border-strong)` in `:root`
 - **Variable Token (`--ir-text-muted`)**: `#5d6675` — grounded in `var(--ir-text-muted)` in `:root`
-- **Variable Token (`--ir-text-subtle`)**: `#8b93a1` — grounded in `var(--ir-text-subtle)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×3944px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `var(--ir-container)` extracted from `iroom-devinthehood-com` stylesheet
-- **Padding & Gutters**: `1.375rem` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--ir-container)`, `gap: 1rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.375rem` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)`, `@media (min-width: 993px)`
-- **Corner Radii**: `var(--ir-radius-sm)`, `var(--ir-radius)`, `50%`, `var(--ir-radius-full)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `2rem` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding
+- **Media Queries**: `@media (max-width: 992px)`, `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)`
+- **Corner Radii**: `8px`, `50%`, `var(--ir-radius)`, `var(--ir-radius-full)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Poppins`
-- **Body Font Stack**: `Libre Barcode 128 Text`
-- **Monospace / Technical Font Stack**: `Libre Barcode 128 Text`
-- **H1 Display Rule**: rule `,.h1` (`font-size: clamp(2rem,1.55rem + 1.9vw,2....`, `letter-spacing: -0.02em`)
-- **H2 Section Rule**: rule `,.h2` (`font-size: clamp(1.5rem,1.3rem + .9vw,2rem)`, `letter-spacing: -0.015em`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1em`, `1rem`, `100%`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1em`, `1rem`, `100%`)
+- **Body Font Stack**: `Segoe UI`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 76px`, `line-height: 79.04px`, `font-weight: 700`, `letter-spacing: -2.66px`); rule `,.h1` (`font-size: clamp(2rem,1.55rem + 1.9vw,2....`, `letter-spacing: -0.02em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 32px`, `line-height: 38.4px`, `font-weight: 600`, `letter-spacing: -0.48px`); rule `,.h2` (`font-size: clamp(1.5rem,1.3rem + .9vw,2rem)`, `letter-spacing: -0.015em`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `iroom-devinthehood-com` (`iRoom framework 3 · Get started`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.navbar> — `iroom-devinthehood-com`)**:
-   - DOM & Selectors: Landmark `<header class="navbar navbar-sticky">` hosting `iRoom framework 3 · Get started` navigation (`Get started · Components · CSS · JavaScript · Download`), DOM attributes (`data-theme="auto"`, `data-theme-toggle`, `data-tooltip="Dark theme"`, `data-tooltip-position="bottom"`), and stylesheet rule `after { box-sizing:border-box }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navbar> — `iroom-devinthehood-com`)` (`iroom-devinthehood-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)`, `@media (min-width: 993px)` with `cubic-bezier(0.2,0.7,0.3,1)` transitions and links `Get started · Components · CSS · JavaScript · Download`.
+   - DOM & Selectors: Landmark `<header class="navbar navbar-sticky">` (`1440x65px`) hosting `iRoom framework 3 · Get started` navigation (`Get started · Components · CSS · JavaScript · Download`), DOM attributes (`data-theme="auto"`, `data-theme-toggle`, `data-tooltip="Dark theme"`, `data-tooltip-position="bottom"`), and stylesheet rule `.demo-brand { font-family: 'Libre Barcode 128 Text', cursive; font-size: 2.75rem; font... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navbar> — `iroom-devinthehood-com`)` (`iroom-devinthehood-com`) adapts across `@media (max-width: 992px)`, `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)` with `cubic-bezier(0.2,0.7,0.3,1)` transitions and links `Get started · Components · CSS · JavaScript · Download`.
 2. **Hero Stage & Focal Lead (<section.demo-hero> — `The flex one, in a flex world.`)**:
    - DOM & Selectors: Landmark `<section class="demo-hero parallax">` presenting display lead `The flex one, in a flex world.` and copy excerpt *"A CSS framework built on flexbox, cascade layers and custom prope"* over `#ffffff` canvas and `#14181f` ink.
-   - Responsive Contract: Hero stage (`1440×3944px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#14181f` headline `The flex one, in a flex world.`.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#14181f` headline `The flex one, in a flex world.`.
 3. **Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)**:
-   - DOM & Selectors: Landmark `<section class="demo-section">` rendering section `Everything a page needs, nothing it does not` with copy *"Classes that read like what they do, a grid that bends to every s"*, asset references (`iroom.ico`, `favicon.png`, `iroom.min.css`, `demo.css`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highligh... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--ir-container)`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.375rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.demo-section> — `A real flex grid`)**:
-   - DOM & Selectors: Landmark `<section class="demo-section bg-subtle">` framing `A real flex grid` and `Cascade layers` (*"Twelve columns, four sizes, true gaps instead of negative margins"*) with `#eceef2` surface cards, `#e3e6eb` accents, and `body { margin:0;min-height:100vh;min-height:100dvh }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.demo-section> — `A real flex grid`)` uses `var(--ir-radius-sm)`, `var(--ir-radius)`, `50%`, `var(--ir-radius-full)` radii, `#e3e6eb` highlights, and assets (iroom.ico, favicon.png, iroom.min.css).
+   - DOM & Selectors: Landmark `<section class="demo-section">` rendering section `Everything a page needs, nothing it does not` with copy *"Classes that read like what they do, a grid that bends to every s"*, asset references (`iroom.ico`, `favicon.png`, `iroom.min.css`, `demo.css`), and grid rule `.demo-logo-pending .demo-hero-bar... { visibility: hidden; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.bg-subtle> — `A real flex grid`)**:
+   - DOM & Selectors: Landmark `<section class="demo-section bg-subtle">` framing `A real flex grid` and `Cascade layers` (*"Twelve columns, four sizes, true gaps instead of negative margins"*) with `#f6f7f9` surface cards, `#1f72c7` accents, and `.demo-hero .lead { max-width: 40rem; color: rgb(255 255 255 / .88); text-shadow: 0 1px 12px... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.bg-subtle> — `A real flex grid`)` uses `8px`, `50%`, `var(--ir-radius)`, `var(--ir-radius-full)` radii, `#1f72c7` highlights, and assets (iroom.ico, favicon.png, iroom.min.css).
 5. **Colophon & Global Directory Footer (<footer.demo-footer> — `https://iroom.devinthehood.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="demo-footer">` anchoring `iRoom framework 3 · Get started` footer links (`Get started · Components · CSS · JavaScript · Download`), copy *"Reset, tokens, base, layout, components, utilities: an utili"*, and `#14181f` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.demo-footer> — `https://iroom.devinthehood.com/`)` aligns to `var(--ir-container)` extracted from `iroom-devinthehood-com` stylesheet with `1.375rem` lateral canvas padding with `1rem` grid gap and attributes (data-theme="auto", data-theme-toggle, data-tooltip="Dark theme").
+   - DOM & Selectors: Landmark `<footer class="demo-footer">` anchoring `iRoom framework 3 · Get started` footer links (`Get started · Components · CSS · JavaScript · Download`), copy *"Reset, tokens, base, layout, components, utilities: an utili"*, and `#e3e6eb` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.demo-footer> — `https://iroom.devinthehood.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `2rem` lateral canvas padding with `16px` grid gap and attributes (data-theme="auto", data-theme-toggle, data-tooltip="Dark theme").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"A CSS framework built on flexbox, cascade layers and custom properties: a twelve c..."*
@@ -245,15 +270,15 @@ Scaffold `iroom-devinthehood-com` (`iRoom framework 3 · Get started`) with thes
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.2,0.7,0.3,1)`
 - **Extracted Stylesheet Rules (`iroom-devinthehood-com`)**:
-- `after { box-sizing:border-box }`
-- `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highligh... }`
-- `body { margin:0;min-height:100vh;min-height:100dvh }`
-- `blockquote { overflow-wrap:break-word }`
-- `strong { font-weight:bolder }`
+- `.demo-brand { font-family: 'Libre Barcode 128 Text', cursive; font-size: 2.75rem; font... }`
+- `.demo-logo-pending .demo-hero-bar... { visibility: hidden; }`
+- `.demo-hero .lead { max-width: 40rem; color: rgb(255 255 255 / .88); text-shadow: 0 1px 12px... }`
+- `.demo-hero .display { text-shadow: 0 2px 30px rgb(9 13 36 / .6); }`
+- `.demo-hero-scroll:hover { color: ffffff; background-color: rgb(255 255 255 / .12); }`
 - **Per-Selector Transition Rules**:
-- **Selector `media(prefers-reduced-motion: red...`**: `transition: .01ms !important` extracted from `iroom-devinthehood-com` stylesheet.
-- **Selector `textarea)`**: `transition: border-color var(--ir-duration) var(--ir-ease),box-shadow var(...` extracted from `iroom-devinthehood-com` stylesheet.
-- **Selector `input[type=radio]`**: `transition: background-color var(--ir-duration) var(--ir-ease),border-colo...` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-swatch`**: `transition: scale var(--ir-duration) var(--ir-ease)` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-anchor`**: `transition: opacity var(--ir-duration) var(--ir-ease)` extracted from `iroom-devinthehood-com` stylesheet.
+- **Selector `.demo-copy`**: `transition: opacity var(--ir-duration) var(--ir-ease), color var(--ir-dura...` extracted from `iroom-devinthehood-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,0.7,0.3,1)`)**: Governs interactive state transitions across `<header.navbar>` and `<section.demo-section>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.demo-hero>` and `<section.demo-section>` interactive targets.
 
