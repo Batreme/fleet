@@ -34,8 +34,8 @@ outcome_summary: "Automated Playwright discovery and headless reverse-engineerin
 ## Final Outcome & Artifacts
 - **50 New Production Targets Analyzed**: Total targets in `fleet/wiki/targets/` increased from 21 to 71.
 - **1,011 Semantic Chunks Indexed**: Vector search tested and verified via `reverse-harness query`.
-- **Knowledge Base Map Updated**: [fleet/wiki/INDEX.md](file:///root/projects/fleet/wiki/INDEX.md) enriched with a clean directory of all 71 production targets.
-- **New Design DNA Archetypes**: Added `gallery-monochrome` and `avant-garde-spatial` in [archetypes.json](file:///root/projects/reverse-harness/dna/archetypes.json) and CLI command `reverse-harness dna`.
+- **Knowledge Base Map Updated**: [fleet/wiki/INDEX.md](../INDEX.md) enriched with a clean directory of all 71 production targets.
+- **New Design DNA Archetypes**: Added `gallery-monochrome` and `avant-garde-spatial` in `reverse-harness/dna/archetypes.json` and CLI command `reverse-harness dna`.
 
 ## Reusable Lessons
 - When crawling award directories like Awwwards, always navigate with Playwright's native browser context rather than forged user-agent strings that fail TLS/HTTP2 consistency checks.

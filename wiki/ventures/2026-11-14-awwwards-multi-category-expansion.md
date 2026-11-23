@@ -32,11 +32,11 @@ outcome_summary: "Expanded Fleet KB to 197 production targets across 7 major ver
 - **Dynamic Canvas & Infinite Scroll Stalls**: Several creative portfolio sites utilize infinite canvas height calculations that stalled full-page screenshots. Resolved with strict 8s screenshot timeouts and 50s per-target execution cutoffs.
 
 ## Final Outcome & Artifacts
-- **197 Total Production Targets**: Cataloged and linked in [fleet/wiki/INDEX.md](file:///root/projects/fleet/wiki/INDEX.md).
+- **197 Total Production Targets**: Cataloged and linked in [fleet/wiki/INDEX.md](../INDEX.md).
 - **Three New Production Playbooks**:
-  - [agency-and-ecommerce-patterns.md](file:///root/projects/fleet/wiki/playbooks/agency-and-ecommerce-patterns.md): Headless Shop Pay v2 cart sync, Remix/Hydrogen edge architectures, CMU phonetic kinetic typography, and aspect-ratio lookbooks.
-  - [architectural-and-spatial-patterns.md](file:///root/projects/fleet/wiki/playbooks/architectural-and-spatial-patterns.md): Tectonic framing, viewport-derived grid math, chunked WebP sequence scrubbing, optical difference headers, and lifecycle statuses.
-  - [tech-and-experimental-patterns.md](file:///root/projects/fleet/wiki/playbooks/tech-and-experimental-patterns.md): Spatial cockpit layering (`z-index: 0/10/20`), PBR GLSL uniform pipelines, pitch-black/neon phosphor tokens, and telemetry HUD readouts.
+  - [agency-and-ecommerce-patterns.md](../playbooks/agency-and-ecommerce-patterns.md): Headless Shop Pay v2 cart sync, Remix/Hydrogen edge architectures, CMU phonetic kinetic typography, and aspect-ratio lookbooks.
+  - [architectural-and-spatial-patterns.md](../playbooks/architectural-and-spatial-patterns.md): Tectonic framing, viewport-derived grid math, chunked WebP sequence scrubbing, optical difference headers, and lifecycle statuses.
+  - [tech-and-experimental-patterns.md](../playbooks/tech-and-experimental-patterns.md): Spatial cockpit layering (`z-index: 0/10/20`), PBR GLSL uniform pipelines, pitch-black/neon phosphor tokens, and telemetry HUD readouts.
 - **Updated Knowledge Base MOC**: Registered all playbooks and 197 targets into `fleet/wiki/INDEX.md`.
 
 ## Reusable Lessons

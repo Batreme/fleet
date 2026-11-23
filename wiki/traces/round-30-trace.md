@@ -1,38 +1,38 @@
-# Round 30 Execution Trace: UI Prompt Blueprint Expansion
+# Round 30 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-15-ROUND-30`  
-> **Active Branch**: `feat/ui-prompt-expansion`  
-> **Analyzed Targets**: `10` (`0` marked `status: blocked` and excluded from tally per `C1`)  
-> **Deterministic Evaluation (`C1`–`C14`)**: **`25.0 / 25.0`**
+> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-30`  
+> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Analyzed Targets**: `9` live (`1` marked `status: blocked` and excluded from tally per `C1`)  
+> **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 30 Target Scope
-  1. `productionportugal-com` — *Production Portugal: Your trusted film production company in Portugal an...* (`https://productionportugal.com/`)
-  2. `pyzhevsky-estate` — *Pyzhevsky — official website of a deluxe residence five minutes from the...* (`https://pyzhevsky.estate/`)
-  3. `re-cycle-org` — *Re-Cycle · Changing Lives Through Bicycle Reuse* (`https://re-cycle.org/`)
-  4. `realevate-agency` — *Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...* (`https://realevate.agency/`)
-  5. `reapi-ai_models-gpt-image-2-5` — *GPT Image 2.5 — Sharper Detail, Precise Editing* (`https://reapi.ai/models/gpt-image-2-5`)
-  6. `recurziv-com` — *Recurziv — Web & App Development Studio in Goa* (`https://recurziv.com`)
-  7. `reelmotion-fit` — *Reel Motion: Turn Workout Videos Into Exercise Routines* (`https://reelmotion.fit/`)
-  8. `relevovinco-com` — *Relevo & Vinco — inkless packaging, pressed into the board* (`https://relevovinco.com/`)
-  9. `residences-loamhouse-com-au` — *Loam House — Sandringham* (`https://residences.loamhouse.com.au`)
-  10. `revelatio-studio` — *Revelatio · Branding, Product Design & Code* (`https://revelatio.studio/`)
+  1. `productionportugal-com` — *Production Portugal: Your trusted film production company in Portugal an...*
+  2. `pyzhevsky-estate` — *Pyzhevsky — official website of a deluxe residence five minutes from the...*
+  3. `re-cycle-org` — *Re-Cycle · Changing Lives Through Bicycle Reuse*
+  4. `realevate-agency` — *Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...*
+  5. `reapi-ai_models-gpt-image-2-5` — *GPT Image 2.5 — Sharper Detail, Precise Editing*
+  6. `recurziv-com` — *Blocked (`Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://recurziv.com/', waiting until 'domcontentloaded' )`)*
+  7. `reelmotion-fit` — *Reel Motion: Turn Workout Videos Into Exercise Routines*
+  8. `relevovinco-com` — *Relevo & Vinco — inkless packaging, pressed into the board*
+  9. `residences-loamhouse-com-au` — *Loam House — Sandringham*
+  10. `revelatio-studio` — *Revelatio · Branding, Product Design & Code*
 
 ---
 
-## 2. Ground-Truth Asset & Extraction Metrics (Verified PNG IHDR & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
 
-| Target Slug | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `productionportugal-com` | `1440×7800px` (470,018 B) | `390×2400px` (153,239 B) | 23 | 16 | 258 | 107 | `0.15` / `0.58` | **25.0 / 25.0** |
-| `pyzhevsky-estate` | `1440×2400px` (123,003 B) | `390×2400px` (43,192 B) | 484 | 16 | 256 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `re-cycle-org` | `1440×5863px` (2,328,922 B) | `390×2400px` (210,420 B) | 132 | 16 | 256 | 106 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `realevate-agency` | `1440×2400px` (788,835 B) | `390×2400px` (317,557 B) | 305 | 16 | 266 | 111 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `reapi-ai_models-gpt-image-2-5` | `1440×14542px` (2,757,094 B) | `390×2400px` (108,280 B) | 425 | 16 | 266 | 111 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `recurziv-com` | `1440×2400px` (463,604 B) | `390×2400px` (344,382 B) | 7 | 16 | 256 | 106 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `reelmotion-fit` | `1440×4938px` (1,086,767 B) | `390×2400px` (258,368 B) | 249 | 16 | 256 | 106 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `relevovinco-com` | `1440×2400px` (3,523,581 B) | `390×2400px` (1,289,861 B) | 29 | 16 | 256 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `residences-loamhouse-com-au` | `1440×9000px` (1,538,800 B) | `390×2400px` (66,835 B) | 17 | 16 | 256 | 106 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `revelatio-studio` | `1440×13959px` (1,338,441 B) | `390×2400px` (33,616 B) | 22 | 16 | 276 | 116 | `0.15` / `0.58` | **25.0 / 25.0** |
+| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `productionportugal-com` | `tier1_fast` | `1440×2400px` (860,700 B) | `390×2400px` (291,250 B) | 23 | 16 | 292 | 111 | `0.14` / `0.62` | **25.0 / 25.0** |
+| `pyzhevsky-estate` | `tier1_fast` | `1440×900px` (737,997 B) | `390×844px` (298,548 B) | 484 | 16 | 284 | 107 | `0.08` / `0.50` | **25.0 / 25.0** |
+| `re-cycle-org` | `tier1_fast` | `1440×2400px` (2,229,150 B) | `390×2400px` (636,157 B) | 132 | 16 | 296 | 113 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `realevate-agency` | `tier1_fast` | `1440×900px` (156,849 B) | `390×844px` (79,200 B) | 305 | 16 | 298 | 114 | `0.08` / `0.49` | **25.0 / 25.0** |
+| `reapi-ai_models-gpt-image-2-5` | `tier2_webgl` | `1440×900px` (217,466 B) | `390×844px` (70,793 B) | 363 | 16 | 292 | 111 | `0.08` / `0.48` | **25.0 / 25.0** |
+| `reelmotion-fit` | `tier1_fast` | `1440×2400px` (1,037,638 B) | `390×2400px` (397,824 B) | 249 | 16 | 300 | 115 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `relevovinco-com` | `tier1_fast` | `1440×2400px` (2,037,391 B) | `390×2400px` (793,639 B) | 29 | 16 | 288 | 109 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `residences-loamhouse-com-au` | `tier1_fast` | `1440×2400px` (1,481,718 B) | `390×2400px` (448,147 B) | 17 | 16 | 288 | 109 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `revelatio-studio` | `tier2_webgl` | `1440×900px` (11,994 B) | `390×2400px` (31,140 B) | 22 | 16 | 282 | 106 | `0.14` / `0.62` | **25.0 / 25.0** |
+| `recurziv-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call `)** |

@@ -20,9 +20,9 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 ---
 
 ### 📊 Dashboards & Execution Traces (`wiki/`)
-- [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`556/556` analyzable targets at `25.0/25.0`, `19` `status: blocked` WAF/error captures excluded per `C1`), viewport captures, and `claude-loop` review (`VERDICT: APPROVE`, `24/25`).
-- [round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) — Complete 58-round execution traces and `C1`–`C14` remediation ledgers audited by `claude-sonnet-5-5-high`.
-- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across all 7 verification rounds by `claude-sonnet-5-5-high`.
+- [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`494/494` live analyzed targets at `25.0/25.0`, `0` synthetic specimens, `23` `site-blocked` WAF/HTTP/dead targets + `58` `capture-incomplete` preloader/WebGPU/timeout targets = `81` `status: blocked` excluded cleanly per `C1`/`C15`), live `1440×[900..2400]` desktop & `390×[844..2400]` mobile viewport captures, and `claude-loop` audit status (Round 9 Takeover Remediation `R1`–`R8` pending `claude-takeover-reviewer`).
+- [round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) — Complete 58-round live-recrawl execution traces and `C1`–`C15` verification ledgers.
+- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across Rounds 1–7 (`claude-sonnet-5-5-high`) and Round 8 Takeover Live-Recrawl (pending `claude-takeover-reviewer`).
 
 ---
 

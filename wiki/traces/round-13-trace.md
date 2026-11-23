@@ -1,38 +1,38 @@
-# Round 13 Execution Trace: UI Prompt Blueprint Expansion
+# Round 13 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-15-ROUND-13`  
-> **Active Branch**: `feat/ui-prompt-expansion`  
-> **Analyzed Targets**: `9` (`1` marked `status: blocked` and excluded from tally per `C1`)  
-> **Deterministic Evaluation (`C1`–`C14`)**: **`25.0 / 25.0`**
+> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-13`  
+> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Analyzed Targets**: `8` live (`2` marked `status: blocked` and excluded from tally per `C1`)  
+> **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 13 Target Scope
-  1. `emmaus-agir-31-fr` — *Emmaüs A.G.I.R. — Boutiques solidaires à Toulouse et autour* (`https://emmaus-agir-31.fr/`)
-  2. `equitifyasset-com` — *EquitiFy Assets · Home* (`https://equitifyasset.com/`)
-  3. `errormade-tech` — *Entrance — Errormade* (`https://errormade.tech/`)
-  4. `estudioniksen-com` — *Estudio Niksen* (`https://estudioniksen.com/`)
-  5. `ethanwong-photography` — *Ethan W · Film-Inspired Wedding & Editorial Photographer · Washington DC...* (`http://ethanwong.photography`)
-  6. `ethiack-com` — *Ethiack* (`https://ethiack.com/`)
-  7. `example-app` — *Blocked (`Placeholder Example Domain capture (0 production stylesheets)`)*
-  8. `exp-fiddle-digital` — *Fiddle.Digital — Experiments* (`https://exp.fiddle.digital`)
-  9. `explorajourneys-com_int-en-explora-journal` — *The Explora Journal, A Magazine by Explora Journeys* (`https://explorajourneys.com/int/en/explora-journal`)
-  10. `explore-auravinyl-com` — *Aura Vinyl Color Explorer* (`https://explore.auravinyl.com`)
+  1. `emmaus-agir-31-fr` — *Emmaüs A.G.I.R. — Boutiques solidaires à Toulouse et autour*
+  2. `equitifyasset-com` — *EquitiFy Assets · Home*
+  3. `errormade-tech` — *Entrance — Errormade*
+  4. `estudioniksen-com` — *Estudio Niksen*
+  5. `ethanwong-photography` — *Ethan W · Film-Inspired Wedding & Editorial Photographer · Washington DC...*
+  6. `ethiack-com` — *Ethiack*
+  7. `example-app` — *Blocked (`Placeholder Example Domain (no production site)`)*
+  8. `exp-fiddle-digital` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  9. `explorajourneys-com_int-en-explora-journal` — *The Explora Journal, A Magazine by Explora Journeys*
+  10. `explore-auravinyl-com` — *Aura Vinyl Color Explorer*
 
 ---
 
-## 2. Ground-Truth Asset & Extraction Metrics (Verified PNG IHDR & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
 
-| Target Slug | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `emmaus-agir-31-fr` | `1440×2400px` (666,710 B) | `390×2400px` (328,785 B) | 70 | 16 | 258 | 107 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `equitifyasset-com` | `1440×8426px` (1,714,922 B) | `390×2400px` (375,889 B) | 96 | 16 | 270 | 113 | `0.10` / `0.50` | **25.0 / 25.0** |
-| `errormade-tech` | `1440×11365px` (84,201 B) | `390×2400px` (38,118 B) | 82 | 16 | 256 | 106 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `estudioniksen-com` | `1440×10946px` (4,083,840 B) | `390×2400px` (238,345 B) | 624 | 16 | 260 | 108 | `0.10` / `0.50` | **25.0 / 25.0** |
-| `ethanwong-photography` | `1440×2400px` (611,552 B) | `390×2400px` (311,535 B) | 30 | 16 | 256 | 106 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `ethiack-com` | `1440×2400px` (484,856 B) | `390×2400px` (247,237 B) | 167 | 16 | 272 | 114 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `example-app` | `status: blocked` | `status: blocked` | — | — | — | — | — | **Excluded (`Placeholder Example Domain capture (0 production stylesheets)`)** |
-| `exp-fiddle-digital` | `1440×2400px` (1,043,184 B) | `390×2400px` (450,480 B) | 74 | 16 | 253 | 103 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `explorajourneys-com_int-en-explora-journal` | `1440×9273px` (127,251 B) | `390×2400px` (99,430 B) | 29 | 16 | 256 | 106 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `explore-auravinyl-com` | `1440×2400px` (471,692 B) | `390×2400px` (255,362 B) | 59 | 16 | 264 | 110 | `0.09` / `0.52` | **25.0 / 25.0** |
+| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `emmaus-agir-31-fr` | `tier1_fast` | `1440×900px` (668,116 B) | `390×844px` (332,759 B) | 70 | 16 | 288 | 109 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `equitifyasset-com` | `tier1_fast` | `1440×2400px` (1,513,447 B) | `390×2400px` (407,538 B) | 96 | 16 | 300 | 115 | `0.09` / `0.53` | **25.0 / 25.0** |
+| `errormade-tech` | `tier2_webgl` | `1440×900px` (13,426 B) | `390×844px` (6,108 B) | 82 | 16 | 284 | 107 | `0.09` / `0.53` | **25.0 / 25.0** |
+| `estudioniksen-com` | `tier1_fast` | `1440×900px` (1,328,742 B) | `390×2400px` (564,732 B) | 130 | 16 | 284 | 107 | `0.09` / `0.53` | **25.0 / 25.0** |
+| `ethanwong-photography` | `tier1_fast` | `1440×900px` (1,374,008 B) | `390×844px` (372,128 B) | 30 | 16 | 292 | 111 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `ethiack-com` | `tier2_webgl` | `1440×900px` (81,523 B) | `390×844px` (34,854 B) | 184 | 16 | 306 | 118 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `explorajourneys-com_int-en-explora-journal` | `tier1_fast` | `1440×2400px` (1,486,006 B) | `390×2400px` (738,290 B) | 10 | 16 | 284 | 107 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `explore-auravinyl-com` | `tier1_fast` | `1440×900px` (360,998 B) | `390×844px` (24,223 B) | 59 | 16 | 298 | 114 | `0.08` / `0.52` | **25.0 / 25.0** |
+| `example-app` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Placeholder Example Domain (no production site)`)** |
+| `exp-fiddle-digital` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
