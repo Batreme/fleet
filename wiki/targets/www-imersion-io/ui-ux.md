@@ -1,39 +1,54 @@
+---
+title: "UI & UX Architecture: www-imersion-io"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-imersion-io
 
 ## Overview & Design Identity
 - **Target**: `www-imersion-io` (**Imersion — Get Immersed in the World's Most Beautiful Places**)
 - **Production URL**: [https://www.imersion.io](https://www.imersion.io)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#007bff` canvas, `#6610f2` ink, `#e83e8c` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#007bff` accent)
 - **Summary**: Get immersed in the most beautiful places on Earth — breathtaking landscapes, hidden hotels and surreal restaurants, each with its own st...
-- **Total Clean CSS Variables Extracted**: `28` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Anton`
-- **Body Font Stack**: `Bitcount Single`
+- **Display Font Stack**: `Geist Mono`
+- **Body Font Stack**: `Source Code Pro`
 - **Monospace / Technical Font Stack**: `Geist Mono`
-- **Hero Display (`H1`)**: rule `,h1` (`font-size: 2.5rem`)
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: 2rem`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1rem`, `80%`, `75%`, `1em`, `1.5rem`)
-- **Metadata & Labels**: rule `,small` (`font-size: 80%`, `font-weight: 400`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 100.8px`, `line-height: 92.736px`, `font-weight: 500`, `letter-spacing: -3.528px`); rule `,h1` (`font-size: 2.5rem`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 38.4px`, `line-height: 53.76px`, `font-weight: 500`, `letter-spacing: -0.576px`); rule `,h2` (`font-size: 2rem`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `,small` (`font-size: 80%`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#007bff` | `var(--blue)` in `:root` |
-| **Primary Typography Ink** | `#6610f2` | `var(--indigo)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6f42c1` | `var(--purple)` in `:root` |
-| **Interactive Accent / Highlight** | `#e83e8c` | `var(--pink)` in `:root` |
-| **Secondary / Muted Copy** | `#dc3545` | `var(--red)` in `:root` |
-| **Structural Hairline Border** | `#fd7e14` | `var(--orange)` in `:root` |
+| **Primary Canvas Substrate** | `#111111` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0a0a0d` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#007bff` | `var(--primary)` in `:root` |
+| **Secondary / Muted Copy** | `#999999` | live computed `footer` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#0f0f0f` | `hr { border-top: #0f0f0f }` |
+| **Variable Token (`--indigo`)** | `#6610f2` | `var(--indigo)` in `:root` |
+| **Variable Token (`--purple`)** | `#6f42c1` | `var(--purple)` in `:root` |
+| **Variable Token (`--pink`)** | `#e83e8c` | `var(--pink)` in `:root` |
+| **Variable Token (`--red`)** | `#dc3545` | `var(--red)` in `:root` |
+| **Variable Token (`--orange`)** | `#fd7e14` | `var(--orange)` in `:root` |
 | **Variable Token (`--yellow`)** | `#ffc107` | `var(--yellow)` in `:root` |
 | **Variable Token (`--green`)** | `#28a745` | `var(--green)` in `:root` |
 | **Variable Token (`--teal`)** | `#20c997` | `var(--teal)` in `:root` |
 | **Variable Token (`--cyan`)** | `#17a2b8` | `var(--cyan)` in `:root` |
-| **Variable Token (`--white`)** | `#fff` | `var(--white)` in `:root` |
 | **Variable Token (`--gray`)** | `#6c757d` | `var(--gray)` in `:root` |
 | **Variable Token (`--gray-dark`)** | `#343a40` | `var(--gray-dark)` in `:root` |
 
@@ -63,12 +78,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hh> — `www-imersion-io`)**:
-   - Landmark `<header class="hh">` hosting `Imersion — Get Immersed in the World` navigation (`Contact Contact`), DOM attributes (`data-n-head="%7B%22lang%22:%7B%22s..."`, `data-n-head="ssr"`, `data-n-head="ssr"`, `data-n-head="ssr"`), and stylesheet rule `before { box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.wow> — `G E T I M M E R S E D`)**:
-   - Landmark `<section class="wow">` presenting display lead `G E T I M M E R S E D` and copy excerpt *"All places All places"* over `#007bff` canvas and `#6610f2` ink.
-3. **Primary Showcase & Content Grid (<section.recent> — `A n i m m e r s i v e e x p e r i `)**:
-   - Landmark `<section class="recent">` rendering section `A n i m m e r s i v e e x p e r i e n c e t h r o...` with copy *"Submit a place Submit a place"*, asset references (`favicon.ico`, `hero-poster.jpg`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `html { font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-w... }`.
-4. **Interactive Detail & Feature Matrix (<section.about> — `Recently added`)**:
-   - Landmark `<section class="about">` framing `Recently added` and `A crew of autonomous AI agents` (*"Need a crew of AI agents? Need a crew of AI agents?"*) with `#6f42c1` surface cards, `#e83e8c` accents, and `section { display:block }`.
+   - Landmark `<header class="hh">` (`1440x80px`) hosting `Imersion — Get Immersed in the World` navigation (`Contact Contact`), DOM attributes (`data-n-head="%7B%22lang%22:%7B%22s..."`, `data-n-head="ssr"`, `data-n-head="ssr"`, `data-n-head="ssr"`), and stylesheet rule `before { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.wow> — `GETIMMERSED`)**:
+   - Landmark `<section class="wow">` presenting display lead `GETIMMERSED` and copy excerpt *"…in breathtaking landscapes, hidden hotels and surreal restaurant"* over `#111111` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.recent> — `…in breathtaking landscapes, hidde`)**:
+   - Landmark `<section class="recent">` rendering section `…in breathtaking landscapes, hidden hotels and s` with copy *"Need a crew of AI agents?"*, asset references (`favicon.ico`, `hero-poster.jpg`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `html { font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-w... }`.
+4. **Interactive Detail & Feature Matrix (<section.about> — `Need a crew of AI agents?`)**:
+   - Landmark `<section class="about">` framing `Need a crew of AI agents?` and `G E T I M M E R S E D` (*"G E T I M M E R S E D"*) with `#0a0a0d` surface cards, `#007bff` accents, and `section { display:block }`.
 5. **Colophon & Global Directory Footer (<footer.hf> — `https://www.imersion.io`)**:
-   - Landmark `<footer class="hf">` anchoring `Imersion — Get Immersed in the W` footer links (`Contact Contact`), copy *"Need a crew of AI agents?"*, and `#fd7e14` structural dividers.
+   - Landmark `<footer class="hf">` anchoring `Imersion — Get Immersed in the W` footer links (`Contact Contact`), copy *"Nusa Penida, Klungkung, Indonesia"*, and `#0f0f0f` structural dividers.

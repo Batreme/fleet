@@ -1,38 +1,38 @@
-# Round 04 Execution Trace: UI Prompt Blueprint Expansion
+# Round 04 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-15-ROUND-04`  
-> **Active Branch**: `feat/ui-prompt-expansion`  
-> **Analyzed Targets**: `9` (`1` marked `status: blocked` and excluded from tally per `C1`)  
-> **Deterministic Evaluation (`C1`–`C14`)**: **`25.0 / 25.0`**
+> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-04`  
+> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Analyzed Targets**: `5` live (`5` marked `status: blocked` and excluded from tally per `C1`)  
+> **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 04 Target Scope
-  1. `altufanulu-com_en` — *Altufan Ulu Law Office · Istanbul Legal Counsel* (`https://altufanulu.com/en/`)
-  2. `andreas-vision` — *Andreas Kruszakin, growth-focused design engineer in Europe* (`https://andreas.vision`)
-  3. `anemone-mina-massoud-com` — *Anemone: an interactive paper-theatre film by Mina Massoud* (`https://anemone.mina-massoud.com/`)
-  4. `annnimate-com` — *GSAP Motion Components for React & Vue · Annnimate* (`https://annnimate.com`)
-  5. `anokhee-dev_albatross` — *The Albatross* (`https://anokhee.dev/albatross`)
-  6. `apricode-agency` — *Apricode — Immersive Websites, Ecommerce, Apps & AI* (`https://apricode.agency`)
-  7. `aqualoqa-com` — *AQUALOQA* (`https://aqualoqa.com/`)
-  8. `arcteryx-com_us-en-explore-system0` — *System 0 · Arc’teryx* (`https://arcteryx.com/us/en/explore/system0`)
-  9. `armor-bd-com` — *Armor Bangladesh Limited — ATM, CRM & Banking Technology Solutions* (`https://armor-bd.com`)
-  10. `art-appstate-edu` — *Blocked (`Empty raw DOM capture (39 bytes, 0 stylesheets)`)*
+  1. `altufanulu-com_en` — *Altufan Ulu Law Office · Istanbul Legal Counsel*
+  2. `andreas-vision` — *Andreas Kruszakin, growth-focused design engineer in Europe*
+  3. `anemone-mina-massoud-com` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  4. `annnimate-com` — *GSAP Motion Components for React & Vue · Annnimate*
+  5. `anokhee-dev_albatross` — *Blocked (`Headless Preloader / Blank Viewport Capture (The Albatross I can smell the island now. 70% or WASD to fly • M to mu)`)*
+  6. `apricode-agency` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  7. `aqualoqa-com` — *Blocked (`Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )`)*
+  8. `arcteryx-com_us-en-explore-system0` — *System 0 · Arc’teryx*
+  9. `armor-bd-com` — *Armor Bangladesh Limited — ATM, CRM & Banking Technology Solutions*
+  10. `art-appstate-edu` — *Blocked (`Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at https://art.appstate.edu/ Call log: - navigating to 'https://art.appstate.edu/', waiting until 'domc)`)*
 
 ---
 
-## 2. Ground-Truth Asset & Extraction Metrics (Verified PNG IHDR & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
 
-| Target Slug | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `altufanulu-com_en` | `1440×5617px` (2,105,877 B) | `390×2400px` (118,436 B) | 6 | 16 | 258 | 107 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `andreas-vision` | `1440×2400px` (51,574 B) | `390×2400px` (59,198 B) | 39 | 16 | 241 | 97 | `0.10` / `0.53` | **25.0 / 25.0** |
-| `anemone-mina-massoud-com` | `1440×2400px` (809,974 B) | `390×2400px` (337,135 B) | 11 | 16 | 256 | 106 | `0.11` / `0.52` | **25.0 / 25.0** |
-| `annnimate-com` | `1440×2400px` (81,382 B) | `390×2400px` (48,064 B) | 453 | 16 | 256 | 106 | `0.10` / `0.46` | **25.0 / 25.0** |
-| `anokhee-dev_albatross` | `1440×2400px` (260,720 B) | `390×2400px` (96,280 B) | 14 | 16 | 266 | 111 | `0.10` / `0.55` | **25.0 / 25.0** |
-| `apricode-agency` | `1440×2400px` (1,094,260 B) | `390×2400px` (357,393 B) | 57 | 16 | 272 | 114 | `0.10` / `0.49` | **25.0 / 25.0** |
-| `aqualoqa-com` | `1440×2400px` (387,674 B) | `390×2400px` (230,587 B) | 0 | 12 | 239 | 96 | `0.11` / `0.55` | **25.0 / 25.0** |
-| `arcteryx-com_us-en-explore-system0` | `1440×2400px` (118,794 B) | `390×2400px` (68,135 B) | 96 | 16 | 256 | 106 | `0.10` / `0.50` | **25.0 / 25.0** |
-| `armor-bd-com` | `1440×2400px` (489,141 B) | `390×2400px` (158,850 B) | 43 | 16 | 256 | 106 | `0.10` / `0.52` | **25.0 / 25.0** |
-| `art-appstate-edu` | `status: blocked` | `status: blocked` | — | — | — | — | — | **Excluded (`Empty raw DOM capture (39 bytes, 0 stylesheets)`)** |
+| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `altufanulu-com_en` | `tier1_fast` | `1440×2400px` (1,781,643 B) | `390×2400px` (531,324 B) | 6 | 16 | 294 | 112 | `0.08` / `0.49` | **25.0 / 25.0** |
+| `andreas-vision` | `tier1_fast` | `1440×900px` (99,057 B) | `390×844px` (35,146 B) | 193 | 16 | 275 | 101 | `0.10` / `0.51` | **25.0 / 25.0** |
+| `annnimate-com` | `tier1_fast` | `1440×2400px` (181,188 B) | `390×2400px` (182,407 B) | 453 | 16 | 292 | 111 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `arcteryx-com_us-en-explore-system0` | `tier1_fast` | `1440×900px` (1,173,257 B) | `390×844px` (8,604 B) | 96 | 16 | 282 | 106 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `armor-bd-com` | `tier1_fast` | `1440×2400px` (2,028,088 B) | `390×2400px` (585,143 B) | 43 | 16 | 283 | 106 | `0.09` / `0.51` | **25.0 / 25.0** |
+| `anemone-mina-massoud-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
+| `anokhee-dev_albatross` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Headless Preloader / Blank Viewport Capture (The Albatross I can smell`)** |
+| `apricode-agency` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
+| `aqualoqa-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call `)** |
+| `art-appstate-edu` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at http`)** |

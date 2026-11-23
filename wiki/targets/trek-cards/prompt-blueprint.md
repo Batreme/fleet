@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: trek-cards"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "trek-cards"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#2E1650`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#ff00ee`)"
 ---
 
 # UI Design System & Master Generation Blueprint: trek-cards
 
 > **Trek Cards - The AI-Powered TCG Where Every Card Has a Story** (https://trek.cards/) — Trek Cards is the AI-powered trading card game (TCG). Craft UNIQUE character cards, battle players worldwide and track your cards around...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Trek Cards - The AI-Powered TCG Where Every Card Has a Story** (`https://trek.cards/`). Trek Cards is the AI-powered trading card game (TCG). Craft UNIQUE character cards, battle players worldwide and track your cards around...
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#2E1650`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#ff00ee`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#18001A` (`var(--ground)` in `:root`) paired with `#FF00EE` primary typography and `#2E1650` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Rubik One` for display copy (`Every card has a story.`) with `Rubik` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `860px` container bounds (`gap: 10px`, padding `1px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#18001a` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff00ee` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 30px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `860px` extracted from `trek-cards` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `6px`, `50%`, `24px`, `100px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `12px` lateral canvas padding with `30px` grid gap.
+- **Border Radius Scale**: `50%`, `100px`, `6px`, `24px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 860px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 30px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width: 860px)`, `@media (max-width: 900px)`, `@media (max-width: 1000px)`, `@media (min-width: 821px) and (max-width: 1100px)`.
 
 ---
@@ -48,20 +52,21 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#18001A` | `var(--ground)` in `:root` |
-| **Primary Typography Ink** | `#1A0A2E` | `var(--bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#221041` | `var(--surface)` in `:root` |
-| **Interactive Accent / Highlight** | `#2E1650` | `var(--surface-2)` in `:root` |
-| **Secondary / Muted Copy** | `#6A00FF` | `var(--purple)` in `:root` |
-| **Structural Hairline Border** | `#FF00EE` | `var(--pink)` in `:root` |
-| **Variable Token (`--lilac`)** | `#B176FF` | `var(--lilac)` in `:root` |
-| **Variable Token (`--ink`)** | `#FFFFFF` | `var(--ink)` in `:root` |
-| **Variable Token (`--muted`)** | `#B6A6D6` | `var(--muted)` in `:root` |
-| **Variable Token (`--green`)** | `#68FF8E` | `var(--green)` in `:root` |
-| **Variable Token (`--brand`)** | `#7B22FF` | `var(--brand)` in `:root` |
-| **Variable Token (`--brand`)** | `#C215F6` | `var(--brand)` in `:root` |
+| **Primary Canvas Substrate** | `#18001a` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#1a0a2e` | `var(--bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff00ee` | `.btn--play { background: #ff00ee }` |
+| **Secondary / Muted Copy** | `#b6a6d6` | `var(--muted)` in `:root` |
+| **Structural Hairline Border** | `#2a142c` | `var(--stroke)` in `:root` (`rgba(255, 255, 255, 0.08)`) |
+| **Variable Token (`--surface`)** | `#221041` | `var(--surface)` in `:root` |
+| **Variable Token (`--surface-2`)** | `#2e1650` | `var(--surface-2)` in `:root` |
+| **Variable Token (`--purple`)** | `#6a00ff` | `var(--purple)` in `:root` |
+| **Variable Token (`--lilac`)** | `#b176ff` | `var(--lilac)` in `:root` |
+| **Variable Token (`--green`)** | `#68ff8e` | `var(--green)` in `:root` |
+| **Variable Token (`--brand`)** | `#7b22ff` | `var(--brand)` in `:root` |
+| **Variable Token (`--brand`)** | `#c215f6` | `var(--brand)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -90,13 +95,13 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#
 ### Font Family Stacks
 - **Display Typography**: `Rubik One`.
 - **Primary Body Stack**: `Rubik`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(38px, 6vw, 92px)`).
-- **Body Copy**: CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`).
-- **Metadata & Navigation Labels**: rule `small` (`font-size: 11px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 400`, `letter-spacing: -2.16px`); rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.4px`, `line-height: 84.672px`, `font-weight: 400`, `letter-spacing: -2.592px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14.5px`, `line-height: 23.2px`, `font-weight: 500`); rule `small` (`font-size: 11px`).
 
 ---
 
@@ -116,40 +121,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Trek Cards - The AI-Powered TCG Where Ever │
 │ ====================================================================== │
-│ [ <header.nav>             | Craft · Battle · Journey · Legacy · Co ]  │
+│ [ <header.nav> (1120x68px)            | Craft · Battle · Journey · L ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Every card has a story.                                      |   │
-│ | Substrate: #18001A    | Ink: #FF00EE    | Accent: #2E1650        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: EVERY CARD HAS A STORY.                                        | │
+│ | Substrate: #18001a | Ink: #ffffff | Accent: #ff00ee                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.prologue>        ) max-w: 860px          |   │
+│ | SHOWCASE GRID (<section.prologue>) max-w: 1440px                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Craft your Unique            |  | 1 Describe your character    | | │
+│ | | Every card has a story.      |  | Craft your Unique            | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.nav>] -> [<section.hero>] -> [<section.prologue>] |         │
+│ | DETAIL MODULE (<section.chapter>) — 1 Describe your chara          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.foot>         ) | https://trek.cards/                │
+│ [ FOOTER (<footer.foot>       ) | https://trek.cards/                  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 30px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.nav>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: EVERY CARD HAS A STORY.                                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.prologue>) — 1-Col Stack                  | │
+│ | [ Item 1: Every card has a story.                                ] | │
+│ | [ Item 2: Craft your Unique                                      ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.chapter>) — 1-Col (1 Describe your ch)      | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.foot>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav> — `trek-cards`)**:
-   - Landmark `<header class="nav">` hosting `Trek Cards - The AI-Powered TCG Wher` navigation (`Craft · Battle · Journey · Legacy · Collect`), DOM attributes (`data-notify`, `data-when="prelaunch"`, `data-when="launch"`, `data-key="kravix"`), and stylesheet rule `font-face { font-family: 'Rubik One'; src: url('../fonts/rubik-one.woff') format('wo... }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `Every card has a story.`)**:
-   - Landmark `<section class="hero">` presenting display lead `Every card has a story.` and copy excerpt *"Download on the App Store"* over `#18001A` canvas and `#FF00EE` ink.
-3. **Primary Showcase & Content Grid (<section.prologue> — `Craft your Unique`)**:
-   - Landmark `<section class="prologue">` rendering section `Craft your Unique` with copy *"For iPhone iOS 17 or later"*, asset references (`favicon-32x32.png`, `apple-touch-icon.png`, `site.css`, `trek-logo.webp (Trek Cards)`), and grid rule `after { box-sizing: border-box; margin: 0; padding: 0; }`.
-4. **Interactive Detail & Feature Matrix (<section.chapter> — `1 Describe your character`)**:
-   - Landmark `<section class="chapter ch-craft">` framing `1 Describe your character` and `2 Choose a frame` (*"Get it on Google Play"*) with `#221041` surface cards, `#2E1650` accents, and `html { -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }`.
+   - Landmark `<header class="nav">` (`1120x68px`) hosting `Trek Cards - The AI-Powered TCG Wher` navigation (`Craft · Battle · Journey · Legacy · Collect`), DOM attributes (`data-notify`, `data-when="prelaunch"`, `data-when="launch"`, `data-key="kravix"`), and stylesheet rule `font-face { font-family: 'Rubik One'; src: url('../fonts/rubik-one.woff') format('wo... }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `EVERY CARD HAS A STORY.`)**:
+   - Landmark `<section class="hero">` presenting display lead `EVERY CARD HAS A STORY.` and copy excerpt *"Trek Cards™ is the AI-powered TCG where you craft UNIQUE cards to"* over `#18001a` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.prologue> — `Every card has a story.`)**:
+   - Landmark `<section class="prologue">` rendering section `Every card has a story.` with copy *"Where losing is only the beginning"*, asset references (`favicon-32x32.png`, `apple-touch-icon.png`, `site.css`, `trek-logo.webp (Trek Cards)`), and grid rule `after { box-sizing: border-box; margin: 0; padding: 0; }`.
+4. **Interactive Detail & Feature Matrix (<section.chapter> — `Craft your Unique`)**:
+   - Landmark `<section class="chapter ch-craft">` framing `Craft your Unique` and `1 Describe your character` (*"Trek Cards™ is the AI-powered TCG where you craft Unique cards to"*) with `#1a0a2e` surface cards, `#ff00ee` accents, and `html { -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://trek.cards/`)**:
-   - Landmark `<footer class="foot">` anchoring `Trek Cards - The AI-Powered TCG ` footer links (`Craft · Battle · Journey · Legacy · Collect`), copy *"For Android On Google Play"*, and `#FF00EE` structural dividers.
+   - Landmark `<footer class="foot">` anchoring `Trek Cards - The AI-Powered TCG ` footer links (`Craft · Battle · Journey · Legacy · Collect`), copy *"Download on the App Store"*, and `#2a142c` structural dividers.
 
 ---
 
@@ -161,19 +185,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `trek-cards` (**Trek Cards - The AI-Powered TCG Where Every Card Has a Story** — `https://trek.cards/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#18001A` / `#2E1650`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#ff00ee`).
 - **Identity & Domain Context**: Trek Cards is the AI-powered trading card game (TCG). Craft UNIQUE character cards, battle players worldwide and track your cards around...
-- **Primary Substrate**: `#18001A` (`var(--ground)` in `:root`), **Primary Ink**: `#FF00EE`, **Accent / Highlight**: `#2E1650`.
+- **Primary Substrate**: `#18001a` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff00ee`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#18001A` (`var(--ground)` in `:root`) paired with `#FF00EE` primary typography and `#2E1650` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Rubik One` for display copy (`Every card has a story.`) with `Rubik` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `860px` container bounds (`gap: 10px`, padding `1px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#18001a` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff00ee` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 30px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `trek-cards` in your global stylesheet:
 
 :root {
-  /* Trek Cards - The AI-Powered TCG Where Every Card Has a Story (trek-cards) — Ground-Truth Extracted CSS Variables */
+  /* Trek Cards - The AI-Powered TCG Where Every Card Has a Story (trek-cards) — Live-Grounded CSS Variables */
   --ground: #18001A; /* Color / Atmospheric Token (trek-cards) */
   --bg: #1A0A2E; /* Canvas / Surface Token (trek-cards) */
   --surface: #221041; /* Canvas / Surface Token (trek-cards) */
@@ -194,61 +218,62 @@ Declare and consume these exact custom properties extracted from `trek-cards` in
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#18001A` — grounded in `var(--ground)` in `:root`
-- **Primary Typography Ink**: `#1A0A2E` — grounded in `var(--bg)` in `:root`
-- **Elevated Surface / Card Substrate**: `#221041` — grounded in `var(--surface)` in `:root`
-- **Interactive Accent / Highlight**: `#2E1650` — grounded in `var(--surface-2)` in `:root`
-- **Secondary / Muted Copy**: `#6A00FF` — grounded in `var(--purple)` in `:root`
-- **Structural Hairline Border**: `#FF00EE` — grounded in `var(--pink)` in `:root`
-- **Variable Token (`--lilac`)**: `#B176FF` — grounded in `var(--lilac)` in `:root`
-- **Variable Token (`--ink`)**: `#FFFFFF` — grounded in `var(--ink)` in `:root`
-- **Variable Token (`--muted`)**: `#B6A6D6` — grounded in `var(--muted)` in `:root`
-- **Variable Token (`--green`)**: `#68FF8E` — grounded in `var(--green)` in `:root`
-- **Variable Token (`--brand`)**: `#7B22FF` — grounded in `var(--brand)` in `:root`
-- **Variable Token (`--brand`)**: `#C215F6` — grounded in `var(--brand)` in `:root`
+- **Primary Canvas Substrate**: `#18001a` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#1a0a2e` — grounded in `var(--bg)` in `:root`
+- **Interactive Accent / Highlight**: `#ff00ee` — grounded in `.btn--play { background: #ff00ee }`
+- **Secondary / Muted Copy**: `#b6a6d6` — grounded in `var(--muted)` in `:root`
+- **Structural Hairline Border**: `#2a142c` — grounded in `var(--stroke)` in `:root` (`rgba(255, 255, 255, 0.08)`)
+- **Variable Token (`--surface`)**: `#221041` — grounded in `var(--surface)` in `:root`
+- **Variable Token (`--surface-2`)**: `#2e1650` — grounded in `var(--surface-2)` in `:root`
+- **Variable Token (`--purple`)**: `#6a00ff` — grounded in `var(--purple)` in `:root`
+- **Variable Token (`--lilac`)**: `#b176ff` — grounded in `var(--lilac)` in `:root`
+- **Variable Token (`--green`)**: `#68ff8e` — grounded in `var(--green)` in `:root`
+- **Variable Token (`--brand`)**: `#7b22ff` — grounded in `var(--brand)` in `:root`
+- **Variable Token (`--brand`)**: `#c215f6` — grounded in `var(--brand)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `860px` extracted from `trek-cards` stylesheet
-- **Padding & Gutters**: `1px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 860px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `12px` lateral canvas padding with `30px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 30px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding
 - **Media Queries**: `@media (max-width: 860px)`, `@media (max-width: 900px)`, `@media (max-width: 1000px)`, `@media (min-width: 821px) and (max-width: 1100px)`
-- **Corner Radii**: `6px`, `50%`, `24px`, `100px`
+- **Corner Radii**: `50%`, `100px`, `6px`, `24px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Rubik One`
 - **Body Font Stack**: `Rubik`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(38px, 6vw, 92px)`)
-- **Body Copy Rule**: CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`)
-- **Metadata & Index Rule**: rule `small` (`font-size: 11px`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 400`, `letter-spacing: -2.16px`); rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 86.4px`, `line-height: 84.672px`, `font-weight: 400`, `letter-spacing: -2.592px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14.5px`, `line-height: 23.2px`, `font-weight: 500`); rule `small` (`font-size: 11px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `trek-cards` (`Trek Cards - The AI-Powered TCG Where Every Card Has a Story`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav> — `trek-cards`)**:
-   - DOM & Selectors: Landmark `<header class="nav">` hosting `Trek Cards - The AI-Powered TCG Wher` navigation (`Craft · Battle · Journey · Legacy · Collect`), DOM attributes (`data-notify`, `data-when="prelaunch"`, `data-when="launch"`, `data-key="kravix"`), and stylesheet rule `font-face { font-family: 'Rubik One'; src: url('../fonts/rubik-one.woff') format('wo... }`.
+   - DOM & Selectors: Landmark `<header class="nav">` (`1120x68px`) hosting `Trek Cards - The AI-Powered TCG Wher` navigation (`Craft · Battle · Journey · Legacy · Collect`), DOM attributes (`data-notify`, `data-when="prelaunch"`, `data-when="launch"`, `data-key="kravix"`), and stylesheet rule `font-face { font-family: 'Rubik One'; src: url('../fonts/rubik-one.woff') format('wo... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `trek-cards`)` (`trek-cards`) adapts across `@media (max-width: 860px)`, `@media (max-width: 900px)`, `@media (max-width: 1000px)`, `@media (min-width: 821px) and (max-width: 1100px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.2,.6,.35,1)`, `cubic-bezier(.37,0,.63,1)` transitions and links `Craft · Battle · Journey · Legacy · Collect`.
-2. **Hero Stage & Focal Lead (<section.hero> — `Every card has a story.`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Every card has a story.` and copy excerpt *"Download on the App Store"* over `#18001A` canvas and `#FF00EE` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#18001A` background with `#FF00EE` headline `Every card has a story.`.
-3. **Primary Showcase & Content Grid (<section.prologue> — `Craft your Unique`)**:
-   - DOM & Selectors: Landmark `<section class="prologue">` rendering section `Craft your Unique` with copy *"For iPhone iOS 17 or later"*, asset references (`favicon-32x32.png`, `apple-touch-icon.png`, `site.css`, `trek-logo.webp (Trek Cards)`), and grid rule `after { box-sizing: border-box; margin: 0; padding: 0; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.prologue> — `Craft your Unique`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 860px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `1px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.chapter> — `1 Describe your character`)**:
-   - DOM & Selectors: Landmark `<section class="chapter ch-craft">` framing `1 Describe your character` and `2 Choose a frame` (*"Get it on Google Play"*) with `#221041` surface cards, `#2E1650` accents, and `html { -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.chapter> — `1 Describe your character`)` uses `6px`, `50%`, `24px`, `100px` radii, `#2E1650` highlights, and assets (favicon-32x32.png, apple-touch-icon.png, site.css).
+2. **Hero Stage & Focal Lead (<section.hero> — `EVERY CARD HAS A STORY.`)**:
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `EVERY CARD HAS A STORY.` and copy excerpt *"Trek Cards™ is the AI-powered TCG where you craft UNIQUE cards to"* over `#18001a` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#18001a` background with `#ffffff` headline `EVERY CARD HAS A STORY.`.
+3. **Primary Showcase & Content Grid (<section.prologue> — `Every card has a story.`)**:
+   - DOM & Selectors: Landmark `<section class="prologue">` rendering section `Every card has a story.` with copy *"Where losing is only the beginning"*, asset references (`favicon-32x32.png`, `apple-touch-icon.png`, `site.css`, `trek-logo.webp (Trek Cards)`), and grid rule `after { box-sizing: border-box; margin: 0; padding: 0; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.prologue> — `Every card has a story.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 30px`) on desktop and Single-column vertical stack at `390px` viewport width with `12px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.chapter> — `Craft your Unique`)**:
+   - DOM & Selectors: Landmark `<section class="chapter ch-craft">` framing `Craft your Unique` and `1 Describe your character` (*"Trek Cards™ is the AI-powered TCG where you craft Unique cards to"*) with `#1a0a2e` surface cards, `#ff00ee` accents, and `html { -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.chapter> — `Craft your Unique`)` uses `50%`, `100px`, `6px`, `24px` radii, `#ff00ee` highlights, and assets (favicon-32x32.png, apple-touch-icon.png, site.css).
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://trek.cards/`)**:
-   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `Trek Cards - The AI-Powered TCG ` footer links (`Craft · Battle · Journey · Legacy · Collect`), copy *"For Android On Google Play"*, and `#FF00EE` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://trek.cards/`)` aligns to `860px` extracted from `trek-cards` stylesheet with `1px` lateral canvas padding with `10px` grid gap and attributes (data-notify, data-when="prelaunch", data-when="launch").
+   - DOM & Selectors: Landmark `<footer class="foot">` anchoring `Trek Cards - The AI-Powered TCG ` footer links (`Craft · Battle · Journey · Legacy · Collect`), copy *"Download on the App Store"*, and `#2a142c` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.foot> — `https://trek.cards/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `12px` lateral canvas padding with `30px` grid gap and attributes (data-notify, data-when="prelaunch", data-when="launch").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Download on the App Store"*
-- Copy Excerpt 2: *"For iPhone iOS 17 or later"*
-- Copy Excerpt 3: *"Get it on Google Play"*
-- Copy Excerpt 4: *"For Android On Google Play"*
+- Copy Excerpt 1: *"Trek Cards™ is the AI-powered TCG where you craft UNIQUE cards to battle against p..."*
+- Copy Excerpt 2: *"Where losing is only the beginning"*
+- Copy Excerpt 3: *"Trek Cards™ is the AI-powered TCG where you craft Unique cards to battle against p..."*
+- Copy Excerpt 4: *"Download on the App Store"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.2,.6,.35,1)`, `cubic-bezier(.37,0,.63,1)`

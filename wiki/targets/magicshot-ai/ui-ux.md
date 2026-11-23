@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: magicshot-ai"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: magicshot-ai
 
 ## Overview & Design Identity
 - **Target**: `magicshot-ai` (**AI Image, Video & Audio Generator all in One Plan**)
 - **Production URL**: [https://magicshot.ai](https://magicshot.ai)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#d7b0ff` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas, `#ffffff` ink, `#a22bff` accent)
 - **Summary**: Generate images, video, and audio with top AI models and countless tools under one subscription. No five tabs, no five invoices, one plan...
-- **Total Clean CSS Variables Extracted**: `147` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `159` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Archivo`
-- **Body Font Stack**: `Martian Mono`
+- **Body Font Stack**: `Archivo`
 - **Monospace / Technical Font Stack**: `Martian Mono`
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.5rem`)
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
-- **Metadata & Labels**: CSS variables `--font-mono: "Martian Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 51.2px`, `line-height: 55.296px`, `font-weight: 800`, `letter-spacing: -1.792px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 700`, `letter-spacing: -1.44px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.5rem`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--font-mono: "Martian Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`; rule `small` (`font-size: .625rem`, `letter-spacing: .16em`, `font-weight: 600`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ecd9ff` | `var(--color-brand-100)` in `:root` |
-| **Interactive Accent / Highlight** | `#d7b0ff` | `var(--color-brand-200)` in `:root` |
-| **Secondary / Muted Copy** | `#c187ff` | `var(--color-brand-300)` in `:root` |
-| **Structural Hairline Border** | `#b14dff` | `var(--color-brand-400)` in `:root` |
+| **Primary Canvas Substrate** | `#0a0a0f` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#121218` | `var(--color-surface-900)` in `:root` |
+| **Interactive Accent / Highlight** | `#a22bff` | `var(--color-brand-500)` in `:root` |
+| **Secondary / Muted Copy** | `#8d8999` | `var(--color-ink-400)` in `:root` |
+| **Structural Hairline Border** | `#7740a7` | `.key:hover { border-color: #7740a7 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `magicshot-ai`)**:
-   - Landmark `<header class="site-header sticky">` hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-navigate-track="reload"`, `data-navigate-track="reload"`, `data-animate`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Every AI model. One plan. Endless `)**:
-   - Landmark `<section class="relative isolate">` presenting display lead `Every AI model. One plan. Endless content.` and copy excerpt *"JUST DROPPED Generate lifelike visuals with Seedream 5.5 ⚡"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.section-y> — `Images, video, photoshoots, edits `)**:
-   - Landmark `<section class="section-y">` rendering section `Images, video, photoshoots, edits and audio. One...` with copy *"Generate lifelike visuals with Seedream 5.5 ⚡"*, asset references (`d2q9lphzn5ioni.cloudfront.net`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.section-y> — `Generate images from a single prom`)**:
-   - Landmark `<section class="section-y">` framing `Generate images from a single prompt` and `Bring images and ideas to life as video` (*"GPT Image 2.6 Sunburst Faster, consistent edits ⚡"*) with `#ecd9ff` surface cards, `#d7b0ff` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.border-t> — `https://magicshot.ai`)**:
-   - Landmark `<footer class="border-t border-surface-800">` anchoring `AI Image, Video & Audio Generato` footer links (`Image · Video · Photoshoot · Photo Editing · Audio`), copy *"GPT Image 2.6 Sunburst"*, and `#b14dff` structural dividers.
+   - Landmark `<header class="site-header top-0">` (`1440x65px`) hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-navigate-track="reload"`, `data-navigate-track="reload"`, `data-animate`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.section-y> — `Every AI model. One plan. Endless `)**:
+   - Landmark `<section class="section-y pt-6">` presenting display lead `Every AI model. One plan. Endless content.` and copy excerpt *"Headshots, product shots, video ads and more, made in seconds fro"* over `#0a0a0f` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.section-y:nth(2)> — `Thanksgiving Feast Challenge is on`)**:
+   - Landmark `<section class="section-y">` rendering section `Thanksgiving Feast Challenge is on` with copy *"Thanksgiving Feast Challenge · win 100k credits"*, asset references (`d2q9lphzn5ioni.cloudfront.net`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.section-y:nth(3)> — `Images, video, photoshoots, edits `)**:
+   - Landmark `<section class="section-y">` framing `Images, video, photoshoots, edits and audio. One...` and `Generate images from a single prompt` (*"What will you create today?"*) with `#121218` surface cards, `#a22bff` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.border-surface-800> — `https://magicshot.ai`)**:
+   - Landmark `<footer class="border-surface-800 bg-surface-950">` anchoring `AI Image, Video & Audio Generato` footer links (`Image · Video · Photoshoot · Photo Editing · Audio`), copy *"See What You Can Make"*, and `#7740a7` structural dividers.

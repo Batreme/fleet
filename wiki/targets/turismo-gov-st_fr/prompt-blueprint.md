@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: turismo-gov-st_fr"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "turismo-gov-st_fr"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#EEEDEA` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#eeedea` canvas, `#000000` ink, `#008000` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: turismo-gov-st_fr
 
 > **Homepage · São Tomé E Príncipe** (https://turismo.gov.st/fr) — Ce que vous devez savoir sur la taxe de tourisme
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Homepage · São Tomé E Príncipe** (`https://turismo.gov.st/fr`). Ce que vous devez savoir sur la taxe de tourisme
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#EEEDEA` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#eeedea` canvas, `#000000` ink, `#008000` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--color-white)` in `:root`) paired with `#000000` primary typography and `#EEEDEA` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Outfit` for display copy (`Pourquoi`) with `gyst-variable` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `600px` container bounds (`gap: 1rem`, padding `1px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#eeedea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#008000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `gyst-variable` for display copy (`São Tomé e Príncipe`) with `Outfit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `84.2rem` container bounds (`gap: 1rem`, padding `60px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `600px` extracted from `turismo-gov-st_fr` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1px` lateral canvas padding with `1rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `84.2rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `60px` lateral canvas padding with `1rem` grid gap.
 - **Border Radius Scale**: `7px`, `50%`, `2px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 600px`, `gap: 1rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 84.2rem`, `gap: 1rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `60px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media screen and (max-width: 600px)`, `@media (min-width: 768px)`, `@media screen and (max-width:700px)`, `@media (min-width:480px)`.
 
 ---
@@ -48,14 +52,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ffffff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#000000` | `var(--color-black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#38492A` | `var(--color-green--dark)` in `:root` |
-| **Interactive Accent / Highlight** | `#EEEDEA` | `var(--color-beige)` in `:root` |
-| **Secondary / Muted Copy** | `#80802B` | `var(--color-fauna-flora)` in `:root` |
-| **Structural Hairline Border** | `#395665` | `var(--color-ocean)` in `:root` |
+| **Primary Canvas Substrate** | `#eeedea` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.progress__track { background-color: #ffffff }` |
+| **Interactive Accent / Highlight** | `#008000` | `.button--primary--dark { color: green }` (`#008000`) |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#bbbbbb` | `.webform-readonly textarea { border-color: #bbbbbb }` |
+| **Variable Token (`--color-green--dark`)** | `#38492a` | `var(--color-green--dark)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +87,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Outfit`.
-- **Primary Body Stack**: `gyst-variable`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `gyst-variable`.
+- **Primary Body Stack**: `Outfit`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: gyst-variable,serif`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `0.875em`, `1em`, `24px`, `100%`, `75%`).
-- **Body Copy**: CSS variables `--font-body: Outfit,Arial,Helvetica,sans-serif`, `--paragraph-max-width: 100%`, `--paragraph-margin-bottom: 0!important`; rule `p` (`font-size: var(--fz-size, 1.7rem)`, `line-height: 1.5`, `font-weight: 300`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `0.875em`, `1em`, `24px`, `100%`, `75%`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 50px`, `line-height: 55px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--font-display: gyst-variable,serif`.
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 100px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: 10px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: Outfit,Arial,Helvetica,sans-serif`, `--paragraph-max-width: 100%`, `--paragraph-margin-bottom: 0`; rule `p` (`font-size: var(--fz-size, 1.7rem)`, `line-height: 1.5`, `font-weight: 300`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 25.5px`, `font-weight: 300`).
 
 ---
 
@@ -110,40 +115,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Homepage · São Tomé E Príncipe             │
 │ ====================================================================== │
-│ [ <header.Header>          | Nature · Un éden insulaire · Une flore ]  │
+│ [ <header.Header> (1440x120px)        | Nature · Un éden insulaire · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.Homepage>                                   |   │
-│ | H1: Pourquoi                                                     |   │
-│ | Substrate: #ffffff    | Ink: #000000    | Accent: #EEEDEA        |   │
+│ | HERO STAGE: <section.Homepage> (w=1440px)                          | │
+│ | H1: São Tomé e Príncipe                                            | │
+│ | Substrate: #eeedea | Ink: #000000 | Accent: #008000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.ParagraphImmersiv) max-w: 600px          |   │
+│ | SHOWCASE GRID (<section.ParagraphImmersiv) max-w: 84.2rem          | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Organiser                    |  | Pratique                     | | │
+│ | | Pourquoi São Tomé?           |  | Une expérience totale, pure  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<header.Header>] -> [<section.Homepage>] -> [<section.Paragraph] |  │
+│ | DETAIL MODULE (<section.ParagraphVertical) — Nos activités         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://turismo.gov.st/fr          │
+│ [ FOOTER (<footer.footer>     ) | https://turismo.gov.st/fr            │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.Header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.Homepage>) — 390px Vertical Lead              | │
+│ | H1: São Tomé e Príncipe                                            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.ParagraphImme) — 1-Col Stack              | │
+│ | [ Item 1: Pourquoi São Tomé?                                     ] | │
+│ | [ Item 2: Une expérience totale, pure et sauvage                 ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.ParagraphVertic) — 1-Col (Nos activités)    | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.Header> — `turismo-gov-st_fr`)**:
-   - Landmark `<header class="Header">` hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1794679749212-0`), and stylesheet rule `.ajax-progress { display: inline-block; padding: 1px 5px 2px 5px; }`.
-2. **Hero Stage & Focal Lead (<section.Homepage> — `Pourquoi`)**:
-   - Landmark `<section class="Homepage node">` presenting display lead `Pourquoi` and copy excerpt *"São Tomé E Príncipe"* over `#ffffff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Organiser`)**:
-   - Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Organiser` with copy *"Pourquoi São Tomé et Príncipe? Pourquoi Nature Un éden insulaire "*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.ajax-progress-throbber .throbber { display: inline; padding: 1px 6px 2px; background: transparent url(../th... }`.
-4. **Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Pratique`)**:
-   - Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Pratique` and `Pied de page` (*"Pourquoi São Tomé et Príncipe?"*) with `#38492A` surface cards, `#EEEDEA` accents, and `.ajax-progress-throbber .message { display: inline; padding: 1px 5px 2px; }`.
+   - Landmark `<header class="Header">` (`1440x120px`) hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1795404115548-0`), and stylesheet rule `.ajax-progress { display: inline-block; padding: 1px 5px 2px 5px; }`.
+2. **Hero Stage & Focal Lead (<section.Homepage> — `São Tomé e Príncipe`)**:
+   - Landmark `<section class="Homepage node">` presenting display lead `São Tomé e Príncipe` and copy excerpt *"Ce que vous devez savoir sur la taxe de tourisme"* over `#eeedea` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Pourquoi São Tomé?`)**:
+   - Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Pourquoi São Tomé?` with copy *"expérience sensorielle"*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.ajax-progress-throbber .throbber { display: inline; padding: 1px 6px 2px; background: transparent url(../th... }`.
+4. **Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Une expérience totale, pure et sau`)**:
+   - Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Une expérience totale, pure et sauvage` and `Nos activités` (*"envoûtement océanique"*) with `#ffffff` surface cards, `#008000` accents, and `.ajax-progress-throbber .message { display: inline; padding: 1px 5px 2px; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://turismo.gov.st/fr`)**:
-   - Landmark `<footer class="footer">` anchoring `Homepage · São Tomé E Príncipe` footer links (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré`), copy *"Nature Un éden insulaire Une flore exceptionnelle Une flore "*, and `#395665` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Homepage · São Tomé E Príncipe` footer links (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), copy *"immersion culturelle"*, and `#bbbbbb` structural dividers.
 
 ---
 
@@ -155,19 +179,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `turismo-gov-st_fr` (**Homepage · São Tomé E Príncipe** — `https://turismo.gov.st/fr`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#EEEDEA` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#eeedea` canvas, `#000000` ink, `#008000` accent).
 - **Identity & Domain Context**: Ce que vous devez savoir sur la taxe de tourisme
-- **Primary Substrate**: `#ffffff` (`var(--color-white)` in `:root`), **Primary Ink**: `#000000`, **Accent / Highlight**: `#EEEDEA`.
+- **Primary Substrate**: `#eeedea` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#008000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--color-white)` in `:root`) paired with `#000000` primary typography and `#EEEDEA` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Outfit` for display copy (`Pourquoi`) with `gyst-variable` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `600px` container bounds (`gap: 1rem`, padding `1px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#eeedea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#008000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `gyst-variable` for display copy (`São Tomé e Príncipe`) with `Outfit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `84.2rem` container bounds (`gap: 1rem`, padding `60px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `turismo-gov-st_fr` in your global stylesheet:
 
 :root {
-  /* Homepage · São Tomé E Príncipe (turismo-gov-st_fr) — Ground-Truth Extracted CSS Variables */
+  /* Homepage · São Tomé E Príncipe (turismo-gov-st_fr) — Live-Grounded CSS Variables */
   --color-white: #ffffff; /* Canvas / Surface Token (turismo-gov-st_fr) */
   --color-white--30: rgba(255, 255, 255, 0.3); /* Canvas / Surface Token (turismo-gov-st_fr) */
   --color-white--00: rgba(255, 255, 255, 0); /* Canvas / Surface Token (turismo-gov-st_fr) */
@@ -188,55 +212,56 @@ Declare and consume these exact custom properties extracted from `turismo-gov-st
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ffffff` — grounded in `var(--color-white)` in `:root`
-- **Primary Typography Ink**: `#000000` — grounded in `var(--color-black)` in `:root`
-- **Elevated Surface / Card Substrate**: `#38492A` — grounded in `var(--color-green--dark)` in `:root`
-- **Interactive Accent / Highlight**: `#EEEDEA` — grounded in `var(--color-beige)` in `:root`
-- **Secondary / Muted Copy**: `#80802B` — grounded in `var(--color-fauna-flora)` in `:root`
-- **Structural Hairline Border**: `#395665` — grounded in `var(--color-ocean)` in `:root`
+- **Primary Canvas Substrate**: `#eeedea` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.progress__track { background-color: #ffffff }`
+- **Interactive Accent / Highlight**: `#008000` — grounded in `.button--primary--dark { color: green }` (`#008000`)
+- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#bbbbbb` — grounded in `.webform-readonly textarea { border-color: #bbbbbb }`
+- **Variable Token (`--color-green--dark`)**: `#38492a` — grounded in `var(--color-green--dark)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `600px` extracted from `turismo-gov-st_fr` stylesheet
-- **Padding & Gutters**: `1px` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 600px`, `gap: 1rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `84.2rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `60px` lateral canvas padding with `1rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 84.2rem`, `gap: 1rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `60px` horizontal padding
 - **Media Queries**: `@media screen and (max-width: 600px)`, `@media (min-width: 768px)`, `@media screen and (max-width:700px)`, `@media (min-width:480px)`
 - **Corner Radii**: `7px`, `50%`, `2px`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Outfit`
-- **Body Font Stack**: `gyst-variable`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--font-display: gyst-variable,serif`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `0.875em`, `1em`, `24px`, `100%`, `75%`)
-- **Body Copy Rule**: CSS variables `--font-body: Outfit,Arial,Helvetica,sans-serif`, `--paragraph-max-width: 100%`, `--paragraph-margin-bottom: 0!important`; rule `p` (`font-size: var(--fz-size, 1.7rem)`, `line-height: 1.5`, `font-weight: 300`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `0.875em`, `1em`, `24px`, `100%`, `75%`)
+- **Display Font Stack**: `gyst-variable`
+- **Body Font Stack**: `Outfit`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 50px`, `line-height: 55px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--font-display: gyst-variable,serif`
+- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 100px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: 10px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: Outfit,Arial,Helvetica,sans-serif`, `--paragraph-max-width: 100%`, `--paragraph-margin-bottom: 0`; rule `p` (`font-size: var(--fz-size, 1.7rem)`, `line-height: 1.5`, `font-weight: 300`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 17px`, `line-height: 25.5px`, `font-weight: 300`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `turismo-gov-st_fr` (`Homepage · São Tomé E Príncipe`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.Header> — `turismo-gov-st_fr`)**:
-   - DOM & Selectors: Landmark `<header class="Header">` hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1794679749212-0`), and stylesheet rule `.ajax-progress { display: inline-block; padding: 1px 5px 2px 5px; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Header> — `turismo-gov-st_fr`)` (`turismo-gov-st_fr`) adapts across `@media screen and (max-width: 600px)`, `@media (min-width: 768px)`, `@media screen and (max-width:700px)`, `@media (min-width:480px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1.08,.38,.98)`, `cubic-bezier(.4,.64,.68,1)` transitions and links `Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré`.
-2. **Hero Stage & Focal Lead (<section.Homepage> — `Pourquoi`)**:
-   - DOM & Selectors: Landmark `<section class="Homepage node">` presenting display lead `Pourquoi` and copy excerpt *"São Tomé E Príncipe"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Pourquoi`.
-3. **Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Organiser`)**:
-   - DOM & Selectors: Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Organiser` with copy *"Pourquoi São Tomé et Príncipe? Pourquoi Nature Un éden insulaire "*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.ajax-progress-throbber .throbber { display: inline; padding: 1px 6px 2px; background: transparent url(../th... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Organiser`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 600px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Pratique`)**:
-   - DOM & Selectors: Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Pratique` and `Pied de page` (*"Pourquoi São Tomé et Príncipe?"*) with `#38492A` surface cards, `#EEEDEA` accents, and `.ajax-progress-throbber .message { display: inline; padding: 1px 5px 2px; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Pratique`)` uses `7px`, `50%`, `2px`, `4px` radii, `#EEEDEA` highlights, and assets (sdk.js, gtm.js, favicon.png).
+   - DOM & Selectors: Landmark `<header class="Header">` (`1440x120px`) hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1795404115548-0`), and stylesheet rule `.ajax-progress { display: inline-block; padding: 1px 5px 2px 5px; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Header> — `turismo-gov-st_fr`)` (`turismo-gov-st_fr`) adapts across `@media screen and (max-width: 600px)`, `@media (min-width: 768px)`, `@media screen and (max-width:700px)`, `@media (min-width:480px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1.08,.38,.98)`, `cubic-bezier(.4,.64,.68,1)` transitions and links `Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`.
+2. **Hero Stage & Focal Lead (<section.Homepage> — `São Tomé e Príncipe`)**:
+   - DOM & Selectors: Landmark `<section class="Homepage node">` presenting display lead `São Tomé e Príncipe` and copy excerpt *"Ce que vous devez savoir sur la taxe de tourisme"* over `#eeedea` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#eeedea` background with `#000000` headline `São Tomé e Príncipe`.
+3. **Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Pourquoi São Tomé?`)**:
+   - DOM & Selectors: Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Pourquoi São Tomé?` with copy *"expérience sensorielle"*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.ajax-progress-throbber .throbber { display: inline; padding: 1px 6px 2px; background: transparent url(../th... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Pourquoi São Tomé?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 84.2rem`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `60px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Une expérience totale, pure et sau`)**:
+   - DOM & Selectors: Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Une expérience totale, pure et sauvage` and `Nos activités` (*"envoûtement océanique"*) with `#ffffff` surface cards, `#008000` accents, and `.ajax-progress-throbber .message { display: inline; padding: 1px 5px 2px; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Une expérience totale, pure et sau`)` uses `7px`, `50%`, `2px`, `4px` radii, `#008000` highlights, and assets (sdk.js, gtm.js, favicon.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://turismo.gov.st/fr`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Homepage · São Tomé E Príncipe` footer links (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré`), copy *"Nature Un éden insulaire Une flore exceptionnelle Une flore "*, and `#395665` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://turismo.gov.st/fr`)` aligns to `600px` extracted from `turismo-gov-st_fr` stylesheet with `1px` lateral canvas padding with `1rem` grid gap and attributes (data-barba="wrapper", data-once="form-single-submit we...", data-off-canvas-main-canvas).
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Homepage · São Tomé E Príncipe` footer links (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), copy *"immersion culturelle"*, and `#bbbbbb` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://turismo.gov.st/fr`)` aligns to `84.2rem` (non-`@media` desktop container stylesheet rule) with `60px` lateral canvas padding with `1rem` grid gap and attributes (data-barba="wrapper", data-once="form-single-submit we...", data-off-canvas-main-canvas).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"São Tomé E Príncipe"*
-- Copy Excerpt 2: *"Pourquoi São Tomé et Príncipe? Pourquoi Nature Un éden insulaire Une flore excepti..."*
-- Copy Excerpt 3: *"Pourquoi São Tomé et Príncipe?"*
-- Copy Excerpt 4: *"Nature Un éden insulaire Une flore exceptionnelle Une flore luxuriante Un trésor b..."*
+- Copy Excerpt 1: *"Ce que vous devez savoir sur la taxe de tourisme"*
+- Copy Excerpt 2: *"expérience sensorielle"*
+- Copy Excerpt 3: *"envoûtement océanique"*
+- Copy Excerpt 4: *"immersion culturelle"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1.08,.38,.98)`, `cubic-bezier(.4,.64,.68,1)`

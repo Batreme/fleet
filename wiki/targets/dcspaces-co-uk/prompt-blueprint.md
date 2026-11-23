@@ -1,82 +1,93 @@
 ---
 title: "UI Prompt Blueprint: dcspaces-co-uk"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "dcspaces-co-uk"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas, `#FFFFFF` ink, `#F2F1ED` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f1e9` canvas, `#343631` ink, `#6c8f6c` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: dcspaces-co-uk
 
 > **Chorley Builders · Extensions & Renovations · DC Carpentry** (https://dcspaces.co.uk/) — Family-run builders in Chorley. House extensions, wall and chimney breast removals, kitchens and bespoke staircases across Lancashire. Fr...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Chorley Builders · Extensions & Renovations · DC Carpentry** (`https://dcspaces.co.uk/`). Family-run builders in Chorley. House extensions, wall and chimney breast removals, kitchens and bespoke staircases across Lancashire. Fr...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas, `#FFFFFF` ink, `#F2F1ED` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f1e9` canvas, `#343631` ink, `#6c8f6c` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#14161A` (`var(--ink)` in `:root`) paired with `#FFFFFF` primary typography and `#F2F1ED` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Satoshi` for display copy (`Building & Renovation Specialists Ac`) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--max)` container bounds (`gap: 12px`, padding `var(--gut)`) with `cubic-bezier(.22,.61,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f1e9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#343631` primary typography and `#6c8f6c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Satoshi` for display copy (`Building & Renovation Specialists Ac`) with `Satoshi` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 2px`, padding `14px`) with `cubic-bezier(.22,.61,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×11093px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `var(--max)` extracted from `dcspaces-co-uk` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `var(--gut)` lateral canvas padding with `12px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `14px` lateral canvas padding with `2px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`, `8px`, `var(--r)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max)`, `gap: 12px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--gut)` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)`, `@media (max-width: 900px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 2px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `14px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width: 760px)`, `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#14161A` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#4A5058` | `var(--ink-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#767D86` | `var(--ink-3)` in `:root` |
-| **Interactive Accent / Highlight** | `#F2F1ED` | `var(--paper)` in `:root` |
-| **Secondary / Muted Copy** | `#E8E6E0` | `var(--paper-2)` in `:root` |
-| **Structural Hairline Border** | `#FFFFFF` | `var(--white)` in `:root` |
-| **Variable Token (`--brand`)** | `#2e432f` | `var(--brand)` in `:root` |
+| **Primary Canvas Substrate** | `#f4f1e9` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#343631` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f2f1ed` | `var(--cc-paper)` in `:root` |
+| **Interactive Accent / Highlight** | `#6c8f6c` | `var(--brand-2)` in `:root` |
+| **Secondary / Muted Copy** | `#767d86` | `var(--ink-3)` in `:root` |
+| **Structural Hairline Border** | `#e0ddd6` | `var(--line)` in `:root` (`rgba(20,22,26,.09)`) |
+| **Variable Token (`--cc-ink`)** | `#14161a` | `var(--cc-ink)` in `:root` |
+| **Variable Token (`--cc-green`)** | `#344c3a` | `var(--cc-green)` in `:root` |
+| **Variable Token (`--cc-forest`)** | `#2e432f` | `var(--cc-forest)` in `:root` |
+| **Variable Token (`--cc-sage`)** | `#dfe5dc` | `var(--cc-sage)` in `:root` |
+| **Variable Token (`--cc-sand`)** | `#e8e2d4` | `var(--cc-sand)` in `:root` |
+| **Variable Token (`--cc-on-deep`)** | `#ffffff` | `var(--cc-on-deep)` in `:root` |
+| **Variable Token (`--ink-2`)** | `#4a5058` | `var(--ink-2)` in `:root` |
+| **Variable Token (`--paper-2`)** | `#e8e6e0` | `var(--paper-2)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--cc-ink` | `#14161a` | Typography Ink Token |
+| `--cc-green` | `#344c3a` | Color / Atmospheric Token |
+| `--cc-forest` | `#2e432f` | Color / Atmospheric Token |
+| `--cc-sage` | `#dfe5dc` | Color / Atmospheric Token |
+| `--cc-sand` | `#e8e2d4` | Color / Atmospheric Token |
+| `--cc-paper` | `#f2f1ed` | Canvas / Surface Token |
+| `--cc-deep` | `#14161a` | Color / Atmospheric Token |
+| `--cc-on-deep` | `#ffffff` | Color / Atmospheric Token |
+| `--cc-font-display` | `'Satoshi', system-ui, sans-serif` | Typography / Scale Token |
+| `--cc-font-body` | `'Satoshi', system-ui, sans-serif` | Typography / Scale Token |
 | `--ink` | `#14161A` | Typography Ink Token |
 | `--ink-2` | `#4A5058` | Typography Ink Token |
 | `--ink-3` | `#767D86` | Typography Ink Token |
 | `--paper` | `#F2F1ED` | Canvas / Surface Token |
 | `--paper-2` | `#E8E6E0` | Canvas / Surface Token |
 | `--white` | `#FFFFFF` | Canvas / Surface Token |
-| `--line` | `rgba(20,22,26,.09)` | Color / Atmospheric Token |
-| `--line-2` | `rgba(20,22,26,.16)` | Color / Atmospheric Token |
-| `--r-xl` | `32px` | Dimension / Scale Token |
-| `--r-sm` | `16px` | Dimension / Scale Token |
-| `--gut` | `24px` | Dimension / Scale Token |
-| `--max` | `1340px` | Dimension / Scale Token |
-| `--shadow` | `0 1px 2px rgba(20,22,26,.04), 0 10px 30px -14px rgba(20,22,26,.14)` | Elevation / Border Token |
-| `--shadow-lg` | `0 2px 6px rgba(20,22,26,.05), 0 30px 70px -28px rgba(20,22,26,.30)` | Elevation / Border Token |
-| `--ease` | `cubic-bezier(.22,.61,.36,1)` | Motion / Easing Token |
-| `--brand` | `#2e432f` | Brand / Palette Token |
 
 ---
 
@@ -84,14 +95,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `Satoshi`.
-- **Primary Body Stack**: `Segoe UI`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Satoshi`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`).
-- **Body Copy**: CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`, `font-weight: 400`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `.76rem`, `clamp(2.7rem, 6.4vw, 5rem)`, `clamp(2.1rem, 4.4vw, 3.5rem)`, `clamp(1.6rem, 2.6vw, 2.2rem)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 73.6px`, `line-height: 73.6px`, `font-weight: 700`, `letter-spacing: -3.312px`); CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 57.12px`, `font-weight: 700`, `letter-spacing: -2.24px`); rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`).
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `p` (`font-size: .9rem`, `line-height: 1.55`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`).
 
 ---
 
@@ -101,9 +112,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas
 - **Extracted Timing Functions**: `cubic-bezier(.22,.61,.36,1)`.
 
 ### Per-Element Transition & Choreography Rules
+- **Selector `.ck-bar`**: `transition: transform .28s ease` extracted from `dcspaces-co-uk` stylesheet.
+- **Selector `.ck-btn`**: `transition: background-color .25s, color .25s` extracted from `dcspaces-co-uk` stylesheet.
 - **Selector `.btn`**: `transition: background .25s var(--ease), color .25s var(--ease), border-co...` extracted from `dcspaces-co-uk` stylesheet.
-- **Selector `.btn__ico`**: `transition: background .25s var(--ease), transform .3s var(--ease)` extracted from `dcspaces-co-uk` stylesheet.
-- **Selector `.tlink`**: `transition: gap .25s var(--ease)` extracted from `dcspaces-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.hdr>` and `<section.opening>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -111,40 +122,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Chorley Builders · Extensions & Renovation │
 │ ====================================================================== │
-│ [ <header.hdr>             | Home · About · All services · Extensio ]  │
+│ [ <header.hdr> (1440x86px)            | Home · About · All services  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Building & Renovation Specialists Across Chorley...          |   │
-│ | Substrate: #14161A    | Ink: #FFFFFF    | Accent: #F2F1ED        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: Building & Renovation Specialists Across Chorley...            | │
+│ | Substrate: #f4f1e9 | Ink: #343631 | Accent: #6c8f6c                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.opening>         ) max-w: var(--max)     |   │
+│ | SHOWCASE GRID (<section.opening>) max-w: 1440px                    | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Everything your house needs, |  | Home Extensions              | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 12px  ) | │
-│ | [<header.hdr>] -> [<section.hero>] -> [<section.opening>] |          │
+│ | DETAIL MODULE (<section.section>) — Loft Conversions               | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.ftr>          ) | https://dcspaces.co.uk/            │
+│ [ FOOTER (<footer.ftr>        ) | https://dcspaces.co.uk/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.hdr>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: Building & Renovation Specialists Across Chorley...            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.opening>) — 1-Col Stack                   | │
+│ | [ Item 1: Everything your house needs, from one team             ] | │
+│ | [ Item 2: Home Extensions                                        ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.section>) — 1-Col (Loft Conversions)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.ftr>        ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.hdr> — `dcspaces-co-uk`)**:
-   - Landmark `<header class="hdr">` hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `font-face { font-family: "Satoshi"; src: url("../fonts/satoshi-400.woff2") format("w... }`.
+   - Landmark `<header class="hdr">` (`1440x86px`) hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `.dcc-hp { position: absolute !important; left: -9999px !important; width: 1px; hei... }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Building & Renovation Specialists `)**:
-   - Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"Structural walls and chimney breasts"* over `#14161A` canvas and `#FFFFFF` ink.
+   - Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"CRAFTING UNIQUE SPACES"* over `#f4f1e9` canvas and `#343631` ink.
 3. **Primary Showcase & Content Grid (<section.opening> — `Everything your house needs, from `)**:
-   - Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Kitchen renovations and fitting"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `after { box-sizing: border-box; }`.
+   - Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Crafting unique spaces"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `.dcc-msg--ok { background: e6ebe3; color: 2e432f; border: 1px solid rgba(52,76,58,.25); }`.
 4. **Interactive Detail & Feature Matrix (<section.section> — `Home Extensions`)**:
-   - Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Bespoke carpentry and staircases"*) with `#767D86` surface cards, `#F2F1ED` accents, and `html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }`.
+   - Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Whether you’re planning a home extension, full renovation, loft c"*) with `#f2f1ed` surface cards, `#6c8f6c` accents, and `.dcc-msg--err { background: f6e8e4; color: 7a2e1f; border: 1px solid rgba(122,46,31,.22); }`.
 5. **Colophon & Global Directory Footer (<footer.ftr> — `https://dcspaces.co.uk/`)**:
-   - Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"Crafting unique spaces"*, and `#FFFFFF` structural dividers.
+   - Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"As a family-run business, we combine skilled craftsmanship w"*, and `#e0ddd6` structural dividers.
 
 ---
 
@@ -156,102 +186,109 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `dcspaces-co-uk` (**Chorley Builders · Extensions & Renovations · DC Carpentry** — `https://dcspaces.co.uk/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas, `#FFFFFF` ink, `#F2F1ED` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f1e9` canvas, `#343631` ink, `#6c8f6c` accent).
 - **Identity & Domain Context**: Family-run builders in Chorley. House extensions, wall and chimney breast removals, kitchens and bespoke staircases across Lancashire. Fr...
-- **Primary Substrate**: `#14161A` (`var(--ink)` in `:root`), **Primary Ink**: `#FFFFFF`, **Accent / Highlight**: `#F2F1ED`.
+- **Primary Substrate**: `#f4f1e9` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#343631`, **Accent / Highlight**: `#6c8f6c`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#14161A` (`var(--ink)` in `:root`) paired with `#FFFFFF` primary typography and `#F2F1ED` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Satoshi` for display copy (`Building & Renovation Specialists Ac`) with `Segoe UI` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `var(--max)` container bounds (`gap: 12px`, padding `var(--gut)`) with `cubic-bezier(.22,.61,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f1e9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#343631` primary typography and `#6c8f6c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Satoshi` for display copy (`Building & Renovation Specialists Ac`) with `Satoshi` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 2px`, padding `14px`) with `cubic-bezier(.22,.61,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `dcspaces-co-uk` in your global stylesheet:
 
 :root {
-  /* Chorley Builders · Extensions & Renovations · DC Carpentry (dcspaces-co-uk) — Ground-Truth Extracted CSS Variables */
+  /* Chorley Builders · Extensions & Renovations · DC Carpentry (dcspaces-co-uk) — Live-Grounded CSS Variables */
+  --cc-ink: #14161a; /* Typography Ink Token (dcspaces-co-uk) */
+  --cc-green: #344c3a; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-forest: #2e432f; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-sage: #dfe5dc; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-sand: #e8e2d4; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-paper: #f2f1ed; /* Canvas / Surface Token (dcspaces-co-uk) */
+  --cc-deep: #14161a; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-on-deep: #ffffff; /* Color / Atmospheric Token (dcspaces-co-uk) */
+  --cc-font-display: 'Satoshi', system-ui, sans-serif; /* Typography / Scale Token (dcspaces-co-uk) */
+  --cc-font-body: 'Satoshi', system-ui, sans-serif; /* Typography / Scale Token (dcspaces-co-uk) */
   --ink: #14161A; /* Typography Ink Token (dcspaces-co-uk) */
   --ink-2: #4A5058; /* Typography Ink Token (dcspaces-co-uk) */
   --ink-3: #767D86; /* Typography Ink Token (dcspaces-co-uk) */
   --paper: #F2F1ED; /* Canvas / Surface Token (dcspaces-co-uk) */
   --paper-2: #E8E6E0; /* Canvas / Surface Token (dcspaces-co-uk) */
   --white: #FFFFFF; /* Canvas / Surface Token (dcspaces-co-uk) */
-  --line: rgba(20,22,26,.09); /* Color / Atmospheric Token (dcspaces-co-uk) */
-  --line-2: rgba(20,22,26,.16); /* Color / Atmospheric Token (dcspaces-co-uk) */
-  --r-xl: 32px; /* Dimension / Scale Token (dcspaces-co-uk) */
-  --r-sm: 16px; /* Dimension / Scale Token (dcspaces-co-uk) */
-  --gut: 24px; /* Dimension / Scale Token (dcspaces-co-uk) */
-  --max: 1340px; /* Dimension / Scale Token (dcspaces-co-uk) */
-  --shadow: 0 1px 2px rgba(20,22,26,.04), 0 10px 30px -14px rgba(20,22,26,.14); /* Elevation / Border Token (dcspaces-co-uk) */
-  --shadow-lg: 0 2px 6px rgba(20,22,26,.05), 0 30px 70px -28px rgba(20,22,26,.30); /* Elevation / Border Token (dcspaces-co-uk) */
-  --ease: cubic-bezier(.22,.61,.36,1); /* Motion / Easing Token (dcspaces-co-uk) */
-  --brand: #2e432f; /* Brand / Palette Token (dcspaces-co-uk) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#14161A` — grounded in `var(--ink)` in `:root`
-- **Primary Typography Ink**: `#4A5058` — grounded in `var(--ink-2)` in `:root`
-- **Elevated Surface / Card Substrate**: `#767D86` — grounded in `var(--ink-3)` in `:root`
-- **Interactive Accent / Highlight**: `#F2F1ED` — grounded in `var(--paper)` in `:root`
-- **Secondary / Muted Copy**: `#E8E6E0` — grounded in `var(--paper-2)` in `:root`
-- **Structural Hairline Border**: `#FFFFFF` — grounded in `var(--white)` in `:root`
-- **Variable Token (`--brand`)**: `#2e432f` — grounded in `var(--brand)` in `:root`
+- **Primary Canvas Substrate**: `#f4f1e9` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#343631` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f2f1ed` — grounded in `var(--cc-paper)` in `:root`
+- **Interactive Accent / Highlight**: `#6c8f6c` — grounded in `var(--brand-2)` in `:root`
+- **Secondary / Muted Copy**: `#767d86` — grounded in `var(--ink-3)` in `:root`
+- **Structural Hairline Border**: `#e0ddd6` — grounded in `var(--line)` in `:root` (`rgba(20,22,26,.09)`)
+- **Variable Token (`--cc-ink`)**: `#14161a` — grounded in `var(--cc-ink)` in `:root`
+- **Variable Token (`--cc-green`)**: `#344c3a` — grounded in `var(--cc-green)` in `:root`
+- **Variable Token (`--cc-forest`)**: `#2e432f` — grounded in `var(--cc-forest)` in `:root`
+- **Variable Token (`--cc-sage`)**: `#dfe5dc` — grounded in `var(--cc-sage)` in `:root`
+- **Variable Token (`--cc-sand`)**: `#e8e2d4` — grounded in `var(--cc-sand)` in `:root`
+- **Variable Token (`--cc-on-deep`)**: `#ffffff` — grounded in `var(--cc-on-deep)` in `:root`
+- **Variable Token (`--ink-2`)**: `#4a5058` — grounded in `var(--ink-2)` in `:root`
+- **Variable Token (`--paper-2`)**: `#e8e6e0` — grounded in `var(--paper-2)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×11093px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `var(--max)` extracted from `dcspaces-co-uk` stylesheet
-- **Padding & Gutters**: `var(--gut)` lateral canvas padding with `12px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max)`, `gap: 12px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--gut)` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)`, `@media (max-width: 900px)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `14px` lateral canvas padding with `2px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 2px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `14px` horizontal padding
+- **Media Queries**: `@media (max-width: 760px)`, `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)`
 - **Corner Radii**: `999px`, `50%`, `8px`, `var(--r)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Satoshi`
-- **Body Font Stack**: `Segoe UI`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`)
-- **Body Copy Rule**: CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`, `font-weight: 400`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `.76rem`, `clamp(2.7rem, 6.4vw, 5rem)`, `clamp(2.1rem, 4.4vw, 3.5rem)`, `clamp(1.6rem, 2.6vw, 2.2rem)`)
+- **Body Font Stack**: `Satoshi`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 73.6px`, `line-height: 73.6px`, `font-weight: 700`, `letter-spacing: -3.312px`); CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 57.12px`, `font-weight: 700`, `letter-spacing: -2.24px`); rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`)
+- **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `p` (`font-size: .9rem`, `line-height: 1.55`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `dcspaces-co-uk` (`Chorley Builders · Extensions & Renovations · DC Carpentry`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.hdr> — `dcspaces-co-uk`)**:
-   - DOM & Selectors: Landmark `<header class="hdr">` hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `font-face { font-family: "Satoshi"; src: url("../fonts/satoshi-400.woff2") format("w... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hdr> — `dcspaces-co-uk`)` (`dcspaces-co-uk`) adapts across `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)`, `@media (max-width: 900px)` with `cubic-bezier(.22,.61,.36,1)` transitions and links `Home · About · All services · Extensions · Projects`.
+   - DOM & Selectors: Landmark `<header class="hdr">` (`1440x86px`) hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `.dcc-hp { position: absolute !important; left: -9999px !important; width: 1px; hei... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hdr> — `dcspaces-co-uk`)` (`dcspaces-co-uk`) adapts across `@media (max-width: 760px)`, `@media (prefers-reduced-motion: no-preference)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1140px)` with `cubic-bezier(.22,.61,.36,1)` transitions and links `Home · About · All services · Extensions · Projects`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Building & Renovation Specialists `)**:
-   - DOM & Selectors: Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"Structural walls and chimney breasts"* over `#14161A` canvas and `#FFFFFF` ink.
-   - Responsive Contract: Hero stage (`1440×11093px` desktop / `390×2400px` mobile) sets `#14161A` background with `#FFFFFF` headline `Building & Renovation Specialists Across Chorley...`.
+   - DOM & Selectors: Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"CRAFTING UNIQUE SPACES"* over `#f4f1e9` canvas and `#343631` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f1e9` background with `#343631` headline `Building & Renovation Specialists Across Chorley...`.
 3. **Primary Showcase & Content Grid (<section.opening> — `Everything your house needs, from `)**:
-   - DOM & Selectors: Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Kitchen renovations and fitting"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `after { box-sizing: border-box; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.opening> — `Everything your house needs, from `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: var(--max)`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--gut)` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Crafting unique spaces"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `.dcc-msg--ok { background: e6ebe3; color: 2e432f; border: 1px solid rgba(52,76,58,.25); }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.opening> — `Everything your house needs, from `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `14px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.section> — `Home Extensions`)**:
-   - DOM & Selectors: Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Bespoke carpentry and staircases"*) with `#767D86` surface cards, `#F2F1ED` accents, and `html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `Home Extensions`)` uses `999px`, `50%`, `8px`, `var(--r)` radii, `#F2F1ED` highlights, and assets (favicon.png, apple-touch-icon.png, satoshi-900.woff2).
+   - DOM & Selectors: Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Whether you’re planning a home extension, full renovation, loft c"*) with `#f2f1ed` surface cards, `#6c8f6c` accents, and `.dcc-msg--err { background: f6e8e4; color: 7a2e1f; border: 1px solid rgba(122,46,31,.22); }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `Home Extensions`)` uses `999px`, `50%`, `8px`, `var(--r)` radii, `#6c8f6c` highlights, and assets (favicon.png, apple-touch-icon.png, satoshi-900.woff2).
 5. **Colophon & Global Directory Footer (<footer.ftr> — `https://dcspaces.co.uk/`)**:
-   - DOM & Selectors: Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"Crafting unique spaces"*, and `#FFFFFF` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.ftr> — `https://dcspaces.co.uk/`)` aligns to `var(--max)` extracted from `dcspaces-co-uk` stylesheet with `var(--gut)` lateral canvas padding with `12px` grid gap and attributes (data-carousel, data-dir="prev", data-dir="next").
+   - DOM & Selectors: Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"As a family-run business, we combine skilled craftsmanship w"*, and `#e0ddd6` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.ftr> — `https://dcspaces.co.uk/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `14px` lateral canvas padding with `2px` grid gap and attributes (data-carousel, data-dir="prev", data-dir="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Structural walls and chimney breasts"*
-- Copy Excerpt 2: *"Kitchen renovations and fitting"*
-- Copy Excerpt 3: *"Bespoke carpentry and staircases"*
-- Copy Excerpt 4: *"Crafting unique spaces"*
+- Copy Excerpt 1: *"CRAFTING UNIQUE SPACES"*
+- Copy Excerpt 2: *"Crafting unique spaces"*
+- Copy Excerpt 3: *"Whether you’re planning a home extension, full renovation, loft conversion or stru..."*
+- Copy Excerpt 4: *"As a family-run business, we combine skilled craftsmanship with professional proje..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,.61,.36,1)`
 - **Extracted Stylesheet Rules (`dcspaces-co-uk`)**:
-- `font-face { font-family: "Satoshi"; src: url("../fonts/satoshi-400.woff2") format("w... }`
-- `after { box-sizing: border-box; }`
-- `html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }`
-- `video { display: block; max-width: 100%; height: auto; }`
-- `button { font: inherit; }`
+- `.dcc-hp { position: absolute !important; left: -9999px !important; width: 1px; hei... }`
+- `.dcc-msg--ok { background: e6ebe3; color: 2e432f; border: 1px solid rgba(52,76,58,.25); }`
+- `.dcc-msg--err { background: f6e8e4; color: 7a2e1f; border: 1px solid rgba(122,46,31,.22); }`
+- `.dcc-404 { min-height: clamp(420px, 60vh, 560px); background: 344c3a; }`
+- `.dcc-404 .phero__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }`
 - **Per-Selector Transition Rules**:
+- **Selector `.ck-bar`**: `transition: transform .28s ease` extracted from `dcspaces-co-uk` stylesheet.
+- **Selector `.ck-btn`**: `transition: background-color .25s, color .25s` extracted from `dcspaces-co-uk` stylesheet.
 - **Selector `.btn`**: `transition: background .25s var(--ease), color .25s var(--ease), border-co...` extracted from `dcspaces-co-uk` stylesheet.
-- **Selector `.btn__ico`**: `transition: background .25s var(--ease), transform .3s var(--ease)` extracted from `dcspaces-co-uk` stylesheet.
-- **Selector `.tlink`**: `transition: gap .25s var(--ease)` extracted from `dcspaces-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.hdr>` and `<section.opening>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 

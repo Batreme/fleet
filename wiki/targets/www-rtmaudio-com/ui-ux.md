@@ -1,35 +1,47 @@
+---
+title: "UI & UX Architecture: www-rtmaudio-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: www-rtmaudio-com
 
 ## Overview & Design Identity
 - **Target**: `www-rtmaudio-com` (**RTM Audio · Audio plug-ins for mixing and mastering**)
 - **Production URL**: [https://www.rtmaudio.com](https://www.rtmaudio.com)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#b08b5c`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#d6c5a3`)
 - **Summary**: Mixing and mastering plug-ins, built by working engineers. Judge the change. Not the volume.
-- **Total Clean CSS Variables Extracted**: `72` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `73` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Instrument Serif`
-- **Body Font Stack**: `Outfit`
+- **Display Font Stack**: `Söhne Breit`
+- **Body Font Stack**: `Söhne Breit`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **Hero Display (`H1`)**: CSS variables `--display-weight: 500`, `--t-display: clamp(3.0518rem,2.3212rem + 2.7188vw,4.7684rem)`, `--lh-display: .94`; rule `h1` (`letter-spacing: -.02em`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(2.8rem,8vw,8rem)`, `line-height: .84`, `letter-spacing: -.045em`, `font-weight: 500`)
-- **Body Copy**: CSS variables `--t-body: 1rem`, `--lh-body: 24px`, `--tr-body: 0`; rule `body` (`letter-spacing: .018em`)
-- **Metadata & Labels**: CSS variables `--mono: "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace`, `--t-label: .8rem`, `--m-label: .8rem`; rule `small` (`font-size: .65rem`, `letter-spacing: .13em`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 76.2899px`, `line-height: 71.7125px`, `font-weight: 500`, `letter-spacing: -1.90725px`); CSS variables `--display-weight: 500`, `--t-display: clamp(3.0518rem,2.3212rem + 2.7188vw,4.7684rem)`, `--lh-display: .94`; rule `h1` (`letter-spacing: -.02em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48.8288px`, `line-height: 48.8288px`, `font-weight: 500`, `letter-spacing: -0.976576px`); rule `h2` (`font-size: clamp(2.8rem,8vw,8rem)`, `line-height: .84`, `letter-spacing: -.045em`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 0.288px`); CSS variables `--t-body: 1rem`, `--lh-body: 24px`, `--tr-body: 0`; rule `body` (`letter-spacing: .018em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 12.8px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 1.792px`); CSS variables `--mono: "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace`, `--t-label: .8rem`, `--m-label: .8rem`; rule `small` (`font-size: .65rem`, `letter-spacing: .13em`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0e0f10` | `var(--void)` in `:root` |
-| **Primary Typography Ink** | `#f0e9dc` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#d6c5a3` | `var(--ink-2)` in `:root` |
-| **Interactive Accent / Highlight** | `#b08b5c` | `var(--ink-dim)` in `:root` |
-| **Secondary / Muted Copy** | `#57c279` | `var(--green)` in `:root` |
-| **Structural Hairline Border** | `#07080a` | `var(--well)` in `:root` |
-| **Variable Token (`--raise`)** | `#121315` | `var(--raise)` in `:root` |
+| **Primary Canvas Substrate** | `#0e0f10` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f0e9dc` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#121315` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#d6c5a3` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#b08b5c` | `var(--ink-dim)` in `:root` |
+| **Structural Hairline Border** | `#252524` | `var(--line)` in `:root` (`rgba(240,233,220,.10)`) |
+| **Variable Token (`--green`)** | `#57c279` | `var(--green)` in `:root` |
+| **Variable Token (`--well`)** | `#07080a` | `var(--well)` in `:root` |
 
 ---
 
@@ -57,12 +69,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.campaigns-head> — `www-rtmaudio-com`)**:
-   - Landmark `<header class="campaigns-head">` hosting `RTM Audio · Audio plug-ins for mixin` navigation (`Plugins Plugins · Store Store · About About · Account Account`), DOM attributes (`data-consent="pending"`, `data-i18n-key="RTM Audio · Audio plu..."`, `data-i18n-content="Mixing and mastering..."`, `data-i18n-content="Mixing and mastering..."`), and stylesheet rule `root { --display-weight:500; }`.
+   - Landmark `<header class="campaigns-head">` (`1296x194px`) hosting `RTM Audio · Audio plug-ins for mixin` navigation (`Plugins Plugins · Store Store · About About · Account Account`), DOM attributes (`data-consent="granted"`, `data-i18n-key="RTM Audio · Audio plu..."`, `data-i18n-content="Mixing and mastering..."`, `data-i18n-content="Mixing and mastering..."`), and stylesheet rule `root { --display-weight:500; }`.
 2. **Hero Stage & Focal Lead (<section.take> — `Judge the change. Not the volume.`)**:
-   - Landmark `<section class="take">` presenting display lead `Judge the change. Not the volume.` and copy excerpt *"See the Black Friday page →"* over `#0e0f10` canvas and `#f0e9dc` ink.
-3. **Primary Showcase & Content Grid (<section.campaigns> — `CXB`)**:
-   - Landmark `<section class="campaigns">` rendering section `CXB` with copy *"Starts Mon 16 Nov, 18:00 CET"*, asset references (`soehne-breit-kraftig.woff2`, `fonts.css`, `site.css`, `black-friday-poster.js`), and grid rule `body { letter-spacing:.018em }`.
-4. **Interactive Detail & Feature Matrix (<article.campaign-panel> — `One knob moves the pair.`)**:
-   - Landmark `<article class="campaign-panel material-light">` framing `One knob moves the pair.` and `Depth and Speed, band by band.` (*"Every plug-in on sale until Wed 2 Dec, 08:59 CET."*) with `#d6c5a3` surface cards, `#b08b5c` accents, and `.hero h1 { letter-spacing:-.02em }`.
+   - Landmark `<section class="take">` presenting display lead `Judge the change. Not the volume.` and copy excerpt *"Mixing and mastering plug-ins, built by working engineers."* over `#0e0f10` canvas and `#f0e9dc` ink.
+3. **Primary Showcase & Content Grid (<section.campaigns> — `Nine in the rack.`)**:
+   - Landmark `<section class="campaigns">` rendering section `Nine in the rack.` with copy *"EQ, vocals, dynamics and loudness."*, asset references (`clarity.js`, `soehne-breit-kraftig.woff2`, `fonts.css`, `site.css`), and grid rule `body { letter-spacing:.018em }`.
+4. **Interactive Detail & Feature Matrix (<article.campaign-panel> — `Your whole rack, in one app.`)**:
+   - Landmark `<article class="campaign-panel material-light">` framing `Your whole rack, in one app.` and `One-time licences. No subscription.` (*"Download, install and activate every plug-in you own. Free for Ma"*) with `#121315` surface cards, `#d6c5a3` accents, and `.hero h1 { letter-spacing:-.02em }`.
 5. **Colophon & Global Directory Footer (<footer.cn-ground> — `https://www.rtmaudio.com`)**:
-   - Landmark `<footer class="cn-ground">` anchoring `RTM Audio · Audio plug-ins for m` footer links (`Plugins Plugins · Store Store · About About · Account Account`), copy *"May Meta and Microsoft see your visit? If you accept, Meta, "*, and `#07080a` structural dividers.
+   - Landmark `<footer class="cn-ground">` anchoring `RTM Audio · Audio plug-ins for m` footer links (`Plugins Plugins · Store Store · About About · Account Account`), copy *"Try any plug-in in the store first."*, and `#252524` structural dividers.

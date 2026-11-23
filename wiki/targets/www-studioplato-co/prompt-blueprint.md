@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-studioplato-co"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-studioplato-co"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#fff`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0082f3`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-studioplato-co
 
 > **Studio Plato - Contemporary Interior Design** (https://www.studioplato.co/) — STUDIO PLATO specializes in interior and architecture design. Connect with us for innovative design solutions.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Studio Plato - Contemporary Interior Design** (`https://www.studioplato.co/`). STUDIO PLATO specializes in interior and architecture design. Connect with us for innovative design solutions.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#fff`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0082f3`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#4f4f4f` (`var(--grey-darkest)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Opensaucesans` for display copy (`T i n y A p a r t m e n t`) with `Instrument Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.075,.82,.165,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Opensaucesans` for display copy (`Studio Plato - Contemporary Interior`) with `Opensaucesans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.075,.82,.165,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `940px` extracted from `www-studioplato-co` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `50%`, `3px`, `100%`, `2px`.
+- **Border Radius Scale**: `3px`, `100%`, `50%`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`.
 
@@ -48,19 +52,21 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#4f4f4f` | `var(--grey-darkest)` in `:root` |
-| **Primary Typography Ink** | `#ddd` | `var(--grey-lightest)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#007aff` | `:root { color: #007aff }` |
-| **Interactive Accent / Highlight** | `#fff` | `.swiper-lazy-preloader-white { color: #fff }` |
-| **Secondary / Muted Copy** | `#000` | `.swiper-lazy-preloader-black { color: #000 }` |
-| **Structural Hairline Border** | `#0000` | `a { background-color: #0000 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#808080` | `figcaption { color: grey }` (`#808080`) |
+| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+| **Variable Token (`--grey-darkest`)** | `#4f4f4f` | `var(--grey-darkest)` in `:root` |
+| **Variable Token (`--grey-lightest`)** | `#dddddd` | `var(--grey-lightest)` in `:root` |
+| **Variable Token (`--swiper-theme-color`)** | `#007aff` | `var(--swiper-theme-color)` in stylesheet |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--w-backdrop-animation` | `initial` | Motion / Easing Token |
 | `--grey-darkest` | `#4f4f4f` | Canvas / Surface Token |
 | `--white` | `white` | Canvas / Surface Token |
 | `--black` | `black` | Canvas / Surface Token |
@@ -69,13 +75,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#
 | `--spacing-120` | `7.5em` | Layout / Spatial Grid Token |
 | `--spacing-200` | `12.5em` | Layout / Spatial Grid Token |
 | `--grey-dark` | `grey` | Canvas / Surface Token |
+| `--w-backdrop-animation` | `initial` | Motion / Easing Token |
 | `--plato-nav-blur` | `0.005em` | Layout / Spatial Grid Token |
 | `--plato-nav-opacity` | `0.959856` | Layout / Spatial Grid Token |
 | `--swiper-theme-color` | `#007aff` | Brand / Palette Token |
 | `--swiper-preloader-color` | `#fff` | Brand / Palette Token |
 | `--swiper-navigation-size` | `44px` | Layout / Spatial Grid Token |
-| `--www-studioplato--bg` | `#4f4f4f` | Canvas Substrate (from `var(--grey-darkest)` in `:root`) |
-| `--www-studioplato--ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
+| `--www-studioplato--bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--www-studioplato--ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
@@ -83,14 +90,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `Opensaucesans`.
-- **Primary Body Stack**: `Instrument Sans`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Opensaucesans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`, `line-height: 36px`).
-- **Body Copy**: rule `body` (`font-size: 14px`, `line-height: 20px`).
-- **Metadata & Navigation Labels**: rule `small` (`font-size: 80%`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 20px`, `line-height: 20px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Body Copy**: live computed `body` (`font-size: 11.52px`, `line-height: 11.52px`, `font-weight: 500`); rule `body` (`font-size: 14px`, `line-height: 20px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 11.52px`, `line-height: 11.52px`, `font-weight: 500`); rule `small` (`font-size: 80%`).
 
 ---
 
@@ -100,50 +107,69 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#
 - **Extracted Timing Functions**: `cubic-bezier(.075,.82,.165,1)`, `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.645,0.045,0.355,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-studioplato-co` stylesheet.
-- **Selector `.swiper-pagination`**: `transition: opacity .3s` extracted from `www-studioplato-co` stylesheet.
-- **Selector `.swiper-pagination-bullets-dynamic`**: `transition: transform .2s,top .2s` extracted from `www-studioplato-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.075,.82,.165,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.cursor_follower>`.
+- **Selector `.w-webflow-badge > img`**: `transition: unset` extracted from `www-studioplato-co` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-studioplato-co` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-studioplato-co` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.075,.82,.165,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.cursor_follower:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Studio Plato - Contemporary Interior Desig │
 │ ====================================================================== │
-│ [ <header.w-mod-js>        | Projects · Studio · Services · Insight ]  │
+│ [ <header.w-mod-js> (1440px)          | Projects · Studio · Services ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <div.cursor_follower>                                |   │
-│ | H1: T i n y A p a r t m e n t                                    |   │
-│ | Substrate: #4f4f4f    | Ink: #fff       | Accent: #fff           |   │
+│ | HERO STAGE: <div.cursor_follower> (w=1440px)                       | │
+│ | H1: Studio Plato - Contemporary Interior Design                    | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0082f3                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.cursor_follower>     ) max-w: 940px          |   │
+│ | SHOWCASE GRID (<div.cursor_follower:nth(2) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Every space starts with a co |  | I n t e r i o r d e s i g n  | | │
+│ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.w-mod-js>] -> [<div.cursor_follow] -> [<div.cursor_follow]  │
+│ | DETAIL MODULE (<div.cursor_follower:nth(3) — Global Directory & Co | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.wf-instruments) | https://www.studioplato.co/        │
+│ [ FOOTER (<footer.wf-instrumen) | https://www.studioplato.co/          │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.w-mod-js>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<div.cursor_follower>) — 390px Vertical Lead           | │
+│ | H1: Studio Plato - Contemporary Interior Design                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<div.cursor_follower:n) — 1-Col Stack              | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<div.cursor_follower:nth) — 1-Col (Global Directory &) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.wf-instrumen) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-studioplato-co`)**:
-   - Landmark `<header class="w-mod-js">` hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-plato-home-guard`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
-2. **Hero Stage & Focal Lead (<div.cursor_follower> — `T i n y A p a r t m e n t`)**:
-   - Landmark `<div class="cursor_follower">` presenting display lead `T i n y A p a r t m e n t` and copy excerpt *"Contemporary interior design for successful living."* over `#4f4f4f` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<div.cursor_follower> — `Every space starts with a conversa`)**:
-   - Landmark `<div class="cursor_follower">` rendering section `Every space starts with a conversation.` with copy *"I n t e r i o r d e s i g n p r o j e c t f o r a t i n y a p a r"*, asset references (`cdn.prod.website-files.com`, `studio-plato.webflow.shared.d6524...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `host { display:block;margin-left:auto;margin-right:auto;position:relative;z-ind... }`.
-4. **Interactive Detail & Feature Matrix (<div.cursor_follower> — `I n t e r i o r d e s i g n p r o `)**:
-   - Landmark `<div class="cursor_follower">` framing `I n t e r i o r d e s i g n p r o j e c t f o r ` and `Featured Projects —` (*"Featured Projects —"*) with `#007aff` surface cards, `#fff` accents, and `.swiper { display:block;list-style:none;margin-left:auto;margin-right:auto;overflo... }`.
+   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-plato-home-guard`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+2. **Hero Stage & Focal Lead (<div.cursor_follower> — `Studio Plato - Contemporary Interi`)**:
+   - Landmark `<div class="cursor_follower">` presenting display lead `Studio Plato - Contemporary Interior Design` and copy excerpt *"Contemporary interior design for successful living."* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.cursor_follower:nth(2)> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<div class="cursor_follower">` rendering section `Featured Work & Interactive Showcase` with copy *"I n t e r i o r d e s i g n p r o j e c t f o r a t i n y a p a r"*, asset references (`cdn.prod.website-files.com`, `studio-plato.webflow.shared.d6524...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
+4. **Interactive Detail & Feature Matrix (<div.cursor_follower:nth(3)> — `Technical Architecture & Narrative`)**:
+   - Landmark `<div class="cursor_follower">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Projects —"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.wf-instrumentsans-n3-active> — `https://www.studioplato.co/`)**:
-   - Landmark `<footer class="wf-instrumentsans-n3-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"S t u d i o P l a t o"*, and `#0000` structural dividers.
+   - Landmark `<footer class="wf-instrumentsans-n3-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"S t u d i o P l a t o"*, and `#e2e2e2` structural dividers.
 
 ---
 
@@ -155,20 +181,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-studioplato-co` (**Studio Plato - Contemporary Interior Design** — `https://www.studioplato.co/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#4f4f4f` / `#fff`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0082f3`).
 - **Identity & Domain Context**: STUDIO PLATO specializes in interior and architecture design. Connect with us for innovative design solutions.
-- **Primary Substrate**: `#4f4f4f` (`var(--grey-darkest)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#4f4f4f` (`var(--grey-darkest)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Opensaucesans` for display copy (`T i n y A p a r t m e n t`) with `Instrument Sans` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.075,.82,.165,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Opensaucesans` for display copy (`Studio Plato - Contemporary Interior`) with `Opensaucesans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.075,.82,.165,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-studioplato-co` in your global stylesheet:
 
 :root {
-  /* Studio Plato - Contemporary Interior Design (www-studioplato-co) — Ground-Truth Extracted CSS Variables */
-  --w-backdrop-animation: initial; /* Motion / Easing Token (www-studioplato-co) */
+  /* Studio Plato - Contemporary Interior Design (www-studioplato-co) — Live-Grounded CSS Variables */
   --grey-darkest: #4f4f4f; /* Canvas / Surface Token (www-studioplato-co) */
   --white: white; /* Canvas / Surface Token (www-studioplato-co) */
   --black: black; /* Canvas / Surface Token (www-studioplato-co) */
@@ -177,60 +202,64 @@ Declare and consume these exact custom properties extracted from `www-studioplat
   --spacing-120: 7.5em; /* Layout / Spatial Grid Token (www-studioplato-co) */
   --spacing-200: 12.5em; /* Layout / Spatial Grid Token (www-studioplato-co) */
   --grey-dark: grey; /* Canvas / Surface Token (www-studioplato-co) */
+  --w-backdrop-animation: initial; /* Motion / Easing Token (www-studioplato-co) */
   --plato-nav-blur: 0.005em; /* Layout / Spatial Grid Token (www-studioplato-co) */
   --plato-nav-opacity: 0.959856; /* Layout / Spatial Grid Token (www-studioplato-co) */
   --swiper-theme-color: #007aff; /* Brand / Palette Token (www-studioplato-co) */
   --swiper-preloader-color: #fff; /* Brand / Palette Token (www-studioplato-co) */
   --swiper-navigation-size: 44px; /* Layout / Spatial Grid Token (www-studioplato-co) */
-  --www-studioplato--bg: #4f4f4f; /* Canvas Substrate (from `var(--grey-darkest)` in `:root`) (www-studioplato-co) */
-  --www-studioplato--ink: #fff; /* Primary Typography Ink (stylesheet-derived) (www-studioplato-co) */
+  --www-studioplato--bg: #ffffff; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (www-studioplato-co) */
+  --www-studioplato--ink: #000000; /* Primary Typography Ink (computed-derived) (www-studioplato-co) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#4f4f4f` — grounded in `var(--grey-darkest)` in `:root`
-- **Primary Typography Ink**: `#ddd` — grounded in `var(--grey-lightest)` in `:root`
-- **Elevated Surface / Card Substrate**: `#007aff` — grounded in `:root { color: #007aff }`
-- **Interactive Accent / Highlight**: `#fff` — grounded in `.swiper-lazy-preloader-white { color: #fff }`
-- **Secondary / Muted Copy**: `#000` — grounded in `.swiper-lazy-preloader-black { color: #000 }`
-- **Structural Hairline Border**: `#0000` — grounded in `a { background-color: #0000 }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffff00` — grounded in `mark { background: #ffff00 }`
+- **Interactive Accent / Highlight**: `#0082f3` — grounded in `.w-dropdown-link.w--current { color: #0082f3 }`
+- **Secondary / Muted Copy**: `#808080` — grounded in `figcaption { color: grey }` (`#808080`)
+- **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
+- **Variable Token (`--grey-darkest`)**: `#4f4f4f` — grounded in `var(--grey-darkest)` in `:root`
+- **Variable Token (`--grey-lightest`)**: `#dddddd` — grounded in `var(--grey-lightest)` in `:root`
+- **Variable Token (`--swiper-theme-color`)**: `#007aff` — grounded in `var(--swiper-theme-color)` in stylesheet
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `940px` extracted from `www-studioplato-co` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`
-- **Corner Radii**: `50%`, `3px`, `100%`, `2px`
+- **Corner Radii**: `3px`, `100%`, `50%`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Opensaucesans`
-- **Body Font Stack**: `Instrument Sans`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Body Font Stack**: `Opensaucesans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: rule `h2` (`font-size: 32px`, `line-height: 36px`)
-- **Body Copy Rule**: rule `body` (`font-size: 14px`, `line-height: 20px`)
-- **Metadata & Index Rule**: rule `small` (`font-size: 80%`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 20px`, `line-height: 20px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 11.52px`, `line-height: 11.52px`, `font-weight: 500`); rule `body` (`font-size: 14px`, `line-height: 20px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 11.52px`, `line-height: 11.52px`, `font-weight: 500`); rule `small` (`font-size: 80%`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-studioplato-co` (`Studio Plato - Contemporary Interior Design`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-studioplato-co`)**:
-   - DOM & Selectors: Landmark `<header class="w-mod-js">` hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-plato-home-guard`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - DOM & Selectors: Landmark `<header class="w-mod-js">` (`1440px`) hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-plato-home-guard`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `www-studioplato-co`)` (`www-studioplato-co`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.075,.82,.165,1)`, `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.645,0.045,0.355,1)` transitions and links `Projects · Studio · Services · Insights · Instagram`.
-2. **Hero Stage & Focal Lead (<div.cursor_follower> — `T i n y A p a r t m e n t`)**:
-   - DOM & Selectors: Landmark `<div class="cursor_follower">` presenting display lead `T i n y A p a r t m e n t` and copy excerpt *"Contemporary interior design for successful living."* over `#4f4f4f` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#4f4f4f` background with `#fff` headline `T i n y A p a r t m e n t`.
-3. **Primary Showcase & Content Grid (<div.cursor_follower> — `Every space starts with a conversa`)**:
-   - DOM & Selectors: Landmark `<div class="cursor_follower">` rendering section `Every space starts with a conversation.` with copy *"I n t e r i o r d e s i g n p r o j e c t f o r a t i n y a p a r"*, asset references (`cdn.prod.website-files.com`, `studio-plato.webflow.shared.d6524...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `host { display:block;margin-left:auto;margin-right:auto;position:relative;z-ind... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.cursor_follower> — `Every space starts with a conversa`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.cursor_follower> — `I n t e r i o r d e s i g n p r o `)**:
-   - DOM & Selectors: Landmark `<div class="cursor_follower">` framing `I n t e r i o r d e s i g n p r o j e c t f o r ` and `Featured Projects —` (*"Featured Projects —"*) with `#007aff` surface cards, `#fff` accents, and `.swiper { display:block;list-style:none;margin-left:auto;margin-right:auto;overflo... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.cursor_follower> — `I n t e r i o r d e s i g n p r o `)` uses `50%`, `3px`, `100%`, `2px` radii, `#fff` highlights, and assets (cdn.prod.website-files.com, studio-plato.webflow.shared.d6524..., fonts.googleapis.com).
+2. **Hero Stage & Focal Lead (<div.cursor_follower> — `Studio Plato - Contemporary Interi`)**:
+   - DOM & Selectors: Landmark `<div class="cursor_follower">` presenting display lead `Studio Plato - Contemporary Interior Design` and copy excerpt *"Contemporary interior design for successful living."* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#000000` headline `Studio Plato - Contemporary Interior Design`.
+3. **Primary Showcase & Content Grid (<div.cursor_follower:nth(2)> — `Featured Work & Interactive Showca`)**:
+   - DOM & Selectors: Landmark `<div class="cursor_follower">` rendering section `Featured Work & Interactive Showcase` with copy *"I n t e r i o r d e s i g n p r o j e c t f o r a t i n y a p a r"*, asset references (`cdn.prod.website-files.com`, `studio-plato.webflow.shared.d6524...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.cursor_follower:nth(2)> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<div.cursor_follower:nth(3)> — `Technical Architecture & Narrative`)**:
+   - DOM & Selectors: Landmark `<div class="cursor_follower">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Projects —"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.cursor_follower:nth(3)> — `Technical Architecture & Narrative`)` uses `3px`, `100%`, `50%`, `2px` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, studio-plato.webflow.shared.d6524..., fonts.googleapis.com).
 5. **Colophon & Global Directory Footer (<footer.wf-instrumentsans-n3-active> — `https://www.studioplato.co/`)**:
-   - DOM & Selectors: Landmark `<footer class="wf-instrumentsans-n3-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"S t u d i o P l a t o"*, and `#0000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.wf-instrumentsans-n3-active> — `https://www.studioplato.co/`)` aligns to `940px` extracted from `www-studioplato-co` stylesheet with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.studioplato.co", data-wf-page="6a27da652c4e1ce8d473b28a", data-wf-site="69fc480c359115ee0044a0b6").
+   - DOM & Selectors: Landmark `<footer class="wf-instrumentsans-n3-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"S t u d i o P l a t o"*, and `#e2e2e2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.wf-instrumentsans-n3-active> — `https://www.studioplato.co/`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.studioplato.co", data-wf-page="6a27da652c4e1ce8d473b28a", data-wf-site="69fc480c359115ee0044a0b6").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Contemporary interior design for successful living."*
@@ -241,16 +270,16 @@ Scaffold `www-studioplato-co` (`Studio Plato - Contemporary Interior Design`) wi
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.075,.82,.165,1)`, `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.645,0.045,0.355,1)`
 - **Extracted Stylesheet Rules (`www-studioplato-co`)**:
-- `root { --swiper-theme-color:007aff }`
-- `host { display:block;margin-left:auto;margin-right:auto;position:relative;z-ind... }`
-- `.swiper { display:block;list-style:none;margin-left:auto;margin-right:auto;overflo... }`
-- `.swiper-vertical>.swiper-wrapper { flex-direction:column }`
-- `.swiper-wrapper { transform:translateZ(0) }`
+- `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`
+- `body { margin: 0; }`
+- `summary { display: block; }`
+- `video { vertical-align: baseline; display: inline-block; }`
+- `template { display: none; }`
 - **Per-Selector Transition Rules**:
-- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-studioplato-co` stylesheet.
-- **Selector `.swiper-pagination`**: `transition: opacity .3s` extracted from `www-studioplato-co` stylesheet.
-- **Selector `.swiper-pagination-bullets-dynamic`**: `transition: transform .2s,top .2s` extracted from `www-studioplato-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.075,.82,.165,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.cursor_follower>`.
+- **Selector `.w-webflow-badge > img`**: `transition: unset` extracted from `www-studioplato-co` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-studioplato-co` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-studioplato-co` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.075,.82,.165,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.cursor_follower:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

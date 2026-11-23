@@ -1,33 +1,45 @@
+---
+title: "UI & UX Architecture: www-esrbespoke-au"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-esrbespoke-au
 
 ## Overview & Design Identity
 - **Target**: `www-esrbespoke-au` (**ESR**)
 - **Production URL**: [https://www.esrbespoke.au/](https://www.esrbespoke.au/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#9ca3af`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#9ca3af`)
 - **Summary**: Three decades of restoring excellence and reigniting the joy of the drive.
-- **Total Clean CSS Variables Extracted**: `8` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `8` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `__bodyFont_0f148b`
-- **Body Font Stack**: `__bodyFont_Fallback_0f148b`
+- **Body Font Stack**: `__bodyFont_0f148b`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
-- **Body Copy**: CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `2.375rem`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 62px`, `line-height: 58.9px`, `font-weight: 500`, `letter-spacing: -0.62px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 500`, `letter-spacing: -0.4px`)
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 23.4px`, `font-weight: 300`); CSS variables `--body-font: "__bodyFont_0f148b","__bodyFont_Fallback_0f148b",helvetica,arial,sans-serif`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 14px`, `font-weight: 300`, `letter-spacing: 1.26px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--foreground)` in `:root` |
-| **Primary Typography Ink** | `#ffffff` | `var(--background)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#29d` | `#nprogress .bar { background: #29d }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#2299dd` | `#nprogress .bar { background: #2299dd }` |
 | **Interactive Accent / Highlight** | `#9ca3af` | `textarea::placeholder { color: #9ca3af }` |
-| **Secondary / Muted Copy** | `#000` | `#nprogress .bar { background: #000 }` |
+| **Secondary / Muted Copy** | `#9ca3af` | `textarea::placeholder { color: #9ca3af }` |
+| **Structural Hairline Border** | `#e6e6e6` | `var(--border)` in `:root` (`rgba(0,0,0,0.1)`) |
 
 ---
 
@@ -48,19 +60,19 @@
 | `--tw-translate-x` | `0` | Design System Custom Token |
 | `--tw-translate-y` | `0` | Design System Custom Token |
 | `--tw-rotate` | `0` | Design System Custom Token |
-| `--www-esrbespoke-a-bg` | `#fff` | Canvas Substrate (from `var(--foreground)` in `:root`) |
-| `--www-esrbespoke-a-ink` | `#000` | Primary Typography Ink (stylesheet-derived) |
+| `--www-esrbespoke-a-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--www-esrbespoke-a-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.w-auto> — `www-esrbespoke-au`)**:
-   - Landmark `<header class="w-auto grid-layout">` hosting `ESR` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
-2. **Hero Stage & Focal Lead (<section.w-auto> — `E x c e p t i o n a l i s o u r s `)**:
-   - Landmark `<section class="w-auto grid-layout">` presenting display lead `E x c e p t i o n a l i s o u r s t a n d a r d` and copy excerpt *"E S R B e s p o k e"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.w-auto> — `ESR is recognised as an official P`)**:
-   - Landmark `<section class="w-auto items-end">` rendering section `ESR is recognised as an official Porsche Certifie...` with copy *"A u t o m o t i v e G r o u p since 1989"*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
-4. **Interactive Detail & Feature Matrix (<section.w-auto> — `At ESR, we offer a complete end-to`)**:
-   - Landmark `<section class="w-auto mb-8">` framing `At ESR, we offer a complete end-to-end service ex...` and `@ e s r b e s p o k e` (*"@ e s r b e s p o k e"*) with `#29d` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.esrbespoke.au/`)**:
-   - Landmark `<footer class="relative clip">` anchoring `ESR` footer links (`Overview · Index · Archive · About · Contact`), copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o "*, and `#000` structural dividers.
+   - Landmark `<header class="w-auto grid-layout">` (`1440x85px`) hosting `ESR` navigation (`Services · Partners · About · Contact · Careers`), DOM attributes (`data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `nprogress { pointer-events:none }`.
+2. **Hero Stage & Focal Lead (<section.w-auto> — `Exceptional is our standard`)**:
+   - Landmark `<section class="w-auto grid-layout">` presenting display lead `Exceptional is our standard` and copy excerpt *"A u t o m o t i v e G r o u p since 1989"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.items-end> — `E x c e p t i o n a l i s o u r s `)**:
+   - Landmark `<section class="w-auto items-end">` rendering section `E x c e p t i o n a l i s o u r s t a n d a r d` with copy *"( 0 2 ) 9 7 3 5 1 1 1 1 e n q u i r i e s @ e s r b e s p o k e ."*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `nprogress .bar { background:29d;position:fixed;z-index:1031;top:0;left:0;width:100%;heigh... }`.
+4. **Interactive Detail & Feature Matrix (<section.mb-8> — `ESR is recognised as an official P`)**:
+   - Landmark `<section class="w-auto mb-8">` framing `ESR is recognised as an official Porsche Certifie...` and `At ESR, we offer a complete end-to-end service ex...` (*"4 1 9 - 4 3 1 C a n t e r b u r y R o a d , C a m p s i e N S W 2"*) with `#2299dd` surface cards, `#9ca3af` accents, and `nprogress .spinner { display:block;position:fixed;z-index:1031;top:15px;right:15px }`.
+5. **Colophon & Global Directory Footer (<footer.clip> — `https://www.esrbespoke.au/`)**:
+   - Landmark `<footer class="clip mono">` anchoring `ESR` footer links (`Services · Partners · About · Contact · Careers`), copy *"E S R B e s p o k e S t u d i o"*, and `#e6e6e6` structural dividers.

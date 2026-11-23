@@ -1,38 +1,38 @@
-# Round 46 Execution Trace: UI Prompt Blueprint Expansion
+# Round 46 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-15-ROUND-46`  
-> **Active Branch**: `feat/ui-prompt-expansion`  
-> **Analyzed Targets**: `10` (`0` marked `status: blocked` and excluded from tally per `C1`)  
-> **Deterministic Evaluation (`C1`–`C14`)**: **`25.0 / 25.0`**
+> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-46`  
+> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Analyzed Targets**: `8` live (`2` marked `status: blocked` and excluded from tally per `C1`)  
+> **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 46 Target Scope
-  1. `www-fieldrank-run` — *FieldRank: Trail and ultra rankings* (`https://www.fieldrank.run`)
-  2. `www-fixchocolatier-com` — *FIX Dessert Chocolatier · The Original Dubai Chocolate* (`https://www.fixchocolatier.com/`)
-  3. `www-flatlineagency-com` — *Shopify, Marketing & AI Agency Amsterdam · Flatline* (`https://www.flatlineagency.com/`)
-  4. `www-fragment-im` — *Fragment Studio · Independent Designer for Visual Identity, Websites & P...* (`https://www.fragment.im`)
-  5. `www-future-human-de` — *FUTURE HUMAN · A Shared Year of Co-Creation & Presence* (`https://www.future-human.de/`)
-  6. `www-genomines-com` — *Home* (`https://www.genomines.com/`)
-  7. `www-gerd-web-de` — *Gerd Web 3 Second - Design* (`https://www.gerd-web.de`)
-  8. `www-get-daffed-com` — *Dafne Salvatori · Brand, design and marketing, Europe* (`https://www.get-daffed.com/`)
-  9. `www-gianpaolotucci-com_work-html` — *Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences* (`https://www.gianpaolotucci.com/work.html`)
-  10. `www-glowingcheetah-com` — *Glowing Cheetah Studios · Father & Son Indie Game Studio* (`https://www.glowingcheetah.com/`)
+  1. `www-fieldrank-run` — *FieldRank: Trail and ultra rankings*
+  2. `www-fixchocolatier-com` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  3. `www-flatlineagency-com` — *Shopify, Marketing & AI Agency Amsterdam · Flatline*
+  4. `www-fragment-im` — *Fragment Studio · Independent Designer for Visual Identity, Websites & P...*
+  5. `www-future-human-de` — *FUTURE HUMAN · A Shared Year of Co-Creation & Presence*
+  6. `www-genomines-com` — *Genomines — We Grow Metal*
+  7. `www-gerd-web-de` — *Gerd Web 3 Second - Design*
+  8. `www-get-daffed-com` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  9. `www-gianpaolotucci-com_work-html` — *Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences*
+  10. `www-glowingcheetah-com` — *Glowing Cheetah Studios · Father & Son Indie Game Studio*
 
 ---
 
-## 2. Ground-Truth Asset & Extraction Metrics (Verified PNG IHDR & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
 
-| Target Slug | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-fieldrank-run` | `1440×1266px` (153,246 B) | `390×2400px` (150,480 B) | 89 | 16 | 256 | 106 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `www-fixchocolatier-com` | `1440×2400px` (461,270 B) | `390×2400px` (243,741 B) | 16 | 16 | 258 | 107 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-flatlineagency-com` | `1440×7042px` (579,707 B) | `390×2400px` (274,287 B) | 48 | 16 | 266 | 111 | `0.10` / `0.58` | **25.0 / 25.0** |
-| `www-fragment-im` | `1440×2400px` (61,773 B) | `390×2400px` (32,172 B) | 35 | 16 | 260 | 108 | `0.09` / `0.61` | **25.0 / 25.0** |
-| `www-future-human-de` | `1440×2400px` (485,493 B) | `390×2400px` (224,022 B) | 30 | 16 | 258 | 107 | `0.10` / `0.61` | **25.0 / 25.0** |
-| `www-genomines-com` | `1440×2400px` (462,119 B) | `390×2400px` (269,022 B) | 22 | 16 | 256 | 106 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-gerd-web-de` | `1440×2574px` (544,001 B) | `390×2400px` (267,753 B) | 23 | 16 | 258 | 107 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `www-get-daffed-com` | `1440×4331px` (337,049 B) | `390×2400px` (116,854 B) | 39 | 16 | 268 | 112 | `0.08` / `0.53` | **25.0 / 25.0** |
-| `www-gianpaolotucci-com_work-html` | `1440×2400px` (161,129 B) | `390×2400px` (399,005 B) | 17 | 16 | 258 | 107 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-glowingcheetah-com` | `1440×2400px` (900,279 B) | `390×2400px` (689,976 B) | 84 | 16 | 260 | 108 | `0.09` / `0.49` | **25.0 / 25.0** |
+| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `www-fieldrank-run` | `tier1_fast` | `1440×1266px` (151,889 B) | `390×2400px` (136,964 B) | 89 | 16 | 288 | 109 | `0.08` / `0.49` | **25.0 / 25.0** |
+| `www-flatlineagency-com` | `tier1_fast` | `1440×2400px` (96,363 B) | `390×2400px` (59,460 B) | 48 | 16 | 298 | 114 | `0.11` / `0.56` | **25.0 / 25.0** |
+| `www-fragment-im` | `tier1_fast` | `1440×2400px` (177,029 B) | `390×2400px` (77,579 B) | 35 | 16 | 292 | 111 | `0.11` / `0.56` | **25.0 / 25.0** |
+| `www-future-human-de` | `tier1_fast` | `1440×900px` (169,380 B) | `390×844px` (49,465 B) | 30 | 16 | 286 | 108 | `0.10` / `0.56` | **25.0 / 25.0** |
+| `www-genomines-com` | `tier2_webgl` | `1440×900px` (705,685 B) | `390×844px` (185,663 B) | 22 | 16 | 282 | 106 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `www-gerd-web-de` | `tier1_fast` | `1440×2400px` (525,590 B) | `390×2400px` (193,220 B) | 23 | 16 | 290 | 110 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-gianpaolotucci-com_work-html` | `tier2_webgl` | `1440×900px` (83,692 B) | `390×844px` (19,034 B) | 17 | 16 | 290 | 110 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `www-glowingcheetah-com` | `tier1_fast` | `1440×2400px` (3,310,871 B) | `390×2400px` (1,210,163 B) | 84 | 16 | 292 | 111 | `0.08` / `0.49` | **25.0 / 25.0** |
+| `www-fixchocolatier-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
+| `www-get-daffed-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |

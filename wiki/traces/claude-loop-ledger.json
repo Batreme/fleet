@@ -58,7 +58,52 @@
       "verdict": "APPROVE",
       "score": "22/25",
       "notes": "Verified fleet 8cf5b91 and reverse-harness 80e11de. unittest 4/4 OK, evaluate_batch.py 556/556 at 25.0. Honest capture counts: 213 specimen, 343 dom, 19 blocked none. 1112 relative embeds resolve. Relative .agents/skills symlinks, portable paths, measured heights, lint labeling, and clean git trees."
+    },
+    {
+      "round": 8,
+      "agent": "claude-takeover-reviewer",
+      "scope": "Full-Catalog Live 3-Tier Recrawl Takeover Round 1 (Rounds 01..58, 575 targets, C1-C15)",
+      "verdict": "CHANGES",
+      "score": "15/25",
+      "findings": [
+        "R1 [should] True desktop container max-width from measured main/section bounding boxes (never @media queries)",
+        "R2 [should] Semantic color roles mapped strictly by CSS property, largest visible H2 >= 20px, strip !important from font stacks",
+        "R3 [should] Preloader-frame detection & 5-target re-capture",
+        "R4 [should] Iframe/Shadow-DOM consent dismissal + blank-tail check & 4-target re-capture",
+        "R5 [should] Grounded Section 6 Desktop (2-col sidebar + main) + separate uniform-width Mobile ASCII wireframe, filter promo copy, deduplicate selectors",
+        "R6 [should] Remove hardcoded scratch/tmp defaults in favor of env/repo-relative .cache/",
+        "R7 [nit] Convert absolute local file-URI links in wiki/ventures/2026-11-14-awwwards-*.md to relative paths",
+        "R8 [nit] Split Site-Blocked / Dead vs Capture-Incomplete in UI_EVALS_DASHBOARD.md"
+      ]
+    },
+    {
+      "round": 9,
+      "agent": "claude-takeover-reviewer",
+      "scope": "Full-Catalog Live 3-Tier Recrawl Takeover Round 2 (R1-R8 Remediation, 575 targets, C1-C15)",
+      "verdict": "CHANGES",
+      "score": "19/25",
+      "findings": [
+        "R2-1 [should] Structural Hairline Border must come from non-zero border-width structural elements or --*border* variables, never h1/text node Tailwind preflight defaults",
+        "R3-1 [should] Color-agnostic dark/light blank-void & blank-tail detection + re-capture giga-ai (desktop) and rialto-com-au (mobile)",
+        "R4-1 [should] Generic promo/newsletter modal dismissal (close/dismiss/x excluding captcha/age/login) + re-capture www-schlosshotel-kitzbuehel-com_en (mobile)"
+      ],
+      "notes": "R1, R3 (anemone/bennos-light-org/anokhee), R5, R6, R7, R8 resolved; R2 mostly resolved, R4 partial. unittest 10/10 OK, evaluate_batch --all --strict EXIT 0."
+    },
+    {
+      "round": 10,
+      "agent": "claude-takeover-reviewer",
+      "scope": "Full-Catalog Live 3-Tier Recrawl Takeover Round 3 (R2-1, R3-1, R4-1 Final Verification, 575 targets, C1-C15)",
+      "verdict": "APPROVE",
+      "score": "23/25",
+      "subscores": {
+        "token": 5,
+        "layout": 4,
+        "motion": 4,
+        "wireframe": 5,
+        "generability": 5
+      },
+      "notes": "All R1-R8 and R2-1/R3-1/R4-1 resolved. Verified aikissfiy-com (#d1d5db from :root --border-color) & bb-b-net (#f0efeb from .border-border-light), giga-ai desktop 1440x900 hydrated, rialto-com-au mobile void eliminated, www-schlosshotel-kitzbuehel-com_en mobile voucher popup dismissed. unittest 11/11 OK, verify_visual_catalog --strict EXIT 0, evaluate_batch --all --strict EXIT 0 (494/494 live at 25.0/25.0, 23 site-blocked, 58 capture-incomplete [81/81 clean], 0 specimens, 0 duplicate hashes)."
     }
   ],
-  "current_status": "Verified & Approved (claude-loop Round 2 PR Audit: 22/25, Catalog Rubric: 24/25, Automated Lint: 25.0/25.0)"
+  "current_status": "VERDICT: APPROVE (23/25 — Token 5, Layout 4, Motion 4, Wireframe 5, Generability 5; 3-Round Takeover claude-loop Complete: 494/494 live at 25.0/25.0, 23 site-blocked, 58 capture-incomplete [81/81 clean], 0 specimens)"
 }

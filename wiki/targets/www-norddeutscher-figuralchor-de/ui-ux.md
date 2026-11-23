@@ -1,34 +1,48 @@
+---
+title: "UI & UX Architecture: www-norddeutscher-figuralchor-de"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-norddeutscher-figuralchor-de
 
 ## Overview & Design Identity
 - **Target**: `www-norddeutscher-figuralchor-de` (**Norddeutscher Figuralchor Hannover — Kammerchor seit 1981**)
 - **Production URL**: [https://www.norddeutscher-figuralchor.de](https://www.norddeutscher-figuralchor.de)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#000000` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c9a85e` accent)
 - **Summary**: Norddeutscher Figuralchor Hannover — semiprofessioneller Kammerchor seit 1981 unter Jörg Straube. Konzerte, CD-Einspielungen und Mitsinge...
-- **Total Clean CSS Variables Extracted**: `24` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `24` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Playfair Display`
+- **Display Font Stack**: `Syne`
 - **Body Font Stack**: `Syne`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Playfair Display", Georgia, serif`
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 8.6vw`, `letter-spacing: 0`, `font-weight: 400`)
-- **Body Copy**: CSS variables `--font-body: "Syne", system-ui, sans-serif`; rule `body` (`font-size: 0`)
-- **Metadata & Labels**: CSS variables `--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",`, `--default-mono-font-family: var(--font-mono)`; rule `small` (`font-size: 80%`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 0px`, `line-height: 0px`, `font-weight: 400`); CSS variables `--font-display: "Playfair Display", Georgia, serif`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 123.84px`, `line-height: 185.76px`, `font-weight: 400`); rule `h2` (`font-size: 8.6vw`, `letter-spacing: 0`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 0px`, `line-height: 0px`, `font-weight: 400`); CSS variables `--font-body: "Syne", system-ui, sans-serif`; rule `body` (`font-size: 0`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 43.2px`, `line-height: 64.8px`, `font-weight: 400`); CSS variables `--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",`, `--default-mono-font-family: var(--font-mono)`; rule `small` (`font-size: 80%`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ffffff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#e6cac7` | `var(--color-rose)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#bd7716` | `var(--color-gold)` in `:root` |
-| **Interactive Accent / Highlight** | `#000000` | `var(--color-ink)` in `:root` |
-| **Secondary / Muted Copy** | `#404040` | `var(--color-charcoal)` in `:root` |
-| **Structural Hairline Border** | `#d3d1de` | `var(--color-conductor)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e6cac7` | live computed `header` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#c9a85e` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#c9a85e` | live computed `a` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e3e3e3` | `#navi-top { border: #e3e3e3 }` |
+| **Variable Token (`--color-gold`)** | `#bd7716` | `var(--color-gold)` in `:root` |
+| **Variable Token (`--color-charcoal`)** | `#404040` | `var(--color-charcoal)` in `:root` |
+| **Variable Token (`--color-conductor`)** | `#d3d1de` | `var(--color-conductor)` in `:root` |
 | **Variable Token (`--color-silver`)** | `#d6d6d6` | `var(--color-silver)` in `:root` |
 
 ---
@@ -57,12 +71,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.bg-rose> — `www-norddeutscher-figuralchor-de`)**:
-   - Landmark `<header class="bg-rose relative">` hosting `Norddeutscher Figuralchor Hannover —` navigation (`Home · Der Chor · Der Dirigent · Konzerte · CDs`), DOM attributes (`data-infos="konzerte.html"`, `data-email="a29udGFrdEBub3JkZGV1d..."`, `data-email="a29udGFrdEBub3JkZGV1d..."`, `data-email="a29udGFrdEBub3JkZGV1d..."`), and stylesheet rule `file-selector-button { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }`.
+   - Landmark `<header class="bg-rose relative">` (`1425x679px`) hosting `Norddeutscher Figuralchor Hannover —` navigation (`Home · Der Chor · Der Dirigent · Konzerte · CDs`), DOM attributes (`data-infos="konzerte.html"`, `data-email="a29udGFrdEBub3JkZGV1d..."`, `data-email="a29udGFrdEBub3JkZGV1d..."`, `data-email="a29udGFrdEBub3JkZGV1d..."`), and stylesheet rule `file-selector-button { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }`.
 2. **Hero Stage & Focal Lead (<section.bg-white> — `Norddeutscher Figuralchor — Kammer`)**:
-   - Landmark `<section class="bg-white overflow-hidden">` presenting display lead `Norddeutscher Figuralchor — Kammerchor aus Hannover` and copy excerpt *"Zum Hauptinhalt springen"* over `#ffffff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.bg-white> — `D e r M a ẞ s t a b`)**:
-   - Landmark `<section class="bg-white">` rendering section `D e r M a ẞ s t a b` with copy *"Der Maßstab seit 1981"*, asset references (`favicon-home.svg`, `favicon.ico`, `apple-touch-icon.png`, `PlayfairDisplay-Regular.woff2`), and grid rule `hr { height: 0; color: inherit; border-top-width: 1px; }`.
-4. **Interactive Detail & Feature Matrix (<section.bg-charcoal> — `S e i t 1 9 8 1 .`)**:
-   - Landmark `<section class="bg-charcoal">` framing `S e i t 1 9 8 1 .` and `wird Teil von einem.` (*"wird Teil von einem."*) with `#bd7716` surface cards, `#000000` accents, and `h6 { font-size: inherit; font-weight: inherit; }`.
+   - Landmark `<section class="bg-white overflow-hidden">` presenting display lead `Norddeutscher Figuralchor — Kammerchor aus Hannover` and copy excerpt *"Der Maßstab seit 1981"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.bg-white:nth(2)> — `Der Maßstab seit 1981`)**:
+   - Landmark `<section class="bg-white">` rendering section `Der Maßstab seit 1981` with copy *"wird Teil von einem."*, asset references (`favicon-home.svg`, `favicon.ico`, `apple-touch-icon.png`, `PlayfairDisplay-Regular.woff2`), and grid rule `hr { height: 0; color: inherit; border-top-width: 1px; }`.
+4. **Interactive Detail & Feature Matrix (<section.bg-charcoal> — `wird Teil von einem.`)**:
+   - Landmark `<section class="bg-charcoal">` framing `wird Teil von einem.` and `Der Norddeutsche Figuralchor gestaltet seit 1981` (*"Der Norddeutsche Figuralchor gestaltet seit 1981 Konzerte, die Me"*) with `#e6cac7` surface cards, `#c9a85e` accents, and `h6 { font-size: inherit; font-weight: inherit; }`.
 5. **Colophon & Global Directory Footer (<footer.bg-ink> — `https://www.norddeutscher-figuralchor.de`)**:
-   - Landmark `<footer class="bg-ink">` anchoring `Norddeutscher Figuralchor Hannov` footer links (`Home · Der Chor · Der Dirigent · Konzerte · CDs`), copy *"Der Norddeutsche Figuralchor gestaltet seit 1981 Konzerte, d"*, and `#d3d1de` structural dividers.
+   - Landmark `<footer class="bg-ink">` anchoring `Norddeutscher Figuralchor Hannov` footer links (`Home · Der Chor · Der Dirigent · Konzerte · CDs`), copy *"// 5 x Echo Klassik // Deutscher Chorwettbewerb // Brahms-We"*, and `#e3e3e3` structural dividers.

@@ -1,70 +1,75 @@
 ---
 title: "UI Prompt Blueprint: m3-pg-de"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "m3-pg-de"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas, `#6610f2` ink, `#d63384` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d6efd` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: m3-pg-de
 
 > **M3 Planungsgruppe** (https://m3-pg.de) — Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **M3 Planungsgruppe** (`https://m3-pg.de`). Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas, `#6610f2` ink, `#d63384` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d6efd` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0d6efd` (`var(--bs-blue)` in `:root`) paired with `#6610f2` primary typography and `#d63384` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Nachhaltigkeit. Ästhetik. Wirtschaft`) with `212529` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `540px` container bounds (`gap: 1rem`, padding `2rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`M3 Planungsgruppe`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×4711px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `540px` extracted from `m3-pg-de` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `1rem` grid gap.
-- **Border Radius Scale**: `0.375rem`, `.25rem`, `var(--bs-border-radius)`, `var(--bs-border-radius-sm)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1420px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `10px` grid gap.
+- **Border Radius Scale**: `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 540px`, `gap: 1rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0d6efd` | `var(--bs-blue)` in `:root` |
-| **Primary Typography Ink** | `#6610f2` | `var(--bs-indigo)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6f42c1` | `var(--bs-purple)` in `:root` |
-| **Interactive Accent / Highlight** | `#d63384` | `var(--bs-pink)` in `:root` |
-| **Secondary / Muted Copy** | `#dc3545` | `var(--bs-red)` in `:root` |
-| **Structural Hairline Border** | `#fd7e14` | `var(--bs-orange)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f8f9fa` | `var(--bs-tertiary-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#0d6efd` | `var(--bs-primary)` in `:root` |
+| **Secondary / Muted Copy** | `#6c757d` | `var(--bs-secondary)` in `:root` |
+| **Structural Hairline Border** | `#9ec5fe` | `var(--bs-primary-border-subtle)` in `:root` |
+| **Variable Token (`--bs-indigo`)** | `#6610f2` | `var(--bs-indigo)` in `:root` |
+| **Variable Token (`--bs-purple`)** | `#6f42c1` | `var(--bs-purple)` in `:root` |
+| **Variable Token (`--bs-pink`)** | `#d63384` | `var(--bs-pink)` in `:root` |
+| **Variable Token (`--bs-red`)** | `#dc3545` | `var(--bs-red)` in `:root` |
+| **Variable Token (`--bs-orange`)** | `#fd7e14` | `var(--bs-orange)` in `:root` |
 | **Variable Token (`--bs-yellow`)** | `#ffc107` | `var(--bs-yellow)` in `:root` |
 | **Variable Token (`--bs-green`)** | `#198754` | `var(--bs-green)` in `:root` |
 | **Variable Token (`--bs-teal`)** | `#20c997` | `var(--bs-teal)` in `:root` |
 | **Variable Token (`--bs-cyan`)** | `#0dcaf0` | `var(--bs-cyan)` in `:root` |
-| **Variable Token (`--bs-black`)** | `#000` | `var(--bs-black)` in `:root` |
-| **Variable Token (`--bs-white`)** | `#fff` | `var(--bs-white)` in `:root` |
-| **Variable Token (`--bs-gray`)** | `#6c757d` | `var(--bs-gray)` in `:root` |
 | **Variable Token (`--bs-gray-dark`)** | `#343a40` | `var(--bs-gray-dark)` in `:root` |
-| **Variable Token (`--bs-gray-100`)** | `#f8f9fa` | `var(--bs-gray-100)` in `:root` |
 | **Variable Token (`--bs-gray-200`)** | `#e9ecef` | `var(--bs-gray-200)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -93,14 +98,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas
 
 ### Font Family Stacks
 - **Display Typography**: `Inter`.
-- **Primary Body Stack**: `212529`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Inter`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`).
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: calc(1.325rem + .9vw)`).
-- **Body Copy**: CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`).
-- **Metadata & Navigation Labels**: CSS variables `--bs-carousel-caption-color: #000`; rule `,small` (`font-size: .875em`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `h1` (`font-size: clamp(40px, 11.1cqw, 198px)`, `line-height: 1em`, `letter-spacing: -0.03em`, `font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `.h2` (`font-size: 64px`, `line-height: 1.125em`, `letter-spacing: -0.03em`, `font-weight: 600`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 24px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `,small` (`font-size: .875em`).
 
 ---
 
@@ -110,9 +115,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas
 - **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.form-control`**: `transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out` extracted from `m3-pg-de` stylesheet.
-- **Selector `media (prefers-reduced-motion:red...`**: `transition: none` extracted from `m3-pg-de` stylesheet.
-- **Selector `.form-control::-webkit-file-uploa...`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `m3-pg-de` stylesheet.
+- **Selector `header`**: `transition: background-color 0.3s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.readmore::after`**: `transition: width 0.6s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.bottom-row a`**: `transition: all .3s ease` extracted from `m3-pg-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.header-desk>` and `<section.page-template>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -120,40 +125,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — M3 Planungsgruppe                          │
 │ ====================================================================== │
-│ [ <header.header-desk>     | M3 Planungsgruppe · Leistungen · Proje ]  │
+│ [ <header.header-desk> (1440x60px)    | M3 Planungsgruppe · Leistung ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.wp-singular>                                |   │
-│ | H1: Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.                |   │
-│ | Substrate: #0d6efd    | Ink: #6610f2    | Accent: #d63384        |   │
+│ | HERO STAGE: <section.wp-singular> (w=1440px)                       | │
+│ | H1: M3 Planungsgruppe                                              | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0d6efd                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.page-template>   ) max-w: 540px          |   │
+│ | SHOWCASE GRID (<section.page-template>) max-w: 1420px              | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Planung, die Bestand hat.    |  | Labwerk                      | | │
+│ | | Nachhaltigkeit. Ästhetik. Wi |  | Planung, die Bestand hat.    | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<header.header-des] -> [<section.wp-singul] -> [<section.page-temp] │
+│ | DETAIL MODULE (<section.page-template-tem) — B18 – Fachwerk trifft | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.page-template-) | https://m3-pg.de                   │
+│ [ FOOTER (<footer.page-templat) | https://m3-pg.de                     │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header-desk>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.wp-singular>) — 390px Vertical Lead           | │
+│ | H1: M3 Planungsgruppe                                              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.page-template) — 1-Col Stack              | │
+│ | [ Item 1: Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.          ] | │
+│ | [ Item 2: Planung, die Bestand hat.                              ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.page-template-t) — 1-Col (B18 – Fachwerk tri) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.page-templat) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)**:
-   - Landmark `<header class="header-desk">` hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.bi-123::before { content:"\f67f" }`.
-2. **Hero Stage & Focal Lead (<section.wp-singular> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
-   - Landmark `<section class="wp-singular">` presenting display lead `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` and copy excerpt *"Projekte Alle Projekte Büro & Verwaltung Industrie Wohnen"* over `#0d6efd` canvas and `#6610f2` ink.
-3. **Primary Showcase & Content Grid (<section.page-template> — `Planung, die Bestand hat.`)**:
-   - Landmark `<section class="page-template">` rendering section `Planung, die Bestand hat.` with copy *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.bi-alarm-fill::before { content:"\f101" }`.
-4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Labwerk`)**:
-   - Landmark `<section class="page-template-templates">` framing `Labwerk` and `Hanghaus` (*"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*) with `#6f42c1` surface cards, `#d63384` accents, and `.bi-alarm::before { content:"\f102" }`.
+   - Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+2. **Hero Stage & Focal Lead (<section.wp-singular> — `M3 Planungsgruppe`)**:
+   - Landmark `<section class="wp-singular">` presenting display lead `M3 Planungsgruppe` and copy excerpt *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
+   - Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)**:
+   - Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)**:
-   - Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Jedes Projekt beginnt mit einem offenen und zielgerichteten "*, and `#fd7e14` structural dividers.
+   - Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Auf dieser Grundlage entwickeln wir eine klare Projektstrate"*, and `#9ec5fe` structural dividers.
 
 ---
 
@@ -165,19 +189,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `m3-pg-de` (**M3 Planungsgruppe** — `https://m3-pg.de`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0d6efd` canvas, `#6610f2` ink, `#d63384` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d6efd` accent).
 - **Identity & Domain Context**: Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.
-- **Primary Substrate**: `#0d6efd` (`var(--bs-blue)` in `:root`), **Primary Ink**: `#6610f2`, **Accent / Highlight**: `#d63384`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0d6efd`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0d6efd` (`var(--bs-blue)` in `:root`) paired with `#6610f2` primary typography and `#d63384` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Nachhaltigkeit. Ästhetik. Wirtschaft`) with `212529` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `540px` container bounds (`gap: 1rem`, padding `2rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`M3 Planungsgruppe`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `m3-pg-de` in your global stylesheet:
 
 :root {
-  /* M3 Planungsgruppe (m3-pg-de) — Ground-Truth Extracted CSS Variables */
+  /* M3 Planungsgruppe (m3-pg-de) — Live-Grounded CSS Variables */
   --bs-blue: #0d6efd; /* Color / Atmospheric Token (m3-pg-de) */
   --bs-indigo: #6610f2; /* Color / Atmospheric Token (m3-pg-de) */
   --bs-purple: #6f42c1; /* Color / Atmospheric Token (m3-pg-de) */
@@ -198,78 +222,79 @@ Declare and consume these exact custom properties extracted from `m3-pg-de` in y
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#0d6efd` — grounded in `var(--bs-blue)` in `:root`
-- **Primary Typography Ink**: `#6610f2` — grounded in `var(--bs-indigo)` in `:root`
-- **Elevated Surface / Card Substrate**: `#6f42c1` — grounded in `var(--bs-purple)` in `:root`
-- **Interactive Accent / Highlight**: `#d63384` — grounded in `var(--bs-pink)` in `:root`
-- **Secondary / Muted Copy**: `#dc3545` — grounded in `var(--bs-red)` in `:root`
-- **Structural Hairline Border**: `#fd7e14` — grounded in `var(--bs-orange)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f8f9fa` — grounded in `var(--bs-tertiary-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#0d6efd` — grounded in `var(--bs-primary)` in `:root`
+- **Secondary / Muted Copy**: `#6c757d` — grounded in `var(--bs-secondary)` in `:root`
+- **Structural Hairline Border**: `#9ec5fe` — grounded in `var(--bs-primary-border-subtle)` in `:root`
+- **Variable Token (`--bs-indigo`)**: `#6610f2` — grounded in `var(--bs-indigo)` in `:root`
+- **Variable Token (`--bs-purple`)**: `#6f42c1` — grounded in `var(--bs-purple)` in `:root`
+- **Variable Token (`--bs-pink`)**: `#d63384` — grounded in `var(--bs-pink)` in `:root`
+- **Variable Token (`--bs-red`)**: `#dc3545` — grounded in `var(--bs-red)` in `:root`
+- **Variable Token (`--bs-orange`)**: `#fd7e14` — grounded in `var(--bs-orange)` in `:root`
 - **Variable Token (`--bs-yellow`)**: `#ffc107` — grounded in `var(--bs-yellow)` in `:root`
 - **Variable Token (`--bs-green`)**: `#198754` — grounded in `var(--bs-green)` in `:root`
 - **Variable Token (`--bs-teal`)**: `#20c997` — grounded in `var(--bs-teal)` in `:root`
 - **Variable Token (`--bs-cyan`)**: `#0dcaf0` — grounded in `var(--bs-cyan)` in `:root`
-- **Variable Token (`--bs-black`)**: `#000` — grounded in `var(--bs-black)` in `:root`
-- **Variable Token (`--bs-white`)**: `#fff` — grounded in `var(--bs-white)` in `:root`
-- **Variable Token (`--bs-gray`)**: `#6c757d` — grounded in `var(--bs-gray)` in `:root`
 - **Variable Token (`--bs-gray-dark`)**: `#343a40` — grounded in `var(--bs-gray-dark)` in `:root`
-- **Variable Token (`--bs-gray-100`)**: `#f8f9fa` — grounded in `var(--bs-gray-100)` in `:root`
 - **Variable Token (`--bs-gray-200`)**: `#e9ecef` — grounded in `var(--bs-gray-200)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×4711px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `540px` extracted from `m3-pg-de` stylesheet
-- **Padding & Gutters**: `2rem` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 540px`, `gap: 1rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)`
-- **Corner Radii**: `0.375rem`, `.25rem`, `var(--bs-border-radius)`, `var(--bs-border-radius-sm)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1420px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `16px` lateral canvas padding with `10px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
+- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)`
+- **Corner Radii**: `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Inter`
-- **Body Font Stack**: `212529`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
-- **H2 Section Rule**: rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
-- **Body Copy Rule**: CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`)
-- **Metadata & Index Rule**: CSS variables `--bs-carousel-caption-color: #000`; rule `,small` (`font-size: .875em`)
+- **Body Font Stack**: `Inter`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `h1` (`font-size: clamp(40px, 11.1cqw, 198px)`, `line-height: 1em`, `letter-spacing: -0.03em`, `font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `.h2` (`font-size: 64px`, `line-height: 1.125em`, `letter-spacing: -0.03em`, `font-weight: 600`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 20px`, `line-height: 24px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `,small` (`font-size: .875em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `m3-pg-de` (`M3 Planungsgruppe`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)**:
-   - DOM & Selectors: Landmark `<header class="header-desk">` hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.bi-123::before { content:"\f67f" }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)` (`m3-pg-de`) adapts across `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)` with `cubic-bezier(.4,0,.2,1)` transitions and links `M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`.
-2. **Hero Stage & Focal Lead (<section.wp-singular> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
-   - DOM & Selectors: Landmark `<section class="wp-singular">` presenting display lead `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` and copy excerpt *"Projekte Alle Projekte Büro & Verwaltung Industrie Wohnen"* over `#0d6efd` canvas and `#6610f2` ink.
-   - Responsive Contract: Hero stage (`1440×4711px` desktop / `390×2400px` mobile) sets `#0d6efd` background with `#6610f2` headline `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.`.
-3. **Primary Showcase & Content Grid (<section.page-template> — `Planung, die Bestand hat.`)**:
-   - DOM & Selectors: Landmark `<section class="page-template">` rendering section `Planung, die Bestand hat.` with copy *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.bi-alarm-fill::before { content:"\f101" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page-template> — `Planung, die Bestand hat.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 540px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Labwerk`)**:
-   - DOM & Selectors: Landmark `<section class="page-template-templates">` framing `Labwerk` and `Hanghaus` (*"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*) with `#6f42c1` surface cards, `#d63384` accents, and `.bi-alarm::before { content:"\f102" }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-template-templates> — `Labwerk`)` uses `0.375rem`, `.25rem`, `var(--bs-border-radius)`, `var(--bs-border-radius-sm)` radii, `#d63384` highlights, and assets (bootstrap.min.css, slick.min.css, main.css).
+   - DOM & Selectors: Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)` (`m3-pg-de`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)` with `cubic-bezier(.4,0,.2,1)` transitions and links `M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`.
+2. **Hero Stage & Focal Lead (<section.wp-singular> — `M3 Planungsgruppe`)**:
+   - DOM & Selectors: Landmark `<section class="wp-singular">` presenting display lead `M3 Planungsgruppe` and copy excerpt *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `M3 Planungsgruppe`.
+3. **Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
+   - DOM & Selectors: Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)**:
+   - DOM & Selectors: Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)` uses `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)` radii, `#0d6efd` highlights, and assets (bootstrap.min.css, slick.min.css, main.css).
 5. **Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)**:
-   - DOM & Selectors: Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Jedes Projekt beginnt mit einem offenen und zielgerichteten "*, and `#fd7e14` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)` aligns to `540px` extracted from `m3-pg-de` stylesheet with `2rem` lateral canvas padding with `1rem` grid gap and attributes (data-wp-strategy="defer", data-more="Mehr erfahren", data-less="Weniger").
+   - DOM & Selectors: Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Auf dieser Grundlage entwickeln wir eine klare Projektstrate"*, and `#9ec5fe` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)` aligns to `1420px` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `10px` grid gap and attributes (data-wp-strategy="defer", data-more="Mehr erfahren", data-less="Weniger").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Projekte Alle Projekte Büro & Verwaltung Industrie Wohnen"*
-- Copy Excerpt 2: *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirtschaftlichkeit. Wi..."*
-- Copy Excerpt 3: *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Materialien und einer..."*
-- Copy Excerpt 4: *"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialog mit dem Auftrag..."*
+- Copy Excerpt 1: *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirtschaftlichkeit. Wi..."*
+- Copy Excerpt 2: *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Materialien und einer..."*
+- Copy Excerpt 3: *"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialog mit dem Auftrag..."*
+- Copy Excerpt 4: *"Auf dieser Grundlage entwickeln wir eine klare Projektstrategie, die als verbindli..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`m3-pg-de`)**:
-- `.bi-123::before { content:"\f67f" }`
-- `.bi-alarm-fill::before { content:"\f101" }`
-- `.bi-alarm::before { content:"\f102" }`
-- `.bi-align-bottom::before { content:"\f103" }`
-- `.bi-align-center::before { content:"\f104" }`
+- `.wpcf7 .hidden-fields-container { display: none; }`
+- `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`
+- `form.submitting .wpcf7-response-o... { display: none; }`
+- `.wpcf7 form.sent .wpcf7-response-... { border-color: 46b450; }`
+- `cf7 form.aborted .wpcf7-response-... { border-color: dc3232; }`
 - **Per-Selector Transition Rules**:
-- **Selector `.form-control`**: `transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out` extracted from `m3-pg-de` stylesheet.
-- **Selector `media (prefers-reduced-motion:red...`**: `transition: none` extracted from `m3-pg-de` stylesheet.
-- **Selector `.form-control::-webkit-file-uploa...`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `m3-pg-de` stylesheet.
+- **Selector `header`**: `transition: background-color 0.3s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.readmore::after`**: `transition: width 0.6s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.bottom-row a`**: `transition: all .3s ease` extracted from `m3-pg-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.header-desk>` and `<section.page-template>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 

@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: davidcata-com_en-musica"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: davidcata-com_en-musica
 
 ## Overview & Design Identity
 - **Target**: `davidcata-com_en-musica` (**Music — “Queridos todos:” and “Origen”, by David Catá**)
 - **Production URL**: [https://davidcata.com/en/musica/](https://davidcata.com/en/musica/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#1f3a78` / `#EDE7DE`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f2eee7` / `#cc8b3d`)
 - **Summary**: The music of David Catá: his new album “Queridos todos:” (20 November 2026), pre-order signed and dedicated, and the instrumental album “...
-- **Total Clean CSS Variables Extracted**: `12` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `12` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Caveat`
-- **Body Font Stack**: `Caveat Fallback`
+- **Display Font Stack**: `Fraunces`
+- **Body Font Stack**: `Karla`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.5rem`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1.55rem`, `line-height: 1.15`, `letter-spacing: -.02em`)
-- **Body Copy**: rule `p` (`font-size: 15px`, `line-height: 1.75`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.5rem`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 168px`, `line-height: 151.2px`, `font-weight: 300`, `letter-spacing: -7.56px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 73.6px`, `line-height: 73.6px`, `font-weight: 300`); rule `h2` (`font-size: 1.55rem`, `line-height: 1.15`, `letter-spacing: -.02em`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: 15px`, `line-height: 1.75`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#1f3a78` | `var(--tinta-pluma)` in `:root` |
-| **Primary Typography Ink** | `#e5e7eb` | `:before { border: #e5e7eb }` |
-| **Elevated Surface / Card Substrate** | `#9ca3af` | `textarea::-moz-placeholder { color: #9ca3af }` |
-| **Interactive Accent / Highlight** | `#EDE7DE` | `.fill-hueso { fill: #EDE7DE }` |
-| **Secondary / Muted Copy** | `#fff` | `.fill-white { fill: #fff }` |
-| **Structural Hairline Border** | `#F2EEE7` | `html { background: #F2EEE7 }` |
+| **Primary Canvas Substrate** | `#f2eee7` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#18110b` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#cc8b3d` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#cc8b3d` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#cc8b3d` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#d1cdc7` | `15 { border-color: #d1cdc7 }` |
+| **Variable Token (`--tinta-pluma`)** | `#1f3a78` | `var(--tinta-pluma)` in `:root` |
 
 ---
 
@@ -49,19 +61,19 @@
 | `--acento` | `204, 139, 61` | Design System Custom Token |
 | `--tw-border-spacing-x` | `0` | Layout / Spatial Grid Token |
 | `--tw-border-spacing-y` | `0` | Layout / Spatial Grid Token |
-| `--davidcata-com-en-bg` | `#1f3a78` | Canvas Substrate (from `var(--tinta-pluma)` in `:root`) |
-| `--davidcata-com-en-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
+| `--davidcata-com-en-bg` | `#f2eee7` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--davidcata-com-en-ink` | `#18110b` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.mundo-calido> — `davidcata-com_en-musica`)**:
-   - Landmark `<header class="mundo-calido mundo-musica">` hosting `Music — “Queridos todos:” and “Orige` navigation (`In cinemas · Albums ▾ · Origen Album · 2023 · Listen · Concerts`), DOM attributes (`data-mundo="sala"`, `data-hero="oscuro"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Queridos todos:`)**:
-   - Landmark `<section class="relative flex">` presenting display lead `Queridos todos:` and copy excerpt *"Queridos todos: New album · 20.11.2026"* over `#1f3a78` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `His theme in “Arriba Tutto”`)**:
-   - Landmark `<section class="relative overflow-clip">` rendering section `His theme in “Arriba Tutto”` with copy *"New album · 20.11.2026"*, asset references (`cd-queridos-limpio-240.webp`, `portada-240.webp`, `amazonmusic.png`, `07c1226183551f0e.css`), and grid rule `body { margin:0;line-height:inherit }`.
+   - Landmark `<header class="mundo-calido mundo-musica">` (`1440x80px`) hosting `Music — “Queridos todos:” and “Orige` navigation (`In cinemas · Albums ▾ · Origen Album · 2023 · Listen · Concerts`), DOM attributes (`data-mundo="sala"`, `data-hero="oscuro"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.__className_91b9f0 { font-family:Fraunces,Fraunces Fallback }`.
+2. **Hero Stage & Focal Lead (<section.h-hero> — `Queridos todos:`)**:
+   - Landmark `<section class="h-hero relative">` presenting display lead `Queridos todos:` and copy excerpt *"DAVID CATÁ · NEW ALBUM · 20.11.2026"* over `#f2eee7` canvas and `#18110b` ink.
+3. **Primary Showcase & Content Grid (<section.overflow-clip> — `His theme in “Arriba Tutto”`)**:
+   - Landmark `<section class="overflow-clip pb-14">` rendering section `His theme in “Arriba Tutto”` with copy *"Queridos todos: New album · 20.11.2026"*, asset references (`6ba5f591ae6c56f6-s.p.woff2`, `af4bf8399d1aacdf-s.p.woff2`, `b7ae23d8a9c319da-s.p.woff2`, `cd-queridos-limpio-240.webp`), and grid rule `.__variable_91b9f0 { --f-titular:"Fraunces","Fraunces Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.border-t> — `Three ways to experience it`)**:
-   - Landmark `<section class="border-t py-20">` framing `Three ways to experience it` and `Two albums. One memory.` (*"Origen Album · 2023"*) with `#9ca3af` surface cards, `#EDE7DE` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.border-t> — `https://davidcata.com/en/musica/`)**:
-   - Landmark `<footer class="border-t bg-papel">` anchoring `Music — “Queridos todos:” and “O` footer links (`In cinemas · Albums ▾ · Origen Album · 2023 · Listen · Concerts`), copy *"Pre-order signed · € 20"*, and `#F2EEE7` structural dividers.
+   - Landmark `<section class="border-t py-20">` framing `Three ways to experience it` and `Two albums. One memory.` (*"New album · 20.11.2026"*) with `#cc8b3d` surface cards, `#cc8b3d` accents, and `.__className_ef4962 { font-family:Karla,Karla Fallback;font-style:normal }`.
+5. **Colophon & Global Directory Footer (<footer.bg-papel> — `https://davidcata.com/en/musica/`)**:
+   - Landmark `<footer class="bg-papel text-tinta">` anchoring `Music — “Queridos todos:” and “O` footer links (`In cinemas · Albums ▾ · Origen Album · 2023 · Listen · Concerts`), copy *"Origen Album · 2023"*, and `#d1cdc7` structural dividers.

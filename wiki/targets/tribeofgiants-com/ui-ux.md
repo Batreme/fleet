@@ -1,39 +1,55 @@
+---
+title: "UI & UX Architecture: tribeofgiants-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: tribeofgiants-com
 
 ## Overview & Design Identity
 - **Target**: `tribeofgiants-com` (**Mindset Coaching & Personal Growth — The Tribe of Giants**)
 - **Production URL**: [https://tribeofgiants.com/](https://tribeofgiants.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fe7624` canvas, `#111` ink, `#f89a29` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0c1018` / `#ffa500`)
 - **Summary**: Name the pattern that's been running your life — then outgrow it. 12 guided journeys, Rimi your AI guide, the Mirror, and a tribe that wa...
-- **Total Clean CSS Variables Extracted**: `86` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Merriweather`
-- **Body Font Stack**: `Merriweather Fallback`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: clamp(24px,4vw,32px)`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1.45em`)
-- **Body Copy**: CSS variables `--font-body: Lato, system-ui, sans-serif`; rule `p` (`line-height: 1.7`)
-- **Metadata & Labels**: rule `small` (`font-size: 13px`, `font-weight: 700`)
+- **Body Font Stack**: `Lato`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 41px`, `line-height: 42.64px`, `font-weight: 700`, `letter-spacing: -0.574px`); rule `h1` (`font-size: clamp(24px,4vw,32px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 43.2px`, `font-weight: 700`, `letter-spacing: -0.32px`); rule `h2` (`font-size: 22px`, `line-height: 1.2`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: Lato, system-ui, sans-serif`; rule `p` (`font-size: 14.5px`, `line-height: 1.55`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `small` (`font-size: 13.5px`, `line-height: 1.45`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fe7624` | `var(--giant-orange)` in `:root` |
-| **Primary Typography Ink** | `#42abdb` | `var(--giant-blue)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0b9444` | `var(--growth-green)` in `:root` |
-| **Interactive Accent / Highlight** | `#f89a29` | `var(--legacy-peach)` in `:root` |
-| **Secondary / Muted Copy** | `#3b2313` | `var(--root-brown)` in `:root` |
-| **Structural Hairline Border** | `#111` | `var(--foundation-black)` in `:root` |
-| **Variable Token (`--potential-white`)** | `#fff` | `var(--potential-white)` in `:root` |
+| **Primary Canvas Substrate** | `#0c1018` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#e9e5db` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#1a222f` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ffa500` | `.cf-whole>summary.cf-whole-btn:... { background: orange }` (`#ffa500`) |
+| **Secondary / Muted Copy** | `#8a5a1a` | `var(--note-ink)` in `:root` |
+| **Structural Hairline Border** | `#c2550f` | `var(--gscp-line)` in `:root` |
+| **Variable Token (`--giant-orange`)** | `#fe7624` | `var(--giant-orange)` in `:root` |
+| **Variable Token (`--giant-blue`)** | `#42abdb` | `var(--giant-blue)` in `:root` |
+| **Variable Token (`--growth-green`)** | `#0b9444` | `var(--growth-green)` in `:root` |
+| **Variable Token (`--legacy-peach`)** | `#f89a29` | `var(--legacy-peach)` in `:root` |
+| **Variable Token (`--root-brown`)** | `#3b2313` | `var(--root-brown)` in `:root` |
+| **Variable Token (`--foundation-black`)** | `#111111` | `var(--foundation-black)` in `:root` |
+| **Variable Token (`--potential-white`)** | `#ffffff` | `var(--potential-white)` in `:root` |
 | **Variable Token (`--gold`)** | `#f2b25c` | `var(--gold)` in `:root` |
 | **Variable Token (`--gold-deep`)** | `#c9a96a` | `var(--gold-deep)` in `:root` |
 | **Variable Token (`--eyebrow`)** | `#a8430a` | `var(--eyebrow)` in `:root` |
-| **Variable Token (`--lit`)** | `#ffffff61` | `var(--lit)` in `:root` |
 | **Variable Token (`--bg`)** | `#f5efe3` | `var(--bg)` in `:root` |
 | **Variable Token (`--surface`)** | `#fffcf6` | `var(--surface)` in `:root` |
 | **Variable Token (`--surface-2`)** | `#f4ede0` | `var(--surface-2)` in `:root` |
@@ -64,12 +80,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.lp-hero-cinema> — `tribeofgiants-com`)**:
-   - Landmark `<header class="lp-hero-cinema">` hosting `Mindset Coaching & Personal Growth —` navigation (`Why the Tribe · Journeys · Blog · Podcast · Books`), DOM attributes (`data-si="1"`, `data-theme="dark"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `iframe { max-width:100% }`.
+   - Landmark `<header class="lp-hero-cinema">` (`1440x860px`) hosting `Mindset Coaching & Personal Growth —` navigation (`Why the Tribe · Journeys · Blog · Podcast · Becoming Giants`), DOM attributes (`data-si="1"`, `data-theme="dark"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.spl.spl-moving .spl-ring { transition:left .28s,top .28s,width .28s,height .28s,border-radius .28s }`.
 2. **Hero Stage & Focal Lead (<section.lp-section> — `Name the pattern that's been runni`)**:
-   - Landmark `<section class="lp-section ins">` presenting display lead `Name the pattern that's been running your life. T...` and copy excerpt *"The Tribe of Giants"* over `#fe7624` canvas and `#111` ink.
-3. **Primary Showcase & Content Grid (<section.lp-section> — `A day inside the Tribe`)**:
-   - Landmark `<section class="lp-section fbk-section">` rendering section `A day inside the Tribe` with copy *"Home of the 12 Journeys — where every Giant was once a Small"*, asset references (`248e1dc0efc99276-s.p.0dq1pb0w2tem...`, `345c85a432359eed-s.p.24jxsbewvqxg...`, `8e451580e5e95631-s.p.0ic9f6t6i9np...`, `9be384ea93fe3f49-s.p.0oq27de-d8s-...`), and grid rule `html { background:var(--bg) }`.
+   - Landmark `<section class="lp-section ins">` presenting display lead `Name the pattern that's been running your life. T...` and copy excerpt *"The Tribe of Giants"* over `#0c1018` canvas and `#e9e5db` ink.
+3. **Primary Showcase & Content Grid (<section.fbk-section> — `A day inside the Tribe`)**:
+   - Landmark `<section class="lp-section fbk-section">` rendering section `A day inside the Tribe` with copy *"Home of the 12 Journeys — where every Giant was once a Small"*, asset references (`248e1dc0efc99276-s.p.0dq1pb0w2tem...`, `345c85a432359eed-s.p.24jxsbewvqxg...`, `8e451580e5e95631-s.p.0ic9f6t6i9np...`, `9be384ea93fe3f49-s.p.0oq27de-d8s-...`), and grid rule `.spl { --spl-dim:080b11b8 }`.
 4. **Interactive Detail & Feature Matrix (<article.fbk-card> — `One honest question`)**:
-   - Landmark `<article class="fbk-card">` framing `One honest question` and `Your page, read back` (*"You've read the books. You've heard the podcasts. You've collecte"*) with `#0b9444` surface cards, `#f89a29` accents, and `body { background:0 0 }`.
+   - Landmark `<article class="fbk-card">` framing `One honest question` and `Your page, read back` (*"You've read the books. You've heard the podcasts. You've collecte"*) with `#1a222f` surface cards, `#ffa500` accents, and `.spl-guide { --spl-dim:080b1185 }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://tribeofgiants.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Mindset Coaching & Personal Grow` footer links (`Why the Tribe · Journeys · Blog · Podcast · Books`), copy *"Join free, for life. Your seat in the Tribe, Journey 1 and t"*, and `#111` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Mindset Coaching & Personal Grow` footer links (`Why the Tribe · Journeys · Blog · Podcast · Becoming Giants`), copy *"Join free, for life. Your seat in the Tribe, Journey 1 and t"*, and `#c2550f` structural dividers.

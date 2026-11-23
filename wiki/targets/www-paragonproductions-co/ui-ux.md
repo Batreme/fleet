@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: www-paragonproductions-co"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-paragonproductions-co
 
 ## Overview & Design Identity
 - **Target**: `www-paragonproductions-co` (**PARAGON · Creative Production Studio**)
 - **Production URL**: [https://www.paragonproductions.co/](https://www.paragonproductions.co/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ff5b4b` canvas, `#f8f8f8` ink, `#ffcdd2` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#100f0f` canvas, `#f8f8f8` ink, `#ff0000` accent)
 - **Summary**: PARAGON is a production partner driven by pursuit. We team up with brands and agencies to craft commercials, branded films, and campaigns...
-- **Total Clean CSS Variables Extracted**: `118` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `118` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Review Condensed`
-- **Body Font Stack**: `Proxima Nova`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
-- **Body Copy**: rule `p` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
-- **Metadata & Labels**: CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--max-width--small: 80rem`, `--max-width--extra-small: 50rem`
+- **Body Font Stack**: `Roobert`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 35.2px`, `font-weight: 500`); rule `h1` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 32px`, `line-height: 35.2px`, `font-weight: 500`); rule `h2` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.96px`, `font-weight: 400`); rule `p` (`font-size: var(--_text-style---font-size)`, `line-height: var(--_text-style---l...`, `letter-spacing: var(--_typography---l...`, `font-weight: var(--_text-s...`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.96px`, `font-weight: 400`); CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--max-width--small: 80rem`, `--max-width--extra-small: 50rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ff5b4b` | `var(--_color---swatch--red)` in `:root` |
-| **Primary Typography Ink** | `#100f0f` | `var(--_color---swatch--black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6d6c6c` | `var(--_color---swatch--grey-500)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffcdd2` | `var(--_color---system--error-light)` in `:root` |
-| **Secondary / Muted Copy** | `#d32f2f` | `var(--_color---system--error)` in `:root` |
-| **Structural Hairline Border** | `#f8f8f8` | `var(--_color---swatch--white)` in `:root` |
+| **Primary Canvas Substrate** | `#100f0f` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f8f8f8` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#222222` | `.w-slider-nav-invert>div.w-active { background-color: #222222 }` |
+| **Interactive Accent / Highlight** | `#ff0000` | `.nav_mobile_link.w--current { color: red }` (`#ff0000`) |
+| **Secondary / Muted Copy** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Structural Hairline Border** | `#3898ec` | `.w-select:focus { border-color: #3898ec }` |
+| **Variable Token (`--_color---swatch--red`)** | `#ff5b4b` | `var(--_color---swatch--red)` in `:root` |
 
 ---
 
@@ -56,12 +68,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.nav_wrap> — `www-paragonproductions-co`)**:
-   - Landmark `<nav class="nav_wrap">` hosting `PARAGON · Creative Production Studio` navigation (`Skip to main content · Work · Who We Are · News · Contact Us`), DOM attributes (`data-wf-domain="www.paragonproduction..."`, `data-wf-page="68be24b22b086720602bcd26"`, `data-wf-site="68be24b22b086720602bcd38"`, `data-wf-intellimize-customer-id="117787750"`), and stylesheet rule `html.lenis body { height:auto }`.
-2. **Hero Stage & Focal Lead (<section.home-hero_wrap> — `Always In PURSUIT`)**:
-   - Landmark `<section class="home-hero_wrap">` presenting display lead `Always In PURSUIT` and copy excerpt *"Skip to main content"* over `#ff5b4b` canvas and `#f8f8f8` ink.
-3. **Primary Showcase & Content Grid (<section.home-services_wrap> — `What We Do`)**:
-   - Landmark `<section class="home-services_wrap">` rendering section `What We Do` with copy *"Instagram Instagram Instagram"*, asset references (`cdn.prod.website-files.com`, `paragonproductions.webflow.shared...`, `paragonproductions.webflow.68be24...`, `gtm.js`), and grid rule `.lenis.lenis-stopped { overflow:clip }`.
+   - Landmark `<nav class="nav_wrap">` (`1440x114px`) hosting `PARAGON · Creative Production Studio` navigation (`Work · Who We Are · News · Contact Us · Vimeo`), DOM attributes (`data-wf-domain="www.paragonproduction..."`, `data-wf-page="68be24b22b086720602bcd26"`, `data-wf-site="68be24b22b086720602bcd38"`, `data-wf-intellimize-customer-id="117787750"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.home-hero_wrap> — `ALWAYS IN PURSUIT`)**:
+   - Landmark `<section class="home-hero_wrap">` presenting display lead `ALWAYS IN PURSUIT` and copy excerpt *"To us, that’s simple: grow every day, put people first, and never"* over `#100f0f` canvas and `#f8f8f8` ink.
+3. **Primary Showcase & Content Grid (<section.home-services_wrap> — `Always In PURSUIT`)**:
+   - Landmark `<section class="home-services_wrap">` rendering section `Always In PURSUIT` with copy *"Creative Creative Creative Creative Creative Creative Creative Cr"*, asset references (`cdn.prod.website-files.com`, `paragonproductions.webflow.shared...`, `paragonproductions.webflow.68be24...`, `gtm.js`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.featured-work_wrap> — `PARAGON is a production partner dr`)**:
-   - Landmark `<section class="featured-work_wrap">` framing `PARAGON is a production partner driven by pursuit.` and `BUILT FOR THE CHASE` (*"LinkedIn LinkedIn LinkedIn"*) with `#6d6c6c` surface cards, `#ffcdd2` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+   - Landmark `<section class="featured-work_wrap">` framing `PARAGON is a production partner driven by pursuit.` and `BUILT FOR THE CHASE` (*"Ideas worth chasing start here. We ground them in research, sharp"*) with `#222222` surface cards, `#ff0000` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.paragonproductions.co/`)**:
-   - Landmark `<footer class="footer_wrap">` anchoring `PARAGON · Creative Production St` footer links (`Skip to main content · Work · Who We Are · News · Contact Us`), copy *"ALWAYS IN PURSUIT //"*, and `#f8f8f8` structural dividers.
+   - Landmark `<footer class="footer_wrap">` anchoring `PARAGON · Creative Production St` footer links (`Work · Who We Are · News · Contact Us · Vimeo`), copy *"Campaign Development"*, and `#3898ec` structural dividers.

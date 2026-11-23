@@ -1,68 +1,86 @@
+---
+title: "UI & UX Architecture: dcspaces-co-uk"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: dcspaces-co-uk
 
 ## Overview & Design Identity
 - **Target**: `dcspaces-co-uk` (**Chorley Builders · Extensions & Renovations · DC Carpentry**)
 - **Production URL**: [https://dcspaces.co.uk/](https://dcspaces.co.uk/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#14161A` canvas, `#FFFFFF` ink, `#F2F1ED` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f1e9` canvas, `#343631` ink, `#6c8f6c` accent)
 - **Summary**: Family-run builders in Chorley. House extensions, wall and chimney breast removals, kitchens and bespoke staircases across Lancashire. Fr...
-- **Total Clean CSS Variables Extracted**: `29` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Satoshi`
-- **Body Font Stack**: `Segoe UI`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`)
-- **Body Copy**: CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`, `font-weight: 400`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `17px`, `.76rem`, `clamp(2.7rem, 6.4vw, 5rem)`, `clamp(2.1rem, 4.4vw, 3.5rem)`, `clamp(1.6rem, 2.6vw, 2.2rem)`)
+- **Body Font Stack**: `Satoshi`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 73.6px`, `line-height: 73.6px`, `font-weight: 700`, `letter-spacing: -3.312px`); CSS variables `--cc-font-display: 'Satoshi', system-ui, sans-serif`; rule `h1` (`font-size: clamp(2.6rem, 5.6vw, 4.6rem)`, `line-height: 1`, `letter-spacing: -.045em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 57.12px`, `font-weight: 700`, `letter-spacing: -2.24px`); rule `h2` (`font-size: clamp(1.5rem, 2.4vw, 2.1rem)`)
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--cc-font-body: 'Satoshi', system-ui, sans-serif`; rule `p` (`font-size: .9rem`, `line-height: 1.55`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#14161A` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#4A5058` | `var(--ink-2)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#767D86` | `var(--ink-3)` in `:root` |
-| **Interactive Accent / Highlight** | `#F2F1ED` | `var(--paper)` in `:root` |
-| **Secondary / Muted Copy** | `#E8E6E0` | `var(--paper-2)` in `:root` |
-| **Structural Hairline Border** | `#FFFFFF` | `var(--white)` in `:root` |
-| **Variable Token (`--brand`)** | `#2e432f` | `var(--brand)` in `:root` |
+| **Primary Canvas Substrate** | `#f4f1e9` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#343631` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f2f1ed` | `var(--cc-paper)` in `:root` |
+| **Interactive Accent / Highlight** | `#6c8f6c` | `var(--brand-2)` in `:root` |
+| **Secondary / Muted Copy** | `#767d86` | `var(--ink-3)` in `:root` |
+| **Structural Hairline Border** | `#e0ddd6` | `var(--line)` in `:root` (`rgba(20,22,26,.09)`) |
+| **Variable Token (`--cc-ink`)** | `#14161a` | `var(--cc-ink)` in `:root` |
+| **Variable Token (`--cc-green`)** | `#344c3a` | `var(--cc-green)` in `:root` |
+| **Variable Token (`--cc-forest`)** | `#2e432f` | `var(--cc-forest)` in `:root` |
+| **Variable Token (`--cc-sage`)** | `#dfe5dc` | `var(--cc-sage)` in `:root` |
+| **Variable Token (`--cc-sand`)** | `#e8e2d4` | `var(--cc-sand)` in `:root` |
+| **Variable Token (`--cc-on-deep`)** | `#ffffff` | `var(--cc-on-deep)` in `:root` |
+| **Variable Token (`--ink-2`)** | `#4a5058` | `var(--ink-2)` in `:root` |
+| **Variable Token (`--paper-2`)** | `#e8e6e0` | `var(--paper-2)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--cc-ink` | `#14161a` | Typography Ink Token |
+| `--cc-green` | `#344c3a` | Color / Atmospheric Token |
+| `--cc-forest` | `#2e432f` | Color / Atmospheric Token |
+| `--cc-sage` | `#dfe5dc` | Color / Atmospheric Token |
+| `--cc-sand` | `#e8e2d4` | Color / Atmospheric Token |
+| `--cc-paper` | `#f2f1ed` | Canvas / Surface Token |
+| `--cc-deep` | `#14161a` | Color / Atmospheric Token |
+| `--cc-on-deep` | `#ffffff` | Color / Atmospheric Token |
+| `--cc-font-display` | `'Satoshi', system-ui, sans-serif` | Typography / Scale Token |
+| `--cc-font-body` | `'Satoshi', system-ui, sans-serif` | Typography / Scale Token |
 | `--ink` | `#14161A` | Typography Ink Token |
 | `--ink-2` | `#4A5058` | Typography Ink Token |
 | `--ink-3` | `#767D86` | Typography Ink Token |
 | `--paper` | `#F2F1ED` | Canvas / Surface Token |
 | `--paper-2` | `#E8E6E0` | Canvas / Surface Token |
 | `--white` | `#FFFFFF` | Canvas / Surface Token |
-| `--line` | `rgba(20,22,26,.09)` | Color / Atmospheric Token |
-| `--line-2` | `rgba(20,22,26,.16)` | Color / Atmospheric Token |
-| `--r-xl` | `32px` | Dimension / Scale Token |
-| `--r-sm` | `16px` | Dimension / Scale Token |
-| `--gut` | `24px` | Dimension / Scale Token |
-| `--max` | `1340px` | Dimension / Scale Token |
-| `--shadow` | `0 1px 2px rgba(20,22,26,.04), 0 10px 30px -14px rgba(20,22,26,.14)` | Elevation / Border Token |
-| `--shadow-lg` | `0 2px 6px rgba(20,22,26,.05), 0 30px 70px -28px rgba(20,22,26,.30)` | Elevation / Border Token |
-| `--ease` | `cubic-bezier(.22,.61,.36,1)` | Motion / Easing Token |
-| `--brand` | `#2e432f` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hdr> — `dcspaces-co-uk`)**:
-   - Landmark `<header class="hdr">` hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `font-face { font-family: "Satoshi"; src: url("../fonts/satoshi-400.woff2") format("w... }`.
+   - Landmark `<header class="hdr">` (`1440x86px`) hosting `Chorley Builders · Extensions & Reno` navigation (`Home · About · All services · Extensions · Projects`), DOM attributes (`data-carousel`, `data-dir="prev"`, `data-dir="next"`, `data-dir="prev"`), and stylesheet rule `.dcc-hp { position: absolute !important; left: -9999px !important; width: 1px; hei... }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Building & Renovation Specialists `)**:
-   - Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"Structural walls and chimney breasts"* over `#14161A` canvas and `#FFFFFF` ink.
+   - Landmark `<section class="hero is-ready">` presenting display lead `Building & Renovation Specialists Across Chorley...` and copy excerpt *"CRAFTING UNIQUE SPACES"* over `#f4f1e9` canvas and `#343631` ink.
 3. **Primary Showcase & Content Grid (<section.opening> — `Everything your house needs, from `)**:
-   - Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Kitchen renovations and fitting"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `after { box-sizing: border-box; }`.
+   - Landmark `<section class="opening">` rendering section `Everything your house needs, from one team` with copy *"Crafting unique spaces"*, asset references (`favicon.png`, `apple-touch-icon.png`, `satoshi-900.woff2`, `satoshi-400.woff2`), and grid rule `.dcc-msg--ok { background: e6ebe3; color: 2e432f; border: 1px solid rgba(52,76,58,.25); }`.
 4. **Interactive Detail & Feature Matrix (<section.section> — `Home Extensions`)**:
-   - Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Bespoke carpentry and staircases"*) with `#767D86` surface cards, `#F2F1ED` accents, and `html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }`.
+   - Landmark `<section class="section">` framing `Home Extensions` and `Loft Conversions` (*"Whether you’re planning a home extension, full renovation, loft c"*) with `#f2f1ed` surface cards, `#6c8f6c` accents, and `.dcc-msg--err { background: f6e8e4; color: 7a2e1f; border: 1px solid rgba(122,46,31,.22); }`.
 5. **Colophon & Global Directory Footer (<footer.ftr> — `https://dcspaces.co.uk/`)**:
-   - Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"Crafting unique spaces"*, and `#FFFFFF` structural dividers.
+   - Landmark `<footer class="ftr">` anchoring `Chorley Builders · Extensions & ` footer links (`Home · About · All services · Extensions · Projects`), copy *"As a family-run business, we combine skilled craftsmanship w"*, and `#e0ddd6` structural dividers.

@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: lajoya-foods-com_en"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: lajoya-foods-com_en
 
 ## Overview & Design Identity
 - **Target**: `lajoya-foods-com_en` (**LAJOYA GOURMET**)
 - **Production URL**: [https://lajoya-foods.com/en](https://lajoya-foods.com/en)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#00EF84` / `#000000`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#00ef84` / `#ea3323`)
 - **Summary**: Optimal preservation of porcelain interior
-- **Total Clean CSS Variables Extracted**: `13` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `JoyaMaison`
-- **Body Font Stack**: `JoyaAmbiant`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`letter-spacing: -2px`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 28px`)
-- **Body Copy**: rule `p` (`font-size: 12px`, `letter-spacing: 2px`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `12px`, `19px`, `14px`, `13px`)
+- **Display Font Stack**: `Ambiant Light Sans`
+- **Body Font Stack**: `Maison Neue`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`)
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 68px`, `line-height: 48px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: 10px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 68px`, `line-height: 68px`, `font-weight: 400`, `letter-spacing: -1.5px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#00EF84` | `var(--color-primary)` in `:root` |
-| **Primary Typography Ink** | `#EA3323` | `var(--color-secondary)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#FFFF54` | `var(--color-tertiary)` in `:root` |
-| **Interactive Accent / Highlight** | `#000000` | `var(--text-color)` in `:root` |
-| **Secondary / Muted Copy** | `#ffffff` | `var(--background-color)` in `:root` |
-| **Structural Hairline Border** | `#1990c6` | `.shopify-payment-button__button... { background-color: #1990c6 }` |
+| **Primary Canvas Substrate** | `#00ef84` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--background-color)` in `:root` |
+| **Interactive Accent / Highlight** | `#ea3323` | `.header__button-cart-quantity { background-color: #ea3323 }` |
+| **Secondary / Muted Copy** | `#ea3323` | `var(--color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#ffffff` | `on.loading>.loading-overlay__sp... { stroke: #ffffff }` |
+| **Variable Token (`--color-tertiary`)** | `#ffff54` | `var(--color-tertiary)` in `:root` |
 | **Variable Token (`--swiper-theme-color`)** | `#007aff` | `var(--swiper-theme-color)` in stylesheet |
 
 ---
@@ -50,19 +62,19 @@
 | `--text-color` | `#000000` | Typography Ink Token |
 | `--background-color` | `#ffffff` | Canvas / Surface Token |
 | `--swiper-theme-color` | `#007aff` | Brand / Palette Token |
-| `--lajoya-foods-com-bg` | `#00EF84` | Canvas Substrate (from `var(--color-primary)` in `:root`) |
-| `--lajoya-foods-com-ink` | `#000000` | Primary Typography Ink (stylesheet-derived) |
+| `--lajoya-foods-com-bg` | `#00ef84` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--lajoya-foods-com-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `lajoya-foods-com_en`)**:
-   - Landmark `<header class="header">` hosting `LAJOYA GOURMET` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+   - Landmark `<header class="header">` (`1440x92px`) hosting `LAJOYA GOURMET` navigation (`Contact · About · Shop · Shop Shop`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="57685803183"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Lajoya Gourmet`)**:
-   - Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Privacy policy Privacy policy"* over `#00EF84` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.tiles> — `Shopping Cart`)**:
-   - Landmark `<section class="tiles">` rendering section `Shopping Cart` with copy *"Terms of service Terms of service"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
-4. **Interactive Detail & Feature Matrix (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
-   - Landmark `<section class="tiles">` framing `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` and `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` (*"Legal notice Legal notice"*) with `#FFFF54` surface cards, `#000000` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+   - Landmark `<section class="hero">` presenting display lead `Lajoya Gourmet` and copy excerpt *"Chopped Peeled Tomato"* over `#00ef84` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.tiles> — `Chopped Peeled Tomato Chopped Peel`)**:
+   - Landmark `<section class="tiles">` rendering section `Chopped Peeled Tomato Chopped Peeled Tomato Chopp...` with copy *"Whole Peeled Tomato"*, asset references (`171ed732002c6631efbca8f91.js`, `klaviyo.js`, `1349771745561073`, `fbevents.js`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+4. **Interactive Detail & Feature Matrix (<section.tiles:nth(2)> — `Whole Peeled Tomato Whole Peeled T`)**:
+   - Landmark `<section class="tiles">` framing `Whole Peeled Tomato Whole Peeled Tomato Whole Pee...` and `Artichoke Hearts Artichoke Hearts Artichoke Heart...` (*"Optimal preservation of porcelain interior"*) with `#ffffff` surface cards, `#ea3323` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
 5. **Colophon & Global Directory Footer (<footer.header--mobile> — `https://lajoya-foods.com/en`)**:
-   - Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Overview · Index · Archive · About · Contact`), copy *"© LaJoya 2026 © LaJoya 2026"*, and `#1990c6` structural dividers.
+   - Landmark `<footer class="header--mobile">` anchoring `LAJOYA GOURMET` footer links (`Contact · About · Shop · Shop Shop`), copy *"Extra virgin olive oil"*, and `#ffffff` structural dividers.

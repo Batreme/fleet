@@ -1,67 +1,78 @@
+---
+title: "UI & UX Architecture: zeropact-co"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: zeropact-co
 
 ## Overview & Design Identity
-- **Target**: `zeropact-co` (**Zeropact · Life Cycle Analysis (LCA) & Product Carbon Footprint**)
+- **Target**: `zeropact-co` (**ZeroPact · LCA, Product Carbon Footprint, DPP, GLEC & EmpCo**)
 - **Production URL**: [https://zeropact.co](https://zeropact.co)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#E5E7EB` canvas, `#0A0A0A` ink, `#7C88AC` accent)
-- **Summary**: Worlds Most Advanced Product Carbon Footprint AI-Powered Software
-- **Total Clean CSS Variables Extracted**: `424` (curated ground-truth set below)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#4d67fc`)
+- **Summary**: LCA, Product Carbon Footprint, Digital Product Passport (DPP), GLEC and EmpCo intelligence and solutions for PIM and PXM companies servin...
+- **Total Clean CSS Variables Extracted**: `148` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Zalando Sans Expanded`
-- **Body Font Stack**: `Inter`
-- **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **Hero Display (`H1`)**: CSS variables `--display: flex`, `--e-n-carousel-swiper-slides-to-display: 3`, `--page-title-display: block`; rule `h1` (`font-weight: var(--e-globa...`)
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-weight: var(--e-globa...`)
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`; rule `p` (`line-height: var(--leading-relaxed)`)
-- **Metadata & Labels**: CSS variables `--e-n-carousel-arrow-prev-caption-spacing: 15px`, `--e-n-carousel-arrow-next-caption-spacing: 15px`, `--arrow-prev-caption-spacing: 15px`
+- **Body Font Stack**: `DM Sans`
+- **Monospace / Technical Font Stack**: `DM Mono`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 112px`, `line-height: 112px`, `font-weight: 600`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 52px`, `line-height: 56.16px`, `font-weight: 600`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.25rem`, `letter-spacing: -.01em`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`line-height: var(--leading-relaxed)`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`; rule `small` (`font-size: 10px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#E5E7EB` | `var(--border-color)` in `:root` |
-| **Primary Typography Ink** | `#FFFFFF` | `var(--e-n-carousel-arrow-normal-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#376CDF` | `var(--e-n-carousel-dots-normal-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#7C88AC` | `var(--e-global-color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#4A5565` | `var(--e-global-color-text)` in `:root` |
-| **Structural Hairline Border** | `#0A0A0A` | `var(--e-search-placeholder-color)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0000ff` | `#company .text-signal { color: blue }` (`#0000ff`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `80 { background-color: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#4d67fc` | `.tf-tower-comet-b { stroke: #4d67fc }` |
+| **Secondary / Muted Copy** | `#800080` | `.text-violet-2 { color: purple }` (`#800080`) |
+| **Structural Hairline Border** | `#ffda76` | `.mi-method-chain li:last-child { border-color: #ffda76 }` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--flex-grow` | `var( --container-widget-flex-grow )` | Design System Custom Token |
-| `--display` | `flex` | Design System Custom Token |
-| `--flex-direction` | `row` | Design System Custom Token |
-| `--container-widget-width` | `calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% )` | Layout / Spatial Grid Token |
-| `--container-widget-height` | `100%` | Layout / Spatial Grid Token |
-| `--container-widget-flex-grow` | `1` | Layout / Spatial Grid Token |
-| `--container-widget-align-self` | `stretch` | Layout / Spatial Grid Token |
-| `--flex-wrap-mobile` | `wrap` | Layout / Spatial Grid Token |
-| `--align-items` | `center` | Design System Custom Token |
-| `--gap` | `53px 53px` | Layout / Spatial Grid Token |
-| `--row-gap` | `53px` | Layout / Spatial Grid Token |
-| `--column-gap` | `53px` | Layout / Spatial Grid Token |
-| `--padding-top` | `80px` | Layout / Spatial Grid Token |
-| `--padding-bottom` | `80px` | Layout / Spatial Grid Token |
-| `--padding-left` | `20px` | Layout / Spatial Grid Token |
-| `--padding-right` | `20px` | Layout / Spatial Grid Token |
+| `--radius` | `.375rem` | Elevation / Border Token |
+| `--background` | `oklch(15% .007 271)` | Canvas / Surface Token |
+| `--foreground` | `oklch(94.6% 0 0)` | Typography Ink Token |
+| `--card` | `oklch(18.6% .009 264.3)` | Color / Atmospheric Token |
+| `--card-foreground` | `oklch(94.6% 0 0)` | Typography Ink Token |
+| `--popover` | `oklch(18.6% .009 264.3)` | Color / Atmospheric Token |
+| `--popover-foreground` | `oklch(94.6% 0 0)` | Typography Ink Token |
+| `--primary` | `oklch(79.7% .101 168.5)` | Brand / Palette Token |
+| `--primary-foreground` | `oklch(15% .007 271)` | Typography Ink Token |
+| `--secondary` | `oklch(21.3% .013 264.3)` | Brand / Palette Token |
+| `--secondary-foreground` | `oklch(94.6% 0 0)` | Typography Ink Token |
+| `--muted` | `oklch(21.3% .013 264.3)` | Color / Atmospheric Token |
+| `--muted-foreground` | `oklch(68.9% 0 0)` | Typography Ink Token |
+| `--accent` | `oklch(58.3% .222 270.3)` | Brand / Palette Token |
+| `--accent-foreground` | `oklch(97.3% .003 106.4)` | Typography Ink Token |
+| `--destructive` | `oklch(65.8% .231 35)` | Color / Atmospheric Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.elementor> — `zeropact-co`)**:
-   - Landmark `<header class="elementor elementor-198">` hosting `Zeropact · Life Cycle Analysis (LCA)` navigation (`Home · Solutions · E-Commerce · Logistics · Enterprise`), DOM attributes (`data-precedence="default"`, `data-precedence="default"`, `data-precedence="default"`, `data-precedence="default"`), and stylesheet rule `ementor-widget-video .elementor-w... { aspect-ratio:var(--video-aspect-ratio) }`.
-2. **Hero Stage & Focal Lead (<div.site-page-root> — `life Cycle analysis (“LCA”)`)**:
-   - Landmark `<div class="site-page-root">` presenting display lead `life Cycle analysis (“LCA”)` and copy excerpt *"Solutions E-Commerce Logistics Enterprise Digital Product Passpor"* over `#E5E7EB` canvas and `#0A0A0A` ink.
-3. **Primary Showcase & Content Grid (<div.site-page-root> — `World's most advanced Ai-powered e`)**:
-   - Landmark `<div class="site-page-root">` rendering section `World's most advanced Ai-powered engine designed...` with copy *"Digital Product Passport"*, asset references (`styles-nW61obKD.css`, `2555c6801d335bcfd3cdccb22cdb3e1e.css`, `863d0923110b7e2df40bdfebd60fedff.css`, `55ee03d21b51256d575abda3ce68a9da.css`), and grid rule `r-widget-video .elementor-wrapper... { background-color:000;border:none;display:flex;height:100%;width:100% }`.
-4. **Interactive Detail & Feature Matrix (<div.site-page-root> — `Life Cycle Analysis ("LCA")`)**:
-   - Landmark `<div class="site-page-root">` framing `Life Cycle Analysis ("LCA")` and `AI-Powered Last-Mile CO2 emissions at Scale` (*"Scale from one to thousands of SKUs with automated, ISO 14067-com"*) with `#376CDF` surface cards, `#7C88AC` accents, and `e .elementor-custom-embed-image-o... { background-position:50%;background-size:cover;inset:0;position:absolute }`.
-5. **Colophon & Global Directory Footer (<footer.elementor> — `https://zeropact.co`)**:
-   - Landmark `<footer class="elementor elementor-172">` anchoring `Zeropact · Life Cycle Analysis (` footer links (`Home · Solutions · E-Commerce · Logistics · Enterprise`), copy *"Explore our Solutions"*, and `#0A0A0A` structural dividers.
+1. **Brand Header & Navigation Bar (<header.inset-x-0> — `zeropact-co`)**:
+   - Landmark `<header class="inset-x-0 top-0">` (`1440x73px`) hosting `ZeroPact · LCA, Product Carbon Footp` navigation (`Explore · Intelligence ▾ · Product · Mobility · Platform & APIs`), DOM attributes (`data-precedence="default"`, `data-precedence="default"`, `data-artifact-kind="dwl_content_hash"`, `data-artifact-id="5f6a974ab5dd754cd3498..."`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.climate-hero> — `ZeroPact.`)**:
+   - Landmark `<section class="climate-hero bg-paper">` presenting display lead `ZeroPact.` and copy excerpt *"DEEPTECH / CLIMATE DATA INTELLIGENCE"* over `#ffffff` canvas and `#0000ff` ink.
+3. **Primary Showcase & Content Grid (<section.border-line> — `ZeroPact .`)**:
+   - Landmark `<section class="border-line py-24">` rendering section `ZeroPact .` with copy *"Deeptech / Climate data intelligence"*, asset references (`zeropact-logotype.png`, `climate-data-landscape-light-CJil...`, `climate-data-landscape-digital-B-...`, `wired_logo.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.bg-paper> — `Product footprints, green claims a`)**:
+   - Landmark `<section class="bg-paper py-24">` framing `Product footprints, green claims and transport em...` and `Environmental intelligence, built into your platf...` (*"From climate data to decisions."*) with `#000000` surface cards, `#4d67fc` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.border-line> — `https://zeropact.co`)**:
+   - Landmark `<footer class="border-line bg-ink">` anchoring `ZeroPact · LCA, Product Carbon F` footer links (`Explore · Intelligence ▾ · Product · Mobility · Platform & APIs`), copy *"Audit-grade AI intelligence that transforms complex environm"*, and `#ffda76` structural dividers.

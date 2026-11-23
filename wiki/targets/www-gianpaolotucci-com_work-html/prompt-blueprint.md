@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-gianpaolotucci-com_work-html"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-gianpaolotucci-com_work-html"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#BEB9AC`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1f2bd6`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-gianpaolotucci-com_work-html
 
 > **Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences** (https://www.gianpaolotucci.com/work.html) — Gianpaolo Tucci is a Berlin-based creative director and experience design director shaping AI-native products, luxury digital experiences...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences** (`https://www.gianpaolotucci.com/work.html`). Gianpaolo Tucci is a Berlin-based creative director and experience design director shaping AI-native products, luxury digital experiences...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#BEB9AC`)**.
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1f2bd6`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#F5F1E7` (`var(--paper)` in `:root`) paired with `#0D0D0C` primary typography and `#BEB9AC` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Mono` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Doto` and `DM Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `819px` container bounds (`gap: 14px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0c` primary typography and `#1f2bd6` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Instrument Sans` and `DM Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `819px` extracted from `www-gianpaolotucci-com_work-html` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `14px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `22px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 819px`, `gap: 14px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:819px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:820px)`.
 
@@ -48,15 +52,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#B
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#F5F1E7` | `var(--paper)` in `:root` |
-| **Primary Typography Ink** | `#0D0D0C` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#6F6B62` | `var(--mute)` in `:root` |
-| **Interactive Accent / Highlight** | `#BEB9AC` | `var(--faint)` in `:root` |
-| **Secondary / Muted Copy** | `#1F2BD6` | `var(--accent)` in `:root` |
-| **Structural Hairline Border** | `#F8F5EE` | `var(--sheet)` in `:root` |
-| **Variable Token (`--go`)** | `#13A35E` | `var(--go)` in `:root` |
+| **Primary Canvas Substrate** | `#f5f1e7` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0d0d0c` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fbf9f4` | `.tcard { background: #fbf9f4 }` |
+| **Interactive Accent / Highlight** | `#1f2bd6` | `var(--accent)` in `:root` |
+| **Secondary / Muted Copy** | `#ffffff` | `.cbar button { color: #ffffff }` |
+| **Structural Hairline Border** | `#d5d1c8` | `.pst::before { border: #d5d1c8 }` |
+| **Variable Token (`--mute`)** | `#6f6b62` | `var(--mute)` in `:root` |
+| **Variable Token (`--faint`)** | `#beb9ac` | `var(--faint)` in `:root` |
+| **Variable Token (`--sheet`)** | `#f8f5ee` | `var(--sheet)` in `:root` |
+| **Variable Token (`--go`)** | `#13a35e` | `var(--go)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,15 +90,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#B
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `DM Mono`.
-- **Primary Body Stack**: `Doto`.
+- **Display Typography**: `Instrument Sans`.
+- **Primary Body Stack**: `Instrument Sans`.
 - **Technical / Metadata Stack**: `DM Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`).
-- **Body Copy**: rule `p` (`font-size: 17px`, `line-height: 1.5`).
-- **Metadata & Navigation Labels**: CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 17px`, `line-height: 1.5`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 11px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 0.22px`); CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`).
 
 ---
 
@@ -111,40 +118,59 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#B
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Gianpaolo Tucci — Creative Director, Berli │
 │ ====================================================================== │
-│ [ <header.idx-head>        | Overview · Index · Archive · About · C ]  │
+│ [ <header.idx-head> (1376x150px)      | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sr-only>                                    |   │
-│ | H1: Gianpaolo Tucci — Creative Director, Berlin                  |   │
-│ | Substrate: #F5F1E7    | Ink: #0D0D0C    | Accent: #BEB9AC        |   │
+│ | HERO STAGE: <section.sr-only> (w=1440px)                           | │
+│ | H1: Gianpaolo Tucci — Creative Director, Berlin                    | │
+│ | Substrate: #f5f1e7 | Ink: #0d0d0c | Accent: #1f2bd6                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.boot>            ) max-w: 819px          |   │
+│ | SHOWCASE GRID (<section.boot>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Selected work                |  | Versace Biggies              | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 14px  ) | │
-│ | [<header.idx-head>] -> [<section.sr-only>] -> [<section.boot>] |     │
+│ | DETAIL MODULE (<section.col>) — Moncler City of Geniu              | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.lcol>         ) | https://www.gianpaolotucci.com/wor │
+│ [ FOOTER (<footer.lcol>       ) | https://www.gianpaolotucci.com/work  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 22px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.idx-head>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.sr-only>) — 390px Vertical Lead               | │
+│ | H1: Gianpaolo Tucci — Creative Director, Berlin                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.boot>) — 1-Col Stack                      | │
+│ | [ Item 1: Selected work                                          ] | │
+│ | [ Item 2: Versace Biggies                                        ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.col>) — 1-Col (Moncler City of Ge)          | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.lcol>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.idx-head> — `www-gianpaolotucci-com_work-html`)**:
-   - Landmark `<header class="idx-head">` hosting `Gianpaolo Tucci — Creative Director,` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-go="work"`, `data-go="index"`, `data-go="about"`, `data-go="contact"`), and stylesheet rule `body { height:100% }`.
+   - Landmark `<header class="idx-head">` (`1376x150px`) hosting `Gianpaolo Tucci — Creative Director,` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-go="work"`, `data-go="index"`, `data-go="about"`, `data-go="contact"`), and stylesheet rule `body { height:100% }`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `Gianpaolo Tucci — Creative Directo`)**:
-   - Landmark `<section class="sr-only">` presenting display lead `Gianpaolo Tucci — Creative Director, Berlin` and copy excerpt *"Gianpaolo Tucci is a Berlin-based creative director and experienc"* over `#F5F1E7` canvas and `#0D0D0C` ink.
+   - Landmark `<section class="sr-only">` presenting display lead `Gianpaolo Tucci — Creative Director, Berlin` and copy excerpt *"Gianpaolo Tucci is a Berlin-based creative director and experienc"* over `#f5f1e7` canvas and `#0d0d0c` ink.
 3. **Primary Showcase & Content Grid (<section.boot> — `Selected work`)**:
    - Landmark `<section class="boot">` rendering section `Selected work` with copy *"This is not a portfolio. This is a timeline of a shift."*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `button { font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poi... }`.
 4. **Interactive Detail & Feature Matrix (<section.col> — `Versace Biggies`)**:
-   - Landmark `<section class="col">` framing `Versace Biggies` and `Moncler City of Genius` (*"Versace Biggies 2024 · Creative direction · Global campaign. One "*) with `#6F6B62` surface cards, `#BEB9AC` accents, and `img { max-width:100% }`.
+   - Landmark `<section class="col">` framing `Versace Biggies` and `Moncler City of Genius` (*"Versace Biggies 2024 · Creative direction · Global campaign. One "*) with `#fbf9f4` surface cards, `#1f2bd6` accents, and `img { max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.lcol> — `https://www.gianpaolotucci.com/work.html`)**:
-   - Landmark `<footer class="lcol">` anchoring `Gianpaolo Tucci — Creative Direc` footer links (`Overview · Index · Archive · About · Contact`), copy *"2024 · Creative direction · Global campaign. One campaign ac"*, and `#F8F5EE` structural dividers.
+   - Landmark `<footer class="lcol">` anchoring `Gianpaolo Tucci — Creative Direc` footer links (`Overview · Index · Archive · About · Contact`), copy *"2024 · Creative direction · Global campaign. One campaign ac"*, and `#d5d1c8` structural dividers.
 
 ---
 
@@ -156,19 +182,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#B
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-gianpaolotucci-com_work-html` (**Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences** — `https://www.gianpaolotucci.com/work.html`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#F5F1E7` / `#BEB9AC`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1f2bd6`).
 - **Identity & Domain Context**: Gianpaolo Tucci is a Berlin-based creative director and experience design director shaping AI-native products, luxury digital experiences...
-- **Primary Substrate**: `#F5F1E7` (`var(--paper)` in `:root`), **Primary Ink**: `#0D0D0C`, **Accent / Highlight**: `#BEB9AC`.
+- **Primary Substrate**: `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0d0d0c`, **Accent / Highlight**: `#1f2bd6`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#F5F1E7` (`var(--paper)` in `:root`) paired with `#0D0D0C` primary typography and `#BEB9AC` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Mono` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Doto` and `DM Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `819px` container bounds (`gap: 14px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0c` primary typography and `#1f2bd6` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Instrument Sans` and `DM Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-gianpaolotucci-com_work-html` in your global stylesheet:
 
 :root {
-  /* Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences (www-gianpaolotucci-com_work-html) — Ground-Truth Extracted CSS Variables */
+  /* Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences (www-gianpaolotucci-com_work-html) — Live-Grounded CSS Variables */
   --paper: #F5F1E7; /* Canvas / Surface Token (www-gianpaolotucci-com_work-html) */
   --ink: #0D0D0C; /* Typography Ink Token (www-gianpaolotucci-com_work-html) */
   --mute: #6F6B62; /* Color / Atmospheric Token (www-gianpaolotucci-com_work-html) */
@@ -189,50 +215,53 @@ Declare and consume these exact custom properties extracted from `www-gianpaolot
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#F5F1E7` — grounded in `var(--paper)` in `:root`
-- **Primary Typography Ink**: `#0D0D0C` — grounded in `var(--ink)` in `:root`
-- **Elevated Surface / Card Substrate**: `#6F6B62` — grounded in `var(--mute)` in `:root`
-- **Interactive Accent / Highlight**: `#BEB9AC` — grounded in `var(--faint)` in `:root`
-- **Secondary / Muted Copy**: `#1F2BD6` — grounded in `var(--accent)` in `:root`
-- **Structural Hairline Border**: `#F8F5EE` — grounded in `var(--sheet)` in `:root`
-- **Variable Token (`--go`)**: `#13A35E` — grounded in `var(--go)` in `:root`
+- **Primary Canvas Substrate**: `#f5f1e7` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0d0d0c` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fbf9f4` — grounded in `.tcard { background: #fbf9f4 }`
+- **Interactive Accent / Highlight**: `#1f2bd6` — grounded in `var(--accent)` in `:root`
+- **Secondary / Muted Copy**: `#ffffff` — grounded in `.cbar button { color: #ffffff }`
+- **Structural Hairline Border**: `#d5d1c8` — grounded in `.pst::before { border: #d5d1c8 }`
+- **Variable Token (`--mute`)**: `#6f6b62` — grounded in `var(--mute)` in `:root`
+- **Variable Token (`--faint`)**: `#beb9ac` — grounded in `var(--faint)` in `:root`
+- **Variable Token (`--sheet`)**: `#f8f5ee` — grounded in `var(--sheet)` in `:root`
+- **Variable Token (`--go`)**: `#13a35e` — grounded in `var(--go)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `819px` extracted from `www-gianpaolotucci-com_work-html` stylesheet
-- **Padding & Gutters**: `16px` lateral canvas padding with `14px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 819px`, `gap: 14px`)
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `16px` lateral canvas padding with `22px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
 - **Media Queries**: `@media (max-width:819px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:820px)`
 - **Corner Radii**: `999px`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `DM Mono`
-- **Body Font Stack**: `Doto`
+- **Display Font Stack**: `Instrument Sans`
+- **Body Font Stack**: `Instrument Sans`
 - **Monospace / Technical Font Stack**: `DM Mono`
-- **H1 Display Rule**: CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`)
-- **H2 Section Rule**: rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`)
-- **Body Copy Rule**: rule `p` (`font-size: 17px`, `line-height: 1.5`)
-- **Metadata & Index Rule**: CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 17px`, `line-height: 1.5`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 11px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 0.22px`); CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-gianpaolotucci-com_work-html` (`Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.idx-head> — `www-gianpaolotucci-com_work-html`)**:
-   - DOM & Selectors: Landmark `<header class="idx-head">` hosting `Gianpaolo Tucci — Creative Director,` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-go="work"`, `data-go="index"`, `data-go="about"`, `data-go="contact"`), and stylesheet rule `body { height:100% }`.
+   - DOM & Selectors: Landmark `<header class="idx-head">` (`1376x150px`) hosting `Gianpaolo Tucci — Creative Director,` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-go="work"`, `data-go="index"`, `data-go="about"`, `data-go="contact"`), and stylesheet rule `body { height:100% }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.idx-head> — `www-gianpaolotucci-com_work-html`)` (`www-gianpaolotucci-com_work-html`) adapts across `@media (max-width:819px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:820px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.77,0,.18,1)`, `cubic-bezier(.34,1.56,.64,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `Gianpaolo Tucci — Creative Directo`)**:
-   - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `Gianpaolo Tucci — Creative Director, Berlin` and copy excerpt *"Gianpaolo Tucci is a Berlin-based creative director and experienc"* over `#F5F1E7` canvas and `#0D0D0C` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#F5F1E7` background with `#0D0D0C` headline `Gianpaolo Tucci — Creative Director, Berlin`.
+   - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `Gianpaolo Tucci — Creative Director, Berlin` and copy excerpt *"Gianpaolo Tucci is a Berlin-based creative director and experienc"* over `#f5f1e7` canvas and `#0d0d0c` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f5f1e7` background with `#0d0d0c` headline `Gianpaolo Tucci — Creative Director, Berlin`.
 3. **Primary Showcase & Content Grid (<section.boot> — `Selected work`)**:
    - DOM & Selectors: Landmark `<section class="boot">` rendering section `Selected work` with copy *"This is not a portfolio. This is a timeline of a shift."*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `button { font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poi... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.boot> — `Selected work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 819px`, `gap: 14px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.boot> — `Selected work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.col> — `Versace Biggies`)**:
-   - DOM & Selectors: Landmark `<section class="col">` framing `Versace Biggies` and `Moncler City of Genius` (*"Versace Biggies 2024 · Creative direction · Global campaign. One "*) with `#6F6B62` surface cards, `#BEB9AC` accents, and `img { max-width:100% }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.col> — `Versace Biggies`)` uses `999px`, `50%` radii, `#BEB9AC` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
+   - DOM & Selectors: Landmark `<section class="col">` framing `Versace Biggies` and `Moncler City of Genius` (*"Versace Biggies 2024 · Creative direction · Global campaign. One "*) with `#fbf9f4` surface cards, `#1f2bd6` accents, and `img { max-width:100% }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.col> — `Versace Biggies`)` uses `999px`, `50%` radii, `#1f2bd6` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.lcol> — `https://www.gianpaolotucci.com/work.html`)**:
-   - DOM & Selectors: Landmark `<footer class="lcol">` anchoring `Gianpaolo Tucci — Creative Direc` footer links (`Overview · Index · Archive · About · Contact`), copy *"2024 · Creative direction · Global campaign. One campaign ac"*, and `#F8F5EE` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lcol> — `https://www.gianpaolotucci.com/work.html`)` aligns to `819px` extracted from `www-gianpaolotucci-com_work-html` stylesheet with `16px` lateral canvas padding with `14px` grid gap and attributes (data-go="work", data-go="index", data-go="about").
+   - DOM & Selectors: Landmark `<footer class="lcol">` anchoring `Gianpaolo Tucci — Creative Direc` footer links (`Overview · Index · Archive · About · Contact`), copy *"2024 · Creative direction · Global campaign. One campaign ac"*, and `#d5d1c8` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lcol> — `https://www.gianpaolotucci.com/work.html`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `16px` lateral canvas padding with `22px` grid gap and attributes (data-go="work", data-go="index", data-go="about").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Gianpaolo Tucci is a Berlin-based creative director and experience design director..."*

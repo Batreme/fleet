@@ -1,67 +1,79 @@
+---
+title: "UI & UX Architecture: montarville-ca"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: montarville-ca
 
 ## Overview & Design Identity
 - **Target**: `montarville-ca` (**montarville · Une approche globale et intégrée dans la gestion de vos pr...**)
 - **Production URL**: [https://montarville.ca/](https://montarville.ca/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#fafafa` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#121212` canvas, `#fafafa` ink, `#d0112b` accent)
 - **Summary**: Un partenaire engagé. Une expertise reconnue. Une exécution maîtrisée. - Une approche globale et intégrée dans la gestion de vos projets...
-- **Total Clean CSS Variables Extracted**: `89` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `89` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `General Sans`
-- **Body Font Stack**: `Sono`
+- **Body Font Stack**: `General Sans`
 - **Monospace / Technical Font Stack**: `Fira Sans`
-- **Hero Display (`H1`)**: CSS variables `--font-size-h1: calc(128 / var(--base-px, 18) * 1rem)`; rule `h1` (`font-size: var(--font-size-h1)`, `line-height: 1em`, `font-weight: 600`)
-- **Section Heading (`H2`)**: CSS variables `--font-size-h2-xl: calc(96 / var(--base-px, 18) * 1rem)`, `--font-size-h2: calc(72 / var(--base-px, 18) * 1rem)`; rule `h2` (`font-size: var(--font-size-h2-xl)`, `line-height: 1.02em`, `font-weight: 600`)
-- **Body Copy**: CSS variables `--font-size-body-lg: calc(24 / var(--base-px, 18) * 1rem)`, `--font-size-body: max(14px, calc(18 / var(--base-px, 18) * 1rem))`, `--font-size-body-sm: max(13px, calc(16 / var(--base-px, 18) * 1rem))`; rule `p` (`font-size: 1rem`)
-- **Metadata & Labels**: CSS variables `--font-size-caption: max(12px, calc(14 / var(--base-px, 18) * 1rem))`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 36px`, `line-height: 39.6px`, `font-weight: 600`); CSS variables `--font-size-h1: calc(128 / var(--base-px, 18) * 1rem)`; rule `h1` (`font-size: var(--font-size-h1)`, `line-height: 1em`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 96px`, `line-height: 96px`, `font-weight: 600`); CSS variables `--font-size-h2-xl: calc(96 / var(--base-px, 18) * 1rem)`, `--font-size-h2: calc(72 / var(--base-px, 18) * 1rem)`; rule `h2` (`font-size: var(--font-size-h2-xl)`, `line-height: 1.02em`, `font-weight: 600`)
+- **Body Copy**: live computed `body` (`font-size: 13.5px`, `line-height: 13.5px`, `font-weight: 400`); CSS variables `--font-size-body-lg: calc(24 / var(--base-px, 18) * 1rem)`, `--font-size-body: max(14px, calc(18 / var(--base-px, 18) * 1rem))`, `--font-size-body-sm: max(13px, calc(16 / var(--base-px, 18) * 1rem))`; rule `p` (`font-size: 1rem`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 13.5px`, `line-height: 13.5px`, `font-weight: 400`); CSS variables `--font-size-caption: max(12px, calc(14 / var(--base-px, 18) * 1rem))`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--ff_wp_tracking_background_color)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--ff_wp_tracking_text_color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#191919` | `var(--color-bg)` in `:root` |
-| **Interactive Accent / Highlight** | `#fafafa` | `var(--color-text)` in `:root` |
-| **Secondary / Muted Copy** | `#d0112b` | `var(--ff_banner_bg_color)` in `:root` |
-| **Structural Hairline Border** | `#121212` | `var(--color-link)` in `:root` |
+| **Primary Canvas Substrate** | `#121212` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#fafafa` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#d0112b` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#d0112b` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#000000` | `var(--ff_wp_tracking_text_color)` in `:root` |
+| **Structural Hairline Border** | `#090909` | `var(--ff_wp_tracking_border_color)` in `:root` (`rgb(0 0 0 / 50%)`) |
+| **Variable Token (`--ff_wp_tracking_background_color`)** | `#ffffff` | `var(--ff_wp_tracking_background_color)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--fa-animation-direction` | `reverse` | Motion / Easing Token |
-| `--fa-style-family-brands` | `"Font Awesome 6 Brands"` | Brand / Palette Token |
-| `--fa-font-brands` | `normal 400 1em/1 "Font Awesome 6 Brands"` | Brand / Palette Token |
-| `--fa-font-regular` | `normal 400 1em/1 "Font Awesome 6 Free"` | Typography / Scale Token |
-| `--fa-style-family-classic` | `"Font Awesome 6 Free"` | Typography / Scale Token |
-| `--fa-font-solid` | `normal 900 1em/1 "Font Awesome 6 Free"` | Typography / Scale Token |
 | `--ff_wp_tracking_ease` | `cubic-bezier(0.25, 1, 0.5, 1)` | Typography / Scale Token |
 | `--ff_wp_tracking_border_color` | `rgb(0 0 0 / 50%)` | Brand / Palette Token |
 | `--ff_wp_tracking_background_color` | `#fff` | Canvas / Surface Token |
 | `--ff_wp_tracking_text_color` | `#000` | Typography Ink Token |
 | `--ff_wp_tracking_wrapper_padding` | `1.5rem` | Typography / Scale Token |
 | `--ff_wp_tracking_dynamic-viewport-height` | `100vh` | Typography / Scale Token |
+| `--fa-style-family-brands` | `"Font Awesome 6 Brands"` | Brand / Palette Token |
+| `--fa-font-brands` | `normal 400 1em/1 "Font Awesome 6 Brands"` | Brand / Palette Token |
+| `--fa-font-regular` | `normal 400 1em/1 "Font Awesome 6 Free"` | Typography / Scale Token |
+| `--fa-style-family-classic` | `"Font Awesome 6 Free"` | Typography / Scale Token |
+| `--fa-font-solid` | `normal 900 1em/1 "Font Awesome 6 Free"` | Typography / Scale Token |
 | `--font-size-h1` | `calc(128 / var(--base-px, 18) * 1rem)` | Typography / Scale Token |
 | `--font-size-h2-xl` | `calc(96 / var(--base-px, 18) * 1rem)` | Typography / Scale Token |
 | `--font-size-h2` | `calc(72 / var(--base-px, 18) * 1rem)` | Typography / Scale Token |
 | `--font-size-h3` | `calc(48 / var(--base-px, 18) * 1rem)` | Typography / Scale Token |
+| `--font-size-h4` | `calc(32 / var(--base-px, 18) * 1rem)` | Typography / Scale Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.c-header> — `montarville-ca`)**:
-   - Landmark `<header class="c-header">` hosting `montarville · Une approche globale e` navigation (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), DOM attributes (`data-browser="Chrome"`, `data-browser-version="124.0.0.0"`, `data-platform="Apple"`, `data-os="Mac OS"`), and stylesheet rule `.fa { font-family:var(--fa-style-family,"Font Awesome 6 Free");font-weight:var... }`.
-2. **Hero Stage & Focal Lead (<section.c-home-intro> — `Un partenaire engagé . Une experti`)**:
-   - Landmark `<section class="c-home-intro">` presenting display lead `Un partenaire engagé . Une expertise reconnue. Un...` and copy excerpt *"Accéder au contenu principal"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.c-home-about> — `Partenaire de vos réussites`)**:
-   - Landmark `<section class="c-home-about">` rendering section `Partenaire de vos réussites` with copy *"Expertises Découvrir Gestion de construction Projets forfaitaires"*, asset references (`orphisme_photographie_20210816-_2...`, `favicon.ico`, `FiraSans-Bold.woff2`, `GeneralSans-Variable.woff2`), and grid rule `.fas { font-family:"Font Awesome 6 Free" }`.
-4. **Interactive Detail & Feature Matrix (<section.c-home-target> — `Vous êtes...`)**:
-   - Landmark `<section class="c-home-target">` framing `Vous êtes...` and `Architecte, designer, ou ingénieur?` (*"Gestion de construction"*) with `#191919` surface cards, `#fafafa` accents, and `.fab { font-family:"Font Awesome 6 Brands" }`.
+   - Landmark `<header class="c-header">` (`1440x0px`) hosting `montarville · Une approche globale e` navigation (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), DOM attributes (`data-browser="Chrome"`, `data-browser-version="131.0.0.0"`, `data-platform="Apple"`, `data-os="Mac OS"`), and stylesheet rule `admin-bar-ff-maintenance-mode.--a... { background-color:8b0000 }`.
+2. **Hero Stage & Focal Lead (<section.c-home-intro> — `Un partenaire engagé. Une expertis`)**:
+   - Landmark `<section class="c-home-intro">` presenting display lead `Un partenaire engagé. Une expertise reconnue. Une...` and copy excerpt *"Une approche globale et intégrée dans la gestion de vos projets d"* over `#121212` canvas and `#fafafa` ink.
+3. **Primary Showcase & Content Grid (<section.c-home-about> — `Un partenaire engagé . Une experti`)**:
+   - Landmark `<section class="c-home-about">` rendering section `Un partenaire engagé . Une expertise reconnue. Un...` with copy *"Que vous soyez au stade de la planification, à la recherche d’un "*, asset references (`orphisme_photographie_20210816-_2...`, `favicon.ico`, `FiraSans-Bold.woff2`, `GeneralSans-Variable.woff2`), and grid rule `.ff-wp-maintenance-page { color:00f!important }`.
+4. **Interactive Detail & Feature Matrix (<section.c-home-target> — `Partenaire de vos réussites`)**:
+   - Landmark `<section class="c-home-target">` framing `Partenaire de vos réussites` and `Vous êtes...` (*"montarville . se distingue par sa capacité à offrir un service in"*) with `#d0112b` surface cards, `#d0112b` accents, and `.ff-wp-tracking h3 { font-size:1.6rem }`.
 5. **Colophon & Global Directory Footer (<footer.c-footer> — `https://montarville.ca/`)**:
-   - Landmark `<footer class="c-footer">` anchoring `montarville · Une approche globa` footer links (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), copy *"Projets forfaitaires"*, and `#121212` structural dividers.
+   - Landmark `<footer class="c-footer">` anchoring `montarville · Une approche globa` footer links (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), copy *"Ce qui nous différencie, c’est aussi la qualité des relation"*, and `#090909` structural dividers.

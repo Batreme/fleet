@@ -1,34 +1,49 @@
+---
+title: "UI & UX Architecture: www-stellarmanagement-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-stellarmanagement-com
 
 ## Overview & Design Identity
 - **Target**: `www-stellarmanagement-com` (**Stellar Management · NYC Real Estate Developer & No Fee Rentals**)
 - **Production URL**: [https://www.stellarmanagement.com](https://www.stellarmanagement.com)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#181513` ink, `#f5f5f5` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#181513` ink, `#0000ff` accent)
 - **Summary**: Stellar is a leading New York real estate developer and manager providing a wide range of apartments and commercial properties. Browse no...
-- **Total Clean CSS Variables Extracted**: `92` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `General Sans Variable`
-- **Body Font Stack**: `Playfair Display`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--title-xl-size: max(28px,4.4rem)`
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--input-font-size-mob)`, `var(--desc-m-size)`, `var(--swiper-navigation-size)`, `var(--desc-s-size)`, `14px`)
-- **Body Copy**: rule `p` (`font-size: var(--desc-l-size)`, `line-height: 150%`, `letter-spacing: 0`, `font-weight: 500`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--input-font-size-mob)`, `var(--desc-m-size)`, `var(--swiper-navigation-size)`, `var(--desc-s-size)`, `14px`)
+- **Body Font Stack**: `General Sans Variable`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 81px`, `line-height: 72.9px`, `font-weight: 500`, `letter-spacing: -3.24px`); CSS variables `--title-xl-size: max(28px,4.4rem)`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 70.2px`, `line-height: 77.22px`, `font-weight: 500`, `letter-spacing: -2.106px`)
+- **Body Copy**: live computed `body` (`font-size: 9px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: var(--desc-l-size)`, `line-height: 150%`, `letter-spacing: 0`, `font-weight: 500`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 9px`, `line-height: normal`, `font-weight: 500`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--white)` in `:root` |
-| **Primary Typography Ink** | `#181513` | `var(--black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#cdcdcd` | `var(--grey)` in `:root` |
-| **Interactive Accent / Highlight** | `#f5f5f5` | `var(--grey-light)` in `:root` |
-| **Secondary / Muted Copy** | `#9e9e9e` | `var(--grey-medium)` in `:root` |
-| **Structural Hairline Border** | `#727272` | `var(--grey-dark)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#181513` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#808080` | `:before { background: grey }` (`#808080`) |
+| **Interactive Accent / Highlight** | `#0000ff` | `.header-bottom .app-button { color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#808080` | `.app-input .app-input-desc { color: grey }` (`#808080`) |
+| **Structural Hairline Border** | `#0000ff` | `:hover { border-color: #0000ff }` |
+| **Variable Token (`--grey`)** | `#cdcdcd` | `var(--grey)` in `:root` |
+| **Variable Token (`--grey-light`)** | `#f5f5f5` | `var(--grey-light)` in `:root` |
+| **Variable Token (`--grey-medium`)** | `#9e9e9e` | `var(--grey-medium)` in `:root` |
+| **Variable Token (`--grey-dark`)** | `#727272` | `var(--grey-dark)` in `:root` |
 | **Variable Token (`--grey-skeleton`)** | `#ebebeb` | `var(--grey-skeleton)` in `:root` |
 | **Variable Token (`--grey-hover`)** | `#f0f0f0` | `var(--grey-hover)` in `:root` |
 | **Variable Token (`--dark-blue`)** | `#06184f` | `var(--dark-blue)` in `:root` |
@@ -65,12 +80,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `www-stellarmanagement-com`)**:
-   - Landmark `<header class="header">` hosting `Stellar Management · NYC Real Estate` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="page-vw"`, `data-gtag`, `data-v-d3185d1d`, `data-path="/"`), and stylesheet rule `root { --block-width-m:84rem;--search-sidebar-width:30rem }`.
+   - Landmark `<header class="header">` (`1440x63px`) hosting `Stellar Management · NYC Real Estate` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="page-vw"`, `data-gtag`, `data-v-d3185d1d`, `data-path="/"`), and stylesheet rule `root { --block-width-m:84rem;--search-sidebar-width:30rem }`.
 2. **Hero Stage & Focal Lead (<section.first> — `We help New Yorkers find home`)**:
-   - Landmark `<section class="first scroll-locked-fullscreen">` presenting display lead `We help New Yorkers find home` and copy excerpt *"R e n t w i t h u s R e n t w i t h u s"* over `#fff` canvas and `#181513` ink.
-3. **Primary Showcase & Content Grid (<section.block> — `From historic blocks to new develo`)**:
-   - Landmark `<section class="block">` rendering section `From historic blocks to new developments, we crea...` with copy *"R e n t w i t h u s"*, asset references (`entry.BO5l_mVZ.css`, `default.D_u9mJpK.css`, `filterMain.Dy3QUOs1.css`, `appInput.BLk3pTmz.css`), and grid rule `before { background:var(--white)!important }`.
-4. **Interactive Detail & Feature Matrix (<section.neighborhoods> — `Explore our backyard`)**:
-   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `Explore our backyard` and `Where numbers reflect people, places, and purpose` (*"Since 1985, creating, investing, developing & living NYC real est"*) with `#cdcdcd` surface cards, `#f5f5f5` accents, and `focus-within { border-color:var(--dark-blue) }`.
+   - Landmark `<section class="first scroll-locked-fullscreen">` presenting display lead `We help New Yorkers find home` and copy excerpt *"Since 1985, creating, investing, developing & living NYC real est"* over `#ffffff` canvas and `#181513` ink.
+3. **Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)**:
+   - Landmark `<section class="block">` rendering section `We help New Yorkers find h o m e` with copy *"R e n t w i t h u s R e n t w i t h u s"*, asset references (`entry.BO5l_mVZ.css`, `default.D_u9mJpK.css`, `filterMain.Dy3QUOs1.css`, `appInput.BLk3pTmz.css`), and grid rule `before { background:var(--white)!important }`.
+4. **Interactive Detail & Feature Matrix (<section.neighborhoods> — `From h i s t o r i c blocks to n e`)**:
+   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `.tag-word { display:none }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)**:
-   - Landmark `<footer class="footer">` anchoring `Stellar Management · NYC Real Es` footer links (`Overview · Index · Archive · About · Contact`), copy *"Approach The Way We Work, Defines Who We Are"*, and `#727272` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Stellar Management · NYC Real Es` footer links (`Overview · Index · Archive · About · Contact`), copy *"The Way We Work, Defines Who We Are"*, and `#0000ff` structural dividers.

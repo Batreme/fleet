@@ -1,11 +1,22 @@
+---
+title: "UI & UX Architecture: clinia-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: clinia-com
 
 ## Overview & Design Identity
 - **Target**: `clinia-com` (**Patient Context for Healthcare AI · Clinia**)
 - **Production URL**: [https://clinia.com](https://clinia.com)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#ff5c00`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#785d24`)
 - **Summary**: Fragmented health data breaks AI. Clinia reconciles it into graph-based context so your healthcare AI agents stay reliable and support op...
-- **Total Clean CSS Variables Extracted**: `231` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `309` (curated live-grounded set below)
 
 ---
 
@@ -13,22 +24,25 @@
 - **Display Font Stack**: `NaN Serf B Text`
 - **Body Font Stack**: `Circular XX`
 - **Monospace / Technical Font Stack**: `Circular XX Mono`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `18px`)
-- **Section Heading (`H2`)**: CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`)
-- **Body Copy**: CSS variables `--ff-body: Circular XX,sans-serif`, `--body-text-color: light-dark(var(--color-primary),var(--color-white))`, `--body-bg-color: light-dark(var(--color-white),var(--gray-900))`
-- **Metadata & Labels**: CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__color: currentColor!important`, `--hsf-default-field-label__font-family: Circular XX,sans-serif!important`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 350`, `letter-spacing: -1.12px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 44px`, `font-weight: 350`, `letter-spacing: -0.8px`); CSS variables `--has-subtitle: 0`, `--subtitle-height: 0px`; rule `h2` (`font-size: 22px`, `line-height: 1.1`)
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-body: Circular XX,sans-serif`, `--paragraph-height: 0px`; rule `p` (`font-size: inherit`, `font-weight: inherit`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 22.5px`, `font-weight: 400`); CSS variables `--ff-mono: Circular XX Mono,monospace`, `--hsf-default-field-label__font-family: Helvetica`, `--hsf-default-field-label__font-size: 1em`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#1a1a1e` | `var(--color-primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#ff5c00` | `var(--color-secondary)` in `:root` |
-| **Secondary / Muted Copy** | `#cca44f` | `var(--color-noble)` in `:root` |
-| **Structural Hairline Border** | `#95795c` | `var(--color-trust)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1a1a1e` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ebf0f5` | `.hsfc-Step .hsfc-Step__Banner { background-color: #ebf0f5 }` |
+| **Interactive Accent / Highlight** | `#785d24` | `.btn.--tag.--tag-noble { color: #785d24 }` |
+| **Secondary / Muted Copy** | `#ff5c00` | `var(--color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#cccccc` | `var(--hsf-default-datepicker__border-color)` in `:root` |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
+| **Variable Token (`--color-noble`)** | `#cca44f` | `var(--color-noble)` in `:root` |
+| **Variable Token (`--color-trust`)** | `#95795c` | `var(--color-trust)` in `:root` |
 | **Variable Token (`--color-trust-dark`)** | `#53402c` | `var(--color-trust-dark)` in `:root` |
 | **Variable Token (`--color-remedy`)** | `#fcf8ef` | `var(--color-remedy)` in `:root` |
 | **Variable Token (`--color-remedy-dark`)** | `#ecd9b9` | `var(--color-remedy-dark)` in `:root` |
@@ -63,12 +77,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `clinia-com`)**:
-   - Landmark `<header class="site-header position-fixed">` hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-wp-strategy="async"`, `data-site-loader`, `data-site-transition`), and stylesheet rule `webkit-scrollbar { display:none }`.
+   - Landmark `<header class="site-header position-fixed">` (`1425x900px`) hosting `Patient Context for Healthcare AI · ` navigation (`Documentation · Changelog · Blog · Trust Center · About us`), DOM attributes (`data-env="production"`, `data-leadin-portal-id="8816539"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`), and stylesheet rule `webkit-scrollbar { display:none }`.
 2. **Hero Stage & Focal Lead (<main.flex-grow-1> — `Health data, turned into a patient`)**:
-   - Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"Product Clinia Context Engine Product A health-specific context l"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<main.flex-grow-1> — `Engineered for AI agents in missio`)**:
-   - Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Clinia Context Engine"*, asset references (`humans.txt`, `xmlrpc.php`, `gtm.js`, `embed`), and grid rule `active { cursor:grabbing }`.
-4. **Interactive Detail & Feature Matrix (<main.flex-grow-1> — `Health-native`)**:
-   - Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Product A health-specific context layer that sits between patient"*) with `#1a1a1e` surface cards, `#ff5c00` accents, and `blossom-dots>blossom-dot { display:none }`.
+   - Landmark `<main class="flex-grow-1">` presenting display lead `Health data, turned into a patient story` and copy excerpt *"PATIENT CONTEXT FOR HEALTHCARE AI"* over `#ffffff` canvas and `#1a1a1e` ink.
+3. **Primary Showcase & Content Grid (<main.flex-grow-1:nth(2)> — `Engineered for AI agents in missio`)**:
+   - Landmark `<main class="flex-grow-1">` rendering section `Engineered for AI agents in mission-critical heal...` with copy *"Patient Context for Healthcare AI"*, asset references (`humans.txt`, `xmlrpc.php`, `collectedforms.js`, `banner.js`), and grid rule `active { cursor:grabbing }`.
+4. **Interactive Detail & Feature Matrix (<main.flex-grow-1:nth(3)> — `Health-native`)**:
+   - Landmark `<main class="flex-grow-1">` framing `Health-native` and `Evaluation-first` (*"Assemble and serve the right context to your agents, so every run"*) with `#ebf0f5` surface cards, `#785d24` accents, and `blossom-dots>blossom-dot { display:none }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://clinia.com`)**:
-   - Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"A health-specific context layer that sits between patient da"*, and `#95795c` structural dividers.
+   - Landmark `<footer class="site-footer container-fluid">` anchoring `Patient Context for Healthcare A` footer links (`Documentation · Changelog · Blog · Trust Center · About us`), copy *"Built for frontier teams, trusted by ambitious builders"*, and `#cccccc` structural dividers.

@@ -1,67 +1,82 @@
+---
+title: "UI & UX Architecture: opportunity-waltonfamilyfoundation-org"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: opportunity-waltonfamilyfoundation-org
 
 ## Overview & Design Identity
 - **Target**: `opportunity-waltonfamilyfoundation-org` (**Access to Opportunity: Gallup Research · Walton Family Foundation**)
 - **Production URL**: [https://opportunity.waltonfamilyfoundation.org/](https://opportunity.waltonfamilyfoundation.org/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#12110e`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e7e72b`)
 - **Summary**: Explore Walton Family Foundation and Gallup research on opportunity. See how investments in education, nature, and communities help oppor...
-- **Total Clean CSS Variables Extracted**: `73` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `74` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Serrif`
-- **Body Font Stack**: `Serrif Fallback`
-- **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--tw-fluid-clamp-min_18_75-cl...`, `var(--tw-fluid-clamp-min_31_5-cla...`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--tw-fluid-clamp-min_18_75-cl...`, `var(--tw-fluid-clamp-min_31_5-cla...`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `var(--tw-fluid-clamp-min_18_75-cl...`, `var(--tw-fluid-clamp-min_31_5-cla...`)
-- **Metadata & Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`
+- **Display Font Stack**: `SerrifCompressed`
+- **Body Font Stack**: `Apple Color Emoji`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 212.543px`, `line-height: 191.289px`, `font-weight: 400`, `letter-spacing: -3.825px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 39.485px`, `line-height: 47.382px`, `font-weight: 400`, `letter-spacing: -0.79px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#e7e72b` | `var(--highlight)` in `:root` |
-| **Interactive Accent / Highlight** | `#12110e` | `var(--foreground)` in `:root` |
-| **Secondary / Muted Copy** | `#5f8763` | `var(--green)` in `:root` |
-| **Structural Hairline Border** | `#337c83` | `var(--teal)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#12110e` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `.bg-yellow { background-color: yellow }` (`#ffff00`) |
+| **Interactive Accent / Highlight** | `#e7e72b` | `var(--highlight)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | `.text-grey { color: grey }` (`#808080`) |
+| **Structural Hairline Border** | `#ff7f7f` | `50 { border-color: #ff7f7f }` |
+| **Variable Token (`--green`)** | `#5f8763` | `var(--green)` in `:root` |
+| **Variable Token (`--teal`)** | `#337c83` | `var(--teal)` in `:root` |
+| **Variable Token (`--blue`)** | `#5a7580` | `var(--blue)` in `:root` |
+| **Variable Token (`--yellow`)** | `#cb9a56` | `var(--yellow)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--font-sans` | `var(--font-sans)` | Typography / Scale Token |
-| `--color-black` | `#000` | Canvas / Surface Token |
-| `--color-white` | `#fff` | Canvas / Surface Token |
-| `--text-xs` | `.75rem` | Typography Ink Token |
-| `--text-xs--line-height` | `calc(1 / .75)` | Typography Ink Token |
-| `--font-weight-bold` | `700` | Typography / Scale Token |
-| `--radius-lg` | `.5rem` | Elevation / Border Token |
-| `--radius-xl` | `.75rem` | Elevation / Border Token |
-| `--ease-out` | `cubic-bezier(0, 0, .2, 1)` | Motion / Easing Token |
-| `--default-transition-duration` | `.15s` | Motion / Easing Token |
-| `--default-transition-timing-function` | `cubic-bezier(.4, 0, .2, 1)` | Motion / Easing Token |
-| `--default-font-family` | `var(--font-sans)` | Typography / Scale Token |
-| `--default-mono-font-family` | `var(--font-mono)` | Typography / Scale Token |
-| `--color-white-100` | `var(--white-100)` | Canvas / Surface Token |
-| `--font-serrif-compressed` | `var(--font-serrif-compressed)` | Typography / Scale Token |
-| `--font-serrif` | `var(--font-serrif)` | Typography / Scale Token |
+| `--z-footer` | `10` | Elevation / Border Token |
+| `--z-main` | `20` | Elevation / Border Token |
+| `--z-header` | `30` | Layout / Spatial Grid Token |
+| `--z-context-cta` | `300` | Typography Ink Token |
+| `--z-progress-bar` | `400` | Elevation / Border Token |
+| `--z-menu-mask` | `500` | Elevation / Border Token |
+| `--z-menu` | `600` | Elevation / Border Token |
+| `--z-menu-button` | `700` | Elevation / Border Token |
+| `--z-image-scatter` | `200` | Elevation / Border Token |
+| `--z-cinematic-scroll` | `100` | Elevation / Border Token |
+| `--background` | `#fff` | Canvas / Surface Token |
+| `--foreground` | `#12110e` | Typography Ink Token |
+| `--green` | `#5f8763` | Color / Atmospheric Token |
+| `--teal` | `#337c83` | Color / Atmospheric Token |
+| `--blue` | `#5a7580` | Color / Atmospheric Token |
+| `--yellow` | `#cb9a56` | Color / Atmospheric Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.is-loading> — `opportunity-waltonfamilyfoundation-org`)**:
-   - Landmark `<header class="is-loading">` hosting `Access to Opportunity: Gallup Resear` navigation (`Privacy Policy · Terms of Use`), DOM attributes (`data-precedence="next"`, `data-lenis-prevent="true"`, `data-menu-background="true"`, `data-menu-link="true"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.antialiased> — `Where opportunity takes root`)**:
-   - Landmark `<section class="antialiased">` presenting display lead `Where opportunity takes root` and copy excerpt *"01 Where Opportunity Takes Root The vision behind our work"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.lenis> — `Opportunity enables people to fulf`)**:
-   - Landmark `<section class="lenis">` rendering section `Opportunity enables people to fulfill their highe...` with copy *"Where Opportunity Takes Root The vision behind our work"*, asset references (`0okt1rwt07m_z.css`, `0ji28_e_~fdtg.js`, `0nz2u-qe8z68i.js`, `0yjw-7sa79pfd.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.lenis-stopped> — `What does opportunity mean today? `)**:
-   - Landmark `<section class="lenis-stopped">` framing `What does opportunity mean today? What does oppor...` and `Lets go deeper... Lets go deeper...` (*"Where Opportunity Takes Root"*) with `#e7e72b` surface cards, `#12110e` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.fixed> — `https://opportunity.waltonfamilyfoundation.org/`)**:
-   - Landmark `<footer class="fixed inset-x-0">` anchoring `Access to Opportunity: Gallup Re` footer links (`Privacy Policy · Terms of Use`), copy *"The vision behind our work"*, and `#337c83` structural dividers.
+1. **Brand Header & Navigation Bar (<header.antialiased> — `opportunity-waltonfamilyfoundation-org`)**:
+   - Landmark `<header class="antialiased">` (`1440x0px`) hosting `Access to Opportunity: Gallup Resear` navigation (`Privacy Policy · Terms of Use`), DOM attributes (`data-precedence="next"`, `data-lenis-prevent="true"`, `data-gtm-vis-polling-id252455071_20="68"`, `data-menu-background="true"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.lenis> — `WHERE OPPORTUNITY TAKES ROOT`)**:
+   - Landmark `<section class="lenis">` presenting display lead `WHERE OPPORTUNITY TAKES ROOT` and copy excerpt *"To build choice-filled lives. Our work helps create access to opp"* over `#ffffff` canvas and `#12110e` ink.
+3. **Primary Showcase & Content Grid (<section.bg-background> — `Where opportunity takes root`)**:
+   - Landmark `<section class="bg-background">` rendering section `Where opportunity takes root` with copy *"The conditions that shape opportunity change over time. So we ask"*, asset references (`03_wvljxzi0as.css`, `0ji28_e_~fdtg.js`, `0nz2u-qe8z68i.js`, `0yjw-7sa79pfd.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.text-foreground> — `Opportunity enables people to fulf`)**:
+   - Landmark `<section class="text-foreground">` framing `Opportunity enables people to fulfill their highe...` and `What does opportunity mean today? What does oppor...` (*"Our partners at Gallup asked the American people to share their i"*) with `#ffff00` surface cards, `#e7e72b` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.inset-x-0> — `https://opportunity.waltonfamilyfoundation.org/`)**:
+   - Landmark `<footer class="inset-x-0 bottom-0">` anchoring `Access to Opportunity: Gallup Re` footer links (`Privacy Policy · Terms of Use`), copy *"This is what they had to say."*, and `#ff7f7f` structural dividers.

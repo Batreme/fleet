@@ -1,34 +1,52 @@
+---
+title: "UI & UX Architecture: southandstonestudio-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: southandstonestudio-com
 
 ## Overview & Design Identity
 - **Target**: `southandstonestudio-com` (**South & Stone Studio · Web Design & Brand Identity**)
 - **Production URL**: [http://southandstonestudio.com](http://southandstonestudio.com)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#eee` / `#7A7A7A`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0000`)
 - **Summary**: Websites written and built by Kelli Covey, a novelist and designer. Custom sites and brand identities for small businesses, with prices p...
-- **Total Clean CSS Variables Extracted**: `113` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `117` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Archivo`
-- **Body Font Stack**: `Caveat`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(2.7rem,7.6vw,8.2rem)`, `line-height: .92`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(1.5rem,2.4vw,2rem)`, `line-height: 1.1`, `letter-spacing: -.02em`, `font-weight: 760`)
-- **Body Copy**: rule `p` (`font-size: clamp(2rem,5.4vw,5.2rem)`, `line-height: .98`, `letter-spacing: -.035em`, `font-weight: 780`)
-- **Metadata & Labels**: rule `small` (`font-size: .85rem`, `font-weight: 650`)
+- **Body Font Stack**: `Geist`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 80.64px`, `line-height: 72.576px`, `font-weight: 780`, `letter-spacing: -2.8224px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(2.7rem,7.6vw,8.2rem)`, `line-height: .92`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 74.88px`, `line-height: 71.136px`, `font-weight: 780`, `letter-spacing: -2.6208px`); rule `h2` (`font-size: clamp(1.5rem,2.4vw,2rem)`, `line-height: 1.1`, `letter-spacing: -.02em`, `font-weight: 760`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: clamp(2rem,5.4vw,5.2rem)`, `line-height: .98`, `letter-spacing: -.035em`, `font-weight: 780`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `small` (`font-size: .85rem`, `font-weight: 650`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#eee` | `var(--edd-blocks-light-grey)` in `:root` |
-| **Primary Typography Ink** | `#6EC1E4` | `var(--e-global-color-primary)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#54595F` | `var(--e-global-color-secondary)` in `:root` |
-| **Interactive Accent / Highlight** | `#7A7A7A` | `var(--e-global-color-text)` in `:root` |
-| **Secondary / Muted Copy** | `#61CE70` | `var(--e-global-color-accent)` in `:root` |
-| **Structural Hairline Border** | `#000` | `var(--sx-black)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#673de6` | `.hostinger-reach-block-dialog__... { background: #673de6 }` |
+| **Interactive Accent / Highlight** | `#ff0000` | `.sx-fst-ctas a:first-child { background: red }` (`#ff0000`) |
+| **Secondary / Muted Copy** | `#7a7a7a` | `var(--e-global-color-text)` in `:root` |
+| **Structural Hairline Border** | `#252422` | `var(--sx-line-d)` in `:root` (`rgba(232,225,211,.16)`) |
+| **Variable Token (`--edd-blocks-light-grey`)** | `#eeeeee` | `var(--edd-blocks-light-grey)` in `:root` |
+| **Variable Token (`--sx-raise`)** | `#121212` | `var(--sx-raise)` in `:root` |
+| **Variable Token (`--sx-bone`)** | `#e8e1d3` | `var(--sx-bone)` in `:root` |
+| **Variable Token (`--sx-bone-2`)** | `#dcd3c1` | `var(--sx-bone-2)` in `:root` |
+| **Variable Token (`--sx-red`)** | `#e1251b` | `var(--sx-red)` in `:root` |
+| **Variable Token (`--sx-red-ink`)** | `#b3170f` | `var(--sx-red-ink)` in `:root` |
+| **Variable Token (`--sx-red-lit`)** | `#ff5146` | `var(--sx-red-lit)` in `:root` |
 
 ---
 
@@ -36,32 +54,32 @@
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
 | `--edd-blocks-light-grey` | `#eee` | Canvas / Surface Token |
+| `--wp--style--global--content-size` | `800px` | Layout / Spatial Grid Token |
+| `--wp--style--global--wide-size` | `1200px` | Layout / Spatial Grid Token |
+| `--wp--style--block-gap` | `24px` | Layout / Spatial Grid Token |
 | `--direction-multiplier` | `1` | Design System Custom Token |
-| `--flex-direction` | `initial` | Design System Custom Token |
-| `--flex-wrap` | `initial` | Layout / Spatial Grid Token |
-| `--justify-content` | `initial` | Design System Custom Token |
-| `--align-items` | `initial` | Design System Custom Token |
-| `--align-content` | `initial` | Design System Custom Token |
-| `--gap` | `initial` | Layout / Spatial Grid Token |
-| `--flex-basis` | `initial` | Design System Custom Token |
-| `--flex-grow` | `initial` | Design System Custom Token |
-| `--flex-shrink` | `initial` | Typography Ink Token |
-| `--order` | `initial` | Design System Custom Token |
-| `--align-self` | `initial` | Design System Custom Token |
 | `--page-title-display` | `block` | Design System Custom Token |
-| `--border-radius` | `0` | Elevation / Border Token |
-| `--border-top-width` | `0px` | Layout / Spatial Grid Token |
+| `--sx-serif` | `"Instrument Serif",Georgia,"Times New Roman",serif` | Typography / Scale Token |
+| `--sx-hand` | `"Caveat","Segoe Print","Bradley Hand",cursive` | Design System Custom Token |
+| `--sx-black` | `#000` | Canvas / Surface Token |
+| `--sx-raise` | `#121212` | Color / Atmospheric Token |
+| `--sx-bone` | `#E8E1D3` | Color / Atmospheric Token |
+| `--sx-bone-2` | `#DCD3C1` | Color / Atmospheric Token |
+| `--sx-white` | `#fff` | Canvas / Surface Token |
+| `--sx-red` | `#E1251B` | Color / Atmospheric Token |
+| `--sx-red-ink` | `#B3170F` | Typography Ink Token |
+| `--sx-red-lit` | `#FF5146` | Color / Atmospheric Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.sx-head> — `southandstonestudio-com`)**:
-   - Landmark `<header class="sx-head">` hosting `South & Stone Studio · Web Design & ` navigation (`Services · Portfolio · Industries · Estimate Desk · Shop`), DOM attributes (`data-domain="southandstonestudio.com"`, `data-elementor-device-mode="desktop"`, `data-sx-industry`, `data-trade="contractors"`), and stylesheet rule `.elementor .e-div-block-base { min-width:30px;padding:10px;display:block; }`.
+   - Landmark `<header class="sx-head">` (`1440x76px`) hosting `South & Stone Studio · Web Design & ` navigation (`Services · Portfolio · Industries · Estimate Desk · Shop`), DOM attributes (`data-domain="southandstonestudio.com"`, `data-elementor-device-mode="desktop"`, `data-sx-industry`, `data-trade="contractors"`), and stylesheet rule `.hostinger-reach-block-connect__t... { color:1d1e20;font-weight:700;margin-bottom:4px }`.
 2. **Hero Stage & Focal Lead (<section.sx-hero> — `Every website has a better version`)**:
-   - Landmark `<section class="sx-hero">` presenting display lead `Every website has a better version.` and copy excerpt *"Get a free redline"* over `#eee` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.sx-sec> — `Drag the red line. Watch a website`)**:
-   - Landmark `<section class="sx-sec sx-t-bone">` rendering section `Drag the red line. Watch a website start selling.` with copy *"Live Try the live demo Holloway Home Repair"*, asset references (`cdn-reach.hostinger.com`, `js.stripe.com`, `embed`, `south-stone-favicon.png`), and grid rule `.elementor .e-flexbox-base { padding:10px;display:flex;flex-direction:row; }`.
-4. **Interactive Detail & Feature Matrix (<section.sx-fst-band> — `Can a customer find your phone num`)**:
-   - Landmark `<section class="sx-fst-band">` framing `Can a customer find your phone number in five sec...` and `Four ways in. Every one priced.` (*"Try the live demo Holloway Home Repair"*) with `#54595F` surface cards, `#7A7A7A` accents, and `.elementor .e-tabs-base { padding-block-start:0px;display:flex;flex-direction:column;gap:30px; }`.
+   - Landmark `<section class="sx-hero">` presenting display lead `Every website has a better version.` and copy excerpt *"Booking projects now Written & built by Kelli Covey Fort Myers, F"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.sx-sec> — `Booking projects now Written & bui`)**:
+   - Landmark `<section class="sx-sec sx-t-bone">` rendering section `Booking projects now Written & built by Kelli Co` with copy *"Try the live demo Holloway Home Repair"*, asset references (`cdn-reach.hostinger.com`, `js.stripe.com`, `embed`, `south-stone-favicon.png`), and grid rule `hostinger-reach-block-connect__su... { color:727586;margin-bottom:4px }`.
+4. **Interactive Detail & Feature Matrix (<section.sx-fst-band> — `Try the live demo Holloway Home Re`)**:
+   - Landmark `<section class="sx-fst-band">` framing `Try the live demo Holloway Home Repair` and `Websites for contractors from $1,250` (*"Websites for contractors from $1,250"*) with `#673de6` surface cards, `#ff0000` accents, and `.hostinger-reach-block-connect a { color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));text-dec... }`.
 5. **Colophon & Global Directory Footer (<footer.sx-foot> — `http://southandstonestudio.com`)**:
-   - Landmark `<footer class="sx-foot">` anchoring `South & Stone Studio · Web Desig` footer links (`Services · Portfolio · Industries · Estimate Desk · Shop`), copy *"Websites for contractors from $1,250"*, and `#000` structural dividers.
+   - Landmark `<footer class="sx-foot">` anchoring `South & Stone Studio · Web Desig` footer links (`Services · Portfolio · Industries · Estimate Desk · Shop`), copy *"Eight concept sites see Meridian Contracting"*, and `#252422` structural dividers.

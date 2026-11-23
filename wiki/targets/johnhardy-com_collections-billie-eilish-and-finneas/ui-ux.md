@@ -1,67 +1,81 @@
+---
+title: "UI & UX Architecture: johnhardy-com_collections-billie-eilish-and-finneas"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: johnhardy-com_collections-billie-eilish-and-finneas
 
 ## Overview & Design Identity
 - **Target**: `johnhardy-com_collections-billie-eilish-and-finneas` (**Billie Eilish and FINNEAS – John Hardy**)
 - **Production URL**: [https://johnhardy.com/collections/billie-eilish-and-finneas](https://johnhardy.com/collections/billie-eilish-and-finneas)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#161514` / `#535353`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c1d`)
 - **Summary**: John Hardy fine luxury jewelry. Made in Bali since 1975. Enjoy complimentary shipping and returns on all orders. Bracelets, Rings, Neckla...
-- **Total Clean CSS Variables Extracted**: `477` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `496` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `itc-avant-garde-gothic-pro`
-- **Body Font Stack**: `ivypresto-text`
+- **Display Font Stack**: `General Sans`
+- **Body Font Stack**: `General Sans`
 - **Monospace / Technical Font Stack**: `Source Code Pro`
 - **Hero Display (`H1`)**: CSS variables `--option-select-label-display: none`, `--bonsai-agent-share-display: none`; rule `h1` (`font-size: 1.5rem`, `line-height: 1.2`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--hero-title-size-mobile,...`)
-- **Body Copy**: CSS variables `--bonsai-font-body: var(--font-family-general-sans)`, `--bonsai-agent-body-bold-weight: 550`; rule `,p` (`font-size: var(--font-size-3)`, `line-height: var(--line-height-0)`, `letter-spacing: var(--letter-spacing-0)`, `font-weight: var(--font-we...`)
-- **Metadata & Labels**: CSS variables `--letter-spacing-0: 0.5px`, `--letter-spacing-1: 1px`, `--letter-spacing-2: 1px`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 48px`, `font-weight: 500`, `letter-spacing: 0.5px`); rule `h2` (`font-size: var(--hero-title-size-mobile,...`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--bonsai-font-body: var(--font-family-general-sans)`, `--bonsai-agent-body-bold-weight: 550`; rule `,p` (`font-size: var(--font-size-3)`, `line-height: var(--line-height-0)`, `letter-spacing: var(--letter-spacing-0)`, `font-weight: var(--font-we...`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--letter-spacing-0: 0.5px`, `--letter-spacing-1: 1px`, `--letter-spacing-2: 1px`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#161514` | `var(--color-neutral-black)` in `:root` |
-| **Primary Typography Ink** | `#212529` | `var(--jh-concierge-bubble-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--rb-smart-search-quick-view-button-text-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#535353` | `var(--rb-smart-search-quick-view-reviews-text-color)` in `:root` |
-| **Secondary / Muted Copy** | `#232323` | `var(--rb-smart-search-results-product-title-color)` in `:root` |
-| **Structural Hairline Border** | `#000000` | `var(--rb-smart-search-results-button-border-color)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e5e5e5` | `var(--rb-smart-collections-reviews-background-color)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff5c1d` | `var(--color-brand-orange)` in `:root` |
+| **Secondary / Muted Copy** | `#757575` | `var(--bonsai-agent-price-fg)` in `:root` |
+| **Structural Hairline Border** | `#cccccc` | `var(--rb-widget-input-border-color)` in `:root` |
+| **Variable Token (`--color-neutral-charcoal`)** | `#33383c` | `var(--color-neutral-charcoal)` in `:root` |
+| **Variable Token (`--color-neutral-dark-grey`)** | `#646464` | `var(--color-neutral-dark-grey)` in `:root` |
+| **Variable Token (`--color-neutral-light-grey`)** | `#e6e6e6` | `var(--color-neutral-light-grey)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--arrow-size` | `40px` | Layout / Spatial Grid Token |
-| `--arrow-icon-size` | `calc(var(--arrow-size) / 2)` | Layout / Spatial Grid Token |
-| `--arrows-padding` | `0 var(--spacing-l)` | Layout / Spatial Grid Token |
-| `--arrows-width` | `100%` | Layout / Spatial Grid Token |
-| `--arrows-translate` | `0 -50%` | Dimension / Scale Token |
-| `--arrows-top` | `50%` | Dimension / Scale Token |
-| `--pagination-margin-y` | `var(--spacing-2xl)` | Layout / Spatial Grid Token |
-| `--pagination-padding-x` | `0` | Layout / Spatial Grid Token |
-| `--page-active-bg` | `var(--color-neutral-black)` | Canvas / Surface Token |
-| `--page-bg` | `var(--color-neutral-medium-grey)` | Canvas / Surface Token |
-| `--page-height` | `4px` | Layout / Spatial Grid Token |
-| `--page-width` | `4px` | Layout / Spatial Grid Token |
-| `--page-radius` | `0` | Elevation / Border Token |
-| `--padding` | `var(--spacing-s)` | Layout / Spatial Grid Token |
-| `--ratio-height` | `273` | Layout / Spatial Grid Token |
-| `--ratio-height-px` | `273px` | Layout / Spatial Grid Token |
+| `--breakpoint-xs` | `0` | Design System Custom Token |
+| `--breakpoint-s` | `36rem` | Dimension / Scale Token |
+| `--breakpoint-m` | `48rem` | Dimension / Scale Token |
+| `--breakpoint-l` | `64rem` | Dimension / Scale Token |
+| `--breakpoint-xl` | `90rem` | Dimension / Scale Token |
+| `--breakpoint-2xl` | `120rem` | Dimension / Scale Token |
+| `--color-brand-black` | `#000` | Canvas / Surface Token |
+| `--color-brand-orange` | `#ff5c1d` | Brand / Palette Token |
+| `--color-neutral-black` | `#000` | Canvas / Surface Token |
+| `--color-neutral-charcoal` | `#33383c` | Brand / Palette Token |
+| `--color-neutral-dark-grey` | `#646464` | Canvas / Surface Token |
+| `--color-neutral-light-grey` | `#e6e6e6` | Canvas / Surface Token |
+| `--color-neutral-medium-grey` | `grey` | Brand / Palette Token |
+| `--color-neutral-white` | `#fff` | Canvas / Surface Token |
+| `--color-overlay` | `rgba(0,0,0,.3)` | Brand / Palette Token |
+| `--color-overlay-background-overlay` | `rgba(0,0,0,.3)` | Canvas / Surface Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `johnhardy-com_collections-billie-eilish-and-finneas`)**:
-   - Landmark `<header class="site-header">` hosting `Billie Eilish and FINNEAS – John Har` navigation (`Wishlist · New Arrivals · Best Sellers · Holiday Gifting · Bracelets`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-rapid="true"`, `data-shop-id="72737456428"`, `data-venmo-supported="true"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
-2. **Hero Stage & Focal Lead (<section.accessibility> — `Billie Eilish & FINNEAS`)**:
-   - Landmark `<section class="accessibility critical-hide">` presenting display lead `Billie Eilish & FINNEAS` and copy excerpt *"Enable accessibility"* over `#161514` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.site-header-group> — `Two Expressions of One Creative Vi`)**:
-   - Landmark `<section class="site-header-group is-open">` rendering section `Two Expressions of One Creative Vision Two Expres...` with copy *"Press Option/Alt + K at any time to jump back to these sign posts"*, asset references (`rebuy.js`, `loader.js`, `01HNXAYFWDBE125P1ZK44ZZ829`, `117791.ct.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
+   - Landmark `<header class="site-header">` (`1440x87px`) hosting `Billie Eilish and FINNEAS – John Har` navigation (`Wishlist · Featured · New Arrivals · Best Sellers · Holiday Gifting`), DOM attributes (`data-header-state="open"`, `data-source-attribution="shopify.exit_intersti..."`, `data-rapid="true"`, `data-shop-id="72737456428"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+2. **Hero Stage & Focal Lead (<section.site-header-offset> — `Billie Eilish & FINNEAS`)**:
+   - Landmark `<section class="site-header-offset">` presenting display lead `Billie Eilish & FINNEAS` and copy excerpt *"Hard meets soft in two distinct design languages: delicate, roman"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.hero-banner-section> — `Two Expressions of One Creative Vi`)**:
+   - Landmark `<section class="hero-banner-section">` rendering section `Two Expressions of One Creative Vision Two Expres...` with copy *"Billie Eilish & FINNEAS"*, asset references (`rebuy.js`, `loader.js`, `01HNXAYFWDBE125P1ZK44ZZ829`, `117791.ct.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
 4. **Interactive Detail & Feature Matrix (<section.template-collection> — `“Jewelry has always been an enormo`)**:
-   - Landmark `<section class="template-collection">` framing `“Jewelry has always been an enormous part of how...` and `Two years in the making` (*"Skip to main content"*) with `#ffffff` surface cards, `#535353` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
-5. **Colophon & Global Directory Footer (<footer.has-overlay> — `https://johnhardy.com/collections/billie-eilish-and-finneas`)**:
-   - Landmark `<footer class="has-overlay">` anchoring `Billie Eilish and FINNEAS – John` footer links (`Wishlist · New Arrivals · Best Sellers · Holiday Gifting · Bracelets`), copy *"Skip to site header"*, and `#000000` structural dividers.
+   - Landmark `<section class="template-collection">` framing `“Jewelry has always been an enormous part of how...` and `Two years in the making` (*"Two Expressions of One Creative Vision"*) with `#e5e5e5` surface cards, `#ff5c1d` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+5. **Colophon & Global Directory Footer (<footer.usablenet> — `https://johnhardy.com/collections/billie-eilish-and-finneas`)**:
+   - Landmark `<footer class="usablenet">` anchoring `Billie Eilish and FINNEAS – John` footer links (`Wishlist · Featured · New Arrivals · Best Sellers · Holiday Gifting`), copy *"Wildflower Pendant Necklace, Sterling Silver, Lab Grown Diam"*, and `#cccccc` structural dividers.

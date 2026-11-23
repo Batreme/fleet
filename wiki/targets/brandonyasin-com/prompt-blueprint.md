@@ -1,62 +1,68 @@
 ---
 title: "UI Prompt Blueprint: brandonyasin-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "brandonyasin-com"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `#fff` ink, `#fff` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#363229` canvas, `#c3beb1` ink, `#ffeb48` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: brandonyasin-com
 
 > **Brandon Yasin — Creative Director & Designer** (https://brandonyasin.com) — Brand, digital and spatial design within lifestyle and luxury. AI scales the production, not the craft. Based in Denmark, working globally.
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Brandon Yasin — Creative Director & Designer** (`https://brandonyasin.com`). Brand, digital and spatial design within lifestyle and luxury. AI scales the production, not the craft. Based in Denmark, working globally.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `#fff` ink, `#fff` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#363229` canvas, `#c3beb1` ink, `#ffeb48` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#111` (`var(--color-main)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Neue Haas Unica Pro` for display copy (`archive`) with `Helvetica Now Variable` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `54.4rem` container bounds (`gap: .8rem`, padding `6.4rem`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#363229` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#c3beb1` primary typography and `#ffeb48` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Neue Haas Unica Pro` for display copy (`archive`) with `Neue Haas Unica Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `114.05vw` container bounds (`gap: 3rem`, padding `16px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `54.4rem` extracted from `brandonyasin-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `6.4rem` lateral canvas padding with `.8rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `114.05vw` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `3rem` grid gap.
 - **Border Radius Scale**: `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 54.4rem`, `gap: .8rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `6.4rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media screen and (width<=360px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 114.05vw`, `gap: 3rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media (width>=768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#111` | `var(--color-main)` in `:root` |
-| **Primary Typography Ink** | `#f8f6f2` | `var(--color-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#263b1c` | `var(--color-green)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `:before { border: #fff }` |
-| **Secondary / Muted Copy** | `#0000` | `html { color: #0000 }` |
-| **Structural Hairline Border** | `#000` | `.img-wrap:after { background-color: #000 }` |
-| **Variable Token (`--selection-bg`)** | `#44300033` | `var(--selection-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#363229` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#c3beb1` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `.img-wrap:after { background-color: #000000 }` |
+| **Interactive Accent / Highlight** | `#ffeb48` | `::-moz-placeholder { color: #ffeb48 }` |
+| **Secondary / Muted Copy** | `#111111` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | `:before { border: #ffffff }` |
+| **Variable Token (`--color-bg`)** | `#f8f6f2` | `var(--color-bg)` in `:root` |
+| **Variable Token (`--selection-bg`)** | `#443000` | `var(--selection-bg)` in `:root` |
+| **Variable Token (`--color-green`)** | `#263b1c` | `var(--color-green)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -76,7 +82,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `
 | `--color-green` | `#263b1c` | Brand / Palette Token |
 | `--line-x` | `0px` | Dimension / Scale Token |
 | `--line-w` | `0` | Design System Custom Token |
-| `--before-w` | `.9` | Design System Custom Token |
+| `--rows-tile-h` | `19.9rem` | Dimension / Scale Token |
 
 ---
 
@@ -84,14 +90,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `Neue Haas Unica Pro`.
-- **Primary Body Stack**: `Helvetica Now Variable`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Neue Haas Unica Pro`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 90.144px`, `line-height: 111.779px`, `font-weight: 400`, `letter-spacing: -3.60576px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40.032px`, `line-height: 48.0384px`, `font-weight: 400`, `letter-spacing: -1.60128px`).
+- **Body Copy**: live computed `body` (`font-size: 15.984px`, `line-height: 20.7792px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`).
 
 ---
 
@@ -101,9 +107,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.33333,1,.66667,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.header--color-anim[data-v-dc320ba0]`**: `transition: color .5s ease-out` extracted from `brandonyasin-com` stylesheet.
-- **Selector `.button[data-v-dc320ba0]:before`**: `transition: transform .35s cubic-bezier(.645,.045,.355,1)` extracted from `brandonyasin-com` stylesheet.
-- **Selector `.button[data-v-dc320ba0]:after`**: `transition: transform .35s cubic-bezier(.645,.045,.355,1) .2s` extracted from `brandonyasin-com` stylesheet.
+- **Selector `label`**: `transition: color .2s ease-out` extracted from `brandonyasin-com` stylesheet.
+- **Selector `textarea[data-v-564d7e72]:-webkit...`**: `transition: background-color 10000000s step-end` extracted from `brandonyasin-com` stylesheet.
+- **Selector `al-wrap textarea[data-v-564d7e72]...`**: `transition: background-color 10000000s step-end` extracted from `brandonyasin-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.header>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -111,40 +117,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Brandon Yasin — Creative Director & Design │
 │ ====================================================================== │
-│ [ <header.header>          | Overview · Index · Archive · About · C ]  │
+│ [ <header.header> (1440x84px)         | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.container>                                  |   │
-│ | H1: archive                                                      |   │
-│ | Substrate: #111       | Ink: #fff       | Accent: #fff           |   │
+│ | HERO STAGE: <section.archive-container> (w=1440px)                 | │
+│ | H1: archive                                                        | │
+│ | Substrate: #363229 | Ink: #c3beb1 | Accent: #ffeb48                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.header>          ) max-w: 54.4rem        |   │
+│ | SHOWCASE GRID (<section.header>) max-w: 114.05vw                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | I build refined brands and e |  | my signature approach is gui | | │
+│ | | Every project begins with ob |  | Brandon Awwwards Site of the | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .8rem ) | │
-│ | [<header.header>] -> [<section.container] -> [<section.header>] |    │
+│ | DETAIL MODULE (<section.holder>) — Brandon Awwwards Site           | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.menu-tile>    ) | https://brandonyasin.com           │
+│ [ FOOTER (<footer.menu-tile>  ) | https://brandonyasin.com             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 3rem)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.archive-contain) — 390px Vertical Lead        | │
+│ | H1: archive                                                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.header>) — 1-Col Stack                    | │
+│ | [ Item 1: Every project begins with observation. Understan       ] | │
+│ | [ Item 2: Brandon Awwwards Site of the day SOTD Yasin Site       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.holder>) — 1-Col (Brandon Awwwards S)       | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.menu-tile>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `brandonyasin-com`)**:
-   - Landmark `<header class="header font-body-12">` hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `last-child { margin-bottom:0 }`.
-2. **Hero Stage & Focal Lead (<section.container> — `archive`)**:
-   - Landmark `<section class="container archive-container">` presenting display lead `archive` and copy excerpt *"Brandon Brandon Yasin Yasin Brandon Awwwards Site of the day SOTD"* over `#111` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.header> — `I build refined brands and experie`)**:
-   - Landmark `<section class="header about-header">` rendering section `I build refined brands and experiences across dig...` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.Di9rGxLO.css`, `useSeo.HvQkUdpq.css`, `PageTitle.DBPCFnbI.css`, `about.D7v35ChA.css`), and grid rule `focus-visible { background-color:var(--focus-bg);color:var(--focus-color);outline:none }`.
-4. **Interactive Detail & Feature Matrix (<section.holder> — `my signature approach is guided by`)**:
-   - Landmark `<section class="holder">` framing `my signature approach is guided by core values` and `established design process tried and tested on sm...` (*"Brandon Awwwards Site of the day SOTD"*) with `#263b1c` surface cards, `#fff` accents, and `before { height:.07vw }`.
+   - Landmark `<header class="header font-body-12">` (`1440x84px`) hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `.font-headline-1 { letter-spacing:-.04em;font:400 5.4rem/1.24 Neue Haas Unica Pro,Helvetica... }`.
+2. **Hero Stage & Focal Lead (<section.archive-container> — `archive`)**:
+   - Landmark `<section class="archive-container container">` presenting display lead `archive` and copy excerpt *"Every project begins with observation. Understanding the context,"* over `#363229` canvas and `#c3beb1` ink.
+3. **Primary Showcase & Content Grid (<section.header> — `Every project begins with observat`)**:
+   - Landmark `<section class="header about-header">` rendering section `Every project begins with observation. Understan` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.CxmSBJR3.css`, `BUkWhEWa.js`, `DK3Fl9T5.js`, `IQKDJ7dv.js`), and grid rule `.font-headline-2 { letter-spacing:0;font:251 2.8rem/1.2 Neue Haas Unica Pro,Helvetica Neue,... }`.
+4. **Interactive Detail & Feature Matrix (<section.holder> — `Brandon Awwwards Site of the day S`)**:
+   - Landmark `<section class="holder">` framing `Brandon Awwwards Site of the day SOTD Yasin Site` and `Brandon Awwwards Site of the day SOTD` (*"Brandon Awwwards Site of the day SOTD"*) with `#000000` surface cards, `#ffeb48` accents, and `.font-headline-2-large { letter-spacing:0;font:251 5.5rem/1.24 Neue Haas Unica Pro,Helvetica Neue... }`.
 5. **Colophon & Global Directory Footer (<footer.menu-tile> — `https://brandonyasin.com`)**:
-   - Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#000` structural dividers.
+   - Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#ffffff` structural dividers.
 
 ---
 
@@ -156,19 +181,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `brandonyasin-com` (**Brandon Yasin — Creative Director & Designer** — `https://brandonyasin.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111` canvas, `#fff` ink, `#fff` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#363229` canvas, `#c3beb1` ink, `#ffeb48` accent).
 - **Identity & Domain Context**: Brand, digital and spatial design within lifestyle and luxury. AI scales the production, not the craft. Based in Denmark, working globally.
-- **Primary Substrate**: `#111` (`var(--color-main)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#363229` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#c3beb1`, **Accent / Highlight**: `#ffeb48`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#111` (`var(--color-main)` in `:root`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Neue Haas Unica Pro` for display copy (`archive`) with `Helvetica Now Variable` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `54.4rem` container bounds (`gap: .8rem`, padding `6.4rem`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#363229` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#c3beb1` primary typography and `#ffeb48` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Neue Haas Unica Pro` for display copy (`archive`) with `Neue Haas Unica Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `114.05vw` container bounds (`gap: 3rem`, padding `16px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `brandonyasin-com` in your global stylesheet:
 
 :root {
-  /* Brandon Yasin — Creative Director & Designer (brandonyasin-com) — Ground-Truth Extracted CSS Variables */
+  /* Brandon Yasin — Creative Director & Designer (brandonyasin-com) — Live-Grounded CSS Variables */
   --color-main: #111; /* Brand / Palette Token (brandonyasin-com) */
   --color-bg: #f8f6f2; /* Canvas / Surface Token (brandonyasin-com) */
   --selection-color: #111; /* Brand / Palette Token (brandonyasin-com) */
@@ -184,58 +209,60 @@ Declare and consume these exact custom properties extracted from `brandonyasin-c
   --color-green: #263b1c; /* Brand / Palette Token (brandonyasin-com) */
   --line-x: 0px; /* Dimension / Scale Token (brandonyasin-com) */
   --line-w: 0; /* Design System Custom Token (brandonyasin-com) */
-  --before-w: .9; /* Design System Custom Token (brandonyasin-com) */
+  --rows-tile-h: 19.9rem; /* Dimension / Scale Token (brandonyasin-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#111` — grounded in `var(--color-main)` in `:root`
-- **Primary Typography Ink**: `#f8f6f2` — grounded in `var(--color-bg)` in `:root`
-- **Elevated Surface / Card Substrate**: `#263b1c` — grounded in `var(--color-green)` in `:root`
-- **Interactive Accent / Highlight**: `#fff` — grounded in `:before { border: #fff }`
-- **Secondary / Muted Copy**: `#0000` — grounded in `html { color: #0000 }`
-- **Structural Hairline Border**: `#000` — grounded in `.img-wrap:after { background-color: #000 }`
-- **Variable Token (`--selection-bg`)**: `#44300033` — grounded in `var(--selection-bg)` in `:root`
+- **Primary Canvas Substrate**: `#363229` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#c3beb1` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#000000` — grounded in `.img-wrap:after { background-color: #000000 }`
+- **Interactive Accent / Highlight**: `#ffeb48` — grounded in `::-moz-placeholder { color: #ffeb48 }`
+- **Secondary / Muted Copy**: `#111111` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ffffff` — grounded in `:before { border: #ffffff }`
+- **Variable Token (`--color-bg`)**: `#f8f6f2` — grounded in `var(--color-bg)` in `:root`
+- **Variable Token (`--selection-bg`)**: `#443000` — grounded in `var(--selection-bg)` in `:root`
+- **Variable Token (`--color-green`)**: `#263b1c` — grounded in `var(--color-green)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `54.4rem` extracted from `brandonyasin-com` stylesheet
-- **Padding & Gutters**: `6.4rem` lateral canvas padding with `.8rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 54.4rem`, `gap: .8rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `6.4rem` horizontal padding
-- **Media Queries**: `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media screen and (width<=360px)`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `114.05vw` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `16px` lateral canvas padding with `3rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 114.05vw`, `gap: 3rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
+- **Media Queries**: `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media (width>=768px)`
 - **Corner Radii**: `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Neue Haas Unica Pro`
-- **Body Font Stack**: `Helvetica Now Variable`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `4.8rem`, `9rem`, `6.26vw`, `clamp(28px,3.125vw,32px)`, `3.34vw`)
+- **Body Font Stack**: `Neue Haas Unica Pro`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 90.144px`, `line-height: 111.779px`, `font-weight: 400`, `letter-spacing: -3.60576px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 40.032px`, `line-height: 48.0384px`, `font-weight: 400`, `letter-spacing: -1.60128px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 15.984px`, `line-height: 20.7792px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `brandonyasin-com` (`Brandon Yasin — Creative Director & Designer`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `brandonyasin-com`)**:
-   - DOM & Selectors: Landmark `<header class="header font-body-12">` hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `last-child { margin-bottom:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `brandonyasin-com`)` (`brandonyasin-com`) adapts across `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media screen and (width<=360px)` with `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.33333,1,.66667,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.container> — `archive`)**:
-   - DOM & Selectors: Landmark `<section class="container archive-container">` presenting display lead `archive` and copy excerpt *"Brandon Brandon Yasin Yasin Brandon Awwwards Site of the day SOTD"* over `#111` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#111` background with `#fff` headline `archive`.
-3. **Primary Showcase & Content Grid (<section.header> — `I build refined brands and experie`)**:
-   - DOM & Selectors: Landmark `<section class="header about-header">` rendering section `I build refined brands and experiences across dig...` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.Di9rGxLO.css`, `useSeo.HvQkUdpq.css`, `PageTitle.DBPCFnbI.css`, `about.D7v35ChA.css`), and grid rule `focus-visible { background-color:var(--focus-bg);color:var(--focus-color);outline:none }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.header> — `I build refined brands and experie`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 54.4rem`, `gap: .8rem`) on desktop and Single-column vertical stack at `390px` viewport width with `6.4rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.holder> — `my signature approach is guided by`)**:
-   - DOM & Selectors: Landmark `<section class="holder">` framing `my signature approach is guided by core values` and `established design process tried and tested on sm...` (*"Brandon Awwwards Site of the day SOTD"*) with `#263b1c` surface cards, `#fff` accents, and `before { height:.07vw }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.holder> — `my signature approach is guided by`)` uses `50%` radii, `#fff` highlights, and assets (entry.Di9rGxLO.css, useSeo.HvQkUdpq.css, PageTitle.DBPCFnbI.css).
+   - DOM & Selectors: Landmark `<header class="header font-body-12">` (`1440x84px`) hosting `Brandon Yasin — Creative Director & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="initial-time-theme"`, `data-v-b4d4802c`, `data-slug="/archive"`, `data-menu-title-lag`), and stylesheet rule `.font-headline-1 { letter-spacing:-.04em;font:400 5.4rem/1.24 Neue Haas Unica Pro,Helvetica... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `brandonyasin-com`)` (`brandonyasin-com`) adapts across `@media only screen and (width>=768px)`, `@media only screen and (width>=1025px)`, `@media only screen and (width>=1438px)`, `@media (width>=768px)` with `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.33333,1,.66667,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+2. **Hero Stage & Focal Lead (<section.archive-container> — `archive`)**:
+   - DOM & Selectors: Landmark `<section class="archive-container container">` presenting display lead `archive` and copy excerpt *"Every project begins with observation. Understanding the context,"* over `#363229` canvas and `#c3beb1` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#363229` background with `#c3beb1` headline `archive`.
+3. **Primary Showcase & Content Grid (<section.header> — `Every project begins with observat`)**:
+   - DOM & Selectors: Landmark `<section class="header about-header">` rendering section `Every project begins with observation. Understan` with copy *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD "*, asset references (`entry.CxmSBJR3.css`, `BUkWhEWa.js`, `DK3Fl9T5.js`, `IQKDJ7dv.js`), and grid rule `.font-headline-2 { letter-spacing:0;font:251 2.8rem/1.2 Neue Haas Unica Pro,Helvetica Neue,... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.header> — `Every project begins with observat`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 114.05vw`, `gap: 3rem`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.holder> — `Brandon Awwwards Site of the day S`)**:
+   - DOM & Selectors: Landmark `<section class="holder">` framing `Brandon Awwwards Site of the day SOTD Yasin Site` and `Brandon Awwwards Site of the day SOTD` (*"Brandon Awwwards Site of the day SOTD"*) with `#000000` surface cards, `#ffeb48` accents, and `.font-headline-2-large { letter-spacing:0;font:251 5.5rem/1.24 Neue Haas Unica Pro,Helvetica Neue... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.holder> — `Brandon Awwwards Site of the day S`)` uses `50%` radii, `#ffeb48` highlights, and assets (entry.CxmSBJR3.css, BUkWhEWa.js, DK3Fl9T5.js).
 5. **Colophon & Global Directory Footer (<footer.menu-tile> — `https://brandonyasin.com`)**:
-   - DOM & Selectors: Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.menu-tile> — `https://brandonyasin.com`)` aligns to `54.4rem` extracted from `brandonyasin-com` stylesheet with `6.4rem` lateral canvas padding with `.8rem` grid gap and attributes (data-hid="initial-time-theme", data-v-b4d4802c, data-slug="/archive").
+   - DOM & Selectors: Landmark `<footer class="menu-tile">` anchoring `Brandon Yasin — Creative Directo` footer links (`Overview · Index · Archive · About · Contact`), copy *"Site of the day SOTD"*, and `#ffffff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.menu-tile> — `https://brandonyasin.com`)` aligns to `114.05vw` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `3rem` grid gap and attributes (data-hid="initial-time-theme", data-v-b4d4802c, data-slug="/archive").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Brandon Brandon Yasin Yasin Brandon Awwwards Site of the day SOTD Yasin Site of th..."*
+- Copy Excerpt 1: *"Every project begins with observation. Understanding the context, people and brand..."*
 - Copy Excerpt 2: *"Brandon Awwwards Site of the day SOTD Yasin Site of the day SOTD 24 OCT '26"*
 - Copy Excerpt 3: *"Brandon Awwwards Site of the day SOTD"*
 - Copy Excerpt 4: *"Site of the day SOTD"*
@@ -243,15 +270,15 @@ Scaffold `brandonyasin-com` (`Brandon Yasin — Creative Director & Designer`) w
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.33333,1,.66667,1)`
 - **Extracted Stylesheet Rules (`brandonyasin-com`)**:
-- `last-child { margin-bottom:0 }`
-- `focus-visible { background-color:var(--focus-bg);color:var(--focus-color);outline:none }`
-- `before { height:.07vw }`
-- `after { height:.07vw }`
-- `hover:before { transform:scaleX(0) }`
+- `.font-headline-1 { letter-spacing:-.04em;font:400 5.4rem/1.24 Neue Haas Unica Pro,Helvetica... }`
+- `.font-headline-2 { letter-spacing:0;font:251 2.8rem/1.2 Neue Haas Unica Pro,Helvetica Neue,... }`
+- `.font-headline-2-large { letter-spacing:0;font:251 5.5rem/1.24 Neue Haas Unica Pro,Helvetica Neue... }`
+- `.font-headline-3 { letter-spacing:0;font:251 2.8rem/1.1 Neue Haas Unica Pro,Helvetica Neue,... }`
+- `.font-headline-4 { letter-spacing:0;font:251 2.8rem/1.1 Neue Haas Unica Pro,Helvetica Neue,... }`
 - **Per-Selector Transition Rules**:
-- **Selector `.header--color-anim[data-v-dc320ba0]`**: `transition: color .5s ease-out` extracted from `brandonyasin-com` stylesheet.
-- **Selector `.button[data-v-dc320ba0]:before`**: `transition: transform .35s cubic-bezier(.645,.045,.355,1)` extracted from `brandonyasin-com` stylesheet.
-- **Selector `.button[data-v-dc320ba0]:after`**: `transition: transform .35s cubic-bezier(.645,.045,.355,1) .2s` extracted from `brandonyasin-com` stylesheet.
+- **Selector `label`**: `transition: color .2s ease-out` extracted from `brandonyasin-com` stylesheet.
+- **Selector `textarea[data-v-564d7e72]:-webkit...`**: `transition: background-color 10000000s step-end` extracted from `brandonyasin-com` stylesheet.
+- **Selector `al-wrap textarea[data-v-564d7e72]...`**: `transition: background-color 10000000s step-end` extracted from `brandonyasin-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.header>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 

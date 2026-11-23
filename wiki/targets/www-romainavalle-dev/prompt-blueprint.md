@@ -1,46 +1,51 @@
 ---
 title: "UI Prompt Blueprint: www-romainavalle-dev"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-romainavalle-dev"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#000000`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f3f2f1`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-romainavalle-dev
 
 > **Romain Avalle - Interactive developper** (https://www.romainavalle.dev/) — Romain Avalle, interactive developer since 2006. Team Lead & Tech Lead at REF Digital in Montréal. Awwwards jury member, 40+ Awwwards and...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Romain Avalle - Interactive developper** (`https://www.romainavalle.dev/`). Romain Avalle, interactive developer since 2006. Team Lead & Tech Lead at REF Digital in Montréal. Awwwards jury member, 40+ Awwwards and...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#000000`)**.
+- **Final Redirected URL**: [https://romainavalle.dev/](https://romainavalle.dev/)
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f3f2f1`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#000` primary typography and `#000000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `RemusVariableVF` for display copy (`R o m a i n A v a l l e`) with `andale-mono` and `andale-mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `none (full-bleed `100%` viewport stage)` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#f3f2f1` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `RemusVariableVF` for display copy (`Romain Avalle`) with `RemusVariableVF` and `andale-mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8.22857px`, padding `8.22857px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×7040px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `none (full-bleed `100%` viewport stage)` extracted from `www-romainavalle-dev` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `0px` lateral canvas padding with `0px (flush layout)` grid gap.
-- **Border Radius Scale**: `.3rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `8.22857px` lateral canvas padding with `8.22857px` grid gap.
+- **Border Radius Scale**: `3.08571px`, `.3rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: none (full-bleed `100%` viewport stage)`, `gap: 0px (flush layout)`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `0px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.22857px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `8.22857px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (width>=650px)`, `@media (width>=1024px)`, `@media (width>=800px)`.
 
 ---
@@ -48,18 +53,22 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#0000
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--color-black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0000` | `textarea { background-color: #0000 }` |
-| **Interactive Accent / Highlight** | `#000000` | `.bg-black { background-color: black }` (`#000000`) |
-| **Secondary / Muted Copy** | `#ffffff` | `.text-white { color: white }` (`#ffffff`) |
-| **Structural Hairline Border** | `#f3f2f1` | `<meta name="theme-color" content="#f3f2f1">` in `dom.html` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | live computed `header` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#f3f2f1` | `<meta name="theme-color" content="#f3f2f1">` in `dom.html` |
+| **Secondary / Muted Copy** | `#000000` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#000000` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--size` | `375` | Layout / Spatial Grid Token |
+| `--lvh` | `1lvh` | Layout / Spatial Grid Token |
+| `--dvh` | `1dvh` | Layout / Spatial Grid Token |
+| `--svh` | `1svh` | Layout / Spatial Grid Token |
 | `--spacing` | `.1rem` | Layout / Spatial Grid Token |
 | `--default-transition-duration` | `.15s` | Motion / Easing Token |
 | `--default-transition-timing-function` | `cubic-bezier(.23, 1, .32, 1)` | Motion / Easing Token |
@@ -67,15 +76,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#0000
 | `--default-mono-font-family` | `var(--font-mono)` | Typography / Scale Token |
 | `--color-white` | `#fff` | Canvas / Surface Token |
 | `--color-black` | `#000` | Canvas / Surface Token |
-| `--size` | `375` | Layout / Spatial Grid Token |
-| `--lvh` | `1lvh` | Layout / Spatial Grid Token |
-| `--dvh` | `1dvh` | Layout / Spatial Grid Token |
-| `--svh` | `1svh` | Layout / Spatial Grid Token |
 | `--tw-translate-x` | `0` | Design System Custom Token |
 | `--tw-translate-y` | `0` | Design System Custom Token |
 | `--tw-translate-z` | `0` | Design System Custom Token |
-| `--www-romainavalle-bg` | `#fff` | Canvas Substrate (from `var(--color-white)` in `:root`) |
-| `--www-romainavalle-ink` | `#000` | Primary Typography Ink (stylesheet-derived) |
+| `--www-romainavalle-bg` | `#ffffff` | Canvas Substrate (from live computed `browser-default` `background-color` (`computed_styles.json`)) |
+| `--www-romainavalle-ink` | `#000000` | Primary Typography Ink (computed-derived) |
 
 ---
 
@@ -83,14 +88,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#0000
 
 ### Font Family Stacks
 - **Display Typography**: `RemusVariableVF`.
-- **Primary Body Stack**: `andale-mono`.
+- **Primary Body Stack**: `RemusVariableVF`.
 - **Technical / Metadata Stack**: `andale-mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `1.2rem`, `1.6rem`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `1.2rem`, `1.6rem`).
-- **Body Copy**: rule `,body` (`font-size: 1.6rem`, `line-height: 1.2`, `letter-spacing: -.03rem`, `font-weight: 600`).
-- **Metadata & Navigation Labels**: CSS variables `--default-mono-font-family: var(--font-mono)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`).
+- **Body Copy**: live computed `body` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`); rule `,body` (`font-size: 1.6rem`, `line-height: 1.2`, `letter-spacing: -.03rem`, `font-weight: 600`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12.3429px`, `line-height: 14.8114px`, `font-weight: 600`, `letter-spacing: -0.308571px`); CSS variables `--default-mono-font-family: var(--font-mono)`.
 
 ---
 
@@ -103,47 +108,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#0000
 - **Selector `.home-work[data-v-187357cc]:before`**: `transition: transform .7s ease-out .11s` extracted from `www-romainavalle-dev` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-romainavalle-dev` stylesheet.
 - **Selector `.back .arrow[data-v-9e8fb527]`**: `transition: transform .3s` extracted from `www-romainavalle-dev` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.bg-black>` and `<section.bg-black>`.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.gap-8>` and `<section.bg-black>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Romain Avalle - Interactive developper     │
 │ ====================================================================== │
-│ [ <header.bg-black>        | Let's talk                             ]  │
+│ [ <header.gap-8> (337x31px)           | Let's talk                   ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.white>                                      |   │
-│ | H1: R o m a i n A v a l l e                                      |   │
-│ | Substrate: #fff       | Ink: #000       | Accent: #000000        |   │
+│ | HERO STAGE: <section.white> (w=1440px)                             | │
+│ | H1: Romain Avalle                                                  | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #f3f2f1                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.bg-black>        ) max-w: none (full-ble |   │
+│ | SHOWCASE GRID (<section.bg-black>) max-w: 1440px                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | I n t e r a c t i v e D e v  |  | █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░  | | │
+│ | | R o m a i n A v a l l e      |  | I n t e r a c t i v e D e v  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (f) | │
-│ | [<header.bg-black>] -> [<section.white>] -> [<section.bg-black>] |   │
+│ | DETAIL MODULE (<section.text-white>) — █ █ █ █ █ █ █ █ █ █ █       | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.h-screen>     ) | https://www.romainavalle.dev/      │
+│ [ FOOTER (<footer.z-1>        ) | https://www.romainavalle.dev/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8.22857p)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.gap-8>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.white>) — 390px Vertical Lead                 | │
+│ | H1: Romain Avalle                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.bg-black>) — 1-Col Stack                  | │
+│ | [ Item 1: R o m a i n A v a l l e                                ] | │
+│ | [ Item 2: I n t e r a c t i v e D e v e l o p e r                ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.text-white>) — 1-Col (█ █ █ █ █ █ █ █ █ )   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.z-1>        ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.bg-black> — `www-romainavalle-dev`)**:
-   - Landmark `<header class="bg-black text-white">` hosting `Romain Avalle - Interactive developp` navigation (`Let's talk`), DOM attributes (`data-v-54411a74`, `data-char="R"`, `data-char="o"`, `data-char="m"`), and stylesheet rule `.common-scene { height:100lvh }`.
-2. **Hero Stage & Focal Lead (<section.white> — `R o m a i n A v a l l e`)**:
-   - Landmark `<section class="white">` presenting display lead `R o m a i n A v a l l e` and copy excerpt *"Interactive Developer"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.bg-black> — `I n t e r a c t i v e D e v e l o `)**:
-   - Landmark `<section class="bg-black">` rendering section `I n t e r a c t i v e D e v e l o p e r` with copy *"█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*, asset references (`gtm.js`, `_payload.json`, `BC66KIH3.js`, `B3W-aES6.js`), and grid rule `before { transform:scaleX(1) }`.
-4. **Interactive Detail & Feature Matrix (<section.text-white> — `█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ `)**:
-   - Landmark `<section class="text-white">` framing `█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ` and `R o m a i n A v a l l e` (*"R o m a i n A v a l l e"*) with `#0000` surface cards, `#000000` accents, and `html.lenis body { height:auto }`.
-5. **Colophon & Global Directory Footer (<footer.h-screen> — `https://www.romainavalle.dev/`)**:
-   - Landmark `<footer class="h-screen relative">` anchoring `Romain Avalle - Interactive deve` footer links (`Let's talk`), copy *"I n t e r a c t i v e D e v e l o p e r"*, and `#f3f2f1` structural dividers.
+1. **Brand Header & Navigation Bar (<header.gap-8> — `www-romainavalle-dev`)**:
+   - Landmark `<header class="gap-8 bottom-30">` (`337x31px`) hosting `Romain Avalle - Interactive developp` navigation (`Let's talk`), DOM attributes (`data-v-54411a74`, `data-char="R"`, `data-char="o"`, `data-char="m"`), and stylesheet rule `.common-scene { height:100lvh }`.
+2. **Hero Stage & Focal Lead (<section.white> — `Romain Avalle`)**:
+   - Landmark `<section class="white">` presenting display lead `Romain Avalle` and copy excerpt *"I'm Romain Avalle, an interactive developer with 20 years of dedi"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.bg-black> — `R o m a i n A v a l l e`)**:
+   - Landmark `<section class="bg-black">` rendering section `R o m a i n A v a l l e` with copy *"Interactive Developer"*, asset references (`gtm.js`, `_payload.json`, `BC66KIH3.js`, `B3W-aES6.js`), and grid rule `before { transform:scaleX(1) }`.
+4. **Interactive Detail & Feature Matrix (<section.text-white> — `I n t e r a c t i v e D e v e l o `)**:
+   - Landmark `<section class="text-white">` framing `I n t e r a c t i v e D e v e l o p e r` and `█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ` (*"█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*) with `#000000` surface cards, `#f3f2f1` accents, and `html.lenis body { height:auto }`.
+5. **Colophon & Global Directory Footer (<footer.z-1> — `https://www.romainavalle.dev/`)**:
+   - Landmark `<footer class="z-1 h-screen">` anchoring `Romain Avalle - Interactive deve` footer links (`Let's talk`), copy *"R o m a i n A v a l l e"*, and `#000000` structural dividers.
 
 ---
 
@@ -155,19 +179,23 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#0000
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-romainavalle-dev` (**Romain Avalle - Interactive developper** — `https://www.romainavalle.dev/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#000000`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f3f2f1`).
 - **Identity & Domain Context**: Romain Avalle, interactive developer since 2006. Team Lead & Tech Lead at REF Digital in Montréal. Awwwards jury member, 40+ Awwwards and...
-- **Primary Substrate**: `#fff` (`var(--color-white)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#000000`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#f3f2f1`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#000` primary typography and `#000000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `RemusVariableVF` for display copy (`R o m a i n A v a l l e`) with `andale-mono` and `andale-mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `none (full-bleed `100%` viewport stage)` container bounds (`gap: 0px (flush layout)`, padding `0px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#f3f2f1` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `RemusVariableVF` for display copy (`Romain Avalle`) with `RemusVariableVF` and `andale-mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8.22857px`, padding `8.22857px`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-romainavalle-dev` in your global stylesheet:
 
 :root {
-  /* Romain Avalle - Interactive developper (www-romainavalle-dev) — Ground-Truth Extracted CSS Variables */
+  /* Romain Avalle - Interactive developper (www-romainavalle-dev) — Live-Grounded CSS Variables */
+  --size: 375; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
+  --lvh: 1lvh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
+  --dvh: 1dvh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
+  --svh: 1svh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
   --spacing: .1rem; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
   --default-transition-duration: .15s; /* Motion / Easing Token (www-romainavalle-dev) */
   --default-transition-timing-function: cubic-bezier(.23, 1, .32, 1); /* Motion / Easing Token (www-romainavalle-dev) */
@@ -175,68 +203,64 @@ Declare and consume these exact custom properties extracted from `www-romainaval
   --default-mono-font-family: var(--font-mono); /* Typography / Scale Token (www-romainavalle-dev) */
   --color-white: #fff; /* Canvas / Surface Token (www-romainavalle-dev) */
   --color-black: #000; /* Canvas / Surface Token (www-romainavalle-dev) */
-  --size: 375; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
-  --lvh: 1lvh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
-  --dvh: 1dvh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
-  --svh: 1svh; /* Layout / Spatial Grid Token (www-romainavalle-dev) */
   --tw-translate-x: 0; /* Design System Custom Token (www-romainavalle-dev) */
   --tw-translate-y: 0; /* Design System Custom Token (www-romainavalle-dev) */
   --tw-translate-z: 0; /* Design System Custom Token (www-romainavalle-dev) */
-  --www-romainavalle-bg: #fff; /* Canvas Substrate (from `var(--color-white)` in `:root`) (www-romainavalle-dev) */
-  --www-romainavalle-ink: #000; /* Primary Typography Ink (stylesheet-derived) (www-romainavalle-dev) */
+  --www-romainavalle-bg: #ffffff; /* Canvas Substrate (from live computed `browser-default` `background-color` (`computed_styles.json`)) (www-romainavalle-dev) */
+  --www-romainavalle-ink: #000000; /* Primary Typography Ink (computed-derived) (www-romainavalle-dev) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Primary Typography Ink**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Elevated Surface / Card Substrate**: `#0000` — grounded in `textarea { background-color: #0000 }`
-- **Interactive Accent / Highlight**: `#000000` — grounded in `.bg-black { background-color: black }` (`#000000`)
-- **Secondary / Muted Copy**: `#ffffff` — grounded in `.text-white { color: white }` (`#ffffff`)
-- **Structural Hairline Border**: `#f3f2f1` — grounded in `<meta name="theme-color" content="#f3f2f1">` in `dom.html`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#000000` — grounded in live computed `header` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#f3f2f1` — grounded in `<meta name="theme-color" content="#f3f2f1">` in `dom.html`
+- **Secondary / Muted Copy**: `#000000` — grounded in secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#000000` — grounded in hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×7040px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `none (full-bleed `100%` viewport stage)` extracted from `www-romainavalle-dev` stylesheet
-- **Padding & Gutters**: `0px` lateral canvas padding with `0px (flush layout)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: none (full-bleed `100%` viewport stage)`, `gap: 0px (flush layout)`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `0px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `8.22857px` lateral canvas padding with `8.22857px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.22857px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `8.22857px` horizontal padding
 - **Media Queries**: `@media (width>=650px)`, `@media (width>=1024px)`, `@media (width>=800px)`
-- **Corner Radii**: `.3rem`
+- **Corner Radii**: `3.08571px`, `.3rem`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `RemusVariableVF`
-- **Body Font Stack**: `andale-mono`
+- **Body Font Stack**: `RemusVariableVF`
 - **Monospace / Technical Font Stack**: `andale-mono`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `1.2rem`, `1.6rem`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `1.2rem`, `1.6rem`)
-- **Body Copy Rule**: rule `,body` (`font-size: 1.6rem`, `line-height: 1.2`, `letter-spacing: -.03rem`, `font-weight: 600`)
-- **Metadata & Index Rule**: CSS variables `--default-mono-font-family: var(--font-mono)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16.4571px`, `line-height: 19.7486px`, `font-weight: 600`, `letter-spacing: -0.308571px`); rule `,body` (`font-size: 1.6rem`, `line-height: 1.2`, `letter-spacing: -.03rem`, `font-weight: 600`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12.3429px`, `line-height: 14.8114px`, `font-weight: 600`, `letter-spacing: -0.308571px`); CSS variables `--default-mono-font-family: var(--font-mono)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-romainavalle-dev` (`Romain Avalle - Interactive developper`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.bg-black> — `www-romainavalle-dev`)**:
-   - DOM & Selectors: Landmark `<header class="bg-black text-white">` hosting `Romain Avalle - Interactive developp` navigation (`Let's talk`), DOM attributes (`data-v-54411a74`, `data-char="R"`, `data-char="o"`, `data-char="m"`), and stylesheet rule `.common-scene { height:100lvh }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bg-black> — `www-romainavalle-dev`)` (`www-romainavalle-dev`) adapts across `@media (width>=650px)`, `@media (width>=1024px)`, `@media (width>=800px)` with `cubic-bezier(.23,1,.32,1)` transitions and links `Let's talk`.
-2. **Hero Stage & Focal Lead (<section.white> — `R o m a i n A v a l l e`)**:
-   - DOM & Selectors: Landmark `<section class="white">` presenting display lead `R o m a i n A v a l l e` and copy excerpt *"Interactive Developer"* over `#fff` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×7040px` desktop / `390×2400px` mobile) sets `#fff` background with `#000` headline `R o m a i n A v a l l e`.
-3. **Primary Showcase & Content Grid (<section.bg-black> — `I n t e r a c t i v e D e v e l o `)**:
-   - DOM & Selectors: Landmark `<section class="bg-black">` rendering section `I n t e r a c t i v e D e v e l o p e r` with copy *"█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*, asset references (`gtm.js`, `_payload.json`, `BC66KIH3.js`, `B3W-aES6.js`), and grid rule `before { transform:scaleX(1) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-black> — `I n t e r a c t i v e D e v e l o `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: none (full-bleed `100%` viewport stage)`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `0px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.text-white> — `█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ `)**:
-   - DOM & Selectors: Landmark `<section class="text-white">` framing `█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ` and `R o m a i n A v a l l e` (*"R o m a i n A v a l l e"*) with `#0000` surface cards, `#000000` accents, and `html.lenis body { height:auto }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.text-white> — `█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ `)` uses `.3rem` radii, `#000000` highlights, and assets (gtm.js, _payload.json, BC66KIH3.js).
-5. **Colophon & Global Directory Footer (<footer.h-screen> — `https://www.romainavalle.dev/`)**:
-   - DOM & Selectors: Landmark `<footer class="h-screen relative">` anchoring `Romain Avalle - Interactive deve` footer links (`Let's talk`), copy *"I n t e r a c t i v e D e v e l o p e r"*, and `#f3f2f1` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.h-screen> — `https://www.romainavalle.dev/`)` aligns to `none (full-bleed `100%` viewport stage)` extracted from `www-romainavalle-dev` stylesheet with `0px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-v-54411a74, data-char="R", data-char="o").
+1. **Brand Header & Navigation Bar (<header.gap-8> — `www-romainavalle-dev`)**:
+   - DOM & Selectors: Landmark `<header class="gap-8 bottom-30">` (`337x31px`) hosting `Romain Avalle - Interactive developp` navigation (`Let's talk`), DOM attributes (`data-v-54411a74`, `data-char="R"`, `data-char="o"`, `data-char="m"`), and stylesheet rule `.common-scene { height:100lvh }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.gap-8> — `www-romainavalle-dev`)` (`www-romainavalle-dev`) adapts across `@media (width>=650px)`, `@media (width>=1024px)`, `@media (width>=800px)` with `cubic-bezier(.23,1,.32,1)` transitions and links `Let's talk`.
+2. **Hero Stage & Focal Lead (<section.white> — `Romain Avalle`)**:
+   - DOM & Selectors: Landmark `<section class="white">` presenting display lead `Romain Avalle` and copy excerpt *"I'm Romain Avalle, an interactive developer with 20 years of dedi"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Romain Avalle`.
+3. **Primary Showcase & Content Grid (<section.bg-black> — `R o m a i n A v a l l e`)**:
+   - DOM & Selectors: Landmark `<section class="bg-black">` rendering section `R o m a i n A v a l l e` with copy *"Interactive Developer"*, asset references (`gtm.js`, `_payload.json`, `BC66KIH3.js`, `B3W-aES6.js`), and grid rule `before { transform:scaleX(1) }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-black> — `R o m a i n A v a l l e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.22857px`) on desktop and Single-column vertical stack at `390px` viewport width with `8.22857px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.text-white> — `I n t e r a c t i v e D e v e l o `)**:
+   - DOM & Selectors: Landmark `<section class="text-white">` framing `I n t e r a c t i v e D e v e l o p e r` and `█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ` (*"█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*) with `#000000` surface cards, `#f3f2f1` accents, and `html.lenis body { height:auto }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.text-white> — `I n t e r a c t i v e D e v e l o `)` uses `3.08571px`, `.3rem` radii, `#f3f2f1` highlights, and assets (gtm.js, _payload.json, BC66KIH3.js).
+5. **Colophon & Global Directory Footer (<footer.z-1> — `https://www.romainavalle.dev/`)**:
+   - DOM & Selectors: Landmark `<footer class="z-1 h-screen">` anchoring `Romain Avalle - Interactive deve` footer links (`Let's talk`), copy *"R o m a i n A v a l l e"*, and `#000000` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.z-1> — `https://www.romainavalle.dev/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `8.22857px` lateral canvas padding with `8.22857px` grid gap and attributes (data-v-54411a74, data-char="R", data-char="o").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Interactive Developer"*
-- Copy Excerpt 2: *"█ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*
-- Copy Excerpt 3: *"R o m a i n A v a l l e"*
-- Copy Excerpt 4: *"I n t e r a c t i v e D e v e l o p e r"*
+- Copy Excerpt 1: *"I'm Romain Avalle, an interactive developer with 20 years of dedicated experience..."*
+- Copy Excerpt 2: *"Interactive Developer"*
+- Copy Excerpt 3: *"█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░"*
+- Copy Excerpt 4: *"R o m a i n A v a l l e"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.23,1,.32,1)`
@@ -250,7 +274,7 @@ Scaffold `www-romainavalle-dev` (`Romain Avalle - Interactive developper`) with 
 - **Selector `.home-work[data-v-187357cc]:before`**: `transition: transform .7s ease-out .11s` extracted from `www-romainavalle-dev` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-romainavalle-dev` stylesheet.
 - **Selector `.back .arrow[data-v-9e8fb527]`**: `transition: transform .3s` extracted from `www-romainavalle-dev` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.bg-black>` and `<section.bg-black>`.
+- **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.gap-8>` and `<section.bg-black>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

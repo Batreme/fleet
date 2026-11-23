@@ -1,35 +1,47 @@
+---
+title: "UI & UX Architecture: heronaiapp-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: heronaiapp-com
 
 ## Overview & Design Identity
 - **Target**: `heronaiapp-com` (**Heron AI · Works inside your design tools**)
 - **Production URL**: [https://heronaiapp.com/](https://heronaiapp.com/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b3b3af` / `#b4b4b0`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fa3600`)
 - **Summary**: Heron sees your model, spots problems, and suggests fixes as you design. When you approve, it makes the edit itself, all without leaving...
-- **Total Clean CSS Variables Extracted**: `43` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `43` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Geistmono`
+- **Display Font Stack**: `BT Grotesk`
 - **Body Font Stack**: `BT Grotesk`
 - **Monospace / Technical Font Stack**: `Geistmono`
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`)
-- **Body Copy**: rule `p` (`font-size: 1rem`, `line-height: 1.1em`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `2em`, `80%`, `75%`, `1em`, `14px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 46.6667px`, `line-height: 46.6667px`, `font-weight: 700`, `letter-spacing: -0.933333px`); rule `h1` (`font-size: 7.2rem`, `line-height: 1em`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 33.3333px`, `line-height: 33.3333px`, `font-weight: 600`, `letter-spacing: -0.666667px`); rule `h2` (`font-size: 2.4rem`, `line-height: 1.1em`, `letter-spacing: -.02em`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 13.3333px`, `line-height: 17.3333px`, `font-weight: 500`, `letter-spacing: -0.266667px`); rule `p` (`font-size: 1rem`, `line-height: 1.1em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 11.6667px`, `line-height: 15.1667px`, `font-weight: 500`, `letter-spacing: -0.266667px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#b3b3af` | `var(--content--border)` in `:root` |
-| **Primary Typography Ink** | `#fa3600` | `var(--content--brand)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#282828` | `var(--content--primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#b4b4b0` | `var(--content--disable)` in `:root` |
-| **Secondary / Muted Copy** | `#72726f` | `var(--content--surface)` in `:root` |
-| **Structural Hairline Border** | `#626260` | `var(--content--granite-gray)` in `:root` |
-| **Variable Token (`--content--terriary`)** | `#282828b8` | `var(--content--terriary)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#282828` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#efefef` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#fa3600` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#b4b4b0` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#b3b3af` | `var(--content--border)` in `:root` |
+| **Variable Token (`--content--surface`)** | `#72726f` | `var(--content--surface)` in `:root` |
+| **Variable Token (`--content--granite-gray`)** | `#626260` | `var(--content--granite-gray)` in `:root` |
 | **Variable Token (`--content--secondary`)** | `#414140` | `var(--content--secondary)` in `:root` |
 
 ---
@@ -58,12 +70,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `heronaiapp-com`)**:
-   - Landmark `<header class="header">` hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
-2. **Hero Stage & Focal Lead (<section.home-hero> — `An AI agent that works inside your`)**:
-   - Landmark `<section class="home-hero">` presenting display lead `An AI agent that works inside your design tools` and copy excerpt *"This website uses cookies. Learn more"* over `#b3b3af` canvas and `#282828` ink.
-3. **Primary Showcase & Content Grid (<section.home-intro> — `T H E R E P E T I T I V E P A R T `)**:
-   - Landmark `<section class="home-intro">` rendering section `T H E R E P E T I T I V E P A R T S O F M O D E L...` with copy *"Heron Chat Widget Heron Chat Widget"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
-4. **Interactive Detail & Feature Matrix (<section.home-problem> — `Your design tools do what you tell`)**:
-   - Landmark `<section class="home-problem">` framing `Your design tools do what you tell them, nothing...` and `RUN AN AGENT NATIVELY IN YOUR MODEL` (*"Heron Dashboard Heron Dashboard"*) with `#282828` surface cards, `#b4b4b0` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Landmark `<header class="header">` (`1427x56px`) hosting `Heron AI · Works inside your design ` navigation (`Menu · Pricing Pricing · Insights Insights · About About`), DOM attributes (`data-wf-domain="heronai.webflow.io"`, `data-wf-page="6a4b5161f0d11f1602cc3ba1"`, `data-wf-site="6a4b5161f0d11f1602cc3bbf"`, `data-resources-saver-cleanup="branding"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.home-hero> — `AN AI AGENT THAT WORKS INSIDE YOUR`)**:
+   - Landmark `<section class="home-hero">` presenting display lead `AN AI AGENT THAT WORKS INSIDE YOUR DESIGN TOOLS` and copy excerpt *"This website uses cookies. LEARN MORE"* over `#ffffff` canvas and `#282828` ink.
+3. **Primary Showcase & Content Grid (<section.home-intro> — `An AI agent that works inside your`)**:
+   - Landmark `<section class="home-intro">` rendering section `An AI agent that works inside your design tools` with copy *"©2026 HERON AI. All rights reserved. Concept Crafted by Bearplus"*, asset references (`cdn.prod.website-files.com`, `heronai.webflow.shared.9f21166e0....`, `clarity.js`, `xxzxds4q6a`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.home-problem> — `T H E R E P E T I T I V E P A R T `)**:
+   - Landmark `<section class="home-problem">` framing `T H E R E P E T I T I V E P A R T S O F M O D E L...` and `Your design tools do what you tell them, nothing...` (*"An AI agent that works inside your design tools"*) with `#efefef` surface cards, `#fa3600` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://heronaiapp.com/`)**:
-   - Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"Resources Resources"*, and `#626260` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Heron AI · Works inside your des` footer links (`Menu · Pricing Pricing · Insights Insights · About About`), copy *"T H E R E P E T I T I V E P A R T S O F M O D E L..."*, and `#b3b3af` structural dividers.

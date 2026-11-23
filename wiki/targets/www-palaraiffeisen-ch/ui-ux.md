@@ -1,41 +1,52 @@
+---
+title: "UI & UX Architecture: www-palaraiffeisen-ch"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: www-palaraiffeisen-ch
 
 ## Overview & Design Identity
 - **Target**: `www-palaraiffeisen-ch` (**Il palazzetto dello sport di Lugano — Palaraiffeisen**)
 - **Production URL**: [https://www.palaraiffeisen.ch](https://www.palaraiffeisen.ch)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#e7d3d3`)
+- **Final Redirected URL**: [https://palaraiffeisen.ch/](https://palaraiffeisen.ch/)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e52528`)
 - **Summary**: Il PalaRaiffeisen, il nuovo palazzetto dello sport di Lugano. Eventi, competizioni e attività per tutti.
-- **Total Clean CSS Variables Extracted**: `323` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `323` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `APK Systema Regular`
 - **Body Font Stack**: `APK-Narrative-Regular`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.7333333333vw`, `1.25vw`, `4.2666666667vw`, `1.1111111111vw`, `6.6666666667vw`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.7333333333vw`, `1.25vw`, `4.2666666667vw`, `1.1111111111vw`, `6.6666666667vw`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.7333333333vw`, `1.25vw`, `4.2666666667vw`, `1.1111111111vw`, `6.6666666667vw`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `3.7333333333vw`, `1.25vw`, `4.2666666667vw`, `1.1111111111vw`, `6.6666666667vw`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 56px`, `font-weight: 400`, `letter-spacing: -0.84px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--c-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--c-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fb2c36` | `var(--c-red)` in `:root` |
-| **Interactive Accent / Highlight** | `#e7d3d3` | `var(--c-light-1)` in `:root` |
-| **Secondary / Muted Copy** | `#eee` | `var(--c-light-2)` in `:root` |
-| **Structural Hairline Border** | `#023911` | `var(--c-green-dark)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f0f0f0` | `.page-home-3d { background-color: #f0f0f0 }` |
+| **Interactive Accent / Highlight** | `#e52528` | `var(--c-primary-300)` in `:root` |
+| **Secondary / Muted Copy** | `#000000` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#000000` | `.app-elements-list li { border: #000000 }` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--scaleX` | `0` | Design System Custom Token |
 | `--c-black` | `#000` | Canvas / Surface Token |
 | `--c-black-0` | `transparent` | Canvas / Surface Token |
 | `--c-black-10` | `rgba(0,0,0,.1)` | Canvas / Surface Token |
@@ -51,17 +62,18 @@
 | `--c-white` | `#fff` | Canvas / Surface Token |
 | `--c-white-0` | `hsla(0,0%,100%,0)` | Canvas / Surface Token |
 | `--c-white-10` | `hsla(0,0%,100%,.1)` | Canvas / Surface Token |
+| `--c-white-20` | `hsla(0,0%,100%,.2)` | Canvas / Surface Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.lenis> — `www-palaraiffeisen-ch`)**:
-   - Landmark `<header class="lenis">` hosting `Il palazzetto dello sport di Lugano ` navigation (`Il Palazzetto · Le società residenti · Organizza un evento · News · Scopri di più`), DOM attributes (`data-infer`, `data-cookiescriptreport="report"`, `data-tres="tresjs 5.8.1"`, `data-engine="three.js r180"`), and stylesheet rule `.svg-icon-close svg { display:block;width:100%;height:100% }`.
-2. **Hero Stage & Focal Lead (<section.page-home-hero> — `B E N V E N U T I A L P A L A R A `)**:
-   - Landmark `<section class="page-home-hero">` presenting display lead `B E N V E N U T I A L P A L A R A I F F E I S E N...` and copy excerpt *"Le società residenti"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.page-home-3d> — `Un nuovo quartiere per Lugano Un n`)**:
-   - Landmark `<section class="page-home-3d">` rendering section `Un nuovo quartiere per Lugano Un nuovo quartiere...` with copy *"Organizza un evento"*, asset references (`kirby.palaraiffeisen.ch`, `entry.DiBOf5nH.css`, `Writer.C_JpA5xq.css`, `Media.C_3wTCR8.css`), and grid rule `.app-webgl-front-card { gap:2.1333333333vw;padding:4.2666666667vw }`.
-4. **Interactive Detail & Feature Matrix (<section.page-banner-fullscreen> — `u n a n u o v a d e s t i n a z i `)**:
-   - Landmark `<section class="page-banner-fullscreen">` framing `u n a n u o v a d e s t i n a z i o n e p e r e v...` and `PALARAIFFEISEN PALARAIFFEISEN` (*"INAUGURAZIONE SETTEMBRE 2027 INAUGURAZIONE SETTEMBRE 2027"*) with `#fb2c36` surface cards, `#e7d3d3` accents, and `.app-webgl-front-card__close { position:absolute;top:.5555555556vw;right:.5555555556vw;width:1.38888888... }`.
+   - Landmark `<header class="lenis">` (`1440px`) hosting `Il palazzetto dello sport di Lugano ` navigation (`Il Palazzetto · Le società residenti · Organizza un evento · News · Scopri di più`), DOM attributes (`data-infer`, `data-cookiescriptreport="report"`, `data-tres="tresjs 5.8.1"`, `data-engine="three.js r180"`), and stylesheet rule `.P2.no-selectable { -webkit-user-select:none;-moz-user-select:none;user-select:none }`.
+2. **Hero Stage & Focal Lead (<section.page-home-hero> — `BENVENUTI AL PALARAIFFEISEN BENVEN`)**:
+   - Landmark `<section class="page-home-hero">` presenting display lead `BENVENUTI AL PALARAIFFEISEN BENVENUTI AL PALARAIF...` and copy excerpt *"La nuova casa dello sport e degli eventi a Lugano."* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.page-home-3d> — `B E N V E N U T I A L P A L A R A `)**:
+   - Landmark `<section class="page-home-3d">` rendering section `B E N V E N U T I A L P A L A R A I F F E I S E N...` with copy *"INAUGURAZIONE SETTEMBRE 2027 INAUGURAZIONE SETTEMBRE 2027"*, asset references (`kirby.palaraiffeisen.ch`, `entry.DiBOf5nH.css`, `Writer.C_JpA5xq.css`, `Media.C_3wTCR8.css`), and grid rule `.app-elements-list { display:flex;flex-direction:column;list-style:none;padding:0;margin:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.page-banner-fullscreen> — `Un nuovo quartiere per Lugano Un n`)**:
+   - Landmark `<section class="page-banner-fullscreen">` framing `Un nuovo quartiere per Lugano Un nuovo quartiere...` and `u n a n u o v a d e s t i n a z i o n e p e r e v...` (*"INAUGURAZIONE SETTEMBRE 2027"*) with `#f0f0f0` surface cards, `#e52528` accents, and `.app-elements-list li { border:1px solid var(--c-black);margin-top:-1px;padding:.2777777778vw;di... }`.
 5. **Colophon & Global Directory Footer (<footer.app-footer> — `https://www.palaraiffeisen.ch`)**:
-   - Landmark `<footer class="app-footer block-inner">` anchoring `Il palazzetto dello sport di Lug` footer links (`Il Palazzetto · Le società residenti · Organizza un evento · News · Scopri di più`), copy *"INAUGURAZIONE SETTEMBRE 2027"*, and `#023911` structural dividers.
+   - Landmark `<footer class="app-footer block-inner">` anchoring `Il palazzetto dello sport di Lug` footer links (`Il Palazzetto · Le società residenti · Organizza un evento · News · Scopri di più`), copy *"B E N V E N U T I A L P A L A R A I F F E I S E N"*, and `#000000` structural dividers.

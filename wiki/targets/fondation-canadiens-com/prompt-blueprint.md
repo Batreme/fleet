@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: fondation-canadiens-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "fondation-canadiens-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f4f4`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0000ff`)"
 ---
 
 # UI Design System & Master Generation Blueprint: fondation-canadiens-com
 
-> **Fondation des Canadiens pour l'enfance - Bouger pour grandir** (https://fondation.canadiens.com/) — La Fondation des Canadiens de Montréal encourage l’activité physique et l’adoption de saines habitudes de vie chez les jeunes défavorisés...
+> **Montreal Canadiens Children's Foundation - Play to thrive** (https://fondation.canadiens.com/) — The Foundation encourages physical activity and the adoption of a healthy lifestyle among underprivileged youth from 4 to 17 years old.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Fondation des Canadiens pour l'enfance - Bouger pour grandir** (`https://fondation.canadiens.com/`). La Fondation des Canadiens de Montréal encourage l’activité physique et l’adoption de saines habitudes de vie chez les jeunes défavorisés...
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f4f4`)**.
+- **Brand Essence & Persona**: **Montreal Canadiens Children's Foundation - Play to thrive** (`https://fondation.canadiens.com/`). The Foundation encourages physical activity and the adoption of a healthy lifestyle among underprivileged youth from 4 to 17 years old.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f4f4f4` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `bauhausvole` for display copy (`B o u g e r p o u r g r a n d i r`) with `Poppins` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `64rem` container bounds (`gap: var(--spacing-margin)`, padding `1rem`) with `cubic-bezier(.32,0,.67,0)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#001a66` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `bauhausvole` for display copy (`PLAY TO THRIVE`) with `Poppins` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing-margin)`, padding `10px`) with `cubic-bezier(.32,0,.67,0)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×10722px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `64rem` extracted from `fondation-canadiens-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `var(--spacing-margin)` grid gap.
-- **Border Radius Scale**: `var(--radius-md)`, `var(--radius-sm)`, `.25rem`, `var(--radius-lg)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `var(--spacing-margin)` grid gap.
+- **Border Radius Scale**: `0px 0px 13.5px`, `var(--radius-md)`, `var(--radius-sm)`, `.25rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 64rem`, `gap: var(--spacing-margin)`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing-margin)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:64rem)`, `@media not all and (max-width:64rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`.
 
 ---
@@ -48,14 +52,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ccc` | `var(--color-gray)` in `:root` |
-| **Interactive Accent / Highlight** | `#f4f4f4` | `var(--color-gray-light)` in `:root` |
-| **Secondary / Muted Copy** | `#dae7f6` | `var(--color-gray-blue)` in `:root` |
-| **Structural Hairline Border** | `#570000` | `var(--color-red-1)` in `:root` |
+| **Primary Canvas Substrate** | `#f4f4f4` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#001a66` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.bg-white { background-color: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#0000ff` | `.prose-column .pill-btn:hover { background-color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#c3c3c3` | `.loader { border-color: #c3c3c3 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -86,11 +90,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f
 - **Primary Body Stack**: `Poppins`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-h1: calc(var(--font-size-h1)/var(--rem)*1rem)`, `--text-h1--line-height: .85`, `--text-h1--letter-spacing: -.03em`; rule `h1` (`font-size: var(--text-h1)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--font-we...`).
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-h2: calc(var(--font-size-h2)/var(--rem)*1rem)`; rule `h2` (`font-size: var(--text-h4)`, `line-height: var(--tw-leading,var(...`, `font-weight: var(--font-we...`).
-- **Body Copy**: CSS variables `--text-body: 1rem`, `--text-body--line-height: 1.4`, `--font-size-body: 16`.
-- **Metadata & Navigation Labels**: CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25/.875)`, `--default-mono-font-family: var(--font-mono)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 172.8px`, `line-height: 146.88px`, `font-weight: 600`, `letter-spacing: -5.184px`); CSS variables `--text-h1: calc(var(--font-size-h1)/var(--rem)*1rem)`, `--text-h1--line-height: .85`, `--text-h1--letter-spacing: -.03em`; rule `h1` (`font-size: var(--text-h1)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--font-we...`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 50px`, `line-height: 57.5px`, `font-weight: 600`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-h2: calc(var(--font-size-h2)/var(--rem)*1rem)`; rule `h2` (`font-size: var(--text-h4)`, `line-height: var(--tw-leading,var(...`, `font-weight: var(--font-we...`).
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 500`); CSS variables `--text-body: 1rem`, `--text-body--line-height: 1.4`, `--font-size-body: 16`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 500`); CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25/.875)`, `--default-mono-font-family: var(--font-mono)`.
 
 ---
 
@@ -103,71 +107,90 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f
 - **Selector `layer theme`**: `transition: var(--speed-normal)` extracted from `fondation-canadiens-com` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `fondation-canadiens-com` stylesheet.
 - **Selector `swiper-pagination .swiper-paginat...`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `fondation-canadiens-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.absolute>` and `<article.pt-margin>`.
+- **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.left-0>` and `<article.space-y-gutter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — Fondation des Canadiens pour l'enfance - B │
+│ DESKTOP VIEWPORT (1440px) — Montreal Canadiens Children's Foundation - │
 │ ====================================================================== │
-│ [ <header.absolute>        | Overview · Index · Archive · About · C ]  │
+│ [ <header.left-0> (1425x110px)        | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <article.pt-margin>                                  |   │
-│ | H1: B o u g e r p o u r g r a n d i r                            |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #f4f4f4        |   │
+│ | HERO STAGE: <article.pt-margin> (w=1425px)                         | │
+│ | H1: PLAY TO THRIVE                                                 | │
+│ | Substrate: #f4f4f4 | Ink: #001a66 | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.pt-margin>       ) max-w: 64rem          |   │
+│ | SHOWCASE GRID (<article.space-y-gutter>) max-w: 96rem              | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Nouvelles et histoires       |  | Comment contribuer           | | │
+│ | | P l a y t o t h r i v e      |  | News & Stories               | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.absolute>] -> [<article.pt-margin] -> [<article.pt-margin]  │
+│ | DETAIL MODULE (<article.bg-gray-light>) — A child discovering t    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.px-margin>    ) | https://fondation.canadiens.com/   │
+│ [ FOOTER (<footer.px-margin>  ) | https://fondation.canadiens.com/     │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--sp)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.left-0>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<article.pt-margin>) — 390px Vertical Lead             | │
+│ | H1: PLAY TO THRIVE                                                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<article.space-y-gutte) — 1-Col Stack              | │
+│ | [ Item 1: P l a y t o t h r i v e                                ] | │
+│ | [ Item 2: News & Stories                                         ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<article.bg-gray-light>) — 1-Col (A child discoverin)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.px-margin>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.absolute> — `fondation-canadiens-com`)**:
-   - Landmark `<header class="absolute left-0">` hosting `Fondation des Canadiens pour l'enfan` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-svg-origin="464 490"`, `data-svg-origin="857.5 277.5"`, `data-flip-id="auto-2"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<article.pt-margin> — `B o u g e r p o u r g r a n d i r`)**:
-   - Landmark `<article class="pt-margin space-y-gutter">` presenting display lead `B o u g e r p o u r g r a n d i r` and copy excerpt *"Dons aux organismes"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<article.pt-margin> — `Nouvelles et histoires`)**:
-   - Landmark `<article class="pt-margin space-y-gutter">` rendering section `Nouvelles et histoires` with copy *"Comment contribuer"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<article.pt-margin> — `Comment contribuer`)**:
-   - Landmark `<article class="pt-margin space-y-gutter">` framing `Comment contribuer` and `Depuis plus de 25 ans, la Fondation des Canadien` (*"Depuis plus de 25 ans, la Fondation des Canadiens pour l’enfance "*) with `#ccc` surface cards, `#f4f4f4` accents, and `strong { font-weight:bolder }`.
+1. **Brand Header & Navigation Bar (<header.left-0> — `fondation-canadiens-com`)**:
+   - Landmark `<header class="left-0 top-0">` (`1425x110px`) hosting `Montreal Canadiens Children's Founda` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-svg-origin="464 490"`, `data-svg-origin="857.5 300.5"`, `data-flip-id="auto-2"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<article.pt-margin> — `PLAY TO THRIVE`)**:
+   - Landmark `<article class="pt-margin space-y-gutter">` presenting display lead `PLAY TO THRIVE` and copy excerpt *"For over 25 years, the Montreal Canadiens Children's Foundation h"* over `#f4f4f4` canvas and `#001a66` ink.
+3. **Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)**:
+   - Landmark `<article class="pt-margin space-y-gutter">` rendering section `P l a y t o t h r i v e` with copy *"Behind every rink and every program, there is a story of a child "*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)**:
+   - Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#ffffff` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)**:
-   - Landmark `<footer class="px-margin pb-30">` anchoring `Fondation des Canadiens pour l'e` footer links (`Overview · Index · Archive · About · Contact`), copy *"Derrière chaque patinoire et chaque programme, il y a une hi"*, and `#570000` structural dividers.
+   - Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#c3c3c3` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: fondation-canadiens-com (Fondation des Canadiens pour l'enfance - Bouger pour grandir)
+# Master Zero-Shot Frontend Generation Prompt: fondation-canadiens-com (Montreal Canadiens Children's Foundation - Play to thrive)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `fondation-canadiens-com` (**Fondation des Canadiens pour l'enfance - Bouger pour grandir** — `https://fondation.canadiens.com/`).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `fondation-canadiens-com` (**Montreal Canadiens Children's Foundation - Play to thrive** — `https://fondation.canadiens.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f4f4f4`).
-- **Identity & Domain Context**: La Fondation des Canadiens de Montréal encourage l’activité physique et l’adoption de saines habitudes de vie chez les jeunes défavorisés...
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#f4f4f4`.
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0000ff`).
+- **Identity & Domain Context**: The Foundation encourages physical activity and the adoption of a healthy lifestyle among underprivileged youth from 4 to 17 years old.
+- **Primary Substrate**: `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#001a66`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f4f4f4` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `bauhausvole` for display copy (`B o u g e r p o u r g r a n d i r`) with `Poppins` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `64rem` container bounds (`gap: var(--spacing-margin)`, padding `1rem`) with `cubic-bezier(.32,0,.67,0)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#001a66` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `bauhausvole` for display copy (`PLAY TO THRIVE`) with `Poppins` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing-margin)`, padding `10px`) with `cubic-bezier(.32,0,.67,0)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `fondation-canadiens-com` in your global stylesheet:
 
 :root {
-  /* Fondation des Canadiens pour l'enfance - Bouger pour grandir (fondation-canadiens-com) — Ground-Truth Extracted CSS Variables */
+  /* Montreal Canadiens Children's Foundation - Play to thrive (fondation-canadiens-com) — Live-Grounded CSS Variables */
   --font-sans: "Poppins",sans-serif; /* Typography / Scale Token (fondation-canadiens-com) */
   --color-red-50: oklch(97.1% .013 17.38); /* Brand / Palette Token (fondation-canadiens-com) */
   --color-red-500: oklch(63.7% .237 25.331); /* Brand / Palette Token (fondation-canadiens-com) */
@@ -188,55 +211,55 @@ Declare and consume these exact custom properties extracted from `fondation-cana
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#ccc` — grounded in `var(--color-gray)` in `:root`
-- **Interactive Accent / Highlight**: `#f4f4f4` — grounded in `var(--color-gray-light)` in `:root`
-- **Secondary / Muted Copy**: `#dae7f6` — grounded in `var(--color-gray-blue)` in `:root`
-- **Structural Hairline Border**: `#570000` — grounded in `var(--color-red-1)` in `:root`
+- **Primary Canvas Substrate**: `#f4f4f4` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#001a66` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.bg-white { background-color: white }` (`#ffffff`)
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.prose-column .pill-btn:hover { background-color: blue }` (`#0000ff`)
+- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#c3c3c3` — grounded in `.loader { border-color: #c3c3c3 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×10722px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `64rem` extracted from `fondation-canadiens-com` stylesheet
-- **Padding & Gutters**: `1rem` lateral canvas padding with `var(--spacing-margin)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 64rem`, `gap: var(--spacing-margin)`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `10px` lateral canvas padding with `var(--spacing-margin)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing-margin)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
 - **Media Queries**: `@media (min-width:64rem)`, `@media not all and (max-width:64rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`
-- **Corner Radii**: `var(--radius-md)`, `var(--radius-sm)`, `.25rem`, `var(--radius-lg)`
+- **Corner Radii**: `0px 0px 13.5px`, `var(--radius-md)`, `var(--radius-sm)`, `.25rem`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `bauhausvole`
 - **Body Font Stack**: `Poppins`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: CSS variables `--text-h1: calc(var(--font-size-h1)/var(--rem)*1rem)`, `--text-h1--line-height: .85`, `--text-h1--letter-spacing: -.03em`; rule `h1` (`font-size: var(--text-h1)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--font-we...`)
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-h2: calc(var(--font-size-h2)/var(--rem)*1rem)`; rule `h2` (`font-size: var(--text-h4)`, `line-height: var(--tw-leading,var(...`, `font-weight: var(--font-we...`)
-- **Body Copy Rule**: CSS variables `--text-body: 1rem`, `--text-body--line-height: 1.4`, `--font-size-body: 16`
-- **Metadata & Index Rule**: CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25/.875)`, `--default-mono-font-family: var(--font-mono)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 172.8px`, `line-height: 146.88px`, `font-weight: 600`, `letter-spacing: -5.184px`); CSS variables `--text-h1: calc(var(--font-size-h1)/var(--rem)*1rem)`, `--text-h1--line-height: .85`, `--text-h1--letter-spacing: -.03em`; rule `h1` (`font-size: var(--text-h1)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`, `font-weight: var(--font-we...`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 50px`, `line-height: 57.5px`, `font-weight: 600`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-h2: calc(var(--font-size-h2)/var(--rem)*1rem)`; rule `h2` (`font-size: var(--text-h4)`, `line-height: var(--tw-leading,var(...`, `font-weight: var(--font-we...`)
+- **Body Copy Rule**: live computed `body` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 500`); CSS variables `--text-body: 1rem`, `--text-body--line-height: 1.4`, `--font-size-body: 16`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 500`); CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25/.875)`, `--default-mono-font-family: var(--font-mono)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
-Scaffold `fondation-canadiens-com` (`Fondation des Canadiens pour l'enfance - Bouger pour grandir`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.absolute> — `fondation-canadiens-com`)**:
-   - DOM & Selectors: Landmark `<header class="absolute left-0">` hosting `Fondation des Canadiens pour l'enfan` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-svg-origin="464 490"`, `data-svg-origin="857.5 277.5"`, `data-flip-id="auto-2"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.absolute> — `fondation-canadiens-com`)` (`fondation-canadiens-com`) adapts across `@media (min-width:64rem)`, `@media not all and (max-width:64rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)` with `cubic-bezier(.32,0,.67,0)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<article.pt-margin> — `B o u g e r p o u r g r a n d i r`)**:
-   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` presenting display lead `B o u g e r p o u r g r a n d i r` and copy excerpt *"Dons aux organismes"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×10722px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `B o u g e r p o u r g r a n d i r`.
-3. **Primary Showcase & Content Grid (<article.pt-margin> — `Nouvelles et histoires`)**:
-   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` rendering section `Nouvelles et histoires` with copy *"Comment contribuer"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.pt-margin> — `Nouvelles et histoires`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 64rem`, `gap: var(--spacing-margin)`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<article.pt-margin> — `Comment contribuer`)**:
-   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` framing `Comment contribuer` and `Depuis plus de 25 ans, la Fondation des Canadien` (*"Depuis plus de 25 ans, la Fondation des Canadiens pour l’enfance "*) with `#ccc` surface cards, `#f4f4f4` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.pt-margin> — `Comment contribuer`)` uses `var(--radius-md)`, `var(--radius-sm)`, `.25rem`, `var(--radius-lg)` radii, `#f4f4f4` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
+Scaffold `fondation-canadiens-com` (`Montreal Canadiens Children's Foundation - Play to thrive`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.left-0> — `fondation-canadiens-com`)**:
+   - DOM & Selectors: Landmark `<header class="left-0 top-0">` (`1425x110px`) hosting `Montreal Canadiens Children's Founda` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-svg-origin="464 490"`, `data-svg-origin="857.5 300.5"`, `data-flip-id="auto-2"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.left-0> — `fondation-canadiens-com`)` (`fondation-canadiens-com`) adapts across `@media (min-width:64rem)`, `@media not all and (max-width:64rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)` with `cubic-bezier(.32,0,.67,0)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+2. **Hero Stage & Focal Lead (<article.pt-margin> — `PLAY TO THRIVE`)**:
+   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` presenting display lead `PLAY TO THRIVE` and copy excerpt *"For over 25 years, the Montreal Canadiens Children's Foundation h"* over `#f4f4f4` canvas and `#001a66` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f4f4` background with `#001a66` headline `PLAY TO THRIVE`.
+3. **Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)**:
+   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` rendering section `P l a y t o t h r i v e` with copy *"Behind every rink and every program, there is a story of a child "*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing-margin)`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)**:
+   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#ffffff` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)` uses `0px 0px 13.5px`, `var(--radius-md)`, `var(--radius-sm)`, `.25rem` radii, `#0000ff` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
 5. **Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="px-margin pb-30">` anchoring `Fondation des Canadiens pour l'e` footer links (`Overview · Index · Archive · About · Contact`), copy *"Derrière chaque patinoire et chaque programme, il y a une hi"*, and `#570000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)` aligns to `64rem` extracted from `fondation-canadiens-com` stylesheet with `1rem` lateral canvas padding with `var(--spacing-margin)` grid gap and attributes (data-sveltekit-preload-data="hover", data-svg-origin="464 490", data-svg-origin="857.5 277.5").
+   - DOM & Selectors: Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#c3c3c3` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `10px` lateral canvas padding with `var(--spacing-margin)` grid gap and attributes (data-sveltekit-preload-data="hover", data-svg-origin="464 490", data-svg-origin="857.5 300.5").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Dons aux organismes"*
-- Copy Excerpt 2: *"Comment contribuer"*
-- Copy Excerpt 3: *"Depuis plus de 25 ans, la Fondation des Canadiens pour l’enfance aide les jeunes d..."*
-- Copy Excerpt 4: *"Derrière chaque patinoire et chaque programme, il y a une histoire d’enfant qui dé..."*
+- Copy Excerpt 1: *"For over 25 years, the Montreal Canadiens Children's Foundation has been helping u..."*
+- Copy Excerpt 2: *"Behind every rink and every program, there is a story of a child discovering their..."*
+- Copy Excerpt 3: *"A child discovering the fun of being active"*
+- Copy Excerpt 4: *"one skate stride at a time."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.32,0,.67,0)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)`
@@ -250,7 +273,7 @@ Scaffold `fondation-canadiens-com` (`Fondation des Canadiens pour l'enfance - Bo
 - **Selector `layer theme`**: `transition: var(--speed-normal)` extracted from `fondation-canadiens-com` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `fondation-canadiens-com` stylesheet.
 - **Selector `swiper-pagination .swiper-paginat...`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `fondation-canadiens-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.absolute>` and `<article.pt-margin>`.
+- **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.left-0>` and `<article.space-y-gutter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

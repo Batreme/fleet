@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: heirest-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: heirest-com
 
 ## Overview & Design Identity
 - **Target**: `heirest-com` (**HEIREST · Fine Jewellery, Authored By You**)
 - **Production URL**: [https://heirest.com/](https://heirest.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#DFDFDF` canvas, `#000000` ink, `#ffffff` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffc700` accent)
 - **Summary**: Fine jewellery for those who choose to author what others inherit. Configured by you and crafted to last.
-- **Total Clean CSS Variables Extracted**: `1464` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `1469` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Inter`
+- **Display Font Stack**: `Moderat-Regular`
 - **Body Font Stack**: `Moderat-Regular`
 - **Monospace / Technical Font Stack**: `ModeratMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--loyalty-shimmer-display: none`, `--font-h1--spacing: var(--font-heading--spacing)`, `--font-h1--color: var(--color-foreground-heading)`; rule `h1` (`line-height: var(--line-height--di...`)
-- **Section Heading (`H2`)**: CSS variables `--loyalty-banner-subtitle-size: 14px`, `--font-h2--spacing: var(--font-heading--spacing)`, `--font-h2--color: var(--color-foreground-heading)`; rule `h2` (`font-size: var(--heading-font-size)`, `font-weight: var(--heading...`)
-- **Body Copy**: CSS variables `--paragraph-color: #202020`, `--paragraph-font-size: 16px`, `--paragraph-font-weight: 400`; rule `p` (`line-height: var(--line-height--bo...`)
-- **Metadata & Labels**: CSS variables `--default-mono-font-family: var(--font-mono)`, `--bundle-product-label-color: #000000`, `--bundle-product-label-size: 16px`
+- **Hero Display (`H1`)**: CSS variables `--loyalty-shimmer-display: none`, `--font-h1--spacing: var(--font-heading--spacing)`, `--max-width--display-normal: 13em`; rule `h1` (`line-height: var(--line-height--di...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 47px`, `line-height: 54.05px`, `font-weight: 400`, `letter-spacing: -1.88px`); CSS variables `--loyalty-banner-subtitle-size: 14px`, `--font-h2--spacing: var(--font-heading--spacing)`, `--font-h2--weight: 400`; rule `h2` (`font-size: var(--heading-font-size)`, `font-weight: var(--heading...`)
+- **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 21.45px`, `font-weight: 400`, `letter-spacing: -0.195px`); CSS variables `--paragraph-font-size: 16px`, `--paragraph-font-weight: 400`, `--form-paragraph-font-weight: var(--paragraph-font-weight)`; rule `p` (`line-height: var(--line-height--bo...`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 21.45px`, `font-weight: 400`, `letter-spacing: -0.195px`); CSS variables `--section-height-small: 15rem`, `--default-mono-font-family: var(--font-mono)`, `--bundle-product-label-size: 16px`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#DFDFDF` | `var(--accordion-border-color)` in `:root` |
-| **Primary Typography Ink** | `#f9f8f6` | `var(--product-image-tint)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#000000` | `var(--bundle-component-title-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffffff` | `var(--bundle-component-background)` in `:root` |
-| **Secondary / Muted Copy** | `#cccccc` | `var(--bundle-option-border-color)` in `:root` |
-| **Structural Hairline Border** | `#202020` | `var(--paragraph-color)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fefdfc` | `var(--color-background-default)` in `:root` |
+| **Interactive Accent / Highlight** | `#ffc700` | `oduct-review .question-form .ra... { color: #ffc700 }` |
+| **Secondary / Muted Copy** | `#606775` | `var(--cs-secondary-text)` in `:root` |
+| **Structural Hairline Border** | `#fefdfc` | `var(--color-border-secondary)` in `:root` |
+| **Variable Token (`--product-image-tint`)** | `#f9f8f6` | `var(--product-image-tint)` in `:root` |
 
 ---
 
@@ -46,22 +58,22 @@
 | `--submenu-animation-speed` | `.36s` | Motion / Easing Token |
 | `--submenu-animation-easing` | `cubic-bezier(.25, .1, .25, 1)` | Motion / Easing Token |
 | `--icon-stroke-width` | `1px` | Layout / Spatial Grid Token |
-| `--backdrop-color-rgb` | `var(--color-shadow-rgb)` | Brand / Palette Token |
 | `--page-margin` | `16px` | Layout / Spatial Grid Token |
-| `--full-page-grid-margin` | `minmax(var(--page-margin), 1fr)` | Layout / Spatial Grid Token |
-| `--full-page-margin-inline-offset` | `calc(((100vw - var(--full-page-grid-central-column-width)) / 2) * -1)` | Layout / Spatial Grid Token |
-| `--dot-size` | `var(--section-dot-size, 1.5px)` | Layout / Spatial Grid Token |
+| `--product-image-tint` | `#f9f8f6` | Canvas / Surface Token |
+| `--sidebar-width` | `25rem` | Layout / Spatial Grid Token |
+| `--narrow-content-width` | `36rem` | Layout / Spatial Grid Token |
+| `--normal-content-width` | `42rem` | Layout / Spatial Grid Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.shopify-section> — `heirest-com`)**:
-   - Landmark `<header class="shopify-section shopify-section-group-header-group">` hosting `HEIREST · Fine Jewellery, Authored B` navigation (`Bespoke · Our Standards · Sizing Kits`), DOM attributes (`data-swym-guest-login-bound="1"`, `data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.event_observe..."`, `data-shopify`), and stylesheet rule `body { scrollbar-width:none;-ms-overflow-style:none }`.
-2. **Hero Stage & Focal Lead (<section.shopify-pc__banner__dialog> — `Cookie consent`)**:
-   - Landmark `<section class="shopify-pc__banner__dialog">` presenting display lead `Cookie consent` and copy excerpt *"cookies are used on this site. Privacy Policy"* over `#DFDFDF` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<section.shopify-section> — `Your Cart Your cart is empty`)**:
-   - Landmark `<section class="shopify-section shopify-section-group-header-group">` rendering section `Your Cart Your cart is empty` with copy *"SHOP THE HEIREST SIZING KIT · ONLY $19 + FREE SHIPPING SHOP THE H"*, asset references (`clarity.js`, `y0e70x819z`, `gtm.js`, `cdn.shopify.com`), and grid rule `body::-webkit-scrollbar { width:0;height:0;display:none }`.
-4. **Interactive Detail & Feature Matrix (<section.shopify-section> — `Subscribe to our newsletter`)**:
-   - Landmark `<section class="shopify-section shopify-section-group-header-group">` framing `Subscribe to our newsletter` and `Slideshow` (*"SHOP THE HEIREST SIZING KIT · ONLY $19 + FREE SHIPPING"*) with `#000000` surface cards, `#ffffff` accents, and `svg { display:block;max-width:100% }`.
+   - Landmark `<header class="shopify-section shopify-section-group-header-group">` (`1440x0px`) hosting `HEIREST · Fine Jewellery, Authored B` navigation (`Bespoke · Engagement · Our Standards`), DOM attributes (`data-swym-guest-login-bound="1"`, `data-swym-drawer-close-bound="1"`, `data-swym-evt-bound="1"`, `data-swym-save-click-bound="1"`), and stylesheet rule `body { scrollbar-width:none;-ms-overflow-style:none }`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Author what others inherit.`)**:
+   - Landmark `<section class="shopify-section featured-blog-posts">` presenting display lead `Author what others inherit.` and copy excerpt *"cookies are used on this site. Privacy Policy"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.template-index> — `Time-honoured finery, authored by `)**:
+   - Landmark `<section class="template-index">` rendering section `Time-honoured finery, authored by you.` with copy *"Every decision yours. Every step visible."*, asset references (`1297080862623390`, `fbevents.js`, `swym-ext-shopify.js`, `clarity.js`), and grid rule `body::-webkit-scrollbar { width:0;height:0;display:none }`.
+4. **Interactive Detail & Feature Matrix (<section.navbar--always-show> — `Our Standards`)**:
+   - Landmark `<section class="navbar--always-show">` framing `Our Standards` and `Start with a category` (*"Clarity and transparency at every step"*) with `#fefdfc` surface cards, `#ffc700` accents, and `svg { display:block;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.announcement-bar--show> — `https://heirest.com/`)**:
-   - Landmark `<footer class="announcement-bar--show">` anchoring `HEIREST · Fine Jewellery, Author` footer links (`Bespoke · Our Standards · Sizing Kits`), copy *"Translation missing: en.localization.currency_label AED AUD "*, and `#202020` structural dividers.
+   - Landmark `<footer class="announcement-bar--show">` anchoring `HEIREST · Fine Jewellery, Author` footer links (`Bespoke · Engagement · Our Standards`), copy *"Complimentary worldwide shipping"*, and `#fefdfc` structural dividers.

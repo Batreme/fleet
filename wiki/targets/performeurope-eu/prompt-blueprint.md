@@ -1,81 +1,90 @@
 ---
 title: "UI Prompt Blueprint: performeurope-eu"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "performeurope-eu"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `#000` ink, `#7a00df` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: performeurope-eu
 
 > **Perform Europe - Reimagine International Touring** (https://performeurope.eu/) — Discover Perform Europe: a funding scheme for the European performing arts. Supporting inclusive, diverse and green touring projects via...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Perform Europe - Reimagine International Touring** (`https://performeurope.eu/`). Discover Perform Europe: a funding scheme for the European performing arts. Supporting inclusive, diverse and green touring projects via...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `#000` ink, `#7a00df` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#CBF2D9` (`var(--mint-color)` in `:root`) paired with `#000` primary typography and `#7a00df` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Favorit` for display copy (`Dear performing arts communities acr`) with `ABC Favorit` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 1rem`, padding `35px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Favorit` for display copy (`Dear performing arts communities acr`) with `Favorit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 1.5rem`, padding `24px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×4533px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `800px` extracted from `performeurope-eu` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `35px` lateral canvas padding with `1rem` grid gap.
-- **Border Radius Scale**: `5rem`, `999px`, `12px`, `4px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `1.5rem` grid gap.
+- **Border Radius Scale**: `16px`, `999px`, `4px`, `8px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 1rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `35px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width: 479px)`, `@media screen and (max-width: 1479px)`, `@media screen and (max-width: 1300px)`, `@media screen and (max-width: 767px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 1.5rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#CBF2D9` | `var(--mint-color)` in `:root` |
-| **Primary Typography Ink** | `#ff00ff` | `var(--magenta-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#000` | `var(--w2w-start-background-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
-| **Secondary / Muted Copy** | `#ddd` | `var(--wp-editor-canvas-background)` in `:root` |
-| **Structural Hairline Border** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0000ff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#0000ff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#111111` | live computed `a` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#5897fb` | `--classic .select2-selection--s... { border: #5897fb }` |
+| **Variable Token (`--wp-block-synced-color`)** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
+| **Variable Token (`--wp-editor-canvas-background`)** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color`)** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-10`)** | `#006ba1` | `var(--wp-admin-theme-color-darker-10)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-20`)** | `#005a87` | `var(--wp-admin-theme-color-darker-20)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--mint-color` | `#CBF2D9` | Brand / Palette Token |
-| `--magenta-color` | `#ff00ff` | Brand / Palette Token |
-| `--magenta` | `#ff00ff` | Color / Atmospheric Token |
-| `--light-blue` | `rgba(0, 0, 255, .0)` | Canvas / Surface Token |
-| `--slider-padding` | `5rem` | Layout / Spatial Grid Token |
-| `--slider-column-gap` | `5rem` | Layout / Spatial Grid Token |
-| `--slide-width` | `33%` | Layout / Spatial Grid Token |
-| `--slide-min-width` | `35rem` | Layout / Spatial Grid Token |
-| `--td176b92ada598f8f` | `initial` | Design System Custom Token |
-| `--td851cd75a8793667` | `initial` | Design System Custom Token |
-| `--tc58f4bf5a9869b3e` | `initial` | Design System Custom Token |
-| `--t3a480c2f814ef19c` | `initial` | Design System Custom Token |
-| `--t77e217518bcd986b` | `initial` | Design System Custom Token |
-| `--tc5e0863356bf5767` | `initial` | Design System Custom Token |
-| `--t7a2234c5eadde886` | `initial` | Design System Custom Token |
-| `--td340014d093b0821` | `initial` | Design System Custom Token |
+| `--wp-block-synced-color` | `#7a00df` | Brand / Palette Token |
+| `--wp-block-synced-color--rgb` | `122,0,223` | Brand / Palette Token |
+| `--wp-bound-block-color` | `var(--wp-block-synced-color)` | Brand / Palette Token |
+| `--wp-editor-canvas-background` | `#ddd` | Canvas / Surface Token |
+| `--wp-admin-theme-color` | `#007cba` | Brand / Palette Token |
+| `--wp-admin-theme-color--rgb` | `0,124,186` | Brand / Palette Token |
+| `--wp-admin-theme-color-darker-10` | `#006ba1` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-10--rgb` | `0,107,160.5` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20` | `#005a87` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20--rgb` | `0,90,135` | Canvas / Surface Token |
+| `--wp-admin-border-width-focus` | `2px` | Layout / Spatial Grid Token |
+| `--wp-admin--admin-bar--position-offset` | `var(--wp-admin--admin-bar--height,0px)` | Dimension / Scale Token |
+| `--wp--custom--spacing--small` | `max(1.5rem, 2vw)` | Layout / Spatial Grid Token |
+| `--wp--custom--spacing--medium` | `clamp(2rem, 8vw, calc(4 * 1.5rem))` | Layout / Spatial Grid Token |
+| `--wp--custom--spacing--large` | `clamp(4rem, 10vw, 8rem)` | Layout / Spatial Grid Token |
+| `--wp--custom--spacing--outer` | `var(--wp--custom--spacing--small, 1.5rem)` | Layout / Spatial Grid Token |
 
 ---
 
@@ -83,14 +92,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `Favorit`.
-- **Primary Body Stack**: `ABC Favorit`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Favorit`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`, `line-height: 36px`).
-- **Body Copy**: rule `.paragraph` (`font-size: 1rem`).
-- **Metadata & Navigation Labels**: CSS variables `--wp--custom--spacing--small: max(1.5rem, 2vw)`, `--wp--custom--typography--line-height--small: 1.2`; rule `small` (`font-size: 80%`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 400`, `letter-spacing: -2.4px`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Body Copy**: live computed `body` (`font-size: 19px`, `line-height: 22.8px`, `font-weight: 400`); rule `p` (`font-size: 1.25rem`, `line-height: 130%`, `letter-spacing: -.05rem`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 19px`, `line-height: 22.8px`, `font-weight: 400`); CSS variables `--wp--custom--spacing--small: max(1.5rem, 2vw)`, `--wp--custom--typography--line-height--small: 1.2`; rule `small` (`font-size: 80%`).
 
 ---
 
@@ -100,50 +109,69 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(.05,0,0,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `#reset-pass-submit`**: `transition: background-color .2s` extracted from `performeurope-eu` stylesheet.
-- **Selector `::after`**: `transition: 0.01ms !important` extracted from `performeurope-eu` stylesheet.
-- **Selector `html.sl-a11y-reduce-motion *::after`**: `transition: 0.01ms !important` extracted from `performeurope-eu` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.nav__cont>` and `<section.section-wrp>`.
+- **Selector `.swiper-slide .txt--4rem-slid.txt...`**: `transition: all .2s` extracted from `performeurope-eu` stylesheet.
+- **Selector `.cta__arrow__img`**: `transition: 200ms` extracted from `performeurope-eu` stylesheet.
+- **Selector `.dd__txt`**: `transition: 0ms` extracted from `performeurope-eu` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.nav__cont>` and `<section.s-card>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Perform Europe - Reimagine International T │
 │ ====================================================================== │
-│ [ <nav.nav__cont>          | L o g i n · Home · About Us · who we a ]  │
+│ [ <nav.nav__cont> (1440x0px)          | L o g i n · Home · About Us  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.section-wrp>                                |   │
-│ | H1: Dear performing arts communities across Europe… hi!          |   │
-│ | Substrate: #CBF2D9    | Ink: #000       | Accent: #7a00df        |   │
+│ | HERO STAGE: <section.section-wrp> (w=1440px)                       | │
+│ | H1: Dear performing arts communities across Europe… hi!            | │
+│ | Substrate: #000000 | Ink: #ffffff | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.section-wrp>     ) max-w: 800px          |   │
+│ | SHOWCASE GRID (<section.s-card>) max-w: 100vw                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Innovative                   |  | Green                        | | │
+│ | | Collaborative                |  | Perform Europe’s Open Call i | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<nav.nav__cont>] -> [<section.section-w] -> [<section.section-w] |  │
+│ | DETAIL MODULE (<section.s-latest>) — Latest news and event         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://performeurope.eu/          │
+│ [ FOOTER (<footer.footer>     ) | https://performeurope.eu/            │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1.5rem)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.nav__cont>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.section-wrp>) — 390px Vertical Lead           | │
+│ | H1: Dear performing arts communities across Europe… hi!            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.s-card>) — 1-Col Stack                    | │
+│ | [ Item 1: Collaborative                                          ] | │
+│ | [ Item 2: Perform Europe’s Open Call is closed. What Happen...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.s-latest>) — 1-Col (Latest news and ev)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.nav__cont> — `performeurope-eu`)**:
-   - Landmark `<nav class="nav__cont">` hosting `Perform Europe - Reimagine Internati` navigation (`L o g i n · Home · About Us · who we are · Timeline`), DOM attributes (`data-speed="1.09"`, `data-lag="0"`, `data-speed="0.95"`, `data-lag="0"`), and stylesheet rule `.display_user_data { display:none; }`.
+   - Landmark `<nav class="nav__cont">` (`1440x0px`) hosting `Perform Europe - Reimagine Internati` navigation (`L o g i n · Home · About Us · who we are · Timeline`), DOM attributes (`data-speed="1.09"`, `data-lag="0"`, `data-speed="0.95"`, `data-lag="0"`), and stylesheet rule `.select2-container { box-sizing:border-box;display:inline-block;margin:0;position:relative;ve... }`.
 2. **Hero Stage & Focal Lead (<section.section-wrp> — `Dear performing arts communities a`)**:
-   - Landmark `<section class="section-wrp s-landing-animation">` presenting display lead `Dear performing arts communities across Europe… hi!` and copy excerpt *"Press Enter to Menu"* over `#CBF2D9` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.section-wrp> — `Innovative`)**:
-   - Landmark `<section class="section-wrp s-card">` rendering section `Innovative` with copy *"Press Enter to Content"*, asset references (`perform-europe-fav.png`, `cdnjs.cloudflare.com`, `embed`, `password-lost.css`), and grid rule `img.open-eyes.closed { display: none; }`.
-4. **Interactive Detail & Feature Matrix (<section.section-wrp> — `Green`)**:
-   - Landmark `<section class="section-wrp s-latest">` framing `Green` and `Diverse` (*"Press Enter to Footer"*) with `#000` surface cards, `#7a00df` accents, and `.s-profile-first h1.page__title { max-width: 800px; }`.
+   - Landmark `<section class="section-wrp s-landing-animation">` presenting display lead `Dear performing arts communities across Europe… hi!` and copy excerpt *"Perform Europe is a forward-looking funding scheme for the Europe"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.s-card> — `Collaborative`)**:
+   - Landmark `<section class="section-wrp s-card">` rendering section `Collaborative` with copy *"Submissions for the Perform Europe Open Call are now closed. A to"*, asset references (`perform-europe-fav.png`, `cdnjs.cloudflare.com`, `embed`, `password-lost.css`), and grid rule `t2-container .select2-selection--... { box-sizing:border-box;cursor:pointer;display:block;height:28px;user-sele... }`.
+4. **Interactive Detail & Feature Matrix (<section.s-latest> — `Perform Europe’s Open Call is clos`)**:
+   - Landmark `<section class="section-wrp s-latest">` framing `Perform Europe’s Open Call is closed. What Happen...` and `Latest news and events` (*"While we await the public announcement of the selected projects f"*) with `#0000ff` surface cards, `#0000ff` accents, and `on--single .select2-selection__re... { display:block;padding-left:8px;padding-right:20px;overflow:hidden;text-o... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://performeurope.eu/`)**:
-   - Landmark `<footer class="footer">` anchoring `Perform Europe - Reimagine Inter` footer links (`L o g i n · Home · About Us · who we are · Timeline`), copy *"P e r f o r m E u r o p e"*, and `#007cba` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Perform Europe - Reimagine Inter` footer links (`L o g i n · Home · About Us · who we are · Timeline`), copy *"Perform Europe is co-funded by the European Union and implem"*, and `#5897fb` structural dividers.
 
 ---
 
@@ -155,102 +183,107 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `performeurope-eu` (**Perform Europe - Reimagine International Touring** — `https://performeurope.eu/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#CBF2D9` canvas, `#000` ink, `#7a00df` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent).
 - **Identity & Domain Context**: Discover Perform Europe: a funding scheme for the European performing arts. Supporting inclusive, diverse and green touring projects via...
-- **Primary Substrate**: `#CBF2D9` (`var(--mint-color)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#7a00df`.
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#CBF2D9` (`var(--mint-color)` in `:root`) paired with `#000` primary typography and `#7a00df` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Favorit` for display copy (`Dear performing arts communities acr`) with `ABC Favorit` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 1rem`, padding `35px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Favorit` for display copy (`Dear performing arts communities acr`) with `Favorit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 1.5rem`, padding `24px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `performeurope-eu` in your global stylesheet:
 
 :root {
-  /* Perform Europe - Reimagine International Touring (performeurope-eu) — Ground-Truth Extracted CSS Variables */
-  --mint-color: #CBF2D9; /* Brand / Palette Token (performeurope-eu) */
-  --magenta-color: #ff00ff; /* Brand / Palette Token (performeurope-eu) */
-  --magenta: #ff00ff; /* Color / Atmospheric Token (performeurope-eu) */
-  --light-blue: rgba(0, 0, 255, .0); /* Canvas / Surface Token (performeurope-eu) */
-  --slider-padding: 5rem; /* Layout / Spatial Grid Token (performeurope-eu) */
-  --slider-column-gap: 5rem; /* Layout / Spatial Grid Token (performeurope-eu) */
-  --slide-width: 33%; /* Layout / Spatial Grid Token (performeurope-eu) */
-  --slide-min-width: 35rem; /* Layout / Spatial Grid Token (performeurope-eu) */
-  --td176b92ada598f8f: initial; /* Design System Custom Token (performeurope-eu) */
-  --td851cd75a8793667: initial; /* Design System Custom Token (performeurope-eu) */
-  --tc58f4bf5a9869b3e: initial; /* Design System Custom Token (performeurope-eu) */
-  --t3a480c2f814ef19c: initial; /* Design System Custom Token (performeurope-eu) */
-  --t77e217518bcd986b: initial; /* Design System Custom Token (performeurope-eu) */
-  --tc5e0863356bf5767: initial; /* Design System Custom Token (performeurope-eu) */
-  --t7a2234c5eadde886: initial; /* Design System Custom Token (performeurope-eu) */
-  --td340014d093b0821: initial; /* Design System Custom Token (performeurope-eu) */
+  /* Perform Europe - Reimagine International Touring (performeurope-eu) — Live-Grounded CSS Variables */
+  --wp-block-synced-color: #7a00df; /* Brand / Palette Token (performeurope-eu) */
+  --wp-block-synced-color--rgb: 122,0,223; /* Brand / Palette Token (performeurope-eu) */
+  --wp-bound-block-color: var(--wp-block-synced-color); /* Brand / Palette Token (performeurope-eu) */
+  --wp-editor-canvas-background: #ddd; /* Canvas / Surface Token (performeurope-eu) */
+  --wp-admin-theme-color: #007cba; /* Brand / Palette Token (performeurope-eu) */
+  --wp-admin-theme-color--rgb: 0,124,186; /* Brand / Palette Token (performeurope-eu) */
+  --wp-admin-theme-color-darker-10: #006ba1; /* Canvas / Surface Token (performeurope-eu) */
+  --wp-admin-theme-color-darker-10--rgb: 0,107,160.5; /* Canvas / Surface Token (performeurope-eu) */
+  --wp-admin-theme-color-darker-20: #005a87; /* Canvas / Surface Token (performeurope-eu) */
+  --wp-admin-theme-color-darker-20--rgb: 0,90,135; /* Canvas / Surface Token (performeurope-eu) */
+  --wp-admin-border-width-focus: 2px; /* Layout / Spatial Grid Token (performeurope-eu) */
+  --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height,0px); /* Dimension / Scale Token (performeurope-eu) */
+  --wp--custom--spacing--small: max(1.5rem, 2vw); /* Layout / Spatial Grid Token (performeurope-eu) */
+  --wp--custom--spacing--medium: clamp(2rem, 8vw, calc(4 * 1.5rem)); /* Layout / Spatial Grid Token (performeurope-eu) */
+  --wp--custom--spacing--large: clamp(4rem, 10vw, 8rem); /* Layout / Spatial Grid Token (performeurope-eu) */
+  --wp--custom--spacing--outer: var(--wp--custom--spacing--small, 1.5rem); /* Layout / Spatial Grid Token (performeurope-eu) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#CBF2D9` — grounded in `var(--mint-color)` in `:root`
-- **Primary Typography Ink**: `#ff00ff` — grounded in `var(--magenta-color)` in `:root`
-- **Elevated Surface / Card Substrate**: `#000` — grounded in `var(--w2w-start-background-color)` in `:root`
-- **Interactive Accent / Highlight**: `#7a00df` — grounded in `var(--wp-block-synced-color)` in `:root`
-- **Secondary / Muted Copy**: `#ddd` — grounded in `var(--wp-editor-canvas-background)` in `:root`
-- **Structural Hairline Border**: `#007cba` — grounded in `var(--wp-admin-theme-color)` in `:root`
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#0000ff` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#111111` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#5897fb` — grounded in `--classic .select2-selection--s... { border: #5897fb }`
+- **Variable Token (`--wp-block-synced-color`)**: `#7a00df` — grounded in `var(--wp-block-synced-color)` in `:root`
+- **Variable Token (`--wp-editor-canvas-background`)**: `#dddddd` — grounded in `var(--wp-editor-canvas-background)` in `:root`
+- **Variable Token (`--wp-admin-theme-color`)**: `#007cba` — grounded in `var(--wp-admin-theme-color)` in `:root`
+- **Variable Token (`--wp-admin-theme-color-darker-10`)**: `#006ba1` — grounded in `var(--wp-admin-theme-color-darker-10)` in `:root`
+- **Variable Token (`--wp-admin-theme-color-darker-20`)**: `#005a87` — grounded in `var(--wp-admin-theme-color-darker-20)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×4533px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `800px` extracted from `performeurope-eu` stylesheet
-- **Padding & Gutters**: `35px` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 1rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `35px` horizontal padding
-- **Media Queries**: `@media screen and (max-width: 479px)`, `@media screen and (max-width: 1479px)`, `@media screen and (max-width: 1300px)`, `@media screen and (max-width: 767px)`
-- **Corner Radii**: `5rem`, `999px`, `12px`, `4px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `24px` lateral canvas padding with `1.5rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 1.5rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
+- **Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`
+- **Corner Radii**: `16px`, `999px`, `4px`, `8px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Favorit`
-- **Body Font Stack**: `ABC Favorit`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Body Font Stack**: `Favorit`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: rule `h2` (`font-size: 32px`, `line-height: 36px`)
-- **Body Copy Rule**: rule `.paragraph` (`font-size: 1rem`)
-- **Metadata & Index Rule**: CSS variables `--wp--custom--spacing--small: max(1.5rem, 2vw)`, `--wp--custom--typography--line-height--small: 1.2`; rule `small` (`font-size: 80%`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 400`, `letter-spacing: -2.4px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 19px`, `line-height: 22.8px`, `font-weight: 400`); rule `p` (`font-size: 1.25rem`, `line-height: 130%`, `letter-spacing: -.05rem`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 19px`, `line-height: 22.8px`, `font-weight: 400`); CSS variables `--wp--custom--spacing--small: max(1.5rem, 2vw)`, `--wp--custom--typography--line-height--small: 1.2`; rule `small` (`font-size: 80%`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `performeurope-eu` (`Perform Europe - Reimagine International Touring`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.nav__cont> — `performeurope-eu`)**:
-   - DOM & Selectors: Landmark `<nav class="nav__cont">` hosting `Perform Europe - Reimagine Internati` navigation (`L o g i n · Home · About Us · who we are · Timeline`), DOM attributes (`data-speed="1.09"`, `data-lag="0"`, `data-speed="0.95"`, `data-lag="0"`), and stylesheet rule `.display_user_data { display:none; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav__cont> — `performeurope-eu`)` (`performeurope-eu`) adapts across `@media screen and (max-width: 479px)`, `@media screen and (max-width: 1479px)`, `@media screen and (max-width: 1300px)`, `@media screen and (max-width: 767px)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(.05,0,0,1)` transitions and links `L o g i n · Home · About Us · who we are · Timeline`.
+   - DOM & Selectors: Landmark `<nav class="nav__cont">` (`1440x0px`) hosting `Perform Europe - Reimagine Internati` navigation (`L o g i n · Home · About Us · who we are · Timeline`), DOM attributes (`data-speed="1.09"`, `data-lag="0"`, `data-speed="0.95"`, `data-lag="0"`), and stylesheet rule `.select2-container { box-sizing:border-box;display:inline-block;margin:0;position:relative;ve... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav__cont> — `performeurope-eu`)` (`performeurope-eu`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(.05,0,0,1)` transitions and links `L o g i n · Home · About Us · who we are · Timeline`.
 2. **Hero Stage & Focal Lead (<section.section-wrp> — `Dear performing arts communities a`)**:
-   - DOM & Selectors: Landmark `<section class="section-wrp s-landing-animation">` presenting display lead `Dear performing arts communities across Europe… hi!` and copy excerpt *"Press Enter to Menu"* over `#CBF2D9` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×4533px` desktop / `390×2400px` mobile) sets `#CBF2D9` background with `#000` headline `Dear performing arts communities across Europe… hi!`.
-3. **Primary Showcase & Content Grid (<section.section-wrp> — `Innovative`)**:
-   - DOM & Selectors: Landmark `<section class="section-wrp s-card">` rendering section `Innovative` with copy *"Press Enter to Content"*, asset references (`perform-europe-fav.png`, `cdnjs.cloudflare.com`, `embed`, `password-lost.css`), and grid rule `img.open-eyes.closed { display: none; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section-wrp> — `Innovative`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `35px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.section-wrp> — `Green`)**:
-   - DOM & Selectors: Landmark `<section class="section-wrp s-latest">` framing `Green` and `Diverse` (*"Press Enter to Footer"*) with `#000` surface cards, `#7a00df` accents, and `.s-profile-first h1.page__title { max-width: 800px; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-wrp> — `Green`)` uses `5rem`, `999px`, `12px`, `4px` radii, `#7a00df` highlights, and assets (perform-europe-fav.png, cdnjs.cloudflare.com, embed).
+   - DOM & Selectors: Landmark `<section class="section-wrp s-landing-animation">` presenting display lead `Dear performing arts communities across Europe… hi!` and copy excerpt *"Perform Europe is a forward-looking funding scheme for the Europe"* over `#000000` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `Dear performing arts communities across Europe… hi!`.
+3. **Primary Showcase & Content Grid (<section.s-card> — `Collaborative`)**:
+   - DOM & Selectors: Landmark `<section class="section-wrp s-card">` rendering section `Collaborative` with copy *"Submissions for the Perform Europe Open Call are now closed. A to"*, asset references (`perform-europe-fav.png`, `cdnjs.cloudflare.com`, `embed`, `password-lost.css`), and grid rule `t2-container .select2-selection--... { box-sizing:border-box;cursor:pointer;display:block;height:28px;user-sele... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.s-card> — `Collaborative`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 1.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.s-latest> — `Perform Europe’s Open Call is clos`)**:
+   - DOM & Selectors: Landmark `<section class="section-wrp s-latest">` framing `Perform Europe’s Open Call is closed. What Happen...` and `Latest news and events` (*"While we await the public announcement of the selected projects f"*) with `#0000ff` surface cards, `#0000ff` accents, and `on--single .select2-selection__re... { display:block;padding-left:8px;padding-right:20px;overflow:hidden;text-o... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.s-latest> — `Perform Europe’s Open Call is clos`)` uses `16px`, `999px`, `4px`, `8px` radii, `#0000ff` highlights, and assets (perform-europe-fav.png, cdnjs.cloudflare.com, embed).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://performeurope.eu/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Perform Europe - Reimagine Inter` footer links (`L o g i n · Home · About Us · who we are · Timeline`), copy *"P e r f o r m E u r o p e"*, and `#007cba` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://performeurope.eu/`)` aligns to `800px` extracted from `performeurope-eu` stylesheet with `35px` lateral canvas padding with `1rem` grid gap and attributes (data-speed="1.09", data-lag="0", data-speed="0.95").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Perform Europe - Reimagine Inter` footer links (`L o g i n · Home · About Us · who we are · Timeline`), copy *"Perform Europe is co-funded by the European Union and implem"*, and `#5897fb` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://performeurope.eu/`)` aligns to `100vw` (non-`@media` desktop container stylesheet rule) with `24px` lateral canvas padding with `1.5rem` grid gap and attributes (data-speed="1.09", data-lag="0", data-speed="0.95").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Press Enter to Menu"*
-- Copy Excerpt 2: *"Press Enter to Content"*
-- Copy Excerpt 3: *"Press Enter to Footer"*
-- Copy Excerpt 4: *"P e r f o r m E u r o p e"*
+- Copy Excerpt 1: *"Perform Europe is a forward-looking funding scheme for the European performing art..."*
+- Copy Excerpt 2: *"Submissions for the Perform Europe Open Call are now closed. A total of 685 partne..."*
+- Copy Excerpt 3: *"While we await the public announcement of the selected projects from the third Per..."*
+- Copy Excerpt 4: *"Perform Europe is co-funded by the European Union and implemented by a consortium..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(.05,0,0,1)`
 - **Extracted Stylesheet Rules (`performeurope-eu`)**:
-- `.display_user_data { display:none; }`
-- `img.open-eyes.closed { display: none; }`
-- `.s-profile-first h1.page__title { max-width: 800px; }`
-- `img.eye_closed.open { display: block !important; }`
-- `.action-warning { z-index: 999999; height: 100%; min-height: 100vh; }`
+- `.select2-container { box-sizing:border-box;display:inline-block;margin:0;position:relative;ve... }`
+- `t2-container .select2-selection--... { box-sizing:border-box;cursor:pointer;display:block;height:28px;user-sele... }`
+- `on--single .select2-selection__re... { display:block;padding-left:8px;padding-right:20px;overflow:hidden;text-o... }`
+- `ction--single .select2-selection_... { position:relative }`
+- `container .select2-selection--mul... { box-sizing:border-box;cursor:pointer;display:block;min-height:32px;user-... }`
 - **Per-Selector Transition Rules**:
-- **Selector `#reset-pass-submit`**: `transition: background-color .2s` extracted from `performeurope-eu` stylesheet.
-- **Selector `::after`**: `transition: 0.01ms !important` extracted from `performeurope-eu` stylesheet.
-- **Selector `html.sl-a11y-reduce-motion *::after`**: `transition: 0.01ms !important` extracted from `performeurope-eu` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.nav__cont>` and `<section.section-wrp>`.
+- **Selector `.swiper-slide .txt--4rem-slid.txt...`**: `transition: all .2s` extracted from `performeurope-eu` stylesheet.
+- **Selector `.cta__arrow__img`**: `transition: 200ms` extracted from `performeurope-eu` stylesheet.
+- **Selector `.dd__txt`**: `transition: 0ms` extracted from `performeurope-eu` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.nav__cont>` and `<section.s-card>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

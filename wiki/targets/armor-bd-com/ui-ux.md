@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: armor-bd-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: armor-bd-com
 
 ## Overview & Design Identity
 - **Target**: `armor-bd-com` (**Armor Bangladesh Limited — ATM, CRM & Banking Technology Solutions**)
 - **Production URL**: [https://armor-bd.com](https://armor-bd.com)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#faebe3`)
+- **Final Redirected URL**: [https://www.armor-bd.com/](https://www.armor-bd.com/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#2d1f1a` / `#ea580c`)
 - **Summary**: Armor Bangladesh Limited provides banking hardware and software — cash recyclers, ATMs, kiosks, UPS, payment switching and card managemen...
-- **Total Clean CSS Variables Extracted**: `43` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `43` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Manrope`
+- **Display Font Stack**: `Work Sans`
 - **Body Font Stack**: `Unbounded`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: rule `h1` (`font-weight: 700`)
-- **Section Heading (`H2`)**: rule `h2` (`font-weight: 700`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.25em`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `1.25em`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`, `letter-spacing: -1.8px`); rule `h1` (`font-weight: 700`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`); rule `h2` (`font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--normal-bg)` in `:root` |
-| **Primary Typography Ink** | `#e5e7eb` | `:after { border-color: #e5e7eb }` |
-| **Elevated Surface / Card Substrate** | `#9ca3af` | `textarea::-moz-placeholder { color: #9ca3af }` |
-| **Interactive Accent / Highlight** | `#faebe3` | `.prose-primary { color: #faebe3 }` |
-| **Secondary / Muted Copy** | `#fff3` | `20 { border-color: #fff3 }` |
-| **Structural Hairline Border** | `#fffc` | `80 { color: #fffc }` |
+| **Primary Canvas Substrate** | `#2d1f1a` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ea580c` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ea580c` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#faebe3` | live computed `nav` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#2d201c` | `10 { border-color: #2d201c }` |
 
 ---
 
@@ -55,13 +67,13 @@
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<nav.relative> — `armor-bd-com`)**:
-   - Landmark `<nav class="relative mx-auto">` hosting `Armor Bangladesh Limited — ATM, CRM ` navigation (`Products · Why us · About · Career · Contact`), DOM attributes (`data-discover="true"`, `data-discover="true"`, `data-discover="true"`, `data-discover="true"`), and stylesheet rule `after { box-sizing:border-box;border-width:0;border-style:solid;border-color:e5e7eb }`.
+1. **Brand Header & Navigation Bar (<nav.rounded-full> — `armor-bd-com`)**:
+   - Landmark `<nav class="rounded-full shadow-lg">` (`1280x56px`) hosting `Armor Bangladesh Limited — ATM, CRM ` navigation (`Products · Why us · About · Career · Contact`), DOM attributes (`data-discover="true"`, `data-discover="true"`, `data-discover="true"`, `data-discover="true"`), and stylesheet rule `after { box-sizing:border-box;border-width:0;border-style:solid;border-color:e5e7eb }`.
 2. **Hero Stage & Focal Lead (<section.lenis-smooth> — `Pioneering Banking Technology Solu`)**:
-   - Landmark `<section class="lenis-smooth">` presenting display lead `Pioneering Banking Technology Solutions` and copy excerpt *"Loading Armor experience"* over `#fff` canvas and `#fff3` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `We are constantly introducing new `)**:
-   - Landmark `<section class="relative overflow-hidden">` rendering section `We are constantly introducing new products & solu...` with copy *"Technology Solutions"*, asset references (`favicon.ico`, `index-CjIBsQtn.js`, `index-BvNfHRqr.css`, `HomeV2-CKyWaDQ7.js`), and grid rule `body { margin:0;line-height:inherit }`.
-4. **Interactive Detail & Feature Matrix (<section.py-6> — `150+`)**:
-   - Landmark `<section class="py-6 overflow-hidden">` framing `150+` and `Everything you need to run modern banking` (*"Trusted nationwide"*) with `#9ca3af` surface cards, `#faebe3` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.w-full> — `https://armor-bd.com`)**:
-   - Landmark `<footer class="w-full bg-primary">` anchoring `Armor Bangladesh Limited — ATM, ` footer links (`Products · Why us · About · Career · Contact`), copy *"At Armor, we empower financial institutions to reach new hei"*, and `#fffc` structural dividers.
+   - Landmark `<section class="lenis-smooth">` presenting display lead `Pioneering Banking Technology Solutions` and copy excerpt *"Trusted nationwide"* over `#2d1f1a` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.relative> — `Trusted nationwide`)**:
+   - Landmark `<section class="relative overflow-hidden">` rendering section `Trusted nationwide` with copy *"Technology Solutions"*, asset references (`favicon.ico`, `index-CjIBsQtn.js`, `index-BvNfHRqr.css`, `HomeV2-CKyWaDQ7.js`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.py-6> — `Technology Solutions`)**:
+   - Landmark `<section class="py-6 bg-primary">` framing `Technology Solutions` and `At Armor, we empower financial institutions to r` (*"At Armor, we empower financial institutions to reach new heights "*) with `#ea580c` surface cards, `#ea580c` accents, and `strong { font-weight:bolder }`.
+5. **Colophon & Global Directory Footer (<footer.bg-primary> — `https://armor-bd.com`)**:
+   - Landmark `<footer class="bg-primary text-secondary">` anchoring `Armor Bangladesh Limited — ATM, ` footer links (`Products · Why us · About · Career · Contact`), copy *"Specialized Technical Experts"*, and `#2d201c` structural dividers.

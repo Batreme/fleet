@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-nereo-io"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-nereo-io"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas, `#fff` ink, `#b1b1b7` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#15191f` canvas, `#ffffff` ink, `#ffd23f` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-nereo-io
 
 > **Nereo — AI Video Generator for Creators & Marketers** (https://www.nereo.io/) — Generate stunning 4K videos with AI. Create professional videos from text prompts with realistic physics and native audio. Start free today.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Nereo — AI Video Generator for Creators & Marketers** (`https://www.nereo.io/`). Generate stunning 4K videos with AI. Create professional videos from text prompts with realistic physics and native audio. Start free today.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas, `#fff` ink, `#b1b1b7` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#15191f` canvas, `#ffffff` ink, `#ffd23f` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#404040` (`var(--sd-line2)` in `:root`) paired with `#fff` primary typography and `#b1b1b7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `__Outfit_a80a2d` for display copy (`AI Video Generator for Creators & Ma`) with `__Outfit_Fallback_a80a2d` and `__IBM_Plex_Sans_Arabic_559684`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: .125rem`, padding `2rem`) with `cubic-bezier(.8,0,1,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#15191f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffd23f` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `__Unbounded_73c992` for display copy (`AI Video Generator for Creators & Ma`) with `__Outfit_a80a2d` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `80rem` container bounds (`gap: 24px`, padding `2rem`) with `cubic-bezier(.8,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×9591px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1200px` extracted from `www-nereo-io` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `.125rem` grid gap.
-- **Border Radius Scale**: `.3125rem`, `.375rem`, `.75rem`, `.25rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `80rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `24px` grid gap.
+- **Border Radius Scale**: `999px`, `.3125rem`, `.375rem`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: .125rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 80rem`, `gap: 24px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:1200px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (prefers-reduced-motion:no-preference)`.
 
@@ -48,14 +52,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#404040` | `var(--sd-line2)` in `:root` |
-| **Primary Typography Ink** | `#262626` | `var(--sd-line)` in `:root` |
+| **Primary Canvas Substrate** | `#15191f` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `nav` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#171717` | `var(--sd-paper)` in `:root` |
-| **Interactive Accent / Highlight** | `#b1b1b7` | `var(--xy-edge-stroke-default)` in `:root` |
-| **Secondary / Muted Copy** | `#555` | `var(--xy-edge-stroke-selected-default)` in `:root` |
-| **Structural Hairline Border** | `#fff` | `var(--xy-minimap-background-color-default)` in `:root` |
+| **Interactive Accent / Highlight** | `#ffd23f` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#2b8fea` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#262626` | `var(--sd-line)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -68,29 +72,29 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas
 | `--sidebar-accent-foreground` | `var(--primary)` | Typography Ink Token |
 | `--sidebar-border` | `var(--border)` | Elevation / Border Token |
 | `--sidebar-ring` | `var(--ring)` | Elevation / Border Token |
-| `--ai-ad-step-angle` | `0deg` | Design System Custom Token |
-| `--duration` | `38s` | Motion / Easing Token |
-| `--font-display` | `var(--font-sans)` | Typography / Scale Token |
-| `--gap` | `12px` | Layout / Spatial Grid Token |
-| `--sd-line2` | `#404040!important` | Color / Atmospheric Token |
-| `--sd-line` | `#262626!important` | Color / Atmospheric Token |
-| `--sd-paper` | `#171717!important` | Canvas / Surface Token |
-| `--sd-raise` | `#262626!important` | Color / Atmospheric Token |
+| `--font-heading` | `var(--font-sans)` | Typography Ink Token |
+| `--background` | `262 76% 95%` | Canvas / Surface Token |
+| `--foreground` | `262 5% 10%` | Typography Ink Token |
+| `--card` | `262 50% 90%` | Dimension / Scale Token |
+| `--card-foreground` | `262 5% 10%` | Typography Ink Token |
+| `--popover` | `262 76% 95%` | Dimension / Scale Token |
+| `--popover-foreground` | `262 95% 10%` | Typography Ink Token |
+| `--primary` | `210 75% 50%` | Brand / Palette Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `__Outfit_a80a2d`.
-- **Primary Body Stack**: `__Outfit_Fallback_a80a2d`.
-- **Technical / Metadata Stack**: `__IBM_Plex_Sans_Arabic_559684`.
+- **Display Typography**: `__Unbounded_73c992`.
+- **Primary Body Stack**: `__Outfit_a80a2d`.
+- **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: var(--font-sans)`.
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`).
-- **Body Copy**: rule `p` (`line-height: 1.625`).
-- **Metadata & Navigation Labels**: CSS variables `--xy-edge-label-background-color-default: #fff`, `--xy-edge-label-color-default: inherit`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 60px`, `line-height: 68px`, `font-weight: 700`, `letter-spacing: -0.9px`); CSS variables `--font-display: var(--font-sans)`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 26px`, `line-height: 32px`, `font-weight: 700`, `letter-spacing: 0.52px`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--removed-body-scroll-bar-size: 0px`; rule `p` (`line-height: 1.625`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `small` (`font-size: 60px`).
 
 ---
 
@@ -103,47 +107,66 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas
 - **Selector `.transition`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
 - **Selector `.transition-\[color\2c text-shadow\]`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
 - **Selector `grid-template-rows\2c opacity\2c...`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.8,0,1,1)`)**: Governs interactive state transitions across `<nav.hidden>` and `<section.relative>`.
-- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+- **Extracted Easing Curve (`cubic-bezier(.8,0,1,1)`)**: Governs interactive state transitions across `<nav.gap-6>` and `<section.gap-4>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Nereo — AI Video Generator for Creators &  │
 │ ====================================================================== │
-│ [ <nav.hidden>             | Nereo · Home · AI Anime Shorts · Text  ]  │
+│ [ <nav.gap-6> (1248x40px)             | Nereo · Home · AI Anime Shor ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sticky>                                     |   │
-│ | H1: AI Video Generator for Creators & Marketers                  |   │
-│ | Substrate: #404040    | Ink: #fff       | Accent: #b1b1b7        |   │
+│ | HERO STAGE: <section.relative> (w=1440px)                          | │
+│ | H1: AI Video Generator for Creators & Marketers                    | │
+│ | Substrate: #15191f | Ink: #ffffff | Accent: #ffd23f                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.relative>        ) max-w: 1200px         |   │
+│ | SHOWCASE GRID (<section.gap-4>) max-w: 80rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Nereo Agent Describe the vid |  | Seedance 2.5 One continuous  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .125re) | │
-│ | [<nav.hidden>] -> [<section.sticky>] -> [<section.relative>] |       │
+│ | DETAIL MODULE (<section.border-nl-rule>) — Seedance 2.0 Audio an   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.antialiased>  ) | https://www.nereo.io/              │
+│ [ FOOTER (<footer.antialiased>) | https://www.nereo.io/                │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.gap-6>             ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.relative>) — 390px Vertical Lead              | │
+│ | H1: AI Video Generator for Creators & Marketers                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.gap-4>) — 1-Col Stack                     | │
+│ | [ Item 1: Nereo Agent Describe the video. The agent writes...    ] | │
+│ | [ Item 2: Seedance 2.5 One continuous 30-second take, nativ...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.border-nl-rule>) — 1-Col (Seedance 2.0 Audio) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.antialiased>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<nav.hidden> — `www-nereo-io`)**:
-   - Landmark `<nav class="hidden items-center">` hosting `Nereo — AI Video Generator for Creat` navigation (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
-2. **Hero Stage & Focal Lead (<section.sticky> — `AI Video Generator for Creators & `)**:
-   - Landmark `<section class="sticky top-0">` presenting display lead `AI Video Generator for Creators & Marketers` and copy excerpt *"Video Tools AI Anime Shorts Text to Video Flow AI Video Generator"* over `#404040` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `Nereo Agent Describe the video. Th`)**:
-   - Landmark `<section class="relative overflow-hidden">` rendering section `Nereo Agent Describe the video. The agent writes...` with copy *"Flow AI Video Generator"*, asset references (`logo.png`, `322e14d06135256b.css`, `1957d3acd0c31940.css`, `935ae15180c0d693.css`), and grid rule `body { margin:0;line-height:inherit }`.
-4. **Interactive Detail & Feature Matrix (<section.flex> — `Seedance 2.5 One continuous 30-sec`)**:
-   - Landmark `<section class="flex flex-col">` framing `Seedance 2.5 One continuous 30-second take, nativ...` and `Seedance 2.0 Audio and video generated together,...` (*"Reference to Video"*) with `#171717` surface cards, `#b1b1b7` accents, and `strong { font-weight:bolder }`.
+1. **Brand Header & Navigation Bar (<nav.gap-6> — `www-nereo-io`)**:
+   - Landmark `<nav class="gap-6 hidden">` (`1248x40px`) hosting `Nereo — AI Video Generator for Creat` navigation (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
+2. **Hero Stage & Focal Lead (<section.relative> — `AI Video Generator for Creators & `)**:
+   - Landmark `<section class="relative overflow-hidden">` presenting display lead `AI Video Generator for Creators & Marketers` and copy excerpt *"Turn a prompt, a photo or a reference into a finished video. Veo "* over `#15191f` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.gap-4> — `Nereo Agent Describe the video. Th`)**:
+   - Landmark `<section class="gap-4 border-nl-rule">` rendering section `Nereo Agent Describe the video. The agent writes...` with copy *"Start creating free"*, asset references (`e4af272ccee01ff0-s.p.woff2`, `logo.png`, `322e14d06135256b.css`, `a7f88efd924ba4d6.css`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.border-nl-rule> — `Seedance 2.5 One continuous 30-sec`)**:
+   - Landmark `<section class="gap-4 border-nl-rule">` framing `Seedance 2.5 One continuous 30-second take, nativ...` and `Seedance 2.0 Audio and video generated together,...` (*"Describe the video. The agent writes the shots, generates them an"*) with `#171717` surface cards, `#ffd23f` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.antialiased> — `https://www.nereo.io/`)**:
-   - Landmark `<footer class="antialiased">` anchoring `Nereo — AI Video Generator for C` footer links (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), copy *"ElevenLabs Alternative"*, and `#fff` structural dividers.
+   - Landmark `<footer class="antialiased">` anchoring `Nereo — AI Video Generator for C` footer links (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), copy *"LUMA NOOK — A Daily Tea Ritual"*, and `#262626` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-nereo-io` (**Nereo — AI Video Generator for Creators & Marketers** — `https://www.nereo.io/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#404040` canvas, `#fff` ink, `#b1b1b7` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#15191f` canvas, `#ffffff` ink, `#ffd23f` accent).
 - **Identity & Domain Context**: Generate stunning 4K videos with AI. Create professional videos from text prompts with realistic physics and native audio. Start free today.
-- **Primary Substrate**: `#404040` (`var(--sd-line2)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#b1b1b7`.
+- **Primary Substrate**: `#15191f` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ffd23f`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#404040` (`var(--sd-line2)` in `:root`) paired with `#fff` primary typography and `#b1b1b7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `__Outfit_a80a2d` for display copy (`AI Video Generator for Creators & Ma`) with `__Outfit_Fallback_a80a2d` and `__IBM_Plex_Sans_Arabic_559684`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: .125rem`, padding `2rem`) with `cubic-bezier(.8,0,1,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#15191f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffd23f` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `__Unbounded_73c992` for display copy (`AI Video Generator for Creators & Ma`) with `__Outfit_a80a2d` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `80rem` container bounds (`gap: 24px`, padding `2rem`) with `cubic-bezier(.8,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-nereo-io` in your global stylesheet:
 
 :root {
-  /* Nereo — AI Video Generator for Creators & Marketers (www-nereo-io) — Ground-Truth Extracted CSS Variables */
+  /* Nereo — AI Video Generator for Creators & Marketers (www-nereo-io) — Live-Grounded CSS Variables */
   --sidebar-background: var(--background); /* Canvas / Surface Token (www-nereo-io) */
   --sidebar-foreground: var(--foreground); /* Typography Ink Token (www-nereo-io) */
   --sidebar-primary: var(--primary); /* Brand / Palette Token (www-nereo-io) */
@@ -176,67 +199,67 @@ Declare and consume these exact custom properties extracted from `www-nereo-io` 
   --sidebar-accent-foreground: var(--primary); /* Typography Ink Token (www-nereo-io) */
   --sidebar-border: var(--border); /* Elevation / Border Token (www-nereo-io) */
   --sidebar-ring: var(--ring); /* Elevation / Border Token (www-nereo-io) */
-  --ai-ad-step-angle: 0deg; /* Design System Custom Token (www-nereo-io) */
-  --duration: 38s; /* Motion / Easing Token (www-nereo-io) */
-  --font-display: var(--font-sans); /* Typography / Scale Token (www-nereo-io) */
-  --gap: 12px; /* Layout / Spatial Grid Token (www-nereo-io) */
-  --sd-line2: #404040!important; /* Color / Atmospheric Token (www-nereo-io) */
-  --sd-line: #262626!important; /* Color / Atmospheric Token (www-nereo-io) */
-  --sd-paper: #171717!important; /* Canvas / Surface Token (www-nereo-io) */
-  --sd-raise: #262626!important; /* Color / Atmospheric Token (www-nereo-io) */
+  --font-heading: var(--font-sans); /* Typography Ink Token (www-nereo-io) */
+  --background: 262 76% 95%; /* Canvas / Surface Token (www-nereo-io) */
+  --foreground: 262 5% 10%; /* Typography Ink Token (www-nereo-io) */
+  --card: 262 50% 90%; /* Dimension / Scale Token (www-nereo-io) */
+  --card-foreground: 262 5% 10%; /* Typography Ink Token (www-nereo-io) */
+  --popover: 262 76% 95%; /* Dimension / Scale Token (www-nereo-io) */
+  --popover-foreground: 262 95% 10%; /* Typography Ink Token (www-nereo-io) */
+  --primary: 210 75% 50%; /* Brand / Palette Token (www-nereo-io) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#404040` — grounded in `var(--sd-line2)` in `:root`
-- **Primary Typography Ink**: `#262626` — grounded in `var(--sd-line)` in `:root`
+- **Primary Canvas Substrate**: `#15191f` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `nav` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#171717` — grounded in `var(--sd-paper)` in `:root`
-- **Interactive Accent / Highlight**: `#b1b1b7` — grounded in `var(--xy-edge-stroke-default)` in `:root`
-- **Secondary / Muted Copy**: `#555` — grounded in `var(--xy-edge-stroke-selected-default)` in `:root`
-- **Structural Hairline Border**: `#fff` — grounded in `var(--xy-minimap-background-color-default)` in `:root`
+- **Interactive Accent / Highlight**: `#ffd23f` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#2b8fea` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#262626` — grounded in `var(--sd-line)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×9591px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1200px` extracted from `www-nereo-io` stylesheet
-- **Padding & Gutters**: `2rem` lateral canvas padding with `.125rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: .125rem`)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `80rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `2rem` lateral canvas padding with `24px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 80rem`, `gap: 24px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding
 - **Media Queries**: `@media (min-width:1200px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (prefers-reduced-motion:no-preference)`
-- **Corner Radii**: `.3125rem`, `.375rem`, `.75rem`, `.25rem`
+- **Corner Radii**: `999px`, `.3125rem`, `.375rem`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `__Outfit_a80a2d`
-- **Body Font Stack**: `__Outfit_Fallback_a80a2d`
-- **Monospace / Technical Font Stack**: `__IBM_Plex_Sans_Arabic_559684`
-- **H1 Display Rule**: CSS variables `--font-display: var(--font-sans)`
-- **H2 Section Rule**: rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`)
-- **Body Copy Rule**: rule `p` (`line-height: 1.625`)
-- **Metadata & Index Rule**: CSS variables `--xy-edge-label-background-color-default: #fff`, `--xy-edge-label-color-default: inherit`
+- **Display Font Stack**: `__Unbounded_73c992`
+- **Body Font Stack**: `__Outfit_a80a2d`
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **H1 Display Rule**: live computed `h1` (`font-size: 60px`, `line-height: 68px`, `font-weight: 700`, `letter-spacing: -0.9px`); CSS variables `--font-display: var(--font-sans)`
+- **H2 Section Rule**: live computed `h2` (`font-size: 26px`, `line-height: 32px`, `font-weight: 700`, `letter-spacing: 0.52px`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--removed-body-scroll-bar-size: 0px`; rule `p` (`line-height: 1.625`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `small` (`font-size: 60px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-nereo-io` (`Nereo — AI Video Generator for Creators & Marketers`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<nav.hidden> — `www-nereo-io`)**:
-   - DOM & Selectors: Landmark `<nav class="hidden items-center">` hosting `Nereo — AI Video Generator for Creat` navigation (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.hidden> — `www-nereo-io`)` (`www-nereo-io`) adapts across `@media (min-width:1200px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (prefers-reduced-motion:no-preference)` with `cubic-bezier(.8,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`.
-2. **Hero Stage & Focal Lead (<section.sticky> — `AI Video Generator for Creators & `)**:
-   - DOM & Selectors: Landmark `<section class="sticky top-0">` presenting display lead `AI Video Generator for Creators & Marketers` and copy excerpt *"Video Tools AI Anime Shorts Text to Video Flow AI Video Generator"* over `#404040` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×9591px` desktop / `390×2400px` mobile) sets `#404040` background with `#fff` headline `AI Video Generator for Creators & Marketers`.
-3. **Primary Showcase & Content Grid (<section.relative> — `Nereo Agent Describe the video. Th`)**:
-   - DOM & Selectors: Landmark `<section class="relative overflow-hidden">` rendering section `Nereo Agent Describe the video. The agent writes...` with copy *"Flow AI Video Generator"*, asset references (`logo.png`, `322e14d06135256b.css`, `1957d3acd0c31940.css`, `935ae15180c0d693.css`), and grid rule `body { margin:0;line-height:inherit }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.relative> — `Nereo Agent Describe the video. Th`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: .125rem`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.flex> — `Seedance 2.5 One continuous 30-sec`)**:
-   - DOM & Selectors: Landmark `<section class="flex flex-col">` framing `Seedance 2.5 One continuous 30-second take, nativ...` and `Seedance 2.0 Audio and video generated together,...` (*"Reference to Video"*) with `#171717` surface cards, `#b1b1b7` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.flex> — `Seedance 2.5 One continuous 30-sec`)` uses `.3125rem`, `.375rem`, `.75rem`, `.25rem` radii, `#b1b1b7` highlights, and assets (logo.png, 322e14d06135256b.css, 1957d3acd0c31940.css).
+1. **Brand Header & Navigation Bar (<nav.gap-6> — `www-nereo-io`)**:
+   - DOM & Selectors: Landmark `<nav class="gap-6 hidden">` (`1248x40px`) hosting `Nereo — AI Video Generator for Creat` navigation (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.gap-6> — `www-nereo-io`)` (`www-nereo-io`) adapts across `@media (min-width:1200px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (prefers-reduced-motion:no-preference)` with `cubic-bezier(.8,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`.
+2. **Hero Stage & Focal Lead (<section.relative> — `AI Video Generator for Creators & `)**:
+   - DOM & Selectors: Landmark `<section class="relative overflow-hidden">` presenting display lead `AI Video Generator for Creators & Marketers` and copy excerpt *"Turn a prompt, a photo or a reference into a finished video. Veo "* over `#15191f` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#15191f` background with `#ffffff` headline `AI Video Generator for Creators & Marketers`.
+3. **Primary Showcase & Content Grid (<section.gap-4> — `Nereo Agent Describe the video. Th`)**:
+   - DOM & Selectors: Landmark `<section class="gap-4 border-nl-rule">` rendering section `Nereo Agent Describe the video. The agent writes...` with copy *"Start creating free"*, asset references (`e4af272ccee01ff0-s.p.woff2`, `logo.png`, `322e14d06135256b.css`, `a7f88efd924ba4d6.css`), and grid rule `body { margin:0;line-height:inherit }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.gap-4> — `Nereo Agent Describe the video. Th`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 80rem`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.border-nl-rule> — `Seedance 2.5 One continuous 30-sec`)**:
+   - DOM & Selectors: Landmark `<section class="gap-4 border-nl-rule">` framing `Seedance 2.5 One continuous 30-second take, nativ...` and `Seedance 2.0 Audio and video generated together,...` (*"Describe the video. The agent writes the shots, generates them an"*) with `#171717` surface cards, `#ffd23f` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.border-nl-rule> — `Seedance 2.5 One continuous 30-sec`)` uses `999px`, `.3125rem`, `.375rem`, `2px` radii, `#ffd23f` highlights, and assets (e4af272ccee01ff0-s.p.woff2, logo.png, 322e14d06135256b.css).
 5. **Colophon & Global Directory Footer (<footer.antialiased> — `https://www.nereo.io/`)**:
-   - DOM & Selectors: Landmark `<footer class="antialiased">` anchoring `Nereo — AI Video Generator for C` footer links (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), copy *"ElevenLabs Alternative"*, and `#fff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.antialiased> — `https://www.nereo.io/`)` aligns to `1200px` extracted from `www-nereo-io` stylesheet with `2rem` lateral canvas padding with `.125rem` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="antialiased">` anchoring `Nereo — AI Video Generator for C` footer links (`Nereo · Home · AI Anime Shorts · Text to Video · Image to Video`), copy *"LUMA NOOK — A Daily Tea Ritual"*, and `#262626` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.antialiased> — `https://www.nereo.io/`)` aligns to `80rem` (non-`@media` desktop container stylesheet rule) with `2rem` lateral canvas padding with `24px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Video Tools AI Anime Shorts Text to Video Flow AI Video Generator Image to Video R..."*
-- Copy Excerpt 2: *"Flow AI Video Generator"*
-- Copy Excerpt 3: *"Reference to Video"*
-- Copy Excerpt 4: *"ElevenLabs Alternative"*
+- Copy Excerpt 1: *"Turn a prompt, a photo or a reference into a finished video. Veo 3.1, Seedance 2.5..."*
+- Copy Excerpt 2: *"Start creating free"*
+- Copy Excerpt 3: *"Describe the video. The agent writes the shots, generates them and cuts them toget..."*
+- Copy Excerpt 4: *"LUMA NOOK — A Daily Tea Ritual"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.8,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`
@@ -250,8 +273,8 @@ Scaffold `www-nereo-io` (`Nereo — AI Video Generator for Creators & Marketers`
 - **Selector `.transition`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
 - **Selector `.transition-\[color\2c text-shadow\]`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
 - **Selector `grid-template-rows\2c opacity\2c...`**: `transition: cubic-bezier(.8,0,1,1)` extracted from `www-nereo-io` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.8,0,1,1)`)**: Governs interactive state transitions across `<nav.hidden>` and `<section.relative>`.
-- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+- **Extracted Easing Curve (`cubic-bezier(.8,0,1,1)`)**: Governs interactive state transitions across `<nav.gap-6>` and `<section.gap-4>`.
+- **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-nereo-io`.

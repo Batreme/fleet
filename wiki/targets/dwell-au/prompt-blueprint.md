@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: dwell-au"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "dwell-au"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#badcf7`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161605` / `#373710`)"
 ---
 
 # UI Design System & Master Generation Blueprint: dwell-au
 
 > **Dwell · A new way home** (https://dwell.au/) — Dwell is a third housing option that lets you have a home and build wealth without a deposit or mortgage. Discover a new way home.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Dwell · A new way home** (`https://dwell.au/`). Dwell is a third housing option that lets you have a home and build wealth without a deposit or mortgage. Discover a new way home.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#badcf7`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#161605` / `#373710`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#3e3e38` (`var(--g-native-base)` in `:root`) paired with `#d1e5f4` primary typography and `#badcf7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `bo` for display copy (`A new A n e w way w a y home h o m e`) with `fr` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: var(--space-md)`, padding `1px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#161605` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f4ed` primary typography and `#373710` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `bo` for display copy (`a new a n e w way w a y home h o m e`) with `bo` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1416px` container bounds (`gap: 20px`, padding `32px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1200px` extracted from `dwell-au` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1px` lateral canvas padding with `var(--space-md)` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1416px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `20px` grid gap.
 - **Border Radius Scale**: `50%`, `var(--radius-lg)`, `var(--radius-md)`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: var(--space-md)`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1416px`, `gap: 20px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-aspect-ratio:1440/865)`, `@media (max-width:1200px)`, `@media (max-width:1200px) and (min-aspect-ratio:400/800)`, `@media (max-width:700px) and (orientation:portrait)`.
 
 ---
@@ -48,14 +52,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#3e3e38` | `var(--g-native-base)` in `:root` |
-| **Primary Typography Ink** | `#87b6d9` | `var(--field-selector-hover)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#aad1ee` | `var(--color-sky)` in `:root` |
-| **Interactive Accent / Highlight** | `#badcf7` | `var(--color-dawn)` in `:root` |
-| **Secondary / Muted Copy** | `#c4dcee` | `var(--color-mist)` in `:root` |
-| **Structural Hairline Border** | `#d1e5f4` | `var(--color-cloud)` in `:root` |
+| **Primary Canvas Substrate** | `#161605` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f4ed` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#3e3e38` | `.glass:before { background: #3e3e38 }` |
+| **Interactive Accent / Highlight** | `#373710` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#aad1ee` | live computed `nav` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#3a3a27` | `var(--field-hover-border)` in `:root` (`5d5d4980`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +87,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `bo`.
-- **Primary Body Stack**: `fr`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `bo`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--n-font)`, `clamp(16*max(1px,min(.0661376vw,....`, `14vw`, `clamp(30*max(1px,min(.0661376vw,....`, `clamp(28px,5svh,34*max(1px,min(.0...`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: calc(34*max(1px,min(.0661376v...`, `line-height: 1.02`).
-- **Body Copy**: CSS variables `--font-weight-body: 359`, `--font-width-body: 95%`; rule `p` (`line-height: 1.05`).
-- **Metadata & Navigation Labels**: CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 160px`, `line-height: 147.2px`, `font-weight: 360`, `letter-spacing: -4.80001px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 140.849px`, `line-height: 108.454px`, `font-weight: 359`, `letter-spacing: -8.45094px`); rule `h2` (`font-size: calc(34*max(1px,min(.0661376v...`, `line-height: 1.02`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 360`); CSS variables `--font-weight-body: 359`, `--font-width-body: 95%`; rule `p` (`line-height: 1.05`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`, `letter-spacing: -0.36px`); CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`.
 
 ---
 
@@ -110,40 +114,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Dwell · A new way home                     │
 │ ====================================================================== │
-│ [ <header.skip-link>       | Overview · Index · Archive · About · C ]  │
+│ [ <header.skip-link> (1440x108px)     | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero-scroll>                                |   │
-│ | H1: A new A n e w way w a y home h o m e                         |   │
-│ | Substrate: #3e3e38    | Ink: #d1e5f4    | Accent: #badcf7        |   │
+│ | HERO STAGE: <section.hero-scroll> (w=1440px)                       | │
+│ | H1: a new a n e w way w a y home h o m e                           | │
+│ | Substrate: #161605 | Ink: #f5f4ed | Accent: #373710                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.scroll>          ) max-w: 1200px         |   │
+│ | SHOWCASE GRID (<section.scroll>) max-w: 1416px                     | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | meet m e e t Dwell D w e l l |  | Build B u i l d for the f o  | | │
+│ | | A new A n e w way w a y home |  | meet m e e t Dwell D w e l l | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.skip-link>] -> [<section.hero-scro] -> [<section.scroll>] | │
+│ | DETAIL MODULE (<section.scroll:nth(2)>) — Build B u i l d for t    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.button-text>  ) | https://dwell.au/                  │
+│ [ FOOTER (<footer.button-text>) | https://dwell.au/                    │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 20px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.skip-link>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero-scroll>) — 390px Vertical Lead           | │
+│ | H1: a new a n e w way w a y home h o m e                           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.scroll>) — 1-Col Stack                    | │
+│ | [ Item 1: A new A n e w way w a y home h o m e                   ] | │
+│ | [ Item 2: meet m e e t Dwell D w e l l                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.scroll:nth(2)>) — 1-Col (Build B u i l d fo)  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.button-text>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.skip-link> — `dwell-au`)**:
-   - Landmark `<header class="skip-link">` hosting `Dwell · A new way home` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-fab-register`, `data-header="sky"`, `data-hero="true"`, `data-hero-title="true"`), and stylesheet rule `body { background-image:none }`.
-2. **Hero Stage & Focal Lead (<section.hero-scroll> — `A new A n e w way w a y home h o m`)**:
-   - Landmark `<section class="hero-scroll hero-rest">` presenting display lead `A new A n e w way w a y home h o m e` and copy excerpt *"Build your home Build your home Build your home Build your home"* over `#3e3e38` canvas and `#d1e5f4` ink.
-3. **Primary Showcase & Content Grid (<section.scroll> — `meet m e e t Dwell D w e l l`)**:
-   - Landmark `<section class="scroll">` rendering section `meet m e e t Dwell D w e l l` with copy *"Build your home Build your home"*, asset references (`loader-house.webp`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `main { flex:1;min-block-size:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.scroll> — `Build B u i l d for the f o r t h `)**:
-   - Landmark `<section class="scroll">` framing `Build B u i l d for the f o r t h e future f u t...` and `The T h e freedom f r e e d o m to move t o m o v e` (*"How it works How it works How it works How it works"*) with `#aad1ee` surface cards, `#badcf7` accents, and `.page_ { display:block;overflow:visible;block-size:auto }`.
+   - Landmark `<header class="skip-link">` (`1440x108px`) hosting `Dwell · A new way home` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-fab-register`, `data-header="sky"`, `data-hero="true"`, `data-hero-title="true"`), and stylesheet rule `body { background-image:none }`.
+2. **Hero Stage & Focal Lead (<section.hero-scroll> — `a new a n e w way w a y home h o m`)**:
+   - Landmark `<section class="hero-scroll hero-rest">` presenting display lead `a new a n e w way w a y home h o m e` and copy excerpt *"An accessible, debt-free path to having a home and growing your w"* over `#161605` canvas and `#f5f4ed` ink.
+3. **Primary Showcase & Content Grid (<section.scroll> — `A new A n e w way w a y home h o m`)**:
+   - Landmark `<section class="scroll">` rendering section `A new A n e w way w a y home h o m e` with copy *"An accessible, debt-free path to"*, asset references (`loader-house.webp`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `main { flex:1;min-block-size:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.scroll:nth(2)> — `meet m e e t Dwell D w e l l`)**:
+   - Landmark `<section class="scroll">` framing `meet m e e t Dwell D w e l l` and `Build B u i l d for the f o r t h e future f u t...` (*"having a home and growing your"*) with `#3e3e38` surface cards, `#373710` accents, and `.page_ { display:block;overflow:visible;block-size:auto }`.
 5. **Colophon & Global Directory Footer (<footer.button-text> — `https://dwell.au/`)**:
-   - Landmark `<footer class="button-text">` anchoring `Dwell · A new way home` footer links (`Overview · Index · Archive · About · Contact`), copy *"How it works How it works"*, and `#d1e5f4` structural dividers.
+   - Landmark `<footer class="button-text">` anchoring `Dwell · A new way home` footer links (`Overview · Index · Archive · About · Contact`), copy *"wealth - no deposit, no mortgage."*, and `#3a3a27` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `dwell-au` (**Dwell · A new way home** — `https://dwell.au/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#3e3e38` / `#badcf7`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#161605` / `#373710`).
 - **Identity & Domain Context**: Dwell is a third housing option that lets you have a home and build wealth without a deposit or mortgage. Discover a new way home.
-- **Primary Substrate**: `#3e3e38` (`var(--g-native-base)` in `:root`), **Primary Ink**: `#d1e5f4`, **Accent / Highlight**: `#badcf7`.
+- **Primary Substrate**: `#161605` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f4ed`, **Accent / Highlight**: `#373710`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#3e3e38` (`var(--g-native-base)` in `:root`) paired with `#d1e5f4` primary typography and `#badcf7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `bo` for display copy (`A new A n e w way w a y home h o m e`) with `fr` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: var(--space-md)`, padding `1px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#161605` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f4ed` primary typography and `#373710` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `bo` for display copy (`a new a n e w way w a y home h o m e`) with `bo` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1416px` container bounds (`gap: 20px`, padding `32px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `dwell-au` in your global stylesheet:
 
 :root {
-  /* Dwell · A new way home (dwell-au) — Ground-Truth Extracted CSS Variables */
+  /* Dwell · A new way home (dwell-au) — Live-Grounded CSS Variables */
   --header-height: calc(108*max(1px,min(.0661376vw,.124069svh))); /* Layout / Spatial Grid Token (dwell-au) */
   --viewport-height: 100vh; /* Layout / Spatial Grid Token (dwell-au) */
   --v-fade: opacity .6s var(--io2); /* Design System Custom Token (dwell-au) */
@@ -188,55 +211,55 @@ Declare and consume these exact custom properties extracted from `dwell-au` in y
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#3e3e38` — grounded in `var(--g-native-base)` in `:root`
-- **Primary Typography Ink**: `#87b6d9` — grounded in `var(--field-selector-hover)` in `:root`
-- **Elevated Surface / Card Substrate**: `#aad1ee` — grounded in `var(--color-sky)` in `:root`
-- **Interactive Accent / Highlight**: `#badcf7` — grounded in `var(--color-dawn)` in `:root`
-- **Secondary / Muted Copy**: `#c4dcee` — grounded in `var(--color-mist)` in `:root`
-- **Structural Hairline Border**: `#d1e5f4` — grounded in `var(--color-cloud)` in `:root`
+- **Primary Canvas Substrate**: `#161605` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f5f4ed` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#3e3e38` — grounded in `.glass:before { background: #3e3e38 }`
+- **Interactive Accent / Highlight**: `#373710` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#aad1ee` — grounded in live computed `nav` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#3a3a27` — grounded in `var(--field-hover-border)` in `:root` (`5d5d4980`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1200px` extracted from `dwell-au` stylesheet
-- **Padding & Gutters**: `1px` lateral canvas padding with `var(--space-md)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: var(--space-md)`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1px` horizontal padding
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1416px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `32px` lateral canvas padding with `20px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1416px`, `gap: 20px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
 - **Media Queries**: `@media (min-aspect-ratio:1440/865)`, `@media (max-width:1200px)`, `@media (max-width:1200px) and (min-aspect-ratio:400/800)`, `@media (max-width:700px) and (orientation:portrait)`
 - **Corner Radii**: `50%`, `var(--radius-lg)`, `var(--radius-md)`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `bo`
-- **Body Font Stack**: `fr`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--n-font)`, `clamp(16*max(1px,min(.0661376vw,....`, `14vw`, `clamp(30*max(1px,min(.0661376vw,....`, `clamp(28px,5svh,34*max(1px,min(.0...`)
-- **H2 Section Rule**: rule `h2` (`font-size: calc(34*max(1px,min(.0661376v...`, `line-height: 1.02`)
-- **Body Copy Rule**: CSS variables `--font-weight-body: 359`, `--font-width-body: 95%`; rule `p` (`line-height: 1.05`)
-- **Metadata & Index Rule**: CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`
+- **Body Font Stack**: `bo`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 160px`, `line-height: 147.2px`, `font-weight: 360`, `letter-spacing: -4.80001px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 140.849px`, `line-height: 108.454px`, `font-weight: 359`, `letter-spacing: -8.45094px`); rule `h2` (`font-size: calc(34*max(1px,min(.0661376v...`, `line-height: 1.02`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 360`); CSS variables `--font-weight-body: 359`, `--font-width-body: 95%`; rule `p` (`line-height: 1.05`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`, `letter-spacing: -0.36px`); CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `dwell-au` (`Dwell · A new way home`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.skip-link> — `dwell-au`)**:
-   - DOM & Selectors: Landmark `<header class="skip-link">` hosting `Dwell · A new way home` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-fab-register`, `data-header="sky"`, `data-hero="true"`, `data-hero-title="true"`), and stylesheet rule `body { background-image:none }`.
+   - DOM & Selectors: Landmark `<header class="skip-link">` (`1440x108px`) hosting `Dwell · A new way home` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-fab-register`, `data-header="sky"`, `data-hero="true"`, `data-hero-title="true"`), and stylesheet rule `body { background-image:none }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.skip-link> — `dwell-au`)` (`dwell-au`) adapts across `@media (min-aspect-ratio:1440/865)`, `@media (max-width:1200px)`, `@media (max-width:1200px) and (min-aspect-ratio:400/800)`, `@media (max-width:700px) and (orientation:portrait)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.33,1,.68,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.hero-scroll> — `A new A n e w way w a y home h o m`)**:
-   - DOM & Selectors: Landmark `<section class="hero-scroll hero-rest">` presenting display lead `A new A n e w way w a y home h o m e` and copy excerpt *"Build your home Build your home Build your home Build your home"* over `#3e3e38` canvas and `#d1e5f4` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#3e3e38` background with `#d1e5f4` headline `A new A n e w way w a y home h o m e`.
-3. **Primary Showcase & Content Grid (<section.scroll> — `meet m e e t Dwell D w e l l`)**:
-   - DOM & Selectors: Landmark `<section class="scroll">` rendering section `meet m e e t Dwell D w e l l` with copy *"Build your home Build your home"*, asset references (`loader-house.webp`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `main { flex:1;min-block-size:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll> — `meet m e e t Dwell D w e l l`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: var(--space-md)`) on desktop and Single-column vertical stack at `390px` viewport width with `1px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.scroll> — `Build B u i l d for the f o r t h `)**:
-   - DOM & Selectors: Landmark `<section class="scroll">` framing `Build B u i l d for the f o r t h e future f u t...` and `The T h e freedom f r e e d o m to move t o m o v e` (*"How it works How it works How it works How it works"*) with `#aad1ee` surface cards, `#badcf7` accents, and `.page_ { display:block;overflow:visible;block-size:auto }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.scroll> — `Build B u i l d for the f o r t h `)` uses `50%`, `var(--radius-lg)`, `var(--radius-md)`, `999px` radii, `#badcf7` highlights, and assets (loader-house.webp, favicon-96x96.png, favicon.svg).
+2. **Hero Stage & Focal Lead (<section.hero-scroll> — `a new a n e w way w a y home h o m`)**:
+   - DOM & Selectors: Landmark `<section class="hero-scroll hero-rest">` presenting display lead `a new a n e w way w a y home h o m e` and copy excerpt *"An accessible, debt-free path to having a home and growing your w"* over `#161605` canvas and `#f5f4ed` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#161605` background with `#f5f4ed` headline `a new a n e w way w a y home h o m e`.
+3. **Primary Showcase & Content Grid (<section.scroll> — `A new A n e w way w a y home h o m`)**:
+   - DOM & Selectors: Landmark `<section class="scroll">` rendering section `A new A n e w way w a y home h o m e` with copy *"An accessible, debt-free path to"*, asset references (`loader-house.webp`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `main { flex:1;min-block-size:0 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll> — `A new A n e w way w a y home h o m`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1416px`, `gap: 20px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.scroll:nth(2)> — `meet m e e t Dwell D w e l l`)**:
+   - DOM & Selectors: Landmark `<section class="scroll">` framing `meet m e e t Dwell D w e l l` and `Build B u i l d for the f o r t h e future f u t...` (*"having a home and growing your"*) with `#3e3e38` surface cards, `#373710` accents, and `.page_ { display:block;overflow:visible;block-size:auto }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.scroll:nth(2)> — `meet m e e t Dwell D w e l l`)` uses `50%`, `var(--radius-lg)`, `var(--radius-md)`, `999px` radii, `#373710` highlights, and assets (loader-house.webp, favicon-96x96.png, favicon.svg).
 5. **Colophon & Global Directory Footer (<footer.button-text> — `https://dwell.au/`)**:
-   - DOM & Selectors: Landmark `<footer class="button-text">` anchoring `Dwell · A new way home` footer links (`Overview · Index · Archive · About · Contact`), copy *"How it works How it works"*, and `#d1e5f4` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.button-text> — `https://dwell.au/`)` aligns to `1200px` extracted from `dwell-au` stylesheet with `1px` lateral canvas padding with `var(--space-md)` grid gap and attributes (data-fab-register, data-header="sky", data-hero="true").
+   - DOM & Selectors: Landmark `<footer class="button-text">` anchoring `Dwell · A new way home` footer links (`Overview · Index · Archive · About · Contact`), copy *"wealth - no deposit, no mortgage."*, and `#3a3a27` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.button-text> — `https://dwell.au/`)` aligns to `1416px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `32px` lateral canvas padding with `20px` grid gap and attributes (data-fab-register, data-header="sky", data-hero="true").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Build your home Build your home Build your home Build your home"*
-- Copy Excerpt 2: *"Build your home Build your home"*
-- Copy Excerpt 3: *"How it works How it works How it works How it works"*
-- Copy Excerpt 4: *"How it works How it works"*
+- Copy Excerpt 1: *"An accessible, debt-free path to having a home and growing your wealth - no deposi..."*
+- Copy Excerpt 2: *"An accessible, debt-free path to"*
+- Copy Excerpt 3: *"having a home and growing your"*
+- Copy Excerpt 4: *"wealth - no deposit, no mortgage."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.33,1,.68,1)`

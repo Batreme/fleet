@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: peaches-world"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "peaches-world"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#fff`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0b0e` / `#ff5a00`)"
 ---
 
 # UI Design System & Master Generation Blueprint: peaches-world
 
 > **Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for** (https://peaches.world/) — Peaches is a web design studio in Pratteln near Basel, Switzerland. Custom-designed, animated websites that feel like a game and stay in...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for** (`https://peaches.world/`). Peaches is a web design studio in Pratteln near Basel, Switzerland. Custom-designed, animated websites that feel like a game and stay in...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#fff`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0b0e` / `#ff5a00`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ff5a00` (`html legend em { color: #ff5a00 }`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Space Mono` for display copy (`Peaches – Webdesign Pratteln, Basel `) with `JetBrains Mono` and `Space Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `90vw` container bounds (`gap: 14px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a0b0e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff5a00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Space Mono` for display copy (`Peaches – Webdesign Pratteln, Basel `) with `JetBrains Mono` and `Space Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 14px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `90vw` extracted from `peaches-world` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `14px` grid gap.
 - **Border Radius Scale**: `8px`, `6px`, `4px`, `9px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90vw`, `gap: 14px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 14px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-height:460px)`, `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)`.
 
@@ -48,30 +52,30 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#f
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ff5a00` | `html legend em { color: #ff5a00 }` |
-| **Primary Typography Ink** | `#f2f2ee` | `:hover { color: #f2f2ee }` |
-| **Elevated Surface / Card Substrate** | `#0a0b0e` | `body { background: #0a0b0e }` |
-| **Interactive Accent / Highlight** | `#fff` | `.t { color: #fff }` |
-| **Secondary / Muted Copy** | `#05070b` | `<meta name="theme-color" content="#05070b">` in `dom.html` |
-| **Structural Hairline Border** | `#ff8a2a` | SVG/DOM `stop-color="#ff8a2a"` attribute in `dom.html` |
+| **Primary Canvas Substrate** | `#0a0b0e` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f2f2ee` | `.sr:focus-within { background: #f2f2ee }` |
+| **Interactive Accent / Highlight** | `#ff5a00` | `html legend em { color: #ff5a00 }` |
+| **Secondary / Muted Copy** | `#f2f2ee` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#7e7e7e` | `body.voll #satz { border-color: #7e7e7e }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--peaches-world-bg` | `#ff5a00` | Canvas Substrate (from `html legend em { color: #ff5a00 }`) |
-| `--peaches-world-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
-| `--peaches-world-surface` | `#0a0b0e` | Surface Substrate (stylesheet-derived) |
-| `--peaches-world-accent` | `#fff` | Interactive Accent (stylesheet-derived) |
-| `--peaches-world-muted` | `#05070b` | Secondary Ink (stylesheet-derived) |
-| `--peaches-world-border` | `#ff8a2a` | Structural Border (stylesheet-derived) |
-| `--peaches-world-container` | `90vw` | Container Bound (stylesheet-derived) |
-| `--peaches-world-gap` | `14px` | Grid Gutter (stylesheet-derived) |
-| `--peaches-world-pad` | `9px` | Lateral Padding (stylesheet-derived) |
+| `--peaches-world-bg` | `#0a0b0e` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--peaches-world-ink` | `#ffffff` | Primary Typography Ink (computed-derived) |
+| `--peaches-world-surface` | `#f2f2ee` | Surface Substrate (computed-derived) |
+| `--peaches-world-accent` | `#ff5a00` | Interactive Accent (computed-derived) |
+| `--peaches-world-muted` | `#f2f2ee` | Secondary Ink (computed-derived) |
+| `--peaches-world-border` | `#7e7e7e` | Structural Border (computed-derived) |
+| `--peaches-world-container` | `1440px` | Container Bound (computed-derived) |
+| `--peaches-world-gap` | `14px` | Grid Gutter (computed-derived) |
+| `--peaches-world-pad` | `9px` | Lateral Padding (computed-derived) |
 | `--peaches-world-ease` | `cubic-bezier(0.25,0.1,0.25,1)` | Primary Easing Function |
-| `--peaches-world-radius` | `8px` | Corner Radius (stylesheet-derived) |
-| `--peaches-world-fs-base` | `clamp(16px,1.25vw,18px)` | Observed Font Size Token |
+| `--peaches-world-radius` | `8px` | Corner Radius (computed-derived) |
+| `--peaches-world-fs-base` | `129.6px` | Observed Font Size Token |
 
 ---
 
@@ -82,11 +86,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#f
 - **Primary Body Stack**: `JetBrains Mono`.
 - **Technical / Metadata Stack**: `Space Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 129.6px`, `line-height: 123.12px`, `font-weight: 700`, `letter-spacing: -2.592px`).
+- **Section Heading (`H2`)**: observed font-size ladder: `129.6px`, `16px`, `12px`, `clamp(16px,1.25vw,18px)`, `15px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -99,47 +103,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#f
 - **Selector `html #weiter`**: `transition: background-color .15s,color .15s,border-color .15s,box-shadow...` extracted from `peaches-world` stylesheet.
 - **Selector `.t`**: `transition: opacity .4s,background .5s,border-color .5s,padding .3s,box-sh...` extracted from `peaches-world` stylesheet.
 - **Selector `#zurueck`**: `transition: transform .14s,box-shadow .14s,opacity .4s` extracted from `peaches-world` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Peaches – Webdesign Pratteln, Basel · Webs │
 │ ====================================================================== │
-│ [ <nav.sr>                 | Home · Who is talking · Work · Referen ]  │
+│ [ <nav.sr> (1x1px)                    | Home · Who is talking · Work ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <div.sr>                                             |   │
-│ | H1: Peaches – Webdesign Pratteln, Basel · Websites w             |   │
-│ | Substrate: #ff5a00    | Ink: #fff       | Accent: #fff           |   │
+│ | HERO STAGE: <div.sr> (w=1440px)                                    | │
+│ | H1: Peaches – Webdesign Pratteln, Basel · Websites w               | │
+│ | Substrate: #0a0b0e | Ink: #ffffff | Accent: #ff5a00                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.schild>              ) max-w: 90vw           |   │
+│ | SHOWCASE GRID (<div.schild>) max-w: 1440px                         | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Featured Work & Interactive  |  | Technical Architecture & Nar | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 14px  ) | │
-│ | [<nav.sr>] -> [<div.sr>] -> [<div.schild>] |                         │
+│ | DETAIL MODULE (<div#kopf>) — Global Directory & Co                 | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer>              ) | https://peaches.world/             │
+│ [ FOOTER (<footer>            ) | https://peaches.world/               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 14px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.sr>                ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<div.sr>) — 390px Vertical Lead                        | │
+│ | H1: Peaches – Webdesign Pratteln, Basel · Websites w               | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<div.schild>) — 1-Col Stack                        | │
+│ | [ Item 1: Featured Work & Interactive Showcase                   ] | │
+│ | [ Item 2: Technical Architecture & Narrative                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<div#kopf>) — 1-Col (Global Directory &)             | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer>            ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.sr> — `peaches-world`)**:
-   - Landmark `<nav class="sr">` hosting `Peaches – Webdesign Pratteln, Basel ` navigation (`Home · Who is talking · Work · References`), DOM attributes (`data-s="Chapter 01 / Home"`, `data-s="Pratteln 47.52 N 7.69 E"`, `data-s="Peaches"`, `data-s="Websites worth pressi..."`), and stylesheet rule `html body { font-family:var(--f-text) }`.
+   - Landmark `<nav class="sr">` (`1x1px`) hosting `Peaches – Webdesign Pratteln, Basel ` navigation (`Home · Who is talking · Work · References`), DOM attributes (`data-s="Chapter 01 / Home"`, `data-s="Pratteln 47.52 N 7.69 E"`, `data-s="Peaches"`, `data-s="Websites worth pressi..."`), and stylesheet rule `html body { font-family:var(--f-text) }`.
 2. **Hero Stage & Focal Lead (<div.sr> — `Peaches – Webdesign Pratteln, Base`)**:
-   - Landmark `<div class="sr">` presenting display lead `Peaches – Webdesign Pratteln, Basel · Websites w` and copy excerpt *"Web design · Pratteln near Basel · Switzerland"* over `#ff5a00` canvas and `#fff` ink.
+   - Landmark `<div class="sr">` presenting display lead `Peaches – Webdesign Pratteln, Basel · Websites w` and copy excerpt *"WEB DESIGN · PRATTELN NEAR BASEL · SWITZERLAND"* over `#0a0b0e` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<div.schild> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<div class="schild">` rendering section `Featured Work & Interactive Showcase` with copy *"Peaches – Webdesign Pratteln, Basel · Websites w"*, asset references (`logo.svg`, `favicon-192.png`, `favicon-48.png`, `apple-touch-icon.png`), and grid rule `oede a { font-family:var(--f-titel) }`.
+   - Landmark `<div class="schild">` rendering section `Featured Work & Interactive Showcase` with copy *"Web design · Pratteln near Basel · Switzerland"*, asset references (`logo.svg`, `favicon-192.png`, `favicon-48.png`, `apple-touch-icon.png`), and grid rule `oede a { font-family:var(--f-titel) }`.
 4. **Interactive Detail & Feature Matrix (<div#kopf> — `Technical Architecture & Narrative`)**:
-   - Landmark `<div id="kopf">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#0a0b0e` surface cards, `#fff` accents, and `runter { font-family:var(--f-titel) }`.
+   - Landmark `<div id="kopf">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#f2f2ee` surface cards, `#ff5a00` accents, and `runter { font-family:var(--f-titel) }`.
 5. **Colophon & Global Directory Footer (<footer> — `https://peaches.world/`)**:
-   - Landmark `<footer>` landmark anchoring `Peaches – Webdesign Pratteln, Ba` footer links (`Home · Who is talking · Work · References`), copy *"Technical Architecture & Narrative"*, and `#ff8a2a` structural dividers.
+   - Landmark `<footer>` landmark anchoring `Peaches – Webdesign Pratteln, Ba` footer links (`Home · Who is talking · Work · References`), copy *"Technical Architecture & Narrative"*, and `#7e7e7e` structural dividers.
 
 ---
 
@@ -151,48 +174,48 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#f
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `peaches-world` (**Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for** — `https://peaches.world/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ff5a00` / `#fff`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0b0e` / `#ff5a00`).
 - **Identity & Domain Context**: Peaches is a web design studio in Pratteln near Basel, Switzerland. Custom-designed, animated websites that feel like a game and stay in...
-- **Primary Substrate**: `#ff5a00` (`html legend em { color: #ff5a00 }`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#fff`.
+- **Primary Substrate**: `#0a0b0e` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff5a00`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ff5a00` (`html legend em { color: #ff5a00 }`) paired with `#fff` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Space Mono` for display copy (`Peaches – Webdesign Pratteln, Basel `) with `JetBrains Mono` and `Space Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `90vw` container bounds (`gap: 14px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a0b0e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff5a00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Space Mono` for display copy (`Peaches – Webdesign Pratteln, Basel `) with `JetBrains Mono` and `Space Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 14px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `peaches-world` in your global stylesheet:
 
 :root {
-  /* Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for (peaches-world) — Ground-Truth Extracted CSS Variables */
-  --peaches-world-bg: #ff5a00; /* Canvas Substrate (from `html legend em { color: #ff5a00 }`) (peaches-world) */
-  --peaches-world-ink: #fff; /* Primary Typography Ink (stylesheet-derived) (peaches-world) */
-  --peaches-world-surface: #0a0b0e; /* Surface Substrate (stylesheet-derived) (peaches-world) */
-  --peaches-world-accent: #fff; /* Interactive Accent (stylesheet-derived) (peaches-world) */
-  --peaches-world-muted: #05070b; /* Secondary Ink (stylesheet-derived) (peaches-world) */
-  --peaches-world-border: #ff8a2a; /* Structural Border (stylesheet-derived) (peaches-world) */
-  --peaches-world-container: 90vw; /* Container Bound (stylesheet-derived) (peaches-world) */
-  --peaches-world-gap: 14px; /* Grid Gutter (stylesheet-derived) (peaches-world) */
-  --peaches-world-pad: 9px; /* Lateral Padding (stylesheet-derived) (peaches-world) */
+  /* Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for (peaches-world) — Live-Grounded CSS Variables */
+  --peaches-world-bg: #0a0b0e; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (peaches-world) */
+  --peaches-world-ink: #ffffff; /* Primary Typography Ink (computed-derived) (peaches-world) */
+  --peaches-world-surface: #f2f2ee; /* Surface Substrate (computed-derived) (peaches-world) */
+  --peaches-world-accent: #ff5a00; /* Interactive Accent (computed-derived) (peaches-world) */
+  --peaches-world-muted: #f2f2ee; /* Secondary Ink (computed-derived) (peaches-world) */
+  --peaches-world-border: #7e7e7e; /* Structural Border (computed-derived) (peaches-world) */
+  --peaches-world-container: 1440px; /* Container Bound (computed-derived) (peaches-world) */
+  --peaches-world-gap: 14px; /* Grid Gutter (computed-derived) (peaches-world) */
+  --peaches-world-pad: 9px; /* Lateral Padding (computed-derived) (peaches-world) */
   --peaches-world-ease: cubic-bezier(0.25,0.1,0.25,1); /* Primary Easing Function (peaches-world) */
-  --peaches-world-radius: 8px; /* Corner Radius (stylesheet-derived) (peaches-world) */
-  --peaches-world-fs-base: clamp(16px,1.25vw,18px); /* Observed Font Size Token (peaches-world) */
+  --peaches-world-radius: 8px; /* Corner Radius (computed-derived) (peaches-world) */
+  --peaches-world-fs-base: 129.6px; /* Observed Font Size Token (peaches-world) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ff5a00` — grounded in `html legend em { color: #ff5a00 }`
-- **Primary Typography Ink**: `#f2f2ee` — grounded in `:hover { color: #f2f2ee }`
-- **Elevated Surface / Card Substrate**: `#0a0b0e` — grounded in `body { background: #0a0b0e }`
-- **Interactive Accent / Highlight**: `#fff` — grounded in `.t { color: #fff }`
-- **Secondary / Muted Copy**: `#05070b` — grounded in `<meta name="theme-color" content="#05070b">` in `dom.html`
-- **Structural Hairline Border**: `#ff8a2a` — grounded in SVG/DOM `stop-color="#ff8a2a"` attribute in `dom.html`
+- **Primary Canvas Substrate**: `#0a0b0e` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f2f2ee` — grounded in `.sr:focus-within { background: #f2f2ee }`
+- **Interactive Accent / Highlight**: `#ff5a00` — grounded in `html legend em { color: #ff5a00 }`
+- **Secondary / Muted Copy**: `#f2f2ee` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#7e7e7e` — grounded in `body.voll #satz { border-color: #7e7e7e }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `90vw` extracted from `peaches-world` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `9px` lateral canvas padding with `14px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90vw`, `gap: 14px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 14px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media (max-height:460px)`, `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)`
 - **Corner Radii**: `8px`, `6px`, `4px`, `9px`
@@ -201,31 +224,32 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Display Font Stack**: `Space Mono`
 - **Body Font Stack**: `JetBrains Mono`
 - **Monospace / Technical Font Stack**: `Space Mono`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(16px,1.25vw,18px)`, `15px`, `12px`, `13px`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 129.6px`, `line-height: 123.12px`, `font-weight: 700`, `letter-spacing: -2.592px`)
+- **H2 Section Rule**: observed font-size ladder: `129.6px`, `16px`, `12px`, `clamp(16px,1.25vw,18px)`, `15px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `peaches-world` (`Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.sr> — `peaches-world`)**:
-   - DOM & Selectors: Landmark `<nav class="sr">` hosting `Peaches – Webdesign Pratteln, Basel ` navigation (`Home · Who is talking · Work · References`), DOM attributes (`data-s="Chapter 01 / Home"`, `data-s="Pratteln 47.52 N 7.69 E"`, `data-s="Peaches"`, `data-s="Websites worth pressi..."`), and stylesheet rule `html body { font-family:var(--f-text) }`.
+   - DOM & Selectors: Landmark `<nav class="sr">` (`1x1px`) hosting `Peaches – Webdesign Pratteln, Basel ` navigation (`Home · Who is talking · Work · References`), DOM attributes (`data-s="Chapter 01 / Home"`, `data-s="Pratteln 47.52 N 7.69 E"`, `data-s="Peaches"`, `data-s="Websites worth pressi..."`), and stylesheet rule `html body { font-family:var(--f-text) }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.sr> — `peaches-world`)` (`peaches-world`) adapts across `@media (max-height:460px)`, `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Home · Who is talking · Work · References`.
 2. **Hero Stage & Focal Lead (<div.sr> — `Peaches – Webdesign Pratteln, Base`)**:
-   - DOM & Selectors: Landmark `<div class="sr">` presenting display lead `Peaches – Webdesign Pratteln, Basel · Websites w` and copy excerpt *"Web design · Pratteln near Basel · Switzerland"* over `#ff5a00` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ff5a00` background with `#fff` headline `Peaches – Webdesign Pratteln, Basel · Websites w`.
+   - DOM & Selectors: Landmark `<div class="sr">` presenting display lead `Peaches – Webdesign Pratteln, Basel · Websites w` and copy excerpt *"WEB DESIGN · PRATTELN NEAR BASEL · SWITZERLAND"* over `#0a0b0e` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#0a0b0e` background with `#ffffff` headline `Peaches – Webdesign Pratteln, Basel · Websites w`.
 3. **Primary Showcase & Content Grid (<div.schild> — `Featured Work & Interactive Showca`)**:
-   - DOM & Selectors: Landmark `<div class="schild">` rendering section `Featured Work & Interactive Showcase` with copy *"Peaches – Webdesign Pratteln, Basel · Websites w"*, asset references (`logo.svg`, `favicon-192.png`, `favicon-48.png`, `apple-touch-icon.png`), and grid rule `oede a { font-family:var(--f-titel) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.schild> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90vw`, `gap: 14px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<div class="schild">` rendering section `Featured Work & Interactive Showcase` with copy *"Web design · Pratteln near Basel · Switzerland"*, asset references (`logo.svg`, `favicon-192.png`, `favicon-48.png`, `apple-touch-icon.png`), and grid rule `oede a { font-family:var(--f-titel) }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.schild> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 14px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<div#kopf> — `Technical Architecture & Narrative`)**:
-   - DOM & Selectors: Landmark `<div id="kopf">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#0a0b0e` surface cards, `#fff` accents, and `runter { font-family:var(--f-titel) }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div#kopf> — `Technical Architecture & Narrative`)` uses `8px`, `6px`, `4px`, `9px` radii, `#fff` highlights, and assets (logo.svg, favicon-192.png, favicon-48.png).
+   - DOM & Selectors: Landmark `<div id="kopf">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#f2f2ee` surface cards, `#ff5a00` accents, and `runter { font-family:var(--f-titel) }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div#kopf> — `Technical Architecture & Narrative`)` uses `8px`, `6px`, `4px`, `9px` radii, `#ff5a00` highlights, and assets (logo.svg, favicon-192.png, favicon-48.png).
 5. **Colophon & Global Directory Footer (<footer> — `https://peaches.world/`)**:
-   - DOM & Selectors: Landmark `<footer>` landmark anchoring `Peaches – Webdesign Pratteln, Ba` footer links (`Home · Who is talking · Work · References`), copy *"Technical Architecture & Narrative"*, and `#ff8a2a` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer> — `https://peaches.world/`)` aligns to `90vw` extracted from `peaches-world` stylesheet with `9px` lateral canvas padding with `14px` grid gap and attributes (data-s="Chapter 01 / Home", data-s="Pratteln 47.52 N 7.69 E", data-s="Peaches").
+   - DOM & Selectors: Landmark `<footer>` landmark anchoring `Peaches – Webdesign Pratteln, Ba` footer links (`Home · Who is talking · Work · References`), copy *"Technical Architecture & Narrative"*, and `#7e7e7e` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer> — `https://peaches.world/`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `9px` lateral canvas padding with `14px` grid gap and attributes (data-s="Chapter 01 / Home", data-s="Pratteln 47.52 N 7.69 E", data-s="Peaches").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Web design · Pratteln near Basel · Switzerland"*
+- Copy Excerpt 1: *"WEB DESIGN · PRATTELN NEAR BASEL · SWITZERLAND"*
+- Copy Excerpt 2: *"Web design · Pratteln near Basel · Switzerland"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
@@ -239,7 +263,7 @@ Scaffold `peaches-world` (`Peaches – Webdesign Pratteln, Basel · Websites wor
 - **Selector `html #weiter`**: `transition: background-color .15s,color .15s,border-color .15s,box-shadow...` extracted from `peaches-world` stylesheet.
 - **Selector `.t`**: `transition: opacity .4s,background .5s,border-color .5s,padding .3s,box-sh...` extracted from `peaches-world` stylesheet.
 - **Selector `#zurueck`**: `transition: transform .14s,box-shadow .14s,opacity .4s` extracted from `peaches-world` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

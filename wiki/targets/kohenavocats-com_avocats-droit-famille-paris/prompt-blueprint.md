@@ -1,108 +1,114 @@
 ---
 title: "UI Prompt Blueprint: kohenavocats-com_avocats-droit-famille-paris"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "kohenavocats-com_avocats-droit-famille-paris"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `#000` ink, `#fff` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0077ed` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: kohenavocats-com_avocats-droit-famille-paris
 
-> **Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession** (https://kohenavocats.com/avocats-droit-famille-paris/) — Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Accompagnement h...
+> **Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession** (https://kohenavocats.com/avocats-droit-famille-paris/) — Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Première analyse...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession** (`https://kohenavocats.com/avocats-droit-famille-paris/`). Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Accompagnement h...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `#000` ink, `#fff` accent)**.
+- **Brand Essence & Persona**: **Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession** (`https://kohenavocats.com/avocats-droit-famille-paris/`). Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Première analyse...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0077ed` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#39aa59` (`var(--e-contact-buttons-profile-dot-bg)` in `:root`) paired with `#000` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Avocat en droit de la famille à Pari`) with `Lato` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `480px` container bounds (`gap: 8px`, padding `20px`) with `cubic-bezier(.58,.3,.005,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0077ed` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Lato` for display copy (`AVOCAT EN DROIT DE LA FAMILLE À PARI`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1386px` container bounds (`gap: var(--row-gap)`, padding `7px`) with `cubic-bezier(.58,.3,.005,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `480px` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `19px`, `23px`, `12px`, `50%`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1386px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `7px` lateral canvas padding with `var(--row-gap)` grid gap.
+- **Border Radius Scale**: `18px`, `50%`, `3px`, `var(--border-radius)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 480px`, `gap: 8px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:480px)`, `@media (max-width:1024px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1386px`, `gap: var(--row-gap)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `7px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (min-width: 768px) and (max-width: 1024px)`, `@media (max-width: 767px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#39aa59` | `var(--e-contact-buttons-profile-dot-bg)` in `:root` |
-| **Primary Typography Ink** | `#467ff7` | `var(--e-contact-buttons-button-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#1c2448` | `var(--e-contact-buttons-button-bg-hover)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `var(--e-contact-buttons-button-icon)` in `:root` |
-| **Secondary / Muted Copy** | `#000` | `var(--e-contact-buttons-message-bubble-name)` in `:root` |
-| **Structural Hairline Border** | `#c8d5dc` | `var(--e-contact-buttons-message-bubble-chat-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6faff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#0077ed` | `.kcf-wrap .kcf-btn:hover { background: #0077ed }` |
+| **Secondary / Muted Copy** | `#7c7c7c` | `var(--e-global-color-secondary)` in `:root` |
+| **Structural Hairline Border** | `#dce3e7` | `var(--kohen-avis-border)` in `:root` |
+| **Variable Token (`--e-global-color-primary`)** | `#15342c` | `var(--e-global-color-primary)` in `:root` |
+| **Variable Token (`--e-global-color-cda53b9`)** | `#52aa69` | `var(--e-global-color-cda53b9)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--km-beacon` | `360deg` | Design System Custom Token |
+| `--wp--style--global--content-size` | `800px` | Layout / Spatial Grid Token |
+| `--wp--style--global--wide-size` | `1200px` | Layout / Spatial Grid Token |
+| `--wp--style--block-gap` | `24px` | Layout / Spatial Grid Token |
 | `--direction-multiplier` | `1` | Design System Custom Token |
-| `--flex-direction` | `initial` | Design System Custom Token |
-| `--flex-wrap` | `initial` | Layout / Spatial Grid Token |
-| `--justify-content` | `initial` | Design System Custom Token |
-| `--align-items` | `initial` | Design System Custom Token |
-| `--align-content` | `initial` | Design System Custom Token |
-| `--gap` | `initial` | Layout / Spatial Grid Token |
-| `--flex-basis` | `initial` | Design System Custom Token |
-| `--flex-grow` | `initial` | Design System Custom Token |
-| `--flex-shrink` | `initial` | Typography Ink Token |
-| `--order` | `initial` | Design System Custom Token |
-| `--align-self` | `initial` | Design System Custom Token |
 | `--page-title-display` | `block` | Design System Custom Token |
-| `--border-radius` | `0` | Elevation / Border Token |
-| `--border-top-width` | `0px` | Layout / Spatial Grid Token |
+| `--e-global-color-primary` | `#15342C` | Brand / Palette Token |
+| `--e-global-color-secondary` | `#7C7C7C` | Brand / Palette Token |
+| `--e-global-color-text` | `#000000` | Typography Ink Token |
+| `--e-global-color-accent` | `#000000` | Brand / Palette Token |
+| `--e-global-color-cd1e84d` | `#FFFFFF` | Brand / Palette Token |
+| `--e-global-color-a983356` | `#FFFFFF` | Brand / Palette Token |
+| `--e-global-color-02754a5` | `#FFFFFF00` | Brand / Palette Token |
+| `--e-global-color-ef9a968` | `#FFFFFF` | Brand / Palette Token |
+| `--e-global-color-0c93145` | `#15342C` | Brand / Palette Token |
+| `--e-global-color-cda53b9` | `#52AA69` | Brand / Palette Token |
+| `--e-global-color-934eedc` | `#FFFFFF` | Brand / Palette Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Inter`.
-- **Primary Body Stack**: `Lato`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Lato`.
+- **Primary Body Stack**: `Segoe UI`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(26px, 6vw, 86px)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 900`).
-- **Section Heading (`H2`)**: CSS variables `--e-contact-buttons-top-bar-subtitle: #fff`; rule `h2` (`font-size: clamp(18px, 0.9rem + 0.6vw, 2...`, `line-height: 1.12 !important`, `letter-spacing: 0.02em !important`, `font-weight: 400 !important`).
-- **Body Copy**: CSS variables `--e-contact-buttons-message-bubble-body: #000`; rule `p` (`font-size: 18px`).
-- **Metadata & Navigation Labels**: CSS variables `--e-contact-buttons-size-small: 55px`, `--e-contact-buttons-svg-size-small: 32px`, `--e-contact-buttons-profile-image-size-small: 65px`; rule `small` (`font-size: 11px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 44px`, `line-height: 50.6px`, `font-weight: 900`, `letter-spacing: -1.1px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(26px, 6vw, 86px)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 900`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 23.04px`, `line-height: 25.8048px`, `font-weight: 400`, `letter-spacing: 0.4608px`); rule `h2` (`font-size: clamp(18px, 0.9rem + 0.6vw, 2...`, `line-height: 1.12`, `letter-spacing: 0.02em`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: 18px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--e-global-typography-primary-letter-spacing: -0.3px`, `--e-global-typography-secondary-letter-spacing: 0px`, `--e-global-typography-text-letter-spacing: -0.8px`; rule `small` (`font-size: 11px`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(0.25,0.1,0.25,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.25,0.1,0.25,1)`, `cubic-bezier(.2,.8,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `or-icon[href*="off_canvas%3Aopen"...`**: `transition: transform .2s, box-shadow .2s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
-- **Selector `#kohen-cc-icon`**: `transition: transform 0.15s ease,box-shadow 0.15s ease,border-color 0.15s...` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
-- **Selector `.kohen-cc-btn`**: `transition: background 0.15s ease,border-color 0.15s ease,box-shadow 0.15s...` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `textarea`**: `transition: all .3s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `button`**: `transition: all .3s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `entor .elementor-background-video...`**: `transition: opacity 1s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.58,.3,.005,1)`)**: Governs interactive state transitions across `<header.elementor>` and `<section.kohen-avis-panel>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -110,40 +116,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Avocat Droit de la Famille Paris · Divorce │
 │ ====================================================================== │
-│ [ <header.elementor>       | Urgence pénale · Garde à vue · Détenti ]  │
+│ [ <header.elementor> (1440x60px)      | Urgence pénale · Garde à vue ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.kfh-conversion>                             |   │
-│ | H1: Avocat en droit de la famille à Paris                        |   │
-│ | Substrate: #39aa59    | Ink: #000       | Accent: #fff           |   │
+│ | HERO STAGE: <section.kfh-conversion> (w=1440px)                    | │
+│ | H1: AVOCAT EN DROIT DE LA FAMILLE À PARIS                          | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0077ed                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.kohen-avis-panel>) max-w: 480px          |   │
+│ | SHOWCASE GRID (<section.kohen-avis-panel>) max-w: 1386px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Recevez une première analyse |  | Ils parlent de nous          | | │
+│ | | Avocat en droit de la famill |  | Recevez une première analyse | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px   ) | │
-│ | [<header.elementor>] -> [<section.kfh-conve] -> [<section.kohen-avi] │
+│ | DETAIL MODULE (<section.knp>) — Ils parlent de nous                | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.kohen-avis-pan) | https://kohenavocats.com/avocats-d │
+│ [ FOOTER (<footer.kohen-avis-p) | https://kohenavocats.com/avocats-dr  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--ro)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.elementor>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.kfh-conversion>) — 390px Vertical Lead        | │
+│ | H1: AVOCAT EN DROIT DE LA FAMILLE À PARIS                          | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.kohen-avis-pa) — 1-Col Stack              | │
+│ | [ Item 1: Avocat en droit de la famille à Paris                  ] | │
+│ | [ Item 2: Recevez une première analyse                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.knp>) — 1-Col (Ils parlent de nou)          | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.kohen-avis-p) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.elementor> — `kohenavocats-com_avocats-droit-famille-paris`)**:
-   - Landmark `<header class="elementor elementor-25177">` hosting `Avocat Droit de la Famille Paris · D` navigation (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), DOM attributes (`data-kfh-variant="transparent"`, `data-cfasync="false"`, `data-no-minify="1"`, `data-no-optimize="1"`), and stylesheet rule `property --km-beacon { syntax: '<angle>'; inherits: false; initial-value: 0deg; }`.
-2. **Hero Stage & Focal Lead (<section.kfh-conversion> — `Avocat en droit de la famille à Pa`)**:
-   - Landmark `<section class="kfh-conversion kfg-unified">` presenting display lead `Avocat en droit de la famille à Paris` and copy excerpt *"Droit pénal · Avocat pénaliste à Paris Urgence pénale Garde à vue"* over `#39aa59` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Recevez une première analyse`)**:
-   - Landmark `<section class="kohen-avis-panel kohen-avis-wrap">` rendering section `Recevez une première analyse` with copy *"Droit pénal · Avocat pénaliste à Paris"*, asset references (`bat.js`, `scripts.clarity.ms`, `www.googletagmanager.com`, `www.clarity.ms`), and grid rule `to { --km-beacon: 360deg; }`.
-4. **Interactive Detail & Feature Matrix (<section.knp> — `Ils parlent de nous`)**:
-   - Landmark `<section class="knp knp--manuel">` framing `Ils parlent de nous` and `Comment le cabinet vous accompagne en droit de la...` (*"Comparution immédiate"*) with `#1c2448` surface cards, `#fff` accents, and `svg { position: relative; z-index: 1; width: 24px; height: 24px; }`.
+   - Landmark `<header class="elementor elementor-25177">` (`1440x60px`) hosting `Avocat Droit de la Famille Paris · D` navigation (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), DOM attributes (`data-kfh-variant="transparent"`, `data-cfasync="false"`, `data-no-minify="1"`, `data-no-optimize="1"`), and stylesheet rule `.elementor-kit-701 .elementor-button { background-color:var( --e-global-color-0eaab80 ); }`.
+2. **Hero Stage & Focal Lead (<section.kfh-conversion> — `AVOCAT EN DROIT DE LA FAMILLE À PA`)**:
+   - Landmark `<section class="kfh-conversion kfg-unified">` presenting display lead `AVOCAT EN DROIT DE LA FAMILLE À PARIS` and copy excerpt *"Divorce Séparation Enfants Succession"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Avocat en droit de la famille à Pa`)**:
+   - Landmark `<section class="kohen-avis-panel kohen-avis-wrap">` rendering section `Avocat en droit de la famille à Paris` with copy *"droit de la famille"*, asset references (`clarity.js`, `u3tj0s09d9`, `656597ce-1c9d-42db-9ea8-b873188c4...`, `scevent.min.js`), and grid rule `.elementor-kit-701 e-page-transition { background-color:FFBC7D; }`.
+4. **Interactive Detail & Feature Matrix (<section.knp> — `Recevez une première analyse`)**:
+   - Landmark `<section class="knp knp--manuel">` framing `Recevez une première analyse` and `Ils parlent de nous` (*"Première analyse écrite 80 € TTC"*) with `#f6faff` surface cards, `#0077ed` accents, and `.elementor-kit-701 a { color:var( --e-global-color-text ); }`.
 5. **Colophon & Global Directory Footer (<footer.kohen-avis-panel-footer> — `https://kohenavocats.com/avocats-droit-famille-paris/`)**:
-   - Landmark `<footer class="kohen-avis-panel-footer">` anchoring `Avocat Droit de la Famille Paris` footer links (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), copy *"Détention provisoire"*, and `#c8d5dc` structural dividers.
+   - Landmark `<footer class="kohen-avis-panel-footer">` anchoring `Avocat Droit de la Famille Paris` footer links (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), copy *"Première analyse écrite"*, and `#dce3e7` structural dividers.
 
 ---
 
@@ -155,101 +180,103 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `kohenavocats-com_avocats-droit-famille-paris` (**Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession** — `https://kohenavocats.com/avocats-droit-famille-paris/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#39aa59` canvas, `#000` ink, `#fff` accent).
-- **Identity & Domain Context**: Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Accompagnement h...
-- **Primary Substrate**: `#39aa59` (`var(--e-contact-buttons-profile-dot-bg)` in `:root`), **Primary Ink**: `#000`, **Accent / Highlight**: `#fff`.
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0077ed` accent).
+- **Identity & Domain Context**: Avocat en droit de la famille à Paris. Divorce amiable ou contentieux, garde d'enfants, pension alimentaire, succession. Première analyse...
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0077ed`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#39aa59` (`var(--e-contact-buttons-profile-dot-bg)` in `:root`) paired with `#000` primary typography and `#fff` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Inter` for display copy (`Avocat en droit de la famille à Pari`) with `Lato` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `480px` container bounds (`gap: 8px`, padding `20px`) with `cubic-bezier(.58,.3,.005,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0077ed` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Lato` for display copy (`AVOCAT EN DROIT DE LA FAMILLE À PARI`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1386px` container bounds (`gap: var(--row-gap)`, padding `7px`) with `cubic-bezier(.58,.3,.005,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `kohenavocats-com_avocats-droit-famille-paris` in your global stylesheet:
 
 :root {
-  /* Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession (kohenavocats-com_avocats-droit-famille-paris) — Ground-Truth Extracted CSS Variables */
-  --km-beacon: 360deg; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
+  /* Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession (kohenavocats-com_avocats-droit-famille-paris) — Live-Grounded CSS Variables */
+  --wp--style--global--content-size: 800px; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --wp--style--global--wide-size: 1200px; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --wp--style--block-gap: 24px; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
   --direction-multiplier: 1; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --flex-direction: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --flex-wrap: initial; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --justify-content: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --align-items: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --align-content: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --gap: initial; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --flex-basis: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --flex-grow: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --flex-shrink: initial; /* Typography Ink Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --order: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --align-self: initial; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
   --page-title-display: block; /* Design System Custom Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --border-radius: 0; /* Elevation / Border Token (kohenavocats-com_avocats-droit-famille-paris) */
-  --border-top-width: 0px; /* Layout / Spatial Grid Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-primary: #15342C; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-secondary: #7C7C7C; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-text: #000000; /* Typography Ink Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-accent: #000000; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-cd1e84d: #FFFFFF; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-a983356: #FFFFFF; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-02754a5: #FFFFFF00; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-ef9a968: #FFFFFF; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-0c93145: #15342C; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-cda53b9: #52AA69; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
+  --e-global-color-934eedc: #FFFFFF; /* Brand / Palette Token (kohenavocats-com_avocats-droit-famille-paris) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#39aa59` — grounded in `var(--e-contact-buttons-profile-dot-bg)` in `:root`
-- **Primary Typography Ink**: `#467ff7` — grounded in `var(--e-contact-buttons-button-bg)` in `:root`
-- **Elevated Surface / Card Substrate**: `#1c2448` — grounded in `var(--e-contact-buttons-button-bg-hover)` in `:root`
-- **Interactive Accent / Highlight**: `#fff` — grounded in `var(--e-contact-buttons-button-icon)` in `:root`
-- **Secondary / Muted Copy**: `#000` — grounded in `var(--e-contact-buttons-message-bubble-name)` in `:root`
-- **Structural Hairline Border**: `#c8d5dc` — grounded in `var(--e-contact-buttons-message-bubble-chat-bg)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f6faff` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#0077ed` — grounded in `.kcf-wrap .kcf-btn:hover { background: #0077ed }`
+- **Secondary / Muted Copy**: `#7c7c7c` — grounded in `var(--e-global-color-secondary)` in `:root`
+- **Structural Hairline Border**: `#dce3e7` — grounded in `var(--kohen-avis-border)` in `:root`
+- **Variable Token (`--e-global-color-primary`)**: `#15342c` — grounded in `var(--e-global-color-primary)` in `:root`
+- **Variable Token (`--e-global-color-cda53b9`)**: `#52aa69` — grounded in `var(--e-global-color-cda53b9)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `480px` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet
-- **Padding & Gutters**: `20px` lateral canvas padding with `8px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 480px`, `gap: 8px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:480px)`, `@media (max-width:1024px)`
-- **Corner Radii**: `19px`, `23px`, `12px`, `50%`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1386px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `7px` lateral canvas padding with `var(--row-gap)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1386px`, `gap: var(--row-gap)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `7px` horizontal padding
+- **Media Queries**: `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (min-width: 768px) and (max-width: 1024px)`, `@media (max-width: 767px)`
+- **Corner Radii**: `18px`, `50%`, `3px`, `var(--border-radius)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Inter`
-- **Body Font Stack**: `Lato`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(26px, 6vw, 86px)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 900`)
-- **H2 Section Rule**: CSS variables `--e-contact-buttons-top-bar-subtitle: #fff`; rule `h2` (`font-size: clamp(18px, 0.9rem + 0.6vw, 2...`, `line-height: 1.12 !important`, `letter-spacing: 0.02em !important`, `font-weight: 400 !important`)
-- **Body Copy Rule**: CSS variables `--e-contact-buttons-message-bubble-body: #000`; rule `p` (`font-size: 18px`)
-- **Metadata & Index Rule**: CSS variables `--e-contact-buttons-size-small: 55px`, `--e-contact-buttons-svg-size-small: 32px`, `--e-contact-buttons-profile-image-size-small: 65px`; rule `small` (`font-size: 11px`)
+- **Display Font Stack**: `Lato`
+- **Body Font Stack**: `Segoe UI`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 44px`, `line-height: 50.6px`, `font-weight: 900`, `letter-spacing: -1.1px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `h1` (`font-size: clamp(26px, 6vw, 86px)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 900`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 23.04px`, `line-height: 25.8048px`, `font-weight: 400`, `letter-spacing: 0.4608px`); rule `h2` (`font-size: clamp(18px, 0.9rem + 0.6vw, 2...`, `line-height: 1.12`, `letter-spacing: 0.02em`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: 18px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--e-global-typography-primary-letter-spacing: -0.3px`, `--e-global-typography-secondary-letter-spacing: 0px`, `--e-global-typography-text-letter-spacing: -0.8px`; rule `small` (`font-size: 11px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `kohenavocats-com_avocats-droit-famille-paris` (`Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.elementor> — `kohenavocats-com_avocats-droit-famille-paris`)**:
-   - DOM & Selectors: Landmark `<header class="elementor elementor-25177">` hosting `Avocat Droit de la Famille Paris · D` navigation (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), DOM attributes (`data-kfh-variant="transparent"`, `data-cfasync="false"`, `data-no-minify="1"`, `data-no-optimize="1"`), and stylesheet rule `property --km-beacon { syntax: '<angle>'; inherits: false; initial-value: 0deg; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `kohenavocats-com_avocats-droit-famille-paris`)` (`kohenavocats-com_avocats-droit-famille-paris`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:480px)`, `@media (max-width:1024px)` with `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`.
-2. **Hero Stage & Focal Lead (<section.kfh-conversion> — `Avocat en droit de la famille à Pa`)**:
-   - DOM & Selectors: Landmark `<section class="kfh-conversion kfg-unified">` presenting display lead `Avocat en droit de la famille à Paris` and copy excerpt *"Droit pénal · Avocat pénaliste à Paris Urgence pénale Garde à vue"* over `#39aa59` canvas and `#000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#39aa59` background with `#000` headline `Avocat en droit de la famille à Paris`.
-3. **Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Recevez une première analyse`)**:
-   - DOM & Selectors: Landmark `<section class="kohen-avis-panel kohen-avis-wrap">` rendering section `Recevez une première analyse` with copy *"Droit pénal · Avocat pénaliste à Paris"*, asset references (`bat.js`, `scripts.clarity.ms`, `www.googletagmanager.com`, `www.clarity.ms`), and grid rule `to { --km-beacon: 360deg; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Recevez une première analyse`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 480px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.knp> — `Ils parlent de nous`)**:
-   - DOM & Selectors: Landmark `<section class="knp knp--manuel">` framing `Ils parlent de nous` and `Comment le cabinet vous accompagne en droit de la...` (*"Comparution immédiate"*) with `#1c2448` surface cards, `#fff` accents, and `svg { position: relative; z-index: 1; width: 24px; height: 24px; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.knp> — `Ils parlent de nous`)` uses `19px`, `23px`, `12px`, `50%` radii, `#fff` highlights, and assets (bat.js, scripts.clarity.ms, www.googletagmanager.com).
+   - DOM & Selectors: Landmark `<header class="elementor elementor-25177">` (`1440x60px`) hosting `Avocat Droit de la Famille Paris · D` navigation (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), DOM attributes (`data-kfh-variant="transparent"`, `data-cfasync="false"`, `data-no-minify="1"`, `data-no-optimize="1"`), and stylesheet rule `.elementor-kit-701 .elementor-button { background-color:var( --e-global-color-0eaab80 ); }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `kohenavocats-com_avocats-droit-famille-paris`)` (`kohenavocats-com_avocats-droit-famille-paris`) adapts across `@media (max-width:1024px)`, `@media (max-width:767px)`, `@media (min-width: 768px) and (max-width: 1024px)`, `@media (max-width: 767px)` with `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.25,0.1,0.25,1)`, `cubic-bezier(.2,.8,.2,1)` transitions and links `Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`.
+2. **Hero Stage & Focal Lead (<section.kfh-conversion> — `AVOCAT EN DROIT DE LA FAMILLE À PA`)**:
+   - DOM & Selectors: Landmark `<section class="kfh-conversion kfg-unified">` presenting display lead `AVOCAT EN DROIT DE LA FAMILLE À PARIS` and copy excerpt *"Divorce Séparation Enfants Succession"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `AVOCAT EN DROIT DE LA FAMILLE À PARIS`.
+3. **Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Avocat en droit de la famille à Pa`)**:
+   - DOM & Selectors: Landmark `<section class="kohen-avis-panel kohen-avis-wrap">` rendering section `Avocat en droit de la famille à Paris` with copy *"droit de la famille"*, asset references (`clarity.js`, `u3tj0s09d9`, `656597ce-1c9d-42db-9ea8-b873188c4...`, `scevent.min.js`), and grid rule `.elementor-kit-701 e-page-transition { background-color:FFBC7D; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.kohen-avis-panel> — `Avocat en droit de la famille à Pa`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1386px`, `gap: var(--row-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `7px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.knp> — `Recevez une première analyse`)**:
+   - DOM & Selectors: Landmark `<section class="knp knp--manuel">` framing `Recevez une première analyse` and `Ils parlent de nous` (*"Première analyse écrite 80 € TTC"*) with `#f6faff` surface cards, `#0077ed` accents, and `.elementor-kit-701 a { color:var( --e-global-color-text ); }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.knp> — `Recevez une première analyse`)` uses `18px`, `50%`, `3px`, `var(--border-radius)` radii, `#0077ed` highlights, and assets (clarity.js, u3tj0s09d9, 656597ce-1c9d-42db-9ea8-b873188c4...).
 5. **Colophon & Global Directory Footer (<footer.kohen-avis-panel-footer> — `https://kohenavocats.com/avocats-droit-famille-paris/`)**:
-   - DOM & Selectors: Landmark `<footer class="kohen-avis-panel-footer">` anchoring `Avocat Droit de la Famille Paris` footer links (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), copy *"Détention provisoire"*, and `#c8d5dc` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.kohen-avis-panel-footer> — `https://kohenavocats.com/avocats-droit-famille-paris/`)` aligns to `480px` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet with `20px` lateral canvas padding with `8px` grid gap and attributes (data-kfh-variant="transparent", data-cfasync="false", data-no-minify="1").
+   - DOM & Selectors: Landmark `<footer class="kohen-avis-panel-footer">` anchoring `Avocat Droit de la Famille Paris` footer links (`Urgence pénale · Garde à vue · Détention provisoire · Cour d’assises · Instruction pénale`), copy *"Première analyse écrite"*, and `#dce3e7` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.kohen-avis-panel-footer> — `https://kohenavocats.com/avocats-droit-famille-paris/`)` aligns to `1386px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `7px` lateral canvas padding with `var(--row-gap)` grid gap and attributes (data-kfh-variant="transparent", data-cfasync="false", data-no-minify="1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Droit pénal · Avocat pénaliste à Paris Urgence pénale Garde à vue Comparution immé..."*
-- Copy Excerpt 2: *"Droit pénal · Avocat pénaliste à Paris"*
-- Copy Excerpt 3: *"Comparution immédiate"*
-- Copy Excerpt 4: *"Détention provisoire"*
+- Copy Excerpt 1: *"Divorce Séparation Enfants Succession"*
+- Copy Excerpt 2: *"droit de la famille"*
+- Copy Excerpt 3: *"Première analyse écrite 80 € TTC"*
+- Copy Excerpt 4: *"Première analyse écrite"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(0.25,0.1,0.25,1)`
+- **Primary Easing Functions**: `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.25,0.1,0.25,1)`, `cubic-bezier(.2,.8,.2,1)`
 - **Extracted Stylesheet Rules (`kohenavocats-com_avocats-droit-famille-paris`)**:
-- `property --km-beacon { syntax: '<angle>'; inherits: false; initial-value: 0deg; }`
-- `to { --km-beacon: 360deg; }`
-- `svg { position: relative; z-index: 1; width: 24px; height: 24px; }`
-- `hover::after { animation: km-beacon-rim 9s linear infinite; }`
-- `active { transform: translateY(1.5px); }`
+- `.elementor-kit-701 .elementor-button { background-color:var( --e-global-color-0eaab80 ); }`
+- `.elementor-kit-701 e-page-transition { background-color:FFBC7D; }`
+- `.elementor-kit-701 a { color:var( --e-global-color-text ); }`
+- `.elementor-kit-701 label { color:var( --e-global-color-primary ); }`
+- `kit-701 .elementor-field-textual:... { color:var( --e-global-color-primary );background-color:var( --e-global-c... }`
 - **Per-Selector Transition Rules**:
-- **Selector `or-icon[href*="off_canvas%3Aopen"...`**: `transition: transform .2s, box-shadow .2s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
-- **Selector `#kohen-cc-icon`**: `transition: transform 0.15s ease,box-shadow 0.15s ease,border-color 0.15s...` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
-- **Selector `.kohen-cc-btn`**: `transition: background 0.15s ease,border-color 0.15s ease,box-shadow 0.15s...` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `textarea`**: `transition: all .3s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `button`**: `transition: all .3s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
+- **Selector `entor .elementor-background-video...`**: `transition: opacity 1s` extracted from `kohenavocats-com_avocats-droit-famille-paris` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.58,.3,.005,1)`)**: Governs interactive state transitions across `<header.elementor>` and `<section.kohen-avis-panel>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 

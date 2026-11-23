@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-alexadevaney-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-alexadevaney-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas, `#FFFFFF` ink, `#FFFFFF` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f7f6f4` canvas, `#333333` ink, `#000080` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-alexadevaney-com
 
 > **North County San Diego Luxury Homes – Alexa Devaney** (https://www.alexadevaney.com/) — Alexa Devaney, Senior Realtor Associate with The Oppenheim Group, helps families buy and sell luxury homes from Encinitas and Carlsbad to...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **North County San Diego Luxury Homes – Alexa Devaney** (`https://www.alexadevaney.com/`). Alexa Devaney, Senior Realtor Associate with The Oppenheim Group, helps families buy and sell luxury homes from Encinitas and Carlsbad to...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas, `#FFFFFF` ink, `#FFFFFF` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f7f6f4` canvas, `#333333` ink, `#000080` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#004F71` (`var(--navy)` in `:root`) paired with `#FFFFFF` primary typography and `#FFFFFF` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Montserrat` for display copy (`A Family-First Realtor for North Cou`) with `Montserrat` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1370px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.4,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f6f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#333333` primary typography and `#000080` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Montserrat` for display copy (`A Family-First Realtor for North Cou`) with `Montserrat` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1320px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1370px` extracted from `www-alexadevaney-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1320px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `18px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `50%`, `999px`, `2px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1370px`, `gap: 18px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1320px`, `gap: 18px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1240px)`, `@media (max-width:992px)`.
 
@@ -48,14 +52,18 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#004F71` | `var(--navy)` in `:root` |
-| **Primary Typography Ink** | `#88786A` | `var(--taupe)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#FBF9F7` | `var(--cream)` in `:root` |
-| **Interactive Accent / Highlight** | `#FFFFFF` | `var(--white)` in `:root` |
-| **Secondary / Muted Copy** | `#7fb0c4` | `var(--cat)` in `:root` |
-| **Structural Hairline Border** | `#2a0409` | `.intro { background: #2a0409 }` |
+| **Primary Canvas Substrate** | `#f7f6f4` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#333333` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.navbar.scrolled { background-color: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#000080` | `.lp-btn--outline { color: navy }` (`#000080`) |
+| **Secondary / Muted Copy** | `#b6b0a6` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#f8f7f5` | `.sidemenu__nav li { border-bottom: #f8f7f5 }` |
+| **Variable Token (`--navy`)** | `#004f71` | `var(--navy)` in `:root` |
+| **Variable Token (`--taupe`)** | `#88786a` | `var(--taupe)` in `:root` |
+| **Variable Token (`--cream`)** | `#fbf9f7` | `var(--cream)` in `:root` |
+| **Variable Token (`--cat`)** | `#7fb0c4` | `var(--cat)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -84,13 +92,13 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas
 ### Font Family Stacks
 - **Display Typography**: `Montserrat`.
 - **Primary Body Stack**: `Montserrat`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--display-font: "Montserrat",sans-serif`; rule `h1` (`font-size: clamp(38px,5.4vw,72px)`, `line-height: 1.02`, `letter-spacing: -1.4px`, `font-weight: 300`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`).
-- **Body Copy**: CSS variables `--body-font: "Montserrat",sans-serif`; rule `p` (`font-size: 16px`, `line-height: 1.7`, `letter-spacing: 1px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(22px,4.2vw,40px)`, `clamp(38px,4.5vw,62px)`, `clamp(30px,3vw,42px)`, `12px`, `14px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 84px`, `line-height: 89.04px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--display-font: "Montserrat",sans-serif`; rule `h1` (`font-size: clamp(38px,5.4vw,72px)`, `line-height: 1.02`, `letter-spacing: -1.4px`, `font-weight: 300`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 37.44px`, `line-height: 54.288px`, `font-weight: 400`); rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font: "Montserrat",sans-serif`; rule `p` (`font-size: 16px`, `line-height: 1.7`, `letter-spacing: 1px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -110,40 +118,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — North County San Diego Luxury Homes – Alex │
 │ ====================================================================== │
-│ [ <nav.navbar>             | Buy · Sell · Old Encinitas · Leucadia  ]  │
+│ [ <nav.navbar> (1440x79px)            | Buy · Sell · Old Encinitas · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.video-section>                              |   │
-│ | H1: A Family-First Realtor for North County                      |   │
-│ | Substrate: #004F71    | Ink: #FFFFFF    | Accent: #FFFFFF        |   │
+│ | HERO STAGE: <section.video-section> (w=1440px)                     | │
+│ | H1: A Family-First Realtor for North County                        | │
+│ | Substrate: #f7f6f4 | Ink: #333333 | Accent: #000080                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.hn-statement>    ) max-w: 1370px         |   │
+│ | SHOWCASE GRID (<section.hn-statement>) max-w: 1320px               | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | For more than ten years I ha |  | Featured Properties          | | │
+│ | | Surf breaks, bluff-top stree |  | Communities North County San | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 18px  ) | │
-│ | [<nav.navbar>] -> [<section.video-sec] -> [<section.hn-statem] |     │
+│ | DETAIL MODULE (<section.hn-stats>) — North County San Dieg         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.intro__emblem>) | https://www.alexadevaney.com/      │
+│ [ FOOTER (<footer.intro__emble) | https://www.alexadevaney.com/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 18px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.navbar>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.video-section>) — 390px Vertical Lead         | │
+│ | H1: A Family-First Realtor for North County                        | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.hn-statement>) — 1-Col Stack              | │
+│ | [ Item 1: Surf breaks, bluff-top streets, and a laid-back        ] | │
+│ | [ Item 2: Communities North County San Diego View all comm       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.hn-stats>) — 1-Col (North County San D)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.intro__emble) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.navbar> — `www-alexadevaney-com`)**:
-   - Landmark `<nav class="navbar">` hosting `North County San Diego Luxury Homes ` navigation (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), DOM attributes (`data-intro="done"`, `data-precedence="next"`, `data-precedence="next"`, `data-nimg="fill"`), and stylesheet rule `.intro { display:none }`.
+   - Landmark `<nav class="navbar">` (`1440x79px`) hosting `North County San Diego Luxury Homes ` navigation (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), DOM attributes (`data-intro="done"`, `data-precedence="next"`, `data-precedence="next"`, `data-nimg="fill"`), and stylesheet rule `.intro { display:none }`.
 2. **Hero Stage & Focal Lead (<section.video-section> — `A Family-First Realtor for North C`)**:
-   - Landmark `<section class="video-section hn-hero">` presenting display lead `A Family-First Realtor for North County` and copy excerpt *"Communities North County San Diego View all communities → Encinit"* over `#004F71` canvas and `#FFFFFF` ink.
-3. **Primary Showcase & Content Grid (<section.hn-statement> — `For more than ten years I have sol`)**:
-   - Landmark `<section class="hn-statement">` rendering section `For more than ten years I have sold homes across...` with copy *"North County San Diego"*, asset references (`og-emblem.webp`, `og-wordmark-light.webp`, `og-wordmark-dark.webp`, `og-ring-decal.webp`), and grid rule `.intro__orb { scale:1.12;transition:scale .6s ease-in }`.
-4. **Interactive Detail & Feature Matrix (<section.hn-stats> — `Featured Properties`)**:
-   - Landmark `<section class="hn-stats">` framing `Featured Properties` and `Encinitas` (*"View all communities →"*) with `#FBF9F7` surface cards, `#FFFFFF` accents, and `.intro__content { position:relative;display:flex;flex-direction:column;align-items:center;... }`.
+   - Landmark `<section class="video-section hn-hero">` presenting display lead `A Family-First Realtor for North County` and copy excerpt *"Surf breaks, bluff-top streets, and a laid-back coastal village f"* over `#f7f6f4` canvas and `#333333` ink.
+3. **Primary Showcase & Content Grid (<section.hn-statement> — `Surf breaks, bluff-top streets, an`)**:
+   - Landmark `<section class="hn-statement">` rendering section `Surf breaks, bluff-top streets, and a laid-back ` with copy *"Communities North County San Diego View all communities → Encinit"*, asset references (`og-emblem.webp`, `og-wordmark-light.webp`, `og-wordmark-dark.webp`, `og-ring-decal.webp`), and grid rule `.intro__orb { scale:1.12;transition:scale .6s ease-in }`.
+4. **Interactive Detail & Feature Matrix (<section.hn-stats> — `Communities North County San Diego`)**:
+   - Landmark `<section class="hn-stats">` framing `Communities North County San Diego View all comm` and `North County San Diego` (*"North County San Diego"*) with `#ffffff` surface cards, `#000080` accents, and `.intro__content { position:relative;display:flex;flex-direction:column;align-items:center;... }`.
 5. **Colophon & Global Directory Footer (<footer.intro__emblem> — `https://www.alexadevaney.com/`)**:
-   - Landmark `<footer class="intro__emblem">` anchoring `North County San Diego Luxury Ho` footer links (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), copy *"Encinitas → Surf breaks, bluff-top streets, and a laid-back "*, and `#2a0409` structural dividers.
+   - Landmark `<footer class="intro__emblem">` anchoring `North County San Diego Luxury Ho` footer links (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), copy *"Encinitas → Surf breaks, bluff-top streets, and a laid-back "*, and `#f8f7f5` structural dividers.
 
 ---
 
@@ -155,19 +182,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-alexadevaney-com` (**North County San Diego Luxury Homes – Alexa Devaney** — `https://www.alexadevaney.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#004F71` canvas, `#FFFFFF` ink, `#FFFFFF` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f6f4` canvas, `#333333` ink, `#000080` accent).
 - **Identity & Domain Context**: Alexa Devaney, Senior Realtor Associate with The Oppenheim Group, helps families buy and sell luxury homes from Encinitas and Carlsbad to...
-- **Primary Substrate**: `#004F71` (`var(--navy)` in `:root`), **Primary Ink**: `#FFFFFF`, **Accent / Highlight**: `#FFFFFF`.
+- **Primary Substrate**: `#f7f6f4` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#333333`, **Accent / Highlight**: `#000080`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#004F71` (`var(--navy)` in `:root`) paired with `#FFFFFF` primary typography and `#FFFFFF` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Montserrat` for display copy (`A Family-First Realtor for North Cou`) with `Montserrat` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1370px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.4,0,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f6f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#333333` primary typography and `#000080` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Montserrat` for display copy (`A Family-First Realtor for North Cou`) with `Montserrat` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1320px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-alexadevaney-com` in your global stylesheet:
 
 :root {
-  /* North County San Diego Luxury Homes – Alexa Devaney (www-alexadevaney-com) — Ground-Truth Extracted CSS Variables */
+  /* North County San Diego Luxury Homes – Alexa Devaney (www-alexadevaney-com) — Live-Grounded CSS Variables */
   --navy: #004F71; /* Layout / Spatial Grid Token (www-alexadevaney-com) */
   --navy-90: rgba(0,79,113,0.9); /* Layout / Spatial Grid Token (www-alexadevaney-com) */
   --taupe: #88786A; /* Color / Atmospheric Token (www-alexadevaney-com) */
@@ -188,19 +215,23 @@ Declare and consume these exact custom properties extracted from `www-alexadevan
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#004F71` — grounded in `var(--navy)` in `:root`
-- **Primary Typography Ink**: `#88786A` — grounded in `var(--taupe)` in `:root`
-- **Elevated Surface / Card Substrate**: `#FBF9F7` — grounded in `var(--cream)` in `:root`
-- **Interactive Accent / Highlight**: `#FFFFFF` — grounded in `var(--white)` in `:root`
-- **Secondary / Muted Copy**: `#7fb0c4` — grounded in `var(--cat)` in `:root`
-- **Structural Hairline Border**: `#2a0409` — grounded in `.intro { background: #2a0409 }`
+- **Primary Canvas Substrate**: `#f7f6f4` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#333333` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.navbar.scrolled { background-color: white }` (`#ffffff`)
+- **Interactive Accent / Highlight**: `#000080` — grounded in `.lp-btn--outline { color: navy }` (`#000080`)
+- **Secondary / Muted Copy**: `#b6b0a6` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#f8f7f5` — grounded in `.sidemenu__nav li { border-bottom: #f8f7f5 }`
+- **Variable Token (`--navy`)**: `#004f71` — grounded in `var(--navy)` in `:root`
+- **Variable Token (`--taupe`)**: `#88786a` — grounded in `var(--taupe)` in `:root`
+- **Variable Token (`--cream`)**: `#fbf9f7` — grounded in `var(--cream)` in `:root`
+- **Variable Token (`--cat`)**: `#7fb0c4` — grounded in `var(--cat)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1370px` extracted from `www-alexadevaney-com` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1320px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `18px` lateral canvas padding with `18px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1370px`, `gap: 18px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1320px`, `gap: 18px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding
 - **Media Queries**: `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1240px)`, `@media (max-width:992px)`
 - **Corner Radii**: `50%`, `999px`, `2px`, `4px`
@@ -208,34 +239,34 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Montserrat`
 - **Body Font Stack**: `Montserrat`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--display-font: "Montserrat",sans-serif`; rule `h1` (`font-size: clamp(38px,5.4vw,72px)`, `line-height: 1.02`, `letter-spacing: -1.4px`, `font-weight: 300`)
-- **H2 Section Rule**: rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`)
-- **Body Copy Rule**: CSS variables `--body-font: "Montserrat",sans-serif`; rule `p` (`font-size: 16px`, `line-height: 1.7`, `letter-spacing: 1px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(22px,4.2vw,40px)`, `clamp(38px,4.5vw,62px)`, `clamp(30px,3vw,42px)`, `12px`, `14px`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 84px`, `line-height: 89.04px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--display-font: "Montserrat",sans-serif`; rule `h1` (`font-size: clamp(38px,5.4vw,72px)`, `line-height: 1.02`, `letter-spacing: -1.4px`, `font-weight: 300`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 37.44px`, `line-height: 54.288px`, `font-weight: 400`); rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font: "Montserrat",sans-serif`; rule `p` (`font-size: 16px`, `line-height: 1.7`, `letter-spacing: 1px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-alexadevaney-com` (`North County San Diego Luxury Homes – Alexa Devaney`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.navbar> — `www-alexadevaney-com`)**:
-   - DOM & Selectors: Landmark `<nav class="navbar">` hosting `North County San Diego Luxury Homes ` navigation (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), DOM attributes (`data-intro="done"`, `data-precedence="next"`, `data-precedence="next"`, `data-nimg="fill"`), and stylesheet rule `.intro { display:none }`.
+   - DOM & Selectors: Landmark `<nav class="navbar">` (`1440x79px`) hosting `North County San Diego Luxury Homes ` navigation (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), DOM attributes (`data-intro="done"`, `data-precedence="next"`, `data-precedence="next"`, `data-nimg="fill"`), and stylesheet rule `.intro { display:none }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.navbar> — `www-alexadevaney-com`)` (`www-alexadevaney-com`) adapts across `@media (max-width:600px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1240px)`, `@media (max-width:992px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.77,0,.175,1)` transitions and links `Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`.
 2. **Hero Stage & Focal Lead (<section.video-section> — `A Family-First Realtor for North C`)**:
-   - DOM & Selectors: Landmark `<section class="video-section hn-hero">` presenting display lead `A Family-First Realtor for North County` and copy excerpt *"Communities North County San Diego View all communities → Encinit"* over `#004F71` canvas and `#FFFFFF` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#004F71` background with `#FFFFFF` headline `A Family-First Realtor for North County`.
-3. **Primary Showcase & Content Grid (<section.hn-statement> — `For more than ten years I have sol`)**:
-   - DOM & Selectors: Landmark `<section class="hn-statement">` rendering section `For more than ten years I have sold homes across...` with copy *"North County San Diego"*, asset references (`og-emblem.webp`, `og-wordmark-light.webp`, `og-wordmark-dark.webp`, `og-ring-decal.webp`), and grid rule `.intro__orb { scale:1.12;transition:scale .6s ease-in }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hn-statement> — `For more than ten years I have sol`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1370px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.hn-stats> — `Featured Properties`)**:
-   - DOM & Selectors: Landmark `<section class="hn-stats">` framing `Featured Properties` and `Encinitas` (*"View all communities →"*) with `#FBF9F7` surface cards, `#FFFFFF` accents, and `.intro__content { position:relative;display:flex;flex-direction:column;align-items:center;... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.hn-stats> — `Featured Properties`)` uses `50%`, `999px`, `2px`, `4px` radii, `#FFFFFF` highlights, and assets (og-emblem.webp, og-wordmark-light.webp, og-wordmark-dark.webp).
+   - DOM & Selectors: Landmark `<section class="video-section hn-hero">` presenting display lead `A Family-First Realtor for North County` and copy excerpt *"Surf breaks, bluff-top streets, and a laid-back coastal village f"* over `#f7f6f4` canvas and `#333333` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f7f6f4` background with `#333333` headline `A Family-First Realtor for North County`.
+3. **Primary Showcase & Content Grid (<section.hn-statement> — `Surf breaks, bluff-top streets, an`)**:
+   - DOM & Selectors: Landmark `<section class="hn-statement">` rendering section `Surf breaks, bluff-top streets, and a laid-back ` with copy *"Communities North County San Diego View all communities → Encinit"*, asset references (`og-emblem.webp`, `og-wordmark-light.webp`, `og-wordmark-dark.webp`, `og-ring-decal.webp`), and grid rule `.intro__orb { scale:1.12;transition:scale .6s ease-in }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hn-statement> — `Surf breaks, bluff-top streets, an`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1320px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.hn-stats> — `Communities North County San Diego`)**:
+   - DOM & Selectors: Landmark `<section class="hn-stats">` framing `Communities North County San Diego View all comm` and `North County San Diego` (*"North County San Diego"*) with `#ffffff` surface cards, `#000080` accents, and `.intro__content { position:relative;display:flex;flex-direction:column;align-items:center;... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.hn-stats> — `Communities North County San Diego`)` uses `50%`, `999px`, `2px`, `4px` radii, `#000080` highlights, and assets (og-emblem.webp, og-wordmark-light.webp, og-wordmark-dark.webp).
 5. **Colophon & Global Directory Footer (<footer.intro__emblem> — `https://www.alexadevaney.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="intro__emblem">` anchoring `North County San Diego Luxury Ho` footer links (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), copy *"Encinitas → Surf breaks, bluff-top streets, and a laid-back "*, and `#2a0409` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.intro__emblem> — `https://www.alexadevaney.com/`)` aligns to `1370px` extracted from `www-alexadevaney-com` stylesheet with `18px` lateral canvas padding with `18px` grid gap and attributes (data-intro="done", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="intro__emblem">` anchoring `North County San Diego Luxury Ho` footer links (`Buy · Sell · Old Encinitas · Leucadia · Cardiff-by-the-Sea`), copy *"Encinitas → Surf breaks, bluff-top streets, and a laid-back "*, and `#f8f7f5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.intro__emblem> — `https://www.alexadevaney.com/`)` aligns to `1320px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `18px` lateral canvas padding with `18px` grid gap and attributes (data-intro="done", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Communities North County San Diego View all communities → Encinitas → Surf breaks,..."*
-- Copy Excerpt 2: *"North County San Diego"*
-- Copy Excerpt 3: *"View all communities →"*
+- Copy Excerpt 1: *"Surf breaks, bluff-top streets, and a laid-back coastal village from Leucadia to C..."*
+- Copy Excerpt 2: *"Communities North County San Diego View all communities → Encinitas → Surf breaks,..."*
+- Copy Excerpt 3: *"North County San Diego"*
 - Copy Excerpt 4: *"Encinitas → Surf breaks, bluff-top streets, and a laid-back coastal village from L..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography

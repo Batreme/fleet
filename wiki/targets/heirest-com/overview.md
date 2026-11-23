@@ -1,8 +1,12 @@
 ---
 title: "Target Overview: heirest-com"
-date: 2026-11-14
+date: 2026-11-23
+captured_at: 2026-11-23
 url: "https://heirest.com/"
+final_url: "https://heirest.com/"
 status: analyzed
+http_status: 200
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -12,26 +16,25 @@ auth_required: false
 
 # Target Overview: heirest-com
 
-## 🧭 Dossier Navigation
+## Dossier Navigation
+- [UI Prompt Blueprint](prompt-blueprint.md)
+- [UI Architecture & Design Tokens](ui-ux.md)
 - [Discovered APIs & Network Protocols](apis.md)
 - [Data Models & Local State](data-models.md)
-- [UI Architecture & Design Tokens](ui-ux.md)
 - [De-obfuscated Source Maps](source-maps.md)
 
 ---
 
-## 🏗️ Architecture & Stack Fingerprint
-- **Target URL**: `https://heirest.com/`
-- **Page Title**: HEIREST | Fine Jewellery, Authored By You
+## Architecture & Stack Fingerprint
+- **Target URL**: [https://heirest.com/](https://heirest.com/)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: HEIREST · Fine Jewellery, Authored By You
 - **Identified Frameworks**: Tailwind CSS
-- **Auth Profile Used**: None (Public session)
-- **Recorded API Endpoints**: 55
-- **Recovered Scripts**: 199
-- **Recovered Stylesheets**: 33
+- **Recovered Scripts**: `241`
+- **Recovered Stylesheets**: `36`
 
 ---
 
-## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
-- **Domain Modeling**: See [data-models](data-models.md) for concrete entity structures observed in network requests and local storage.
-- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
-- **[UI Prompt Blueprint](prompt-blueprint.md)** — 7-part design system analysis, desktop/mobile visual captures, and zero-shot generation prompt.
+## Key Architectural Lessons
+- **UI & Design System**: See [ui-ux.md](ui-ux.md) and [prompt-blueprint.md](prompt-blueprint.md) for live computed design tokens and viewport captures.
+- **Client State & APIs**: See [data-models.md](data-models.md) and [apis.md](apis.md) for observed endpoints and storage keys.

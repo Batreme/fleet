@@ -1,69 +1,83 @@
+---
+title: "UI & UX Architecture: familyservicelincoln-org"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: familyservicelincoln-org
 
 ## Overview & Design Identity
 - **Target**: `familyservicelincoln-org` (**Family Service Lincoln: Everyone Deserves the Chance to Thrive**)
 - **Production URL**: [https://familyservicelincoln.org](https://familyservicelincoln.org)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#1b1f2a` canvas, `#ffffff` ink, `#ffc145` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#171717` ink, `#d99500` accent)
 - **Summary**: For over 135 years, we have adapted to meet the needs of families, serving as Lincoln's first charitable organization.
-- **Total Clean CSS Variables Extracted**: `39` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `39` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Google Sans`
-- **Body Font Stack**: `Libre Caslon Text`
+- **Body Font Stack**: `Google Sans`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 3rem`, `line-height: 1`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(32px,5vw,70px)`, `line-height: 1.17`, `letter-spacing: -1.4px`, `font-weight: 400`)
-- **Body Copy**: rule `,p` (`font-size: 1rem`, `line-height: 1.5rem`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `15px`, `13px`, `16px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`, `letter-spacing: -1.8px`); rule `h1` (`font-size: 3rem`, `line-height: 1`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 700`); rule `h2` (`font-size: clamp(32px,5vw,70px)`, `line-height: 1.17`, `letter-spacing: -1.4px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `,p` (`font-size: 1rem`, `line-height: 1.5rem`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#1b1f2a` | `var(--gmcc-bg)` in `:root` |
-| **Primary Typography Ink** | `#ffffff` | `var(--gmcc-text)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#a7b0bd` | `var(--gmcc-text-muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffc145` | `var(--gmcc-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#15171c` | `var(--gmcc-accent-text)` in `:root` |
-| **Structural Hairline Border** | `#ffd37a` | `var(--gmcc-accent-hover)` in `:root` |
-| **Variable Token (`--gmcc-link`)** | `#7cc6ff` | `var(--gmcc-link)` in `:root` |
-| **Variable Token (`--gmcc-focus`)** | `#3b82f6` | `var(--gmcc-focus)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#171717` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
+| **Interactive Accent / Highlight** | `#d99500` | `var(--gmcc-accenthover)` in `:root` |
+| **Secondary / Muted Copy** | `#a7b0bd` | `var(--gmcc-text-muted)` in `:root` |
+| **Structural Hairline Border** | `#d9d9d9` | `.gm-cc__prefs { border-top: #d9d9d9 }` |
+| **Variable Token (`--wp-block-synced-color`)** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color`)** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-10`)** | `#006ba1` | `var(--wp-admin-theme-color-darker-10)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-20`)** | `#005a87` | `var(--wp-admin-theme-color-darker-20)` in `:root` |
+| **Variable Token (`--gmcc-bg`)** | `#1b1f2a` | `var(--gmcc-bg)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--wp-block-synced-color` | `#7a00df` | Brand / Palette Token |
+| `--wp-block-synced-color--rgb` | `122,0,223` | Brand / Palette Token |
+| `--wp-bound-block-color` | `var(--wp-block-synced-color)` | Brand / Palette Token |
+| `--wp-editor-canvas-background` | `#ddd` | Canvas / Surface Token |
+| `--wp-admin-theme-color` | `#007cba` | Brand / Palette Token |
+| `--wp-admin-theme-color--rgb` | `0,124,186` | Brand / Palette Token |
+| `--wp-admin-theme-color-darker-10` | `#006ba1` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-10--rgb` | `0,107,160.5` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20` | `#005a87` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20--rgb` | `0,90,135` | Canvas / Surface Token |
+| `--wp-admin-border-width-focus` | `2px` | Layout / Spatial Grid Token |
+| `--wp-admin--admin-bar--position-offset` | `var(--wp-admin--admin-bar--height,0px)` | Dimension / Scale Token |
+| `--header-height` | `88px` | Layout / Spatial Grid Token |
 | `--gmcc-bg` | `#1b1f2a` | Canvas / Surface Token |
 | `--gmcc-text` | `#ffffff` | Typography Ink Token |
 | `--gmcc-text-muted` | `#a7b0bd` | Typography Ink Token |
-| `--gmcc-accent` | `#ffc145` | Brand / Palette Token |
-| `--gmcc-accent-text` | `#15171c` | Typography Ink Token |
-| `--gmcc-accent-hover` | `#ffd37a` | Brand / Palette Token |
-| `--gmcc-link` | `#7cc6ff` | Typography Ink Token |
-| `--gmcc-focus` | `#3b82f6` | Color / Atmospheric Token |
-| `--gmcc-radius` | `16px` | Elevation / Border Token |
-| `--gmcc-font` | `inherit` | Typography / Scale Token |
-| `--header-height` | `88px` | Layout / Spatial Grid Token |
-| `--admin-bar-height` | `32px` | Layout / Spatial Grid Token |
-| `--gform-theme-control-shadow` | `none` | Brand / Palette Token |
-| `--gform-theme-control-size` | `auto` | Brand / Palette Token |
-| `--gform-theme-control-checked-shadow` | `none` | Brand / Palette Token |
-| `--gform-theme-control-checkbox-checked-shadow` | `none` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.fixed> — `familyservicelincoln-org`)**:
-   - Landmark `<header class="fixed top-0">` hosting `Family Service Lincoln: Everyone Des` navigation (`About Us · Leadership Team · Annual Report · Strategic Plan · Form 990`), DOM attributes (`data-cbid="1670e8a1-465b-4331-ab..."`, `data-blockingmode="manual"`, `data-acsb-sr-alert="true"`, `data-acsb-sr-only="true"`), and stylesheet rule `.gm-cc { padding: 0 2% 1.25rem; }`.
+1. **Brand Header & Navigation Bar (<header.top-0> — `familyservicelincoln-org`)**:
+   - Landmark `<header class="top-0 left-0">` (`1440x100px`) hosting `Family Service Lincoln: Everyone Des` navigation (`About Us · Leadership Team · Annual Report · Strategic Plan · Form 990`), DOM attributes (`data-cbid="1670e8a1-465b-4331-ab..."`, `data-blockingmode="manual"`, `data-acsb-sr-alert="true"`, `data-acsb-sr-only="true"`), and stylesheet rule `.gm-cc { padding: 0 2% 1.25rem; }`.
 2. **Hero Stage & Focal Lead (<section.module-hero> — `Everyone Deserves the Chance to Th`)**:
-   - Landmark `<section class="module-hero full">` presenting display lead `Everyone Deserves the Chance to Thrive` and copy excerpt *"Press Option+1 for screen-reader mode, Option+0 to cancel"* over `#1b1f2a` canvas and `#ffffff` ink.
+   - Landmark `<section class="module-hero full">` presenting display lead `Everyone Deserves the Chance to Thrive` and copy excerpt *"Join FSL for Science Saturdays at FiftyOne Commons!"* over `#ffffff` canvas and `#171717` ink.
 3. **Primary Showcase & Content Grid (<section.module-program_tabs> — `Serving Thousands of Households An`)**:
-   - Landmark `<section class="module-program_tabs full">` rendering section `Serving Thousands of Households Annually` with copy *"Accessibility Screen-Reader Guide, Feedback, and Issue Reporting "*, asset references (`widgetIcon.min.js`, `state.js`, `logconsent.ashx`, `cc.js`), and grid rule `.gm-cc.is-visible { transform: none; opacity: 1; }`.
+   - Landmark `<section class="module-program_tabs full">` rendering section `Serving Thousands of Households Annually` with copy *"Child Care Food Program (CCFP)"*, asset references (`state.js`, `widgetIcon.min.js`, `logconsent.ashx`, `cc.js`), and grid rule `.gm-cc.is-visible { transform: none; opacity: 1; }`.
 4. **Interactive Detail & Feature Matrix (<section.module-impact_stats> — `Together, Our Efforts Make a Measu`)**:
-   - Landmark `<section class="module-impact_stats full">` framing `Together, Our Efforts Make a Measurable Difference` and `Strong Families Build Strong Communities` (*"Skip to main content"*) with `#a7b0bd` surface cards, `#ffc145` accents, and `.gm-cc__card { padding: 1.75rem 2rem; }`.
+   - Landmark `<section class="module-impact_stats full">` framing `Together, Our Efforts Make a Measurable Difference` and `Strong Families Build Strong Communities` (*"Housing & Support Services"*) with `#dddddd` surface cards, `#d99500` accents, and `.gm-cc__card { padding: 1.75rem 2rem; }`.
 5. **Colophon & Global Directory Footer (<footer.full> — `https://familyservicelincoln.org`)**:
-   - Landmark `<footer class="full relative">` anchoring `Family Service Lincoln: Everyone` footer links (`About Us · Leadership Team · Annual Report · Strategic Plan · Form 990`), copy *"The FiftyOne Commons STEAM Activity Center is now available "*, and `#ffd37a` structural dividers.
+   - Landmark `<footer class="full relative">` anchoring `Family Service Lincoln: Everyone` footer links (`About Us · Leadership Team · Annual Report · Strategic Plan · Form 990`), copy *"Women, Infants, and Children (WIC)"*, and `#d9d9d9` structural dividers.

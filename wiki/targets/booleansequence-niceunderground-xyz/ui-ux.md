@@ -1,32 +1,45 @@
+---
+title: "UI & UX Architecture: booleansequence-niceunderground-xyz"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: booleansequence-niceunderground-xyz
 
 ## Overview & Design Identity
 - **Target**: `booleansequence-niceunderground-xyz` (**booleanSequence · generative art by niceunderground**)
 - **Production URL**: [https://booleansequence.niceunderground.xyz/](https://booleansequence.niceunderground.xyz/)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#ff0000` / `#000000`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)
 - **Summary**: booleanSequence by niceunderground: generative visuals built on two values and nothing else. A modern yin and yang of contrasts that swap...
-- **Total Clean CSS Variables Extracted**: `10` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `10` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Archivo`
-- **Body Font Stack**: `JetBrains Mono`
+- **Body Font Stack**: `Archivo`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `16px`, `13px`, `clamp(5rem,21vw,22rem)`, `12px`, `14px`)
-- **Section Heading (`H2`)**: CSS variables `--rule-h2: clamp(2rem, 4.6vw, 5.6rem)`; rule `.h2` (`font-size: clamp(2.1rem,5vw,6rem)`)
-- **Body Copy**: rule `p` (`font-size: clamp(15px,1.05vw,17px)`, `line-height: 1.4`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `16px`, `13px`, `clamp(5rem,21vw,22rem)`, `12px`, `14px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 196.663px`, `line-height: 157.33px`, `font-weight: 800`, `letter-spacing: -10.8165px`)
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 31.68px`, `line-height: 31.68px`, `font-weight: 800`, `letter-spacing: -1.1088px`); CSS variables `--rule-h2: clamp(2rem, 4.6vw, 5.6rem)`; rule `.h2` (`font-size: clamp(2.1rem,5vw,6rem)`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 400`); rule `p` (`font-size: clamp(15px,1.05vw,17px)`, `line-height: 1.4`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ff0000` | `var(--err)` in `:root` |
-| **Primary Typography Ink** | `#0000ff` | `var(--pt)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--pf)` in `:root` |
-| **Interactive Accent / Highlight** | `#000000` | `<meta name="theme-color" content="#000000">` in `dom.html` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0000ff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0000ff` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ff0000` | `var(--err)` in `:root` |
+| **Secondary / Muted Copy** | `#0000ff` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#0000ff` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
 
 ---
 
@@ -43,23 +56,23 @@
 | `--rule-h2` | `clamp(2rem, 4.6vw, 5.6rem)` | Typography / Scale Token |
 | `--pt` | `#0000ff` | Color / Atmospheric Token |
 | `--pf` | `#ffffff` | Color / Atmospheric Token |
-| `--booleansequence--bg` | `#ff0000` | Canvas Substrate (from `var(--err)` in `:root`) |
-| `--booleansequence--ink` | `#ffffff` | Primary Typography Ink (stylesheet-derived) |
-| `--booleansequence--surface` | `#ffffff` | Surface Substrate (stylesheet-derived) |
-| `--booleansequence--accent` | `#000000` | Interactive Accent (stylesheet-derived) |
-| `--booleansequence--muted` | `#ffffff` | Secondary Ink (stylesheet-derived) |
-| `--booleansequence--border` | `#ffffff` | Structural Border (stylesheet-derived) |
+| `--booleansequence--bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--booleansequence--ink` | `#0000ff` | Primary Typography Ink (computed-derived) |
+| `--booleansequence--surface` | `#0000ff` | Surface Substrate (computed-derived) |
+| `--booleansequence--accent` | `#ff0000` | Interactive Accent (computed-derived) |
+| `--booleansequence--muted` | `#0000ff` | Secondary Ink (computed-derived) |
+| `--booleansequence--border` | `#0000ff` | Structural Border (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hud> — `booleansequence-niceunderground-xyz`)**:
-   - Landmark `<header class="hud">` hosting `booleanSequence · generative art by ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-live`, `data-magnetic`, `data-set="plus"`, `data-set="bin"`), and stylesheet rule `after { box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `boolean Sequence`)**:
-   - Landmark `<section class="hero">` presenting display lead `boolean Sequence` and copy excerpt *"two values, nothing else"* over `#ff0000` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.statement> — `01 Concept`)**:
-   - Landmark `<section class="statement">` rendering section `01 Concept` with copy *"niceunderground generative visuals"*, asset references (`llms.txt`, `favicon.svg`, `favicon-32.png`, `favicon-48.png`), and grid rule `html { -webkit-text-size-adjust:100% }`.
+   - Landmark `<header class="hud">` (`1377x35px`) hosting `booleanSequence · generative art by ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-live`, `data-magnetic`, `data-set="plus"`, `data-set="bin"`), and stylesheet rule `after { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `boo><<< >>><<><>`)**:
+   - Landmark `<section class="hero">` presenting display lead `boo><<< >>><<><>` and copy excerpt *"niceunderground generative visuals"* over `#ffffff` canvas and `#0000ff` ink.
+3. **Primary Showcase & Content Grid (<section.statement> — `b o o > < < < > > > > < > < <`)**:
+   - Landmark `<section class="statement">` rendering section `b o o > < < < > > > > < > < <` with copy *"generative visuals"*, asset references (`llms.txt`, `favicon.svg`, `favicon-32.png`, `favicon-48.png`), and grid rule `html { -webkit-text-size-adjust:100% }`.
 4. **Interactive Detail & Feature Matrix (<section.above> — `Seen from above, it looks like a s`)**:
-   - Landmark `<section class="above">` framing `Seen from above, it looks like a society.` and `One rule, four verbs.` (*"generative visuals"*) with `#ffffff` surface cards, `#000000` accents, and `html.lenis body { height:auto }`.
+   - Landmark `<section class="above">` framing `Seen from above, it looks like a society.` and `One rule, four verbs.` (*"A modern yin and yang. Two values, nothing else."*) with `#0000ff` surface cards, `#ff0000` accents, and `html.lenis body { height:auto }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://booleansequence.niceunderground.xyz/`)**:
-   - Landmark `<footer class="foot">` anchoring `booleanSequence · generative art` footer links (`Overview · Index · Archive · About · Contact`), copy *"A modern yin and yang. Two values, nothing else."*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="foot">` anchoring `booleanSequence · generative art` footer links (`Overview · Index · Archive · About · Contact`), copy *"click the field to send a wave through it tap the field to s"*, and `#0000ff` structural dividers.

@@ -1,31 +1,45 @@
+---
+title: "UI & UX Architecture: zenobasi-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: zenobasi-com
 
 ## Overview & Design Identity
 - **Target**: `zenobasi-com` (**Zen Obasi — Art Director**)
 - **Production URL**: [https://zenobasi.com](https://zenobasi.com)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#000`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0c0c0c`)
 - **Summary**: Art director and visual strategist working across identity, campaign and editorial for brands worldwide.
-- **Total Clean CSS Variables Extracted**: `13` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Google Sans Flex`
 - **Body Font Stack**: `Google Sans Flex`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-large)`, `var(--text-small)`, `clamp(1.5rem,7vw,2rem)`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--text-large)`, `var(--text-small)`, `clamp(1.5rem,7vw,2rem)`)
-- **Body Copy**: rule `,p` (`font-size: var(--text-small)`, `line-height: 1.35`, `font-weight: 400`)
-- **Metadata & Labels**: CSS variables `--text-small: 0.7rem`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 24px`, `line-height: 30px`, `font-weight: 350`)
+- **Section Heading (`H2`)**: observed font-size ladder: `24px`, `16px`, `11.2px`, `var(--text-large)`, `var(--text-small)`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `,p` (`font-size: var(--text-small)`, `line-height: 1.35`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-small: 0.7rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--base-100)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--base-300)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#0c0c0c` | `.background { background-color: #0c0c0c }` |
+| **Interactive Accent / Highlight** | `#0c0c0c` | `<meta name="theme-color" content="#0c0c0c">` in `dom.html` |
+| **Secondary / Muted Copy** | `#ffffff` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
 
 ---
 
@@ -45,20 +59,20 @@
 | `--digit-h` | `1.1em` | Dimension / Scale Token |
 | `--fill-mobile` | `0.75` | Design System Custom Token |
 | `--fill-desktop` | `0.45` | Design System Custom Token |
-| `--zenobasi-com-bg` | `#fff` | Canvas Substrate (from `var(--base-100)` in `:root`) |
-| `--zenobasi-com-ink` | `#000` | Primary Typography Ink (stylesheet-derived) |
-| `--zenobasi-com-surface` | `#0c0c0c` | Surface Substrate (stylesheet-derived) |
+| `--zenobasi-com-bg` | `#000000` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--zenobasi-com-ink` | `#ffffff` | Primary Typography Ink (computed-derived) |
+| `--zenobasi-com-surface` | `#0c0c0c` | Surface Substrate (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.lenis> — `zenobasi-com`)**:
-   - Landmark `<nav class="lenis">` hosting `Zen Obasi — Art Director` navigation (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/5f4..."`, `data-engine="three.js r186"`, `data-copy="lines"`), and stylesheet rule `html { overflow-x:clip }`.
+   - Landmark `<nav class="lenis">` (`1440x111px`) hosting `Zen Obasi — Art Director` navigation (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/5f4..."`, `data-engine="three.js r186"`, `data-copy="lines"`), and stylesheet rule `html { overflow-x:clip }`.
 2. **Hero Stage & Focal Lead (<main.background> — `Zen Obasi, Art Director`)**:
-   - Landmark `<main class="background">` presenting display lead `Zen Obasi, Art Director` and copy excerpt *"Zen Obasi Zen Obasi"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<main.container> — `Zen Obasi Zen Obasi`)**:
-   - Landmark `<main class="container">` rendering section `Zen Obasi Zen Obasi` with copy *"Art Direction / Visual Identity"*, asset references (`2adbc45882a5a7c5.p.woff2`, `webpack-b827b2449ca92f38.js`, `4bd1b696-228d6cc6681fc189.js`, `826-cff36fe3db5d20f7.js`), and grid rule `body { font-family:var(--font-sans),sans-serif;background-color:var(--base-300)... }`.
+   - Landmark `<main class="background">` presenting display lead `Zen Obasi, Art Director` and copy excerpt *"ART DIRECTION / VISUAL IDENTITY"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<main.container> — `ART DIRECTION / VISUAL IDENTITY`)**:
+   - Landmark `<main class="container">` rendering section `ART DIRECTION / VISUAL IDENTITY` with copy *"Art Direction / Visual Identity"*, asset references (`2adbc45882a5a7c5.p.woff2`, `webpack-b827b2449ca92f38.js`, `4bd1b696-228d6cc6681fc189.js`, `826-cff36fe3db5d20f7.js`), and grid rule `body { font-family:var(--font-sans),sans-serif;background-color:var(--base-300)... }`.
 4. **Interactive Detail & Feature Matrix (<main.menu-toggle> — `Art Direction / Visual Identity`)**:
-   - Landmark `<main class="menu-toggle">` framing `Art Direction / Visual Identity` and `Accepting Briefs for S/S 2027` (*"Accepting Briefs for S/S 2027"*) with `#0c0c0c` surface cards, `#000` accents, and `selection { background-color:var(--base-100);color:var(--base-300) }`.
+   - Landmark `<main class="menu-toggle">` framing `Art Direction / Visual Identity` and `Accepting Briefs for S/S 2027` (*"Accepting Briefs for S/S 2027"*) with `#0c0c0c` surface cards, `#0c0c0c` accents, and `selection { background-color:var(--base-100);color:var(--base-300) }`.
 5. **Colophon & Global Directory Footer (<footer.footer-pinned> — `https://zenobasi.com`)**:
-   - Landmark `<footer class="footer-pinned footer-simple">` anchoring `Zen Obasi — Art Director` footer links (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), copy *"Art Direction / Visual Identity"*, and `#000` structural dividers.
+   - Landmark `<footer class="footer-pinned footer-simple">` anchoring `Zen Obasi — Art Director` footer links (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), copy *"Zen Obasi Zen Obasi"*, and `#ffffff` structural dividers.

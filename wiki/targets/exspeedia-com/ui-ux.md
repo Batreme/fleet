@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: exspeedia-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: exspeedia-com
 
 ## Overview & Design Identity
 - **Target**: `exspeedia-com` (**Official IShowSpeed Travel Site Powered by Expedia**)
 - **Production URL**: [https://exspeedia.com](https://exspeedia.com)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fbf8e6` / `#fae26a`)
+- **Final Redirected URL**: [https://speed.expedia.com/](https://speed.expedia.com/)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#030c1d` / `#005aeb`)
 - **Summary**: The official IShowSpeed travel website powered by Expedia. Book trips inspired by Speed’s real travels, enter sweepstakes, and earn rewards.
-- **Total Clean CSS Variables Extracted**: `398` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `398` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Centra No2`
-- **Body Font Stack**: `Segoe UI`
+- **Body Font Stack**: `Centra No2`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`font-size: 1.5rem`, `line-height: 1.2`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 14.4px`, `font-weight: 800`, `letter-spacing: -3.52px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`font-size: 1.5rem`, `line-height: 1.2`)
 - **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.25`)
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`font-size: .75em`)
-- **Metadata & Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`font-size: .75em`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 13.008px`, `line-height: 19.512px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fbf8e6` | `var(--color-yellow-50)` in `:root` |
-| **Primary Typography Ink** | `#f9f2cf` | `var(--color-yellow-100)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f8e99e` | `var(--color-yellow-200)` in `:root` |
-| **Interactive Accent / Highlight** | `#fae26a` | `var(--color-yellow-300)` in `:root` |
-| **Secondary / Muted Copy** | `#fddb32` | `var(--color-yellow-400)` in `:root` |
-| **Structural Hairline Border** | `#ffd60a` | `var(--color-yellow-500)` in `:root` |
+| **Primary Canvas Substrate** | `#030c1d` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#020247` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#005aeb` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#575b6e` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#808080` | `.border-gray-200 { border-color: #808080 }` |
 
 ---
 
@@ -56,12 +68,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.grid> — `exspeedia-com`)**:
-   - Landmark `<header class="grid">` hosting `Official IShowSpeed Travel Site Powe` navigation (`More information`), DOM attributes (`data-navigate-track="reload"`, `data-document-language="true"`, `data-domain-script="019d9c05-c22b-757a-b8..."`, `data-v-app`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.ot-sdk-row> — `Go places like`)**:
-   - Landmark `<section class="ot-sdk-row ot-cat-grp">` presenting display lead `Go places like` and copy excerpt *"Accept All Cookies"* over `#fbf8e6` canvas and `#ffd60a` ink.
-3. **Primary Showcase & Content Grid (<section.ot-hide> — `Privacy Preference Center`)**:
-   - Landmark `<section class="ot-hide ot-pc-scrollbar">` rendering section `Privacy Preference Center` with copy *"checkbox label label"*, asset references (`speed-cdn.expedia.com`, `d2848tzd1fqvrv.cloudfront.net`, `cdn.usefathom.com`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.fixed> — `Manage Consent Preferences`)**:
-   - Landmark `<section class="fixed">` framing `Manage Consent Preferences` and `Cookie List` (*"Confirm My Choices"*) with `#f8e99e` surface cards, `#fae26a` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<header class="grid">` (`1440px`) hosting `Official IShowSpeed Travel Site Powe` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-navigate-track="reload"`, `data-document-language="true"`, `data-domain-script="019d9c05-c22b-757a-b8..."`, `data-v-app`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.ot-sdk-row> — `GO PLACES LIKE`)**:
+   - Landmark `<section class="ot-sdk-row ot-cat-grp">` presenting display lead `GO PLACES LIKE` and copy excerpt *"checkbox label label"* over `#030c1d` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.ot-hide> — `checkbox label label`)**:
+   - Landmark `<section class="ot-hide ot-pc-scrollbar">` rendering section `checkbox label label` with copy *"GO PLACES LIKE"*, asset references (`speed-cdn.expedia.com`, `d2848tzd1fqvrv.cloudfront.net`, `cdn.usefathom.com`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.fixed> — `exspeedia-com Interactive Matrix`)**:
+   - Landmark `<section class="fixed">` framing `exspeedia-com Interactive Matrix` and `exspeedia-com Archive & Directory` (*"checkbox label label"*) with `#020247` surface cards, `#005aeb` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.inset-0> — `https://exspeedia.com`)**:
-   - Landmark `<footer class="inset-0">` anchoring `Official IShowSpeed Travel Site ` footer links (`More information`), copy *"Manage Consent Preferences"*, and `#ffd60a` structural dividers.
+   - Landmark `<footer class="inset-0">` anchoring `Official IShowSpeed Travel Site ` footer links (`Overview · Index · Archive · About · Contact`), copy *"exspeedia-com Interactive Matrix"*, and `#808080` structural dividers.

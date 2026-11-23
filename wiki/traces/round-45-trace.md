@@ -1,38 +1,38 @@
-# Round 45 Execution Trace: UI Prompt Blueprint Expansion
+# Round 45 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-15-ROUND-45`  
-> **Active Branch**: `feat/ui-prompt-expansion`  
-> **Analyzed Targets**: `10` (`0` marked `status: blocked` and excluded from tally per `C1`)  
-> **Deterministic Evaluation (`C1`–`C14`)**: **`25.0 / 25.0`**
+> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-45`  
+> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Analyzed Targets**: `10` live (`0` marked `status: blocked` and excluded from tally per `C1`)  
+> **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 45 Target Scope
-  1. `www-dontlookup-app` — *Don't Look Up — a game about keeping everyone looking down* (`https://www.dontlookup.app/`)
-  2. `www-east64films-com` — *EAST 64 Films · Tokyo-Based International Production Company* (`https://www.east64films.com/`)
-  3. `www-easyseller-it` — *EASYSELLER · Sales Digital Agency* (`https://www.easyseller.it/`)
-  4. `www-emblematica-agency` — *emblematica — concept-led brand & web design agency in barcelona* (`https://www.emblematica.agency`)
-  5. `www-enigmascult-com` — *Enigma – Sneaker Auctions, Mystery Boxes & Reborn Customs* (`https://www.enigmascult.com/`)
-  6. `www-era-residence-com` — *ERA Residence — Contemporary Mediterranean Residences in Estepona* (`https://www.era-residence.com/`)
-  7. `www-esrbespoke-au` — *ESR* (`https://www.esrbespoke.au/`)
-  8. `www-extrafazant-nl` — *Extrafazant · Social Content, Video's & Animatie* (`https://www.extrafazant.nl/`)
-  9. `www-feelreformed-com` — *Reformed: The biggest thing to happen to Coffee since Coffee.* (`https://www.feelreformed.com/`)
-  10. `www-fiabamia-com` — *FiabaMia — Personalized bedtime stories for children* (`https://www.fiabamia.com/`)
+  1. `www-dontlookup-app` — *Don't Look Up — a game about keeping everyone looking down*
+  2. `www-east64films-com` — *EAST 64 Films · Tokyo-Based International Production Company*
+  3. `www-easyseller-it` — *EASYSELLER · Sales Digital Agency*
+  4. `www-emblematica-agency` — *emblematica — concept-led brand & web design agency in barcelona*
+  5. `www-enigmascult-com` — *Enigma – Sneaker Auctions, Mystery Boxes & Reborn Customs*
+  6. `www-era-residence-com` — *ERA Residence — Contemporary Mediterranean Residences in Estepona*
+  7. `www-esrbespoke-au` — *ESR*
+  8. `www-extrafazant-nl` — *Extrafazant · Social Content, Video's & Animatie*
+  9. `www-feelreformed-com` — *Reformed: The biggest thing to happen to Coffee since Coffee.*
+  10. `www-fiabamia-com` — *FiabaMia — Personalized bedtime stories for children*
 
 ---
 
-## 2. Ground-Truth Asset & Extraction Metrics (Verified PNG IHDR & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
 
-| Target Slug | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-dontlookup-app` | `1440×2400px` (1,656,871 B) | `390×2400px` (560,811 B) | 20 | 16 | 260 | 108 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-east64films-com` | `1440×2400px` (184,403 B) | `390×2400px` (43,082 B) | 111 | 16 | 266 | 111 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-easyseller-it` | `1440×2400px` (1,072,403 B) | `390×2400px` (338,858 B) | 451 | 16 | 276 | 116 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-emblematica-agency` | `1440×47561px` (4,183,999 B) | `390×2400px` (437,728 B) | 60 | 16 | 256 | 106 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-enigmascult-com` | `1440×11069px` (2,670,151 B) | `390×2400px` (67,086 B) | 101 | 16 | 266 | 111 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `www-era-residence-com` | `1440×2400px` (50,010 B) | `390×2400px` (450,147 B) | 202 | 16 | 256 | 106 | `0.11` / `0.58` | **25.0 / 25.0** |
-| `www-esrbespoke-au` | `1440×7770px` (1,053,498 B) | `390×2400px` (246,065 B) | 8 | 16 | 254 | 105 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-extrafazant-nl` | `1440×9447px` (1,737,941 B) | `390×2400px` (89,878 B) | 166 | 16 | 256 | 106 | `0.11` / `0.58` | **25.0 / 25.0** |
-| `www-feelreformed-com` | `1440×4311px` (2,346,094 B) | `390×2400px` (353,210 B) | 1313 | 16 | 256 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-fiabamia-com` | `1440×2400px` (2,866,309 B) | `390×2400px` (899,956 B) | 185 | 16 | 266 | 111 | `0.09` / `0.51` | **25.0 / 25.0** |
+| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `www-dontlookup-app` | `tier1_fast` | `1440×900px` (762,884 B) | `390×844px` (240,902 B) | 24 | 16 | 294 | 112 | `0.09` / `0.51` | **25.0 / 25.0** |
+| `www-east64films-com` | `tier1_fast` | `1440×900px` (341,874 B) | `390×844px` (185,927 B) | 111 | 16 | 302 | 116 | `0.09` / `0.50` | **25.0 / 25.0** |
+| `www-easyseller-it` | `tier1_fast` | `1440×900px` (485,719 B) | `390×844px` (132,704 B) | 451 | 16 | 298 | 114 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `www-emblematica-agency` | `tier1_fast` | `1440×2400px` (989,372 B) | `390×2400px` (424,571 B) | 61 | 16 | 289 | 109 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `www-enigmascult-com` | `tier1_fast` | `1440×2400px` (1,082,670 B) | `390×2400px` (316,113 B) | 102 | 16 | 300 | 115 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `www-era-residence-com` | `tier1_fast` | `1440×2400px` (2,340,570 B) | `390×2400px` (275,410 B) | 201 | 16 | 282 | 106 | `0.13` / `0.60` | **25.0 / 25.0** |
+| `www-esrbespoke-au` | `tier1_fast` | `1440×2400px` (822,257 B) | `390×2400px` (269,824 B) | 8 | 16 | 282 | 106 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `www-extrafazant-nl` | `tier1_fast` | `1440×2400px` (860,248 B) | `390×2400px` (510,822 B) | 166 | 16 | 282 | 106 | `0.13` / `0.60` | **25.0 / 25.0** |
+| `www-feelreformed-com` | `tier1_fast` | `1440×2400px` (1,209,458 B) | `390×2400px` (454,467 B) | 779 | 16 | 282 | 106 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `www-fiabamia-com` | `tier2_webgl` | `1440×900px` (327,459 B) | `390×844px` (97,218 B) | 186 | 16 | 302 | 116 | `0.09` / `0.48` | **25.0 / 25.0** |

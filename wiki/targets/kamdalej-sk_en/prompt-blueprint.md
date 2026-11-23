@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: kamdalej-sk_en"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "kamdalej-sk_en"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `#141413` ink, `#D6C4BB` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: kamdalej-sk_en
 
 > **Mastercard · Where Next** (https://kamdalej.sk/en) — A digital tool helping people in Slovakia find better career opportunities by matching their skills with real labour market needs
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Mastercard · Where Next** (`https://kamdalej.sk/en`). A digital tool helping people in Slovakia find better career opportunities by matching their skills with real labour market needs
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `#141413` ink, `#D6C4BB` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#FF671B` (`var(--orange)` in `:root`) paired with `#141413` primary typography and `#D6C4BB` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Mark Offc For MC` for display copy (`WhereNext can you move forward profe`) with `Futura` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `43px` container bounds (`gap: 40px`, padding `var(--pad_x6)`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Mark Offc For MC` for display copy (`WhereNext can you move forward profe`) with `Mark Offc For MC` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 40px`, padding `var(--pad_x6)`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×5687px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `43px` extracted from `kamdalej-sk_en` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--pad_x6)` lateral canvas padding with `40px` grid gap.
-- **Border Radius Scale**: `var(--pad_x4)`, `24px`, `4px`, `32px`.
+- **Border Radius Scale**: `56px`, `var(--pad_x4)`, `24px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 43px`, `gap: 40px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 40px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--pad_x6)` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (print),(prefers-reduced-motion:reduce)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1600px)`.
 
@@ -48,14 +52,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#FF671B` | `var(--orange)` in `:root` |
-| **Primary Typography Ink** | `#882D00` | `var(--orangeh)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#C14000` | `var(--orange_wcag)` in `:root` |
-| **Interactive Accent / Highlight** | `#D6C4BB` | `var(--orange_wcag_transparent)` in `:root` |
-| **Secondary / Muted Copy** | `#141413` | `var(--gd)` in `:root` |
-| **Structural Hairline Border** | `#F3EFEC` | `var(--gl)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f6f3f1` | `var(--bg_100)` in `:root` |
+| **Interactive Accent / Highlight** | `#0000ff` | `form label a:hover { color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#756c66` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffa500` | `.simpleImg:before { border: #ffa500 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +87,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `Mark Offc For MC`.
-- **Primary Body Stack**: `Futura`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Mark Offc For MC`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--fz-h1-mob: 40`, `--fz-h1: 64`; rule `.title` (`font-size: calc(var(--fz-body-xs) * 1px...`, `font-weight: var(--fw-medium)`).
-- **Section Heading (`H2`)**: CSS variables `--fz-h2-mob: 36`, `--fz-h2: 52`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.25`).
-- **Body Copy**: CSS variables `--fz-body-xl-mob: 30`, `--fz-body-xl: 36`, `--fz-body-l-mob: 20`; rule `p` (`font-size: 14px`, `line-height: 20px`, `font-weight: var(--fw-normal)`).
-- **Metadata & Navigation Labels**: rule `.label` (`font-size: calc(var(--fz-body-xs) * 1px...`, `line-height: 14px`, `font-weight: var(--fw-normal)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 64px`, `font-weight: 300`); CSS variables `--fz-h1-mob: 40`, `--fz-h1: 64`; rule `.title` (`font-size: calc(var(--fz-body-xs) * 1px...`, `font-weight: var(--fw-medium)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 52px`, `line-height: 57.9956px`, `font-weight: 500`); CSS variables `--fz-h2-mob: 36`, `--fz-h2: 52`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.25`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.24px`); CSS variables `--fz-body-xl-mob: 30`, `--fz-body-xl: 36`, `--fz-body-l-mob: 20`; rule `p` (`font-size: 14px`, `line-height: 20px`, `font-weight: var(--fw-normal)`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.24px`); rule `.label` (`font-size: calc(var(--fz-body-xs) * 1px...`, `line-height: 14px`, `font-weight: var(--fw-normal)`).
 
 ---
 
@@ -110,40 +114,59 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Mastercard · Where Next                    │
 │ ====================================================================== │
-│ [ <header.loaded>          | Work Permit                            ]  │
+│ [ <header.loaded> (1440x72px)         | Work Permit                  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: WhereNext can you move forward professionally?               |   │
-│ | Substrate: #FF671B    | Ink: #141413    | Accent: #D6C4BB        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: WhereNext can you move forward professionally?                 | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.heroForm>        ) max-w: 43px           |   │
+│ | SHOWCASE GRID (<section.heroForm>) max-w: 1440px                   | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Powered by trusted partners  |  | Mastercard                   | | │
+│ | | Powered by trusted partners  |  | Create your professional gro | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 40px  ) | │
-│ | [<header.loaded>] -> [<section.hero>] -> [<section.heroForm>] |      │
+│ | DETAIL MODULE (<section.partners>) — Work experience               | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.aic>          ) | https://kamdalej.sk/en             │
+│ [ FOOTER (<footer.aic>        ) | https://kamdalej.sk/en               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 40px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.loaded>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: WhereNext can you move forward professionally?                 | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.heroForm>) — 1-Col Stack                  | │
+│ | [ Item 1: Powered by trusted partners                            ] | │
+│ | [ Item 2: Create your professional growth path                   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.partners>) — 1-Col (Work experience)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.aic>        ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.loaded> — `kamdalej-sk_en`)**:
-   - Landmark `<header class="loaded">` hosting `Mastercard · Where Next` navigation (`Work Permit`), DOM attributes (`data-document-language="true"`, `data-domain-script="019c98a8-e583-7fb5-a6..."`, `data-v-app`, `data-v-a006813b`), and stylesheet rule `.flash { -webkit-animation-name:flash;animation-name:flash }`.
+   - Landmark `<header class="loaded">` (`1440x72px`) hosting `Mastercard · Where Next` navigation (`Work Permit`), DOM attributes (`data-document-language="true"`, `data-domain-script="019c98a8-e583-7fb5-a6..."`, `data-v-app`, `data-v-a006813b`), and stylesheet rule `.flash { -webkit-animation-name:flash;animation-name:flash }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `WhereNext can you move forward pro`)**:
-   - Landmark `<section class="hero heroMain">` presenting display lead `WhereNext can you move forward professionally?` and copy excerpt *"Tetiana (Ukraine) Former warehouse worker, now construction engin"* over `#FF671B` canvas and `#141413` ink.
+   - Landmark `<section class="hero heroMain">` presenting display lead `WhereNext can you move forward professionally?` and copy excerpt *"Tetiana (Ukraine) Former warehouse worker, now construction engin"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.heroForm> — `Powered by trusted partners`)**:
    - Landmark `<section class="heroForm">` rendering section `Powered by trusted partners` with copy *"Former warehouse worker,"*, asset references (`fav.svg`, `cdn.cookielaw.org`, `assets.adobedtm.com`, `otSDKStub.js`), and grid rule `.pulse { -webkit-animation-name:pulse;animation-name:pulse }`.
-4. **Interactive Detail & Feature Matrix (<section.partners> — `Mastercard`)**:
-   - Landmark `<section class="partners">` framing `Mastercard` and `IOM` (*"now construction engineer."*) with `#C14000` surface cards, `#D6C4BB` accents, and `.rubberBand { -webkit-animation-name:rubberBand;animation-name:rubberBand }`.
+4. **Interactive Detail & Feature Matrix (<section.partners> — `Create your professional growth pa`)**:
+   - Landmark `<section class="partners">` framing `Create your professional growth path` and `Work experience` (*"now construction engineer."*) with `#f6f3f1` surface cards, `#0000ff` accents, and `.rubberBand { -webkit-animation-name:rubberBand;animation-name:rubberBand }`.
 5. **Colophon & Global Directory Footer (<footer.aic> — `https://kamdalej.sk/en`)**:
-   - Landmark `<footer class="aic">` anchoring `Mastercard · Where Next` footer links (`Work Permit`), copy *"Noura (Lebanon) Former call center agent, now Head of Reserv"*, and `#F3EFEC` structural dividers.
+   - Landmark `<footer class="aic">` anchoring `Mastercard · Where Next` footer links (`Work Permit`), copy *"Noura (Lebanon) Former call center agent, now Head of Reserv"*, and `#ffa500` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `kamdalej-sk_en` (**Mastercard · Where Next** — `https://kamdalej.sk/en`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#FF671B` canvas, `#141413` ink, `#D6C4BB` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent).
 - **Identity & Domain Context**: A digital tool helping people in Slovakia find better career opportunities by matching their skills with real labour market needs
-- **Primary Substrate**: `#FF671B` (`var(--orange)` in `:root`), **Primary Ink**: `#141413`, **Accent / Highlight**: `#D6C4BB`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#FF671B` (`var(--orange)` in `:root`) paired with `#141413` primary typography and `#D6C4BB` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Mark Offc For MC` for display copy (`WhereNext can you move forward profe`) with `Futura` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `43px` container bounds (`gap: 40px`, padding `var(--pad_x6)`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Mark Offc For MC` for display copy (`WhereNext can you move forward profe`) with `Mark Offc For MC` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 40px`, padding `var(--pad_x6)`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `kamdalej-sk_en` in your global stylesheet:
 
 :root {
-  /* Mastercard · Where Next (kamdalej-sk_en) — Ground-Truth Extracted CSS Variables */
+  /* Mastercard · Where Next (kamdalej-sk_en) — Live-Grounded CSS Variables */
   --oki-base: 4px; /* Dimension / Scale Token (kamdalej-sk_en) */
   --pad: calc(var(--oki-base) * 1); /* Layout / Spatial Grid Token (kamdalej-sk_en) */
   --pad_x0: calc(var(--oki-base) * 0); /* Layout / Spatial Grid Token (kamdalej-sk_en) */
@@ -188,49 +211,49 @@ Declare and consume these exact custom properties extracted from `kamdalej-sk_en
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#FF671B` — grounded in `var(--orange)` in `:root`
-- **Primary Typography Ink**: `#882D00` — grounded in `var(--orangeh)` in `:root`
-- **Elevated Surface / Card Substrate**: `#C14000` — grounded in `var(--orange_wcag)` in `:root`
-- **Interactive Accent / Highlight**: `#D6C4BB` — grounded in `var(--orange_wcag_transparent)` in `:root`
-- **Secondary / Muted Copy**: `#141413` — grounded in `var(--gd)` in `:root`
-- **Structural Hairline Border**: `#F3EFEC` — grounded in `var(--gl)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#f6f3f1` — grounded in `var(--bg_100)` in `:root`
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `form label a:hover { color: blue }` (`#0000ff`)
+- **Secondary / Muted Copy**: `#756c66` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ffa500` — grounded in `.simpleImg:before { border: #ffa500 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×5687px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `43px` extracted from `kamdalej-sk_en` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--pad_x6)` lateral canvas padding with `40px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 43px`, `gap: 40px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 40px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--pad_x6)` horizontal padding
 - **Media Queries**: `@media (print),(prefers-reduced-motion:reduce)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1600px)`
-- **Corner Radii**: `var(--pad_x4)`, `24px`, `4px`, `32px`
+- **Corner Radii**: `56px`, `var(--pad_x4)`, `24px`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Mark Offc For MC`
-- **Body Font Stack**: `Futura`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--fz-h1-mob: 40`, `--fz-h1: 64`; rule `.title` (`font-size: calc(var(--fz-body-xs) * 1px...`, `font-weight: var(--fw-medium)`)
-- **H2 Section Rule**: CSS variables `--fz-h2-mob: 36`, `--fz-h2: 52`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.25`)
-- **Body Copy Rule**: CSS variables `--fz-body-xl-mob: 30`, `--fz-body-xl: 36`, `--fz-body-l-mob: 20`; rule `p` (`font-size: 14px`, `line-height: 20px`, `font-weight: var(--fw-normal)`)
-- **Metadata & Index Rule**: rule `.label` (`font-size: calc(var(--fz-body-xs) * 1px...`, `line-height: 14px`, `font-weight: var(--fw-normal)`)
+- **Body Font Stack**: `Mark Offc For MC`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 64px`, `line-height: 64px`, `font-weight: 300`); CSS variables `--fz-h1-mob: 40`, `--fz-h1: 64`; rule `.title` (`font-size: calc(var(--fz-body-xs) * 1px...`, `font-weight: var(--fw-medium)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 52px`, `line-height: 57.9956px`, `font-weight: 500`); CSS variables `--fz-h2-mob: 36`, `--fz-h2: 52`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.25`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.24px`); CSS variables `--fz-body-xl-mob: 30`, `--fz-body-xl: 36`, `--fz-body-l-mob: 20`; rule `p` (`font-size: 14px`, `line-height: 20px`, `font-weight: var(--fw-normal)`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.24px`); rule `.label` (`font-size: calc(var(--fz-body-xs) * 1px...`, `line-height: 14px`, `font-weight: var(--fw-normal)`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `kamdalej-sk_en` (`Mastercard · Where Next`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.loaded> — `kamdalej-sk_en`)**:
-   - DOM & Selectors: Landmark `<header class="loaded">` hosting `Mastercard · Where Next` navigation (`Work Permit`), DOM attributes (`data-document-language="true"`, `data-domain-script="019c98a8-e583-7fb5-a6..."`, `data-v-app`, `data-v-a006813b`), and stylesheet rule `.flash { -webkit-animation-name:flash;animation-name:flash }`.
+   - DOM & Selectors: Landmark `<header class="loaded">` (`1440x72px`) hosting `Mastercard · Where Next` navigation (`Work Permit`), DOM attributes (`data-document-language="true"`, `data-domain-script="019c98a8-e583-7fb5-a6..."`, `data-v-app`, `data-v-a006813b`), and stylesheet rule `.flash { -webkit-animation-name:flash;animation-name:flash }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.loaded> — `kamdalej-sk_en`)` (`kamdalej-sk_en`) adapts across `@media (print),(prefers-reduced-motion:reduce)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:1600px)` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.755,.05,.855,.06)`, `cubic-bezier(.55,.055,.675,.19)` transitions and links `Work Permit`.
 2. **Hero Stage & Focal Lead (<section.hero> — `WhereNext can you move forward pro`)**:
-   - DOM & Selectors: Landmark `<section class="hero heroMain">` presenting display lead `WhereNext can you move forward professionally?` and copy excerpt *"Tetiana (Ukraine) Former warehouse worker, now construction engin"* over `#FF671B` canvas and `#141413` ink.
-   - Responsive Contract: Hero stage (`1440×5687px` desktop / `390×2400px` mobile) sets `#FF671B` background with `#141413` headline `WhereNext can you move forward professionally?`.
+   - DOM & Selectors: Landmark `<section class="hero heroMain">` presenting display lead `WhereNext can you move forward professionally?` and copy excerpt *"Tetiana (Ukraine) Former warehouse worker, now construction engin"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `WhereNext can you move forward professionally?`.
 3. **Primary Showcase & Content Grid (<section.heroForm> — `Powered by trusted partners`)**:
    - DOM & Selectors: Landmark `<section class="heroForm">` rendering section `Powered by trusted partners` with copy *"Former warehouse worker,"*, asset references (`fav.svg`, `cdn.cookielaw.org`, `assets.adobedtm.com`, `otSDKStub.js`), and grid rule `.pulse { -webkit-animation-name:pulse;animation-name:pulse }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.heroForm> — `Powered by trusted partners`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 43px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--pad_x6)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.partners> — `Mastercard`)**:
-   - DOM & Selectors: Landmark `<section class="partners">` framing `Mastercard` and `IOM` (*"now construction engineer."*) with `#C14000` surface cards, `#D6C4BB` accents, and `.rubberBand { -webkit-animation-name:rubberBand;animation-name:rubberBand }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.partners> — `Mastercard`)` uses `var(--pad_x4)`, `24px`, `4px`, `32px` radii, `#D6C4BB` highlights, and assets (fav.svg, cdn.cookielaw.org, assets.adobedtm.com).
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.heroForm> — `Powered by trusted partners`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--pad_x6)` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.partners> — `Create your professional growth pa`)**:
+   - DOM & Selectors: Landmark `<section class="partners">` framing `Create your professional growth path` and `Work experience` (*"now construction engineer."*) with `#f6f3f1` surface cards, `#0000ff` accents, and `.rubberBand { -webkit-animation-name:rubberBand;animation-name:rubberBand }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.partners> — `Create your professional growth pa`)` uses `56px`, `var(--pad_x4)`, `24px`, `4px` radii, `#0000ff` highlights, and assets (fav.svg, cdn.cookielaw.org, assets.adobedtm.com).
 5. **Colophon & Global Directory Footer (<footer.aic> — `https://kamdalej.sk/en`)**:
-   - DOM & Selectors: Landmark `<footer class="aic">` anchoring `Mastercard · Where Next` footer links (`Work Permit`), copy *"Noura (Lebanon) Former call center agent, now Head of Reserv"*, and `#F3EFEC` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.aic> — `https://kamdalej.sk/en`)` aligns to `43px` extracted from `kamdalej-sk_en` stylesheet with `var(--pad_x6)` lateral canvas padding with `40px` grid gap and attributes (data-document-language="true", data-domain-script="019c98a8-e583-7fb5-a6...", data-v-app).
+   - DOM & Selectors: Landmark `<footer class="aic">` anchoring `Mastercard · Where Next` footer links (`Work Permit`), copy *"Noura (Lebanon) Former call center agent, now Head of Reserv"*, and `#ffa500` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.aic> — `https://kamdalej.sk/en`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `var(--pad_x6)` lateral canvas padding with `40px` grid gap and attributes (data-document-language="true", data-domain-script="019c98a8-e583-7fb5-a6...", data-v-app).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Tetiana (Ukraine) Former warehouse worker, now construction engineer."*

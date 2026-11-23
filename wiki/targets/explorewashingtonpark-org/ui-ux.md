@@ -1,71 +1,79 @@
+---
+title: "UI & UX Architecture: explorewashingtonpark-org"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: explorewashingtonpark-org
 
 ## Overview & Design Identity
 - **Target**: `explorewashingtonpark-org` (**Explore Washington Park**)
 - **Production URL**: [https://explorewashingtonpark.org](https://explorewashingtonpark.org)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3c73e` canvas, `#243746` ink, `#aac0d2` accent)
+- **Final Redirected URL**: [https://www.explorewashingtonpark.org/](https://www.explorewashingtonpark.org/)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fdfbf8` canvas, `#313232` ink, `#ffff00` accent)
 - **Summary**: Washington Park in Portland, Oregon is home to the Oregon Zoo, Hoyt Arboretum, world-class gardens, museums, and miles of trails. Find ho...
-- **Total Clean CSS Variables Extracted**: `1364` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `1364` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `squarespace-ui-font`
-- **Body Font Stack**: `FlodeskSans`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--sqsp-heading-1-color: hsla(var(--black-hsl),1)`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`letter-spacing: .5px`, `font-weight: 500`)
-- **Section Heading (`H2`)**: CSS variables `--image-block-collage-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-card-image-subtitle-color: hsla(var(--black-hsl),1)`, `--image-block-poster-image-subtitle-color: hsla(var(--white-hsl),1)`; rule `h2` (`font-size: 1.88em`)
-- **Body Copy**: CSS variables `--paragraphSmallColor: hsla(var(--black-hsl),1)`, `--sqsp-paragraph-3-color: hsla(var(--black-hsl),1)`, `--paragraphLargeColor: hsla(var(--black-hsl),1)`; rule `p` (`line-height: 1.4`)
-- **Metadata & Labels**: CSS variables `--itinerary-meta-text: #000`, `--it2-time-label-value-text: #24322b`, `--it2-slider-label-text: #24322b`; rule `.caption` (`font-size: 12px`)
+- **Display Font Stack**: `national-ygefsl`
+- **Body Font Stack**: `National`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--child-display: initial`, `--heading-1-size: 3.76rem`, `--heading-1-size-value: 3.76`; rule `.title` (`font-size: 1rem`, `line-height: 1.4`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 79.208px`, `line-height: 64.9506px`, `font-weight: 700`); CSS variables `--heading-2-size: 2.71rem`, `--heading-2-size-value: 2.71`; rule `h2` (`font-size: 1.88em`)
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font-font-family: "national-ygefsl"`, `--body-font-font-style: normal`, `--body-font-font-weight: 500`; rule `p` (`line-height: 1`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18.0368px`, `line-height: 18.0368px`, `font-weight: 500`); CSS variables `--heading-font-letter-spacing: 0em`, `--body-font-letter-spacing: 0em`, `--meta-font-font-family: "national-ygefsl"`; rule `.caption` (`font-size: 12px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f3c73e` | `var(--yellow)` in `:root` |
-| **Primary Typography Ink** | `#9bbd3c` | `var(--green)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#dc6638` | `var(--red)` in `:root` |
-| **Interactive Accent / Highlight** | `#aac0d2` | `var(--blue)` in `:root` |
-| **Secondary / Muted Copy** | `#7a8ea3` | `var(--mediumblue)` in `:root` |
-| **Structural Hairline Border** | `#243746` | `var(--navy)` in `:root` |
-| **Variable Token (`--darkgreen`)** | `#404d2e` | `var(--darkgreen)` in `:root` |
-| **Variable Token (`--rollinghillsgreen`)** | `#869646` | `var(--rollinghillsgreen)` in `:root` |
-| **Variable Token (`--black`)** | `#313232` | `var(--black)` in `:root` |
-| **Variable Token (`--brown`)** | `#2e2925` | `var(--brown)` in `:root` |
+| **Primary Canvas Substrate** | `#fdfbf8` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#313232` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#9bbd3c` | live computed `a` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ffff00` | `.icon-button:hover { color: yellow }` (`#ffff00`) |
+| **Secondary / Muted Copy** | `#6b7280` | `var(--weather-modal-text-muted)` in `:root` |
+| **Structural Hairline Border** | `#f1ebe2` | `var(--wm-accordion-item-border-color)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--palette-1` | `hsla(var(--white-hsl), 1)` | Brand / Palette Token |
-| `--palette-2` | `hsla(var(--lightAccent-hsl), 1)` | Brand / Palette Token |
-| `--palette-3` | `hsla(var(--accent-hsl), 1)` | Brand / Palette Token |
-| `--palette-4` | `hsla(var(--darkAccent-hsl), 1)` | Brand / Palette Token |
-| `--palette-5` | `hsla(var(--black-hsl), 1)` | Brand / Palette Token |
-| `--yellow` | `#f3c73e` | Color / Atmospheric Token |
-| `--green` | `#9bbd3c` | Color / Atmospheric Token |
-| `--red` | `#dc6638` | Color / Atmospheric Token |
-| `--blue` | `#aac0d2` | Color / Atmospheric Token |
-| `--offwhite` | `linen` | Canvas / Surface Token |
-| `--mediumblue` | `#7a8ea3` | Color / Atmospheric Token |
-| `--navy` | `#243746` | Layout / Spatial Grid Token |
-| `--darkgreen` | `#404d2e` | Canvas / Surface Token |
-| `--rollinghillsgreen` | `#869646` | Color / Atmospheric Token |
-| `--black` | `#313232` | Canvas / Surface Token |
-| `--brown` | `#2e2925` | Color / Atmospheric Token |
+| `--course-item-nav-text-color` | `hsla(var(--black-hsl),1)` | Typography Ink Token |
+| `--tweak-blog-item-pagination-icon-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--tweak-quote-block-source-color-on-background` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--product-basic-item-add-ons-title-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--product-block-text-color-on-background` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--paragraphSmallColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--sqsp-paragraph-3-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--list-section-simple-button-background-color` | `hsla(var(--safeDarkAccent-hsl),1)` | Canvas / Surface Token |
+| `--gradientHeaderBorderColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--solidHeaderDropShadowColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--tweak-summary-block-background-color` | `hsla(var(--white-hsl),1)` | Canvas / Surface Token |
+| `--tweak-form-block-survey-title-color` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
+| `--list-section-carousel-card-description-color` | `hsla(var(--white-hsl),1)` | Brand / Palette Token |
+| `--scheduling-block-scheduler-background-color` | `hsla(var(--lightAccent-hsl),1)` | Canvas / Surface Token |
+| `--image-block-card-inline-link-color` | `hsla(var(--black-hsl),1)` | Typography Ink Token |
+| `--paragraphLargeColor` | `hsla(var(--black-hsl),1)` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.white> — `explorewashingtonpark-org`)**:
-   - Landmark `<header class="white header">` hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.list-item-content { padding:44px }`.
-2. **Hero Stage & Focal Lead (<section.page-section> — `Portland’s Premier Park`)**:
-   - Landmark `<section class="page-section full-bleed-section">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#f3c73e` canvas and `#243746` ink.
-3. **Primary Showcase & Content Grid (<section.page-section> — `7 Spots to See Fall Color for Free`)**:
-   - Landmark `<section class="page-section full-bleed-section">` rendering section `7 Spots to See Fall Color for Free` with copy *"Parking fills fast, and payment is required at all lots. The Wash"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-7afaba259a8e252a-mi...`), and grid rule `.list-item-content__button-container { padding-top:22px }`.
+   - Landmark `<header class="white header">` (`1440x198px`) hosting `Explore Washington Park` navigation (`Plan Your Visit · Explore The Park`), DOM attributes (`data-tippy-stylesheet`, `data-name="static-context"`, `data-tawk-font-preconnect`, `data-animation-state="booted"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
+2. **Hero Stage & Focal Lead (<article.page-regions> — `Portland’s Premier Park`)**:
+   - Landmark `<article class="page-regions">` presenting display lead `Portland’s Premier Park` and copy excerpt *"Know Before You Go"* over `#fdfbf8` canvas and `#313232` ink.
+3. **Primary Showcase & Content Grid (<section.region> — `7 Spots to See Fall Color for Free`)**:
+   - Landmark `<section class="region">` rendering section `7 Spots to See Fall Color for Free` with copy *"Portland’s Premier Park Explore Attractions & Amenities"*, asset references (`twk-main.js`, `announcement-bar-ff2c04748aa19f8b...`, `popup-overlay-f39ec8cdc95ccd84-mi...`, `popup-overlay-eb69d574e194d111-mi...`), and grid rule `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `Reservoir & Reflecting Pools Are N`)**:
-   - Landmark `<section class="page-section full-bleed-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"Washington Park Free Shuttle"*) with `#dc6638` surface cards, `#aac0d2` accents, and `.accordion-title .text { text-overflow:unset !important }`.
+   - Landmark `<section class="page-section user-items-list-section">` framing `Reservoir & Reflecting Pools Are Now Open` and `TriMet Gets You Here Faster` (*"7 Spots to See Fall Color for Free Read the Blog"*) with `#9bbd3c` surface cards, `#ffff00` accents, and `.hWuyu_pGCLQnxiCx { animation-name:fadein;animation-iteration-count:1 }`.
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://explorewashingtonpark.org`)**:
-   - Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"View Parking Availability"*, and `#243746` structural dividers.
+   - Landmark `<footer class="sections">` anchoring `Explore Washington Park` footer links (`Plan Your Visit · Explore The Park`), copy *"Reservoir & Reflecting Pools Are Now Open Explore the Reserv"*, and `#f1ebe2` structural dividers.

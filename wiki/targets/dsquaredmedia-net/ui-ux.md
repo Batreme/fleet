@@ -1,67 +1,88 @@
+---
+title: "UI & UX Architecture: dsquaredmedia-net"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: dsquaredmedia-net
 
 ## Overview & Design Identity
 - **Target**: `dsquaredmedia-net` (**South Florida Marketing Agency · Branding, Web & AI · Dsquared Media**)
 - **Production URL**: [https://dsquaredmedia.net](https://dsquaredmedia.net)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#16161a`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#07090d` / `#ff006d`)
 - **Summary**: Dsquared Media is a boutique West Palm Beach marketing agency serving South Florida. Branding, web design, growth, and AI, built as one s...
-- **Total Clean CSS Variables Extracted**: `111` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `78` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `jakarta`
-- **Body Font Stack**: `jakarta Fallback`
+- **Body Font Stack**: `jakarta`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `,h1` (`font-size: 62px`, `line-height: 1.05`, `letter-spacing: -.03em`, `font-weight: 600`)
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: clamp(32px,4vw,56px)`, `line-height: 1.04`, `letter-spacing: -.025em`, `font-weight: 500`)
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`font-size: 16px`, `line-height: 1.7`)
-- **Metadata & Labels**: CSS variables `--font-mono: var(--font-victor),ui-monospace,monospace`, `--default-mono-font-family: var(--font-mono)`; rule `small` (`font-size: 14px`, `letter-spacing: 0`, `font-weight: 500`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 11px`, `line-height: 15.95px`, `font-weight: 700`, `letter-spacing: 1.54px`); rule `,h1` (`font-size: 62px`, `line-height: 1.05`, `letter-spacing: -.03em`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 68px`, `line-height: 70.72px`, `font-weight: 400`, `letter-spacing: -2.38px`); rule `,h2` (`font-size: clamp(32px,4vw,56px)`, `line-height: 1.04`, `letter-spacing: -.025em`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: var(--font-victor),ui-monospace,monospace`, `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#07090d` | `var(--color-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#111113` | `var(--color-surface)` in `:root` |
-| **Interactive Accent / Highlight** | `#16161a` | `var(--color-surface-2)` in `:root` |
-| **Secondary / Muted Copy** | `#0e0e13` | `var(--color-surface-raised)` in `:root` |
-| **Structural Hairline Border** | `#0c0d12` | `var(--color-surface-card)` in `:root` |
+| **Primary Canvas Substrate** | `#07090d` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0e0e14` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ff006d` | `var(--gradient-brand)` in `:root` |
+| **Secondary / Muted Copy** | `#5661ff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#16171b` | `var(--border-subtle)` in `:root` (`ffffff0f`) |
+| **Variable Token (`--color-surface`)** | `#111113` | `var(--color-surface)` in `:root` |
+| **Variable Token (`--color-surface-2`)** | `#16161a` | `var(--color-surface-2)` in `:root` |
+| **Variable Token (`--color-surface-raised`)** | `#0e0e13` | `var(--color-surface-raised)` in `:root` |
+| **Variable Token (`--color-surface-card`)** | `#0c0d12` | `var(--color-surface-card)` in `:root` |
+| **Variable Token (`--color-text`)** | `#f1f1f1` | `var(--color-text)` in `:root` |
+| **Variable Token (`--color-dim`)** | `#989898` | `var(--color-dim)` in `:root` |
+| **Variable Token (`--color-text-80`)** | `#fffc` | `var(--color-text-80)` in `:root` |
+| **Variable Token (`--color-text-60`)** | `#fff9` | `var(--color-text-60)` in `:root` |
+| **Variable Token (`--color-indigo`)** | `#4b39b4` | `var(--color-indigo)` in `:root` |
+| **Variable Token (`--color-lavender`)** | `#a88fff` | `var(--color-lavender)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--font-sans` | `var(--font-jakarta),system-ui,sans-serif` | Typography / Scale Token |
-| `--font-mono` | `var(--font-victor),ui-monospace,monospace` | Typography / Scale Token |
-| `--color-amber-50` | `oklch(98.7% .022 95.277)` | Brand / Palette Token |
-| `--color-gray-100` | `oklch(96.7% .003 264.542)` | Brand / Palette Token |
-| `--color-gray-600` | `oklch(44.6% .03 256.802)` | Brand / Palette Token |
-| `--color-gray-900` | `oklch(21% .034 264.665)` | Brand / Palette Token |
-| `--color-zinc-200` | `oklch(92% .004 286.32)` | Brand / Palette Token |
-| `--color-zinc-900` | `oklch(21% .006 285.885)` | Brand / Palette Token |
-| `--color-zinc-950` | `oklch(14.1% .005 285.823)` | Brand / Palette Token |
+| `--color-bg` | `#07090d` | Canvas / Surface Token |
+| `--color-surface` | `#111113` | Canvas / Surface Token |
+| `--color-surface-2` | `#16161a` | Canvas / Surface Token |
+| `--color-surface-raised` | `#0e0e13` | Canvas / Surface Token |
+| `--color-surface-card` | `#0c0d12` | Canvas / Surface Token |
+| `--color-text` | `#f1f1f1` | Typography Ink Token |
 | `--color-white` | `#fff` | Canvas / Surface Token |
-| `--spacing` | `.25rem` | Layout / Spatial Grid Token |
-| `--container-7xl` | `80rem` | Layout / Spatial Grid Token |
-| `--text-base` | `1rem` | Typography Ink Token |
-| `--text-base--line-height` | `calc(1.5 / 1)` | Typography Ink Token |
-| `--text-4xl` | `2.25rem` | Typography Ink Token |
-| `--text-4xl--line-height` | `calc(2.5 / 2.25)` | Typography Ink Token |
+| `--color-dim` | `#989898` | Brand / Palette Token |
+| `--color-text-80` | `#fffc` | Typography Ink Token |
+| `--color-text-60` | `#fff9` | Typography Ink Token |
+| `--color-text-50` | `#ffffff80` | Typography Ink Token |
+| `--color-text-38` | `#ffffff61` | Typography Ink Token |
+| `--color-blue` | `#5661ff` | Brand / Palette Token |
+| `--color-indigo` | `#4b39b4` | Brand / Palette Token |
+| `--color-lavender` | `#a88fff` | Brand / Palette Token |
+| `--color-magenta` | `#ff006d` | Brand / Palette Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.cap-fw-head> — `dsquaredmedia-net`)**:
-   - Landmark `<header class="cap-fw-head">` hosting `South Florida Marketing Agency · Bra` navigation (`About · Services · Flex · The Hub · Work`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `A South Florida marketing agency b`)**:
-   - Landmark `<section class="hero hero-in">` presenting display lead `A South Florida marketing agency built to shape y...` and copy excerpt *"Consent Preferences"* over `#fff` canvas and `#07090d` ink.
-3. **Primary Showcase & Content Grid (<section.statement> — `Branding, web, growth and AI, buil`)**:
-   - Landmark `<section class="statement">` rendering section `Branding, web, growth and AI, built as one system.` with copy *"We live in a world shaped by perception."*, asset references (`636a5ac981f94f8b-s.p.woff2`, `8d2bb7cdfa09b0c5-s.p.woff2`, `ee62220d3ef0f600.css`, `182c5d4bd48e5167.css`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.cap-fw> — `Graphic Design`)**:
-   - Landmark `<section class="cap-fw anim">` framing `Graphic Design` and `Web Design & Development` (*"A full-service marketing agency in West Palm Beach, working with "*) with `#111113` surface cards, `#16161a` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<header class="cap-fw-head">` (`1440x362px`) hosting `South Florida Marketing Agency · Bra` navigation (`About · Services · Flex · The Hub · Work`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.d2c-launch.d2c-raised { bottom:calc(118px + var(--d2c-consent-lift, 0px)) }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `A SOUTH FLORIDA MARKETING AGENCY B`)**:
+   - Landmark `<section class="hero hero-in">` presenting display lead `A SOUTH FLORIDA MARKETING AGENCY BUILT TO SHAPE Y...` and copy excerpt *"We live in a world shaped by perception."* over `#07090d` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.statement> — `A South Florida marketing agency b`)**:
+   - Landmark `<section class="statement">` rendering section `A South Florida marketing agency built to shape y...` with copy *"A full-service marketing agency in West Palm Beach, working with "*, asset references (`636a5ac981f94f8b-s.p.woff2`, `8d2bb7cdfa09b0c5-s.p.woff2`, `ee62220d3ef0f600.css`, `182c5d4bd48e5167.css`), and grid rule `.nav-chat-anchor { display:none }`.
+4. **Interactive Detail & Feature Matrix (<section.cap-fw> — `Branding, web, growth and AI, buil`)**:
+   - Landmark `<section class="cap-fw anim">` framing `Branding, web, growth and AI, built as one system.` and `Graphic Design` (*"5.0 across 100+ client reviews"*) with `#0e0e14` surface cards, `#ff006d` accents, and `.d2c-launch.d2c-launch--nav.d2c-r... { bottom:auto }`.
 5. **Colophon & Global Directory Footer (<footer.caf-footer> — `https://dsquaredmedia.net`)**:
-   - Landmark `<footer class="caf-footer">` anchoring `South Florida Marketing Agency ·` footer links (`About · Services · Flex · The Hub · Work`), copy *"5.0 across 100+ client reviews"*, and `#0c0d12` structural dividers.
+   - Landmark `<footer class="caf-footer">` anchoring `South Florida Marketing Agency ·` footer links (`About · Services · Flex · The Hub · Work`), copy *"Over 15 years in South Florida and hundreds of trusted partn"*, and `#16171b` structural dividers.

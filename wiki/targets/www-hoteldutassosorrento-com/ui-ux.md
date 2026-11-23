@@ -1,14 +1,17 @@
 ---
 title: "UI & UX Architecture: www-hoteldutassosorrento-com"
+date: 2026-11-23
+captured_at: 2026-11-23
 status: blocked
-block_reason: "Cloudflare HTTP 520 Origin Error (Web server is returning an unknown error)"
+http_status: 520
+block_reason: "Upstream HTTP 520 — Cloudflare Origin/WAF Error"
 ---
 
 # UI & UX Architecture: www-hoteldutassosorrento-com (`status: blocked`)
 
 > [!WARNING]
-> **Target Status**: `status: blocked`  
+> **Target Status**: `status: blocked` (`http_status: 520`)  
 > **Production URL**: [https://www.hoteldutassosorrento.com/](https://www.hoteldutassosorrento.com/)  
-> **Block / Unreachable Reason**: Cloudflare HTTP 520 Origin Error (Web server is returning an unknown error)
+> **Block / Unreachable Reason**: Upstream HTTP 520 — Cloudflare Origin/WAF Error
 
-This target's raw capture in `raw/www-hoteldutassosorrento-com/` terminated at an upstream edge WAF challenge, anti-bot verification gate, or origin HTTP error. Per strict anti-bot and ground-truth integrity rules, no synthetic or invented design tokens have been fabricated for this target, and it is excluded from the `25.0` evaluation tally.
+This target terminated at an upstream edge WAF challenge, anti-bot verification gate, browser compatibility block, or origin HTTP/network error during live capture. Per strict ethical and ground-truth integrity rules, zero WAF/CAPTCHA bypasses were attempted, no synthetic design tokens were fabricated, and this target is excluded from the `25.0` evaluation tally.

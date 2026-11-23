@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: loot-games-ru"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: loot-games-ru
 
 ## Overview & Design Identity
 - **Target**: `loot-games-ru` (**LOOT – награды в играх за активность в реальной жизни**)
 - **Production URL**: [https://loot-games.ru](https://loot-games.ru)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#fffc`)
+- **Final Redirected URL**: [https://loot.ru/](https://loot.ru/)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ec5a00`)
 - **Summary**: Получайте лутсы за обучение, тренировки, музыку, фильмы и книги. Обменивайте их на предметы и награды в 4500+ играх.
-- **Total Clean CSS Variables Extracted**: `8` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `8` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Atkinson`
+- **Display Font Stack**: `SF Pro`
 - **Body Font Stack**: `SF Pro`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.47619vw`, `clamp(3px,.520833vw + .0109375rem...`, `2.48756vw`, `1.81818vw`, `1.6rem`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 11.5rem`, `font-weight: 500`)
-- **Body Copy**: rule `p` (`font-size: 1.6rem`, `line-height: 1.2`, `font-weight: 500`)
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.47619vw`, `clamp(3px,.520833vw + .0109375rem...`, `2.48756vw`, `1.81818vw`, `1.6rem`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 13.7143px`, `line-height: normal`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 78.8571px`, `line-height: 70.9714px`, `font-weight: 500`); rule `h2` (`font-size: 11.5rem`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 6.85714px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.6rem`, `line-height: 1.2`, `font-weight: 500`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 6.85714px`, `line-height: normal`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--flicker-fg)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--flicker-bg)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffa500` | `.loading-layer svg circle { stroke: orange }` (`#ffa500`) |
-| **Interactive Accent / Highlight** | `#fffc` | `.tagline { color: #fffc }` |
-| **Secondary / Muted Copy** | `#ec5a00` | `.is--orange:before { background: #ec5a00 }` |
-| **Structural Hairline Border** | `#fff9` | `.calc .calc-meta__desc { color: #fff9 }` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `p` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#303030` | `.plans .plans-item.is--active { background: #303030 }` |
+| **Interactive Accent / Highlight** | `#ec5a00` | `.start .start-card__footer-button { color: #ec5a00 }` |
+| **Secondary / Muted Copy** | `#ec5a00` | `item li.card-second-footer__hid... { color: #ec5a00 }` |
+| **Structural Hairline Border** | `#371500` | `.how .how-meta .how-center-wrap { border: #371500 }` |
 
 ---
 
@@ -43,25 +55,25 @@
 | `--flicker-duration` | `.3s` | Motion / Easing Token |
 | `--img` | `url("/assets/images/icon-09.avif")` | Design System Custom Token |
 | `--hue` | `0` | Design System Custom Token |
-| `--loot-games-ru-bg` | `#fff` | Canvas Substrate (from `var(--flicker-fg)` in `:root`) |
-| `--loot-games-ru-ink` | `#000` | Primary Typography Ink (stylesheet-derived) |
-| `--loot-games-ru-surface` | `#ffa500` | Surface Substrate (stylesheet-derived) |
-| `--loot-games-ru-accent` | `#fffc` | Interactive Accent (stylesheet-derived) |
-| `--loot-games-ru-muted` | `#ec5a00` | Secondary Ink (stylesheet-derived) |
-| `--loot-games-ru-border` | `#fff9` | Structural Border (stylesheet-derived) |
-| `--loot-games-ru-container` | `3840px` | Container Bound (stylesheet-derived) |
-| `--loot-games-ru-gap` | `1rem` | Grid Gutter (stylesheet-derived) |
+| `--loot-games-ru-bg` | `#000000` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--loot-games-ru-ink` | `#ffffff` | Primary Typography Ink (computed-derived) |
+| `--loot-games-ru-surface` | `#303030` | Surface Substrate (computed-derived) |
+| `--loot-games-ru-accent` | `#ec5a00` | Interactive Accent (computed-derived) |
+| `--loot-games-ru-muted` | `#ec5a00` | Secondary Ink (computed-derived) |
+| `--loot-games-ru-border` | `#371500` | Structural Border (computed-derived) |
+| `--loot-games-ru-container` | `1440px` | Container Bound (computed-derived) |
+| `--loot-games-ru-gap` | `2rem` | Grid Gutter (computed-derived) |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.navbar> — `loot-games-ru`)**:
-   - Landmark `<header class="navbar">` hosting `LOOT – награды в играх за активность` navigation (`НАЧНИТЕ · ГЛАВНАЯ · ПАРТНЕРАМ · ПЛАНЫ · КАК ЭТО РАБОТАЕТ`), DOM attributes (`data-astro-cid-l7arcky5`, `data-menu-toggle`, `data-page-progress`, `data-scrollto="0"`), and stylesheet rule `html { width:100%;height:100svh;position:fixed;top:0;left:0;overflow:hidden }`.
+   - Landmark `<header class="navbar">` (`1440px`) hosting `LOOT – награды в играх за активность` navigation (`НАЧНИТЕ · ГЛАВНАЯ · ПАРТНЕРАМ · ПЛАНЫ · КАК ЭТО РАБОТАЕТ`), DOM attributes (`data-astro-cid-l7arcky5`, `data-menu-toggle`, `data-page-progress`, `data-scrollto="0"`), and stylesheet rule `.main-wrap { width:100%;height:auto }`.
 2. **Hero Stage & Focal Lead (<section.main-wrap> — `ТВОЯ ЖИЗНЬ – ТВОЙ LOOT`)**:
-   - Landmark `<section class="main-wrap">` presenting display lead `ТВОЯ ЖИЗНЬ – ТВОЙ LOOT` and copy excerpt *"ОГРН 1197746200123 · ИНН 7707428570"* over `#fff` canvas and `#000` ink.
+   - Landmark `<section class="main-wrap">` presenting display lead `ТВОЯ ЖИЗНЬ – ТВОЙ LOOT` and copy excerpt *"Спорт, кино, книги, музыка: все, чем вы и так заняты, превращаетс"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.main-wrap__sticky> — `Что такое LOOT?`)**:
-   - Landmark `<section class="main-wrap__sticky">` rendering section `Что такое LOOT?` with copy *"141590, Московская обл., г. о. Химки, г. Химки, Транспортный пр-д"*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `.scroller-wrapper.is--seq-lock { touch-action:none }`.
+   - Landmark `<section class="main-wrap__sticky">` rendering section `Что такое LOOT?` with copy *"LOOT связывает реальную активность людей с наградами внутри игр –"*, asset references (`apple-touch-icon.png`, `favicon-32x32.png`, `favicon-16x16.png`, `favicon.ico`), and grid rule `.main-wrap__sticky { z-index:4;grid-template-areas:"section";width:100%;height:100svh;display... }`.
 4. **Interactive Detail & Feature Matrix (<section.hero> — `Лутсы – внутренняя валюта LOOT`)**:
-   - Landmark `<section class="hero is--section">` framing `Лутсы – внутренняя валюта LOOT` and `5 км` (*"partners@loot-games.ru"*) with `#ffa500` surface cards, `#fffc` accents, and `.scroller-content { min-height:100% }`.
+   - Landmark `<section class="hero is--section">` framing `Лутсы – внутренняя валюта LOOT` and `Выбирайте награду` (*"реальную активность людей"*) with `#303030` surface cards, `#ec5a00` accents, and `.is--section { opacity:0;pointer-events:none;grid-area:section;height:100svh }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://loot-games.ru`)**:
-   - Landmark `<footer class="footer is--home">` anchoring `LOOT – награды в играх за активн` footer links (`НАЧНИТЕ · ГЛАВНАЯ · ПАРТНЕРАМ · ПЛАНЫ · КАК ЭТО РАБОТАЕТ`), copy *"Свяжитесь с командой"*, and `#fff9` structural dividers.
+   - Landmark `<footer class="footer is--home">` anchoring `LOOT – награды в играх за активн` footer links (`НАЧНИТЕ · ГЛАВНАЯ · ПАРТНЕРАМ · ПЛАНЫ · КАК ЭТО РАБОТАЕТ`), copy *"ЗАГРУЖАЕМ НОВЫЙ МИР"*, and `#371500` structural dividers.

@@ -1,34 +1,46 @@
+---
+title: "UI & UX Architecture: both-sides-the7eye-org-il_en"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: both-sides-the7eye-org-il_en
 
 ## Overview & Design Identity
 - **Target**: `both-sides-the7eye-org-il_en` (**Extremists on Both Sides**)
 - **Production URL**: [https://both-sides.the7eye.org.il/en/](https://both-sides.the7eye.org.il/en/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#FDFCFF` / `#E1E1E1`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#25d366`)
 - **Summary**: We collected thousands of political actions carried out in public space over the past four years. Decide for yourself — who are the extre...
-- **Total Clean CSS Variables Extracted**: `91` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `91` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Assistant`
-- **Body Font Stack**: `Josefin Slab`
-- **Monospace / Technical Font Stack**: `IBM Plex Sans Arabic`
-- **Hero Display (`H1`)**: CSS variables `--se-cap-display: block`
-- **Section Heading (`H2`)**: rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
-- **Body Copy**: CSS variables `--font-body: 'Assistant', sans-serif`
-- **Metadata & Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `18px`, `16px`, `36px`, `26px`, `14px`)
+- **Display Font Stack**: `Discordia`
+- **Body Font Stack**: `Assistant`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 54px`, `font-weight: 400`); CSS variables `--se-cap-display: block`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: 'Assistant', sans-serif`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#FDFCFF` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#111` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#767676` | `var(--muted-ui)` in `:root` |
-| **Interactive Accent / Highlight** | `#E1E1E1` | `var(--line-light)` in `:root` |
-| **Secondary / Muted Copy** | `#25D366` | `var(--brand)` in `:root` |
-| **Structural Hairline Border** | `#393239` | `var(--se-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#fdfcff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `age9-layout-v2 #page9ZoneAbove... { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#25d366` | `var(--brand)` in `:root` |
+| **Secondary / Muted Copy** | `#767676` | `var(--muted-ui)` in `:root` |
+| **Structural Hairline Border** | `#e1e1e1` | `var(--line-light)` in `:root` |
+| **Variable Token (`--ink`)** | `#111111` | `var(--ink)` in `:root` |
 
 ---
 
@@ -56,12 +68,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.lang-wrap> — `both-sides-the7eye-org-il_en`)**:
-   - Landmark `<nav class="lang-wrap">` hosting `Extremists on Both Sides` navigation (`עברית · English · العربية`), DOM attributes (`data-page="0"`, `data-page="1"`, `data-page="2"`, `data-page="3"`), and stylesheet rule `html { touch-action: pan-x pan-y; }`.
-2. **Hero Stage & Focal Lead (<section.a11y-only> — `Text description of the data`)**:
-   - Landmark `<section class="a11y-only">` presenting display lead `Text description of the data` and copy excerpt *"The project shows 14,300 documented political actions that took p"* over `#FDFCFF` canvas and `#111` ink.
-3. **Primary Showcase & Content Grid (<section.text-section> — `By camp and group`)**:
-   - Landmark `<section class="text-section">` rendering section `By camp and group` with copy *"Haredi Jewish protesters: 492 documented actions"*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png`), and grid rule `body { background: var(--bg); }`.
-4. **Interactive Detail & Feature Matrix (<section.text-section> — `The Netanyahu Coalition — 8,499 do`)**:
-   - Landmark `<section class="text-section">` framing `The Netanyahu Coalition — 8,499 documented actions` and `The Change Bloc — 5,801 documented actions` (*"West Bank settler movements: 7,698 documented actions"*) with `#767676` surface cards, `#E1E1E1` accents, and `after { -webkit-user-select: none !important; user-select: none !important; -web... }`.
+   - Landmark `<nav class="lang-wrap">` (`57x28px`) hosting `Extremists on Both Sides` navigation (`עברית · English · العربية`), DOM attributes (`data-page="0"`, `data-page="1"`, `data-page="2"`, `data-page="3"`), and stylesheet rule `html { touch-action: pan-x pan-y; }`.
+2. **Hero Stage & Focal Lead (<section.text-section> — `Extremists on Both Sides`)**:
+   - Landmark `<section class="text-section">` presenting display lead `Extremists on Both Sides` and copy excerpt *"The project shows 14,877 documented political actions that took p"* over `#fdfcff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.text-section:nth(2)> — `In recent years, Israeli citizens `)**:
+   - Landmark `<section class="text-section">` rendering section `In recent years, Israeli citizens have become div...` with copy *"An analysis of political activity across Israel’s political camps"*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png`), and grid rule `body { background: var(--bg); }`.
+4. **Interactive Detail & Feature Matrix (<section.text-section:nth(3)> — `Both camps include groups that bri`)**:
+   - Landmark `<section class="text-section">` framing `Both camps include groups that bring their politi...` and `Because of their on-the-ground activity, these gr...` (*"Hover over a square to view the event description and scale."*) with `#ffffff` surface cards, `#25d366` accents, and `after { -webkit-user-select: none !important; user-select: none !important; -web... }`.
 5. **Colophon & Global Directory Footer (<footer.page0-dots-overlay> — `https://both-sides.the7eye.org.il/en/`)**:
-   - Landmark `<footer class="page0-dots-overlay">` anchoring `Extremists on Both Sides` footer links (`עברית · English · العربية`), copy *"Conservative right-wing groups: 309 documented actions"*, and `#393239` structural dividers.
+   - Landmark `<footer class="page0-dots-overlay">` anchoring `Extremists on Both Sides` footer links (`עברית · English · العربية`), copy *"Press and hold a square to view the event description and sc"*, and `#e1e1e1` structural dividers.

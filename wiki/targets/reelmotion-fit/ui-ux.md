@@ -1,67 +1,87 @@
+---
+title: "UI & UX Architecture: reelmotion-fit"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: reelmotion-fit
 
 ## Overview & Design Identity
 - **Target**: `reelmotion-fit` (**Reel Motion: Turn Workout Videos Into Exercise Routines**)
 - **Production URL**: [https://reelmotion.fit/](https://reelmotion.fit/)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#4A52DE` canvas, `#FFFFFF` ink, `#787FF6` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `#0e1116` ink, `#0d95e8` accent)
 - **Summary**: Paste a link from YouTube, Instagram, or TikTok and Reel Motion creates an illustrated, step-by-step workout you can follow on iPhone and...
-- **Total Clean CSS Variables Extracted**: `249` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `249` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Instrument Serif`
+- **Display Font Stack**: `Inter Tight`
 - **Body Font Stack**: `Inter`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--page-title-display: block`, `--Display: Inter Tight`, `--TextDisplay: clamp(32px, 5.4vw, 66px)`; rule `h1` (`font-size: var( --e-global-typography-pr...`, `line-height: var( --e-global-typog...`, `letter-spacing: var( --e-global-typog...`, `font-weight: var( --e-glob...`)
-- **Section Heading (`H2`)**: CSS variables `--TextH2: clamp(30px, 3.9vw, 48px)`; rule `h2` (`font-size: var( --e-global-typography-se...`, `line-height: var( --e-global-typog...`, `letter-spacing: var( --e-global-typog...`, `font-weight: var( --e-glob...`)
-- **Body Copy**: CSS variables `--Body: Inter`, `--TextBody: 16px`; rule `p` (`line-height: 1.7`)
-- **Metadata & Labels**: CSS variables `--e-global-typography-primary-letter-spacing: -0.025em`, `--e-global-typography-secondary-letter-spacing: -0.025em`, `--TextSmall: 15px`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 66px`, `line-height: 68.64px`, `font-weight: 700`, `letter-spacing: -1.65px`); CSS variables `--page-title-display: block`, `--Display: Inter Tight`, `--TextDisplay: clamp(32px, 5.4vw, 66px)`; rule `h1` (`font-size: 35px`, `font-weight: 700`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 50.88px`, `font-weight: 700`, `letter-spacing: -1.2px`); CSS variables `--TextH2: clamp(30px, 3.9vw, 48px)`; rule `h2` (`font-size: var( --e-global-typography-se...`, `line-height: var( --e-global-typog...`, `letter-spacing: var( --e-global-typog...`, `font-weight: var( --e-glob...`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--Body: Inter`, `--TextBody: 16px`; rule `p` (`font-size: 16px`, `line-height: 20px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--TextSmall: 15px`, `--e-global-typography-primary-letter-spacing: -0.025em`, `--e-global-typography-secondary-letter-spacing: -0.025em`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#4A52DE` | `var(--e-global-color-primary)` in `:root` |
-| **Primary Typography Ink** | `#0E1116` | `var(--e-global-color-secondary)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#5B6472` | `var(--e-global-color-text)` in `:root` |
-| **Interactive Accent / Highlight** | `#787FF6` | `var(--e-global-color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#FFFFFF` | `var(--e-global-color-e0a4856)` in `:root` |
-| **Structural Hairline Border** | `#F5F7FB` | `var(--e-global-color-40c312a)` in `:root` |
+| **Primary Canvas Substrate** | `#f5f7fb` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0e1116` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#0d95e8` | `.fancybox-share__button--tw:hover { background: #0d95e8 }` |
+| **Secondary / Muted Copy** | `#8a93a3` | `var(--Muted)` in `:root` |
+| **Structural Hairline Border** | `#d7d7d7` | `.fancybox-share__input { border-bottom: #d7d7d7 }` |
+| **Variable Token (`--e-gv-d8119ec`)** | `#934cff` | `var(--e-gv-d8119ec)` in `:root` |
+| **Variable Token (`--e-gv-22831a4`)** | `#7a32f0` | `var(--e-gv-22831a4)` in `:root` |
+| **Variable Token (`--e-gv-c75aa4e`)** | `#2f7cf8` | `var(--e-gv-c75aa4e)` in `:root` |
+| **Variable Token (`--e-gv-ac48b9b`)** | `#78aafa` | `var(--e-gv-ac48b9b)` in `:root` |
+| **Variable Token (`--e-gv-399bfaa`)** | `#975af4` | `var(--e-gv-399bfaa)` in `:root` |
+| **Variable Token (`--e-gv-cd3db67`)** | `#f5f4fb` | `var(--e-gv-cd3db67)` in `:root` |
+| **Variable Token (`--e-gv-0105447`)** | `#161a20` | `var(--e-gv-0105447)` in `:root` |
+| **Variable Token (`--e-gv-80cc8b6`)** | `#6b6f7b` | `var(--e-gv-80cc8b6)` in `:root` |
+| **Variable Token (`--e-gv-d4944d5`)** | `#e6e4f0` | `var(--e-gv-d4944d5)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--wp--style--global--content-size` | `800px` | Layout / Spatial Grid Token |
+| `--wp--style--global--wide-size` | `1200px` | Layout / Spatial Grid Token |
+| `--wp--style--block-gap` | `24px` | Layout / Spatial Grid Token |
 | `--direction-multiplier` | `1` | Design System Custom Token |
-| `--flex-direction` | `initial` | Design System Custom Token |
-| `--flex-wrap` | `initial` | Layout / Spatial Grid Token |
-| `--justify-content` | `initial` | Design System Custom Token |
-| `--align-items` | `initial` | Design System Custom Token |
-| `--align-content` | `initial` | Design System Custom Token |
-| `--gap` | `initial` | Layout / Spatial Grid Token |
-| `--flex-basis` | `initial` | Design System Custom Token |
-| `--flex-grow` | `initial` | Design System Custom Token |
-| `--flex-shrink` | `initial` | Typography Ink Token |
-| `--order` | `initial` | Design System Custom Token |
-| `--align-self` | `initial` | Design System Custom Token |
 | `--page-title-display` | `block` | Design System Custom Token |
-| `--border-radius` | `0` | Elevation / Border Token |
-| `--border-top-width` | `0px` | Layout / Spatial Grid Token |
-| `--border-right-width` | `0px` | Layout / Spatial Grid Token |
+| `--e-gv-d8119ec` | `#934cff` | Color / Atmospheric Token |
+| `--e-gv-22831a4` | `#7a32f0` | Color / Atmospheric Token |
+| `--e-gv-c75aa4e` | `#2f7cf8` | Color / Atmospheric Token |
+| `--e-gv-ac48b9b` | `#78aafa` | Color / Atmospheric Token |
+| `--e-gv-399bfaa` | `#975af4` | Color / Atmospheric Token |
+| `--e-gv-1036c6e` | `#ffffff` | Color / Atmospheric Token |
+| `--e-gv-cd3db67` | `#f5f4fb` | Color / Atmospheric Token |
+| `--e-gv-0105447` | `#161a20` | Color / Atmospheric Token |
+| `--e-gv-9d9c176` | `#161a20` | Color / Atmospheric Token |
+| `--e-gv-80cc8b6` | `#6b6f7b` | Color / Atmospheric Token |
+| `--e-gv-d4944d5` | `#e6e4f0` | Color / Atmospheric Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.elementor> — `reelmotion-fit`)**:
-   - Landmark `<nav class="elementor elementor-15">` hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `.elementor .e-div-block-base { min-width:30px;padding:10px;display:block; }`.
+   - Landmark `<nav class="elementor elementor-15">` (`1440x0px`) hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `.uael-ins-target { position:relative }`.
 2. **Hero Stage & Focal Lead (<section.elementor-element> — `Any workout video becomes a routin`)**:
-   - Landmark `<section class="elementor-element elementor-element-rmfeatsec">` presenting display lead `Any workout video becomes a routine you can` and copy excerpt *"Paste a link from YouTube, Instagram, or TikTok. Get illustrated "* over `#4A52DE` canvas and `#FFFFFF` ink.
-3. **Primary Showcase & Content Grid (<section.elementor-element> — `Read once, run hands-free`)**:
-   - Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `.elementor .e-flexbox-base { padding:10px;display:flex;flex-direction:row; }`.
-4. **Interactive Detail & Feature Matrix (<section.elementor-element> — `Illustrated exercises`)**:
-   - Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#5B6472` surface cards, `#787FF6` accents, and `.elementor .e-tabs-base { padding-block-start:0px;display:flex;flex-direction:column;gap:30px; }`.
+   - Landmark `<section class="elementor-element elementor-element-rmfeatsec">` presenting display lead `Any workout video becomes a routine you can` and copy excerpt *"Paste a link from YouTube, Instagram, or TikTok. Get illustrated "* over `#f5f7fb` canvas and `#0e1116` ink.
+3. **Primary Showcase & Content Grid (<section.elementor-element-rmhowsec> — `Read once, run hands-free`)**:
+   - Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `.uael-ins-target::before { display:block;height:100%;left:0;position:absolute;top:0;width:100%;z-in... }`.
+4. **Interactive Detail & Feature Matrix (<section.elementor-element-rmpricesec> — `Illustrated exercises`)**:
+   - Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#ffffff` surface cards, `#0d95e8` accents, and `.uael-ins-normal .uael-ins-target { -webkit-filter:unset;filter:unset }`.
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://reelmotion.fit/`)**:
-   - Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#F5F7FB` structural dividers.
+   - Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#d7d7d7` structural dividers.

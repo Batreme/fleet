@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: ross-oneill-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "ross-oneill-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#f5f5f7` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#da0a2c` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: ross-oneill-com
 
 > **Ross O'Neill · Freelance Web Developer and Designer in Perth** (https://ross-oneill.com/) — Freelance web developer and designer in North Beach, Perth. Fast custom websites for WA businesses, built and looked after by the person...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ross O'Neill · Freelance Web Developer and Designer in Perth** (`https://ross-oneill.com/`). Freelance web developer and designer in North Beach, Perth. Fast custom websites for WA businesses, built and looked after by the person...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#f5f5f7` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#da0a2c` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f5f5f7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Ross O'Neill, a Perth-based web deve`) with `Segoe UI` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#da0a2c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Ross O'Neill, a Perth-based web deve`) with `DM Sans` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×3718px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `ross-oneill-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `1rem` grid gap.
-- **Border Radius Scale**: `100%`, `9999px`, `var(--radius-base)`, `8px`.
+- **Border Radius Scale**: `3.35544e+07px`, `50%`, `100%`, `9999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 1rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 1rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (width>=640px)`, `@media (width>=40rem)`, `@media (width>=48rem)`, `@media (width>=64rem)`.
 
@@ -48,14 +52,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#da0a2c` | `var(--color-accent)` in `:root` |
-| **Interactive Accent / Highlight** | `#f5f5f7` | `var(--color-offwhite)` in `:root` |
-| **Secondary / Muted Copy** | `#0000` | `textarea { background-color: #0000 }` |
-| **Structural Hairline Border** | `#ffffff` | `:disabled:checked:after { background-color: white }` (`#ffffff`) |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `.bg-yellow-100 { background-color: yellow }` (`#ffff00`) |
+| **Interactive Accent / Highlight** | `#da0a2c` | `var(--color-accent)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | `.text-gray-400 { color: gray }` (`#808080`) |
+| **Structural Hairline Border** | `#f2f2f2` | `5 { border-color: #f2f2f2 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -83,14 +87,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `DM Sans`.
-- **Primary Body Stack**: `Segoe UI`.
+- **Primary Body Stack**: `DM Sans`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`.
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`.
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--color-body: var(--color-gray-600)`.
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: 32px`, `font-weight: 700`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
 
 ---
 
@@ -100,50 +104,69 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `ross-oneill-com` stylesheet.
+- **Selector `.swiper-free-mode>.swiper-wrapper`**: `transition: ease-out` extracted from `ross-oneill-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `ross-oneill-com` stylesheet.
-- **Selector `.toggle-bg:after`**: `transition: .15s` extracted from `ross-oneill-com` stylesheet.
-- **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `ross-oneill-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.header-content>` and `<section.bg-white>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.header-content>` and `<section.pb-12>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Ross O'Neill · Freelance Web Developer and │
 │ ====================================================================== │
-│ [ <header.header-content>  | About Me · Plans · Work · Blog · Get i ]  │
+│ [ <header.header-content (1440x104px) | About Me · Plans · Work · Bl ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.bg-white>                                   |   │
-│ | H1: Ross O'Neill, a Perth-based web developer who tra...         |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #f5f5f7        |   │
+│ | HERO STAGE: <section.py-28> (w=1440px)                             | │
+│ | H1: Ross O'Neill, a Perth-based web developer who tra...           | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #da0a2c                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.bg-white>        ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.pb-12>) max-w: 96rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Margaret River Region        |  | Capes Foundation             | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem  ) | │
-│ | [<header.header-con] -> [<section.bg-white>] -> [<section.bg-white>] │
+│ | DETAIL MODULE (<section.relative>) — Westmec Services              | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.relative>     ) | https://ross-oneill.com/           │
+│ [ FOOTER (<footer.rounded-2xl>) | https://ross-oneill.com/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header-content> ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.py-28>) — 390px Vertical Lead                 | │
+│ | H1: Ross O'Neill, a Perth-based web developer who tra...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.pb-12>) — 1-Col Stack                     | │
+│ | [ Item 1: Margaret River Region                                  ] | │
+│ | [ Item 2: Capes Foundation                                       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.relative>) — 1-Col (Westmec Services)       | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.rounded-2xl>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header-content> — `ross-oneill-com`)**:
-   - Landmark `<header class="header-content fixed">` hosting `Ross O'Neill · Freelance Web Develop` navigation (`About Me · Plans · Work · Blog · Get in Touch`), DOM attributes (`data-astro-exec`, `data-cfasync="false"`, `data-icon="carbon:arrow-right"`, `data-icon="carbon:arrow-right"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.bg-white> — `Ross O'Neill, a Perth-based web de`)**:
-   - Landmark `<section class="bg-white py-28">` presenting display lead `Ross O'Neill, a Perth-based web developer who tra...` and copy excerpt *"Ross O'Neill, a Perth-based web developer who transforms designs "* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.bg-white> — `Margaret River Region`)**:
-   - Landmark `<section class="bg-white pb-12">` rendering section `Margaret River Region` with copy *"Swipe to See Full Portfolio"*, asset references (`favicon.ico`, `favicon.svg`, `sitemap-index.xml`, `static.cloudflareinsights.com`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="header-content top-0">` (`1440x104px`) hosting `Ross O'Neill · Freelance Web Develop` navigation (`About Me · Plans · Work · Blog · Get in Touch`), DOM attributes (`data-astro-exec`, `data-cfasync="false"`, `data-icon="carbon:arrow-right"`, `data-icon="carbon:arrow-right"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+2. **Hero Stage & Focal Lead (<section.py-28> — `Ross O'Neill, a Perth-based web de`)**:
+   - Landmark `<section class="py-28 bg-white">` presenting display lead `Ross O'Neill, a Perth-based web developer who tra...` and copy excerpt *"Custom websites built from scratch. Clean code, lightning-fast pe"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.pb-12> — `Margaret River Region`)**:
+   - Landmark `<section class="pb-12 bg-white">` rendering section `Margaret River Region` with copy *"Ross O'Neill, a Perth-based web developer who transforms designs "*, asset references (`favicon.ico`, `favicon.svg`, `sitemap-index.xml`, `static.cloudflareinsights.com`), and grid rule `host { z-index:1;margin-left:auto;margin-right:auto;display:block;position:rela... }`.
 4. **Interactive Detail & Feature Matrix (<section.relative> — `Capes Foundation`)**:
-   - Landmark `<section class="relative py-12">` framing `Capes Foundation` and `CMEWA` (*"See Full Portfolio"*) with `#da0a2c` surface cards, `#f5f5f7` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://ross-oneill.com/`)**:
-   - Landmark `<footer class="relative text-white">` anchoring `Ross O'Neill · Freelance Web Dev` footer links (`About Me · Plans · Work · Blog · Get in Touch`), copy *"Margaret River Region"*, and `#ffffff` structural dividers.
+   - Landmark `<section class="relative py-12">` framing `Capes Foundation` and `Westmec Services` (*"Swipe to See Full Portfolio"*) with `#ffff00` surface cards, `#da0a2c` accents, and `.swiper { z-index:1;margin-left:auto;margin-right:auto;padding:0;list-style:none;d... }`.
+5. **Colophon & Global Directory Footer (<footer.rounded-2xl> — `https://ross-oneill.com/`)**:
+   - Landmark `<footer class="rounded-2xl m-4">` anchoring `Ross O'Neill · Freelance Web Dev` footer links (`About Me · Plans · Work · Blog · Get in Touch`), copy *"Monthly maintenance to keep your site secure, fast, and up-t"*, and `#f2f2f2` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `ross-oneill-com` (**Ross O'Neill · Freelance Web Developer and Designer in Perth** — `https://ross-oneill.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#f5f5f7` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#da0a2c` accent).
 - **Identity & Domain Context**: Freelance web developer and designer in North Beach, Perth. Fast custom websites for WA businesses, built and looked after by the person...
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#f5f5f7`.
+- **Primary Substrate**: `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#da0a2c`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f5f5f7` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Ross O'Neill, a Perth-based web deve`) with `Segoe UI` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#da0a2c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Ross O'Neill, a Perth-based web deve`) with `DM Sans` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 1rem`, padding `.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `ross-oneill-com` in your global stylesheet:
 
 :root {
-  /* Ross O'Neill · Freelance Web Developer and Designer in Perth (ross-oneill-com) — Ground-Truth Extracted CSS Variables */
+  /* Ross O'Neill · Freelance Web Developer and Designer in Perth (ross-oneill-com) — Live-Grounded CSS Variables */
   --color-red-50: oklch(97.1% .013 17.38); /* Brand / Palette Token (ross-oneill-com) */
   --color-red-100: oklch(93.6% .032 17.717); /* Brand / Palette Token (ross-oneill-com) */
   --color-red-200: oklch(88.5% .062 18.334); /* Brand / Palette Token (ross-oneill-com) */
@@ -188,69 +211,69 @@ Declare and consume these exact custom properties extracted from `ross-oneill-co
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#da0a2c` — grounded in `var(--color-accent)` in `:root`
-- **Interactive Accent / Highlight**: `#f5f5f7` — grounded in `var(--color-offwhite)` in `:root`
-- **Secondary / Muted Copy**: `#0000` — grounded in `textarea { background-color: #0000 }`
-- **Structural Hairline Border**: `#ffffff` — grounded in `:disabled:checked:after { background-color: white }` (`#ffffff`)
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffff00` — grounded in `.bg-yellow-100 { background-color: yellow }` (`#ffff00`)
+- **Interactive Accent / Highlight**: `#da0a2c` — grounded in `var(--color-accent)` in `:root`
+- **Secondary / Muted Copy**: `#808080` — grounded in `.text-gray-400 { color: gray }` (`#808080`)
+- **Structural Hairline Border**: `#f2f2f2` — grounded in `5 { border-color: #f2f2f2 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×3718px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `ross-oneill-com` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `.5rem` lateral canvas padding with `1rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 1rem`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 1rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding
 - **Media Queries**: `@media (width>=640px)`, `@media (width>=40rem)`, `@media (width>=48rem)`, `@media (width>=64rem)`
-- **Corner Radii**: `100%`, `9999px`, `var(--radius-base)`, `8px`
+- **Corner Radii**: `3.35544e+07px`, `50%`, `100%`, `9999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `DM Sans`
-- **Body Font Stack**: `Segoe UI`
+- **Body Font Stack**: `DM Sans`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--color-body: var(--color-gray-600)`
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **H1 Display Rule**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: 32px`, `font-weight: 700`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `ross-oneill-com` (`Ross O'Neill · Freelance Web Developer and Designer in Perth`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header-content> — `ross-oneill-com`)**:
-   - DOM & Selectors: Landmark `<header class="header-content fixed">` hosting `Ross O'Neill · Freelance Web Develop` navigation (`About Me · Plans · Work · Blog · Get in Touch`), DOM attributes (`data-astro-exec`, `data-cfasync="false"`, `data-icon="carbon:arrow-right"`, `data-icon="carbon:arrow-right"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - DOM & Selectors: Landmark `<header class="header-content top-0">` (`1440x104px`) hosting `Ross O'Neill · Freelance Web Develop` navigation (`About Me · Plans · Work · Blog · Get in Touch`), DOM attributes (`data-astro-exec`, `data-cfasync="false"`, `data-icon="carbon:arrow-right"`, `data-icon="carbon:arrow-right"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header-content> — `ross-oneill-com`)` (`ross-oneill-com`) adapts across `@media (width>=640px)`, `@media (width>=40rem)`, `@media (width>=48rem)`, `@media (width>=64rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `About Me · Plans · Work · Blog · Get in Touch`.
-2. **Hero Stage & Focal Lead (<section.bg-white> — `Ross O'Neill, a Perth-based web de`)**:
-   - DOM & Selectors: Landmark `<section class="bg-white py-28">` presenting display lead `Ross O'Neill, a Perth-based web developer who tra...` and copy excerpt *"Ross O'Neill, a Perth-based web developer who transforms designs "* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×3718px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Ross O'Neill, a Perth-based web developer who tra...`.
-3. **Primary Showcase & Content Grid (<section.bg-white> — `Margaret River Region`)**:
-   - DOM & Selectors: Landmark `<section class="bg-white pb-12">` rendering section `Margaret River Region` with copy *"Swipe to See Full Portfolio"*, asset references (`favicon.ico`, `favicon.svg`, `sitemap-index.xml`, `static.cloudflareinsights.com`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-white> — `Margaret River Region`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
+2. **Hero Stage & Focal Lead (<section.py-28> — `Ross O'Neill, a Perth-based web de`)**:
+   - DOM & Selectors: Landmark `<section class="py-28 bg-white">` presenting display lead `Ross O'Neill, a Perth-based web developer who tra...` and copy excerpt *"Custom websites built from scratch. Clean code, lightning-fast pe"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Ross O'Neill, a Perth-based web developer who tra...`.
+3. **Primary Showcase & Content Grid (<section.pb-12> — `Margaret River Region`)**:
+   - DOM & Selectors: Landmark `<section class="pb-12 bg-white">` rendering section `Margaret River Region` with copy *"Ross O'Neill, a Perth-based web developer who transforms designs "*, asset references (`favicon.ico`, `favicon.svg`, `sitemap-index.xml`, `static.cloudflareinsights.com`), and grid rule `host { z-index:1;margin-left:auto;margin-right:auto;display:block;position:rela... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pb-12> — `Margaret River Region`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.relative> — `Capes Foundation`)**:
-   - DOM & Selectors: Landmark `<section class="relative py-12">` framing `Capes Foundation` and `CMEWA` (*"See Full Portfolio"*) with `#da0a2c` surface cards, `#f5f5f7` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Capes Foundation`)` uses `100%`, `9999px`, `var(--radius-base)`, `8px` radii, `#f5f5f7` highlights, and assets (favicon.ico, favicon.svg, sitemap-index.xml).
-5. **Colophon & Global Directory Footer (<footer.relative> — `https://ross-oneill.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="relative text-white">` anchoring `Ross O'Neill · Freelance Web Dev` footer links (`About Me · Plans · Work · Blog · Get in Touch`), copy *"Margaret River Region"*, and `#ffffff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://ross-oneill.com/`)` aligns to `40rem` extracted from `ross-oneill-com` stylesheet with `.5rem` lateral canvas padding with `1rem` grid gap and attributes (data-astro-exec, data-cfasync="false", data-icon="carbon:arrow-right").
+   - DOM & Selectors: Landmark `<section class="relative py-12">` framing `Capes Foundation` and `Westmec Services` (*"Swipe to See Full Portfolio"*) with `#ffff00` surface cards, `#da0a2c` accents, and `.swiper { z-index:1;margin-left:auto;margin-right:auto;padding:0;list-style:none;d... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Capes Foundation`)` uses `3.35544e+07px`, `50%`, `100%`, `9999px` radii, `#da0a2c` highlights, and assets (favicon.ico, favicon.svg, sitemap-index.xml).
+5. **Colophon & Global Directory Footer (<footer.rounded-2xl> — `https://ross-oneill.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="rounded-2xl m-4">` anchoring `Ross O'Neill · Freelance Web Dev` footer links (`About Me · Plans · Work · Blog · Get in Touch`), copy *"Monthly maintenance to keep your site secure, fast, and up-t"*, and `#f2f2f2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.rounded-2xl> — `https://ross-oneill.com/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `.5rem` lateral canvas padding with `1rem` grid gap and attributes (data-astro-exec, data-cfasync="false", data-icon="carbon:arrow-right").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Ross O'Neill, a Perth-based web developer who transforms designs into lightning-fa..."*
-- Copy Excerpt 2: *"Swipe to See Full Portfolio"*
-- Copy Excerpt 3: *"See Full Portfolio"*
-- Copy Excerpt 4: *"Margaret River Region"*
+- Copy Excerpt 1: *"Custom websites built from scratch. Clean code, lightning-fast performance, and de..."*
+- Copy Excerpt 2: *"Ross O'Neill, a Perth-based web developer who transforms designs into lightning-fa..."*
+- Copy Excerpt 3: *"Swipe to See Full Portfolio"*
+- Copy Excerpt 4: *"Monthly maintenance to keep your site secure, fast, and up-to-date. Updates, backu..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`ross-oneill-com`)**:
-- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `strong { font-weight:bolder }`
-- `small { font-size:80% }`
-- `sup { vertical-align:baseline;font-size:75%;line-height:0;position:relative }`
+- `root { --swiper-theme-color:007aff }`
+- `host { z-index:1;margin-left:auto;margin-right:auto;display:block;position:rela... }`
+- `.swiper { z-index:1;margin-left:auto;margin-right:auto;padding:0;list-style:none;d... }`
+- `.swiper-vertical>.swiper-wrapper { flex-direction:column }`
+- `.swiper-wrapper { transform:translate(0,0) }`
 - **Per-Selector Transition Rules**:
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `ross-oneill-com` stylesheet.
+- **Selector `.swiper-free-mode>.swiper-wrapper`**: `transition: ease-out` extracted from `ross-oneill-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `ross-oneill-com` stylesheet.
-- **Selector `.toggle-bg:after`**: `transition: .15s` extracted from `ross-oneill-com` stylesheet.
-- **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `ross-oneill-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.header-content>` and `<section.bg-white>`.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.header-content>` and `<section.pb-12>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

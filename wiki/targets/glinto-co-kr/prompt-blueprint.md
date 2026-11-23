@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: glinto-co-kr"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "glinto-co-kr"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7b0`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`)"
 ---
 
 # UI Design System & Master Generation Blueprint: glinto-co-kr
 
 > **Glinto — Creative studio** (https://glinto.co.kr) — Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Glinto — Creative studio** (`https://glinto.co.kr`). Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7b0`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#ff7f54` primary typography and `#ffc7b0` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Everything your brand needs, from on`) with `DM Sans Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f131f` primary typography and `#ff5c34` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Pretendard Variable` for display copy (`Everything your brand needs, from on`) with `Pretendard Variable` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `105rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×9417px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `glinto-co-kr` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `105rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap.
 - **Border Radius Scale**: `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing-1)`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105rem`, `gap: var(--spacing-1)`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--spacing-1)` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
 
@@ -48,49 +52,64 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--color-white)` in `:root` |
-| **Primary Typography Ink** | `#fff3ee` | `var(--accent-50)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#ffe4d9` | `var(--accent-100)` in `:root` |
-| **Interactive Accent / Highlight** | `#ffc7b0` | `var(--accent-200)` in `:root` |
-| **Secondary / Muted Copy** | `#ffa47d` | `var(--accent-300)` in `:root` |
-| **Structural Hairline Border** | `#ff7f54` | `var(--accent-400)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0f131f` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fdeceb` | `var(--danger-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff5c34` | `var(--accent-500)` in `:root` |
+| **Secondary / Muted Copy** | `#626880` | `var(--mock-muted)` in `:root` |
+| **Structural Hairline Border** | `#626880` | hairline divider derived from `var(--mock-muted)` in `:root` |
+| **Variable Token (`--accent-50`)** | `#fff3ee` | `var(--accent-50)` in `:root` |
+| **Variable Token (`--accent-100`)** | `#ffe4d9` | `var(--accent-100)` in `:root` |
+| **Variable Token (`--accent-200`)** | `#ffc7b0` | `var(--accent-200)` in `:root` |
+| **Variable Token (`--accent-300`)** | `#ffa47d` | `var(--accent-300)` in `:root` |
+| **Variable Token (`--accent-400`)** | `#ff7f54` | `var(--accent-400)` in `:root` |
+| **Variable Token (`--accent-600`)** | `#e8451f` | `var(--accent-600)` in `:root` |
+| **Variable Token (`--accent-700`)** | `#c13215` | `var(--accent-700)` in `:root` |
+| **Variable Token (`--accent-800`)** | `#922712` | `var(--accent-800)` in `:root` |
+| **Variable Token (`--accent-900`)** | `#611a0c` | `var(--accent-900)` in `:root` |
+| **Variable Token (`--neutral-50`)** | `#fbf9f7` | `var(--neutral-50)` in `:root` |
+| **Variable Token (`--neutral-100`)** | `#f5f1ed` | `var(--neutral-100)` in `:root` |
+| **Variable Token (`--neutral-200`)** | `#e8e1da` | `var(--neutral-200)` in `:root` |
+| **Variable Token (`--neutral-300`)** | `#d6ccc2` | `var(--neutral-300)` in `:root` |
+| **Variable Token (`--neutral-400`)** | `#b3a79c` | `var(--neutral-400)` in `:root` |
+| **Variable Token (`--neutral-500`)** | `#8f8177` | `var(--neutral-500)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--font-dm-sans` | `"DM Sans", "DM Sans Fallback"` | Typography / Scale Token |
-| `--header-fill` | `0` | Layout / Spatial Grid Token |
-| `--px-x` | `80%` | Dimension / Scale Token |
-| `--px-y` | `0%` | Dimension / Scale Token |
-| `--wm-x` | `20%` | Dimension / Scale Token |
-| `--wm-y` | `30%` | Dimension / Scale Token |
-| `--spacing` | `.25rem` | Layout / Spatial Grid Token |
-| `--text-sm` | `var(--fs-sm)` | Typography Ink Token |
-| `--text-sm--line-height` | `var(--lh-sm)` | Typography Ink Token |
-| `--font-weight-light` | `300` | Canvas / Surface Token |
-| `--font-weight-normal` | `400` | Typography / Scale Token |
-| `--font-weight-medium` | `500` | Typography / Scale Token |
-| `--font-weight-semibold` | `600` | Typography / Scale Token |
-| `--font-weight-bold` | `700` | Typography / Scale Token |
-| `--ease-in` | `cubic-bezier(.4, 0, 1, 1)` | Motion / Easing Token |
-| `--ease-out` | `cubic-bezier(0, 0, .2, 1)` | Motion / Easing Token |
+| `--accent-50` | `#fff3ee` | Brand / Palette Token |
+| `--accent-100` | `#ffe4d9` | Brand / Palette Token |
+| `--accent-200` | `#ffc7b0` | Brand / Palette Token |
+| `--accent-300` | `#ffa47d` | Brand / Palette Token |
+| `--accent-400` | `#ff7f54` | Brand / Palette Token |
+| `--accent-500` | `#ff5c34` | Brand / Palette Token |
+| `--accent-600` | `#e8451f` | Brand / Palette Token |
+| `--accent-700` | `#c13215` | Brand / Palette Token |
+| `--accent-800` | `#922712` | Brand / Palette Token |
+| `--accent-900` | `#611a0c` | Brand / Palette Token |
+| `--neutral-50` | `#fbf9f7` | Color / Atmospheric Token |
+| `--neutral-100` | `#f5f1ed` | Color / Atmospheric Token |
+| `--neutral-200` | `#e8e1da` | Color / Atmospheric Token |
+| `--neutral-300` | `#d6ccc2` | Color / Atmospheric Token |
+| `--neutral-400` | `#b3a79c` | Color / Atmospheric Token |
+| `--neutral-500` | `#8f8177` | Color / Atmospheric Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `DM Sans`.
-- **Primary Body Stack**: `DM Sans Fallback`.
+- **Display Typography**: `Pretendard Variable`.
+- **Primary Body Stack**: `Pretendard Variable`.
 - **Technical / Metadata Stack**: `JetBrains Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-h1: var(--fs-h1)`, `--text-h1--line-height: var(--lh-figma)`, `--text-display-sans: var(--fs-display-sans)`.
-- **Section Heading (`H2`)**: CSS variables `--text-h2: var(--fs-h2)`, `--text-h2--line-height: var(--lh-figma)`, `--subtitle-color: var(--gray-200)`.
-- **Body Copy**: CSS variables `--text-body-s: var(--fs-body-s)`, `--text-body-s--line-height: var(--lh-figma)`, `--text-body-m: var(--fs-body-m)`.
-- **Metadata & Navigation Labels**: CSS variables `--text-sm: var(--fs-sm)`, `--text-sm--line-height: var(--lh-sm)`, `--default-mono-font-family: var(--font-mono)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--fs-xl: 1.25rem`, `--fs-h1: 1.625rem`, `--fs-display-sans: 2.125rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 60px`, `font-weight: 600`, `letter-spacing: -0.6px`); CSS variables `--fs-lg: 1.125rem`, `--fs-h2: 1.375rem`, `--tracking-h2: -.01em`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--fs-base: 1rem`, `--fs-body-s: .8125rem`, `--fs-body-m: .875rem`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--label-ink-start: var(--lime-cream-start)`, `--label-ink-end: var(--lime-cream-end)`, `--fs-sm: .875rem`.
 
 ---
 
@@ -110,40 +129,59 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Glinto — Creative studio                   │
 │ ====================================================================== │
-│ [ <header.site-header-wrap | About · Services · Glinto.dev · Works  ]  │
+│ [ <header.site-header-wr (1440x64px)  | About · Services · Glinto.de ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.antialiased>                                |   │
-│ | H1: Everything your brand needs, from one team                   |   │
-│ | Substrate: #fff       | Ink: #ff7f54    | Accent: #ffc7b0        |   │
+│ | HERO STAGE: <section.antialiased> (w=1440px)                       | │
+│ | H1: Everything your brand needs, from one team                     | │
+│ | Substrate: #ffffff | Ink: #0f131f | Accent: #ff5c34                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.pt-24>           ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.pt-24>) max-w: 105rem                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Media                        |  | Design                       | | │
+│ | | Solutions shaped by how your |  | Launch & care                | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--) | │
-│ | [<header.site-heade] -> [<section.antialias] -> [<section.pt-24>] |  │
+│ | DETAIL MODULE (<section.pt-24:nth(2)>) — Experience with brand     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.mt-24>        ) | https://glinto.co.kr               │
+│ [ FOOTER (<footer.mt-24>      ) | https://glinto.co.kr                 │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--sp)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header-wrap) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.antialiased>) — 390px Vertical Lead           | │
+│ | H1: Everything your brand needs, from one team                     | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.pt-24>) — 1-Col Stack                     | │
+│ | [ Item 1: Solutions shaped by how your brand runs                ] | │
+│ | [ Item 2: Launch & care                                          ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.pt-24:nth(2)>) — 1-Col (Experience with br) | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.mt-24>      ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header-wrap> — `glinto-co-kr`)**:
-   - Landmark `<header class="site-header-wrap sticky">` hosting `Glinto — Creative studio` navigation (`About · Services · Glinto.dev · Works · Contact`), DOM attributes (`data-theme="light"`, `data-reveal-ready`, `data-progress-ready`, `data-precedence="next"`), and stylesheet rule `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`.
+   - Landmark `<header class="site-header-wrap top-0">` (`1440x64px`) hosting `Glinto — Creative studio` navigation (`About · Services · Glinto.dev · Works · Contact`), DOM attributes (`data-theme="light"`, `data-reveal-ready`, `data-progress-ready`, `data-precedence="next"`), and stylesheet rule `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.antialiased> — `Everything your brand needs, from `)**:
-   - Landmark `<section class="antialiased">` presenting display lead `Everything your brand needs, from one team` and copy excerpt *"Services Glinto.dev"* over `#fff` canvas and `#ff7f54` ink.
-3. **Primary Showcase & Content Grid (<section.pt-24> — `Media`)**:
-   - Landmark `<section class="pt-24">` rendering section `Media` with copy *"Creative studio for identity, visuals, and code."*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `0twwmijs60d6j.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.pt-24> — `Design`)**:
-   - Landmark `<section class="pt-24">` framing `Design` and `Engineering` (*"BX Plan it BX Plan it"*) with `#ffe4d9` surface cards, `#ffc7b0` accents, and `host { --header-fill:0;--px-x:80%;--px-y:0% }`.
+   - Landmark `<section class="antialiased">` presenting display lead `Everything your brand needs, from one team` and copy excerpt *"Creative studio for identity, visuals, and code."* over `#ffffff` canvas and `#0f131f` ink.
+3. **Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)**:
+   - Landmark `<section class="pt-24">` rendering section `Solutions shaped by how your brand runs` with copy *"Engineering Build it"*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `3b84er6uv62xn.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)**:
+   - Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`.
 5. **Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)**:
-   - Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Media Capture it Media Capture it"*, and `#ff7f54` structural dividers.
+   - Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Start small with the one service you need right now."*, and `#626880` structural dividers.
 
 ---
 
@@ -155,97 +193,112 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `glinto-co-kr` (**Glinto — Creative studio** — `https://glinto.co.kr`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff` / `#ffc7b0`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`).
 - **Identity & Domain Context**: Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
-- **Primary Substrate**: `#fff` (`var(--color-white)` in `:root`), **Primary Ink**: `#ff7f54`, **Accent / Highlight**: `#ffc7b0`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0f131f`, **Accent / Highlight**: `#ff5c34`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fff` (`var(--color-white)` in `:root`) paired with `#ff7f54` primary typography and `#ffc7b0` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Everything your brand needs, from on`) with `DM Sans Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f131f` primary typography and `#ff5c34` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Pretendard Variable` for display copy (`Everything your brand needs, from on`) with `Pretendard Variable` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `105rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `glinto-co-kr` in your global stylesheet:
 
 :root {
-  /* Glinto — Creative studio (glinto-co-kr) — Ground-Truth Extracted CSS Variables */
-  --font-dm-sans: "DM Sans", "DM Sans Fallback"; /* Typography / Scale Token (glinto-co-kr) */
-  --header-fill: 0; /* Layout / Spatial Grid Token (glinto-co-kr) */
-  --px-x: 80%; /* Dimension / Scale Token (glinto-co-kr) */
-  --px-y: 0%; /* Dimension / Scale Token (glinto-co-kr) */
-  --wm-x: 20%; /* Dimension / Scale Token (glinto-co-kr) */
-  --wm-y: 30%; /* Dimension / Scale Token (glinto-co-kr) */
-  --spacing: .25rem; /* Layout / Spatial Grid Token (glinto-co-kr) */
-  --text-sm: var(--fs-sm); /* Typography Ink Token (glinto-co-kr) */
-  --text-sm--line-height: var(--lh-sm); /* Typography Ink Token (glinto-co-kr) */
-  --font-weight-light: 300; /* Canvas / Surface Token (glinto-co-kr) */
-  --font-weight-normal: 400; /* Typography / Scale Token (glinto-co-kr) */
-  --font-weight-medium: 500; /* Typography / Scale Token (glinto-co-kr) */
-  --font-weight-semibold: 600; /* Typography / Scale Token (glinto-co-kr) */
-  --font-weight-bold: 700; /* Typography / Scale Token (glinto-co-kr) */
-  --ease-in: cubic-bezier(.4, 0, 1, 1); /* Motion / Easing Token (glinto-co-kr) */
-  --ease-out: cubic-bezier(0, 0, .2, 1); /* Motion / Easing Token (glinto-co-kr) */
+  /* Glinto — Creative studio (glinto-co-kr) — Live-Grounded CSS Variables */
+  --accent-50: #fff3ee; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-100: #ffe4d9; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-200: #ffc7b0; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-300: #ffa47d; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-400: #ff7f54; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-500: #ff5c34; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-600: #e8451f; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-700: #c13215; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-800: #922712; /* Brand / Palette Token (glinto-co-kr) */
+  --accent-900: #611a0c; /* Brand / Palette Token (glinto-co-kr) */
+  --neutral-50: #fbf9f7; /* Color / Atmospheric Token (glinto-co-kr) */
+  --neutral-100: #f5f1ed; /* Color / Atmospheric Token (glinto-co-kr) */
+  --neutral-200: #e8e1da; /* Color / Atmospheric Token (glinto-co-kr) */
+  --neutral-300: #d6ccc2; /* Color / Atmospheric Token (glinto-co-kr) */
+  --neutral-400: #b3a79c; /* Color / Atmospheric Token (glinto-co-kr) */
+  --neutral-500: #8f8177; /* Color / Atmospheric Token (glinto-co-kr) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Primary Typography Ink**: `#fff3ee` — grounded in `var(--accent-50)` in `:root`
-- **Elevated Surface / Card Substrate**: `#ffe4d9` — grounded in `var(--accent-100)` in `:root`
-- **Interactive Accent / Highlight**: `#ffc7b0` — grounded in `var(--accent-200)` in `:root`
-- **Secondary / Muted Copy**: `#ffa47d` — grounded in `var(--accent-300)` in `:root`
-- **Structural Hairline Border**: `#ff7f54` — grounded in `var(--accent-400)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0f131f` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fdeceb` — grounded in `var(--danger-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#ff5c34` — grounded in `var(--accent-500)` in `:root`
+- **Secondary / Muted Copy**: `#626880` — grounded in `var(--mock-muted)` in `:root`
+- **Structural Hairline Border**: `#626880` — grounded in hairline divider derived from `var(--mock-muted)` in `:root`
+- **Variable Token (`--accent-50`)**: `#fff3ee` — grounded in `var(--accent-50)` in `:root`
+- **Variable Token (`--accent-100`)**: `#ffe4d9` — grounded in `var(--accent-100)` in `:root`
+- **Variable Token (`--accent-200`)**: `#ffc7b0` — grounded in `var(--accent-200)` in `:root`
+- **Variable Token (`--accent-300`)**: `#ffa47d` — grounded in `var(--accent-300)` in `:root`
+- **Variable Token (`--accent-400`)**: `#ff7f54` — grounded in `var(--accent-400)` in `:root`
+- **Variable Token (`--accent-600`)**: `#e8451f` — grounded in `var(--accent-600)` in `:root`
+- **Variable Token (`--accent-700`)**: `#c13215` — grounded in `var(--accent-700)` in `:root`
+- **Variable Token (`--accent-800`)**: `#922712` — grounded in `var(--accent-800)` in `:root`
+- **Variable Token (`--accent-900`)**: `#611a0c` — grounded in `var(--accent-900)` in `:root`
+- **Variable Token (`--neutral-50`)**: `#fbf9f7` — grounded in `var(--neutral-50)` in `:root`
+- **Variable Token (`--neutral-100`)**: `#f5f1ed` — grounded in `var(--neutral-100)` in `:root`
+- **Variable Token (`--neutral-200`)**: `#e8e1da` — grounded in `var(--neutral-200)` in `:root`
+- **Variable Token (`--neutral-300`)**: `#d6ccc2` — grounded in `var(--neutral-300)` in `:root`
+- **Variable Token (`--neutral-400`)**: `#b3a79c` — grounded in `var(--neutral-400)` in `:root`
+- **Variable Token (`--neutral-500`)**: `#8f8177` — grounded in `var(--neutral-500)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×9417px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `glinto-co-kr` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `105rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing-1)`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105rem`, `gap: var(--spacing-1)`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--spacing-1)` horizontal padding
 - **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
 - **Corner Radii**: `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `DM Sans`
-- **Body Font Stack**: `DM Sans Fallback`
+- **Display Font Stack**: `Pretendard Variable`
+- **Body Font Stack**: `Pretendard Variable`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **H1 Display Rule**: CSS variables `--text-h1: var(--fs-h1)`, `--text-h1--line-height: var(--lh-figma)`, `--text-display-sans: var(--fs-display-sans)`
-- **H2 Section Rule**: CSS variables `--text-h2: var(--fs-h2)`, `--text-h2--line-height: var(--lh-figma)`, `--subtitle-color: var(--gray-200)`
-- **Body Copy Rule**: CSS variables `--text-body-s: var(--fs-body-s)`, `--text-body-s--line-height: var(--lh-figma)`, `--text-body-m: var(--fs-body-m)`
-- **Metadata & Index Rule**: CSS variables `--text-sm: var(--fs-sm)`, `--text-sm--line-height: var(--lh-sm)`, `--default-mono-font-family: var(--font-mono)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--fs-xl: 1.25rem`, `--fs-h1: 1.625rem`, `--fs-display-sans: 2.125rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 60px`, `font-weight: 600`, `letter-spacing: -0.6px`); CSS variables `--fs-lg: 1.125rem`, `--fs-h2: 1.375rem`, `--tracking-h2: -.01em`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--fs-base: 1rem`, `--fs-body-s: .8125rem`, `--fs-body-m: .875rem`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--label-ink-start: var(--lime-cream-start)`, `--label-ink-end: var(--lime-cream-end)`, `--fs-sm: .875rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `glinto-co-kr` (`Glinto — Creative studio`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header-wrap> — `glinto-co-kr`)**:
-   - DOM & Selectors: Landmark `<header class="site-header-wrap sticky">` hosting `Glinto — Creative studio` navigation (`About · Services · Glinto.dev · Works · Contact`), DOM attributes (`data-theme="light"`, `data-reveal-ready`, `data-progress-ready`, `data-precedence="next"`), and stylesheet rule `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`.
+   - DOM & Selectors: Landmark `<header class="site-header-wrap top-0">` (`1440x64px`) hosting `Glinto — Creative studio` navigation (`About · Services · Glinto.dev · Works · Contact`), DOM attributes (`data-theme="light"`, `data-reveal-ready`, `data-progress-ready`, `data-precedence="next"`), and stylesheet rule `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header-wrap> — `glinto-co-kr`)` (`glinto-co-kr`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `About · Services · Glinto.dev · Works · Contact`.
 2. **Hero Stage & Focal Lead (<section.antialiased> — `Everything your brand needs, from `)**:
-   - DOM & Selectors: Landmark `<section class="antialiased">` presenting display lead `Everything your brand needs, from one team` and copy excerpt *"Services Glinto.dev"* over `#fff` canvas and `#ff7f54` ink.
-   - Responsive Contract: Hero stage (`1440×9417px` desktop / `390×2400px` mobile) sets `#fff` background with `#ff7f54` headline `Everything your brand needs, from one team`.
-3. **Primary Showcase & Content Grid (<section.pt-24> — `Media`)**:
-   - DOM & Selectors: Landmark `<section class="pt-24">` rendering section `Media` with copy *"Creative studio for identity, visuals, and code."*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `0twwmijs60d6j.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pt-24> — `Media`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: var(--spacing-1)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-1)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.pt-24> — `Design`)**:
-   - DOM & Selectors: Landmark `<section class="pt-24">` framing `Design` and `Engineering` (*"BX Plan it BX Plan it"*) with `#ffe4d9` surface cards, `#ffc7b0` accents, and `host { --header-fill:0;--px-x:80%;--px-y:0% }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.pt-24> — `Design`)` uses `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem` radii, `#ffc7b0` highlights, and assets (2f7d2945a32bc936-s.p.0q9pvfn3wr_3..., 5c285b27cdda1fe8-s.p.0lsanbtneewq..., 0k1f2nt08p6_n.css).
+   - DOM & Selectors: Landmark `<section class="antialiased">` presenting display lead `Everything your brand needs, from one team` and copy excerpt *"Creative studio for identity, visuals, and code."* over `#ffffff` canvas and `#0f131f` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0f131f` headline `Everything your brand needs, from one team`.
+3. **Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)**:
+   - DOM & Selectors: Landmark `<section class="pt-24">` rendering section `Solutions shaped by how your brand runs` with copy *"Engineering Build it"*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `3b84er6uv62xn.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105rem`, `gap: var(--spacing-1)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-1)` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)**:
+   - DOM & Selectors: Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)` uses `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem` radii, `#ff5c34` highlights, and assets (2f7d2945a32bc936-s.p.0q9pvfn3wr_3..., 5c285b27cdda1fe8-s.p.0lsanbtneewq..., 0k1f2nt08p6_n.css).
 5. **Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)**:
-   - DOM & Selectors: Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Media Capture it Media Capture it"*, and `#ff7f54` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)` aligns to `40rem` extracted from `glinto-co-kr` stylesheet with `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap and attributes (data-theme="light", data-reveal-ready, data-progress-ready).
+   - DOM & Selectors: Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Start small with the one service you need right now."*, and `#626880` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)` aligns to `105rem` (non-`@media` desktop container stylesheet rule) with `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap and attributes (data-theme="light", data-reveal-ready, data-progress-ready).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Services Glinto.dev"*
-- Copy Excerpt 2: *"Creative studio for identity, visuals, and code."*
-- Copy Excerpt 3: *"BX Plan it BX Plan it"*
-- Copy Excerpt 4: *"Media Capture it Media Capture it"*
+- Copy Excerpt 1: *"Creative studio for identity, visuals, and code."*
+- Copy Excerpt 2: *"Engineering Build it"*
+- Copy Excerpt 3: *"From brand strategy to design, media and development, specialists in each field wo..."*
+- Copy Excerpt 4: *"Start small with the one service you need right now."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`glinto-co-kr`)**:
 - `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`
 - `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`
-- `host { --header-fill:0;--px-x:80%;--px-y:0% }`
-- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
+- `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`
+- `mono_dee0ec74-module__m2KSdq__cla... { font-family:JetBrains Mono,JetBrains Mono Fallback;font-style:normal }`
+- `rbit_fbf1de06-module__6Zwo7q__cla... { font-family:Orbit,Orbit Fallback;font-style:normal;font-weight:400 }`
 - **Per-Selector Transition Rules**:
 - **Selector `layer theme`**: `transition: .15s` extracted from `glinto-co-kr` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `glinto-co-kr` stylesheet.

@@ -1,62 +1,69 @@
 ---
 title: "UI Prompt Blueprint: ksenpanchenko-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "ksenpanchenko-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a8a8a6`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f1f0ec` / `#c63a10`)"
 ---
 
 # UI Design System & Master Generation Blueprint: ksenpanchenko-com
 
 > **Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS** (https://ksenpanchenko.com/) — Ksen (Kseniia) Panchenko, independent UX/UI & Product Designer in Dublin: websites, products and design systems for FinTech and SaaS — pl...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS** (`https://ksenpanchenko.com/`). Ksen (Kseniia) Panchenko, independent UX/UI & Product Designer in Dublin: websites, products and design systems for FinTech and SaaS — pl...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a8a8a6`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f1f0ec` / `#c63a10`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--color-neutral-0)` in `:root`) paired with `#2b2b2b` primary typography and `#a8a8a6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `GeistSans` for display copy (`Ksen Panchenko — UX/UI & Product Des`) with `GeistSans Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `300px` container bounds (`gap: 4px`, padding `4px`) with `cubic-bezier(.16,1,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f1f0ec` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c63a10` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `GeistSans` for display copy (`Ksen Panchenko — UX/UI & Product Des`) with `GeistSans` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1376px` container bounds (`gap: normal 16px`, padding `32px`) with `cubic-bezier(.22,1.18,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×8165px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `300px` extracted from `ksenpanchenko-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `4px` grid gap.
-- **Border Radius Scale**: `14px`, `999px`, `12%`, `11%`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1376px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `normal 16px` grid gap.
+- **Border Radius Scale**: `100px`, `4px`, `999px`, `var(--radius-media)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 300px`, `gap: 4px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (max-width:1023px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1376px`, `gap: normal 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1023px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ffffff` | `var(--color-neutral-0)` in `:root` |
-| **Primary Typography Ink** | `#f4f1ec` | `var(--color-neutral-50)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f1f0ec` | `var(--color-neutral-100)` in `:root` |
-| **Interactive Accent / Highlight** | `#a8a8a6` | `var(--color-neutral-400)` in `:root` |
-| **Secondary / Muted Copy** | `#6b6b6b` | `var(--color-neutral-500)` in `:root` |
-| **Structural Hairline Border** | `#2b2b2b` | `var(--color-neutral-800)` in `:root` |
-| **Variable Token (`--color-neutral-950`)** | `#141414` | `var(--color-neutral-950)` in `:root` |
+| **Primary Canvas Substrate** | `#f1f0ec` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.hero__pill { background: #ffffff }` |
+| **Interactive Accent / Highlight** | `#c63a10` | `var(--color-text-accent-strong)` in `:root` |
+| **Secondary / Muted Copy** | `#141414` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#828280` | `:before { border-color: #828280 }` |
+| **Variable Token (`--color-neutral-50`)** | `#f4f1ec` | `var(--color-neutral-50)` in `:root` |
+| **Variable Token (`--color-neutral-400`)** | `#a8a8a6` | `var(--color-neutral-400)` in `:root` |
+| **Variable Token (`--color-neutral-500`)** | `#6b6b6b` | `var(--color-neutral-500)` in `:root` |
+| **Variable Token (`--color-neutral-800`)** | `#2b2b2b` | `var(--color-neutral-800)` in `:root` |
 | **Variable Token (`--color-orange-500`)** | `#ff5c2e` | `var(--color-orange-500)` in `:root` |
 | **Variable Token (`--color-orange-600`)** | `#e8461a` | `var(--color-orange-600)` in `:root` |
 | **Variable Token (`--color-green-500`)** | `#4dd973` | `var(--color-green-500)` in `:root` |
@@ -64,11 +71,6 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--gap` | `6cqw` | Layout / Spatial Grid Token |
-| `--stage` | `min(816px,calc(100vh - var(--component-nav-height)))` | Dimension / Scale Token |
-| `--ts` | `64` | Design System Custom Token |
-| `--font-geist-sans` | `"GeistSans","GeistSans Fallback"` | Typography / Scale Token |
-| `--font-serif-loaded` | `"serif","serif Fallback",Georgia,serif` | Typography / Scale Token |
 | `--color-neutral-0` | `#ffffff` | Brand / Palette Token |
 | `--color-neutral-50` | `#f4f1ec` | Brand / Palette Token |
 | `--color-neutral-100` | `#f1f0ec` | Brand / Palette Token |
@@ -80,6 +82,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a
 | `--color-orange-600` | `#e8461a` | Brand / Palette Token |
 | `--color-green-500` | `#4dd973` | Brand / Palette Token |
 | `--font-family-serif` | `var(--font-serif-loaded,"Instrument Serif"),Georgia,serif` | Typography / Scale Token |
+| `--font-family-sans` | `"Geist",system-ui,sans-serif` | Typography / Scale Token |
+| `--font-family-mono` | `"JetBrains Mono",ui-monospace,monospace` | Typography / Scale Token |
+| `--space-0` | `0px` | Layout / Spatial Grid Token |
+| `--space-4` | `4px` | Layout / Spatial Grid Token |
+| `--space-8` | `8px` | Layout / Spatial Grid Token |
 
 ---
 
@@ -87,67 +94,86 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a
 
 ### Font Family Stacks
 - **Display Typography**: `GeistSans`.
-- **Primary Body Stack**: `GeistSans Fallback`.
+- **Primary Body Stack**: `GeistSans`.
 - **Technical / Metadata Stack**: `JetBrains Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--type-display-size: 220px`, `--type-display-line-height: 198px`, `--type-display-letter-spacing: -6.6px`.
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `14px`, `13px`, `32px`, `52px`, `12px`).
-- **Body Copy**: CSS variables `--type-body-lead-size: 24px`, `--type-body-lead-line-height: 31.2px`, `--type-body-lead-letter-spacing: 0px`; rule `p` (`font-size: 16px`, `line-height: 24px`).
-- **Metadata & Navigation Labels**: CSS variables `--font-family-mono: "JetBrains Mono",ui-monospace,monospace`, `--type-display-letter-spacing: -6.6px`, `--type-heading-large-letter-spacing: 0px`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-display-size: 220px`, `--type-display-line-height: 198px`, `--type-display-letter-spacing: -6.6px`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 64px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-body-lead-size: 24px`, `--type-body-lead-line-height: 31.2px`, `--type-body-lead-letter-spacing: 0px`; rule `p` (`font-size: 14px`, `line-height: 20px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-family-mono: "JetBrains Mono",ui-monospace,monospace`, `--type-display-letter-spacing: -6.6px`, `--type-heading-large-letter-spacing: 0px`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.42,.64,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.sw__reel`**: `transition: opacity .55s var(--ease-out),visibility 0s .55s` extracted from `ksenpanchenko-com` stylesheet.
-- **Selector `.sw__reel.is-active`**: `transition: opacity .55s var(--ease-out) .08s,visibility 0s` extracted from `ksenpanchenko-com` stylesheet.
-- **Selector `.cs-next__reel) .sw__reel img`**: `transition: none` extracted from `ksenpanchenko-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sw>`.
+- **Selector `.sw__index li`**: `transition: color .3s` extracted from `ksenpanchenko-com` stylesheet.
+- **Selector `.sw__stage img`**: `transition: opacity .9s var(--ease-out),scale 1.2s var(--ease-out),visibil...` extracted from `ksenpanchenko-com` stylesheet.
+- **Selector `.svc__card`**: `transition: transform .45s var(--ease-out),box-shadow .45s var(--ease-out)...` extracted from `ksenpanchenko-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1.18,.36,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sw>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Ksen Panchenko — UX/UI & Product Designer  │
 │ ====================================================================== │
-│ [ <header.nav>             | Work · About                           ]  │
+│ [ <header.nav> (1440x56px)            | Work · About                 ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Ksen Panchenko — UX/UI & Product Designer in Dubl...         |   │
-│ | Substrate: #ffffff    | Ink: #2b2b2b    | Accent: #a8a8a6        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: Ksen Panchenko — UX/UI & Product Designer in Dubl...           | │
+│ | Substrate: #f1f0ec | Ink: #000000 | Accent: #c63a10                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.sw>              ) max-w: 300px          |   │
+│ | SHOWCASE GRID (<section.sw>) max-w: 1376px                         | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Selected work                |  | Services                     | | │
+│ | | Selected work                |  | Product & UX                 | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px   ) | │
-│ | [<header.nav>] -> [<section.hero>] -> [<section.sw>] |               │
+│ | DETAIL MODULE (<section.philo>) — Web & Systems                    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://ksenpanchenko.com/         │
+│ [ FOOTER (<footer.footer>     ) | https://ksenpanchenko.com/           │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: normal 1)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.nav>            ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: Ksen Panchenko — UX/UI & Product Designer in Dubl...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.sw>) — 1-Col Stack                        | │
+│ | [ Item 1: Selected work                                          ] | │
+│ | [ Item 2: Product & UX                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.philo>) — 1-Col (Web & Systems)             | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav> — `ksenpanchenko-com`)**:
-   - Landmark `<header class="nav">` hosting `Ksen Panchenko — UX/UI & Product Des` navigation (`Work · About`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-end="1"`), and stylesheet rule `.sw__reel.is-active { opacity:1;visibility:visible;transition:opacity .55s var(--ease-out) .08... }`.
+   - Landmark `<header class="nav">` (`1440x56px`) hosting `Ksen Panchenko — UX/UI & Product Des` navigation (`Work · About`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-end="1"`), and stylesheet rule `.hero__center { position:relative;width:733px;max-width:100%;margin:0 auto;padding-top:21px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Ksen Panchenko — UX/UI & Product D`)**:
-   - Landmark `<section class="hero">` presenting display lead `Ksen Panchenko — UX/UI & Product Designer in Dubl...` and copy excerpt *"Available for projects"* over `#ffffff` canvas and `#2b2b2b` ink.
+   - Landmark `<section class="hero">` presenting display lead `Ksen Panchenko — UX/UI & Product Designer in Dubl...` and copy excerpt *"Available for projects"* over `#f1f0ec` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.sw> — `Selected work`)**:
-   - Landmark `<section class="sw">` rendering section `Selected work` with copy *"Dublin 19:22 GMT+0"*, asset references (`7cb8e1b9ab81be17-s.p.woff2`, `dbccb4a9e22cbf0d-s.p.woff2`, `e872e3f251959e82-s.p.woff2`, `kseniia-cutout.webp`), and grid rule `.sw__reel img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacit... }`.
-4. **Interactive Detail & Feature Matrix (<section.philo> — `Services`)**:
-   - Landmark `<section class="philo">` framing `Services` and `Product & UX` (*"E m a i l m e Email me"*) with `#f1f0ec` surface cards, `#a8a8a6` accents, and `.sw__reel.is-active .sw__win { translate:0 0 }`.
+   - Landmark `<section class="sw">` rendering section `Selected work` with copy *"Gold London Design Awards 2026 · Emerald24 · UI Design"*, asset references (`7cb8e1b9ab81be17-s.p.woff2`, `dbccb4a9e22cbf0d-s.p.woff2`, `e872e3f251959e82-s.p.woff2`, `kseniia-cutout.webp`), and grid rule `.hero__name { display:grid;margin:0;font-weight:400 }`.
+4. **Interactive Detail & Feature Matrix (<section.philo> — `Product & UX`)**:
+   - Landmark `<section class="philo">` framing `Product & UX` and `Web & Systems` (*"London Design Awards 2026 · Emerald24 · UI Design"*) with `#ffffff` surface cards, `#c63a10` accents, and `.hero__name>.text-display-hero { padding-left:131px }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ksenpanchenko.com/`)**:
-   - Landmark `<footer class="footer">` anchoring `Ksen Panchenko — UX/UI & Product` footer links (`Work · About`), copy *"Gold London Design Awards 2026 · Emerald24 · UI Design"*, and `#2b2b2b` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Ksen Panchenko — UX/UI & Product` footer links (`Work · About`), copy *"Ksen Panchenko — UX/UI & Product Designer in Dublin."*, and `#828280` structural dividers.
 
 ---
 
@@ -159,24 +185,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `ksenpanchenko-com` (**Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS** — `https://ksenpanchenko.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#a8a8a6`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f1f0ec` / `#c63a10`).
 - **Identity & Domain Context**: Ksen (Kseniia) Panchenko, independent UX/UI & Product Designer in Dublin: websites, products and design systems for FinTech and SaaS — pl...
-- **Primary Substrate**: `#ffffff` (`var(--color-neutral-0)` in `:root`), **Primary Ink**: `#2b2b2b`, **Accent / Highlight**: `#a8a8a6`.
+- **Primary Substrate**: `#f1f0ec` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#c63a10`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ffffff` (`var(--color-neutral-0)` in `:root`) paired with `#2b2b2b` primary typography and `#a8a8a6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `GeistSans` for display copy (`Ksen Panchenko — UX/UI & Product Des`) with `GeistSans Fallback` and `JetBrains Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `300px` container bounds (`gap: 4px`, padding `4px`) with `cubic-bezier(.16,1,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f1f0ec` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c63a10` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `GeistSans` for display copy (`Ksen Panchenko — UX/UI & Product Des`) with `GeistSans` and `JetBrains Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1376px` container bounds (`gap: normal 16px`, padding `32px`) with `cubic-bezier(.22,1.18,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `ksenpanchenko-com` in your global stylesheet:
 
 :root {
-  /* Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS (ksenpanchenko-com) — Ground-Truth Extracted CSS Variables */
-  --gap: 6cqw; /* Layout / Spatial Grid Token (ksenpanchenko-com) */
-  --stage: min(816px,calc(100vh - var(--component-nav-height))); /* Dimension / Scale Token (ksenpanchenko-com) */
-  --ts: 64; /* Design System Custom Token (ksenpanchenko-com) */
-  --font-geist-sans: "GeistSans","GeistSans Fallback"; /* Typography / Scale Token (ksenpanchenko-com) */
-  --font-serif-loaded: "serif","serif Fallback",Georgia,serif; /* Typography / Scale Token (ksenpanchenko-com) */
+  /* Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS (ksenpanchenko-com) — Live-Grounded CSS Variables */
   --color-neutral-0: #ffffff; /* Brand / Palette Token (ksenpanchenko-com) */
   --color-neutral-50: #f4f1ec; /* Brand / Palette Token (ksenpanchenko-com) */
   --color-neutral-100: #f1f0ec; /* Brand / Palette Token (ksenpanchenko-com) */
@@ -188,77 +209,85 @@ Declare and consume these exact custom properties extracted from `ksenpanchenko-
   --color-orange-600: #e8461a; /* Brand / Palette Token (ksenpanchenko-com) */
   --color-green-500: #4dd973; /* Brand / Palette Token (ksenpanchenko-com) */
   --font-family-serif: var(--font-serif-loaded,"Instrument Serif"),Georgia,serif; /* Typography / Scale Token (ksenpanchenko-com) */
+  --font-family-sans: "Geist",system-ui,sans-serif; /* Typography / Scale Token (ksenpanchenko-com) */
+  --font-family-mono: "JetBrains Mono",ui-monospace,monospace; /* Typography / Scale Token (ksenpanchenko-com) */
+  --space-0: 0px; /* Layout / Spatial Grid Token (ksenpanchenko-com) */
+  --space-4: 4px; /* Layout / Spatial Grid Token (ksenpanchenko-com) */
+  --space-8: 8px; /* Layout / Spatial Grid Token (ksenpanchenko-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ffffff` — grounded in `var(--color-neutral-0)` in `:root`
-- **Primary Typography Ink**: `#f4f1ec` — grounded in `var(--color-neutral-50)` in `:root`
-- **Elevated Surface / Card Substrate**: `#f1f0ec` — grounded in `var(--color-neutral-100)` in `:root`
-- **Interactive Accent / Highlight**: `#a8a8a6` — grounded in `var(--color-neutral-400)` in `:root`
-- **Secondary / Muted Copy**: `#6b6b6b` — grounded in `var(--color-neutral-500)` in `:root`
-- **Structural Hairline Border**: `#2b2b2b` — grounded in `var(--color-neutral-800)` in `:root`
-- **Variable Token (`--color-neutral-950`)**: `#141414` — grounded in `var(--color-neutral-950)` in `:root`
+- **Primary Canvas Substrate**: `#f1f0ec` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.hero__pill { background: #ffffff }`
+- **Interactive Accent / Highlight**: `#c63a10` — grounded in `var(--color-text-accent-strong)` in `:root`
+- **Secondary / Muted Copy**: `#141414` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#828280` — grounded in `:before { border-color: #828280 }`
+- **Variable Token (`--color-neutral-50`)**: `#f4f1ec` — grounded in `var(--color-neutral-50)` in `:root`
+- **Variable Token (`--color-neutral-400`)**: `#a8a8a6` — grounded in `var(--color-neutral-400)` in `:root`
+- **Variable Token (`--color-neutral-500`)**: `#6b6b6b` — grounded in `var(--color-neutral-500)` in `:root`
+- **Variable Token (`--color-neutral-800`)**: `#2b2b2b` — grounded in `var(--color-neutral-800)` in `:root`
 - **Variable Token (`--color-orange-500`)**: `#ff5c2e` — grounded in `var(--color-orange-500)` in `:root`
 - **Variable Token (`--color-orange-600`)**: `#e8461a` — grounded in `var(--color-orange-600)` in `:root`
 - **Variable Token (`--color-green-500`)**: `#4dd973` — grounded in `var(--color-green-500)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×8165px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `300px` extracted from `ksenpanchenko-com` stylesheet
-- **Padding & Gutters**: `4px` lateral canvas padding with `4px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 300px`, `gap: 4px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (max-width:1023px)`
-- **Corner Radii**: `14px`, `999px`, `12%`, `11%`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1376px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `32px` lateral canvas padding with `normal 16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1376px`, `gap: normal 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
+- **Media Queries**: `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1023px)`
+- **Corner Radii**: `100px`, `4px`, `999px`, `var(--radius-media)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `GeistSans`
-- **Body Font Stack**: `GeistSans Fallback`
+- **Body Font Stack**: `GeistSans`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **H1 Display Rule**: CSS variables `--type-display-size: 220px`, `--type-display-line-height: 198px`, `--type-display-letter-spacing: -6.6px`
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `14px`, `13px`, `32px`, `52px`, `12px`)
-- **Body Copy Rule**: CSS variables `--type-body-lead-size: 24px`, `--type-body-lead-line-height: 31.2px`, `--type-body-lead-letter-spacing: 0px`; rule `p` (`font-size: 16px`, `line-height: 24px`)
-- **Metadata & Index Rule**: CSS variables `--font-family-mono: "JetBrains Mono",ui-monospace,monospace`, `--type-display-letter-spacing: -6.6px`, `--type-heading-large-letter-spacing: 0px`
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-display-size: 220px`, `--type-display-line-height: 198px`, `--type-display-letter-spacing: -6.6px`
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 64px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-body-lead-size: 24px`, `--type-body-lead-line-height: 31.2px`, `--type-body-lead-letter-spacing: 0px`; rule `p` (`font-size: 14px`, `line-height: 20px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-family-mono: "JetBrains Mono",ui-monospace,monospace`, `--type-display-letter-spacing: -6.6px`, `--type-heading-large-letter-spacing: 0px`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `ksenpanchenko-com` (`Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav> — `ksenpanchenko-com`)**:
-   - DOM & Selectors: Landmark `<header class="nav">` hosting `Ksen Panchenko — UX/UI & Product Des` navigation (`Work · About`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-end="1"`), and stylesheet rule `.sw__reel.is-active { opacity:1;visibility:visible;transition:opacity .55s var(--ease-out) .08... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `ksenpanchenko-com`)` (`ksenpanchenko-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (max-width:1023px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)` transitions and links `Work · About`.
+   - DOM & Selectors: Landmark `<header class="nav">` (`1440x56px`) hosting `Ksen Panchenko — UX/UI & Product Des` navigation (`Work · About`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-end="1"`), and stylesheet rule `.hero__center { position:relative;width:733px;max-width:100%;margin:0 auto;padding-top:21px }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `ksenpanchenko-com`)` (`ksenpanchenko-com`) adapts across `@media (max-height:820px)`, `@media (max-height:640px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1023px)` with `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.42,.64,1)` transitions and links `Work · About`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Ksen Panchenko — UX/UI & Product D`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Ksen Panchenko — UX/UI & Product Designer in Dubl...` and copy excerpt *"Available for projects"* over `#ffffff` canvas and `#2b2b2b` ink.
-   - Responsive Contract: Hero stage (`1440×8165px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#2b2b2b` headline `Ksen Panchenko — UX/UI & Product Designer in Dubl...`.
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Ksen Panchenko — UX/UI & Product Designer in Dubl...` and copy excerpt *"Available for projects"* over `#f1f0ec` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f1f0ec` background with `#000000` headline `Ksen Panchenko — UX/UI & Product Designer in Dubl...`.
 3. **Primary Showcase & Content Grid (<section.sw> — `Selected work`)**:
-   - DOM & Selectors: Landmark `<section class="sw">` rendering section `Selected work` with copy *"Dublin 19:22 GMT+0"*, asset references (`7cb8e1b9ab81be17-s.p.woff2`, `dbccb4a9e22cbf0d-s.p.woff2`, `e872e3f251959e82-s.p.woff2`, `kseniia-cutout.webp`), and grid rule `.sw__reel img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacit... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sw> — `Selected work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 300px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.philo> — `Services`)**:
-   - DOM & Selectors: Landmark `<section class="philo">` framing `Services` and `Product & UX` (*"E m a i l m e Email me"*) with `#f1f0ec` surface cards, `#a8a8a6` accents, and `.sw__reel.is-active .sw__win { translate:0 0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.philo> — `Services`)` uses `14px`, `999px`, `12%`, `11%` radii, `#a8a8a6` highlights, and assets (7cb8e1b9ab81be17-s.p.woff2, dbccb4a9e22cbf0d-s.p.woff2, e872e3f251959e82-s.p.woff2).
+   - DOM & Selectors: Landmark `<section class="sw">` rendering section `Selected work` with copy *"Gold London Design Awards 2026 · Emerald24 · UI Design"*, asset references (`7cb8e1b9ab81be17-s.p.woff2`, `dbccb4a9e22cbf0d-s.p.woff2`, `e872e3f251959e82-s.p.woff2`, `kseniia-cutout.webp`), and grid rule `.hero__name { display:grid;margin:0;font-weight:400 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sw> — `Selected work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1376px`, `gap: normal 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.philo> — `Product & UX`)**:
+   - DOM & Selectors: Landmark `<section class="philo">` framing `Product & UX` and `Web & Systems` (*"London Design Awards 2026 · Emerald24 · UI Design"*) with `#ffffff` surface cards, `#c63a10` accents, and `.hero__name>.text-display-hero { padding-left:131px }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.philo> — `Product & UX`)` uses `100px`, `4px`, `999px`, `var(--radius-media)` radii, `#c63a10` highlights, and assets (7cb8e1b9ab81be17-s.p.woff2, dbccb4a9e22cbf0d-s.p.woff2, e872e3f251959e82-s.p.woff2).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ksenpanchenko.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Ksen Panchenko — UX/UI & Product` footer links (`Work · About`), copy *"Gold London Design Awards 2026 · Emerald24 · UI Design"*, and `#2b2b2b` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://ksenpanchenko.com/`)` aligns to `300px` extracted from `ksenpanchenko-com` stylesheet with `4px` lateral canvas padding with `4px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Ksen Panchenko — UX/UI & Product` footer links (`Work · About`), copy *"Ksen Panchenko — UX/UI & Product Designer in Dublin."*, and `#828280` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://ksenpanchenko.com/`)` aligns to `1376px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `32px` lateral canvas padding with `normal 16px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Available for projects"*
-- Copy Excerpt 2: *"Dublin 19:22 GMT+0"*
-- Copy Excerpt 3: *"E m a i l m e Email me"*
-- Copy Excerpt 4: *"Gold London Design Awards 2026 · Emerald24 · UI Design"*
+- Copy Excerpt 2: *"Gold London Design Awards 2026 · Emerald24 · UI Design"*
+- Copy Excerpt 3: *"London Design Awards 2026 · Emerald24 · UI Design"*
+- Copy Excerpt 4: *"Ksen Panchenko — UX/UI & Product Designer in Dublin."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)`
+- **Primary Easing Functions**: `cubic-bezier(.22,1.18,.36,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.42,.64,1)`
 - **Extracted Stylesheet Rules (`ksenpanchenko-com`)**:
-- `.sw__reel.is-active { opacity:1;visibility:visible;transition:opacity .55s var(--ease-out) .08... }`
-- `.sw__reel img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacit... }`
-- `.sw__reel.is-active .sw__win { translate:0 0 }`
-- `.sw__bar i { width:clamp(4px,.75cqw,8px);height:clamp(4px,.75cqw,8px);border-radius:9... }`
-- `.sw__screen { position:relative;aspect-ratio:1600/906 }`
+- `.hero__center { position:relative;width:733px;max-width:100%;margin:0 auto;padding-top:21px }`
+- `.hero__name { display:grid;margin:0;font-weight:400 }`
+- `.hero__name>.text-display-hero { padding-left:131px }`
+- `.hero__name em { color:var(--color-text-accent) }`
+- `.hero__contact img { width:72px;height:72px;border-radius:999px }`
 - **Per-Selector Transition Rules**:
-- **Selector `.sw__reel`**: `transition: opacity .55s var(--ease-out),visibility 0s .55s` extracted from `ksenpanchenko-com` stylesheet.
-- **Selector `.sw__reel.is-active`**: `transition: opacity .55s var(--ease-out) .08s,visibility 0s` extracted from `ksenpanchenko-com` stylesheet.
-- **Selector `.cs-next__reel) .sw__reel img`**: `transition: none` extracted from `ksenpanchenko-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sw>`.
+- **Selector `.sw__index li`**: `transition: color .3s` extracted from `ksenpanchenko-com` stylesheet.
+- **Selector `.sw__stage img`**: `transition: opacity .9s var(--ease-out),scale 1.2s var(--ease-out),visibil...` extracted from `ksenpanchenko-com` stylesheet.
+- **Selector `.svc__card`**: `transition: transform .45s var(--ease-out),box-shadow .45s var(--ease-out)...` extracted from `ksenpanchenko-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1.18,.36,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sw>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

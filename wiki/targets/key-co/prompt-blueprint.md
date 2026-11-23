@@ -1,81 +1,83 @@
 ---
 title: "UI Prompt Blueprint: key-co"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "key-co"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#808080` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier2_webgl
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020817` ink, `#1a73e8` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: key-co
 
 > **KEY.co · Luxury Vacation Home Rentals + Concierge Services** (https://key.co/) — Find your perfect getaway with KEY.co. Explore curated vacation homes with in-home services like pre-arrival groceries and private chefs.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **KEY.co · Luxury Vacation Home Rentals + Concierge Services** (`https://key.co/`). Find your perfect getaway with KEY.co. Explore curated vacation homes with in-home services like pre-arrival groceries and private chefs.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#808080` accent)**.
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020817` ink, `#1a73e8` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#808080` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `adobe-caslon-pro` for display copy (`Pack your bags, we’ll do the rest`) with `proxima-nova` and `GeistMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 6px`, padding `15px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#020817` primary typography and `#1a73e8` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `adobe-caslon-pro` for display copy (`Pack your bags, we’ll do the rest`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `10px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `767px` extracted from `key-co` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `15px` lateral canvas padding with `6px` grid gap.
-- **Border Radius Scale**: `var(--radius)`, `.3125rem`, `.375rem`, `.25rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `0px (flush layout)` grid gap.
+- **Border Radius Scale**: `1.2px`, `10px`, `4px`, `20px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 6px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `15px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width:64rem)`, `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (min-width:40rem)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (-ms-high-contrast:active)`, `@media screen and (preferes-contrast:more)`, `@media screen and (prefers-contrast:more)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#0000` | `textarea { background-color: #0000 }` |
-| **Interactive Accent / Highlight** | `#808080` | `:before { border-color: gray }` (`#808080`) |
-| **Secondary / Muted Copy** | `#ffffff` | `.left-b:before { background-color: white }` (`#ffffff`) |
-| **Structural Hairline Border** | `#ce0070` | `.payload-richtext a { color: #ce0070 }` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#020817` | live computed `body` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#fbf9f2` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#1a73e8` | `.hSRGPd { color: #1a73e8 }` |
+| **Secondary / Muted Copy** | `#1a73e8` | `.hSRGPd { color: #1a73e8 }` |
+| **Structural Hairline Border** | `#4285f4` | `.fFW7wc-ibnC6b>.aZ2wEe>div { border-color: #4285f4 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--color-red-50` | `oklch(97.1% .013 17.38)` | Brand / Palette Token |
-| `--color-red-100` | `oklch(93.6% .032 17.717)` | Brand / Palette Token |
-| `--color-red-200` | `oklch(88.5% .062 18.334)` | Brand / Palette Token |
-| `--color-red-400` | `oklch(70.4% .191 22.216)` | Brand / Palette Token |
-| `--color-red-500` | `oklch(63.7% .237 25.331)` | Brand / Palette Token |
-| `--color-red-600` | `oklch(57.7% .245 27.325)` | Brand / Palette Token |
-| `--color-red-700` | `oklch(50.5% .213 27.518)` | Brand / Palette Token |
-| `--color-red-800` | `oklch(44.4% .177 26.899)` | Brand / Palette Token |
-| `--color-orange-100` | `oklch(95.4% .038 75.164)` | Brand / Palette Token |
-| `--color-orange-600` | `oklch(64.6% .222 41.116)` | Brand / Palette Token |
-| `--color-green-100` | `oklch(96.2% .044 156.743)` | Brand / Palette Token |
-| `--color-green-600` | `oklch(62.7% .194 149.214)` | Brand / Palette Token |
-| `--color-blue-50` | `oklch(97% .014 254.604)` | Brand / Palette Token |
-| `--color-blue-100` | `oklch(93.2% .032 255.585)` | Brand / Palette Token |
-| `--color-blue-500` | `oklch(62.3% .214 259.815)` | Brand / Palette Token |
-| `--color-blue-600` | `oklch(54.6% .245 262.881)` | Brand / Palette Token |
+| `--font-geist-sans` | `'GeistSans', 'GeistSans Fallback'` | Typography / Scale Token |
+| `--top-banner-height` | `41px` | Layout / Spatial Grid Token |
+| `--key-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--key-co-ink` | `#020817` | Primary Typography Ink (computed-derived) |
+| `--key-co-surface` | `#fbf9f2` | Surface Substrate (computed-derived) |
+| `--key-co-accent` | `#1a73e8` | Interactive Accent (computed-derived) |
+| `--key-co-muted` | `#1a73e8` | Secondary Ink (computed-derived) |
+| `--key-co-border` | `#4285f4` | Structural Border (computed-derived) |
+| `--key-co-container` | `1440px` | Container Bound (computed-derived) |
+| `--key-co-gap` | `0px` | Grid Gutter (computed-derived) |
+| `--key-co-pad` | `10px` | Lateral Padding (computed-derived) |
+| `--key-co-ease` | `cubic-bezier(0.25,0.1,0.25,1)` | Primary Easing Function |
+| `--key-co-radius` | `1.2px` | Corner Radius (computed-derived) |
+| `--key-co-fs-base` | `72px` | Observed Font Size Token |
 
 ---
 
@@ -84,66 +86,85 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 ### Font Family Stacks
 - **Display Typography**: `adobe-caslon-pro`.
 - **Primary Body Stack**: `proxima-nova`.
-- **Technical / Metadata Stack**: `GeistMono`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`.
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`font-weight: var(--font-we...`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: .28px`, `font-weight: var(--font-we...`).
-- **Metadata & Navigation Labels**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 92px`, `font-weight: 400`, `letter-spacing: -1.44px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 40px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `layer theme`**: `transition: .15s` extracted from `key-co` stylesheet.
-- **Selector `.navbar-hovered`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `key-co` stylesheet.
-- **Selector `.navbar-hovered .navbar-logo img`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `key-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.relative>` and `<article.wf-proximanova-n5-active>`.
+- **Selector `.P1ekSe-ZMv3u`**: `transition: height .2s linear` extracted from `key-co` stylesheet.
+- **Selector `.P1ekSe-ZMv3u>div:first-child`**: `transition: width .3s linear` extracted from `key-co` stylesheet.
+- **Selector `.nsm7Bb-HzV7m-LgbsSe`**: `transition: background-color .218s,border-color .218s` extracted from `key-co` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — KEY.co · Luxury Vacation Home Rentals + Co │
 │ ====================================================================== │
-│ [ <nav.relative>           | Overview · Index · Archive · About · C ]  │
+│ [ <nav.max-w-max> (1120x68px)         | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.navbar-section>                             |   │
-│ | H1: Pack your bags, we’ll do the rest                            |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #808080        |   │
+│ | HERO STAGE: <section.navbar-section> (w=1440px)                    | │
+│ | H1: Pack your bags, we’ll do the rest                              | │
+│ | Substrate: #ffffff | Ink: #020817 | Accent: #1a73e8                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.wf-proximanova-n5) max-w: 767px          |   │
+│ | SHOWCASE GRID (<article.wf-proximanova-n4) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Homes that inspire           |  | Elegant Escape               | | │
+│ | | $500 off $10k+ stays w/ HOLI |  | Curated Vacation Homes + Lux | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 6px   ) | │
-│ | [<nav.relative>] -> [<section.navbar-se] -> [<article.wf-proxim] |   │
+│ | DETAIL MODULE (<section.video-fit>) — Explore our selection        | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.bg-brand-beige) | https://key.co/                    │
+│ [ FOOTER (<footer.bg-brand-bei) | https://key.co/                      │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0px (flu)   │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.max-w-max>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.navbar-section>) — 390px Vertical Lead        | │
+│ | H1: Pack your bags, we’ll do the rest                              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<article.wf-proximanov) — 1-Col Stack              | │
+│ | [ Item 1: $500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 1       ] | │
+│ | [ Item 2: Curated Vacation Homes + Luxury Services               ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.video-fit>) — 1-Col (Explore our select)    | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.bg-brand-bei) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<nav.relative> — `key-co`)**:
-   - Landmark `<nav class="relative flex">` hosting `KEY.co · Luxury Vacation Home Rental` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-theme="light"`), and stylesheet rule `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`.
+1. **Brand Header & Navigation Bar (<nav.max-w-max> — `key-co`)**:
+   - Landmark `<nav class="max-w-max flex-1">` (`1120x68px`) hosting `KEY.co · Luxury Vacation Home Rental` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-theme="light"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
 2. **Hero Stage & Focal Lead (<section.navbar-section> — `Pack your bags, we’ll do the rest`)**:
-   - Landmark `<section class="navbar-section">` presenting display lead `Pack your bags, we’ll do the rest` and copy excerpt *"$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 12/31"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<article.wf-proximanova-n5-active> — `Homes that inspire`)**:
-   - Landmark `<article class="wf-proximanova-n5-active">` rendering section `Homes that inspire` with copy *"Curated Vacation Homes + Luxury Services"*, asset references (`oaiq.min.js`, `283498678855975`, `fbevents.js`, `gtm.js`), and grid rule `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Elegant Escape`)**:
-   - Landmark `<section class="relative video-fit">` framing `Elegant Escape` and `Galloping Goose Chalet` (*"Search destination"*) with `#0000` surface cards, `#808080` accents, and `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="navbar-section">` presenting display lead `Pack your bags, we’ll do the rest` and copy excerpt *"$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 12/31"* over `#ffffff` canvas and `#020817` ink.
+3. **Primary Showcase & Content Grid (<article.wf-proximanova-n4-active> — `$500 off $10k+ stays w/ HOLIDAYSAR`)**:
+   - Landmark `<article class="wf-proximanova-n4-active">` rendering section `$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 1` with copy *"Curated Vacation Homes + Luxury Services"*, asset references (`oaiq.min.js`, `283498678855975`, `fbevents.js`, `gtm.js`), and grid rule `.tk-adobe-caslon-pro { font-family: "adobe-caslon-pro",serif; }`.
+4. **Interactive Detail & Feature Matrix (<section.video-fit> — `Curated Vacation Homes + Luxury Se`)**:
+   - Landmark `<section class="video-fit no-gsap-animation">` framing `Curated Vacation Homes + Luxury Services` and `Explore our selection of premium homes—each chos` (*"Explore our selection of premium homes—each chosen for style, com"*) with `#fbf9f2` surface cards, `#1a73e8` accents, and `.tk-futura-pt { font-family: "futura-pt",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.bg-brand-beige> — `https://key.co/`)**:
-   - Landmark `<footer class="bg-brand-beige">` anchoring `KEY.co · Luxury Vacation Home Re` footer links (`Overview · Index · Archive · About · Contact`), copy *"Explore our selection of premium homes—each chosen for style"*, and `#ce0070` structural dividers.
+   - Landmark `<footer class="bg-brand-beige">` anchoring `KEY.co · Luxury Vacation Home Re` footer links (`Overview · Index · Archive · About · Contact`), copy *"Professionally managed and vetted for comfort and style, our"*, and `#4285f4` structural dividers.
 
 ---
 
@@ -155,102 +176,100 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `key-co` (**KEY.co · Luxury Vacation Home Rentals + Concierge Services** — `https://key.co/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#808080` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020817` ink, `#1a73e8` accent).
 - **Identity & Domain Context**: Find your perfect getaway with KEY.co. Explore curated vacation homes with in-home services like pre-arrival groceries and private chefs.
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#808080`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#020817`, **Accent / Highlight**: `#1a73e8`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#808080` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `adobe-caslon-pro` for display copy (`Pack your bags, we’ll do the rest`) with `proxima-nova` and `GeistMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 6px`, padding `15px`) with `cubic-bezier(0,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#020817` primary typography and `#1a73e8` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `adobe-caslon-pro` for display copy (`Pack your bags, we’ll do the rest`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `10px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `key-co` in your global stylesheet:
 
 :root {
-  /* KEY.co · Luxury Vacation Home Rentals + Concierge Services (key-co) — Ground-Truth Extracted CSS Variables */
-  --color-red-50: oklch(97.1% .013 17.38); /* Brand / Palette Token (key-co) */
-  --color-red-100: oklch(93.6% .032 17.717); /* Brand / Palette Token (key-co) */
-  --color-red-200: oklch(88.5% .062 18.334); /* Brand / Palette Token (key-co) */
-  --color-red-400: oklch(70.4% .191 22.216); /* Brand / Palette Token (key-co) */
-  --color-red-500: oklch(63.7% .237 25.331); /* Brand / Palette Token (key-co) */
-  --color-red-600: oklch(57.7% .245 27.325); /* Brand / Palette Token (key-co) */
-  --color-red-700: oklch(50.5% .213 27.518); /* Brand / Palette Token (key-co) */
-  --color-red-800: oklch(44.4% .177 26.899); /* Brand / Palette Token (key-co) */
-  --color-orange-100: oklch(95.4% .038 75.164); /* Brand / Palette Token (key-co) */
-  --color-orange-600: oklch(64.6% .222 41.116); /* Brand / Palette Token (key-co) */
-  --color-green-100: oklch(96.2% .044 156.743); /* Brand / Palette Token (key-co) */
-  --color-green-600: oklch(62.7% .194 149.214); /* Brand / Palette Token (key-co) */
-  --color-blue-50: oklch(97% .014 254.604); /* Brand / Palette Token (key-co) */
-  --color-blue-100: oklch(93.2% .032 255.585); /* Brand / Palette Token (key-co) */
-  --color-blue-500: oklch(62.3% .214 259.815); /* Brand / Palette Token (key-co) */
-  --color-blue-600: oklch(54.6% .245 262.881); /* Brand / Palette Token (key-co) */
+  /* KEY.co · Luxury Vacation Home Rentals + Concierge Services (key-co) — Live-Grounded CSS Variables */
+  --font-geist-sans: 'GeistSans', 'GeistSans Fallback'; /* Typography / Scale Token (key-co) */
+  --top-banner-height: 41px; /* Layout / Spatial Grid Token (key-co) */
+  --key-co-bg: #ffffff; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (key-co) */
+  --key-co-ink: #020817; /* Primary Typography Ink (computed-derived) (key-co) */
+  --key-co-surface: #fbf9f2; /* Surface Substrate (computed-derived) (key-co) */
+  --key-co-accent: #1a73e8; /* Interactive Accent (computed-derived) (key-co) */
+  --key-co-muted: #1a73e8; /* Secondary Ink (computed-derived) (key-co) */
+  --key-co-border: #4285f4; /* Structural Border (computed-derived) (key-co) */
+  --key-co-container: 1440px; /* Container Bound (computed-derived) (key-co) */
+  --key-co-gap: 0px; /* Grid Gutter (computed-derived) (key-co) */
+  --key-co-pad: 10px; /* Lateral Padding (computed-derived) (key-co) */
+  --key-co-ease: cubic-bezier(0.25,0.1,0.25,1); /* Primary Easing Function (key-co) */
+  --key-co-radius: 1.2px; /* Corner Radius (computed-derived) (key-co) */
+  --key-co-fs-base: 72px; /* Observed Font Size Token (key-co) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#0000` — grounded in `textarea { background-color: #0000 }`
-- **Interactive Accent / Highlight**: `#808080` — grounded in `:before { border-color: gray }` (`#808080`)
-- **Secondary / Muted Copy**: `#ffffff` — grounded in `.left-b:before { background-color: white }` (`#ffffff`)
-- **Structural Hairline Border**: `#ce0070` — grounded in `.payload-richtext a { color: #ce0070 }`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#020817` — grounded in live computed `body` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#fbf9f2` — grounded in live computed `footer` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#1a73e8` — grounded in `.hSRGPd { color: #1a73e8 }`
+- **Secondary / Muted Copy**: `#1a73e8` — grounded in `.hSRGPd { color: #1a73e8 }`
+- **Structural Hairline Border**: `#4285f4` — grounded in `.fFW7wc-ibnC6b>.aZ2wEe>div { border-color: #4285f4 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `767px` extracted from `key-co` stylesheet
-- **Padding & Gutters**: `15px` lateral canvas padding with `6px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 6px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `15px` horizontal padding
-- **Media Queries**: `@media (min-width:64rem)`, `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (min-width:40rem)`
-- **Corner Radii**: `var(--radius)`, `.3125rem`, `.375rem`, `.25rem`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `10px` lateral canvas padding with `0px (flush layout)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
+- **Media Queries**: `@media screen and (-ms-high-contrast:active)`, `@media screen and (preferes-contrast:more)`, `@media screen and (prefers-contrast:more)`
+- **Corner Radii**: `1.2px`, `10px`, `4px`, `20px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `adobe-caslon-pro`
 - **Body Font Stack**: `proxima-nova`
-- **Monospace / Technical Font Stack**: `GeistMono`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `,h2` (`font-weight: var(--font-we...`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: .28px`, `font-weight: var(--font-we...`)
-- **Metadata & Index Rule**: CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`, `--text-sm: .875rem`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 92px`, `font-weight: 400`, `letter-spacing: -1.44px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 32px`, `line-height: 40px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `key-co` (`KEY.co · Luxury Vacation Home Rentals + Concierge Services`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<nav.relative> — `key-co`)**:
-   - DOM & Selectors: Landmark `<nav class="relative flex">` hosting `KEY.co · Luxury Vacation Home Rental` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-theme="light"`), and stylesheet rule `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.relative> — `key-co`)` (`key-co`) adapts across `@media (min-width:64rem)`, `@media (max-width:767px)`, `@media (min-width:768px)`, `@media (min-width:40rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+1. **Brand Header & Navigation Bar (<nav.max-w-max> — `key-co`)**:
+   - DOM & Selectors: Landmark `<nav class="max-w-max flex-1">` (`1120x68px`) hosting `KEY.co · Luxury Vacation Home Rental` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-theme="light"`), and stylesheet rule `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.max-w-max> — `key-co`)` (`key-co`) adapts across `@media screen and (-ms-high-contrast:active)`, `@media screen and (preferes-contrast:more)`, `@media screen and (prefers-contrast:more)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.navbar-section> — `Pack your bags, we’ll do the rest`)**:
-   - DOM & Selectors: Landmark `<section class="navbar-section">` presenting display lead `Pack your bags, we’ll do the rest` and copy excerpt *"$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 12/31"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Pack your bags, we’ll do the rest`.
-3. **Primary Showcase & Content Grid (<article.wf-proximanova-n5-active> — `Homes that inspire`)**:
-   - DOM & Selectors: Landmark `<article class="wf-proximanova-n5-active">` rendering section `Homes that inspire` with copy *"Curated Vacation Homes + Luxury Services"*, asset references (`oaiq.min.js`, `283498678855975`, `fbevents.js`, `gtm.js`), and grid rule `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.wf-proximanova-n5-active> — `Homes that inspire`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 6px`) on desktop and Single-column vertical stack at `390px` viewport width with `15px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.relative> — `Elegant Escape`)**:
-   - DOM & Selectors: Landmark `<section class="relative video-fit">` framing `Elegant Escape` and `Galloping Goose Chalet` (*"Search destination"*) with `#0000` surface cards, `#808080` accents, and `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.relative> — `Elegant Escape`)` uses `var(--radius)`, `.3125rem`, `.375rem`, `.25rem` radii, `#808080` highlights, and assets (oaiq.min.js, 283498678855975, fbevents.js).
+   - DOM & Selectors: Landmark `<section class="navbar-section">` presenting display lead `Pack your bags, we’ll do the rest` and copy excerpt *"$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 12/31"* over `#ffffff` canvas and `#020817` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#020817` headline `Pack your bags, we’ll do the rest`.
+3. **Primary Showcase & Content Grid (<article.wf-proximanova-n4-active> — `$500 off $10k+ stays w/ HOLIDAYSAR`)**:
+   - DOM & Selectors: Landmark `<article class="wf-proximanova-n4-active">` rendering section `$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 1` with copy *"Curated Vacation Homes + Luxury Services"*, asset references (`oaiq.min.js`, `283498678855975`, `fbevents.js`, `gtm.js`), and grid rule `.tk-adobe-caslon-pro { font-family: "adobe-caslon-pro",serif; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.wf-proximanova-n4-active> — `$500 off $10k+ stays w/ HOLIDAYSAR`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.video-fit> — `Curated Vacation Homes + Luxury Se`)**:
+   - DOM & Selectors: Landmark `<section class="video-fit no-gsap-animation">` framing `Curated Vacation Homes + Luxury Services` and `Explore our selection of premium homes—each chos` (*"Explore our selection of premium homes—each chosen for style, com"*) with `#fbf9f2` surface cards, `#1a73e8` accents, and `.tk-futura-pt { font-family: "futura-pt",sans-serif; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.video-fit> — `Curated Vacation Homes + Luxury Se`)` uses `1.2px`, `10px`, `4px`, `20px` radii, `#1a73e8` highlights, and assets (oaiq.min.js, 283498678855975, fbevents.js).
 5. **Colophon & Global Directory Footer (<footer.bg-brand-beige> — `https://key.co/`)**:
-   - DOM & Selectors: Landmark `<footer class="bg-brand-beige">` anchoring `KEY.co · Luxury Vacation Home Re` footer links (`Overview · Index · Archive · About · Contact`), copy *"Explore our selection of premium homes—each chosen for style"*, and `#ce0070` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-brand-beige> — `https://key.co/`)` aligns to `767px` extracted from `key-co` stylesheet with `15px` lateral canvas padding with `6px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="bg-brand-beige">` anchoring `KEY.co · Luxury Vacation Home Re` footer links (`Overview · Index · Archive · About · Contact`), copy *"Professionally managed and vetted for comfort and style, our"*, and `#4285f4` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-brand-beige> — `https://key.co/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `10px` lateral canvas padding with `0px (flush layout)` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"$500 off $10k+ stays w/ HOLIDAYSAREHERE - ends 12/31"*
 - Copy Excerpt 2: *"Curated Vacation Homes + Luxury Services"*
-- Copy Excerpt 3: *"Search destination"*
-- Copy Excerpt 4: *"Explore our selection of premium homes—each chosen for style, comfort, and unforge..."*
+- Copy Excerpt 3: *"Explore our selection of premium homes—each chosen for style, comfort, and unforge..."*
+- Copy Excerpt 4: *"Professionally managed and vetted for comfort and style, our homes raise the bar...."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`
+- **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
 - **Extracted Stylesheet Rules (`key-co`)**:
-- `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`
-- `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`
-- `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `strong { font-weight:bolder }`
+- `.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }`
+- `.tk-adobe-caslon-pro { font-family: "adobe-caslon-pro",serif; }`
+- `.tk-futura-pt { font-family: "futura-pt",sans-serif; }`
+- `.tk-futura-pt-bold { font-family: "futura-pt-bold",sans-serif; }`
+- `.ynRLnc { left:-9999px;position:absolute;top:-9999px }`
 - **Per-Selector Transition Rules**:
-- **Selector `layer theme`**: `transition: .15s` extracted from `key-co` stylesheet.
-- **Selector `.navbar-hovered`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `key-co` stylesheet.
-- **Selector `.navbar-hovered .navbar-logo img`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `key-co` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.relative>` and `<article.wf-proximanova-n5-active>`.
+- **Selector `.P1ekSe-ZMv3u`**: `transition: height .2s linear` extracted from `key-co` stylesheet.
+- **Selector `.P1ekSe-ZMv3u>div:first-child`**: `transition: width .3s linear` extracted from `key-co` stylesheet.
+- **Selector `.nsm7Bb-HzV7m-LgbsSe`**: `transition: background-color .218s,border-color .218s` extracted from `key-co` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

@@ -1,149 +1,177 @@
 ---
 title: "UI Prompt Blueprint: annnimate-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "annnimate-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f5f5f5`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#b3fca0` / `#ca4417`)"
 ---
 
 # UI Design System & Master Generation Blueprint: annnimate-com
 
 > **GSAP Motion Components for React & Vue · Annnimate** (https://annnimate.com) — Production GSAP motion components for React and Vue. Every component is built to the standard we ship for real brands. By Good Fella.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **GSAP Motion Components for React & Vue · Annnimate** (`https://annnimate.com`). Production GSAP motion components for React and Vue. Every component is built to the standard we ship for real brands. By Good Fella.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f5f5f5`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#b3fca0` / `#ca4417`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f5f5f5` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geist` for display copy (`Give any site award‑level animation `) with `Geist Mono` and `Geist Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 3px`, padding `1.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#b3fca0` (live computed `meta-theme-color` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ca4417` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `geistSans` for display copy (`Give any site award‑level animation `) with `geistSans Fallback` and `geistMono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 12px`, padding `22px`) with `cubic-bezier(.7,0,.16,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `40rem` extracted from `annnimate-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `3px` grid gap.
-- **Border Radius Scale**: `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)`, `var(--adm-radius-sm)`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `22px` lateral canvas padding with `12px` grid gap.
+- **Border Radius Scale**: `16px`, `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 3px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 12px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `22px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:767px)`, `@media (max-width:479px)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fafafa` | `var(--gray-50)` in `:root` |
-| **Interactive Accent / Highlight** | `#f5f5f5` | `var(--gray-100)` in `:root` |
-| **Secondary / Muted Copy** | `#eee` | `var(--gray-150)` in `:root` |
-| **Structural Hairline Border** | `#e8e8e8` | `var(--gray-200)` in `:root` |
+| **Primary Canvas Substrate** | `#b3fca0` | live computed `meta-theme-color` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | `var(--foreground)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#f2f2ef` | `var(--ga-bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#ca4417` | `var(--primary)` in `:root` |
+| **Secondary / Muted Copy** | `#696869` | `var(--foreground-muted)` in `:root` |
+| **Structural Hairline Border** | `#d4d4d4` | `var(--surface-border)` in `:root` |
+| **Variable Token (`--ga-tile`)** | `#fafaf8` | `var(--ga-tile)` in `:root` |
+| **Variable Token (`--ga-tile-2`)** | `#e8e8e4` | `var(--ga-tile-2)` in `:root` |
+| **Variable Token (`--ga-fg`)** | `#141314` | `var(--ga-fg)` in `:root` |
+| **Variable Token (`--ga-fg-soft`)** | `#9a9a96` | `var(--ga-fg-soft)` in `:root` |
+| **Variable Token (`--ga-focus`)** | `#101010` | `var(--ga-focus)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--font-geist-sans` | `"geistSans", "geistSans Fallback"` | Typography / Scale Token |
+| `--font-geist-mono` | `"geistMono", "geistMono Fallback"` | Typography / Scale Token |
+| `--font-aktiv` | `"aktivGrotesk", "aktivGrotesk Fallback"` | Typography / Scale Token |
+| `--font-handwritten` | `"shadowsIntoLight", "shadowsIntoLight Fallback"` | Typography / Scale Token |
+| `--ga-bg` | `#f2f2ef` | Canvas / Surface Token |
+| `--ga-tile` | `#fafaf8` | Color / Atmospheric Token |
+| `--ga-tile-2` | `#e8e8e4` | Color / Atmospheric Token |
+| `--ga-ink` | `#fafaf8` | Typography Ink Token |
+| `--ga-fg` | `#141314` | Typography Ink Token |
+| `--ga-fg-soft` | `#9a9a96` | Typography Ink Token |
+| `--ga-fg-dim` | `#9a9a96` | Typography Ink Token |
+| `--ga-focus` | `#1010104d` | Color / Atmospheric Token |
+| `--ga-margin` | `clamp(20px, 2.8vw, 48px)` | Layout / Spatial Grid Token |
+| `--ga-gutter` | `clamp(12px, 1.4vw, 24px)` | Layout / Spatial Grid Token |
+| `--ga-label` | `clamp(18px, 1.4vw, 28px)` | Dimension / Scale Token |
 | `--angle` | `0deg` | Design System Custom Token |
-| `--font-mono` | `var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace` | Typography / Scale Token |
-| `--color-red-400` | `oklch(70.4% .191 22.216)` | Brand / Palette Token |
-| `--color-red-500` | `oklch(63.7% .237 25.331)` | Brand / Palette Token |
-| `--color-red-600` | `oklch(57.7% .245 27.325)` | Brand / Palette Token |
-| `--color-amber-400` | `oklch(82.8% .189 84.429)` | Brand / Palette Token |
-| `--color-amber-500` | `oklch(76.9% .188 70.08)` | Brand / Palette Token |
-| `--color-lime-50` | `oklch(98.6% .031 120.757)` | Brand / Palette Token |
-| `--color-lime-100` | `oklch(96.7% .067 122.328)` | Brand / Palette Token |
-| `--color-lime-200` | `oklch(93.8% .127 124.321)` | Brand / Palette Token |
-| `--color-lime-300` | `oklch(89.7% .196 126.665)` | Brand / Palette Token |
-| `--color-lime-400` | `oklch(84.1% .238 128.85)` | Brand / Palette Token |
-| `--color-lime-500` | `oklch(76.8% .233 130.85)` | Brand / Palette Token |
-| `--color-lime-600` | `oklch(64.8% .2 131.684)` | Brand / Palette Token |
-| `--color-lime-700` | `oklch(53.2% .157 131.589)` | Brand / Palette Token |
-| `--color-lime-800` | `oklch(45.3% .124 130.933)` | Brand / Palette Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Geist`.
-- **Primary Body Stack**: `Geist Mono`.
-- **Technical / Metadata Stack**: `Geist Mono`.
+- **Display Typography**: `geistSans`.
+- **Primary Body Stack**: `geistSans Fallback`.
+- **Technical / Metadata Stack**: `geistMono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `,.h1` (`font-size: var(--font-size-4xl)`, `line-height: 1.2`, `letter-spacing: -.04em`).
 - **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `,.h2` (`font-size: var(--font-size-2xl)`, `line-height: 1.2`, `letter-spacing: -.03em`).
 - **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-size-base: clamp(1rem,.95rem + .25vw,1.125rem)`.
-- **Metadata & Navigation Labels**: CSS variables `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`.
+- **Metadata & Navigation Labels**: CSS variables `--font-geist-mono: "geistMono", "geistMono Fallback"`, `--ga-label: clamp(18px, 1.4vw, 28px)`, `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.7,0,.16,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
+- **Selector `.macc_trigger_crisp`**: `transition: background-color .3s cubic-bezier(.7,0,.16,1)` extracted from `annnimate-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `annnimate-com` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `annnimate-com` stylesheet.
-- **Selector `.transition\!`**: `transition: var(--tw-ease,var(--default-transition-timing-function))!impor...` extracted from `annnimate-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.v2-header>` and `<section.bg-background>`.
+- **Extracted Easing Curve (`cubic-bezier(.7,0,.16,1)`)**: Governs interactive state transitions across `<header.v2-header>` and `<section.pt-64>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — GSAP Motion Components for React & Vue · A │
 │ ====================================================================== │
-│ [ <header.v2-header>       | Library Library · Kits Kits New · Lear ]  │
+│ [ <header.v2-header> (1440px)         | Library Library · Kits Kits  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.relative>                                   |   │
-│ | H1: Give any site award‑level animation in minutes.              |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #f5f5f5        |   │
+│ | HERO STAGE: <section.bg-background> (w=1440px)                     | │
+│ | H1: Give any site award‑level animation in minutes.                | │
+│ | Substrate: #b3fca0 | Ink: #000000 | Accent: #ca4417                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.bg-background>   ) max-w: 40rem          |   │
+│ | SHOWCASE GRID (<section.pt-64>) max-w: 96rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Try it before you copy it.   |  | Client-ready the moment you  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 3px   ) | │
-│ | [<header.v2-header>] -> [<section.relative>] -> [<section.bg-backgr] │
+│ | DETAIL MODULE (<section.py-64>) — Motion that wins the             | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.annnimate-foot) | https://annnimate.com              │
+│ [ FOOTER (<footer.annnimate-fo) | https://annnimate.com                │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 12px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.v2-header>      ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.bg-background>) — 390px Vertical Lead         | │
+│ | H1: Give any site award‑level animation in minutes.                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.pt-64>) — 1-Col Stack                     | │
+│ | [ Item 1: Try it before you copy it.                             ] | │
+│ | [ Item 2: Client-ready the moment you paste it.                  ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.py-64>) — 1-Col (Motion that wins t)        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.annnimate-fo) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.v2-header> — `annnimate-com`)**:
-   - Landmark `<header class="v2-header inset-x-0">` hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `host { --glass-primary:color-mix(in srgb,var(--color-muted)70%,transparent) }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Give any site award‑level animatio`)**:
-   - Landmark `<section class="relative flex">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Get access Get access"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.bg-background> — `Try it before you copy it.`)**:
-   - Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"Curated, not a catalog dump."*, asset references (`edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`, `3e5aujvbo39dz.css`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.bg-background> — `Client-ready the moment you paste `)**:
-   - Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"Every component built to the bar we ship for real brands. Filter,"*) with `#fafafa` surface cards, `#f5f5f5` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="v2-header inset-x-0">` (`1440px`) hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.QRhTIa_className { font-family:geistSans,geistSans Fallback }`.
+2. **Hero Stage & Focal Lead (<section.bg-background> — `Give any site award‑level animatio`)**:
+   - Landmark `<section class="bg-background pt-112">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Give any site award‑level"* over `#b3fca0` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.pt-64> — `Try it before you copy it.`)**:
+   - Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"animation in minutes."*, asset references (`teaser-poster.jpg`, `edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`), and grid rule `.QRhTIa_variable { --font-geist-sans:"geistSans", "geistSans Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.py-64> — `Client-ready the moment you paste `)**:
+   - Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"The same GSAP animations we build for Coca-Cola and Powerade, rea"*) with `#f2f2ef` surface cards, `#ca4417` accents, and `.mNpjDG_className { font-family:geistMono,geistMono Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.annnimate-footer> — `https://annnimate.com`)**:
-   - Landmark `<footer class="annnimate-footer relative">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Browse the library Browse the library"*, and `#e8e8e8` structural dividers.
+   - Landmark `<footer class="annnimate-footer bg-background">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Get access -25% Get access -25%"*, and `#d4d4d4` structural dividers.
 
 ---
 
@@ -155,102 +183,107 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f5f
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `annnimate-com` (**GSAP Motion Components for React & Vue · Annnimate** — `https://annnimate.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000` / `#f5f5f5`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b3fca0` / `#ca4417`).
 - **Identity & Domain Context**: Production GSAP motion components for React and Vue. Every component is built to the standard we ship for real brands. By Good Fella.
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#f5f5f5`.
+- **Primary Substrate**: `#b3fca0` (live computed `meta-theme-color` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ca4417`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#f5f5f5` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Geist` for display copy (`Give any site award‑level animation `) with `Geist Mono` and `Geist Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `40rem` container bounds (`gap: 3px`, padding `1.5rem`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#b3fca0` (live computed `meta-theme-color` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ca4417` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `geistSans` for display copy (`Give any site award‑level animation `) with `geistSans Fallback` and `geistMono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 12px`, padding `22px`) with `cubic-bezier(.7,0,.16,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `annnimate-com` in your global stylesheet:
 
 :root {
-  /* GSAP Motion Components for React & Vue · Annnimate (annnimate-com) — Ground-Truth Extracted CSS Variables */
+  /* GSAP Motion Components for React & Vue · Annnimate (annnimate-com) — Live-Grounded CSS Variables */
+  --font-geist-sans: "geistSans", "geistSans Fallback"; /* Typography / Scale Token (annnimate-com) */
+  --font-geist-mono: "geistMono", "geistMono Fallback"; /* Typography / Scale Token (annnimate-com) */
+  --font-aktiv: "aktivGrotesk", "aktivGrotesk Fallback"; /* Typography / Scale Token (annnimate-com) */
+  --font-handwritten: "shadowsIntoLight", "shadowsIntoLight Fallback"; /* Typography / Scale Token (annnimate-com) */
+  --ga-bg: #f2f2ef; /* Canvas / Surface Token (annnimate-com) */
+  --ga-tile: #fafaf8; /* Color / Atmospheric Token (annnimate-com) */
+  --ga-tile-2: #e8e8e4; /* Color / Atmospheric Token (annnimate-com) */
+  --ga-ink: #fafaf8; /* Typography Ink Token (annnimate-com) */
+  --ga-fg: #141314; /* Typography Ink Token (annnimate-com) */
+  --ga-fg-soft: #9a9a96; /* Typography Ink Token (annnimate-com) */
+  --ga-fg-dim: #9a9a96; /* Typography Ink Token (annnimate-com) */
+  --ga-focus: #1010104d; /* Color / Atmospheric Token (annnimate-com) */
+  --ga-margin: clamp(20px, 2.8vw, 48px); /* Layout / Spatial Grid Token (annnimate-com) */
+  --ga-gutter: clamp(12px, 1.4vw, 24px); /* Layout / Spatial Grid Token (annnimate-com) */
+  --ga-label: clamp(18px, 1.4vw, 28px); /* Dimension / Scale Token (annnimate-com) */
   --angle: 0deg; /* Design System Custom Token (annnimate-com) */
-  --font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace; /* Typography / Scale Token (annnimate-com) */
-  --color-red-400: oklch(70.4% .191 22.216); /* Brand / Palette Token (annnimate-com) */
-  --color-red-500: oklch(63.7% .237 25.331); /* Brand / Palette Token (annnimate-com) */
-  --color-red-600: oklch(57.7% .245 27.325); /* Brand / Palette Token (annnimate-com) */
-  --color-amber-400: oklch(82.8% .189 84.429); /* Brand / Palette Token (annnimate-com) */
-  --color-amber-500: oklch(76.9% .188 70.08); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-50: oklch(98.6% .031 120.757); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-100: oklch(96.7% .067 122.328); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-200: oklch(93.8% .127 124.321); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-300: oklch(89.7% .196 126.665); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-400: oklch(84.1% .238 128.85); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-500: oklch(76.8% .233 130.85); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-600: oklch(64.8% .2 131.684); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-700: oklch(53.2% .157 131.589); /* Brand / Palette Token (annnimate-com) */
-  --color-lime-800: oklch(45.3% .124 130.933); /* Brand / Palette Token (annnimate-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fafafa` — grounded in `var(--gray-50)` in `:root`
-- **Interactive Accent / Highlight**: `#f5f5f5` — grounded in `var(--gray-100)` in `:root`
-- **Secondary / Muted Copy**: `#eee` — grounded in `var(--gray-150)` in `:root`
-- **Structural Hairline Border**: `#e8e8e8` — grounded in `var(--gray-200)` in `:root`
+- **Primary Canvas Substrate**: `#b3fca0` — grounded in live computed `meta-theme-color` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in `var(--foreground)` in `:root`
+- **Elevated Surface / Card Substrate**: `#f2f2ef` — grounded in `var(--ga-bg)` in `:root`
+- **Interactive Accent / Highlight**: `#ca4417` — grounded in `var(--primary)` in `:root`
+- **Secondary / Muted Copy**: `#696869` — grounded in `var(--foreground-muted)` in `:root`
+- **Structural Hairline Border**: `#d4d4d4` — grounded in `var(--surface-border)` in `:root`
+- **Variable Token (`--ga-tile`)**: `#fafaf8` — grounded in `var(--ga-tile)` in `:root`
+- **Variable Token (`--ga-tile-2`)**: `#e8e8e4` — grounded in `var(--ga-tile-2)` in `:root`
+- **Variable Token (`--ga-fg`)**: `#141314` — grounded in `var(--ga-fg)` in `:root`
+- **Variable Token (`--ga-fg-soft`)**: `#9a9a96` — grounded in `var(--ga-fg-soft)` in `:root`
+- **Variable Token (`--ga-focus`)**: `#101010` — grounded in `var(--ga-focus)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `40rem` extracted from `annnimate-com` stylesheet
-- **Padding & Gutters**: `1.5rem` lateral canvas padding with `3px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 3px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding
-- **Media Queries**: `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)`
-- **Corner Radii**: `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)`, `var(--adm-radius-sm)`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `22px` lateral canvas padding with `12px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 12px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `22px` horizontal padding
+- **Media Queries**: `@media (max-width:767px)`, `@media (max-width:479px)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`
+- **Corner Radii**: `16px`, `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Geist`
-- **Body Font Stack**: `Geist Mono`
-- **Monospace / Technical Font Stack**: `Geist Mono`
+- **Display Font Stack**: `geistSans`
+- **Body Font Stack**: `geistSans Fallback`
+- **Monospace / Technical Font Stack**: `geistMono`
 - **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`; rule `,.h1` (`font-size: var(--font-size-4xl)`, `line-height: 1.2`, `letter-spacing: -.04em`)
 - **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `,.h2` (`font-size: var(--font-size-2xl)`, `line-height: 1.2`, `letter-spacing: -.03em`)
 - **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`, `--font-size-base: clamp(1rem,.95rem + .25vw,1.125rem)`
-- **Metadata & Index Rule**: CSS variables `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
+- **Metadata & Index Rule**: CSS variables `--font-geist-mono: "geistMono", "geistMono Fallback"`, `--ga-label: clamp(18px, 1.4vw, 28px)`, `--font-mono: var(--font-geist-mono),"SF Mono",Monaco,"Cascadia Code",monospace`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `annnimate-com` (`GSAP Motion Components for React & Vue · Annnimate`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.v2-header> — `annnimate-com`)**:
-   - DOM & Selectors: Landmark `<header class="v2-header inset-x-0">` hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `host { --glass-primary:color-mix(in srgb,var(--color-muted)70%,transparent) }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.v2-header> — `annnimate-com`)` (`annnimate-com`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Give any site award‑level animatio`)**:
-   - DOM & Selectors: Landmark `<section class="relative flex">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Get access Get access"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Give any site award‑level animation in minutes.`.
-3. **Primary Showcase & Content Grid (<section.bg-background> — `Try it before you copy it.`)**:
-   - DOM & Selectors: Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"Curated, not a catalog dump."*, asset references (`edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`, `3e5aujvbo39dz.css`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-background> — `Try it before you copy it.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 40rem`, `gap: 3px`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.bg-background> — `Client-ready the moment you paste `)**:
-   - DOM & Selectors: Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"Every component built to the bar we ship for real brands. Filter,"*) with `#fafafa` surface cards, `#f5f5f5` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.bg-background> — `Client-ready the moment you paste `)` uses `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)`, `var(--adm-radius-sm)` radii, `#f5f5f5` highlights, and assets (edoardo_avatar.avif, lukas_avatar.avif, matthew_avatar.avif).
+   - DOM & Selectors: Landmark `<header class="v2-header inset-x-0">` (`1440px`) hosting `GSAP Motion Components for React & V` navigation (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.QRhTIa_className { font-family:geistSans,geistSans Fallback }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.v2-header> — `annnimate-com`)` (`annnimate-com`) adapts across `@media (max-width:767px)`, `@media (max-width:479px)`, `@media (min-width:40rem)`, `@media (min-width:48rem)` with `cubic-bezier(.7,0,.16,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)` transitions and links `Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`.
+2. **Hero Stage & Focal Lead (<section.bg-background> — `Give any site award‑level animatio`)**:
+   - DOM & Selectors: Landmark `<section class="bg-background pt-112">` presenting display lead `Give any site award‑level animation in minutes.` and copy excerpt *"Give any site award‑level"* over `#b3fca0` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#b3fca0` background with `#000000` headline `Give any site award‑level animation in minutes.`.
+3. **Primary Showcase & Content Grid (<section.pt-64> — `Try it before you copy it.`)**:
+   - DOM & Selectors: Landmark `<section class="bg-background pt-64">` rendering section `Try it before you copy it.` with copy *"animation in minutes."*, asset references (`teaser-poster.jpg`, `edoardo_avatar.avif`, `lukas_avatar.avif`, `matthew_avatar.avif`), and grid rule `.QRhTIa_variable { --font-geist-sans:"geistSans", "geistSans Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pt-64> — `Try it before you copy it.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `22px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.py-64> — `Client-ready the moment you paste `)**:
+   - DOM & Selectors: Landmark `<section class="bg-background py-64">` framing `Client-ready the moment you paste it.` and `Motion that wins the pitch` (*"The same GSAP animations we build for Coca-Cola and Powerade, rea"*) with `#f2f2ef` surface cards, `#ca4417` accents, and `.mNpjDG_className { font-family:geistMono,geistMono Fallback }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-64> — `Client-ready the moment you paste `)` uses `16px`, `.25rem`, `var(--adm-radius)`, `var(--adm-radius-md)` radii, `#ca4417` highlights, and assets (teaser-poster.jpg, edoardo_avatar.avif, lukas_avatar.avif).
 5. **Colophon & Global Directory Footer (<footer.annnimate-footer> — `https://annnimate.com`)**:
-   - DOM & Selectors: Landmark `<footer class="annnimate-footer relative">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Browse the library Browse the library"*, and `#e8e8e8` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.annnimate-footer> — `https://annnimate.com`)` aligns to `40rem` extracted from `annnimate-com` stylesheet with `1.5rem` lateral canvas padding with `3px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="annnimate-footer bg-background">` anchoring `GSAP Motion Components for React` footer links (`Library Library · Kits Kits New · Learn Learn · Docs Docs · Pricing Pricing`), copy *"Get access -25% Get access -25%"*, and `#d4d4d4` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.annnimate-footer> — `https://annnimate.com`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `22px` lateral canvas padding with `12px` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Get access Get access"*
-- Copy Excerpt 2: *"Curated, not a catalog dump."*
-- Copy Excerpt 3: *"Every component built to the bar we ship for real brands. Filter, preview live, co..."*
-- Copy Excerpt 4: *"Browse the library Browse the library"*
+- Copy Excerpt 1: *"Give any site award‑level"*
+- Copy Excerpt 2: *"animation in minutes."*
+- Copy Excerpt 3: *"The same GSAP animations we build for Coca-Cola and Powerade, ready for React, Vue..."*
+- Copy Excerpt 4: *"Get access -25% Get access -25%"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
+- **Primary Easing Functions**: `cubic-bezier(.7,0,.16,1)`, `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`
 - **Extracted Stylesheet Rules (`annnimate-com`)**:
-- `host { --glass-primary:color-mix(in srgb,var(--color-muted)70%,transparent) }`
-- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
-- `strong { font-weight:bolder }`
-- `small { font-size:80% }`
+- `.QRhTIa_className { font-family:geistSans,geistSans Fallback }`
+- `.QRhTIa_variable { --font-geist-sans:"geistSans", "geistSans Fallback" }`
+- `.mNpjDG_className { font-family:geistMono,geistMono Fallback }`
+- `.mNpjDG_variable { --font-geist-mono:"geistMono", "geistMono Fallback" }`
+- `.b-foHG_className { font-family:aktivGrotesk,aktivGrotesk Fallback }`
 - **Per-Selector Transition Rules**:
+- **Selector `.macc_trigger_crisp`**: `transition: background-color .3s cubic-bezier(.7,0,.16,1)` extracted from `annnimate-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `annnimate-com` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `annnimate-com` stylesheet.
-- **Selector `.transition\!`**: `transition: var(--tw-ease,var(--default-transition-timing-function))!impor...` extracted from `annnimate-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.v2-header>` and `<section.bg-background>`.
+- **Extracted Easing Curve (`cubic-bezier(.7,0,.16,1)`)**: Governs interactive state transitions across `<header.v2-header>` and `<section.pt-64>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

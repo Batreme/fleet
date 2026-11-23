@@ -1,8 +1,13 @@
 ---
 title: "Target Overview: jockey-stuudio-xyz"
-date: 2026-11-14
+date: 2026-11-23
+captured_at: 2026-11-23
 url: "https://jockey.stuudio.xyz/"
-status: analyzed
+final_url: "https://jockey.stuudio.xyz/"
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Hard per-target capture deadline exceeded (150s)"
 tags:
   - target
   - reverse-engineering
@@ -12,26 +17,26 @@ auth_required: false
 
 # Target Overview: jockey-stuudio-xyz
 
-## 🧭 Dossier Navigation
+## Dossier Navigation
+- [UI Prompt Blueprint](prompt-blueprint.md)
+- [UI Architecture & Design Tokens](ui-ux.md)
 - [Discovered APIs & Network Protocols](apis.md)
 - [Data Models & Local State](data-models.md)
-- [UI Architecture & Design Tokens](ui-ux.md)
 - [De-obfuscated Source Maps](source-maps.md)
 
 ---
 
-## 🏗️ Architecture & Stack Fingerprint
-- **Target URL**: `https://jockey.stuudio.xyz/`
-- **Page Title**: Jockey by TwelveLabs: The Video Intelligence Agent
+## Architecture & Stack Fingerprint
+- **Target URL**: [https://jockey.stuudio.xyz/](https://jockey.stuudio.xyz/)
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Page Title**: jockey-stuudio-xyz
 - **Identified Frameworks**: Modern Web Application
-- **Auth Profile Used**: None (Public session)
-- **Recorded API Endpoints**: 14
-- **Recovered Scripts**: 32
-- **Recovered Stylesheets**: 1
+- **Recovered Scripts**: `0`
+- **Recovered Stylesheets**: `0`
 
 ---
 
-## 💡 Key Architectural Lessons (Anti-AI-Slop Insights)
-- **Domain Modeling**: See [data-models](data-models.md) for concrete entity structures observed in network requests and local storage.
-- **Client Architecture**: Inferred from UI layout primitives and client storage persistence.
-- **[UI Prompt Blueprint](prompt-blueprint.md)** — 7-part design system analysis, desktop/mobile visual captures, and zero-shot generation prompt.
+## Key Architectural Lessons
+- **UI & Design System**: See [ui-ux.md](ui-ux.md) and [prompt-blueprint.md](prompt-blueprint.md) for live computed design tokens and viewport captures.
+- **Client State & APIs**: See [data-models.md](data-models.md) and [apis.md](apis.md) for observed endpoints and storage keys.

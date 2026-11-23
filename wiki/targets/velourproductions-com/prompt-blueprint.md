@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: velourproductions-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "velourproductions-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas, `#f4f0e5` ink, `#1a1a1a` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: velourproductions-com
 
 > **Velour Productions · Vancouver Video & Photography** (https://velourproductions.com/) — Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Velour Productions · Vancouver Video & Photography** (`https://velourproductions.com/`). Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas, `#f4f0e5` ink, `#1a1a1a` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fe2f00` (`var(--color-red)` in `:root`) paired with `#f4f0e5` primary typography and `#1a1a1a` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Velour Display` for display copy (`We give you a point of view`) with `Velour Mono` and `Velour Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 2rem`, padding `1rem`) with `cubic-bezier(.76,0,.24,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f0e5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1a` primary typography and `#ff0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Velour Display` for display copy (`WE GIVE YOU A POINT OF VIEW`) with `Velour Mono` and `Velour Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 46.8px`, padding `34.56px`) with `cubic-bezier(.76,0,.24,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×5154px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `800px` extracted from `velourproductions-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `2rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `34.56px` lateral canvas padding with `46.8px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 2rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 46.8px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `34.56px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width:800px)`, `@media (max-width:520px)`, `@media (max-width:760px),(hover:none)`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
@@ -48,14 +52,17 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fe2f00` | `var(--color-red)` in `:root` |
-| **Primary Typography Ink** | `#3a70e6` | `var(--color-blue)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#f4f0e5` | `var(--color-paper)` in `:root` |
-| **Interactive Accent / Highlight** | `#1a1a1a` | `var(--color-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#f4f0e5` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#1a1a1a` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e4e0d6` | `.about-profile__portrait { background: #e4e0d6 }` |
+| **Interactive Accent / Highlight** | `#ff0000` | `.brand-opening__work-link:focus... { color: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#202020` | `var(--color-ink-soft)` in `:root` |
-| **Structural Hairline Border** | `#a59b87` | `var(--color-taupe)` in `:root` |
+| **Structural Hairline Border** | `#7c7b76` | `.section-kicker { border-bottom: #7c7b76 }` |
+| **Variable Token (`--color-red`)** | `#fe2f00` | `var(--color-red)` in `:root` |
+| **Variable Token (`--color-blue`)** | `#3a70e6` | `var(--color-blue)` in `:root` |
+| **Variable Token (`--color-taupe`)** | `#a59b87` | `var(--color-taupe)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -86,11 +93,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas
 - **Primary Body Stack**: `Velour Mono`.
 - **Technical / Metadata Stack**: `Velour Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Velour Display", "Arial Narrow", "Helvetica Neue", sans-serif`, `--type-display-caption: clamp(1.25rem, 1.55vw, 1.75rem)`, `--type-display-xs: clamp(2.25rem, 3vw, 3rem)`; rule `h1` (`font-size: var(--type-photo-booth-headline)`, `line-height: .78`, `letter-spacing: 0`, `font-weight: 900`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--type-display-lg)`, `line-height: .77`, `font-weight: 900`).
-- **Body Copy**: CSS variables `--type-body: clamp(.875rem, 1.2vw, 1rem)`, `--leading-body: 1.3`; rule `p` (`font-size: var(--type-body)`, `line-height: var(--leading-body)`, `font-weight: 300`).
-- **Metadata & Navigation Labels**: CSS variables `--font-mono: "Velour Mono", "Courier New", monospace`, `--type-meta: clamp(.625rem, .72vw, .6875rem)`, `--type-small: clamp(.75rem, .9vw, .8125rem)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 252px`, `line-height: 181.44px`, `font-weight: 900`); CSS variables `--font-display: "Velour Display", "Arial Narrow", "Helvetica Neue", sans-serif`, `--type-display-caption: clamp(1.25rem, 1.55vw, 1.75rem)`, `--type-display-xs: clamp(2.25rem, 3vw, 3rem)`; rule `h1` (`font-size: var(--type-photo-booth-headline)`, `line-height: .78`, `letter-spacing: 0`, `font-weight: 900`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 194.4px`, `line-height: 149.688px`, `font-weight: 900`); rule `h2` (`font-size: var(--type-display-lg)`, `line-height: .77`, `font-weight: 900`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-body: clamp(.875rem, 1.2vw, 1rem)`, `--leading-body: 1.3`; rule `p` (`font-size: var(--type-body)`, `line-height: var(--leading-body)`, `font-weight: 300`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 10.368px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-mono: "Velour Mono", "Courier New", monospace`, `--type-meta: clamp(.625rem, .72vw, .6875rem)`, `--type-small: clamp(.75rem, .9vw, .8125rem)`.
 
 ---
 
@@ -110,40 +117,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Velour Productions · Vancouver Video & Pho │
 │ ====================================================================== │
-│ [ <header.site-header>     | Work · About · Instagram · LinkedIn    ]  │
+│ [ <header.site-header> (1425x78px)    | Work · About · Instagram · L ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.brand-opening>                              |   │
-│ | H1: We give you a point of view                                  |   │
-│ | Substrate: #fe2f00    | Ink: #f4f0e5    | Accent: #1a1a1a        |   │
+│ | HERO STAGE: <section.brand-opening> (w=1425px)                     | │
+│ | H1: WE GIVE YOU A POINT OF VIEW                                    | │
+│ | Substrate: #f4f0e5 | Ink: #1a1a1a | Accent: #ff0000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.work>            ) max-w: 800px          |   │
+│ | SHOWCASE GRID (<section.work>) max-w: 120rem                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Selected Work                |  | What we do                   | | │
+│ | | We give you a point of view  |  | Selected Work                | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 2rem  ) | │
-│ | [<header.site-heade] -> [<section.brand-ope] -> [<section.work>] |   │
+│ | DETAIL MODULE (<section.services>) — Good company. Great s         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.site-footer>  ) | https://velourproductions.com/     │
+│ [ FOOTER (<footer.site-footer>) | https://velourproductions.com/       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 46.8px)     │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.site-header>    ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.brand-opening>) — 390px Vertical Lead         | │
+│ | H1: WE GIVE YOU A POINT OF VIEW                                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.work>) — 1-Col Stack                      | │
+│ | [ Item 1: We give you a point of view                            ] | │
+│ | [ Item 2: Selected Work                                          ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.services>) — 1-Col (Good company. Grea)     | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.site-footer>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `velourproductions-com`)**:
-   - Landmark `<header class="site-header">` hosting `Velour Productions · Vancouver Video` navigation (`Work · About · Instagram · LinkedIn`), DOM attributes (`data-velour-hero-opening-seen="true"`, `data-home-theme="paper"`, `data-velour-hero-phase="ready"`, `data-precedence="next"`), and stylesheet rule `after { box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.brand-opening> — `We give you a point of view`)**:
-   - Landmark `<section class="brand-opening">` presenting display lead `We give you a point of view` and copy excerpt *"You’re building a brand with something to say. We translate that "* over `#fe2f00` canvas and `#f4f0e5` ink.
-3. **Primary Showcase & Content Grid (<section.work> — `Selected Work`)**:
-   - Landmark `<section class="work filmstrip">` rendering section `Selected Work` with copy *"A selection of films, photographs, campaigns, and brand worlds."*, asset references (`loading-bracket-left.svg`, `loading-dots.svg`, `loading-bracket-right.svg`, `0035rp4bt3s1g.css`), and grid rule `smooth-content { min-height:100% }`.
-4. **Interactive Detail & Feature Matrix (<section.services> — `What we do`)**:
-   - Landmark `<section class="services">` framing `What we do` and `Good company. Great stories.` (*"View project 01 Rugby Bricks Photography + Videography 2026"*) with `#f4f0e5` surface cards, `#1a1a1a` accents, and `smooth-wrapper { overflow-x:clip }`.
+   - Landmark `<header class="site-header">` (`1425x78px`) hosting `Velour Productions · Vancouver Video` navigation (`Work · About · Instagram · LinkedIn`), DOM attributes (`data-velour-hero-opening-seen="true"`, `data-home-theme="paper"`, `data-velour-hero-phase="ready"`, `data-precedence="next"`), and stylesheet rule `after { box-sizing:border-box }`.
+2. **Hero Stage & Focal Lead (<section.brand-opening> — `WE GIVE YOU A POINT OF VIEW`)**:
+   - Landmark `<section class="brand-opening">` presenting display lead `WE GIVE YOU A POINT OF VIEW` and copy excerpt *"You’re building a brand with something to say. We translate that "* over `#f4f0e5` canvas and `#1a1a1a` ink.
+3. **Primary Showcase & Content Grid (<section.work> — `We give you a point of view`)**:
+   - Landmark `<section class="work filmstrip">` rendering section `We give you a point of view` with copy *"A selection of films, photographs, campaigns, and brand worlds."*, asset references (`loading-bracket-left.svg`, `loading-dots.svg`, `loading-bracket-right.svg`, `0035rp4bt3s1g.css`), and grid rule `smooth-content { min-height:100% }`.
+4. **Interactive Detail & Feature Matrix (<section.services> — `Selected Work`)**:
+   - Landmark `<section class="services">` framing `Selected Work` and `Good company. Great stories.` (*"View project 01 Rugby Bricks Photography + Videography 2026"*) with `#e4e0d6` surface cards, `#ff0000` accents, and `smooth-wrapper { overflow-x:clip }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://velourproductions.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Velour Productions · Vancouver V` footer links (`Work · About · Instagram · LinkedIn`), copy *"Photography + Videography"*, and `#a59b87` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Velour Productions · Vancouver V` footer links (`Work · About · Instagram · LinkedIn`), copy *"Photography + Videography"*, and `#7c7b76` structural dividers.
 
 ---
 
@@ -155,19 +181,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `velourproductions-com` (**Velour Productions · Vancouver Video & Photography** — `https://velourproductions.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#fe2f00` canvas, `#f4f0e5` ink, `#1a1a1a` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent).
 - **Identity & Domain Context**: Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
-- **Primary Substrate**: `#fe2f00` (`var(--color-red)` in `:root`), **Primary Ink**: `#f4f0e5`, **Accent / Highlight**: `#1a1a1a`.
+- **Primary Substrate**: `#f4f0e5` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1a1a1a`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#fe2f00` (`var(--color-red)` in `:root`) paired with `#f4f0e5` primary typography and `#1a1a1a` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Velour Display` for display copy (`We give you a point of view`) with `Velour Mono` and `Velour Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `800px` container bounds (`gap: 2rem`, padding `1rem`) with `cubic-bezier(.76,0,.24,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f0e5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1a` primary typography and `#ff0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Velour Display` for display copy (`WE GIVE YOU A POINT OF VIEW`) with `Velour Mono` and `Velour Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 46.8px`, padding `34.56px`) with `cubic-bezier(.76,0,.24,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `velourproductions-com` in your global stylesheet:
 
 :root {
-  /* Velour Productions · Vancouver Video & Photography (velourproductions-com) — Ground-Truth Extracted CSS Variables */
+  /* Velour Productions · Vancouver Video & Photography (velourproductions-com) — Live-Grounded CSS Variables */
   --color-red: #fe2f00; /* Brand / Palette Token (velourproductions-com) */
   --color-blue: #3a70e6; /* Brand / Palette Token (velourproductions-com) */
   --color-paper: #f4f0e5; /* Canvas / Surface Token (velourproductions-com) */
@@ -188,20 +214,23 @@ Declare and consume these exact custom properties extracted from `velourproducti
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fe2f00` — grounded in `var(--color-red)` in `:root`
-- **Primary Typography Ink**: `#3a70e6` — grounded in `var(--color-blue)` in `:root`
-- **Elevated Surface / Card Substrate**: `#f4f0e5` — grounded in `var(--color-paper)` in `:root`
-- **Interactive Accent / Highlight**: `#1a1a1a` — grounded in `var(--color-ink)` in `:root`
+- **Primary Canvas Substrate**: `#f4f0e5` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#1a1a1a` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e4e0d6` — grounded in `.about-profile__portrait { background: #e4e0d6 }`
+- **Interactive Accent / Highlight**: `#ff0000` — grounded in `.brand-opening__work-link:focus... { color: red }` (`#ff0000`)
 - **Secondary / Muted Copy**: `#202020` — grounded in `var(--color-ink-soft)` in `:root`
-- **Structural Hairline Border**: `#a59b87` — grounded in `var(--color-taupe)` in `:root`
+- **Structural Hairline Border**: `#7c7b76` — grounded in `.section-kicker { border-bottom: #7c7b76 }`
+- **Variable Token (`--color-red`)**: `#fe2f00` — grounded in `var(--color-red)` in `:root`
+- **Variable Token (`--color-blue`)**: `#3a70e6` — grounded in `var(--color-blue)` in `:root`
+- **Variable Token (`--color-taupe`)**: `#a59b87` — grounded in `var(--color-taupe)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×5154px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `800px` extracted from `velourproductions-com` stylesheet
-- **Padding & Gutters**: `1rem` lateral canvas padding with `2rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 2rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `34.56px` lateral canvas padding with `46.8px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 46.8px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `34.56px` horizontal padding
 - **Media Queries**: `@media (max-width:800px)`, `@media (max-width:520px)`, `@media (max-width:760px),(hover:none)`, `@media (prefers-reduced-motion:reduce)`
 - **Corner Radii**: `999px`, `50%`
 
@@ -209,28 +238,28 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Display Font Stack**: `Velour Display`
 - **Body Font Stack**: `Velour Mono`
 - **Monospace / Technical Font Stack**: `Velour Mono`
-- **H1 Display Rule**: CSS variables `--font-display: "Velour Display", "Arial Narrow", "Helvetica Neue", sans-serif`, `--type-display-caption: clamp(1.25rem, 1.55vw, 1.75rem)`, `--type-display-xs: clamp(2.25rem, 3vw, 3rem)`; rule `h1` (`font-size: var(--type-photo-booth-headline)`, `line-height: .78`, `letter-spacing: 0`, `font-weight: 900`)
-- **H2 Section Rule**: rule `h2` (`font-size: var(--type-display-lg)`, `line-height: .77`, `font-weight: 900`)
-- **Body Copy Rule**: CSS variables `--type-body: clamp(.875rem, 1.2vw, 1rem)`, `--leading-body: 1.3`; rule `p` (`font-size: var(--type-body)`, `line-height: var(--leading-body)`, `font-weight: 300`)
-- **Metadata & Index Rule**: CSS variables `--font-mono: "Velour Mono", "Courier New", monospace`, `--type-meta: clamp(.625rem, .72vw, .6875rem)`, `--type-small: clamp(.75rem, .9vw, .8125rem)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 252px`, `line-height: 181.44px`, `font-weight: 900`); CSS variables `--font-display: "Velour Display", "Arial Narrow", "Helvetica Neue", sans-serif`, `--type-display-caption: clamp(1.25rem, 1.55vw, 1.75rem)`, `--type-display-xs: clamp(2.25rem, 3vw, 3rem)`; rule `h1` (`font-size: var(--type-photo-booth-headline)`, `line-height: .78`, `letter-spacing: 0`, `font-weight: 900`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 194.4px`, `line-height: 149.688px`, `font-weight: 900`); rule `h2` (`font-size: var(--type-display-lg)`, `line-height: .77`, `font-weight: 900`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--type-body: clamp(.875rem, 1.2vw, 1rem)`, `--leading-body: 1.3`; rule `p` (`font-size: var(--type-body)`, `line-height: var(--leading-body)`, `font-weight: 300`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 10.368px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-mono: "Velour Mono", "Courier New", monospace`, `--type-meta: clamp(.625rem, .72vw, .6875rem)`, `--type-small: clamp(.75rem, .9vw, .8125rem)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `velourproductions-com` (`Velour Productions · Vancouver Video & Photography`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `velourproductions-com`)**:
-   - DOM & Selectors: Landmark `<header class="site-header">` hosting `Velour Productions · Vancouver Video` navigation (`Work · About · Instagram · LinkedIn`), DOM attributes (`data-velour-hero-opening-seen="true"`, `data-home-theme="paper"`, `data-velour-hero-phase="ready"`, `data-precedence="next"`), and stylesheet rule `after { box-sizing:border-box }`.
+   - DOM & Selectors: Landmark `<header class="site-header">` (`1425x78px`) hosting `Velour Productions · Vancouver Video` navigation (`Work · About · Instagram · LinkedIn`), DOM attributes (`data-velour-hero-opening-seen="true"`, `data-home-theme="paper"`, `data-velour-hero-phase="ready"`, `data-precedence="next"`), and stylesheet rule `after { box-sizing:border-box }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `velourproductions-com`)` (`velourproductions-com`) adapts across `@media (max-width:800px)`, `@media (max-width:520px)`, `@media (max-width:760px),(hover:none)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.76,0,.24,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.23,1,.32,1)` transitions and links `Work · About · Instagram · LinkedIn`.
-2. **Hero Stage & Focal Lead (<section.brand-opening> — `We give you a point of view`)**:
-   - DOM & Selectors: Landmark `<section class="brand-opening">` presenting display lead `We give you a point of view` and copy excerpt *"You’re building a brand with something to say. We translate that "* over `#fe2f00` canvas and `#f4f0e5` ink.
-   - Responsive Contract: Hero stage (`1440×5154px` desktop / `390×2400px` mobile) sets `#fe2f00` background with `#f4f0e5` headline `We give you a point of view`.
-3. **Primary Showcase & Content Grid (<section.work> — `Selected Work`)**:
-   - DOM & Selectors: Landmark `<section class="work filmstrip">` rendering section `Selected Work` with copy *"A selection of films, photographs, campaigns, and brand worlds."*, asset references (`loading-bracket-left.svg`, `loading-dots.svg`, `loading-bracket-right.svg`, `0035rp4bt3s1g.css`), and grid rule `smooth-content { min-height:100% }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work> — `Selected Work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 800px`, `gap: 2rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.services> — `What we do`)**:
-   - DOM & Selectors: Landmark `<section class="services">` framing `What we do` and `Good company. Great stories.` (*"View project 01 Rugby Bricks Photography + Videography 2026"*) with `#f4f0e5` surface cards, `#1a1a1a` accents, and `smooth-wrapper { overflow-x:clip }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.services> — `What we do`)` uses `999px`, `50%` radii, `#1a1a1a` highlights, and assets (loading-bracket-left.svg, loading-dots.svg, loading-bracket-right.svg).
+2. **Hero Stage & Focal Lead (<section.brand-opening> — `WE GIVE YOU A POINT OF VIEW`)**:
+   - DOM & Selectors: Landmark `<section class="brand-opening">` presenting display lead `WE GIVE YOU A POINT OF VIEW` and copy excerpt *"You’re building a brand with something to say. We translate that "* over `#f4f0e5` canvas and `#1a1a1a` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f0e5` background with `#1a1a1a` headline `WE GIVE YOU A POINT OF VIEW`.
+3. **Primary Showcase & Content Grid (<section.work> — `We give you a point of view`)**:
+   - DOM & Selectors: Landmark `<section class="work filmstrip">` rendering section `We give you a point of view` with copy *"A selection of films, photographs, campaigns, and brand worlds."*, asset references (`loading-bracket-left.svg`, `loading-dots.svg`, `loading-bracket-right.svg`, `0035rp4bt3s1g.css`), and grid rule `smooth-content { min-height:100% }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work> — `We give you a point of view`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 46.8px`) on desktop and Single-column vertical stack at `390px` viewport width with `34.56px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.services> — `Selected Work`)**:
+   - DOM & Selectors: Landmark `<section class="services">` framing `Selected Work` and `Good company. Great stories.` (*"View project 01 Rugby Bricks Photography + Videography 2026"*) with `#e4e0d6` surface cards, `#ff0000` accents, and `smooth-wrapper { overflow-x:clip }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.services> — `Selected Work`)` uses `999px`, `50%` radii, `#ff0000` highlights, and assets (loading-bracket-left.svg, loading-dots.svg, loading-bracket-right.svg).
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://velourproductions.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `Velour Productions · Vancouver V` footer links (`Work · About · Instagram · LinkedIn`), copy *"Photography + Videography"*, and `#a59b87` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://velourproductions.com/`)` aligns to `800px` extracted from `velourproductions-com` stylesheet with `1rem` lateral canvas padding with `2rem` grid gap and attributes (data-velour-hero-opening-seen="true", data-home-theme="paper", data-velour-hero-phase="ready").
+   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `Velour Productions · Vancouver V` footer links (`Work · About · Instagram · LinkedIn`), copy *"Photography + Videography"*, and `#7c7b76` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://velourproductions.com/`)` aligns to `120rem` (non-`@media` desktop container stylesheet rule) with `34.56px` lateral canvas padding with `46.8px` grid gap and attributes (data-velour-hero-opening-seen="true", data-home-theme="paper", data-velour-hero-phase="ready").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"You’re building a brand with something to say. We translate that story into cinema..."*

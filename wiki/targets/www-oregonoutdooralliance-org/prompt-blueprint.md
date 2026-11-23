@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-oregonoutdooralliance-org"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-oregonoutdooralliance-org"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas, `#fff` ink, `#242a37` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `#616161` ink, `#0082f3` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-oregonoutdooralliance-org
 
 > **Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry** (https://www.oregonoutdooralliance.org/) — Connect with Oregon’s outdoor community. Explore events, resources, and partnerships that help outdoor brands and leaders grow and thrive.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry** (`https://www.oregonoutdooralliance.org/`). Connect with Oregon’s outdoor community. Explore events, resources, and partnerships that help outdoor brands and leaders grow and thrive.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas, `#fff` ink, `#242a37` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `#616161` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ba4722` (`var(--swatch--brand-dark)` in `:root`) paired with `#fff` primary typography and `#242a37` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Worksans Variablefont Wght` for display copy (`Oregon’s Outdoor Business Alliance`) with `Manrope Variablefont Wght` and `Ibmplexmono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#efeeee` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#616161` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Ibmplexmono` for display copy (`OREGON’S OUTDOOR BUSINESS ALLIANCE`) with `Manrope Variablefont Wght` and `Ibmplexmono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×3905px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `940px` extracted from `www-oregonoutdooralliance-org` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `3px`, `100%`, `50%`, `2px`.
+- **Border Radius Scale**: `100%`, `3px`, `50%`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`.
 
@@ -48,14 +52,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ba4722` | `var(--swatch--brand-dark)` in `:root` |
-| **Primary Typography Ink** | `#efeeee` | `var(--swatch--light-200)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--swatch--white)` in `:root` |
-| **Interactive Accent / Highlight** | `#242a37` | `var(--swatch--neutral-dark-100)` in `:root` |
-| **Secondary / Muted Copy** | `#de6e4a` | `var(--swatch--brand-base)` in `:root` |
-| **Structural Hairline Border** | `#101319` | `var(--swatch--dark-900)` in `:root` |
+| **Primary Canvas Substrate** | `#efeeee` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#616161` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#eeeeee` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | `var(--ez-banner-border)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +86,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Worksans Variablefont Wght`.
+- **Display Typography**: `Ibmplexmono`.
 - **Primary Body Stack**: `Manrope Variablefont Wght`.
 - **Technical / Metadata Stack**: `Ibmplexmono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--_typography---font-size--display: var(--size--7rem)`, `--_typography---font-size--h1: var(--size--5rem)`; rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: CSS variables `--_typography---font-size--h2: var(--size--4rem)`; rule `h2` (`font-size: 32px`, `line-height: 36px`).
-- **Body Copy**: CSS variables `--ez-body-lock-z-index: 2147483600`; rule `body` (`font-size: 14px`, `line-height: 20px`).
-- **Metadata & Navigation Labels**: CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--radius--small: .375rem`, `--container--small: 66.25rem`; rule `small` (`font-size: 80%`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 14px`, `line-height: 18.2px`, `font-weight: 400`, `letter-spacing: -0.144px`); CSS variables `--_typography---font-size--display: var(--size--7rem)`, `--_typography---font-size--h1: var(--size--5rem)`; rule `h1` (`font-size: 2em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 81.6px`, `font-weight: 600`, `letter-spacing: -2.4px`); CSS variables `--_typography---font-size--h2: var(--size--4rem)`; rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--ez-body-lock-z-index: 2147483600`; rule `body` (`font-size: 14px`, `line-height: 20px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--radius--small: .375rem`, `--container--small: 66.25rem`; rule `small` (`font-size: 80%`).
 
 ---
 
@@ -110,40 +114,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Oregon Outdoor Alliance · Growing Oregon’s │
 │ ====================================================================== │
-│ [ <nav.nav_desktop_layout> | Connect · Events · Brand Members · Spo ]  │
+│ [ <nav.nav_desktop_layou (1076x64px)  | Connect · Events · Brand Mem ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.page_hero>                                  |   │
-│ | H1: Oregon’s Outdoor Business Alliance                           |   │
-│ | Substrate: #ba4722    | Ink: #fff       | Accent: #242a37        |   │
+│ | HERO STAGE: <section.page_hero> (w=1440px)                         | │
+│ | H1: OREGON’S OUTDOOR BUSINESS ALLIANCE                             | │
+│ | Substrate: #efeeee | Ink: #616161 | Accent: #0082f3                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.page_wrap>       ) max-w: 940px          |   │
+│ | SHOWCASE GRID (<section.page_wrap>) max-w: 120rem                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Connection. Cultivation. Bus |  | Who We Are                   | | │
+│ | | Oregon’s Outdoor Business Al |  | Connection. Cultivation. Bus | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<nav.nav_desktop_l] -> [<section.page_hero] -> [<section.page_wrap] │
+│ | DETAIL MODULE (<section.page_code_wrap>) — Join the Oregon Outdo   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer_wrap>  ) | https://www.oregonoutdooralliance. │
+│ [ FOOTER (<footer.footer_wrap>) | https://www.oregonoutdooralliance.o  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.nav_desktop_layout>) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.page_hero>) — 390px Vertical Lead             | │
+│ | H1: OREGON’S OUTDOOR BUSINESS ALLIANCE                             | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.page_wrap>) — 1-Col Stack                 | │
+│ | [ Item 1: Oregon’s Outdoor Business Alliance                     ] | │
+│ | [ Item 2: Connection. Cultivation. Business Growth.              ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.page_code_wrap>) — 1-Col (Join the Oregon Ou) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer_wrap>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.nav_desktop_layout> — `www-oregonoutdooralliance-org`)**:
-   - Landmark `<nav class="nav_desktop_layout u-position-relative">` hosting `Oregon Outdoor Alliance · Growing Or` navigation (`Connect · Events · Brand Members · Sponsorship · Cultivate`), DOM attributes (`data-wf-domain="www.oregonoutdooralli..."`, `data-wf-page="68029c5c43248225ae283f85"`, `data-wf-site="68029c5c43248225ae283f91"`, `data-delay="0"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
-2. **Hero Stage & Focal Lead (<section.page_hero> — `Oregon’s Outdoor Business Alliance`)**:
-   - Landmark `<section class="page_hero u-position-relative">` presenting display lead `Oregon’s Outdoor Business Alliance` and copy excerpt *"Skip to main content"* over `#ba4722` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.page_wrap> — `Connection. Cultivation. Business `)**:
-   - Landmark `<section class="page_wrap">` rendering section `Connection. Cultivation. Business Growth.` with copy *"Connect Connect Events Brand Members Sponsorship"*, asset references (`cdn.prod.website-files.com`, `261-ooa.webflow.shared.517ddcbf1.css`, `437a9f0a-aec5-11f0-9d68-0bd0c0028851`, `gtm.js`), and grid rule `body { margin: 0; }`.
-4. **Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Who We Are`)**:
-   - Landmark `<section class="page_code_wrap">` framing `Who We Are` and `Join the Oregon Outdoor Alliance` (*"Cultivate Cultivate Chapters Blog Job Board"*) with `#fff` surface cards, `#242a37` accents, and `summary { display: block; }`.
+   - Landmark `<nav class="nav_desktop_layout u-position-relative">` (`1076x64px`) hosting `Oregon Outdoor Alliance · Growing Or` navigation (`Connect · Events · Brand Members · Sponsorship · Cultivate`), DOM attributes (`data-wf-domain="www.oregonoutdooralli..."`, `data-wf-page="68029c5c43248225ae283f85"`, `data-wf-site="68029c5c43248225ae283f91"`, `data-delay="0"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+2. **Hero Stage & Focal Lead (<section.page_hero> — `OREGON’S OUTDOOR BUSINESS ALLIANCE`)**:
+   - Landmark `<section class="page_hero u-position-relative">` presenting display lead `OREGON’S OUTDOOR BUSINESS ALLIANCE` and copy excerpt *"Join the Oregon Outdoor Alliance today!"* over `#efeeee` canvas and `#616161` ink.
+3. **Primary Showcase & Content Grid (<section.page_wrap> — `Oregon’s Outdoor Business Alliance`)**:
+   - Landmark `<section class="page_wrap">` rendering section `Oregon’s Outdoor Business Alliance` with copy *"The Southern Oregon Panel: Enhancing the Outdoor Recreation Econo"*, asset references (`cdn.prod.website-files.com`, `261-ooa.webflow.shared.d47e507e6.css`, `437a9f0a-aec5-11f0-9d68-0bd0c0028851`, `gtm.js`), and grid rule `body { margin: 0; }`.
+4. **Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Connection. Cultivation. Business `)**:
+   - Landmark `<section class="page_code_wrap">` framing `Connection. Cultivation. Business Growth.` and `Join the Oregon Outdoor Alliance` (*"O r e g o n O u t d o o r A l l i a n c e u n i t e s i n d i v i"*) with `#ffffff` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.oregonoutdooralliance.org/`)**:
-   - Landmark `<footer class="footer_wrap u-overflow-hidden">` anchoring `Oregon Outdoor Alliance · Growin` footer links (`Connect · Events · Brand Members · Sponsorship · Cultivate`), copy *"About Us About Us Our Team Our History Contact Us"*, and `#101319` structural dividers.
+   - Landmark `<footer class="footer_wrap u-overflow-hidden">` anchoring `Oregon Outdoor Alliance · Growin` footer links (`Connect · Events · Brand Members · Sponsorship · Cultivate`), copy *"Be part of an extensive member directory that helps you find"*, and `#ffffff` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-oregonoutdooralliance-org` (**Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry** — `https://www.oregonoutdooralliance.org/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#ba4722` canvas, `#fff` ink, `#242a37` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `#616161` ink, `#0082f3` accent).
 - **Identity & Domain Context**: Connect with Oregon’s outdoor community. Explore events, resources, and partnerships that help outdoor brands and leaders grow and thrive.
-- **Primary Substrate**: `#ba4722` (`var(--swatch--brand-dark)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#242a37`.
+- **Primary Substrate**: `#efeeee` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#616161`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#ba4722` (`var(--swatch--brand-dark)` in `:root`) paired with `#fff` primary typography and `#242a37` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Worksans Variablefont Wght` for display copy (`Oregon’s Outdoor Business Alliance`) with `Manrope Variablefont Wght` and `Ibmplexmono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `940px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#efeeee` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#616161` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Ibmplexmono` for display copy (`OREGON’S OUTDOOR BUSINESS ALLIANCE`) with `Manrope Variablefont Wght` and `Ibmplexmono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-oregonoutdooralliance-org` in your global stylesheet:
 
 :root {
-  /* Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry (www-oregonoutdooralliance-org) — Ground-Truth Extracted CSS Variables */
+  /* Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry (www-oregonoutdooralliance-org) — Live-Grounded CSS Variables */
   --_theme---background: var(--swatch--light-200); /* Canvas / Surface Token (www-oregonoutdooralliance-org) */
   --_text-style---font-family: var(--_typography---font--primary-family); /* Typography Ink Token (www-oregonoutdooralliance-org) */
   --_theme---text: var(--swatch--dark-400); /* Typography Ink Token (www-oregonoutdooralliance-org) */
@@ -188,55 +211,55 @@ Declare and consume these exact custom properties extracted from `www-oregonoutd
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#ba4722` — grounded in `var(--swatch--brand-dark)` in `:root`
-- **Primary Typography Ink**: `#efeeee` — grounded in `var(--swatch--light-200)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `var(--swatch--white)` in `:root`
-- **Interactive Accent / Highlight**: `#242a37` — grounded in `var(--swatch--neutral-dark-100)` in `:root`
-- **Secondary / Muted Copy**: `#de6e4a` — grounded in `var(--swatch--brand-base)` in `:root`
-- **Structural Hairline Border**: `#101319` — grounded in `var(--swatch--dark-900)` in `:root`
+- **Primary Canvas Substrate**: `#efeeee` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#616161` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#0082f3` — grounded in `.w-dropdown-link.w--current { color: #0082f3 }`
+- **Secondary / Muted Copy**: `#eeeeee` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#ffffff` — grounded in `var(--ez-banner-border)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×3905px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `940px` extracted from `www-oregonoutdooralliance-org` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`
-- **Corner Radii**: `3px`, `100%`, `50%`, `2px`
+- **Corner Radii**: `100%`, `3px`, `50%`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Worksans Variablefont Wght`
+- **Display Font Stack**: `Ibmplexmono`
 - **Body Font Stack**: `Manrope Variablefont Wght`
 - **Monospace / Technical Font Stack**: `Ibmplexmono`
-- **H1 Display Rule**: CSS variables `--_typography---font-size--display: var(--size--7rem)`, `--_typography---font-size--h1: var(--size--5rem)`; rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: CSS variables `--_typography---font-size--h2: var(--size--4rem)`; rule `h2` (`font-size: 32px`, `line-height: 36px`)
-- **Body Copy Rule**: CSS variables `--ez-body-lock-z-index: 2147483600`; rule `body` (`font-size: 14px`, `line-height: 20px`)
-- **Metadata & Index Rule**: CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--radius--small: .375rem`, `--container--small: 66.25rem`; rule `small` (`font-size: 80%`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 14px`, `line-height: 18.2px`, `font-weight: 400`, `letter-spacing: -0.144px`); CSS variables `--_typography---font-size--display: var(--size--7rem)`, `--_typography---font-size--h1: var(--size--5rem)`; rule `h1` (`font-size: 2em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 81.6px`, `font-weight: 600`, `letter-spacing: -2.4px`); CSS variables `--_typography---font-size--h2: var(--size--4rem)`; rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 20px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--ez-body-lock-z-index: 2147483600`; rule `body` (`font-size: 14px`, `line-height: 20px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--0em)`, `--radius--small: .375rem`, `--container--small: 66.25rem`; rule `small` (`font-size: 80%`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-oregonoutdooralliance-org` (`Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.nav_desktop_layout> — `www-oregonoutdooralliance-org`)**:
-   - DOM & Selectors: Landmark `<nav class="nav_desktop_layout u-position-relative">` hosting `Oregon Outdoor Alliance · Growing Or` navigation (`Connect · Events · Brand Members · Sponsorship · Cultivate`), DOM attributes (`data-wf-domain="www.oregonoutdooralli..."`, `data-wf-page="68029c5c43248225ae283f85"`, `data-wf-site="68029c5c43248225ae283f91"`, `data-delay="0"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+   - DOM & Selectors: Landmark `<nav class="nav_desktop_layout u-position-relative">` (`1076x64px`) hosting `Oregon Outdoor Alliance · Growing Or` navigation (`Connect · Events · Brand Members · Sponsorship · Cultivate`), DOM attributes (`data-wf-domain="www.oregonoutdooralli..."`, `data-wf-page="68029c5c43248225ae283f85"`, `data-wf-site="68029c5c43248225ae283f91"`, `data-delay="0"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav_desktop_layout> — `www-oregonoutdooralliance-org`)` (`www-oregonoutdooralliance-org`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)` transitions and links `Connect · Events · Brand Members · Sponsorship · Cultivate`.
-2. **Hero Stage & Focal Lead (<section.page_hero> — `Oregon’s Outdoor Business Alliance`)**:
-   - DOM & Selectors: Landmark `<section class="page_hero u-position-relative">` presenting display lead `Oregon’s Outdoor Business Alliance` and copy excerpt *"Skip to main content"* over `#ba4722` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×3905px` desktop / `390×2400px` mobile) sets `#ba4722` background with `#fff` headline `Oregon’s Outdoor Business Alliance`.
-3. **Primary Showcase & Content Grid (<section.page_wrap> — `Connection. Cultivation. Business `)**:
-   - DOM & Selectors: Landmark `<section class="page_wrap">` rendering section `Connection. Cultivation. Business Growth.` with copy *"Connect Connect Events Brand Members Sponsorship"*, asset references (`cdn.prod.website-files.com`, `261-ooa.webflow.shared.517ddcbf1.css`, `437a9f0a-aec5-11f0-9d68-0bd0c0028851`, `gtm.js`), and grid rule `body { margin: 0; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page_wrap> — `Connection. Cultivation. Business `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 940px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Who We Are`)**:
-   - DOM & Selectors: Landmark `<section class="page_code_wrap">` framing `Who We Are` and `Join the Oregon Outdoor Alliance` (*"Cultivate Cultivate Chapters Blog Job Board"*) with `#fff` surface cards, `#242a37` accents, and `summary { display: block; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Who We Are`)` uses `3px`, `100%`, `50%`, `2px` radii, `#242a37` highlights, and assets (cdn.prod.website-files.com, 261-ooa.webflow.shared.517ddcbf1.css, 437a9f0a-aec5-11f0-9d68-0bd0c0028851).
+2. **Hero Stage & Focal Lead (<section.page_hero> — `OREGON’S OUTDOOR BUSINESS ALLIANCE`)**:
+   - DOM & Selectors: Landmark `<section class="page_hero u-position-relative">` presenting display lead `OREGON’S OUTDOOR BUSINESS ALLIANCE` and copy excerpt *"Join the Oregon Outdoor Alliance today!"* over `#efeeee` canvas and `#616161` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#efeeee` background with `#616161` headline `OREGON’S OUTDOOR BUSINESS ALLIANCE`.
+3. **Primary Showcase & Content Grid (<section.page_wrap> — `Oregon’s Outdoor Business Alliance`)**:
+   - DOM & Selectors: Landmark `<section class="page_wrap">` rendering section `Oregon’s Outdoor Business Alliance` with copy *"The Southern Oregon Panel: Enhancing the Outdoor Recreation Econo"*, asset references (`cdn.prod.website-files.com`, `261-ooa.webflow.shared.d47e507e6.css`, `437a9f0a-aec5-11f0-9d68-0bd0c0028851`, `gtm.js`), and grid rule `body { margin: 0; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page_wrap> — `Oregon’s Outdoor Business Alliance`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Connection. Cultivation. Business `)**:
+   - DOM & Selectors: Landmark `<section class="page_code_wrap">` framing `Connection. Cultivation. Business Growth.` and `Join the Oregon Outdoor Alliance` (*"O r e g o n O u t d o o r A l l i a n c e u n i t e s i n d i v i"*) with `#ffffff` surface cards, `#0082f3` accents, and `summary { display: block; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page_code_wrap> — `Connection. Cultivation. Business `)` uses `100%`, `3px`, `50%`, `2px` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, 261-ooa.webflow.shared.d47e507e6.css, 437a9f0a-aec5-11f0-9d68-0bd0c0028851).
 5. **Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.oregonoutdooralliance.org/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer_wrap u-overflow-hidden">` anchoring `Oregon Outdoor Alliance · Growin` footer links (`Connect · Events · Brand Members · Sponsorship · Cultivate`), copy *"About Us About Us Our Team Our History Contact Us"*, and `#101319` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.oregonoutdooralliance.org/`)` aligns to `940px` extracted from `www-oregonoutdooralliance-org` stylesheet with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.oregonoutdooralli...", data-wf-page="68029c5c43248225ae283f85", data-wf-site="68029c5c43248225ae283f91").
+   - DOM & Selectors: Landmark `<footer class="footer_wrap u-overflow-hidden">` anchoring `Oregon Outdoor Alliance · Growin` footer links (`Connect · Events · Brand Members · Sponsorship · Cultivate`), copy *"Be part of an extensive member directory that helps you find"*, and `#ffffff` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.oregonoutdooralliance.org/`)` aligns to `120rem` (non-`@media` desktop container stylesheet rule) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.oregonoutdooralli...", data-wf-page="68029c5c43248225ae283f85", data-wf-site="68029c5c43248225ae283f91").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Skip to main content"*
-- Copy Excerpt 2: *"Connect Connect Events Brand Members Sponsorship"*
-- Copy Excerpt 3: *"Cultivate Cultivate Chapters Blog Job Board"*
-- Copy Excerpt 4: *"About Us About Us Our Team Our History Contact Us"*
+- Copy Excerpt 1: *"Join the Oregon Outdoor Alliance today!"*
+- Copy Excerpt 2: *"The Southern Oregon Panel: Enhancing the Outdoor Recreation Economy for Southern O..."*
+- Copy Excerpt 3: *"O r e g o n O u t d o o r A l l i a n c e u n i t e s i n d i v i d u a l s , i n..."*
+- Copy Excerpt 4: *"Be part of an extensive member directory that helps you find collaborators, suppli..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)`

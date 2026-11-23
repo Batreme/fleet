@@ -1,243 +1,282 @@
 ---
 title: "UI Prompt Blueprint: www-anduril-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-anduril-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Mission-Critical Defense Autonomy Platform & Odometer Telemetry Grid (`HelveticaNowDisplay` + `Elios`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff3535`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-anduril-com
 
-> **Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology** — An authoritative defense hardware and autonomous systems platform engineered around near-black stealth carbon (`--theme-color-background: #010101`), stark optic white (`--theme-color-text: #fff`), warm bone light-theme chapters (`.theme-light` / `#f1f0ea`), and high-visibility radar volt-yellow (`#dff140`) and alert red (`#ff3535`) indicators.
+> **Transforming U.S. Defense Capabilities with Advanced Technology · Anduril** (https://www.anduril.com/) — Anduril Industries builds advanced autonomous systems and defense technology to protect US and allied forces. Creating the future of nati...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
-- **Brand Essence & Persona**: **Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology**. An authoritative defense hardware and autonomous systems platform engineered around near-black stealth carbon (`--theme-color-background: #010101`), stark optic white (`--theme-color-text: #fff`), warm bone light-theme chapters (`.theme-light` / `#f1f0ea`), and high-visibility radar volt-yellow (`#dff140`) and alert red (`#ff3535`) indicators.
-- **Visual Archetype**: **Mission-Critical Defense Autonomy Platform & Odometer Telemetry Grid (`HelveticaNowDisplay` + `Elios`)**.
+- **Brand Essence & Persona**: **Transforming U.S. Defense Capabilities with Advanced Technology · Anduril** (`https://www.anduril.com/`). Anduril Industries builds advanced autonomous systems and defense technology to protect US and allied forces. Creating the future of nati...
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff3535`)**.
 - **Anti-AI-Slop Differentiators**:
-  1. **Programmatic Theme Polarity Switching**: Uses root CSS state variables (`--theme-color-background: #010101`, `--theme-color-text: #fff`) that invert dynamically on `.theme-light` chapters (`#f1f0ea` / `#fff` background with `#010101` ink).
-  2. **Mechanical Odometer Metric Rollers**: Driven by custom CSS math (`--roller-scale: 1`, `--roller-font-size: calc(3rem*var(--roller-scale))`, `--roller-column-height: calc(2.5rem*var(--roller-scale))`, `--roller-digit-width: calc(1.8rem*var(--roller-scale))`).
-  3. **Tactical Hardware Showcase Matrix**: Full-viewport autonomous system modules (`H2: Arsenal-2`, `H2: Steelfin`, `H2: Barracuda`) with aspect-ratio locked containers (`--in-production-h: max(505px,100vw*505/403)`).
-  4. **Precision Industrial Typography**: Combines `HelveticaNowDisplay` for authoritative headlines with custom technical display face `Elios` for system designations and telemetry readouts.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff3535` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `HelveticaNowDisplay` for display copy (`@[shortTitle]`) with `Elios` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 1rem`, padding `8px`) with `cubic-bezier(.215,.62,.34,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Full-Page Dimensions**: Desktop `1440×5230px` (`assets/desktop.png`), Mobile `390×6917px` (`assets/mobile.png`).
-- **Master Container Bounds**: Full-bleed `100vw` tactical viewports with `@media (min-width:1440px)` and `@media (min-width:1920px)` max-bounds.
-- **Canvas Lateral Padding & Spacing**: Responsive horizontal padding scaling across `@media (min-width:400px)`, `768px`, `1280px`, `1440px`, `1920px`.
-- **Border Radius Scale**: `0px` razor-sharp corners across all cards and plates; circular `.CircleButton` (`border: 1px solid #fff`) for directional triggers.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `8px` lateral canvas padding with `1rem` grid gap.
+- **Border Radius Scale**: `2px`, `100px`, `50%`, `5px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Full-bleed stacked hardware plates (`Arsenal-2`, `Steelfin`, `Barracuda`) and multi-column telemetry counters.
-- **Mobile Layout**: Controlled via `--is-mob: 1` inside `@media (max-width:768px)`, activating `<nav class="HeaderMobile lenis">`.
-- **Extracted CSS Media Queries**: `@media (max-width:768px)` (`--is-mob: 1`), `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (min-width:1440px)`, `@media (min-width:1920px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `8px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:768px)`, `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| Primary Dark Substrate | `#010101` | `--theme-color-background` (`:root`) |
-| Pure Black Base | `#000000` | `--base-color: black` (`:root`) |
-| Light-Theme Paper Surface | `#f1f0ea` | Extracted stylesheet surface hex (`#f1f0ea` / `.theme-light`) |
-| Elevated Slate Surface | `#2f3234` | Extracted stylesheet dark panel hex (`#2f3234`) |
-| Primary White Ink | `#fff` | `--theme-color-text` / `--linkbutton-color` (`:root`) |
-| Secondary Muted Ink | `#b0b0a9` | Extracted stylesheet muted neutral (`#b0b0a9`) |
-| Dimmed Technical Ink | `#565654` | Extracted stylesheet dim gray (`#565654`) |
-| Radar Volt-Yellow Accent | `#dff140` | Extracted stylesheet high-visibility accent (`#dff140`) |
-| Alert Warning Red | `#ff3535` | Extracted stylesheet warning indicator (`#ff3535`) |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#010101` | `var(--theme-color-background)` in `:root` |
+| **Interactive Accent / Highlight** | `#ff3535` | `FormInput.FormInput .errorMessa... { color: #ff3535 }` |
+| **Secondary / Muted Copy** | `#010101` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#010101` | `.AlgoliaPagination .next { border: #010101 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--is-mob` | `0` | Viewport breakpoint flag (switches to `1` at `max-width: 768px`) |
-| `--theme-color-background` | `#010101` | Primary stealth carbon background surface |
-| `--theme-color-text` | `#fff` | Primary high-contrast text ink |
-| `--base-color` | `black` | Base substrate color keyword |
-| `--contrast-color` | `white` | High-contrast foreground keyword |
-| `--linkbutton-color` | `#fff` | Default `.LinkButton` & `.CircleButton` foreground |
-| `--linkbutton-hover-color` | `#010101` | Inverted button label ink on hover fill |
-| `--roller-scale` | `1` | Scale multiplier for mechanical odometer counters |
-| `--roller-font-size` | `calc(3rem*var(--roller-scale))` | Odometer digit font size |
-| `--roller-column-height` | `calc(2.5rem*var(--roller-scale))` | Odometer vertical slot height |
-| `--roller-digit-width` | `calc(1.8rem*var(--roller-scale))` | Odometer fixed monospace digit width |
-| `--links-height` | `0px` | Collapsible navigation submenu height state |
-| `--frosted` | `0` | Header backdrop frosted glass state toggle |
-| `--backgroundOpacity` | `0` | Dynamic scroll overlay opacity value |
-| `--in-production-h` | `max(505px,100vw*505/403)` | Responsive aspect-ratio height for production showcase |
+| `--is-mob` | `0` | Design System Custom Token |
+| `--theme-color-background` | `#010101` | Canvas / Surface Token |
+| `--theme-color-text` | `#fff` | Typography Ink Token |
+| `--base-color` | `black` | Brand / Palette Token |
+| `--contrast-color` | `white` | Brand / Palette Token |
+| `--linkbutton-color` | `#fff` | Typography Ink Token |
+| `--linkbutton-hover-color` | `#010101` | Typography Ink Token |
+| `--roller-scale` | `1` | Motion / Easing Token |
+| `--roller-font-size` | `calc(3rem*var(--roller-scale))` | Typography / Scale Token |
+| `--roller-column-height` | `calc(2.5rem*var(--roller-scale))` | Layout / Spatial Grid Token |
+| `--roller-digit-width` | `calc(1.8rem*var(--roller-scale))` | Layout / Spatial Grid Token |
+| `--links-height` | `0px` | Typography Ink Token |
+| `--frosted` | `0` | Design System Custom Token |
+| `--backgroundOpacity` | `0` | Canvas / Surface Token |
+| `--in-production-h` | `max(505px,100vw*505/403)` | Dimension / Scale Token |
+| `--focus-ring-color` | `currentColor` | Brand / Palette Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `HelveticaNowDisplay, Helvetica, Arial, sans-serif` paired with `Elios, sans-serif`.
-- **Primary Body Stack**: `HelveticaNowDisplay, Helvetica, Arial, sans-serif`.
-- **Technical / Metadata Stack**: `Elios, monospace` (Odometer telemetry counters, autonomous system designations).
+- **Display Typography**: `HelveticaNowDisplay`.
+- **Primary Body Stack**: `Elios`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules
-- **Hero Display (`H1`)**: `clamp(2.75rem, 5.5vw, 5.25rem)`, `font-family: HelveticaNowDisplay, sans-serif`, `font-weight: 500`, `line-height: 0.98`, `letter-spacing: -0.03em`.
-- **Section Heading (`H2`)**: `clamp(2rem, 4vw, 3.75rem)`, `font-family: HelveticaNowDisplay, sans-serif` ("Arsenal-2", "Steelfin", "Barracuda").
-- **Body Copy**: `1rem (16px)`, `font-family: HelveticaNowDisplay, Helvetica, Arial, sans-serif`, `line-height: 1.55`, `color: #b0b0a9`.
-- **Metadata & Navigation Labels**: `0.75rem (12px)`, `font-family: Elios, sans-serif`, `letter-spacing: 0.1em`, `text-transform: uppercase`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 12px`, `line-height: 12.6px`, `font-weight: 500`, `letter-spacing: 0.48px`); rule `.title` (`font-size: 3rem`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: 27.6px`, `font-weight: 700`, `letter-spacing: -0.24px`); rule `h2` (`font-size: 8.75rem`, `line-height: 95%`, `letter-spacing: -.0875rem`, `font-weight: 500`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.5rem`, `line-height: 115%`, `letter-spacing: -.015rem`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `.label` (`font-size: .75rem`, `line-height: 105%`, `letter-spacing: .03rem`, `font-weight: 500`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.215,.62,.34,1)` (custom tactical ease-out).
+- **Extracted Timing Functions**: `cubic-bezier(.215,.62,.34,1)`, `cubic-bezier(0.19,1,0.22,1)`, `cubic-bezier(0.215,0.61,0.355,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- `Button & Link Reveals (.CircleButton, .LinkButton)` -> `transition: all 350ms cubic-bezier(.215,.62,.34,1)` (invert fill from `#010101` to `#fff` with `--linkbutton-hover-color: #010101`)
-- `Odometer Digit Columns` -> vertical `translateY` slot rotation scaled by `--roller-column-height: calc(2.5rem*var(--roller-scale))`
-- `Lenis Smooth Scroll (<nav class="HeaderMobile lenis">)` -> inertia-damped viewport scrolling synchronized with `--backgroundOpacity`
+- **Selector `.AlgoliaPagination .next`**: `transition: background-color .5s,border-color .5s` extracted from `www-anduril-com` stylesheet.
+- **Selector `.AlgoliaPagination .next svg`**: `transition: color .5s` extracted from `www-anduril-com` stylesheet.
+- **Selector `.AlgoliaPagination .pageButton`**: `transition: opacity .5s` extracted from `www-anduril-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.215,.62,.34,1)`)**: Governs interactive state transitions across `<header.header>` and `<main.Header>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html`)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ <header class="header"> <nav class="HeaderDesktop"> (Bg: #010101, Text │
-│   [ANDURIL]   [Lattice] [Arsenal] [Air] [Maritime] [Subsea] [Mission]  │
-├────────────────────────────────────────────────────────────────────────┤
-│ <main> Hero Mission Stage (Substrate: --theme-color-background #010101 │
-│   Title: Transforming U.S. Defense Capabilities with Advanced Technolo │
-│   [ .CircleButton (1px solid #fff) ]  [ Telemetry Odometer (--roller-* │
-├────────────────────────────────────────────────────────────────────────┤
-│ <section class="hardware-matrix"> (Full-Bleed Autonomous Systems)      │
-│   [ H2: Arsenal-2 (Hyperscale Mfg) ] │ [ H2: Steelfin (Autonomous UUV) │
-│   [ H2: Barracuda (Autonomous AAV) ] │ [ Height: --in-production-h     │
-├────────────────────────────────────────────────────────────────────────┤
-│ <footer class="Footer"> [Lattice OS] [Careers] [Newsroom] © Anduril    │
+│ DESKTOP VIEWPORT (1440px) — Transforming U.S. Defense Capabilities wit │
+│ ====================================================================== │
+│ [ <header.header> (1440px)            | Anduril Logo · Subterranean  ] │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE: <main.GLA11y> (w=1425px)                               | │
+│ | H1: @[shortTitle]                                                  | │
+│ | Substrate: #000000 | Ink: #ffffff | Accent: #ff3535                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE GRID (<main.Header>) max-w: 1440px                        | │
+│ | +------------------------------+  +------------------------------+ | │
+│ | | @[title]                     |  | Please enable javascript     | | │
+│ | +------------------------------+  +------------------------------+ | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL MODULE (<main.HeaderDesktop>) — Tactical Reconnaissan       | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.Footer>     ) | https://www.anduril.com/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.GLA11y>) — 390px Vertical Lead                   | │
+│ | H1: @[shortTitle]                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.Header>) — 1-Col Stack                       | │
+│ | [ Item 1: @[title]                                               ] | │
+│ | [ Item 2: Please enable javascript                               ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.HeaderDesktop>) — 1-Col (Tactical Reconnais)   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.Footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Desktop & Mobile Header (`<header class="header">`, `<nav class="HeaderDesktop">`, and `<nav class="HeaderMobile lenis">`)**:
-   - Fixed top bar controlled by `--frosted` and `--links-height`, switching to `HeaderMobile` when `--is-mob: 1` (`@media (max-width:768px)`).
-2. **Hero Autonomy Viewport (`<main>`)**:
-   - Full-bleed dark stage (`--theme-color-background: #010101`) with `HelveticaNowDisplay` headline and `.CircleButton` (`1px solid #fff`, hover fill `#fff` with `--linkbutton-hover-color: #010101`) triggers.
-3. **Autonomous Systems Matrix (`H2: Arsenal-2`, `H2: Steelfin`, `H2: Barracuda`)**:
-   - Stacked and split hardware modules sized via `--in-production-h: max(505px,100vw*505/403)` showcasing defense platforms with `Elios` technical indices and `#dff140` radar accents.
-4. **Odometer Telemetry Section (`--roller-font-size`, `--roller-column-height`, `--roller-digit-width`)**:
-   - Mechanical rolling digit counters sized via `calc(3rem*var(--roller-scale))` on `.theme-light` (`#f1f0ea`) and `#2f3234` slate substrates.
-5. **Global Footer (`<footer class="Footer">`)**:
-   - Structured defense directory linking Lattice, Force Protection, and Careers.
+1. **Brand Header & Navigation Bar (<header.header> — `www-anduril-com`)**:
+   - Landmark `<header class="header">` (`1440px`) hosting `Transforming U.S. Defense Capabiliti` navigation (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), DOM attributes (`data-path="/"`, `data-path="subterranean/future-s..."`, `data-label="Subterranean"`, `data-domain="Sea"`), and stylesheet rule `root { --is-mob:0 }`.
+2. **Hero Stage & Focal Lead (<main.GLA11y> — `@[shortTitle]`)**:
+   - Landmark `<main class="GLA11y">` presenting display lead `@[shortTitle]` and copy excerpt *"Anduril, U.S. Navy Invest $6.6 Billion to Expand America's Submar"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<main.Header> — `@[title]`)**:
+   - Landmark `<main class="Header">` rendering section `@[title]` with copy *"Please enable javascript"*, asset references (`feed.xml`, `favicon.xxWKiVhdqu.ico`, `favicon.xxQR7xb3fo.svg`, `apple-touch-icon.xxx1TpF2gg.png`), and grid rule `Stage { width:100%;height:100%;margin:0;padding:0;overflow-x:clip }`.
+4. **Interactive Detail & Feature Matrix (<main.HeaderDesktop> — `Please enable javascript`)**:
+   - Landmark `<main class="HeaderDesktop">` framing `Please enable javascript` and `Tactical Reconnaissance & Strike` (*"Tactical Reconnaissance & Strike"*) with `#010101` surface cards, `#ff3535` accents, and `html { scrollbar-gutter:stable }`.
+5. **Colophon & Global Directory Footer (<footer.Footer> — `https://www.anduril.com/`)**:
+   - Landmark `<footer class="Footer">` anchoring `Transforming U.S. Defense Capabi` footer links (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), copy *"Air Dominance & Strike"*, and `#010101` structural dividers.
 
 ---
 
 ## 7. Master Zero-Shot AI Generation Prompt
 
 ```markdown
-# Master Zero-Shot Frontend Generation Prompt: www-anduril-com (Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology)
+# Master Zero-Shot Frontend Generation Prompt: www-anduril-com (Transforming U.S. Defense Capabilities with Advanced Technology · Anduril)
 
-You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-anduril-com` (Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology).
+You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-anduril-com` (**Transforming U.S. Defense Capabilities with Advanced Technology · Anduril** — `https://www.anduril.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Mission-Critical Defense Autonomy Platform & Odometer Telemetry Grid (`HelveticaNowDisplay` + `Elios`).
-- **Primary Substrate**: `#010101` (`--theme-color-background` (`:root`)), **Primary Ink**: `#fff`, **Accent / Highlight**: `#ff3535`.
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff3535`).
+- **Identity & Domain Context**: Anduril Industries builds advanced autonomous systems and defense technology to protect US and allied forces. Creating the future of nati...
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff3535`.
 - **Site-Specific Differentiators**:
-  1. **Programmatic Theme Polarity Switching**: Uses root CSS state variables (`--theme-color-background: #010101`, `--theme-color-text: #fff`) that invert dynamically on `.theme-light` chapters (`#f1f0ea` / `#fff` background with `#010101` ink).
-  2. **Mechanical Odometer Metric Rollers**: Driven by custom CSS math (`--roller-scale: 1`, `--roller-font-size: calc(3rem*var(--roller-scale))`, `--roller-column-height: calc(2.5rem*var(--roller-scale))`, `--roller-digit-width: calc(1.8rem*var(--roller-scale))`).
-  3. **Tactical Hardware Showcase Matrix**: Full-viewport autonomous system modules (`H2: Arsenal-2`, `H2: Steelfin`, `H2: Barracuda`) with aspect-ratio locked containers (`--in-production-h: max(505px,100vw*505/403)`).
-  4. **Precision Industrial Typography**: Combines `HelveticaNowDisplay` for authoritative headlines with custom technical display face `Elios` for system designations and telemetry readouts.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff3535` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `HelveticaNowDisplay` for display copy (`@[shortTitle]`) with `Elios` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 1rem`, padding `8px`) with `cubic-bezier(.215,.62,.34,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-anduril-com` in your global stylesheet:
 
 :root {
-  /* Anduril Industries · Transforming U.S. Defense Capabilities with Advanced Technology — Ground-Truth Extracted CSS Variables */
-  --is-mob: 0; /* Viewport breakpoint flag (switches to `1` at `max-width: 768px`) */
-  --theme-color-background: #010101; /* Primary stealth carbon background surface */
-  --theme-color-text: #fff; /* Primary high-contrast text ink */
-  --base-color: black; /* Base substrate color keyword */
-  --contrast-color: white; /* High-contrast foreground keyword */
-  --linkbutton-color: #fff; /* Default `.LinkButton` & `.CircleButton` foreground */
-  --linkbutton-hover-color: #010101; /* Inverted button label ink on hover fill */
-  --roller-scale: 1; /* Scale multiplier for mechanical odometer counters */
-  --roller-font-size: calc(3rem*var(--roller-scale)); /* Odometer digit font size */
-  --roller-column-height: calc(2.5rem*var(--roller-scale)); /* Odometer vertical slot height */
-  --roller-digit-width: calc(1.8rem*var(--roller-scale)); /* Odometer fixed monospace digit width */
-  --links-height: 0px; /* Collapsible navigation submenu height state */
-  --frosted: 0; /* Header backdrop frosted glass state toggle */
-  --backgroundOpacity: 0; /* Dynamic scroll overlay opacity value */
-  --in-production-h: max(505px,100vw*505/403); /* Responsive aspect-ratio height for production showcase */
+  /* Transforming U.S. Defense Capabilities with Advanced Technology · Anduril (www-anduril-com) — Live-Grounded CSS Variables */
+  --is-mob: 0; /* Design System Custom Token (www-anduril-com) */
+  --theme-color-background: #010101; /* Canvas / Surface Token (www-anduril-com) */
+  --theme-color-text: #fff; /* Typography Ink Token (www-anduril-com) */
+  --base-color: black; /* Brand / Palette Token (www-anduril-com) */
+  --contrast-color: white; /* Brand / Palette Token (www-anduril-com) */
+  --linkbutton-color: #fff; /* Typography Ink Token (www-anduril-com) */
+  --linkbutton-hover-color: #010101; /* Typography Ink Token (www-anduril-com) */
+  --roller-scale: 1; /* Motion / Easing Token (www-anduril-com) */
+  --roller-font-size: calc(3rem*var(--roller-scale)); /* Typography / Scale Token (www-anduril-com) */
+  --roller-column-height: calc(2.5rem*var(--roller-scale)); /* Layout / Spatial Grid Token (www-anduril-com) */
+  --roller-digit-width: calc(1.8rem*var(--roller-scale)); /* Layout / Spatial Grid Token (www-anduril-com) */
+  --links-height: 0px; /* Typography Ink Token (www-anduril-com) */
+  --frosted: 0; /* Design System Custom Token (www-anduril-com) */
+  --backgroundOpacity: 0; /* Canvas / Surface Token (www-anduril-com) */
+  --in-production-h: max(505px,100vw*505/403); /* Dimension / Scale Token (www-anduril-com) */
+  --focus-ring-color: currentColor; /* Brand / Palette Token (www-anduril-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Dark Substrate**: `#010101` — grounded in `--theme-color-background` (`:root`)
-- **Pure Black Base**: `#000000` — grounded in `--base-color: black` (`:root`)
-- **Light-Theme Paper Surface**: `#f1f0ea` — grounded in Extracted stylesheet surface hex (`#f1f0ea` / `.theme-light`)
-- **Elevated Slate Surface**: `#2f3234` — grounded in Extracted stylesheet dark panel hex (`#2f3234`)
-- **Primary White Ink**: `#fff` — grounded in `--theme-color-text` / `--linkbutton-color` (`:root`)
-- **Secondary Muted Ink**: `#b0b0a9` — grounded in Extracted stylesheet muted neutral (`#b0b0a9`)
-- **Dimmed Technical Ink**: `#565654` — grounded in Extracted stylesheet dim gray (`#565654`)
-- **Radar Volt-Yellow Accent**: `#dff140` — grounded in Extracted stylesheet high-visibility accent (`#dff140`)
-- **Alert Warning Red**: `#ff3535` — grounded in Extracted stylesheet warning indicator (`#ff3535`)
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#010101` — grounded in `var(--theme-color-background)` in `:root`
+- **Interactive Accent / Highlight**: `#ff3535` — grounded in `FormInput.FormInput .errorMessa... { color: #ff3535 }`
+- **Secondary / Muted Copy**: `#010101` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#010101` — grounded in `.AlgoliaPagination .next { border: #010101 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×5230px` full-page capture (`1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×6917px` full-page capture (`390px` standard mobile width).
-- **Container Max-Width**: Full-bleed `100vw` tactical viewports with `@media (min-width:1440px)` and `@media (min-width:1920px)` max-bounds
-- **Padding & Gutters**: Responsive horizontal padding scaling across `@media (min-width:400px)`, `768px`, `1280px`, `1440px`, `1920px`
-- **Desktop Grid**: Full-bleed stacked hardware plates (`Arsenal-2`, `Steelfin`, `Barracuda`) and multi-column telemetry counters
-- **Mobile Adaptation**: Controlled via `--is-mob: 1` inside `@media (max-width:768px)`, activating `<nav class="HeaderMobile lenis">`
-- **Media Queries**: `@media (max-width:768px)` (`--is-mob: 1`), `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (min-width:1440px)`, `@media (min-width:1920px)`
-- **Corner Radii**: `0px` razor-sharp corners across all cards and plates; circular `.CircleButton` (`border: 1px solid #fff`) for directional triggers
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `8px` lateral canvas padding with `1rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `8px` horizontal padding
+- **Media Queries**: `@media (max-width:768px)`, `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)`
+- **Corner Radii**: `2px`, `100px`, `50%`, `5px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `HelveticaNowDisplay, Helvetica, Arial, sans-serif` paired with `Elios, sans-serif`
-- **Body Font Stack**: `HelveticaNowDisplay, Helvetica, Arial, sans-serif`
-- **Monospace / Technical Font Stack**: `Elios, monospace` (Odometer telemetry counters, autonomous system designations)
-- **H1 Display Rule**: `clamp(2.75rem, 5.5vw, 5.25rem)`, `font-family: HelveticaNowDisplay, sans-serif`, `font-weight: 500`, `line-height: 0.98`, `letter-spacing: -0.03em`
-- **H2 Section Rule**: `clamp(2rem, 4vw, 3.75rem)`, `font-family: HelveticaNowDisplay, sans-serif` ("Arsenal-2", "Steelfin", "Barracuda")
-- **Body Copy Rule**: `1rem (16px)`, `font-family: HelveticaNowDisplay, Helvetica, Arial, sans-serif`, `line-height: 1.55`, `color: #b0b0a9`
-- **Metadata & Index Rule**: `0.75rem (12px)`, `font-family: Elios, sans-serif`, `letter-spacing: 0.1em`, `text-transform: uppercase`
+- **Display Font Stack**: `HelveticaNowDisplay`
+- **Body Font Stack**: `Elios`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 12px`, `line-height: 12.6px`, `font-weight: 500`, `letter-spacing: 0.48px`); rule `.title` (`font-size: 3rem`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: 27.6px`, `font-weight: 700`, `letter-spacing: -0.24px`); rule `h2` (`font-size: 8.75rem`, `line-height: 95%`, `letter-spacing: -.0875rem`, `font-weight: 500`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.5rem`, `line-height: 115%`, `letter-spacing: -.015rem`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `.label` (`font-size: .75rem`, `line-height: 105%`, `letter-spacing: .03rem`, `font-weight: 500`)
 
-### 6. Component Hierarchy & Real DOM Landmarks
-Scaffold the interface with these exact structural regions and class selectors from `www-anduril-com`:
-1. **Desktop & Mobile Header (`<header class="header">`, `<nav class="HeaderDesktop">`, and `<nav class="HeaderMobile lenis">`)**:
-   - Architecture & Selectors: Fixed top bar controlled by `--frosted` and `--links-height`, switching to `HeaderMobile` when `--is-mob: 1` (`@media (max-width:768px)`).
-   - Layout & State Contract: Sticky/fixed top header navigation adapting across `@media (max-width:768px)` (`--is-mob: 1`), `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)`, `@media (min-width:1440px)`, `@media (min-width:1920px)` with `cubic-bezier(.215,.62,.34,1)` (custom tactical ease-out) menu transitions.
-2. **Hero Autonomy Viewport (`<main>`)**:
-   - Architecture & Selectors: Full-bleed dark stage (`--theme-color-background: #010101`) with `HelveticaNowDisplay` headline and `.CircleButton` (`1px solid #fff`, hover fill `#fff` with `--linkbutton-hover-color: #010101`) triggers.
-   - Layout & State Contract: Full-viewport hero stage (`1440px` desktop / `390px` mobile) pairing `#010101` substrate with `#fff` display typography (`H1`).
-3. **Autonomous Systems Matrix (`H2: Arsenal-2`, `H2: Steelfin`, `H2: Barracuda`)**:
-   - Architecture & Selectors: Stacked and split hardware modules sized via `--in-production-h: max(505px,100vw*505/403)` showcasing defense platforms with `Elios` technical indices and `#dff140` radar accents.
-   - Layout & State Contract: Primary showcase grid executing Full-bleed stacked hardware plates (`Arsenal-2`, `Steelfin`, `Barracuda`) and multi-column telemetry counters on desktop and Controlled via `--is-mob: 1` inside `@media (max-width:768px)`, activating `<nav class="HeaderMobile lenis">` on mobile.
-4. **Odometer Telemetry Section (`--roller-font-size`, `--roller-column-height`, `--roller-digit-width`)**:
-   - Architecture & Selectors: Mechanical rolling digit counters sized via `calc(3rem*var(--roller-scale))` on `.theme-light` (`#f1f0ea`) and `#2f3234` slate substrates.
-   - Layout & State Contract: Interactive specification & narrative module framed by `0px` razor-sharp corners across all cards and plates; circular `.CircleButton` (`border: 1px solid #fff`) for directional triggers and `#ff3535` highlights.
-5. **Global Footer (`<footer class="Footer">`)**:
-   - Architecture & Selectors: Structured defense directory linking Lattice, Force Protection, and Careers.
-   - Layout & State Contract: Footer directory and utility bar anchored to Full-bleed `100vw` tactical viewports with `@media (min-width:1440px)` and `@media (min-width:1920px)` max-bounds with Responsive horizontal padding scaling across `@media (min-width:400px)`, `768px`, `1280px`, `1440px`, `1920px` lateral gutters.
+### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
+Scaffold `www-anduril-com` (`Transforming U.S. Defense Capabilities with Advanced Technology · Anduril`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
+1. **Brand Header & Navigation Bar (<header.header> — `www-anduril-com`)**:
+   - DOM & Selectors: Landmark `<header class="header">` (`1440px`) hosting `Transforming U.S. Defense Capabiliti` navigation (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), DOM attributes (`data-path="/"`, `data-path="subterranean/future-s..."`, `data-label="Subterranean"`, `data-domain="Sea"`), and stylesheet rule `root { --is-mob:0 }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `www-anduril-com`)` (`www-anduril-com`) adapts across `@media (max-width:768px)`, `@media (min-width:400px)`, `@media (min-width:768px)`, `@media (min-width:1280px)` with `cubic-bezier(.215,.62,.34,1)`, `cubic-bezier(0.19,1,0.22,1)`, `cubic-bezier(0.215,0.61,0.355,1)` transitions and links `Anduril Logo · Subterranean · Space · Arsenal · Seapower`.
+2. **Hero Stage & Focal Lead (<main.GLA11y> — `@[shortTitle]`)**:
+   - DOM & Selectors: Landmark `<main class="GLA11y">` presenting display lead `@[shortTitle]` and copy excerpt *"Anduril, U.S. Navy Invest $6.6 Billion to Expand America's Submar"* over `#000000` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `@[shortTitle]`.
+3. **Primary Showcase & Content Grid (<main.Header> — `@[title]`)**:
+   - DOM & Selectors: Landmark `<main class="Header">` rendering section `@[title]` with copy *"Please enable javascript"*, asset references (`feed.xml`, `favicon.xxWKiVhdqu.ico`, `favicon.xxQR7xb3fo.svg`, `apple-touch-icon.xxx1TpF2gg.png`), and grid rule `Stage { width:100%;height:100%;margin:0;padding:0;overflow-x:clip }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.Header> — `@[title]`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `8px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<main.HeaderDesktop> — `Please enable javascript`)**:
+   - DOM & Selectors: Landmark `<main class="HeaderDesktop">` framing `Please enable javascript` and `Tactical Reconnaissance & Strike` (*"Tactical Reconnaissance & Strike"*) with `#010101` surface cards, `#ff3535` accents, and `html { scrollbar-gutter:stable }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.HeaderDesktop> — `Please enable javascript`)` uses `2px`, `100px`, `50%`, `5px` radii, `#ff3535` highlights, and assets (feed.xml, favicon.xxWKiVhdqu.ico, favicon.xxQR7xb3fo.svg).
+5. **Colophon & Global Directory Footer (<footer.Footer> — `https://www.anduril.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="Footer">` anchoring `Transforming U.S. Defense Capabi` footer links (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), copy *"Air Dominance & Strike"*, and `#010101` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.Footer> — `https://www.anduril.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `8px` lateral canvas padding with `1rem` grid gap and attributes (data-path="/", data-path="subterranean/future-s...", data-label="Subterranean").
 
-### 7. Motion & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.215,.62,.34,1)` (custom tactical ease-out)
+#### Verbatim DOM Copy Excerpts (`dom.html`)
+- Copy Excerpt 1: *"Anduril, U.S. Navy Invest $6.6 Billion to Expand America's Submarine Industrial Base"*
+- Copy Excerpt 2: *"Please enable javascript"*
+- Copy Excerpt 3: *"Tactical Reconnaissance & Strike"*
+- Copy Excerpt 4: *"Air Dominance & Strike"*
+
+### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
+- **Primary Easing Functions**: `cubic-bezier(.215,.62,.34,1)`, `cubic-bezier(0.19,1,0.22,1)`, `cubic-bezier(0.215,0.61,0.355,1)`
+- **Extracted Stylesheet Rules (`www-anduril-com`)**:
+- `root { --is-mob:0 }`
+- `Stage { width:100%;height:100%;margin:0;padding:0;overflow-x:clip }`
+- `html { scrollbar-gutter:stable }`
+- `.mob { height:100vh;position:relative }`
+- `.GLA11y { clip:rect(0 0 0 0);width:0;height:100%;position:absolute;overflow:hidden }`
 - **Per-Selector Transition Rules**:
-- `Button & Link Reveals (.CircleButton, .LinkButton)` -> `transition: all 350ms cubic-bezier(.215,.62,.34,1)` (invert fill from `#010101` to `#fff` with `--linkbutton-hover-color: #010101`)
-- `Odometer Digit Columns` -> vertical `translateY` slot rotation scaled by `--roller-column-height: calc(2.5rem*var(--roller-scale))`
-- `Lenis Smooth Scroll (<nav class="HeaderMobile lenis">)` -> inertia-damped viewport scrolling synchronized with `--backgroundOpacity`
+- **Selector `.AlgoliaPagination .next`**: `transition: background-color .5s,border-color .5s` extracted from `www-anduril-com` stylesheet.
+- **Selector `.AlgoliaPagination .next svg`**: `transition: color .5s` extracted from `www-anduril-com` stylesheet.
+- **Selector `.AlgoliaPagination .pageButton`**: `transition: opacity .5s` extracted from `www-anduril-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.215,.62,.34,1)`)**: Governs interactive state transitions across `<header.header>` and `<main.Header>`.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables
-- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above.
+- Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-anduril-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```

@@ -1,34 +1,45 @@
+---
+title: "UI & UX Architecture: loopsii-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: loopsii-com
 
 ## Overview & Design Identity
 - **Target**: `loopsii-com` (**Loopsii: the all-in-one app for freelancers**)
 - **Production URL**: [https://loopsii.com/](https://loopsii.com/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#fff`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c4f041`)
 - **Summary**: Loopsii is the all-in-one app for freelancers: CRM, project management, time tracking, AI notes from client calls and dictation. 14-day f...
-- **Total Clean CSS Variables Extracted**: `158` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `158` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Saans VF-1156b2189454d62c`
-- **Body Font Stack**: `Saans VF-1156b2189454d62c fallback: Arial`
+- **Body Font Stack**: `Saans VF-1156b2189454d62c`
 - **Monospace / Technical Font Stack**: `Geist Mono-c001706f58ecc7d6`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `clamp(14.4px, 16 * var(--spacing)`, `clamp(16px, 20 * var(--spacing)`, `clamp(14.4px, 18 * var(--spacing)`, `clamp(16.2px, 18 * var(--spacing)`, `clamp(12.6px, 14 * var(--spacing)`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`)
-- **Body Copy**: CSS variables `--font-body: var(--font-title)`
-- **Metadata & Labels**: CSS variables `--tp-label-foreground-color: #fff9`, `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25 / .875)`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 21px`, `line-height: 29.4px`, `font-weight: 400`, `letter-spacing: -0.63px`); rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`)
+- **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--font-body: var(--font-title)`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25 / .875)`, `--default-mono-font-family: var(--font-mono)`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f0f0f0` | `var(--color-grey)` in `:root` |
-| **Primary Typography Ink** | `#c5c5c5` | `var(--color-dark-grey)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff` | `var(--color-white)` in `:root` |
-| **Secondary / Muted Copy** | `#c4f041` | `var(--color-main)` in `:root` |
-| **Structural Hairline Border** | `#e0f661` | `var(--color-lime-light)` in `:root` |
+| **Primary Canvas Substrate** | `#f0f0f0` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.prose code { background: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#c4f041` | `var(--color-main)` in `:root` |
+| **Secondary / Muted Copy** | `#8fd8ff` | `var(--tp-input-foreground-color)` in `:root` |
+| **Structural Hairline Border** | `#d0d0d0` | `.nav_legal .nav_legal-socials { border-color: #d0d0d0 }` |
 
 ---
 
@@ -56,12 +67,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.is-loading> — `loopsii-com`)**:
-   - Landmark `<header class="is-loading">` hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-loader`, `data-module="NavMorph"`, `data-track="nav-logo"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
+   - Landmark `<header class="is-loading">` (`1440x872px`) hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-loader`, `data-module="NavMorph"`, `data-track="nav-logo"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `Loopsii, the all-in-one app for fr`)**:
-   - Landmark `<section class="intro relative">` presenting display lead `Loopsii, the all-in-one app for freelancers` and copy excerpt *"W h y L o o p s i i"* over `#f0f0f0` canvas and `#000` ink.
+   - Landmark `<section class="intro z-2">` presenting display lead `Loopsii, the all-in-one app for freelancers` and copy excerpt *"Every project follows a familiar loop. Loopsii keeps it moving, s"* over `#f0f0f0` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.distraction> — `The all-in-one app for freelancers`)**:
-   - Landmark `<section class="distraction relative">` rendering section `The all-in-one app for freelancers. Like a person...` with copy *"S i g n u p f o r f r e e"*, asset references (`f1306f12b629075b.woff2`, `fd3499837a53ca88.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `.v-text { writing-mode:vertical-lr }`.
+   - Landmark `<section class="distraction z-3">` rendering section `The all-in-one app for freelancers. Like a person...` with copy *"Too many things pulling you away"*, asset references (`f1306f12b629075b.woff2`, `fd3499837a53ca88.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `.v-text { writing-mode:vertical-lr }`.
 4. **Interactive Detail & Feature Matrix (<section.app-demo> — `Loopsii helps freelance designers `)**:
-   - Landmark `<section class="app-demo relative">` framing `Loopsii helps freelance designers and developers...` and `That's why Loopsii exists` (*"Start your loop here"*) with `#000` surface cards, `#fff` accents, and `.display { font-size:calc(164 * var(--spacing));letter-spacing:-.02em;font-variatio... }`.
+   - Landmark `<section class="app-demo app-demo--pinned">` framing `Loopsii helps freelance designers and developers...` and `That's why Loopsii exists` (*"from the work that actually matters"*) with `#ffffff` surface cards, `#c4f041` accents, and `.display { font-size:calc(164 * var(--spacing));letter-spacing:-.02em;font-variatio... }`.
 5. **Colophon & Global Directory Footer (<footer.fixed> — `https://loopsii.com/`)**:
-   - Landmark `<footer class="fixed">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"One account, all your clients, one simple workflow"*, and `#e0f661` structural dividers.
+   - Landmark `<footer class="fixed">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"Forgot to start the timer"*, and `#d0d0d0` structural dividers.

@@ -1,37 +1,47 @@
+---
+title: "UI & UX Architecture: santalarch-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: santalarch-com
 
 ## Overview & Design Identity
 - **Target**: `santalarch-com` (**Santalarch**)
 - **Production URL**: [https://santalarch.com](https://santalarch.com)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#0f0f0f`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#007aff`)
 - **Summary**: Architectural studio built on uncompromising precision and intent.
-- **Total Clean CSS Variables Extracted**: `103` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `103` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Helvetica`
-- **Body Font Stack**: `lil-gui`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
+- **Display Font Stack**: `lil-gui`
+- **Body Font Stack**: `Segoe UI`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: rule `.title` (`line-height: calc(var(--title-heig...`, `font-weight: 600`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `14.625rem`, `7.875rem`, `6.125rem`, `4rem`)
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `100%`, `14.625rem`, `7.875rem`, `6.125rem`, `4rem`)
-- **Metadata & Labels**: CSS variables `--font-family-mono: Menlo, Monaco, Consolas, "Droid Sans Mono", monospace`
+- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 33px`, `line-height: 35.64px`, `font-weight: 400`, `letter-spacing: -0.99px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--font-family-mono: Menlo, Monaco, Consolas, "Droid Sans Mono", monospace`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f0f0f0` | `var(--c-base-light-primary)` in `:root` |
-| **Primary Typography Ink** | `#000` | `var(--c-pure-black)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--c-pure-white)` in `:root` |
-| **Interactive Accent / Highlight** | `#0f0f0f` | `var(--c-base-dark-primary)` in `:root` |
-| **Secondary / Muted Copy** | `#8f2424` | `var(--c-error)` in `:root` |
-| **Structural Hairline Border** | `#1f1f1f` | `var(--background-color)` in `:root` |
-| **Variable Token (`--c-base-line-highlight`)** | `#f2f0f033` | `var(--c-base-line-highlight)` in `:root` |
-| **Variable Token (`--c-base-line-dark-bg`)** | `#f2f0f00d` | `var(--c-base-line-dark-bg)` in `:root` |
-| **Variable Token (`--c-light-secondary`)** | `#f2f0f066` | `var(--c-light-secondary)` in `:root` |
+| **Primary Canvas Substrate** | `#f0f0f0` | live computed `main` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0f0f0f` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `:hover { background-color: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#007aff` | `:root { color: #007aff }` |
+| **Secondary / Muted Copy** | `#ebebeb` | `var(--text-color)` in `:root` |
+| **Structural Hairline Border** | `#f9f9f9` | `ui .controller.color .display:h... { border: #f9f9f9 }` |
+| **Variable Token (`--c-base-line-highlight`)** | `#f2f0f0` | `var(--c-base-line-highlight)` in `:root` |
+| **Variable Token (`--c-pure-black`)** | `#000000` | `var(--c-pure-black)` in `:root` |
 
 ---
 
@@ -59,12 +69,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `santalarch-com`)**:
-   - Landmark `<header class="header difference">` hosting `Santalarch` navigation (`Works Works · Services Services · Process Process · Company Company · Contact Contact`), DOM attributes (`data-theme="light"`, `data-v-fd5224ce`, `data-v-211bdc1c`, `data-v-52d76f34`), and stylesheet rule `before { box-sizing:border-box;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `Bold`)**:
-   - Landmark `<section class="hero">` presenting display lead `Bold` and copy excerpt *"This site uses cookies."* over `#f0f0f0` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.cubes-wrap> — `Confident`)**:
-   - Landmark `<section class="cubes-wrap">` rendering section `Confident` with copy *"Philosophy Philosophy"*, asset references (`entry.D7X7o5bn.css`, `DrgmgFce.js`, `08bc0b24-806f-4d88-b7d6-f5aecb73d...`, `ad.B18i8NGa.svg`), and grid rule `video { border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:b... }`.
-4. **Interactive Detail & Feature Matrix (<section.approach> — `Quiet`)**:
-   - Landmark `<section class="approach grid-container">` framing `Quiet` and `Intent Before Image` (*"Architectural studio built on uncompromising precision and intent"*) with `#fff` surface cards, `#0f0f0f` accents, and `svg { display:block }`.
-5. **Colophon & Global Directory Footer (<footer.cookies-actions> — `https://santalarch.com`)**:
-   - Landmark `<footer class="cookies-actions">` anchoring `Santalarch` footer links (`Works Works · Services Services · Process Process · Company Company · Contact Contact`), copy *"Architecture Shapes Perception"*, and `#1f1f1f` structural dividers.
+   - Landmark `<header class="header difference">` (`1440x450px`) hosting `Santalarch` navigation (`Works Works · Services Services · Process Process · Company Company · Contact Contact`), DOM attributes (`data-theme="light"`, `data-v-fd5224ce`, `data-v-211bdc1c`, `data-v-52d76f34`), and stylesheet rule `before { box-sizing:border-box;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `Intent Before Image`)**:
+   - Landmark `<section class="hero">` presenting display lead `Intent Before Image` and copy excerpt *"This site uses cookies."* over `#f0f0f0` canvas and `#0f0f0f` ink.
+3. **Primary Showcase & Content Grid (<section.cubes-wrap> — `Engineering as Foundation`)**:
+   - Landmark `<section class="cubes-wrap">` rendering section `Engineering as Foundation` with copy *"Architectural studio built on uncompromising precision and intent"*, asset references (`entry.D7X7o5bn.css`, `CI8pdcr7.js`, `03be9e1c-9e63-48c6-b4db-59a6b0167...`, `ad.B18i8NGa.svg`), and grid rule `video { border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:b... }`.
+4. **Interactive Detail & Feature Matrix (<section.approach> — `Material Intelligence`)**:
+   - Landmark `<section class="approach grid-container">` framing `Material Intelligence` and `Detail as Discipline` (*"Architecture Shapes Perception"*) with `#ffffff` surface cards, `#007aff` accents, and `svg { display:block }`.
+5. **Colophon & Global Directory Footer (<footer.c2-sb> — `https://santalarch.com`)**:
+   - Landmark `<footer class="c2-sb">` anchoring `Santalarch` footer links (`Works Works · Services Services · Process Process · Company Company · Contact Contact`), copy *"Bold presence. Quiet execution."*, and `#f9f9f9` structural dividers.

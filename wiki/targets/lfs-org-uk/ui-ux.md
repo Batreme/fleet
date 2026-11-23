@@ -1,34 +1,48 @@
+---
+title: "UI & UX Architecture: lfs-org-uk"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: lfs-org-uk
 
 ## Overview & Design Identity
 - **Target**: `lfs-org-uk` (**London Film School**)
 - **Production URL**: [https://lfs.org.uk/](https://lfs.org.uk/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#000` ink, `#30363c` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)
 - **Summary**: The oldest film school in the UK, dedicated to the education of filmmakers.
-- **Total Clean CSS Variables Extracted**: `100` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `100` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Waldenburg Condensed Black`
 - **Body Font Stack**: `Segoe UI`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
-- **Body Copy**: rule `p` (`line-height: 1.2!important`)
-- **Metadata & Labels**: CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 160px`, `line-height: 144px`, `font-weight: 400`, `letter-spacing: -3.2px`); rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`); rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); rule `p` (`line-height: 1.2`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--cc-bg)` in `:root` |
-| **Primary Typography Ink** | `#2c2f31` | `var(--cc-primary-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#30363c` | `var(--cc-btn-primary-bg)` in `:root` |
-| **Secondary / Muted Copy** | `#000` | `var(--cc-btn-primary-hover-bg)` in `:root` |
-| **Structural Hairline Border** | `#eaeff2` | `var(--cc-btn-secondary-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#23282d` | `.wpcf7-spinner { background-color: #23282d }` |
+| **Interactive Accent / Highlight** | `#0000ff` | `.page--short-courses .pill-btn { background-color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#5e6266` | `var(--cc-secondary-color)` in `:root` |
+| **Structural Hairline Border** | `#d4dae0` | `var(--cc-btn-secondary-hover-border-color)` in `:root` |
+| **Variable Token (`--cc-primary-color`)** | `#2c2f31` | `var(--cc-primary-color)` in `:root` |
+| **Variable Token (`--cc-btn-primary-bg`)** | `#30363c` | `var(--cc-btn-primary-bg)` in `:root` |
+| **Variable Token (`--cc-btn-secondary-bg`)** | `#eaeff2` | `var(--cc-btn-secondary-bg)` in `:root` |
 
 ---
 
@@ -56,12 +70,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `lfs-org-uk`)**:
-   - Landmark `<header class="header js-header">` hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `cc-main span { all:unset;box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.menu> — `Late applications for MA Filmmakin`)**:
-   - Landmark `<section class="menu js-overlay-menu">` presenting display lead `Late applications for MA Filmmaking January intak...` and copy excerpt *"London Film School"* over `#fff` canvas and `#000` ink.
-3. **Primary Showcase & Content Grid (<section.homepage-hero> — `Courses`)**:
-   - Landmark `<section class="homepage-hero homepage-hero--announcement">` rendering section `Courses` with copy *"Full time courses MA Filmmaking MA Screenwriting MA Film Marketin"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `cc-main button { all:initial;box-sizing:border-box;color:unset;visibility:unset }`.
-4. **Interactive Detail & Feature Matrix (<section.homepage-courses> — `Study at LFS`)**:
-   - Landmark `<section class="homepage-courses background-grey">` framing `Study at LFS` and `About` (*"MA International Film Business"*) with `#5e6266` surface cards, `#30363c` accents, and `cc-main tr { all:revert;color:inherit;font-family:inherit;font-size:inherit;font-weig... }`.
+   - Landmark `<header class="header js-header">` (`1440x40px`) hosting `London Film School` navigation (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), DOM attributes (`data-category="analytics"`, `data-service="Google Analytics"`, `data-category="analytics"`, `data-service="Google Analytics"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+2. **Hero Stage & Focal Lead (<section.homepage-hero> — `Find your voice in film`)**:
+   - Landmark `<section class="homepage-hero homepage-hero--announcement">` presenting display lead `Find your voice in film` and copy excerpt *"A 17-year-old Ada spends the school vacation helping her father s"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.homepage-courses> — `Training the world’s next great fi`)**:
+   - Landmark `<section class="homepage-courses background-grey">` rendering section `Training the world’s next great filmmakers and st...` with copy *"Explore London Film School from anywhere"*, asset references (`recaptcha__en.js`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+4. **Interactive Detail & Feature Matrix (<section.featured-film> — `MA Filmmaking`)**:
+   - Landmark `<section class="featured-film js-featured-film">` framing `MA Filmmaking` and `MA Screenwriting` (*"Elísabet Ronaldsdóttir"*) with `#23282d` surface cards, `#0000ff` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://lfs.org.uk/`)**:
-   - Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"Study at LFS How to apply Facilities Life in London Funding "*, and `#eaeff2` structural dividers.
+   - Landmark `<footer class="footer grid-container">` anchoring `London Film School` footer links (`Full time courses · MA Filmmaking · MA Screenwriting · MA Film Marketing · MA Film Producing`), copy *"LFS is the UK's oldest dedicated film school. Based in the c"*, and `#d4dae0` structural dividers.

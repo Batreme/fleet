@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: hole-money"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "hole-money"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: dom
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#afafb6`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#c3c3c3` / `#1c1c1c`)"
 ---
 
 # UI Design System & Master Generation Blueprint: hole-money
 
 > **Money Hole** (https://hole.money) — Money Hole is a free personal finance manager for tracking income, expenses, accounts and budgets. Analytics, multi-currency support and...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Money Hole** (`https://hole.money`). Money Hole is a free personal finance manager for tracking income, expenses, accounts and budgets. Analytics, multi-currency support and...
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#afafb6`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#c3c3c3` / `#1c1c1c`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e4e4e7` (`var(--bg)` in `:root`) paired with `#18181b` primary typography and `#afafb6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `IBM Plex Sans` for display copy (`Income sources`) with `IBM Plex Serif` and `IBM Plex Sans`.
-  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 10px`, padding `7px`) with `cubic-bezier(.32,.72,0,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#c3c3c3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0000ee` primary typography and `#1c1c1c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `IBM Plex Serif` for display copy (`Manage Your Finance`) with `IBM Plex Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1385px` container bounds (`gap: 10px`, padding `7px`) with `cubic-bezier(.32,.72,0,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `100vw` extracted from `hole-money` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1385px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `7px` lateral canvas padding with `10px` grid gap.
 - **Border Radius Scale**: `62px`, `1px`, `60px`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 10px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1385px`, `gap: 10px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `7px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`.
 
@@ -48,18 +52,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#a
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#e4e4e7` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#ffffff` | `var(--card)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#18181b` | `var(--primary)` in `:root` |
-| **Interactive Accent / Highlight** | `#afafb6` | `var(--grab)` in `:root` |
-| **Secondary / Muted Copy** | `#d7d7db` | `var(--divider)` in `:root` |
-| **Structural Hairline Border** | `#797986` | `var(--ink2)` in `:root` |
-| **Variable Token (`--module`)** | `#ffffff80` | `var(--module)` in `:root` |
-| **Variable Token (`--glass`)** | `#ffffff73` | `var(--glass)` in `:root` |
-| **Variable Token (`--bsm`)** | `#ffffff4d` | `var(--bsm)` in `:root` |
-| **Variable Token (`--shadow-btn`)** | `#0000000a` | `var(--shadow-btn)` in `:root` |
+| **Primary Canvas Substrate** | `#c3c3c3` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#0000ee` | live computed `a` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e4e4e7` | `var(--bg)` in `:root` |
+| **Interactive Accent / Highlight** | `#1c1c1c` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#797986` | `var(--ink2)` in `:root` |
+| **Structural Hairline Border** | `#d7d7db` | `var(--divider)` in `:root` |
+| **Variable Token (`--module`)** | `#ffffff` | `var(--module)` in `:root` |
+| **Variable Token (`--primary`)** | `#18181b` | `var(--primary)` in `:root` |
+| **Variable Token (`--grab`)** | `#afafb6` | `var(--grab)` in `:root` |
+| **Variable Token (`--shadow-btn`)** | `#000000` | `var(--shadow-btn)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -86,15 +90,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#a
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `IBM Plex Sans`.
-- **Primary Body Stack**: `IBM Plex Serif`.
-- **Technical / Metadata Stack**: `IBM Plex Sans`.
+- **Display Typography**: `IBM Plex Serif`.
+- **Primary Body Stack**: `IBM Plex Sans`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `24px`, `22px`, `9px`, `8px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `24px`, `22px`, `9px`, `8px`).
-- **Body Copy**: rule `body` (`letter-spacing: -.1px`).
-- **Metadata & Navigation Labels**: rule `small` (`font-weight: 500`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 120px`, `line-height: 130px`, `font-weight: 700`, `letter-spacing: -0.1px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60px`, `line-height: 70px`, `font-weight: 700`, `letter-spacing: -0.1px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: -0.1px`); rule `body` (`letter-spacing: -.1px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: -0.1px`); rule `small` (`font-weight: 500`).
 
 ---
 
@@ -107,47 +111,66 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#a
 - **Selector `.splash`**: `transition: opacity .6s var(--ios)` extracted from `hole-money` stylesheet.
 - **Selector `.splash .ico`**: `transition: opacity .7s var(--ios),transform .9s cubic-bezier(.34,1.4,.64,...` extracted from `hole-money` stylesheet.
 - **Selector `.splash.out .ico`**: `transition: opacity .45s ease-in,transform .6s var(--ios),filter .45s` extracted from `hole-money` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.32,.72,0,1)`)**: Governs interactive state transitions across `<header.paused>` and `<section.sl>`.
+- **Extracted Easing Curve (`cubic-bezier(.32,.72,0,1)`)**: Governs interactive state transitions across `<header.paused>` and `<section.sl:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Money Hole                                 │
 │ ====================================================================== │
-│ [ <header.paused>          | Overview · Index · Archive · About · C ]  │
+│ [ <header.paused> (1400x20px)         | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.sl>                                         |   │
-│ | H1: Income sources                                               |   │
-│ | Substrate: #e4e4e7    | Ink: #18181b    | Accent: #afafb6        |   │
+│ | HERO STAGE: <section.sl> (w=1440px)                                | │
+│ | H1: Manage Your Finance                                            | │
+│ | Substrate: #c3c3c3 | Ink: #0000ee | Accent: #1c1c1c                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.sl>              ) max-w: 100vw          |   │
+│ | SHOWCASE GRID (<section.sl:nth(2)>) max-w: 1385px                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Accounts                     |  | Expenses                     | | │
+│ | | Manage Your Finance Manage Y |  | For example, Salary to Cash, | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.paused>] -> [<section.sl>] -> [<section.sl>] |              │
+│ | DETAIL MODULE (<section.sl:nth(3)>) — Manage Your Finance          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.dframe>       ) | https://hole.money                 │
+│ [ FOOTER (<footer.dframe>     ) | https://hole.money                   │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.paused>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.sl>) — 390px Vertical Lead                    | │
+│ | H1: Manage Your Finance                                            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.sl:nth(2)>) — 1-Col Stack                 | │
+│ | [ Item 1: Manage Your Finance Manage Your Finance                ] | │
+│ | [ Item 2: For example, Salary to Cash, ten thousand dollar       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.sl:nth(3)>) — 1-Col (Manage Your Financ)    | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.dframe>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.paused> — `hole-money`)**:
-   - Landmark `<header class="paused">` hosting `Money Hole` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-c="0"`, `data-m="0"`, `data-s="1"`, `data-v="incT"`), and stylesheet rule `.stage { position:relative;width:432px;height:871px }`.
-2. **Hero Stage & Focal Lead (<section.sl> — `Income sources`)**:
-   - Landmark `<section class="sl show">` presenting display lead `Income sources` and copy excerpt *"Spending by Category"* over `#e4e4e7` canvas and `#18181b` ink.
-3. **Primary Showcase & Content Grid (<section.sl> — `Accounts`)**:
-   - Landmark `<section class="sl">` rendering section `Accounts` with copy *"For example, Salary to Cash, ten thousand dollars"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon.ico`), and grid rule `.device { position:absolute;left:0;top:0;width:432px;height:871px;transform-origin... }`.
-4. **Interactive Detail & Feature Matrix (<section.sl> — `Expenses`)**:
-   - Landmark `<section class="sl">` framing `Expenses` and `Expense category` (*"Manage Your Finance"*) with `#18181b` surface cards, `#afafb6` accents, and `.dcut { position:absolute;background:linear-gradient(817e73,c3beac);border-radiu... }`.
+   - Landmark `<header class="paused">` (`1400x20px`) hosting `Money Hole` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-c="0"`, `data-m="0"`, `data-s="1"`, `data-v="incT"`), and stylesheet rule `.stage { position:relative;width:432px;height:871px }`.
+2. **Hero Stage & Focal Lead (<section.sl> — `Manage Your Finance`)**:
+   - Landmark `<section class="sl show">` presenting display lead `Manage Your Finance` and copy excerpt *"Spending by Category"* over `#c3c3c3` canvas and `#0000ee` ink.
+3. **Primary Showcase & Content Grid (<section.sl:nth(2)> — `Manage Your Finance Manage Your Fi`)**:
+   - Landmark `<section class="sl">` rendering section `Manage Your Finance Manage Your Finance` with copy *"For example, Salary to Cash, ten thousand dollars"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon.ico`), and grid rule `.device { position:absolute;left:0;top:0;width:432px;height:871px;transform-origin... }`.
+4. **Interactive Detail & Feature Matrix (<section.sl:nth(3)> — `For example, Salary to Cash, ten t`)**:
+   - Landmark `<section class="sl">` framing `For example, Salary to Cash, ten thousand dollar` and `Manage Your Finance` (*"Manage Your Finance"*) with `#e4e4e7` surface cards, `#1c1c1c` accents, and `.dcut { position:absolute;background:linear-gradient(817e73,c3beac);border-radiu... }`.
 5. **Colophon & Global Directory Footer (<footer.dframe> — `https://hole.money`)**:
-   - Landmark `<footer class="dframe">` anchoring `Money Hole` footer links (`Overview · Index · Archive · About · Contact`), copy *"– no intrusive ads or subscriptions"*, and `#797986` structural dividers.
+   - Landmark `<footer class="dframe">` anchoring `Money Hole` footer links (`Overview · Index · Archive · About · Contact`), copy *"– no intrusive ads or subscriptions"*, and `#d7d7db` structural dividers.
 
 ---
 
@@ -159,19 +182,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#a
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `hole-money` (**Money Hole** — `https://hole.money`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#e4e4e7` / `#afafb6`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#c3c3c3` / `#1c1c1c`).
 - **Identity & Domain Context**: Money Hole is a free personal finance manager for tracking income, expenses, accounts and budgets. Analytics, multi-currency support and...
-- **Primary Substrate**: `#e4e4e7` (`var(--bg)` in `:root`), **Primary Ink**: `#18181b`, **Accent / Highlight**: `#afafb6`.
+- **Primary Substrate**: `#c3c3c3` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0000ee`, **Accent / Highlight**: `#1c1c1c`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#e4e4e7` (`var(--bg)` in `:root`) paired with `#18181b` primary typography and `#afafb6` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `IBM Plex Sans` for display copy (`Income sources`) with `IBM Plex Serif` and `IBM Plex Sans`.
-  - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 10px`, padding `7px`) with `cubic-bezier(.32,.72,0,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#c3c3c3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0000ee` primary typography and `#1c1c1c` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `IBM Plex Serif` for display copy (`Manage Your Finance`) with `IBM Plex Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1385px` container bounds (`gap: 10px`, padding `7px`) with `cubic-bezier(.32,.72,0,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `hole-money` in your global stylesheet:
 
 :root {
-  /* Money Hole (hole-money) — Ground-Truth Extracted CSS Variables */
+  /* Money Hole (hole-money) — Live-Grounded CSS Variables */
   --ios: cubic-bezier(.32,.72,0,1); /* Motion / Timing Token (hole-money) */
   --bg: #e4e4e7; /* Canvas / Surface Token (hole-money) */
   --module: #ffffff80; /* Color / Atmospheric Token (hole-money) */
@@ -192,53 +215,53 @@ Declare and consume these exact custom properties extracted from `hole-money` in
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#e4e4e7` — grounded in `var(--bg)` in `:root`
-- **Primary Typography Ink**: `#ffffff` — grounded in `var(--card)` in `:root`
-- **Elevated Surface / Card Substrate**: `#18181b` — grounded in `var(--primary)` in `:root`
-- **Interactive Accent / Highlight**: `#afafb6` — grounded in `var(--grab)` in `:root`
-- **Secondary / Muted Copy**: `#d7d7db` — grounded in `var(--divider)` in `:root`
-- **Structural Hairline Border**: `#797986` — grounded in `var(--ink2)` in `:root`
-- **Variable Token (`--module`)**: `#ffffff80` — grounded in `var(--module)` in `:root`
-- **Variable Token (`--glass`)**: `#ffffff73` — grounded in `var(--glass)` in `:root`
-- **Variable Token (`--bsm`)**: `#ffffff4d` — grounded in `var(--bsm)` in `:root`
-- **Variable Token (`--shadow-btn`)**: `#0000000a` — grounded in `var(--shadow-btn)` in `:root`
+- **Primary Canvas Substrate**: `#c3c3c3` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#0000ee` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e4e4e7` — grounded in `var(--bg)` in `:root`
+- **Interactive Accent / Highlight**: `#1c1c1c` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#797986` — grounded in `var(--ink2)` in `:root`
+- **Structural Hairline Border**: `#d7d7db` — grounded in `var(--divider)` in `:root`
+- **Variable Token (`--module`)**: `#ffffff` — grounded in `var(--module)` in `:root`
+- **Variable Token (`--primary`)**: `#18181b` — grounded in `var(--primary)` in `:root`
+- **Variable Token (`--grab`)**: `#afafb6` — grounded in `var(--grab)` in `:root`
+- **Variable Token (`--shadow-btn`)**: `#000000` — grounded in `var(--shadow-btn)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `100vw` extracted from `hole-money` stylesheet
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1385px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `7px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 10px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1385px`, `gap: 10px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `7px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion:reduce)`
 - **Corner Radii**: `62px`, `1px`, `60px`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `IBM Plex Sans`
-- **Body Font Stack**: `IBM Plex Serif`
-- **Monospace / Technical Font Stack**: `IBM Plex Sans`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `24px`, `22px`, `9px`, `8px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `24px`, `22px`, `9px`, `8px`)
-- **Body Copy Rule**: rule `body` (`letter-spacing: -.1px`)
-- **Metadata & Index Rule**: rule `small` (`font-weight: 500`)
+- **Display Font Stack**: `IBM Plex Serif`
+- **Body Font Stack**: `IBM Plex Sans`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 120px`, `line-height: 130px`, `font-weight: 700`, `letter-spacing: -0.1px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 60px`, `line-height: 70px`, `font-weight: 700`, `letter-spacing: -0.1px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: -0.1px`); rule `body` (`letter-spacing: -.1px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: -0.1px`); rule `small` (`font-weight: 500`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `hole-money` (`Money Hole`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.paused> — `hole-money`)**:
-   - DOM & Selectors: Landmark `<header class="paused">` hosting `Money Hole` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-c="0"`, `data-m="0"`, `data-s="1"`, `data-v="incT"`), and stylesheet rule `.stage { position:relative;width:432px;height:871px }`.
+   - DOM & Selectors: Landmark `<header class="paused">` (`1400x20px`) hosting `Money Hole` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-c="0"`, `data-m="0"`, `data-s="1"`, `data-v="incT"`), and stylesheet rule `.stage { position:relative;width:432px;height:871px }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.paused> — `hole-money`)` (`hole-money`) adapts across `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.32,.72,0,1)`, `cubic-bezier(.34,1.4,.64,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.sl> — `Income sources`)**:
-   - DOM & Selectors: Landmark `<section class="sl show">` presenting display lead `Income sources` and copy excerpt *"Spending by Category"* over `#e4e4e7` canvas and `#18181b` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e4e4e7` background with `#18181b` headline `Income sources`.
-3. **Primary Showcase & Content Grid (<section.sl> — `Accounts`)**:
-   - DOM & Selectors: Landmark `<section class="sl">` rendering section `Accounts` with copy *"For example, Salary to Cash, ten thousand dollars"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon.ico`), and grid rule `.device { position:absolute;left:0;top:0;width:432px;height:871px;transform-origin... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sl> — `Accounts`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `7px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.sl> — `Expenses`)**:
-   - DOM & Selectors: Landmark `<section class="sl">` framing `Expenses` and `Expense category` (*"Manage Your Finance"*) with `#18181b` surface cards, `#afafb6` accents, and `.dcut { position:absolute;background:linear-gradient(817e73,c3beac);border-radiu... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sl> — `Expenses`)` uses `62px`, `1px`, `60px`, `2px` radii, `#afafb6` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
+2. **Hero Stage & Focal Lead (<section.sl> — `Manage Your Finance`)**:
+   - DOM & Selectors: Landmark `<section class="sl show">` presenting display lead `Manage Your Finance` and copy excerpt *"Spending by Category"* over `#c3c3c3` canvas and `#0000ee` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#c3c3c3` background with `#0000ee` headline `Manage Your Finance`.
+3. **Primary Showcase & Content Grid (<section.sl:nth(2)> — `Manage Your Finance Manage Your Fi`)**:
+   - DOM & Selectors: Landmark `<section class="sl">` rendering section `Manage Your Finance Manage Your Finance` with copy *"For example, Salary to Cash, ten thousand dollars"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon.ico`), and grid rule `.device { position:absolute;left:0;top:0;width:432px;height:871px;transform-origin... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sl:nth(2)> — `Manage Your Finance Manage Your Fi`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1385px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `7px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.sl:nth(3)> — `For example, Salary to Cash, ten t`)**:
+   - DOM & Selectors: Landmark `<section class="sl">` framing `For example, Salary to Cash, ten thousand dollar` and `Manage Your Finance` (*"Manage Your Finance"*) with `#e4e4e7` surface cards, `#1c1c1c` accents, and `.dcut { position:absolute;background:linear-gradient(817e73,c3beac);border-radiu... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sl:nth(3)> — `For example, Salary to Cash, ten t`)` uses `62px`, `1px`, `60px`, `2px` radii, `#1c1c1c` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
 5. **Colophon & Global Directory Footer (<footer.dframe> — `https://hole.money`)**:
-   - DOM & Selectors: Landmark `<footer class="dframe">` anchoring `Money Hole` footer links (`Overview · Index · Archive · About · Contact`), copy *"– no intrusive ads or subscriptions"*, and `#797986` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.dframe> — `https://hole.money`)` aligns to `100vw` extracted from `hole-money` stylesheet with `7px` lateral canvas padding with `10px` grid gap and attributes (data-c="0", data-m="0", data-s="1").
+   - DOM & Selectors: Landmark `<footer class="dframe">` anchoring `Money Hole` footer links (`Overview · Index · Archive · About · Contact`), copy *"– no intrusive ads or subscriptions"*, and `#d7d7db` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.dframe> — `https://hole.money`)` aligns to `1385px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `7px` lateral canvas padding with `10px` grid gap and attributes (data-c="0", data-m="0", data-s="1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Spending by Category"*
@@ -258,7 +281,7 @@ Scaffold `hole-money` (`Money Hole`) with these exact structural regions, extrac
 - **Selector `.splash`**: `transition: opacity .6s var(--ios)` extracted from `hole-money` stylesheet.
 - **Selector `.splash .ico`**: `transition: opacity .7s var(--ios),transform .9s cubic-bezier(.34,1.4,.64,...` extracted from `hole-money` stylesheet.
 - **Selector `.splash.out .ico`**: `transition: opacity .45s ease-in,transform .6s var(--ios),filter .45s` extracted from `hole-money` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.32,.72,0,1)`)**: Governs interactive state transitions across `<header.paused>` and `<section.sl>`.
+- **Extracted Easing Curve (`cubic-bezier(.32,.72,0,1)`)**: Governs interactive state transitions across `<header.paused>` and `<section.sl:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

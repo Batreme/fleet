@@ -1,65 +1,73 @@
 ---
 title: "UI Prompt Blueprint: www-vanderhotel-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-vanderhotel-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#F3F5FB` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#0082f3` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-vanderhotel-com
 
 > **Hotel & Restaurant Ljubljana · Vander Urbani Resort** (https://www.vanderhotel.com) — This Design Hotel offers 20 beautiful rooms. For the foodies we have our HAUS & À la carte restaurant or for a glass of champagne we sugg...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Hotel & Restaurant Ljubljana · Vander Urbani Resort** (`https://www.vanderhotel.com`). This Design Hotel offers 20 beautiful rooms. For the foodies we have our HAUS & À la carte restaurant or for a glass of champagne we sugg...
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#F3F5FB` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f4f2f1` (`var(--_primitives---colors--white)` in `:root`) paired with `#353230` primary typography and `#F3F5FB` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Sohne Buch` for display copy (`where comfort meets culture`) with `Arial` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `25rem` container bounds (`gap: 1.5rem`, padding `1.25rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#353230` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Sohne Buch` for display copy (`WHERE COMFORT MEETS CULTURE`) with `Sohne Buch` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 24px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×6795px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `25rem` extracted from `www-vanderhotel-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `1.25rem` lateral canvas padding with `1.5rem` grid gap.
-- **Border Radius Scale**: `50%`, `3px`, `100%`, `24px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1260px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `24px` grid gap.
+- **Border Radius Scale**: `3px`, `100%`, `50%`, `24px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 25rem`, `gap: 1.5rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1.25rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (-ms-high-contrast:none)`, `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 24px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f4f2f1` | `var(--_primitives---colors--white)` in `:root` |
-| **Primary Typography Ink** | `#353230` | `var(--_primitives---colors--dark)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#967850` | `var(--_primitives---colors--brown)` in `:root` |
-| **Interactive Accent / Highlight** | `#F3F5FB` | `var(--main-light-color)` in `:root` |
-| **Secondary / Muted Copy** | `#ccc` | `.datepicker-dropdown { border: #ccc }` |
-| **Structural Hairline Border** | `#39f` | `.datepicker-top-right { color: #39f }` |
+| **Primary Canvas Substrate** | `#f4f2f1` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#353230` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
+| **Secondary / Muted Copy** | `#967850` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+| **Variable Token (`--main-light-color`)** | `#f3f5fb` | `var(--main-light-color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--main-light-color` | `#F3F5FB` | Canvas / Surface Token |
+| `--main-dark-color` | `#353230` | Canvas / Surface Token |
+| `--main-active-color` | `#353230` | Brand / Palette Token |
 | `--color-scheme-1--background-primary` | `var(--_primitives---colors--white)` | Canvas / Surface Token |
 | `--_typography---font-styles--body` | `"Sohne Buch",Arial,sans-serif` | Typography / Scale Token |
 | `--color-scheme-1--text-primary` | `var(--_primitives---colors--dark)` | Typography Ink Token |
@@ -73,9 +81,6 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `
 | `--_ui-styles---stroke--border-width` | `1px` | Layout / Spatial Grid Token |
 | `--color-scheme-1--border` | `var(--_primitives---colors--brown)` | Brand / Palette Token |
 | `--_ui-styles---radius--medium` | `0px` | Elevation / Border Token |
-| `--color-scheme-1--foreground` | `var(--_primitives---colors--white)` | Typography Ink Token |
-| `--_ui-styles---radius--small` | `0px` | Elevation / Border Token |
-| `--_ui-styles---radius--large` | `0px` | Elevation / Border Token |
 
 ---
 
@@ -83,14 +88,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `Sohne Buch`.
-- **Primary Body Stack**: `Arial`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `Sohne Buch`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `12px`, `18px`, `1rem`, `7rem`, `5rem`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 2.5rem`).
-- **Body Copy**: CSS variables `--_typography---font-styles--body: "Sohne Buch",Arial,sans-serif`.
-- **Metadata & Navigation Labels**: CSS variables `--_ui-styles---radius--small: 0px`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 112px`, `line-height: 134.4px`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 400`); rule `h2` (`font-size: 2.5rem`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: "Sohne Buch",Arial,sans-serif`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--small: 0px`.
 
 ---
 
@@ -100,50 +105,69 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.splide__pagination__page`**: `transition: transform .2s linear` extracted from `www-vanderhotel-com` stylesheet.
-- **Selector `.button`**: `transition: transform .3s` extracted from `www-vanderhotel-com` stylesheet.
-- **Selector `.secondary-button`**: `transition: transform .3s` extracted from `www-vanderhotel-com` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `www-vanderhotel-com` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `www-vanderhotel-com` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-vanderhotel-com` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Hotel & Restaurant Ljubljana · Vander Urba │
 │ ====================================================================== │
-│ [ <header.navbar>          | Hotel · Food & Drink · meetings & Even ]  │
+│ [ <header.navbar> (1440x135px)        | Hotel · Food & Drink · meeti ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.section-2>                                  |   │
-│ | H1: where comfort meets culture                                  |   │
-│ | Substrate: #f4f2f1    | Ink: #353230    | Accent: #F3F5FB        |   │
+│ | HERO STAGE: <section.section-hero> (w=1440px)                      | │
+│ | H1: WHERE COMFORT MEETS CULTURE                                    | │
+│ | Substrate: #f4f2f1 | Ink: #353230 | Accent: #0082f3                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.section-hero>    ) max-w: 25rem          |   │
+│ | SHOWCASE GRID (<section.section-wake-up>) max-w: 1260px            | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | wake up in                   |  | vanderland                   | | │
+│ | | where comfort meets culture  |  | mailing list                 | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1.5rem) | │
-│ | [<header.navbar>] -> [<section.section-2] -> [<section.section-h] |  │
+│ | DETAIL MODULE (<section.section-experienc) — rooftop terrace       | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://www.vanderhotel.com        │
+│ [ FOOTER (<footer.footer>     ) | https://www.vanderhotel.com          │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 24px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.navbar>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.section-hero>) — 390px Vertical Lead          | │
+│ | H1: WHERE COMFORT MEETS CULTURE                                    | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.section-wake-) — 1-Col Stack              | │
+│ | [ Item 1: where comfort meets culture                            ] | │
+│ | [ Item 2: mailing list                                           ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.section-experie) — 1-Col (rooftop terrace)  | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.navbar> — `www-vanderhotel-com`)**:
-   - Landmark `<header class="navbar">` hosting `Hotel & Restaurant Ljubljana · Vande` navigation (`Hotel · Food & Drink · meetings & Events · book now · journal`), DOM attributes (`data-wf-domain="www.vanderhotel.com"`, `data-wf-page="67f3b8c25d374ee9920d88c8"`, `data-wf-site="67f3b8c25d374ee9920d885b"`, `data-w-id="792db6bb-fe71-b745-03..."`), and stylesheet rule `.datepicker-container::after { border: 5px solid transparent; content: " "; display: block; height: 0;... }`.
-2. **Hero Stage & Focal Lead (<section.section-2> — `where comfort meets culture`)**:
-   - Landmark `<section class="section-2">` presenting display lead `where comfort meets culture` and copy excerpt *"Best price is guaranteed when booking directly! Choosing this opt"* over `#f4f2f1` canvas and `#353230` ink.
-3. **Primary Showcase & Content Grid (<section.section-hero> — `wake up in`)**:
-   - Landmark `<section class="section-hero">` rendering section `wake up in` with copy *"Our team is ready to help you plan your perfect stay. Feel free t"*, asset references (`cdn.prod.website-files.com`, `vander-hotel.webflow.shared.087c8...`, `vander-hotel.webflow.67f3b8c25d37...`, `1910953583635711`), and grid rule `.datepicker-inline { position: static; }`.
-4. **Interactive Detail & Feature Matrix (<section.section-wake-up> — `vanderland`)**:
-   - Landmark `<section class="section-wake-up">` framing `vanderland` and `experience` (*"Book online instead"*) with `#967850` surface cards, `#F3F5FB` accents, and `.datepicker-top-right { border-top-color: 39f; }`.
+   - Landmark `<header class="navbar">` (`1440x135px`) hosting `Hotel & Restaurant Ljubljana · Vande` navigation (`Hotel · Food & Drink · meetings & Events · book now · journal`), DOM attributes (`data-wf-domain="www.vanderhotel.com"`, `data-wf-page="67f3b8c25d374ee9920d88c8"`, `data-wf-site="67f3b8c25d374ee9920d885b"`, `data-w-id="792db6bb-fe71-b745-03..."`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+2. **Hero Stage & Focal Lead (<section.section-hero> — `WHERE COMFORT MEETS CULTURE`)**:
+   - Landmark `<section class="section-hero">` presenting display lead `WHERE COMFORT MEETS CULTURE` and copy excerpt *"Experience a stylish, relaxed city break filled with comfort and "* over `#f4f2f1` canvas and `#353230` ink.
+3. **Primary Showcase & Content Grid (<section.section-wake-up> — `where comfort meets culture`)**:
+   - Landmark `<section class="section-wake-up">` rendering section `where comfort meets culture` with copy *"Welcome to our Vander Hotel. Perfect rooms for all Vanderers by h"*, asset references (`cdn.prod.website-files.com`, `vander-hotel.webflow.shared.087c8...`, `vander-hotel.webflow.67f3b8c25d37...`, `1910953583635711`), and grid rule `summary { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.section-experience> — `mailing list`)**:
+   - Landmark `<section class="section-experience">` framing `mailing list` and `rooftop terrace` (*"Early check-in & late check-out"*) with `#ffff00` surface cards, `#0082f3` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.vanderhotel.com`)**:
-   - Landmark `<footer class="footer">` anchoring `Hotel & Restaurant Ljubljana · V` footer links (`Hotel · Food & Drink · meetings & Events · book now · journal`), copy *"Experience a stylish, relaxed city break filled with comfort"*, and `#39f` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Hotel & Restaurant Ljubljana · V` footer links (`Hotel · Food & Drink · meetings & Events · book now · journal`), copy *"If you are in for some VanderFul and funky tastes, then come"*, and `#e2e2e2` structural dividers.
 
 ---
 
@@ -155,19 +179,22 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-vanderhotel-com` (**Hotel & Restaurant Ljubljana · Vander Urbani Resort** — `https://www.vanderhotel.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#F3F5FB` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f2f1` canvas, `#353230` ink, `#0082f3` accent).
 - **Identity & Domain Context**: This Design Hotel offers 20 beautiful rooms. For the foodies we have our HAUS & À la carte restaurant or for a glass of champagne we sugg...
-- **Primary Substrate**: `#f4f2f1` (`var(--_primitives---colors--white)` in `:root`), **Primary Ink**: `#353230`, **Accent / Highlight**: `#F3F5FB`.
+- **Primary Substrate**: `#f4f2f1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#353230`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f4f2f1` (`var(--_primitives---colors--white)` in `:root`) paired with `#353230` primary typography and `#F3F5FB` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Sohne Buch` for display copy (`where comfort meets culture`) with `Arial` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `25rem` container bounds (`gap: 1.5rem`, padding `1.25rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#353230` primary typography and `#0082f3` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Sohne Buch` for display copy (`WHERE COMFORT MEETS CULTURE`) with `Sohne Buch` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 24px`, padding `9px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-vanderhotel-com` in your global stylesheet:
 
 :root {
-  /* Hotel & Restaurant Ljubljana · Vander Urbani Resort (www-vanderhotel-com) — Ground-Truth Extracted CSS Variables */
+  /* Hotel & Restaurant Ljubljana · Vander Urbani Resort (www-vanderhotel-com) — Live-Grounded CSS Variables */
+  --main-light-color: #F3F5FB; /* Canvas / Surface Token (www-vanderhotel-com) */
+  --main-dark-color: #353230; /* Canvas / Surface Token (www-vanderhotel-com) */
+  --main-active-color: #353230; /* Brand / Palette Token (www-vanderhotel-com) */
   --color-scheme-1--background-primary: var(--_primitives---colors--white); /* Canvas / Surface Token (www-vanderhotel-com) */
   --_typography---font-styles--body: "Sohne Buch",Arial,sans-serif; /* Typography / Scale Token (www-vanderhotel-com) */
   --color-scheme-1--text-primary: var(--_primitives---colors--dark); /* Typography Ink Token (www-vanderhotel-com) */
@@ -181,76 +208,74 @@ Declare and consume these exact custom properties extracted from `www-vanderhote
   --_ui-styles---stroke--border-width: 1px; /* Layout / Spatial Grid Token (www-vanderhotel-com) */
   --color-scheme-1--border: var(--_primitives---colors--brown); /* Brand / Palette Token (www-vanderhotel-com) */
   --_ui-styles---radius--medium: 0px; /* Elevation / Border Token (www-vanderhotel-com) */
-  --color-scheme-1--foreground: var(--_primitives---colors--white); /* Typography Ink Token (www-vanderhotel-com) */
-  --_ui-styles---radius--small: 0px; /* Elevation / Border Token (www-vanderhotel-com) */
-  --_ui-styles---radius--large: 0px; /* Elevation / Border Token (www-vanderhotel-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f4f2f1` — grounded in `var(--_primitives---colors--white)` in `:root`
-- **Primary Typography Ink**: `#353230` — grounded in `var(--_primitives---colors--dark)` in `:root`
-- **Elevated Surface / Card Substrate**: `#967850` — grounded in `var(--_primitives---colors--brown)` in `:root`
-- **Interactive Accent / Highlight**: `#F3F5FB` — grounded in `var(--main-light-color)` in `:root`
-- **Secondary / Muted Copy**: `#ccc` — grounded in `.datepicker-dropdown { border: #ccc }`
-- **Structural Hairline Border**: `#39f` — grounded in `.datepicker-top-right { color: #39f }`
+- **Primary Canvas Substrate**: `#f4f2f1` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#353230` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ffff00` — grounded in `mark { background: #ffff00 }`
+- **Interactive Accent / Highlight**: `#0082f3` — grounded in `.w-dropdown-link.w--current { color: #0082f3 }`
+- **Secondary / Muted Copy**: `#967850` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
+- **Variable Token (`--main-light-color`)**: `#f3f5fb` — grounded in `var(--main-light-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×6795px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `25rem` extracted from `www-vanderhotel-com` stylesheet
-- **Padding & Gutters**: `1.25rem` lateral canvas padding with `1.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 25rem`, `gap: 1.5rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1.25rem` horizontal padding
-- **Media Queries**: `@media screen and (-ms-high-contrast:none)`, `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`
-- **Corner Radii**: `50%`, `3px`, `100%`, `24px`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1260px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `9px` lateral canvas padding with `24px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 24px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
+- **Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`
+- **Corner Radii**: `3px`, `100%`, `50%`, `24px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Sohne Buch`
-- **Body Font Stack**: `Arial`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `12px`, `18px`, `1rem`, `7rem`, `5rem`)
-- **H2 Section Rule**: rule `h2` (`font-size: 2.5rem`)
-- **Body Copy Rule**: CSS variables `--_typography---font-styles--body: "Sohne Buch",Arial,sans-serif`
-- **Metadata & Index Rule**: CSS variables `--_ui-styles---radius--small: 0px`
+- **Body Font Stack**: `Sohne Buch`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 112px`, `line-height: 134.4px`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 400`); rule `h2` (`font-size: 2.5rem`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: "Sohne Buch",Arial,sans-serif`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--small: 0px`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-vanderhotel-com` (`Hotel & Restaurant Ljubljana · Vander Urbani Resort`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.navbar> — `www-vanderhotel-com`)**:
-   - DOM & Selectors: Landmark `<header class="navbar">` hosting `Hotel & Restaurant Ljubljana · Vande` navigation (`Hotel · Food & Drink · meetings & Events · book now · journal`), DOM attributes (`data-wf-domain="www.vanderhotel.com"`, `data-wf-page="67f3b8c25d374ee9920d88c8"`, `data-wf-site="67f3b8c25d374ee9920d885b"`, `data-w-id="792db6bb-fe71-b745-03..."`), and stylesheet rule `.datepicker-container::after { border: 5px solid transparent; content: " "; display: block; height: 0;... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navbar> — `www-vanderhotel-com`)` (`www-vanderhotel-com`) adapts across `@media screen and (-ms-high-contrast:none)`, `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Hotel · Food & Drink · meetings & Events · book now · journal`.
-2. **Hero Stage & Focal Lead (<section.section-2> — `where comfort meets culture`)**:
-   - DOM & Selectors: Landmark `<section class="section-2">` presenting display lead `where comfort meets culture` and copy excerpt *"Best price is guaranteed when booking directly! Choosing this opt"* over `#f4f2f1` canvas and `#353230` ink.
-   - Responsive Contract: Hero stage (`1440×6795px` desktop / `390×2400px` mobile) sets `#f4f2f1` background with `#353230` headline `where comfort meets culture`.
-3. **Primary Showcase & Content Grid (<section.section-hero> — `wake up in`)**:
-   - DOM & Selectors: Landmark `<section class="section-hero">` rendering section `wake up in` with copy *"Our team is ready to help you plan your perfect stay. Feel free t"*, asset references (`cdn.prod.website-files.com`, `vander-hotel.webflow.shared.087c8...`, `vander-hotel.webflow.67f3b8c25d37...`, `1910953583635711`), and grid rule `.datepicker-inline { position: static; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section-hero> — `wake up in`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 25rem`, `gap: 1.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.25rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.section-wake-up> — `vanderland`)**:
-   - DOM & Selectors: Landmark `<section class="section-wake-up">` framing `vanderland` and `experience` (*"Book online instead"*) with `#967850` surface cards, `#F3F5FB` accents, and `.datepicker-top-right { border-top-color: 39f; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-wake-up> — `vanderland`)` uses `50%`, `3px`, `100%`, `24px` radii, `#F3F5FB` highlights, and assets (cdn.prod.website-files.com, vander-hotel.webflow.shared.087c8..., vander-hotel.webflow.67f3b8c25d37...).
+   - DOM & Selectors: Landmark `<header class="navbar">` (`1440x135px`) hosting `Hotel & Restaurant Ljubljana · Vande` navigation (`Hotel · Food & Drink · meetings & Events · book now · journal`), DOM attributes (`data-wf-domain="www.vanderhotel.com"`, `data-wf-page="67f3b8c25d374ee9920d88c8"`, `data-wf-site="67f3b8c25d374ee9920d885b"`, `data-w-id="792db6bb-fe71-b745-03..."`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navbar> — `www-vanderhotel-com`)` (`www-vanderhotel-com`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Hotel · Food & Drink · meetings & Events · book now · journal`.
+2. **Hero Stage & Focal Lead (<section.section-hero> — `WHERE COMFORT MEETS CULTURE`)**:
+   - DOM & Selectors: Landmark `<section class="section-hero">` presenting display lead `WHERE COMFORT MEETS CULTURE` and copy excerpt *"Experience a stylish, relaxed city break filled with comfort and "* over `#f4f2f1` canvas and `#353230` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f2f1` background with `#353230` headline `WHERE COMFORT MEETS CULTURE`.
+3. **Primary Showcase & Content Grid (<section.section-wake-up> — `where comfort meets culture`)**:
+   - DOM & Selectors: Landmark `<section class="section-wake-up">` rendering section `where comfort meets culture` with copy *"Welcome to our Vander Hotel. Perfect rooms for all Vanderers by h"*, asset references (`cdn.prod.website-files.com`, `vander-hotel.webflow.shared.087c8...`, `vander-hotel.webflow.67f3b8c25d37...`, `1910953583635711`), and grid rule `summary { display:block }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section-wake-up> — `where comfort meets culture`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.section-experience> — `mailing list`)**:
+   - DOM & Selectors: Landmark `<section class="section-experience">` framing `mailing list` and `rooftop terrace` (*"Early check-in & late check-out"*) with `#ffff00` surface cards, `#0082f3` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-experience> — `mailing list`)` uses `3px`, `100%`, `50%`, `24px` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, vander-hotel.webflow.shared.087c8..., vander-hotel.webflow.67f3b8c25d37...).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.vanderhotel.com`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Hotel & Restaurant Ljubljana · V` footer links (`Hotel · Food & Drink · meetings & Events · book now · journal`), copy *"Experience a stylish, relaxed city break filled with comfort"*, and `#39f` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.vanderhotel.com`)` aligns to `25rem` extracted from `www-vanderhotel-com` stylesheet with `1.25rem` lateral canvas padding with `1.5rem` grid gap and attributes (data-wf-domain="www.vanderhotel.com", data-wf-page="67f3b8c25d374ee9920d88c8", data-wf-site="67f3b8c25d374ee9920d885b").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Hotel & Restaurant Ljubljana · V` footer links (`Hotel · Food & Drink · meetings & Events · book now · journal`), copy *"If you are in for some VanderFul and funky tastes, then come"*, and `#e2e2e2` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.vanderhotel.com`)` aligns to `1260px` (non-`@media` desktop container stylesheet rule) with `9px` lateral canvas padding with `24px` grid gap and attributes (data-wf-domain="www.vanderhotel.com", data-wf-page="67f3b8c25d374ee9920d88c8", data-wf-site="67f3b8c25d374ee9920d885b").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Best price is guaranteed when booking directly! Choosing this option may also incl..."*
-- Copy Excerpt 2: *"Our team is ready to help you plan your perfect stay. Feel free to reach out with..."*
-- Copy Excerpt 3: *"Book online instead"*
-- Copy Excerpt 4: *"Experience a stylish, relaxed city break filled with comfort and culinary delight."*
+- Copy Excerpt 1: *"Experience a stylish, relaxed city break filled with comfort and culinary delight."*
+- Copy Excerpt 2: *"Welcome to our Vander Hotel. Perfect rooms for all Vanderers by heart. Softness al..."*
+- Copy Excerpt 3: *"Early check-in & late check-out"*
+- Copy Excerpt 4: *"If you are in for some VanderFul and funky tastes, then come and sit with us at th..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`
 - **Extracted Stylesheet Rules (`www-vanderhotel-com`)**:
-- `.datepicker-container::after { border: 5px solid transparent; content: " "; display: block; height: 0;... }`
-- `.datepicker-inline { position: static; }`
-- `.datepicker-top-right { border-top-color: 39f; }`
-- `.datepicker-top-right::after { border-top: 0; left: 10px; top: -5px; }`
-- `.datepicker-top-right::before { border-bottom-color: 39f; }`
+- `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`
+- `summary { display:block }`
+- `video { vertical-align:baseline;display:inline-block }`
+- `template { display:none }`
+- `strong { font-weight:700 }`
 - **Per-Selector Transition Rules**:
-- **Selector `.splide__pagination__page`**: `transition: transform .2s linear` extracted from `www-vanderhotel-com` stylesheet.
-- **Selector `.button`**: `transition: transform .3s` extracted from `www-vanderhotel-com` stylesheet.
-- **Selector `.secondary-button`**: `transition: transform .3s` extracted from `www-vanderhotel-com` stylesheet.
-- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in static CSS).
+- **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `www-vanderhotel-com` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `www-vanderhotel-com` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-vanderhotel-com` stylesheet.
+- **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

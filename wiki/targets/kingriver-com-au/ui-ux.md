@@ -1,67 +1,84 @@
+---
+title: "UI & UX Architecture: kingriver-com-au"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: kingriver-com-au
 
 ## Overview & Design Identity
 - **Target**: `kingriver-com-au` (**Australian Wagyu Beef · King River Legendary Wagyu**)
 - **Production URL**: [https://kingriver.com.au/](https://kingriver.com.au/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f6ede8` / `#e5240a`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#e5240a`)
 - **Summary**: Explore the exquisite taste of King River Australian Wagyu beef and its unique quality that sets it apart in the culinary world.
-- **Total Clean CSS Variables Extracted**: `51` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `51` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `feijoa`
-- **Body Font Stack**: `sweet-sans-pro`
+- **Display Font Stack**: `sweet-sans-pro`
+- **Body Font Stack**: `feijoa`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `1em`, `80%`, `75%`, `100%`, `14px`)
-- **Section Heading (`H2`)**: rule `,h2` (`font-size: 1.375rem`, `font-weight: 700`)
-- **Body Copy**: rule `p` (`font-size: .75rem`, `line-height: 2`, `letter-spacing: .05em`, `font-weight: 700`)
-- **Metadata & Labels**: CSS variables `--chain-meta: 1rem`, `--chain-meta-gap: 1.25rem`, `--chain-caption-gap: 0px`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 40px`, `font-weight: 700`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 40px`, `font-weight: 700`); rule `,h2` (`font-size: 1.375rem`, `font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 22.75px`, `font-weight: 500`); rule `p` (`font-size: .75rem`, `line-height: 2`, `letter-spacing: .05em`, `font-weight: 700`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 22.75px`, `font-weight: 500`); CSS variables `--chain-meta: 1rem`, `--chain-meta-gap: 1.25rem`, `--chain-caption-gap: 0px`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f6ede8` | `var(--button-base)` in `:root` |
-| **Primary Typography Ink** | `#3b1013` | `var(--button-ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#7d1a1c` | `var(--marker-color)` in `:root` |
-| **Interactive Accent / Highlight** | `#e5240a` | `var(--marker-active-color)` in `:root` |
-| **Secondary / Muted Copy** | `#551115` | `var(--beef-background)` in `:root` |
-| **Structural Hairline Border** | `#f2e5de` | `var(--field-bg)` in `:root` |
+| **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | `.wp-block-button__link { color: #ffffff }` |
+| **Elevated Surface / Card Substrate** | `#3b1013` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#e5240a` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#e5240a` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e5240a` | `var(--field-rule)` in `:root` |
+| **Variable Token (`--wp-block-synced-color`)** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
+| **Variable Token (`--wp-editor-canvas-background`)** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color`)** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-10`)** | `#006ba1` | `var(--wp-admin-theme-color-darker-10)` in `:root` |
+| **Variable Token (`--wp-admin-theme-color-darker-20`)** | `#005a87` | `var(--wp-admin-theme-color-darker-20)` in `:root` |
+| **Variable Token (`--button-base`)** | `#f6ede8` | `var(--button-base)` in `:root` |
 
 ---
 
 ## Reverse-Engineered CSS Variables (Sanitized Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
+| `--wp-block-synced-color` | `#7a00df` | Brand / Palette Token |
+| `--wp-block-synced-color--rgb` | `122,0,223` | Brand / Palette Token |
+| `--wp-bound-block-color` | `var(--wp-block-synced-color)` | Brand / Palette Token |
+| `--wp-editor-canvas-background` | `#ddd` | Canvas / Surface Token |
+| `--wp-admin-theme-color` | `#007cba` | Brand / Palette Token |
+| `--wp-admin-theme-color--rgb` | `0,124,186` | Brand / Palette Token |
+| `--wp-admin-theme-color-darker-10` | `#006ba1` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-10--rgb` | `0,107,160.5` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20` | `#005a87` | Canvas / Surface Token |
+| `--wp-admin-theme-color-darker-20--rgb` | `0,90,135` | Canvas / Surface Token |
+| `--wp-admin-border-width-focus` | `2px` | Layout / Spatial Grid Token |
+| `--wp-admin--admin-bar--position-offset` | `var(--wp-admin--admin-bar--height,0px)` | Dimension / Scale Token |
 | `--button-base` | `#f6ede8` | Color / Atmospheric Token |
 | `--button-ink` | `#3b1013` | Typography Ink Token |
 | `--button-fill` | `#f6ede8` | Color / Atmospheric Token |
 | `--marker-size` | `12px` | Layout / Spatial Grid Token |
-| `--marker-active-size` | `18px` | Layout / Spatial Grid Token |
-| `--marker-color` | `#7d1a1c` | Brand / Palette Token |
-| `--marker-active-color` | `#e5240a` | Brand / Palette Token |
-| `--button-ease` | `cubic-bezier(0.33,1,0.68,1)` | Motion / Easing Token |
-| `--button-sweep` | `0.34s` | Motion / Timing Token |
-| `--pill-ease` | `cubic-bezier(0.33,1,0.68,1)` | Motion / Easing Token |
-| `--jewel-slide-gap` | `1rem` | Layout / Spatial Grid Token |
-| `--jewel-slide-size` | `82%` | Layout / Spatial Grid Token |
-| `--beef-background` | `#551115` | Canvas / Surface Token |
-| `--card-ease` | `cubic-bezier(0.33,1,0.68,1)` | Motion / Easing Token |
-| `--row-ease` | `cubic-bezier(0.33,1,0.68,1)` | Motion / Easing Token |
-| `--card-bg` | `#f6ede8` | Canvas / Surface Token |
 
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.fixed> — `kingriver-com-au`)**:
-   - Landmark `<header class="fixed top-0">` hosting `Australian Wagyu Beef · King River L` navigation (`Our Properties · Our Story · Our Beef · Jewel · Partners`), DOM attributes (`data-template="base.twig"`, `data-transition`, `data-transition-shade`, `data-transition-panel`), and stylesheet rule `before { border:0 solid e5e7eb;box-sizing:border-box }`.
-2. **Hero Stage & Focal Lead (<section.remove-section-padding> — `King River`)**:
-   - Landmark `<section class="remove-section-padding relative">` presenting display lead `King River` and copy excerpt *"King River Australian Wagyu"* over `#f6ede8` canvas and `#3b1013` ink.
-3. **Primary Showcase & Content Grid (<section.relative> — `From our family to yours.`)**:
-   - Landmark `<section class="relative bg-maroon-dark">` rendering section `From our family to yours.` with copy *"Queensland, Australia"*, asset references (`clarity.js`, `yxd9a243r4`, `gtm.js`, `humans.txt`), and grid rule `body { line-height:inherit;margin:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.home> — `RED LABEL`)**:
-   - Landmark `<section class="home">` framing `RED LABEL` and `KING RIVER` (*"Fifth-generation Australian Wagyu"*) with `#7d1a1c` surface cards, `#e5240a` accents, and `strong { font-weight:bolder }`.
-5. **Colophon & Global Directory Footer (<footer.overflow-hidden> — `https://kingriver.com.au/`)**:
-   - Landmark `<footer class="overflow-hidden bg-maroon-dark">` anchoring `Australian Wagyu Beef · King Riv` footer links (`Our Properties · Our Story · Our Beef · Jewel · Partners`), copy *"King River is a fifth-generation family business producing A"*, and `#f2e5de` structural dividers.
+1. **Brand Header & Navigation Bar (<header.top-0> — `kingriver-com-au`)**:
+   - Landmark `<header class="top-0 text-gum-light">` (`1440x59px`) hosting `Australian Wagyu Beef · King River L` navigation (`Our Properties · Our Story · Our Beef · Jewel · Partners`), DOM attributes (`data-template="base.twig"`, `data-transition`, `data-transition-shade`, `data-transition-panel`), and stylesheet rule `.tk-sweet-sans-pro { font-family: "sweet-sans-pro",sans-serif; }`.
+2. **Hero Stage & Focal Lead (<section.remove-section-padding> — `KING RIVER`)**:
+   - Landmark `<section class="remove-section-padding h-svh">` presenting display lead `KING RIVER` and copy excerpt *"FIFTH-GENERATION AUSTRALIAN WAGYU"* over `#000000` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.bg-maroon-dark> — `King River`)**:
+   - Landmark `<section class="bg-maroon-dark relative">` rendering section `King River` with copy *"Queensland, Australia"*, asset references (`clarity.js`, `yxd9a243r4`, `gtm.js`, `humans.txt`), and grid rule `before { border:0 solid e5e7eb;box-sizing:border-box }`.
+4. **Interactive Detail & Feature Matrix (<section.yoast-schema-graph> — `From our family to yours.`)**:
+   - Landmark `<section class="yoast-schema-graph">` framing `From our family to yours.` and `AUSTRALIA’S FINEST LUXURY WAGYU. RAISED ON PURE P...` (*"Fifth-generation Australian Wagyu"*) with `#3b1013` surface cards, `#e5240a` accents, and `body { line-height:inherit;margin:0 }`.
+5. **Colophon & Global Directory Footer (<footer.bg-maroon-dark> — `https://kingriver.com.au/`)**:
+   - Landmark `<footer class="bg-maroon-dark text-scarlet">` anchoring `Australian Wagyu Beef · King Riv` footer links (`Our Properties · Our Story · Our Beef · Jewel · Partners`), copy *"King River is a fifth-generation family business producing A"*, and `#e5240a` structural dividers.

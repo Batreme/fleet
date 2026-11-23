@@ -1,35 +1,48 @@
+---
+title: "UI & UX Architecture: www-johnbolster-design"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier2_webgl
+http_status: 200
+---
+
 # UI & UX Architecture: www-johnbolster-design
 
 ## Overview & Design Identity
 - **Target**: `www-johnbolster-design` (**John Bolster · Brand Identity Designer and Art Director, Saratoga Spring...**)
 - **Production URL**: [https://www.johnbolster.design/](https://www.johnbolster.design/)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ECEAE2` / `#D3D0C6`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4b5cff`)
 - **Summary**: Independent brand identity designer and art director in Saratoga Springs, NY. Brand strategy, identity, print and web for businesses, hig...
-- **Total Clean CSS Variables Extracted**: `22` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `22` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `DM Serif Display`
+- **Display Font Stack**: `BebasProBold`
 - **Body Font Stack**: `Geist`
 - **Monospace / Technical Font Stack**: `Geist Mono`
-- **Hero Display (`H1`)**: CSS variables `--display: "BebasPro","Bebas Neue","Arial Narrow",Impact,sans-serif`
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `16px`, `11px`, `clamp(15px,1.15vw,18px)`, `14px`, `22px`)
-- **Body Copy**: CSS variables `--body: "Geist",ui-sans-serif,system-ui,sans-serif`; rule `p` (`font-size: clamp(15px,1.15vw,18px)`, `line-height: 1.5`)
-- **Metadata & Labels**: CSS variables `--mono: "Geist Mono",ui-monospace,Menlo,monospace`; rule `.mono` (`font-size: 12px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 252px`, `line-height: 216.72px`, `font-weight: 400`); CSS variables `--display: "BebasPro","Bebas Neue","Arial Narrow",Impact,sans-serif`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 123.84px`, `line-height: 106.502px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--body: "Geist",ui-sans-serif,system-ui,sans-serif`; rule `p` (`font-size: clamp(15px,1.15vw,18px)`, `line-height: 1.5`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); CSS variables `--mono: "Geist Mono",ui-monospace,Menlo,monospace`; rule `.mono` (`font-size: 12px`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#ECEAE2` | `var(--bg)` in `:root` |
-| **Primary Typography Ink** | `#121413` | `var(--ink)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#5E6360` | `var(--muted)` in `:root` |
-| **Interactive Accent / Highlight** | `#D3D0C6` | `var(--hair)` in `:root` |
-| **Secondary / Muted Copy** | `#2234E0` | `var(--line)` in `:root` |
-| **Structural Hairline Border** | `#F47920` | `var(--orange)` in `:root` |
-| **Variable Token (`--black`)** | `#0A0A0A` | `var(--black)` in `:root` |
+| **Primary Canvas Substrate** | `#eceae2` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#121413` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffa500` | `#distinkt { background: orange }` (`#ffa500`) |
+| **Interactive Accent / Highlight** | `#4b5cff` | `#menu .menu-sub a:hover { color: #4b5cff }` |
+| **Secondary / Muted Copy** | `#5e6360` | `var(--muted)` in `:root` |
+| **Structural Hairline Border** | `#2234e0` | `var(--line)` in `:root` |
+| **Variable Token (`--hair`)** | `#d3d0c6` | `var(--hair)` in `:root` |
+| **Variable Token (`--orange`)** | `#f47920` | `var(--orange)` in `:root` |
+| **Variable Token (`--black`)** | `#0a0a0a` | `var(--black)` in `:root` |
 
 ---
 
@@ -57,12 +70,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.bar> — `www-johnbolster-design`)**:
-   - Landmark `<header class="bar">` hosting `John Bolster · Brand Identity Design` navigation (`01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`), DOM attributes (`data-sdkn="@vercel/analytics"`, `data-sdkv="2.0.1"`, `data-go="hero"`, `data-go="about"`), and stylesheet rule `html { background:var(--bg) }`.
-2. **Hero Stage & Focal Lead (<section.st> — `About John Bolster`)**:
-   - Landmark `<section class="st">` presenting display lead `About John Bolster` and copy excerpt *"John Bolster is an independent brand identity designer and art di"* over `#ECEAE2` canvas and `#121413` ink.
-3. **Primary Showcase & Content Grid (<section.st> — `Services`)**:
-   - Landmark `<section class="st">` rendering section `Services` with copy *"Brand Strategy: Positioning and differentiation, Audience definit"*, asset references (`favicon-32.png`, `icon-512.png`, `apple-touch-icon.png`, `bebas-neue-pro-semiexp-bold.woff2`), and grid rule `body::-webkit-scrollbar { display:none;width:0;height:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.st> — `Selected work`)**:
-   - Landmark `<section class="st">` framing `Selected work` and `Contact` (*"Brand Identity: Logo design, Typography and color systems, Guidel"*) with `#5E6360` surface cards, `#D3D0C6` accents, and `img { max-width:100%;display:block }`.
+   - Landmark `<header class="bar">` (`1440x64px`) hosting `John Bolster · Brand Identity Design` navigation (`01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`), DOM attributes (`data-sdkn="@vercel/analytics"`, `data-sdkv="2.0.1"`, `data-go="hero"`, `data-go="about"`), and stylesheet rule `html { background:var(--bg) }`.
+2. **Hero Stage & Focal Lead (<section.st> — `JOHN BOLSTER`)**:
+   - Landmark `<section class="st">` presenting display lead `JOHN BOLSTER` and copy excerpt *"Thoughtful brand identity and design for brands and everything th"* over `#eceae2` canvas and `#121413` ink.
+3. **Primary Showcase & Content Grid (<section.st:nth(2)> — `J o h n B o l s t e r`)**:
+   - Landmark `<section class="st">` rendering section `J o h n B o l s t e r` with copy *"Designer · Since 2002"*, asset references (`favicon-32.png`, `icon-512.png`, `apple-touch-icon.png`, `bebas-neue-pro-semiexp-bold.woff2`), and grid rule `body::-webkit-scrollbar { display:none;width:0;height:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.st:nth(3)> — `L e t ' s m a k e s o m e t h i n `)**:
+   - Landmark `<section class="st">` framing `L e t ' s m a k e s o m e t h i n g` and `I n d e p e n d e n t B r a n d D e s i g n e r` (*"I n d e p e n d e n t B r a n d D e s i g n e r"*) with `#ffa500` surface cards, `#4b5cff` accents, and `img { max-width:100%;display:block }`.
 5. **Colophon & Global Directory Footer (<footer.burger> — `https://www.johnbolster.design/`)**:
-   - Landmark `<footer class="burger">` anchoring `John Bolster · Brand Identity De` footer links (`01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`), copy *"Art Direction: Campaign concepts, Art direction and imagery"*, and `#F47920` structural dividers.
+   - Landmark `<footer class="burger">` anchoring `John Bolster · Brand Identity De` footer links (`01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`), copy *"I n d e p e n d e n t"*, and `#2234e0` structural dividers.

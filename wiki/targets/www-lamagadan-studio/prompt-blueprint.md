@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-lamagadan-studio"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-lamagadan-studio"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas, `#fff` ink, `#222` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#222222` ink, `#ff5f26` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-lamagadan-studio
 
 > **La Magadán · Branding y diseño para emprendedoras** (https://www.lamagadan.studio/) — Soy Cristina, diseñadora y creativa en La Magadán. Ayudo a emprendedoras como tú a crear marcas que conectan, destacan y venden.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **La Magadán · Branding y diseño para emprendedoras** (`https://www.lamagadan.studio/`). Soy Cristina, diseñadora y creativa en La Magadán. Ayudo a emprendedoras como tú a crear marcas que conectan, destacan y venden.
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas, `#fff` ink, `#222` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#222222` ink, `#ff5f26` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b00020` (`.sc-logic-error { background: #b00020 }`) paired with `#fff` primary typography and `#222` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Instrument Serif` for display copy (`Branding para emprendedoras con una `) with `Inter` and `Geist Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `60ch` container bounds (`gap: 16px`, padding `4px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f5f5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#ff5f26` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Animal Condensed` for display copy (`Branding para emprendedoras con una `) with `Inter` and `Geist Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `4px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×11027px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `60ch` extracted from `www-lamagadan-studio` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `2px`, `3px`, `4px`, `999px`.
+- **Border Radius Scale**: `28px`, `2px`, `3px`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 16px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`.
 
@@ -48,44 +52,45 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#b00020` | `.sc-logic-error { background: #b00020 }` |
-| **Primary Typography Ink** | `#fff` | `.sc-logic-error { color: #fff }` |
-| **Elevated Surface / Card Substrate** | `#F5F5F5` | `body { background: #F5F5F5 }` |
-| **Interactive Accent / Highlight** | `#222` | `body { color: #222 }` |
-| **Secondary / Muted Copy** | `#E9BC3C` | `a:hover { color: #E9BC3C }` |
+| **Primary Canvas Substrate** | `#f5f5f5` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#222222` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ff5f26` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ff5f26` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `footer` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#7a7a7a` | `.sc-interp.sc-missing { border: #7a7a7a }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--www-lamagadan-st-bg` | `#b00020` | Canvas Substrate (from `.sc-logic-error { background: #b00020 }`) |
-| `--www-lamagadan-st-ink` | `#fff` | Primary Typography Ink (stylesheet-derived) |
-| `--www-lamagadan-st-surface` | `#F5F5F5` | Surface Substrate (stylesheet-derived) |
-| `--www-lamagadan-st-accent` | `#222` | Interactive Accent (stylesheet-derived) |
-| `--www-lamagadan-st-muted` | `#E9BC3C` | Secondary Ink (stylesheet-derived) |
-| `--www-lamagadan-st-border` | `#fff` | Structural Border (stylesheet-derived) |
-| `--www-lamagadan-st-container` | `60ch` | Container Bound (stylesheet-derived) |
-| `--www-lamagadan-st-gap` | `16px` | Grid Gutter (stylesheet-derived) |
-| `--www-lamagadan-st-pad` | `4px` | Lateral Padding (stylesheet-derived) |
+| `--www-lamagadan-st-bg` | `#f5f5f5` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
+| `--www-lamagadan-st-ink` | `#222222` | Primary Typography Ink (computed-derived) |
+| `--www-lamagadan-st-surface` | `#ff5f26` | Surface Substrate (computed-derived) |
+| `--www-lamagadan-st-accent` | `#ff5f26` | Interactive Accent (computed-derived) |
+| `--www-lamagadan-st-muted` | `#ffffff` | Secondary Ink (computed-derived) |
+| `--www-lamagadan-st-border` | `#7a7a7a` | Structural Border (computed-derived) |
+| `--www-lamagadan-st-container` | `1440px` | Container Bound (computed-derived) |
+| `--www-lamagadan-st-gap` | `16px` | Grid Gutter (computed-derived) |
+| `--www-lamagadan-st-pad` | `4px` | Lateral Padding (computed-derived) |
 | `--www-lamagadan-st-ease` | `cubic-bezier(0.4,0,0.2,1)` | Primary Easing Function |
-| `--www-lamagadan-st-radius` | `2px` | Corner Radius (stylesheet-derived) |
-| `--www-lamagadan-st-fs-base` | `.85em` | Observed Font Size Token |
+| `--www-lamagadan-st-radius` | `28px` | Corner Radius (computed-derived) |
+| `--www-lamagadan-st-fs-base` | `129.6px` | Observed Font Size Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Instrument Serif`.
+- **Display Typography**: `Animal Condensed`.
 - **Primary Body Stack**: `Inter`.
 - **Technical / Metadata Stack**: `Geist Mono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 129.6px`, `line-height: 132.192px`, `font-weight: 400`, `letter-spacing: -1.296px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 92.16px`, `line-height: 87.552px`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
 
@@ -105,40 +110,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — La Magadán · Branding y diseño para empren │
 │ ====================================================================== │
-│ [ <header.sc-host>         | Quién soy · Proyectos · Servicios · Mi ]  │
+│ [ <header.sc-host> (1408x64px)        | Quién soy · Proyectos · Serv ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.scp0>                                       |   │
-│ | H1: Branding para emprendedoras con una historia que...          |   │
-│ | Substrate: #b00020    | Ink: #fff       | Accent: #222           |   │
+│ | HERO STAGE: <section.scp0> (w=1440px)                              | │
+│ | H1: Branding para emprendedoras con una historia que...            | │
+│ | Substrate: #f5f5f5 | Ink: #222222 | Accent: #ff5f26                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.scp1>            ) max-w: 60ch           |   │
+│ | SHOWCASE GRID (<section.scp1>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Hola, soy Cristina           |  | Lo que busco                 | | │
+│ | | Acompaño a mujeres emprended |  | ¿Hablamos? ¿Hablamos?        | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.sc-host>] -> [<section.scp0>] -> [<section.scp1>] |         │
+│ | DETAIL MODULE (<section.sc-interp>) — Busco la esencia de t        | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.scp3>         ) | https://www.lamagadan.studio/      │
+│ [ FOOTER (<footer.scp3>       ) | https://www.lamagadan.studio/        │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.sc-host>        ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.scp0>) — 390px Vertical Lead                  | │
+│ | H1: Branding para emprendedoras con una historia que...            | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.scp1>) — 1-Col Stack                      | │
+│ | [ Item 1: Acompaño a mujeres emprendedoras como tú a const       ] | │
+│ | [ Item 2: ¿Hablamos? ¿Hablamos?                                  ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.sc-interp>) — 1-Col (Busco la esencia d)    | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.scp3>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.sc-host> — `www-lamagadan-studio`)**:
-   - Landmark `<header class="sc-host">` hosting `La Magadán · Branding y diseño para ` navigation (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-dc-tpl="4"`), and stylesheet rule `l.sc-dc-streaming .sc-interp.sc-m... { position:relative; background:color-mix(in srgb,currentColor 5%,transpar... }`.
+   - Landmark `<header class="sc-host">` (`1408x64px`) hosting `La Magadán · Branding y diseño para ` navigation (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-dc-tpl="4"`), and stylesheet rule `l.sc-dc-streaming .sc-interp.sc-m... { position:relative; background:color-mix(in srgb,currentColor 5%,transpar... }`.
 2. **Hero Stage & Focal Lead (<section.scp0> — `Branding para emprendedoras con un`)**:
-   - Landmark `<section class="scp0">` presenting display lead `Branding para emprendedoras con una historia que...` and copy excerpt *"¿Hablamos? ¿Hablamos?"* over `#b00020` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.scp1> — `Hola, soy Cristina`)**:
-   - Landmark `<section class="scp1">` rendering section `Hola, soy Cristina` with copy *"Acompaño a mujeres emprendedoras como tú a construir su identidad"*, asset references (`favicon.png`, `apple-touch-icon.png`, `support.js`, `react.production.min.js`), and grid rule `before { animation:none; background:color-mix(in srgb,currentColor 8%,transparent) }`.
-4. **Interactive Detail & Feature Matrix (<section.sc-interp> — `Lo que busco`)**:
-   - Landmark `<section class="sc-interp">` framing `Lo que busco` and `Lo que hago` (*"01 Lo que busco Busco la esencia de tu proyecto para que tu marca"*) with `#F5F5F5` surface cards, `#222` accents, and `.sc-host.sc-has-error { position:relative }`.
+   - Landmark `<section class="scp0">` presenting display lead `Branding para emprendedoras con una historia que...` and copy excerpt *"Acompaño a mujeres emprendedoras como tú a construir su identidad"* over `#f5f5f5` canvas and `#222222` ink.
+3. **Primary Showcase & Content Grid (<section.scp1> — `Acompaño a mujeres emprendedoras c`)**:
+   - Landmark `<section class="scp1">` rendering section `Acompaño a mujeres emprendedoras como tú a const` with copy *"¿Hablamos? ¿Hablamos?"*, asset references (`favicon.png`, `apple-touch-icon.png`, `support.js`, `react.production.min.js`), and grid rule `before { animation:none; background:color-mix(in srgb,currentColor 8%,transparent) }`.
+4. **Interactive Detail & Feature Matrix (<section.sc-interp> — `¿Hablamos? ¿Hablamos?`)**:
+   - Landmark `<section class="sc-interp">` framing `¿Hablamos? ¿Hablamos?` and `Busco la esencia de tu proyecto para que tu marc` (*"Busco la esencia de tu proyecto para que tu marca sea fiel a quié"*) with `#ff5f26` surface cards, `#ff5f26` accents, and `.sc-host.sc-has-error { position:relative }`.
 5. **Colophon & Global Directory Footer (<footer.scp3> — `https://www.lamagadan.studio/`)**:
-   - Landmark `<footer class="scp3">` anchoring `La Magadán · Branding y diseño p` footer links (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), copy *"Busco la esencia de tu proyecto para que tu marca sea fiel a"*, and `#fff` structural dividers.
+   - Landmark `<footer class="scp3">` anchoring `La Magadán · Branding y diseño p` footer links (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), copy *"Transformo tus ideas en relatos memorables: marcas que conec"*, and `#7a7a7a` structural dividers.
 
 ---
 
@@ -150,83 +174,84 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-lamagadan-studio` (**La Magadán · Branding y diseño para emprendedoras** — `https://www.lamagadan.studio/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#b00020` canvas, `#fff` ink, `#222` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#222222` ink, `#ff5f26` accent).
 - **Identity & Domain Context**: Soy Cristina, diseñadora y creativa en La Magadán. Ayudo a emprendedoras como tú a crear marcas que conectan, destacan y venden.
-- **Primary Substrate**: `#b00020` (`.sc-logic-error { background: #b00020 }`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#222`.
+- **Primary Substrate**: `#f5f5f5` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#222222`, **Accent / Highlight**: `#ff5f26`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#b00020` (`.sc-logic-error { background: #b00020 }`) paired with `#fff` primary typography and `#222` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Instrument Serif` for display copy (`Branding para emprendedoras con una `) with `Inter` and `Geist Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `60ch` container bounds (`gap: 16px`, padding `4px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f5f5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#ff5f26` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Animal Condensed` for display copy (`Branding para emprendedoras con una `) with `Inter` and `Geist Mono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `4px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-lamagadan-studio` in your global stylesheet:
 
 :root {
-  /* La Magadán · Branding y diseño para emprendedoras (www-lamagadan-studio) — Ground-Truth Extracted CSS Variables */
-  --www-lamagadan-st-bg: #b00020; /* Canvas Substrate (from `.sc-logic-error { background: #b00020 }`) (www-lamagadan-studio) */
-  --www-lamagadan-st-ink: #fff; /* Primary Typography Ink (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-surface: #F5F5F5; /* Surface Substrate (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-accent: #222; /* Interactive Accent (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-muted: #E9BC3C; /* Secondary Ink (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-border: #fff; /* Structural Border (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-container: 60ch; /* Container Bound (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-gap: 16px; /* Grid Gutter (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-pad: 4px; /* Lateral Padding (stylesheet-derived) (www-lamagadan-studio) */
+  /* La Magadán · Branding y diseño para emprendedoras (www-lamagadan-studio) — Live-Grounded CSS Variables */
+  --www-lamagadan-st-bg: #f5f5f5; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (www-lamagadan-studio) */
+  --www-lamagadan-st-ink: #222222; /* Primary Typography Ink (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-surface: #ff5f26; /* Surface Substrate (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-accent: #ff5f26; /* Interactive Accent (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-muted: #ffffff; /* Secondary Ink (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-border: #7a7a7a; /* Structural Border (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-container: 1440px; /* Container Bound (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-gap: 16px; /* Grid Gutter (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-pad: 4px; /* Lateral Padding (computed-derived) (www-lamagadan-studio) */
   --www-lamagadan-st-ease: cubic-bezier(0.4,0,0.2,1); /* Primary Easing Function (www-lamagadan-studio) */
-  --www-lamagadan-st-radius: 2px; /* Corner Radius (stylesheet-derived) (www-lamagadan-studio) */
-  --www-lamagadan-st-fs-base: .85em; /* Observed Font Size Token (www-lamagadan-studio) */
+  --www-lamagadan-st-radius: 28px; /* Corner Radius (computed-derived) (www-lamagadan-studio) */
+  --www-lamagadan-st-fs-base: 129.6px; /* Observed Font Size Token (www-lamagadan-studio) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#b00020` — grounded in `.sc-logic-error { background: #b00020 }`
-- **Primary Typography Ink**: `#fff` — grounded in `.sc-logic-error { color: #fff }`
-- **Elevated Surface / Card Substrate**: `#F5F5F5` — grounded in `body { background: #F5F5F5 }`
-- **Interactive Accent / Highlight**: `#222` — grounded in `body { color: #222 }`
-- **Secondary / Muted Copy**: `#E9BC3C` — grounded in `a:hover { color: #E9BC3C }`
+- **Primary Canvas Substrate**: `#f5f5f5` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#222222` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#ff5f26` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#ff5f26` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `footer` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#7a7a7a` — grounded in `.sc-interp.sc-missing { border: #7a7a7a }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×11027px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `60ch` extracted from `www-lamagadan-studio` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `4px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 16px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion:reduce)`
-- **Corner Radii**: `2px`, `3px`, `4px`, `999px`
+- **Corner Radii**: `28px`, `2px`, `3px`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Instrument Serif`
+- **Display Font Stack**: `Animal Condensed`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `Geist Mono`
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `.85em`, `15px`, `16px`, `clamp(48px, 9vw, 132px)`, `clamp(52px, 6.4vw, 96px)`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 129.6px`, `line-height: 132.192px`, `font-weight: 400`, `letter-spacing: -1.296px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 92.16px`, `line-height: 87.552px`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-lamagadan-studio` (`La Magadán · Branding y diseño para emprendedoras`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.sc-host> — `www-lamagadan-studio`)**:
-   - DOM & Selectors: Landmark `<header class="sc-host">` hosting `La Magadán · Branding y diseño para ` navigation (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-dc-tpl="4"`), and stylesheet rule `l.sc-dc-streaming .sc-interp.sc-m... { position:relative; background:color-mix(in srgb,currentColor 5%,transpar... }`.
+   - DOM & Selectors: Landmark `<header class="sc-host">` (`1408x64px`) hosting `La Magadán · Branding y diseño para ` navigation (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), DOM attributes (`data-dc-tpl="1"`, `data-dc-tpl="2"`, `data-dc-tpl="3"`, `data-dc-tpl="4"`), and stylesheet rule `l.sc-dc-streaming .sc-interp.sc-m... { position:relative; background:color-mix(in srgb,currentColor 5%,transpar... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.sc-host> — `www-lamagadan-studio`)` (`www-lamagadan-studio`) adapts across `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.22,0.8,0.2,1)`, `cubic-bezier(0.65,0,0.25,1)` transitions and links `Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`.
 2. **Hero Stage & Focal Lead (<section.scp0> — `Branding para emprendedoras con un`)**:
-   - DOM & Selectors: Landmark `<section class="scp0">` presenting display lead `Branding para emprendedoras con una historia que...` and copy excerpt *"¿Hablamos? ¿Hablamos?"* over `#b00020` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×11027px` desktop / `390×2400px` mobile) sets `#b00020` background with `#fff` headline `Branding para emprendedoras con una historia que...`.
-3. **Primary Showcase & Content Grid (<section.scp1> — `Hola, soy Cristina`)**:
-   - DOM & Selectors: Landmark `<section class="scp1">` rendering section `Hola, soy Cristina` with copy *"Acompaño a mujeres emprendedoras como tú a construir su identidad"*, asset references (`favicon.png`, `apple-touch-icon.png`, `support.js`, `react.production.min.js`), and grid rule `before { animation:none; background:color-mix(in srgb,currentColor 8%,transparent) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scp1> — `Hola, soy Cristina`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 60ch`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.sc-interp> — `Lo que busco`)**:
-   - DOM & Selectors: Landmark `<section class="sc-interp">` framing `Lo que busco` and `Lo que hago` (*"01 Lo que busco Busco la esencia de tu proyecto para que tu marca"*) with `#F5F5F5` surface cards, `#222` accents, and `.sc-host.sc-has-error { position:relative }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sc-interp> — `Lo que busco`)` uses `2px`, `3px`, `4px`, `999px` radii, `#222` highlights, and assets (favicon.png, apple-touch-icon.png, support.js).
+   - DOM & Selectors: Landmark `<section class="scp0">` presenting display lead `Branding para emprendedoras con una historia que...` and copy excerpt *"Acompaño a mujeres emprendedoras como tú a construir su identidad"* over `#f5f5f5` canvas and `#222222` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f5f5f5` background with `#222222` headline `Branding para emprendedoras con una historia que...`.
+3. **Primary Showcase & Content Grid (<section.scp1> — `Acompaño a mujeres emprendedoras c`)**:
+   - DOM & Selectors: Landmark `<section class="scp1">` rendering section `Acompaño a mujeres emprendedoras como tú a const` with copy *"¿Hablamos? ¿Hablamos?"*, asset references (`favicon.png`, `apple-touch-icon.png`, `support.js`, `react.production.min.js`), and grid rule `before { animation:none; background:color-mix(in srgb,currentColor 8%,transparent) }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scp1> — `Acompaño a mujeres emprendedoras c`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.sc-interp> — `¿Hablamos? ¿Hablamos?`)**:
+   - DOM & Selectors: Landmark `<section class="sc-interp">` framing `¿Hablamos? ¿Hablamos?` and `Busco la esencia de tu proyecto para que tu marc` (*"Busco la esencia de tu proyecto para que tu marca sea fiel a quié"*) with `#ff5f26` surface cards, `#ff5f26` accents, and `.sc-host.sc-has-error { position:relative }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sc-interp> — `¿Hablamos? ¿Hablamos?`)` uses `28px`, `2px`, `3px`, `4px` radii, `#ff5f26` highlights, and assets (favicon.png, apple-touch-icon.png, support.js).
 5. **Colophon & Global Directory Footer (<footer.scp3> — `https://www.lamagadan.studio/`)**:
-   - DOM & Selectors: Landmark `<footer class="scp3">` anchoring `La Magadán · Branding y diseño p` footer links (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), copy *"Busco la esencia de tu proyecto para que tu marca sea fiel a"*, and `#fff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.scp3> — `https://www.lamagadan.studio/`)` aligns to `60ch` extracted from `www-lamagadan-studio` stylesheet with `4px` lateral canvas padding with `16px` grid gap and attributes (data-dc-tpl="1", data-dc-tpl="2", data-dc-tpl="3").
+   - DOM & Selectors: Landmark `<footer class="scp3">` anchoring `La Magadán · Branding y diseño p` footer links (`Quién soy · Proyectos · Servicios · Mi proceso · Testimonios`), copy *"Transformo tus ideas en relatos memorables: marcas que conec"*, and `#7a7a7a` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.scp3> — `https://www.lamagadan.studio/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `4px` lateral canvas padding with `16px` grid gap and attributes (data-dc-tpl="1", data-dc-tpl="2", data-dc-tpl="3").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"¿Hablamos? ¿Hablamos?"*
-- Copy Excerpt 2: *"Acompaño a mujeres emprendedoras como tú a construir su identidad visual desde la..."*
-- Copy Excerpt 3: *"01 Lo que busco Busco la esencia de tu proyecto para que tu marca sea fiel a quién..."*
-- Copy Excerpt 4: *"Busco la esencia de tu proyecto para que tu marca sea fiel a quién eres, sin perde..."*
+- Copy Excerpt 1: *"Acompaño a mujeres emprendedoras como tú a construir su identidad visual desde la..."*
+- Copy Excerpt 2: *"¿Hablamos? ¿Hablamos?"*
+- Copy Excerpt 3: *"Busco la esencia de tu proyecto para que tu marca sea fiel a quién eres, sin perde..."*
+- Copy Excerpt 4: *"Transformo tus ideas en relatos memorables: marcas que conectan y emocionan a quie..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.22,0.8,0.2,1)`, `cubic-bezier(0.65,0,0.25,1)`

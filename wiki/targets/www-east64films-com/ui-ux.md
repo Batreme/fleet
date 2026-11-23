@@ -1,38 +1,54 @@
+---
+title: "UI & UX Architecture: www-east64films-com"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: www-east64films-com
 
 ## Overview & Design Identity
 - **Target**: `www-east64films-com` (**EAST 64 Films · Tokyo-Based International Production Company**)
 - **Production URL**: [https://www.east64films.com/](https://www.east64films.com/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#4eaebf` canvas, `#151515` ink, `#e43936` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#222222` canvas, `#ece9e2` ink, `#3498db` accent)
 - **Summary**: EAST 64 Films is a Tokyo-based production company working across Japan and abroad. From commercials, music videos, and branded content to...
-- **Total Clean CSS Variables Extracted**: `111` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `111` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Noto Sans JP`
-- **Body Font Stack**: `matrix-ii-ext-semi-narrow`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1rem`, `clamp(1.5rem,6vw,8rem)`, `13px`)
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `80%`, `75%`, `1rem`, `clamp(1.5rem,6vw,8rem)`, `13px`)
-- **Body Copy**: CSS variables `--font-size-base: var(--font-size-md)`; rule `p` (`font-size: 13px`, `line-height: 1.4`, `font-weight: 400`)
-- **Metadata & Labels**: CSS variables `--base-letter-spacing: 0em`
+- **Display Font Stack**: `matrix-ii-ext-semi-narrow`
+- **Body Font Stack**: `Noto Sans JP`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 44px`, `line-height: 55px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: observed font-size ladder: `44px`, `16px`, `11px`, `80%`, `75%`
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 29.5px`, `font-weight: 500`); CSS variables `--font-size-base: var(--font-size-md)`; rule `p` (`font-size: 13px`, `line-height: 1.4`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 11px`, `line-height: 20.2812px`, `font-weight: 400`); CSS variables `--base-letter-spacing: 0em`
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#4eaebf` | `var(--cl-blue)` in `:root` |
-| **Primary Typography Ink** | `#f6b000` | `var(--cl-yellow)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#00a44d` | `var(--cl-green)` in `:root` |
-| **Interactive Accent / Highlight** | `#e43936` | `var(--cl-red)` in `:root` |
-| **Secondary / Muted Copy** | `#f46f2c` | `var(--cl-orange)` in `:root` |
-| **Structural Hairline Border** | `#151515` | `var(--cl-dark)` in `:root` |
+| **Primary Canvas Substrate** | `#222222` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ece9e2` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#3b3b3b` | `.footer { background: #3b3b3b }` |
+| **Interactive Accent / Highlight** | `#3498db` | `.c-form__btn-primary { background-color: #3498db }` |
+| **Secondary / Muted Copy** | `#808080` | `.has-cyan-bluish-gray-color { color: gray }` (`#808080`) |
+| **Structural Hairline Border** | `#e74c3c` | `.c-form__group.has-error select { border-color: #e74c3c }` |
+| **Variable Token (`--cl-blue`)** | `#4eaebf` | `var(--cl-blue)` in `:root` |
+| **Variable Token (`--cl-yellow`)** | `#f6b000` | `var(--cl-yellow)` in `:root` |
+| **Variable Token (`--cl-green`)** | `#00a44d` | `var(--cl-green)` in `:root` |
+| **Variable Token (`--cl-red`)** | `#e43936` | `var(--cl-red)` in `:root` |
+| **Variable Token (`--cl-orange`)** | `#f46f2c` | `var(--cl-orange)` in `:root` |
+| **Variable Token (`--cl-dark`)** | `#151515` | `var(--cl-dark)` in `:root` |
 | **Variable Token (`--cl-white`)** | `#ffffff` | `var(--cl-white)` in `:root` |
 | **Variable Token (`--cl-whitegray`)** | `#eeeeee` | `var(--cl-whitegray)` in `:root` |
 | **Variable Token (`--cl-black`)** | `#1a1a1a` | `var(--cl-black)` in `:root` |
-| **Variable Token (`--cl-blackgray`)** | `#222222` | `var(--cl-blackgray)` in `:root` |
 | **Variable Token (`--cl-lightgray`)** | `#b9b9b9` | `var(--cl-lightgray)` in `:root` |
 
 ---
@@ -61,12 +77,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-east64films-com`)**:
-   - Landmark `<header class="site-header">` hosting `EAST 64 Films · Tokyo-Based Internat` navigation (`T T O O P P · W W O O R R K K S S · A A B B O O U U T T`), DOM attributes (`data-lang-suffix="/"`, `data-lang-suffix="/"`, `data-lang-suffix="/"`, `data-lang-suffix="/works/"`), and stylesheet rule `.tk-matrix-ii { font-family: "matrix-ii",serif; }`.
-2. **Hero Stage & Focal Lead (<section.p-works> — `F E N D I H o l i d a y C a m p a `)**:
-   - Landmark `<section class="p-works">` presenting display lead `F E N D I H o l i d a y C a m p a i g n F E N D I` and copy excerpt *"W W O O R R K K S S"* over `#4eaebf` canvas and `#151515` ink.
-3. **Primary Showcase & Content Grid (<section.p-works> — `W W O O R R K K S S`)**:
-   - Landmark `<section class="p-works">` rendering section `W W O O R R K K S S` with copy *"A A R R T T I I S S T T S S"*, asset references (`knx0cof.css`, `fonts.googleapis.com`, `fonts.gstatic.com`, `favicon.ico`), and grid rule `.tk-matrix-ii-extra { font-family: "matrix-ii-extra",serif; }`.
-4. **Interactive Detail & Feature Matrix (<section.p-works> — `A A R R T T I I S S T T S S`)**:
-   - Landmark `<section class="p-works">` framing `A A R R T T I I S S T T S S` and `A A B B O O U U T T` (*"A A B B O O U U T T"*) with `#00a44d` surface cards, `#e43936` accents, and `.tk-matrix-ii-display-hilite-scr { font-family: "matrix-ii-display-hilite-scr",sans-serif; }`.
+   - Landmark `<header class="site-header">` (`1440x33px`) hosting `EAST 64 Films · Tokyo-Based Internat` navigation (`T T O O P P · W W O O R R K K S S · A A B B O O U U T T`), DOM attributes (`data-lang-suffix="/"`, `data-lang-suffix="/"`, `data-lang-suffix="/"`, `data-lang-suffix="/works/"`), and stylesheet rule `.tk-matrix-ii { font-family: "matrix-ii",serif; }`.
+2. **Hero Stage & Focal Lead (<section.p-works> — `EAST 64 Films · Tokyo-Based Intern`)**:
+   - Landmark `<section class="p-works">` presenting display lead `EAST 64 Films · Tokyo-Based International Produc` and copy excerpt *"C o m m e r c i a l s , F i l m s , C r e a t i v e C a m p a i g"* over `#222222` canvas and `#ece9e2` ink.
+3. **Primary Showcase & Content Grid (<section.p-works:nth(2)> — `Featured Work & Interactive Showca`)**:
+   - Landmark `<section class="p-works">` rendering section `Featured Work & Interactive Showcase` with copy *"C o m m e r c i a l s ,"*, asset references (`knx0cof.css`, `fonts.googleapis.com`, `fonts.gstatic.com`, `favicon.ico`), and grid rule `.tk-matrix-ii-extra { font-family: "matrix-ii-extra",serif; }`.
+4. **Interactive Detail & Feature Matrix (<section.p-works:nth(3)> — `Technical Architecture & Narrative`)**:
+   - Landmark `<section class="p-works">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"C a m p a i g n s ,"*) with `#3b3b3b` surface cards, `#3498db` accents, and `.tk-matrix-ii-display-hilite-scr { font-family: "matrix-ii-display-hilite-scr",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.l-footer> — `https://www.east64films.com/`)**:
-   - Landmark `<footer class="l-footer">` anchoring `EAST 64 Films · Tokyo-Based Inte` footer links (`T T O O P P · W W O O R R K K S S · A A B B O O U U T T`), copy *"C o m m e r c i a l s , F i l m s , C r e a t i v e C a m p "*, and `#151515` structural dividers.
+   - Landmark `<footer class="l-footer">` anchoring `EAST 64 Films · Tokyo-Based Inte` footer links (`T T O O P P · W W O O R R K K S S · A A B B O O U U T T`), copy *"M u s i c V i d e o s , B r a n d e d C o n t e n t , e t c "*, and `#e74c3c` structural dividers.

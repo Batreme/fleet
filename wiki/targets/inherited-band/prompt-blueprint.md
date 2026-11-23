@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: inherited-band"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "inherited-band"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#FCFFFE` ink, `#d50305` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: inherited-band
 
 > **INHERITED** (https://inherited.band/) — INHERITED BAND
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **INHERITED** (`https://inherited.band/`). INHERITED BAND
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#FCFFFE` ink, `#d50305` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`#loading { background: #000 }`) paired with `#FCFFFE` primary typography and `#d50305` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: 20rem`, padding `15rem`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#eee2c5` primary typography and `#fcfffe` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×4747px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1024px` extracted from `inherited-band` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `15rem` lateral canvas padding with `20rem` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `18px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 20rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `15rem` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width: 1024px)`.
 
 ---
@@ -48,13 +52,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `#loading { background: #000 }` |
-| **Primary Typography Ink** | `#ff03` | `#grid div { background: #ff03 }` |
-| **Elevated Surface / Card Substrate** | `#eee2c5` | `#nav-mobile-bar span { background: #eee2c5 }` |
-| **Interactive Accent / Highlight** | `#d50305` | `.header { background: #d50305 }` |
-| **Secondary / Muted Copy** | `#FCFFFE` | `<meta name="theme-color" content="#FCFFFE">` in `dom.html` |
+| **Primary Canvas Substrate** | `#000000` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#eee2c5` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#d50305` | live computed `header` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#fcfffe` | `<meta name="theme-color" content="#FCFFFE">` in `dom.html` |
+| **Secondary / Muted Copy** | `#eee2c5` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#eee2c5` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -64,17 +69,17 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 | `--column` | `calc((var(--rvw) * 100 - var(--margin) * 2 - var(--gap) * 5) / 6)` | Layout / Spatial Grid Token |
 | `--rvw` | `14.4px` | Layout / Spatial Grid Token |
 | `--right-height` | `692px` | Layout / Spatial Grid Token |
-| `--inherited-band-bg` | `#000` | Canvas Substrate (from `#loading { background: #000 }`) |
-| `--inherited-band-ink` | `#FCFFFE` | Primary Typography Ink (stylesheet-derived) |
-| `--inherited-band-surface` | `#eee2c5` | Surface Substrate (stylesheet-derived) |
-| `--inherited-band-accent` | `#d50305` | Interactive Accent (stylesheet-derived) |
-| `--inherited-band-muted` | `#FCFFFE` | Secondary Ink (stylesheet-derived) |
-| `--inherited-band-border` | `#FCFFFE` | Structural Border (stylesheet-derived) |
-| `--inherited-band-container` | `1024px` | Container Bound (stylesheet-derived) |
-| `--inherited-band-gap` | `20rem` | Grid Gutter (stylesheet-derived) |
-| `--inherited-band-pad` | `15rem` | Lateral Padding (stylesheet-derived) |
+| `--inherited-band-bg` | `#000000` | Canvas Substrate (from live computed `html` `background-color` (`computed_styles.json`)) |
+| `--inherited-band-ink` | `#eee2c5` | Primary Typography Ink (computed-derived) |
+| `--inherited-band-surface` | `#d50305` | Surface Substrate (computed-derived) |
+| `--inherited-band-accent` | `#fcfffe` | Interactive Accent (computed-derived) |
+| `--inherited-band-muted` | `#eee2c5` | Secondary Ink (computed-derived) |
+| `--inherited-band-border` | `#eee2c5` | Structural Border (computed-derived) |
+| `--inherited-band-container` | `1440px` | Container Bound (computed-derived) |
+| `--inherited-band-gap` | `18px` | Grid Gutter (computed-derived) |
+| `--inherited-band-pad` | `18px` | Lateral Padding (computed-derived) |
 | `--inherited-band-ease` | `cubic-bezier(.6,.14,0,1)` | Primary Easing Function |
-| `--inherited-band-radius` | `0px` | Corner Radius (stylesheet-derived) |
+| `--inherited-band-radius` | `0px` | Corner Radius (computed-derived) |
 
 ---
 
@@ -83,13 +88,13 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 ### Font Family Stacks
 - **Display Typography**: `Founders Grotesk`.
 - **Primary Body Stack**: `Founders Grotesk`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `.h1` (`line-height: .85`, `letter-spacing: -.1em`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 103.5px`, `line-height: 103.5px`, `font-weight: 700`, `letter-spacing: -10.35px`); rule `.h1` (`line-height: .85`, `letter-spacing: -.1em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 22.5px`, `line-height: 22.5px`, `font-weight: 400`, `letter-spacing: -0.3375px`).
+- **Body Copy**: live computed `body` (`font-size: 13.5px`, `line-height: 16.335px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 13.5px`, `line-height: 16.335px`, `font-weight: 400`).
 
 ---
 
@@ -102,47 +107,66 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Selector `#loading`**: `transition: opacity .5s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Selector `.rich-text a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Selector `#nav a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.member>`.
+- **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.no-transition>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — INHERITED                                  │
 │ ====================================================================== │
-│ [ <header.header>          | INHERITED · Spotify · Instagram · Tik  ]  │
+│ [ <header.header> (1440x900px)        | INHERITED · Spotify · Instag ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.member>                                     |   │
-│ | H1: I N H E R I T E D                                            |   │
-│ | Substrate: #000       | Ink: #FCFFFE    | Accent: #d50305        |   │
+│ | HERO STAGE: <section.member> (w=1440px)                            | │
+│ | H1: I N H E R I T E D                                              | │
+│ | Substrate: #000000 | Ink: #eee2c5 | Accent: #fcfffe                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.member>          ) max-w: 1024px         |   │
+│ | SHOWCASE GRID (<section.no-transition>) max-w: 1440px              | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | 2016 Deathcore Metalcore     |  | E d e r A n a y a            | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 20rem ) | │
-│ | [<header.header>] -> [<section.member>] -> [<section.member>] |      │
+│ | DETAIL MODULE (<section.member:nth(2)>) — ( Me, Myself, and Sam    | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.items>        ) | https://inherited.band/            │
+│ [ FOOTER (<footer.items>      ) | https://inherited.band/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 18px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.member>) — 390px Vertical Lead                | │
+│ | H1: I N H E R I T E D                                              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.no-transition) — 1-Col Stack              | │
+│ | [ Item 1: 2016 Deathcore Metalcore                               ] | │
+│ | [ Item 2: E d e r A n a y a                                      ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.member:nth(2)>) — 1-Col (( Me, Myself, and )  │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.items>      ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `inherited-band`)**:
-   - Landmark `<header class="header">` hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
+   - Landmark `<header class="header">` (`1440x900px`) hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
 2. **Hero Stage & Focal Lead (<section.member> — `I N H E R I T E D`)**:
-   - Landmark `<section class="member no-transition">` presenting display lead `I N H E R I T E D` and copy excerpt *"m e e t @ i n h e r i t e d . b a n d"* over `#000` canvas and `#FCFFFE` ink.
-3. **Primary Showcase & Content Grid (<section.member> — `2016 Deathcore Metalcore`)**:
-   - Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Metalcore Deathcore"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
-4. **Interactive Detail & Feature Matrix (<section.member> — `E d e r A n a y a`)**:
-   - Landmark `<section class="member no-transition">` framing `E d e r A n a y a` and `Guitarist Producer` (*"Guitarist Producer"*) with `#eee2c5` surface cards, `#d50305` accents, and `.h1 { font-size:115rem }`.
+   - Landmark `<section class="member show">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
+3. **Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)**:
+   - Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Guitarist Producer"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
+4. **Interactive Detail & Feature Matrix (<section.member:nth(2)> — `E d e r A n a y a`)**:
+   - Landmark `<section class="member no-transition">` framing `E d e r A n a y a` and `( Me, Myself, and Sam )` (*"( Me, Myself, and Sam )"*) with `#d50305` surface cards, `#fcfffe` accents, and `.h1 { font-size:115rem }`.
 5. **Colophon & Global Directory Footer (<footer.items> — `https://inherited.band/`)**:
-   - Landmark `<footer class="items">` anchoring `INHERITED` footer links (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), copy *"( Me, Myself, and Sam )"*, and `#FCFFFE` structural dividers.
+   - Landmark `<footer class="items">` anchoring `INHERITED` footer links (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), copy *"E d e r A n a y a"*, and `#eee2c5` structural dividers.
 
 ---
 
@@ -154,87 +178,87 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `inherited-band` (**INHERITED** — `https://inherited.band/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#FCFFFE` ink, `#d50305` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent).
 - **Identity & Domain Context**: INHERITED BAND
-- **Primary Substrate**: `#000` (`#loading { background: #000 }`), **Primary Ink**: `#FCFFFE`, **Accent / Highlight**: `#d50305`.
+- **Primary Substrate**: `#000000` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#eee2c5`, **Accent / Highlight**: `#fcfffe`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`#loading { background: #000 }`) paired with `#FCFFFE` primary typography and `#d50305` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1024px` container bounds (`gap: 20rem`, padding `15rem`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#eee2c5` primary typography and `#fcfffe` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `inherited-band` in your global stylesheet:
 
 :root {
-  /* INHERITED (inherited-band) — Ground-Truth Extracted CSS Variables */
+  /* INHERITED (inherited-band) — Live-Grounded CSS Variables */
   --margin: 20rem; /* Layout / Spatial Grid Token (inherited-band) */
   --gap: 20rem; /* Layout / Spatial Grid Token (inherited-band) */
   --column: calc((var(--rvw) * 100 - var(--margin) * 2 - var(--gap) * 5) / 6); /* Layout / Spatial Grid Token (inherited-band) */
   --rvw: 14.4px; /* Layout / Spatial Grid Token (inherited-band) */
   --right-height: 692px; /* Layout / Spatial Grid Token (inherited-band) */
-  --inherited-band-bg: #000; /* Canvas Substrate (from `#loading { background: #000 }`) (inherited-band) */
-  --inherited-band-ink: #FCFFFE; /* Primary Typography Ink (stylesheet-derived) (inherited-band) */
-  --inherited-band-surface: #eee2c5; /* Surface Substrate (stylesheet-derived) (inherited-band) */
-  --inherited-band-accent: #d50305; /* Interactive Accent (stylesheet-derived) (inherited-band) */
-  --inherited-band-muted: #FCFFFE; /* Secondary Ink (stylesheet-derived) (inherited-band) */
-  --inherited-band-border: #FCFFFE; /* Structural Border (stylesheet-derived) (inherited-band) */
-  --inherited-band-container: 1024px; /* Container Bound (stylesheet-derived) (inherited-band) */
-  --inherited-band-gap: 20rem; /* Grid Gutter (stylesheet-derived) (inherited-band) */
-  --inherited-band-pad: 15rem; /* Lateral Padding (stylesheet-derived) (inherited-band) */
+  --inherited-band-bg: #000000; /* Canvas Substrate (from live computed `html` `background-color` (`computed_styles.json`)) (inherited-band) */
+  --inherited-band-ink: #eee2c5; /* Primary Typography Ink (computed-derived) (inherited-band) */
+  --inherited-band-surface: #d50305; /* Surface Substrate (computed-derived) (inherited-band) */
+  --inherited-band-accent: #fcfffe; /* Interactive Accent (computed-derived) (inherited-band) */
+  --inherited-band-muted: #eee2c5; /* Secondary Ink (computed-derived) (inherited-band) */
+  --inherited-band-border: #eee2c5; /* Structural Border (computed-derived) (inherited-band) */
+  --inherited-band-container: 1440px; /* Container Bound (computed-derived) (inherited-band) */
+  --inherited-band-gap: 18px; /* Grid Gutter (computed-derived) (inherited-band) */
+  --inherited-band-pad: 18px; /* Lateral Padding (computed-derived) (inherited-band) */
   --inherited-band-ease: cubic-bezier(.6,.14,0,1); /* Primary Easing Function (inherited-band) */
-  --inherited-band-radius: 0px; /* Corner Radius (stylesheet-derived) (inherited-band) */
+  --inherited-band-radius: 0px; /* Corner Radius (computed-derived) (inherited-band) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `#loading { background: #000 }`
-- **Primary Typography Ink**: `#ff03` — grounded in `#grid div { background: #ff03 }`
-- **Elevated Surface / Card Substrate**: `#eee2c5` — grounded in `#nav-mobile-bar span { background: #eee2c5 }`
-- **Interactive Accent / Highlight**: `#d50305` — grounded in `.header { background: #d50305 }`
-- **Secondary / Muted Copy**: `#FCFFFE` — grounded in `<meta name="theme-color" content="#FCFFFE">` in `dom.html`
+- **Primary Canvas Substrate**: `#000000` — grounded in live computed `html` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#eee2c5` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#d50305` — grounded in live computed `header` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#fcfffe` — grounded in `<meta name="theme-color" content="#FCFFFE">` in `dom.html`
+- **Secondary / Muted Copy**: `#eee2c5` — grounded in secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#eee2c5` — grounded in hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×4747px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1024px` extracted from `inherited-band` stylesheet
-- **Padding & Gutters**: `15rem` lateral canvas padding with `20rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 20rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `15rem` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `18px` lateral canvas padding with `18px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `18px` horizontal padding
 - **Media Queries**: `@media (max-width: 1024px)`
 - **Corner Radii**: `0px` (sharp unrounded corners)
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Founders Grotesk`
 - **Body Font Stack**: `Founders Grotesk`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: rule `.h1` (`line-height: .85`, `letter-spacing: -.1em`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `15rem`, `115rem`, `80rem`, `25rem`, `12px`)
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 103.5px`, `line-height: 103.5px`, `font-weight: 700`, `letter-spacing: -10.35px`); rule `.h1` (`line-height: .85`, `letter-spacing: -.1em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 22.5px`, `line-height: 22.5px`, `font-weight: 400`, `letter-spacing: -0.3375px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 13.5px`, `line-height: 16.335px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 13.5px`, `line-height: 16.335px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `inherited-band` (`INHERITED`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `inherited-band`)**:
-   - DOM & Selectors: Landmark `<header class="header">` hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
+   - DOM & Selectors: Landmark `<header class="header">` (`1440x900px`) hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `inherited-band`)` (`inherited-band`) adapts across `@media (max-width: 1024px)` with `cubic-bezier(.6,.14,0,1)`, `cubic-bezier(.35,.42,0,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `INHERITED · Spotify · Instagram · Tik Tok · Contact us`.
 2. **Hero Stage & Focal Lead (<section.member> — `I N H E R I T E D`)**:
-   - DOM & Selectors: Landmark `<section class="member no-transition">` presenting display lead `I N H E R I T E D` and copy excerpt *"m e e t @ i n h e r i t e d . b a n d"* over `#000` canvas and `#FCFFFE` ink.
-   - Responsive Contract: Hero stage (`1440×4747px` desktop / `390×2400px` mobile) sets `#000` background with `#FCFFFE` headline `I N H E R I T E D`.
-3. **Primary Showcase & Content Grid (<section.member> — `2016 Deathcore Metalcore`)**:
-   - DOM & Selectors: Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Metalcore Deathcore"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.member> — `2016 Deathcore Metalcore`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1024px`, `gap: 20rem`) on desktop and Single-column vertical stack at `390px` viewport width with `15rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.member> — `E d e r A n a y a`)**:
-   - DOM & Selectors: Landmark `<section class="member no-transition">` framing `E d e r A n a y a` and `Guitarist Producer` (*"Guitarist Producer"*) with `#eee2c5` surface cards, `#d50305` accents, and `.h1 { font-size:115rem }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.member> — `E d e r A n a y a`)` uses `0px` (sharp unrounded corners) radii, `#d50305` highlights, and assets (fav.ico, fav.svg, fav-mask.svg).
+   - DOM & Selectors: Landmark `<section class="member show">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×844px` mobile) sets `#000000` background with `#eee2c5` headline `I N H E R I T E D`.
+3. **Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)**:
+   - DOM & Selectors: Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Guitarist Producer"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.member:nth(2)> — `E d e r A n a y a`)**:
+   - DOM & Selectors: Landmark `<section class="member no-transition">` framing `E d e r A n a y a` and `( Me, Myself, and Sam )` (*"( Me, Myself, and Sam )"*) with `#d50305` surface cards, `#fcfffe` accents, and `.h1 { font-size:115rem }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.member:nth(2)> — `E d e r A n a y a`)` uses `0px` (sharp unrounded corners) radii, `#fcfffe` highlights, and assets (fav.ico, fav.svg, fav-mask.svg).
 5. **Colophon & Global Directory Footer (<footer.items> — `https://inherited.band/`)**:
-   - DOM & Selectors: Landmark `<footer class="items">` anchoring `INHERITED` footer links (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), copy *"( Me, Myself, and Sam )"*, and `#FCFFFE` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.items> — `https://inherited.band/`)` aligns to `1024px` extracted from `inherited-band` stylesheet with `15rem` lateral canvas padding with `20rem` grid gap and attributes (data-touch="false", data-custom-loaded="true", data-title="about").
+   - DOM & Selectors: Landmark `<footer class="items">` anchoring `INHERITED` footer links (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), copy *"E d e r A n a y a"*, and `#eee2c5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.items> — `https://inherited.band/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `18px` lateral canvas padding with `18px` grid gap and attributes (data-touch="false", data-custom-loaded="true", data-title="about").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"m e e t @ i n h e r i t e d . b a n d"*
-- Copy Excerpt 2: *"Metalcore Deathcore"*
-- Copy Excerpt 3: *"Guitarist Producer"*
-- Copy Excerpt 4: *"( Me, Myself, and Sam )"*
+- Copy Excerpt 1: *"Metalcore Deathcore"*
+- Copy Excerpt 2: *"Guitarist Producer"*
+- Copy Excerpt 3: *"( Me, Myself, and Sam )"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.6,.14,0,1)`, `cubic-bezier(.35,.42,0,1)`, `cubic-bezier(.19,1,.22,1)`
@@ -248,7 +272,7 @@ Scaffold `inherited-band` (`INHERITED`) with these exact structural regions, ext
 - **Selector `#loading`**: `transition: opacity .5s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Selector `.rich-text a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Selector `#nav a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.member>`.
+- **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.no-transition>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

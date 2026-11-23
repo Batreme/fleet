@@ -1,45 +1,49 @@
 ---
 title: "UI Prompt Blueprint: the-family-rice-tray-vercel-app"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "the-family-rice-tray-vercel-app"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas, `#e3a94a` ink, `#8b0c1c` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#5e0712` canvas, `#f7efe0` ink, `#ff0000` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: the-family-rice-tray-vercel-app
 
 > **Mâm Cơm — the Vietnamese family rice tray** (https://the-family-rice-tray.vercel.app) — A love letter to mâm cơm, the round tray of shared dishes at the centre of every Vietnamese home — laid out on the face of a Đông Sơn bro...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Mâm Cơm — the Vietnamese family rice tray** (`https://the-family-rice-tray.vercel.app`). A love letter to mâm cơm, the round tray of shared dishes at the centre of every Vietnamese home — laid out on the face of a Đông Sơn bro...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas, `#e3a94a` ink, `#8b0c1c` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#5e0712` canvas, `#f7efe0` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#3f040c` (`var(--red-900)` in `:root`) paired with `#e3a94a` primary typography and `#8b0c1c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Be Vietnam Pro` for display copy (`Mâm Cơm The family rice tray`) with `Big Shoulders Display` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `560px` container bounds (`gap: 0.9rem`, padding `0.85rem`) with `cubic-bezier(0.22,0.61,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#5e0712` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f7efe0` primary typography and `#ff0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Big Shoulders Display` for display copy (`MÂM CƠM THE FAMILY RICE TRAY`) with `Be Vietnam Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 25.92px`, padding `0.85rem`) with `cubic-bezier(0.22,0.61,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×10547px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `560px` extracted from `the-family-rice-tray-vercel-app` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `0.85rem` lateral canvas padding with `0.9rem` grid gap.
-- **Border Radius Scale**: `4px`, `2px`, `999px`, `50%`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `0.85rem` lateral canvas padding with `25.92px` grid gap.
+- **Border Radius Scale**: `50%`, `0px 0px 14px 14px`, `4px`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 560px`, `gap: 0.9rem`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 25.92px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `0.85rem` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width: 560px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 720px)`, `@media (min-width: 561px) and (max-width: 959px)`.
 
@@ -48,19 +52,21 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#3f040c` | `var(--red-900)` in `:root` |
-| **Primary Typography Ink** | `#5e0712` | `var(--red-800)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#7a0a18` | `var(--red-700)` in `:root` |
-| **Interactive Accent / Highlight** | `#8b0c1c` | `var(--red-600)` in `:root` |
-| **Secondary / Muted Copy** | `#a8121f` | `var(--red-500)` in `:root` |
-| **Structural Hairline Border** | `#e3a94a` | `var(--gold-400)` in `:root` |
-| **Variable Token (`--gold-300`)** | `#f0be6b` | `var(--gold-300)` in `:root` |
+| **Primary Canvas Substrate** | `#5e0712` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f7efe0` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#3f040c` | live computed `footer` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ff0000` | `.stepper button { color: red }` (`#ff0000`) |
+| **Secondary / Muted Copy** | `#f0be6b` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#a0582e` | `.btn--ghost { border: #a0582e }` |
+| **Variable Token (`--red-700`)** | `#7a0a18` | `var(--red-700)` in `:root` |
+| **Variable Token (`--red-600`)** | `#8b0c1c` | `var(--red-600)` in `:root` |
+| **Variable Token (`--red-500`)** | `#a8121f` | `var(--red-500)` in `:root` |
+| **Variable Token (`--gold-400`)** | `#e3a94a` | `var(--gold-400)` in `:root` |
 | **Variable Token (`--gold-200`)** | `#f7d9a0` | `var(--gold-200)` in `:root` |
 | **Variable Token (`--jade`)** | `#2e6b58` | `var(--jade)` in `:root` |
 | **Variable Token (`--jade-light`)** | `#7fb8a2` | `var(--jade-light)` in `:root` |
-| **Variable Token (`--cream`)** | `#f7efe0` | `var(--cream)` in `:root` |
 | **Variable Token (`--cream-dim`)** | `#dccdb4` | `var(--cream-dim)` in `:root` |
 | **Variable Token (`--ink`)** | `#1a0509` | `var(--ink)` in `:root` |
 
@@ -89,15 +95,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Be Vietnam Pro`.
-- **Primary Body Stack**: `Big Shoulders Display`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Big Shoulders Display`.
+- **Primary Body Stack**: `Be Vietnam Pro`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif`; rule `h1` (`font-size: var(--t-hero)`, `line-height: 0.82`, `letter-spacing: -0.015em`, `font-weight: 900`).
-- **Section Heading (`H2`)**: CSS variables `--t-h2: clamp(2.4rem, 6vw, 4.6rem)`; rule `h2` (`font-size: var(--t-h2)`, `font-weight: 900`).
-- **Body Copy**: CSS variables `--font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif`, `--t-body: clamp(1rem, 0.55vw + 0.9rem, 1.16rem)`; rule `body` (`font-size: var(--t-body)`, `line-height: 1.72`, `font-weight: 300`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--t-body)`, `0.76rem`, `var(--t-lede)`, `0.62em`, `0.4em`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 134.4px`, `line-height: 110.208px`, `font-weight: 900`, `letter-spacing: -2.016px`); CSS variables `--font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif`; rule `h1` (`font-size: var(--t-hero)`, `line-height: 0.82`, `letter-spacing: -0.015em`, `font-weight: 900`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 73.6px`, `line-height: 75.072px`, `font-weight: 900`, `letter-spacing: -0.736px`); CSS variables `--t-h2: clamp(2.4rem, 6vw, 4.6rem)`; rule `h2` (`font-size: var(--t-h2)`, `font-weight: 900`).
+- **Body Copy**: live computed `body` (`font-size: 18.56px`, `line-height: 31.9232px`, `font-weight: 300`); CSS variables `--font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif`, `--t-body: clamp(1rem, 0.55vw + 0.9rem, 1.16rem)`; rule `body` (`font-size: var(--t-body)`, `line-height: 1.72`, `font-weight: 300`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 18.56px`, `line-height: 31.9232px`, `font-weight: 300`).
 
 ---
 
@@ -117,40 +123,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Mâm Cơm — the Vietnamese family rice tray  │
 │ ====================================================================== │
-│ [ <header.masthead>        | The Tray · The Legend · The Recipe · N ]  │
+│ [ <header.masthead> (1440x67px)       | The Tray · The Legend · The  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.hero>                                       |   │
-│ | H1: Mâm Cơm The family rice tray                                 |   │
-│ | Substrate: #3f040c    | Ink: #e3a94a    | Accent: #8b0c1c        |   │
+│ | HERO STAGE: <section.hero> (w=1440px)                              | │
+│ | H1: MÂM CƠM THE FAMILY RICE TRAY                                   | │
+│ | Substrate: #5e0712 | Ink: #f7efe0 | Accent: #ff0000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.section>         ) max-w: 560px          |   │
+│ | SHOWCASE GRID (<section.section>) max-w: 1440px                    | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Three thousand years on a ci |  | Cơm Trắng                    | | │
+│ | | Mâm Cơm The family rice tray |  | Three thousand years on a ci | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 0.9rem) | │
-│ | [<header.masthead>] -> [<section.hero>] -> [<section.section>] |     │
+│ | DETAIL MODULE (<section.feast>) — Thịt Kho Trứng                   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://the-family-rice-tray.verce │
+│ [ FOOTER (<footer.footer>     ) | https://the-family-rice-tray.vercel  │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 25.92px)    │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.masthead>       ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.hero>) — 390px Vertical Lead                  | │
+│ | H1: MÂM CƠM THE FAMILY RICE TRAY                                   | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.section>) — 1-Col Stack                   | │
+│ | [ Item 1: Mâm Cơm The family rice tray                           ] | │
+│ | [ Item 2: Three thousand years on a circle                       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.feast>) — 1-Col (Thịt Kho Trứng)            | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.masthead> — `the-family-rice-tray-vercel-app`)**:
-   - Landmark `<header class="masthead">` hosting `Mâm Cơm — the Vietnamese family rice` navigation (`The Tray · The Legend · The Recipe · Nếp Nhà`), DOM attributes (`data-audio-toggle`, `data-audio`, `data-jump="tab-com"`, `data-jump="tab-thitkho"`), and stylesheet rule `after { box-sizing: border-box; }`.
-2. **Hero Stage & Focal Lead (<section.hero> — `Mâm Cơm The family rice tray`)**:
-   - Landmark `<section class="hero">` presenting display lead `Mâm Cơm The family rice tray` and copy excerpt *"A love letter to a regional dish Việt Nam · Đông Nam Á"* over `#3f040c` canvas and `#e3a94a` ink.
-3. **Primary Showcase & Content Grid (<section.section> — `Three thousand years on a circle`)**:
-   - Landmark `<section class="section tray-section">` rendering section `Three thousand years on a circle` with copy *"Việt Nam · Đông Nam Á"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `html { -webkit-text-size-adjust: 100%; }`.
-4. **Interactive Detail & Feature Matrix (<section.feast> — `Cơm Trắng`)**:
-   - Landmark `<section class="feast">` framing `Cơm Trắng` and `Thịt Kho Trứng` (*"mâm cơm · /məm kəːm/ · “the tray of rice”"*) with `#7a0a18` surface cards, `#8b0c1c` accents, and `img { max-width: 100%; height: auto; display: block; }`.
+   - Landmark `<header class="masthead">` (`1440x67px`) hosting `Mâm Cơm — the Vietnamese family rice` navigation (`The Tray · The Legend · The Recipe · Nếp Nhà`), DOM attributes (`data-audio-toggle`, `data-audio`, `data-jump="tab-com"`, `data-jump="tab-thitkho"`), and stylesheet rule `after { box-sizing: border-box; }`.
+2. **Hero Stage & Focal Lead (<section.hero> — `MÂM CƠM THE FAMILY RICE TRAY`)**:
+   - Landmark `<section class="hero">` presenting display lead `MÂM CƠM THE FAMILY RICE TRAY` and copy excerpt *"A LOVE LETTER TO A REGIONAL DISH VIỆT NAM · ĐÔNG NAM Á"* over `#5e0712` canvas and `#f7efe0` ink.
+3. **Primary Showcase & Content Grid (<section.section> — `Mâm Cơm The family rice tray`)**:
+   - Landmark `<section class="section tray-section">` rendering section `Mâm Cơm The family rice tray` with copy *"A love letter to a regional dish Việt Nam · Đông Nam Á"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `html { -webkit-text-size-adjust: 100%; }`.
+4. **Interactive Detail & Feature Matrix (<section.feast> — `Three thousand years on a circle`)**:
+   - Landmark `<section class="feast">` framing `Three thousand years on a circle` and `Thịt Kho Trứng` (*"Việt Nam · Đông Nam Á"*) with `#3f040c` surface cards, `#ff0000` accents, and `img { max-width: 100%; height: auto; display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://the-family-rice-tray.vercel.app`)**:
-   - Landmark `<footer class="footer">` anchoring `Mâm Cơm — the Vietnamese family ` footer links (`The Tray · The Legend · The Recipe · Nếp Nhà`), copy *"Vietnamese has no word for entrée . There is only cơm — rice"*, and `#e3a94a` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Mâm Cơm — the Vietnamese family ` footer links (`The Tray · The Legend · The Recipe · Nếp Nhà`), copy *"mâm cơm · /məm kəːm/ · “the tray of rice”"*, and `#a0582e` structural dividers.
 
 ---
 
@@ -162,19 +187,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `the-family-rice-tray-vercel-app` (**Mâm Cơm — the Vietnamese family rice tray** — `https://the-family-rice-tray.vercel.app`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#3f040c` canvas, `#e3a94a` ink, `#8b0c1c` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#5e0712` canvas, `#f7efe0` ink, `#ff0000` accent).
 - **Identity & Domain Context**: A love letter to mâm cơm, the round tray of shared dishes at the centre of every Vietnamese home — laid out on the face of a Đông Sơn bro...
-- **Primary Substrate**: `#3f040c` (`var(--red-900)` in `:root`), **Primary Ink**: `#e3a94a`, **Accent / Highlight**: `#8b0c1c`.
+- **Primary Substrate**: `#5e0712` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f7efe0`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#3f040c` (`var(--red-900)` in `:root`) paired with `#e3a94a` primary typography and `#8b0c1c` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Be Vietnam Pro` for display copy (`Mâm Cơm The family rice tray`) with `Big Shoulders Display` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `560px` container bounds (`gap: 0.9rem`, padding `0.85rem`) with `cubic-bezier(0.22,0.61,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#5e0712` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f7efe0` primary typography and `#ff0000` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Big Shoulders Display` for display copy (`MÂM CƠM THE FAMILY RICE TRAY`) with `Be Vietnam Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 25.92px`, padding `0.85rem`) with `cubic-bezier(0.22,0.61,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `the-family-rice-tray-vercel-app` in your global stylesheet:
 
 :root {
-  /* Mâm Cơm — the Vietnamese family rice tray (the-family-rice-tray-vercel-app) — Ground-Truth Extracted CSS Variables */
+  /* Mâm Cơm — the Vietnamese family rice tray (the-family-rice-tray-vercel-app) — Live-Grounded CSS Variables */
   --red-900: #3f040c; /* Color / Atmospheric Token (the-family-rice-tray-vercel-app) */
   --red-800: #5e0712; /* Color / Atmospheric Token (the-family-rice-tray-vercel-app) */
   --red-700: #7a0a18; /* Color / Atmospheric Token (the-family-rice-tray-vercel-app) */
@@ -195,62 +220,64 @@ Declare and consume these exact custom properties extracted from `the-family-ric
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#3f040c` — grounded in `var(--red-900)` in `:root`
-- **Primary Typography Ink**: `#5e0712` — grounded in `var(--red-800)` in `:root`
-- **Elevated Surface / Card Substrate**: `#7a0a18` — grounded in `var(--red-700)` in `:root`
-- **Interactive Accent / Highlight**: `#8b0c1c` — grounded in `var(--red-600)` in `:root`
-- **Secondary / Muted Copy**: `#a8121f` — grounded in `var(--red-500)` in `:root`
-- **Structural Hairline Border**: `#e3a94a` — grounded in `var(--gold-400)` in `:root`
-- **Variable Token (`--gold-300`)**: `#f0be6b` — grounded in `var(--gold-300)` in `:root`
+- **Primary Canvas Substrate**: `#5e0712` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f7efe0` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#3f040c` — grounded in live computed `footer` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#ff0000` — grounded in `.stepper button { color: red }` (`#ff0000`)
+- **Secondary / Muted Copy**: `#f0be6b` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#a0582e` — grounded in `.btn--ghost { border: #a0582e }`
+- **Variable Token (`--red-700`)**: `#7a0a18` — grounded in `var(--red-700)` in `:root`
+- **Variable Token (`--red-600`)**: `#8b0c1c` — grounded in `var(--red-600)` in `:root`
+- **Variable Token (`--red-500`)**: `#a8121f` — grounded in `var(--red-500)` in `:root`
+- **Variable Token (`--gold-400`)**: `#e3a94a` — grounded in `var(--gold-400)` in `:root`
 - **Variable Token (`--gold-200`)**: `#f7d9a0` — grounded in `var(--gold-200)` in `:root`
 - **Variable Token (`--jade`)**: `#2e6b58` — grounded in `var(--jade)` in `:root`
 - **Variable Token (`--jade-light`)**: `#7fb8a2` — grounded in `var(--jade-light)` in `:root`
-- **Variable Token (`--cream`)**: `#f7efe0` — grounded in `var(--cream)` in `:root`
 - **Variable Token (`--cream-dim`)**: `#dccdb4` — grounded in `var(--cream-dim)` in `:root`
 - **Variable Token (`--ink`)**: `#1a0509` — grounded in `var(--ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×10547px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `560px` extracted from `the-family-rice-tray-vercel-app` stylesheet
-- **Padding & Gutters**: `0.85rem` lateral canvas padding with `0.9rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 560px`, `gap: 0.9rem`)
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `0.85rem` lateral canvas padding with `25.92px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 25.92px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `0.85rem` horizontal padding
 - **Media Queries**: `@media (max-width: 560px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 720px)`, `@media (min-width: 561px) and (max-width: 959px)`
-- **Corner Radii**: `4px`, `2px`, `999px`, `50%`
+- **Corner Radii**: `50%`, `0px 0px 14px 14px`, `4px`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Be Vietnam Pro`
-- **Body Font Stack**: `Big Shoulders Display`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif`; rule `h1` (`font-size: var(--t-hero)`, `line-height: 0.82`, `letter-spacing: -0.015em`, `font-weight: 900`)
-- **H2 Section Rule**: CSS variables `--t-h2: clamp(2.4rem, 6vw, 4.6rem)`; rule `h2` (`font-size: var(--t-h2)`, `font-weight: 900`)
-- **Body Copy Rule**: CSS variables `--font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif`, `--t-body: clamp(1rem, 0.55vw + 0.9rem, 1.16rem)`; rule `body` (`font-size: var(--t-body)`, `line-height: 1.72`, `font-weight: 300`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `var(--t-body)`, `0.76rem`, `var(--t-lede)`, `0.62em`, `0.4em`)
+- **Display Font Stack**: `Big Shoulders Display`
+- **Body Font Stack**: `Be Vietnam Pro`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 134.4px`, `line-height: 110.208px`, `font-weight: 900`, `letter-spacing: -2.016px`); CSS variables `--font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif`; rule `h1` (`font-size: var(--t-hero)`, `line-height: 0.82`, `letter-spacing: -0.015em`, `font-weight: 900`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 73.6px`, `line-height: 75.072px`, `font-weight: 900`, `letter-spacing: -0.736px`); CSS variables `--t-h2: clamp(2.4rem, 6vw, 4.6rem)`; rule `h2` (`font-size: var(--t-h2)`, `font-weight: 900`)
+- **Body Copy Rule**: live computed `body` (`font-size: 18.56px`, `line-height: 31.9232px`, `font-weight: 300`); CSS variables `--font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif`, `--t-body: clamp(1rem, 0.55vw + 0.9rem, 1.16rem)`; rule `body` (`font-size: var(--t-body)`, `line-height: 1.72`, `font-weight: 300`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 18.56px`, `line-height: 31.9232px`, `font-weight: 300`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `the-family-rice-tray-vercel-app` (`Mâm Cơm — the Vietnamese family rice tray`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.masthead> — `the-family-rice-tray-vercel-app`)**:
-   - DOM & Selectors: Landmark `<header class="masthead">` hosting `Mâm Cơm — the Vietnamese family rice` navigation (`The Tray · The Legend · The Recipe · Nếp Nhà`), DOM attributes (`data-audio-toggle`, `data-audio`, `data-jump="tab-com"`, `data-jump="tab-thitkho"`), and stylesheet rule `after { box-sizing: border-box; }`.
+   - DOM & Selectors: Landmark `<header class="masthead">` (`1440x67px`) hosting `Mâm Cơm — the Vietnamese family rice` navigation (`The Tray · The Legend · The Recipe · Nếp Nhà`), DOM attributes (`data-audio-toggle`, `data-audio`, `data-jump="tab-com"`, `data-jump="tab-thitkho"`), and stylesheet rule `after { box-sizing: border-box; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.masthead> — `the-family-rice-tray-vercel-app`)` (`the-family-rice-tray-vercel-app`) adapts across `@media (max-width: 560px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 720px)`, `@media (min-width: 561px) and (max-width: 959px)` with `cubic-bezier(0.22,0.61,0.36,1)`, `cubic-bezier(0.34,0.02,0.2,1)` transitions and links `The Tray · The Legend · The Recipe · Nếp Nhà`.
-2. **Hero Stage & Focal Lead (<section.hero> — `Mâm Cơm The family rice tray`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Mâm Cơm The family rice tray` and copy excerpt *"A love letter to a regional dish Việt Nam · Đông Nam Á"* over `#3f040c` canvas and `#e3a94a` ink.
-   - Responsive Contract: Hero stage (`1440×10547px` desktop / `390×2400px` mobile) sets `#3f040c` background with `#e3a94a` headline `Mâm Cơm The family rice tray`.
-3. **Primary Showcase & Content Grid (<section.section> — `Three thousand years on a circle`)**:
-   - DOM & Selectors: Landmark `<section class="section tray-section">` rendering section `Three thousand years on a circle` with copy *"Việt Nam · Đông Nam Á"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `html { -webkit-text-size-adjust: 100%; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section> — `Three thousand years on a circle`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 560px`, `gap: 0.9rem`) on desktop and Single-column vertical stack at `390px` viewport width with `0.85rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.feast> — `Cơm Trắng`)**:
-   - DOM & Selectors: Landmark `<section class="feast">` framing `Cơm Trắng` and `Thịt Kho Trứng` (*"mâm cơm · /məm kəːm/ · “the tray of rice”"*) with `#7a0a18` surface cards, `#8b0c1c` accents, and `img { max-width: 100%; height: auto; display: block; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.feast> — `Cơm Trắng`)` uses `4px`, `2px`, `999px`, `50%` radii, `#8b0c1c` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
+2. **Hero Stage & Focal Lead (<section.hero> — `MÂM CƠM THE FAMILY RICE TRAY`)**:
+   - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `MÂM CƠM THE FAMILY RICE TRAY` and copy excerpt *"A LOVE LETTER TO A REGIONAL DISH VIỆT NAM · ĐÔNG NAM Á"* over `#5e0712` canvas and `#f7efe0` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#5e0712` background with `#f7efe0` headline `MÂM CƠM THE FAMILY RICE TRAY`.
+3. **Primary Showcase & Content Grid (<section.section> — `Mâm Cơm The family rice tray`)**:
+   - DOM & Selectors: Landmark `<section class="section tray-section">` rendering section `Mâm Cơm The family rice tray` with copy *"A love letter to a regional dish Việt Nam · Đông Nam Á"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `html { -webkit-text-size-adjust: 100%; }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section> — `Mâm Cơm The family rice tray`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 25.92px`) on desktop and Single-column vertical stack at `390px` viewport width with `0.85rem` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.feast> — `Three thousand years on a circle`)**:
+   - DOM & Selectors: Landmark `<section class="feast">` framing `Three thousand years on a circle` and `Thịt Kho Trứng` (*"Việt Nam · Đông Nam Á"*) with `#3f040c` surface cards, `#ff0000` accents, and `img { max-width: 100%; height: auto; display: block; }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.feast> — `Three thousand years on a circle`)` uses `50%`, `0px 0px 14px 14px`, `4px`, `2px` radii, `#ff0000` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://the-family-rice-tray.vercel.app`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Mâm Cơm — the Vietnamese family ` footer links (`The Tray · The Legend · The Recipe · Nếp Nhà`), copy *"Vietnamese has no word for entrée . There is only cơm — rice"*, and `#e3a94a` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://the-family-rice-tray.vercel.app`)` aligns to `560px` extracted from `the-family-rice-tray-vercel-app` stylesheet with `0.85rem` lateral canvas padding with `0.9rem` grid gap and attributes (data-audio-toggle, data-audio, data-jump="tab-com").
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Mâm Cơm — the Vietnamese family ` footer links (`The Tray · The Legend · The Recipe · Nếp Nhà`), copy *"mâm cơm · /məm kəːm/ · “the tray of rice”"*, and `#a0582e` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://the-family-rice-tray.vercel.app`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `0.85rem` lateral canvas padding with `25.92px` grid gap and attributes (data-audio-toggle, data-audio, data-jump="tab-com").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"A love letter to a regional dish Việt Nam · Đông Nam Á"*
-- Copy Excerpt 2: *"Việt Nam · Đông Nam Á"*
-- Copy Excerpt 3: *"mâm cơm · /məm kəːm/ · “the tray of rice”"*
-- Copy Excerpt 4: *"Vietnamese has no word for entrée . There is only cơm — rice — and everything laid..."*
+- Copy Excerpt 1: *"A LOVE LETTER TO A REGIONAL DISH VIỆT NAM · ĐÔNG NAM Á"*
+- Copy Excerpt 2: *"A love letter to a regional dish Việt Nam · Đông Nam Á"*
+- Copy Excerpt 3: *"Việt Nam · Đông Nam Á"*
+- Copy Excerpt 4: *"mâm cơm · /məm kəːm/ · “the tray of rice”"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.22,0.61,0.36,1)`, `cubic-bezier(0.34,0.02,0.2,1)`

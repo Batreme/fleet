@@ -1,70 +1,74 @@
 ---
 title: "UI Prompt Blueprint: awards-racing"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "awards-racing"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas, `#fff` ink, `#c60000` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#2c2c2c` ink, `#ffc500` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: awards-racing
 
 > **Awards Racing** (https://awards.racing) — Customize your car and race through parody award shows and galleries in Awards Racing (also known as Versus Racing and Versus: Design Gra...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Awards Racing** (`https://awards.racing`). Customize your car and race through parody award shows and galleries in Awards Racing (also known as Versus Racing and Versus: Design Gra...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas, `#fff` ink, `#c60000` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#2c2c2c` ink, `#ffc500` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f00000` (`var(--color-theme)` in `:root`) paired with `#fff` primary typography and `#c60000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Druk Wide Cy TT` for display copy (`awards racing`) with `Druk Wide Cy TT` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `991px` container bounds (`gap: 4px`, padding `5px`) with `cubic-bezier(.33,1,.68,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#2c2c2c` primary typography and `#ffc500` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Druk Wide Cy TT` for display copy (`AWARDS RACING`) with `Druk Wide Cy TT` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 4px`, padding `32px`) with `cubic-bezier(.33,1,.68,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x844)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `991px` extracted from `awards-racing` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `5px` lateral canvas padding with `4px` grid gap.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Master Container Bounds**: `1920px` (non-`@media` desktop container stylesheet rule).
+- **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `50%`, `38px`, `72px`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 4px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `5px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:991px)`, `@media (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:992px)and (min-height:558px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (min-width:380px)`, `@media (min-width:479px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:820px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#f00000` | `var(--color-theme)` in `:root` |
-| **Primary Typography Ink** | `#c00000` | `var(--color-theme-dark)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--color-line-1)` in `:root` |
-| **Interactive Accent / Highlight** | `#c60000` | `var(--color-line-3)` in `:root` |
-| **Secondary / Muted Copy** | `#ff6464` | `var(--color-line-4)` in `:root` |
-| **Structural Hairline Border** | `#ffc500` | `var(--color-accent)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#2c2c2c` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e9e9e9` | `var(--color-bg-gray-default)` in `:root` |
+| **Interactive Accent / Highlight** | `#ffc500` | `var(--color-accent)` in `:root` |
+| **Secondary / Muted Copy** | `#d9d9d9` | `var(--color-text-disabled)` in `:root` |
+| **Structural Hairline Border** | `#ff6464` | `var(--color-line-4)` in `:root` |
+| **Variable Token (`--color-theme`)** | `#f00000` | `var(--color-theme)` in `:root` |
+| **Variable Token (`--color-theme-dark`)** | `#c00000` | `var(--color-theme-dark)` in `:root` |
+| **Variable Token (`--color-line-3`)** | `#c60000` | `var(--color-line-3)` in `:root` |
+| **Variable Token (`--color-text-black`)** | `#000000` | `var(--color-text-black)` in `:root` |
+| **Variable Token (`--color-text-gray-dark`)** | `#505050` | `var(--color-text-gray-dark)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--size` | `50px` | Layout / Spatial Grid Token |
-| `--offset` | `4px` | Dimension / Scale Token |
-| `--icon-width` | `20px` | Layout / Spatial Grid Token |
-| `--icon-height` | `14px` | Layout / Spatial Grid Token |
-| `--border-width` | `3px` | Layout / Spatial Grid Token |
 | `--font-primary` | `"Druk Wide Cy TT",sans-serif` | Brand / Palette Token |
 | `--base-font-size` | `16px` | Typography / Scale Token |
 | `--color-theme` | `#f00000` | Brand / Palette Token |
@@ -76,6 +80,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas
 | `--color-line-3` | `#c60000` | Brand / Palette Token |
 | `--color-line-4` | `#ff6464` | Brand / Palette Token |
 | `--color-accent` | `#ffc500` | Brand / Palette Token |
+| `--color-text-white` | `#fff` | Canvas / Surface Token |
+| `--color-text-black` | `#000` | Canvas / Surface Token |
+| `--color-text-gray-light` | `silver` | Canvas / Surface Token |
+| `--color-text-gray-dark` | `#505050` | Canvas / Surface Token |
+| `--color-text-disabled` | `#d9d9d9` | Typography Ink Token |
 
 ---
 
@@ -84,13 +93,13 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas
 ### Font Family Stacks
 - **Display Typography**: `Druk Wide Cy TT`.
 - **Primary Body Stack**: `Druk Wide Cy TT`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`).
-- **Metadata & Navigation Labels**: CSS variables `--small-size: 50px`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 138px`, `line-height: 126.96px`, `font-weight: 900`).
+- **Section Heading (`H2`)**: observed font-size ladder: `138px`, `16px`, `24px`, `var(--base-font-size)`, `9px`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 24px`, `line-height: normal`, `font-weight: 500`, `letter-spacing: 0.72px`); CSS variables `--small-size: 50px`.
 
 ---
 
@@ -100,9 +109,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas
 - **Extracted Timing Functions**: `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.7,0,.84,0)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.options__button`**: `transition: opacity .3s ease-in-out` extracted from `awards-racing` stylesheet.
-- **Selector `.options__button:not(:disabled):a...`**: `transition: opacity .3s` extracted from `awards-racing` stylesheet.
-- **Selector `.options__list`**: `transition: .3s,0s` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-leave-active`**: `transition: opacity .35s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-fast-leave-active`**: `transition: opacity .25s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-out-leave-active`**: `transition: opacity .25s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.macos>` and `<div.landscape>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -110,40 +119,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Awards Racing                              │
 │ ====================================================================== │
-│ [ <header.macos>           | Overview · Index · Archive · About · C ]  │
+│ [ <header.macos> (1440px)             | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <div.desktop>                                        |   │
-│ | H1: awards racing                                                |   │
-│ | Substrate: #f00000    | Ink: #fff       | Accent: #c60000        |   │
+│ | HERO STAGE: <div.desktop> (w=1440px)                               | │
+│ | H1: AWARDS RACING                                                  | │
+│ | Substrate: #ffffff | Ink: #2c2c2c | Accent: #ffc500                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.landscape>           ) max-w: 991px          |   │
+│ | SHOWCASE GRID (<div.landscape>) max-w: 1920px                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Awards Racing Primary Showca |  | awards-racing Interactive Ma | | │
+│ | | awards racing                |  | awards-racing Interactive Ma | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px   ) | │
-│ | [<header.macos>] -> [<div.desktop>] -> [<div.landscape>] |           │
+│ | DETAIL MODULE (<div.view>) — awards-racing Archive                 | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.preloader>    ) | https://awards.racing              │
+│ [ FOOTER (<footer.preloader>  ) | https://awards.racing                │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.macos>          ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<div.desktop>) — 390px Vertical Lead                   | │
+│ | H1: AWARDS RACING                                                  | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<div.landscape>) — 1-Col Stack                     | │
+│ | [ Item 1: awards racing                                          ] | │
+│ | [ Item 2: awards-racing Interactive Matrix                       ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<div.view>) — 1-Col (awards-racing Arch)             | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.preloader>  ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.macos> — `awards-racing`)**:
-   - Landmark `<header class="macos">` hosting `Awards Racing` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-theme="green"`, `data-onloadfired="true"`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `.options { gap:clamp(4px,3.33333vw,16px) }`.
-2. **Hero Stage & Focal Lead (<div.desktop> — `awards racing`)**:
-   - Landmark `<div class="desktop">` presenting display lead `awards racing` and copy excerpt *"Customize your car and race through parody award shows and galler"* over `#f00000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<div.landscape> — `Awards Racing Primary Showcase`)**:
-   - Landmark `<div class="landscape">` rendering section `Awards Racing Primary Showcase` with copy *"awards racing"*, asset references (`entry.BqrIyN9y.css`, `index.B6ocAFgr.css`, `shareState.CxNBlIw1.css`, `useWaitlistAvailable.C-zekLsB.css`), and grid rule `.options__button { --border-width:clamp(3px,.50403vw,5px) }`.
+   - Landmark `<header class="macos">` (`1440px`) hosting `Awards Racing` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-theme="green"`, `data-onloadfired="true"`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `root { --header-offset-top:14px;--header-offset-inline:24px }`.
+2. **Hero Stage & Focal Lead (<div.desktop> — `AWARDS RACING`)**:
+   - Landmark `<div class="desktop">` presenting display lead `AWARDS RACING` and copy excerpt *"Customize your car and race through parody award shows and galler"* over `#ffffff` canvas and `#2c2c2c` ink.
+3. **Primary Showcase & Content Grid (<div.landscape> — `awards racing`)**:
+   - Landmark `<div class="landscape">` rendering section `awards racing` with copy *"AWARDS RACING"*, asset references (`entry.BqrIyN9y.css`, `index.B6ocAFgr.css`, `shareState.CxNBlIw1.css`, `useWaitlistAvailable.C-zekLsB.css`), and grid rule `before { -webkit-box-sizing:border-box;box-sizing:border-box }`.
 4. **Interactive Detail & Feature Matrix (<div.view> — `awards-racing Interactive Matrix`)**:
-   - Landmark `<div class="view">` framing `awards-racing Interactive Matrix` and `awards-racing Archive & Directory` (*"Awards Racing Primary Showcase"*) with `#fff` surface cards, `#c60000` accents, and `.options__button img { border-radius:50%;display:block;height:100%;-o-object-fit:cover;object-f... }`.
+   - Landmark `<div class="view">` framing `awards-racing Interactive Matrix` and `awards-racing Archive & Directory` (*"awards racing"*) with `#e9e9e9` surface cards, `#ffc500` accents, and `button { background-color:transparent;border:0;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.preloader> — `https://awards.racing`)**:
-   - Landmark `<footer class="preloader">` anchoring `Awards Racing` footer links (`Overview · Index · Archive · About · Contact`), copy *"awards-racing Interactive Matrix"*, and `#ffc500` structural dividers.
+   - Landmark `<footer class="preloader">` anchoring `Awards Racing` footer links (`Overview · Index · Archive · About · Contact`), copy *"awards-racing Interactive Matrix"*, and `#ff6464` structural dividers.
 
 ---
 
@@ -155,24 +183,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `awards-racing` (**Awards Racing** — `https://awards.racing`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#f00000` canvas, `#fff` ink, `#c60000` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#2c2c2c` ink, `#ffc500` accent).
 - **Identity & Domain Context**: Customize your car and race through parody award shows and galleries in Awards Racing (also known as Versus Racing and Versus: Design Gra...
-- **Primary Substrate**: `#f00000` (`var(--color-theme)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#c60000`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#2c2c2c`, **Accent / Highlight**: `#ffc500`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#f00000` (`var(--color-theme)` in `:root`) paired with `#fff` primary typography and `#c60000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Druk Wide Cy TT` for display copy (`awards racing`) with `Druk Wide Cy TT` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `991px` container bounds (`gap: 4px`, padding `5px`) with `cubic-bezier(.33,1,.68,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#2c2c2c` primary typography and `#ffc500` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Druk Wide Cy TT` for display copy (`AWARDS RACING`) with `Druk Wide Cy TT` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 4px`, padding `32px`) with `cubic-bezier(.33,1,.68,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `awards-racing` in your global stylesheet:
 
 :root {
-  /* Awards Racing (awards-racing) — Ground-Truth Extracted CSS Variables */
-  --size: 50px; /* Layout / Spatial Grid Token (awards-racing) */
-  --offset: 4px; /* Dimension / Scale Token (awards-racing) */
-  --icon-width: 20px; /* Layout / Spatial Grid Token (awards-racing) */
-  --icon-height: 14px; /* Layout / Spatial Grid Token (awards-racing) */
-  --border-width: 3px; /* Layout / Spatial Grid Token (awards-racing) */
+  /* Awards Racing (awards-racing) — Live-Grounded CSS Variables */
   --font-primary: "Druk Wide Cy TT",sans-serif; /* Brand / Palette Token (awards-racing) */
   --base-font-size: 16px; /* Typography / Scale Token (awards-racing) */
   --color-theme: #f00000; /* Brand / Palette Token (awards-racing) */
@@ -184,53 +207,63 @@ Declare and consume these exact custom properties extracted from `awards-racing`
   --color-line-3: #c60000; /* Brand / Palette Token (awards-racing) */
   --color-line-4: #ff6464; /* Brand / Palette Token (awards-racing) */
   --color-accent: #ffc500; /* Brand / Palette Token (awards-racing) */
+  --color-text-white: #fff; /* Canvas / Surface Token (awards-racing) */
+  --color-text-black: #000; /* Canvas / Surface Token (awards-racing) */
+  --color-text-gray-light: silver; /* Canvas / Surface Token (awards-racing) */
+  --color-text-gray-dark: #505050; /* Canvas / Surface Token (awards-racing) */
+  --color-text-disabled: #d9d9d9; /* Typography Ink Token (awards-racing) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#f00000` — grounded in `var(--color-theme)` in `:root`
-- **Primary Typography Ink**: `#c00000` — grounded in `var(--color-theme-dark)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `var(--color-line-1)` in `:root`
-- **Interactive Accent / Highlight**: `#c60000` — grounded in `var(--color-line-3)` in `:root`
-- **Secondary / Muted Copy**: `#ff6464` — grounded in `var(--color-line-4)` in `:root`
-- **Structural Hairline Border**: `#ffc500` — grounded in `var(--color-accent)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#2c2c2c` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e9e9e9` — grounded in `var(--color-bg-gray-default)` in `:root`
+- **Interactive Accent / Highlight**: `#ffc500` — grounded in `var(--color-accent)` in `:root`
+- **Secondary / Muted Copy**: `#d9d9d9` — grounded in `var(--color-text-disabled)` in `:root`
+- **Structural Hairline Border**: `#ff6464` — grounded in `var(--color-line-4)` in `:root`
+- **Variable Token (`--color-theme`)**: `#f00000` — grounded in `var(--color-theme)` in `:root`
+- **Variable Token (`--color-theme-dark`)**: `#c00000` — grounded in `var(--color-theme-dark)` in `:root`
+- **Variable Token (`--color-line-3`)**: `#c60000` — grounded in `var(--color-line-3)` in `:root`
+- **Variable Token (`--color-text-black`)**: `#000000` — grounded in `var(--color-text-black)` in `:root`
+- **Variable Token (`--color-text-gray-dark`)**: `#505050` — grounded in `var(--color-text-gray-dark)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `991px` extracted from `awards-racing` stylesheet
-- **Padding & Gutters**: `5px` lateral canvas padding with `4px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 4px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `5px` horizontal padding
-- **Media Queries**: `@media (max-width:991px)`, `@media (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:992px)and (min-height:558px)`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Container Max-Width**: `1920px` (non-`@media` desktop container stylesheet rule)
+- **Padding & Gutters**: `32px` lateral canvas padding with `4px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
+- **Media Queries**: `@media (min-width:380px)`, `@media (min-width:479px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:820px)`
 - **Corner Radii**: `50%`, `38px`, `72px`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Druk Wide Cy TT`
 - **Body Font Stack**: `Druk Wide Cy TT`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `9px`, `clamp(9px,1.04167vw,10px)`, `clamp(10px,.72917vw,16px)`, `clamp(14px,3.125vw,24px)`, `clamp(24px,1.5625vw,48px)`)
-- **Metadata & Index Rule**: CSS variables `--small-size: 50px`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 138px`, `line-height: 126.96px`, `font-weight: 900`)
+- **H2 Section Rule**: observed font-size ladder: `138px`, `16px`, `24px`, `var(--base-font-size)`, `9px`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 24px`, `line-height: normal`, `font-weight: 500`, `letter-spacing: 0.72px`); CSS variables `--small-size: 50px`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `awards-racing` (`Awards Racing`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.macos> — `awards-racing`)**:
-   - DOM & Selectors: Landmark `<header class="macos">` hosting `Awards Racing` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-theme="green"`, `data-onloadfired="true"`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `.options { gap:clamp(4px,3.33333vw,16px) }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.macos> — `awards-racing`)` (`awards-racing`) adapts across `@media (max-width:991px)`, `@media (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:992px)and (min-height:558px)` with `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.7,0,.84,0)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<div.desktop> — `awards racing`)**:
-   - DOM & Selectors: Landmark `<div class="desktop">` presenting display lead `awards racing` and copy excerpt *"Customize your car and race through parody award shows and galler"* over `#f00000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f00000` background with `#fff` headline `awards racing`.
-3. **Primary Showcase & Content Grid (<div.landscape> — `Awards Racing Primary Showcase`)**:
-   - DOM & Selectors: Landmark `<div class="landscape">` rendering section `Awards Racing Primary Showcase` with copy *"awards racing"*, asset references (`entry.BqrIyN9y.css`, `index.B6ocAFgr.css`, `shareState.CxNBlIw1.css`, `useWaitlistAvailable.C-zekLsB.css`), and grid rule `.options__button { --border-width:clamp(3px,.50403vw,5px) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.landscape> — `Awards Racing Primary Showcase`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 991px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `5px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<header class="macos">` (`1440px`) hosting `Awards Racing` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-theme="green"`, `data-onloadfired="true"`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `root { --header-offset-top:14px;--header-offset-inline:24px }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.macos> — `awards-racing`)` (`awards-racing`) adapts across `@media (min-width:380px)`, `@media (min-width:479px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:558px)`, `@media (min-width:768px)and (min-height:820px)` with `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.7,0,.84,0)` transitions and links `Overview · Index · Archive · About · Contact`.
+2. **Hero Stage & Focal Lead (<div.desktop> — `AWARDS RACING`)**:
+   - DOM & Selectors: Landmark `<div class="desktop">` presenting display lead `AWARDS RACING` and copy excerpt *"Customize your car and race through parody award shows and galler"* over `#ffffff` canvas and `#2c2c2c` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#2c2c2c` headline `AWARDS RACING`.
+3. **Primary Showcase & Content Grid (<div.landscape> — `awards racing`)**:
+   - DOM & Selectors: Landmark `<div class="landscape">` rendering section `awards racing` with copy *"AWARDS RACING"*, asset references (`entry.BqrIyN9y.css`, `index.B6ocAFgr.css`, `shareState.CxNBlIw1.css`, `useWaitlistAvailable.C-zekLsB.css`), and grid rule `before { -webkit-box-sizing:border-box;box-sizing:border-box }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.landscape> — `awards racing`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<div.view> — `awards-racing Interactive Matrix`)**:
-   - DOM & Selectors: Landmark `<div class="view">` framing `awards-racing Interactive Matrix` and `awards-racing Archive & Directory` (*"Awards Racing Primary Showcase"*) with `#fff` surface cards, `#c60000` accents, and `.options__button img { border-radius:50%;display:block;height:100%;-o-object-fit:cover;object-f... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.view> — `awards-racing Interactive Matrix`)` uses `50%`, `38px`, `72px`, `999px` radii, `#c60000` highlights, and assets (entry.BqrIyN9y.css, index.B6ocAFgr.css, shareState.CxNBlIw1.css).
+   - DOM & Selectors: Landmark `<div class="view">` framing `awards-racing Interactive Matrix` and `awards-racing Archive & Directory` (*"awards racing"*) with `#e9e9e9` surface cards, `#ffc500` accents, and `button { background-color:transparent;border:0;margin:0;padding:0 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.view> — `awards-racing Interactive Matrix`)` uses `50%`, `38px`, `72px`, `999px` radii, `#ffc500` highlights, and assets (entry.BqrIyN9y.css, index.B6ocAFgr.css, shareState.CxNBlIw1.css).
 5. **Colophon & Global Directory Footer (<footer.preloader> — `https://awards.racing`)**:
-   - DOM & Selectors: Landmark `<footer class="preloader">` anchoring `Awards Racing` footer links (`Overview · Index · Archive · About · Contact`), copy *"awards-racing Interactive Matrix"*, and `#ffc500` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.preloader> — `https://awards.racing`)` aligns to `991px` extracted from `awards-racing` stylesheet with `5px` lateral canvas padding with `4px` grid gap and attributes (data-theme="green", data-onloadfired="true", data-nuxt-data="nuxt-app").
+   - DOM & Selectors: Landmark `<footer class="preloader">` anchoring `Awards Racing` footer links (`Overview · Index · Archive · About · Contact`), copy *"awards-racing Interactive Matrix"*, and `#ff6464` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.preloader> — `https://awards.racing`)` aligns to `1920px` (non-`@media` desktop container stylesheet rule) with `32px` lateral canvas padding with `4px` grid gap and attributes (data-theme="green", data-onloadfired="true", data-nuxt-data="nuxt-app").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Lead Copy: *"Customize your car and race through parody award shows and galleries in Awards Racing (also known as Versus Racing and Versus: Design Gra..."*
@@ -238,15 +271,15 @@ Scaffold `awards-racing` (`Awards Racing`) with these exact structural regions, 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.7,0,.84,0)`
 - **Extracted Stylesheet Rules (`awards-racing`)**:
-- `.options { gap:clamp(4px,3.33333vw,16px) }`
-- `.options__button { --border-width:clamp(3px,.50403vw,5px) }`
-- `.options__button img { border-radius:50%;display:block;height:100%;-o-object-fit:cover;object-f... }`
-- `.options__badge { font-size:clamp(9px,1.04167vw,10px);padding-block:clamp(5px,.78125vw,6px... }`
-- `.options__badge--accent { background:var(--color-accent);color:var(--color-text-black) }`
+- `root { --header-offset-top:14px;--header-offset-inline:24px }`
+- `before { -webkit-box-sizing:border-box;box-sizing:border-box }`
+- `button { background-color:transparent;border:0;margin:0;padding:0 }`
+- `a:hover { text-decoration:none }`
+- `textarea { color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;... }`
 - **Per-Selector Transition Rules**:
-- **Selector `.options__button`**: `transition: opacity .3s ease-in-out` extracted from `awards-racing` stylesheet.
-- **Selector `.options__button:not(:disabled):a...`**: `transition: opacity .3s` extracted from `awards-racing` stylesheet.
-- **Selector `.options__list`**: `transition: .3s,0s` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-leave-active`**: `transition: opacity .35s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-fast-leave-active`**: `transition: opacity .25s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
+- **Selector `.fade-out-leave-active`**: `transition: opacity .25s var(--ease-out-cubic)` extracted from `awards-racing` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.macos>` and `<div.landscape>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
 

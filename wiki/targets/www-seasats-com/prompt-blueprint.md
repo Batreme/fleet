@@ -1,81 +1,87 @@
 ---
 title: "UI Prompt Blueprint: www-seasats-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "www-seasats-com"
 status: analyzed
-capture: specimen
-capture_desktop: dom
-capture_mobile: specimen
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#4e9a85`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fffdfd` / `#4e9a85`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-seasats-com
 
 > **Seasats · Ocean Autonomy That Works** (https://www.seasats.com/) — Missions completed for defense, science, and commercial customers around the world.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Seasats · Ocean Autonomy That Works** (`https://www.seasats.com/`). Missions completed for defense, science, and commercial customers around the world.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#4e9a85`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fffdfd` / `#4e9a85`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#2b3922` (`var(--icon-background)` in `:root`) paired with `#fff` primary typography and `#4e9a85` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `seasonMix` for display copy (`Ocean Autonomy That Works`) with `seasonMix Fallback` and `supplyMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: 3.2rem`, padding `.4rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffdfd` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#232323` primary typography and `#4e9a85` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `seasonMix` for display copy (`Ocean Autonomy That Works`) with `seasonSans` and `supplyMono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: .8rem`, padding `1rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1023px` extracted from `www-seasats-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `.4rem` lateral canvas padding with `3.2rem` grid gap.
-- **Border Radius Scale**: `var(--radius)`, `.4rem`, `.2rem`, `1.2rem`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `.8rem` grid gap.
+- **Border Radius Scale**: `8px`, `2px`, `50%`, `999px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 3.2rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.4rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:1024px)and (pointer:coarse)and (hov...`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: .8rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (max-width:1023px)and (max-width:519px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#2b3922` | `var(--icon-background)` in `:root` |
-| **Primary Typography Ink** | `#fffdfd` | `var(--icon-color)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#fff` | `var(--colorText)` in `:root` |
-| **Interactive Accent / Highlight** | `#4e9a85` | `var(--modal-barBackgroundColor)` in `:root` |
-| **Secondary / Muted Copy** | `#e3ede4` | `var(--button-background)` in `:root` |
-| **Structural Hairline Border** | `#232323` | `var(--formField-color)` in `:root` |
+| **Primary Canvas Substrate** | `#fffdfd` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#232323` | live computed `main` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e3ede4` | `var(--modal-contentBackgroundColor)` in `:root` |
+| **Interactive Accent / Highlight** | `#4e9a85` | `var(--gradient)` in `:root` |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#dcdada` | `.ContentStats_item__LxyN9 { border-top: #dcdada }` |
+| **Variable Token (`--gradient`)** | `#183f34` | `var(--gradient)` in `:root` |
+| **Variable Token (`--gradient`)** | `#2b3922` | `var(--gradient)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--icon-background` | `#2b3922` | Canvas / Surface Token |
-| `--icon-color` | `#fffdfd` | Brand / Palette Token |
-| `--icon-size` | `3rem` | Layout / Spatial Grid Token |
-| `--icon-progress` | `1` | Design System Custom Token |
-| `--colorText` | `#fff` | Typography Ink Token |
-| `--button-outline` | `#fffdfd` | Elevation / Border Token |
-| `--gridLayout-columns` | `var(--columns)` | Layout / Spatial Grid Token |
-| `--button-maskPadding` | `0.1rem` | Layout / Spatial Grid Token |
-| `--button-maskFade` | `0.1rem` | Dimension / Scale Token |
-| `--paddingTop` | `6.4rem` | Layout / Spatial Grid Token |
-| `--paddingBottom` | `6.4rem` | Layout / Spatial Grid Token |
-| `--modal-contentMaxWidth` | `60.8rem` | Layout / Spatial Grid Token |
-| `--modal-contentBackgroundColor` | `#fffdfd` | Canvas / Surface Token |
-| `--modal-barBackgroundColor` | `#4e9a85` | Canvas / Surface Token |
-| `--modal-barColor` | `#fffdfd` | Brand / Palette Token |
-| `--button-background` | `#e3ede4` | Canvas / Surface Token |
+| `--wrapperWidth` | `144rem` | Layout / Spatial Grid Token |
+| `--headerHeight` | `7.2rem` | Layout / Spatial Grid Token |
+| `--columns` | `24` | Layout / Spatial Grid Token |
+| `--gutter` | `1.2rem` | Layout / Spatial Grid Token |
+| `--margin` | `3.2rem` | Layout / Spatial Grid Token |
+| `--radius` | `0.8rem` | Elevation / Border Token |
+| `--colorText` | `#232323` | Typography Ink Token |
+| `--colorAccent` | `#e3ede4` | Brand / Palette Token |
+| `--gradient` | `linear-gradient(180deg,#4e9a85,#183f34 52.82%,#2b3922 75.83%)` | Color / Atmospheric Token |
+| `--body-adjustOffset` | `calc(59.8rem / -2)` | Dimension / Scale Token |
+| `--body-adjustScale` | `0.66` | Design System Custom Token |
+| `--body-adjustScalePrecise` | `0.585` | Design System Custom Token |
+| `--fontSeasonMix` | `"seasonMix","seasonMix Fallback",serif` | Typography / Scale Token |
+| `--fontSeasonSans` | `"seasonSans","seasonSans Fallback",sans-serif` | Typography / Scale Token |
+| `--fontSupplyMono` | `"supplyMono","supplyMono Fallback",monospace` | Typography / Scale Token |
+| `--uiOffset` | `48px` | Dimension / Scale Token |
 
 ---
 
@@ -83,26 +89,26 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#
 
 ### Font Family Stacks
 - **Display Typography**: `seasonMix`.
-- **Primary Body Stack**: `seasonMix Fallback`.
+- **Primary Body Stack**: `seasonSans`.
 - **Technical / Metadata Stack**: `supplyMono`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: rule `h1` (`font-size: 4.8rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`).
-- **Section Heading (`H2`)**: rule `h2` (`font-size: 2.4rem`, `line-height: 1.2`, `letter-spacing: 0`, `font-weight: 400`).
-- **Body Copy**: CSS variables `--body-adjustOffset: calc(59.8rem / -2)`, `--body-adjustScale: 0.66`, `--body-adjustScalePrecise: 0.585`.
-- **Metadata & Navigation Labels**: CSS variables `--fontSupplyMono: "supplyMono","supplyMono Fallback",monospace`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 124px`, `line-height: 111.6px`, `font-weight: 400`, `letter-spacing: -1.24px`); rule `h1` (`font-size: 4.8rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: -0.8px`); rule `h2` (`font-size: 2.4rem`, `line-height: 1.2`, `letter-spacing: 0`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 400`); CSS variables `--body-adjustOffset: calc(59.8rem / -2)`, `--body-adjustScale: 0.66`, `--body-adjustScalePrecise: 0.585`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 24px`, `line-height: 28.8px`, `font-weight: 500`); CSS variables `--fontSupplyMono: "supplyMono","supplyMono Fallback",monospace`.
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.19,1,.22,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,.88,.26,.92)`, `cubic-bezier(.55,.055,.675,.19)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.AnimatedText_char__T7_D3`**: `transition: calc(.6s - var(--char-amt)*12ms) cubic-bezier(.215,.61,.355,1)` extracted from `www-seasats-com` stylesheet.
-- **Selector `Button_icon__6so9o[data-icon=plus...`**: `transition: transform .5s ease` extracted from `www-seasats-com` stylesheet.
-- **Selector `on_icon__6so9o[data-icon=arrow-ri...`**: `transition: .5s ease` extracted from `www-seasats-com` stylesheet.
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-seasats-com` stylesheet.
+- **Selector `media screen and (min-width:1024px)`**: `transition: transform .8s ease` extracted from `www-seasats-com` stylesheet.
+- **Selector `.nav)) .overlay-adjust--center`**: `transition: transform .8s ease` extracted from `www-seasats-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header_container__U6gzw>` and `<main.browser-ui-overlay--top>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 
@@ -110,40 +116,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Seasats · Ocean Autonomy That Works        │
 │ ====================================================================== │
-│ [ <header.Header_container | Home · 01 Capabilities · 02 Past Missi ]  │
+│ [ <header.Header_contain (1376x72px)  | Home · 01 Capabilities · 02  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <main.browser-ui-overlay>                            |   │
-│ | H1: Ocean Autonomy That Works                                    |   │
-│ | Substrate: #2b3922    | Ink: #fff       | Accent: #4e9a85        |   │
+│ | HERO STAGE: <main.browser-ui-overlay> (w=1440px)                   | │
+│ | H1: Ocean Autonomy That Works                                      | │
+│ | Substrate: #fffdfd | Ink: #232323 | Accent: #4e9a85                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.browser-ui-overlay--) max-w: 1023px         |   │
+│ | SHOWCASE GRID (<main.browser-ui-overlay--) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Deploy in minutes.           |  | Detect from miles.           | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 3.2rem) | │
-│ | [<header.Header_con] -> [<main.browser-ui-o] -> [<main.browser-ui-o] │
+│ | DETAIL MODULE (<main.ThemeBackground_back) — React at once.        | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://www.seasats.com/           │
+│ [ FOOTER (<footer.footer>     ) | https://www.seasats.com/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: .8rem)      │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.Header_container) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<main.browser-ui-overlay) — 390px Vertical Lead        | │
+│ | H1: Ocean Autonomy That Works                                      | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<main.browser-ui-overl) — 1-Col Stack              | │
+│ | [ Item 1: Deploy in minutes.                                     ] | │
+│ | [ Item 2: Detect from miles.                                     ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<main.ThemeBackground_ba) — 1-Col (React at once.)   | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.Header_container__U6gzw> — `www-seasats-com`)**:
-   - Landmark `<header class="Header_container__U6gzw">` hosting `Seasats · Ocean Autonomy That Works` navigation (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.not-found_title__bgpas { font-size:min(36rem,36vh) }`.
+   - Landmark `<header class="Header_container__U6gzw">` (`1376x72px`) hosting `Seasats · Ocean Autonomy That Works` navigation (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `video { margin:0;padding:0;font:inherit;font-size:100%;vertical-align:baseline;b... }`.
 2. **Hero Stage & Focal Lead (<main.browser-ui-overlay> — `Ocean Autonomy That Works`)**:
-   - Landmark `<main class="browser-ui-overlay">` presenting display lead `Ocean Autonomy That Works` and copy excerpt *"Ocean Autonomy That Works"* over `#2b3922` canvas and `#fff` ink.
+   - Landmark `<main class="browser-ui-overlay">` presenting display lead `Ocean Autonomy That Works` and copy excerpt *"Ocean Autonomy That Works"* over `#fffdfd` canvas and `#232323` ink.
 3. **Primary Showcase & Content Grid (<main.browser-ui-overlay--top> — `Deploy in minutes.`)**:
-   - Landmark `<main class="browser-ui-overlay--top">` rendering section `Deploy in minutes.` with copy *"E x p l o r e p r o d u c t s E x p l o r e p r o d u c t s"*, asset references (`d11d81b0342c0709.css`, `a14bc365605f91b3.css`, `110e11ba57841c1c.css`, `5ef63a433e26978c.css`), and grid rule `.not-found_media__ko4tq { position:absolute;inset:0;background-image:linear-gradient(180deg,1d344a... }`.
+   - Landmark `<main class="browser-ui-overlay--top">` rendering section `Deploy in minutes.` with copy *"E x p l o r e p r o d u c t s E x p l o r e p r o d u c t s"*, asset references (`d11d81b0342c0709.css`, `a14bc365605f91b3.css`, `110e11ba57841c1c.css`, `5ef63a433e26978c.css`), and grid rule `section { display:block }`.
 4. **Interactive Detail & Feature Matrix (<main.ThemeBackground_background__xCT8k> — `Detect from miles.`)**:
-   - Landmark `<main class="ThemeBackground_background__xCT8k">` framing `Detect from miles.` and `React at once.` (*"E x p l o r e p r o d u c t s"*) with `#fff` surface cards, `#4e9a85` accents, and `.AnimatedText_animatedText__MS50q { display:block;position:relative }`.
+   - Landmark `<main class="ThemeBackground_background__xCT8k">` framing `Detect from miles.` and `React at once.` (*"E x p l o r e p r o d u c t s"*) with `#e3ede4` surface cards, `#4e9a85` accents, and `body { line-height:1 }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.seasats.com/`)**:
-   - Landmark `<footer class="footer Footer_container__kRlyj">` anchoring `Seasats · Ocean Autonomy That Wo` footer links (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), copy *"The coordinates of the ghost fleet."*, and `#232323` structural dividers.
+   - Landmark `<footer class="footer Footer_container__kRlyj">` anchoring `Seasats · Ocean Autonomy That Wo` footer links (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), copy *"The coordinates of the ghost fleet."*, and `#dcdada` structural dividers.
 
 ---
 
@@ -155,82 +180,84 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-seasats-com` (**Seasats · Ocean Autonomy That Works** — `https://www.seasats.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#2b3922` / `#4e9a85`).
+- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fffdfd` / `#4e9a85`).
 - **Identity & Domain Context**: Missions completed for defense, science, and commercial customers around the world.
-- **Primary Substrate**: `#2b3922` (`var(--icon-background)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#4e9a85`.
+- **Primary Substrate**: `#fffdfd` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#232323`, **Accent / Highlight**: `#4e9a85`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#2b3922` (`var(--icon-background)` in `:root`) paired with `#fff` primary typography and `#4e9a85` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `seasonMix` for display copy (`Ocean Autonomy That Works`) with `seasonMix Fallback` and `supplyMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: 3.2rem`, padding `.4rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffdfd` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#232323` primary typography and `#4e9a85` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `seasonMix` for display copy (`Ocean Autonomy That Works`) with `seasonSans` and `supplyMono`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: .8rem`, padding `1rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-seasats-com` in your global stylesheet:
 
 :root {
-  /* Seasats · Ocean Autonomy That Works (www-seasats-com) — Ground-Truth Extracted CSS Variables */
-  --icon-background: #2b3922; /* Canvas / Surface Token (www-seasats-com) */
-  --icon-color: #fffdfd; /* Brand / Palette Token (www-seasats-com) */
-  --icon-size: 3rem; /* Layout / Spatial Grid Token (www-seasats-com) */
-  --icon-progress: 1; /* Design System Custom Token (www-seasats-com) */
-  --colorText: #fff; /* Typography Ink Token (www-seasats-com) */
-  --button-outline: #fffdfd; /* Elevation / Border Token (www-seasats-com) */
-  --gridLayout-columns: var(--columns); /* Layout / Spatial Grid Token (www-seasats-com) */
-  --button-maskPadding: 0.1rem; /* Layout / Spatial Grid Token (www-seasats-com) */
-  --button-maskFade: 0.1rem; /* Dimension / Scale Token (www-seasats-com) */
-  --paddingTop: 6.4rem; /* Layout / Spatial Grid Token (www-seasats-com) */
-  --paddingBottom: 6.4rem; /* Layout / Spatial Grid Token (www-seasats-com) */
-  --modal-contentMaxWidth: 60.8rem; /* Layout / Spatial Grid Token (www-seasats-com) */
-  --modal-contentBackgroundColor: #fffdfd; /* Canvas / Surface Token (www-seasats-com) */
-  --modal-barBackgroundColor: #4e9a85; /* Canvas / Surface Token (www-seasats-com) */
-  --modal-barColor: #fffdfd; /* Brand / Palette Token (www-seasats-com) */
-  --button-background: #e3ede4; /* Canvas / Surface Token (www-seasats-com) */
+  /* Seasats · Ocean Autonomy That Works (www-seasats-com) — Live-Grounded CSS Variables */
+  --wrapperWidth: 144rem; /* Layout / Spatial Grid Token (www-seasats-com) */
+  --headerHeight: 7.2rem; /* Layout / Spatial Grid Token (www-seasats-com) */
+  --columns: 24; /* Layout / Spatial Grid Token (www-seasats-com) */
+  --gutter: 1.2rem; /* Layout / Spatial Grid Token (www-seasats-com) */
+  --margin: 3.2rem; /* Layout / Spatial Grid Token (www-seasats-com) */
+  --radius: 0.8rem; /* Elevation / Border Token (www-seasats-com) */
+  --colorText: #232323; /* Typography Ink Token (www-seasats-com) */
+  --colorAccent: #e3ede4; /* Brand / Palette Token (www-seasats-com) */
+  --gradient: linear-gradient(180deg,#4e9a85,#183f34 52.82%,#2b3922 75.83%); /* Color / Atmospheric Token (www-seasats-com) */
+  --body-adjustOffset: calc(59.8rem / -2); /* Dimension / Scale Token (www-seasats-com) */
+  --body-adjustScale: 0.66; /* Design System Custom Token (www-seasats-com) */
+  --body-adjustScalePrecise: 0.585; /* Design System Custom Token (www-seasats-com) */
+  --fontSeasonMix: "seasonMix","seasonMix Fallback",serif; /* Typography / Scale Token (www-seasats-com) */
+  --fontSeasonSans: "seasonSans","seasonSans Fallback",sans-serif; /* Typography / Scale Token (www-seasats-com) */
+  --fontSupplyMono: "supplyMono","supplyMono Fallback",monospace; /* Typography / Scale Token (www-seasats-com) */
+  --uiOffset: 48px; /* Dimension / Scale Token (www-seasats-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#2b3922` — grounded in `var(--icon-background)` in `:root`
-- **Primary Typography Ink**: `#fffdfd` — grounded in `var(--icon-color)` in `:root`
-- **Elevated Surface / Card Substrate**: `#fff` — grounded in `var(--colorText)` in `:root`
-- **Interactive Accent / Highlight**: `#4e9a85` — grounded in `var(--modal-barBackgroundColor)` in `:root`
-- **Secondary / Muted Copy**: `#e3ede4` — grounded in `var(--button-background)` in `:root`
-- **Structural Hairline Border**: `#232323` — grounded in `var(--formField-color)` in `:root`
+- **Primary Canvas Substrate**: `#fffdfd` — grounded in live computed `html` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#232323` — grounded in live computed `main` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#e3ede4` — grounded in `var(--modal-contentBackgroundColor)` in `:root`
+- **Interactive Accent / Highlight**: `#4e9a85` — grounded in `var(--gradient)` in `:root`
+- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#dcdada` — grounded in `.ContentStats_item__LxyN9 { border-top: #dcdada }`
+- **Variable Token (`--gradient`)**: `#183f34` — grounded in `var(--gradient)` in `:root`
+- **Variable Token (`--gradient`)**: `#2b3922` — grounded in `var(--gradient)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1023px` extracted from `www-seasats-com` stylesheet
-- **Padding & Gutters**: `.4rem` lateral canvas padding with `3.2rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 3.2rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.4rem` horizontal padding
-- **Media Queries**: `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:1024px)and (pointer:coarse)and (hov...`
-- **Corner Radii**: `var(--radius)`, `.4rem`, `.2rem`, `1.2rem`
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `1rem` lateral canvas padding with `.8rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: .8rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding
+- **Media Queries**: `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (max-width:1023px)and (max-width:519px)`
+- **Corner Radii**: `8px`, `2px`, `50%`, `999px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `seasonMix`
-- **Body Font Stack**: `seasonMix Fallback`
+- **Body Font Stack**: `seasonSans`
 - **Monospace / Technical Font Stack**: `supplyMono`
-- **H1 Display Rule**: rule `h1` (`font-size: 4.8rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
-- **H2 Section Rule**: rule `h2` (`font-size: 2.4rem`, `line-height: 1.2`, `letter-spacing: 0`, `font-weight: 400`)
-- **Body Copy Rule**: CSS variables `--body-adjustOffset: calc(59.8rem / -2)`, `--body-adjustScale: 0.66`, `--body-adjustScalePrecise: 0.585`
-- **Metadata & Index Rule**: CSS variables `--fontSupplyMono: "supplyMono","supplyMono Fallback",monospace`
+- **H1 Display Rule**: live computed `h1` (`font-size: 124px`, `line-height: 111.6px`, `font-weight: 400`, `letter-spacing: -1.24px`); rule `h1` (`font-size: 4.8rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: -0.8px`); rule `h2` (`font-size: 2.4rem`, `line-height: 1.2`, `letter-spacing: 0`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 400`); CSS variables `--body-adjustOffset: calc(59.8rem / -2)`, `--body-adjustScale: 0.66`, `--body-adjustScalePrecise: 0.585`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 24px`, `line-height: 28.8px`, `font-weight: 500`); CSS variables `--fontSupplyMono: "supplyMono","supplyMono Fallback",monospace`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-seasats-com` (`Seasats · Ocean Autonomy That Works`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.Header_container__U6gzw> — `www-seasats-com`)**:
-   - DOM & Selectors: Landmark `<header class="Header_container__U6gzw">` hosting `Seasats · Ocean Autonomy That Works` navigation (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.not-found_title__bgpas { font-size:min(36rem,36vh) }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Header_container__U6gzw> — `www-seasats-com`)` (`www-seasats-com`) adapts across `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (min-width:1024px)and (pointer:coarse)and (hov...` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`.
+   - DOM & Selectors: Landmark `<header class="Header_container__U6gzw">` (`1376x72px`) hosting `Seasats · Ocean Autonomy That Works` navigation (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `video { margin:0;padding:0;font:inherit;font-size:100%;vertical-align:baseline;b... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Header_container__U6gzw> — `www-seasats-com`)` (`www-seasats-com`) adapts across `@media screen and (max-width:1023px)`, `@media screen and (max-width:519px)`, `@media screen and (min-width:1024px)`, `@media screen and (max-width:1023px)and (max-width:519px)` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,.88,.26,.92)`, `cubic-bezier(.55,.055,.675,.19)` transitions and links `Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`.
 2. **Hero Stage & Focal Lead (<main.browser-ui-overlay> — `Ocean Autonomy That Works`)**:
-   - DOM & Selectors: Landmark `<main class="browser-ui-overlay">` presenting display lead `Ocean Autonomy That Works` and copy excerpt *"Ocean Autonomy That Works"* over `#2b3922` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#2b3922` background with `#fff` headline `Ocean Autonomy That Works`.
+   - DOM & Selectors: Landmark `<main class="browser-ui-overlay">` presenting display lead `Ocean Autonomy That Works` and copy excerpt *"Ocean Autonomy That Works"* over `#fffdfd` canvas and `#232323` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fffdfd` background with `#232323` headline `Ocean Autonomy That Works`.
 3. **Primary Showcase & Content Grid (<main.browser-ui-overlay--top> — `Deploy in minutes.`)**:
-   - DOM & Selectors: Landmark `<main class="browser-ui-overlay--top">` rendering section `Deploy in minutes.` with copy *"E x p l o r e p r o d u c t s E x p l o r e p r o d u c t s"*, asset references (`d11d81b0342c0709.css`, `a14bc365605f91b3.css`, `110e11ba57841c1c.css`, `5ef63a433e26978c.css`), and grid rule `.not-found_media__ko4tq { position:absolute;inset:0;background-image:linear-gradient(180deg,1d344a... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.browser-ui-overlay--top> — `Deploy in minutes.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 3.2rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.4rem` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<main class="browser-ui-overlay--top">` rendering section `Deploy in minutes.` with copy *"E x p l o r e p r o d u c t s E x p l o r e p r o d u c t s"*, asset references (`d11d81b0342c0709.css`, `a14bc365605f91b3.css`, `110e11ba57841c1c.css`, `5ef63a433e26978c.css`), and grid rule `section { display:block }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.browser-ui-overlay--top> — `Deploy in minutes.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: .8rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<main.ThemeBackground_background__xCT8k> — `Detect from miles.`)**:
-   - DOM & Selectors: Landmark `<main class="ThemeBackground_background__xCT8k">` framing `Detect from miles.` and `React at once.` (*"E x p l o r e p r o d u c t s"*) with `#fff` surface cards, `#4e9a85` accents, and `.AnimatedText_animatedText__MS50q { display:block;position:relative }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.ThemeBackground_background__xCT8k> — `Detect from miles.`)` uses `var(--radius)`, `.4rem`, `.2rem`, `1.2rem` radii, `#4e9a85` highlights, and assets (d11d81b0342c0709.css, a14bc365605f91b3.css, 110e11ba57841c1c.css).
+   - DOM & Selectors: Landmark `<main class="ThemeBackground_background__xCT8k">` framing `Detect from miles.` and `React at once.` (*"E x p l o r e p r o d u c t s"*) with `#e3ede4` surface cards, `#4e9a85` accents, and `body { line-height:1 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.ThemeBackground_background__xCT8k> — `Detect from miles.`)` uses `8px`, `2px`, `50%`, `999px` radii, `#4e9a85` highlights, and assets (d11d81b0342c0709.css, a14bc365605f91b3.css, 110e11ba57841c1c.css).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.seasats.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer Footer_container__kRlyj">` anchoring `Seasats · Ocean Autonomy That Wo` footer links (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), copy *"The coordinates of the ghost fleet."*, and `#232323` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.seasats.com/`)` aligns to `1023px` extracted from `www-seasats-com` stylesheet with `.4rem` lateral canvas padding with `3.2rem` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="footer Footer_container__kRlyj">` anchoring `Seasats · Ocean Autonomy That Wo` footer links (`Home · 01 Capabilities · 02 Past Missions · Products · 01 Comparison`), copy *"The coordinates of the ghost fleet."*, and `#dcdada` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.seasats.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `1rem` lateral canvas padding with `.8rem` grid gap and attributes (data-precedence="next", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Ocean Autonomy That Works"*
@@ -239,17 +266,17 @@ Scaffold `www-seasats-com` (`Seasats · Ocean Autonomy That Works`) with these e
 - Copy Excerpt 4: *"The coordinates of the ghost fleet."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.19,1,.22,1)`
+- **Primary Easing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.23,.88,.26,.92)`, `cubic-bezier(.55,.055,.675,.19)`
 - **Extracted Stylesheet Rules (`www-seasats-com`)**:
-- `.not-found_title__bgpas { font-size:min(36rem,36vh) }`
-- `.not-found_media__ko4tq { position:absolute;inset:0;background-image:linear-gradient(180deg,1d344a... }`
-- `.AnimatedText_animatedText__MS50q { display:block;position:relative }`
-- `.AnimatedText_labelOriginal__hgz_O { display:block }`
-- `.AnimatedText_labelCopy__BAC2o { color:var(--animatedText-hover-color,currentcolor) }`
+- `video { margin:0;padding:0;font:inherit;font-size:100%;vertical-align:baseline;b... }`
+- `section { display:block }`
+- `body { line-height:1 }`
+- `q:before { content:"";content:none }`
+- `table { border-spacing:0;border-collapse:collapse }`
 - **Per-Selector Transition Rules**:
-- **Selector `.AnimatedText_char__T7_D3`**: `transition: calc(.6s - var(--char-amt)*12ms) cubic-bezier(.215,.61,.355,1)` extracted from `www-seasats-com` stylesheet.
-- **Selector `Button_icon__6so9o[data-icon=plus...`**: `transition: transform .5s ease` extracted from `www-seasats-com` stylesheet.
-- **Selector `on_icon__6so9o[data-icon=arrow-ri...`**: `transition: .5s ease` extracted from `www-seasats-com` stylesheet.
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-seasats-com` stylesheet.
+- **Selector `media screen and (min-width:1024px)`**: `transition: transform .8s ease` extracted from `www-seasats-com` stylesheet.
+- **Selector `.nav)) .overlay-adjust--center`**: `transition: transform .8s ease` extracted from `www-seasats-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header_container__U6gzw>` and `<main.browser-ui-overlay--top>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
 

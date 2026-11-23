@@ -1,34 +1,49 @@
+---
+title: "UI & UX Architecture: yumlog-dev"
+date: 2026-11-23
+captured_at: 2026-11-23
+status: analyzed
+capture: live
+capture_tier: tier1_fast
+http_status: 200
+---
+
 # UI & UX Architecture: yumlog-dev
 
 ## Overview & Design Identity
 - **Target**: `yumlog-dev` (**YumLog — the calorie tracker you can talk to, for Apple Watch and iPhone**)
 - **Production URL**: [https://yumlog.dev/](https://yumlog.dev/)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff` canvas, `#10231b` ink, `#ff8d6b` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffc93c` accent)
 - **Summary**: Say what you ate and YumLog logs the calories, protein, carbs and fat. Voice logging on Apple Watch, chat and photos on iPhone, restauran...
-- **Total Clean CSS Variables Extracted**: `26` (curated ground-truth set below)
+- **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Nunito`
-- **Body Font Stack**: `ui-rounded`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: CSS variables `--display: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif`; rule `h1` (`font-size: clamp(52px, 7vw, 100px)`, `line-height: 0.92`, `letter-spacing: -0.035em`)
-- **Section Heading (`H2`)**: rule `h2` (`font-size: clamp(40px, 5.4vw, 72px)`)
-- **Body Copy**: rule `p` (`font-size: 20px`, `line-height: 1.6`)
-- **Metadata & Labels**: rule `.label` (`font-size: 12px`, `line-height: 1.25`)
+- **Display Font Stack**: `ui-rounded`
+- **Body Font Stack**: `SF Pro Text`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 100px`, `line-height: 92px`, `font-weight: 900`, `letter-spacing: -3.5px`); CSS variables `--display: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif`; rule `h1` (`font-size: clamp(52px, 7vw, 100px)`, `line-height: 0.92`, `letter-spacing: -0.035em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 900`, `letter-spacing: -1.8px`); rule `h2` (`font-size: clamp(40px, 5.4vw, 72px)`)
+- **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: 20px`, `line-height: 1.6`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 600`); rule `.label` (`font-size: 12px`, `line-height: 1.25`)
 
 ---
 
-## Semantic Color System (Source-Grounded)
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+## Semantic Color System (Live-Computed & Source-Grounded)
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fff` | `var(--ground)` in `:root` |
-| **Primary Typography Ink** | `#f2533a` | `var(--coral)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#e53e30` | `var(--coral-deep)` in `:root` |
-| **Interactive Accent / Highlight** | `#ff8d6b` | `var(--coral-light)` in `:root` |
-| **Secondary / Muted Copy** | `#ffc93c` | `var(--pineapple)` in `:root` |
-| **Structural Hairline Border** | `#10231b` | `var(--nori)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#f2f2f7` | `.video-frame { background: #f2f2f7 }` |
+| **Interactive Accent / Highlight** | `#ffc93c` | `var(--pineapple)` in `:root` |
+| **Secondary / Muted Copy** | `#6f6d85` | `var(--ink-3)` in `:root` |
+| **Structural Hairline Border** | `#e8e8ea` | `var(--line)` in `:root` (`rgb(29 27 44 / 0.1)`) |
+| **Variable Token (`--coral`)** | `#f2533a` | `var(--coral)` in `:root` |
+| **Variable Token (`--coral-deep`)** | `#e53e30` | `var(--coral-deep)` in `:root` |
+| **Variable Token (`--coral-light`)** | `#ff8d6b` | `var(--coral-light)` in `:root` |
+| **Variable Token (`--nori`)** | `#10231b` | `var(--nori)` in `:root` |
 | **Variable Token (`--nori-2`)** | `#1b3a2d` | `var(--nori-2)` in `:root` |
 | **Variable Token (`--salmon`)** | `#ff8a5c` | `var(--salmon)` in `:root` |
 | **Variable Token (`--donut`)** | `#ffc3d6` | `var(--donut)` in `:root` |
@@ -62,12 +77,12 @@
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top> — `yumlog-dev`)**:
-   - Landmark `<header class="top">` hosting `YumLog — the calorie tracker you can` navigation (`How it works · Features · Rings · Questions`), DOM attributes (`data-reveal`, `data-sequence="0.5 2.6"`, `data-cycle="8"`, `data-step="1"`), and stylesheet rule `.closing { --ink: 1d1b2c; --ink-2: 4c4a60; --ink-3: 6f6d85; --line: rgb(29 27 44 /... }`.
+   - Landmark `<header class="top">` (`1440x72px`) hosting `YumLog — the calorie tracker you can` navigation (`How it works · Features · Rings · Questions`), DOM attributes (`data-reveal`, `data-sequence="0.5 2.6"`, `data-cycle="8"`, `data-step="1"`), and stylesheet rule `.closing { --ink: 1d1b2c; --ink-2: 4c4a60; --ink-3: 6f6d85; --line: rgb(29 27 44 /... }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `The calorie tracker you can talk t`)**:
-   - Landmark `<section class="hero">` presenting display lead `The calorie tracker you can talk to` and copy excerpt *"Say “two eggs and toast with butter” to your Apple Watch, and bre"* over `#fff` canvas and `#10231b` ink.
-3. **Primary Showcase & Content Grid (<section.facts> — `Say what you ate. Get on with your`)**:
-   - Landmark `<section class="facts wrap">` rendering section `Say what you ate. Get on with your day.` with copy *"Get YumLog on the App Store"*, asset references (`favicon.png`, `apple-touch-icon.png`, `home.css`, `site.js`), and grid rule `after { box-sizing: border-box; }`.
+   - Landmark `<section class="hero">` presenting display lead `The calorie tracker you can talk to` and copy excerpt *"Say “two eggs and toast with butter” to your Apple Watch. Breakfa"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.facts> — `Like texting someone what you ate.`)**:
+   - Landmark `<section class="facts wrap">` rendering section `Like texting someone what you ate.` with copy *"“Two eggs and toast”"*, asset references (`favicon.png`, `apple-touch-icon.png`, `home.css`, `site.js`), and grid rule `after { box-sizing: border-box; }`.
 4. **Interactive Detail & Feature Matrix (<section.how> — `Two eggs and toast with butter for`)**:
-   - Landmark `<section class="how wrap">` framing `Two eggs and toast with butter for breakfast.` and `Can I fit a burger and fries in for lunch?` (*"“Two eggs and toast”"*) with `#e53e30` surface cards, `#ff8d6b` accents, and `html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }`.
+   - Landmark `<section class="how wrap">` framing `Two eggs and toast with butter for breakfast.` and `Can I fit a burger and fries in for lunch?` (*"“Actually, three eggs”"*) with `#f2f2f7` surface cards, `#ffc93c` accents, and `html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://yumlog.dev/`)**:
-   - Landmark `<footer class="foot">` anchoring `YumLog — the calorie tracker you` footer links (`How it works · Features · Rings · Questions`), copy *"“Actually, three eggs”"*, and `#10231b` structural dividers.
+   - Landmark `<footer class="foot">` anchoring `YumLog — the calorie tracker you` footer links (`How it works · Features · Rings · Questions`), copy *"“How’s my week going?”"*, and `#e8e8ea` structural dividers.

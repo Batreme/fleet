@@ -1,68 +1,71 @@
 ---
 title: "UI Prompt Blueprint: gpg-dops-agency"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "gpg-dops-agency"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#1051b4` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#003c97` ink, `#7fa1d5` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: gpg-dops-agency
 
 > **Garvinpromo** (https://gpg.dops.agency/) — Welcome to Garvin Promotion Group, a leading provider of rebate management, spiffs, and loyalty incentive programs
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x900)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Garvinpromo** (`https://gpg.dops.agency/`). Welcome to Garvin Promotion Group, a leading provider of rebate management, spiffs, and loyalty incentive programs
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#1051b4` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#003c97` ink, `#7fa1d5` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--vc-clr-primary)` in `:root`) paired with `#fff` primary typography and `#1051b4` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PPMori` for display copy (`Welcome to Garvin Promotion Group, a`) with `PPMori Semi Bold` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `960px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(.37,0,.63,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#003c97` primary typography and `#7fa1d5` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PPMori` for display copy (`Welcome to Garvin Promotion Group, a`) with `PPMori` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1181px` container bounds (`gap: 13px`, padding `30px`) with `cubic-bezier(.37,0,.63,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `960px` extracted from `gpg-dops-agency` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `50%`, `4px`, `35px`, `var(--vc-nav-border-radius)`.
+- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1181px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
+- **Canvas Lateral Padding & Spacing**: `30px` lateral canvas padding with `13px` grid gap.
+- **Border Radius Scale**: `90px`, `50%`, `4px`, `35px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 960px`, `gap: 16px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (max-width:960px)`, `@media screen and (max-width:767px),screen and (max-width:825px)...`, `@media (max-width:1024px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1181px`, `gap: 13px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (max-width:1850px)`, `@media (max-width:1024px)`, `@media screen and (max-width:960px)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--vc-clr-primary)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--vc-clr-white)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#003c97` | `:before { background-color: #003c97 }` |
-| **Interactive Accent / Highlight** | `#1051b4` | `:before { background-color: #1051b4 }` |
-| **Secondary / Muted Copy** | `#f15928` | `:before { background-color: #f15928 }` |
-| **Structural Hairline Border** | `#d3d3d3` | `:before { background-color: #d3d3d3 }` |
-| **Variable Token (`--vc-clr-secondary`)** | `#090f207f` | `var(--vc-clr-secondary)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#003c97` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#b0c8eb` | `:before { background-color: #b0c8eb }` |
+| **Interactive Accent / Highlight** | `#7fa1d5` | `.btn--point__c { background-color: #7fa1d5 }` |
+| **Secondary / Muted Copy** | `#898995` | live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#7fa1d5` | `:before { border: #7fa1d5 }` |
+| **Variable Token (`--vc-clr-primary`)** | `#000000` | `var(--vc-clr-primary)` in `:root` |
+| **Variable Token (`--vc-clr-secondary`)** | `#090f20` | `var(--vc-clr-secondary)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--line` | `16px` | Dimension / Scale Token |
-| `--height-mask` | `22px` | Layout / Spatial Grid Token |
 | `--vc-clr-primary` | `#000` | Brand / Palette Token |
 | `--vc-clr-secondary` | `#090f207f` | Brand / Palette Token |
 | `--vc-clr-white` | `#fff` | Canvas / Surface Token |
@@ -77,6 +80,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 | `--vc-pgn-height` | `4px` | Layout / Spatial Grid Token |
 | `--vc-pgn-margin` | `4px` | Layout / Spatial Grid Token |
 | `--vc-pgn-border-radius` | `0` | Elevation / Border Token |
+| `--vc-pgn-background-color` | `var(--vc-clr-secondary)` | Canvas / Surface Token |
+| `--vc-pgn-active-color` | `var(--vc-clr-primary)` | Brand / Palette Token |
 
 ---
 
@@ -84,14 +89,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 
 ### Font Family Stacks
 - **Display Typography**: `PPMori`.
-- **Primary Body Stack**: `PPMori Semi Bold`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Primary Body Stack**: `PPMori`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`).
-- **Body Copy**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`).
+- **Body Copy**: live computed `body` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`).
 
 ---
 
@@ -101,50 +106,69 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.37,0,.63,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.circle[data-v-2f21aabe]`**: `transition: left 1.25s ease-in-out` extracted from `gpg-dops-agency` stylesheet.
-- **Selector `media screen and (min-width:1025px)`**: `transition: transform .65s ease-in-out` extracted from `gpg-dops-agency` stylesheet.
-- **Selector `.accordion-leave-active[data-v-99...`**: `transition: height .3s ease-in-out,opacity .2s ease` extracted from `gpg-dops-agency` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.37,0,.63,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.carousel>`.
+- **Selector `media screen and (min-width:1025px)`**: `transition: opacity .4s` extracted from `gpg-dops-agency` stylesheet.
+- **Selector `img.lazy-load[data-v-db3a31aa]`**: `transition: filter .3s,opacity .3s` extracted from `gpg-dops-agency` stylesheet.
+- **Selector `.btn[data-v-db37a4ce]`**: `transition: opacity .4s` extracted from `gpg-dops-agency` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.37,0,.63,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.carousel:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Garvinpromo                                │
 │ ====================================================================== │
-│ [ <header.header>          | Services Services · About us About us  ]  │
+│ [ <header.header> (1430x79px)         | Services Services · About us ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.carousel>                                   |   │
-│ | H1: Welcome to Garvin Promotion Group, a leading prov...         |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #1051b4        |   │
+│ | HERO STAGE: <section.carousel> (w=1440px)                          | │
+│ | H1: Welcome to Garvin Promotion Group, a leading prov...           | │
+│ | Substrate: #ffffff | Ink: #003c97 | Accent: #7fa1d5                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.carousel>        ) max-w: 960px          |   │
+│ | SHOWCASE GRID (<section.carousel:nth(2)>) max-w: 1181px            | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Promotion strategy and devel |  | Rebate fulfillment           | | │
+│ | | Garvin Promotion Group       |  | Clients success Clients succ | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px  ) | │
-│ | [<header.header>] -> [<section.carousel>] -> [<section.carousel>] |  │
+│ | DETAIL MODULE (<section.preloader--initia) — Garvin Promotion Grou | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://gpg.dops.agency/           │
+│ [ FOOTER (<footer.footer>     ) | https://gpg.dops.agency/             │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 13px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.carousel>) — 390px Vertical Lead              | │
+│ | H1: Welcome to Garvin Promotion Group, a leading prov...           | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.carousel:nth() — 1-Col Stack              | │
+│ | [ Item 1: Garvin Promotion Group                                 ] | │
+│ | [ Item 2: Clients success Clients success                        ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.preloader--init) — 1-Col (Garvin Promotion G) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `gpg-dops-agency`)**:
-   - Landmark `<header class="header header--light">` hosting `Garvinpromo` navigation (`Services Services · About us About us · Let's Talk`), DOM attributes (`data-v-537c3597`, `data-v-5f87b270`, `data-v-05812e15`, `data-v-f8de3fbd`), and stylesheet rule `before { border-radius:50%;content:"";display:block;height:100%;left:0;position:a... }`.
+   - Landmark `<header class="header header--light">` (`1430x79px`) hosting `Garvinpromo` navigation (`Services Services · About us About us · Let's Talk`), DOM attributes (`data-v-537c3597`, `data-v-5f87b270`, `data-v-05812e15`, `data-v-f8de3fbd`), and stylesheet rule `svg { display:block;height:100%;width:100% }`.
 2. **Hero Stage & Focal Lead (<section.carousel> — `Welcome to Garvin Promotion Group,`)**:
-   - Landmark `<section class="carousel home-strategic__carousel">` presenting display lead `Welcome to Garvin Promotion Group, a leading prov...` and copy excerpt *"Garvin Promotion Group"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<section.carousel> — `Promotion strategy and development`)**:
-   - Landmark `<section class="carousel">` rendering section `Promotion strategy and development` with copy *"Clients success Clients success"*, asset references (`garvinpromo.com`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`), and grid rule `hover .faq__item-question { color:898995 }`.
-4. **Interactive Detail & Feature Matrix (<section.preloader--initial> — `Rebate fulfillment`)**:
-   - Landmark `<section class="preloader--initial">` framing `Rebate fulfillment` and `Loyalty programs` (*"Garvin Promotion Group 10220 South 51st Street Phoenix, AZ 85044"*) with `#003c97` surface cards, `#1051b4` accents, and `hover .faq__item-cross { border-color:898995 }`.
+   - Landmark `<section class="carousel home-strategic__carousel">` presenting display lead `Welcome to Garvin Promotion Group, a leading prov...` and copy excerpt *"Garvin Promotion Group"* over `#ffffff` canvas and `#003c97` ink.
+3. **Primary Showcase & Content Grid (<section.carousel:nth(2)> — `Garvin Promotion Group`)**:
+   - Landmark `<section class="carousel">` rendering section `Garvin Promotion Group` with copy *"Clients success Clients success"*, asset references (`garvinpromo.com`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`), and grid rule `ellipse { animation:circle-5f87b270 1.8s ease infinite }`.
+4. **Interactive Detail & Feature Matrix (<section.preloader--initial> — `Clients success Clients success`)**:
+   - Landmark `<section class="preloader--initial">` framing `Clients success Clients success` and `Garvin Promotion Group 10220 South 51st Street P` (*"Garvin Promotion Group 10220 South 51st Street Phoenix, AZ 85044"*) with `#b0c8eb` surface cards, `#7fa1d5` accents, and `ellipse:first-child { animation-delay:.12s!important }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://gpg.dops.agency/`)**:
-   - Landmark `<footer class="footer bg-dark">` anchoring `Garvinpromo` footer links (`Services Services · About us About us · Let's Talk`), copy *"Welcome to Garvin Promotion Group, a leading provider of reb"*, and `#d3d3d3` structural dividers.
+   - Landmark `<footer class="footer bg-dark">` anchoring `Garvinpromo` footer links (`Services Services · About us About us · Let's Talk`), copy *"Welcome to Garvin Promotion Group, a leading provider of reb"*, and `#7fa1d5` structural dividers.
 
 ---
 
@@ -156,21 +180,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `gpg-dops-agency` (**Garvinpromo** — `https://gpg.dops.agency/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#1051b4` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#003c97` ink, `#7fa1d5` accent).
 - **Identity & Domain Context**: Welcome to Garvin Promotion Group, a leading provider of rebate management, spiffs, and loyalty incentive programs
-- **Primary Substrate**: `#000` (`var(--vc-clr-primary)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#1051b4`.
+- **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#003c97`, **Accent / Highlight**: `#7fa1d5`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--vc-clr-primary)` in `:root`) paired with `#fff` primary typography and `#1051b4` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `PPMori` for display copy (`Welcome to Garvin Promotion Group, a`) with `PPMori Semi Bold` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `960px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(.37,0,.63,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#003c97` primary typography and `#7fa1d5` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `PPMori` for display copy (`Welcome to Garvin Promotion Group, a`) with `PPMori` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1181px` container bounds (`gap: 13px`, padding `30px`) with `cubic-bezier(.37,0,.63,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `gpg-dops-agency` in your global stylesheet:
 
 :root {
-  /* Garvinpromo (gpg-dops-agency) — Ground-Truth Extracted CSS Variables */
-  --line: 16px; /* Dimension / Scale Token (gpg-dops-agency) */
-  --height-mask: 22px; /* Layout / Spatial Grid Token (gpg-dops-agency) */
+  /* Garvinpromo (gpg-dops-agency) — Live-Grounded CSS Variables */
   --vc-clr-primary: #000; /* Brand / Palette Token (gpg-dops-agency) */
   --vc-clr-secondary: #090f207f; /* Brand / Palette Token (gpg-dops-agency) */
   --vc-clr-white: #fff; /* Canvas / Surface Token (gpg-dops-agency) */
@@ -185,54 +207,57 @@ Declare and consume these exact custom properties extracted from `gpg-dops-agenc
   --vc-pgn-height: 4px; /* Layout / Spatial Grid Token (gpg-dops-agency) */
   --vc-pgn-margin: 4px; /* Layout / Spatial Grid Token (gpg-dops-agency) */
   --vc-pgn-border-radius: 0; /* Elevation / Border Token (gpg-dops-agency) */
+  --vc-pgn-background-color: var(--vc-clr-secondary); /* Canvas / Surface Token (gpg-dops-agency) */
+  --vc-pgn-active-color: var(--vc-clr-primary); /* Brand / Palette Token (gpg-dops-agency) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--vc-clr-primary)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--vc-clr-white)` in `:root`
-- **Elevated Surface / Card Substrate**: `#003c97` — grounded in `:before { background-color: #003c97 }`
-- **Interactive Accent / Highlight**: `#1051b4` — grounded in `:before { background-color: #1051b4 }`
-- **Secondary / Muted Copy**: `#f15928` — grounded in `:before { background-color: #f15928 }`
-- **Structural Hairline Border**: `#d3d3d3` — grounded in `:before { background-color: #d3d3d3 }`
-- **Variable Token (`--vc-clr-secondary`)**: `#090f207f` — grounded in `var(--vc-clr-secondary)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#003c97` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#b0c8eb` — grounded in `:before { background-color: #b0c8eb }`
+- **Interactive Accent / Highlight**: `#7fa1d5` — grounded in `.btn--point__c { background-color: #7fa1d5 }`
+- **Secondary / Muted Copy**: `#898995` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#7fa1d5` — grounded in `:before { border: #7fa1d5 }`
+- **Variable Token (`--vc-clr-primary`)**: `#000000` — grounded in `var(--vc-clr-primary)` in `:root`
+- **Variable Token (`--vc-clr-secondary`)**: `#090f20` — grounded in `var(--vc-clr-secondary)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `960px` extracted from `gpg-dops-agency` stylesheet
-- **Padding & Gutters**: `24px` lateral canvas padding with `16px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 960px`, `gap: 16px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
-- **Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (max-width:960px)`, `@media screen and (max-width:767px),screen and (max-width:825px)...`, `@media (max-width:1024px)`
-- **Corner Radii**: `50%`, `4px`, `35px`, `var(--vc-nav-border-radius)`
+- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1181px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
+- **Padding & Gutters**: `30px` lateral canvas padding with `13px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1181px`, `gap: 13px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `30px` horizontal padding
+- **Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (max-width:1850px)`, `@media (max-width:1024px)`, `@media screen and (max-width:960px)`
+- **Corner Radii**: `90px`, `50%`, `4px`, `35px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `PPMori`
-- **Body Font Stack**: `PPMori Semi Bold`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`)
-- **Body Copy Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `20px`, `14px`, `12px`, `22px`, `16px`)
+- **Body Font Stack**: `PPMori`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `gpg-dops-agency` (`Garvinpromo`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `gpg-dops-agency`)**:
-   - DOM & Selectors: Landmark `<header class="header header--light">` hosting `Garvinpromo` navigation (`Services Services · About us About us · Let's Talk`), DOM attributes (`data-v-537c3597`, `data-v-5f87b270`, `data-v-05812e15`, `data-v-f8de3fbd`), and stylesheet rule `before { border-radius:50%;content:"";display:block;height:100%;left:0;position:a... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `gpg-dops-agency`)` (`gpg-dops-agency`) adapts across `@media screen and (min-width:1025px)`, `@media screen and (max-width:960px)`, `@media screen and (max-width:767px),screen and (max-width:825px)...`, `@media (max-width:1024px)` with `cubic-bezier(.37,0,.63,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Services Services · About us About us · Let's Talk`.
+   - DOM & Selectors: Landmark `<header class="header header--light">` (`1430x79px`) hosting `Garvinpromo` navigation (`Services Services · About us About us · Let's Talk`), DOM attributes (`data-v-537c3597`, `data-v-5f87b270`, `data-v-05812e15`, `data-v-f8de3fbd`), and stylesheet rule `svg { display:block;height:100%;width:100% }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `gpg-dops-agency`)` (`gpg-dops-agency`) adapts across `@media screen and (min-width:1025px)`, `@media screen and (max-width:1850px)`, `@media (max-width:1024px)`, `@media screen and (max-width:960px)` with `cubic-bezier(.37,0,.63,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Services Services · About us About us · Let's Talk`.
 2. **Hero Stage & Focal Lead (<section.carousel> — `Welcome to Garvin Promotion Group,`)**:
-   - DOM & Selectors: Landmark `<section class="carousel home-strategic__carousel">` presenting display lead `Welcome to Garvin Promotion Group, a leading prov...` and copy excerpt *"Garvin Promotion Group"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `Welcome to Garvin Promotion Group, a leading prov...`.
-3. **Primary Showcase & Content Grid (<section.carousel> — `Promotion strategy and development`)**:
-   - DOM & Selectors: Landmark `<section class="carousel">` rendering section `Promotion strategy and development` with copy *"Clients success Clients success"*, asset references (`garvinpromo.com`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`), and grid rule `hover .faq__item-question { color:898995 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.carousel> — `Promotion strategy and development`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 960px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.preloader--initial> — `Rebate fulfillment`)**:
-   - DOM & Selectors: Landmark `<section class="preloader--initial">` framing `Rebate fulfillment` and `Loyalty programs` (*"Garvin Promotion Group 10220 South 51st Street Phoenix, AZ 85044"*) with `#003c97` surface cards, `#1051b4` accents, and `hover .faq__item-cross { border-color:898995 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.preloader--initial> — `Rebate fulfillment`)` uses `50%`, `4px`, `35px`, `var(--vc-nav-border-radius)` radii, `#1051b4` highlights, and assets (garvinpromo.com, favicon.ico, favicon-16x16.png).
+   - DOM & Selectors: Landmark `<section class="carousel home-strategic__carousel">` presenting display lead `Welcome to Garvin Promotion Group, a leading prov...` and copy excerpt *"Garvin Promotion Group"* over `#ffffff` canvas and `#003c97` ink.
+   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#003c97` headline `Welcome to Garvin Promotion Group, a leading prov...`.
+3. **Primary Showcase & Content Grid (<section.carousel:nth(2)> — `Garvin Promotion Group`)**:
+   - DOM & Selectors: Landmark `<section class="carousel">` rendering section `Garvin Promotion Group` with copy *"Clients success Clients success"*, asset references (`garvinpromo.com`, `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`), and grid rule `ellipse { animation:circle-5f87b270 1.8s ease infinite }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.carousel:nth(2)> — `Garvin Promotion Group`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1181px`, `gap: 13px`) on desktop and Single-column vertical stack at `390px` viewport width with `30px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.preloader--initial> — `Clients success Clients success`)**:
+   - DOM & Selectors: Landmark `<section class="preloader--initial">` framing `Clients success Clients success` and `Garvin Promotion Group 10220 South 51st Street P` (*"Garvin Promotion Group 10220 South 51st Street Phoenix, AZ 85044"*) with `#b0c8eb` surface cards, `#7fa1d5` accents, and `ellipse:first-child { animation-delay:.12s!important }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.preloader--initial> — `Clients success Clients success`)` uses `90px`, `50%`, `4px`, `35px` radii, `#7fa1d5` highlights, and assets (garvinpromo.com, favicon.ico, favicon-16x16.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://gpg.dops.agency/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer bg-dark">` anchoring `Garvinpromo` footer links (`Services Services · About us About us · Let's Talk`), copy *"Welcome to Garvin Promotion Group, a leading provider of reb"*, and `#d3d3d3` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://gpg.dops.agency/`)` aligns to `960px` extracted from `gpg-dops-agency` stylesheet with `24px` lateral canvas padding with `16px` grid gap and attributes (data-v-537c3597, data-v-5f87b270, data-v-05812e15).
+   - DOM & Selectors: Landmark `<footer class="footer bg-dark">` anchoring `Garvinpromo` footer links (`Services Services · About us About us · Let's Talk`), copy *"Welcome to Garvin Promotion Group, a leading provider of reb"*, and `#7fa1d5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://gpg.dops.agency/`)` aligns to `1181px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `30px` lateral canvas padding with `13px` grid gap and attributes (data-v-537c3597, data-v-5f87b270, data-v-05812e15).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Garvin Promotion Group"*
@@ -243,16 +268,16 @@ Scaffold `gpg-dops-agency` (`Garvinpromo`) with these exact structural regions, 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.37,0,.63,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)`
 - **Extracted Stylesheet Rules (`gpg-dops-agency`)**:
-- `before { border-radius:50%;content:"";display:block;height:100%;left:0;position:a... }`
-- `hover .faq__item-question { color:898995 }`
-- `hover .faq__item-cross { border-color:898995 }`
-- `hover .faq__item-cross:before { background-color:898995 }`
-- `after { height:var(--line);width:2px }`
+- `svg { display:block;height:100%;width:100% }`
+- `ellipse { animation:circle-5f87b270 1.8s ease infinite }`
+- `ellipse:first-child { animation-delay:.12s!important }`
+- `hover ellipse { animation:circle-5f87b270 1s ease infinite forwards;animation-iteration-... }`
+- `before { content:"";display:block;height:100%;position:absolute;top:0;width:100% }`
 - **Per-Selector Transition Rules**:
-- **Selector `.circle[data-v-2f21aabe]`**: `transition: left 1.25s ease-in-out` extracted from `gpg-dops-agency` stylesheet.
-- **Selector `media screen and (min-width:1025px)`**: `transition: transform .65s ease-in-out` extracted from `gpg-dops-agency` stylesheet.
-- **Selector `.accordion-leave-active[data-v-99...`**: `transition: height .3s ease-in-out,opacity .2s ease` extracted from `gpg-dops-agency` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.37,0,.63,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.carousel>`.
+- **Selector `media screen and (min-width:1025px)`**: `transition: opacity .4s` extracted from `gpg-dops-agency` stylesheet.
+- **Selector `img.lazy-load[data-v-db3a31aa]`**: `transition: filter .3s,opacity .3s` extracted from `gpg-dops-agency` stylesheet.
+- **Selector `.btn[data-v-db37a4ce]`**: `transition: opacity .4s` extracted from `gpg-dops-agency` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.37,0,.63,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.carousel:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

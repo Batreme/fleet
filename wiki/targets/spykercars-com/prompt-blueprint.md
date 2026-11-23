@@ -1,96 +1,100 @@
 ---
 title: "UI Prompt Blueprint: spykercars-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "spykercars-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#0000` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: spykercars-com
 
 > **Hand-Built Super Sports Cars Since 1880 · Spyker Cars** (https://spykercars.com/) — Spyker builds highly exclusive, hand-built super sports cars in the Netherlands. Discover the C8 Preliator XXV Coupé and the marque's sto...
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Hand-Built Super Sports Cars Since 1880 · Spyker Cars** (`https://spykercars.com/`). Spyker builds highly exclusive, hand-built super sports cars in the Netherlands. Discover the C8 Preliator XXV Coupé and the marque's sto...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#0000` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#0000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `swiss721` for display copy (`The next chapter of Spyker T h e n e`) with `swiss721 Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: 5px`, padding `16px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `futura-pt-condensed` for display copy (`THE NEXT CHAPTER OF SPYKER`) with `swiss721` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `86rem` container bounds (`gap: 5px`, padding `16px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×9519px` (`assets/desktop.png`, full-page scroll capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `1023px` extracted from `spykercars-com` stylesheet.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `86rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `5px` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 5px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 86rem`, `gap: 5px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width:1023px)`, `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`.
+- **Extracted CSS Media Queries**: `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`.
 
 ---
 
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#000` | `var(--color-black)` in `:root` |
-| **Primary Typography Ink** | `#fff` | `var(--color-white)` in `:root` |
+| **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `p` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f24822` | `.animated-grid__col { background-color: #f24822 }` |
-| **Interactive Accent / Highlight** | `#0000` | `textarea { background-color: #0000 }` |
-| **Secondary / Muted Copy** | `#1d1d1b` | `::selection { background-color: #1d1d1b }` |
-| **Structural Hairline Border** | `#000000` | `.border-black { border-color: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#0000ff` | `.border-blue-600 { border-color: #0000ff }` |
+| **Secondary / Muted Copy** | `#101010` | live computed `h2` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#e5e5e5` | `10 { border-color: #e5e5e5 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--font-sans` | `var(--font-swiss-721),sans-serif` | Typography / Scale Token |
-| `--font-mono` | `ui-monospace,SFMono-Regular,monospace` | Typography / Scale Token |
-| `--color-red-300` | `oklch(80.8% .114 19.571)` | Brand / Palette Token |
-| `--color-red-500` | `oklch(63.7% .237 25.331)` | Brand / Palette Token |
-| `--color-red-600` | `oklch(57.7% .245 27.325)` | Brand / Palette Token |
-| `--color-red-700` | `oklch(50.5% .213 27.518)` | Brand / Palette Token |
-| `--color-cyan-300` | `oklch(86.5% .127 207.078)` | Brand / Palette Token |
-| `--color-blue-600` | `oklch(54.6% .245 262.881)` | Brand / Palette Token |
-| `--color-gray-400` | `oklch(70.7% .022 261.325)` | Brand / Palette Token |
-| `--color-gray-500` | `oklch(55.1% .027 264.364)` | Brand / Palette Token |
-| `--color-neutral-50` | `oklch(98.5% 0 none)` | Brand / Palette Token |
-| `--color-neutral-100` | `oklch(97% 0 none)` | Brand / Palette Token |
-| `--color-neutral-200` | `oklch(92.2% 0 none)` | Brand / Palette Token |
-| `--color-neutral-300` | `oklch(87% 0 none)` | Brand / Palette Token |
-| `--color-neutral-400` | `oklch(70.8% 0 none)` | Brand / Palette Token |
-| `--color-neutral-500` | `oklch(55.6% 0 none)` | Brand / Palette Token |
+| `--background` | `oklch(100% 0 0)` | Canvas / Surface Token |
+| `--foreground` | `oklch(14.5% 0 0)` | Typography Ink Token |
+| `--card` | `oklch(96.5% .005 265)` | Color / Atmospheric Token |
+| `--card-foreground` | `oklch(14.5% 0 0)` | Typography Ink Token |
+| `--popover` | `oklch(100% 0 0)` | Color / Atmospheric Token |
+| `--popover-foreground` | `oklch(14.5% 0 0)` | Typography Ink Token |
+| `--primary` | `oklch(20.5% 0 0)` | Brand / Palette Token |
+| `--primary-foreground` | `oklch(98.5% 0 0)` | Typography Ink Token |
+| `--secondary` | `oklch(97% 0 0)` | Brand / Palette Token |
+| `--secondary-foreground` | `oklch(20.5% 0 0)` | Typography Ink Token |
+| `--muted` | `oklch(97% 0 0)` | Color / Atmospheric Token |
+| `--muted-foreground` | `oklch(55.6% 0 0)` | Typography Ink Token |
+| `--accent` | `oklch(97% 0 0)` | Brand / Palette Token |
+| `--accent-foreground` | `oklch(20.5% 0 0)` | Typography Ink Token |
+| `--destructive` | `oklch(57.7% .245 27.325)` | Color / Atmospheric Token |
+| `--destructive-foreground` | `oklch(57.7% .245 27.325)` | Typography Ink Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `swiss721`.
-- **Primary Body Stack**: `swiss721 Fallback`.
+- **Display Typography**: `futura-pt-condensed`.
+- **Primary Body Stack**: `swiss721`.
 - **Technical / Metadata Stack**: `SFMono-Regular`.
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`.
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 38px`).
-- **Body Copy**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`).
-- **Metadata & Navigation Labels**: CSS variables `--font-mono: ui-monospace,SFMono-Regular,monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`.
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 47.6px`, `font-weight: 500`, `letter-spacing: 2.24px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 47.6px`, `font-weight: 500`, `letter-spacing: 2.24px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 38px`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: ui-monospace,SFMono-Regular,monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`.
 
 ---
 
@@ -100,50 +104,69 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.navLink`**: `transition: transform .3s` extracted from `spykercars-com` stylesheet.
-- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `spykercars-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `spykercars-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<nav.container>` and `<article.sr-only>`.
+- **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `spykercars-com` stylesheet.
+- **Selector `box-shadow\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `spykercars-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<nav.py-4>` and `<section.w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ---
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Hand-Built Super Sports Cars Since 1880 ·  │
 │ ====================================================================== │
-│ [ <nav.container>          | Home · Heritage · Boutique · News · Co ]  │
+│ [ <nav.py-4> (1425x88px)              | Home · Heritage · Boutique · ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.lenis-autoToggle>                           |   │
-│ | H1: The next chapter of Spyker T h e n e x t c h a p...          |   │
-│ | Substrate: #000       | Ink: #fff       | Accent: #0000          |   │
+│ | HERO STAGE: <article.lenis-autoToggle> (w=1425px)                  | │
+│ | H1: THE NEXT CHAPTER OF SPYKER                                     | │
+│ | Substrate: #ffffff | Ink: #000000 | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.sr-only>         ) max-w: 1023px         |   │
+│ | SHOWCASE GRID (<section.w-full>) max-w: 86rem                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | P u r e P a s s i o n        |  | N u l l a T e n a c i I n v  | | │
+│ | | The next chapter of Spyker T |  | P u r e P a s s i o n        | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 5px   ) | │
-│ | [<nav.container>] -> [<section.lenis-aut] -> [<article.sr-only>] |   │
+│ | DETAIL MODULE (<section.fixed>) — N u l l a T e n a c i            | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.relative>     ) | https://spykercars.com/            │
+│ [ FOOTER (<footer.relative>   ) | https://spykercars.com/              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 5px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<nav.py-4>              ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<article.lenis-autoToggl) — 390px Vertical Lead        | │
+│ | H1: THE NEXT CHAPTER OF SPYKER                                     | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.w-full>) — 1-Col Stack                    | │
+│ | [ Item 1: The next chapter of Spyker T h e n e x t c h a p...    ] | │
+│ | [ Item 2: P u r e P a s s i o n                                  ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.fixed>) — 1-Col (N u l l a T e n a )        | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.relative>   ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<nav.container> — `spykercars-com`)**:
-   - Landmark `<nav class="container grid">` hosting `Hand-Built Super Sports Cars Since 1` navigation (`Home · Heritage · Boutique · News · Contact`), DOM attributes (`data-theme="light"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `after { transform:translateY(-2px) }`.
-2. **Hero Stage & Focal Lead (<section.lenis-autoToggle> — `The next chapter of Spyker T h e n`)**:
-   - Landmark `<section class="lenis-autoToggle">` presenting display lead `The next chapter of Spyker T h e n e x t c h a p...` and copy excerpt *"Skip to main content"* over `#000` canvas and `#fff` ink.
-3. **Primary Showcase & Content Grid (<article.sr-only> — `P u r e P a s s i o n`)**:
-   - Landmark `<article class="sr-only">` rendering section `P u r e P a s s i o n` with copy *"C8 Preliator XXV Coupé"*, asset references (`f13a7bda184fa931.css`, `86c130d7567786c0.css`, `3c4afd8b2a3df79a.css`, `cdb4fb19178d4946.css`), and grid rule `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`.
-4. **Interactive Detail & Feature Matrix (<section.w-full> — `N u l l a T e n a c i I n v i a E `)**:
-   - Landmark `<section class="w-full relative">` framing `N u l l a T e n a c i I n v i a E s t V i a` and `T h e S p y k e r h e r i t a g e` (*"info@spykercars.com"*) with `#f24822` surface cards, `#0000` accents, and `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`.
+1. **Brand Header & Navigation Bar (<nav.py-4> — `spykercars-com`)**:
+   - Landmark `<nav class="py-4 container">` (`1425x88px`) hosting `Hand-Built Super Sports Cars Since 1` navigation (`Home · Heritage · Boutique · News · Contact`), DOM attributes (`data-theme="light"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.__className_e6d04a { font-family:swiss721,swiss721 Fallback }`.
+2. **Hero Stage & Focal Lead (<article.lenis-autoToggle> — `THE NEXT CHAPTER OF SPYKER`)**:
+   - Landmark `<article class="lenis-autoToggle">` presenting display lead `THE NEXT CHAPTER OF SPYKER` and copy excerpt *"We use cookies to run the site, and optionally for analytics and "* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.w-full> — `The next chapter of Spyker T h e n`)**:
+   - Landmark `<section class="w-full relative">` rendering section `The next chapter of Spyker T h e n e x t c h a p...` with copy *"T h e b e g i n n i n g o f X X V"*, asset references (`f13a7bda184fa931.css`, `86c130d7567786c0.css`, `3c4afd8b2a3df79a.css`, `cdb4fb19178d4946.css`), and grid rule `.__variable_e6d04a { --font-swiss-721:"swiss721","swiss721 Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.fixed> — `P u r e P a s s i o n`)**:
+   - Landmark `<section class="fixed">` framing `P u r e P a s s i o n` and `N u l l a T e n a c i I n v i a E s t V i a` (*"The next chapter of Spyker"*) with `#f24822` surface cards, `#0000ff` accents, and `.__className_83cf94 { font-family:"PT Serif","PT Serif Fallback";font-weight:400;font-style:no... }`.
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://spykercars.com/`)**:
-   - Landmark `<footer class="relative z-30">` anchoring `Hand-Built Super Sports Cars Sin` footer links (`Home · Heritage · Boutique · News · Contact`), copy *"For press contacts:"*, and `#000000` structural dividers.
+   - Landmark `<footer class="relative z-30">` anchoring `Hand-Built Super Sports Cars Sin` footer links (`Home · Heritage · Boutique · News · Contact`), copy *"T h e n e x t c h a p t e r o f S p y k e r"*, and `#e5e5e5` structural dividers.
 
 ---
 
@@ -155,102 +178,102 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `spykercars-com` (**Hand-Built Super Sports Cars Since 1880 · Spyker Cars** — `https://spykercars.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000` canvas, `#fff` ink, `#0000` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent).
 - **Identity & Domain Context**: Spyker builds highly exclusive, hand-built super sports cars in the Netherlands. Discover the C8 Preliator XXV Coupé and the marque's sto...
-- **Primary Substrate**: `#000` (`var(--color-black)` in `:root`), **Primary Ink**: `#fff`, **Accent / Highlight**: `#0000`.
+- **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#000` (`var(--color-black)` in `:root`) paired with `#fff` primary typography and `#0000` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `swiss721` for display copy (`The next chapter of Spyker T h e n e`) with `swiss721 Fallback` and `SFMono-Regular`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1023px` container bounds (`gap: 5px`, padding `16px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `futura-pt-condensed` for display copy (`THE NEXT CHAPTER OF SPYKER`) with `swiss721` and `SFMono-Regular`.
+  - **Calibrated Spatial Grid & Motion**: Combines `86rem` container bounds (`gap: 5px`, padding `16px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `spykercars-com` in your global stylesheet:
 
 :root {
-  /* Hand-Built Super Sports Cars Since 1880 · Spyker Cars (spykercars-com) — Ground-Truth Extracted CSS Variables */
-  --font-sans: var(--font-swiss-721),sans-serif; /* Typography / Scale Token (spykercars-com) */
-  --font-mono: ui-monospace,SFMono-Regular,monospace; /* Typography / Scale Token (spykercars-com) */
-  --color-red-300: oklch(80.8% .114 19.571); /* Brand / Palette Token (spykercars-com) */
-  --color-red-500: oklch(63.7% .237 25.331); /* Brand / Palette Token (spykercars-com) */
-  --color-red-600: oklch(57.7% .245 27.325); /* Brand / Palette Token (spykercars-com) */
-  --color-red-700: oklch(50.5% .213 27.518); /* Brand / Palette Token (spykercars-com) */
-  --color-cyan-300: oklch(86.5% .127 207.078); /* Brand / Palette Token (spykercars-com) */
-  --color-blue-600: oklch(54.6% .245 262.881); /* Brand / Palette Token (spykercars-com) */
-  --color-gray-400: oklch(70.7% .022 261.325); /* Brand / Palette Token (spykercars-com) */
-  --color-gray-500: oklch(55.1% .027 264.364); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-50: oklch(98.5% 0 none); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-100: oklch(97% 0 none); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-200: oklch(92.2% 0 none); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-300: oklch(87% 0 none); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-400: oklch(70.8% 0 none); /* Brand / Palette Token (spykercars-com) */
-  --color-neutral-500: oklch(55.6% 0 none); /* Brand / Palette Token (spykercars-com) */
+  /* Hand-Built Super Sports Cars Since 1880 · Spyker Cars (spykercars-com) — Live-Grounded CSS Variables */
+  --background: oklch(100% 0 0); /* Canvas / Surface Token (spykercars-com) */
+  --foreground: oklch(14.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --card: oklch(96.5% .005 265); /* Color / Atmospheric Token (spykercars-com) */
+  --card-foreground: oklch(14.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --popover: oklch(100% 0 0); /* Color / Atmospheric Token (spykercars-com) */
+  --popover-foreground: oklch(14.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --primary: oklch(20.5% 0 0); /* Brand / Palette Token (spykercars-com) */
+  --primary-foreground: oklch(98.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --secondary: oklch(97% 0 0); /* Brand / Palette Token (spykercars-com) */
+  --secondary-foreground: oklch(20.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --muted: oklch(97% 0 0); /* Color / Atmospheric Token (spykercars-com) */
+  --muted-foreground: oklch(55.6% 0 0); /* Typography Ink Token (spykercars-com) */
+  --accent: oklch(97% 0 0); /* Brand / Palette Token (spykercars-com) */
+  --accent-foreground: oklch(20.5% 0 0); /* Typography Ink Token (spykercars-com) */
+  --destructive: oklch(57.7% .245 27.325); /* Color / Atmospheric Token (spykercars-com) */
+  --destructive-foreground: oklch(57.7% .245 27.325); /* Typography Ink Token (spykercars-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#000` — grounded in `var(--color-black)` in `:root`
-- **Primary Typography Ink**: `#fff` — grounded in `var(--color-white)` in `:root`
+- **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `p` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#f24822` — grounded in `.animated-grid__col { background-color: #f24822 }`
-- **Interactive Accent / Highlight**: `#0000` — grounded in `textarea { background-color: #0000 }`
-- **Secondary / Muted Copy**: `#1d1d1b` — grounded in `::selection { background-color: #1d1d1b }`
-- **Structural Hairline Border**: `#000000` — grounded in `.border-black { border-color: black }` (`#000000`)
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.border-blue-600 { border-color: #0000ff }`
+- **Secondary / Muted Copy**: `#101010` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#e5e5e5` — grounded in `10 { border-color: #e5e5e5 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×9519px` (full-page scroll capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1023px` extracted from `spykercars-com` stylesheet
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `86rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `16px` lateral canvas padding with `5px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 5px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 86rem`, `gap: 5px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
-- **Media Queries**: `@media screen and (max-width:1023px)`, `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`
+- **Media Queries**: `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`
 - **Corner Radii**: `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `swiss721`
-- **Body Font Stack**: `swiss721 Fallback`
+- **Display Font Stack**: `futura-pt-condensed`
+- **Body Font Stack**: `swiss721`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **H1 Display Rule**: CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 38px`)
-- **Body Copy Rule**: CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`)
-- **Metadata & Index Rule**: CSS variables `--font-mono: ui-monospace,SFMono-Regular,monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
+- **H1 Display Rule**: live computed `h1` (`font-size: 56px`, `line-height: 47.6px`, `font-weight: 500`, `letter-spacing: 2.24px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
+- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 47.6px`, `font-weight: 500`, `letter-spacing: 2.24px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 38px`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`font-size: var(--text-sm)`, `line-height: var(--tw-leading,var(...`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: ui-monospace,SFMono-Regular,monospace`, `--text-xs: .75rem`, `--text-xs--line-height: calc(1/.75)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `spykercars-com` (`Hand-Built Super Sports Cars Since 1880 · Spyker Cars`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<nav.container> — `spykercars-com`)**:
-   - DOM & Selectors: Landmark `<nav class="container grid">` hosting `Hand-Built Super Sports Cars Since 1` navigation (`Home · Heritage · Boutique · News · Contact`), DOM attributes (`data-theme="light"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `after { transform:translateY(-2px) }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.container> — `spykercars-com`)` (`spykercars-com`) adapts across `@media screen and (max-width:1023px)`, `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Home · Heritage · Boutique · News · Contact`.
-2. **Hero Stage & Focal Lead (<section.lenis-autoToggle> — `The next chapter of Spyker T h e n`)**:
-   - DOM & Selectors: Landmark `<section class="lenis-autoToggle">` presenting display lead `The next chapter of Spyker T h e n e x t c h a p...` and copy excerpt *"Skip to main content"* over `#000` canvas and `#fff` ink.
-   - Responsive Contract: Hero stage (`1440×9519px` desktop / `390×2400px` mobile) sets `#000` background with `#fff` headline `The next chapter of Spyker T h e n e x t c h a p...`.
-3. **Primary Showcase & Content Grid (<article.sr-only> — `P u r e P a s s i o n`)**:
-   - DOM & Selectors: Landmark `<article class="sr-only">` rendering section `P u r e P a s s i o n` with copy *"C8 Preliator XXV Coupé"*, asset references (`f13a7bda184fa931.css`, `86c130d7567786c0.css`, `3c4afd8b2a3df79a.css`, `cdb4fb19178d4946.css`), and grid rule `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.sr-only> — `P u r e P a s s i o n`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1023px`, `gap: 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.w-full> — `N u l l a T e n a c i I n v i a E `)**:
-   - DOM & Selectors: Landmark `<section class="w-full relative">` framing `N u l l a T e n a c i I n v i a E s t V i a` and `T h e S p y k e r h e r i t a g e` (*"info@spykercars.com"*) with `#f24822` surface cards, `#0000` accents, and `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.w-full> — `N u l l a T e n a c i I n v i a E `)` uses `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)` radii, `#0000` highlights, and assets (f13a7bda184fa931.css, 86c130d7567786c0.css, 3c4afd8b2a3df79a.css).
+1. **Brand Header & Navigation Bar (<nav.py-4> — `spykercars-com`)**:
+   - DOM & Selectors: Landmark `<nav class="py-4 container">` (`1425x88px`) hosting `Hand-Built Super Sports Cars Since 1` navigation (`Home · Heritage · Boutique · News · Contact`), DOM attributes (`data-theme="light"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.__className_e6d04a { font-family:swiss721,swiss721 Fallback }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.py-4> — `spykercars-com`)` (`spykercars-com`) adapts across `@media (min-width:64rem) and (orientation:landscape)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Home · Heritage · Boutique · News · Contact`.
+2. **Hero Stage & Focal Lead (<article.lenis-autoToggle> — `THE NEXT CHAPTER OF SPYKER`)**:
+   - DOM & Selectors: Landmark `<article class="lenis-autoToggle">` presenting display lead `THE NEXT CHAPTER OF SPYKER` and copy excerpt *"We use cookies to run the site, and optionally for analytics and "* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `THE NEXT CHAPTER OF SPYKER`.
+3. **Primary Showcase & Content Grid (<section.w-full> — `The next chapter of Spyker T h e n`)**:
+   - DOM & Selectors: Landmark `<section class="w-full relative">` rendering section `The next chapter of Spyker T h e n e x t c h a p...` with copy *"T h e b e g i n n i n g o f X X V"*, asset references (`f13a7bda184fa931.css`, `86c130d7567786c0.css`, `3c4afd8b2a3df79a.css`, `cdb4fb19178d4946.css`), and grid rule `.__variable_e6d04a { --font-swiss-721:"swiss721","swiss721 Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.w-full> — `The next chapter of Spyker T h e n`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 86rem`, `gap: 5px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.fixed> — `P u r e P a s s i o n`)**:
+   - DOM & Selectors: Landmark `<section class="fixed">` framing `P u r e P a s s i o n` and `N u l l a T e n a c i I n v i a E s t V i a` (*"The next chapter of Spyker"*) with `#f24822` surface cards, `#0000ff` accents, and `.__className_83cf94 { font-family:"PT Serif","PT Serif Fallback";font-weight:400;font-style:no... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.fixed> — `P u r e P a s s i o n`)` uses `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)` radii, `#0000ff` highlights, and assets (f13a7bda184fa931.css, 86c130d7567786c0.css, 3c4afd8b2a3df79a.css).
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://spykercars.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="relative z-30">` anchoring `Hand-Built Super Sports Cars Sin` footer links (`Home · Heritage · Boutique · News · Contact`), copy *"For press contacts:"*, and `#000000` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://spykercars.com/`)` aligns to `1023px` extracted from `spykercars-com` stylesheet with `16px` lateral canvas padding with `5px` grid gap and attributes (data-theme="light", data-precedence="next", data-precedence="next").
+   - DOM & Selectors: Landmark `<footer class="relative z-30">` anchoring `Hand-Built Super Sports Cars Sin` footer links (`Home · Heritage · Boutique · News · Contact`), copy *"T h e n e x t c h a p t e r o f S p y k e r"*, and `#e5e5e5` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.relative> — `https://spykercars.com/`)` aligns to `86rem` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `5px` grid gap and attributes (data-theme="light", data-precedence="next", data-precedence="next").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Skip to main content"*
-- Copy Excerpt 2: *"C8 Preliator XXV Coupé"*
-- Copy Excerpt 3: *"info@spykercars.com"*
-- Copy Excerpt 4: *"For press contacts:"*
+- Copy Excerpt 1: *"We use cookies to run the site, and optionally for analytics and marketing."*
+- Copy Excerpt 2: *"T h e b e g i n n i n g o f X X V"*
+- Copy Excerpt 3: *"The next chapter of Spyker"*
+- Copy Excerpt 4: *"T h e n e x t c h a p t e r o f S p y k e r"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`spykercars-com`)**:
-- `after { transform:translateY(-2px) }`
-- `.icon--copy { height:1.5384615385rem;width:1.5384615385rem }`
-- `.icon--copy .stroke { fill:none;stroke:currentColor;stroke-width:1px }`
-- `html.lenis body { height:auto }`
-- `.lenis-stopped { overflow:clip }`
+- `.__className_e6d04a { font-family:swiss721,swiss721 Fallback }`
+- `.__variable_e6d04a { --font-swiss-721:"swiss721","swiss721 Fallback" }`
+- `.__className_83cf94 { font-family:"PT Serif","PT Serif Fallback";font-weight:400;font-style:no... }`
+- `.__variable_83cf94 { --font-pt-serif:"PT Serif","PT Serif Fallback" }`
+- `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
 - **Per-Selector Transition Rules**:
-- **Selector `.navLink`**: `transition: transform .3s` extracted from `spykercars-com` stylesheet.
-- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `spykercars-com` stylesheet.
 - **Selector `layer theme`**: `transition: .15s` extracted from `spykercars-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<nav.container>` and `<article.sr-only>`.
+- **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `spykercars-com` stylesheet.
+- **Selector `box-shadow\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `spykercars-com` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<nav.py-4>` and `<section.w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
 
 ### 8. Technical Deliverables

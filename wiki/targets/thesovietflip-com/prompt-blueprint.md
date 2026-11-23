@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: thesovietflip-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "thesovietflip-com"
 status: analyzed
-capture: specimen
-capture_desktop: specimen
-capture_mobile: specimen
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#fff0d3` ink, `#fff0d3` accent)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#ffffff` ink, `#903c32` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: thesovietflip-com
 
 > **The Soviet Flip** (https://thesovietflip.com/) — A visual historical research project about the Cold War, Israel, the USSR, and the rise of modern Palestinian identity, with archival sou...
 
-![Desktop Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/desktop.png)
+![Desktop Viewport Capture (1440x968)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Soviet Flip** (`https://thesovietflip.com/`). A visual historical research project about the Cold War, Israel, the USSR, and the rise of modern Palestinian identity, with archival sou...
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#fff0d3` ink, `#fff0d3` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#ffffff` ink, `#903c32` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0f0f0c` (`var(--ink)` in `:root`) paired with `#fff0d3` primary typography and `#fff0d3` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`The Soviet Flip`) with `Stalinist One` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `65px` container bounds (`gap: 8px`, padding `10px`) with `cubic-bezier(.2,.8,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0f0f0c` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#903c32` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Assistant` for display copy (`The Soviet Flip`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Design Specimen (Offline WebGL/JS Fallback — not live site capture)](assets/mobile.png)
+![Mobile Viewport Capture (390x908)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `65px` extracted from `thesovietflip-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `18px`, `50%`, `4px`, `28px`.
+- **Captured Viewport Dimensions**: Desktop `1440×968px` (`assets/desktop.png`, full-page live capture (968px)), Mobile `390×908px` (`assets/mobile.png`, full-page live capture (908px)).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `12px` lateral canvas padding with `8px` grid gap.
+- **Border Radius Scale**: `50%`, `4px`, `18px`, `28px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65px`, `gap: 8px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion)`, `@media (prefers-reduced-motion:reduce)`, `@media (width<=480px)`, `@media (width<=600px)`.
 
 ---
@@ -48,14 +52,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0f0f0c` | `var(--ink)` in `:root` |
-| **Primary Typography Ink** | `#ebe5d6` | `var(--paper)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#903c32` | `var(--red)` in `:root` |
-| **Interactive Accent / Highlight** | `#fff0d3` | `:hover { color: #fff0d3 }` |
-| **Secondary / Muted Copy** | `#dba181` | `:first-child { color: #dba181 }` |
-| **Structural Hairline Border** | `#b5634f` | `::-webkit-slider-runnable-track { background: #b5634f }` |
+| **Primary Canvas Substrate** | `#0f0f0c` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#71362d` | live computed `nav` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#903c32` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#ebe5d6` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#903c32` | `:checked { border-color: #903c32 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -72,25 +76,25 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 | `--drawer-progress` | `0` | Design System Custom Token |
 | `--peek` | `0px` | Dimension / Scale Token |
 | `--ribbon-tail` | `24px` | Dimension / Scale Token |
-| `--bookmark-width` | `88px!important` | Layout / Spatial Grid Token |
+| `--bookmark-width` | `88px` | Layout / Spatial Grid Token |
 | `--listener-shift` | `18px` | Dimension / Scale Token |
-| `--progress` | `0%` | Dimension / Scale Token |
-| `--initial-transform` | `none` | Design System Custom Token |
+| `--button-size` | `62px` | Layout / Spatial Grid Token |
+| `--ring-size` | `55px` | Layout / Spatial Grid Token |
 
 ---
 
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Jost`.
-- **Primary Body Stack**: `Stalinist One`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Assistant`.
+- **Primary Body Stack**: `Assistant`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`).
-- **Section Heading (`H2`)**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`).
-- **Body Copy**: CSS variables `--map-body-font: "Jost",sans-serif`; rule `p` (`line-height: 1.2!important`).
-- **Metadata & Navigation Labels**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 36px`, `line-height: 45px`, `font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 20px`, `line-height: 22px`, `font-weight: 800`); rule `h2` (`font-size: 27px`, `line-height: 1.08`, `font-weight: 800`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--map-body-font: "Jost",sans-serif`; rule `p` (`line-height: 1.2`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); rule `small` (`font-size: 12px`, `font-weight: 400`).
 
 ---
 
@@ -110,40 +114,59 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — The Soviet Flip                            │
 │ ====================================================================== │
-│ [ <header.motion-enabled>  | Overview · Index · Archive · About · C ]  │
+│ [ <header.motion-enabled (1440px)     | עברית · English · Русский    ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.reading-view>                               |   │
-│ | H1: The Soviet Flip                                              |   │
-│ | Substrate: #0f0f0c    | Ink: #fff0d3    | Accent: #fff0d3        |   │
+│ | HERO STAGE: <section.reading-view> (w=1440px)                      | │
+│ | H1: The Soviet Flip                                                | │
+│ | Substrate: #0f0f0c | Ink: #ffffff | Accent: #903c32                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.reading-block>   ) max-w: 65px           |   │
+│ | SHOWCASE GRID (<section.reading-block>) max-w: 1440px              | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | האזנה רציפה                  |  | info@thesovietflip.com       | | │
+│ | | For source corrections, arch |  | info@thesovietflip.com       | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px   ) | │
-│ | [<header.motion-ena] -> [<section.reading-v] -> [<section.reading-b] │
+│ | DETAIL MODULE (<section.reading-block:nth) — © 2026 The Soviet Fli | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.book-turning-p) | https://thesovietflip.com/         │
+│ [ FOOTER (<footer.sf-loader-di) | https://thesovietflip.com/           │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px)        │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.motion-enabled> ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.reading-view>) — 390px Vertical Lead          | │
+│ | H1: The Soviet Flip                                                | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.reading-block) — 1-Col Stack              | │
+│ | [ Item 1: For source corrections, archival material, licen       ] | │
+│ | [ Item 2: info@thesovietflip.com                                 ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.reading-block:n) — 1-Col (© 2026 The Soviet ) │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.sf-loader-di) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.motion-enabled> — `thesovietflip-com`)**:
-   - Landmark `<header class="motion-enabled">` hosting `The Soviet Flip` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-astro-transition-scope="astro-yztbsuuz-1"`, `data-astro-cid-ju4pidww`, `data-astro-rerun`, `data-astro-exec`), and stylesheet rule `root { color-scheme:dark;--ink:0f0f0c;--paper:ebe5d6;--red:903c32 }`.
+   - Landmark `<header class="motion-enabled">` (`1440px`) hosting `The Soviet Flip` navigation (`עברית · English · Русский`), DOM attributes (`data-astro-transition-scope="astro-yztbsuuz-1"`, `data-astro-cid-ju4pidww`, `data-a11y-contrast="default"`, `data-a11y-saturation="default"`), and stylesheet rule `root { color-scheme:dark;--ink:0f0f0c;--paper:ebe5d6;--red:903c32 }`.
 2. **Hero Stage & Focal Lead (<section.reading-view> — `The Soviet Flip`)**:
-   - Landmark `<section class="reading-view">` presenting display lead `The Soviet Flip` and copy excerpt *"For source corrections, archival material, licensing questions, o"* over `#0f0f0c` canvas and `#fff0d3` ink.
-3. **Primary Showcase & Content Grid (<section.reading-block> — `האזנה רציפה`)**:
-   - Landmark `<section class="reading-block">` rendering section `האזנה רציפה` with copy *"info@thesovietflip.com"*, asset references (`ae304b70d9495a89f84a.woff2`, `cca183354fd3fefb84fd.woff2`, `2b5199f9f43249f2ad78.webp`, `3118562a4483c1224195.webp`), and grid rule `html { scroll-behavior:smooth;background:var(--ink);-webkit-text-size-adjust:10... }`.
-4. **Interactive Detail & Feature Matrix (<section.reading-block> — `info@thesovietflip.com`)**:
-   - Landmark `<section class="reading-block">` framing `info@thesovietflip.com` and `© 2026 The Soviet Flip. All rights reserved. All` (*"© 2026 The Soviet Flip. All rights reserved. All content, researc"*) with `#903c32` surface cards, `#fff0d3` accents, and `body { color:var(--paper);background:var(--ink);margin:0;font-family:Assistant,... }`.
-5. **Colophon & Global Directory Footer (<footer.book-turning-page> — `https://thesovietflip.com/`)**:
-   - Landmark `<footer class="book-turning-page">` anchoring `The Soviet Flip` footer links (`Overview · Index · Archive · About · Contact`), copy *"S o v i e t F l i p"*, and `#b5634f` structural dividers.
+   - Landmark `<section class="reading-view">` presenting display lead `The Soviet Flip` and copy excerpt *"For source corrections, archival material, licensing questions, o"* over `#0f0f0c` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.reading-block> — `For source corrections, archival m`)**:
+   - Landmark `<section class="reading-block">` rendering section `For source corrections, archival material, licen` with copy *"info@thesovietflip.com"*, asset references (`ae304b70d9495a89f84a.woff2`, `cca183354fd3fefb84fd.woff2`, `2b5199f9f43249f2ad78.webp`, `3118562a4483c1224195.webp`), and grid rule `html { scroll-behavior:smooth;background:var(--ink);-webkit-text-size-adjust:10... }`.
+4. **Interactive Detail & Feature Matrix (<section.reading-block:nth(2)> — `info@thesovietflip.com`)**:
+   - Landmark `<section class="reading-block">` framing `info@thesovietflip.com` and `© 2026 The Soviet Flip. All rights reserved. All` (*"© 2026 The Soviet Flip. All rights reserved. All content, researc"*) with `#71362d` surface cards, `#903c32` accents, and `body { color:var(--paper);background:var(--ink);margin:0;font-family:Assistant,... }`.
+5. **Colophon & Global Directory Footer (<footer.sf-loader-digits> — `https://thesovietflip.com/`)**:
+   - Landmark `<footer class="sf-loader-digits">` anchoring `The Soviet Flip` footer links (`עברית · English · Русский`), copy *"S o v i e t F l i p"*, and `#903c32` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `thesovietflip-com` (**The Soviet Flip** — `https://thesovietflip.com/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#fff0d3` ink, `#fff0d3` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#ffffff` ink, `#903c32` accent).
 - **Identity & Domain Context**: A visual historical research project about the Cold War, Israel, the USSR, and the rise of modern Palestinian identity, with archival sou...
-- **Primary Substrate**: `#0f0f0c` (`var(--ink)` in `:root`), **Primary Ink**: `#fff0d3`, **Accent / Highlight**: `#fff0d3`.
+- **Primary Substrate**: `#0f0f0c` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#903c32`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0f0f0c` (`var(--ink)` in `:root`) paired with `#fff0d3` primary typography and `#fff0d3` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Jost` for display copy (`The Soviet Flip`) with `Stalinist One` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `65px` container bounds (`gap: 8px`, padding `10px`) with `cubic-bezier(.2,.8,.2,1)` easing.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0f0f0c` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#903c32` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Assistant` for display copy (`The Soviet Flip`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `thesovietflip-com` in your global stylesheet:
 
 :root {
-  /* The Soviet Flip (thesovietflip-com) — Ground-Truth Extracted CSS Variables */
+  /* The Soviet Flip (thesovietflip-com) — Live-Grounded CSS Variables */
   --ink: #0f0f0c; /* Typography Ink Token (thesovietflip-com) */
   --paper: #ebe5d6; /* Canvas / Surface Token (thesovietflip-com) */
   --red: #903c32; /* Color / Atmospheric Token (thesovietflip-com) */
@@ -180,57 +203,57 @@ Declare and consume these exact custom properties extracted from `thesovietflip-
   --drawer-progress: 0; /* Design System Custom Token (thesovietflip-com) */
   --peek: 0px; /* Dimension / Scale Token (thesovietflip-com) */
   --ribbon-tail: 24px; /* Dimension / Scale Token (thesovietflip-com) */
-  --bookmark-width: 88px!important; /* Layout / Spatial Grid Token (thesovietflip-com) */
+  --bookmark-width: 88px; /* Layout / Spatial Grid Token (thesovietflip-com) */
   --listener-shift: 18px; /* Dimension / Scale Token (thesovietflip-com) */
-  --progress: 0%; /* Dimension / Scale Token (thesovietflip-com) */
-  --initial-transform: none; /* Design System Custom Token (thesovietflip-com) */
+  --button-size: 62px; /* Layout / Spatial Grid Token (thesovietflip-com) */
+  --ring-size: 55px; /* Layout / Spatial Grid Token (thesovietflip-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#0f0f0c` — grounded in `var(--ink)` in `:root`
-- **Primary Typography Ink**: `#ebe5d6` — grounded in `var(--paper)` in `:root`
-- **Elevated Surface / Card Substrate**: `#903c32` — grounded in `var(--red)` in `:root`
-- **Interactive Accent / Highlight**: `#fff0d3` — grounded in `:hover { color: #fff0d3 }`
-- **Secondary / Muted Copy**: `#dba181` — grounded in `:first-child { color: #dba181 }`
-- **Structural Hairline Border**: `#b5634f` — grounded in `::-webkit-slider-runnable-track { background: #b5634f }`
+- **Primary Canvas Substrate**: `#0f0f0c` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#71362d` — grounded in live computed `nav` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#903c32` — grounded in live computed `button` `background-color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#ebe5d6` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#903c32` — grounded in `:checked { border-color: #903c32 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `65px` extracted from `thesovietflip-com` stylesheet
-- **Padding & Gutters**: `10px` lateral canvas padding with `8px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65px`, `gap: 8px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `10px` horizontal padding
+- **Desktop Viewport Reference**: `1440×968px` (full-page live capture (968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×908px` (full-page live capture (908px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `12px` lateral canvas padding with `8px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `12px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion)`, `@media (prefers-reduced-motion:reduce)`, `@media (width<=480px)`, `@media (width<=600px)`
-- **Corner Radii**: `18px`, `50%`, `4px`, `28px`
+- **Corner Radii**: `50%`, `4px`, `18px`, `28px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Jost`
-- **Body Font Stack**: `Stalinist One`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`)
-- **H2 Section Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`)
-- **Body Copy Rule**: CSS variables `--map-body-font: "Jost",sans-serif`; rule `p` (`line-height: 1.2!important`)
-- **Metadata & Index Rule**: not explicitly declared on tag in static CSS (stylesheet font-size ladder: `25px`, `11px`, `13px`, `10px`, `19px`)
+- **Display Font Stack**: `Assistant`
+- **Body Font Stack**: `Assistant`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 36px`, `line-height: 45px`, `font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 20px`, `line-height: 22px`, `font-weight: 800`); rule `h2` (`font-size: 27px`, `line-height: 1.08`, `font-weight: 800`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--map-body-font: "Jost",sans-serif`; rule `p` (`line-height: 1.2`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 23.2px`, `font-weight: 400`); rule `small` (`font-size: 12px`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `thesovietflip-com` (`The Soviet Flip`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.motion-enabled> — `thesovietflip-com`)**:
-   - DOM & Selectors: Landmark `<header class="motion-enabled">` hosting `The Soviet Flip` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-astro-transition-scope="astro-yztbsuuz-1"`, `data-astro-cid-ju4pidww`, `data-astro-rerun`, `data-astro-exec`), and stylesheet rule `root { color-scheme:dark;--ink:0f0f0c;--paper:ebe5d6;--red:903c32 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.motion-enabled> — `thesovietflip-com`)` (`thesovietflip-com`) adapts across `@media (prefers-reduced-motion)`, `@media (prefers-reduced-motion:reduce)`, `@media (width<=480px)`, `@media (width<=600px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.45,0,.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - DOM & Selectors: Landmark `<header class="motion-enabled">` (`1440px`) hosting `The Soviet Flip` navigation (`עברית · English · Русский`), DOM attributes (`data-astro-transition-scope="astro-yztbsuuz-1"`, `data-astro-cid-ju4pidww`, `data-a11y-contrast="default"`, `data-a11y-saturation="default"`), and stylesheet rule `root { color-scheme:dark;--ink:0f0f0c;--paper:ebe5d6;--red:903c32 }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.motion-enabled> — `thesovietflip-com`)` (`thesovietflip-com`) adapts across `@media (prefers-reduced-motion)`, `@media (prefers-reduced-motion:reduce)`, `@media (width<=480px)`, `@media (width<=600px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.45,0,.25,1)` transitions and links `עברית · English · Русский`.
 2. **Hero Stage & Focal Lead (<section.reading-view> — `The Soviet Flip`)**:
-   - DOM & Selectors: Landmark `<section class="reading-view">` presenting display lead `The Soviet Flip` and copy excerpt *"For source corrections, archival material, licensing questions, o"* over `#0f0f0c` canvas and `#fff0d3` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0f0f0c` background with `#fff0d3` headline `The Soviet Flip`.
-3. **Primary Showcase & Content Grid (<section.reading-block> — `האזנה רציפה`)**:
-   - DOM & Selectors: Landmark `<section class="reading-block">` rendering section `האזנה רציפה` with copy *"info@thesovietflip.com"*, asset references (`ae304b70d9495a89f84a.woff2`, `cca183354fd3fefb84fd.woff2`, `2b5199f9f43249f2ad78.webp`, `3118562a4483c1224195.webp`), and grid rule `html { scroll-behavior:smooth;background:var(--ink);-webkit-text-size-adjust:10... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.reading-block> — `האזנה רציפה`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 65px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.reading-block> — `info@thesovietflip.com`)**:
-   - DOM & Selectors: Landmark `<section class="reading-block">` framing `info@thesovietflip.com` and `© 2026 The Soviet Flip. All rights reserved. All` (*"© 2026 The Soviet Flip. All rights reserved. All content, researc"*) with `#903c32` surface cards, `#fff0d3` accents, and `body { color:var(--paper);background:var(--ink);margin:0;font-family:Assistant,... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.reading-block> — `info@thesovietflip.com`)` uses `18px`, `50%`, `4px`, `28px` radii, `#fff0d3` highlights, and assets (ae304b70d9495a89f84a.woff2, cca183354fd3fefb84fd.woff2, 2b5199f9f43249f2ad78.webp).
-5. **Colophon & Global Directory Footer (<footer.book-turning-page> — `https://thesovietflip.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="book-turning-page">` anchoring `The Soviet Flip` footer links (`Overview · Index · Archive · About · Contact`), copy *"S o v i e t F l i p"*, and `#b5634f` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.book-turning-page> — `https://thesovietflip.com/`)` aligns to `65px` extracted from `thesovietflip-com` stylesheet with `10px` lateral canvas padding with `8px` grid gap and attributes (data-astro-transition-scope="astro-yztbsuuz-1", data-astro-cid-ju4pidww, data-astro-rerun).
+   - DOM & Selectors: Landmark `<section class="reading-view">` presenting display lead `The Soviet Flip` and copy excerpt *"For source corrections, archival material, licensing questions, o"* over `#0f0f0c` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1440×968px` desktop / `390×908px` mobile) sets `#0f0f0c` background with `#ffffff` headline `The Soviet Flip`.
+3. **Primary Showcase & Content Grid (<section.reading-block> — `For source corrections, archival m`)**:
+   - DOM & Selectors: Landmark `<section class="reading-block">` rendering section `For source corrections, archival material, licen` with copy *"info@thesovietflip.com"*, asset references (`ae304b70d9495a89f84a.woff2`, `cca183354fd3fefb84fd.woff2`, `2b5199f9f43249f2ad78.webp`, `3118562a4483c1224195.webp`), and grid rule `html { scroll-behavior:smooth;background:var(--ink);-webkit-text-size-adjust:10... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.reading-block> — `For source corrections, archival m`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `12px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.reading-block:nth(2)> — `info@thesovietflip.com`)**:
+   - DOM & Selectors: Landmark `<section class="reading-block">` framing `info@thesovietflip.com` and `© 2026 The Soviet Flip. All rights reserved. All` (*"© 2026 The Soviet Flip. All rights reserved. All content, researc"*) with `#71362d` surface cards, `#903c32` accents, and `body { color:var(--paper);background:var(--ink);margin:0;font-family:Assistant,... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.reading-block:nth(2)> — `info@thesovietflip.com`)` uses `50%`, `4px`, `18px`, `28px` radii, `#903c32` highlights, and assets (ae304b70d9495a89f84a.woff2, cca183354fd3fefb84fd.woff2, 2b5199f9f43249f2ad78.webp).
+5. **Colophon & Global Directory Footer (<footer.sf-loader-digits> — `https://thesovietflip.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="sf-loader-digits">` anchoring `The Soviet Flip` footer links (`עברית · English · Русский`), copy *"S o v i e t F l i p"*, and `#903c32` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sf-loader-digits> — `https://thesovietflip.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `12px` lateral canvas padding with `8px` grid gap and attributes (data-astro-transition-scope="astro-yztbsuuz-1", data-astro-cid-ju4pidww, data-a11y-contrast="default").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"For source corrections, archival material, licensing questions, or additional info..."*

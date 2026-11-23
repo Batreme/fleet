@@ -1,46 +1,50 @@
 ---
 title: "UI Prompt Blueprint: ty1official-com"
-date: 2026-11-15
+date: 2026-11-23
+captured_at: 2026-11-23
 target: "ty1official-com"
 status: analyzed
-capture: dom
-capture_desktop: dom
-capture_mobile: dom
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#c14e12`)"
+capture: live
+capture_desktop: live
+capture_mobile: live
+capture_tier: tier1_fast
+http_status: 200
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)"
 ---
 
 # UI Design System & Master Generation Blueprint: ty1official-com
 
 > **TY1 — DJ & Producer** (https://ty1official.com) — TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
 
-![Desktop Viewport Capture](assets/desktop.png)
+![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **TY1 — DJ & Producer** (`https://ty1official.com`). TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#c14e12`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0d0b0c` (`var(--c-black)` in `:root`) paired with `#d7d6d5` primary typography and `#c14e12` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Humane` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Thunder` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#181618` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#ec651d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Atkinson Hyperlegible` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Atkinson Hyperlegible` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture](assets/mobile.png)
+![Mobile Viewport Capture (390x2400)](assets/mobile.png)
 
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, capped at 2400px multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, capped at 2400px multi-section capture).
-- **Master Container Bounds**: `767px` extracted from `ty1official-com` stylesheet.
-- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `var(--radius)`, `6px`, `50%`, `2px`.
+- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `10px` grid gap.
+- **Border Radius Scale**: `50%`, `var(--radius)`, `6px`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (max-width: 767px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 640px)`, `@media (hover: none) and (orientation: landscape) and (max-heigh...`.
 
 ---
@@ -48,14 +52,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 ## 3. Color System, Materiality & Atmospheric Lighting
 
 ### Semantic Palette & Source Grounding
-| Semantic Role | Ground-Truth Value | Extracted CSS Source / Selector |
+| Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#0d0b0c` | `var(--c-black)` in `:root` |
-| **Primary Typography Ink** | `#ec651d` | `var(--c-orange)` in `:root` |
-| **Elevated Surface / Card Substrate** | `#d7d6d5` | `var(--c-white)` in `:root` |
-| **Interactive Accent / Highlight** | `#c14e12` | `var(--c-orange-deep)` in `:root` |
-| **Secondary / Muted Copy** | `#ff7d33` | `var(--c-orange-bright)` in `:root` |
-| **Structural Hairline Border** | `#1a1617` | `var(--c-ink)` in `:root` |
+| **Primary Canvas Substrate** | `#181618` | live computed `html` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f5` | live computed `h2` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#0d0b0c` | `.consenso__carta { background: #0d0b0c }` |
+| **Interactive Accent / Highlight** | `#ec651d` | `.consenso__testo a:hover { color: #ec651d }` |
+| **Secondary / Muted Copy** | `#d7d6d5` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#333132` | `var(--line)` in `:root` (`rgba(215, 214, 213, .14)`) |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -82,15 +86,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 ## 4. Typographic Scale & Editorial Hierarchy
 
 ### Font Family Stacks
-- **Display Typography**: `Humane`.
-- **Primary Body Stack**: `Thunder`.
-- **Technical / Metadata Stack**: not declared in static CSS (uses primary stack / `ui-monospace`).
+- **Display Typography**: `Atkinson Hyperlegible`.
+- **Primary Body Stack**: `Atkinson Hyperlegible`.
+- **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
-### Typographic Scale & Rules (Extracted from Stylesheet & Variables)
-- **Hero Display (`H1`)**: CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`.
-- **Section Heading (`H2`)**: CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`.
-- **Body Copy**: CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`.
-- **Metadata & Navigation Labels**: CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`).
+### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 48px`, `font-weight: 700`); CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 480px`, `line-height: 393.6px`, `font-weight: 900`); CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`).
 
 ---
 
@@ -110,40 +114,59 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 
 ## 6. Component Wireframe & Structural DOM Map
 
-### Visual Layout Schematic (Grounded in `dom.html` — `1440px` Desktop & `390px` Mobile Reflow)
+### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — TY1 — DJ & Producer                        │
 │ ====================================================================== │
-│ [ <header.testata>         | A p p l e M u s i c · D e e z e r · S  ]  │
+│ [ <header.testata> (1440x76px)        | A p p l e M u s i c · D e e  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.intro>                                      |   │
-│ | H1: TY1 — DJ & Producer, Junkie Musik                            |   │
-│ | Substrate: #0d0b0c    | Ink: #d7d6d5    | Accent: #c14e12        |   │
+│ | HERO STAGE: <section.intro> (w=1440px)                             | │
+│ | H1: TY1 — DJ & Producer, Junkie Musik                              | │
+│ | Substrate: #181618 | Ink: #f5f5f5 | Accent: #ec651d                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.trasf>           ) max-w: 767px          |   │
+│ | SHOWCASE GRID (<section.trasf>) max-w: 1440px                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Fuori ora                    |  | Il vinile di Junkie Musik    | | │
+│ | | Il vinile di Junkie Musik    |  | G i o c a e v i n c i u n i  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px  ) | │
-│ | [<header.testata>] -> [<section.intro>] -> [<section.trasf>] |       │
+│ | DETAIL MODULE (<section.section>) — Regolamento — Junkie           | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.footer>       ) | https://ty1official.com            │
+│ [ FOOTER (<footer.footer>     ) | https://ty1official.com              │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Visual Layout Schematic — Mobile Reflow (`390px`)
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ ====================================================================== │
+│ [ HEADER BAR (<header.testata>        ) | Compact Menu (390px)         │
+│ ---------------------------------------------------------------------- │
+│ | HERO STAGE (<section.intro>) — 390px Vertical Lead                 | │
+│ | H1: TY1 — DJ & Producer, Junkie Musik                              | │
+│ ---------------------------------------------------------------------- │
+│ | SHOWCASE STACK (<section.trasf>) — 1-Col Stack                     | │
+│ | [ Item 1: Il vinile di Junkie Musik                              ] | │
+│ | [ Item 2: G i o c a e v i n c i u n i n c o n t r o c o n T...   ] | │
+│ ---------------------------------------------------------------------- │
+│ | DETAIL STACK (<section.section>) — 1-Col (Regolamento — Junk)      | │
+│ ---------------------------------------------------------------------- │
+│ [ FOOTER (<footer.footer>     ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)**:
-   - Landmark `<header class="testata">` hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
+   - Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"J u n k i e M u s i k"* over `#0d0b0c` canvas and `#d7d6d5` ink.
-3. **Primary Showcase & Content Grid (<section.trasf> — `Fuori ora`)**:
-   - Landmark `<section class="trasf vscroll">` rendering section `Fuori ora` with copy *"Clicca il video per ingrandirlo"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Il vinile di Junkie Musik`)**:
-   - Landmark `<section class="section vinile">` framing `Il vinile di Junkie Musik` and `G i o c a e v i n c i u n i n c o n t r o c o n T...` (*"S i d e A · S i d e B"*) with `#d7d6d5` surface cards, `#c14e12` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
+3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
+   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
+   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#1a1617` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.
 
 ---
 
@@ -155,19 +178,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `ty1official-com` (**TY1 — DJ & Producer** — `https://ty1official.com`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0b0c` / `#c14e12`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`).
 - **Identity & Domain Context**: TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
-- **Primary Substrate**: `#0d0b0c` (`var(--c-black)` in `:root`), **Primary Ink**: `#d7d6d5`, **Accent / Highlight**: `#c14e12`.
+- **Primary Substrate**: `#181618` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f5f5`, **Accent / Highlight**: `#ec651d`.
 - **Site-Specific Differentiators**:
-  - **Source-Grounded Chromatic Polarity**: Anchors the viewport in `#0d0b0c` (`var(--c-black)` in `:root`) paired with `#d7d6d5` primary typography and `#c14e12` accents.
-  - **Extracted Typographic Hierarchy**: Pairs `Humane` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Thunder` and not declared in static CSS (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `767px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#181618` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#ec651d` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Atkinson Hyperlegible` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Atkinson Hyperlegible` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `ty1official-com` in your global stylesheet:
 
 :root {
-  /* TY1 — DJ & Producer (ty1official-com) — Ground-Truth Extracted CSS Variables */
+  /* TY1 — DJ & Producer (ty1official-com) — Live-Grounded CSS Variables */
   --font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif; /* Typography / Scale Token (ty1official-com) */
   --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; /* Typography / Scale Token (ty1official-com) */
   --font-decorative: "Nebulon", "Oswald", "Arial Narrow", sans-serif; /* Typography / Scale Token (ty1official-com) */
@@ -188,55 +211,55 @@ Declare and consume these exact custom properties extracted from `ty1official-co
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#0d0b0c` — grounded in `var(--c-black)` in `:root`
-- **Primary Typography Ink**: `#ec651d` — grounded in `var(--c-orange)` in `:root`
-- **Elevated Surface / Card Substrate**: `#d7d6d5` — grounded in `var(--c-white)` in `:root`
-- **Interactive Accent / Highlight**: `#c14e12` — grounded in `var(--c-orange-deep)` in `:root`
-- **Secondary / Muted Copy**: `#ff7d33` — grounded in `var(--c-orange-bright)` in `:root`
-- **Structural Hairline Border**: `#1a1617` — grounded in `var(--c-ink)` in `:root`
+- **Primary Canvas Substrate**: `#181618` — grounded in live computed `html` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f5f5f5` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#0d0b0c` — grounded in `.consenso__carta { background: #0d0b0c }`
+- **Interactive Accent / Highlight**: `#ec651d` — grounded in `.consenso__testo a:hover { color: #ec651d }`
+- **Secondary / Muted Copy**: `#d7d6d5` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#333132` — grounded in `var(--line)` in `:root` (`rgba(215, 214, 213, .14)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (capped at 2400px multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (capped at 2400px multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `767px` extracted from `ty1official-com` stylesheet
-- **Padding & Gutters**: `16px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
+- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Padding & Gutters**: `57.6px` lateral canvas padding with `10px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding
 - **Media Queries**: `@media (max-width: 767px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 640px)`, `@media (hover: none) and (orientation: landscape) and (max-heigh...`
-- **Corner Radii**: `var(--radius)`, `6px`, `50%`, `2px`
+- **Corner Radii**: `50%`, `var(--radius)`, `6px`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
-- **Display Font Stack**: `Humane`
-- **Body Font Stack**: `Thunder`
-- **Monospace / Technical Font Stack**: not declared in static CSS (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`
-- **H2 Section Rule**: CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`
-- **Body Copy Rule**: CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`
-- **Metadata & Index Rule**: CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`)
+- **Display Font Stack**: `Atkinson Hyperlegible`
+- **Body Font Stack**: `Atkinson Hyperlegible`
+- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 48px`, `font-weight: 700`); CSS variables `--font-display: "Thunder", "Anton", "Arial Narrow", system-ui, sans-serif`, `--step-h1: clamp(2.4rem, 8vw, 6.5rem)`
+- **H2 Section Rule**: live computed `h2` (`font-size: 480px`, `line-height: 393.6px`, `font-weight: 900`); CSS variables `--step-h2: clamp(1.9rem, 5vw, 3.75rem)`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif`, `--step-body: clamp(1rem, 1.05vw, 1.2rem)`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--step-small: clamp(.78rem, .95vw, .95rem)`; rule `small` (`font-size: clamp(0.62rem, 2.2vw, 0.9rem)`, `letter-spacing: 0.5em`, `font-weight: 600`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `ty1official-com` (`TY1 — DJ & Producer`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)**:
-   - DOM & Selectors: Landmark `<header class="testata">` hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
+   - DOM & Selectors: Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)` (`ty1official-com`) adapts across `@media (max-width: 767px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 640px)`, `@media (hover: none) and (orientation: landscape) and (max-heigh...` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - DOM & Selectors: Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"J u n k i e M u s i k"* over `#0d0b0c` canvas and `#d7d6d5` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0d0b0c` background with `#d7d6d5` headline `TY1 — DJ & Producer, Junkie Musik`.
-3. **Primary Showcase & Content Grid (<section.trasf> — `Fuori ora`)**:
-   - DOM & Selectors: Landmark `<section class="trasf vscroll">` rendering section `Fuori ora` with copy *"Clicca il video per ingrandirlo"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.trasf> — `Fuori ora`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 767px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.section> — `Il vinile di Junkie Musik`)**:
-   - DOM & Selectors: Landmark `<section class="section vinile">` framing `Il vinile di Junkie Musik` and `G i o c a e v i n c i u n i n c o n t r o c o n T...` (*"S i d e A · S i d e B"*) with `#d7d6d5` surface cards, `#c14e12` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `Il vinile di Junkie Musik`)` uses `var(--radius)`, `6px`, `50%`, `2px` radii, `#c14e12` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
+   - DOM & Selectors: Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
+   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#181618` background with `#f5f5f5` headline `TY1 — DJ & Producer, Junkie Musik`.
+3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
+   - DOM & Selectors: Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
+   - DOM & Selectors: Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)` uses `50%`, `var(--radius)`, `6px`, `2px` radii, `#ec651d` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#1a1617` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)` aligns to `767px` extracted from `ty1official-com` stylesheet with `16px` lateral canvas padding with `10px` grid gap and attributes (data-world="artist", data-suono, data-testata).
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `57.6px` lateral canvas padding with `10px` grid gap and attributes (data-world="artist", data-suono, data-testata).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"J u n k i e M u s i k"*
-- Copy Excerpt 2: *"Clicca il video per ingrandirlo"*
+- Copy Excerpt 1: *"A u d i o O n O f f"*
+- Copy Excerpt 2: *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*
 - Copy Excerpt 3: *"S i d e A · S i d e B"*
-- Copy Excerpt 4: *"G i o c a e v i n c i u n"*
+- Copy Excerpt 4: *"J u n k i e M u s i k"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.16,1,.3,1)`
