@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: pankow-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "pankow-band"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `
 
 > **Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW** (https://pankow.band) — Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW** (`https://pankow.band`). Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffff00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Die Pankow-Zeitmaschine`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=3981px` / doc `4881px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `0.75rem` lateral canvas padding with `0.5rem` grid gap.
 - **Border Radius Scale**: `10px`, `5px`, `12px`, `0.25rem`.
@@ -95,7 +100,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 31.68px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 96px`, `font-weight: 400`, `letter-spacing: -6.4px`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 19.2px`, `line-height: normal`, `font-weight: 400`).
 
@@ -112,6 +117,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `
 - **Selector `.main-menu-shell img`**: `transition: opacity 0.4s ease 0.1s` extracted from `pankow-band` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4881px`, deepest scrollY reached `3981px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Route Transition Architecture**: First internal navigation (`/album/pankow-album-kille-kille.html`) measured as `direct` in `771ms`.
 
 ---
 
@@ -170,6 +179,18 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `
    - Landmark `<section class="zeitmaschine-compat-message">` framing `Deine Technik ist leider zu alt oder Du lässt kei...` and `Hans im Glück` (*"Stöbere mit der Zeitmaschine durch die Band-Historie, alle Alben "*) with `#ffffff` surface cards, `#ffff00` accents, and `.icon-arrows-vertical:before { content: "\fb85"; }`.
 5. **Colophon & Global Directory Footer (<footer.main-menu> — `https://pankow.band`)**:
    - Landmark `<footer class="main-menu">` anchoring `Die Pankow Zeitmaschine - Websit` footer links (`Home · Info · Zeitmaschine · Kontakt`), copy *"Deshalb kann die Zeitmaschine hier nicht richtig angezeigt u"*, and `#dddddd` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Pankow Website-Hero mit Hintergrundvideo und Logo` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `21%`): Active landmark `Willkommen auf der Website der Band PANKOW (1981-...` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `43%`): Active landmark `Willkommen auf der Website der Band PANKOW (1981-...` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `64%`): Active landmark `ALBEN` · sticky/fixed elements: `2`
+- **Step 05** (`y=3400px`, `85%`): Active landmark `Trauer um Wolfgang Schubert` · sticky/fixed elements: `2`
+- **Step 06** (`y=3981px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/album/pankow-album-kille-kille.html`)**: `https://pankow.band/album/pankow-album-kille-kille.html` — H1: `PANKOW - Kille Kille (1983) · PANKOW Diskographie`, scrollHeight `1027px`, transition `direct` (`771ms`)
+- **Detail Route (`/album/pankow-album-hans-im-glueck.html`)**: `https://pankow.band/album/pankow-album-hans-im-glueck.html` — H1: `PANKOW - Hans im Glück (1984) · PANKOW Diskographie`, scrollHeight `1027px`, transition `direct` (`499ms`)
+- **Detail Route (`/album/pankow-album-keine-stars.html`)**: `https://pankow.band/album/pankow-album-keine-stars.html` — H1: `PANKOW - Keine Stars (1986) · PANKOW Diskographie`, scrollHeight `1027px`, transition `direct` (`229ms`)
 
 ---
 
@@ -186,7 +207,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffff00`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e3bd8e` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffff00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Pankow-Zeitmaschine`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Die Pankow-Zeitmaschine`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 0.5rem`, padding `0.75rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +246,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--farbe-fokus`)**: `#b82608` — grounded in `var(--farbe-fokus)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `0.75rem` lateral canvas padding with `0.5rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 0.5rem`)
@@ -239,7 +260,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Poppins`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 31.68px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 96px`, `font-weight: 400`, `letter-spacing: -6.4px`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 19.2px`, `line-height: normal`, `font-weight: 400`)
 
@@ -250,7 +271,7 @@ Scaffold `pankow-band` (`Die Pankow Zeitmaschine - Website der Berliner Rockband
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.font-global> — `pankow-band`)` (`pankow-band`) adapts across `@media (min-height: 52rem)`, `@media (max-width: 600px)`, `@media (prefers-reduced-motion: reduce)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Home · Info · Zeitmaschine · Kontakt`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Die Pankow-Zeitmaschine`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Die Pankow-Zeitmaschine` and copy excerpt *"Ich habe mir einen Ort gewünscht, an dem man sich an die Band PAN"* over `#e3bd8e` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e3bd8e` background with `#000000` headline `Die Pankow-Zeitmaschine`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#e3bd8e` background with `#000000` headline `Die Pankow-Zeitmaschine`.
 3. **Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)**:
    - DOM & Selectors: Landmark `<section class="info inhalts-section">` rendering section `Willkommen auf der Website der Band PANKOW (1981-...` with copy *"Mein Dank geht an Monika Herold von SoulSite Design für die Zusam"*, asset references (`favicon.ico`, `rubik-dirt-v2-latin-regular.woff2`, `pankow-hero-grunge-overlay-unten....`, `major.css`), and grid rule `.palette0 { font-palette: --palette0; color: currentColor; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.info> — `Willkommen auf der Website der Ban`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 0.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding on mobile.
@@ -281,8 +302,40 @@ Scaffold `pankow-band` (`Die Pankow Zeitmaschine - Website der Berliner Rockband
 - **Selector `.main-menu-shell img`**: `transition: opacity 0.4s ease 0.1s` extracted from `pankow-band` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4881px` across 6 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Pankow Website-Hero mit Hin... (0%) -> Willkommen auf der Website... (21%) -> Willkommen auf der Website... (43%) -> ALBEN (64%) -> Trauer um Wolfgang Schubert (85%) -> Footer / Bottom (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/album/pankow-album-kille-kille.html` (detail, direct), `/album/pankow-album-hans-im-glueck.html` (detail, direct), `/album/pankow-album-keine-stars.html` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `pankow-band`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Pankow Website-Hero mit Hintergrundvideo und... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `21%` | Willkommen auf der Website der Band PANKOW (1... | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `43%` | Willkommen auf der Website der Band PANKOW (1... | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `64%` | ALBEN | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `85%` | Trauer um Wolfgang Schubert | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3981px` | `100%` | Footer / Bottom | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Pankow Website-Hero mit Hintergrundvideo... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1982px` | `50%` | #zeitmaschine | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3964px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://pankow.band/album/pankow-album-kille-kille.html` | PANKOW - Kille Kille (1983) · PANKOW... | `1027px` | `direct` (`771ms`) | [subpage-01-album-pankow-album-kille-kille-html.webp](assets/subpage-01-album-pankow-album-kille-kille-html.webp) |
+| `2` | `detail` | `https://pankow.band/album/pankow-album-hans-im-glueck.html` | PANKOW - Hans im Glück (1984) · PANKO... | `1027px` | `direct` (`499ms`) | [subpage-02-album-pankow-album-hans-im-glueck-ht.webp](assets/subpage-02-album-pankow-album-hans-im-glueck-ht.webp) |
+| `3` | `detail` | `https://pankow.band/album/pankow-album-keine-stars.html` | PANKOW - Keine Stars (1986) · PANKOW... | `1027px` | `direct` (`229ms`) | [subpage-03-album-pankow-album-keine-stars-html.webp](assets/subpage-03-album-pankow-album-keine-stars-html.webp) |
+

@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-johnbolster-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.johnbolster.design/"
 final_url: "https://www.johnbolster.design/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.johnbolster.design/](https://www.johnbolster.design/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: John Bolster · Brand Identity Designer and Art Director, Saratoga Spring...
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `5`
+- **Recovered Stylesheets**: `5`
 
 ---
 

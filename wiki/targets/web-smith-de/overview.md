@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: web-smith-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://web-smith.de"
 final_url: "https://web-smith.de/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Internetagentur Ostwestfalen: Websites & SEO · Web Smith
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `8`
+- **Recovered Stylesheets**: `11`
 
 ---
 

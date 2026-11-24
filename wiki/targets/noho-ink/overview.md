@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: noho-ink"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://noho.ink"
 final_url: "https://noho.ink/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://noho.ink](https://noho.ink)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Noho
-- **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: noho-ink
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `18`
 - **Recovered Stylesheets**: `3`
 

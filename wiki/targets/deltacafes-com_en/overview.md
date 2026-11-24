@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: deltacafes-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://deltacafes.com/en"
 final_url: "https://deltacafes.com/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Delta, coffee with heart · Delta Cafés — The coffee of your life
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `35`
-- **Recovered Stylesheets**: `17`
+- **Recovered Scripts**: `143`
+- **Recovered Stylesheets**: `48`
 
 ---
 

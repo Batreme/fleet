@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-flatlineagency-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-flatlineagency-com` (**Shopify, Marketing & AI Agency Amsterdam · Flatline**)
 - **Production URL**: [https://www.flatlineagency.com/](https://www.flatlineagency.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3f0e9` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: Flatline is a Shopify Platinum Partner in Amsterdam. We build, migrate and grow Shopify Plus stores and run marketing and AI for premium...
 - **Total Clean CSS Variables Extracted**: `48` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Canela Web Thin Placeholder`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 80px`, `line-height: 72px`, `font-weight: 100`); CSS variables `--text-truncation-display-inline-for-safari-16: inline`, `--text-truncation-display-none-for-safari-16: none`; rule `h1` (`font-size: 80px`, `line-height: 90%`, `letter-spacing: 0em`, `font-weight: 100`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 100`); rule `h2` (`font-size: 40px`, `line-height: 1em`, `letter-spacing: 0px`, `font-weight: 100`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 72px`, `font-weight: 100`); rule `h2` (`font-size: 40px`, `line-height: 1em`, `letter-spacing: 0px`, `font-weight: 100`)
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 16px`, `line-height: 1.2em`, `letter-spacing: 0em`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`); CSS variables `--letter-spacing: var(--framer-letter-spacing)`
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: gallery-play-be"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://gallery-play.be/"
 final_url: "https://gallery-play.be/"
 status: analyzed

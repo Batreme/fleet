@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-concretemanagement-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `www-concretemanagement-fr` (**Concrete.**)
 - **Production URL**: [https://www.concretemanagement.fr/](https://www.concretemanagement.fr/)
 - **Final Redirected URL**: [https://www.concretemanagement.ch/fr](https://www.concretemanagement.ch/fr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas, `#ffffff` ink, `#0082f3` accent)
 - **Summary**: L’immobilier, pensé pour vous
 - **Total Clean CSS Variables Extracted**: `25` (curated live-grounded set below)
@@ -26,7 +26,7 @@ http_status: 200
 - **Body Font Stack**: `Interdisplay`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 300`, `letter-spacing: -10.08px`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 300`, `letter-spacing: -3.92px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 72px`, `font-weight: 300`, `letter-spacing: -5.04px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 24px`, `line-height: 20.8px`, `font-weight: 400`); rule `small` (`font-size: 80%`)
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: rialto-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `rialto-com-au` (**Rialto · The icon of Melbourne's skyline**)
 - **Production URL**: [https://rialto.com.au/](https://rialto.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#080808` canvas, `#ffffff` ink, `#004bff` accent)
 - **Summary**: With the prestige of Melbourne's Collins Street address. Rialto hosts world-class amenity, dining and retail, offering unique experiences.
 - **Total Clean CSS Variables Extracted**: `128` (curated live-grounded set below)
@@ -36,10 +36,11 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#080808` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#000000` | `.gfield.gfield--type-consent la... { background-color: #000000 }` |
+| **Elevated Surface / Card Substrate** | `#004bff` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#004bff` | live computed `button` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#004bff` | live computed `button` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#000000` | `.gfield.gfield--type-consent la... { border: #000000 }` |
+| **Structural Hairline Border** | `#666666` | `#sbi_lightbox .sbi_lightbox_action { border-left: #666666 }` |
+| **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
 | **Variable Token (`--color-gray-300`)** | `#d1d4d6` | `var(--color-gray-300)` in `:root` |
 | **Variable Token (`--color-gray-700`)** | `#3d3d3b` | `var(--color-gray-700)` in `:root` |
 | **Variable Token (`--color-gray-800`)** | `#231f20` | `var(--color-gray-800)` in `:root` |
@@ -71,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `rialto-com-au`)**:
-   - Landmark `<header class="header borders">` (`1425x65px`) hosting `Rialto · The icon of Melbourne's sky` navigation (`Discover · What's On · Experience`), DOM attributes (`data-rocket-prefetch`, `data-rocket-preload`, `data-minify="1"`, `data-minify="1"`), and stylesheet rule `.gfield .chosen-container-multi { font-size:1.6rem }`.
+   - Landmark `<header class="header borders">` (`1425x65px`) hosting `Rialto · The icon of Melbourne's sky` navigation (`Discover · What's On · Experience`), DOM attributes (`data-rocket-prefetch`, `data-rocket-preload`, `data-minify="1"`, `data-minify="1"`), and stylesheet rule `sb_instagram { -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:bord... }`.
 2. **Hero Stage & Focal Lead (<section.module> — `CELEBRATING 40 YEARS`)**:
-   - Landmark `<section class="module module--hero">` presenting display lead `CELEBRATING 40 YEARS` and copy excerpt *"Rialto is for those who embrace potential, realise goals and cont"* over `#080808` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.module--image_text> — `A MELBOURNE ICON`)**:
-   - Landmark `<section class="module module--image_text">` rendering section `A MELBOURNE ICON` with copy *"AMBITION LIVES HERE"*, asset references (`recaptcha__en.js`, `gtm.js`, `google-analytics.com`, `ajax.googleapis.com`), and grid rule `.gfield .gfield_label:last-child { margin-block-end:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.module--tiles_carousel> — `AMBITION LIVES HERE`)**:
-   - Landmark `<section class="module module--tiles_carousel">` framing `AMBITION LIVES HERE` and `WHAT’S ON AT RIALTO` (*"This is a place that welcomes the driven, where we can achieve be"*) with `#000000` surface cards, `#004bff` accents, and `last-child { margin-block-end:0 }`.
+   - Landmark `<section class="module module--landing_animation">` presenting display lead `CELEBRATING 40 YEARS` and copy excerpt *"Rialto is for those who embrace potential, realise goals and cont"* over `#080808` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.module--hero> — `A MELBOURNE ICON`)**:
+   - Landmark `<section class="module module--hero">` rendering section `A MELBOURNE ICON` with copy *"AMBITION LIVES HERE"*, asset references (`recaptcha__en.js`, `gtm.js`, `google-analytics.com`, `ajax.googleapis.com`), and grid rule `sb_instagram:after { clear:both;content:"";display:table }`.
+4. **Interactive Detail & Feature Matrix (<section.module--image_text> — `AMBITION LIVES HERE`)**:
+   - Landmark `<section class="module module--image_text">` framing `AMBITION LIVES HERE` and `WHAT’S ON AT RIALTO` (*"This is a place that welcomes the driven, where we can achieve be"*) with `#004bff` surface cards, `#004bff` accents, and `sb_instagram.sbi_fixed_height { overflow:hidden;overflow-y:auto }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://rialto.com.au/`)**:
-   - Landmark `<footer class="footer">` anchoring `Rialto · The icon of Melbourne's` footer links (`Discover · What's On · Experience`), copy *"WHAT’S ON AT RIALTO"*, and `#000000` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `Rialto · The icon of Melbourne's` footer links (`Discover · What's On · Experience`), copy *"WHAT’S ON AT RIALTO"*, and `#666666` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: altamedfoundation-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `altamedfoundation-org` (**AltaMed Foundation · AltaMed Foundation**)
 - **Production URL**: [https://altamedfoundation.org/](https://altamedfoundation.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent)
 - **Summary**: AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
 - **Total Clean CSS Variables Extracted**: `175` (curated live-grounded set below)

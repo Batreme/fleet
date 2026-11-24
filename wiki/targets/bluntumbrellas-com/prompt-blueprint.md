@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: bluntumbrellas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "bluntumbrellas-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `#1c1c1c` ink, `#ffc700` accent)"
 ---
@@ -16,7 +21,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 
 > **BLUNT Umbrellas · Built to Resist Every Weather** (https://bluntumbrellas.com) — Discover Blunt Umbrellas: premium stormproof umbrellas designed to withstand extreme weather. Innovative design, superior durability, and...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,29 +31,27 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 
 - **Brand Essence & Persona**: **BLUNT Umbrellas · Built to Resist Every Weather** (`https://bluntumbrellas.com`). Discover Blunt Umbrellas: premium stormproof umbrellas designed to withstand extreme weather. Innovative design, superior durability, and...
 - **Final Redirected URL**: [https://bluntumbrellas.eu/](https://bluntumbrellas.eu/)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `#1c1c1c` ink, `#ffc700` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f1f1f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1c1c1c` primary typography and `#ffc700` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`BLUNT Umbrellas EU`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`BLUNT Umbrellas EU`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 10px 40px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=10802px` / doc `11748px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `10px 40px` grid gap.
-- **Border Radius Scale**: `4px`, `0px`, `5px`, `34px`.
+- **Border Radius Scale**: `0px`, `5px`, `34px`, `50%`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 10px 40px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:991.98px)`, `@media (max-width:767.98px)`.
+- **Extracted CSS Media Queries**: `@media (max-width:991.98px)`, `@media (max-width:767.98px)`, `@media (max-width:767.98px)and (max-width:767.98px)`, `@media (min-width:900px)`.
 
 ---
 
@@ -102,14 +107,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0.25,0.8,0.25,1)`, `cubic-bezier(.785,.135,.15,.86)`.
+- **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `bluntumbrellas-com` stylesheet.
 - **Selector `.button`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
 - **Selector `.underline-link`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
+- **Selector `.underline-link:after`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.jdgm-settings-script>` and `<section.shopify-section--scrolling-content>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `11748px`, deepest scrollY reached `10802px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `BLUNT Umbrellas EU`)**: `color`: `rgb(255, 255, 255)` -> `rgb(28, 28, 28)`; `borderColor`: `rgba(0, 0, 0, 0)` -> `rgb(209, 209, 209)` (`transition-duration: 0s`, `timing: ease`).
+- **Interactive Control Probe (`accordion` · `Change language`)**: Triggered visual diff `5.875` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/pages/all-collections`) measured as `direct` in `1481ms`.
 
 ---
 
@@ -159,15 +170,29 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.jdgm-settings-script> — `bluntumbrellas-com`)**:
-   - Landmark `<header class="jdgm-settings-script">` (`1440x75px`) hosting `BLUNT Umbrellas · Built to Resist Ev` navigation (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+   - Landmark `<header class="jdgm-settings-script">` (`1440x75px`) hosting `BLUNT Umbrellas · Built to Resist Ev` navigation (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `html { line-height:1.15;-webkit-text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `BLUNT Umbrellas EU`)**:
    - Landmark `<section class="shopify-section shopify-section--neo-hero">` presenting display lead `BLUNT Umbrellas EU` and copy excerpt *"Our smallest and lightest yet. Folds to just 26 cm and slips into"* over `#f1f1f1` canvas and `#1c1c1c` ink.
 3. **Primary Showcase & Content Grid (<section.shopify-section--scrolling-content> — `What others say about Blunt`)**:
-   - Landmark `<section class="shopify-section shopify-section--scrolling-content">` rendering section `What others say about Blunt` with copy *"Your trusted sidekick. Compact, collapsible and convenient for li"*, asset references (`blunt_favicon.png`, `fonts.shopifycdn.com`, `poppins_n4.0ba78fa5af9b0e1a374041...`, `es-modules-shim.2.4.0.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
+   - Landmark `<section class="shopify-section shopify-section--scrolling-content">` rendering section `What others say about Blunt` with copy *"Your trusted sidekick. Compact, collapsible and convenient for li"*, asset references (`blunt_favicon.png`, `fonts.shopifycdn.com`, `poppins_n4.0ba78fa5af9b0e1a374041...`, `es-modules-shim.2.4.0.js`), and grid rule `main { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Your trusted sidekick. Compact, co`)**:
-   - Landmark `<section class="shopify-section">` framing `Your trusted sidekick. Compact, collapsible and ` and `The original full length umbrella, inspired by t` (*"The original full length umbrella, inspired by tradition and desi"*) with `#ffffff` surface cards, `#ffc700` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
+   - Landmark `<section class="shopify-section">` framing `Your trusted sidekick. Compact, collapsible and ` and `The original full length umbrella, inspired by t` (*"The original full length umbrella, inspired by tradition and desi"*) with `#ffffff` surface cards, `#ffc700` accents, and `pre { font-family:monospace,monospace;font-size:1em }`.
 5. **Colophon & Global Directory Footer (<footer.analytics> — `https://bluntumbrellas.com`)**:
    - Landmark `<footer class="analytics">` anchoring `BLUNT Umbrellas · Built to Resis` footer links (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), copy *"In the business of keeping you dry with relentless performan"*, and `#cccccc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `8%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `24%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `39%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 05** (`y=6800px`, `63%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 06** (`y=8500px`, `79%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 07** (`y=10200px`, `94%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+- **Step 08** (`y=10802px`, `100%`): Active landmark `BLUNT Umbrellas EU` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/pages/all-collections`)**: `https://bluntumbrellas.eu/pages/all-collections` — H1: `All Collections`, scrollHeight `7130px`, transition `direct` (`1481ms`)
+- **Detail Route (`/collections/limited-editions`)**: `https://bluntumbrellas.eu/collections/limited-editions` — H1: `Limited Editions`, scrollHeight `7706px`, transition `direct` (`2366ms`)
+- **Detail Route (`/collections/uv-umbrellas`)**: `https://bluntumbrellas.eu/collections/uv-umbrellas` — H1: `UV Umbrellas`, scrollHeight `4349px`, transition `direct` (`1246ms`)
 
 ---
 
@@ -184,7 +209,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f1f1f1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1c1c1c`, **Accent / Highlight**: `#ffc700`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f1f1f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1c1c1c` primary typography and `#ffc700` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`BLUNT Umbrellas EU`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`BLUNT Umbrellas EU`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 10px 40px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -220,14 +245,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#cccccc` — grounded in `var(--bundle-option-border-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `16px` lateral canvas padding with `10px 40px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 10px 40px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
-- **Media Queries**: `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:991.98px)`, `@media (max-width:767.98px)`
-- **Corner Radii**: `4px`, `0px`, `5px`, `34px`
+- **Media Queries**: `@media (max-width:991.98px)`, `@media (max-width:767.98px)`, `@media (max-width:767.98px)and (max-width:767.98px)`, `@media (min-width:900px)`
+- **Corner Radii**: `0px`, `5px`, `34px`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Poppins`
@@ -241,17 +266,17 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `bluntumbrellas-com` (`BLUNT Umbrellas · Built to Resist Every Weather`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.jdgm-settings-script> — `bluntumbrellas-com`)**:
-   - DOM & Selectors: Landmark `<header class="jdgm-settings-script">` (`1440x75px`) hosting `BLUNT Umbrellas · Built to Resist Ev` navigation (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.jdgm-settings-script> — `bluntumbrellas-com`)` (`bluntumbrellas-com`) adapts across `@media screen and (forced-colors:active)`, `@media screen and (width<=750px)`, `@media (max-width:991.98px)`, `@media (max-width:767.98px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0.25,0.8,0.25,1)`, `cubic-bezier(.785,.135,.15,.86)` transitions and links `Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`.
+   - DOM & Selectors: Landmark `<header class="jdgm-settings-script">` (`1440x75px`) hosting `BLUNT Umbrellas · Built to Resist Ev` navigation (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-source-attribution="shopify.loadfeatures"`, `data-source-attribution="shopify.dynamic_check..."`, `data-source-attribution="shopify.dynamic_check..."`), and stylesheet rule `html { line-height:1.15;-webkit-text-size-adjust:100% }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.jdgm-settings-script> — `bluntumbrellas-com`)` (`bluntumbrellas-com`) adapts across `@media (max-width:991.98px)`, `@media (max-width:767.98px)`, `@media (max-width:767.98px)and (max-width:767.98px)`, `@media (min-width:900px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)` transitions and links `Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`.
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `BLUNT Umbrellas EU`)**:
    - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--neo-hero">` presenting display lead `BLUNT Umbrellas EU` and copy excerpt *"Our smallest and lightest yet. Folds to just 26 cm and slips into"* over `#f1f1f1` canvas and `#1c1c1c` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f1f1f1` background with `#1c1c1c` headline `BLUNT Umbrellas EU`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#f1f1f1` background with `#1c1c1c` headline `BLUNT Umbrellas EU`.
 3. **Primary Showcase & Content Grid (<section.shopify-section--scrolling-content> — `What others say about Blunt`)**:
-   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--scrolling-content">` rendering section `What others say about Blunt` with copy *"Your trusted sidekick. Compact, collapsible and convenient for li"*, asset references (`blunt_favicon.png`, `fonts.shopifycdn.com`, `poppins_n4.0ba78fa5af9b0e1a374041...`, `es-modules-shim.2.4.0.js`), and grid rule `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`.
+   - DOM & Selectors: Landmark `<section class="shopify-section shopify-section--scrolling-content">` rendering section `What others say about Blunt` with copy *"Your trusted sidekick. Compact, collapsible and convenient for li"*, asset references (`blunt_favicon.png`, `fonts.shopifycdn.com`, `poppins_n4.0ba78fa5af9b0e1a374041...`, `es-modules-shim.2.4.0.js`), and grid rule `main { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.shopify-section--scrolling-content> — `What others say about Blunt`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 10px 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Your trusted sidekick. Compact, co`)**:
-   - DOM & Selectors: Landmark `<section class="shopify-section">` framing `Your trusted sidekick. Compact, collapsible and ` and `The original full length umbrella, inspired by t` (*"The original full length umbrella, inspired by tradition and desi"*) with `#ffffff` surface cards, `#ffc700` accents, and `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Your trusted sidekick. Compact, co`)` uses `4px`, `0px`, `5px`, `34px` radii, `#ffc700` highlights, and assets (blunt_favicon.png, fonts.shopifycdn.com, poppins_n4.0ba78fa5af9b0e1a374041...).
+   - DOM & Selectors: Landmark `<section class="shopify-section">` framing `Your trusted sidekick. Compact, collapsible and ` and `The original full length umbrella, inspired by t` (*"The original full length umbrella, inspired by tradition and desi"*) with `#ffffff` surface cards, `#ffc700` accents, and `pre { font-family:monospace,monospace;font-size:1em }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.shopify-section:nth(2)> — `Your trusted sidekick. Compact, co`)` uses `0px`, `5px`, `34px`, `50%` radii, `#ffc700` highlights, and assets (blunt_favicon.png, fonts.shopifycdn.com, poppins_n4.0ba78fa5af9b0e1a374041...).
 5. **Colophon & Global Directory Footer (<footer.analytics> — `https://bluntumbrellas.com`)**:
    - DOM & Selectors: Landmark `<footer class="analytics">` anchoring `BLUNT Umbrellas · Built to Resis` footer links (`Regular Models · Limited Editions · UV Umbrellas · All Umbrellas · Our Design`), copy *"In the business of keeping you dry with relentless performan"*, and `#cccccc` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.analytics> — `https://bluntumbrellas.com`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `10px 40px` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-source-attribution="shopify.loadfeatures", data-source-attribution="shopify.dynamic_check...").
@@ -263,21 +288,61 @@ Scaffold `bluntumbrellas-com` (`BLUNT Umbrellas · Built to Resist Every Weather
 - Copy Excerpt 4: *"In the business of keeping you dry with relentless performance and reliability."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0.25,0.8,0.25,1)`, `cubic-bezier(.785,.135,.15,.86)`
+- **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.785,.135,.15,.86)`, `cubic-bezier(.4,0,.22,1)`
 - **Extracted Stylesheet Rules (`bluntumbrellas-com`)**:
-- `.shopify-payment-button__button--... { visibility:hidden }`
-- `opify-payment-button__button--unb... { background-color:1990c6;padding:1em 2em }`
-- `ptions.shopify-payment-button__sk... { width:50%;margin-left:25%;margin-right:25%;border-radius:4px!important;h... }`
-- `shopify-payment-button__button--b... { z-index:1;flex-direction:column;display:flex;position:relative }`
-- `on__button--branded .shopify-clea... { flex-direction:column!important;flex:1!important;display:flex!important }`
+- `html { line-height:1.15;-webkit-text-size-adjust:100% }`
+- `main { display:block }`
+- `pre { font-family:monospace,monospace;font-size:1em }`
+- `strong { font-weight:bolder }`
+- `samp { font-family:monospace,monospace;font-size:1em }`
 - **Per-Selector Transition Rules**:
-- **Selector `.shopify-payment-button__button`**: `transition: background .2s ease-in-out` extracted from `bluntumbrellas-com` stylesheet.
 - **Selector `.button`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
 - **Selector `.underline-link`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
+- **Selector `.underline-link:after`**: `transition: all .3s ease` extracted from `bluntumbrellas-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.jdgm-settings-script>` and `<section.shopify-section--scrolling-content>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `11748px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: BLUNT Umbrellas EU (0%) -> BLUNT Umbrellas EU (8%) -> BLUNT Umbrellas EU (24%) -> BLUNT Umbrellas EU (39%) -> BLUNT Umbrellas EU (63%) -> BLUNT Umbrellas EU (79%) -> BLUNT Umbrellas EU (94%) -> BLUNT Umbrellas EU (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `color, borderColor` with `0s ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/pages/all-collections` (detail, direct), `/collections/limited-editions` (detail, direct), `/collections/uv-umbrellas` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `bluntumbrellas-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | BLUNT Umbrellas EU | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `8%` | BLUNT Umbrellas EU | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `24%` | BLUNT Umbrellas EU | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `39%` | BLUNT Umbrellas EU | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `63%` | BLUNT Umbrellas EU | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `79%` | BLUNT Umbrellas EU | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `94%` | BLUNT Umbrellas EU | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `10802px` | `100%` | BLUNT Umbrellas EU | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | BLUNT Umbrellas EU | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2903px` | `50%` | BLUNT Umbrellas EU | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5836px` | `100%` | BLUNT Umbrellas EU | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Change language`, diff `5.875`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://bluntumbrellas.eu/pages/all-collections` | All Collections | `7130px` | `direct` (`1481ms`) | [subpage-01-pages-all-collections.webp](assets/subpage-01-pages-all-collections.webp) |
+| `2` | `detail` | `https://bluntumbrellas.eu/collections/limited-editions` | Limited Editions | `7706px` | `direct` (`2366ms`) | [subpage-02-collections-limited-editions.webp](assets/subpage-02-collections-limited-editions.webp) |
+| `3` | `detail` | `https://bluntumbrellas.eu/collections/uv-umbrellas` | UV Umbrellas | `4349px` | `direct` (`1246ms`) | [subpage-03-collections-uv-umbrellas.webp](assets/subpage-03-collections-uv-umbrellas.webp) |
+

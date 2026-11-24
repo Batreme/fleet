@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: mejuma-tuscany-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://mejuma-tuscany.com/"
 final_url: "https://www.mejuma-tuscany.com/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Mejuma Tuscany
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `18`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `72`
+- **Recovered Stylesheets**: `12`
 
 ---
 

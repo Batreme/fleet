@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: wndws-space"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://wndws.space/"
 final_url: "https://wndws.space/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://wndws.space/](https://wndws.space/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: windows · place is temporary. you are not.
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `21`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `81`
+- **Recovered Stylesheets**: `22`
 
 ---
 

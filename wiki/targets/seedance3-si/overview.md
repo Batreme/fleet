@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: seedance3-si"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://seedance3.si/"
 final_url: "https://seedance3.si/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Seedance 3.0 AI Video Generator: Make Videos from References
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `43`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `117`
+- **Recovered Stylesheets**: `11`
 
 ---
 

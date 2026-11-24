@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-alpineguides-co-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,8 +13,8 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-alpineguides-co-nz` (**Alpine Guides Aoraki · NZ Mountain Guiding Since 1966**)
 - **Production URL**: [https://www.alpineguides.co.nz/](https://www.alpineguides.co.nz/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#f2f2f3` ink, `#ffcc00` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#ffffff` ink, `#ffcc00` accent)
 - **Summary**: Explore guided ascents, mountaineering courses, ski touring, Tasman Glacier heli-hike and alpine adventures in Aoraki/Mount Cook with pro...
 - **Total Clean CSS Variables Extracted**: `236` (curated live-grounded set below)
 
@@ -35,12 +35,13 @@ http_status: 200
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#191919` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#f2f2f3` | live computed `h1` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#343435` | live computed `a` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ffcc00` | `crubber-button.ytp-swatch-backg... { background-color: #ffcc00 }` |
 | **Secondary / Muted Copy** | `#333333` | live computed `footer` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#3898ec` | `.w-select:focus { border-color: #3898ec }` |
 | **Variable Token (`--_theme---agl-gold`)** | `#fcb124` | `var(--_theme---agl-gold)` in `:root` |
+| **Variable Token (`--_theme---white`)** | `#f2f2f3` | `var(--_theme---white)` in `:root` |
 | **Variable Token (`--_theme---carbon`)** | `#1e1e1e` | `var(--_theme---carbon)` in `:root` |
 
 ---
@@ -69,9 +70,9 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-alpineguides-co-nz`)**:
-   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-styled="active"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-page="home"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
 2. **Hero Stage & Focal Lead (<section.explore-mega> — `Expert Mountain Adventures Since 1`)**:
-   - Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#f2f2f3` ink.
+   - Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.prepare-mega> — `Alpine Guides offers unmatched acc`)**:
    - Landmark `<section class="prepare-mega">` rendering section `Alpine Guides offers unmatched access to the vas` with copy *"A spectacular heli-hike experience exploring the white ice of New"*, asset references (`cdn.prod.website-files.com`, `alpine-guides.webflow.shared.ac09...`, `www-widgetapi.js`, `recaptcha__en.js`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.c-hero> — `A spectacular heli-hike experience`)**:

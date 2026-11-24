@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: woonpact-gent"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: 200
 block_reason: "Live mobile screenshot capture failed (0 valid PNG bytes)"

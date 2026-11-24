@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: vploss-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://vploss.com"
 final_url: "https://vploss.com/"
 status: analyzed
@@ -29,8 +29,8 @@ auth_required: false
 - **Target URL**: [https://vploss.com](https://vploss.com)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: VPLOSS
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `37`
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `99`
 - **Recovered Stylesheets**: `0`
 
 ---

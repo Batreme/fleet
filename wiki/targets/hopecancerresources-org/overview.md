@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: hopecancerresources-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://hopecancerresources.org/"
 final_url: "https://hopecancerresources.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Hope Cancer Resources - Support. Educate. Prevent.
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `72`
+- **Recovered Stylesheets**: `7`
 
 ---
 

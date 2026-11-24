@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: macmillan-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://macmillan.studio"
 final_url: "https://macmillan.studio/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Christian MacMillan · Independent Tech Lead—Developer
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `43`
-- **Recovered Stylesheets**: `13`
+- **Recovered Scripts**: `174`
+- **Recovered Stylesheets**: `41`
 
 ---
 

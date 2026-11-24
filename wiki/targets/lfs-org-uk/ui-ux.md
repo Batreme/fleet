@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lfs-org-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lfs-org-uk` (**London Film School**)
 - **Production URL**: [https://lfs.org.uk/](https://lfs.org.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ff` accent)
 - **Summary**: The oldest film school in the UK, dedicated to the education of filmmakers.
 - **Total Clean CSS Variables Extracted**: `100` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Segoe UI`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 160px`, `line-height: 144px`, `font-weight: 400`, `letter-spacing: -3.2px`); rule `h1` (`font-size: 2rem`, `line-height: 1`, `letter-spacing: -.02em`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`); rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 160px`, `line-height: 144px`, `font-weight: 400`, `letter-spacing: -3.2px`); rule `h2` (`font-size: 1.375rem`, `line-height: 1`, `letter-spacing: -.01em`, `font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); rule `p` (`line-height: 1.2`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 22px`, `font-weight: 400`); CSS variables `--spacing-xsmall: 1rem`, `--spacing-small: 2rem`
 

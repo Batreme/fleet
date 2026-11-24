@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: example-app"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: 200
 block_reason: "Placeholder Example Domain (no production site)"

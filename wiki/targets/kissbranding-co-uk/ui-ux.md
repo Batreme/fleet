@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: kissbranding-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `kissbranding-co-uk` (**Kiss · Brands that Kiss**)
 - **Production URL**: [https://kissbranding.co.uk/](https://kissbranding.co.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#008300`)
 - **Summary**: Brand strategy and identity for founder-led and investor-backed businesses at the moments that matter. Transform Award-winning studio in...
 - **Total Clean CSS Variables Extracted**: `95` (curated live-grounded set below)

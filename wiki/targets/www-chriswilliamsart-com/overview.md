@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-chriswilliamsart-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.chriswilliamsart.com/"
 final_url: "https://www.chriswilliamsart.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Chris Williams Art Gallery · Contemporary painting in London
 - **Identified Frameworks**: Framer, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `3`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `12`
+- **Recovered Stylesheets**: `8`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: both-sides-the7eye-org-il_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "both-sides-the7eye-org-il_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 4
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#25d366`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#2
 
 > **Extremists on Both Sides** (https://both-sides.the7eye.org.il/en/) — We collected thousands of political actions carried out in public space over the past four years. Decide for yourself — who are the extre...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Extremists on Both Sides** (`https://both-sides.the7eye.org.il/en/`). We collected thousands of political actions carried out in public space over the past four years. Decide for yourself — who are the extre...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#25d366`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdfcff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#25d366` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Discordia` for display copy (`Extremists on Both Sides`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Discordia` for display copy (`Extremists on Both Sides`) with `Assistant`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `2px`) with `cubic-bezier(0.22,1,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=10200px` / doc `21770px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `2px` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `16px`, `4px`, `6px`, `8px`.
@@ -93,7 +98,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#2
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 54px`, `font-weight: 400`); CSS variables `--se-cap-display: block`.
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 400`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: 'Assistant', sans-serif`.
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
@@ -110,6 +115,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#2
 - **Selector `page9-title-row .text-card .text-...`**: `transition: background var(--fade-ms) ease-out` extracted from `both-sides-the7eye-org-il_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<nav.lang-wrap>` and `<section.text-section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `21770px`, deepest scrollY reached `10200px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -168,6 +176,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#2
    - Landmark `<section class="text-section">` framing `Both camps include groups that bring their politi...` and `Because of their on-the-ground activity, these gr...` (*"Hover over a square to view the event description and scale."*) with `#ffffff` surface cards, `#25d366` accents, and `after { -webkit-user-select: none !important; user-select: none !important; -web... }`.
 5. **Colophon & Global Directory Footer (<footer.page0-dots-overlay> — `https://both-sides.the7eye.org.il/en/`)**:
    - Landmark `<footer class="page0-dots-overlay">` anchoring `Extremists on Both Sides` footer links (`עברית · English · العربية`), copy *"Press and hold a square to view the event description and sc"*, and `#e1e1e1` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Extremists on Both Sides` · sticky/fixed elements: `8`
+- **Step 02** (`y=5100px`, `24%`): Active landmark `The events shown took place from the beginning of...` · sticky/fixed elements: `11`
+- **Step 03** (`y=5950px`, `29%`): Active landmark `#page-9` · sticky/fixed elements: `11`
+- **Step 04** (`y=10200px`, `49%`): Active landmark `#page-10` · sticky/fixed elements: `10`
 
 ---
 
@@ -184,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fdfcff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#25d366`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdfcff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#25d366` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Discordia` for display copy (`Extremists on Both Sides`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Discordia` for display copy (`Extremists on Both Sides`) with `Assistant`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `2px`) with `cubic-bezier(0.22,1,0.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +234,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--ink`)**: `#111111` — grounded in `var(--ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `2px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
@@ -235,7 +248,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Assistant`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 40px`, `line-height: 54px`, `font-weight: 400`); CSS variables `--se-cap-display: block`
-- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 400`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: 'Assistant', sans-serif`
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
@@ -246,7 +259,7 @@ Scaffold `both-sides-the7eye-org-il_en` (`Extremists on Both Sides`) with these 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.lang-wrap> — `both-sides-the7eye-org-il_en`)` (`both-sides-the7eye-org-il_en`) adapts across `@media (max-width: 600px)`, `@media (max-width: 600px) and (hover: hover) and (pointer: fine)`, `@media (min-width: 601px)`, `@media (min-width: 640px)` with `cubic-bezier(0.22,1,0.36,1)`, `cubic-bezier(0.37,0,0.63,1)` transitions and links `עברית · English · العربية`.
 2. **Hero Stage & Focal Lead (<section.text-section> — `Extremists on Both Sides`)**:
    - DOM & Selectors: Landmark `<section class="text-section">` presenting display lead `Extremists on Both Sides` and copy excerpt *"The project shows 14,877 documented political actions that took p"* over `#fdfcff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fdfcff` background with `#000000` headline `Extremists on Both Sides`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×2616px` mobile) sets `#fdfcff` background with `#000000` headline `Extremists on Both Sides`.
 3. **Primary Showcase & Content Grid (<section.text-section:nth(2)> — `In recent years, Israeli citizens `)**:
    - DOM & Selectors: Landmark `<section class="text-section">` rendering section `In recent years, Israeli citizens have become div...` with copy *"An analysis of political activity across Israel’s political camps"*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png`), and grid rule `body { background: var(--bg); }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.text-section:nth(2)> — `In recent years, Israeli citizens `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `2px` horizontal padding on mobile.
@@ -277,8 +290,30 @@ Scaffold `both-sides-the7eye-org-il_en` (`Extremists on Both Sides`) with these 
 - **Selector `page9-title-row .text-card .text-...`**: `transition: background var(--fade-ms) ease-out` extracted from `both-sides-the7eye-org-il_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<nav.lang-wrap>` and `<section.text-section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `21770px` across 4 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Extremists on Both Sides (0%) -> The events shown took place... (24%) -> #page-9 (29%) -> #page-10 (49%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `both-sides-the7eye-org-il_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Extremists on Both Sides | `8` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `5100px` | `24%` | The events shown took place from the beginnin... | `11` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `5950px` | `29%` | #page-9 | `11` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `10200px` | `49%` | #page-10 | `10` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Extremists on Both Sides | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | #page-9 | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `13753px` | `100%` | What is an extreme action to you? | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

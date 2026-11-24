@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: offform-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://offform.net/"
 final_url: "https://offform.net/"
 status: blocked

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lpas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lpas-com` (**LPAS - Architecture and Interiors**)
 - **Production URL**: [https://lpas.com/](https://lpas.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0e0e0e` accent)
 - **Summary**: Clear Process. Creative Results. Human-centered. Always Curious. At LPAS, we design with people at the center and purpose at every turn.
 - **Total Clean CSS Variables Extracted**: `12` (curated live-grounded set below)
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.mainHeader> — `lpas-com`)**:
-   - Landmark `<header class="mainHeader">` (`900x225px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
+   - Landmark `<header class="mainHeader">` (`1340x107px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
 2. **Hero Stage & Focal Lead (<section.homeHero> — `We’re a process driven architectur`)**:
    - Landmark `<section class="homeHero">` presenting display lead `We’re a process driven architecture and interior...` and copy excerpt *"Happy Halloween from LPAS! Teamwork makes the scream work."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.blockIntroGeneral> — `Higher Education`)**:

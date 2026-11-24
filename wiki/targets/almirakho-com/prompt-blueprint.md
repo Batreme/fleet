@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: almirakho-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "almirakho-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `#0a0a0a` ink, `#2ec97a` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `
 
 > **Almira Kho - Photographer and Director** (https://almirakho.com/) — Almira Kho is a photographer and director based in Paris/London. Specialized in music industry and fashion. Film and digital.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Almira Kho - Photographer and Director** (`https://almirakho.com/`). Almira Kho is a photographer and director based in Paris/London. Specialized in music industry and fashion. Film and digital.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `#0a0a0a` ink, `#2ec97a` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0a0a0a` primary typography and `#2ec97a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ALMIRA KHO`) with `Archivo` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Archivo` across display (`ALMIRA KHO`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20px`, padding `20px`) with `cubic-bezier(.455,.03,.515,.955)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `20px` grid gap.
 - **Border Radius Scale**: `var(--vp-radius)`, `var(--vp-button-radius)`, `var(--vp-radius-xs)`, `var(--vp-timeline-radius)`.
@@ -110,6 +115,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `
 - **Selector `.project-leave-active`**: `transition: opacity .45s,transform .45s` extracted from `almirakho-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.455,.03,.515,.955)`)**: Governs interactive state transitions across `<header.header>` and `<main.home-link>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Hover Physics (`primary_cta` · `WORKS,`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/about`) measured as `SPA` in `1113ms`.
 
 ---
 
@@ -168,6 +178,18 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `
    - Landmark `<main class="router-link-active">` framing `almirakho-com Interactive Matrix` and `almirakho-com Archive & Directory` (*"Almira Kho"*) with `#ffffff` surface cards, `#2ec97a` accents, and `html::-moz-selection { background-color:var(--color-white);color:var(--color-black) }`.
 5. **Colophon & Global Directory Footer (<footer.router-link-exact-active> — `https://almirakho.com/`)**:
    - Landmark `<footer class="router-link-exact-active">` anchoring `Almira Kho - Photographer and Di` footer links (`Almira Kho · About · IG`), copy *"almirakho-com Interactive Matrix"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 02** (`y=0px`, `8%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 03** (`y=0px`, `17%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 04** (`y=0px`, `25%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 05** (`y=0px`, `33%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 06** (`y=0px`, `42%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 07** (`y=0px`, `50%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+- **Step 08** (`y=0px`, `58%`): Active landmark `ALMIRA KHO` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **About Route (`/about`)**: `https://almirakho.com/about` — H1: `ALMIRA KHO`, scrollHeight `2480px`, transition `SPA` (`1113ms`)
 
 ---
 
@@ -184,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0a0a0a`, **Accent / Highlight**: `#2ec97a`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0a0a0a` primary typography and `#2ec97a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ALMIRA KHO`) with `Archivo` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Archivo` across display (`ALMIRA KHO`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20px`, padding `20px`) with `cubic-bezier(.455,.03,.515,.955)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +243,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-red`)**: `#e45050` — grounded in `var(--color-red)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `20px` lateral canvas padding with `20px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px`)
@@ -246,7 +268,7 @@ Scaffold `almirakho-com` (`Almira Kho - Photographer and Director`) with these e
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `almirakho-com`)` (`almirakho-com`) adapts across `@media screen and (width<=900px)`, `@media screen and (width<=420px)`, `@media screen and (hover:hover) and (pointer:fine)` with `cubic-bezier(.455,.03,.515,.955)`, `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Almira Kho · About · IG`.
 2. **Hero Stage & Focal Lead (<main.header> — `ALMIRA KHO`)**:
    - DOM & Selectors: Landmark `<main class="header">` presenting display lead `ALMIRA KHO` and copy excerpt *"Photographer and director based in Paris/London. Specialized in m"* over `#fafafa` canvas and `#0a0a0a` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#fafafa` background with `#0a0a0a` headline `ALMIRA KHO`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fafafa` background with `#0a0a0a` headline `ALMIRA KHO`.
 3. **Primary Showcase & Content Grid (<main.home-link> — `Almira Kho`)**:
    - DOM & Selectors: Landmark `<main class="home-link">` rendering section `Almira Kho` with copy *"ALMIRA KHO"*, asset references (`entry.BkXJSryM.css`, `Cg0QnzOv.js`, `B_9E_aBj.js`, `HclGiUj8.js`), and grid rule `body::-moz-selection { background-color:var(--color-white);color:var(--color-black) }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.home-link> — `Almira Kho`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
@@ -274,8 +296,40 @@ Scaffold `almirakho-com` (`Almira Kho - Photographer and Director`) with these e
 - **Selector `.project-leave-active`**: `transition: opacity .45s,transform .45s` extracted from `almirakho-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.455,.03,.515,.955)`)**: Governs interactive state transitions across `<header.header>` and `<main.home-link>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: ALMIRA KHO (0%) -> ALMIRA KHO (8%) -> ALMIRA KHO (17%) -> ALMIRA KHO (25%) -> ALMIRA KHO (33%) -> ALMIRA KHO (42%) -> ALMIRA KHO (50%) -> ALMIRA KHO (58%).
+- **Multi-Page Routes**: Scaffold internal routes `/about` (about, SPA) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `almirakho-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | ALMIRA KHO | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | ALMIRA KHO | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | ALMIRA KHO | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | ALMIRA KHO | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | ALMIRA KHO | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | ALMIRA KHO | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | ALMIRA KHO | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | ALMIRA KHO | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | ALMIRA KHO | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4642px` | `50%` | ALMIRA KHO | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `9284px` | `100%` | ALMIRA KHO | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `about` | `https://almirakho.com/about` | ALMIRA KHO | `2480px` | `SPA` (`1113ms`) | [subpage-01-about.webp](assets/subpage-01-about.webp) |
+

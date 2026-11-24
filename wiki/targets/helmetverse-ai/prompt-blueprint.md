@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: helmetverse-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "helmetverse-ai"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f4f1` / `#00d2aa`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f4f1` / `#0
 
 > **Helmetverse · Design yours** (https://helmetverse.ai/) — Type a prompt. The team rides what you imagine.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Helmetverse · Design yours** (`https://helmetverse.ai/`). Type a prompt. The team rides what you imagine.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f7f4f1` / `#00d2aa`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f4f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#2a312b` primary typography and `#00d2aa` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `G42 Sans` for display copy (`HELMETVERSE`) with `G42 Sans` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `G42 Sans` across display (`HELMETVERSE`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1536px` container bounds (`gap: 24px`, padding `var(--spacing-lg)`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `1536px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-lg)` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `999px`, `var(--radius-lg)`, `var(--radius-full)`, `.25rem`.
@@ -117,6 +122,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f4f1` / `#0
 - **Selector `color\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `helmetverse-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.jsx-25f90e9ce2076406>` and `<main.text-text-primary-dark>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -175,6 +183,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f4f1` / `#0
    - Landmark `<main class="bg-bg-dark text-text-primary-dark">` framing `A GLOBAL COMPETITION FOR THE MOST CREATIVE MINDS` and `FEATURED HELMET DESIGNS` (*"Win a trip to Abu Dhabi"*) with `#00d2aa` surface cards, `#00d2aa` accents, and `.PhoneInputCountryIcon--square { width:var(--PhoneInputCountryFlag-height) }`.
 5. **Colophon & Global Directory Footer (<footer.text-text-primary-dark> — `https://helmetverse.ai/`)**:
    - Landmark `<footer class="text-text-primary-dark">` anchoring `Helmetverse · Design yours` footer links (`Home · Gallery · AI Studio · Leaderboard · About`), copy *"THE DESIGNS ARE IN. NOW YOU DECIDE WHO WINS."*, and `#ede9e4` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Viewport` · sticky/fixed elements: `0`
 
 ---
 
@@ -191,7 +201,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f7f4f1` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#2a312b`, **Accent / Highlight**: `#00d2aa`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f4f1` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#2a312b` primary typography and `#00d2aa` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `G42 Sans` for display copy (`HELMETVERSE`) with `G42 Sans` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `G42 Sans` across display (`HELMETVERSE`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1536px` container bounds (`gap: 24px`, padding `var(--spacing-lg)`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -235,8 +245,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-border-dark`)**: `#2a3830` — grounded in `var(--color-border-dark)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `1536px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing-lg)` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: 24px`)
@@ -260,7 +270,7 @@ Scaffold `helmetverse-ai` (`Helmetverse · Design yours`) with these exact struc
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.jsx-25f90e9ce2076406> — `helmetverse-ai`)` (`helmetverse-ai`) adapts across `@media (min-width:375px)`, `@media (min-width:425px)`, `@media (min-width:640px)`, `@media (min-width:768px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.2,.8,.2,1)` transitions and links `Home · Gallery · AI Studio · Leaderboard · About`.
 2. **Hero Stage & Focal Lead (<main.bg-bg-dark> — `HELMETVERSE`)**:
    - DOM & Selectors: Landmark `<main class="bg-bg-dark text-text-primary-dark">` presenting display lead `HELMETVERSE` and copy excerpt *"Submissions and voting are officially closed. Explore this year’s"* over `#f7f4f1` canvas and `#2a312b` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#f7f4f1` background with `#2a312b` headline `HELMETVERSE`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×1744px` mobile) sets `#f7f4f1` background with `#2a312b` headline `HELMETVERSE`.
 3. **Primary Showcase & Content Grid (<main.text-text-primary-dark> — `DESIGN WITHOUT LIMITS`)**:
    - DOM & Selectors: Landmark `<main class="bg-bg-dark text-text-primary-dark">` rendering section `DESIGN WITHOUT LIMITS` with copy *"H E L M E T V E R S E"*, asset references (`6577f91f-ad74-4868-93e8-13027534a...`, `79d7fc46-0103-4a7f-b9f7-d1012c6fa...`, `98da8316-c3f4-4946-adb6-727aa17a0...`, `b241f184-7659-4fb4-bdb4-cdf53d1fc...`), and grid rule `.PhoneInputInput { flex:1;min-width:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.text-text-primary-dark> — `DESIGN WITHOUT LIMITS`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-lg)` horizontal padding on mobile.
@@ -291,8 +301,26 @@ Scaffold `helmetverse-ai` (`Helmetverse · Design yours`) with these exact struc
 - **Selector `color\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `helmetverse-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.jsx-25f90e9ce2076406>` and `<main.text-text-primary-dark>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Viewport (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `helmetverse-ai`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Viewport | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | HELMETVERSE | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `100%` | HELMETVERSE | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+

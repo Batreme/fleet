@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-avilus-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-avilus-com` (**Avilus · Dual-Use Uncrewed Aircraft for Evacuation, Logistics and Survei...**)
 - **Production URL**: [https://www.avilus.com/](https://www.avilus.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f7f7` canvas, `#183032` ink, `#0082f3` accent)
 - **Summary**: Manufacturer and certified operator of dual-use uncrewed aircraft for medical evacuation, logistics, surveillance, and reconnaissance.
 - **Total Clean CSS Variables Extracted**: `164` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `Robotomono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`, `letter-spacing: -2.16px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 30px`, `line-height: 33px`, `font-weight: 700`, `letter-spacing: -0.9px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 72px`, `font-weight: 700`, `letter-spacing: -2.16px`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 25.2px`, `font-weight: 400`); CSS variables `--_text-style---letter-spacing: var(--_typography---letter-spacing--normal)`, `--_responsive---small: 0`, `--_responsive---xsmall: 0`
 
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#183032` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
 | **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
-| **Secondary / Muted Copy** | `#ddff2c` | live computed `h2` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
 
 ---

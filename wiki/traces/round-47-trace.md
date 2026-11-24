@@ -1,9 +1,9 @@
-# Round 47 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 47 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-47`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `8` live (`2` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-47`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `7` live (`3` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
@@ -17,22 +17,22 @@
   6. `www-hollywoodexhibit2026-com` — *ELLE & Esquire, The New Hollywood Photography Exhibition*
   7. `www-honeyquote-com` — *Compare Insurance Quotes Worth Trusting · HoneyQuote*
   8. `www-hoteldutassosorrento-com` — *Blocked (`Upstream HTTP 520 — Cloudflare Origin/WAF Error`)*
-  9. `www-huxleysaga-com` — *Huxley · Home*
-  10. `www-iamsunnywang-com` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  9. `www-huxleysaga-com` — *Blocked (`Empty DOM response (0 bytes, 0 visible text)`)*
+  10. `www-iamsunnywang-com` — *Blocked (`Live desktop behavioral capture failed (0 valid keyframes)`)*
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-governorsmansion-org` | `tier1_fast` | `1440×2400px` (1,228,263 B) | `390×2400px` (469,313 B) | 171 | 16 | 282 | 106 | `0.14` / `0.56` | **25.0 / 25.0** |
-| `www-gravelleduparc-com` | `tier1_fast` | `1440×2400px` (1,545,651 B) | `390×2400px` (453,293 B) | 53 | 16 | 308 | 119 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-greenlock-io` | `tier1_fast` | `1440×2400px` (318,612 B) | `390×2400px` (269,803 B) | 62 | 16 | 308 | 119 | `0.14` / `0.57` | **25.0 / 25.0** |
-| `www-halcyon-co-nz` | `tier1_fast` | `1440×2400px` (1,694,234 B) | `390×2400px` (477,656 B) | 1262 | 16 | 292 | 111 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `www-hauntedbouldercity-com` | `tier1_fast` | `1440×2400px` (1,740,922 B) | `390×2400px` (634,699 B) | 18 | 16 | 286 | 108 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `www-hollywoodexhibit2026-com` | `tier1_fast` | `1440×900px` (101,927 B) | `390×844px` (15,370 B) | 44 | 16 | 279 | 103 | `0.09` / `0.53` | **25.0 / 25.0** |
-| `www-honeyquote-com` | `tier1_fast` | `1440×2400px` (2,439,364 B) | `390×2400px` (393,712 B) | 235 | 16 | 282 | 106 | `0.14` / `0.57` | **25.0 / 25.0** |
-| `www-huxleysaga-com` | `tier2_webgl` | `1440×900px` (676,354 B) | `390×844px` (344,810 B) | 228 | 16 | 282 | 106 | `0.09` / `0.53` | **25.0 / 25.0** |
+| `www-governorsmansion-org` | `tier1_fast` | `1280×6624px` (500,326 B) | `390×2616px` (117,918 B) | 171 | 16 | 340 | 110 | `0.14` / `0.55` | **25.0 / 25.0** |
+| `www-gravelleduparc-com` | `tier1_fast` | `1280×6624px` (459,022 B) | `390×2616px` (76,736 B) | 53 | 16 | 353 | 122 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-greenlock-io` | `tier1_fast` | `1280×4968px` (256,022 B) | `390×2616px` (87,842 B) | 996 | 16 | 361 | 123 | `0.14` / `0.55` | **25.0 / 25.0** |
+| `www-halcyon-co-nz` | `tier1_fast` | `1280×828px` (142,372 B) | `390×2616px` (111,200 B) | 775 | 16 | 321 | 114 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-hauntedbouldercity-com` | `tier1_fast` | `1280×6624px` (350,592 B) | `390×2616px` (52,226 B) | 20 | 16 | 339 | 112 | `0.09` / `0.46` | **25.0 / 25.0** |
+| `www-hollywoodexhibit2026-com` | `tier1_fast` | `1280×828px` (30,384 B) | `390×872px` (7,330 B) | 44 | 16 | 306 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-honeyquote-com` | `tier1_fast` | `1280×6624px` (566,862 B) | `390×2616px` (101,976 B) | 224 | 16 | 339 | 111 | `0.14` / `0.54` | **25.0 / 25.0** |
 | `www-hoteldutassosorrento-com` | `blocked` (`520`) | `none` | `none` | — | — | — | — | — | **Excluded (`Upstream HTTP 520 — Cloudflare Origin/WAF Error`)** |
-| `www-iamsunnywang-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
+| `www-huxleysaga-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Empty DOM response (0 bytes, 0 visible text)`)** |
+| `www-iamsunnywang-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Live desktop behavioral capture failed (0 valid keyframes)`)** |

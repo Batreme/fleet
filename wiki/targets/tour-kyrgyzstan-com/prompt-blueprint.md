@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: tour-kyrgyzstan-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "tour-kyrgyzstan-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#dc2f02` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Tour Kyrgyzstan — Central Asia, unmapped** (https://tour-kyrgyzstan.com/) — Discover authentic Kyrgyzstan tours. Mountain trekking, nomadic culture, and professional video production services.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Tour Kyrgyzstan — Central Asia, unmapped** (`https://tour-kyrgyzstan.com/`). Discover authentic Kyrgyzstan tours. Mountain trekking, nomadic culture, and professional video production services.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#dc2f02` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#dc2f02` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=10969px` / doc `11869px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `40px` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `0%`, `50%`.
@@ -109,6 +114,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.nav__mobile-menu`**: `transition: opacity .2s ease, transform .2s ease` extracted from `tour-kyrgyzstan-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<section.section>`.
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `11869px`, deepest scrollY reached `10969px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Interactive Control Probe (`carousel_next`)**: Tested `Next review` (diff `1.303`).
+- **Route Transition Architecture**: First internal navigation (`/index.html`) measured as `direct` in `849ms`.
 
 ---
 
@@ -167,6 +177,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="section">` framing `K y r g y z s t a n i s h o m e t o u s . W e ' ` and `K y r g y z s t a n i s h o m e t o u s .` (*"K y r g y z s t a n i s h o m e t o u s ."*) with `#dc2f02` surface cards, `#dc2f02` accents, and `img { display: block; max-width: 100%; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://tour-kyrgyzstan.com/`)**:
    - Landmark `<footer class="footer section--dark">` anchoring `Tour Kyrgyzstan — Central Asia, ` footer links (`Gallery · Expeditions`), copy *"W e ' d l o v e t o s h o w i t t o y o u ."*, and `#d1d1d1` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED` · sticky/fixed elements: `4`
+- **Step 02** (`y=850px`, `8%`): Active landmark `#founder` · sticky/fixed elements: `4`
+- **Step 03** (`y=2486px`, `23%`): Active landmark `Section @ 23%` · sticky/fixed elements: `5`
+- **Step 04** (`y=4209px`, `38%`): Active landmark `Section @ 38%` · sticky/fixed elements: `5`
+- **Step 05** (`y=6800px`, `62%`): Active landmark `IMMERSIVE NOMADIC EXPERIENCE` · sticky/fixed elements: `5`
+- **Step 06** (`y=8500px`, `77%`): Active landmark `WE ALSO PROVIDE PROFESSIONAL PRODUCTION SERVICES` · sticky/fixed elements: `4`
+- **Step 07** (`y=10200px`, `93%`): Active landmark `YOU STILL HAVE QUESTIONS? WE HAVE ANSWERS` · sticky/fixed elements: `4`
+- **Step 08** (`y=10969px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `4`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/index.html`)**: `https://tour-kyrgyzstan.com/index.html` — H1: `CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED`, scrollHeight `11869px`, transition `direct` (`849ms`)
+- **Other Route (`/gallery.html`)**: `https://tour-kyrgyzstan.com/gallery.html` — H1: `Gallery — Tour Kyrgyzstan`, scrollHeight `900px`, transition `direct` (`746ms`)
+- **Other Route (`/expeditions.html`)**: `https://tour-kyrgyzstan.com/expeditions.html` — H1: `Expeditions — Tour Kyrgyzstan`, scrollHeight `5968px`, transition `direct` (`634ms`)
 
 ---
 
@@ -219,8 +243,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#d1d1d1` — grounded in `.founder-grid { border: #d1d1d1 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `40px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 8px`)
@@ -244,7 +268,7 @@ Scaffold `tour-kyrgyzstan-com` (`Tour Kyrgyzstan — Central Asia, unmapped`) wi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav> — `tour-kyrgyzstan-com`)` (`tour-kyrgyzstan-com`) adapts across `@media (hover: none), (max-width: 900px)`, `@media (max-width: 900px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.76,0,.24,1)` transitions and links `Gallery · Expeditions`.
 2. **Hero Stage & Focal Lead (<section.hero> — `CENTRAL ASIA LIKE YOU'VE NEVER IMA`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED` and copy excerpt *"JOURNEYS WHICH DON'T EXIST IN GUIDEBOOKS. TREKKING, NOMADIC CULTU"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED`.
 3. **Primary Showcase & Content Grid (<section.section> — `Central Asia like you've never ima`)**:
    - DOM & Selectors: Landmark `<section class="section">` rendering section `Central Asia like you've never imagined` with copy *"K y r g y z s t a n i s h o m e t o u s . W e ' d l o v e t o s h"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `cassette.webp`), and grid rule `html { scroll-behavior: smooth; overflow-x: hidden; -webkit-text-size-adjust: 1... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section> — `Central Asia like you've never ima`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `40px` horizontal padding on mobile.
@@ -275,8 +299,42 @@ Scaffold `tour-kyrgyzstan-com` (`Tour Kyrgyzstan — Central Asia, unmapped`) wi
 - **Selector `.nav__mobile-menu`**: `transition: opacity .2s ease, transform .2s ease` extracted from `tour-kyrgyzstan-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<section.section>`.
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `11869px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: CENTRAL ASIA LIKE YOU'VE NE... (0%) -> #founder (8%) -> Section @ 23% (23%) -> Section @ 38% (38%) -> IMMERSIVE NOMADIC EXPERIENCE (62%) -> WE ALSO PROVIDE PROFESSIONA... (77%) -> YOU STILL HAVE QUESTIONS? W... (93%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/index.html` (other, direct), `/gallery.html` (other, direct), `/expeditions.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `tour-kyrgyzstan-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `8%` | #founder | `4` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2486px` | `23%` | Section @ 23% | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4209px` | `38%` | Section @ 38% | `5` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `62%` | IMMERSIVE NOMADIC EXPERIENCE | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `77%` | WE ALSO PROVIDE PROFESSIONAL PRODUCTION SERVICES | `4` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `93%` | YOU STILL HAVE QUESTIONS? WE HAVE ANSWERS | `4` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `10969px` | `100%` | Footer | `4` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2409px` | `50%` | IMMERSIVE NOMADIC EXPERIENCE | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `4818px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://tour-kyrgyzstan.com/index.html` | CENTRAL ASIA LIKE YOU'VE NEVER IMAGINED | `11869px` | `direct` (`849ms`) | [subpage-01-index-html.webp](assets/subpage-01-index-html.webp) |
+| `2` | `other` | `https://tour-kyrgyzstan.com/gallery.html` | Gallery — Tour Kyrgyzstan | `900px` | `direct` (`746ms`) | [subpage-02-gallery-html.webp](assets/subpage-02-gallery-html.webp) |
+| `3` | `other` | `https://tour-kyrgyzstan.com/expeditions.html` | Expeditions — Tour Kyrgyzstan | `5968px` | `direct` (`634ms`) | [subpage-03-expeditions-html.webp](assets/subpage-03-expeditions-html.webp) |
+

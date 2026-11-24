@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: bennos-light-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bennos-light.org/"
 final_url: "https://bennos-light.org/"
 status: blocked
-http_status: 200
+http_status: null
 capture_tier: none
-block_reason: "Headless Preloader / Blank Viewport Capture (LOADING YOU ARE ABOUT TO EXPERIENCE THE PERSONAL TESTIMONY OF HOLOCAUS)"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://bennos-light.org/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://bennos-light.org/](https://bennos-light.org/)
-- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (LOADING YOU ARE ABOUT TO EXPERIENCE THE PERSONAL TESTIMONY OF HOLOCAUS)
-- **Page Title**: Benno's Light
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://bennos-light.org/', waiting until 'domcontentloaded' )
+- **Page Title**: bennos-light-org
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `4`
+- **Recovered Stylesheets**: `1`
 
 ---
 

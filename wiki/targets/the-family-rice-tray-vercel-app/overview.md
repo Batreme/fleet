@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: the-family-rice-tray-vercel-app"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://the-family-rice-tray.vercel.app"
 final_url: "https://the-family-rice-tray.vercel.app/"
 status: analyzed

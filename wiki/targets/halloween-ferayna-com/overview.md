@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: halloween-ferayna-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://halloween.ferayna.com/"
 final_url: "https://halloween.ferayna.com/"
 status: blocked

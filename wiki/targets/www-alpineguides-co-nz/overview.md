@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-alpineguides-co-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.alpineguides.co.nz/"
 final_url: "https://www.alpineguides.co.nz/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Alpine Guides Aoraki · NZ Mountain Guiding Since 1966
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `66`
-- **Recovered Stylesheets**: `8`
+- **Recovered Scripts**: `293`
+- **Recovered Stylesheets**: `33`
 
 ---
 

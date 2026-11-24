@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: perappelgren-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://perappelgren.de/"
 final_url: "https://perappelgren.de/"
 status: analyzed
@@ -28,7 +28,7 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://perappelgren.de/](https://perappelgren.de/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Per Appelgren
+- **Page Title**: Per Appelgren · Fashion & Beauty Photographer, Paris & Berlin
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
 - **Recovered Scripts**: `21`
 - **Recovered Stylesheets**: `1`

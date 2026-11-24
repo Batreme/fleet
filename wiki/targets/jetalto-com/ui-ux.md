@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: jetalto-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `jetalto-com` (**JetALto, Private Jet Charter · Fly Anywhere, On Your Schedule**)
 - **Production URL**: [https://jetalto.com/](https://jetalto.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#faf7f2` canvas, `#0b1220` ink, `#000080` accent)
 - **Summary**: Instant private jet charter quotes from vetted operators. On-demand flights to 5,000+ airports worldwide. Empty-leg alerts, transparent p...
 - **Total Clean CSS Variables Extracted**: `47` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 73.44px`, `font-weight: 500`, `letter-spacing: -1.08px`); rule `h1` (`font-size: clamp(30px,4.4vw,52px)`, `line-height: 1.06`, `letter-spacing: -.01em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 26px`, `line-height: 40.3px`, `font-weight: 600`, `letter-spacing: -0.13px`); rule `h2` (`font-size: 26px`, `letter-spacing: -.005em`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 44px`, `line-height: 48.4px`, `font-weight: 500`, `letter-spacing: -0.22px`); rule `h2` (`font-size: 26px`, `letter-spacing: -.005em`, `font-weight: 600`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); rule `body` (`font-size: 16px`, `line-height: 1.55`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24.8px`, `font-weight: 400`); rule `small` (`font-size: 11px`, `letter-spacing: .06em`, `font-weight: 600`)
 

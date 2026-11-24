@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: onecoldnight-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://onecoldnight.com/"
 final_url: "https://onecoldnight.com/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://onecoldnight.com/](https://onecoldnight.com/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
 - **Page Title**: onecoldnight-com
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `19`
+- **Recovered Stylesheets**: `2`
 
 ---
 

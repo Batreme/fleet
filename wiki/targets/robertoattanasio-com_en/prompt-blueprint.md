@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: robertoattanasio-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "robertoattanasio-com_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#9c0ea3`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
 
 > **Roberto Attanasio** (https://robertoattanasio.com/en) — I write code by day and words by night. Projects, music and poems, all hidden in my digital world: drag the field and find them.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Roberto Attanasio** (`https://robertoattanasio.com/en`). I write code by day and words by night. Projects, music and poems, all hidden in my digital world: drag the field and find them.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#9c0ea3`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080808` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3f3f3` primary typography and `#9c0ea3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Mononoki` for display copy (`ROBERTO ATTANASIO`) with `Mononoki` and `Mononoki`.
+  - **Grounded Typographic Hierarchy**: Uses `Mononoki` across display (`ROBERTO ATTANASIO`) and body copy, paired with `Mononoki` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--margo-button-gap)`, padding `1rem`) with `cubic-bezier(.4,0,.2,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `var(--margo-button-gap)` grid gap.
 - **Border Radius Scale**: `var(--margo-radius)`, `var(--margo-radius-sm)`, `var(--margo-radius-xs)`, `9999px`.
@@ -115,6 +120,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
 - **Selector `:where(.margo-button-icon-label)`**: `transition: .18s` extracted from `robertoattanasio-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.inset-x-0>` and `<article.box-content>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -172,7 +180,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
 4. **Interactive Detail & Feature Matrix (<article.py-5> — `poetry poetry poetry`)**:
    - Landmark `<article class="box-content py-5">` framing `poetry poetry poetry` and `I write code by day and words by night. In betwe` (*"I write code by day and words by night. In between there's the pi"*) with `#080808` surface cards, `#9c0ea3` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.flex> — `https://robertoattanasio.com/en`)**:
-   - Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com 1753ZT0X-=X="*, and `#cecece` structural dividers.
+   - Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com KV12·3N+T7VX"*, and `#cecece` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `ROBERTO ATTANASIO` · sticky/fixed elements: `4`
 
 ---
 
@@ -189,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#080808` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f3f3f3`, **Accent / Highlight**: `#9c0ea3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080808` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3f3f3` primary typography and `#9c0ea3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Mononoki` for display copy (`ROBERTO ATTANASIO`) with `Mononoki` and `Mononoki`.
+  - **Grounded Typographic Hierarchy**: Uses `Mononoki` across display (`ROBERTO ATTANASIO`) and body copy, paired with `Mononoki` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--margo-button-gap)`, padding `1rem`) with `cubic-bezier(.4,0,.2,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--margo-color-medium`)**: `#787878` — grounded in `var(--margo-color-medium)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `1rem` lateral canvas padding with `var(--margo-button-gap)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--margo-button-gap)`)
@@ -256,7 +266,7 @@ Scaffold `robertoattanasio-com_en` (`Roberto Attanasio`) with these exact struct
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.inset-x-0> — `robertoattanasio-com_en`)` (`robertoattanasio-com_en`) adapts across `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `ROBERTO ATTANASIO`)**:
    - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `ROBERTO ATTANASIO` and copy excerpt *"Hi, I'm a Frontend Web Developer with five years of experience."* over `#080808` canvas and `#f3f3f3` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#080808` background with `#f3f3f3` headline `ROBERTO ATTANASIO`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#080808` background with `#f3f3f3` headline `ROBERTO ATTANASIO`.
 3. **Primary Showcase & Content Grid (<article.box-content> — `Roberto Attanasio`)**:
    - DOM & Selectors: Landmark `<article class="box-content py-5">` rendering section `Roberto Attanasio` with copy *"poetry poetry poetry"*, asset references (`index-G4udTFpP.css`, `index-DUR-Fu7l.js`, `graft-DQAKSCm4.js`, `route-BfXHpA5q.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.box-content> — `Roberto Attanasio`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--margo-button-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
@@ -264,14 +274,14 @@ Scaffold `robertoattanasio-com_en` (`Roberto Attanasio`) with these exact struct
    - DOM & Selectors: Landmark `<article class="box-content py-5">` framing `poetry poetry poetry` and `I write code by day and words by night. In betwe` (*"I write code by day and words by night. In between there's the pi"*) with `#080808` surface cards, `#9c0ea3` accents, and `strong { font-weight:bolder }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.py-5> — `poetry poetry poetry`)` uses `var(--margo-radius)`, `var(--margo-radius-sm)`, `var(--margo-radius-xs)`, `9999px` radii, `#9c0ea3` highlights, and assets (index-G4udTFpP.css, index-DUR-Fu7l.js, graft-DQAKSCm4.js).
 5. **Colophon & Global Directory Footer (<footer.flex> — `https://robertoattanasio.com/en`)**:
-   - DOM & Selectors: Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com 1753ZT0X-=X="*, and `#cecece` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com KV12·3N+T7VX"*, and `#cecece` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.flex> — `https://robertoattanasio.com/en`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `1rem` lateral canvas padding with `var(--margo-button-gap)` grid gap and attributes (data-precedence="default", data-root="true", data-cursor="expand").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Hi, I'm a Frontend Web Developer with five years of experience."*
 - Copy Excerpt 2: *"poetry poetry poetry"*
 - Copy Excerpt 3: *"I write code by day and words by night. In between there's the piano, design and p..."*
-- Copy Excerpt 4: *"r.attanasio90@gmail.com r.attanasio90@gmail.com 1753ZT0X-=X=1TV:Z1>K=7·"*
+- Copy Excerpt 4: *"r.attanasio90@gmail.com r.attanasio90@gmail.com KV12·3N+T7VX3TN9E2768K9"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)`
@@ -287,8 +297,25 @@ Scaffold `robertoattanasio-com_en` (`Roberto Attanasio`) with these exact struct
 - **Selector `:where(.margo-button-icon-label)`**: `transition: .18s` extracted from `robertoattanasio-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.inset-x-0>` and `<article.box-content>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `900px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: ROBERTO ATTANASIO (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `robertoattanasio-com_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | ROBERTO ATTANASIO | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

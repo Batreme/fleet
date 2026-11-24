@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ruthgriffioen-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ruthgriffioen-art` (**Ruth Griffioen – Colourful paintings & art prints**)
 - **Production URL**: [https://ruthgriffioen.art/](https://ruthgriffioen.art/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c42000`)
 - **Summary**: Discover colourful paintings by Dutch artist Ruth Griffioen, from portraits of women to still lifes and landscapes. Art prints coming Jan...
 - **Total Clean CSS Variables Extracted**: `62` (curated live-grounded set below)

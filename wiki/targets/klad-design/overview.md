@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: klad-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://klad.design/"
 final_url: "https://klad.design/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Multidisciplinary Design Syndicate – KLAD
 - **Identified Frameworks**: Webflow, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `38`
+- **Recovered Stylesheets**: `3`
 
 ---
 

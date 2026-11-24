@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: vivmgmt-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `vivmgmt-com` (**Photographer Agency & Commercial Photo Production — ViV MGMT**)
 - **Production URL**: [https://vivmgmt.com/](https://vivmgmt.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ebebeb` accent)
 - **Summary**: Representing commercial photographers, directors, and creatives while providing full-service photo and video production for brands nation...
 - **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.c-navbar> — `vivmgmt-com`)**:
-   - Landmark `<nav class="c-navbar">` (`1440x41px`) hosting `Photographer Agency & Commercial Pho` navigation (`ViV Management · Artists · News · About · All`), DOM attributes (`data-col="1"`, `data-href="/artist/jonathan-mannion"`, `data-cycle="[("t":"img","url":"ht..."`, `data-col="2"`), and stylesheet rule `html { box-sizing:border-box;-ms-overflow-style:scrollbar }`.
+   - Landmark `<nav class="c-navbar">` (`1440x41px`) hosting `Photographer Agency & Commercial Pho` navigation (`ViV Management · Artists · News · About · All`), DOM attributes (`data-col="1"`, `data-href="/artist/edward-tran"`, `data-cycle="[("t":"img","url":"ht..."`, `data-col="2"`), and stylesheet rule `html { box-sizing:border-box;-ms-overflow-style:scrollbar }`.
 2. **Hero Stage & Focal Lead (<section.c-home__gallery> — `ViV — artist management + producti`)**:
    - Landmark `<section class="c-home__gallery">` presenting display lead `ViV — artist management + production` and copy excerpt *"Artist management + production."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.c-home__gallery:nth(2)> — `ARTURO TORRES x MARINE LAYER`)**:

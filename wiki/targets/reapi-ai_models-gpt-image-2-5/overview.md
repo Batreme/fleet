@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: reapi-ai_models-gpt-image-2-5"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://reapi.ai/models/gpt-image-2-5"
 final_url: "https://reapi.ai/models/gpt-image-2-5"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://reapi.ai/models/gpt-image-2-5](https://reapi.ai/models/gpt-image-2-5)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: GPT Image 2.5 — Sharper Detail, Precise Editing
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `76`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `83`
+- **Recovered Stylesheets**: `5`
 
 ---
 

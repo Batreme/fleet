@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ladolfinajumping-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ladolfinajumping-com` (**La Dolfina Jumping. World class genetics, breed in Argentina**)
 - **Production URL**: [https://ladolfinajumping.com/](https://ladolfinajumping.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#fbe0b6` accent)
 - **Summary**: We are dedicated to create the finest show jumping horses through our cutting-edge breeding program in Argentina by sourcing and importin...
 - **Total Clean CSS Variables Extracted**: `12` (curated live-grounded set below)

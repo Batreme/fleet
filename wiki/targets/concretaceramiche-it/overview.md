@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: concretaceramiche-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://concretaceramiche.it/"
 final_url: "https://concretaceramiche.it/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Concreta Ceramiche Artigianali Fatte a Mano
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `33`
-- **Recovered Stylesheets**: `13`
+- **Recovered Scripts**: `143`
+- **Recovered Stylesheets**: `44`
 
 ---
 

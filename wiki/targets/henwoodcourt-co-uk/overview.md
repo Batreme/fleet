@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: henwoodcourt-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://henwoodcourt.co.uk"
 final_url: "https://henwoodcourt.co.uk/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Henwood Court · Where financial freedom meets fulfilment
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `35`
+- **Recovered Stylesheets**: `14`
 
 ---
 

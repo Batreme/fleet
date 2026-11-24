@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: chanpan-com-ar"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `chanpan-com-ar` (**ChanPan · AI Video Production, Commercials & Creative Studio — Argentina**)
 - **Production URL**: [https://chanpan.com.ar](https://chanpan.com.ar)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#c1bbae` canvas, `#17130d` ink, `#f15a24` accent)
 - **Summary**: AI-driven video production, commercials, branded content, branding and 2D/3D animation. A creative studio from Corrientes, Argentina, wor...
-- **Total Clean CSS Variables Extracted**: `12` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
 
 ---
 
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `Archivo`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 32.64px`, `font-weight: 700`, `letter-spacing: -0.64px`); CSS variables `--display: 'Archivo',sans-serif`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 33.12px`, `line-height: 33.7824px`, `font-weight: 800`, `letter-spacing: -0.6624px`); rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 32.64px`, `font-weight: 700`, `letter-spacing: -0.64px`); CSS variables `--display: 'Archivo',sans-serif`; rule `h1` (`font-size: clamp(38px,6.4vw,92px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 52px`, `line-height: 53.04px`, `font-weight: 800`, `letter-spacing: -1.04px`); rule `h2` (`font-size: clamp(26px,3.2vw,42px)`, `font-weight: 800`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--body: 'Inter',system-ui,sans-serif`; rule `body` (`line-height: 1.6`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--mono: 'JetBrains Mono',ui-monospace,monospace`; rule `small` (`font-size: 9.5px`, `letter-spacing: .14em`, `font-weight: 600`)
 
@@ -38,9 +38,10 @@ http_status: 200
 | **Primary Typography Ink** | `#17130d` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#eee9de` | `var(--paper)` in `:root` |
 | **Interactive Accent / Highlight** | `#f15a24` | `var(--brand)` in `:root` |
-| **Secondary / Muted Copy** | `#524b3d` | live computed `p` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#524b3d` | live computed `button` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#a6a094` | `var(--line)` in `:root` (`rgba(23,19,13,.16)`) |
 | **Variable Token (`--brand-text`)** | `#a8360c` | `var(--brand-text)` in `:root` |
+| **Variable Token (`--black`)** | `#0b0b0b` | `var(--black)` in `:root` |
 
 ---
 
@@ -59,10 +60,10 @@ http_status: 200
 | `--mono` | `'JetBrains Mono',ui-monospace,monospace` | Typography / Scale Token |
 | `--mx` | `clamp(22px,5.5vw,88px)` | Dimension / Scale Token |
 | `--band-bottom` | `0px` | Dimension / Scale Token |
+| `--black` | `#0B0B0B` | Canvas / Surface Token |
 | `--chanpan-com-ar-bg` | `#c1bbae` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
 | `--chanpan-com-ar-ink` | `#17130d` | Primary Typography Ink (computed-derived) |
 | `--chanpan-com-ar-surface` | `#eee9de` | Surface Substrate (computed-derived) |
-| `--chanpan-com-ar-accent` | `#f15a24` | Interactive Accent (computed-derived) |
 
 ---
 
@@ -70,7 +71,7 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.hd> — `chanpan-com-ar`)**:
    - Landmark `<header class="hd">` (`1440x89px`) hosting `ChanPan · AI Video Production, Comme` navigation (`Home · Demo Reel · Services · Work · Contact`), DOM attributes (`data-clip="s1-loop"`, `data-clip="s2-scrub"`, `data-scrub`, `data-clip="s3-scrub"`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `ChanPan — AI video production and `)**:
-   - Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"AI as a production tool, not a shortcut."* over `#c1bbae` canvas and `#17130d` ink.
+   - Landmark `<section class="hero">` presenting display lead `ChanPan — AI video production and creative studio` and copy excerpt *"We make brands that climb to the very top."* over `#c1bbae` canvas and `#17130d` ink.
 3. **Primary Showcase & Content Grid (<section.drive> — `First, perspective.`)**:
    - Landmark `<section class="drive">` rendering section `First, perspective.` with copy *"Corrientes, Argentina"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `body.is-loading { overflow:hidden }`.
 4. **Interactive Detail & Feature Matrix (<section.drive:nth(2)> — `Our terrain.`)**:

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: sparkle-ankatms-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "sparkle-ankatms-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native+wheel
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#ff3b30`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#f
 
 > **Kids Reward Chart & Chore App · Sparkle** (https://sparkle.ankatms.com) — Organize tasks, earn stars and choose rewards together. Sparkle is a private reward-chart app for families and groups on iPhone and iPad....
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Kids Reward Chart & Chore App · Sparkle** (`https://sparkle.ankatms.com`). Organize tasks, earn stars and choose rewards together. Sparkle is a private reward-chart app for families and groups on iPhone and iPad....
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#ff3b30`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#1c1736` primary typography and `#ff3b30` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `SF Pro Display` for display copy (`Stars Today. Habits Tomorrow.`) with `SF Pro Display` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `SF Pro Display` across display (`Stars Today. Habits Tomorrow.`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 11.2px 19.2px`, padding `63.36px`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6700px` / doc `25386px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `63.36px` lateral canvas padding with `11.2px 19.2px` grid gap.
 - **Border Radius Scale**: `50%`, `12px`, `10px`, `100px`.
@@ -118,6 +123,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#f
 - **Selector `.nav__brand`**: `transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease` extracted from `sparkle-ankatms-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.16,1,0.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.scene>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native+wheel` (max document height `25386px`, deepest scrollY reached `6700px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Scroll to earn your first star`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Hover Physics (`first_card` · `Get Moving 30 minutes of movement...`)**: `boxShadow`: `rgba(245, 166, 35, 0.55...` -> `rgba(60, 40, 160, 0.42)...` (`transition-duration: 0.6s`, `timing: ease`).
+- **Interactive Control Probe (`accordion` · `Is Sparkle really free?`)**: Triggered visual diff `5.692` (attr ` -> `, captured in `assets/state-interactive.webp`).
 
 ---
 
@@ -167,7 +178,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#f
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)**:
-   - Landmark `<header class="nav is-scrolled">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
+   - Landmark `<header class="nav">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Stars Today. Habits Tomorrow.`)**:
    - Landmark `<section class="hero">` presenting display lead `Stars Today. Habits Tomorrow.` and copy excerpt *"A reward-chart app for families and groups"* over `#fbfaf6` canvas and `#1c1736` ink.
 3. **Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)**:
@@ -176,6 +187,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fbfaf6` / `#f
    - Landmark `<article class="tcard">` framing `Everyday tasks become achievements.` and `Write something` (*"Watch the film 0:30"*) with `#ffffff` surface cards, `#ff3b30` accents, and `.search-page a { color:4c3fba;text-underline-offset:.2em }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://sparkle.ankatms.com`)**:
    - Landmark `<footer class="foot">` anchoring `Kids Reward Chart & Chore App · ` footer links (`English · Deutsch · Español · Français · Türkçe`), copy *"Get Moving 30 minutes of movement. Sport, dance… 30 min 3 st"*, and `#e3dfef` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Stars Today. Habits Tomorrow.` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `3%`): Active landmark `Everyday tasks become achievements.` · sticky/fixed elements: `5`
+- **Step 03** (`y=1700px`, `7%`): Active landmark `Everyday tasks become achievements.` · sticky/fixed elements: `5`
+- **Step 04** (`y=2550px`, `10%`): Active landmark `Everyday tasks become achievements.` · sticky/fixed elements: `5`
+- **Step 05** (`y=3400px`, `14%`): Active landmark `Everyday tasks become achievements.` · sticky/fixed elements: `5`
+- **Step 06** (`y=4250px`, `17%`): Active landmark `Progress you can actually see.` · sticky/fixed elements: `6`
+- **Step 07** (`y=5100px`, `21%`): Active landmark `Progress you can actually see.` · sticky/fixed elements: `5`
+- **Step 08** (`y=6700px`, `27%`): Active landmark `Progress you can actually see.` · sticky/fixed elements: `6`
 
 ---
 
@@ -192,7 +212,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1c1736`, **Accent / Highlight**: `#ff3b30`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fbfaf6` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#1c1736` primary typography and `#ff3b30` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `SF Pro Display` for display copy (`Stars Today. Habits Tomorrow.`) with `SF Pro Display` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `SF Pro Display` across display (`Stars Today. Habits Tomorrow.`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 11.2px 19.2px`, padding `63.36px`) with `cubic-bezier(0.16,1,0.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -237,8 +257,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--night-ink`)**: `#f5f2ff` — grounded in `var(--night-ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `63.36px` lateral canvas padding with `11.2px 19.2px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 11.2px 19.2px`)
@@ -258,11 +278,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `sparkle-ankatms-com` (`Kids Reward Chart & Chore App · Sparkle`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)**:
-   - DOM & Selectors: Landmark `<header class="nav is-scrolled">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
+   - DOM & Selectors: Landmark `<header class="nav">` (`1440x76px`) hosting `Kids Reward Chart & Chore App · Spar` navigation (`English · Deutsch · Español · Français · Türkçe`), DOM attributes (`data-nav`, `data-logo`, `data-hud`, `data-hud-count`), and stylesheet rule `.search-languages a { color:inherit;text-decoration:underline;text-underline-offset:.2em }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `sparkle-ankatms-com`)` (`sparkle-ankatms-com`) adapts across `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width: 1180px)`, `@media (max-width: 959px)` with `cubic-bezier(0.16,1,0.3,1)`, `cubic-bezier(0.2,1.45,0.35,1)`, `cubic-bezier(0.25,1.25,0.4,1)` transitions and links `English · Deutsch · Español · Français · Türkçe`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Stars Today. Habits Tomorrow.`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Stars Today. Habits Tomorrow.` and copy excerpt *"A reward-chart app for families and groups"* over `#fbfaf6` canvas and `#1c1736` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fbfaf6` background with `#1c1736` headline `Stars Today. Habits Tomorrow.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fbfaf6` background with `#1c1736` headline `Stars Today. Habits Tomorrow.`.
 3. **Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)**:
    - DOM & Selectors: Landmark `<section class="scene scene--tasks">` rendering section `S t a r s T o d a y . H a b i t s T o m o r r o w .` with copy *"Sparkle turns everyday tasks into stars children can see, collect"*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `avatar-luca.jpg`, `sparkle-story.css`), and grid rule `.search-page img { display:block;max-width:100%;height:auto }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scene> — `S t a r s T o d a y . H a b i t s `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 11.2px 19.2px`) on desktop and Single-column vertical stack at `390px` viewport width with `63.36px` horizontal padding on mobile.
@@ -293,8 +313,40 @@ Scaffold `sparkle-ankatms-com` (`Kids Reward Chart & Chore App · Sparkle`) with
 - **Selector `.nav__brand`**: `transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease` extracted from `sparkle-ankatms-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.16,1,0.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.scene>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native+wheel` vertical progression up to `25386px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Stars Today. Habits Tomorrow. (0%) -> Everyday tasks become achie... (3%) -> Everyday tasks become achie... (7%) -> Everyday tasks become achie... (10%) -> Everyday tasks become achie... (14%) -> Progress you can actually see. (17%) -> Progress you can actually see. (21%) -> Progress you can actually see. (27%).
+- **Hover Micro-Interaction (`first_card`)**: Animate `boxShadow` with `0.6s ease`.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `sparkle-ankatms-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Stars Today. Habits Tomorrow. | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `3%` | Everyday tasks become achievements. | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `7%` | Everyday tasks become achievements. | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `10%` | Everyday tasks become achievements. | `5` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `14%` | Everyday tasks become achievements. | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `17%` | Progress you can actually see. | `6` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5100px` | `21%` | Progress you can actually see. | `5` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6700px` | `27%` | Progress you can actually see. | `6` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Stars Today. Habits Tomorrow. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Something worth working toward. | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Built for the whole family. | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Is Sparkle really free?`, diff `5.692`) | [state-interactive.webp](assets/state-interactive.webp) |
+

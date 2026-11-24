@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: bb-b-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "bb-b-net"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#fa4500` accent)"
 ---
@@ -16,7 +21,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Agence de Communication b2b et Marketing Industriel- bb&b** (https://bb-b.net) — bb&b agence conseil en marketing industriel et communication B2B, basée à Paris. Contactez-nous pour tous vos projets !
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,7 +31,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 - **Brand Essence & Persona**: **Agence de Communication b2b et Marketing Industriel- bb&b** (`https://bb-b.net`). bb&b agence conseil en marketing industriel et communication B2B, basée à Paris. Contactez-nous pour tous vos projets !
 - **Final Redirected URL**: [https://www.bb-b.net/](https://www.bb-b.net/)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#fa4500` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `main` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#fa4500` accents.
@@ -35,10 +42,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=9322px` / doc `10222px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `14px` lateral canvas padding with `.25rem` grid gap.
 - **Border Radius Scale**: `var(--toastify-toast-bd-radius)`, `100%`, `var(--radius-lg)`, `var(--radius-md)`.
@@ -111,6 +116,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.Toastify__close-button`**: `transition: .3s ease` extracted from `bb-b-net` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<nav.inset-x-0>` and `<section.w-full>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.relative>` and `<section.w-full>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `10222px`, deepest scrollY reached `9322px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Theme Toggle Probe (`Switch to dark mode`)**: Toggled body background `rgba(0, 0, 0, 0)` -> `rgba(0, 0, 0, 0)` and ink `rgb(0, 0, 0)` -> `rgb(0, 0, 0)`.
+- **Route Transition Architecture**: First internal navigation (`/blog`) measured as `SPA` in `1948ms`.
 
 ---
 
@@ -160,7 +170,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.inset-x-0> — `bb-b-net`)**:
-   - Landmark `<nav class="inset-x-0 top-0">` (`1440x64px`) hosting `Agence de Communication b2b et Marke` navigation (`Accueil · Agence · Compétences · Références · Blog`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/653..."`, `data-ueto="ueto_a4b03d3947"`, `data-cky-tag="revisit-consent"`), and stylesheet rule `font-face { font-family: 'Söhne Kraftig'; src: url('/fonts/soehne-kraftig.woff2') fo... }`.
+   - Landmark `<nav class="inset-x-0 top-0">` (`1440x64px`) hosting `Agence de Communication b2b et Marke` navigation (`Accueil · Agence · Compétences · Références · Blog`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/653..."`, `data-ueto="ueto_d354e50f6e"`, `data-cky-tag="revisit-consent"`), and stylesheet rule `font-face { font-family: 'Söhne Kraftig'; src: url('/fonts/soehne-kraftig.woff2') fo... }`.
 2. **Hero Stage & Focal Lead (<section.relative> — `MARKETING ET COMMUNICATION POUR LE`)**:
    - Landmark `<section class="relative flex">` presenting display lead `MARKETING ET COMMUNICATION POUR LE MONDE INDUSTRI...` and copy excerpt *"bb&b est une agence conseil en marketing et communication B2B, sp"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.w-full> — `Marketing et communication pour le`)**:
@@ -169,6 +179,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="pt-6 bg-white">` framing `Industries, technologies et b2b` and `Une agence singulière` (*"la compréhension des enjeux techniques, la solide expérience des "*) with `#f0efeb` surface cards, `#fa4500` accents, and `.Toastify__toast-container--top-c... { top:var(--toastify-toast-top);left:50%;transform:translate(-50%);align-i... }`.
 5. **Colophon & Global Directory Footer (<footer.w-full> — `https://bb-b.net`)**:
    - Landmark `<footer class="w-full flex">` anchoring `Agence de Communication b2b et M` footer links (`Accueil · Agence · Compétences · Références · Blog`), copy *"structurer, créer, déployer."*, and `#f0efeb` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `MARKETING ET COMMUNICATION POUR LE MONDE INDUSTRI...` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `9%`): Active landmark `INDUSTRIES, TECHNOLOGIES ET B2B` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `27%`): Active landmark `CE QUI NOUS DIFFÉRENCIE` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `46%`): Active landmark `CAMPAGNE MARKETING INTÉGRÉE` · sticky/fixed elements: `1`
+- **Step 05** (`y=5100px`, `55%`): Active landmark `DÉVELOPPEMENT WEB & MARKETING DIGITAL` · sticky/fixed elements: `1`
+- **Step 06** (`y=6800px`, `73%`): Active landmark `NOS ACTUALITÉS` · sticky/fixed elements: `1`
+- **Step 07** (`y=8500px`, `91%`): Active landmark `PARLONS-EN` · sticky/fixed elements: `1`
+- **Step 08** (`y=9322px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/blog`)**: `https://www.bb-b.net/blog` — H1: `MARKETING B2B : NEWS, IDÉES ET CONCEPTS`, scrollHeight `4823px`, transition `SPA` (`1948ms`)
+- **Detail Route (`/references/zonegreen`)**: `https://www.bb-b.net/references/zonegreen` — H1: `CAMPAGNE MARKETING INTÉGRÉE`, scrollHeight `10033px`, transition `direct` (`3093ms`)
+- **About Route (`/contact`)**: `https://www.bb-b.net/contact` — H1: `CONTACTER BB&B`, scrollHeight `5846px`, transition `direct` (`464ms`)
 
 ---
 
@@ -222,8 +246,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--bbb-link-color-active`)**: `#8b0000` — grounded in `var(--bbb-link-color-active)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `14px` lateral canvas padding with `.25rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: .25rem`)
@@ -243,11 +267,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `bb-b-net` (`Agence de Communication b2b et Marketing Industriel- bb&b`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.inset-x-0> — `bb-b-net`)**:
-   - DOM & Selectors: Landmark `<nav class="inset-x-0 top-0">` (`1440x64px`) hosting `Agence de Communication b2b et Marke` navigation (`Accueil · Agence · Compétences · Références · Blog`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/653..."`, `data-ueto="ueto_a4b03d3947"`, `data-cky-tag="revisit-consent"`), and stylesheet rule `font-face { font-family: 'Söhne Kraftig'; src: url('/fonts/soehne-kraftig.woff2') fo... }`.
+   - DOM & Selectors: Landmark `<nav class="inset-x-0 top-0">` (`1440x64px`) hosting `Agence de Communication b2b et Marke` navigation (`Accueil · Agence · Compétences · Références · Blog`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/653..."`, `data-ueto="ueto_d354e50f6e"`, `data-cky-tag="revisit-consent"`), and stylesheet rule `font-face { font-family: 'Söhne Kraftig'; src: url('/fonts/soehne-kraftig.woff2') fo... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.inset-x-0> — `bb-b-net`)` (`bb-b-net`) adapts across `@media only screen and (max-width: 480px)`, `@media (min-width:640px)`, `@media (min-width:968px)`, `@media (min-width:1024px)` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Accueil · Agence · Compétences · Références · Blog`.
 2. **Hero Stage & Focal Lead (<section.relative> — `MARKETING ET COMMUNICATION POUR LE`)**:
    - DOM & Selectors: Landmark `<section class="relative flex">` presenting display lead `MARKETING ET COMMUNICATION POUR LE MONDE INDUSTRI...` and copy excerpt *"bb&b est une agence conseil en marketing et communication B2B, sp"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `MARKETING ET COMMUNICATION POUR LE MONDE INDUSTRI...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `MARKETING ET COMMUNICATION POUR LE MONDE INDUSTRI...`.
 3. **Primary Showcase & Content Grid (<section.w-full> — `Marketing et communication pour le`)**:
    - DOM & Selectors: Landmark `<section class="relative w-full">` rendering section `Marketing et communication pour le monde industri...` with copy *"faire rayonner les entreprises industrielles et technologiques en"*, asset references (`webpack-4e4475af75d05841.js`, `813956296145205`, `fbevents.js`, `lftracker_v1_YEgkB8lB6dx4ep3Z.js`), and grid rule `.Toastify__toast-container--top-left { top:var(--toastify-toast-top);left:var(--toastify-toast-left) }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.w-full> — `Marketing et communication pour le`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: .25rem`) on desktop and Single-column vertical stack at `390px` viewport width with `14px` horizontal padding on mobile.
@@ -256,7 +280,7 @@ Scaffold `bb-b-net` (`Agence de Communication b2b et Marketing Industriel- bb&b`
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.pt-6> — `Industries, technologies et b2b`)` uses `var(--toastify-toast-bd-radius)`, `100%`, `var(--radius-lg)`, `var(--radius-md)` radii, `#fa4500` highlights, and assets (webpack-4e4475af75d05841.js, 813956296145205, fbevents.js).
 5. **Colophon & Global Directory Footer (<footer.w-full> — `https://bb-b.net`)**:
    - DOM & Selectors: Landmark `<footer class="w-full flex">` anchoring `Agence de Communication b2b et M` footer links (`Accueil · Agence · Compétences · Références · Blog`), copy *"structurer, créer, déployer."*, and `#f0efeb` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.w-full> — `https://bb-b.net`)` aligns to `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `14px` lateral canvas padding with `.25rem` grid gap and attributes (data-precedence="next", data-href="/_next/static/css/653...", data-ueto="ueto_a4b03d3947").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.w-full> — `https://bb-b.net`)` aligns to `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `14px` lateral canvas padding with `.25rem` grid gap and attributes (data-precedence="next", data-href="/_next/static/css/653...", data-ueto="ueto_d354e50f6e").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"bb&b est une agence conseil en marketing et communication B2B, spécialisée dans le..."*
@@ -278,8 +302,42 @@ Scaffold `bb-b-net` (`Agence de Communication b2b et Marketing Industriel- bb&b`
 - **Selector `.Toastify__close-button`**: `transition: .3s ease` extracted from `bb-b-net` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<nav.inset-x-0>` and `<section.w-full>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.relative>` and `<section.w-full>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `10222px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: MARKETING ET COMMUNICATION... (0%) -> INDUSTRIES, TECHNOLOGIES ET... (9%) -> CE QUI NOUS DIFFÉRENCIE (27%) -> CAMPAGNE MARKETING INTÉGRÉE (46%) -> DÉVELOPPEMENT WEB & MARKETI... (55%) -> NOS ACTUALITÉS (73%) -> PARLONS-EN (91%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/blog` (listing, SPA), `/references/zonegreen` (detail, direct), `/contact` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `bb-b-net`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | MARKETING ET COMMUNICATION POUR LE MONDE INDU... | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `9%` | INDUSTRIES, TECHNOLOGIES ET B2B | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `27%` | CE QUI NOUS DIFFÉRENCIE | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `46%` | CAMPAGNE MARKETING INTÉGRÉE | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `55%` | DÉVELOPPEMENT WEB & MARKETING DIGITAL | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `6800px` | `73%` | NOS ACTUALITÉS | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `8500px` | `91%` | PARLONS-EN | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `9322px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | MARKETING ET COMMUNICATION POUR LE MONDE... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5940px` | `50%` | DÉVELOPPEMENT WEB & MARKETING DIGITAL | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `11787px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.bb-b.net/blog` | MARKETING B2B : NEWS, IDÉES ET CONCEPTS | `4823px` | `SPA` (`1948ms`) | [subpage-01-blog.webp](assets/subpage-01-blog.webp) |
+| `2` | `detail` | `https://www.bb-b.net/references/zonegreen` | CAMPAGNE MARKETING INTÉGRÉE | `10033px` | `direct` (`3093ms`) | [subpage-02-references-zonegreen.webp](assets/subpage-02-references-zonegreen.webp) |
+| `3` | `about` | `https://www.bb-b.net/contact` | CONTACTER BB&B | `5846px` | `direct` (`464ms`) | [subpage-03-contact.webp](assets/subpage-03-contact.webp) |
+

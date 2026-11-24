@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: kissbranding-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "kissbranding-co-uk"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 5
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#008300`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Kiss · Brands that Kiss** (https://kissbranding.co.uk/) — Brand strategy and identity for founder-led and investor-backed businesses at the moments that matter. Transform Award-winning studio in...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Kiss · Brands that Kiss** (`https://kissbranding.co.uk/`). Brand strategy and identity for founder-led and investor-backed businesses at the moments that matter. Transform Award-winning studio in...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#008300`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#008300` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Apple Color Emoji` for display copy (`Kiss · Brands that Kiss`) with `Apple Color Emoji` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Apple Color Emoji` across display (`Kiss · Brands that Kiss`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: var(--spacing-grid)`, padding `var(--spacing-container)`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1920px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-container)` lateral canvas padding with `var(--spacing-grid)` grid gap.
 - **Border Radius Scale**: `var(--tac-border-radius)`, `var(--tac-btn-border-radius)`, `8px`, `5px`.
@@ -109,6 +114,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `.transition-all`**: `transition: var(--tw-ease,ease)` extracted from `kissbranding-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.pointer-events-none>` and `<div.bg-white>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -167,6 +175,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<div class="mobile-wrapper bg-white">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Mandatory cookies This site uses cookies necessary for its proper"*) with `#ff0000` surface cards, `#008300` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.yoast-schema-graph> — `https://kissbranding.co.uk/`)**:
    - Landmark `<footer class="yoast-schema-graph">` anchoring `Kiss · Brands that Kiss` footer links (`Overview · Index · Archive · About · Contact`), copy *"This site uses cookies necessary for its proper functioning "*, and `#333333` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Hero` · sticky/fixed elements: `2`
+- **Step 05** (`y=0px`, `33%`): Active landmark `Hero` · sticky/fixed elements: `2`
 
 ---
 
@@ -183,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#008300`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#008300` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Apple Color Emoji` for display copy (`Kiss · Brands that Kiss`) with `Apple Color Emoji` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Apple Color Emoji` across display (`Kiss · Brands that Kiss`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: var(--spacing-grid)`, padding `var(--spacing-container)`) with `cubic-bezier(.23,1,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +233,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#333333` — grounded in `#tarteaucitron .tarteaucitronBo... { border: #333333 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1920px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing-container)` lateral canvas padding with `var(--spacing-grid)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: var(--spacing-grid)`)
@@ -244,7 +258,7 @@ Scaffold `kissbranding-co-uk` (`Kiss · Brands that Kiss`) with these exact stru
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.pointer-events-none> — `kissbranding-co-uk`)` (`kissbranding-co-uk`) adapts across `@media (min-width:375px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1200px)` with `cubic-bezier(.23,1,.32,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<div.mobile-wrapper> — `Kiss · Brands that Kiss`)**:
    - DOM & Selectors: Landmark `<div class="mobile-wrapper bg-white">` presenting display lead `Kiss · Brands that Kiss` and copy excerpt *"Cookie preferences"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#ffffff` headline `Kiss · Brands that Kiss`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×872px` mobile) sets `#000000` background with `#ffffff` headline `Kiss · Brands that Kiss`.
 3. **Primary Showcase & Content Grid (<div.bg-white> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<div class="mobile-wrapper bg-white">` rendering section `Featured Work & Interactive Showcase` with copy *"Preference for all services"*, asset references (`tarteaucitron.min.js`, `apple-touch-icon-57x57.png`, `apple-touch-icon-60x60.png`, `apple-touch-icon-72x72.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.bg-white> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: var(--spacing-grid)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-container)` horizontal padding on mobile.
@@ -275,8 +289,29 @@ Scaffold `kissbranding-co-uk` (`Kiss · Brands that Kiss`) with these exact stru
 - **Selector `.transition-all`**: `transition: var(--tw-ease,ease)` extracted from `kissbranding-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.23,1,.32,1)`)**: Governs interactive state transitions across `<header.pointer-events-none>` and `<div.bg-white>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Lottie Vector Animation Player, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 5 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%) -> Hero (8%) -> Hero (17%) -> Hero (25%) -> Hero (33%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `kissbranding-co-uk`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Hero | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | Hero | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

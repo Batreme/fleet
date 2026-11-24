@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-butter-video"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-butter-video"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#00ffd0`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 > **Butter Video · Online Video Editor Engineered for Creativity** (https://www.butter.video/) — The first video editor and design platform built with creative code for creative teams. It's a whole new timeline.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Butter Video · Online Video Editor Engineered for Creativity** (`https://www.butter.video/`). The first video editor and design platform built with creative code for creative teams. It's a whole new timeline.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#00ffd0`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#0f0f0f` primary typography and `#00ffd0` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DieGrotesk` for display copy (`Engineered for Creativity Engineered`) with `DieGrotesk` and `monospace)`.
+  - **Grounded Typographic Hierarchy**: Uses `DieGrotesk` across display (`Engineered for Creativity Engineered`) and body copy, paired with `monospace)` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: .75rem`, padding `1.5rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=0px` / doc `14365px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `1920px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `.75rem` grid gap.
 - **Border Radius Scale**: `8px`, `1.6rem`, `50%`, `1rem`.
@@ -58,7 +63,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 | **Primary Typography Ink** | `#0f0f0f` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ededed` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#00ffd0` | `var(--perf-gradient-primary)` in `:root` |
-| **Secondary / Muted Copy** | `#718096` | `var(--perf-text-muted)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#fdfdfd` | `.CreatorSlice_secondaryButton__... { border-color: #fdfdfd }` |
 | **Variable Token (`--butter-white`)** | `#fafafa` | `var(--butter-white)` in `:root` |
 | **Variable Token (`--butter-off-white`)** | `#f7f7f7` | `var(--butter-off-white)` in `:root` |
@@ -120,6 +125,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: none` extracted from `www-butter-video` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `14365px`, deepest scrollY reached `0px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Interactive Control Probe (`accordion`)**: Tested `Describe Describe` (diff `0.0`).
 
 ---
 
@@ -169,15 +178,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.kbhUnc> — `www-butter-video`)**:
-   - Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
+   - Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.__className_8d5843 { font-family:DieGrotesk,DieGrotesk Fallback;font-weight:400;font-style:no... }`.
 2. **Hero Stage & Focal Lead (<section.hsoZjO> — `Engineered for Creativity Engineer`)**:
    - Landmark `<section class="hsoZjO">` presenting display lead `Engineered for Creativity Engineered for Creativity` and copy excerpt *"It's a whole new timeline."* over `#ffffff` canvas and `#0f0f0f` ink.
 3. **Primary Showcase & Content Grid (<section.glnUmG> — `Butter is the first video editor w`)**:
-   - Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.CreatorSlice_surfacePage__D5FDj { background:var(--butter-white) }`.
+   - Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.__className_210739 { font-family:ABCDiatype,ABCDiatype Fallback;font-weight:400;font-style:no... }`.
 4. **Interactive Detail & Feature Matrix (<section.lhNRew> — `Browse curated blocks for motion g`)**:
-   - Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_surfaceSubtle__v5RgA { background:var(--butter-off-white) }`.
+   - Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
 5. **Colophon & Global Directory Footer (<footer.bdNowa> — `https://www.butter.video/`)**:
    - Landmark `<footer class="bdNowa">` anchoring `Butter Video · Online Video Edit` footer links (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), copy *"Product Product Explore features Explore features"*, and `#fdfdfd` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Engineered for Creativity Engineered for Creativity` · sticky/fixed elements: `1`
+- **Step 02** (`y=0px`, `100%`): Active landmark `Viewport` · sticky/fixed elements: `0`
 
 ---
 
@@ -194,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0f0f0f`, **Accent / Highlight**: `#00ffd0`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#0f0f0f` primary typography and `#00ffd0` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DieGrotesk` for display copy (`Engineered for Creativity Engineered`) with `DieGrotesk` and `monospace)`.
+  - **Grounded Typographic Hierarchy**: Uses `DieGrotesk` across display (`Engineered for Creativity Engineered`) and body copy, paired with `monospace)` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: .75rem`, padding `1.5rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -226,7 +238,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#0f0f0f` — grounded in live computed `h1` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#ededed` — grounded in live computed `footer` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#00ffd0` — grounded in `var(--perf-gradient-primary)` in `:root`
-- **Secondary / Muted Copy**: `#718096` — grounded in `var(--perf-text-muted)` in `:root`
+- **Secondary / Muted Copy**: `#808080` — grounded in live computed `hr` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#fdfdfd` — grounded in `.CreatorSlice_secondaryButton__... { border-color: #fdfdfd }`
 - **Variable Token (`--butter-white`)**: `#fafafa` — grounded in `var(--butter-white)` in `:root`
 - **Variable Token (`--butter-off-white`)**: `#f7f7f7` — grounded in `var(--butter-off-white)` in `:root`
@@ -241,8 +253,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--butter-pink`)**: `#f9abff` — grounded in `var(--butter-pink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `1920px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `1.5rem` lateral canvas padding with `.75rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: .75rem`)
@@ -262,16 +274,16 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-butter-video` (`Butter Video · Online Video Editor Engineered for Creativity`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.kbhUnc> — `www-butter-video`)**:
-   - DOM & Selectors: Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
+   - DOM & Selectors: Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.__className_8d5843 { font-family:DieGrotesk,DieGrotesk Fallback;font-weight:400;font-style:no... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.kbhUnc> — `www-butter-video`)` (`www-butter-video`) adapts across `@media (max-width:900px)`, `@media (max-width:650px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width: 480px)` with `cubic-bezier(0.25,0.1,0.25,1)`, `cubic-bezier(0.200,0.715,0.205,0.990)` transitions and links `Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`.
 2. **Hero Stage & Focal Lead (<section.hsoZjO> — `Engineered for Creativity Engineer`)**:
    - DOM & Selectors: Landmark `<section class="hsoZjO">` presenting display lead `Engineered for Creativity Engineered for Creativity` and copy excerpt *"It's a whole new timeline."* over `#ffffff` canvas and `#0f0f0f` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0f0f0f` headline `Engineered for Creativity Engineered for Creativity`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×1744px` mobile) sets `#ffffff` background with `#0f0f0f` headline `Engineered for Creativity Engineered for Creativity`.
 3. **Primary Showcase & Content Grid (<section.glnUmG> — `Butter is the first video editor w`)**:
-   - DOM & Selectors: Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.CreatorSlice_surfacePage__D5FDj { background:var(--butter-white) }`.
+   - DOM & Selectors: Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.__className_210739 { font-family:ABCDiatype,ABCDiatype Fallback;font-weight:400;font-style:no... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.glnUmG> — `Butter is the first video editor w`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: .75rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.lhNRew> — `Browse curated blocks for motion g`)**:
-   - DOM & Selectors: Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_surfaceSubtle__v5RgA { background:var(--butter-off-white) }`.
+   - DOM & Selectors: Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.lhNRew> — `Browse curated blocks for motion g`)` uses `8px`, `1.6rem`, `50%`, `1rem` radii, `#00ffd0` highlights, and assets (5fb8d156cdd6d753-s.p.woff2, da60608f2183158e-s.p.woff2, 2836d44e2fdcb041.css).
 5. **Colophon & Global Directory Footer (<footer.bdNowa> — `https://www.butter.video/`)**:
    - DOM & Selectors: Landmark `<footer class="bdNowa">` anchoring `Butter Video · Online Video Edit` footer links (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), copy *"Product Product Explore features Explore features"*, and `#fdfdfd` structural dividers.
@@ -286,19 +298,38 @@ Scaffold `www-butter-video` (`Butter Video · Online Video Editor Engineered for
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`, `cubic-bezier(0.200,0.715,0.205,0.990)`
 - **Extracted Stylesheet Rules (`www-butter-video`)**:
+- `.__className_8d5843 { font-family:DieGrotesk,DieGrotesk Fallback;font-weight:400;font-style:no... }`
+- `.__className_210739 { font-family:ABCDiatype,ABCDiatype Fallback;font-weight:400;font-style:no... }`
 - `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`
 - `.CreatorSlice_surfacePage__D5FDj { background:var(--butter-white) }`
 - `.CreatorSlice_surfaceSubtle__v5RgA { background:var(--butter-off-white) }`
-- `.CreatorSlice_surfaceMuted__nLVRI { background:var(--butter-light-grey) }`
-- `.CreatorSlice_surfaceInverse___5xY_ { background:var(--butter-true-black);color:var(--butter-white) }`
 - **Per-Selector Transition Rules**:
 - **Selector `.CreatorSlice_secondaryButton__I1S9a`**: `transition: transform .2s var(--butter-ease-out),background .2s var(--butt...` extracted from `www-butter-video` stylesheet.
 - **Selector `.CreatorSlice_tabs__0DQZR button`**: `transition: background .2s var(--butter-ease-out),color .2s var(--butter-e...` extracted from `www-butter-video` stylesheet.
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: none` extracted from `www-butter-video` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `14365px` across 2 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Engineered for Creativity E... (0%) -> Viewport (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-butter-video`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Engineered for Creativity Engineered for Crea... | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `100%` | Viewport | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `5501px` | `50%` | Describe Describe | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `11002px` | `100%` | Footer | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+

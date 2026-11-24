@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: mauricemoynihan-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `mauricemoynihan-com` (**Maurice Moynihan**)
 - **Production URL**: [https://mauricemoynihan.com](https://mauricemoynihan.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#efede6` / `#ff0000`)
 - **Summary**: Advertising creative director, Melbourne. A portfolio. Some of it won things. It also has an album, which hasn’t.
 - **Total Clean CSS Variables Extracted**: `25` (curated live-grounded set below)

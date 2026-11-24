@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-plugandplaydesign-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,8 +13,8 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-plugandplaydesign-co-uk` (**Web Design Agency London & Guildford · Plug & Play**)
 - **Production URL**: [https://www.plugandplaydesign.co.uk/](https://www.plugandplaydesign.co.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `#080808` ink, `#1863dc` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fafafa` canvas, `#080808` ink, `#808080` accent)
 - **Summary**: Award-winning web design agency in London and Guildford. High-performance websites and digital retainers that drive measurable growth.
 - **Total Clean CSS Variables Extracted**: `380` (curated live-grounded set below)
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Geist`
 - **Monospace / Technical Font Stack**: `Geist Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.28px`); rule `h1` (`font-size: var(--text-body-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`, `letter-spacing: -0.28px`); rule `h2` (`font-size: var(--text-body-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 38.4px`, `font-weight: 400`, `letter-spacing: -0.64px`); rule `h2` (`font-size: var(--text-body-sm)`, `line-height: var(--tw-leading,var(...`, `letter-spacing: var(--tw-tracking,var...`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-body-sm: .875rem`, `--text-body-sm--line-height: 1.4`, `--text-body-sm--letter-spacing: -.02em`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: "Geist Mono",ui-monospace,"SF Mono",Menlo,monospace`, `--default-mono-font-family: var(--font-mono)`, `--text-caption: .75rem`
 
@@ -37,9 +37,9 @@ http_status: 200
 | **Primary Canvas Substrate** | `#fafafa` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#080808` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffffff` | `.bg-white { background-color: white }` (`#ffffff`) |
-| **Interactive Accent / Highlight** | `#1863dc` | `.cky-dma-content-wrapper button... { color: #1863dc }` |
+| **Interactive Accent / Highlight** | `#808080` | live computed `a` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#808080` | live computed `p` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#1863dc` | `.cky-btn-customize { border: #1863dc }` |
+| **Structural Hairline Border** | `#808080` | hairline divider derived from live computed `p` `color` (`computed_styles.json`) |
 
 ---
 
@@ -71,8 +71,8 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.px-page> — `Web Design Agency in London and Su`)**:
    - Landmark `<section class="px-page pt-section">` presenting display lead `Web Design Agency in London and Surrey` and copy excerpt *"Plug and Play is a creative web design agency based in Guildford,"* over `#fafafa` canvas and `#080808` ink.
 3. **Primary Showcase & Content Grid (<section.bg-background> — `Web Design Agency`)**:
-   - Landmark `<section class="bg-background px-page">` rendering section `Web Design Agency` with copy *"Websites that drive results,"*, asset references (`ca4cfa437ae45d18.css`, `dd5d352a082118c1.css`, `webpack-43624c9fe997cbf4.js`, `clarity.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="bg-background px-page">` rendering section `Web Design Agency` with copy *"Websites that drive results,"*, asset references (`ca4cfa437ae45d18.css`, `dd5d352a082118c1.css`, `webpack-43624c9fe997cbf4.js`, `cf303062-0b72e54636065547.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.w-screen> — `Websites that drive results, digit`)**:
-   - Landmark `<section class="w-screen">` framing `Websites that drive results, digital retainers th...` and `Critical thinking. Creativity. Innovation.` (*"digital retainers that deliver growth."*) with `#ffffff` surface cards, `#1863dc` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="w-screen">` framing `Websites that drive results, digital retainers th...` and `Critical thinking. Creativity. Innovation.` (*"digital retainers that deliver growth."*) with `#ffffff` surface cards, `#808080` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.bg-background> — `https://www.plugandplaydesign.co.uk/`)**:
-   - Landmark `<footer class="bg-background px-page">` anchoring `Web Design Agency London & Guild` footer links (`Web Design · Branding · Digital Marketing · UX / UI Design · eCommerce`), copy *"Trusted by ambitious organisations across every major sector"*, and `#1863dc` structural dividers.
+   - Landmark `<footer class="bg-background px-page">` anchoring `Web Design Agency London & Guild` footer links (`Web Design · Branding · Digital Marketing · UX / UI Design · eCommerce`), copy *"Trusted by ambitious organisations across every major sector"*, and `#808080` structural dividers.

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: vploss-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "vploss-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff2a2a`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **VPLOSS** (https://vploss.com) — VPLOSS, the fashion label of designer Vincent Ploss: the New York and Paris Fashion Week 2026 collections, with every runway look to rent.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **VPLOSS** (`https://vploss.com`). VPLOSS, the fashion label of designer Vincent Ploss: the New York and Paris Fashion Week 2026 collections, with every runway look to rent.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff2a2a`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#030303` primary typography and `#ff2a2a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Monument Extended` for display copy (`VPLOSS`) with `PP Monument Extended Fallback` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `PP Monument Extended` for display copy (`VPLOSS`) with `PP Monument Extended Fallback`.
   - **Calibrated Spatial Grid & Motion**: Combines `980px` container bounds (`gap: 8px`, padding `21px`) with `cubic-bezier(.33,1,.68,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8195px` / doc `9095px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `980px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `21px` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `50%`, `4px`, `3px`, `8px`.
@@ -121,6 +126,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `._header_a9xy0_24`**: `transition: box-shadow .5s cubic-bezier(.33,1,.68,1)` extracted from `vploss-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section#film>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9095px`, deepest scrollY reached `8195px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Route Transition Architecture**: First internal navigation (`/news`) measured as `SPA` in `1946ms`.
 
 ---
 
@@ -179,6 +188,20 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
    - Landmark `<section id="looks">` framing `Campaigns` and `My Partners` (*"New York Fashion Week 2026 The Hourglass, Pinned, Confined, Ideal"*) with `#ed3833` surface cards, `#ff2a2a` accents, and `nded_a9xy0_95 ._navLink_a9xy0_108... { opacity:.85 }`.
 5. **Colophon & Global Directory Footer (<footer#footer> — `https://vploss.com`)**:
    - Landmark `<footer id="footer">` anchoring `VPLOSS` footer links (`LOOKS L O O K S · RENT R E N T`), copy *"The Hourglass, Pinned, Confined, Ideal, The Thread, Armour /"*, and `#d4d4d4` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Cookie Settings` · sticky/fixed elements: `4`
+- **Step 02** (`y=850px`, `10%`): Active landmark `Cookie Settings` · sticky/fixed elements: `5`
+- **Step 03** (`y=2550px`, `31%`): Active landmark `CAMPAIGNS` · sticky/fixed elements: `4`
+- **Step 04** (`y=3400px`, `41%`): Active landmark `Cookie Settings` · sticky/fixed elements: `4`
+- **Step 05** (`y=5100px`, `62%`): Active landmark `#partners` · sticky/fixed elements: `4`
+- **Step 06** (`y=0px`, `0%`): Active landmark `Viewport` · sticky/fixed elements: `0`
+- **Step 07** (`y=7650px`, `93%`): Active landmark `Cookie Settings` · sticky/fixed elements: `3`
+- **Step 08** (`y=8195px`, `100%`): Active landmark `SKULLS AND NEEDLES EVERYWHERE` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/news`)**: `https://vploss.com/news` — H1: `NEWS`, scrollHeight `3392px`, transition `SPA` (`1946ms`)
+- **Detail Route (`/campaigns/world-on-fire`)**: `https://vploss.com/campaigns/world-on-fire` — H1: `World on Fire — VPLOSS`, scrollHeight `8339px`, transition `direct` (`7169ms`)
+- **About Route (`/about`)**: `https://vploss.com/about` — H1: `Vincent Ploss is the founder and designer behind...`, scrollHeight `5790px`, transition `direct` (`797ms`)
 
 ---
 
@@ -195,7 +218,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#030303`, **Accent / Highlight**: `#ff2a2a`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#030303` primary typography and `#ff2a2a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Monument Extended` for display copy (`VPLOSS`) with `PP Monument Extended Fallback` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `PP Monument Extended` for display copy (`VPLOSS`) with `PP Monument Extended Fallback`.
   - **Calibrated Spatial Grid & Motion**: Combines `980px` container bounds (`gap: 8px`, padding `21px`) with `cubic-bezier(.33,1,.68,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -243,8 +266,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--paris-soot`)**: `#4d4642` — grounded in `var(--paris-soot)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `980px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `21px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 980px`, `gap: 8px`)
@@ -268,7 +291,7 @@ Scaffold `vploss-com` (`VPLOSS`) with these exact structural regions, extracted 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `vploss-com`)` (`vploss-com`) adapts across `@media (width<=767px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference) and (hover:hover)`, `@media (prefers-reduced-motion:no-preference)` with `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `LOOKS L O O K S · RENT R E N T`.
 2. **Hero Stage & Focal Lead (<section.heroPin> — `VPLOSS`)**:
    - DOM & Selectors: Landmark `<section class="heroPin">` presenting display lead `VPLOSS` and copy excerpt *"LOOKS FROM THE SHOW"* over `#ffffff` canvas and `#030303` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#030303` headline `VPLOSS`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#030303` headline `VPLOSS`.
 3. **Primary Showcase & Content Grid (<section#film> — `NYFW '26`)**:
    - DOM & Selectors: Landmark `<section id="film">` rendering section `NYFW '26` with copy *"Looks from the Show"*, asset references (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `gnExpanded_a9xy0_95 ._navLink_a9x... { color:030303 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section#film> — `NYFW '26`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 980px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `21px` horizontal padding on mobile.
@@ -299,8 +322,42 @@ Scaffold `vploss-com` (`VPLOSS`) with these exact structural regions, extracted 
 - **Selector `._header_a9xy0_24`**: `transition: box-shadow .5s cubic-bezier(.33,1,.68,1)` extracted from `vploss-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section#film>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9095px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Cookie Settings (0%) -> Cookie Settings (10%) -> CAMPAIGNS (31%) -> Cookie Settings (41%) -> #partners (62%) -> Viewport (0%) -> Cookie Settings (93%) -> SKULLS AND NEEDLES EVERYWHERE (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/news` (listing, SPA), `/campaigns/world-on-fire` (detail, direct), `/about` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `vploss-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Cookie Settings | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | Cookie Settings | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `31%` | CAMPAIGNS | `4` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `41%` | Cookie Settings | `4` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `62%` | #partners | `4` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `0%` | Viewport | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `93%` | Cookie Settings | `3` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8195px` | `100%` | SKULLS AND NEEDLES EVERYWHERE | `3` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | #hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4154px` | `50%` | #designer | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `8308px` | `100%` | SKULLS AND NEEDLES EVERYWHERE | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://vploss.com/news` | NEWS | `3392px` | `SPA` (`1946ms`) | [subpage-01-news.webp](assets/subpage-01-news.webp) |
+| `2` | `detail` | `https://vploss.com/campaigns/world-on-fire` | World on Fire — VPLOSS | `8339px` | `direct` (`7169ms`) | [subpage-02-campaigns-world-on-fire.webp](assets/subpage-02-campaigns-world-on-fire.webp) |
+| `3` | `about` | `https://vploss.com/about` | Vincent Ploss is the founder and desi... | `5790px` | `direct` (`797ms`) | [subpage-03-about.webp](assets/subpage-03-about.webp) |
+

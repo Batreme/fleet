@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: layrmedia-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `layrmedia-com` (**LAYR Media · Creative Photography & Videography Studio**)
 - **Production URL**: [https://layrmedia.com/](https://layrmedia.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f8f7f6` / `#ff0033`)
 - **Summary**: A Toronto-based photography and video production studio creating high-quality commercial, brand, corporate and social content from concep...
 - **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Koulen`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 172.8px`, `line-height: 138.24px`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 115.2px`, `line-height: 86.4px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 331.2px`, `line-height: 331.2px`, `font-weight: 500`, `letter-spacing: -8.28px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--default-mono-font-family: var(--font-mono)`
 

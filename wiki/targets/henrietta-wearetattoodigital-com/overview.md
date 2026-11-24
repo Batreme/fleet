@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: henrietta-wearetattoodigital-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://henrietta.wearetattoodigital.com/"
 final_url: "https://henrietta.wearetattoodigital.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Henrietta Said : Scandalously Spicy
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `45`
+- **Recovered Stylesheets**: `8`
 
 ---
 

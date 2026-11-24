@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-kubehotel-saint-tropez-com_fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-kubehotel-saint-tropez-com_fr"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `#000000` ink, `#0082f3` accent)"
 ---
@@ -16,7 +21,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 
 > **Layne Saint-Tropez, hôtel 5 étoiles : ouverture le 1er mai 2027** (https://www.kubehotel-saint-tropez.com/fr) — Face au golfe de Saint-Tropez, découvrez Layne, un nouvel hôtel 5 étoiles à Gassin. Ouverture le 1er mai 2027. Contact : info@layne-saint...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,21 +31,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 
 - **Brand Essence & Persona**: **Layne Saint-Tropez, hôtel 5 étoiles : ouverture le 1er mai 2027** (`https://www.kubehotel-saint-tropez.com/fr`). Face au golfe de Saint-Tropez, découvrez Layne, un nouvel hôtel 5 étoiles à Gassin. Ouverture le 1er mai 2027. Contact : info@layne-saint...
 - **Final Redirected URL**: [https://www.layne-sainttropez.com/fr](https://www.layne-sainttropez.com/fr)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `#000000` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf9f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Kallisto` for display copy (`LES PLUS BELLES VACANCES ONT LE GOÛT`) with `Anth` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Kallisto` for display copy (`LES PLUS BELLES VACANCES ONT LE GOÛT`) with `Anth`.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `50%`, `10px`, `3px`, `100%`.
@@ -110,6 +115,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 - **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s left` extracted from `www-kubehotel-saint-tropez-com_fr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.hero_header_wrap>` and `<section.u-section>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`.
+- **Nav / Drawer Probe**: Tested trigger `FR FR` (diff `0.772`, below state-capture threshold).
+- **Hover Physics (`primary_cta` · `FR`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/en`) measured as `direct` in `1611ms`.
 
 ---
 
@@ -120,7 +131,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Layne Saint-Tropez, hôtel 5 étoiles : ouve │
 │ ====================================================================== │
-│ [ <header.hero_header_wr (1356x40px)  | fr · en · it · ru            ] │
+│ [ <header.hero_header_wr (1356x48px)  | fr · en · it · ru            ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.hero_wrap> (w=1425px)                         | │
 │ | H1: LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...           | │
@@ -131,7 +142,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 │ | | Les plus belles vacances ont |  | Hôtel - Restaurant - Spa - P | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.u-theme-dark>) — Ouverture 1 er mai 20     | │
+│ | DETAIL MODULE (<section.u-theme-dark>) — Ouverture 1er mai 202     | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.CybotCookieb) | https://www.kubehotel-saint-tropez.  │
 └────────────────────────────────────────────────────────────────────────┘
@@ -151,7 +162,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 │ | [ Item 1: Les plus belles vacances ont le goût de l’insouci...   ] | │
 │ | [ Item 2: Hôtel - Restaurant - Spa - Piscines                    ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.u-theme-dark>) — 1-Col (Ouverture 1 er mai) | │
+│ | DETAIL STACK (<section.u-theme-dark>) — 1-Col (Ouverture 1er mai ) | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.CybotCookieb) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -159,15 +170,22 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.hero_header_wrap> — `www-kubehotel-saint-tropez-com_fr`)**:
-   - Landmark `<header class="hero_header_wrap">` (`1356x40px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - Landmark `<header class="hero_header_wrap">` (`1356x48px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
 2. **Hero Stage & Focal Lead (<section.hero_wrap> — `LES PLUS BELLES VACANCES ONT LE GO`)**:
    - Landmark `<section class="hero_wrap u-section">` presenting display lead `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...` and copy excerpt *"HÔTEL - RESTAURANT - SPA - PISCINES"* over `#fdf9f4` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.u-section> — `Les plus belles vacances ont le go`)**:
    - Landmark `<section class="hero_wrap u-section">` rendering section `Les plus belles vacances ont le goût de l’insouci...` with copy *"Hôtel - Restaurant - Spa - Piscines"*, asset references (`cdn.prod.website-files.com`, `layne-sainttropez.webflow.shared....`, `state.js`, `widgetIcon.min.js`), and grid rule `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
 4. **Interactive Detail & Feature Matrix (<section.u-theme-dark> — `Hôtel - Restaurant - Spa - Piscine`)**:
-   - Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1 er mai 2027` (*"Ouverture 1 er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
+   - Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1er mai 2027` (*"Ouverture 1er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotDialogContentWrapper> — `https://www.kubehotel-saint-tropez.com/fr`)**:
    - Landmark `<footer class="CybotCookiebotDialogContentWrapper">` anchoring `Layne Saint-Tropez, hôtel 5 étoi` footer links (`fr · en · it · ru`), copy *"Informations et réservations : info@layne-sainttropez.com"*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/en`)**: `https://www.layne-sainttropez.com/en` — H1: `THE MOST BEAUTIFUL HOLIDAYS ARE INFUSED WITH EFFO...`, scrollHeight `900px`, transition `direct` (`1611ms`)
+- **Other Route (`/it`)**: `https://www.layne-sainttropez.com/it` — H1: `LE VACANZE PIÙ BELLE HANNO IL SAPORE DELLA SPENSI...`, scrollHeight `900px`, transition `direct` (`1018ms`)
+- **Other Route (`/ru`)**: `https://www.layne-sainttropez.com/ru` — H1: `САМЫЙ ПРЕКРАСНЫЙ ОТДЫХ — СО ВКУСОМ БЕЗМЯТЕЖНОСТИ.`, scrollHeight `900px`, transition `direct` (`981ms`)
 
 ---
 
@@ -184,7 +202,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fdf9f4` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf9f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Kallisto` for display copy (`LES PLUS BELLES VACANCES ONT LE GOÛT`) with `Anth` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Kallisto` for display copy (`LES PLUS BELLES VACANCES ONT LE GOÛT`) with `Anth`.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -220,8 +238,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 16px`)
@@ -241,16 +259,16 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-kubehotel-saint-tropez-com_fr` (`Layne Saint-Tropez, hôtel 5 étoiles : ouverture le 1er mai 2027`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.hero_header_wrap> — `www-kubehotel-saint-tropez-com_fr`)**:
-   - DOM & Selectors: Landmark `<header class="hero_header_wrap">` (`1356x40px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - DOM & Selectors: Landmark `<header class="hero_header_wrap">` (`1356x48px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hero_header_wrap> — `www-kubehotel-saint-tropez-com_fr`)` (`www-kubehotel-saint-tropez-com_fr`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(.175,.885,.32,1.275)` transitions and links `fr · en · it · ru`.
 2. **Hero Stage & Focal Lead (<section.hero_wrap> — `LES PLUS BELLES VACANCES ONT LE GO`)**:
    - DOM & Selectors: Landmark `<section class="hero_wrap u-section">` presenting display lead `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...` and copy excerpt *"HÔTEL - RESTAURANT - SPA - PISCINES"* over `#fdf9f4` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fdf9f4` background with `#000000` headline `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#fdf9f4` background with `#000000` headline `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...`.
 3. **Primary Showcase & Content Grid (<section.u-section> — `Les plus belles vacances ont le go`)**:
    - DOM & Selectors: Landmark `<section class="hero_wrap u-section">` rendering section `Les plus belles vacances ont le goût de l’insouci...` with copy *"Hôtel - Restaurant - Spa - Piscines"*, asset references (`cdn.prod.website-files.com`, `layne-sainttropez.webflow.shared....`, `state.js`, `widgetIcon.min.js`), and grid rule `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.u-section> — `Les plus belles vacances ont le go`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.u-theme-dark> — `Hôtel - Restaurant - Spa - Piscine`)**:
-   - DOM & Selectors: Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1 er mai 2027` (*"Ouverture 1 er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
+   - DOM & Selectors: Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1er mai 2027` (*"Ouverture 1er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.u-theme-dark> — `Hôtel - Restaurant - Spa - Piscine`)` uses `50%`, `10px`, `3px`, `100%` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, layne-sainttropez.webflow.shared...., state.js).
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotDialogContentWrapper> — `https://www.kubehotel-saint-tropez.com/fr`)**:
    - DOM & Selectors: Landmark `<footer class="CybotCookiebotDialogContentWrapper">` anchoring `Layne Saint-Tropez, hôtel 5 étoi` footer links (`fr · en · it · ru`), copy *"Informations et réservations : info@layne-sainttropez.com"*, and `#e2e2e2` structural dividers.
@@ -259,7 +277,7 @@ Scaffold `www-kubehotel-saint-tropez-com_fr` (`Layne Saint-Tropez, hôtel 5 éto
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"HÔTEL - RESTAURANT - SPA - PISCINES"*
 - Copy Excerpt 2: *"Hôtel - Restaurant - Spa - Piscines"*
-- Copy Excerpt 3: *"Ouverture 1 er mai 2027"*
+- Copy Excerpt 3: *"Ouverture 1er mai 2027"*
 - Copy Excerpt 4: *"Informations et réservations : info@layne-sainttropez.com"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
@@ -276,8 +294,33 @@ Scaffold `www-kubehotel-saint-tropez-com_fr` (`Layne Saint-Tropez, hôtel 5 éto
 - **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s left` extracted from `www-kubehotel-saint-tropez-com_fr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.hero_header_wrap>` and `<section.u-section>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: LES PLUS BELLES VACANCES ON... (0%).
+- **Multi-Page Routes**: Scaffold internal routes `/en` (other, direct), `/it` (other, direct), `/ru` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-kubehotel-saint-tropez-com_fr`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INS... | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | LES PLUS BELLES VACANCES ONT LE GOÛT DE L... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://www.layne-sainttropez.com/en` | THE MOST BEAUTIFUL HOLIDAYS ARE INFUS... | `900px` | `direct` (`1611ms`) | [subpage-01-en.webp](assets/subpage-01-en.webp) |
+| `2` | `other` | `https://www.layne-sainttropez.com/it` | LE VACANZE PIÙ BELLE HANNO IL SAPORE... | `900px` | `direct` (`1018ms`) | [subpage-02-it.webp](assets/subpage-02-it.webp) |
+| `3` | `other` | `https://www.layne-sainttropez.com/ru` | САМЫЙ ПРЕКРАСНЫЙ ОТДЫХ — СО ВКУСОМ БЕ... | `900px` | `direct` (`981ms`) | [subpage-03-ru.webp](assets/subpage-03-ru.webp) |
+

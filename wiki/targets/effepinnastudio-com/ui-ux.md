@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: effepinnastudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `effepinnastudio-com` (**Fabio Pinna — Art Director e Graphic Designer · Effepinna Studio**)
 - **Production URL**: [https://effepinnastudio.com/](https://effepinnastudio.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)
 - **Summary**: Direzione artistica, progettazione grafica e produzione di immagini, video e animazioni per agenzie e brand. Fabio Pinna, freelance a Gra...
-- **Total Clean CSS Variables Extracted**: `94` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `109` (curated live-grounded set below)
 
 ---
 
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#f3f2ef` | `var(--paper)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff0000` | `.controls button { background: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#ee2c3d` | live computed `p` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#ff0000` | `.hero-doodle { border: #ff0000 }` |
+| **Structural Hairline Border** | `#f8a6ae` | `var(--calmilene-line)` in `:root` (`rgba(239, 43, 63, 0.42)`) |
 | **Variable Token (`--red`)** | `#ef233c` | `var(--red)` in `:root` |
 | **Variable Token (`--ink`)** | `#0a0a0a` | `var(--ink)` in `:root` |
 
@@ -77,4 +77,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<article.work-row> — `Fastweb Tu sei Futuro`)**:
    - Landmark `<article class="work-row">` framing `Fastweb Tu sei Futuro` and `Dose e Dadda Summer Merch` (*"Sviluppo il concept, progetto il linguaggio visivo e lavoro alla "*) with `#f3f2ef` surface cards, `#ff0000` accents, and `focus-visible { outline: 2px solid currentColor;outline-offset: 4px; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://effepinnastudio.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#ff0000` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#f8a6ae` structural dividers.

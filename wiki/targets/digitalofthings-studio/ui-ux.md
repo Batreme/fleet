@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: digitalofthings-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `digitalofthings-studio` (**digital of things · user experience digital studio**)
 - **Production URL**: [https://digitalofthings.studio/](https://digitalofthings.studio/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#dbffad`)
 - **Summary**: digital of things is an independent user experience digital studio based in Barcelona. We design and build websites, e-commerce and digit...
 - **Total Clean CSS Variables Extracted**: `3` (curated live-grounded set below)
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#212121` | `.stack-item-content-wrapper { background: #212121 }` |
 | **Interactive Accent / Highlight** | `#dbffad` | `.cookie-consent__actions button { color: #dbffad }` |
 | **Secondary / Muted Copy** | `#9ca3af` | `input::-moz-placeholder { color: #9ca3af }` |
-| **Structural Hairline Border** | `#e5e7eb` | live computed `nav` `border-color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#dbffad` | `.cookie-consent__actions button { border: #dbffad }` |
 
 ---
 
@@ -75,4 +75,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.custom-cursor> — `or know more about us`)**:
    - Landmark `<section class="custom-cursor">` framing `or know more about us` and `User experience digital studio` (*"User experience digital studio"*) with `#212121` surface cards, `#dbffad` accents, and `html { scroll-behavior:smooth }`.
 5. **Colophon & Global Directory Footer (<footer.app-footer> — `https://digitalofthings.studio/`)**:
-   - Landmark `<footer class="app-footer">` anchoring `digital of things · user experie` footer links (`Projects · Pet Projects · Contact · Easter Eggs · Clients`), copy *"Turning ideas into digital experiences."*, and `#e5e7eb` structural dividers.
+   - Landmark `<footer class="app-footer">` anchoring `digital of things · user experie` footer links (`Projects · Pet Projects · Contact · Easter Eggs · Clients`), copy *"Turning ideas into digital experiences."*, and `#dbffad` structural dividers.

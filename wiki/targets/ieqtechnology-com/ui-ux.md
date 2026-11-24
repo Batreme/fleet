@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ieqtechnology-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ieqtechnology-com` (**IEQ Technology · Innovation. Experience. Quality.**)
 - **Production URL**: [https://ieqtechnology.com/](https://ieqtechnology.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#0a0a0a` ink, `#0d91d0` accent)
 - **Summary**: Managed IT, legacy system modernization, custom software and custom websites from a 100% U.S.-based team in Springfield, Oregon. Since 2011.
 - **Total Clean CSS Variables Extracted**: `51` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Geist`
 - **Monospace / Technical Font Stack**: `Geist Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 108px`, `line-height: 99.36px`, `font-weight: 600`, `letter-spacing: -3.24px`); CSS variables `--font-display: "Cabin","Geist",ui-sans-serif,system-ui,sans-serif`; rule `h1` (`font-size: 34px`, `letter-spacing: -.03em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60px`, `line-height: 61.2px`, `font-weight: 600`, `letter-spacing: -2.1px`); rule `.h2` (`font-size: clamp(40px,5vw,68px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 68px`, `line-height: 69.36px`, `font-weight: 600`, `letter-spacing: -2.38px`); rule `.h2` (`font-size: clamp(40px,5vw,68px)`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); rule `p` (`font-size: 15px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--font-mono: "Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace`; rule `small` (`font-size: 12px`, `font-weight: 400`)
 
@@ -72,7 +72,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.nav> — `ieqtechnology-com`)**:
-   - Landmark `<header class="nav scrolled">` (`1440x77px`) hosting `IEQ Technology · Innovation. Experie` navigation (`About · Services · All services · Our Work · Awards`), DOM attributes (`data-theme="light"`, `data-k="nw"`, `data-k="ne"`, `data-k="sw"`), and stylesheet rule `after { box-sizing:border-box }`.
+   - Landmark `<header class="nav">` (`1440x77px`) hosting `IEQ Technology · Innovation. Experie` navigation (`About · Services · All services · Our Work · Awards`), DOM attributes (`data-theme="light"`, `data-k="nw"`, `data-k="ne"`, `data-k="sw"`), and stylesheet rule `after { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Innovation. Experience. Quality. T`)**:
    - Landmark `<section class="hero">` presenting display lead `Innovation. Experience. Quality. THAT'S IEQ TECHN...` and copy excerpt *"Managed IT, legacy system modernization, custom software, and web"* over `#ffffff` canvas and `#0a0a0a` ink.
 3. **Primary Showcase & Content Grid (<section.block> — `I nnovation. E xperience. Q uality`)**:

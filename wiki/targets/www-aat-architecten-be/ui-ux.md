@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-aat-architecten-be"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-aat-architecten-be` (**AAT Architecten**)
 - **Production URL**: [https://www.aat-architecten.be/](https://www.aat-architecten.be/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1d1d1b` ink, `#000000` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1d1d1b` ink, `#185abc` accent)
 - **Summary**: Architectenbureau uit Turnhout (Antwerpen), actief in een ruimer gebied. Architectuurprojecten voor openbare besturen, scholen en bedrijv...
-- **Total Clean CSS Variables Extracted**: `151` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `148` (curated live-grounded set below)
 
 ---
 
@@ -37,7 +37,7 @@ http_status: 200
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#1d1d1b` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f9fafb` | `.aspect-ratio-box .no-image:before { background-color: #f9fafb }` |
-| **Interactive Accent / Highlight** | `#000000` | `a:active { color: black }` (`#000000`) |
+| **Interactive Accent / Highlight** | `#185abc` | `.rc-2fa-submit-button-holder bu... { background-color: #185abc }` |
 | **Secondary / Muted Copy** | `#ababab` | live computed `h2` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e9f3e3` | `20 { border-color: #e9f3e3 }` |
 
@@ -73,6 +73,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.block-featured-projects> — `Projecten`)**:
    - Landmark `<section class="block-featured-projects block-featured-projects--first">` rendering section `Projecten` with copy *"publieke ruimtes, scholen en bedrijven, en"*, asset references (`favicon-96x96.png`, `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `.lenis.lenis-stopped { overflow:clip }`.
 4. **Interactive Detail & Feature Matrix (<section.block-text-and-portrait> — `publieke ruimtes, scholen en bedri`)**:
-   - Landmark `<section class="block-text-and-portrait row">` framing `publieke ruimtes, scholen en bedrijven, en` and `vertrekken daarbij steeds van de ruimte` (*"vertrekken daarbij steeds van de ruimte"*) with `#f9fafb` surface cards, `#000000` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+   - Landmark `<section class="block-text-and-portrait row">` framing `publieke ruimtes, scholen en bedrijven, en` and `vertrekken daarbij steeds van de ruimte` (*"vertrekken daarbij steeds van de ruimte"*) with `#f9fafb` surface cards, `#185abc` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
 5. **Colophon & Global Directory Footer (<footer.mobile-nav__footer> — `https://www.aat-architecten.be/`)**:
    - Landmark `<footer class="mobile-nav__footer">` anchoring `AAT Architecten` footer links (`Projecten · Over · Contact`), copy *"Schooltje van de Hei"*, and `#e9f3e3` structural dividers.

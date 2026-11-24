@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: cue-onebranding-webflow-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "cue-onebranding-webflow-io"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#13171a` ink, `#0000ff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Cue - Creating Unforgettable Experiences** (https://cue-onebranding.webflow.io/) — Fan-first technology for premium brands and event experiences. Take your events to the next level with CUE and experience true fan engage...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Cue - Creating Unforgettable Experiences** (`https://cue-onebranding.webflow.io/`). Fan-first technology for premium brands and event experiences. Take your events to the next level with CUE and experience true fan engage...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#13171a` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#13171a` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Create Unforgettable Experiences`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Create Unforgettable Experiences`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `90rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.165,.84,.44,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6213px` / doc `7113px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `90rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `2px`.
@@ -99,7 +104,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 83.2px`, `font-weight: 700`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 100px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); rule `p` (`font-size: inherit`, `line-height: inherit`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); CSS variables `--radius--small: .25rem`.
 
@@ -116,6 +121,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `cue-onebranding-webflow-io` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.165,.84,.44,1)`)**: Governs interactive state transitions across `<header.section>` and `<section.cc-video-zoom>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7113px`, deepest scrollY reached `6213px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `CONTACT US`)**: Computed transition `0.3s, 0.3s` / `cubic-bezier(0.165, 0.84, 0.44, 1), cubic-bezier(0.165, 0.84, 0.44, 1)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/verticals/sports`) measured as `direct` in `864ms`.
 
 ---
 
@@ -174,6 +184,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="section cc-product-starter">` framing `An experience like no other` and `Fanatic Filters` (*"U n f o r g e t t a b l e"*) with `#ffff00` surface cards, `#0000ff` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://cue-onebranding.webflow.io/`)**:
    - Landmark `<footer class="footer">` anchoring `Cue - Creating Unforgettable Exp` footer links (`NAB · Ross Video · REQUEST A DEMO · WE ARE CUE`), copy *"E x p e r i e n c e s"*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Create Unforgettable Experiences` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `14%`): Active landmark `An experience like no other` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `27%`): Active landmark `Light Show` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `41%`): Active landmark `Light Show` · sticky/fixed elements: `1`
+- **Step 05** (`y=4250px`, `68%`): Active landmark `What clients say about us` · sticky/fixed elements: `1`
+- **Step 06** (`y=5100px`, `82%`): Active landmark `#request-a-demo` · sticky/fixed elements: `1`
+- **Step 07** (`y=5950px`, `96%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 08** (`y=6213px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/verticals/sports`)**: `https://cue-onebranding.webflow.io/verticals/sports` — H1: `Sports`, scrollHeight `8213px`, transition `direct` (`864ms`)
+- **About Route (`/about`)**: `https://cue-onebranding.webflow.io/about` — H1: `About CUE`, scrollHeight `7242px`, transition `direct` (`530ms`)
+- **Detail Route (`/verticals/high-schools`)**: `https://cue-onebranding.webflow.io/verticals/high-schools` — H1: `High schools`, scrollHeight `7028px`, transition `direct` (`524ms`)
 
 ---
 
@@ -190,7 +214,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#13171a`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#13171a` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Create Unforgettable Experiences`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Create Unforgettable Experiences`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `90rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.165,.84,.44,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -233,8 +257,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--on-light-gradient`)**: `#2f68e9` — grounded in `var(--on-light-gradient)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `90rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90rem`, `gap: 16px`)
@@ -247,7 +271,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Poppins`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 64px`, `line-height: 83.2px`, `font-weight: 700`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 80px`, `line-height: 100px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); rule `p` (`font-size: inherit`, `line-height: inherit`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); CSS variables `--radius--small: .25rem`
 
@@ -258,7 +282,7 @@ Scaffold `cue-onebranding-webflow-io` (`Cue - Creating Unforgettable Experiences
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.section> — `cue-onebranding-webflow-io`)` (`cue-onebranding-webflow-io`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(.165,.84,.44,1)` transitions and links `NAB · Ross Video · REQUEST A DEMO · WE ARE CUE`.
 2. **Hero Stage & Focal Lead (<section.section> — `Create Unforgettable Experiences`)**:
    - DOM & Selectors: Landmark `<section class="section cc-2col-text-cta">` presenting display lead `Create Unforgettable Experiences` and copy excerpt *"It was a great week at NAB with our friends from Ross Video! Cont"* over `#ffffff` canvas and `#13171a` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#13171a` headline `Create Unforgettable Experiences`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#13171a` headline `Create Unforgettable Experiences`.
 3. **Primary Showcase & Content Grid (<section.cc-video-zoom> — `C r e a t e U n f o r g e t t a b `)**:
    - DOM & Selectors: Landmark `<section class="section cc-video-zoom">` rendering section `C r e a t e U n f o r g e t t a b l e E x p e r i...` with copy *"C r e a t e U n f o r g e t t a b l e E x p e r i e n c e s"*, asset references (`cdn.prod.website-files.com`, `cue-onebranding.shared.e83737123....`, `insight.min.js`, `clarity.js`), and grid rule `summary { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.cc-video-zoom> — `C r e a t e U n f o r g e t t a b `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -289,8 +313,42 @@ Scaffold `cue-onebranding-webflow-io` (`Cue - Creating Unforgettable Experiences
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `cue-onebranding-webflow-io` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.165,.84,.44,1)`)**: Governs interactive state transitions across `<header.section>` and `<section.cc-video-zoom>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7113px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Create Unforgettable Experi... (0%) -> An experience like no other (14%) -> Light Show (27%) -> Light Show (41%) -> What clients say about us (68%) -> #request-a-demo (82%) -> Footer (96%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/verticals/sports` (detail, direct), `/about` (about, direct), `/verticals/high-schools` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `cue-onebranding-webflow-io`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Create Unforgettable Experiences | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `14%` | An experience like no other | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `27%` | Light Show | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `41%` | Light Show | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `68%` | What clients say about us | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5100px` | `82%` | #request-a-demo | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5950px` | `96%` | Footer | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6213px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Create Unforgettable Experiences | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3340px` | `50%` | What clients say about us | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6680px` | `100%` | / Company | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://cue-onebranding.webflow.io/verticals/sports` | Sports | `8213px` | `direct` (`864ms`) | [subpage-01-verticals-sports.webp](assets/subpage-01-verticals-sports.webp) |
+| `2` | `about` | `https://cue-onebranding.webflow.io/about` | About CUE | `7242px` | `direct` (`530ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://cue-onebranding.webflow.io/verticals/high-schools` | High schools | `7028px` | `direct` (`524ms`) | [subpage-03-verticals-high-schools.webp](assets/subpage-03-verticals-high-schools.webp) |
+

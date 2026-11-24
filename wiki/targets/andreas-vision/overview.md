@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: andreas-vision"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://andreas.vision"
 final_url: "https://andreas.vision/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Andreas Kruszakin, growth-focused design engineer in Europe
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `65`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `239`
+- **Recovered Stylesheets**: `7`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: thestudiobyjuliegranger-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thestudiobyjuliegranger-com` (**The Studio by Julie Granger**)
 - **Production URL**: [https://thestudiobyjuliegranger.com/](https://thestudiobyjuliegranger.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#474040` ink, `#91befc` accent)
 - **Summary**: Une méthode unique alliant barre, yoga et renforcement, développée depuis plus de 12 ans et déjà adoptée par des milliers de femmes à tra...
-- **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `47` (curated live-grounded set below)
 
 ---
 
@@ -24,9 +24,9 @@ http_status: 200
 - **Display Font Stack**: `Newsreader Hero`
 - **Body Font Stack**: `Open Sans`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 64px`, `font-weight: 400`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 64px`, `font-weight: 400`); rule `h1` (`font-size: 26px`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 42px`, `line-height: 46.2px`, `font-weight: 400`); rule `h2` (`font-size: 26px`, `line-height: 1.1`, `font-weight: 400`)
-- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`); rule `p` (`font-size: 14px`, `line-height: 1.4`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 19.6px`, `font-weight: 400`)
 
 ---
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#f6f6f0` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#91befc` | `.hero__retreat-badge { background-color: #91befc }` |
 | **Secondary / Muted Copy** | `#665c5a` | `var(--consent-soft-ink)` in `:root` |
-| **Structural Hairline Border** | `#e4dfda` | `var(--consent-line)` in `:root` |
+| **Structural Hairline Border** | `#e2e2e2` | `var(--wc-address-book--border--color)` in `:root` |
 | **Variable Token (`--wp-block-synced-color`)** | `#7a00df` | `var(--wp-block-synced-color)` in `:root` |
 | **Variable Token (`--wp-editor-canvas-background`)** | `#dddddd` | `var(--wp-editor-canvas-background)` in `:root` |
 | **Variable Token (`--wp-admin-theme-color`)** | `#007cba` | `var(--wp-admin-theme-color)` in `:root` |
@@ -66,7 +66,7 @@ http_status: 200
 | `--site-fixed-header-offset` | `70px` | Layout / Spatial Grid Token |
 | `--site-no-hero-top-gap` | `18px` | Layout / Spatial Grid Token |
 | `--site-anchor-scroll-gap` | `16px` | Layout / Spatial Grid Token |
-| `--reviews-slides-per-view` | `1.2` | Design System Custom Token |
+| `--gap` | `12px` | Layout / Spatial Grid Token |
 
 ---
 
@@ -80,4 +80,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.benefits> — `The Studio by Julie Granger`)**:
    - Landmark `<section class="benefits">` framing `The Studio by Julie Granger` and `Si vous vous reconnaissez, The Studio est fait po...` (*"Pour tous les niveaux"*) with `#f6f6f0` surface cards, `#91befc` accents, and `.banp-ajax-error { color:b81c23 }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://thestudiobyjuliegranger.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `The Studio by Julie Granger` footer links (`Connexion · en · Connexion Connexion · Méthode et Résultats · Corps qui a changé`), copy *"Des workouts adaptés à tous les niveaux"*, and `#e4dfda` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `The Studio by Julie Granger` footer links (`Connexion · en · Connexion Connexion · Méthode et Résultats · Corps qui a changé`), copy *"Des workouts adaptés à tous les niveaux"*, and `#e2e2e2` structural dividers.

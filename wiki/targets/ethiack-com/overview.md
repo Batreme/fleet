@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: ethiack-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ethiack.com/"
 final_url: "https://ethiack.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://ethiack.com/](https://ethiack.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Ethiack
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `158`
-- **Recovered Stylesheets**: `31`
+- **Recovered Scripts**: `150`
+- **Recovered Stylesheets**: `20`
 
 ---
 

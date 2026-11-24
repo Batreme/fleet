@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: thecassandravale-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thecassandravale-com` (**Cassandra Vale · Fashion, Stories & Branded Content**)
 - **Production URL**: [https://thecassandravale.com/](https://thecassandravale.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas, `#ffffff` ink, `#ff1053` accent)
 - **Summary**: Cassandra Vale brings together fashion, short-form stories, editorial imagery and branded collaborations.
-- **Total Clean CSS Variables Extracted**: `43` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)
 
 ---
 
@@ -26,7 +26,7 @@ http_status: 200
 - **Monospace / Technical Font Stack**: `Andale Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 201.6px`, `line-height: 161.28px`, `font-weight: 700`, `letter-spacing: -10.08px`); rule `h1` (`font-size: 44px`, `line-height: 54px`, `font-weight: 600`)
 - **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 26px`, `line-height: 26px`, `font-weight: 700`, `letter-spacing: -0.26px`); rule `h2` (`font-weight: 600`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 29px`, `font-weight: 400`); CSS variables `--nectar-body-line-height: 29px`, `--nectar-body-font-size: 16px`; rule `p` (`font-size: 14px`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 29px`, `font-weight: 400`); CSS variables `--nectar-body-line-height: 29px`, `--nectar-body-font-size: 16px`; rule `p` (`font-size: 1em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 29px`, `font-weight: 400`); rule `.label` (`font-size: 14px`, `line-height: 1`)
 
 ---
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#131313` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#000000` | `slide-out-widget-area-toggle .l... { background-color: #000000 }` |
+| **Elevated Surface / Card Substrate** | `#2c3338` | `#wpadminbar .shortlink-input { background: #2c3338 }` |
 | **Interactive Accent / Highlight** | `#ff1053` | `var(--nectar-extra-color-gradient-1)` in `:root` |
 | **Secondary / Muted Copy** | `#888888` | `gle #single-meta ul .meta-share... { color: #888888 }` |
 | **Structural Hairline Border** | `#2c353b` | `#wp-admin-bar-my-account.with-a... { border: #2c353b }` |
@@ -72,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.js> — `thecassandravale-com`)**:
-   - Landmark `<header class="js">` (`1440x49px`) hosting `Cassandra Vale · Fashion, Stories & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-pagespeed-no-defer`, `data-nowprocket`, `data-wpacu-skip`, `data-no-optimize`), and stylesheet rule `logo.no-image { transition:color .3s ease,margin .3s ease }`.
+   - Landmark `<header class="js">` (`1440x49px`) hosting `Cassandra Vale · Fashion, Stories & ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-pagespeed-no-defer`, `data-nowprocket`, `data-wpacu-skip`, `data-no-optimize`), and stylesheet rule `.col { position:relative;display:block;width:100% }`.
 2. **Hero Stage & Focal Lead (<div.lenis> — `TOO LOUD`)**:
    - Landmark `<div class="lenis">` presenting display lead `TOO LOUD` and copy excerpt *"SHE TAKES THE LONG WAY, THE FAST LANE, OR WHATEVER MAKES A BETTER"* over `#131313` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<div.lenis-scrolling> — `SHE TAKES THE LONG WAY, THE FAST L`)**:
-   - Landmark `<div class="lenis-scrolling">` rendering section `SHE TAKES THE LONG WAY, THE FAST LANE, OR WHATEV` with copy *"TO MAKE IT WORTH SHOWING UP FOR."*, asset references (`embed`, `icomoon.woff`, `HERO5_OPT-1024x768.jpg`, `HERO5_OPT.jpg`), and grid rule `.transparent { pointer-events:none }`.
-4. **Interactive Detail & Feature Matrix (<div.js_active> — `TO MAKE IT WORTH SHOWING UP FOR.`)**:
-   - Landmark `<div class="js_active">` framing `TO MAKE IT WORTH SHOWING UP FOR.` and `ARTEM MARKOVSKY / ARCR` (*"ARTEM MARKOVSKY / ARCR"*) with `#000000` surface cards, `#ff1053` accents, and `.transparent>.nectar-global-section { pointer-events:all }`.
-5. **Colophon & Global Directory Footer (<footer.vc_desktop> — `https://thecassandravale.com/`)**:
-   - Landmark `<footer class="vc_desktop">` anchoring `Cassandra Vale · Fashion, Storie` footer links (`Overview · Index · Archive · About · Contact`), copy *"TO MAKE IT WORTH SHOWING UP FOR."*, and `#2c353b` structural dividers.
+3. **Primary Showcase & Content Grid (<div.home> — `SHE TAKES THE LONG WAY, THE FAST L`)**:
+   - Landmark `<div class="home">` rendering section `SHE TAKES THE LONG WAY, THE FAST LANE, OR WHATEV` with copy *"TO MAKE IT WORTH SHOWING UP FOR."*, asset references (`embed`, `icomoon.woff`, `HERO5_OPT-1024x768.jpg`, `HERO5_OPT.jpg`), and grid rule `html body .vc_row-fluid>.span_12 { display:flex;display:-ms-flexbox;-ms-flex-wrap:wrap;flex-wrap:wrap;float... }`.
+4. **Interactive Detail & Feature Matrix (<div.wp-singular> — `TO MAKE IT WORTH SHOWING UP FOR.`)**:
+   - Landmark `<div class="wp-singular">` framing `TO MAKE IT WORTH SHOWING UP FOR.` and `ARTEM MARKOVSKY / ARCR` (*"ARTEM MARKOVSKY / ARCR"*) with `#2c3338` surface cards, `#ff1053` accents, and `.col:last-child { margin-right:0 }`.
+5. **Colophon & Global Directory Footer (<footer.page-template-default> — `https://thecassandravale.com/`)**:
+   - Landmark `<footer class="page-template-default">` anchoring `Cassandra Vale · Fashion, Storie` footer links (`Overview · Index · Archive · About · Contact`), copy *"TO MAKE IT WORTH SHOWING UP FOR."*, and `#2c353b` structural dividers.

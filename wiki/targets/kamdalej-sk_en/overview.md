@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: kamdalej-sk_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://kamdalej.sk/en"
 final_url: "https://kamdalej.sk/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Mastercard · Where Next
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `67`
+- **Recovered Stylesheets**: `13`
 
 ---
 

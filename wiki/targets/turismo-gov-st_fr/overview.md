@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: turismo-gov-st_fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://turismo.gov.st/fr"
 final_url: "https://turismo.gov.st/fr"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Homepage · São Tomé E Príncipe
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `48`
-- **Recovered Stylesheets**: `14`
+- **Recovered Scripts**: `172`
+- **Recovered Stylesheets**: `44`
 
 ---
 

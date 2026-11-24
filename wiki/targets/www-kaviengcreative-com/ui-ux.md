@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-kaviengcreative-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-kaviengcreative-com` (**Kavieng Cheng · Art Director and Creative**)
 - **Production URL**: [https://www.kaviengcreative.com/](https://www.kaviengcreative.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas, `#f0efe9` ink, `#62625e` accent)
 - **Summary**: Kavieng Cheng is a Hong Kong-based art director and creative working across advertising, product, fine art and photography.
 - **Total Clean CSS Variables Extracted**: `10` (curated live-grounded set below)
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#f0efe9` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#000000` | `html { background: black }` (`#000000`) |
 | **Interactive Accent / Highlight** | `#62625e` | `.filter-projects button span:la... { color: #62625e }` |
-| **Secondary / Muted Copy** | `#0a0a09` | `var(--hard-ink)` in `:root` |
+| **Secondary / Muted Copy** | `#0a0a09` | live computed `section` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#060606` | `var(--rule-dark)` in `:root` (`rgba(10, 10, 9, .19)`) |
 | **Variable Token (`--page-grey`)** | `#c9c8c3` | `var(--page-grey)` in `:root` |
 | **Variable Token (`--graphite`)** | `#8a8a84` | `var(--graphite)` in `:root` |

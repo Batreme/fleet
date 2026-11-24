@@ -1,13 +1,12 @@
 ---
 title: "Target Overview: kindi-land"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://kindi.land/"
-final_url: "https://kindi.land/"
-status: blocked
-http_status: null
-capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+final_url: "https://kindi.land/en"
+status: analyzed
+http_status: 200
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,12 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://kindi.land/](https://kindi.land/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: kindi-land
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: Kindi & Kitir — a confectionery manufacturer in Turkmenistan
+- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Recovered Scripts**: `20`
+- **Recovered Stylesheets**: `1`
 
 ---
 

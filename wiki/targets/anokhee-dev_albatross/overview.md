@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: anokhee-dev_albatross"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://anokhee.dev/albatross"
 final_url: "https://anokhee.dev/albatross/"
 status: blocked
 http_status: 200
 capture_tier: none
-block_reason: "Headless Preloader / Blank Viewport Capture (The Albatross I can smell the island now. 70% or WASD to fly • M to mu)"
+block_reason: "Headless Preloader / Blank Viewport Capture (The Albatross The wind is steady. 6% or WASD to fly • M to mute Made b)"
 tags:
   - target
   - reverse-engineering
@@ -29,7 +29,7 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://anokhee.dev/albatross](https://anokhee.dev/albatross)
 - **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (The Albatross I can smell the island now. 70% or WASD to fly • M to mu)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (The Albatross The wind is steady. 6% or WASD to fly • M to mute Made b)
 - **Page Title**: The Albatross
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `17`

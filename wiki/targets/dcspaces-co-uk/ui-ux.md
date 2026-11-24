@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: dcspaces-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `dcspaces-co-uk` (**Chorley Builders · Extensions & Renovations · DC Carpentry**)
 - **Production URL**: [https://dcspaces.co.uk/](https://dcspaces.co.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f1e9` canvas, `#343631` ink, `#6c8f6c` accent)
 - **Summary**: Family-run builders in Chorley. House extensions, wall and chimney breast removals, kitchens and bespoke staircases across Lancashire. Fr...
 - **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)

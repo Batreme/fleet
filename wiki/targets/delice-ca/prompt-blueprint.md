@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: delice-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "delice-ca"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#185abc`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#1
 
 > **Accueil - Délice** (https://delice.ca/) — Pizza Délice depuis 1970 Au cœur de Lévis, alliant chaleur, grandeur et convivialité dans une ambiance vibrante et accueillante.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Accueil - Délice** (`https://delice.ca/`). Pizza Délice depuis 1970 Au cœur de Lévis, alliant chaleur, grandeur et convivialité dans une ambiance vibrante et accueillante.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#185abc`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f8efdc` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#de2b2b` primary typography and `#185abc` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Filson Soft` for display copy (`PIZZA DÉLICE DEPUIS 1970 Au cœur de `) with `Filson Soft` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Filson Soft` across display (`PIZZA DÉLICE DEPUIS 1970 Au cœur de `) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 32px`, padding `3px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `14331px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `3px` lateral canvas padding with `32px` grid gap.
 - **Border Radius Scale**: `50%`, `2px`, `4px`, `8px`.
@@ -94,7 +99,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#1
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 18px`, `line-height: 24.3px`, `font-weight: 500`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 600`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 64px`, `font-weight: 600`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: max(14px,min(14px,.875rem))`, `line-height: 1.4`, `letter-spacing: 0`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
 
@@ -111,6 +116,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#1
 - **Selector `.plyr__control`**: `transition: all .1s ease-in-out` extracted from `delice-ca` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.o-section>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `14331px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -169,6 +177,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f8efdc` / `#1
    - Landmark `<section class="o-section">` framing `Un choix pour tous les goûts` and `Plaisirs du jour` (*"Vos fins d’après-midi, rehaussées."*) with `#ffffff` surface cards, `#185abc` accents, and `.flickity-slider { width:100%;height:100%;position:absolute;left:0 }`.
 5. **Colophon & Global Directory Footer (<footer.c-footer> — `https://delice.ca/`)**:
    - Landmark `<footer class="c-footer">` anchoring `Accueil - Délice` footer links (`Les menus · Le restaurant`), copy *"Tous les jours de 14 h à 18 h."*, and `#b2b2b2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, allian...` · sticky/fixed elements: `3`
 
 ---
 
@@ -185,7 +195,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f8efdc` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#de2b2b`, **Accent / Highlight**: `#185abc`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f8efdc` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#de2b2b` primary typography and `#185abc` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Filson Soft` for display copy (`PIZZA DÉLICE DEPUIS 1970 Au cœur de `) with `Filson Soft` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Filson Soft` across display (`PIZZA DÉLICE DEPUIS 1970 Au cœur de `) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: 32px`, padding `3px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -223,8 +233,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--on-primary-300-alt`)**: `#7c2627` — grounded in `var(--on-primary-300-alt)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `3px` lateral canvas padding with `32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 32px`)
@@ -237,7 +247,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Filson Soft`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 18px`, `line-height: 24.3px`, `font-weight: 500`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 600`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 64px`, `font-weight: 600`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: max(14px,min(14px,.875rem))`, `line-height: 1.4`, `letter-spacing: 0`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 
@@ -248,7 +258,7 @@ Scaffold `delice-ca` (`Accueil - Délice`) with these exact structural regions, 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.c-header> — `delice-ca`)` (`delice-ca`) adapts across `@media (min-width:480px)`, `@media (min-width:768px)`, `@media (max-width:767px)`, `@media (min-width:1024px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.23,1,.32,1)`, `cubic-bezier(.215,.61,.355,1)` transitions and links `Les menus · Le restaurant`.
 2. **Hero Stage & Focal Lead (<section.c-hero> — `PIZZA DÉLICE DEPUIS 1970 Au cœur d`)**:
    - DOM & Selectors: Landmark `<section class="c-hero">` presenting display lead `PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, allian...` and copy excerpt *"Au cœur de Lévis, alliant chaleur, grandeur et convivialité dans "* over `#f8efdc` canvas and `#de2b2b` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f8efdc` background with `#de2b2b` headline `PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, allian...`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#f8efdc` background with `#de2b2b` headline `PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, allian...`.
 3. **Primary Showcase & Content Grid (<section.o-section> — `Pizza Délice depuis 1970 Au cœur d`)**:
    - DOM & Selectors: Landmark `<section class="o-section u-relative">` rendering section `Pizza Délice depuis 1970 Au cœur de Lévis, allian...` with copy *"Des saveurs du monde, des ingrédients frais, et des plats pensés "*, asset references (`recaptcha__en.js`, `script.js`, `www.googletagmanager.com`, `mainCss.css`), and grid rule `.flickity-viewport { touch-action:pan-y;height:100%;position:relative;overflow:hidden }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.o-section> — `Pizza Délice depuis 1970 Au cœur d`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `3px` horizontal padding on mobile.
@@ -279,8 +289,27 @@ Scaffold `delice-ca` (`Accueil - Délice`) with these exact structural regions, 
 - **Selector `.plyr__control`**: `transition: all .1s ease-in-out` extracted from `delice-ca` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.c-header>` and `<section.o-section>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `14331px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: PIZZA DÉLICE DEPUIS 1970 Au... (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `delice-ca`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | PIZZA DÉLICE DEPUIS 1970 Au cœur de Lévis, al... | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | On engage | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5593px` | `50%` | On engage | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `11187px` | `100%` | On engage | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

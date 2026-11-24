@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: thetiebreak-merci-michel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thetiebreak-merci-michel-com` (**The Tie-break!**)
 - **Production URL**: [https://thetiebreak.merci-michel.com/](https://thetiebreak.merci-michel.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fff302`)
 - **Summary**: Play the game and discover the latest New Balance X Miu Miu collection with Coco Gauff.
 - **Total Clean CSS Variables Extracted**: `16` (curated live-grounded set below)
@@ -21,13 +21,13 @@ http_status: 200
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `WorkSans`
+- **Display Font Stack**: `Instrument`
 - **Body Font Stack**: `WorkSans`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: observed font-size ladder: `7.5px`, `1.4em`, `2.4em`, `15em`, `8.4em`
-- **Section Heading (`H2`)**: observed font-size ladder: `7.5px`, `1.4em`, `2.4em`, `15em`, `8.4em`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 112.5px`, `line-height: 112.5px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: observed font-size ladder: `112.5px`, `7.5px`, `12px`, `1.4em`, `2.4em`
 - **Body Copy**: live computed `body` (`font-size: 7.5px`, `line-height: 8.25px`, `font-weight: 400`)
-- **Metadata & Labels**: observed font-size ladder: `7.5px`, `1.4em`, `2.4em`, `15em`, `8.4em`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 7.5px`, `line-height: 8.25px`, `font-weight: 400`)
 
 ---
 
@@ -68,12 +68,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.desktop> — `thetiebreak-merci-michel-com`)**:
-   - Landmark `<header class="desktop">` (`1440px`) hosting `The Tie-break!` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-app`, `data-can-control`, `data-engine="three.js r184"`), and stylesheet rule `.webgl-canvas { outline:none }`.
-2. **Hero Stage & Focal Lead (<main.ui> — `The Tie-break!`)**:
-   - Landmark `<main class="ui">` presenting display lead `The Tie-break!` and copy excerpt *"Play the game and discover the latest New Balance X Miu Miu colle"* over `#ffffff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<main.ui:nth(2)> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<main class="ui">` rendering section `Featured Work & Interactive Showcase` with copy *"The Tie-break!"*, asset references (`utag.js`, `favicon.ico`, `favicon_dark.svg`, `favicon_light.svg`), and grid rule `hover { border-color:transparent }`.
-4. **Interactive Detail & Feature Matrix (<main.ui:nth(3)> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="ui">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#05152d` surface cards, `#fff302` accents, and `before { transform:scale(1.1) }`.
-5. **Colophon & Global Directory Footer (<footer.is-exiting> — `https://thetiebreak.merci-michel.com/`)**:
-   - Landmark `<footer class="is-exiting">` anchoring `The Tie-break!` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#000000` structural dividers.
+   - Landmark `<header class="desktop">` (`1440px`) hosting `The Tie-break!` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-active-route="Home"`, `data-v-app`, `data-v-04734283`, `data-v-7fa37a60`), and stylesheet rule `.webgl-canvas { outline:none }`.
+2. **Hero Stage & Focal Lead (<section.view> — `The Tie-break!`)**:
+   - Landmark `<section class="view view-home">` presenting display lead `The Tie-break!` and copy excerpt *"Play the game and discover the latest New Balance X Miu Miu colle"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<section.view-home> — `Play the game and discover the lat`)**:
+   - Landmark `<section class="view view-home">` rendering section `Play the game and discover the latest New Balanc` with copy *"The Tie-break!"*, asset references (`utag.js`, `favicon.ico`, `favicon_dark.svg`, `favicon_light.svg`), and grid rule `hover { border-color:transparent }`.
+4. **Interactive Detail & Feature Matrix (<section.view:nth(2)> — `thetiebreak-merci-michel-com Inter`)**:
+   - Landmark `<section class="view view-home">` framing `thetiebreak-merci-michel-com Interactive Matrix` and `thetiebreak-merci-michel-com Archive & Directory` (*"Play the game and discover the latest New Balanc"*) with `#05152d` surface cards, `#fff302` accents, and `before { transform:scale(1.1) }`.
+5. **Colophon & Global Directory Footer (<footer.ui> — `https://thetiebreak.merci-michel.com/`)**:
+   - Landmark `<footer class="ui">` anchoring `The Tie-break!` footer links (`Overview · Index · Archive · About · Contact`), copy *"thetiebreak-merci-michel-com Interactive Matrix"*, and `#000000` structural dividers.

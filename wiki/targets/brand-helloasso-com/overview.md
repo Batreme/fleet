@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: brand-helloasso-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://brand.helloasso.com/"
 final_url: "https://brand.helloasso.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,7 +27,7 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://brand.helloasso.com/](https://brand.helloasso.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Accueil – Brandbook HelloAsso
 - **Identified Frameworks**: HTML5 Canvas / WebGL
 - **Recovered Scripts**: `12`

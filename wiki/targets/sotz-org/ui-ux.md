@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: sotz-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sotz-org` (**Shout out to Zanzibar**)
 - **Production URL**: [https://sotz.org/](https://sotz.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×1064px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: S h o u t o u t t o Z a n z i b a r :
-- **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `15` (curated live-grounded set below)
 
 ---
 
@@ -53,15 +53,15 @@ http_status: 200
 | `--breath-y` | `-2.5px` | Dimension / Scale Token |
 | `--sd` | `4.2s` | Motion / Timing Token |
 | `--sdd` | `0s` | Motion / Timing Token |
-| `--fx` | `-8.963657902432804px` | Dimension / Scale Token |
-| `--fy` | `-57.39062020612461px` | Dimension / Scale Token |
-| `--fd` | `9.104268337879649s` | Motion / Timing Token |
-| `--fdd` | `-1.4289036550019194s` | Motion / Timing Token |
-| `--gd` | `4.621072714254437s` | Motion / Timing Token |
-| `--gdd` | `-3.922843652651112s` | Motion / Timing Token |
+| `--fx` | `12.686829972268164px` | Dimension / Scale Token |
+| `--fy` | `-42.338201167836075px` | Dimension / Scale Token |
+| `--fd` | `8.03990141361104s` | Motion / Timing Token |
+| `--fdd` | `-4.525146343807082s` | Motion / Timing Token |
+| `--gd` | `3.218259545023418s` | Motion / Timing Token |
+| `--gdd` | `-1.1055247801866024s` | Motion / Timing Token |
+| `--dx` | `97.66093029928604px` | Dimension / Scale Token |
+| `--dy` | `-56.65180577215252px` | Dimension / Scale Token |
 | `--sotz-org-bg` | `#e9e2d3` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
-| `--sotz-org-ink` | `#000000` | Primary Typography Ink (computed-derived) |
-| `--sotz-org-surface` | `#f3eddd` | Surface Substrate (computed-derived) |
 
 ---
 

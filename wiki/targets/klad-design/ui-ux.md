@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: klad-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `klad-design` (**Multidisciplinary Design Syndicate – KLAD**)
 - **Production URL**: [https://klad.design/](https://klad.design/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#000000`)
 - **Summary**: Klad Syndicate is a multidisciplinary design studio offering comprehensive solutions for ambitious brands. Every design we deliver is ori...
 - **Total Clean CSS Variables Extracted**: `68` (curated live-grounded set below)

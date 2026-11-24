@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-unbelievablycrap-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.unbelievablycrap.com/"
 final_url: "https://www.unbelievablycrap.com/"
-status: analyzed
-http_status: 200
-capture_tier: tier2_webgl
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://www.unbelievablycrap.com/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.unbelievablycrap.com/](https://www.unbelievablycrap.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Liubomyr Ulytskyi - Digital Designer
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `66`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://www.unbelievablycrap.com/', waiting until 'domcontentloaded' )
+- **Page Title**: www-unbelievablycrap-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `64`
 - **Recovered Stylesheets**: `23`
 
 ---

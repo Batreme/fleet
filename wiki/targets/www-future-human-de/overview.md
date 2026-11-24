@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-future-human-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.future-human.de/"
 final_url: "https://www.future-human.de/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: FUTURE HUMAN · A Shared Year of Co-Creation & Presence
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `16`
+- **Recovered Scripts**: `22`
 - **Recovered Stylesheets**: `0`
 
 ---

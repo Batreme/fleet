@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: fondation-canadiens-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://fondation.canadiens.com/"
 final_url: "https://fondation.canadiens.com/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Montreal Canadiens Children's Foundation - Play to thrive
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `57`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `255`
+- **Recovered Stylesheets**: `29`
 
 ---
 

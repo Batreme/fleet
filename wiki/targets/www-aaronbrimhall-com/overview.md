@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-aaronbrimhall-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.aaronbrimhall.com/"
 final_url: "https://www.aaronbrimhall.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Aaron Brimhall · Action & Automotive Photographer
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `11`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `44`
+- **Recovered Stylesheets**: `12`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: 100yearsmonet-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `100yearsmonet-com` (**Monet 100 — A century without Claude Monet · 3D gallery**)
 - **Production URL**: [https://100yearsmonet.com](https://100yearsmonet.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#fbf3c6`)
 - **Summary**: A hundred years after Claude Monet’s death: walk on water through his paintings into the room of Water Lilies. An immersive 3D tribute wi...
 - **Total Clean CSS Variables Extracted**: `7` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Quelia`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 49.6px`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54.72px`, `line-height: 55.8144px`, `font-weight: 300`); rule `h2` (`letter-spacing: -.01em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60.48px`, `line-height: 62.8992px`, `font-weight: 400`); rule `h2` (`letter-spacing: -.01em`)
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 11.5px`, `line-height: 17.25px`, `font-weight: 400`); rule `small` (`letter-spacing: .12em`)
 
@@ -77,5 +77,5 @@ http_status: 200
    - Landmark `<article class="mui-card">` rendering section `100 Years without Monet` with copy *"Claude Monet died at Giverny on 5 December 1926. A hundred years "*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `quelia.woff2`), and grid rule `canvas { position:fixed;inset:0;width:100%;height:100% }`.
 4. **Interactive Detail & Feature Matrix (<article.mui-card:nth(2)> — `Claude Monet died at Giverny on 5 `)**:
    - Landmark `<article class="mui-card">` framing `Claude Monet died at Giverny on 5 December 1926.` and `This experience needs JavaScript and WebGL.` (*"This experience needs JavaScript and WebGL."*) with `#141006` surface cards, `#fbf3c6` accents, and `journey { height:2000vh;pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.mui-garden> — `https://100yearsmonet.com`)**:
-   - Landmark `<footer class="mui-garden">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.mui> — `https://100yearsmonet.com`)**:
+   - Landmark `<footer class="mui">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.

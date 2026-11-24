@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: davidcata-com_en-musica"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://davidcata.com/en/musica/"
 final_url: "https://davidcata.com/en/musica/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Music — “Queridos todos:” and “Origen”, by David Catá
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `32`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `181`
+- **Recovered Stylesheets**: `12`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: allsorts-andrew-rip"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "allsorts-andrew-rip"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#dddddd`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Allsorts · Andrew Robinson** (https://allsorts.andrew.rip) — Liquorice allsorts to throw, pile and frame, rendered in your browser. Save one as a wallpaper. By Andrew Robinson.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Allsorts · Andrew Robinson** (`https://allsorts.andrew.rip`). Liquorice allsorts to throw, pile and frame, rendered in your browser. Save one as a wallpaper. By Andrew Robinson.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#dddddd`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#dddddd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Soehne` for display copy (`Allsorts · Andrew Robinson`) with `Tiempos Fine` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Soehne` for display copy (`Allsorts · Andrew Robinson`) with `Tiempos Fine`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px`, padding `8px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `8px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `999px`, `6px`, `4px`, `1px`.
@@ -106,6 +111,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `.close.svelte-11id0ew`**: `transition: left .25s,top .25s` extracted from `allsorts-andrew-rip` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -164,6 +172,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<div class="fallback">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Open it in the latest Chrome, Edge or Safari. In an app? Open it "*) with `#111111` surface cards, `#dddddd` accents, and `.row.svelte-qxof8p { justify-content:space-between;gap:12px;display:flex }`.
 5. **Colophon & Global Directory Footer (<footer.words> — `https://allsorts.andrew.rip`)**:
    - Landmark `<footer class="words">` anchoring `Allsorts · Andrew Robinson` footer links (`Andrew Robinson`), copy *"Technical Architecture & Narrative"*, and `#262626` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `3`
 
 ---
 
@@ -180,7 +190,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#dddddd`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#dddddd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Soehne` for display copy (`Allsorts · Andrew Robinson`) with `Tiempos Fine` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Soehne` for display copy (`Allsorts · Andrew Robinson`) with `Tiempos Fine`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px`, padding `8px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -213,8 +223,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#262626` — grounded in `.total.svelte-qxof8p { border-top: #262626 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `8px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px`)
@@ -238,7 +248,7 @@ Scaffold `allsorts-andrew-rip` (`Allsorts · Andrew Robinson`) with these exact 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.stage> — `allsorts-andrew-rip`)` (`allsorts-andrew-rip`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (width<=480px)`, `@media (width<=640px),(pointer:coarse) and (height<=500px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Andrew Robinson`.
 2. **Hero Stage & Focal Lead (<div.svelte-1pzb9eq> — `Allsorts · Andrew Robinson`)**:
    - DOM & Selectors: Landmark `<div class="svelte-1pzb9eq">` presenting display lead `Allsorts · Andrew Robinson` and copy excerpt *"Allsorts Andrew Robinson"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#ffffff` headline `Allsorts · Andrew Robinson`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#000000` background with `#ffffff` headline `Allsorts · Andrew Robinson`.
 3. **Primary Showcase & Content Grid (<div.light> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<div class="light">` rendering section `Featured Work & Interactive Showcase` with copy *"Liquorice allsorts to throw, pile and frame, rendered on your gra"*, asset references (`start.ChVgNEA1.js`, `payload.DSmR2FwN.js`, `CRzLMJPS.js`, `CKKoTArS.js`), and grid rule `body { overscroll-behavior:none;background:000;margin:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.light> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `8px` horizontal padding on mobile.
@@ -268,8 +278,25 @@ Scaffold `allsorts-andrew-rip` (`Allsorts · Andrew Robinson`) with these exact 
 - **Selector `.close.svelte-11id0ew`**: `transition: left .25s,top .25s` extracted from `allsorts-andrew-rip` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `allsorts-andrew-rip`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: agnestoth-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `agnestoth-com` (**AGNESTOTH · House of Luxurious Embroidery**)
 - **Production URL**: [https://agnestoth.com](https://agnestoth.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#121212` ink, `#1990c6` accent)
 - **Summary**: Discover one-of-a-kind luxury embroidered handbags by AGNESTOTH, created in Budapest from apple leather with original artist-led designs.
-- **Total Clean CSS Variables Extracted**: `232` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `729` (curated live-grounded set below)
 
 ---
 
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `FreightBig Pro`
 - **Body Font Stack**: `Jost`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 100px`, `line-height: 100px`, `font-weight: 300`); rule `h1` (`font-size: 5.2rem`, `line-height: 1.3`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 34px`, `line-height: 34px`, `font-weight: 400`, `letter-spacing: 0.34px`); rule `h2` (`font-size: 2.8rem`, `line-height: 1.3`, `font-weight: 400`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 100px`, `line-height: 100px`, `font-weight: 300`); CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `h1` (`font-size: 5.2rem`, `line-height: 1.3`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 70px`, `line-height: 74px`, `font-weight: 300`); rule `h2` (`font-size: 2.8rem`, `line-height: 1.3`, `font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 28.8px`, `font-weight: 400`, `letter-spacing: 0.6px`); CSS variables `--font-body-family: Assistant, sans-serif`, `--font-body-style: normal`, `--font-body-weight: 400`; rule `p` (`font-size: 1.6rem`, `line-height: 2.4rem`, `letter-spacing: .02em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 28.8px`, `font-weight: 400`, `letter-spacing: 0.6px`); CSS variables `--agnes-label-size: 1.3rem`, `--agnes-label-weight: 500`, `--agnes-label-tracking: .14em`
 

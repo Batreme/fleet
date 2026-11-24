@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-era-residence-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-era-residence-com` (**ERA Residence — Contemporary Mediterranean Residences in Estepona**)
 - **Production URL**: [https://www.era-residence.com/](https://www.era-residence.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3f3ec` canvas, `#17233b` ink, `#0082f3` accent)
 - **Summary**: Boutique residences on the New Golden Mile combining contemporary architecture, natural materials and resort-style living near Marbella a...
 - **Total Clean CSS Variables Extracted**: `201` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Maison Neue Extended`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 172.8px`, `line-height: 150.336px`, `font-weight: 400`, `letter-spacing: -4.1472px`); CSS variables `--_fonts---font-display: ambroise-francois-std,sans-serif`, `--_fonts---h1--size: calc(192rem/var(--_special-units---scale-ratio))`, `--_fonts---h1--line-height: 87.5%`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 108px`, `line-height: 108px`, `font-weight: 400`); CSS variables `--_fonts---h2--size: calc(136rem/var(--_special-units---scale-ratio))`, `--_fonts---h2--line-height: 88.235%`, `--_fonts---h2--letter-spacing: -.024em`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 349.211px`, `line-height: 303.813px`, `font-weight: 400`, `letter-spacing: -8.38106px`); CSS variables `--_fonts---h2--size: calc(136rem/var(--_special-units---scale-ratio))`, `--_fonts---h2--line-height: 88.235%`, `--_fonts---h2--letter-spacing: -.024em`
 - **Body Copy**: live computed `body` (`font-size: 14.4px`, `line-height: 14.4px`, `font-weight: 400`); CSS variables `--_fonts---font-body: "Maison Neue Extended",Arial,sans-serif`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14.4px`, `line-height: 14.4px`, `font-weight: 400`); CSS variables `--_fonts---h1--letter-spacing: -.024em`, `--_fonts---h2--letter-spacing: -.024em`, `--_fonts---h3--letter-spacing: -.024em`
 

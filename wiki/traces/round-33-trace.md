@@ -1,8 +1,8 @@
-# Round 33 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 33 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-33`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-33`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
 > **Analyzed Targets**: `9` live (`1` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
@@ -10,7 +10,7 @@
 
 ## 1. Round 33 Target Scope
   1. `sibaldesign-com` — *Jeff Sibal — Visual & Digital Designer · SIBALDESIGN*
-  2. `siglitos-com` — *Blocked (`Hard per-target capture deadline exceeded (150s)`)*
+  2. `siglitos-com` — *Blocked (`Empty DOM response (0 bytes, 0 visible text)`)*
   3. `sincro-es_en-us` — *Us - Sincro*
   4. `sinedogma-com-tr` — *sinedogma*
   5. `sixescricket-com` — *Sixes Party Cricket · Let's Play · Nets & Simulator · Sixes Social Cricket*
@@ -22,17 +22,17 @@
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `sibaldesign-com` | `tier2_webgl` | `1440×900px` (273,482 B) | `390×844px` (119,741 B) | 28 | 16 | 294 | 112 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `sincro-es_en-us` | `tier1_fast` | `1440×2400px` (1,070,479 B) | `390×2400px` (251,737 B) | 133 | 16 | 284 | 107 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `sinedogma-com-tr` | `tier1_fast` | `1440×2400px` (372,578 B) | `390×2400px` (171,131 B) | 203 | 16 | 284 | 107 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `sixescricket-com` | `tier1_fast` | `1440×2400px` (952,420 B) | `390×2400px` (327,054 B) | 240 | 16 | 282 | 106 | `0.09` / `0.46` | **25.0 / 25.0** |
-| `skhiladze-com` | `tier2_webgl` | `1440×900px` (106,253 B) | `390×844px` (69,958 B) | 36 | 16 | 286 | 108 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `sleutelaar-xyz` | `tier1_fast` | `1440×2400px` (263,818 B) | `390×2400px` (130,686 B) | 11 | 16 | 286 | 108 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `sotz-org` | `tier1_fast` | `1440×1064px` (1,038,850 B) | `390×844px` (152,059 B) | 13 | 16 | 282 | 106 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `southandstonestudio-com` | `tier1_fast` | `1440×2400px` (338,282 B) | `390×2400px` (190,185 B) | 117 | 16 | 296 | 113 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `sparkle-ankatms-com` | `tier1_fast` | `1440×2400px` (1,431,796 B) | `390×2400px` (446,334 B) | 31 | 16 | 300 | 115 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `siglitos-com` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Hard per-target capture deadline exceeded (150s)`)** |
+| `sibaldesign-com` | `tier2_webgl` | `1280×828px` (9,610 B) | `390×872px` (7,334 B) | 28 | 16 | 321 | 115 | `0.08` / `0.51` | **25.0 / 25.0** |
+| `sincro-es_en-us` | `tier1_fast` | `1280×6624px` (389,170 B) | `390×2616px` (107,376 B) | 133 | 16 | 341 | 111 | `0.11` / `0.52` | **25.0 / 25.0** |
+| `sinedogma-com-tr` | `tier1_fast` | `1280×6624px` (400,074 B) | `390×2616px` (88,116 B) | 203 | 16 | 342 | 111 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `sixescricket-com` | `tier1_fast` | `1280×6624px` (781,606 B) | `390×2616px` (93,164 B) | 240 | 16 | 347 | 111 | `0.09` / `0.46` | **25.0 / 25.0** |
+| `skhiladze-com` | `tier1_fast` | `1280×6624px` (251,448 B) | `390×1744px` (20,598 B) | 36 | 16 | 340 | 113 | `0.09` / `0.51` | **25.0 / 25.0** |
+| `sleutelaar-xyz` | `tier2_webgl` | `1280×6624px` (527,756 B) | `390×872px` (1,966 B) | 11 | 16 | 337 | 112 | `0.11` / `0.52` | **25.0 / 25.0** |
+| `sotz-org` | `tier1_fast` | `1280×3312px` (274,092 B) | `390×872px` (16,902 B) | 15 | 16 | 331 | 111 | `0.08` / `0.50` | **25.0 / 25.0** |
+| `southandstonestudio-com` | `tier1_fast` | `1280×6624px` (436,728 B) | `390×2616px` (103,966 B) | 140 | 16 | 363 | 118 | `0.09` / `0.46` | **25.0 / 25.0** |
+| `sparkle-ankatms-com` | `tier1_fast` | `1280×6624px` (370,748 B) | `390×2616px` (69,130 B) | 31 | 16 | 352 | 119 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `siglitos-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Empty DOM response (0 bytes, 0 visible text)`)** |

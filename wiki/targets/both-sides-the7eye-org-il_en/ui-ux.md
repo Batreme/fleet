@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: both-sides-the7eye-org-il_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier2_webgl
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `both-sides-the7eye-org-il_en` (**Extremists on Both Sides**)
 - **Production URL**: [https://both-sides.the7eye.org.il/en/](https://both-sides.the7eye.org.il/en/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fdfcff` / `#25d366`)
 - **Summary**: We collected thousands of political actions carried out in public space over the past four years. Decide for yourself — who are the extre...
 - **Total Clean CSS Variables Extracted**: `91` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Assistant`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 54px`, `font-weight: 400`); CSS variables `--se-cap-display: block`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 400`); rule `.section-title` (`font-size: 36px`, `line-height: 1.2`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: 'Assistant', sans-serif`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 

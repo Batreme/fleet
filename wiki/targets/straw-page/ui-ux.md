@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: straw-page"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `straw-page` (**Straw.Page - Extremely simple website builder**)
 - **Production URL**: [https://straw.page](https://straw.page)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffff00` accent)
 - **Summary**: Straw.Page is the world's simplest website builder. Create unique websites from your mobile device.
 - **Total Clean CSS Variables Extracted**: `4` (curated live-grounded set below)

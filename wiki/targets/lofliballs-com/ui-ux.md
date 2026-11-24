@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lofliballs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lofliballs-com` (**LoFli Balls—Innovative Training Tools for Youth Athletes – Lofli**)
 - **Production URL**: [http://lofliballs.com](http://lofliballs.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f4da40`)
 - **Summary**: LoFli Balls are weighted training tools with emulated stitching to mimic the feel of a real ball. Flying about half the distance of a sta...
-- **Total Clean CSS Variables Extracted**: `196` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `287` (curated live-grounded set below)
 
 ---
 
@@ -25,8 +25,8 @@ http_status: 200
 - **Body Font Stack**: `Assistant`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 259.2px`, `line-height: 168.48px`, `font-weight: 700`, `letter-spacing: -7.776px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 63.36px`, `line-height: 57.024px`, `font-weight: 900`, `letter-spacing: -2.5344px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 47.52px`, `line-height: 41.3424px`, `font-weight: 900`, `letter-spacing: -1.9008px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`, `--jm-body-lg-size: var(--jm-font-size-450)`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `small` (`font-size: calc(var(--kl-reviews-reviews...`, `font-weight: var(--kl-revi...`)
 
 ---

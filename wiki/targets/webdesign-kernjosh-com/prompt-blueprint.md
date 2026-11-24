@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: webdesign-kernjosh-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "webdesign-kernjosh-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#0
 
 > **Josh Kern** (https://webdesign.kernjosh.com) — Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Josh Kern** (`https://webdesign.kernjosh.com`). Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c0908` primary typography and `#007aff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Hey my name is Josh and I cool websi`) with `DM Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `DM Sans` across display (`Hey my name is Josh and I cool websi`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 12px`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x886)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×886px` (`assets/mobile.png`, full-page live capture (886px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `.45rem` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `999px`, `6px`, `4px`, `1px`.
@@ -113,6 +118,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#0
 - **Selector `.loader .loading-hint`**: `transition: none` extracted from `webdesign-kernjosh-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<section.work-stage>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -171,6 +179,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#0
    - Landmark `<section class="process-shell">` framing `Building the site` and `Handover & going live` (*"I start exploring ideas for the landing page by throwing a lot of"*) with `#ece3cb` surface cards, `#007aff` accents, and `root { --base-100:f5f1e6;--base-200:e0dfd7;--base-300:5f5f5f;--base-350:3f3f3f;... }`.
 5. **Colophon & Global Directory Footer (<footer.legal-footer> — `https://webdesign.kernjosh.com`)**:
    - Landmark `<footer class="legal-footer">` anchoring `Josh Kern` footer links (`Overview · Index · Archive · About · Contact`), copy *"3 Building the site I build everything with custom code, add"*, and `#8b8983` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Getting to know you` · sticky/fixed elements: `5`
 
 ---
 
@@ -187,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0c0908`, **Accent / Highlight**: `#007aff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c0908` primary typography and `#007aff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Hey my name is Josh and I cool websi`) with `DM Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `DM Sans` across display (`Hey my name is Josh and I cool websi`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1400px` container bounds (`gap: 12px`, padding `.45rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +237,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--buy-bg`)**: `#2a1d15` — grounded in `var(--buy-bg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×886px` (full-page live capture (886px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1400px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `.45rem` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 12px`)
@@ -252,7 +262,7 @@ Scaffold `webdesign-kernjosh-com` (`Josh Kern`) with these exact structural regi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav> — `webdesign-kernjosh-com`)` (`webdesign-kernjosh-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (width<=600px)`, `@media (width<=1000px)`, `@media (width<=560px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.33,1,.68,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.desk> — `Hey my name is Josh and I cool web`)**:
    - DOM & Selectors: Landmark `<section class="desk">` presenting display lead `Hey my name is Josh and I cool websites :)` and copy excerpt *"I ask a lot of questions because I want the website to feel like "* over `#f5f1e6` canvas and `#0c0908` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×886px` mobile) sets `#f5f1e6` background with `#0c0908` headline `Hey my name is Josh and I cool websites :)`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#f5f1e6` background with `#0c0908` headline `Hey my name is Josh and I cool websites :)`.
 3. **Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)**:
    - DOM & Selectors: Landmark `<section class="work-stage">` rendering section `Getting to know you` with copy *"1 Getting to know you I ask a lot of questions because I want the"*, asset references (`favicon.png`, `apple-touch-icon.png`, `challenges.cloudflare.com`, `main-CwptEoZ4.js`), and grid rule `font-face { font-family:Outfit;src:url(/assets/Outfit-Variable-D6ftewdU.woff2)format... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work-stage> — `Getting to know you`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1400px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding on mobile.
@@ -283,8 +293,25 @@ Scaffold `webdesign-kernjosh-com` (`Josh Kern`) with these exact structural regi
 - **Selector `.loader .loading-hint`**: `transition: none` extracted from `webdesign-kernjosh-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<section.work-stage>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `900px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Getting to know you (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `webdesign-kernjosh-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Getting to know you | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Getting to know you | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

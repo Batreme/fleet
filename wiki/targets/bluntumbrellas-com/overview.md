@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bluntumbrellas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bluntumbrellas.com"
 final_url: "https://bluntumbrellas.eu/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: BLUNT Umbrellas · Built to Resist Every Weather
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `246`
-- **Recovered Stylesheets**: `40`
+- **Recovered Scripts**: `852`
+- **Recovered Stylesheets**: `41`
 
 ---
 

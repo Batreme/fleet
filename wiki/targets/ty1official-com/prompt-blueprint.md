@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: ty1official-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "ty1official-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#
 
 > **TY1 — DJ & Producer** (https://ty1official.com) — TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **TY1 — DJ & Producer** (`https://ty1official.com`). TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#181618` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#ec651d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Atkinson Hyperlegible` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Atkinson Hyperlegible` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Atkinson Hyperlegible` across display (`TY1 — DJ & Producer, Junkie Musik`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=11900px` / doc `25000px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `10px` grid gap.
 - **Border Radius Scale**: `50%`, `var(--radius)`, `6px`, `2px`.
@@ -109,6 +114,10 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#
 - **Selector `.cta`**: `transition: background var(--dur) var(--ease-out),color var(--dur) var(--e...` extracted from `ty1official-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.testata>` and `<section.trasf>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `25000px`, deepest scrollY reached `11900px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Interactive Control Probe (`accordion` · `Regolamento`)**: Triggered visual diff `55.743` (attr ` -> `, captured in `assets/state-interactive.webp`).
 
 ---
 
@@ -160,13 +169,22 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#
 1. **Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)**:
    - Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
+   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"Clicca il video per ingrandirlo"* over `#181618` canvas and `#f5f5f5` ink.
 3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
-   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"S i d e A · S i d e B"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
 4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
-   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"J u n k i e M u s i k"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#333132` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `4%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `3`
+- **Step 03** (`y=2550px`, `11%`): Active landmark `FUORI ORA` · sticky/fixed elements: `3`
+- **Step 04** (`y=5100px`, `21%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `2`
+- **Step 05** (`y=6800px`, `28%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `2`
+- **Step 06** (`y=8500px`, `35%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `2`
+- **Step 07** (`y=11050px`, `46%`): Active landmark `COOKIE POLICY` · sticky/fixed elements: `1`
+- **Step 08** (`y=11900px`, `49%`): Active landmark `GIOCA E VINCI UN INCONTRO CON TY1` · sticky/fixed elements: `1`
 
 ---
 
@@ -183,7 +201,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#181618` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f5f5`, **Accent / Highlight**: `#ec651d`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#181618` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#ec651d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Atkinson Hyperlegible` for display copy (`TY1 — DJ & Producer, Junkie Musik`) with `Atkinson Hyperlegible` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Atkinson Hyperlegible` across display (`TY1 — DJ & Producer, Junkie Musik`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +237,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#333132` — grounded in `var(--line)` in `:root` (`rgba(215, 214, 213, .14)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `57.6px` lateral canvas padding with `10px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`)
@@ -243,23 +261,23 @@ Scaffold `ty1official-com` (`TY1 — DJ & Producer`) with these exact structural
    - DOM & Selectors: Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)` (`ty1official-com`) adapts across `@media (max-width: 767px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 640px)`, `@media (hover: none) and (orientation: landscape) and (max-heigh...` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - DOM & Selectors: Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#181618` background with `#f5f5f5` headline `TY1 — DJ & Producer, Junkie Musik`.
+   - DOM & Selectors: Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"Clicca il video per ingrandirlo"* over `#181618` canvas and `#f5f5f5` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#181618` background with `#f5f5f5` headline `TY1 — DJ & Producer, Junkie Musik`.
 3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
-   - DOM & Selectors: Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+   - DOM & Selectors: Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"S i d e A · S i d e B"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
-   - DOM & Selectors: Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - DOM & Selectors: Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"J u n k i e M u s i k"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)` uses `50%`, `var(--radius)`, `6px`, `2px` radii, `#ec651d` highlights, and assets (favicon.ico, favicon.svg, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#333132` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `57.6px` lateral canvas padding with `10px` grid gap and attributes (data-world="artist", data-suono, data-testata).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"A u d i o O n O f f"*
-- Copy Excerpt 2: *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*
-- Copy Excerpt 3: *"S i d e A · S i d e B"*
-- Copy Excerpt 4: *"J u n k i e M u s i k"*
+- Copy Excerpt 1: *"Clicca il video per ingrandirlo"*
+- Copy Excerpt 2: *"S i d e A · S i d e B"*
+- Copy Excerpt 3: *"J u n k i e M u s i k"*
+- Copy Excerpt 4: *"G i o c a e v i n c i u n"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.16,1,.3,1)`
@@ -275,8 +293,37 @@ Scaffold `ty1official-com` (`TY1 — DJ & Producer`) with these exact structural
 - **Selector `.cta`**: `transition: background var(--dur) var(--ease-out),color var(--dur) var(--e...` extracted from `ty1official-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.testata>` and `<section.trasf>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `25000px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: COOKIE POLICY (0%) -> COOKIE POLICY (4%) -> FUORI ORA (11%) -> COOKIE POLICY (21%) -> COOKIE POLICY (28%) -> COOKIE POLICY (35%) -> COOKIE POLICY (46%) -> GIOCA E VINCI UN INCONTRO C... (49%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `ty1official-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | COOKIE POLICY | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | COOKIE POLICY | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `11%` | FUORI ORA | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `21%` | COOKIE POLICY | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `28%` | COOKIE POLICY | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `35%` | COOKIE POLICY | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `11050px` | `46%` | COOKIE POLICY | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `11900px` | `49%` | GIOCA E VINCI UN INCONTRO CON TY1 | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | COOKIE POLICY | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Regolamento`, diff `55.743`) | [state-interactive.webp](assets/state-interactive.webp) |
+

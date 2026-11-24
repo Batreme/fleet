@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: tamasolajos-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "tamasolajos-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ffffff`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Tamás Olajos — AI Filmmaker & Director · London & Budapest** (https://tamasolajos.com/) — Tamás Olajos is an award-winning AI filmmaker and director, Runway and Dreamina Creative Partner. Cinematic commercial campaigns and expe...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Tamás Olajos — AI Filmmaker & Director · London & Budapest** (`https://tamasolajos.com/`). Tamás Olajos is an award-winning AI filmmaker and director, Runway and Dreamina Creative Partner. Cinematic commercial campaigns and expe...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ffffff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `system-ui, -apple-system, sans-serif` (live computed system stack) for display copy (`Tamás Olajos — AI Filmmaker & Direct`) with `system-ui, -apple-system, sans-serif` (live computed system stack) and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `system-ui, -apple-system, sans-serif` (live computed system stack) across display (`Tamás Olajos — AI Filmmaker & Direct`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `1rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x1082)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×1082px` (`assets/mobile.png`, full-page live capture (1082px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `1082px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `1rem` lateral canvas padding with `0px (flush layout)` grid gap.
 - **Border Radius Scale**: `4rem`.
@@ -103,6 +108,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 ### Per-Element Transition & Choreography Rules
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `1082px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -161,6 +169,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<div class="webgl">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#000000` surface cards, `#ffffff` accents, and `.webgl { -webkit-user-select:none;user-select:none;width:100dvw;height:100dvh;pos... }`.
 5. **Colophon & Global Directory Footer (<footer> — `https://tamasolajos.com/`)**:
    - Landmark `<footer>` landmark anchoring `Tamás Olajos — AI Filmmaker & Di` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
 
 ---
 
@@ -177,7 +187,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `system-ui, -apple-system, sans-serif` (live computed system stack) for display copy (`Tamás Olajos — AI Filmmaker & Direct`) with `system-ui, -apple-system, sans-serif` (live computed system stack) and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `system-ui, -apple-system, sans-serif` (live computed system stack) across display (`Tamás Olajos — AI Filmmaker & Direct`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px (flush layout)`, padding `1rem`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -210,8 +220,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#ffffff` — grounded in hairline divider derived from secondary opacity step of `body` default contrast ink (`#ffffff`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×1082px` (full-page live capture (1082px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `1rem` lateral canvas padding with `0px (flush layout)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`)
@@ -235,7 +245,7 @@ Scaffold `tamasolajos-com` (`Tamás Olajos — AI Filmmaker & Director · London
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.webgl> — `tamasolajos-com`)` (`tamasolajos-com`) adapts across no `@media` queries in captured stylesheet (fluid viewport scaling) with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<div.webgl> — `Tamás Olajos — AI Filmmaker & Dire`)**:
    - DOM & Selectors: Landmark `<div class="webgl">` presenting display lead `Tamás Olajos — AI Filmmaker & Director · London ` and copy excerpt *"Tamás Olajos is an award-winning AI filmmaker and director, Runwa"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×1082px` mobile) sets `#000000` background with `#ffffff` headline `Tamás Olajos — AI Filmmaker & Director · London `.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#000000` background with `#ffffff` headline `Tamás Olajos — AI Filmmaker & Director · London `.
 3. **Primary Showcase & Content Grid (<div.webgl:nth(2)> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<div class="webgl">` rendering section `Featured Work & Interactive Showcase` with copy *"Tamás Olajos — AI Filmmaker & Director · London "*, asset references (`favicon.svg`, `index-BZCf80GG.js`, `index-DcXtDSRr.css`, `showreel_short.mp4`), and grid rule `html { background-color:000;font-size:10px }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.webgl:nth(2)> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `1rem` horizontal padding on mobile.
@@ -260,8 +270,27 @@ Scaffold `tamasolajos-com` (`Tamás Olajos — AI Filmmaker & Director · London
 - **Per-Selector Transition Rules**:
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `1082px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `tamasolajos-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `119px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `238px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

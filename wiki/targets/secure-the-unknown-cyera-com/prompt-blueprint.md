@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: secure-the-unknown-cyera-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "secure-the-unknown-cyera-com"
 status: blocked
 capture: none

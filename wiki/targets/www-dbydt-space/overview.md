@@ -1,13 +1,12 @@
 ---
 title: "Target Overview: www-dbydt-space"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.dbydt.space"
-final_url: "https://www.dbydt.space"
-status: blocked
-http_status: null
-capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+final_url: "https://www.dbydt.space/"
+status: analyzed
+http_status: 200
+capture_tier: tier2_webgl
 tags:
   - target
   - reverse-engineering
@@ -28,12 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.dbydt.space](https://www.dbydt.space)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: www-dbydt-space
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Page Title**: Deebak Tamilmani · Design Portfolio
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `3`
+- **Recovered Stylesheets**: `2`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-fieldrank-run"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-fieldrank-run"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 2
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1d1a` ink, `#f1efea` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **FieldRank: Trail and ultra rankings** (https://www.fieldrank.run) — A season ranking of trail and ultra runners, built from race results. Overall and by distance.
 
-![Desktop Viewport Capture (1440x1266)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **FieldRank: Trail and ultra rankings** (`https://www.fieldrank.run`). A season ranking of trail and ultra runners, built from race results. Overall and by distance.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1d1a` ink, `#f1efea` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#1e1d1a` primary typography and `#f1efea` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`Trail and ultra rankings`) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`Trail and ultra rankings`) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `var(--card-spacing)`) with `cubic-bezier(.4,0,.6,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×1266px` (`assets/desktop.png`, full-page live capture (1266px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=366px` / doc `1266px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `var(--card-spacing)` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `8px`, `.25rem`, `1px`, `2px`.
@@ -112,6 +117,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.transition-all`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-fieldrank-run` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<div.min-h-screen>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<div.light>` and `<div.min-h-screen>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `1266px`, deepest scrollY reached `366px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe (`Settings`)**: Triggered visual change (pixel diff `23.535`, captured in `assets/state-nav.webp`); revealed links: FieldRank, Rankings, Races, Feedback, 2026 Overall, 2026 100M+.
+- **Hover Physics (`primary_cta` · `FieldRank`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Hover Physics (`first_card` · `LATEST RESULTS IN New Pacific Tra...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Theme Toggle Probe (`Dark`)**: Toggled body background `lab(94.4667 0.0291467 2.67346)` -> `lab(6.81519 0.113778 1.32487)` and ink `lab(10.8278 -0.050351 2.3117)` -> `lab(94.4667 0.0291467 2.67346)`.
+- **Route Transition Architecture**: First internal navigation (`/rankings`) measured as `SPA` in `1645ms`.
 
 ---
 
@@ -170,6 +183,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<div class="bg-background">` framing `Season in progress` and `2026-11-15 · Santa Ynez, CA, USA · Short · 422 r` (*"2026-11-15 · Santa Ynez, CA, USA · Short · 422 results"*) with `#f1efea` surface cards, `#f1efea` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.text-foreground> — `https://www.fieldrank.run`)**:
    - Landmark `<footer class="text-foreground">` anchoring `FieldRank: Trail and ultra ranki` footer links (`Rankings · Races`), copy *"Santa Ynez, CA, USA"*, and `#ddd9cf` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Trail and ultra rankings` · sticky/fixed elements: `1`
+- **Step 02** (`y=366px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/rankings`)**: `https://www.fieldrank.run/rankings` — H1: `2026 Overall · M`, scrollHeight `2806px`, transition `SPA` (`1645ms`)
+- **Other Route (`/races`)**: `https://www.fieldrank.run/races` — H1: `Races`, scrollHeight `4559px`, transition `direct` (`832ms`)
 
 ---
 
@@ -186,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1e1d1a`, **Accent / Highlight**: `#f1efea`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#1e1d1a` primary typography and `#f1efea` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`Trail and ultra rankings`) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`Trail and ultra rankings`) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `var(--card-spacing)`) with `cubic-bezier(.4,0,.6,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +245,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--destructive`)**: `#e40014` — grounded in `var(--destructive)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×1266px` (full-page live capture (1266px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `var(--card-spacing)` lateral canvas padding with `4px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`)
@@ -250,7 +270,7 @@ Scaffold `www-fieldrank-run` (`FieldRank: Trail and ultra rankings`) with these 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `www-fieldrank-run`)` (`www-fieldrank-run`) adapts across `@media not all and (min-width:40rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)` with `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Rankings · Races`.
 2. **Hero Stage & Focal Lead (<div.light> — `Trail and ultra rankings`)**:
    - DOM & Selectors: Landmark `<div class="light">` presenting display lead `Trail and ultra rankings` and copy excerpt *"A season ranking of trail and ultra runners, built from race resu"* over `#ffffff` canvas and `#1e1d1a` ink.
-   - Responsive Contract: Hero stage (`1440×1266px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#1e1d1a` headline `Trail and ultra rankings`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#1e1d1a` headline `Trail and ultra rankings`.
 3. **Primary Showcase & Content Grid (<div.min-h-screen> — `A season ranking of trail and ultr`)**:
    - DOM & Selectors: Landmark `<div class="min-h-screen">` rendering section `A season ranking of trail and ultra runners, bui` with copy *"Season in progress"*, asset references (`2oz0lep7db5t2.css`, `0jvhpaew_uadu.js`, `script.js`, `19mx3mg6lkumu.js`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.min-h-screen> — `A season ranking of trail and ultr`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--card-spacing)` horizontal padding on mobile.
@@ -281,8 +301,41 @@ Scaffold `www-fieldrank-run` (`FieldRank: Trail and ultra rankings`) with these 
 - **Selector `.transition-all`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-fieldrank-run` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<div.min-h-screen>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<div.light>` and `<div.min-h-screen>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `1266px` across 2 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Trail and ultra rankings (0%) -> Footer / Bottom (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Settings`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/rankings` (other, SPA), `/races` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-fieldrank-run`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Trail and ultra rankings | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `366px` | `100%` | Footer / Bottom | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Trail and ultra rankings | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `909px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `1818px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Settings`, diff `23.535`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://www.fieldrank.run/rankings` | 2026 Overall · M | `2806px` | `SPA` (`1645ms`) | [subpage-01-rankings.webp](assets/subpage-01-rankings.webp) |
+| `2` | `other` | `https://www.fieldrank.run/races` | Races | `4559px` | `direct` (`832ms`) | [subpage-02-races.webp](assets/subpage-02-races.webp) |
+

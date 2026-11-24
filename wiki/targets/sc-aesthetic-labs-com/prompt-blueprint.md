@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: sc-aesthetic-labs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "sc-aesthetic-labs-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas, `#f2f4f4` ink, `#ff4d00` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas
 
 > **Digital Systems for Visible Trust – S/C Lab** (https://sc-aesthetic-labs.com/) — Digital Systems for Visible Trust by S/C Lab. Public image, digital form and visible trust for serious brands, clinics and institutions.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Digital Systems for Visible Trust – S/C Lab** (`https://sc-aesthetic-labs.com/`). Digital Systems for Visible Trust by S/C Lab. Public image, digital form and visible trust for serious brands, clinics and institutions.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas, `#f2f4f4` ink, `#ff4d00` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#151616` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f2f4f4` primary typography and `#ff4d00` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `15597px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `43px` lateral canvas padding with `var(--gutter)` grid gap.
 - **Border Radius Scale**: `50%`, `999px`.
@@ -112,6 +117,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas
 - **Selector `eo-hero .page-hero-media .hero-fr...`**: `transition: opacity 120ms linear` extracted from `sc-aesthetic-labs-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.16,1,0.3,1)`)**: Governs interactive state transitions across `<header.page-hero>` and `<article.what-col>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.what-grid>` and `<article.what-col>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `15597px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `START A PROJECT`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/contact.html`) measured as `MPA` in `1134ms`.
 
 ---
 
@@ -170,6 +180,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas
    - Landmark `<article class="what-col">` framing `Public Image` and `Digital Form` (*"Visible Trust Surface Logic"*) with `#696967` surface cards, `#ff4d00` accents, and `img { display: block; width: 100%; height: 100%; object-fit: cover; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://sc-aesthetic-labs.com/`)**:
    - Landmark `<footer class="footer">` anchoring `Digital Systems for Visible Trus` footer links (`S/C Aesthetic Labs · Approach · Practice · Notes · Contact`), copy *"Each project takes the shape the brand needs. Discuss a proj"*, and `#3e3f3f` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `S/C LABSTM` · sticky/fixed elements: `7`
+- **Step 02** (`y=850px`, `6%`): Active landmark `S/C LABSTM` · sticky/fixed elements: `7`
+- **Step 03** (`y=3400px`, `23%`): Active landmark `Public Image` · sticky/fixed elements: `6`
+- **Step 04** (`y=5950px`, `40%`): Active landmark `SIGNALS` · sticky/fixed elements: `6`
+- **Step 05** (`y=8500px`, `58%`): Active landmark `Image interlude` · sticky/fixed elements: `6`
+- **Step 06** (`y=11050px`, `75%`): Active landmark `Image interlude` · sticky/fixed elements: `6`
+- **Step 07** (`y=13600px`, `93%`): Active landmark `Maintain` · sticky/fixed elements: `7`
+- **Step 08** (`y=14400px`, `98%`): Active landmark `Footer` · sticky/fixed elements: `6`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/contact.html`)**: `https://sc-aesthetic-labs.com/contact.html?v=20261114b` — H1: `WRITE PLAINLY.`, scrollHeight `4672px`, transition `MPA` (`1134ms`)
+- **Other Route (`/index.html`)**: `https://sc-aesthetic-labs.com/index.html` — H1: `S/C LABSTM`, scrollHeight `15597px`, transition `direct` (`441ms`)
+- **Other Route (`/approach.html`)**: `https://sc-aesthetic-labs.com/approach.html` — H1: `THE SYSTEM BEGINS.`, scrollHeight `10873px`, transition `direct` (`329ms`)
 
 ---
 
@@ -225,8 +249,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--soft-2`)**: `#1d1f20` — grounded in `var(--soft-2)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `43px` lateral canvas padding with `var(--gutter)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--gutter)`)
@@ -250,7 +274,7 @@ Scaffold `sc-aesthetic-labs-com` (`Digital Systems for Visible Trust – S/C Lab
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.page-hero> — `sc-aesthetic-labs-com`)` (`sc-aesthetic-labs-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1100px)`, `@media (max-width: 720px)`, `@media (max-width: 767px)` with `cubic-bezier(0.16,1,0.3,1)`, `cubic-bezier(0.19,1,0.22,1)` transitions and links `S/C Aesthetic Labs · Approach · Practice · Notes · Contact`.
 2. **Hero Stage & Focal Lead (<section.what-grid> — `S/C LABSTM`)**:
    - DOM & Selectors: Landmark `<section class="what-grid tone-graphite">` presenting display lead `S/C LABSTM` and copy excerpt *"S/C Aesthetic Labs designs identities, websites and digital exper"* over `#151616` canvas and `#f2f4f4` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#151616` background with `#f2f4f4` headline `S/C LABSTM`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#151616` background with `#f2f4f4` headline `S/C LABSTM`.
 3. **Primary Showcase & Content Grid (<article.what-col> — `S/C Labs TM`)**:
    - DOM & Selectors: Landmark `<article class="what-col">` rendering section `S/C Labs TM` with copy *"Public Image Digital Systems"*, asset references (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `site.css`), and grid rule `textarea { font-weight: 400; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.what-col> — `S/C Labs TM`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--gutter)`) on desktop and Single-column vertical stack at `390px` viewport width with `43px` horizontal padding on mobile.
@@ -281,8 +305,42 @@ Scaffold `sc-aesthetic-labs-com` (`Digital Systems for Visible Trust – S/C Lab
 - **Selector `eo-hero .page-hero-media .hero-fr...`**: `transition: opacity 120ms linear` extracted from `sc-aesthetic-labs-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.16,1,0.3,1)`)**: Governs interactive state transitions across `<header.page-hero>` and `<article.what-col>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.what-grid>` and `<article.what-col>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `15597px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: S/C LABSTM (0%) -> S/C LABSTM (6%) -> Public Image (23%) -> SIGNALS (40%) -> Image interlude (58%) -> Image interlude (75%) -> Maintain (93%) -> Footer (98%).
+- **Multi-Page Routes**: Scaffold internal routes `/contact.html` (other, MPA), `/index.html` (other, direct), `/approach.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `sc-aesthetic-labs-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | S/C LABSTM | `7` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `6%` | S/C LABSTM | `7` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `23%` | Public Image | `6` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `40%` | SIGNALS | `6` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `58%` | Image interlude | `6` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `75%` | Image interlude | `6` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `93%` | Maintain | `7` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `98%` | Footer | `6` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | S/C LABSTM | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Image interlude | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Define | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://sc-aesthetic-labs.com/contact.html?v=20261114b` | WRITE PLAINLY. | `4672px` | `MPA` (`1134ms`) | [subpage-01-contact-html.webp](assets/subpage-01-contact-html.webp) |
+| `2` | `other` | `https://sc-aesthetic-labs.com/index.html` | S/C LABSTM | `15597px` | `direct` (`441ms`) | [subpage-02-index-html.webp](assets/subpage-02-index-html.webp) |
+| `3` | `other` | `https://sc-aesthetic-labs.com/approach.html` | THE SYSTEM BEGINS. | `10873px` | `direct` (`329ms`) | [subpage-03-approach-html.webp](assets/subpage-03-approach-html.webp) |
+

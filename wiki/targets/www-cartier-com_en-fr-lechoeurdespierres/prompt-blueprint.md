@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: www-cartier-com_en-fr-lechoeurdespierres"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-cartier-com_en-fr-lechoeurdespierres"
 status: blocked
 capture: none

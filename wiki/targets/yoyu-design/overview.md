@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: yoyu-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://yoyu.design/"
 final_url: "https://yoyu.design/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://yoyu.design/](https://yoyu.design/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: ヨユデザ（よゆでざ）｜幼稚園・保育園・認定こども園の技術支援サービス
-- **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: yoyu-design
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `4`
 - **Recovered Stylesheets**: `2`
 

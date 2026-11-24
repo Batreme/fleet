@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: yumlog-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `yumlog-dev` (**YumLog — the calorie tracker you can talk to, for Apple Watch and iPhone**)
 - **Production URL**: [https://yumlog.dev/](https://yumlog.dev/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffc93c` accent)
 - **Summary**: Say what you ate and YumLog logs the calories, protein, carbs and fat. Voice logging on Apple Watch, chat and photos on iPhone, restauran...
-- **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `31` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `SF Pro Text`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 100px`, `line-height: 92px`, `font-weight: 900`, `letter-spacing: -3.5px`); CSS variables `--display: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif`; rule `h1` (`font-size: clamp(52px, 7vw, 100px)`, `line-height: 0.92`, `letter-spacing: -0.035em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 900`, `letter-spacing: -1.8px`); rule `h2` (`font-size: clamp(40px, 5.4vw, 72px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 92px`, `line-height: 90.16px`, `font-weight: 900`, `letter-spacing: -2.3px`); rule `h2` (`font-size: clamp(40px, 5.4vw, 72px)`)
 - **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`); rule `p` (`font-size: 20px`, `line-height: 1.6`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 23.25px`, `font-weight: 600`); rule `.label` (`font-size: 12px`, `line-height: 1.25`)
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#f2f2f7` | `.video-frame { background: #f2f2f7 }` |
+| **Elevated Surface / Card Substrate** | `#e7e8fb` | `var(--panel)` in `:root` |
 | **Interactive Accent / Highlight** | `#ffc93c` | `var(--pineapple)` in `:root` |
 | **Secondary / Muted Copy** | `#6f6d85` | `var(--ink-3)` in `:root` |
 | **Structural Hairline Border** | `#e8e8ea` | `var(--line)` in `:root` (`rgb(29 27 44 / 0.1)`) |
@@ -83,6 +83,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.facts> — `Like texting someone what you ate.`)**:
    - Landmark `<section class="facts wrap">` rendering section `Like texting someone what you ate.` with copy *"“Two eggs and toast”"*, asset references (`favicon.png`, `apple-touch-icon.png`, `home.css`, `site.js`), and grid rule `after { box-sizing: border-box; }`.
 4. **Interactive Detail & Feature Matrix (<section.how> — `Two eggs and toast with butter for`)**:
-   - Landmark `<section class="how wrap">` framing `Two eggs and toast with butter for breakfast.` and `Can I fit a burger and fries in for lunch?` (*"“Actually, three eggs”"*) with `#f2f2f7` surface cards, `#ffc93c` accents, and `html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }`.
+   - Landmark `<section class="how wrap">` framing `Two eggs and toast with butter for breakfast.` and `Can I fit a burger and fries in for lunch?` (*"“Actually, three eggs”"*) with `#e7e8fb` surface cards, `#ffc93c` accents, and `html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://yumlog.dev/`)**:
    - Landmark `<footer class="foot">` anchoring `YumLog — the calorie tracker you` footer links (`How it works · Features · Rings · Questions`), copy *"“How’s my week going?”"*, and `#e8e8ea` structural dividers.

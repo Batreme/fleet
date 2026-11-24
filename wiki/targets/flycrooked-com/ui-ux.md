@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: flycrooked-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `flycrooked-com` (**Crow · Trip planner and flight finder for iPhone**)
 - **Production URL**: [https://flycrooked.com/](https://flycrooked.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#ad2450` / `#ff3d81`)
 - **Summary**: Your iPhone travel companion. Plan a trip, compare flight routes, track delays and gate changes, and carry a blunt local guide when you l...
-- **Total Clean CSS Variables Extracted**: `61` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `80` (curated live-grounded set below)
 
 ---
 
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `Barlow Condensed`
 - **Body Font Stack**: `Barlow`
 - **Monospace / Technical Font Stack**: `mono`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 262.74px`, `line-height: 215.447px`, `font-weight: 900`, `letter-spacing: -1.3137px`); CSS variables `--display: var(--font-display),"Arial Narrow",Arial,sans-serif`, `--font-display: "display","display Fallback"`; rule `h1` (`letter-spacing: -.005em`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 262.74px`, `line-height: 215.447px`, `font-weight: 900`, `letter-spacing: -1.3137px`); CSS variables `--display: var(--font-display),"Arial Narrow",Arial,sans-serif`, `--font-display: "display","display Fallback"`, `--font-display-italic: "Crow Barlow Italic"`; rule `h1` (`letter-spacing: -.005em`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); rule `h2` (`letter-spacing: -.005em`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); CSS variables `--body: var(--font-body),-apple-system,"Segoe UI",sans-serif`, `--font-body: "body","body Fallback"`; rule `p` (`font-size: 16px`, `line-height: 1.75`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 22.5px`, `font-weight: 500`); CSS variables `--mono: var(--font-mono),ui-monospace,"SF Mono",Menlo,monospace`, `--font-mono: "mono"`, `--default-mono-font-family: var(--font-mono)`; rule `nav` (`font-size: 15px`, `font-weight: 500`)
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#fff5f8` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#1c1e24` | `var(--panel-black)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff3d81` | `var(--accent)` in `:root` |
-| **Secondary / Muted Copy** | `#bec2ca` | `var(--cp-muted)` in `:root` |
+| **Secondary / Muted Copy** | `#9197a1` | `var(--eg-muted)` in `:root` |
 | **Structural Hairline Border** | `#33373f` | `var(--surface-line)` in `:root` |
 | **Variable Token (`--concourse`)** | `#eceff3` | `var(--concourse)` in `:root` |
 | **Variable Token (`--sign-black`)** | `#17181c` | `var(--sign-black)` in `:root` |
@@ -79,7 +79,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.js> — `flycrooked-com`)**:
-   - Landmark `<nav class="js">` (`1461x106px`) hosting `Crow · Trip planner and flight finde` navigation (`Crow · Guides · Get Crow`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="story"`, `data-booted="1"`), and stylesheet rule `.__className_2063d3 { font-family:display,display Fallback }`.
+   - Landmark `<nav class="js">` (`1440x105px`) hosting `Crow · Trip planner and flight finde` navigation (`Crow · Guides · Get Crow`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="story"`, `data-booted="1"`), and stylesheet rule `.__className_2063d3 { font-family:display,display Fallback }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `FLY CROOKED.`)**:
    - Landmark `<section class="hero one">` presenting display lead `FLY CROOKED.` and copy excerpt *"F l y c r o o k e d ."* over `#ad2450` canvas and `#fff5f8` ink.
 3. **Primary Showcase & Content Grid (<section.one> — `F l y c r o o k e d .`)**:

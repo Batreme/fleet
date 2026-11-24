@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: almadalabel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://almadalabel.com/"
 final_url: "https://almadalabel.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: ALMADA LABEL - A modern take on a seasonless wardrobe
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `186`
-- **Recovered Stylesheets**: `20`
+- **Recovered Scripts**: `992`
+- **Recovered Stylesheets**: `41`
 
 ---
 

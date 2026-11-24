@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: explore-auravinyl-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://explore.auravinyl.com"
 final_url: "https://explore.auravinyl.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 tags:
   - target
   - reverse-engineering
@@ -27,7 +27,7 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://explore.auravinyl.com](https://explore.auravinyl.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
 - **Page Title**: Aura Vinyl Color Explorer
 - **Identified Frameworks**: HTML5 Canvas / WebGL
 - **Recovered Scripts**: `13`

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: christoph-nagel-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "christoph-nagel-dev"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 1
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#000000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
 
 > **Christoph Nagel · Webentwickler, Fotograf & Videograf in Dorsten** (https://christoph-nagel.dev/) — Christoph Nagel aus Dorsten: Webentwicklung mit WordPress, HTML, CSS und JavaScript. Einblicke in eigene Projekte, Fotografie und Videogr...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Christoph Nagel · Webentwickler, Fotograf & Videograf in Dorsten** (`https://christoph-nagel.dev/`). Christoph Nagel aus Dorsten: Webentwicklung mit WordPress, HTML, CSS und JavaScript. Einblicke in eigene Projekte, Fotografie und Videogr...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#000000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080808` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`CHRISTOPH NAGEL Webentwickler, Fotog`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`CHRISTOPH NAGEL Webentwickler, Fotog`) with `Manrope`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28.8px`, padding `0.75rem`) with `cubic-bezier(0.19,1,0.22,1)` easing and GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `0.75rem` lateral canvas padding with `28.8px` grid gap.
 - **Border Radius Scale**: `50%`, `999px`, `0.9rem`, `1.3rem`.
@@ -110,6 +115,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
 - **Selector `.home-mark`**: `transition: background-color 200ms ease, border-color 200ms ease, transfor...` extracted from `christoph-nagel-dev` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.19,1,0.22,1)`)**: Governs interactive state transitions across `<header.topbar>` and `<section.panel--content>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Christoph Nagel`)**: `transform`: `none` -> `matrix(1, 0, 0, 1, 0, 0)` (`transition-duration: 0.2s, 0.2s, 0.2s`, `timing: ease, ease, ease`).
+- **Route Transition Architecture**: First internal navigation (`/seo-schnelltest/`) measured as `direct` in `358ms`.
 
 ---
 
@@ -168,6 +178,18 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#
    - Landmark `<section class="panel panel--content">` framing `Code. Kamera. Klartext.` and `Digitale Lösungen mit Substanz` (*"Seit 2001 beschäftige ich mich mit Webdesign und Webentwicklung. "*) with `#0a0a0a` surface cards, `#000000` accents, and `button { font: inherit; }`.
 5. **Colophon & Global Directory Footer (<footer.legal-links> — `https://christoph-nagel.dev/`)**:
    - Landmark `<footer class="legal-links">` anchoring `Christoph Nagel · Webentwickler,` footer links (`Kontakt`), copy *"Auf Just a Web-Developer teile ich eigene Projekte, praktisc"*, and `#343434` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...` · sticky/fixed elements: `4`
+- **Step 02** (`y=0px`, `8%`): Active landmark `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...` · sticky/fixed elements: `5`
+- **Step 03** (`y=0px`, `17%`): Active landmark `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...` · sticky/fixed elements: `5`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Digitale Lösungen mit Substanz` · sticky/fixed elements: `5`
+- **Step 05** (`y=0px`, `33%`): Active landmark `#webentwicklung` · sticky/fixed elements: `5`
+- **Step 06** (`y=0px`, `42%`): Active landmark `Ein klarer Blick für den richtigen Moment` · sticky/fixed elements: `5`
+- **Step 07** (`y=0px`, `50%`): Active landmark `Ein klarer Blick für den richtigen Moment` · sticky/fixed elements: `5`
+- **Step 08** (`y=0px`, `58%`): Active landmark `Bewegung mit Konzept` · sticky/fixed elements: `5`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/seo-schnelltest/`)**: `https://christoph-nagel.dev/seo-schnelltest/` — H1: `Bereit für Suchmaschinen und KI?`, scrollHeight `900px`, transition `direct` (`358ms`)
 
 ---
 
@@ -184,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#080808` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#000000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080808` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`CHRISTOPH NAGEL Webentwickler, Fotog`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`CHRISTOPH NAGEL Webentwickler, Fotog`) with `Manrope`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28.8px`, padding `0.75rem`) with `cubic-bezier(0.19,1,0.22,1)` easing and GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +243,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--red`)**: `#ff4b3e` — grounded in `var(--red)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `0.75rem` lateral canvas padding with `28.8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28.8px`)
@@ -246,7 +268,7 @@ Scaffold `christoph-nagel-dev` (`Christoph Nagel · Webentwickler, Fotograf & Vi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.topbar> — `christoph-nagel-dev`)` (`christoph-nagel-dev`) adapts across `@media (min-width: 901px) and (max-width: 1937px)`, `@media (max-width: 900px)`, `@media (max-width: 620px)`, `@media (prefers-reduced-motion: reduce)` with `cubic-bezier(0.19,1,0.22,1)`, `cubic-bezier(.2,.75,.2,1)`, `cubic-bezier(.15,.62,.28,1)` transitions and links `Kontakt`.
 2. **Hero Stage & Focal Lead (<section.panel> — `CHRISTOPH NAGEL Webentwickler, Fot`)**:
    - DOM & Selectors: Landmark `<section class="panel panel--intro">` presenting display lead `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...` and copy excerpt *"Webentwickler, Fotograf und Videograf aus Dorsten im Ruhrgebiet"* over `#080808` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#080808` background with `#ffffff` headline `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#080808` background with `#ffffff` headline `CHRISTOPH NAGEL Webentwickler, Fotograf und Video...`.
 3. **Primary Showcase & Content Grid (<section.panel--content> — `Christoph Nagel Webentwickler, Fot`)**:
    - DOM & Selectors: Landmark `<section class="panel panel--content">` rendering section `Christoph Nagel Webentwickler, Fotograf und Video...` with copy *"Code. Kamera. Klartext."*, asset references (`intro.jpg`, `anton-v27-latin-regular.woff2`, `site-media.js`, `llms.txt`), and grid rule `body { background: 080808; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.panel--content> — `Christoph Nagel Webentwickler, Fot`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28.8px`) on desktop and Single-column vertical stack at `390px` viewport width with `0.75rem` horizontal padding on mobile.
@@ -277,8 +299,39 @@ Scaffold `christoph-nagel-dev` (`Christoph Nagel · Webentwickler, Fotograf & Vi
 - **Selector `.home-mark`**: `transition: background-color 200ms ease, border-color 200ms ease, transfor...` extracted from `christoph-nagel-dev` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.19,1,0.22,1)`)**: Governs interactive state transitions across `<header.topbar>` and `<section.panel--content>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters using GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: CHRISTOPH NAGEL Webentwickl... (0%) -> CHRISTOPH NAGEL Webentwickl... (8%) -> CHRISTOPH NAGEL Webentwickl... (17%) -> Digitale Lösungen mit Substanz (25%) -> #webentwicklung (33%) -> Ein klarer Blick für den ri... (42%) -> Ein klarer Blick für den ri... (50%) -> Bewegung mit Konzept (58%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform` with `0.2s, 0.2s, 0.2s ease, ease, ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/seo-schnelltest/` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `christoph-nagel-dev`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | CHRISTOPH NAGEL Webentwickler, Fotograf und V... | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | CHRISTOPH NAGEL Webentwickler, Fotograf und V... | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | CHRISTOPH NAGEL Webentwickler, Fotograf und V... | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Digitale Lösungen mit Substanz | `5` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | #webentwicklung | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | Ein klarer Blick für den richtigen Moment | `5` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | Ein klarer Blick für den richtigen Moment | `5` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | Bewegung mit Konzept | `5` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | CHRISTOPH NAGEL Webentwickler, Fotograf u... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://christoph-nagel.dev/seo-schnelltest/` | Bereit für Suchmaschinen und KI? | `900px` | `direct` (`358ms`) | [subpage-01-seo-schnelltest.webp](assets/subpage-01-seo-schnelltest.webp) |
+

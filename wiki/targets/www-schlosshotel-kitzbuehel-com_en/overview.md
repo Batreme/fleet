@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-schlosshotel-kitzbuehel-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.schlosshotel-kitzbuehel.com/en"
 final_url: "https://www.schlosshotel-kitzbuehel.com/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Schlosshotel Kitzbühel – a premium experience
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `64`
-- **Recovered Stylesheets**: `17`
+- **Recovered Scripts**: `214`
+- **Recovered Stylesheets**: `42`
 
 ---
 

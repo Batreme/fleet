@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-bitwip-fr_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-bitwip-fr_en` (**Communications consulting agency for Overseas France · Bitwip**)
 - **Production URL**: [https://www.bitwip.fr/en](https://www.bitwip.fr/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#121414` canvas, `#ffffff` ink, `#fc622a` accent)
 - **Summary**: Communications consulting agency in Overseas France and Occitanie: strategy, branding, web and campaigns. French Guiana, Martinique, Guad...
-- **Total Clean CSS Variables Extracted**: `184` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `186` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Cabinet Grotesk`
 - **Monospace / Technical Font Stack**: `SF Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 37.76px`, `line-height: 58.528px`, `font-weight: 400`); CSS variables `--t-h1: clamp(2.75rem,1.6rem + 4.6vw,6rem)`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 73.76px`, `line-height: 73.76px`, `font-weight: 500`, `letter-spacing: -2.5816px`); CSS variables `--t-h2: clamp(2.375rem,1.55rem + 3.4vw,5rem)`; rule `h2` (`font-size: var(--t-h3)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 91.84px`, `line-height: 90.0032px`, `font-weight: 500`, `letter-spacing: -3.6736px`); CSS variables `--t-h2: clamp(2.375rem,1.55rem + 3.4vw,5rem)`; rule `h2` (`font-size: var(--t-h3)`, `line-height: 1.12`, `letter-spacing: -.025em`, `font-weight: 500`)
 - **Body Copy**: live computed `body` (`font-size: 18.88px`, `line-height: 29.264px`, `font-weight: 400`); CSS variables `--t-body: clamp(1.0625rem,1rem + .2vw,1.1875rem)`; rule `p` (`font-size: clamp(1.625rem,.9rem + 1.6vw,...`, `line-height: 1.16`, `letter-spacing: -.03em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 18.88px`, `line-height: 29.264px`, `font-weight: 400`); CSS variables `--f-label: "Clash Display","Cabinet Grotesk","Helvetica Neue",Arial,sans-serif`, `--t-small: .9375rem`, `--t-label: .75rem`; rule `.label` (`font-size: .6875rem`)
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: legacybridge-software"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://legacybridge.software/"
 final_url: "https://legacybridge.software/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: AI Document Entry for AS/400 & Legacy Systems · LegacyBridge
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `24`
+- **Recovered Scripts**: `35`
+- **Recovered Stylesheets**: `49`
 
 ---
 

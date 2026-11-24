@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-rtmaudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-rtmaudio-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#d6c5a3`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#
 
 > **RTM Audio · Audio plug-ins for mixing and mastering** (https://www.rtmaudio.com) — Mixing and mastering plug-ins, built by working engineers. Judge the change. Not the volume.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **RTM Audio · Audio plug-ins for mixing and mastering** (`https://www.rtmaudio.com`). Mixing and mastering plug-ins, built by working engineers. Judge the change. Not the volume.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#d6c5a3`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0e0f10` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f0e9dc` primary typography and `#d6c5a3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Söhne Breit` for display copy (`Judge the change. Not the volume.`) with `Söhne Breit` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Söhne Breit` across display (`Judge the change. Not the volume.`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1296px` container bounds (`gap: 32px`, padding `.45rem`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14058px` / doc `14958px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1296px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `.45rem` lateral canvas padding with `32px` grid gap.
 - **Border Radius Scale**: `4px`, `2px`, `var(--r)`, `999px`.
@@ -57,7 +62,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#
 | **Primary Canvas Substrate** | `#0e0f10` | live computed `html` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#f0e9dc` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#121315` | live computed `a` `background-color` (`computed_styles.json`) |
-| **Interactive Accent / Highlight** | `#d6c5a3` | live computed `a` `color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#d6c5a3` | live computed `button` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#b08b5c` | `var(--ink-dim)` in `:root` |
 | **Structural Hairline Border** | `#252524` | `var(--line)` in `:root` (`rgba(240,233,220,.10)`) |
 | **Variable Token (`--green`)** | `#57c279` | `var(--green)` in `:root` |
@@ -111,6 +116,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#
 - **Selector `.campaign-object`**: `transition: transform .22s var(--ease)` extracted from `www-rtmaudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.campaigns-head>` and `<section.campaigns>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `14958px`, deepest scrollY reached `14058px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Interactive Control Probe (`tab` · `TOOLS`)**: Triggered visual diff `6.015` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/store/`) measured as `MPA` in `1433ms`.
 
 ---
 
@@ -169,6 +179,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#
    - Landmark `<article class="campaign-panel material-light">` framing `Your whole rack, in one app.` and `One-time licences. No subscription.` (*"Download, install and activate every plug-in you own. Free for Ma"*) with `#121315` surface cards, `#d6c5a3` accents, and `.hero h1 { letter-spacing:-.02em }`.
 5. **Colophon & Global Directory Footer (<footer.cn-ground> — `https://www.rtmaudio.com`)**:
    - Landmark `<footer class="cn-ground">` anchoring `RTM Audio · Audio plug-ins for m` footer links (`Plugins Plugins · Store Store · About About · Account Account`), copy *"Try any plug-in in the store first."*, and `#252524` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Judge the change. Not the volume.` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `6%`): Active landmark `Nine in the rack.` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `24%`): Active landmark `#take` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `42%`): Active landmark `RTM Audio 2.0 collection` · sticky/fixed elements: `1`
+- **Step 05** (`y=8500px`, `60%`): Active landmark `RTM Audio 2.0 collection` · sticky/fixed elements: `1`
+- **Step 06** (`y=11050px`, `79%`): Active landmark `RTM Audio 2.0 collection` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `97%`): Active landmark `#rack` · sticky/fixed elements: `1`
+- **Step 08** (`y=14058px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/store/`)**: `https://www.rtmaudio.com/store/` — H1: `Buy it once.`, scrollHeight `4878px`, transition `MPA` (`1433ms`)
+- **About Route (`/about/`)**: `https://www.rtmaudio.com/about/` — H1: `The engineers behind`, scrollHeight `2349px`, transition `direct` (`526ms`)
+- **Other Route (`/home/`)**: `https://www.rtmaudio.com/home/` — H1: `All your plug-ins. One rack.`, scrollHeight `5301px`, transition `direct` (`638ms`)
 
 ---
 
@@ -185,7 +209,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#0e0f10` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f0e9dc`, **Accent / Highlight**: `#d6c5a3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0e0f10` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#f0e9dc` primary typography and `#d6c5a3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Söhne Breit` for display copy (`Judge the change. Not the volume.`) with `Söhne Breit` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Söhne Breit` across display (`Judge the change. Not the volume.`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1296px` container bounds (`gap: 32px`, padding `.45rem`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -216,15 +240,15 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#0e0f10` — grounded in live computed `html` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#f0e9dc` — grounded in live computed `h1` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#121315` — grounded in live computed `a` `background-color` (`computed_styles.json`)
-- **Interactive Accent / Highlight**: `#d6c5a3` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#d6c5a3` — grounded in live computed `button` `color` (`computed_styles.json`)
 - **Secondary / Muted Copy**: `#b08b5c` — grounded in `var(--ink-dim)` in `:root`
 - **Structural Hairline Border**: `#252524` — grounded in `var(--line)` in `:root` (`rgba(240,233,220,.10)`)
 - **Variable Token (`--green`)**: `#57c279` — grounded in `var(--green)` in `:root`
 - **Variable Token (`--well`)**: `#07080a` — grounded in `var(--well)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1296px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `.45rem` lateral canvas padding with `32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1296px`, `gap: 32px`)
@@ -248,7 +272,7 @@ Scaffold `www-rtmaudio-com` (`RTM Audio · Audio plug-ins for mixing and masteri
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.campaigns-head> — `www-rtmaudio-com`)` (`www-rtmaudio-com`) adapts across `@media (max-width:560px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:820px)`, `@media (max-width:420px)` with `cubic-bezier(.16,1,.3,1)` transitions and links `Plugins Plugins · Store Store · About About · Account Account`.
 2. **Hero Stage & Focal Lead (<section.take> — `Judge the change. Not the volume.`)**:
    - DOM & Selectors: Landmark `<section class="take">` presenting display lead `Judge the change. Not the volume.` and copy excerpt *"Mixing and mastering plug-ins, built by working engineers."* over `#0e0f10` canvas and `#f0e9dc` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#0e0f10` background with `#f0e9dc` headline `Judge the change. Not the volume.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#0e0f10` background with `#f0e9dc` headline `Judge the change. Not the volume.`.
 3. **Primary Showcase & Content Grid (<section.campaigns> — `Nine in the rack.`)**:
    - DOM & Selectors: Landmark `<section class="campaigns">` rendering section `Nine in the rack.` with copy *"EQ, vocals, dynamics and loudness."*, asset references (`clarity.js`, `soehne-breit-kraftig.woff2`, `fonts.css`, `site.css`), and grid rule `body { letter-spacing:.018em }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.campaigns> — `Nine in the rack.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1296px`, `gap: 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `.45rem` horizontal padding on mobile.
@@ -279,8 +303,47 @@ Scaffold `www-rtmaudio-com` (`RTM Audio · Audio plug-ins for mixing and masteri
 - **Selector `.campaign-object`**: `transition: transform .22s var(--ease)` extracted from `www-rtmaudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.campaigns-head>` and `<section.campaigns>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `14958px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Judge the change. Not the v... (0%) -> Nine in the rack. (6%) -> #take (24%) -> RTM Audio 2.0 collection (42%) -> RTM Audio 2.0 collection (60%) -> RTM Audio 2.0 collection (79%) -> #rack (97%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/store/` (listing, MPA), `/about/` (about, direct), `/home/` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-rtmaudio-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Judge the change. Not the volume. | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `6%` | Nine in the rack. | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `24%` | #take | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `42%` | RTM Audio 2.0 collection | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `60%` | RTM Audio 2.0 collection | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `79%` | RTM Audio 2.0 collection | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `97%` | #rack | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14058px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Judge the change. Not the volume. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `6590px` | `50%` | TXB2 | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `13250px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `tab` (`TOOLS`, diff `6.015`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.rtmaudio.com/store/` | Buy it once. | `4878px` | `MPA` (`1433ms`) | [subpage-01-store.webp](assets/subpage-01-store.webp) |
+| `2` | `about` | `https://www.rtmaudio.com/about/` | The engineers behind | `2349px` | `direct` (`526ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `other` | `https://www.rtmaudio.com/home/` | All your plug-ins. One rack. | `5301px` | `direct` (`638ms`) | [subpage-03-home.webp](assets/subpage-03-home.webp) |
+

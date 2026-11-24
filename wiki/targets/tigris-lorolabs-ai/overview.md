@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: tigris-lorolabs-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tigris.lorolabs.ai/"
 final_url: "https://tigris.lorolabs.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: TIGRIS · Instinct, in Its Rarest Form
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `13`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `12`
+- **Recovered Stylesheets**: `5`
 
 ---
 

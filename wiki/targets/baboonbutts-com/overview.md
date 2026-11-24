@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: baboonbutts-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://baboonbutts.com/"
 final_url: "https://baboonbutts.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Baboon Butts - The redder the better!
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `29`
+- **Recovered Scripts**: `32`
 - **Recovered Stylesheets**: `7`
 
 ---

@@ -1,9 +1,9 @@
-# Round 54 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 54 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-54`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `8` live (`2` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-54`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `6` live (`4` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
@@ -13,26 +13,26 @@
   2. `www-spectup-com` — *Private Capital Advisory: Capital Raising and M&A · spectup*
   3. `www-stellarmanagement-com` — *Stellar Management · NYC Real Estate Developer & No Fee Rentals*
   4. `www-studioplato-co` — *Studio Plato - Contemporary Interior Design*
-  5. `www-sztanki-com` — *Blocked (`Headless Preloader / Blank Viewport Capture (cannot hydrate without interactive/GPU session)`)*
+  5. `www-sztanki-com` — *Blocked (`Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)`)*
   6. `www-teamcafeteria-com_2027` — *2027 — a [cafeteria] report*
   7. `www-tedxportland-com` — *TEDxPortland*
-  8. `www-terakawaoffice-com_en` — *Architectural Photographer in Tokyo, Japan · TERAKAWA Photo Office*
+  8. `www-terakawaoffice-com_en` — *Blocked (`Empty DOM response (0 bytes, 0 visible text)`)*
   9. `www-terrenohotel-com_en` — *Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca*
-  10. `www-theboringblog-ai` — *The Boring Blog — art, engineering and AI*
+  10. `www-theboringblog-ai` — *Blocked (`Network/Navigation failure (Desktop session exceeded 178s sub-budget)`)*
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-spectup-com` | `tier1_fast` | `1440×2400px` (1,510,479 B) | `390×2400px` (451,470 B) | 162 | 16 | 288 | 109 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `www-stellarmanagement-com` | `tier1_fast` | `1440×2400px` (1,137,302 B) | `390×2400px` (230,709 B) | 92 | 16 | 308 | 119 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-studioplato-co` | `tier1_fast` | `1440×900px` (1,036,037 B) | `390×844px` (236,762 B) | 11 | 16 | 288 | 109 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-teamcafeteria-com_2027` | `tier2_webgl` | `1440×900px` (50,436 B) | `390×844px` (58,589 B) | 142 | 16 | 282 | 106 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `www-tedxportland-com` | `tier1_fast` | `1440×2400px` (1,861,788 B) | `390×2400px` (227,347 B) | 85 | 16 | 282 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-terakawaoffice-com_en` | `tier2_webgl` | `1440×900px` (2,095,834 B) | `390×844px` (239,903 B) | 36 | 16 | 294 | 112 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-terrenohotel-com_en` | `tier1_fast` | `1440×2400px` (1,634,439 B) | `390×2400px` (634,794 B) | 492 | 16 | 282 | 106 | `0.09` / `0.48` | **25.0 / 25.0** |
-| `www-theboringblog-ai` | `tier2_webgl` | `1440×900px` (140,684 B) | `390×844px` (54,013 B) | 427 | 16 | 304 | 117 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-spectup-com` | `tier1_fast` | `1280×6624px` (377,410 B) | `390×2616px` (71,636 B) | 189 | 16 | 353 | 114 | `0.09` / `0.45` | **25.0 / 25.0** |
+| `www-stellarmanagement-com` | `tier1_fast` | `1280×6624px` (472,490 B) | `390×872px` (2,630 B) | 94 | 16 | 365 | 123 | `0.09` / `0.51` | **25.0 / 25.0** |
+| `www-studioplato-co` | `tier1_fast` | `1280×3312px` (388,018 B) | `390×872px` (4,288 B) | 11 | 16 | 321 | 112 | `0.09` / `0.51` | **25.0 / 25.0** |
+| `www-teamcafeteria-com_2027` | `tier1_fast` | `1280×828px` (59,936 B) | `390×2616px` (59,868 B) | 216 | 16 | 311 | 109 | `0.09` / `0.46` | **25.0 / 25.0** |
+| `www-tedxportland-com` | `tier1_fast` | `1280×6624px` (547,384 B) | `390×2616px` (85,784 B) | 85 | 16 | 349 | 112 | `0.09` / `0.44` | **25.0 / 25.0** |
+| `www-terrenohotel-com_en` | `tier1_fast` | `1280×6624px` (479,258 B) | `390×2616px` (73,952 B) | 513 | 16 | 345 | 111 | `0.09` / `0.45` | **25.0 / 25.0** |
 | `www-soe-org-uk` | `blocked` (`403`) | `none` | `none` | — | — | — | — | — | **Excluded (`Upstream HTTP 403 (Checking your browser...)`)** |
-| `www-sztanki-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Headless Preloader / Blank Viewport Capture (cannot hydrate without in`)** |
+| `www-sztanki-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Headless Preloader / Blank Viewport Capture (solid blank desktop viewp`)** |
+| `www-terakawaoffice-com_en` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Empty DOM response (0 bytes, 0 visible text)`)** |
+| `www-theboringblog-ai` | `blocked` (`None`) | `none` | `none` | — | — | — | — | — | **Excluded (`Network/Navigation failure (Desktop session exceeded 178s sub-budget)`)** |

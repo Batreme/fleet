@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-unimaticwatches-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-unimaticwatches-com` (**UNIMATIC Watches**)
 - **Production URL**: [https://www.unimaticwatches.com/?srsltid=AfmBOor1S-k1GXW2WUlgmQd-YbKuDQWHeKBxyRjTFNyURmTvXoeNJXHD](https://www.unimaticwatches.com/?srsltid=AfmBOor1S-k1GXW2WUlgmQd-YbKuDQWHeKBxyRjTFNyURmTvXoeNJXHD)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f6f6f6` canvas, `#000000` ink, `#afff00` accent)
 - **Summary**: Discover UNIMATIC watches, an independent Italian watch brand creating minimalist, functional watches made in Italy. Explore our Classic...
 - **Total Clean CSS Variables Extracted**: `93` (curated live-grounded set below)
@@ -38,8 +38,9 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffffff` | `.b2b-terms { background-color: white }` (`#ffffff`) |
 | **Interactive Accent / Highlight** | `#afff00` | `var(--color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#222222` | `var(--color-tag-ink)` in `:root` |
-| **Structural Hairline Border** | `#ffffff` | `on.loading>.loading-overlay__sp... { stroke: #ffffff }` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#ffffff` | `.filter-opt__box:after { border: #ffffff }` |
+| **Variable Token (`--color-tag-ink`)** | `#222222` | `var(--color-tag-ink)` in `:root` |
 
 ---
 
@@ -69,10 +70,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.shopify-section> — `www-unimaticwatches-com`)**:
    - Landmark `<header class="shopify-section shopify-section-group-header-group">` (`1440x0px`) hosting `UNIMATIC Watches` navigation (`New in · Bracelets`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shopify`, `data-shop-id="104415822154"`, `data-venmo-supported="false"`), and stylesheet rule `after { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `New Langhe Collection`)**:
-   - Landmark `<section class="shopify-section hero">` presenting display lead `New Langhe Collection` and copy excerpt *"Truffle, Moss, Fog Dials"* over `#f6f6f6` canvas and `#000000` ink.
+   - Landmark `<section class="shopify-section hero">` presenting display lead `New Langhe Collection` and copy excerpt *"Weather: partly cloudy"* over `#f6f6f6` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.product-carousel-section> — `Some landscapes are defined less b`)**:
-   - Landmark `<section class="shopify-section product-carousel-section">` rendering section `Some landscapes are defined less by what can be s...` with copy *"A landscape interpreted through colour and texture."*, asset references (`596128728859448`, `fbevents.js`, `clarity.js`, `zg18q6f8jj`), and grid rule `html { font-size:10px;-webkit-text-size-adjust:100%;text-size-adjust:100% }`.
+   - Landmark `<section class="shopify-section product-carousel-section">` rendering section `Some landscapes are defined less by what can be s...` with copy *"Truffle, Moss, Fog Dials"*, asset references (`596128728859448`, `fbevents.js`, `clarity.js`, `zg18q6f8jj`), and grid rule `html { font-size:10px;-webkit-text-size-adjust:100%;text-size-adjust:100% }`.
 4. **Interactive Detail & Feature Matrix (<article.product-card> — `The ICON collection`)**:
-   - Landmark `<article class="product-card">` framing `The ICON collection` and `Waterproof checked` (*"Meet The Collection"*) with `#ffffff` surface cards, `#afff00` accents, and `button { font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poi... }`.
+   - Landmark `<article class="product-card">` framing `The ICON collection` and `Waterproof checked` (*"A landscape interpreted through colour and texture."*) with `#ffffff` surface cards, `#afff00` accents, and `button { font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poi... }`.
 5. **Colophon & Global Directory Footer (<footer.shopify-section> — `https://www.unimaticwatches.com/?srsltid=AfmBOor1S-k1GXW2WUlgmQd-YbKuDQWHeKBxyRjTFNyURmTvXoeNJXHD`)**:
-   - Landmark `<footer class="shopify-section shopify-section-group-footer-group">` anchoring `UNIMATIC Watches` footer links (`New in · Bracelets`), copy *"Limited Edition - Diver"*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="shopify-section shopify-section-group-footer-group">` anchoring `UNIMATIC Watches` footer links (`New in · Bracelets`), copy *"Meet The Collection"*, and `#ffffff` structural dividers.

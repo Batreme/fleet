@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thecassandravale-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thecassandravale.com/"
 final_url: "https://thecassandravale.com/"
 status: analyzed

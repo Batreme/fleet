@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: www-vanguardinitiative-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-vanguardinitiative-com"
 status: blocked
 capture: none

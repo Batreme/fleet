@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: yumlog-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://yumlog.dev/"
 final_url: "https://yumlog.dev/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: YumLog — the calorie tracker you can talk to, for Apple Watch and iPhone
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Stylesheets**: `2`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-agrumeafarm-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-agrumeafarm-it_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 4
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e
 
 > **Agrumea Farm · Jams, pestos and flavours of Sicily** (https://www.agrumeafarm.it/en) — Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Agrumea Farm · Jams, pestos and flavours of Sicily** (`https://www.agrumeafarm.it/en`). Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#762530` primary typography and `#e94e1b` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivystyle-sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `ivystyle-sans` across display (`Agrumea Farm: Sicilian artisan marma`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0.5px`, padding `30px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `30px` lateral canvas padding with `0.5px` grid gap.
 - **Border Radius Scale**: `0px 0px 15px`, `999px`, `14px`, `2px`.
@@ -110,6 +115,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e
 - **Selector `.site-footer__link[data-v-68ac8fad]`**: `transition: color .3s var(--ease-out-expo)` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.jar-slider:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Nav / Drawer Probe (`menu`)**: Triggered visual change (pixel diff `100.125`, captured in `assets/state-nav.webp`); revealed links: Smeraldo - Pistachio..., H O M E H O M E, P A N T R Y P A N T R Y, P R O D U C T I O N P..., E X P E R I E N C E E..., A b o u t A b o u t.
 
 ---
 
@@ -168,6 +177,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e
    - Landmark `<section class="jar-slider">` framing `Scroll to discover` and `Agrumea Farm · Jams, pestos and flavours of Sici` (*"Agrumea Farm · Jams, pestos and flavours of Sicily"*) with `#ffffff` surface cards, `#e94e1b` accents, and `.tk-ivymode { font-family: "ivymode",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.site-shell__legal> — `https://www.agrumeafarm.it/en`)**:
    - Landmark `<footer class="site-shell__legal">` anchoring `Agrumea Farm · Jams, pestos and ` footer links (`IT · EN`), copy *"m m e e n n u u c c l l o o s s e e"*, and `#762530` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `6`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `6`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `6`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Hero` · sticky/fixed elements: `6`
 
 ---
 
@@ -184,7 +198,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#762530`, **Accent / Highlight**: `#e94e1b`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdf3eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#762530` primary typography and `#e94e1b` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `ivystyle-sans` for display copy (`Agrumea Farm: Sicilian artisan marma`) with `ivystyle-sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `ivystyle-sans` across display (`Agrumea Farm: Sicilian artisan marma`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0.5px`, padding `30px`) with `cubic-bezier(.645,.045,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +235,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-yellow`)**: `#f39200` — grounded in `var(--color-yellow)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `30px` lateral canvas padding with `0.5px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0.5px`)
@@ -246,7 +260,7 @@ Scaffold `www-agrumeafarm-it_en` (`Agrumea Farm · Jams, pestos and flavours of 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-agrumeafarm-it_en`)` (`www-agrumeafarm-it_en`) adapts across `@media (max-width:1024px)`, `@media (max-width:480px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `IT · EN`.
 2. **Hero Stage & Focal Lead (<section.jar-slider> — `Agrumea Farm: Sicilian artisan mar`)**:
    - DOM & Selectors: Landmark `<section class="jar-slider">` presenting display lead `Agrumea Farm: Sicilian artisan marmalades, spread...` and copy excerpt *"SCROLL TO DISCOVER"* over `#fdf3eb` canvas and `#762530` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fdf3eb` background with `#762530` headline `Agrumea Farm: Sicilian artisan marmalades, spread...`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×872px` mobile) sets `#fdf3eb` background with `#762530` headline `Agrumea Farm: Sicilian artisan marmalades, spread...`.
 3. **Primary Showcase & Content Grid (<section.jar-slider:nth(2)> — `SCROLL TO DISCOVER`)**:
    - DOM & Selectors: Landmark `<section class="jar-slider">` rendering section `SCROLL TO DISCOVER` with copy *"Scroll to discover"*, asset references (`use.typekit.net`, `p.typekit.net`, `yey3ruw.css`, `CmsHomePage.CpbPGEL3.css`), and grid rule `.tk-ivystyle-sans { font-family: "ivystyle-sans",sans-serif; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.jar-slider:nth(2)> — `SCROLL TO DISCOVER`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0.5px`) on desktop and Single-column vertical stack at `390px` viewport width with `30px` horizontal padding on mobile.
@@ -277,8 +291,34 @@ Scaffold `www-agrumeafarm-it_en` (`Agrumea Farm · Jams, pestos and flavours of 
 - **Selector `.site-footer__link[data-v-68ac8fad]`**: `transition: color .3s var(--ease-out-expo)` extracted from `www-agrumeafarm-it_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.645,.045,.355,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.jar-slider:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 4 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%) -> Hero (8%) -> Hero (17%) -> Hero (25%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`menu`) with Escape-to-close keyboard handling.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-agrumeafarm-it_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `6` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `6` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `6` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Hero | `6` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`menu`, diff `100.125`) | [state-nav.webp](assets/state-nav.webp) |
+

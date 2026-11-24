@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-romainavalle-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.romainavalle.dev/"
 final_url: "https://romainavalle.dev/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -28,11 +29,12 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.romainavalle.dev/](https://www.romainavalle.dev/)
 - **Final Redirected URL**: [https://romainavalle.dev/](https://romainavalle.dev/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Romain Avalle - Interactive developper
-- **Identified Frameworks**: Vue / Nuxt, Tailwind CSS, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: www-romainavalle-dev
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `5`
-- **Recovered Stylesheets**: `4`
+- **Recovered Stylesheets**: `3`
 
 ---
 

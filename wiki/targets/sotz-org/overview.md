@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: sotz-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://sotz.org/"
 final_url: "https://sotz.org/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Shout out to Zanzibar
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `2`
+- **Recovered Stylesheets**: `7`
 
 ---
 

@@ -1,46 +1,51 @@
 ---
 title: "UI Prompt Blueprint: www-alpineguides-co-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-alpineguides-co-nz"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
-archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#f2f2f3` ink, `#ffcc00` accent)"
+archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#ffffff` ink, `#ffcc00` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-alpineguides-co-nz
 
 > **Alpine Guides Aoraki · NZ Mountain Guiding Since 1966** (https://www.alpineguides.co.nz/) — Explore guided ascents, mountaineering courses, ski touring, Tasman Glacier heli-hike and alpine adventures in Aoraki/Mount Cook with pro...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Alpine Guides Aoraki · NZ Mountain Guiding Since 1966** (`https://www.alpineguides.co.nz/`). Explore guided ascents, mountaineering courses, ski touring, Tasman Glacier heli-hike and alpine adventures in Aoraki/Mount Cook with pro...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
-- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#f2f2f3` ink, `#ffcc00` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
+- **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#ffffff` ink, `#ffcc00` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#191919` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f2f2f3` primary typography and `#ffcc00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Mozillaheadline Variablefont Wdth Wght` for display copy (`Expert Mountain Adventures Since 196`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#191919` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffcc00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Mozillaheadline Variablefont Wdth Wght` for display copy (`Expert Mountain Adventures Since 196`) with `Helvetica Neue`.
   - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.49,.78,.46,1.34)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `17501px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `8px`, `7px`, `3px`, `100%`.
+- **Border Radius Scale**: `999px`, `7px`, `3px`, `100%`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 16px`).
@@ -55,12 +60,13 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#191919` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#f2f2f3` | live computed `h1` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#343435` | live computed `a` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ffcc00` | `crubber-button.ytp-swatch-backg... { background-color: #ffcc00 }` |
 | **Secondary / Muted Copy** | `#333333` | live computed `footer` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#3898ec` | `.w-select:focus { border-color: #3898ec }` |
 | **Variable Token (`--_theme---agl-gold`)** | `#fcb124` | `var(--_theme---agl-gold)` in `:root` |
+| **Variable Token (`--_theme---white`)** | `#f2f2f3` | `var(--_theme---white)` in `:root` |
 | **Variable Token (`--_theme---carbon`)** | `#1e1e1e` | `var(--_theme---carbon)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -110,7 +116,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas
 - **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-alpineguides-co-nz` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-alpineguides-co-nz` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.49,.78,.46,1.34)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.prepare-mega>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `17501px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Route Transition Architecture**: First internal navigation (`/trips/private-guiding`) measured as `direct` in `3690ms`.
 
 ---
 
@@ -125,7 +135,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.explore-mega> (w=1440px)                      | │
 │ | H1: Expert Mountain Adventures Since 1966                          | │
-│ | Substrate: #191919 | Ink: #f2f2f3 | Accent: #ffcc00                | │
+│ | Substrate: #191919 | Ink: #ffffff | Accent: #ffcc00                | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.prepare-mega>) max-w: 1392px               | │
 │ | +------------------------------+  +------------------------------+ | │
@@ -160,15 +170,29 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-alpineguides-co-nz`)**:
-   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-styled="active"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-page="home"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
 2. **Hero Stage & Focal Lead (<section.explore-mega> — `Expert Mountain Adventures Since 1`)**:
-   - Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#f2f2f3` ink.
+   - Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.prepare-mega> — `Alpine Guides offers unmatched acc`)**:
    - Landmark `<section class="prepare-mega">` rendering section `Alpine Guides offers unmatched access to the vas` with copy *"A spectacular heli-hike experience exploring the white ice of New"*, asset references (`cdn.prod.website-files.com`, `alpine-guides.webflow.shared.ac09...`, `www-widgetapi.js`, `recaptcha__en.js`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.c-hero> — `A spectacular heli-hike experience`)**:
    - Landmark `<section class="c-hero">` framing `A spectacular heli-hike experience exploring the` and `A 7-day intermediate-level course teaching an in` (*"A 7-day intermediate-level course teaching an introduction to mod"*) with `#343435` surface cards, `#ffcc00` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.alpineguides.co.nz/`)**:
    - Landmark `<footer class="footer">` anchoring `Alpine Guides Aoraki · NZ Mounta` footer links (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), copy *"A tailor-made package for bespoke mountaineering and ski tou"*, and `#3898ec` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Expert Mountain Adventures Since 1966` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Expert Mountain Adventures Since 1966` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `20%`): Active landmark `Expert Mountain Adventures Since 1966` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `36%`): Active landmark `Section @ 36%` · sticky/fixed elements: `2`
+- **Step 05** (`y=8500px`, `51%`): Active landmark `TRIPS WORTH CHECKING OUT` · sticky/fixed elements: `2`
+- **Step 06** (`y=11050px`, `67%`): Active landmark `#c-split-gallery` · sticky/fixed elements: `2`
+- **Step 07** (`y=13600px`, `82%`): Active landmark `#c-split-gallery` · sticky/fixed elements: `2`
+- **Step 08** (`y=14400px`, `87%`): Active landmark `#c-split-gallery` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/trips/private-guiding`)**: `https://www.alpineguides.co.nz/trips/private-guiding` — H1: `Private Guiding`, scrollHeight `11540px`, transition `direct` (`3690ms`)
+- **About Route (`/about`)**: `https://www.alpineguides.co.nz/about` — H1: `Mountains Define Us`, scrollHeight `22347px`, transition `direct` (`2902ms`)
+- **Detail Route (`/trips/tasman-glacier-heli-hike`)**: `https://www.alpineguides.co.nz/trips/tasman-glacier-heli-hike` — H1: `Tasman Glacier Helihike`, scrollHeight `16065px`, transition `direct` (`2913ms`)
 
 ---
 
@@ -180,12 +204,12 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-alpineguides-co-nz` (**Alpine Guides Aoraki · NZ Mountain Guiding Since 1966** — `https://www.alpineguides.co.nz/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#f2f2f3` ink, `#ffcc00` accent).
+- **Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#191919` canvas, `#ffffff` ink, `#ffcc00` accent).
 - **Identity & Domain Context**: Explore guided ascents, mountaineering courses, ski touring, Tasman Glacier heli-hike and alpine adventures in Aoraki/Mount Cook with pro...
-- **Primary Substrate**: `#191919` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f2f2f3`, **Accent / Highlight**: `#ffcc00`.
+- **Primary Substrate**: `#191919` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ffcc00`.
 - **Site-Specific Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#191919` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f2f2f3` primary typography and `#ffcc00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Mozillaheadline Variablefont Wdth Wght` for display copy (`Expert Mountain Adventures Since 196`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#191919` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffcc00` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Mozillaheadline Variablefont Wdth Wght` for display copy (`Expert Mountain Adventures Since 196`) with `Helvetica Neue`.
   - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.49,.78,.46,1.34)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -214,23 +238,24 @@ Declare and consume these exact custom properties extracted from `www-alpineguid
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#191919` — grounded in live computed `body` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#f2f2f3` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `button` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#343435` — grounded in live computed `a` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#ffcc00` — grounded in `crubber-button.ytp-swatch-backg... { background-color: #ffcc00 }`
 - **Secondary / Muted Copy**: `#333333` — grounded in live computed `footer` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#3898ec` — grounded in `.w-select:focus { border-color: #3898ec }`
 - **Variable Token (`--_theme---agl-gold`)**: `#fcb124` — grounded in `var(--_theme---agl-gold)` in `:root`
+- **Variable Token (`--_theme---white`)**: `#f2f2f3` — grounded in `var(--_theme---white)` in `:root`
 - **Variable Token (`--_theme---carbon`)**: `#1e1e1e` — grounded in `var(--_theme---carbon)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)`
-- **Corner Radii**: `8px`, `7px`, `3px`, `100%`
+- **Corner Radii**: `999px`, `7px`, `3px`, `100%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Mozillaheadline Variablefont Wdth Wght`
@@ -244,17 +269,17 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-alpineguides-co-nz` (`Alpine Guides Aoraki · NZ Mountain Guiding Since 1966`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-alpineguides-co-nz`)**:
-   - DOM & Selectors: Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-styled="active"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+   - DOM & Selectors: Landmark `<header class="w-mod-js">` (`1440px`) hosting `Alpine Guides Aoraki · NZ Mountain G` navigation (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), DOM attributes (`data-wf-domain="www.alpineguides.co.nz"`, `data-wf-page="6948a91537f8a4167b84e785"`, `data-wf-site="6948a91537f8a4167b84e770"`, `data-page="home"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `www-alpineguides-co-nz`)` (`www-alpineguides-co-nz`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.49,.78,.46,1.34)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,1,1)` transitions and links `prepare · contact us · alpine hiking · learn the ropes · guided ascents`.
 2. **Hero Stage & Focal Lead (<section.explore-mega> — `Expert Mountain Adventures Since 1`)**:
-   - DOM & Selectors: Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#f2f2f3` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#191919` background with `#f2f2f3` headline `Expert Mountain Adventures Since 1966`.
+   - DOM & Selectors: Landmark `<section class="explore-mega">` presenting display lead `Expert Mountain Adventures Since 1966` and copy excerpt *"Alpine Guides offers unmatched access to the vast mountain playgr"* over `#191919` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#191919` background with `#ffffff` headline `Expert Mountain Adventures Since 1966`.
 3. **Primary Showcase & Content Grid (<section.prepare-mega> — `Alpine Guides offers unmatched acc`)**:
    - DOM & Selectors: Landmark `<section class="prepare-mega">` rendering section `Alpine Guides offers unmatched access to the vas` with copy *"A spectacular heli-hike experience exploring the white ice of New"*, asset references (`cdn.prod.website-files.com`, `alpine-guides.webflow.shared.ac09...`, `www-widgetapi.js`, `recaptcha__en.js`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.prepare-mega> — `Alpine Guides offers unmatched acc`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.c-hero> — `A spectacular heli-hike experience`)**:
    - DOM & Selectors: Landmark `<section class="c-hero">` framing `A spectacular heli-hike experience exploring the` and `A 7-day intermediate-level course teaching an in` (*"A 7-day intermediate-level course teaching an introduction to mod"*) with `#343435` surface cards, `#ffcc00` accents, and `summary { display: block; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.c-hero> — `A spectacular heli-hike experience`)` uses `8px`, `7px`, `3px`, `100%` radii, `#ffcc00` highlights, and assets (cdn.prod.website-files.com, alpine-guides.webflow.shared.ac09..., www-widgetapi.js).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.c-hero> — `A spectacular heli-hike experience`)` uses `999px`, `7px`, `3px`, `100%` radii, `#ffcc00` highlights, and assets (cdn.prod.website-files.com, alpine-guides.webflow.shared.ac09..., www-widgetapi.js).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.alpineguides.co.nz/`)**:
    - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Alpine Guides Aoraki · NZ Mounta` footer links (`prepare · contact us · alpine hiking · learn the ropes · guided ascents`), copy *"A tailor-made package for bespoke mountaineering and ski tou"*, and `#3898ec` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.alpineguides.co.nz/`)` aligns to `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.alpineguides.co.nz", data-wf-page="6948a91537f8a4167b84e785", data-wf-site="6948a91537f8a4167b84e770").
@@ -278,9 +303,43 @@ Scaffold `www-alpineguides-co-nz` (`Alpine Guides Aoraki · NZ Mountain Guiding 
 - **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-alpineguides-co-nz` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-alpineguides-co-nz` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.49,.78,.46,1.34)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.prepare-mega>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `17501px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Expert Mountain Adventures... (0%) -> Expert Mountain Adventures... (5%) -> Expert Mountain Adventures... (20%) -> Section @ 36% (36%) -> TRIPS WORTH CHECKING OUT (51%) -> #c-split-gallery (67%) -> #c-split-gallery (82%) -> #c-split-gallery (87%).
+- **Multi-Page Routes**: Scaffold internal routes `/trips/private-guiding` (detail, direct), `/about` (about, direct), `/trips/tasman-glacier-heli-hike` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-alpineguides-co-nz`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Expert Mountain Adventures Since 1966 | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Expert Mountain Adventures Since 1966 | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `20%` | Expert Mountain Adventures Since 1966 | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `36%` | Section @ 36% | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `51%` | TRIPS WORTH CHECKING OUT | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `67%` | #c-split-gallery | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `82%` | #c-split-gallery | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `87%` | #c-split-gallery | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Expert Mountain Adventures Since 1966 | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4330px` | `50%` | WHERE WE GUIDE | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `8701px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.alpineguides.co.nz/trips/private-guiding` | Private Guiding | `11540px` | `direct` (`3690ms`) | [subpage-01-trips-private-guiding.webp](assets/subpage-01-trips-private-guiding.webp) |
+| `2` | `about` | `https://www.alpineguides.co.nz/about` | Mountains Define Us | `22347px` | `direct` (`2902ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://www.alpineguides.co.nz/trips/tasman-glacier-heli-hike` | Tasman Glacier Helihike | `16065px` | `direct` (`2913ms`) | [subpage-03-trips-tasman-glacier-heli-hike.webp](assets/subpage-03-trips-tasman-glacier-heli-hike.webp) |
+

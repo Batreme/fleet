@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: effepinnastudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "effepinnastudio-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **Fabio Pinna — Art Director e Graphic Designer · Effepinna Studio** (https://effepinnastudio.com/) — Direzione artistica, progettazione grafica e produzione di immagini, video e animazioni per agenzie e brand. Fabio Pinna, freelance a Gra...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Fabio Pinna — Art Director e Graphic Designer · Effepinna Studio** (`https://effepinnastudio.com/`). Direzione artistica, progettazione grafica e produzione di immagini, video e animazioni per agenzie e brand. Fabio Pinna, freelance a Gra...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0000ee` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Fabio Pinna - Art Direction, Multime`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 27px 40.32px`, padding `36.2264px`) with `cubic-bezier(.22,.78,.24,1)` easing and GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Grounded Typographic Hierarchy**: Uses `Instrument Sans` across display (`Fabio Pinna - Art Direction, Multime`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 27px 40.32px`, padding `36.2264px`) with `cubic-bezier(.22,.78,.24,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6491px` / doc `7391px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `36.2264px` lateral canvas padding with `27px 40.32px` grid gap.
 - **Border Radius Scale**: `50%`, `999px`.
@@ -59,7 +64,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 | **Elevated Surface / Card Substrate** | `#f3f2ef` | `var(--paper)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff0000` | `.controls button { background: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#ee2c3d` | live computed `p` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#ff0000` | `.hero-doodle { border: #ff0000 }` |
+| **Structural Hairline Border** | `#f8a6ae` | `var(--calmilene-line)` in `:root` (`rgba(239, 43, 63, 0.42)`) |
 | **Variable Token (`--red`)** | `#ef233c` | `var(--red)` in `:root` |
 | **Variable Token (`--ink`)** | `#0a0a0a` | `var(--ink)` in `:root` |
 
@@ -110,7 +115,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `.ragdoll-cursor-hint`**: `transition: opacity 155ms ease, visibility 0s linear 155ms` extracted from `effepinnastudio-com` stylesheet.
 - **Selector `.ragdoll-cursor-hint.is-visible`**: `transition: opacity 200ms ease, visibility 0s` extracted from `effepinnastudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.78,.24,1)`)**: Governs interactive state transitions across `<header.hero>` and `<section.work>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7391px`, deepest scrollY reached `6491px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Nav / Drawer Probe (`Apri menu`)**: Triggered visual change (pixel diff `130.548`, captured in `assets/state-nav.webp`); revealed links: Home ↗, Work ↗, Agenzie e brand ↗, Chi sono ↗, Contatti ↗, Articoli ↗.
+- **Route Transition Architecture**: First internal navigation (`/blog/vallelata.html`) measured as `direct` in `3069ms`.
 
 ---
 
@@ -168,7 +178,21 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 4. **Interactive Detail & Feature Matrix (<article.work-row> — `Fastweb Tu sei Futuro`)**:
    - Landmark `<article class="work-row">` framing `Fastweb Tu sei Futuro` and `Dose e Dadda Summer Merch` (*"Sviluppo il concept, progetto il linguaggio visivo e lavoro alla "*) with `#f3f2ef` surface cards, `#ff0000` accents, and `focus-visible { outline: 2px solid currentColor;outline-offset: 4px; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://effepinnastudio.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#ff0000` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#f8a6ae` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#manifesto-title` · sticky/fixed elements: `4`
+- **Step 02** (`y=850px`, `13%`): Active landmark `#manifesto-title` · sticky/fixed elements: `4`
+- **Step 03** (`y=1700px`, `26%`): Active landmark `Fastweb Tu sei Futuro` · sticky/fixed elements: `4`
+- **Step 04** (`y=2550px`, `39%`): Active landmark `Dose e Dadda Summer Merch` · sticky/fixed elements: `4`
+- **Step 05** (`y=4250px`, `65%`): Active landmark `Per le agenzie` · sticky/fixed elements: `4`
+- **Step 06** (`y=5100px`, `79%`): Active landmark `Altri articoli Altri articoli` · sticky/fixed elements: `4`
+- **Step 07** (`y=5950px`, `92%`): Active landmark `Footer` · sticky/fixed elements: `4`
+- **Step 08** (`y=6491px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `4`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/blog/vallelata.html`)**: `https://effepinnastudio.com/blog/vallelata.html` — H1: `Vallelata: campagne display, visual e video AI.`, scrollHeight `10853px`, transition `direct` (`3069ms`)
+- **Detail Route (`/blog/pennicanza.html`)**: `https://effepinnastudio.com/blog/pennicanza.html` — H1: `La Pennicanza: Natale in miniatura.`, scrollHeight `6608px`, transition `direct` (`1254ms`)
+- **Detail Route (`/blog/mega-effe-x.html`)**: `https://effepinnastudio.com/blog/mega-effe-x.html` — H1: `Mega Effe X`, scrollHeight `7594px`, transition `direct` (`2621ms`)
 
 ---
 
@@ -185,8 +209,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0000ee`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0000ee` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Fabio Pinna - Art Direction, Multime`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 27px 40.32px`, padding `36.2264px`) with `cubic-bezier(.22,.78,.24,1)` easing and GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Grounded Typographic Hierarchy**: Uses `Instrument Sans` across display (`Fabio Pinna - Art Direction, Multime`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 27px 40.32px`, padding `36.2264px`) with `cubic-bezier(.22,.78,.24,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `effepinnastudio-com` in your global stylesheet:
@@ -218,13 +242,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Elevated Surface / Card Substrate**: `#f3f2ef` — grounded in `var(--paper)` in `:root`
 - **Interactive Accent / Highlight**: `#ff0000` — grounded in `.controls button { background: red }` (`#ff0000`)
 - **Secondary / Muted Copy**: `#ee2c3d` — grounded in live computed `p` `color` (`computed_styles.json`)
-- **Structural Hairline Border**: `#ff0000` — grounded in `.hero-doodle { border: #ff0000 }`
+- **Structural Hairline Border**: `#f8a6ae` — grounded in `var(--calmilene-line)` in `:root` (`rgba(239, 43, 63, 0.42)`)
 - **Variable Token (`--red`)**: `#ef233c` — grounded in `var(--red)` in `:root`
 - **Variable Token (`--ink`)**: `#0a0a0a` — grounded in `var(--ink)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `36.2264px` lateral canvas padding with `27px 40.32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 27px 40.32px`)
@@ -248,7 +272,7 @@ Scaffold `effepinnastudio-com` (`Fabio Pinna — Art Director e Graphic Designer
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hero> — `effepinnastudio-com`)` (`effepinnastudio-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 760px)`, `@media (max-width: 760px), (hover: none), (pointer: coarse), (pr...`, `@media (max-width: 1100px)` with `cubic-bezier(.22,.78,.24,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`.
 2. **Hero Stage & Focal Lead (<section.manifesto> — `Fabio Pinna - Art Direction, Multi`)**:
    - DOM & Selectors: Landmark `<section class="manifesto editorial-grid">` presenting display lead `Fabio Pinna - Art Direction, Multimedia Graphic D...` and copy excerpt *"Mi occupo di direzione artistica e graphic design multimediale. M"* over `#ffffff` canvas and `#0000ee` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0000ee` headline `Fabio Pinna - Art Direction, Multimedia Graphic D...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#0000ee` headline `Fabio Pinna - Art Direction, Multimedia Graphic D...`.
 3. **Primary Showcase & Content Grid (<section.work> — `Selezione Lavori`)**:
    - DOM & Selectors: Landmark `<section class="work">` rendering section `Selezione Lavori` with copy *"Mi occupo di direzione artistica e graphic design multimediale."*, asset references (`motion-policy-20261012.js`, `favicon-192.png`, `favicon.ico`, `apple-touch-icon.png`), and grid rule `body { touch-action: manipulation;touch-action: pan-x pan-y; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work> — `Selezione Lavori`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 27px 40.32px`) on desktop and Single-column vertical stack at `390px` viewport width with `36.2264px` horizontal padding on mobile.
@@ -256,7 +280,7 @@ Scaffold `effepinnastudio-com` (`Fabio Pinna — Art Director e Graphic Designer
    - DOM & Selectors: Landmark `<article class="work-row">` framing `Fastweb Tu sei Futuro` and `Dose e Dadda Summer Merch` (*"Sviluppo il concept, progetto il linguaggio visivo e lavoro alla "*) with `#f3f2ef` surface cards, `#ff0000` accents, and `focus-visible { outline: 2px solid currentColor;outline-offset: 4px; }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.work-row> — `Fastweb Tu sei Futuro`)` uses `50%`, `999px` radii, `#ff0000` highlights, and assets (motion-policy-20261012.js, favicon-192.png, favicon.ico).
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://effepinnastudio.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#ff0000` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `Fabio Pinna — Art Director e Gra` footer links (`Home ↗ · Work ↗ · Agenzie e brand ↗ · Chi sono ↗ · Contatti ↗`), copy *"Art director e graphic designer multimediale, tra Milano e G"*, and `#f8a6ae` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://effepinnastudio.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `36.2264px` lateral canvas padding with `27px 40.32px` grid gap and attributes (data-work-preview-loading="true", data-loading-theme="red", data-loading-state="ready").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
@@ -278,9 +302,49 @@ Scaffold `effepinnastudio-com` (`Fabio Pinna — Art Director e Graphic Designer
 - **Selector `.ragdoll-cursor-hint`**: `transition: opacity 155ms ease, visibility 0s linear 155ms` extracted from `effepinnastudio-com` stylesheet.
 - **Selector `.ragdoll-cursor-hint.is-visible`**: `transition: opacity 200ms ease, visibility 0s` extracted from `effepinnastudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.78,.24,1)`)**: Governs interactive state transitions across `<header.hero>` and `<section.work>`.
-- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7391px` across 8 distinct viewport chapters using GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: #manifesto-title (0%) -> #manifesto-title (13%) -> Fastweb Tu sei Futuro (26%) -> Dose e Dadda Summer Merch (39%) -> Per le agenzie (65%) -> Altri articoli Altri articoli (79%) -> Footer (92%) -> Footer (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Apri menu`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/blog/vallelata.html` (detail, direct), `/blog/pennicanza.html` (detail, direct), `/blog/mega-effe-x.html` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `effepinnastudio-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #manifesto-title | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `13%` | #manifesto-title | `4` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `26%` | Fastweb Tu sei Futuro | `4` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `39%` | Dose e Dadda Summer Merch | `4` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `65%` | Per le agenzie | `4` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5100px` | `79%` | Altri articoli Altri articoli | `4` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5950px` | `92%` | Footer | `4` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6491px` | `100%` | Footer | `4` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | #manifesto-title | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3396px` | `50%` | Servizi Servizi | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6792px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Apri menu`, diff `130.548`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://effepinnastudio.com/blog/vallelata.html` | Vallelata: campagne display, visual e... | `10853px` | `direct` (`3069ms`) | [subpage-01-blog-vallelata-html.webp](assets/subpage-01-blog-vallelata-html.webp) |
+| `2` | `detail` | `https://effepinnastudio.com/blog/pennicanza.html` | La Pennicanza: Natale in miniatura. | `6608px` | `direct` (`1254ms`) | [subpage-02-blog-pennicanza-html.webp](assets/subpage-02-blog-pennicanza-html.webp) |
+| `3` | `detail` | `https://effepinnastudio.com/blog/mega-effe-x.html` | Mega Effe X | `7594px` | `direct` (`2621ms`) | [subpage-03-blog-mega-effe-x-html.webp](assets/subpage-03-blog-mega-effe-x-html.webp) |
+

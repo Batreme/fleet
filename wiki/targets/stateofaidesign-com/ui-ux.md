@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: stateofaidesign-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `stateofaidesign-com` (**AI in Design Report 2026**)
 - **Production URL**: [https://stateofaidesign.com/](https://stateofaidesign.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: The second annual report by Designer Fund and Foundation Capital on how design teams are adapting to AI across tooling, craft, and org.
 - **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)
@@ -72,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.framer-g5d54> — `stateofaidesign-com`)**:
-   - Landmark `<nav class="framer-g5d54 framer-60e8rl">` (`1425x56px`) hosting `AI in Design Report 2026` navigation (`About About · Tools 01 · Craft 02 · Teams 03 · Sierra 01`), DOM attributes (`data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`, `data-fid="7cd17bb067b245589aa6a..."`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
+   - Landmark `<nav class="framer-g5d54 framer-60e8rl">` (`1425x56px`) hosting `AI in Design Report 2026` navigation (`About About · Tools 01 · Craft 02 · Teams 03 · Sierra 01`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-miin9m { display:none!important }`.
 2. **Hero Stage & Focal Lead (<article.framer-1ti4ff8> — `AI in Design Report 2026`)**:
    - Landmark `<article class="framer-1ti4ff8">` presenting display lead `AI in Design Report 2026` and copy excerpt *"©2026 Designer Fund, Foundation Capital. All rights reserved"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<article.framer-HiGHW> — `In 2025, designers were experiment`)**:
-   - Landmark `<article class="framer-HiGHW">` rendering section `In 2025, designers were experimenting with AI. In...` with copy *"How designers are evolving their tools, craft, and teams with AI"*, asset references (`YeBg4KhukpeFDQRc7qUySaNCzM4.png`, `LYZGuKjYSwOjtebGnDa0R1K1zg.png`, `fonts.gstatic.com`, `adora-start.js`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
+   - Landmark `<article class="framer-HiGHW">` rendering section `In 2025, designers were experimenting with AI. In...` with copy *"How designers are evolving their tools, craft, and teams with AI"*, asset references (`YeBg4KhukpeFDQRc7qUySaNCzM4.png`, `LYZGuKjYSwOjtebGnDa0R1K1zg.png`, `fonts.gstatic.com`, `adora-start.js`), and grid rule `.hidden-72rtr7 { display:none!important }`.
 4. **Interactive Detail & Feature Matrix (<article.framer-72rtr7> — `The great toolstack shakeup`)**:
-   - Landmark `<article class="framer-72rtr7">` framing `The great toolstack shakeup` and `Craft in the age of infinite output` (*"By Designer Fund in partnership with Foundation Capital"*) with `#cdabfe` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
+   - Landmark `<article class="framer-72rtr7">` framing `The great toolstack shakeup` and `Craft in the age of infinite output` (*"By Designer Fund in partnership with Foundation Capital"*) with `#cdabfe` surface cards, `#0000ee` accents, and `.hidden-t69d6d { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.framer-3azmvu> — `https://stateofaidesign.com/`)**:
    - Landmark `<footer class="framer-3azmvu">` anchoring `AI in Design Report 2026` footer links (`About About · Tools 01 · Craft 02 · Teams 03 · Sierra 01`), copy *"An Inflection Point"*, and `#000000` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-easyseller-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-easyseller-it` (**EASYSELLER · Sales Digital Agency**)
 - **Production URL**: [https://www.easyseller.it/](https://www.easyseller.it/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0d6efd`)
 - **Summary**: Aiutiamo i brand e retail multibrand a crescere online attraverso percorsi completi di consulenza · digitalizzazione · gestione · promozi...
 - **Total Clean CSS Variables Extracted**: `451` (curated live-grounded set below)

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-mathildedechiara-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-mathildedechiara-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 
 > **Mathilde De Chiara, designer and interior architect** (https://www.mathildedechiara.com/) — Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Mathilde De Chiara, designer and interior architect** (`https://www.mathildedechiara.com/`). Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `5vw` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
@@ -109,6 +114,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
 - **Selector `.mode-toggle`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<nav.home-page__filters>` and `<main.home-page>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Interactive Control Probe (`carousel_next` · `Display modeSlider/Grid`)**: Triggered visual diff `47.417` (attr ` -> `, captured in `assets/state-interactive.webp`).
 
 ---
 
@@ -167,6 +176,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#0
    - Landmark `<main class="page-content home-page">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#f0f0f0` surface cards, `#000000` accents, and `body { line-height:1 }`.
 5. **Colophon & Global Directory Footer (<footer.home-page> — `https://www.mathildedechiara.com/`)**:
    - Landmark `<footer class="home-page">` anchoring `Mathilde De Chiara, designer and` footer links (`Overview · Index · Archive · About · Contact`), copy *"Technical Architecture & Narrative"*, and `#f8f6f3` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `5`
 
 ---
 
@@ -183,7 +194,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#000000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f5f2` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `PP Editorial New` for display copy (`Mathilde De Chiara, designer and int`) with `Helvetica Neue`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `5vw`) with `cubic-bezier(.87,0,.13,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +230,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#f8f6f3` — grounded in `.grid--rows-overlay .grid__item { border: #f8f6f3 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `5vw` lateral canvas padding with `4px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`)
@@ -244,7 +255,7 @@ Scaffold `www-mathildedechiara-com` (`Mathilde De Chiara, designer and interior 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.home-page__filters> — `www-mathildedechiara-com`)` (`www-mathildedechiara-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1024px) and (min-width: 769px)`, `@media (max-width: 768px)`, `@media screen and (max-width: 768px)` with `cubic-bezier(.87,0,.13,1)`, `cubic-bezier(.22,.61,.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.page-content> — `Mathilde De Chiara, designer and i`)**:
    - DOM & Selectors: Landmark `<main class="page-content home-page">` presenting display lead `Mathilde De Chiara, designer and interior archit` and copy excerpt *"Photography & Communication"* over `#f7f5f2` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f7f5f2` background with `#000000` headline `Mathilde De Chiara, designer and interior archit`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#f7f5f2` background with `#000000` headline `Mathilde De Chiara, designer and interior archit`.
 3. **Primary Showcase & Content Grid (<main.home-page> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<main class="page-content home-page">` rendering section `Featured Work & Interactive Showcase` with copy *"Mathilde De Chiara, designer and interior archit"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`, `b2mcdo5v.apicdn.sanity.io`), and grid rule `section { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.home-page> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `5vw` horizontal padding on mobile.
@@ -272,8 +283,30 @@ Scaffold `www-mathildedechiara-com` (`Mathilde De Chiara, designer and interior 
 - **Selector `.mode-toggle`**: `transition: opacity .3s` extracted from `www-mathildedechiara-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.87,0,.13,1)`)**: Governs interactive state transitions across `<nav.home-page__filters>` and `<main.home-page>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-mathildedechiara-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Mathilde De Chiara | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `carousel_next` (`Display modeSlider/Grid`, diff `47.417`) | [state-interactive.webp](assets/state-interactive.webp) |
+

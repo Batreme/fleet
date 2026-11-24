@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: dwell-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `dwell-au` (**Dwell · A new way home**)
 - **Production URL**: [https://dwell.au/](https://dwell.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#161605` / `#373710`)
 - **Summary**: Dwell is a third housing option that lets you have a home and build wealth without a deposit or mortgage. Discover a new way home.
-- **Total Clean CSS Variables Extracted**: `201` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `203` (curated live-grounded set below)
 
 ---
 
@@ -27,7 +27,7 @@ http_status: 200
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 160px`, `line-height: 147.2px`, `font-weight: 360`, `letter-spacing: -4.80001px`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 140.849px`, `line-height: 108.454px`, `font-weight: 359`, `letter-spacing: -8.45094px`); rule `h2` (`font-size: calc(34*max(1px,min(.0661376v...`, `line-height: 1.02`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 360`); CSS variables `--font-weight-body: 359`, `--font-width-body: 95%`; rule `p` (`line-height: 1.05`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`, `letter-spacing: -0.36px`); CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 360`); CSS variables `--field-label: var(--color-moss)`, `--step-label-top: 12%`, `--font-mono: "fr",monospace`
 
 ---
 
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#f5f4ed` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#3e3e38` | `.glass:before { background: #3e3e38 }` |
 | **Interactive Accent / Highlight** | `#373710` | live computed `button` `color` (`computed_styles.json`) |
-| **Secondary / Muted Copy** | `#aad1ee` | live computed `nav` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#aad1ee` | live computed `h1` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#3a3a27` | `var(--field-hover-border)` in `:root` (`5d5d4980`) |
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: 11moissanstoit-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `11moissanstoit-com` (**11 mois sans toi(t), le tour du monde de Josué & Philippe**)
 - **Production URL**: [https://11moissanstoit.com/](https://11moissanstoit.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#151723`)
 - **Summary**: Tour du monde autobiographique 2010-2011 de Josué & Philippe. 11 mois, des dizaines d'étapes, des milliers de tweets, de photos et de sou...
 - **Total Clean CSS Variables Extracted**: `9` (curated live-grounded set below)
@@ -72,7 +72,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.h-full> — `11moissanstoit-com`)**:
-   - Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
 2. **Hero Stage & Focal Lead (<section.font-condensed> — `11 mois sans toi(t), le tour du mo`)**:
    - Landmark `<section class="font-condensed font-medium">` presenting display lead `11 mois sans toi(t), le tour du monde de Josué &` and copy excerpt *"OCTOBER 2010. PHILIPPE AND JOSUÉ, TWO CHILDHOOD FRIENDS, MAKE THE"* over `#fee422` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.font-medium> — `Featured Work & Interactive Showca`)**:
@@ -80,4 +80,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.uppercase> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="font-condensed font-medium">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"a journey told in real time through their digital footprints, on "*) with `#c7cedb` surface cards, `#151723` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.inset-0> — `https://11moissanstoit.com/`)**:
-   - Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.
+   - Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.

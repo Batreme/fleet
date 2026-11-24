@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-imersion-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.imersion.io"
 final_url: "https://www.imersion.io/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Imersion — Get Immersed in the World's Most Beautiful Places
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `42`
+- **Recovered Stylesheets**: `8`
 
 ---
 

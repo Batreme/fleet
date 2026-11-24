@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-lesgmstudios-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.lesgmstudios.com/"
 final_url: "https://www.lesgmstudios.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: GM Studios — Du contenu qui dépasse les chiffres
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `29`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `173`
+- **Recovered Stylesheets**: `36`
 
 ---
 

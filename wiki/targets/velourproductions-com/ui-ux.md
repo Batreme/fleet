@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: velourproductions-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `velourproductions-com` (**Velour Productions · Vancouver Video & Photography**)
 - **Production URL**: [https://velourproductions.com/](https://velourproductions.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent)
 - **Summary**: Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
 - **Total Clean CSS Variables Extracted**: `79` (curated live-grounded set below)

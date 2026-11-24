@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: re-cycle-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `re-cycle-org` (**Re-Cycle · Changing Lives Through Bicycle Reuse**)
 - **Production URL**: [https://re-cycle.org/](https://re-cycle.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#193838` ink, `#ff0000` accent)
 - **Summary**: We are Re-Cycle. We collect unwanted bikes from across the UK and ship them to trusted partners in Africa. Donate a bike, change a life.
-- **Total Clean CSS Variables Extracted**: `132` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `178` (curated live-grounded set below)
 
 ---
 
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `Rubik`
 - **Body Font Stack**: `DM Sans`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 81px`, `line-height: 67.5px`, `font-weight: 700`); CSS variables `--font-display: "Rubik", sans-serif`, `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54px`, `line-height: 54px`, `font-weight: 700`, `letter-spacing: -1.35px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 81px`, `line-height: 67.5px`, `font-weight: 700`); CSS variables `--font-display: "Rubik", sans-serif`, `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`; rule `h1` (`font-size: 2.5rem`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54px`, `line-height: 54px`, `font-weight: 700`, `letter-spacing: -1.35px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: var(--sl-title-size, 15px)`, `font-weight: 700`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); CSS variables `--font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif`, `--text-base: 1rem`, `--text-base--line-height: 1.5`; rule `p` (`font-size: var(--text-xl)`, `line-height: var(--leading-relaxed)`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `small` (`font-size: 15px`)
 
@@ -78,7 +78,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.footer-main> — `DONATE A BIKE. CHANGE A LIFE.`)**:
    - Landmark `<section class="footer-main relative">` presenting display lead `DONATE A BIKE. CHANGE A LIFE.` and copy excerpt *"We collect unwanted bikes across the UK and send them to Africa, "* over `#ffffff` canvas and `#193838` ink.
 3. **Primary Showcase & Content Grid (<section.relative> — `HOW IT WORKS`)**:
-   - Landmark `<section class="footer-main relative">` rendering section `HOW IT WORKS` with copy *"Containers Shipped"*, asset references (`analytics.js`, `ct-bot-detector.min.js`, `gtm.js`, `543115586334417`), and grid rule `.apbct-real-user-wrapper-woo { display:inline;align-items:center;color:444!important;font-size:14px }`.
+   - Landmark `<section class="footer-main relative">` rendering section `HOW IT WORKS` with copy *"Containers Shipped"*, asset references (`analytics.js`, `gtm.js`, `ct-bot-detector.min.js`, `543115586334417`), and grid rule `.apbct-real-user-wrapper-woo { display:inline;align-items:center;color:444!important;font-size:14px }`.
 4. **Interactive Detail & Feature Matrix (<section.z-10> — `Make your donation go twice as far`)**:
    - Landmark `<section class="footer-main relative">` framing `Make your donation go twice as far!` and `Real Life Impact` (*"Partners Across Africa"*) with `#c8df0a` surface cards, `#ff0000` accents, and `.apbct-real-user-author-name { display:inline-flex }`.
 5. **Colophon & Global Directory Footer (<footer.bg-dark> — `https://re-cycle.org/`)**:

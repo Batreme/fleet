@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-terakawaoffice-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.terakawaoffice.com/en/"
 final_url: "https://www.terakawaoffice.com/en/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.terakawaoffice.com/en/](https://www.terakawaoffice.com/en/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Architectural Photographer in Tokyo, Japan · TERAKAWA Photo Office
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `16`
-- **Recovered Stylesheets**: `15`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: www-terakawaoffice-com_en
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `17`
+- **Recovered Stylesheets**: `14`
 
 ---
 

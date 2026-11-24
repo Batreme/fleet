@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-kubehotel-saint-tropez-com_fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.kubehotel-saint-tropez.com/fr"
 final_url: "https://www.layne-sainttropez.com/fr"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Layne Saint-Tropez, hôtel 5 étoiles : ouverture le 1er mai 2027
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `28`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `118`
+- **Recovered Stylesheets**: `8`
 
 ---
 

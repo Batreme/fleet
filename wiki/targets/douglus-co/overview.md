@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: douglus-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://douglus.co"
 final_url: "https://douglus.co/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://douglus.co](https://douglus.co)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Douglus Nguyen — Web Designer from Vietnam
-- **Identified Frameworks**: HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: douglus-co
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `1`
 - **Recovered Stylesheets**: `1`
 

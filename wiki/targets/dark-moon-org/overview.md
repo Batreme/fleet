@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: dark-moon-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dark-moon.org/"
 final_url: "https://dark-moon.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Darkmoon: Autonomous AI Penetration Testing Platform
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `21`
-- **Recovered Stylesheets**: `10`
+- **Recovered Scripts**: `123`
+- **Recovered Stylesheets**: `26`
 
 ---
 

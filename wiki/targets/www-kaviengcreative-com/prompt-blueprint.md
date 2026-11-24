@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-kaviengcreative-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-kaviengcreative-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas, `#f0efe9` ink, `#62625e` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas
 
 > **Kavieng Cheng · Art Director and Creative** (https://www.kaviengcreative.com/) — Kavieng Cheng is a Hong Kong-based art director and creative working across advertising, product, fine art and photography.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Kavieng Cheng · Art Director and Creative** (`https://www.kaviengcreative.com/`). Kavieng Cheng is a Hong Kong-based art director and creative working across advertising, product, fine art and photography.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas, `#f0efe9` ink, `#62625e` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#050505` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f0efe9` primary typography and `#62625e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Heros` for display copy (`KAVIENG CHENG`) with `Heros` and `Junicode`.
+  - **Grounded Typographic Hierarchy**: Uses `Heros` across display (`KAVIENG CHENG`) and body copy, paired with `Junicode` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `24px`) with `cubic-bezier(.16,1,.3,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `8px`, `50%`, `5px`, `6px`.
@@ -58,7 +63,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas
 | **Primary Typography Ink** | `#f0efe9` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#000000` | `html { background: black }` (`#000000`) |
 | **Interactive Accent / Highlight** | `#62625e` | `.filter-projects button span:la... { color: #62625e }` |
-| **Secondary / Muted Copy** | `#0a0a09` | `var(--hard-ink)` in `:root` |
+| **Secondary / Muted Copy** | `#0a0a09` | live computed `section` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#060606` | `var(--rule-dark)` in `:root` (`rgba(10, 10, 9, .19)`) |
 | **Variable Token (`--page-grey`)** | `#c9c8c3` | `var(--page-grey)` in `:root` |
 | **Variable Token (`--graphite`)** | `#8a8a84` | `var(--graphite)` in `:root` |
@@ -112,6 +117,10 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas
 - **Selector `.focus-reticle`**: `transition: opacity .18s ease` extracted from `www-kaviengcreative-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.archive-header>` and `<section.view-shell:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.view-shell>` and `<section.view-shell:nth(2)>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `KAVIENG CHENG Art director + crea...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
 
 ---
 
@@ -170,6 +179,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#050505` canvas
    - Landmark `<section class="view-shell">` framing `The UN-billed Space` and `The Touch Annual Report` (*"The Touch Annual Report"*) with `#000000` surface cards, `#62625e` accents, and `body { background:var(--archive-black);color:var(--paper);font-family:Heros,Ari... }`.
 5. **Colophon & Global Directory Footer (<footer.loader__hint> — `https://www.kaviengcreative.com/`)**:
    - Landmark `<footer class="loader__hint">` anchoring `Kavieng Cheng · Art Director and` footer links (`Archive · About · Awards · Press · Private`), copy *"The Cigarette Book"*, and `#060606` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 02** (`y=0px`, `8%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 03** (`y=0px`, `17%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 04** (`y=0px`, `25%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 05** (`y=0px`, `33%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 06** (`y=0px`, `42%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 07** (`y=0px`, `50%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
+- **Step 08** (`y=0px`, `58%`): Active landmark `KAVIENG CHENG` · sticky/fixed elements: `3`
 
 ---
 
@@ -186,7 +204,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#050505` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f0efe9`, **Accent / Highlight**: `#62625e`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#050505` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f0efe9` primary typography and `#62625e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Heros` for display copy (`KAVIENG CHENG`) with `Heros` and `Junicode`.
+  - **Grounded Typographic Hierarchy**: Uses `Heros` across display (`KAVIENG CHENG`) and body copy, paired with `Junicode` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `24px`) with `cubic-bezier(.16,1,.3,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -218,15 +236,15 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#f0efe9` — grounded in live computed `h1` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#000000` — grounded in `html { background: black }` (`#000000`)
 - **Interactive Accent / Highlight**: `#62625e` — grounded in `.filter-projects button span:la... { color: #62625e }`
-- **Secondary / Muted Copy**: `#0a0a09` — grounded in `var(--hard-ink)` in `:root`
+- **Secondary / Muted Copy**: `#0a0a09` — grounded in live computed `section` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#060606` — grounded in `var(--rule-dark)` in `:root` (`rgba(10, 10, 9, .19)`)
 - **Variable Token (`--page-grey`)**: `#c9c8c3` — grounded in `var(--page-grey)` in `:root`
 - **Variable Token (`--graphite`)**: `#8a8a84` — grounded in `var(--graphite)` in `:root`
 - **Variable Token (`--silver`)**: `#aaa9a2` — grounded in `var(--silver)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `24px` lateral canvas padding with `18px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`)
@@ -250,7 +268,7 @@ Scaffold `www-kaviengcreative-com` (`Kavieng Cheng · Art Director and Creative`
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.archive-header> — `www-kaviengcreative-com`)` (`www-kaviengcreative-com`) adapts across `@media (max-width:700px)`, `@media (max-width:900px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:380px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.3,1,.4,1)` transitions and links `Archive · About · Awards · Press · Private`.
 2. **Hero Stage & Focal Lead (<section.view-shell> — `KAVIENG CHENG`)**:
    - DOM & Selectors: Landmark `<section class="view-shell">` presenting display lead `KAVIENG CHENG` and copy excerpt *"Art director + creative"* over `#050505` canvas and `#f0efe9` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#050505` background with `#f0efe9` headline `KAVIENG CHENG`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#050505` background with `#f0efe9` headline `KAVIENG CHENG`.
 3. **Primary Showcase & Content Grid (<section.view-shell:nth(2)> — `Kavieng Cheng`)**:
    - DOM & Selectors: Landmark `<section class="view-shell">` rendering section `Kavieng Cheng` with copy *"The UN-billed Space"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `main-C5DSeFRy.js`), and grid rule `html { background:var(--archive-black) }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.view-shell:nth(2)> — `Kavieng Cheng`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
@@ -281,8 +299,32 @@ Scaffold `www-kaviengcreative-com` (`Kavieng Cheng · Art Director and Creative`
 - **Selector `.focus-reticle`**: `transition: opacity .18s ease` extracted from `www-kaviengcreative-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.archive-header>` and `<section.view-shell:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.view-shell>` and `<section.view-shell:nth(2)>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: KAVIENG CHENG (0%) -> KAVIENG CHENG (8%) -> KAVIENG CHENG (17%) -> KAVIENG CHENG (25%) -> KAVIENG CHENG (33%) -> KAVIENG CHENG (42%) -> KAVIENG CHENG (50%) -> KAVIENG CHENG (58%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-kaviengcreative-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | KAVIENG CHENG | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | KAVIENG CHENG | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | KAVIENG CHENG | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | KAVIENG CHENG | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | KAVIENG CHENG | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | KAVIENG CHENG | `3` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | KAVIENG CHENG | `3` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | KAVIENG CHENG | `3` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | KAVIENG CHENG | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

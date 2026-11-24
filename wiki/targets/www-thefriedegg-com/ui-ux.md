@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-thefriedegg-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-thefriedegg-com` (**Fried Egg Golf**)
 - **Production URL**: [https://www.thefriedegg.com/](https://www.thefriedegg.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1b1a1a` ink, `#ffa500` accent)
 - **Summary**: Visit Fried Egg Golf for in-depth golf course profiles, entertaining podcasts, premium event access, and all of the merch you never knew...
 - **Total Clean CSS Variables Extracted**: `236` (curated live-grounded set below)
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.header_main_wrap> — `www-thefriedegg-com`)**:
    - Landmark `<header class="header_main_wrap">` (`1440x900px`) hosting `Fried Egg Golf` navigation (`Newsletter · Pro Shop · Architecture · Course Profiles · Architect Profiles`), DOM attributes (`data-wf-domain="www.thefriedegg.com"`, `data-wf-page="67ab6ef769ff843db623d6fa"`, `data-wf-site="67ab6ef769ff843db623d6f5"`, `data-hubspot-styled-components`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
 2. **Hero Stage & Focal Lead (<section.explore_content_wrap> — `A deeper level of golf`)**:
-   - Landmark `<section class="explore_content_wrap">` presenting display lead `A deeper level of golf` and copy excerpt *"List of former LIV players to take up membership in 2027"* over `#ffffff` canvas and `#1b1a1a` ink.
+   - Landmark `<section class="explore_content_wrap">` presenting display lead `A deeper level of golf` and copy excerpt *"From the RSM Classic to showing up for East Potomac"* over `#ffffff` canvas and `#1b1a1a` ink.
 3. **Primary Showcase & Content Grid (<section.latest_wrap> — `2026 U.S. Mid-Amateur Champion And`)**:
-   - Landmark `<section class="latest_wrap">` rendering section `2026 U.S. Mid-Amateur Champion Andrew Bailey` with copy *"Q&A with Aaron Wise"*, asset references (`cdn.prod.website-files.com`, `friedegg-staging.shared.feb62e49d...`, `iframe_api.bc7198a0fbd8d2409df5.js`, `www-widgetapi.js`), and grid rule `summary { display:block }`.
+   - Landmark `<section class="latest_wrap">` rendering section `2026 U.S. Mid-Amateur Champion Andrew Bailey` with copy *"'Don't Change the Course'"*, asset references (`cdn.prod.website-files.com`, `friedegg-staging.shared.feb62e49d...`, `iframe_api.bc7198a0fbd8d2409df5.js`, `www-widgetapi.js`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.major_cta_wrap> — `Davenport Country Club`)**:
-   - Landmark `<section class="major_cta_wrap">` framing `Davenport Country Club` and `Aaron Wise Q&A: On His PGA Tour Return, Mental He...` (*"On his PGA Tour return, mental health, and more"*) with `#f3f1e7` surface cards, `#ffa500` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Landmark `<section class="major_cta_wrap">` framing `Davenport Country Club` and `Weekend Round-Up: Another Monday Finish, Showing...` (*"Jeeno Thitikul three-peats at the CME"*) with `#f3f1e7` surface cards, `#ffa500` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.thefriedegg.com/`)**:
-   - Landmark `<footer class="footer_wrap">` anchoring `Fried Egg Golf` footer links (`Newsletter · Pro Shop · Architecture · Course Profiles · Architect Profiles`), copy *"Liking and Subscribing to the DP World Tour"*, and `#e2e2e2` structural dividers.
+   - Landmark `<footer class="footer_wrap">` anchoring `Fried Egg Golf` footer links (`Newsletter · Pro Shop · Architecture · Course Profiles · Architect Profiles`), copy *"Q&A with Aaron Wise"*, and `#e2e2e2` structural dividers.

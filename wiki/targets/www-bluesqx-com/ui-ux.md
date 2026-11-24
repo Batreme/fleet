@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-bluesqx-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-bluesqx-com` (**Blue Square X – Premium LED Displays & Immersive Digital Experiences**)
 - **Production URL**: [https://www.bluesqx.com/](https://www.bluesqx.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)
 - **Summary**: We design and deliver high-end LED display systems and immersive digital experiences for luxury brands, retail spaces, and iconic environ...
 - **Total Clean CSS Variables Extracted**: `67` (curated live-grounded set below)
@@ -23,9 +23,9 @@ http_status: 200
 ## Typography & Hierarchy
 - **Display Font Stack**: `Beausite Classic`
 - **Body Font Stack**: `Beausite Classic`
-- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Monospace / Technical Font Stack**: `Fira Sans`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 56px`, `line-height: 56px`, `font-weight: 500`, `letter-spacing: -2px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 48px`, `font-weight: 500`, `letter-spacing: -1.6px`); rule `h2` (`letter-spacing: -.125rem`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 56px`, `font-weight: 500`, `letter-spacing: -2px`); rule `h2` (`letter-spacing: -.125rem`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: "Beausite Classic",Arial,sans-serif`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--xxsmall: .125rem`, `--_ui-styles---radius--small: .25rem`; rule `.label` (`font-size: 0.75rem`, `font-weight: 400`)
 
@@ -73,7 +73,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.banner_component> — `Immersive Experiences. Lasting Imp`)**:
    - Landmark `<section class="banner_component dark">` presenting display lead `Immersive Experiences. Lasting Impressions.` and copy excerpt *"Stay Inspired! Subscribe for the latest Blue Square X updates."* over `#ffffff` canvas and `#1b1e24` ink.
 3. **Primary Showcase & Content Grid (<section.section_header> — `Build Your Immersive Experiences`)**:
-   - Landmark `<section class="section_header dark">` rendering section `Build Your Immersive Experiences` with copy *"Trusted by the industry leaders:"*, asset references (`cdn.prod.website-files.com`, `bluesquarex.webflow.shared.3fa960...`, `pixel.gif`, `data.js`), and grid rule `summary { display:block }`.
+   - Landmark `<section class="section_header dark">` rendering section `Build Your Immersive Experiences` with copy *"Trusted by the industry leaders:"*, asset references (`cdn.prod.website-files.com`, `bluesquarex.webflow.shared.3fa960...`, `data.js`, `recaptcha__en.js`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.section_services-cards> — `Discover LED Indoor and Outdoor Pr`)**:
    - Landmark `<section class="section_services-cards base">` framing `Discover LED Indoor and Outdoor Products` and `Vision + Experience` (*"We design, build, create, and support environments that captivate"*) with `#ffff00` surface cards, `#0000ff` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.bluesqx.com/`)**:

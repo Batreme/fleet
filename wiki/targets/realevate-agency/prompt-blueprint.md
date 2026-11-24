@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: realevate-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "realevate-agency"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 3
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1f2b5e` ink, `#000080` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...** (https://realevate.agency/) — Realevate is a global real estate agency specializing in unique properties and exceptional developments in high-demand markets, offering...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...** (`https://realevate.agency/`). Realevate is a global real estate agency specializing in unique properties and exceptional developments in high-demand markets, offering...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1f2b5e` ink, `#000080` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1f2b5e` primary typography and `#000080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Google Sans` for display copy (`Invest in Exceptional Real Estate Pr`) with `Google Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Google Sans` across display (`Invest in Exceptional Real Estate Pr`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 2.601vw`, padding `4.5vw`) with `cubic-bezier(.7,.6,0,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `100vw` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `4.5vw` lateral canvas padding with `2.601vw` grid gap.
 - **Border Radius Scale**: `5px`, `50%`, `999px`.
@@ -117,6 +122,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.selection-card`**: `transition: filter var(--selection-hover-duration) var(--selection-hover-e...` extracted from `realevate-agency` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,.6,0,1)`)**: Governs interactive state transitions across `<header.logo>` and `<main.is-ready>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`first_card` · `By The Sea Coastal, Marina & Seaf...`)**: Computed transition `0.8s` / `cubic-bezier(0.18, 0.13, 0, 0.99)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/about`) measured as `SPA` in `1913ms`.
 
 ---
 
@@ -175,6 +185,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<main class="rotate-phone-overlay">` framing `Starting from 100,000€` and `Please rotate your device` (*"Please rotate your device"*) with `#e3e5eb` surface cards, `#000080` accents, and `html { scrollbar-width:none;width:100%;height:100svh }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://realevate.agency/`)**:
    - Landmark `<footer class="site-footer">` anchoring `Realevate · Exceptional Real Est` footer links (`Overview · Index · Archive · About · Contact`), copy *"Homepage Invest in Cyprus, Montenegro and Georgia"*, and `#d7d9e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Invest in Exceptional Real Estate Properties in C...` · sticky/fixed elements: `1`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `2`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **About Route (`/about`)**: `https://realevate.agency/about` — H1: `About · Realevate`, scrollHeight `9349px`, transition `SPA` (`1913ms`)
+- **About Route (`/contact`)**: `https://realevate.agency/contact` — H1: `Contact`, scrollHeight `900px`, transition `direct` (`1492ms`)
+- **Other Route (`/bythesea`)**: `https://realevate.agency/bythesea` — H1: `Seafront Apartments & Villas, and Properties with...`, scrollHeight `11739px`, transition `direct` (`1000ms`)
 
 ---
 
@@ -191,7 +210,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1f2b5e`, **Accent / Highlight**: `#000080`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1f2b5e` primary typography and `#000080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Google Sans` for display copy (`Invest in Exceptional Real Estate Pr`) with `Google Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Google Sans` across display (`Invest in Exceptional Real Estate Pr`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `100vw` container bounds (`gap: 2.601vw`, padding `4.5vw`) with `cubic-bezier(.7,.6,0,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -235,8 +254,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--category-rare-gems-muted`)**: `#5c585d` — grounded in `var(--category-rare-gems-muted)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `100vw` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `4.5vw` lateral canvas padding with `2.601vw` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 2.601vw`)
@@ -260,7 +279,7 @@ Scaffold `realevate-agency` (`Realevate · Exceptional Real Estate Investments i
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.logo> — `realevate-agency`)` (`realevate-agency`) adapts across `@media (max-width:650px)and (orientation:portrait)`, `@media (hover:none),(max-width:650px)and (orientation:portrait)`, `@media (min-width:651px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.7,.6,0,1)`, `cubic-bezier(.18,.13,0,.99)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.site-preloader-counter-init> — `Invest in Exceptional Real Estate `)**:
    - DOM & Selectors: Landmark `<main class="site-preloader-counter-init">` presenting display lead `Invest in Exceptional Real Estate Properties in C...` and copy excerpt *"STARTING FROM 100,000€"* over `#ffffff` canvas and `#1f2b5e` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#1f2b5e` headline `Invest in Exceptional Real Estate Properties in C...`.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×872px` mobile) sets `#ffffff` background with `#1f2b5e` headline `Invest in Exceptional Real Estate Properties in C...`.
 3. **Primary Showcase & Content Grid (<main.is-ready> — `STARTING FROM 100,000€`)**:
    - DOM & Selectors: Landmark `<main class="is-ready">` rendering section `STARTING FROM 100,000€` with copy *"Starting from 100,000€"*, asset references (`4532996743652549`, `fbevents.js`, `compat-bootstrap.js`, `favicon.png`), and grid rule `root { --category-hero-scroll-grow-scale: 1.2 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.is-ready> — `STARTING FROM 100,000€`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 100vw`, `gap: 2.601vw`) on desktop and Single-column vertical stack at `390px` viewport width with `4.5vw` horizontal padding on mobile.
@@ -291,8 +310,35 @@ Scaffold `realevate-agency` (`Realevate · Exceptional Real Estate Investments i
 - **Selector `.selection-card`**: `transition: filter var(--selection-hover-duration) var(--selection-hover-e...` extracted from `realevate-agency` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,.6,0,1)`)**: Governs interactive state transitions across `<header.logo>` and `<main.is-ready>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 3 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Invest in Exceptional Real... (0%) -> Hero (8%) -> Hero (17%).
+- **Multi-Page Routes**: Scaffold internal routes `/about` (about, SPA), `/contact` (about, direct), `/bythesea` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `realevate-agency`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Invest in Exceptional Real Estate Properties... | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `about` | `https://realevate.agency/about` | About · Realevate | `9349px` | `SPA` (`1913ms`) | [subpage-01-about.webp](assets/subpage-01-about.webp) |
+| `2` | `about` | `https://realevate.agency/contact` | Contact | `900px` | `direct` (`1492ms`) | [subpage-02-contact.webp](assets/subpage-02-contact.webp) |
+| `3` | `other` | `https://realevate.agency/bythesea` | Seafront Apartments & Villas, and Pro... | `11739px` | `direct` (`1000ms`) | [subpage-03-bythesea.webp](assets/subpage-03-bythesea.webp) |
+

@@ -1,44 +1,49 @@
 ---
 title: "UI Prompt Blueprint: www-teamcafeteria-com_2027"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-teamcafeteria-com_2027"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
-archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#35ff92`)"
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ff`)"
 ---
 
 # UI Design System & Master Generation Blueprint: www-teamcafeteria-com_2027
 
 > **2027 — a [cafeteria] report** (https://www.teamcafeteria.com/2027) — 1,423 people told us what 2027 looks like. A scroll-driven [cafeteria] report.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **2027 — a [cafeteria] report** (`https://www.teamcafeteria.com/2027`). 1,423 people told us what 2027 looks like. A scroll-driven [cafeteria] report.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
-- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#35ff92`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#fcfcfc` primary typography and `#35ff92` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Satoshi 2027` for display copy (`2027 — a [cafeteria] report`) with `Satoshi 2027` and `Rubik Mono One`.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#fcfcfc` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Uses `Satoshi 2027` across display (`2027 — a [cafeteria] report`) and body copy, paired with `Rubik Mono One` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 24px`, padding `4px`) with `cubic-bezier(.65,0,.35,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
-- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `52568px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
+- **Master Container Bounds**: `1440px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `22%`, `40px`, `50%`, `99px`.
 
@@ -57,7 +62,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 | **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#fcfcfc` | live computed `footer` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#1d1b1b` | live computed `nav` `background-color` (`computed_styles.json`) |
-| **Interactive Accent / Highlight** | `#35ff92` | `var(--accent)` in `:root` |
+| **Interactive Accent / Highlight** | `#0000ff` | `.hover:hover>.btn-link { color: blue }` (`#0000ff`) |
 | **Secondary / Muted Copy** | `#686b6b` | `var(--c-text-mute)` in `:root` |
 | **Structural Hairline Border** | `#232020` | `var(--c-border-strong)` in `:root` |
 
@@ -93,15 +98,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 81px`, `line-height: 89.1px`, `font-weight: 500`); rule `h1` (`font-size: clamp(2rem,5vw,3rem)`, `line-height: 1.1`, `font-weight: 700`).
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 57.6px`, `line-height: 63.36px`, `font-weight: 500`); rule `h2` (`font-size: clamp(1.5rem,3.5vw,2rem)`, `line-height: 1.2`, `font-weight: 700`).
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-size-vw-body: 1.5vw`, `--font-size-body: clamp(1.125rem, var(--font-size-vw-body), 1.5rem)`.
-- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-family-mono: "Roboto Mono", monospace`, `--mono: "Roboto Mono 2027",ui-monospace,Menlo,monospace`.
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-size-vw-body: 1.5vw`, `--font-size-body: clamp(1.125rem, var(--font-size-vw-body), 1.5rem)`; rule `p` (`font-weight: 500`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-family-mono: "Roboto Mono", monospace`, `--mono: "Roboto Mono 2027",ui-monospace,Menlo,monospace`; rule `,.label` (`font-size: var(--font-size-lg)`).
 
 ---
 
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `body.report2027-page .rw>i`**: `transition: transform .5s cubic-bezier(.65,0,.35,1) calc(var(--i,0)*70ms)` extracted from `www-teamcafeteria-com_2027` stylesheet.
@@ -109,6 +114,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `body.report2027-page #nav .navt .tx`**: `transition: transform .55s cubic-bezier(.65,0,.35,1),opacity .4s` extracted from `www-teamcafeteria-com_2027` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,0,.35,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.fact>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `52568px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -123,7 +131,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <article.report-doc> (w=1440px)                        | │
 │ | H1: 2027 — a [cafeteria] report                                    | │
-│ | Substrate: #000000 | Ink: #fcfcfc | Accent: #35ff92                | │
+│ | Substrate: #000000 | Ink: #fcfcfc | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.fact>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
@@ -164,9 +172,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 3. **Primary Showcase & Content Grid (<section.fact> — `Shoes`)**:
    - Landmark `<section class="fact">` rendering section `Shoes` with copy *"Back to the experience"*, asset references (`favicon.svg`, `Satoshi-Medium.dlbj618m.woff2`, `Satoshi-Bold.BRirVCsc.woff2`, `Satoshi-Black.BWj4aoZT.woff2`), and grid rule `body.report2027-page .report2027 { line-height:normal }`.
 4. **Interactive Detail & Feature Matrix (<section.fact:nth(2)> — `Spend`)**:
-   - Landmark `<section class="fact">` framing `Spend` and `Collabs` (*"277 hours of conversation"*) with `#1d1b1b` surface cards, `#35ff92` accents, and `track { position:relative;width:1px;pointer-events:none }`.
+   - Landmark `<section class="fact">` framing `Spend` and `Collabs` (*"277 hours of conversation"*) with `#1d1b1b` surface cards, `#0000ff` accents, and `track { position:relative;width:1px;pointer-events:none }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.teamcafeteria.com/2027`)**:
    - Landmark `<footer class="footer theme-dark">` anchoring `2027 — a [cafeteria] report` footer links (`ask AI → · studies →`), copy *"50% female · 48% male · median age 20"*, and `#232020` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `6`
 
 ---
 
@@ -178,12 +188,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `www-teamcafeteria-com_2027` (**2027 — a [cafeteria] report** — `https://www.teamcafeteria.com/2027`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#35ff92`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ff`).
 - **Identity & Domain Context**: 1,423 people told us what 2027 looks like. A scroll-driven [cafeteria] report.
-- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#fcfcfc`, **Accent / Highlight**: `#35ff92`.
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#fcfcfc`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#fcfcfc` primary typography and `#35ff92` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Satoshi 2027` for display copy (`2027 — a [cafeteria] report`) with `Satoshi 2027` and `Rubik Mono One`.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#fcfcfc` primary typography and `#0000ff` accents.
+  - **Grounded Typographic Hierarchy**: Uses `Satoshi 2027` across display (`2027 — a [cafeteria] report`) and body copy, paired with `Rubik Mono One` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 24px`, padding `4px`) with `cubic-bezier(.65,0,.35,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -214,14 +224,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#fcfcfc` — grounded in live computed `footer` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#1d1b1b` — grounded in live computed `nav` `background-color` (`computed_styles.json`)
-- **Interactive Accent / Highlight**: `#35ff92` — grounded in `var(--accent)` in `:root`
+- **Interactive Accent / Highlight**: `#0000ff` — grounded in `.hover:hover>.btn-link { color: blue }` (`#0000ff`)
 - **Secondary / Muted Copy**: `#686b6b` — grounded in `var(--c-text-mute)` in `:root`
 - **Structural Hairline Border**: `#232020` — grounded in `var(--c-border-strong)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
-- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
+- **Container Max-Width**: `1440px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `4px` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 24px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `4px` horizontal padding
@@ -234,26 +244,26 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Monospace / Technical Font Stack**: `Rubik Mono One`
 - **H1 Display Rule**: live computed `h1` (`font-size: 81px`, `line-height: 89.1px`, `font-weight: 500`); rule `h1` (`font-size: clamp(2rem,5vw,3rem)`, `line-height: 1.1`, `font-weight: 700`)
 - **H2 Section Rule**: live computed `h2` (`font-size: 57.6px`, `line-height: 63.36px`, `font-weight: 500`); rule `h2` (`font-size: clamp(1.5rem,3.5vw,2rem)`, `line-height: 1.2`, `font-weight: 700`)
-- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-size-vw-body: 1.5vw`, `--font-size-body: clamp(1.125rem, var(--font-size-vw-body), 1.5rem)`
-- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-family-mono: "Roboto Mono", monospace`, `--mono: "Roboto Mono 2027",ui-monospace,Menlo,monospace`
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-size-vw-body: 1.5vw`, `--font-size-body: clamp(1.125rem, var(--font-size-vw-body), 1.5rem)`; rule `p` (`font-weight: 500`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 500`); CSS variables `--font-family-mono: "Roboto Mono", monospace`, `--mono: "Roboto Mono 2027",ui-monospace,Menlo,monospace`; rule `,.label` (`font-size: var(--font-size-lg)`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-teamcafeteria-com_2027` (`2027 — a [cafeteria] report`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-teamcafeteria-com_2027`)**:
    - DOM & Selectors: Landmark `<header class="site-header">` (`1440x58px`) hosting `2027 — a [cafeteria] report` navigation (`ask AI → · studies →`), DOM attributes (`data-nav-flow-ready="true"`, `data-nav-pill-ready="true"`, `data-cta-location="use_cases_menu"`, `data-track-cta`), and stylesheet rule `font-face { font-family:Anton;font-weight:100 900;font-display:swap;src:url(/_astro/... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-teamcafeteria-com_2027`)` (`www-teamcafeteria-com_2027`) adapts across `@media (min-width:761px)`, `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1100px)` with `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)` transitions and links `ask AI → · studies →`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-teamcafeteria-com_2027`)` (`www-teamcafeteria-com_2027`) adapts across `@media (min-width:761px)`, `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:1100px)` with `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `ask AI → · studies →`.
 2. **Hero Stage & Focal Lead (<article.report-doc> — `2027 — a [cafeteria] report`)**:
    - DOM & Selectors: Landmark `<article class="report-doc">` presenting display lead `2027 — a [cafeteria] report` and copy excerpt *"we asked 1,423 young consumers about the year ahead"* over `#000000` canvas and `#fcfcfc` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#fcfcfc` headline `2027 — a [cafeteria] report`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#000000` background with `#fcfcfc` headline `2027 — a [cafeteria] report`.
 3. **Primary Showcase & Content Grid (<section.fact> — `Shoes`)**:
    - DOM & Selectors: Landmark `<section class="fact">` rendering section `Shoes` with copy *"Back to the experience"*, asset references (`favicon.svg`, `Satoshi-Medium.dlbj618m.woff2`, `Satoshi-Bold.BRirVCsc.woff2`, `Satoshi-Black.BWj4aoZT.woff2`), and grid rule `body.report2027-page .report2027 { line-height:normal }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.fact> — `Shoes`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.fact:nth(2)> — `Spend`)**:
-   - DOM & Selectors: Landmark `<section class="fact">` framing `Spend` and `Collabs` (*"277 hours of conversation"*) with `#1d1b1b` surface cards, `#35ff92` accents, and `track { position:relative;width:1px;pointer-events:none }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.fact:nth(2)> — `Spend`)` uses `22%`, `40px`, `50%`, `99px` radii, `#35ff92` highlights, and assets (favicon.svg, Satoshi-Medium.dlbj618m.woff2, Satoshi-Bold.BRirVCsc.woff2).
+   - DOM & Selectors: Landmark `<section class="fact">` framing `Spend` and `Collabs` (*"277 hours of conversation"*) with `#1d1b1b` surface cards, `#0000ff` accents, and `track { position:relative;width:1px;pointer-events:none }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.fact:nth(2)> — `Spend`)` uses `22%`, `40px`, `50%`, `99px` radii, `#0000ff` highlights, and assets (favicon.svg, Satoshi-Medium.dlbj618m.woff2, Satoshi-Bold.BRirVCsc.woff2).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.teamcafeteria.com/2027`)**:
    - DOM & Selectors: Landmark `<footer class="footer theme-dark">` anchoring `2027 — a [cafeteria] report` footer links (`ask AI → · studies →`), copy *"50% female · 48% male · median age 20"*, and `#232020` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.teamcafeteria.com/2027`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `4px` lateral canvas padding with `24px` grid gap and attributes (data-nav-flow-ready="true", data-nav-pill-ready="true", data-cta-location="use_cases_menu").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.teamcafeteria.com/2027`)` aligns to `1440px` (non-`@media` desktop container stylesheet rule) with `4px` lateral canvas padding with `24px` grid gap and attributes (data-nav-flow-ready="true", data-nav-pill-ready="true", data-cta-location="use_cases_menu").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"we asked 1,423 young consumers about the year ahead"*
@@ -262,7 +272,7 @@ Scaffold `www-teamcafeteria-com_2027` (`2027 — a [cafeteria] report`) with the
 - Copy Excerpt 4: *"50% female · 48% male · median age 20"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)`
+- **Primary Easing Functions**: `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`www-teamcafeteria-com_2027`)**:
 - `font-face { font-family:Anton;font-weight:100 900;font-display:swap;src:url(/_astro/... }`
 - `body.report2027-page .report2027 { line-height:normal }`
@@ -275,8 +285,27 @@ Scaffold `www-teamcafeteria-com_2027` (`2027 — a [cafeteria] report`) with the
 - **Selector `body.report2027-page #nav .navt .tx`**: `transition: transform .55s cubic-bezier(.65,0,.35,1),opacity .4s` extracted from `www-teamcafeteria-com_2027` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,0,.35,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.fact>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `52568px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-teamcafeteria-com_2027`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `6` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Section @ 17% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Section @ 33% | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

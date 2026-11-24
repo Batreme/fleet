@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: akaiito-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `akaiito-ai` (**Akai Ito — Your twin dates millions. You go on one date.**)
 - **Production URL**: [https://akaiito.ai](https://akaiito.ai)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#ff0000`)
 - **Summary**: Akai Ito builds a digital twin of you. It goes on millions of first dates, lives ten thousand lives with your best match, then books one...
 - **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)

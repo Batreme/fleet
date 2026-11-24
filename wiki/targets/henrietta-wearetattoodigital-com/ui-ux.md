@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: henrietta-wearetattoodigital-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `henrietta-wearetattoodigital-com` (**Henrietta Said : Scandalously Spicy**)
 - **Production URL**: [https://henrietta.wearetattoodigital.com/](https://henrietta.wearetattoodigital.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#e3a898` / `#ffa500`)
 - **Summary**: It’s hard to contain this kind of spiciness. That’s why we’re bringing our scandalously spicy selves to the mainstream with bold wing-fla...
 - **Total Clean CSS Variables Extracted**: `21` (curated live-grounded set below)
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `Sink`
 - **Body Font Stack**: `Helvetica Neue`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 172.8px`, `line-height: 155.52px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 403.2px`, `line-height: 362.88px`, `font-weight: 900`, `letter-spacing: 4.32px`); rule `h1` (`font-size: 2em`)
 - **Section Heading (`H2`)**: rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `small` (`font-size: 80%`)
@@ -38,9 +38,10 @@ http_status: 200
 | **Primary Typography Ink** | `#333333` | live computed `body` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#dddddd` | live computed `nav` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ffa500` | `.button-v-1.buffalo { color: orange }` (`#ffa500`) |
-| **Secondary / Muted Copy** | `#eae6e3` | live computed `h1` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
 | **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
 | **Variable Token (`--kimchi-red`)** | `#d32929` | `var(--kimchi-red)` in `:root` |
+| **Variable Token (`--light-grey`)** | `#eae6e3` | `var(--light-grey)` in `:root` |
 | **Variable Token (`--brown-chicken`)** | `#8b231a` | `var(--brown-chicken)` in `:root` |
 | **Variable Token (`--orange`)** | `#f45016` | `var(--orange)` in `:root` |
 | **Variable Token (`--lemon`)** | `#efc415` | `var(--lemon)` in `:root` |
@@ -77,8 +78,8 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.our-products-list> — `henrietta-wearetattoodigital-com`)**:
    - Landmark `<nav class="our-products-list w-dropdown-list">` (`1440px`) hosting `Henrietta Said : Scandalously Spicy` navigation (`ancho kimchi · original buffalo · lemon pepper`), DOM attributes (`data-wf-domain="henrietta.wearetattoo..."`, `data-wf-page="69fc9bd508ea045856fc2e42"`, `data-wf-site="69fc9bd208ea045856fc2c0a"`, `data-preloader-counter`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
-2. **Hero Stage & Focal Lead (<div.preloader> — `SCANDALOUSLY SPICY SNACKS`)**:
-   - Landmark `<div class="preloader">` presenting display lead `SCANDALOUSLY SPICY SNACKS` and copy excerpt *"Jumbo roasted peanuts with a fusion of flavorfully fun ancho kimc"* over `#e3a898` canvas and `#333333` ink.
+2. **Hero Stage & Focal Lead (<div.preloader> — `KIMCHI`)**:
+   - Landmark `<div class="preloader">` presenting display lead `KIMCHI` and copy excerpt *"Jumbo roasted peanuts with a fusion of flavorfully fun ancho kimc"* over `#e3a898` canvas and `#333333` ink.
 3. **Primary Showcase & Content Grid (<div.preloader:nth(2)> — `Jumbo roasted peanuts with a fusio`)**:
    - Landmark `<div class="preloader">` rendering section `Jumbo roasted peanuts with a fusion of flavorful` with copy *"Jumbo roasted peanuts with bodaciously bold Nashville hot Chicken"*, asset references (`cdn.prod.website-files.com`, `henrietta-said.webflow.shared.afe...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<div.preloader:nth(3)> — `Jumbo roasted peanuts with bodacio`)**:

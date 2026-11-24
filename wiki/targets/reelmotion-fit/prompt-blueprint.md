@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: reelmotion-fit"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "reelmotion-fit"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `#0e1116` ink, `#0d95e8` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `
 
 > **Reel Motion: Turn Workout Videos Into Exercise Routines** (https://reelmotion.fit/) — Paste a link from YouTube, Instagram, or TikTok and Reel Motion creates an illustrated, step-by-step workout you can follow on iPhone and...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Reel Motion: Turn Workout Videos Into Exercise Routines** (`https://reelmotion.fit/`). Paste a link from YouTube, Instagram, or TikTok and Reel Motion creates an illustrated, step-by-step workout you can follow on iPhone and...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `#0e1116` ink, `#0d95e8` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f7fb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0e1116` primary typography and `#0d95e8` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Any workout video becomes a routine `) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1304px` container bounds (`gap: 8px`, padding `44px`) with `cubic-bezier(.47,0,.74,.71)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Any workout video becomes a routine `) with `Inter`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1304px` container bounds (`gap: var(--row-gap)`, padding `.5rem`) with `cubic-bezier(.47,0,.74,.71)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=4038px` / doc `4938px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1304px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
-- **Canvas Lateral Padding & Spacing**: `44px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `999px`, `100%`, `3px`, `10px`.
+- **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `var(--row-gap)` grid gap.
+- **Border Radius Scale**: `999px`, `3px`, `var(--border-radius)`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: 8px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `44px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:800px)`, `@media only screen and (max-width:976px)`, `@media only screen and (max-width:767px)`, `@media screen and (max-width:1024px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: var(--row-gap)`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (max-width:767px)`, `@media (max-width:1024px)`, `@media (min-width:-1)`, `@media (max-width:-1)`.
 
 ---
 
@@ -59,7 +64,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `
 | **Elevated Surface / Card Substrate** | `#ffffff` | live computed `button` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0d95e8` | `.fancybox-share__button--tw:hover { background: #0d95e8 }` |
 | **Secondary / Muted Copy** | `#8a93a3` | `var(--Muted)` in `:root` |
-| **Structural Hairline Border** | `#d7d7d7` | `.fancybox-share__input { border-bottom: #d7d7d7 }` |
+| **Structural Hairline Border** | `#cccccc` | `pre { border: #cccccc }` |
 | **Variable Token (`--e-gv-d8119ec`)** | `#934cff` | `var(--e-gv-d8119ec)` in `:root` |
 | **Variable Token (`--e-gv-22831a4`)** | `#7a32f0` | `var(--e-gv-22831a4)` in `:root` |
 | **Variable Token (`--e-gv-c75aa4e`)** | `#2f7cf8` | `var(--e-gv-c75aa4e)` in `:root` |
@@ -113,11 +118,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.47,0,.74,.71)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.5,0,.14,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.fancybox-bg`**: `transition: inherit` extracted from `reelmotion-fit` stylesheet.
-- **Selector `.fancybox-is-open .fancybox-bg`**: `transition: cubic-bezier(.47,0,.74,.71)` extracted from `reelmotion-fit` stylesheet.
-- **Selector `.fancybox-toolbar`**: `transition: opacity .25s,visibility 0s linear .25s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `textarea`**: `transition: all .3s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `button`**: `transition: all .3s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `entor .elementor-background-video...`**: `transition: opacity 1s` extracted from `reelmotion-fit` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.47,0,.74,.71)`)**: Governs interactive state transitions across `<nav.elementor>` and `<section.elementor-element-rmhowsec>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4938px`, deepest scrollY reached `4038px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Download App`)**: `backgroundColor`: `rgb(14, 17, 22)` -> `rgb(26, 31, 40)`; `boxShadow`: `none` -> `rgba(120, 127, 246, 0.6...` (`transition-duration: 0.2s, 0.2s`, `timing: ease, ease`).
+- **Route Transition Architecture**: First internal navigation (`/support/`) measured as `MPA` in `4382ms`.
 
 ---
 
@@ -148,7 +158,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `
 ### Visual Layout Schematic — Mobile Reflow (`390px`)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px)        │
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: var(--ro)   │
 │ ====================================================================== │
 │ [ HEADER BAR (<nav.elementor>         ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
@@ -167,15 +177,25 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f5f7fb` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.elementor> — `reelmotion-fit`)**:
-   - Landmark `<nav class="elementor elementor-15">` (`1440x0px`) hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `.uael-ins-target { position:relative }`.
+   - Landmark `<nav class="elementor elementor-15">` (`1440x0px`) hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `html { line-height:1.15;-webkit-text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.elementor-element> — `Any workout video becomes a routin`)**:
    - Landmark `<section class="elementor-element elementor-element-rmfeatsec">` presenting display lead `Any workout video becomes a routine you can` and copy excerpt *"Paste a link from YouTube, Instagram, or TikTok. Get illustrated "* over `#f5f7fb` canvas and `#0e1116` ink.
 3. **Primary Showcase & Content Grid (<section.elementor-element-rmhowsec> — `Read once, run hands-free`)**:
-   - Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `.uael-ins-target::before { display:block;height:100%;left:0;position:absolute;top:0;width:100%;z-in... }`.
+   - Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `before { box-sizing:border-box }`.
 4. **Interactive Detail & Feature Matrix (<section.elementor-element-rmpricesec> — `Illustrated exercises`)**:
-   - Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#ffffff` surface cards, `#0d95e8` accents, and `.uael-ins-normal .uael-ins-target { -webkit-filter:unset;filter:unset }`.
+   - Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#ffffff` surface cards, `#0d95e8` accents, and `pre { font-family:monospace;font-size:1em;white-space:pre-wrap }`.
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://reelmotion.fit/`)**:
-   - Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#d7d7d7` structural dividers.
+   - Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#cccccc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Any workout video becomes a routine you can` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `21%`): Active landmark `Read once, run hands-free` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `42%`): Active landmark `How it works` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `63%`): Active landmark `Every plan unlocks the whole app` · sticky/fixed elements: `1`
+- **Step 05** (`y=3400px`, `84%`): Active landmark `Your next workout is one link away.` · sticky/fixed elements: `1`
+- **Step 06** (`y=4038px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/support/`)**: `https://reelmotion.fit/support/` — H1: `Need a hand?`, scrollHeight `2646px`, transition `MPA` (`4382ms`)
 
 ---
 
@@ -192,8 +212,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f5f7fb` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0e1116`, **Accent / Highlight**: `#0d95e8`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f7fb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0e1116` primary typography and `#0d95e8` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Any workout video becomes a routine `) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1304px` container bounds (`gap: 8px`, padding `44px`) with `cubic-bezier(.47,0,.74,.71)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Pairs `Inter Tight` for display copy (`Any workout video becomes a routine `) with `Inter`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1304px` container bounds (`gap: var(--row-gap)`, padding `.5rem`) with `cubic-bezier(.47,0,.74,.71)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `reelmotion-fit` in your global stylesheet:
@@ -225,7 +245,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Elevated Surface / Card Substrate**: `#ffffff` — grounded in live computed `button` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#0d95e8` — grounded in `.fancybox-share__button--tw:hover { background: #0d95e8 }`
 - **Secondary / Muted Copy**: `#8a93a3` — grounded in `var(--Muted)` in `:root`
-- **Structural Hairline Border**: `#d7d7d7` — grounded in `.fancybox-share__input { border-bottom: #d7d7d7 }`
+- **Structural Hairline Border**: `#cccccc` — grounded in `pre { border: #cccccc }`
 - **Variable Token (`--e-gv-d8119ec`)**: `#934cff` — grounded in `var(--e-gv-d8119ec)` in `:root`
 - **Variable Token (`--e-gv-22831a4`)**: `#7a32f0` — grounded in `var(--e-gv-22831a4)` in `:root`
 - **Variable Token (`--e-gv-c75aa4e`)**: `#2f7cf8` — grounded in `var(--e-gv-c75aa4e)` in `:root`
@@ -237,14 +257,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--e-gv-d4944d5`)**: `#e6e4f0` — grounded in `var(--e-gv-d4944d5)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1304px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
-- **Padding & Gutters**: `44px` lateral canvas padding with `8px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: 8px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `44px` horizontal padding
-- **Media Queries**: `@media (max-width:800px)`, `@media only screen and (max-width:976px)`, `@media only screen and (max-width:767px)`, `@media screen and (max-width:1024px)`
-- **Corner Radii**: `999px`, `100%`, `3px`, `10px`
+- **Padding & Gutters**: `.5rem` lateral canvas padding with `var(--row-gap)` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: var(--row-gap)`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding
+- **Media Queries**: `@media (max-width:767px)`, `@media (max-width:1024px)`, `@media (min-width:-1)`, `@media (max-width:-1)`
+- **Corner Radii**: `999px`, `3px`, `var(--border-radius)`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Inter Tight`
@@ -258,20 +278,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `reelmotion-fit` (`Reel Motion: Turn Workout Videos Into Exercise Routines`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.elementor> — `reelmotion-fit`)**:
-   - DOM & Selectors: Landmark `<nav class="elementor elementor-15">` (`1440x0px`) hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `.uael-ins-target { position:relative }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.elementor> — `reelmotion-fit`)` (`reelmotion-fit`) adapts across `@media (max-width:800px)`, `@media only screen and (max-width:976px)`, `@media only screen and (max-width:767px)`, `@media screen and (max-width:1024px)` with `cubic-bezier(.47,0,.74,.71)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.5,0,.14,1)` transitions and links `Reel Motion · Home · Features · How it works · Pricing`.
+   - DOM & Selectors: Landmark `<nav class="elementor elementor-15">` (`1440x0px`) hosting `Reel Motion: Turn Workout Videos Int` navigation (`Reel Motion · Home · Features · How it works · Pricing`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-elementor-device-mode="desktop"`), and stylesheet rule `html { line-height:1.15;-webkit-text-size-adjust:100% }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.elementor> — `reelmotion-fit`)` (`reelmotion-fit`) adapts across `@media (max-width:767px)`, `@media (max-width:1024px)`, `@media (min-width:-1)`, `@media (max-width:-1)` with `cubic-bezier(.47,0,.74,.71)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.5,0,.14,1)` transitions and links `Reel Motion · Home · Features · How it works · Pricing`.
 2. **Hero Stage & Focal Lead (<section.elementor-element> — `Any workout video becomes a routin`)**:
    - DOM & Selectors: Landmark `<section class="elementor-element elementor-element-rmfeatsec">` presenting display lead `Any workout video becomes a routine you can` and copy excerpt *"Paste a link from YouTube, Instagram, or TikTok. Get illustrated "* over `#f5f7fb` canvas and `#0e1116` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f5f7fb` background with `#0e1116` headline `Any workout video becomes a routine you can`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#f5f7fb` background with `#0e1116` headline `Any workout video becomes a routine you can`.
 3. **Primary Showcase & Content Grid (<section.elementor-element-rmhowsec> — `Read once, run hands-free`)**:
-   - DOM & Selectors: Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `.uael-ins-target::before { display:block;height:100%;left:0;position:absolute;top:0;width:100%;z-in... }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.elementor-element-rmhowsec> — `Read once, run hands-free`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `44px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="elementor-element elementor-element-rmhowsec">` rendering section `Read once, run hands-free` with copy *"Reel Motion reads the video for you, then hands back a workout yo"*, asset references (`fonts.googleapis.com`, `embed`, `reset.css`, `theme.css`), and grid rule `before { box-sizing:border-box }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.elementor-element-rmhowsec> — `Read once, run hands-free`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1304px`, `gap: var(--row-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.elementor-element-rmpricesec> — `Illustrated exercises`)**:
-   - DOM & Selectors: Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#ffffff` surface cards, `#0d95e8` accents, and `.uael-ins-normal .uael-ins-target { -webkit-filter:unset;filter:unset }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.elementor-element-rmpricesec> — `Illustrated exercises`)` uses `999px`, `100%`, `3px`, `10px` radii, `#0d95e8` highlights, and assets (fonts.googleapis.com, embed, reset.css).
+   - DOM & Selectors: Landmark `<section class="elementor-element elementor-element-rmpricesec">` framing `Illustrated exercises` and `Hands-free control` (*"Start and finish positions, drawn for every move."*) with `#ffffff` surface cards, `#0d95e8` accents, and `pre { font-family:monospace;font-size:1em;white-space:pre-wrap }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.elementor-element-rmpricesec> — `Illustrated exercises`)` uses `999px`, `3px`, `var(--border-radius)`, `2px` radii, `#0d95e8` highlights, and assets (fonts.googleapis.com, embed, reset.css).
 5. **Colophon & Global Directory Footer (<footer.elementor> — `https://reelmotion.fit/`)**:
-   - DOM & Selectors: Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#d7d7d7` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.elementor> — `https://reelmotion.fit/`)` aligns to `1304px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `44px` lateral canvas padding with `8px` grid gap and attributes (data-wp-strategy="defer", data-wp-strategy="defer", data-wp-strategy="defer").
+   - DOM & Selectors: Landmark `<footer class="elementor elementor-68">` anchoring `Reel Motion: Turn Workout Videos` footer links (`Reel Motion · Home · Features · How it works · Pricing`), copy *"Say start, next, or done. Your phone stays on the floor."*, and `#cccccc` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.elementor> — `https://reelmotion.fit/`)` aligns to `1304px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `.5rem` lateral canvas padding with `var(--row-gap)` grid gap and attributes (data-wp-strategy="defer", data-wp-strategy="defer", data-wp-strategy="defer").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Paste a link from YouTube, Instagram, or TikTok. Get illustrated exercises, step-b..."*
@@ -282,19 +302,50 @@ Scaffold `reelmotion-fit` (`Reel Motion: Turn Workout Videos Into Exercise Routi
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.47,0,.74,.71)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.5,0,.14,1)`
 - **Extracted Stylesheet Rules (`reelmotion-fit`)**:
-- `.uael-ins-target { position:relative }`
-- `.uael-ins-target::before { display:block;height:100%;left:0;position:absolute;top:0;width:100%;z-in... }`
-- `.uael-ins-normal .uael-ins-target { -webkit-filter:unset;filter:unset }`
-- `ns-hover:hover .uael-ins-target::... { background:unset;mix-blend-mode:unset }`
-- `.uael-ins-hover:hover .uael-ins-t... { -webkit-filter:sepia(.5) hue-rotate(-30deg) saturate(1.4);filter:sepia(.... }`
+- `html { line-height:1.15;-webkit-text-size-adjust:100% }`
+- `before { box-sizing:border-box }`
+- `pre { font-family:monospace;font-size:1em;white-space:pre-wrap }`
+- `a:hover { color:336 }`
+- `hover { color:inherit;text-decoration:none }`
 - **Per-Selector Transition Rules**:
-- **Selector `.fancybox-bg`**: `transition: inherit` extracted from `reelmotion-fit` stylesheet.
-- **Selector `.fancybox-is-open .fancybox-bg`**: `transition: cubic-bezier(.47,0,.74,.71)` extracted from `reelmotion-fit` stylesheet.
-- **Selector `.fancybox-toolbar`**: `transition: opacity .25s,visibility 0s linear .25s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `textarea`**: `transition: all .3s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `button`**: `transition: all .3s` extracted from `reelmotion-fit` stylesheet.
+- **Selector `entor .elementor-background-video...`**: `transition: opacity 1s` extracted from `reelmotion-fit` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.47,0,.74,.71)`)**: Governs interactive state transitions across `<nav.elementor>` and `<section.elementor-element-rmhowsec>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4938px` across 6 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Any workout video becomes a... (0%) -> Read once, run hands-free (21%) -> How it works (42%) -> Every plan unlocks the whol... (63%) -> Your next workout is one li... (84%) -> Footer (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `backgroundColor, boxShadow` with `0.2s, 0.2s ease, ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/support/` (other, MPA) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `reelmotion-fit`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Any workout video becomes a routine you can | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `21%` | Read once, run hands-free | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `42%` | How it works | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `63%` | Every plan unlocks the whole app | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `84%` | Your next workout is one link away. | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4038px` | `100%` | Footer | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Any workout video becomes a routine you can | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3168px` | `50%` | Run the workout | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6336px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://reelmotion.fit/support/` | Need a hand? | `2646px` | `MPA` (`4382ms`) | [subpage-01-support.webp](assets/subpage-01-support.webp) |
+

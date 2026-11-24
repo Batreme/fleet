@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: akaiito-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://akaiito.ai"
 final_url: "https://akaiito.ai/"
 status: analyzed

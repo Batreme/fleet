@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: mont-rural-emblematica-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://mont-rural.emblematica.agency"
 final_url: "https://mont-rural.emblematica.agency/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: MontRural — Private Masia Among the Vineyards of Penedès
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `40`
+- **Recovered Scripts**: `39`
 - **Recovered Stylesheets**: `13`
 
 ---

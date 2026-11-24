@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-offforum-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.offforum.com/"
 final_url: "https://www.offforum.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM · SEPT 15, 2027 · OFFF S...
 - **Identified Frameworks**: Vue / Nuxt, Framer, Tailwind CSS
-- **Recovered Scripts**: `53`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `156`
+- **Recovered Stylesheets**: `6`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-thedesignsociety-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-thedesignsociety-fr` (**The Design Society Lyon — la communauté des designers**)
 - **Production URL**: [https://www.thedesignsociety.fr/](https://www.thedesignsociety.fr/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#350aff` canvas, `#ffffff` ink, `#0082f3` accent)
 - **Summary**: L'association qui réunit les designers de Lyon autour de talks et d'apéros. Une société secrète si mal gardée qu'on a fait un site. Proch...
 - **Total Clean CSS Variables Extracted**: `60` (curated live-grounded set below)

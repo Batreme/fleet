@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: pankow-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://pankow.band"
 final_url: "https://pankow.band/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `29`
+- **Recovered Stylesheets**: `8`
 
 ---
 

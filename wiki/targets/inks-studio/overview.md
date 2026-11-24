@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: inks-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://inks.studio/"
 final_url: "https://www.inks.studio/"
 status: analyzed
@@ -30,9 +30,9 @@ auth_required: false
 - **Final Redirected URL**: [https://www.inks.studio/](https://www.inks.studio/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Ink Studio - UI UX Design, CRO & Webflow Development Agency
-- **Identified Frameworks**: Webflow, Framer
-- **Recovered Scripts**: `121`
-- **Recovered Stylesheets**: `1`
+- **Identified Frameworks**: Webflow, Framer, Tailwind CSS
+- **Recovered Scripts**: `633`
+- **Recovered Stylesheets**: `41`
 
 ---
 

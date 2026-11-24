@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: biipmk-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `biipmk-com` (**biipmk**)
 - **Production URL**: [https://biipmk.com/](https://biipmk.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f0f0f1` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: French art director and keycap designer with 10+ years experience. Specializing in mechanical keyboard design, custom keycap sets, and vi...
 - **Total Clean CSS Variables Extracted**: `45` (curated live-grounded set below)

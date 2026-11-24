@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: productionportugal-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `productionportugal-com` (**Production Portugal: Your trusted film production company in Portugal an...**)
 - **Production URL**: [https://productionportugal.com/](https://productionportugal.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0063`)
 - **Summary**: Dive into cinematic excellence with expert location scouting. Explore possibilities with Production Portugal - Your Trusted film producti...
-- **Total Clean CSS Variables Extracted**: `23` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `24` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Neue Haas Grotesk Display Pro`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 36px`, `font-weight: 900`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 96px`, `line-height: 81.6px`, `font-weight: 700`, `letter-spacing: -2.88px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `small` (`font-size: 80%`)
 

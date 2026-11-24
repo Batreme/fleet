@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: christoph-nagel-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://christoph-nagel.dev/"
 final_url: "https://christoph-nagel.dev/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Christoph Nagel · Webentwickler, Fotograf & Videograf in Dorsten
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `5`
+- **Recovered Scripts**: `9`
 - **Recovered Stylesheets**: `0`
 
 ---

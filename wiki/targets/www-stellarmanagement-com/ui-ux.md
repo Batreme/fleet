@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-stellarmanagement-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-stellarmanagement-com` (**Stellar Management · NYC Real Estate Developer & No Fee Rentals**)
 - **Production URL**: [https://www.stellarmanagement.com](https://www.stellarmanagement.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#181513` ink, `#0000ff` accent)
 - **Summary**: Stellar is a leading New York real estate developer and manager providing a wide range of apartments and commercial properties. Browse no...
-- **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `94` (curated live-grounded set below)
 
 ---
 
@@ -86,6 +86,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)**:
    - Landmark `<section class="block">` rendering section `We help New Yorkers find h o m e` with copy *"R e n t w i t h u s R e n t w i t h u s"*, asset references (`entry.BO5l_mVZ.css`, `default.D_u9mJpK.css`, `filterMain.Dy3QUOs1.css`, `appInput.BLk3pTmz.css`), and grid rule `before { background:var(--white)!important }`.
 4. **Interactive Detail & Feature Matrix (<section.neighborhoods> — `From h i s t o r i c blocks to n e`)**:
-   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `.tag-word { display:none }`.
+   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `hover { border-color:var(--dark-blue);color:var(--dark-blue) }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)**:
    - Landmark `<footer class="footer">` anchoring `Stellar Management · NYC Real Es` footer links (`Overview · Index · Archive · About · Contact`), copy *"The Way We Work, Defines Who We Are"*, and `#0000ff` structural dividers.

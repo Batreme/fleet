@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: filmmaker-framer-media"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://filmmaker.framer.media/"
 final_url: "https://filmmaker.framer.media/"
 status: analyzed

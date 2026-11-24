@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bybang-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bybang.co/"
 final_url: "https://bybang.co/"
 status: analyzed

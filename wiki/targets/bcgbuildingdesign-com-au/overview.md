@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bcgbuildingdesign-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bcgbuildingdesign.com.au/"
 final_url: "https://www.bcgbuildingdesign.com.au/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Building Designer Gold Coast · BCG Building Design
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `92`
+- **Recovered Stylesheets**: `8`
 
 ---
 

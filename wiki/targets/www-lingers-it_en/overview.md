@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-lingers-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.lingers.it/en"
 final_url: "https://www.lingers.it/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Lingers – your hotel in Girlan
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `47`
-- **Recovered Stylesheets**: `10`
+- **Recovered Scripts**: `164`
+- **Recovered Stylesheets**: `25`
 
 ---
 

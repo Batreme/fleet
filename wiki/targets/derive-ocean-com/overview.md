@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: derive-ocean-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://derive-ocean.com/"
 final_url: "https://derive-ocean.com/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://derive-ocean.com/](https://derive-ocean.com/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
 - **Page Title**: derive-ocean-com
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `3`
+- **Recovered Stylesheets**: `1`
 
 ---
 

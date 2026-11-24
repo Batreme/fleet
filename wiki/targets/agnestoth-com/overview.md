@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: agnestoth-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://agnestoth.com"
 final_url: "https://agnestoth.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: AGNESTOTH · House of Luxurious Embroidery
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `60`
-- **Recovered Stylesheets**: `7`
+- **Recovered Scripts**: `837`
+- **Recovered Stylesheets**: `42`
 
 ---
 

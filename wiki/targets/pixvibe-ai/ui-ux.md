@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: pixvibe-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `pixvibe-ai` (**PixVibe — Free Background Remover, Converter & Upscaler**)
 - **Production URL**: [https://pixvibe.ai](https://pixvibe.ai)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)
 - **Summary**: Remove backgrounds, convert, compress, resize, crop and upscale images — free, batch up to 20 at once, right in your browser.
 - **Total Clean CSS Variables Extracted**: `565` (curated live-grounded set below)
@@ -24,9 +24,9 @@ http_status: 200
 - **Display Font Stack**: `fontJakarta`
 - **Body Font Stack**: `fontInter`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 78px`, `line-height: 78px`, `font-weight: 700`, `letter-spacing: -4px`); CSS variables `--pv-font-display: "Clash Display",system-ui,sans-serif`, `--tool-hero-title-badge-font-size: 12px`, `--text-display: 68px`; rule `h1` (`font-size: clamp(28px,7vw,40px)`)
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 20px`, `line-height: 28px`, `font-weight: 600`, `letter-spacing: -0.8px`); rule `h2` (`font-size: clamp(21px,1.9vw,26px)`, `line-height: 1.25`, `letter-spacing: -.02em`, `font-weight: 600`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--pv-font-body: "Satoshi",system-ui,sans-serif`, `--body: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif`, `--text-base: 1rem`; rule `p` (`font-size: clamp(15px,1.1vw,16.5px)`, `line-height: 1.8`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 78px`, `line-height: 78px`, `font-weight: 700`, `letter-spacing: -4px`); CSS variables `--pv-font-display: "Clash Display",system-ui,sans-serif`, `--tool-hero-title-badge-font-size: 12px`, `--text-display: 68px`; rule `h1` (`font-size: var(--text-subpage-hero)`, `line-height: var(--leading-subpage...`, `letter-spacing: var(--tracking-subpag...`, `font-weight: var(--subpage...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 600`, `letter-spacing: -2.64px`); rule `h2` (`font-size: 25px`, `line-height: 1.14`, `letter-spacing: -.05em`, `font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--pv-font-body: "Satoshi",system-ui,sans-serif`, `--body: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif`, `--text-body-sm: 16px`; rule `p` (`font-size: var(--text-body-sm)`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--tool-processing-label-size: 10px`, `--tool-hero-label-height: 36px`, `--tool-hero-label-font-size: 14px`; rule `small` (`font-size: 12px`)
 
 ---
@@ -74,12 +74,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.pv-notification-header> — `pixvibe-ai`)**:
-   - Landmark `<header class="pv-notification-header">` (`419x65px`) hosting `PixVibe — Free Background Remover, C` navigation (`Home · Pricing · Blog`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `root { --fv-section-x:16px;--fv-section-top:12px;--fv-section-y:20px }`.
+   - Landmark `<header class="pv-notification-header">` (`419x65px`) hosting `PixVibe — Free Background Remover, C` navigation (`Home · Pricing · Blog`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.juZLRa_className { font-family:fontInter,fontInter Fallback }`.
 2. **Hero Stage & Focal Lead (<section.home-hero> — `The private image toolkit for you `)**:
    - Landmark `<section class="home-hero">` presenting display lead `The private image toolkit for you and your AI age...` and copy excerpt *"Full guide for AI agents, with shortcut URLs and parameters for e"* over `#ffffff` canvas and `#18172d` ink.
 3. **Primary Showcase & Content Grid (<section.home-section> — `Free image tools`)**:
-   - Landmark `<section class="home-section home-toolkit">` rendering section `Free image tools` with copy *"11 free tools · free batch processing · runs in your browser · pl"*, asset references (`dm_mono_400_latin-s.p.38hmww4cj4v...`, `dm_mono_500_latin-s.p.2yee423r7ah...`, `inter_400_700_latin-s.p.2bn3s6zvc...`, `manrope_400_700_latin-s.p.1sj6eob...`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="home-section home-toolkit">` rendering section `Free image tools` with copy *"11 free tools · free batch processing · runs in your browser · pl"*, asset references (`dm_mono_400_latin-s.p.38hmww4cj4v...`, `dm_mono_500_latin-s.p.2yee423r7ah...`, `inter_400_700_latin-s.p.2bn3s6zvc...`, `manrope_400_700_latin-s.p.1sj6eob...`), and grid rule `.juZLRa_variable { --font-inter:"fontInter", "fontInter Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.home-tool-group> — `Background Remover`)**:
-   - Landmark `<section class="home-tool-group">` framing `Background Remover` and `Image Converter` (*"11 free tools · free batch processing · runs in your browser"*) with `#bdbdbd` surface cards, `#0000ff` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="home-tool-group">` framing `Background Remover` and `Image Converter` (*"11 free tools · free batch processing · runs in your browser"*) with `#bdbdbd` surface cards, `#0000ff` accents, and `.It_wna_className { font-family:fontJakarta,fontJakarta Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://pixvibe.ai`)**:
    - Landmark `<footer class="site-footer feedback-footer">` anchoring `PixVibe — Free Background Remove` footer links (`Home · Pricing · Blog`), copy *"· plus 3 Pro tools"*, and `#e7e9f0` structural dividers.

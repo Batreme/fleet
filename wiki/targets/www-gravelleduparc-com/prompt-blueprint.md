@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-gravelleduparc-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-gravelleduparc-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `#000000` ink, `#0000ee` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `
 
 > **Gravelle du Parc · Événement gravel bike — 2-4 octobre 2026** (https://www.gravelleduparc.com/) — La Gravelle du Parc, c’est un week-end de gravel : vélo de gravelle le samedi, course à pied le dimanche. Plusieurs distances, expérience...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Gravelle du Parc · Événement gravel bike — 2-4 octobre 2026** (`https://www.gravelleduparc.com/`). La Gravelle du Parc, c’est un week-end de gravel : vélo de gravelle le samedi, course à pied le dimanche. Plusieurs distances, expérience...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `#000000` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffbf0` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Frama Regular` for display copy (`GRAVELLE DU PARC`) with `PP Frama Regular Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1408px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(0.44,0,0.56,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Frama Regular` for display copy (`GRAVELLE DU PARC`) with `PP Frama Regular Placeholder`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1408px` container bounds (`gap: 16px`, padding `2px`) with `cubic-bezier(0.44,0,0.56,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `23080px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1408px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
-- **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `10px`, `24px`, `18px`, `9999px`.
+- **Canvas Lateral Padding & Spacing**: `2px` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `10px`, `50%`, `4px`, `12px`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1408px`, `gap: 16px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width: 1440px)`, `@media (min-width: 960px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 959.98px)`, `@media (max-width: 809.98px)`.
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding.
+- **Extracted CSS Media Queries**: `@media screen`, `@media screen and (forced-colors:active)`, `@media screen and (forced-colors:active) and (prefers-color-sche...`, `@media (prefers-reduced-motion:reduce)`.
 
 ---
 
@@ -118,10 +123,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-gravelleduparc-com` stylesheet.
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-gravelleduparc-com` stylesheet.
-- **Selector `.cms-faq-category-tab-label`**: `transition: color 0.2s ease` extracted from `www-gravelleduparc-com` stylesheet.
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-gravelleduparc-com` stylesheet.
+- **Selector `.swiper-pagination`**: `transition: opacity .3s` extracted from `www-gravelleduparc-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.44,0,0.56,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.framer-1qtcgda>`.
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `23080px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `Framer Motion`.
+- **Hover Physics (`primary_cta` · `Découvrir l'événement`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`tab`)**: Tested `129 KM` (diff `1.425`).
 
 ---
 
@@ -180,6 +190,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffbf0` canvas, `
    - Landmark `<section class="framer-597gjk">` framing `Les expériences` and `Commanditaire` (*"S'inscrire maintenant"*) with `#baf1c5` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events: none; }`.
 5. **Colophon & Global Directory Footer (<footer.framer-17xvneb-container> — `https://www.gravelleduparc.com/`)**:
    - Landmark `<footer class="framer-17xvneb-container">` anchoring `Gravelle du Parc · Événement gra` footer links (`Overview · Index · Archive · About · Contact`), copy *"Gravelle du Parc c'est pas juste une course. C'est un weeken"*, and `#222222` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `GRAVELLE DU PARC` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `4%`): Active landmark `#video` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `16%`): Active landmark `#levenement` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `28%`): Active landmark `#schedule` · sticky/fixed elements: `4`
+- **Step 05** (`y=8500px`, `39%`): Active landmark `Les expériences` · sticky/fixed elements: `1`
+- **Step 06** (`y=11050px`, `50%`): Active landmark `#leparcours` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `61%`): Active landmark `LE WEEKEND` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `65%`): Active landmark `LE WEEKEND` · sticky/fixed elements: `1`
 
 ---
 
@@ -196,8 +215,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fffbf0` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffbf0` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PP Frama Regular` for display copy (`GRAVELLE DU PARC`) with `PP Frama Regular Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1408px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(0.44,0,0.56,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
+  - **Grounded Typographic Hierarchy**: Pairs `PP Frama Regular` for display copy (`GRAVELLE DU PARC`) with `PP Frama Regular Placeholder`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1408px` container bounds (`gap: 16px`, padding `2px`) with `cubic-bezier(0.44,0,0.56,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-gravelleduparc-com` in your global stylesheet:
@@ -245,14 +264,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-a37e6c3e-a10c-437b-b258-07d1d49555da`)**: `#fcebef` — grounded in `var(--token-a37e6c3e-a10c-437b-b258-07d1d49555da)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1408px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
-- **Padding & Gutters**: `32px` lateral canvas padding with `16px` grid gap
+- **Padding & Gutters**: `2px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1408px`, `gap: 16px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
-- **Media Queries**: `@media (min-width: 1440px)`, `@media (min-width: 960px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 959.98px)`, `@media (max-width: 809.98px)`
-- **Corner Radii**: `10px`, `24px`, `18px`, `9999px`
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2px` horizontal padding
+- **Media Queries**: `@media screen`, `@media screen and (forced-colors:active)`, `@media screen and (forced-colors:active) and (prefers-color-sche...`, `@media (prefers-reduced-motion:reduce)`
+- **Corner Radii**: `10px`, `50%`, `4px`, `12px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `PP Frama Regular`
@@ -267,19 +286,19 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 Scaffold `www-gravelleduparc-com` (`Gravelle du Parc · Événement gravel bike — 2-4 octobre 2026`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.lenis> — `www-gravelleduparc-com`)**:
    - DOM & Selectors: Landmark `<header class="lenis">` (`437x113px`) hosting `Gravelle du Parc · Événement gravel ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `html.lenis body { height: auto; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `www-gravelleduparc-com`)` (`www-gravelleduparc-com`) adapts across `@media (min-width: 1440px)`, `@media (min-width: 960px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 959.98px)`, `@media (max-width: 809.98px)` with `cubic-bezier(0.44,0,0.56,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `www-gravelleduparc-com`)` (`www-gravelleduparc-com`) adapts across `@media screen`, `@media screen and (forced-colors:active)`, `@media screen and (forced-colors:active) and (prefers-color-sche...`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(0.44,0,0.56,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.framer-3c888> — `GRAVELLE DU PARC`)**:
    - DOM & Selectors: Landmark `<section class="framer-3c888">` presenting display lead `GRAVELLE DU PARC` and copy excerpt *"2–4 octobre 2026 · Wakefield, QC"* over `#fffbf0` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fffbf0` background with `#000000` headline `GRAVELLE DU PARC`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fffbf0` background with `#000000` headline `GRAVELLE DU PARC`.
 3. **Primary Showcase & Content Grid (<section.framer-1qtcgda> — `Ils seront là! Et toi?`)**:
    - DOM & Selectors: Landmark `<section class="framer-1qtcgda">` rendering section `Ils seront là! Et toi?` with copy *"Découvrir l'événement"*, asset references (`iM7hUimGereN8t0VwJyHekeIY.png`, `kPdF8fyktsGL7BKiYVgEs0g8Ozg.png`, `BPKxeJbv6FMQXmeKTCEyN570iaI.png`, `hls.min.js`), and grid rule `.lenis-stopped { overflow: clip; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.framer-1qtcgda> — `Ils seront là! Et toi?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1408px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.framer-1qtcgda> — `Ils seront là! Et toi?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1408px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `2px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.framer-597gjk> — `Les expériences`)**:
    - DOM & Selectors: Landmark `<section class="framer-597gjk">` framing `Les expériences` and `Commanditaire` (*"S'inscrire maintenant"*) with `#baf1c5` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events: none; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.framer-597gjk> — `Les expériences`)` uses `10px`, `24px`, `18px`, `9999px` radii, `#0000ee` highlights, and assets (iM7hUimGereN8t0VwJyHekeIY.png, kPdF8fyktsGL7BKiYVgEs0g8Ozg.png, BPKxeJbv6FMQXmeKTCEyN570iaI.png).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.framer-597gjk> — `Les expériences`)` uses `10px`, `50%`, `4px`, `12px` radii, `#0000ee` highlights, and assets (iM7hUimGereN8t0VwJyHekeIY.png, kPdF8fyktsGL7BKiYVgEs0g8Ozg.png, BPKxeJbv6FMQXmeKTCEyN570iaI.png).
 5. **Colophon & Global Directory Footer (<footer.framer-17xvneb-container> — `https://www.gravelleduparc.com/`)**:
    - DOM & Selectors: Landmark `<footer class="framer-17xvneb-container">` anchoring `Gravelle du Parc · Événement gra` footer links (`Overview · Index · Archive · About · Contact`), copy *"Gravelle du Parc c'est pas juste une course. C'est un weeken"*, and `#222222` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-17xvneb-container> — `https://www.gravelleduparc.com/`)` aligns to `1408px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `32px` lateral canvas padding with `16px` grid gap and attributes (data-framer-font-css, data-framer-breakpoint-css, data-framer-css-ssr-minified).
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-17xvneb-container> — `https://www.gravelleduparc.com/`)` aligns to `1408px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `2px` lateral canvas padding with `16px` grid gap and attributes (data-framer-font-css, data-framer-breakpoint-css, data-framer-css-ssr-minified).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"2–4 octobre 2026 · Wakefield, QC"*
@@ -294,15 +313,41 @@ Scaffold `www-gravelleduparc-com` (`Gravelle du Parc · Événement gravel bike 
 - `.lenis-stopped { overflow: clip; }`
 - `.lenis.lenis-smooth iframe { pointer-events: none; }`
 - `.lenis.lenis-autoToggle { transition-property: overflow; transition-duration: 1ms; transition-beha... }`
-- `.hidden-72rtr7 { display:none!important }`
+- `.icon-align-center-horizontal:before { content: "\eb1b"; }`
 - **Per-Selector Transition Rules**:
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-gravelleduparc-com` stylesheet.
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-gravelleduparc-com` stylesheet.
-- **Selector `.cms-faq-category-tab-label`**: `transition: color 0.2s ease` extracted from `www-gravelleduparc-com` stylesheet.
+- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `www-gravelleduparc-com` stylesheet.
+- **Selector `.swiper-pagination`**: `transition: opacity .3s` extracted from `www-gravelleduparc-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.44,0,0.56,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.framer-1qtcgda>`.
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `23080px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, Framer Motion.
+- **Vertical Chapter Sequence**: GRAVELLE DU PARC (0%) -> #video (4%) -> #levenement (16%) -> #schedule (28%) -> Les expériences (39%) -> #leparcours (50%) -> LE WEEKEND (61%) -> LE WEEKEND (65%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-gravelleduparc-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | GRAVELLE DU PARC | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | #video | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `16%` | #levenement | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `28%` | #schedule | `4` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `39%` | Les expériences | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `50%` | #leparcours | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `61%` | LE WEEKEND | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `65%` | LE WEEKEND | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | GRAVELLE DU PARC | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Les expériences | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Commanditaire | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

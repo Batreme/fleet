@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: brand-helloasso-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "brand-helloasso-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d7e103`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d
 
 > **Accueil – Brandbook HelloAsso** (https://brand.helloasso.com/) — Logotype, typographie, couleurs, direction photographique et identité verbale de HelloAsso.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Accueil – Brandbook HelloAsso** (`https://brand.helloasso.com/`). Logotype, typographie, couleurs, direction photographique et identité verbale de HelloAsso.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d7e103`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#101010` primary typography and `#d7e103` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `ITC Franklin Gothic LT` for display copy (`Accueil – Brandbook HelloAsso`) with `ABC Diatype Rounded` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `ITC Franklin Gothic LT` for display copy (`Accueil – Brandbook HelloAsso`) with `ABC Diatype Rounded`.
   - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 8px`, padding `10px`) with `cubic-bezier(.19,1,.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=2604px` / doc `3504px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `21.8%`.
@@ -122,6 +127,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d
 - **Selector `.bcta img`**: `transition: transform .4s cubic-bezier(.19,1,.22,1)` extracted from `brand-helloasso-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.is-ready>` and `<section.chapter:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3504px`, deepest scrollY reached `2604px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`, `WebGL/Canvas`.
 
 ---
 
@@ -180,6 +188,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d
    - Landmark `<section class="chapter">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Work & Interactive Showcase"*) with `#ededed` surface cards, `#d7e103` accents, and `.scroller { height:620vh;position:relative }`.
 5. **Colophon & Global Directory Footer (<footer.cell-border> — `https://brand.helloasso.com/`)**:
    - Landmark `<footer class="cell-border">` anchoring `Accueil – Brandbook HelloAsso` footer links (`BRUNO`), copy *"Technical Architecture & Narrative"*, and `#e7e7e7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `33%`): Active landmark `Section @ 33%` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `65%`): Active landmark `Section @ 65%` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `98%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
+- **Step 05** (`y=2604px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
 
 ---
 
@@ -196,7 +210,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#101010`, **Accent / Highlight**: `#d7e103`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#101010` primary typography and `#d7e103` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `ITC Franklin Gothic LT` for display copy (`Accueil – Brandbook HelloAsso`) with `ABC Diatype Rounded` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `ITC Franklin Gothic LT` for display copy (`Accueil – Brandbook HelloAsso`) with `ABC Diatype Rounded`.
   - **Calibrated Spatial Grid & Motion**: Combines `1392px` container bounds (`gap: 8px`, padding `10px`) with `cubic-bezier(.19,1,.22,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -245,8 +259,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-sport-anthracite`)**: `#504e44` — grounded in `var(--color-sport-anthracite)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1392px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `10px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 8px`)
@@ -270,7 +284,7 @@ Scaffold `brand-helloasso-com` (`Accueil – Brandbook HelloAsso`) with these ex
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.is-ready> — `brand-helloasso-com`)` (`brand-helloasso-com`) adapts across `@media (prefers-reduced-motion)`, `@media (width<=767px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.19,1,.22,1)`, `cubic-bezier(.25,1,.5,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `BRUNO`.
 2. **Hero Stage & Focal Lead (<section.chapter> — `Accueil – Brandbook HelloAsso`)**:
    - DOM & Selectors: Landmark `<section class="chapter">` presenting display lead `Accueil – Brandbook HelloAsso` and copy excerpt *"L’ENGAGEMENT REND LES GENS MEILLEURS."* over `#ffffff` canvas and `#101010` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#101010` headline `Accueil – Brandbook HelloAsso`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×872px` mobile) sets `#ffffff` background with `#101010` headline `Accueil – Brandbook HelloAsso`.
 3. **Primary Showcase & Content Grid (<section.chapter:nth(2)> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<section class="chapter">` rendering section `Featured Work & Interactive Showcase` with copy *"L’engagement rend les gens meilleurs."*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `ITCFranklinGothicLT-DemiCompresse...`), and grid rule `.cursor { will-change:transform;display:none }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.chapter:nth(2)> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
@@ -299,8 +313,29 @@ Scaffold `brand-helloasso-com` (`Accueil – Brandbook HelloAsso`) with these ex
 - **Selector `.bcta img`**: `transition: transform .4s cubic-bezier(.19,1,.22,1)` extracted from `brand-helloasso-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.19,1,.22,1)`)**: Governs interactive state transitions across `<header.is-ready>` and `<section.chapter:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3504px` across 5 distinct viewport chapters using GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%) -> Section @ 33% (33%) -> Section @ 65% (65%) -> Footer / Bottom (98%) -> Footer / Bottom (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `brand-helloasso-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `33%` | Section @ 33% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `65%` | Section @ 65% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `98%` | Footer / Bottom | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `2604px` | `100%` | Footer / Bottom | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

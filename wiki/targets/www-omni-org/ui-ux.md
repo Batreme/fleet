@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-omni-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-omni-org` (**Omni Institute**)
 - **Production URL**: [https://www.omni.org](https://www.omni.org)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#081c39` ink, `#ffa500` accent)
 - **Summary**: At Omni Institute, we believe in the power of data to drive real-life change. As a nonprofit research and evaluation partner, we help nat...
-- **Total Clean CSS Variables Extracted**: `45` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `985` (curated live-grounded set below)
 
 ---
 
@@ -24,10 +24,10 @@ http_status: 200
 - **Display Font Stack**: `neue-haas-grotesk-display`
 - **Body Font Stack**: `neue-haas-grotesk-display`
 - **Monospace / Technical Font Stack**: `Sometype Mono`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 20px`, `line-height: 24px`, `font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 700`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: neue-haas-grotesk-display,sans-serif`; rule `p` (`line-height: 1.7`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--small: 8px`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 20px`, `line-height: 24px`, `font-weight: 700`); CSS variables `--sds-g-sizing-heading-1: 20ch`, `--slds-g-sizing-heading-1: 20ch`; rule `h1` (`line-height: 1`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 80px`, `font-weight: 700`); CSS variables `--sds-g-sizing-heading-2: 25ch`, `--slds-g-sizing-heading-2: 25ch`; rule `h2` (`font-size: 1.125rem`, `font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: neue-haas-grotesk-display,sans-serif`, `--sds-g-font-size-base: 1rem`, `--slds-g-font-size-base: 0.8125rem`; rule `p` (`line-height: 1.7`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--small: 8px`, `--sds-g-font-family-monospace: Consolas,Menlo,Monaco,Courier,monospace`, `--slds-g-font-family-monospace: Consolas,Menlo,Monaco,Courier,monospace`
 
 ---
 
@@ -36,10 +36,11 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#081c39` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Elevated Surface / Card Substrate** | `#f3f3f3` | `var(--sds-g-color-surface-2)` in `:root` |
 | **Interactive Accent / Highlight** | `#ffa500` | `.button.is-secondary.is-icon.or... { color: orange }` (`#ffa500`) |
-| **Secondary / Muted Copy** | `#5776b2` | `var(--_primitives---colors--periwinkle-600)` in `:root` |
-| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+| **Secondary / Muted Copy** | `#fe7298` | `var(--sds-g-color-palette-pink-65)` in `:root` |
+| **Structural Hairline Border** | `#dd7a01` | `var(--sds-g-color-border-warning-1)` in `:root` |
+| **Variable Token (`--_primitives---colors--periwinkle-600`)** | `#5776b2` | `var(--_primitives---colors--periwinkle-600)` in `:root` |
 | **Variable Token (`--_primitives---colors--steel-blue-200`)** | `#bfcbd3` | `var(--_primitives---colors--steel-blue-200)` in `:root` |
 | **Variable Token (`--_primitives---colors--steel-blue-400`)** | `#677384` | `var(--_primitives---colors--steel-blue-400)` in `:root` |
 | **Variable Token (`--_primitives---colors--periwinkle-200`)** | `#d4ddeb` | `var(--_primitives---colors--periwinkle-200)` in `:root` |
@@ -78,6 +79,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.background-color-ivory> — `Turning Data into Stories, Stories`)**:
    - Landmark `<section class="background-color-ivory">` rendering section `Turning Data into Stories, Stories into Change` with copy *"Rigorous, Human-First Research"*, asset references (`cdn.prod.website-files.com`, `omni-institute.webflow.shared.add...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.section_layout516> — `We strengthen communities through `)**:
-   - Landmark `<section class="section_layout516">` framing `We strengthen communities through research, evalu...` and `Data-Driven Insights. Meaningful Impact.` (*"Committed to Actionable Impact"*) with `#ffff00` surface cards, `#ffa500` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Landmark `<section class="section_layout516">` framing `We strengthen communities through research, evalu...` and `Data-Driven Insights. Meaningful Impact.` (*"Committed to Actionable Impact"*) with `#f3f3f3` surface cards, `#ffa500` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer6_component> — `https://www.omni.org`)**:
-   - Landmark `<footer class="footer6_component">` anchoring `Omni Institute` footer links (`Community Health · Behavioral Health · Children & Families · Economic Security · Justice`), copy *"Organizational Development"*, and `#e2e2e2` structural dividers.
+   - Landmark `<footer class="footer6_component">` anchoring `Omni Institute` footer links (`Community Health · Behavioral Health · Children & Families · Economic Security · Justice`), copy *"Organizational Development"*, and `#dd7a01` structural dividers.

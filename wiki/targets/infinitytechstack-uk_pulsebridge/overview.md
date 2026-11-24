@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: infinitytechstack-uk_pulsebridge"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://infinitytechstack.uk/pulsebridge"
 final_url: "https://infinitytechstack.uk/pulsebridge"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: PulseBridge [2026] · AI IDE Mobile Companion (Free)
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `7`
+- **Recovered Scripts**: `124`
+- **Recovered Stylesheets**: `26`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-gerd-web-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.gerd-web.de"
 final_url: "https://www.gerd-web.de/"
 status: analyzed

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-governorsmansion-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.governorsmansion.org/"
 final_url: "https://www.governorsmansion.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Louisiana's House · Louisiana Governor's Mansion
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `80`
+- **Recovered Stylesheets**: `18`
 
 ---
 

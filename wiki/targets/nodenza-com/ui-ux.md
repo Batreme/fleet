@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: nodenza-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `nodenza-com` (**Home · Nodenza**)
 - **Production URL**: [https://nodenza.com/](https://nodenza.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `#000000` ink, `#ffffff` accent)
 - **Summary**: Nosenza invests globally in early-stage biotech, medtech, and healthcare companies advancing life sciences and improving patient outcomes.
 - **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Aspekta`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `.title` (`line-height: 0.95`, `letter-spacing: -0.03em`, `font-weight: 500`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64.8px`, `line-height: 61.56px`, `font-weight: 500`, `letter-spacing: -1.944px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`); rule `p` (`font-size: var(--f-d)`, `line-height: 1.3`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`)
 

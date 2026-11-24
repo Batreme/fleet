@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: white-desert-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://white-desert.com/"
 final_url: "https://white-desert.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Luxury Adventures in Antarctica · White Desert
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `37`
-- **Recovered Stylesheets**: `19`
+- **Recovered Scripts**: `152`
+- **Recovered Stylesheets**: `40`
 
 ---
 

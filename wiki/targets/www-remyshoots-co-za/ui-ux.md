@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-remyshoots-co-za"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-remyshoots-co-za` (**Remy Shoots**)
 - **Production URL**: [https://www.remyshoots.co.za/](https://www.remyshoots.co.za/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#808080` accent)
 - **Summary**: Documenting emotion, movement and meaning. Since ©2016 — the photography portfolio of Remy.
 - **Total Clean CSS Variables Extracted**: `45` (curated live-grounded set below)

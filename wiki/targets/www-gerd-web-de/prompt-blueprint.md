@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-gerd-web-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-gerd-web-de"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 4
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas, `#f5edff` ink, `#00f0ff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas
 
 > **Gerd Web 3 Second - Design** (https://www.gerd-web.de) — Design ist unsere Leidenschaft. Wir begleiten Ihr Webprojekt ganzheitlich – vom prägnanten Logo über ausdrucksstarke Bildwelten bis hin z...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Gerd Web 3 Second - Design** (`https://www.gerd-web.de`). Design ist unsere Leidenschaft. Wir begleiten Ihr Webprojekt ganzheitlich – vom prägnanten Logo über ausdrucksstarke Bildwelten bis hin z...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas, `#f5edff` ink, `#00f0ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080c16` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5edff` primary typography and `#00f0ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Dancing Script` for display copy (`Webdesign mit Charakter`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Dancing Script` for display copy (`Webdesign mit Charakter`) with `Segoe UI`.
   - **Calibrated Spatial Grid & Motion**: Combines `1100px` container bounds (`gap: 40px`, padding `24px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=2250px` / doc `2574px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1100px` (live computed `main` `max-width`).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `40px` grid gap.
 - **Border Radius Scale**: `8px`, `50%`, `16px`, `12px`.
@@ -113,6 +118,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas
 - **Selector `#cursor-logo`**: `transition: opacity 0.15s ease, transform 0.65s cubic-bezier(0.4,0,0.2,1)` extracted from `www-gerd-web-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<nav.menu-container>` and `<section.impressum-section:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.impressum-section>` and `<section.impressum-section:nth(2)>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `2574px`, deepest scrollY reached `2250px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`first_card` · `Impressum Angaben gemäß § 5 DDG G...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/index.html`) measured as `MPA` in `1648ms`.
 
 ---
 
@@ -171,6 +181,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas
    - Landmark `<section class="impressum-section">` framing `Fotografie & Porträts` and `Über mich` (*"Neben Webseiten gestalten wir unter anderem Interfaces und Visual"*) with `#241038` surface cards, `#00f0ff` accents, and `cursor-logo.rotated { opacity: 1; }`.
 5. **Colophon & Global Directory Footer (<footer.sound-control> — `https://www.gerd-web.de`)**:
    - Landmark `<footer class="sound-control">` anchoring `Gerd Web 3 Second - Design` footer links (`Home · Web · Plakate · Spiele · Foto`), copy *"Ob Smartphone, Tablet oder Desktop: Dank Responsive Design p"*, and `#00f0ff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Webdesign mit Charakter` · sticky/fixed elements: `1`
+- **Step 02** (`y=750px`, `7%`): Active landmark `Design für Werbung und Unterhaltung` · sticky/fixed elements: `1`
+- **Step 03** (`y=1500px`, `14%`): Active landmark `Über mich` · sticky/fixed elements: `1`
+- **Step 04** (`y=2250px`, `21%`): Active landmark `Impressum` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/index.html`)**: `https://www.gerd-web.de/index.html` — H1: `Gerd Web 3 Second - Design`, scrollHeight `2574px`, transition `MPA` (`1648ms`)
+- **Other Route (`/webseiten.html`)**: `https://www.gerd-web.de/webseiten.html` — H1: `Gerd Web 3 Second - Webseiten`, scrollHeight `2983px`, transition `direct` (`271ms`)
+- **Other Route (`/plakate.html`)**: `https://www.gerd-web.de/plakate.html` — H1: `Gerd Web 3 Second - Plakate`, scrollHeight `2854px`, transition `direct` (`473ms`)
 
 ---
 
@@ -187,7 +207,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#080c16` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5edff`, **Accent / Highlight**: `#00f0ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080c16` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5edff` primary typography and `#00f0ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Dancing Script` for display copy (`Webdesign mit Charakter`) with `Segoe UI` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Dancing Script` for display copy (`Webdesign mit Charakter`) with `Segoe UI`.
   - **Calibrated Spatial Grid & Motion**: Combines `1100px` container bounds (`gap: 40px`, padding `24px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +247,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--text-color`)**: `#e6edf8` — grounded in `var(--text-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1100px` (live computed `main` `max-width`)
 - **Padding & Gutters**: `24px` lateral canvas padding with `40px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1100px`, `gap: 40px`)
@@ -252,7 +272,7 @@ Scaffold `www-gerd-web-de` (`Gerd Web 3 Second - Design`) with these exact struc
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.menu-container> — `www-gerd-web-de`)` (`www-gerd-web-de`) adapts across `@media (max-width: 768px)`, `@media (max-width: 480px)` with `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.3,0,0.2,1)`, `cubic-bezier(0.25,1,0.5,1)` transitions and links `Home · Web · Plakate · Spiele · Foto`.
 2. **Hero Stage & Focal Lead (<section.impressum-section> — `Webdesign mit Charakter`)**:
    - DOM & Selectors: Landmark `<section class="impressum-section">` presenting display lead `Webdesign mit Charakter` and copy excerpt *"Design ist unsere Leidenschaft. Wir begleiten Ihr Webprojekt ganz"* over `#080c16` canvas and `#f5edff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#080c16` background with `#f5edff` headline `Webdesign mit Charakter`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×2616px` mobile) sets `#080c16` background with `#f5edff` headline `Webdesign mit Charakter`.
 3. **Primary Showcase & Content Grid (<section.impressum-section:nth(2)> — `Design für Werbung und Unterhaltun`)**:
    - DOM & Selectors: Landmark `<section class="impressum-section">` rendering section `Design für Werbung und Unterhaltung` with copy *"Jede Website wird von Grund auf individuell konzipiert und passge"*, asset references (`logo.png (Logo)`, `banner-index.jpg (Willkommen Banner)`, `index-webseite.jpg (Titelbild Startseite)`, `index-design.jpg (Fotografie Startseite)`), and grid rule `custom-cursor.hovering { box-shadow: 0 0 18px var(--active-glow), 0 0 28px rgba(168, 85, 247, 0.6); }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.impressum-section:nth(2)> — `Design für Werbung und Unterhaltun`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1100px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
@@ -283,8 +303,38 @@ Scaffold `www-gerd-web-de` (`Gerd Web 3 Second - Design`) with these exact struc
 - **Selector `#cursor-logo`**: `transition: opacity 0.15s ease, transform 0.65s cubic-bezier(0.4,0,0.2,1)` extracted from `www-gerd-web-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<nav.menu-container>` and `<section.impressum-section:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.impressum-section>` and `<section.impressum-section:nth(2)>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `2574px` across 4 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Webdesign mit Charakter (0%) -> Design für Werbung und Unte... (7%) -> Über mich (14%) -> Impressum (21%).
+- **Multi-Page Routes**: Scaffold internal routes `/index.html` (other, MPA), `/webseiten.html` (other, direct), `/plakate.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-gerd-web-de`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Webdesign mit Charakter | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `750px` | `7%` | Design für Werbung und Unterhaltung | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1500px` | `14%` | Über mich | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2250px` | `21%` | Impressum | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Webdesign mit Charakter | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | Über mich | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `0px` | `100%` | Impressum | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://www.gerd-web.de/index.html` | Gerd Web 3 Second - Design | `2574px` | `MPA` (`1648ms`) | [subpage-01-index-html.webp](assets/subpage-01-index-html.webp) |
+| `2` | `other` | `https://www.gerd-web.de/webseiten.html` | Gerd Web 3 Second - Webseiten | `2983px` | `direct` (`271ms`) | [subpage-02-webseiten-html.webp](assets/subpage-02-webseiten-html.webp) |
+| `3` | `other` | `https://www.gerd-web.de/plakate.html` | Gerd Web 3 Second - Plakate | `2854px` | `direct` (`473ms`) | [subpage-03-plakate-html.webp](assets/subpage-03-plakate-html.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-fieldrank-run"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.fieldrank.run"
 final_url: "https://www.fieldrank.run/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: FieldRank: Trail and ultra rankings
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `17`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `35`
+- **Recovered Stylesheets**: `2`
 
 ---
 

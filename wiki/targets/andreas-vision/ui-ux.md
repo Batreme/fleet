@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: andreas-vision"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `andreas-vision` (**Andreas Kruszakin, growth-focused design engineer in Europe**)
 - **Production URL**: [https://andreas.vision](https://andreas.vision)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f8f8fa` / `#00aaff`)
 - **Summary**: I'm Andreas, a growth-focused design engineer who is design first and builds the system underneath. I make founders' products easy to get...
 - **Total Clean CSS Variables Extracted**: `193` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Geist Variable`
 - **Monospace / Technical Font Stack**: `Geist Mono Variable`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 132px`, `line-height: 147.84px`, `font-weight: 400`, `letter-spacing: -5.28px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 38.4px`, `font-weight: 500`, `letter-spacing: -0.32px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 104.8px`, `line-height: 90.128px`, `font-weight: 500`, `letter-spacing: -1.048px`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 21px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 16.2px`, `font-weight: 500`); CSS variables `--font-brand-mono: "Geist Mono Variable", ui-monospace, monospace`, `--label-icon-selected: inherit`, `--labels: 0`
 
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffffff` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#00aaff` | `var(--link-visited)` in `:root` |
-| **Secondary / Muted Copy** | `#ff44aa` | `var(--palette-pink)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e2e2e4` | `var(--line-hover)` in `:root` (`rgba(0, 0, 0, 0.09)`) |
 
 ---
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top> — `andreas-vision`)**:
-   - Landmark `<header class="top">` (`686x26px`) hosting `Andreas Kruszakin, growth-focused de` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-selection-ink`, `data-emotion="css-global"`, `data-s`, `data-emotion="css-global"`), and stylesheet rule `root { height: 100%; margin: 0; }`.
+   - Landmark `<header class="top">` (`688x26px`) hosting `Andreas Kruszakin, growth-focused de` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-selection-ink`, `data-emotion="css-global"`, `data-s`, `data-emotion="css-global"`), and stylesheet rule `root { height: 100%; margin: 0; }`.
 2. **Hero Stage & Focal Lead (<section.e5sioty0> — `Designer who ships with vision Des`)**:
    - Landmark `<section class="e5sioty0 css-8jf4oe">` presenting display lead `Designer who ships with vision Design Engineer wh...` and copy excerpt *"I'm Andreas, making precise, joyful interfaces and the tools to b"* over `#f8f8fa` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.swap> — `Work`)**:

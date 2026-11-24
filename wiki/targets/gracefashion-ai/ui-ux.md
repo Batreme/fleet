@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: gracefashion-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `gracefashion-ai` (**KI-Fotostudio für Mode: Bilder ohne Shooting · grace ai**)
 - **Production URL**: [https://gracefashion.ai](https://gracefashion.ai)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#9ca3af` accent)
 - **Summary**: KI-Modefotografie aus deinen eigenen Teilen: On-Model-Bilder, Kampagnen und Videos. Als Software oder als Service, rund 80 Prozent unter...
 - **Total Clean CSS Variables Extracted**: `11` (curated live-grounded set below)
@@ -72,10 +72,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<nav.top-0> — `gracefashion-ai`)**:
    - Landmark `<nav class="top-0 left-0">` (`1440x56px`) hosting `KI-Fotostudio für Mode: Bilder ohne ` navigation (`Software · Service · Ratgeber · Team · Demo buchen`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/react"`, `data-sdkv="2.0.1"`), and stylesheet rule `.vGn8MW_className { font-family:Instrument Sans,Instrument Sans Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.page-surface> — `KI-Fotostudio für Modemarken: Soft`)**:
-   - Landmark `<section class="page-surface px-8">` presenting display lead `KI-Fotostudio für Modemarken: Software und Servic...` and copy excerpt *"Du entscheidest, was die Welt"* over `#ffffff` canvas and `#000000` ink.
+   - Landmark `<section class="page-surface px-8">` presenting display lead `KI-Fotostudio für Modemarken: Software und Servic...` and copy excerpt *"Models ohne Buchung."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.bg-black> — `Du entscheidest, was die Welt sehe`)**:
-   - Landmark `<section class="bg-black">` rendering section `Du entscheidest, was die Welt sehen und tragen soll.` with copy *"sehen und tragen soll."*, asset references (`237858b39a32779d-s.p.1ii7211jqpzi...`, `4cf231d25563e07b-s.p.3uuun_-7zsf1...`, `62f37606a5bd6f6f-s.p.3wn_q526zaol...`, `92b6de9cb55945e2-s.p.44ks8kcggj01...`), and grid rule `.vGn8MW_variable { --font-instrument-sans:"Instrument Sans", "Instrument Sans Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.bg-neutral-900> — `sehen und tragen soll.`)**:
-   - Landmark `<section class="bg-neutral-900 relative">` framing `sehen und tragen soll.` and `Aus deinem Produkt wird ein ganzes Shooting. In ` (*"Aus deinem Produkt wird ein ganzes Shooting. In Minuten."*) with `#737373` surface cards, `#9ca3af` accents, and `.wdTYSa_className { font-family:Space Grotesk,Space Grotesk Fallback;font-style:normal }`.
+   - Landmark `<section class="bg-black">` rendering section `Du entscheidest, was die Welt sehen und tragen soll.` with copy *"Du entscheidest, was die Welt"*, asset references (`237858b39a32779d-s.p.1ii7211jqpzi...`, `4cf231d25563e07b-s.p.3uuun_-7zsf1...`, `62f37606a5bd6f6f-s.p.3wn_q526zaol...`, `92b6de9cb55945e2-s.p.44ks8kcggj01...`), and grid rule `.vGn8MW_variable { --font-instrument-sans:"Instrument Sans", "Instrument Sans Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.bg-neutral-900> — `Du entscheidest, was die Welt`)**:
+   - Landmark `<section class="bg-neutral-900 relative">` framing `Du entscheidest, was die Welt` and `sehen und tragen soll.` (*"sehen und tragen soll."*) with `#737373` surface cards, `#9ca3af` accents, and `.wdTYSa_className { font-family:Space Grotesk,Space Grotesk Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://gracefashion.ai`)**:
-   - Landmark `<footer class="relative text-white">` anchoring `KI-Fotostudio für Mode: Bilder o` footer links (`Software · Service · Ratgeber · Team · Demo buchen`), copy *"Aus deinem Produkt"*, and `#fba9a3` structural dividers.
+   - Landmark `<footer class="relative text-white">` anchoring `KI-Fotostudio für Mode: Bilder o` footer links (`Software · Service · Ratgeber · Team · Demo buchen`), copy *"Aus deinem Produkt wird ein ganzes Shooting. In Minuten."*, and `#fba9a3` structural dividers.

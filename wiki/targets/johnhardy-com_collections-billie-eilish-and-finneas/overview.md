@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: johnhardy-com_collections-billie-eilish-and-finneas"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://johnhardy.com/collections/billie-eilish-and-finneas"
 final_url: "https://johnhardy.com/en-eu/collections/billie-eilish-and-finneas"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://johnhardy.com/collections/billie-eilish-and-finneas](https://johnhardy.com/collections/billie-eilish-and-finneas)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Billie Eilish and FINNEAS – John Hardy
-- **Identified Frameworks**: Vue / Nuxt, Framer, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `258`
-- **Recovered Stylesheets**: `32`
+- **Identified Frameworks**: Vue / Nuxt, Framer, Tailwind CSS, HTML5 Canvas / WebGL
+- **Recovered Scripts**: `1403`
+- **Recovered Stylesheets**: `40`
 
 ---
 

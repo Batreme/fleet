@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: almadalabel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `almadalabel-com` (**ALMADA LABEL - A modern take on a seasonless wardrobe**)
 - **Production URL**: [https://almadalabel.com/](https://almadalabel.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: Seasonless modern wardrobe staples designed with Scandinavian minimalism, resonating beyond trends. Responsibly crafted from high-quality...
-- **Total Clean CSS Variables Extracted**: `108` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `107` (curated live-grounded set below)
 
 ---
 
@@ -38,11 +38,12 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f3f2f2` | `var(--background_color_2)` in `:root` |
 | **Interactive Accent / Highlight** | `#0000ee` | live computed `a` `color` (`computed_styles.json`) |
-| **Secondary / Muted Copy** | `#88847c` | `var(--secondary_gray)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#a6a6a5` | `var(--button-border)` in `:root` |
 | **Variable Token (`--primary_text`)** | `#17140f` | `var(--primary_text)` in `:root` |
 | **Variable Token (`--secondary_accent`)** | `#38302e` | `var(--secondary_accent)` in `:root` |
 | **Variable Token (`--primary_gray`)** | `#55534e` | `var(--primary_gray)` in `:root` |
+| **Variable Token (`--secondary_gray`)** | `#88847c` | `var(--secondary_gray)` in `:root` |
 | **Variable Token (`--loader_color`)** | `#1e242a` | `var(--loader_color)` in `:root` |
 
 ---
@@ -75,7 +76,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<article.favorites-drawer__item> — `ALMADA`)**:
    - Landmark `<article class="favorites-drawer__item">` presenting display lead `ALMADA` and copy excerpt *"Free shipping to Germany on orders over 300€"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<article.favorites-drawer__item:nth(2)> — `Silk, lustrous satin and delicate `)**:
-   - Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`script.js`, `weglot_script_tag.js`, `storefrontattributes`, `trsdk`), and grid rule `.form-checkbox__label-text p { display:inline }`.
+   - Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`222020436221013`, `fbevents.js`, `script.js`, `weglot_script_tag.js`), and grid rule `.form-checkbox__label-text p { display:inline }`.
 4. **Interactive Detail & Feature Matrix (<article.favorites-drawer__item:nth(3)> — `Search`)**:
    - Landmark `<article class="favorites-drawer__item">` framing `Search` and `Search Wishlist Cart 0` (*"Search Wishlist Cart 0"*) with `#f3f2f2` surface cards, `#0000ee` accents, and `.form-checkbox { width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://almadalabel.com/`)**:

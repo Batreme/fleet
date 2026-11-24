@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: thunder-buns-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "thunder-buns-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#0000ee`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#
 
 > **Thunderbuns · Smashburgers Delivered** (https://thunder-buns.com/) — The best smash burgers, 100% halal. Delivered across the Netherlands, Belgium and Germany. Order through your usual delivery app.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Thunderbuns · Smashburgers Delivered** (`https://thunder-buns.com/`). The best smash burgers, 100% halal. Delivered across the Netherlands, Belgium and Germany. Order through your usual delivery app.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#0000ee`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#12220f` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#faf7ec` primary typography and `#0000ee` accents.
@@ -34,10 +41,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=0px` / doc `5983px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `99.7em` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `var(--grid-gap)` grid gap.
 - **Border Radius Scale**: `4px`, `12px`, `3px`, `50%`.
@@ -97,7 +102,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 130px`, `line-height: 114.4px`, `font-weight: 700`); rule `h1` (`font-size: min(14.5em,130px)`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 50px`, `line-height: 44px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 175px`, `line-height: 154px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`).
 - **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.4em`, `line-height: 1.2`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`).
 
@@ -114,6 +119,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#
 - **Selector `.mapboxgl-touch-pan-blocker-show`**: `transition: opacity .1s ease-in-out` extracted from `thunder-buns-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.award:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `5983px`, deepest scrollY reached `0px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -172,6 +180,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#
    - Landmark `<section class="award">` framing `Who are we? What do we do? Where are we?` and `Winner Thuisbezorgd.nl Award 2025 “Best National...` (*"You'll now find us in 130+ locations across the Netherlands, Belg"*) with `#1e351f` surface cards, `#0000ee` accents, and `.mapboxgl-canary { background-color:salmon }`.
 5. **Colophon & Global Directory Footer (<footer.shape> — `https://thunder-buns.com/`)**:
    - Landmark `<footer class="shape">` anchoring `Thunderbuns · Smashburgers Deliv` footer links (`English · Nederlands · Deutsch · Français · Order`), copy *"Thunderbuns Aachen"*, and `#d4dae0` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `BURGERS THAT HIT LIKE LIGHTNING.` · sticky/fixed elements: `1`
+- **Step 02** (`y=0px`, `100%`): Active landmark `Viewport` · sticky/fixed elements: `0`
 
 ---
 
@@ -229,8 +240,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--cc-btn-secondary-bg`)**: `#eaeff2` — grounded in `var(--cc-btn-secondary-bg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `99.7em` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `20px` lateral canvas padding with `var(--grid-gap)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 99.7em`, `gap: var(--grid-gap)`)
@@ -243,7 +254,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Satoshi`
 - **Monospace / Technical Font Stack**: `Haffer Mono`
 - **H1 Display Rule**: live computed `h1` (`font-size: 130px`, `line-height: 114.4px`, `font-weight: 700`); rule `h1` (`font-size: min(14.5em,130px)`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 50px`, `line-height: 44px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 175px`, `line-height: 154px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`)
 - **Body Copy Rule**: live computed `body` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.4em`, `line-height: 1.2`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`)
 
@@ -254,7 +265,7 @@ Scaffold `thunder-buns-com` (`Thunderbuns · Smashburgers Delivered`) with these
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `thunder-buns-com`)` (`thunder-buns-com`) adapts across `@media screen`, `@media screen and (-ms-high-contrast:active)`, `@media screen and (-ms-high-contrast:black-on-white)`, `@media screen and (min-width:640px)` with `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.22,1,.36,1)` transitions and links `English · Nederlands · Deutsch · Français · Order`.
 2. **Hero Stage & Focal Lead (<section.award> — `BURGERS THAT HIT LIKE LIGHTNING.`)**:
    - DOM & Selectors: Landmark `<section class="award">` presenting display lead `BURGERS THAT HIT LIKE LIGHTNING.` and copy excerpt *"ORDER THUNDERBUNS ONLINE -"* over `#12220f` canvas and `#faf7ec` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#12220f` background with `#faf7ec` headline `BURGERS THAT HIT LIKE LIGHTNING.`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×2616px` mobile) sets `#12220f` background with `#faf7ec` headline `BURGERS THAT HIT LIKE LIGHTNING.`.
 3. **Primary Showcase & Content Grid (<section.award:nth(2)> — `Burgers that hit like lightning.`)**:
    - DOM & Selectors: Landmark `<section class="award">` rendering section `Burgers that hit like lightning.` with copy *"We make smashburgers. Two patties, smashed onto a screaming hot p"*, asset references (`tb-favicon2.png`, `BowlbyOne-Regular.woff2`, `Satoshi-Regular.woff2`, `image.mux.com`), and grid rule `.mapboxgl-map:-webkit-full-screen { width:100%;height:100% }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.award:nth(2)> — `Burgers that hit like lightning.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 99.7em`, `gap: var(--grid-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
@@ -285,8 +296,28 @@ Scaffold `thunder-buns-com` (`Thunderbuns · Smashburgers Delivered`) with these
 - **Selector `.mapboxgl-touch-pan-blocker-show`**: `transition: opacity .1s ease-in-out` extracted from `thunder-buns-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.award:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `5983px` across 2 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: BURGERS THAT HIT LIKE LIGHT... (0%) -> Viewport (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `thunder-buns-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | BURGERS THAT HIT LIKE LIGHTNING. | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `100%` | Viewport | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | BURGERS THAT HIT LIKE LIGHTNING. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3889px` | `50%` | BIG GROOVE | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `7779px` | `100%` | OR OPEN YOUR OWN THUNDERBUNS | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: mejuma-tuscany-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `mejuma-tuscany-com` (**Mejuma Tuscany**)
 - **Production URL**: [https://mejuma-tuscany.com/](https://mejuma-tuscany.com/)
 - **Final Redirected URL**: [https://www.mejuma-tuscany.com/](https://www.mejuma-tuscany.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f1f1f1` canvas, `#0000ee` ink, `#ffff00` accent)
 - **Summary**: Find your dream home in Tuscany with expert guidance. We handle property search, purchase, renovation & local coordination. Trusted turnk...
 - **Total Clean CSS Variables Extracted**: `99` (curated live-grounded set below)
@@ -25,8 +25,8 @@ http_status: 200
 - **Display Font Stack**: `Roxale Story 400`
 - **Body Font Stack**: `Golos Text`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 411.948px`, `line-height: 453.143px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 411.231px`, `line-height: 452.355px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 120px`, `line-height: 120px`, `font-weight: 400`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--cs-font-size-body: calc(var(--cs-base) * .875)`, `--cs-font-size-body-min: 0px`, `--cs-font-weight-body: 400`; rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--cs-font-weight-toggle-label: var(--cs-font-weight-medium)`; rule `small` (`font-size: 80%`)
 
@@ -74,9 +74,9 @@ http_status: 200
    - Landmark `<header class="cs-banner__header">` (`1440px`) hosting `Mejuma Tuscany` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-wf-domain="www.mejuma-tuscany.com"`, `data-wf-page="6a71d6d6aa3293dbfd19a3b3"`, `data-wf-site="6a71d6d6aa3293dbfd19a3b7"`, `data-scroll-orientation="vertical"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
 2. **Hero Stage & Focal Lead (<section.js> — `mejuma`)**:
    - Landmark `<section class="js">` presenting display lead `mejuma` and copy excerpt *"Discover a carefully curated selection of Tuscan homes, with pers"* over `#f1f1f1` canvas and `#0000ee` ink.
-3. **Primary Showcase & Content Grid (<section.wf-golostext-n7-active> — `m e j u m a`)**:
-   - Landmark `<section class="wf-golostext-n7-active">` rendering section `m e j u m a` with copy *"Explore our properties"*, asset references (`cdn.prod.website-files.com`, `mejuma-staging.webflow.shared.777...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
-4. **Interactive Detail & Feature Matrix (<section.wf-golostext-n4-active> — `Explore our properties`)**:
-   - Landmark `<section class="wf-golostext-n4-active">` framing `Explore our properties` and `Our mission is simple: to make buying and owning` (*"Our mission is simple: to make buying and owning a home in Tuscan"*) with `#e8e4e1` surface cards, `#ffff00` accents, and `summary { display: block; }`.
+3. **Primary Showcase & Content Grid (<section.wf-golostext-n4-active> — `m e j u m a`)**:
+   - Landmark `<section class="wf-golostext-n4-active">` rendering section `m e j u m a` with copy *"Explore our properties"*, asset references (`cdn.prod.website-files.com`, `mejuma-staging.webflow.shared.777...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
+4. **Interactive Detail & Feature Matrix (<section.wf-golostext-n7-active> — `Explore our properties`)**:
+   - Landmark `<section class="wf-golostext-n7-active">` framing `Explore our properties` and `Our mission is simple: to make buying and owning` (*"Our mission is simple: to make buying and owning a home in Tuscan"*) with `#e8e4e1` surface cards, `#ffff00` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.wf-active> — `https://mejuma-tuscany.com/`)**:
    - Landmark `<footer class="wf-active">` anchoring `Mejuma Tuscany` footer links (`Overview · Index · Archive · About · Contact`), copy *"Selected properties"*, and `#e0e0e0` structural dividers.

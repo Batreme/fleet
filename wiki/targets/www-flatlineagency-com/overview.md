@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-flatlineagency-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.flatlineagency.com/"
 final_url: "https://www.flatlineagency.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Shopify, Marketing & AI Agency Amsterdam · Flatline
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `28`
+- **Recovered Scripts**: `105`
 - **Recovered Stylesheets**: `0`
 
 ---

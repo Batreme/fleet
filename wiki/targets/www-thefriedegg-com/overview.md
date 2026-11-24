@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-thefriedegg-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.thefriedegg.com/"
 final_url: "https://www.thefriedegg.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Fried Egg Golf
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `51`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `185`
+- **Recovered Stylesheets**: `10`
 
 ---
 

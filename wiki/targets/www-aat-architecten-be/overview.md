@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-aat-architecten-be"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.aat-architecten.be/"
 final_url: "https://www.aat-architecten.be/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: AAT Architecten
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `83`
+- **Recovered Stylesheets**: `9`
 
 ---
 

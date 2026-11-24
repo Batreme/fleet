@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-rebelliously-optimistic-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.rebelliously-optimistic.com/"
 final_url: "https://www.rebelliously-optimistic.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.rebelliously-optimistic.com/](https://www.rebelliously-optimistic.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Rebelliously Optimistic — A movement for the human future
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: www-rebelliously-optimistic-com
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `2`
 - **Recovered Stylesheets**: `1`
 

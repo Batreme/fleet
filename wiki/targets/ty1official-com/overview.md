@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: ty1official-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ty1official.com"
 final_url: "https://ty1official.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: TY1 — DJ & Producer
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `13`
+- **Recovered Stylesheets**: `4`
 
 ---
 

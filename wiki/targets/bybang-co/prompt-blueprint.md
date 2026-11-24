@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: bybang-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "bybang-co"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#141414` ink, `#c7161d` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Estudio Bang · Architecture, Interiors, Objects & Digital Media** (https://bybang.co/) — Estudio Bang is a Barcelona-based architecture studio working across architecture, interiors, objects and digital media. We create spaces...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Estudio Bang · Architecture, Interiors, Objects & Digital Media** (`https://bybang.co/`). Estudio Bang is a Barcelona-based architecture studio working across architecture, interiors, objects and digital media. We create spaces...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#141414` ink, `#c7161d` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#141414` primary typography and `#c7161d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`estudiobang`) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`estudiobang`) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `10px`) with `cubic-bezier(.2,.8,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=25330px` / doc `56160px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `999px`, `8px`, `6px`, `50%`.
@@ -112,6 +117,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.site-language__option`**: `transition: opacity .24s ease` extracted from `bybang-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.site-chrome>` and `<main.site-home--ready>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `56160px`, deepest scrollY reached `25330px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -130,7 +138,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<main.site-home--ready>) max-w: 1440px              | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | BCN 05 : 01 BUE 01 : 01      |  | Copyright Estudio Bang® 2026 | | │
+│ | | BCN 13 : 59 BUE 09 : 59      |  | Copyright Estudio Bang® 2026 | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
 │ | DETAIL MODULE (<main.site-home:nth(2)>) — Copyright Estudio Ban    | │
@@ -150,7 +158,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 │ | H1: estudiobang                                                    | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<main.site-home--ready) — 1-Col Stack              | │
-│ | [ Item 1: BCN 05 : 01 BUE 01 : 01                                ] | │
+│ | [ Item 1: BCN 13 : 59 BUE 09 : 59                                ] | │
 │ | [ Item 2: Copyright Estudio Bang® 2026 · Legal & Privacy ·       ] | │
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<main.site-home:nth(2)>) — 1-Col (Copyright Estudio )  │
@@ -163,13 +171,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 1. **Brand Header & Navigation Bar (<header.site-chrome> — `bybang-co`)**:
    - Landmark `<header class="site-chrome">` (`1376x24px`) hosting `Estudio Bang · Architecture, Interio` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-cursor-target="logo"`, `data-cursor-target="logo"`, `data-entry-signal="0"`, `data-filter="all"`), and stylesheet rule `html.lenis body { height:auto }`.
 2. **Hero Stage & Focal Lead (<main.site-home> — `estudiobang`)**:
-   - Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 05 : 01 BUE 01 : 01"* over `#ffffff` canvas and `#141414` ink.
-3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 05 : 01 BUE 01 : 01`)**:
-   - Landmark `<main class="site-home site-home--ready">` rendering section `BCN 05 : 01 BUE 01 : 01` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
+   - Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 13 : 59 BUE 09 : 59"* over `#ffffff` canvas and `#141414` ink.
+3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 13 : 59 BUE 09 : 59`)**:
+   - Landmark `<main class="site-home site-home--ready">` rendering section `BCN 13 : 59 BUE 09 : 59` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
 4. **Interactive Detail & Feature Matrix (<main.site-home:nth(2)> — `Copyright Estudio Bang® 2026 · Leg`)**:
    - Landmark `<main class="site-home site-home--ready">` framing `Copyright Estudio Bang® 2026 · Legal & Privacy ·` and `Copyright Estudio Bang® 2026` (*"Copyright Estudio Bang® 2026"*) with `#f5f5f2` surface cards, `#c7161d` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.custom-cursor__split> — `https://bybang.co/`)**:
-   - Landmark `<footer class="custom-cursor__split">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.custom-cursor__label> — `https://bybang.co/`)**:
+   - Landmark `<footer class="custom-cursor__label">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=24480px`, `0%`): Active landmark `estudiobang` · sticky/fixed elements: `4`
+- **Step 02** (`y=25330px`, `46%`): Active landmark `estudiobang` · sticky/fixed elements: `4`
 
 ---
 
@@ -186,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#141414`, **Accent / Highlight**: `#c7161d`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#141414` primary typography and `#c7161d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`estudiobang`) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`estudiobang`) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `10px`) with `cubic-bezier(.2,.8,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +236,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--accent`)**: `#946ec4` — grounded in `var(--accent)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `10px` lateral canvas padding with `18px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`)
@@ -249,20 +260,20 @@ Scaffold `bybang-co` (`Estudio Bang · Architecture, Interiors, Objects & Digita
    - DOM & Selectors: Landmark `<header class="site-chrome">` (`1376x24px`) hosting `Estudio Bang · Architecture, Interio` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-cursor-target="logo"`, `data-cursor-target="logo"`, `data-entry-signal="0"`, `data-filter="all"`), and stylesheet rule `html.lenis body { height:auto }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-chrome> — `bybang-co`)` (`bybang-co`) adapts across `@media (max-width:700px)`, `@media (max-width:980px)`, `@media (max-width:1100px)`, `@media (max-width:760px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.68,-.48,.28,1.48)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.site-home> — `estudiobang`)**:
-   - DOM & Selectors: Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 05 : 01 BUE 01 : 01"* over `#ffffff` canvas and `#141414` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#141414` headline `estudiobang`.
-3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 05 : 01 BUE 01 : 01`)**:
-   - DOM & Selectors: Landmark `<main class="site-home site-home--ready">` rendering section `BCN 05 : 01 BUE 01 : 01` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 05 : 01 BUE 01 : 01`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 13 : 59 BUE 09 : 59"* over `#ffffff` canvas and `#141414` ink.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#141414` headline `estudiobang`.
+3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 13 : 59 BUE 09 : 59`)**:
+   - DOM & Selectors: Landmark `<main class="site-home site-home--ready">` rendering section `BCN 13 : 59 BUE 09 : 59` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 13 : 59 BUE 09 : 59`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<main.site-home:nth(2)> — `Copyright Estudio Bang® 2026 · Leg`)**:
    - DOM & Selectors: Landmark `<main class="site-home site-home--ready">` framing `Copyright Estudio Bang® 2026 · Legal & Privacy ·` and `Copyright Estudio Bang® 2026` (*"Copyright Estudio Bang® 2026"*) with `#f5f5f2` surface cards, `#c7161d` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.site-home:nth(2)> — `Copyright Estudio Bang® 2026 · Leg`)` uses `999px`, `8px`, `6px`, `50%` radii, `#c7161d` highlights, and assets (intro-01.webp, intro-02.webp, intro-03.webp).
-5. **Colophon & Global Directory Footer (<footer.custom-cursor__split> — `https://bybang.co/`)**:
-   - DOM & Selectors: Landmark `<footer class="custom-cursor__split">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.custom-cursor__split> — `https://bybang.co/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `10px` lateral canvas padding with `18px` grid gap and attributes (data-cursor-target="logo", data-cursor-target="logo", data-entry-signal="0").
+5. **Colophon & Global Directory Footer (<footer.custom-cursor__label> — `https://bybang.co/`)**:
+   - DOM & Selectors: Landmark `<footer class="custom-cursor__label">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.custom-cursor__label> — `https://bybang.co/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `10px` lateral canvas padding with `18px` grid gap and attributes (data-cursor-target="logo", data-cursor-target="logo", data-entry-signal="0").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"BCN 05 : 01 BUE 01 : 01"*
+- Copy Excerpt 1: *"BCN 13 : 59 BUE 09 : 59"*
 - Copy Excerpt 2: *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo Studio"*
 - Copy Excerpt 3: *"Copyright Estudio Bang® 2026"*
 
@@ -280,8 +291,28 @@ Scaffold `bybang-co` (`Estudio Bang · Architecture, Interiors, Objects & Digita
 - **Selector `.site-language__option`**: `transition: opacity .24s ease` extracted from `bybang-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.site-chrome>` and `<main.site-home--ready>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `56160px` across 2 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: estudiobang (0%) -> estudiobang (46%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `bybang-co`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `24480px` | `0%` | estudiobang | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `25330px` | `46%` | estudiobang | `4` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Section @ 14% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Section @ 28% | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

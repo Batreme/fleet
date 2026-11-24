@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-alexadevaney-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-alexadevaney-com` (**North County San Diego Luxury Homes – Alexa Devaney**)
 - **Production URL**: [https://www.alexadevaney.com/](https://www.alexadevaney.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f6f4` canvas, `#333333` ink, `#000080` accent)
 - **Summary**: Alexa Devaney, Senior Realtor Associate with The Oppenheim Group, helps families buy and sell luxury homes from Encinitas and Carlsbad to...
 - **Total Clean CSS Variables Extracted**: `17` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Montserrat`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 84px`, `line-height: 89.04px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--display-font: "Montserrat",sans-serif`; rule `h1` (`font-size: clamp(38px,5.4vw,72px)`, `line-height: 1.02`, `letter-spacing: -1.4px`, `font-weight: 300`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 37.44px`, `line-height: 54.288px`, `font-weight: 400`); rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 43.2px`, `line-height: 49.68px`, `font-weight: 500`); rule `h2` (`font-size: 30px`, `letter-spacing: 1px`, `font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body-font: "Montserrat",sans-serif`; rule `p` (`font-size: 16px`, `line-height: 1.7`, `letter-spacing: 1px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 

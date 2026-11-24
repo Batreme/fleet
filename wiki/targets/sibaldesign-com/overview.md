@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: sibaldesign-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://sibaldesign.com/"
 final_url: "https://sibaldesign.com/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Jeff Sibal — Visual & Digital Designer · SIBALDESIGN
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
 - **Recovered Scripts**: `1`
-- **Recovered Stylesheets**: `1`
+- **Recovered Stylesheets**: `2`
 
 ---
 

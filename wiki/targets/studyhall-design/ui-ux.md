@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: studyhall-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `studyhall-design` (**Home · Study Hall ✶ Built to move you.**)
 - **Production URL**: [https://studyhall.design/](https://studyhall.design/)
 - **Final Redirected URL**: [https://www.studyhall.design/](https://www.studyhall.design/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)
 - **Summary**: A creative agency based in Oakland and partnering globally. We craft brand, motion, and interactive to help businesses resonate now and r...
 - **Total Clean CSS Variables Extracted**: `213` (curated live-grounded set below)
@@ -68,11 +68,11 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.pt-20> — `studyhall-design`)**:
-   - Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-leadin-portal-id="246568091"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-cookieconsent="ignore"`, `data-hs-ignore="true"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.pb-gy> — `We're in the business of making th`)**:
    - Landmark `<section class="pb-gy">` presenting display lead `We're in the business of making things move. Bran...` and copy excerpt *"San Francisco Running Company"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.py-gy> — `San Francisco Running Company Bran`)**:
-   - Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`246568091.js`, `collectedforms.js`, `banner.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`banner.js`, `collectedforms.js`, `246568091.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.gap-gutter> — `Awards & Publications`)**:
    - Landmark `<section class="py-gy gap-gutter">` framing `Awards & Publications` and `Recent Work` (*"Netflix Sports Club"*) with `#cdcdcd` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.mb-18> — `https://studyhall.design/`)**:

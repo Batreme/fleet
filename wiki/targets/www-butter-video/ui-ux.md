@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-butter-video"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-butter-video` (**Butter Video · Online Video Editor Engineered for Creativity**)
 - **Production URL**: [https://www.butter.video/](https://www.butter.video/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#00ffd0`)
 - **Summary**: The first video editor and design platform built with creative code for creative teams. It's a whole new timeline.
 - **Total Clean CSS Variables Extracted**: `40` (curated live-grounded set below)
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#0f0f0f` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ededed` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#00ffd0` | `var(--perf-gradient-primary)` in `:root` |
-| **Secondary / Muted Copy** | `#718096` | `var(--perf-text-muted)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#fdfdfd` | `.CreatorSlice_secondaryButton__... { border-color: #fdfdfd }` |
 | **Variable Token (`--butter-white`)** | `#fafafa` | `var(--butter-white)` in `:root` |
 | **Variable Token (`--butter-off-white`)** | `#f7f7f7` | `var(--butter-off-white)` in `:root` |
@@ -78,12 +78,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.kbhUnc> — `www-butter-video`)**:
-   - Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
+   - Landmark `<header class="kbhUnc">` (`1440x88px`) hosting `Butter Video · Online Video Editor E` navigation (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), DOM attributes (`data-auth="out"`, `data-precedence="next"`, `data-precedence="next"`, `data-styled="active"`), and stylesheet rule `.__className_8d5843 { font-family:DieGrotesk,DieGrotesk Fallback;font-weight:400;font-style:no... }`.
 2. **Hero Stage & Focal Lead (<section.hsoZjO> — `Engineered for Creativity Engineer`)**:
    - Landmark `<section class="hsoZjO">` presenting display lead `Engineered for Creativity Engineered for Creativity` and copy excerpt *"It's a whole new timeline."* over `#ffffff` canvas and `#0f0f0f` ink.
 3. **Primary Showcase & Content Grid (<section.glnUmG> — `Butter is the first video editor w`)**:
-   - Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.CreatorSlice_surfacePage__D5FDj { background:var(--butter-white) }`.
+   - Landmark `<section class="glnUmG">` rendering section `Butter is the first video editor where creatives...` with copy *"Co-Create Co-Create"*, asset references (`5fb8d156cdd6d753-s.p.woff2`, `da60608f2183158e-s.p.woff2`, `2836d44e2fdcb041.css`, `6294d87c4b6dbd81.css`), and grid rule `.__className_210739 { font-family:ABCDiatype,ABCDiatype Fallback;font-weight:400;font-style:no... }`.
 4. **Interactive Detail & Feature Matrix (<section.lhNRew> — `Browse curated blocks for motion g`)**:
-   - Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_surfaceSubtle__v5RgA { background:var(--butter-off-white) }`.
+   - Landmark `<section class="lhNRew">` framing `Browse curated blocks for motion graphics, kineti...` and `Make blocks your own with intuitive dials, slider...` (*"Templates Templates"*) with `#ededed` surface cards, `#00ffd0` accents, and `.CreatorSlice_inner__5XvuM { width:100%;max-width:1920px;margin-inline:auto }`.
 5. **Colophon & Global Directory Footer (<footer.bdNowa> — `https://www.butter.video/`)**:
    - Landmark `<footer class="bdNowa">` anchoring `Butter Video · Online Video Edit` footer links (`Product Product · Blocks Blocks · Templates Templates · Pricing Pricing · Blog Blog`), copy *"Product Product Explore features Explore features"*, and `#fdfdfd` structural dividers.

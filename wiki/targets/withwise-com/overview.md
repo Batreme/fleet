@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: withwise-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://withwise.com/"
 final_url: "https://withwise.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Compliance-First Onboarding Software · Wise
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `36`
-- **Recovered Stylesheets**: `11`
+- **Recovered Scripts**: `149`
+- **Recovered Stylesheets**: `45`
 
 ---
 

@@ -1,43 +1,48 @@
 ---
 title: "UI Prompt Blueprint: explorajourneys-com_int-en-explora-journal"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "explorajourneys-com_int-en-explora-journal"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 2
 http_status: 200
-archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#9c441d` accent)"
+archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#06b6d4` accent)"
 ---
 
 # UI Design System & Master Generation Blueprint: explorajourneys-com_int-en-explora-journal
 
 > **The Explora Journal, A Magazine by Explora Journeys** (https://explorajourneys.com/int/en/explora-journal) — Step aboard The Explora Journal for stories of ships and destinations, from wellness and dining to ports and cultures, told through the O...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Explora Journal, A Magazine by Explora Journeys** (`https://explorajourneys.com/int/en/explora-journal`). Step aboard The Explora Journal for stories of ships and destinations, from wellness and dining to ports and cultures, told through the O...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
-- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#9c441d` accent)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
+- **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#06b6d4` accent)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#9c441d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `WT Monarch Nova` for display copy (`The Explora Journal`) with `Shapiro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#06b6d4` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `WT Monarch Nova` for display copy (`The Explora Journal`) with `Shapiro`.
   - **Calibrated Spatial Grid & Motion**: Combines `1364px` container bounds (`gap: 30px`, padding `.5rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8421px` / doc `9321px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1364px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `30px` grid gap.
 - **Border Radius Scale**: `5px`, `50%`, `7px`, `3px`.
@@ -56,10 +61,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 |---|---|---|
 | **Primary Canvas Substrate** | `#f4f2ef` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#222222` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffffff` | `.cmp-search__results { background: #ffffff }` |
-| **Interactive Accent / Highlight** | `#9c441d` | `.cta-light-scroll:hover { color: #9c441d }` |
-| **Secondary / Muted Copy** | `#866d4b` | live computed `a` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#cccccc` | `.cmp-search__loading-indicator { border: #cccccc }` |
+| **Elevated Surface / Card Substrate** | `#e7e1da` | live computed `section` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#06b6d4` | `.vc-date__btn { color: #06b6d4 }` |
+| **Secondary / Muted Copy** | `#666666` | live computed `p` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#eeeeee` | `.fa-border { border: #eeeeee }` |
 | **Variable Token (`--swiper-theme-color`)** | `#007aff` | `var(--swiper-theme-color)` in stylesheet |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -74,13 +79,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 | `--partner-header-height` | `0px` | Layout / Spatial Grid Token |
 | `--hero-component-height` | `calc(100svh - 80px)` | Layout / Spatial Grid Token |
 | `--hero-component-height-full` | `var(--hero-component-height)` | Layout / Spatial Grid Token |
+| `--gradient-angle` | `0deg` | Design System Custom Token |
 | `--contact-banner-height` | `0px` | Layout / Spatial Grid Token |
 | `--swiper-theme-color` | `#007aff` | Brand / Palette Token |
+| `--tw-bg-opacity` | `1` | Canvas / Surface Token |
+| `--tw-shadow` | `0 9px 20px rgba(0, 0, 0, .1)` | Elevation / Border Token |
 | `--explorajourneys--bg` | `#f4f2ef` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
 | `--explorajourneys--ink` | `#222222` | Primary Typography Ink (computed-derived) |
-| `--explorajourneys--surface` | `#ffffff` | Surface Substrate (computed-derived) |
-| `--explorajourneys--accent` | `#9c441d` | Interactive Accent (computed-derived) |
-| `--explorajourneys--muted` | `#866d4b` | Secondary Ink (computed-derived) |
 
 ---
 
@@ -93,7 +98,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 40.05px`, `line-height: 56.07px`, `font-weight: 400`); rule `.title` (`font-size: 24px`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 19.95px`, `line-height: 27.93px`, `font-weight: 400`); rule `h2` (`font-size: 1.5em`, `font-weight: bold`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 20px`, `line-height: 28px`, `font-weight: 100`); rule `h2` (`font-size: 1.5em`, `font-weight: bold`).
 - **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 26px`, `font-weight: 400`); rule `p` (`font-size: 13px`, `line-height: 20px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 26px`, `font-weight: 400`); rule `.label` (`font-size: 9pt`).
 
@@ -110,6 +115,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 - **Selector `80%`**: `transition: cubic-bezier(.215,.61,.355,1)` extracted from `explorajourneys-com_int-en-explora-journal` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.experiencefragment>` and `<section.emag-home-grid>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9321px`, deepest scrollY reached `8421px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `Read Story`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/int/en/find-your-journey`) measured as `MPA` in `2655ms`.
 
 ---
 
@@ -124,14 +134,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.emag-home-hero> (w=1440px)                    | │
 │ | H1: The Explora Journal                                            | │
-│ | Substrate: #f4f2ef | Ink: #222222 | Accent: #9c441d                | │
+│ | Substrate: #f4f2ef | Ink: #222222 | Accent: #06b6d4                | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.emag-home-grid>) max-w: 1364px             | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Introducing EXPLORA III      |  | Out of Office: Jannik Sinner | | │
+│ | | Introducing EXPLORA III      |  | From Sea Salt to Soil        | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<article.article-card>) — Introducing Captain F     | │
+│ | DETAIL MODULE (<article.article-card>) — Advocating for the Oc     | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.quotesubject) | https://explorajourneys.com/int/en/  │
 └────────────────────────────────────────────────────────────────────────┘
@@ -149,9 +159,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<section.emag-home-gri) — 1-Col Stack              | │
 │ | [ Item 1: Introducing EXPLORA III                                ] | │
-│ | [ Item 2: Out of Office: Jannik Sinner’s Way                     ] | │
+│ | [ Item 2: From Sea Salt to Soil                                  ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<article.article-card>) — 1-Col (Introducing Captai) | │
+│ | DETAIL STACK (<article.article-card>) — 1-Col (Advocating for the) | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.quotesubject) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -159,15 +169,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.experiencefragment> — `explorajourneys-com_int-en-explora-journal`)**:
-   - Landmark `<header class="experiencefragment header-sticky">` (`1440x0px`) hosting `The Explora Journal, A Magazine by E` navigation (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), DOM attributes (`data-destex-discover-bound`, `data-description="Scene7DefaultCSS"`, `data-component="ScrollBar"`, `data-namespace="s7classic"`), and stylesheet rule `.cmp-accordion__button { display:block;width:100%;text-align:left }`.
+   - Landmark `<header class="experiencefragment header-sticky">` (`1440x0px`) hosting `The Explora Journal, A Magazine by E` navigation (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), DOM attributes (`data-destex-discover-bound`, `data-description="Scene7DefaultCSS"`, `data-component="ScrollBar"`, `data-namespace="s7classic"`), and stylesheet rule `.fa-lg { font-size:1.33333333em;line-height:.75em;vertical-align:-15% }`.
 2. **Hero Stage & Focal Lead (<section.emag-home-hero> — `The Explora Journal`)**:
    - Landmark `<section class="emag-home-hero emag-home-hero--imageBackground">` presenting display lead `The Explora Journal` and copy excerpt *"A Magazine by Explora Journeys"* over `#f4f2ef` canvas and `#222222` ink.
 3. **Primary Showcase & Content Grid (<section.emag-home-grid> — `Introducing EXPLORA III`)**:
-   - Landmark `<section class="emag-home-grid">` rendering section `Introducing EXPLORA III` with copy *"Wrong email address Primary Email Address* Add Another Email Addr"*, asset references (`0.8.77`, `187102487`, `adalyser.js`, `insight.min.js`), and grid rule `.cmp-accordion__panel--hidden { display:none }`.
-4. **Interactive Detail & Feature Matrix (<article.article-card> — `Out of Office: Jannik Sinner’s Way`)**:
-   - Landmark `<article class="article-card card--small">` framing `Out of Office: Jannik Sinner’s Way` and `Introducing Captain Francesco Russo: A Life Shape...` (*"Wrong email address"*) with `#ffffff` surface cards, `#9c441d` accents, and `.cmp-accordion__panel--expanded { display:block }`.
+   - Landmark `<section class="emag-home-grid">` rendering section `Introducing EXPLORA III` with copy *"Wrong email address Primary Email Address* Add Another Email Addr"*, asset references (`0.8.77`, `187102487`, `adalyser.js`, `insight.min.js`), and grid rule `.fa-2x { font-size:2em }`.
+4. **Interactive Detail & Feature Matrix (<article.article-card> — `From Sea Salt to Soil`)**:
+   - Landmark `<article class="article-card card--small">` framing `From Sea Salt to Soil` and `Advocating for the Ocean` (*"Wrong email address"*) with `#e7e1da` surface cards, `#06b6d4` accents, and `.fa-3x { font-size:3em }`.
 5. **Colophon & Global Directory Footer (<footer.quotesubject> — `https://explorajourneys.com/int/en/explora-journal`)**:
-   - Landmark `<footer class="quotesubject">` anchoring `The Explora Journal, A Magazine ` footer links (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), copy *"Primary Email Address*"*, and `#cccccc` structural dividers.
+   - Landmark `<footer class="quotesubject">` anchoring `The Explora Journal, A Magazine ` footer links (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), copy *"Primary Email Address*"*, and `#eeeeee` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The Explora Journal` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `10%`): Active landmark `Section @ 10%` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `30%`): Active landmark `Anna Nash: "The Best Is Yet to Come"` · sticky/fixed elements: `0`
+- **Step 04** (`y=3400px`, `40%`): Active landmark `Section @ 40%` · sticky/fixed elements: `0`
+- **Step 05** (`y=5100px`, `61%`): Active landmark `Best Mediterranean Cruise Ports: A Journey Throug...` · sticky/fixed elements: `0`
+- **Step 06** (`y=5950px`, `71%`): Active landmark `Jannik Sinner: Our Global Brand Ambassador` · sticky/fixed elements: `0`
+- **Step 07** (`y=7650px`, `91%`): Active landmark `Amazon River Travel Guide: Discover the World's G...` · sticky/fixed elements: `0`
+- **Step 08** (`y=8421px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/int/en/find-your-journey`)**: `https://explorajourneys.com/int/en/find-your-journey` — H1: `FIND YOUR JOURNEY`, scrollHeight `3887px`, transition `MPA` (`2655ms`)
+- **Detail Route (`/int/en/destinations-globe`)**: `https://explorajourneys.com/int/en/destinations-globe` — H1: `Journeys Departing Soon`, scrollHeight `5137px`, transition `direct` (`3166ms`)
 
 ---
 
@@ -179,12 +202,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `explorajourneys-com_int-en-explora-journal` (**The Explora Journal, A Magazine by Explora Journeys** — `https://explorajourneys.com/int/en/explora-journal`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#9c441d` accent).
+- **Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f2ef` canvas, `#222222` ink, `#06b6d4` accent).
 - **Identity & Domain Context**: Step aboard The Explora Journal for stories of ships and destinations, from wellness and dining to ports and cultures, told through the O...
-- **Primary Substrate**: `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#222222`, **Accent / Highlight**: `#9c441d`.
+- **Primary Substrate**: `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#222222`, **Accent / Highlight**: `#06b6d4`.
 - **Site-Specific Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#9c441d` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `WT Monarch Nova` for display copy (`The Explora Journal`) with `Shapiro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f2ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#222222` primary typography and `#06b6d4` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `WT Monarch Nova` for display copy (`The Explora Journal`) with `Shapiro`.
   - **Calibrated Spatial Grid & Motion**: Combines `1364px` container bounds (`gap: 30px`, padding `.5rem`) with `cubic-bezier(.215,.61,.355,1)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -201,28 +224,28 @@ Declare and consume these exact custom properties extracted from `explorajourney
   --partner-header-height: 0px; /* Layout / Spatial Grid Token (explorajourneys-com_int-en-explora-journal) */
   --hero-component-height: calc(100svh - 80px); /* Layout / Spatial Grid Token (explorajourneys-com_int-en-explora-journal) */
   --hero-component-height-full: var(--hero-component-height); /* Layout / Spatial Grid Token (explorajourneys-com_int-en-explora-journal) */
+  --gradient-angle: 0deg; /* Design System Custom Token (explorajourneys-com_int-en-explora-journal) */
   --contact-banner-height: 0px; /* Layout / Spatial Grid Token (explorajourneys-com_int-en-explora-journal) */
   --swiper-theme-color: #007aff; /* Brand / Palette Token (explorajourneys-com_int-en-explora-journal) */
+  --tw-bg-opacity: 1; /* Canvas / Surface Token (explorajourneys-com_int-en-explora-journal) */
+  --tw-shadow: 0 9px 20px rgba(0, 0, 0, .1); /* Elevation / Border Token (explorajourneys-com_int-en-explora-journal) */
   --explorajourneys--bg: #f4f2ef; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (explorajourneys-com_int-en-explora-journal) */
   --explorajourneys--ink: #222222; /* Primary Typography Ink (computed-derived) (explorajourneys-com_int-en-explora-journal) */
-  --explorajourneys--surface: #ffffff; /* Surface Substrate (computed-derived) (explorajourneys-com_int-en-explora-journal) */
-  --explorajourneys--accent: #9c441d; /* Interactive Accent (computed-derived) (explorajourneys-com_int-en-explora-journal) */
-  --explorajourneys--muted: #866d4b; /* Secondary Ink (computed-derived) (explorajourneys-com_int-en-explora-journal) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#f4f2ef` — grounded in live computed `body` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#222222` — grounded in live computed `h1` `color` (`computed_styles.json`)
-- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.cmp-search__results { background: #ffffff }`
-- **Interactive Accent / Highlight**: `#9c441d` — grounded in `.cta-light-scroll:hover { color: #9c441d }`
-- **Secondary / Muted Copy**: `#866d4b` — grounded in live computed `a` `color` (`computed_styles.json`)
-- **Structural Hairline Border**: `#cccccc` — grounded in `.cmp-search__loading-indicator { border: #cccccc }`
+- **Elevated Surface / Card Substrate**: `#e7e1da` — grounded in live computed `section` `background-color` (`computed_styles.json`)
+- **Interactive Accent / Highlight**: `#06b6d4` — grounded in `.vc-date__btn { color: #06b6d4 }`
+- **Secondary / Muted Copy**: `#666666` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Structural Hairline Border**: `#eeeeee` — grounded in `.fa-border { border: #eeeeee }`
 - **Variable Token (`--swiper-theme-color`)**: `#007aff` — grounded in `var(--swiper-theme-color)` in stylesheet
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1364px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `.5rem` lateral canvas padding with `30px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1364px`, `gap: 30px`)
@@ -235,26 +258,26 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Shapiro`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 40.05px`, `line-height: 56.07px`, `font-weight: 400`); rule `.title` (`font-size: 24px`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 19.95px`, `line-height: 27.93px`, `font-weight: 400`); rule `h2` (`font-size: 1.5em`, `font-weight: bold`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 20px`, `line-height: 28px`, `font-weight: 100`); rule `h2` (`font-size: 1.5em`, `font-weight: bold`)
 - **Body Copy Rule**: live computed `body` (`font-size: 15px`, `line-height: 26px`, `font-weight: 400`); rule `p` (`font-size: 13px`, `line-height: 20px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 15px`, `line-height: 26px`, `font-weight: 400`); rule `.label` (`font-size: 9pt`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `explorajourneys-com_int-en-explora-journal` (`The Explora Journal, A Magazine by Explora Journeys`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.experiencefragment> — `explorajourneys-com_int-en-explora-journal`)**:
-   - DOM & Selectors: Landmark `<header class="experiencefragment header-sticky">` (`1440x0px`) hosting `The Explora Journal, A Magazine by E` navigation (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), DOM attributes (`data-destex-discover-bound`, `data-description="Scene7DefaultCSS"`, `data-component="ScrollBar"`, `data-namespace="s7classic"`), and stylesheet rule `.cmp-accordion__button { display:block;width:100%;text-align:left }`.
+   - DOM & Selectors: Landmark `<header class="experiencefragment header-sticky">` (`1440x0px`) hosting `The Explora Journal, A Magazine by E` navigation (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), DOM attributes (`data-destex-discover-bound`, `data-description="Scene7DefaultCSS"`, `data-component="ScrollBar"`, `data-namespace="s7classic"`), and stylesheet rule `.fa-lg { font-size:1.33333333em;line-height:.75em;vertical-align:-15% }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.experiencefragment> — `explorajourneys-com_int-en-explora-journal`)` (`explorajourneys-com_int-en-explora-journal`) adapts across `@media (prefers-reduced-motion:reduce),print`, `@media only screen and (max-width:768px)`, `@media only screen and (max-width:360px)`, `@media only screen and (min-width:768px) and (max-width:1024px)` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.755,.05,.855,.06)`, `cubic-bezier(.55,.055,.675,.19)` transitions and links `Find a journey · All Destinations · Alaska · Asia · Grand Journeys`.
 2. **Hero Stage & Focal Lead (<section.emag-home-hero> — `The Explora Journal`)**:
    - DOM & Selectors: Landmark `<section class="emag-home-hero emag-home-hero--imageBackground">` presenting display lead `The Explora Journal` and copy excerpt *"A Magazine by Explora Journeys"* over `#f4f2ef` canvas and `#222222` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f2ef` background with `#222222` headline `The Explora Journal`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#f4f2ef` background with `#222222` headline `The Explora Journal`.
 3. **Primary Showcase & Content Grid (<section.emag-home-grid> — `Introducing EXPLORA III`)**:
-   - DOM & Selectors: Landmark `<section class="emag-home-grid">` rendering section `Introducing EXPLORA III` with copy *"Wrong email address Primary Email Address* Add Another Email Addr"*, asset references (`0.8.77`, `187102487`, `adalyser.js`, `insight.min.js`), and grid rule `.cmp-accordion__panel--hidden { display:none }`.
+   - DOM & Selectors: Landmark `<section class="emag-home-grid">` rendering section `Introducing EXPLORA III` with copy *"Wrong email address Primary Email Address* Add Another Email Addr"*, asset references (`0.8.77`, `187102487`, `adalyser.js`, `insight.min.js`), and grid rule `.fa-2x { font-size:2em }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.emag-home-grid> — `Introducing EXPLORA III`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1364px`, `gap: 30px`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<article.article-card> — `Out of Office: Jannik Sinner’s Way`)**:
-   - DOM & Selectors: Landmark `<article class="article-card card--small">` framing `Out of Office: Jannik Sinner’s Way` and `Introducing Captain Francesco Russo: A Life Shape...` (*"Wrong email address"*) with `#ffffff` surface cards, `#9c441d` accents, and `.cmp-accordion__panel--expanded { display:block }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.article-card> — `Out of Office: Jannik Sinner’s Way`)` uses `5px`, `50%`, `7px`, `3px` radii, `#9c441d` highlights, and assets (0.8.77, 187102487, adalyser.js).
+4. **Interactive Detail & Feature Matrix (<article.article-card> — `From Sea Salt to Soil`)**:
+   - DOM & Selectors: Landmark `<article class="article-card card--small">` framing `From Sea Salt to Soil` and `Advocating for the Ocean` (*"Wrong email address"*) with `#e7e1da` surface cards, `#06b6d4` accents, and `.fa-3x { font-size:3em }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.article-card> — `From Sea Salt to Soil`)` uses `5px`, `50%`, `7px`, `3px` radii, `#06b6d4` highlights, and assets (0.8.77, 187102487, adalyser.js).
 5. **Colophon & Global Directory Footer (<footer.quotesubject> — `https://explorajourneys.com/int/en/explora-journal`)**:
-   - DOM & Selectors: Landmark `<footer class="quotesubject">` anchoring `The Explora Journal, A Magazine ` footer links (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), copy *"Primary Email Address*"*, and `#cccccc` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="quotesubject">` anchoring `The Explora Journal, A Magazine ` footer links (`Find a journey · All Destinations · Alaska · Asia · Grand Journeys`), copy *"Primary Email Address*"*, and `#eeeeee` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.quotesubject> — `https://explorajourneys.com/int/en/explora-journal`)` aligns to `1364px` (non-`@media` desktop container stylesheet rule) with `.5rem` lateral canvas padding with `30px` grid gap and attributes (data-destex-discover-bound, data-description="Scene7DefaultCSS", data-component="ScrollBar").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
@@ -266,19 +289,52 @@ Scaffold `explorajourneys-com_int-en-explora-journal` (`The Explora Journal, A M
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.755,.05,.855,.06)`, `cubic-bezier(.55,.055,.675,.19)`
 - **Extracted Stylesheet Rules (`explorajourneys-com_int-en-explora-journal`)**:
-- `.cmp-accordion__button { display:block;width:100%;text-align:left }`
-- `.cmp-accordion__panel--hidden { display:none }`
-- `.cmp-accordion__panel--expanded { display:block }`
-- `.cmp-tabs__tablist { display:flex;flex-wrap:wrap;padding-left:0;list-style:none }`
-- `.cmp-tabs__tab { box-sizing:border-box;border-bottom:1px solid transparent;padding:.5rem... }`
+- `.fa-lg { font-size:1.33333333em;line-height:.75em;vertical-align:-15% }`
+- `.fa-2x { font-size:2em }`
+- `.fa-3x { font-size:3em }`
+- `.fa-4x { font-size:4em }`
+- `.fa-5x { font-size:5em }`
 - **Per-Selector Transition Rules**:
 - **Selector `print`**: `transition: 1ms!important` extracted from `explorajourneys-com_int-en-explora-journal` stylesheet.
 - **Selector `80%`**: `transition: cubic-bezier(.215,.61,.355,1)` extracted from `explorajourneys-com_int-en-explora-journal` stylesheet.
 - **Selector `80%`**: `transition: cubic-bezier(.215,.61,.355,1)` extracted from `explorajourneys-com_int-en-explora-journal` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.experiencefragment>` and `<section.emag-home-grid>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9321px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: The Explora Journal (0%) -> Section @ 10% (10%) -> Anna Nash: "The Best Is Yet... (30%) -> Section @ 40% (40%) -> Best Mediterranean Cruise P... (61%) -> Jannik Sinner: Our Global B... (71%) -> Amazon River Travel Guide:... (91%) -> Footer / Bottom (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/int/en/find-your-journey` (detail, MPA), `/int/en/destinations-globe` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `explorajourneys-com_int-en-explora-journal`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The Explora Journal | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | Section @ 10% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `30%` | Anna Nash: "The Best Is Yet to Come" | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `40%` | Section @ 40% | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `61%` | Best Mediterranean Cruise Ports: A Journey Th... | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `71%` | Jannik Sinner: Our Global Brand Ambassador | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `91%` | Amazon River Travel Guide: Discover the World... | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8421px` | `100%` | Footer / Bottom | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The Explora Journal | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5145px` | `50%` | A South America Itinerary by Sea: The Con... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `10291px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://explorajourneys.com/int/en/find-your-journey` | FIND YOUR JOURNEY | `3887px` | `MPA` (`2655ms`) | [subpage-01-int-en-find-your-journey.webp](assets/subpage-01-int-en-find-your-journey.webp) |
+| `2` | `detail` | `https://explorajourneys.com/int/en/destinations-globe` | Journeys Departing Soon | `5137px` | `direct` (`3166ms`) | [subpage-02-int-en-destinations-globe.webp](assets/subpage-02-int-en-destinations-globe.webp) |
+

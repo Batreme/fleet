@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-lamagadan-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-lamagadan-studio` (**La Magadán · Branding y diseño para emprendedoras**)
 - **Production URL**: [https://www.lamagadan.studio/](https://www.lamagadan.studio/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#222222` ink, `#ff5f26` accent)
 - **Summary**: Soy Cristina, diseñadora y creativa en La Magadán. Ayudo a emprendedoras como tú a crear marcas que conectan, destacan y venden.
 - **Total Clean CSS Variables Extracted**: `0` (curated live-grounded set below)

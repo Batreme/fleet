@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-oceans-faith_moralcatch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.oceans.faith/moralcatch"
 final_url: "https://www.oceans.faith/moralcatch"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.oceans.faith/moralcatch](https://www.oceans.faith/moralcatch)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `26`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `138`
+- **Recovered Stylesheets**: `33`
 
 ---
 

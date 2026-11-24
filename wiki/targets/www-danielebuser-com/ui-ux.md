@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-danielebuser-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,21 +13,21 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-danielebuser-com` (**Daniele Buser · Creative Developer**)
 - **Production URL**: [https://www.danielebuser.com/](https://www.danielebuser.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×2484px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0a0a0a` canvas, `#f6f6f6` ink, `#ff4500` accent)
 - **Summary**: Explore Daniele Buser's creative development projects: interactive 3D web experiences, WebGL experiments, and high-performance front-end...
-- **Total Clean CSS Variables Extracted**: `72` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `79` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `neueHaasGrotesk`
 - **Body Font Stack**: `neueHaasGrotesk`
-- **Monospace / Technical Font Stack**: `SFMono-Regular`
+- **Monospace / Technical Font Stack**: `PP Neue Montreal Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 208.8px`, `line-height: 177.48px`, `font-weight: 400`, `letter-spacing: -5.22px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 30.56px`, `line-height: 30.56px`, `font-weight: 400`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48.8px`, `line-height: 46.36px`, `font-weight: 400`, `letter-spacing: -1.22px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--text-body-lg: 1.125rem`
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`; rule `.caption` (`font-size: 10px`, `line-height: 1.5`)
 
 ---
 
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#f6f6f6` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#1e1e1e` | `var(--color-card-dark)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff4500` | `var(--color-accent)` in `:root` |
-| **Secondary / Muted Copy** | `#6b6b6b` | live computed `h2` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#9b9b9b` | live computed `p` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#1a1a1a` | `var(--color-grid-line-dark)` in `:root` |
 | **Variable Token (`--color-rose-400`)** | `#ff667f` | `var(--color-rose-400)` in `:root` |
 | **Variable Token (`--color-neutral-200`)** | `#e5e5e5` | `var(--color-neutral-200)` in `:root` |

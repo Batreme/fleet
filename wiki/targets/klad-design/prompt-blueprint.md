@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: klad-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "klad-design"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#000000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#0
 
 > **Multidisciplinary Design Syndicate – KLAD** (https://klad.design/) — Klad Syndicate is a multidisciplinary design studio offering comprehensive solutions for ambitious brands. Every design we deliver is ori...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Multidisciplinary Design Syndicate – KLAD** (`https://klad.design/`). Klad Syndicate is a multidisciplinary design studio offering comprehensive solutions for ambitious brands. Every design we deliver is ori...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#000000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e6e6e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Helvetica Now Display` for display copy (`KLAD SYNDICATE KLAD SYNDICATE KLAD S`) with `Helvetica Now Display` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Helvetica Now Display` across display (`KLAD SYNDICATE KLAD SYNDICATE KLAD S`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 3px`, padding `10px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=5893px` / doc `6793px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `3px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
@@ -111,6 +116,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#0
 - **Selector `.button:after`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `klad-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.duration-200>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6793px`, deepest scrollY reached `5893px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/work`) measured as `SPA` in `3295ms`.
 
 ---
 
@@ -169,6 +178,20 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e6e6e6` / `#0
    - Landmark `<section class="pt-20 z-1">` framing `Team 专责小组 Team 专责小组 Team 专责小组 Team 专责小组 Team 专责小组...` and `Ksusha Ksusha Ksusha Ksusha Ksusha Ksusha` (*"As a small team, we deliberately limit the number of projects we "*) with `#808080` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.absolute> — `https://klad.design/`)**:
    - Landmark `<footer class="absolute">` anchoring `Multidisciplinary Design Syndica` footer links (`About · Work · Process · Expectations · Pricing`), copy *"Retail & E-commerce"*, and `#808080` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE KLAD...` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `14%`): Active landmark `Section @ 14%` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `29%`): Active landmark `TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组...` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `43%`): Active landmark `TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组...` · sticky/fixed elements: `3`
+- **Step 05** (`y=3400px`, `58%`): Active landmark `TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组...` · sticky/fixed elements: `3`
+- **Step 06** (`y=4250px`, `72%`): Active landmark `TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组...` · sticky/fixed elements: `2`
+- **Step 07** (`y=5100px`, `87%`): Active landmark `BOOK A CALL BOOK A CALL BOOK A CALL BOOK A CALL B...` · sticky/fixed elements: `2`
+- **Step 08** (`y=5893px`, `100%`): Active landmark `KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE KLAD...` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/work`)**: `https://klad.design/work` — H1: `DATALANE DATALANE DATALANE`, scrollHeight `900px`, transition `SPA` (`3295ms`)
+- **Listing Route (`/pricing`)**: `https://klad.design/pricing` — H1: `PRICING 価格設定 PRICING 価格設定 PRICING 価格設定`, scrollHeight `900px`, transition `direct` (`610ms`)
+- **Other Route (`/process`)**: `https://klad.design/process` — H1: `PROCESS 过程 PROCESS 过程 PROCESS 过程`, scrollHeight `900px`, transition `direct` (`632ms`)
 
 ---
 
@@ -185,7 +208,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e6e6e6` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#000000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e6e6e6` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#000000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Helvetica Now Display` for display copy (`KLAD SYNDICATE KLAD SYNDICATE KLAD S`) with `Helvetica Now Display` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Helvetica Now Display` across display (`KLAD SYNDICATE KLAD SYNDICATE KLAD S`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 3px`, padding `10px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -223,8 +246,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-white`)**: `#ffffff` — grounded in `var(--color-white)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `10px` lateral canvas padding with `3px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 3px`)
@@ -248,7 +271,7 @@ Scaffold `klad-design` (`Multidisciplinary Design Syndicate – KLAD`) with thes
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `klad-design`)` (`klad-design`) adapts across `@media (min-width:768px)`, `@media (min-width:48rem)`, `@media (min-width:96rem)`, `@media (min-width:64rem)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `About · Work · Process · Expectations · Pricing`.
 2. **Hero Stage & Focal Lead (<section.transition-colors> — `KLAD SYNDICATE KLAD SYNDICATE KLAD`)**:
    - DOM & Selectors: Landmark `<section class="transition-colors">` presenting display lead `KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE KLAD...` and copy excerpt *"We are a multidisciplinary design syndicate offering comprehensiv"* over `#e6e6e6` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e6e6e6` background with `#000000` headline `KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE KLAD...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#e6e6e6` background with `#000000` headline `KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE KLAD...`.
 3. **Primary Showcase & Content Grid (<section.duration-200> — `Klad Syndicate Klad Syndicate Klad`)**:
    - DOM & Selectors: Landmark `<section class="duration-200">` rendering section `Klad Syndicate Klad Syndicate Klad Syndicate Klad...` with copy *"We actively avoid repeating ourselves. Our process may seem chaot"*, asset references (`logo-still.31i0fmdt_igcj.svg`, `world.39sfmav5iqip_.svg`, `1myj9p5-zqliw.css`, `3wl6p7zgws1t-.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.duration-200> — `Klad Syndicate Klad Syndicate Klad`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 3px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
@@ -279,8 +302,42 @@ Scaffold `klad-design` (`Multidisciplinary Design Syndicate – KLAD`) with thes
 - **Selector `.button:after`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `klad-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.duration-200>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6793px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: KLAD SYNDICATE KLAD SYNDICA... (0%) -> Section @ 14% (14%) -> TEAM 专责小组 TEAM 专责小组 TEAM 专责... (29%) -> TEAM 专责小组 TEAM 专责小组 TEAM 专责... (43%) -> TEAM 专责小组 TEAM 专责小组 TEAM 专责... (58%) -> TEAM 专责小组 TEAM 专责小组 TEAM 专责... (72%) -> BOOK A CALL BOOK A CALL BOO... (87%) -> KLAD SYNDICATE KLAD SYNDICA... (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/work` (listing, SPA), `/pricing` (listing, direct), `/process` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `klad-design`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `14%` | Section @ 14% | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `29%` | TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM... | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `43%` | TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM... | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `58%` | TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM... | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `72%` | TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM... | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5100px` | `87%` | BOOK A CALL BOOK A CALL BOOK A CALL BOOK A CA... | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `5893px` | `100%` | KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDICATE... | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | KLAD SYNDICATE KLAD SYNDICATE KLAD SYNDIC... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1687px` | `50%` | TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 TEAM 专责小组 T... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3375px` | `100%` | BOOK A CALL BOOK A CALL BOOK A CALL BOOK... | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://klad.design/work` | DATALANE DATALANE DATALANE | `900px` | `SPA` (`3295ms`) | [subpage-01-work.webp](assets/subpage-01-work.webp) |
+| `2` | `listing` | `https://klad.design/pricing` | PRICING 価格設定 PRICING 価格設定 PRICING 価格設定 | `900px` | `direct` (`610ms`) | [subpage-02-pricing.webp](assets/subpage-02-pricing.webp) |
+| `3` | `other` | `https://klad.design/process` | PROCESS 过程 PROCESS 过程 PROCESS 过程 | `900px` | `direct` (`632ms`) | [subpage-03-process.webp](assets/subpage-03-process.webp) |
+

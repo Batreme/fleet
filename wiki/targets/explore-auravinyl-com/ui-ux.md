@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: explore-auravinyl-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `explore-auravinyl-com` (**Aura Vinyl Color Explorer**)
 - **Production URL**: [https://explore.auravinyl.com](https://explore.auravinyl.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#e3fc02`)
 - **Summary**: Explore over 500 colors across matte, satin, and gloss finishes from Aura Premium Vinyl. Find vinyl wrap ideas and inspiration.
-- **Total Clean CSS Variables Extracted**: `59` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `57` (curated live-grounded set below)
 
 ---
 
@@ -27,7 +27,7 @@ http_status: 200
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 30px`, `line-height: 27px`, `font-weight: 900`, `letter-spacing: -0.6px`); rule `.title` (`font-size: 18px`, `line-height: 1.1`, `letter-spacing: -.02em`, `font-weight: 800`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 28px`, `line-height: 25.2px`, `font-weight: 900`, `letter-spacing: -0.56px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `.body` (`font-size: 13px`, `line-height: 1.5`, `font-weight: 500`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 13px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`
 
 ---
 
@@ -75,12 +75,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.head> — `explore-auravinyl-com`)**:
-   - Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-perma="satin-diamond-white"`, `data-perma="gloss-paint-metallic-..."`, `data-perma="matte-green-black-shift"`, `data-perma="ultra-gloss-metallic-..."`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
-2. **Hero Stage & Focal Lead (<section.mbar> — `ARCTIC FIRE`)**:
-   - Landmark `<section class="mbar">` presenting display lead `ARCTIC FIRE` and copy excerpt *"Please enable javascript"* over `#161616` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.card> — `Arctic Fire`)**:
-   - Landmark `<section class="card">` rendering section `Arctic Fire` with copy *"Paint Metallic Diamond Green"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
-4. **Interactive Detail & Feature Matrix (<section.sec> — `Paint Metallic Diamond Green`)**:
-   - Landmark `<section class="sec">` framing `Paint Metallic Diamond Green` and `Metallic Gold Green Shift` (*"Metallic Gold Green Shift"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
+   - Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-target="explore-auravinyl-com"`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
+2. **Hero Stage & Focal Lead (<section.mbar> — `Arctic Fire`)**:
+   - Landmark `<section class="mbar">` presenting display lead `Arctic Fire` and copy excerpt *"No colors match. Clear the hue or collection, or try another word"* over `#161616` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.card> — `No colors match. Clear the hue or `)**:
+   - Landmark `<section class="card">` rendering section `No colors match. Clear the hue or collection, or` with copy *"Please enable javascript"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
+4. **Interactive Detail & Feature Matrix (<section.sec> — `Please enable javascript`)**:
+   - Landmark `<section class="sec">` framing `Please enable javascript` and `Show more / 741 left` (*"Show more / 741 left"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
 5. **Colophon & Global Directory Footer (<footer.shell> — `https://explore.auravinyl.com`)**:
-   - Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Shift"*, and `#262626` structural dividers.
+   - Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Nebula"*, and `#262626` structural dividers.

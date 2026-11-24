@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: chandebootcamp-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://chandebootcamp.com/"
 final_url: "https://www.chandebootcamp.com/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Chande Bootcamp 2026 by Mingg Patreon - Design Community in Vietnam
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `40`
+- **Recovered Scripts**: `160`
 - **Recovered Stylesheets**: `5`
 
 ---

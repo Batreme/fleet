@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: montarville-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `montarville-ca` (**montarville · Une approche globale et intégrée dans la gestion de vos pr...**)
 - **Production URL**: [https://montarville.ca/](https://montarville.ca/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#121212` canvas, `#fafafa` ink, `#d0112b` accent)
 - **Summary**: Un partenaire engagé. Une expertise reconnue. Une exécution maîtrisée. - Une approche globale et intégrée dans la gestion de vos projets...
 - **Total Clean CSS Variables Extracted**: `89` (curated live-grounded set below)
@@ -68,12 +68,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.c-header> — `montarville-ca`)**:
-   - Landmark `<header class="c-header">` (`1440x0px`) hosting `montarville · Une approche globale e` navigation (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), DOM attributes (`data-browser="Chrome"`, `data-browser-version="131.0.0.0"`, `data-platform="Apple"`, `data-os="Mac OS"`), and stylesheet rule `admin-bar-ff-maintenance-mode.--a... { background-color:8b0000 }`.
+   - Landmark `<header class="c-header">` (`1440x0px`) hosting `montarville · Une approche globale e` navigation (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), DOM attributes (`data-browser="Chrome"`, `data-browser-version="131.0.0.0"`, `data-platform="Apple"`, `data-os="Mac OS"`), and stylesheet rule `.ff-wp-tracking h3 { font-size:1.6rem }`.
 2. **Hero Stage & Focal Lead (<section.c-home-intro> — `Un partenaire engagé. Une expertis`)**:
-   - Landmark `<section class="c-home-intro">` presenting display lead `Un partenaire engagé. Une expertise reconnue. Une...` and copy excerpt *"Une approche globale et intégrée dans la gestion de vos projets d"* over `#121212` canvas and `#fafafa` ink.
+   - Landmark `<section class="c-home-intro">` presenting display lead `Un partenaire engagé. Une expertise reconnue. Une...` and copy excerpt *"Du début à la fin, nous avons le souci de livrer un projet à la h"* over `#121212` canvas and `#fafafa` ink.
 3. **Primary Showcase & Content Grid (<section.c-home-about> — `Un partenaire engagé . Une experti`)**:
-   - Landmark `<section class="c-home-about">` rendering section `Un partenaire engagé . Une expertise reconnue. Un...` with copy *"Que vous soyez au stade de la planification, à la recherche d’un "*, asset references (`orphisme_photographie_20210816-_2...`, `favicon.ico`, `FiraSans-Bold.woff2`, `GeneralSans-Variable.woff2`), and grid rule `.ff-wp-maintenance-page { color:00f!important }`.
+   - Landmark `<section class="c-home-about">` rendering section `Un partenaire engagé . Une expertise reconnue. Un...` with copy *"Une approche globale et intégrée dans la gestion de vos projets d"*, asset references (`orphisme_photographie_20210816-_2...`, `favicon.ico`, `FiraSans-Bold.woff2`, `GeneralSans-Variable.woff2`), and grid rule `.ff-wp-tracking h4 { font-size:1.3rem }`.
 4. **Interactive Detail & Feature Matrix (<section.c-home-target> — `Partenaire de vos réussites`)**:
-   - Landmark `<section class="c-home-target">` framing `Partenaire de vos réussites` and `Vous êtes...` (*"montarville . se distingue par sa capacité à offrir un service in"*) with `#d0112b` surface cards, `#d0112b` accents, and `.ff-wp-tracking h3 { font-size:1.6rem }`.
+   - Landmark `<section class="c-home-target">` framing `Partenaire de vos réussites` and `Vous êtes...` (*"Que vous soyez au stade de la planification, à la recherche d’un "*) with `#d0112b` surface cards, `#d0112b` accents, and `.ff-wp-tracking p { font-size:1rem;margin-top:1em }`.
 5. **Colophon & Global Directory Footer (<footer.c-footer> — `https://montarville.ca/`)**:
-   - Landmark `<footer class="c-footer">` anchoring `montarville · Une approche globa` footer links (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), copy *"Ce qui nous différencie, c’est aussi la qualité des relation"*, and `#090909` structural dividers.
+   - Landmark `<footer class="c-footer">` anchoring `montarville · Une approche globa` footer links (`À propos · Découvrir · Projets forfaitaires · Projets clés en main · Institutionnel`), copy *"montarville . se distingue par sa capacité à offrir un servi"*, and `#090909` structural dividers.

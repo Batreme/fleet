@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-glowingcheetah-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-glowingcheetah-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas, `#ffffff` ink, `#ffff00` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas
 
 > **Glowing Cheetah Studios · Father & Son Indie Game Studio** (https://www.glowingcheetah.com/) — Glowing Cheetah is a father and son indie studio making games, books and animation. Creators of Pigeon’s Mission, a pixel platformer on S...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Glowing Cheetah Studios · Father & Son Indie Game Studio** (`https://www.glowingcheetah.com/`). Glowing Cheetah is a father and son indie studio making games, books and animation. Creators of Pigeon’s Mission, a pixel platformer on S...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas, `#ffffff` ink, `#ffff00` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#131313` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ffff00` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=7659px` / doc `8559px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `4px` lateral canvas padding with `20px 32px` grid gap.
 - **Border Radius Scale**: `2px`, `3px`, `4px`, `50%`.
@@ -114,6 +119,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas
 - **Selector `html.gc-rv [data-rv]`**: `transition: opacity .8s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezie...` extracted from `www-glowingcheetah-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<nav.gc-rv>` and `<section.gc-skip>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `8559px`, deepest scrollY reached `7659px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `PROJECTS`)**: `color`: `rgb(255, 255, 255)` -> `rgb(213, 177, 35)`; `borderColor`: `rgb(255, 255, 255)` -> `rgb(213, 177, 35)` (`transition-duration: 0.12s`, `timing: cubic-bezier(0.2, 0.8, 0.2, 1)`).
+- **Hover Physics (`first_card` · `main section a[href]`)**: `color`: `rgb(255, 255, 255)` -> `rgb(213, 177, 35)`; `borderColor`: `rgb(255, 255, 255)` -> `rgb(213, 177, 35)` (`transition-duration: 0.12s`, `timing: cubic-bezier(0.2, 0.8, 0.2, 1)`).
 
 ---
 
@@ -172,6 +182,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#131313` canvas
    - Landmark `<section class="gc-intro__panel">` framing `An indie studio` and `Pigeon's Mission` (*"Fly into a world of excitement as Archie embarks on a mission to "*) with `#b00020` surface cards, `#ffff00` accents, and `.sc-host.sc-has-error { position:relative }`.
 5. **Colophon & Global Directory Footer (<footer.gc-sr> — `https://www.glowingcheetah.com/`)**:
    - Landmark `<footer class="gc-sr">` anchoring `Glowing Cheetah Studios · Father` footer links (`Projects · Team · Contact`), copy *"A sci-fi epic rooted in Afrofuturism about three interconnec"*, and `#2f2f2f` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `WE CRAFT STORIES` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `11%`): Active landmark `AN INDIE STUDIO` · sticky/fixed elements: `0`
+- **Step 03** (`y=2550px`, `33%`): Active landmark `#clip` · sticky/fixed elements: `0`
+- **Step 04** (`y=3400px`, `44%`): Active landmark `#team` · sticky/fixed elements: `0`
+- **Step 05** (`y=5100px`, `67%`): Active landmark `#team` · sticky/fixed elements: `0`
+- **Step 06** (`y=5950px`, `78%`): Active landmark `LOGAN SAUNDERS` · sticky/fixed elements: `0`
+- **Step 07** (`y=7650px`, `100%`): Active landmark `#contact` · sticky/fixed elements: `0`
+- **Step 08** (`y=7659px`, `100%`): Active landmark `WE'D LOVE TO HEAR FROM YOU!` · sticky/fixed elements: `0`
 
 ---
 
@@ -229,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--ember`)**: `#df7042` — grounded in `var(--ember)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `4px` lateral canvas padding with `20px 32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px 32px`)
@@ -254,7 +273,7 @@ Scaffold `www-glowingcheetah-com` (`Glowing Cheetah Studios · Father & Son Indi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.gc-rv> — `www-glowingcheetah-com`)` (`www-glowingcheetah-com`) adapts across `@media (max-width:900px)`, `@media (max-width:640px)`, `@media (min-width:641px) and (max-width:900px)`, `@media (max-width:1024px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.7,0,.2,1)` transitions and links `Projects · Team · Contact`.
 2. **Hero Stage & Focal Lead (<section.sc-host> — `WE CRAFT STORIES`)**:
    - DOM & Selectors: Landmark `<section class="sc-host">` presenting display lead `WE CRAFT STORIES` and copy excerpt *"We're a father and son creative studio bringing stories to life t"* over `#131313` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#131313` background with `#ffffff` headline `WE CRAFT STORIES`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#131313` background with `#ffffff` headline `WE CRAFT STORIES`.
 3. **Primary Showcase & Content Grid (<section.gc-skip> — `We craft stories`)**:
    - DOM & Selectors: Landmark `<section class="gc-skip">` rendering section `We craft stories` with copy *"We're a father and son creative studio bringing stories to life t"*, asset references (`clarity.js`, `ylwyja15eg`, `icon.svg`, `favicon-32.png`), and grid rule `before { animation:none; background:color-mix(in srgb,currentColor 8%,transparent) }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.gc-skip> — `We craft stories`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `4px` horizontal padding on mobile.
@@ -285,8 +304,36 @@ Scaffold `www-glowingcheetah-com` (`Glowing Cheetah Studios · Father & Son Indi
 - **Selector `html.gc-rv [data-rv]`**: `transition: opacity .8s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezie...` extracted from `www-glowingcheetah-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<nav.gc-rv>` and `<section.gc-skip>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `8559px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: WE CRAFT STORIES (0%) -> AN INDIE STUDIO (11%) -> #clip (33%) -> #team (44%) -> #team (67%) -> LOGAN SAUNDERS (78%) -> #contact (100%) -> WE'D LOVE TO HEAR FROM YOU! (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `color, borderColor` with `0.12s cubic-bezier(0.2, 0.8, 0.2, 1)`.
+- **Hover Micro-Interaction (`first_card`)**: Animate `color, borderColor` with `0.12s cubic-bezier(0.2, 0.8, 0.2, 1)`.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-glowingcheetah-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | WE CRAFT STORIES | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `11%` | AN INDIE STUDIO | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `33%` | #clip | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `44%` | #team | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `67%` | #team | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `78%` | LOGAN SAUNDERS | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `100%` | #contact | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `7659px` | `100%` | WE'D LOVE TO HEAR FROM YOU! | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | WE CRAFT STORIES | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3177px` | `50%` | BEGINNINGS. | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6355px` | `100%` | WE'D LOVE TO HEAR FROM YOU! | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

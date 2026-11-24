@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-butter-video"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.butter.video/"
 final_url: "https://www.butter.video/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Butter Video · Online Video Editor Engineered for Creativity
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `68`
+- **Recovered Scripts**: `79`
 - **Recovered Stylesheets**: `2`
 
 ---

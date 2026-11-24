@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: pankow-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `pankow-band` (**Die Pankow Zeitmaschine - Website der Berliner Rockband PANKOW**)
 - **Production URL**: [https://pankow.band](https://pankow.band)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#e3bd8e` canvas, `#000000` ink, `#ffff00` accent)
 - **Summary**: Die PANKOW Zeitmaschine ist die Band-Website der Rolling Stones des Ostens mit Diskografie, Videos, Chronik, Fangeschichten und Bildern a...
 - **Total Clean CSS Variables Extracted**: `31` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Poppins`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); rule `h1` (`font-size: clamp(2rem, 5vw, 3rem)`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 31.68px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 96px`, `font-weight: 400`, `letter-spacing: -6.4px`); rule `h2` (`font-size: clamp(1.2rem, 2.2vw, 2rem)`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 500`); rule `p` (`font-size: clamp(1.05rem, 2vw, 1.35rem)`, `line-height: 1.55`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 19.2px`, `line-height: normal`, `font-weight: 400`)
 

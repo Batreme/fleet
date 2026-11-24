@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: sibaldesign-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "sibaldesign-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#5fe0ff`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#
 
 > **Jeff Sibal — Visual & Digital Designer · SIBALDESIGN** (https://sibaldesign.com/) — Jeff Sibal, visual and digital designer in Southern California. Twenty-plus years across web, UI/UX, email, video and photography. I desi...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Jeff Sibal — Visual & Digital Designer · SIBALDESIGN** (`https://sibaldesign.com/`). Jeff Sibal, visual and digital designer in Southern California. Twenty-plus years across web, UI/UX, email, video and photography. I desi...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#5fe0ff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080c15` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#eaf1ff` primary typography and `#5fe0ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Chakra Petch` for display copy (`A VISUAL & DIGITAL DESIGNER`) with `Chakra Petch` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Chakra Petch` across display (`A VISUAL & DIGITAL DESIGNER`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1352px` container bounds (`gap: 34px`, padding `44px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `10853px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1352px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `44px` lateral canvas padding with `34px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
@@ -115,6 +120,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#
 - **Selector `.enter__rule`**: `transition: width .5s var(--ease),background .3s` extracted from `sibaldesign-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sec>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `10853px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -173,6 +181,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#
    - Landmark `<section class="sec hz">` framing `Agency Project Board` and `Credit Union Campaigns` (*"Twenty-plus years across web, UI/UX, email marketing, video and p"*) with `#0d1320` surface cards, `#5fe0ff` accents, and `button { font:inherit;color:inherit;background:none;border:0;cursor:pointer }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://sibaldesign.com/`)**:
    - Landmark `<footer class="foot">` anchoring `Jeff Sibal — Visual & Digital De` footer links (`PROFILE · PROJECTS · EXPERIENCE · PHOTOS · EQUIPMENT`), copy *"SOUTHERN CALIFORNIA"*, and `#232e45` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#splash` · sticky/fixed elements: `2`
 
 ---
 
@@ -189,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#080c15` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#eaf1ff`, **Accent / Highlight**: `#5fe0ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#080c15` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#eaf1ff` primary typography and `#5fe0ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Chakra Petch` for display copy (`A VISUAL & DIGITAL DESIGNER`) with `Chakra Petch` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Chakra Petch` across display (`A VISUAL & DIGITAL DESIGNER`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1352px` container bounds (`gap: 34px`, padding `44px`) with `cubic-bezier(.16,1,.3,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--flash`)**: `#7ce9ff` — grounded in `var(--flash)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1352px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `44px` lateral canvas padding with `34px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1352px`, `gap: 34px`)
@@ -256,7 +266,7 @@ Scaffold `sibaldesign-com` (`Jeff Sibal — Visual & Digital Designer · SIBALDE
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `sibaldesign-com`)` (`sibaldesign-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-width:900px)`, `@media (max-width:860px)`, `@media (max-width:560px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.5,.05,.25,1)` transitions and links `PROFILE · PROJECTS · EXPERIENCE · PHOTOS · EQUIPMENT`.
 2. **Hero Stage & Focal Lead (<section.hero> — `A VISUAL & DIGITAL DESIGNER`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `A VISUAL & DIGITAL DESIGNER` and copy excerpt *"COPYRIGHT 2026 · CREATED BY JEFF SIBAL"* over `#080c15` canvas and `#eaf1ff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#080c15` background with `#eaf1ff` headline `A VISUAL & DIGITAL DESIGNER`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#080c15` background with `#eaf1ff` headline `A VISUAL & DIGITAL DESIGNER`.
 3. **Primary Showcase & Content Grid (<section.sec> — `Video Testimonial Service`)**:
    - DOM & Selectors: Landmark `<section class="sec">` rendering section `Video Testimonial Service` with copy *"« JEFF.OF.ALL.TRADES"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `body { height:100% }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.sec> — `Video Testimonial Service`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1352px`, `gap: 34px`) on desktop and Single-column vertical stack at `390px` viewport width with `44px` horizontal padding on mobile.
@@ -287,8 +297,25 @@ Scaffold `sibaldesign-com` (`Jeff Sibal — Visual & Digital Designer · SIBALDE
 - **Selector `.enter__rule`**: `transition: width .5s var(--ease),background .3s` extracted from `sibaldesign-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.sec>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `10853px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: #splash (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `sibaldesign-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #splash | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | #splash | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

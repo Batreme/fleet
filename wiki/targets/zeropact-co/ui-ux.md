@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: zeropact-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `zeropact-co` (**ZeroPact · LCA, Product Carbon Footprint, DPP, GLEC & EmpCo**)
 - **Production URL**: [https://zeropact.co](https://zeropact.co)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#4d67fc`)
 - **Summary**: LCA, Product Carbon Footprint, Digital Product Passport (DPP), GLEC and EmpCo intelligence and solutions for PIM and PXM companies servin...
 - **Total Clean CSS Variables Extracted**: `148` (curated live-grounded set below)
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.inset-x-0> — `zeropact-co`)**:
-   - Landmark `<header class="inset-x-0 top-0">` (`1440x73px`) hosting `ZeroPact · LCA, Product Carbon Footp` navigation (`Explore · Intelligence ▾ · Product · Mobility · Platform & APIs`), DOM attributes (`data-precedence="default"`, `data-precedence="default"`, `data-artifact-kind="dwl_content_hash"`, `data-artifact-id="5f6a974ab5dd754cd3498..."`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="inset-x-0 top-0">` (`1440x73px`) hosting `ZeroPact · LCA, Product Carbon Footp` navigation (`Explore · Intelligence ▾ · Product · Mobility · Platform & APIs`), DOM attributes (`data-precedence="default"`, `data-precedence="default"`, `data-artifact-kind="dwl_content_hash"`, `data-artifact-id="ab2d1433faa58eadc83ca..."`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.climate-hero> — `ZeroPact.`)**:
    - Landmark `<section class="climate-hero bg-paper">` presenting display lead `ZeroPact.` and copy excerpt *"DEEPTECH / CLIMATE DATA INTELLIGENCE"* over `#ffffff` canvas and `#0000ff` ink.
 3. **Primary Showcase & Content Grid (<section.border-line> — `ZeroPact .`)**:

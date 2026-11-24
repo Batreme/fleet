@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: peaches-world"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://peaches.world/"
 final_url: "https://peaches.world/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `1`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `7`
+- **Recovered Stylesheets**: `4`
 
 ---
 

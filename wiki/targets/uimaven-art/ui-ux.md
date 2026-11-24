@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: uimaven-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `uimaven-art` (**uimaven.art**)
 - **Production URL**: [https://uimaven.art](https://uimaven.art)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f3670e` / `#fe0000`)
 - **Summary**: UI/UX design portfolio of Leila Abbassova.
 - **Total Clean CSS Variables Extracted**: `101` (curated live-grounded set below)

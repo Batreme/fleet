@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-villiers-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.villiers.ai/"
 final_url: "https://www.villiers.ai/"
-status: analyzed
-http_status: 200
-capture_tier: tier1_fast
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Desktop session exceeded 178s sub-budget)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.villiers.ai/](https://www.villiers.ai/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Private Jet Charter and Empty Leg Flights · Villiers
-- **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `52`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Desktop session exceeded 178s sub-budget)
+- **Page Title**: www-villiers-ai
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `0`
 - **Recovered Stylesheets**: `6`
 
 ---

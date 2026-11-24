@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: productionportugal-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "productionportugal-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0063`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Production Portugal: Your trusted film production company in Portugal an...** (https://productionportugal.com/) — Dive into cinematic excellence with expert location scouting. Explore possibilities with Production Portugal - Your Trusted film producti...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Production Portugal: Your trusted film production company in Portugal an...** (`https://productionportugal.com/`). Dive into cinematic excellence with expert location scouting. Explore possibilities with Production Portugal - Your Trusted film producti...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0063`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff0063` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Neue Haas Grotesk Display Pro` for display copy (`Production Portugal: Your trusted fi`) with `Neue Haas Grotesk Display Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Neue Haas Grotesk Display Pro` across display (`Production Portugal: Your trusted fi`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `10px`) with `cubic-bezier(0.4,0,0.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6900px` / doc `7800px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `2px`.
@@ -97,7 +102,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 36px`, `font-weight: 900`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 96px`, `line-height: 81.6px`, `font-weight: 700`, `letter-spacing: -2.88px`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `body` (`font-size: 14px`, `line-height: 20px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `small` (`font-size: 80%`).
 
@@ -114,6 +119,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `productionportugal-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.home__about>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7800px`, deepest scrollY reached `6900px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Hover Physics (`first_card` · `recent commercials [ 01 ] PORSCHE...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/work`) measured as `direct` in `414ms`.
 
 ---
 
@@ -172,6 +182,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<section class="home__brands">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Xfinity - We Love To Update"*) with `#ff0080` surface cards, `#ff0063` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://productionportugal.com/`)**:
    - Landmark `<footer class="footer">` anchoring `Production Portugal: Your truste` footer links (`[ WORK ] · [ Commercials ] · [ Long Format ] · [ DIRECTORS ] · [ CLIENTS ]`), copy *"Volkswagen Abt E-Line"*, and `#3898ec` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `12%`): Active landmark `Section @ 12%` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `25%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+- **Step 04** (`y=3400px`, `49%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+- **Step 05** (`y=4250px`, `62%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+- **Step 06** (`y=5950px`, `86%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+- **Step 07** (`y=6800px`, `99%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+- **Step 08** (`y=6900px`, `100%`): Active landmark `®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTION SE...` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/work`)**: `https://productionportugal.com/work` — H1: `OUR WORK`, scrollHeight `6038px`, transition `direct` (`414ms`)
+- **About Route (`/about-us`)**: `https://productionportugal.com/about-us` — H1: `PSP PRODUCTION IS A SENIOR- LED PRODUCTION SERVIC...`, scrollHeight `30521px`, transition `direct` (`1446ms`)
+- **Other Route (`/long-format`)**: `https://productionportugal.com/long-format` — H1: `Long Format Portfolio · Leading Film and TV Produ...`, scrollHeight `900px`, transition `direct` (`898ms`)
 
 ---
 
@@ -188,7 +212,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff0063`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff0063` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Neue Haas Grotesk Display Pro` for display copy (`Production Portugal: Your trusted fi`) with `Neue Haas Grotesk Display Pro` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Neue Haas Grotesk Display Pro` across display (`Production Portugal: Your trusted fi`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `10px`) with `cubic-bezier(0.4,0,0.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -229,8 +253,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--vignette`)**: `#590224` — grounded in `var(--vignette)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `10px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -243,7 +267,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Neue Haas Grotesk Display Pro`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 36px`, `font-weight: 900`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 96px`, `line-height: 81.6px`, `font-weight: 700`, `letter-spacing: -2.88px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 11.52px`, `font-weight: 700`, `letter-spacing: -0.36px`); rule `small` (`font-size: 80%`)
 
@@ -254,7 +278,7 @@ Scaffold `productionportugal-com` (`Production Portugal: Your trusted film produ
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `productionportugal-com`)` (`productionportugal-com`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.22,1,0.36,1)`, `cubic-bezier(0.16,1,0.3,1)` transitions and links `[ WORK ] · [ Commercials ] · [ Long Format ] · [ DIRECTORS ] · [ CLIENTS ]`.
 2. **Hero Stage & Focal Lead (<section.home__hero> — `Production Portugal: Your trusted `)**:
    - DOM & Selectors: Landmark `<section class="home__hero">` presenting display lead `Production Portugal: Your trusted film productio` and copy excerpt *"At PSP Production, every project is guided by senior executive pr"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `Production Portugal: Your trusted film productio`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#000000` background with `#ffffff` headline `Production Portugal: Your trusted film productio`.
 3. **Primary Showcase & Content Grid (<section.home__about> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<section class="home__about">` rendering section `Featured Work & Interactive Showcase` with copy *"Hinge Can't Believe We Met on Hinge"*, asset references (`cdn.prod.website-files.com`, `psp-6eb01f.webflow.shared.c80d7d9...`, `6a68884496439a79375f31d1_PSP-Logo...`, `6a688844292fe50b266154c7_PSP-Logo...`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home__about> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
@@ -285,8 +309,42 @@ Scaffold `productionportugal-com` (`Production Portugal: Your trusted film produ
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `productionportugal-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.home__about>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7800px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%) -> Section @ 12% (12%) -> ®WE’RE A LEADING PREMIUM FU... (25%) -> ®WE’RE A LEADING PREMIUM FU... (49%) -> ®WE’RE A LEADING PREMIUM FU... (62%) -> ®WE’RE A LEADING PREMIUM FU... (86%) -> ®WE’RE A LEADING PREMIUM FU... (99%) -> ®WE’RE A LEADING PREMIUM FU... (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/work` (listing, direct), `/about-us` (about, direct), `/long-format` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `productionportugal-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `12%` | Section @ 12% | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `25%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `49%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `62%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `86%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `6800px` | `99%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6900px` | `100%` | ®WE’RE A LEADING PREMIUM FULL-SCALE PRODUCTIO... | `3` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | WE BELIEVE HAPPINESS—OURS AND YOURS—COMES... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | WE BELIEVE HAPPINESS—OURS AND YOURS—COMES... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `0px` | `100%` | WE BELIEVE HAPPINESS—OURS AND YOURS—COMES... | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://productionportugal.com/work` | OUR WORK | `6038px` | `direct` (`414ms`) | [subpage-01-work.webp](assets/subpage-01-work.webp) |
+| `2` | `about` | `https://productionportugal.com/about-us` | PSP PRODUCTION IS A SENIOR- LED PRODU... | `30521px` | `direct` (`1446ms`) | [subpage-02-about-us.webp](assets/subpage-02-about-us.webp) |
+| `3` | `other` | `https://productionportugal.com/long-format` | Long Format Portfolio · Leading Film... | `900px` | `direct` (`898ms`) | [subpage-03-long-format.webp](assets/subpage-03-long-format.webp) |
+

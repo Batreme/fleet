@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: tridentstars-maserati-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tridentstars.maserati.com/en/"
 final_url: "https://tridentstars.maserati.com/en/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Discover Maserati’s Trident Constellation in the Sky
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `42`
-- **Recovered Stylesheets**: `9`
+- **Recovered Scripts**: `66`
+- **Recovered Stylesheets**: `18`
 
 ---
 

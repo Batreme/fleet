@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: 100yearsmonet-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "100yearsmonet-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#fbf3c6`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Monet 100 — A century without Claude Monet · 3D gallery** (https://100yearsmonet.com) — A hundred years after Claude Monet’s death: walk on water through his paintings into the room of Water Lilies. An immersive 3D tribute wi...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Monet 100 — A century without Claude Monet · 3D gallery** (`https://100yearsmonet.com`). A hundred years after Claude Monet’s death: walk on water through his paintings into the room of Water Lilies. An immersive 3D tribute wi...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#fbf3c6`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#fbf3c6` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`100 years without Monet`) with `Quelia` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`100 years without Monet`) with `Quelia`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(.3,.6,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `18000px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `40px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `50%`, `2px`, `3px`, `1px`.
@@ -95,7 +100,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: 49.6px`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54.72px`, `line-height: 55.8144px`, `font-weight: 300`); rule `h2` (`letter-spacing: -.01em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60.48px`, `line-height: 62.8992px`, `font-weight: 400`); rule `h2` (`letter-spacing: -.01em`).
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 11.5px`, `line-height: 17.25px`, `font-weight: 400`); rule `small` (`letter-spacing: .12em`).
 
@@ -112,6 +117,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `.mui .btn`**: `transition: background .25s,color .25s,border-color .25s` extracted from `100yearsmonet-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.3,.6,.2,1)`)**: Governs interactive state transitions across `<header.mui-hud>` and `<article.mui-card>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `18000px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -135,7 +143,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ ---------------------------------------------------------------------- │
 │ | DETAIL MODULE (<article.mui-card:nth(2)>) — This experience needs  | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.mui-garden> ) | https://100yearsmonet.com            │
+│ [ FOOTER (<footer.mui>        ) | https://100yearsmonet.com            │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -155,7 +163,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<article.mui-card:nth(2)) — 1-Col (This experience ne) │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.mui-garden> ) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.mui>        ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -168,8 +176,10 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<article class="mui-card">` rendering section `100 Years without Monet` with copy *"Claude Monet died at Giverny on 5 December 1926. A hundred years "*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `quelia.woff2`), and grid rule `canvas { position:fixed;inset:0;width:100%;height:100% }`.
 4. **Interactive Detail & Feature Matrix (<article.mui-card:nth(2)> — `Claude Monet died at Giverny on 5 `)**:
    - Landmark `<article class="mui-card">` framing `Claude Monet died at Giverny on 5 December 1926.` and `This experience needs JavaScript and WebGL.` (*"This experience needs JavaScript and WebGL."*) with `#141006` surface cards, `#fbf3c6` accents, and `journey { height:2000vh;pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.mui-garden> — `https://100yearsmonet.com`)**:
-   - Landmark `<footer class="mui-garden">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.mui> — `https://100yearsmonet.com`)**:
+   - Landmark `<footer class="mui">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `“I perhaps owe having become a painter to flowers.”` · sticky/fixed elements: `7`
 
 ---
 
@@ -186,7 +196,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#fbf3c6`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#fbf3c6` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`100 years without Monet`) with `Quelia` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`100 years without Monet`) with `Quelia`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(.3,.6,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +235,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--mui-night`)**: `#15141f` — grounded in `var(--mui-night)` in stylesheet
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `40px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -239,7 +249,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Quelia`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: 49.6px`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 54.72px`, `line-height: 55.8144px`, `font-weight: 300`); rule `h2` (`letter-spacing: -.01em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 60.48px`, `line-height: 62.8992px`, `font-weight: 400`); rule `h2` (`letter-spacing: -.01em`)
 - **Body Copy Rule**: live computed `body` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 11.5px`, `line-height: 17.25px`, `font-weight: 400`); rule `small` (`letter-spacing: .12em`)
 
@@ -250,16 +260,16 @@ Scaffold `100yearsmonet-com` (`Monet 100 — A century without Claude Monet · 3
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.mui-hud> — `100yearsmonet-com`)` (`100yearsmonet-com`) adapts across `@media (max-width:600px)`, `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:700px)` with `cubic-bezier(.3,.6,.2,1)`, `cubic-bezier(.5,0,.2,1)`, `cubic-bezier(.2,.7,.2,1)` transitions and links `Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`.
 2. **Hero Stage & Focal Lead (<section.mui-hero> — `100 years without Monet`)**:
    - DOM & Selectors: Landmark `<section class="mui-hero">` presenting display lead `100 years without Monet` and copy excerpt *"He died at Giverny on 5 December 1926. A century later, walk on t"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `100 years without Monet`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#000000` background with `#ffffff` headline `100 years without Monet`.
 3. **Primary Showcase & Content Grid (<article.mui-card> — `100 Years without Monet`)**:
    - DOM & Selectors: Landmark `<article class="mui-card">` rendering section `100 Years without Monet` with copy *"Claude Monet died at Giverny on 5 December 1926. A hundred years "*, asset references (`favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`, `quelia.woff2`), and grid rule `canvas { position:fixed;inset:0;width:100%;height:100% }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.mui-card> — `100 Years without Monet`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `40px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.mui-card:nth(2)> — `Claude Monet died at Giverny on 5 `)**:
    - DOM & Selectors: Landmark `<article class="mui-card">` framing `Claude Monet died at Giverny on 5 December 1926.` and `This experience needs JavaScript and WebGL.` (*"This experience needs JavaScript and WebGL."*) with `#141006` surface cards, `#fbf3c6` accents, and `journey { height:2000vh;pointer-events:none }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.mui-card:nth(2)> — `Claude Monet died at Giverny on 5 `)` uses `50%`, `2px`, `3px`, `1px` radii, `#fbf3c6` highlights, and assets (favicon-32.png, apple-touch-icon.png, site.webmanifest).
-5. **Colophon & Global Directory Footer (<footer.mui-garden> — `https://100yearsmonet.com`)**:
-   - DOM & Selectors: Landmark `<footer class="mui-garden">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mui-garden> — `https://100yearsmonet.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `40px` lateral canvas padding with `16px` grid gap and attributes (data-title-stay, data-enter="sound", data-v="Dawn").
+5. **Colophon & Global Directory Footer (<footer.mui> — `https://100yearsmonet.com`)**:
+   - DOM & Selectors: Landmark `<footer class="mui">` anchoring `Monet 100 — A century without Cl` footer links (`Musée de l’Orangerie · Musée d’Orsay · The Met · MFA Boston · Museum Barberini`), copy *"Claude Monet 1926 — 2026"*, and `#8c8c8c` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mui> — `https://100yearsmonet.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `40px` lateral canvas padding with `16px` grid gap and attributes (data-title-stay, data-enter="sound", data-v="Dawn").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"He died at Giverny on 5 December 1926. A century later, walk on the water through..."*
@@ -281,8 +291,27 @@ Scaffold `100yearsmonet-com` (`Monet 100 — A century without Claude Monet · 3
 - **Selector `.mui .btn`**: `transition: background .25s,color .25s,border-color .25s` extracted from `100yearsmonet-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.3,.6,.2,1)`)**: Governs interactive state transitions across `<header.mui-hud>` and `<article.mui-card>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `18000px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: “I perhaps owe having becom... (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `100yearsmonet-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | “I perhaps owe having become a painter to flo... | `7` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | “I perhaps owe having become a painter to... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | “I perhaps owe having become a painter to... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `0px` | `100%` | “I perhaps owe having become a painter to... | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-photiu-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-photiu-ai"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#9ca3af` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Remove Background, Upscale & Erase Objects – Photiu.ai** (https://www.photiu.ai) — Discover Photiu.ai's AI tools: remove backgrounds, upscale images, and erase unwanted objects. Achieve stunning photo edits online quickl...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Remove Background, Upscale & Erase Objects – Photiu.ai** (`https://www.photiu.ai`). Discover Photiu.ai's AI tools: remove backgrounds, upscale images, and erase unwanted objects. Achieve stunning photo edits online quickl...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#9ca3af` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#9ca3af` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Segoe UI` for display copy (`Remove background`) with `Segoe UI` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Segoe UI` across display (`Remove background`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 1rem`, padding `.25rem`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=5311px` / doc `6211px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `1200px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `.25rem` lateral canvas padding with `1rem` grid gap.
 - **Border Radius Scale**: `.5rem`, `8px`, `.25rem`, `1rem`.
@@ -94,7 +99,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 48px`, `line-height: 48px`, `font-weight: 700`); rule `h1` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 700`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 30px`, `line-height: 50px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 42px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`); rule `p` (`line-height: 1.625`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`).
 
@@ -111,6 +116,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.transition-\[color\2c background...`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-photiu-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.flex-1>` and `<section.w-full:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.w-full>` and `<section.w-full:nth(2)>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6211px`, deepest scrollY reached `5311px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe**: Tested trigger `more` (diff `1.3`, below state-capture threshold).
+- **Hover Physics (`primary_cta` · `AI Photo Editor`)**: `color`: `rgb(0, 0, 0)` -> `rgb(74, 74, 244)`; `backgroundColor`: `rgba(0, 0, 0, 0)` -> `rgb(234, 234, 255)` (`transition-duration: 0.15s`, `timing: cubic-bezier(0.4, 0, 0.2, 1)`).
+- **Interactive Control Probe (`accordion` · `Can Photiu.ai create a transparen...`)**: Triggered visual diff `6.835` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/pricing`) measured as `MPA` in `1352ms`.
 
 ---
 
@@ -169,6 +181,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="w-full">` framing `HD Background Removal` and `Erase Freely, Cut Perfectly` (*"Resize images to ideal dimensions"*) with `#eeeeff` surface cards, `#9ca3af` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.flex> — `https://www.photiu.ai`)**:
    - Landmark `<footer class="flex w-full">` anchoring `Remove Background, Upscale & Era` footer links (`AI Photo Editor · Image Generator · Image Upscale · Remove Background · Magic Eraser`), copy *"Make your images smaller"*, and `#c9c9fc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Remove background` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `16%`): Active landmark `Remove backgrounds instantly with just one click!` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `32%`): Active landmark `All-in-One AI Photo Editing Tools Online` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `48%`): Active landmark `Everything You Need to Upgrade Your Images` · sticky/fixed elements: `1`
+- **Step 05** (`y=3400px`, `64%`): Active landmark `AI Tools for Creators, Sellers, and Businesses` · sticky/fixed elements: `1`
+- **Step 06** (`y=4250px`, `80%`): Active landmark `Frequently Asked Questions:` · sticky/fixed elements: `1`
+- **Step 07** (`y=5100px`, `96%`): Active landmark `Do I need any technical skills to use Photiu.ai?` · sticky/fixed elements: `1`
+- **Step 08** (`y=5311px`, `100%`): Active landmark `Why should I use this online background eraser?` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/pricing`)**: `https://www.photiu.ai/pricing` — H1: `Choose Your Plan`, scrollHeight `1882px`, transition `MPA` (`1352ms`)
+- **Detail Route (`/tools/image-resizer`)**: `https://www.photiu.ai/tools/image-resizer` — H1: `Resize image online Free`, scrollHeight `4378px`, transition `direct` (`1132ms`)
+- **Detail Route (`/tools/compress-image`)**: `https://www.photiu.ai/tools/compress-image` — H1: `Compress Image`, scrollHeight `3108px`, transition `direct` (`1258ms`)
 
 ---
 
@@ -185,7 +211,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#9ca3af`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#9ca3af` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Segoe UI` for display copy (`Remove background`) with `Segoe UI` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Segoe UI` across display (`Remove background`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1200px` container bounds (`gap: 1rem`, padding `.25rem`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -223,8 +249,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--termly-theme-button-background-color`)**: `#003afa` — grounded in `var(--termly-theme-button-background-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `1200px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `.25rem` lateral canvas padding with `1rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 1rem`)
@@ -237,7 +263,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Segoe UI`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: live computed `h1` (`font-size: 48px`, `line-height: 48px`, `font-weight: 700`); rule `h1` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 700`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 30px`, `line-height: 50px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 36px`, `line-height: 42px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`); rule `p` (`line-height: 1.625`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`)
 
@@ -248,7 +274,7 @@ Scaffold `www-photiu-ai` (`Remove Background, Upscale & Erase Objects – Photiu
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.flex-1> — `www-photiu-ai`)` (`www-photiu-ai`) adapts across `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0,0,.2,1)` transitions and links `AI Photo Editor · Image Generator · Image Upscale · Remove Background · Magic Eraser`.
 2. **Hero Stage & Focal Lead (<section.w-full> — `Remove background`)**:
    - DOM & Selectors: Landmark `<section class="w-full">` presenting display lead `Remove background` and copy excerpt *"Photiu.ai's advanced AI technology ensures precise background rem"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Remove background`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×1744px` mobile) sets `#ffffff` background with `#000000` headline `Remove background`.
 3. **Primary Showcase & Content Grid (<section.w-full:nth(2)> — `Remove backgrounds instantly with `)**:
    - DOM & Selectors: Landmark `<section class="w-full">` rendering section `Remove backgrounds instantly with just one click!` with copy *"AI Photo Editor Image Generator Image Upscale Remove Background M"*, asset references (`gtm.js`, `eTI4g9fAtUixpHto8YooHCfeUPdUHEz0P...`, `3b524ee0-b2d0-46e4-acf0-3df4c2d8edb5`, `www.googletagmanager.com`), and grid rule `body { margin:0;line-height:inherit }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.w-full:nth(2)> — `Remove backgrounds instantly with `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1200px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.25rem` horizontal padding on mobile.
@@ -279,8 +305,47 @@ Scaffold `www-photiu-ai` (`Remove Background, Upscale & Erase Objects – Photiu
 - **Selector `.transition-\[color\2c background...`**: `transition: cubic-bezier(.4,0,.2,1)` extracted from `www-photiu-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.flex-1>` and `<section.w-full:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.w-full>` and `<section.w-full:nth(2)>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6211px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Remove background (0%) -> Remove backgrounds instantl... (16%) -> All-in-One AI Photo Editing... (32%) -> Everything You Need to Upgr... (48%) -> AI Tools for Creators, Sell... (64%) -> Frequently Asked Questions: (80%) -> Do I need any technical ski... (96%) -> Why should I use this onlin... (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `color, backgroundColor` with `0.15s cubic-bezier(0.4, 0, 0.2, 1)`.
+- **Multi-Page Routes**: Scaffold internal routes `/pricing` (listing, MPA), `/tools/image-resizer` (detail, direct), `/tools/compress-image` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-photiu-ai`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Remove background | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `16%` | Remove backgrounds instantly with just one cl... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `32%` | All-in-One AI Photo Editing Tools Online | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `48%` | Everything You Need to Upgrade Your Images | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `64%` | AI Tools for Creators, Sellers, and Businesses | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `80%` | Frequently Asked Questions: | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5100px` | `96%` | Do I need any technical skills to use Photiu.ai? | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `5311px` | `100%` | Why should I use this online background eraser? | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Remove background | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7758px` | `100%` | Footer | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Can Photiu.ai create a transp...`, diff `6.835`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.photiu.ai/pricing` | Choose Your Plan | `1882px` | `MPA` (`1352ms`) | [subpage-01-pricing.webp](assets/subpage-01-pricing.webp) |
+| `2` | `detail` | `https://www.photiu.ai/tools/image-resizer` | Resize image online Free | `4378px` | `direct` (`1132ms`) | [subpage-02-tools-image-resizer.webp](assets/subpage-02-tools-image-resizer.webp) |
+| `3` | `detail` | `https://www.photiu.ai/tools/compress-image` | Compress Image | `3108px` | `direct` (`1258ms`) | [subpage-03-tools-compress-image.webp](assets/subpage-03-tools-compress-image.webp) |
+

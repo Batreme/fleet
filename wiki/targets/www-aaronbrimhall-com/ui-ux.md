@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-aaronbrimhall-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-aaronbrimhall-com` (**Aaron Brimhall · Action & Automotive Photographer**)
 - **Production URL**: [https://www.aaronbrimhall.com/](https://www.aaronbrimhall.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×2484px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#fe019a`)
 - **Summary**: Action and automotive photography by Aaron Brimhall: dynamic compositions, high-octane shoots and globe-trotting adventures. Fun fuels cr...
 - **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `Inter Variablefont Opsz Wght`
 - **Body Font Stack**: `IBM Plex Mono`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
-- **Hero Display (`H1`)**: observed font-size ladder: `100px`, `38px`, `14px`, `11px`, `2em`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100px`, `line-height: 95px`, `font-weight: 200`, `letter-spacing: 1px`)
+- **Hero Display (`H1`)**: observed font-size ladder: `144px`, `38px`, `14px`, `11px`, `2em`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 200`, `letter-spacing: -1.44px`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `.paragraph` (`letter-spacing: .01em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
 
@@ -35,7 +35,7 @@ http_status: 200
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#101010` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#222222` | `.w-slider-nav-invert>div.w-active { background-color: #222222 }` |
 | **Interactive Accent / Highlight** | `#fe019a` | `.ab-ab-cta-arrow { color: #fe019a }` |
 | **Secondary / Muted Copy** | `#333333` | live computed `nav` `color` (`computed_styles.json`) |
@@ -74,5 +74,5 @@ http_status: 200
    - Landmark `<section class="hero-section_wrapper">` rendering section `Featured Work & Interactive Showcase` with copy *"SIGNAL LOST — TRY AGAIN"*, asset references (`cdn.prod.website-files.com`, `aaron-brimhall-site-09-25-f01e7c4...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.gallery_section> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="gallery_section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"I M A G E G E N E R A T O R →"*) with `#222222` surface cards, `#fe019a` accents, and `video { vertical-align:baseline;display:inline-block }`.
-5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n6-active> — `https://www.aaronbrimhall.com/`)**:
-   - Landmark `<footer class="wf-ibmplexmono-n6-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n7-active> — `https://www.aaronbrimhall.com/`)**:
+   - Landmark `<footer class="wf-ibmplexmono-n7-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.

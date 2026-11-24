@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: key-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://key.co/"
 final_url: "https://key.co/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://key.co/](https://key.co/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: KEY.co · Luxury Vacation Home Rentals + Concierge Services
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `71`
-- **Recovered Stylesheets**: `3`
+- **Identified Frameworks**: Tailwind CSS
+- **Recovered Scripts**: `284`
+- **Recovered Stylesheets**: `26`
 
 ---
 

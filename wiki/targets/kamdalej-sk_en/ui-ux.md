@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: kamdalej-sk_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `kamdalej-sk_en` (**Mastercard · Where Next**)
 - **Production URL**: [https://kamdalej.sk/en](https://kamdalej.sk/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)
 - **Summary**: A digital tool helping people in Slovakia find better career opportunities by matching their skills with real labour market needs
-- **Total Clean CSS Variables Extracted**: `149` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `168` (curated live-grounded set below)
 
 ---
 

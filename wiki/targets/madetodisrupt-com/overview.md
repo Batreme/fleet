@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: madetodisrupt-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://madetodisrupt.com"
 final_url: "https://madetodisrupt.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Disrupt · Creative Brand Experience Agency
 - **Identified Frameworks**: Framer, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `36`
-- **Recovered Stylesheets**: `24`
+- **Recovered Scripts**: `154`
+- **Recovered Stylesheets**: `44`
 
 ---
 

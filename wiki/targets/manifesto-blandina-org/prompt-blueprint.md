@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: manifesto-blandina-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "manifesto-blandina-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native+wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#ffa500`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#f
 
 > **Connect, Create, Change: Manifesto of Blandina** (https://manifesto.blandina.org/) — Manifesto of Blandina: connect with yourself, create the life you want, change the world. Yoga, mindfulness and meditation in Padua, the...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Connect, Create, Change: Manifesto of Blandina** (`https://manifesto.blandina.org/`). Manifesto of Blandina: connect with yourself, create the life you want, change the world. Yoga, mindfulness and meditation in Padua, the...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#ffa500`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#edece8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1d150c` primary typography and `#ffa500` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Host Grotesk` for display copy (`Blandina`) with `Host Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Host Grotesk` across display (`Blandina`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1640px` container bounds (`gap: 8px`, padding `7px`) with `cubic-bezier(.55,.06,.68,.19)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `23768px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1640px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `7px` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `50%`, `5px`, `2px`, `14px`.
@@ -115,6 +120,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#f
 - **Selector `.fade-in-leave-active`**: `transition: opacity var(--timing-default) var(--easing-in)` extracted from `manifesto-blandina-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.55,.06,.68,.19)`)**: Governs interactive state transitions across `<header.inspirational-gallery__head>` and `<section.the-intro>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native+wheel` (max document height `23768px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
 
 ---
 
@@ -133,7 +141,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#f
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.the-intro>) max-w: 1640px                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | E v e r y t h i n g b e g i  |  | C o n n e c t w i t h y o u  | | │
+│ | | Everything begins within.    |  | Connect with yourself        | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
 │ | DETAIL MODULE (<section.immersive-video>) — Create the life you w  | │
@@ -153,8 +161,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#f
 │ | H1: Blandina                                                       | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<section.the-intro>) — 1-Col Stack                 | │
-│ | [ Item 1: E v e r y t h i n g b e g i n s w i t h i n .          ] | │
-│ | [ Item 2: C o n n e c t w i t h y o u r s e l f                  ] | │
+│ | [ Item 1: Everything begins within.                              ] | │
+│ | [ Item 2: Connect with yourself                                  ] | │
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<section.immersive-video) — 1-Col (Create the life yo) │
 │ ---------------------------------------------------------------------- │
@@ -167,12 +175,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#f
    - Landmark `<header class="inspirational-gallery__head">` (`1400x34px`) hosting `Connect, Create, Change: Manifesto o` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-cb3bbcd5`, `data-v-59ccf550`, `data-cursor="hide"`, `data-v-ba6e3b8d`), and stylesheet rule `property --line-bottom { syntax:"<length>";inherits:true;initial-value:360px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Blandina`)**:
    - Landmark `<section class="hero hero--fx">` presenting display lead `Blandina` and copy excerpt *"CLICK ANYWHERE TO ENTER WITH SOUND"* over `#edece8` canvas and `#1d150c` ink.
-3. **Primary Showcase & Content Grid (<section.the-intro> — `E v e r y t h i n g b e g i n s w `)**:
-   - Landmark `<section class="the-intro home-h__panel">` rendering section `E v e r y t h i n g b e g i n s w i t h i n .` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
-4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `C o n n e c t w i t h y o u r s e `)**:
-   - Landmark `<section class="immersive-video home-h__panel">` framing `C o n n e c t w i t h y o u r s e l f` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
+3. **Primary Showcase & Content Grid (<section.the-intro> — `Everything begins within.`)**:
+   - Landmark `<section class="the-intro home-h__panel">` rendering section `Everything begins within.` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `Connect with yourself`)**:
+   - Landmark `<section class="immersive-video home-h__panel">` framing `Connect with yourself` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.the-footer> — `https://manifesto.blandina.org/`)**:
    - Landmark `<footer class="the-footer">` anchoring `Connect, Create, Change: Manifes` footer links (`Overview · Index · Archive · About · Contact`), copy *"Connect with yourself,"*, and `#fa712a` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Blandina` · sticky/fixed elements: `4`
 
 ---
 
@@ -189,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#edece8` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1d150c`, **Accent / Highlight**: `#ffa500`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#edece8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1d150c` primary typography and `#ffa500` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Host Grotesk` for display copy (`Blandina`) with `Host Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Host Grotesk` across display (`Blandina`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1640px` container bounds (`gap: 8px`, padding `7px`) with `cubic-bezier(.55,.06,.68,.19)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-black`)**: `#0f0f0f` — grounded in `var(--color-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1640px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `7px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1640px`, `gap: 8px`)
@@ -256,13 +266,13 @@ Scaffold `manifesto-blandina-org` (`Connect, Create, Change: Manifesto of Blandi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.inspirational-gallery__head> — `manifesto-blandina-org`)` (`manifesto-blandina-org`) adapts across `@media (width>=64em)`, `@media (width<=63.99em)`, `@media (prefers-reduced-motion:reduce)`, `@media (width<=1023px)` with `cubic-bezier(.55,.06,.68,.19)`, `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Blandina`)**:
    - DOM & Selectors: Landmark `<section class="hero hero--fx">` presenting display lead `Blandina` and copy excerpt *"CLICK ANYWHERE TO ENTER WITH SOUND"* over `#edece8` canvas and `#1d150c` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#edece8` background with `#1d150c` headline `Blandina`.
-3. **Primary Showcase & Content Grid (<section.the-intro> — `E v e r y t h i n g b e g i n s w `)**:
-   - DOM & Selectors: Landmark `<section class="the-intro home-h__panel">` rendering section `E v e r y t h i n g b e g i n s w i t h i n .` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.the-intro> — `E v e r y t h i n g b e g i n s w `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1640px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `7px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `C o n n e c t w i t h y o u r s e `)**:
-   - DOM & Selectors: Landmark `<section class="immersive-video home-h__panel">` framing `C o n n e c t w i t h y o u r s e l f` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.immersive-video> — `C o n n e c t w i t h y o u r s e `)` uses `50%`, `5px`, `2px`, `14px` radii, `#ffa500` highlights, and assets (embeds.iubenda.com, cdn.iubenda.com, entry.D6Uwv4sb.css).
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#edece8` background with `#1d150c` headline `Blandina`.
+3. **Primary Showcase & Content Grid (<section.the-intro> — `Everything begins within.`)**:
+   - DOM & Selectors: Landmark `<section class="the-intro home-h__panel">` rendering section `Everything begins within.` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.the-intro> — `Everything begins within.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1640px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `7px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `Connect with yourself`)**:
+   - DOM & Selectors: Landmark `<section class="immersive-video home-h__panel">` framing `Connect with yourself` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.immersive-video> — `Connect with yourself`)` uses `50%`, `5px`, `2px`, `14px` radii, `#ffa500` highlights, and assets (embeds.iubenda.com, cdn.iubenda.com, entry.D6Uwv4sb.css).
 5. **Colophon & Global Directory Footer (<footer.the-footer> — `https://manifesto.blandina.org/`)**:
    - DOM & Selectors: Landmark `<footer class="the-footer">` anchoring `Connect, Create, Change: Manifes` footer links (`Overview · Index · Archive · About · Contact`), copy *"Connect with yourself,"*, and `#fa712a` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.the-footer> — `https://manifesto.blandina.org/`)` aligns to `1640px` (non-`@media` desktop container stylesheet rule) with `7px` lateral canvas padding with `8px` grid gap and attributes (data-v-cb3bbcd5, data-v-59ccf550, data-cursor="hide").
@@ -287,8 +297,25 @@ Scaffold `manifesto-blandina-org` (`Connect, Create, Change: Manifesto of Blandi
 - **Selector `.fade-in-leave-active`**: `transition: opacity var(--timing-default) var(--easing-in)` extracted from `manifesto-blandina-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.55,.06,.68,.19)`)**: Governs interactive state transitions across `<header.inspirational-gallery__head>` and `<section.the-intro>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native+wheel` vertical progression up to `23768px` across 1 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Blandina (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `manifesto-blandina-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Blandina | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Blandina | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

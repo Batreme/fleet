@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: vault-hyperiux-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://vault.hyperiux.com"
 final_url: "https://vault.hyperiux.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Hyperiux Vault - React & Next.js Interaction Effects.
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `86`
+- **Recovered Scripts**: `42`
 - **Recovered Stylesheets**: `3`
 
 ---

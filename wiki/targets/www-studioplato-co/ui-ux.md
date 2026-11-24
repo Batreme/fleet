@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-studioplato-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-studioplato-co` (**Studio Plato - Contemporary Interior Design**)
 - **Production URL**: [https://www.studioplato.co/](https://www.studioplato.co/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0082f3`)
 - **Summary**: STUDIO PLATO specializes in interior and architecture design. Connect with us for innovative design solutions.
 - **Total Clean CSS Variables Extracted**: `11` (curated live-grounded set below)
@@ -58,8 +58,8 @@ http_status: 200
 | `--spacing-200` | `12.5em` | Layout / Spatial Grid Token |
 | `--grey-dark` | `grey` | Canvas / Surface Token |
 | `--w-backdrop-animation` | `initial` | Motion / Easing Token |
-| `--plato-nav-blur` | `0.005em` | Layout / Spatial Grid Token |
-| `--plato-nav-opacity` | `0.959856` | Layout / Spatial Grid Token |
+| `--plato-nav-blur` | `0em` | Layout / Spatial Grid Token |
+| `--plato-nav-opacity` | `1` | Layout / Spatial Grid Token |
 | `--swiper-theme-color` | `#007aff` | Brand / Palette Token |
 | `--swiper-preloader-color` | `#fff` | Brand / Palette Token |
 | `--swiper-navigation-size` | `44px` | Layout / Spatial Grid Token |
@@ -70,12 +70,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-studioplato-co`)**:
-   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-plato-home-guard`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
+   - Landmark `<header class="w-mod-js">` (`1440px`) hosting `Studio Plato - Contemporary Interior` navigation (`Projects · Studio · Services · Insights · Instagram`), DOM attributes (`data-wf-domain="www.studioplato.co"`, `data-wf-page="6a27da652c4e1ce8d473b28a"`, `data-wf-site="69fc480c359115ee0044a0b6"`, `data-nav-reveal`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
 2. **Hero Stage & Focal Lead (<div.cursor_follower> — `Studio Plato - Contemporary Interi`)**:
    - Landmark `<div class="cursor_follower">` presenting display lead `Studio Plato - Contemporary Interior Design` and copy excerpt *"Contemporary interior design for successful living."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<div.cursor_follower:nth(2)> — `Featured Work & Interactive Showca`)**:
    - Landmark `<div class="cursor_follower">` rendering section `Featured Work & Interactive Showcase` with copy *"I n t e r i o r d e s i g n p r o j e c t f o r a t i n y a p a r"*, asset references (`cdn.prod.website-files.com`, `studio-plato.webflow.shared.d6524...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<div.cursor_follower:nth(3)> — `Technical Architecture & Narrative`)**:
    - Landmark `<div class="cursor_follower">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Featured Projects —"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
-5. **Colophon & Global Directory Footer (<footer.wf-instrumentsans-n3-active> — `https://www.studioplato.co/`)**:
-   - Landmark `<footer class="wf-instrumentsans-n3-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"S t u d i o P l a t o"*, and `#e2e2e2` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.wf-instrumentsans-n6-active> — `https://www.studioplato.co/`)**:
+   - Landmark `<footer class="wf-instrumentsans-n6-active">` anchoring `Studio Plato - Contemporary Inte` footer links (`Projects · Studio · Services · Insights · Instagram`), copy *"Tell us about your space, your vision, and what you want to "*, and `#e2e2e2` structural dividers.

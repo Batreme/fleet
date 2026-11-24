@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-serko-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.serko.ai"
 final_url: "https://www.serko.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Serko.ai · AI Travel Agent for Business Trips
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `43`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `144`
+- **Recovered Stylesheets**: `11`
 
 ---
 

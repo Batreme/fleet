@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: 11moissanstoit-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "11moissanstoit-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#151723`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#1
 
 > **11 mois sans toi(t), le tour du monde de Josué & Philippe** (https://11moissanstoit.com/) — Tour du monde autobiographique 2010-2011 de Josué & Philippe. 11 mois, des dizaines d'étapes, des milliers de tweets, de photos et de sou...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **11 mois sans toi(t), le tour du monde de Josué & Philippe** (`https://11moissanstoit.com/`). Tour du monde autobiographique 2010-2011 de Josué & Philippe. 11 mois, des dizaines d'étapes, des milliers de tweets, de photos et de sou...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#151723`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fee422` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#151723` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk X-Condensed` for display copy (`11 mois sans toi(t), le tour du mond`) with `Founders Grotesk X-Condensed` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Founders Grotesk X-Condensed` across display (`11 mois sans toi(t), le tour du mond`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1180px` container bounds (`gap: .25rem`, padding `.5rem`) with `cubic-bezier(.4,0,.6,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1180px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `.25rem` grid gap.
 - **Border Radius Scale**: `.25rem`, `10px`, `12px`, `15px`.
@@ -114,6 +119,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#1
 - **Selector `transform\]`**: `transition: .15s` extracted from `11moissanstoit-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.h-full>` and `<section.font-medium>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -163,7 +171,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#1
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.h-full> — `11moissanstoit-com`)**:
-   - Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
 2. **Hero Stage & Focal Lead (<section.font-condensed> — `11 mois sans toi(t), le tour du mo`)**:
    - Landmark `<section class="font-condensed font-medium">` presenting display lead `11 mois sans toi(t), le tour du monde de Josué &` and copy excerpt *"OCTOBER 2010. PHILIPPE AND JOSUÉ, TWO CHILDHOOD FRIENDS, MAKE THE"* over `#fee422` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.font-medium> — `Featured Work & Interactive Showca`)**:
@@ -171,7 +179,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fee422` / `#1
 4. **Interactive Detail & Feature Matrix (<section.uppercase> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="font-condensed font-medium">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"a journey told in real time through their digital footprints, on "*) with `#c7cedb` surface cards, `#151723` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.inset-0> — `https://11moissanstoit.com/`)**:
-   - Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.
+   - Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `2`
 
 ---
 
@@ -188,7 +198,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fee422` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#151723`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fee422` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#151723` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk X-Condensed` for display copy (`11 mois sans toi(t), le tour du mond`) with `Founders Grotesk X-Condensed` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Founders Grotesk X-Condensed` across display (`11 mois sans toi(t), le tour du mond`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1180px` container bounds (`gap: .25rem`, padding `.5rem`) with `cubic-bezier(.4,0,.6,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -229,8 +239,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--blue-notif`)**: `#3acfe1` — grounded in `var(--blue-notif)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1180px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `.5rem` lateral canvas padding with `.25rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1180px`, `gap: .25rem`)
@@ -250,11 +260,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `11moissanstoit-com` (`11 mois sans toi(t), le tour du monde de Josué & Philippe`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.h-full> — `11moissanstoit-com`)**:
-   - DOM & Selectors: Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.h-full> — `11moissanstoit-com`)` (`11moissanstoit-com`) adapts across `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)` with `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,1,1)` transitions and links `MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`.
+   - DOM & Selectors: Landmark `<header class="h-full">` (`1440px`) hosting `11 mois sans toi(t), le tour du mond` navigation (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`, `data-disable-auto-track="1"`), and stylesheet rule `after { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.h-full> — `11moissanstoit-com`)` (`11moissanstoit-com`) adapts across `@media (min-width:640px)`, `@media (min-width:768px)`, `@media (min-width:1024px)`, `@media (min-width:1280px)` with `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,1,1)` transitions and links `MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`.
 2. **Hero Stage & Focal Lead (<section.font-condensed> — `11 mois sans toi(t), le tour du mo`)**:
    - DOM & Selectors: Landmark `<section class="font-condensed font-medium">` presenting display lead `11 mois sans toi(t), le tour du monde de Josué &` and copy excerpt *"OCTOBER 2010. PHILIPPE AND JOSUÉ, TWO CHILDHOOD FRIENDS, MAKE THE"* over `#fee422` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fee422` background with `#000000` headline `11 mois sans toi(t), le tour du monde de Josué &`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#fee422` background with `#000000` headline `11 mois sans toi(t), le tour du monde de Josué &`.
 3. **Primary Showcase & Content Grid (<section.font-medium> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<section class="font-condensed font-medium">` rendering section `Featured Work & Interactive Showcase` with copy *"October 2010. Philippe and Josué , two childhood friends, make th"*, asset references (`logo-vecto.svg`, `photoLogo_11moissanstoi.png`, `2_er3-xpipny2.css`, `3cwyw8ne2vg7_.js`), and grid rule `body { line-height:inherit;margin:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.font-medium> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1180px`, `gap: .25rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
@@ -262,7 +272,7 @@ Scaffold `11moissanstoit-com` (`11 mois sans toi(t), le tour du monde de Josué 
    - DOM & Selectors: Landmark `<section class="font-condensed font-medium">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"a journey told in real time through their digital footprints, on "*) with `#c7cedb` surface cards, `#151723` accents, and `strong { font-weight:bolder }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.uppercase> — `Technical Architecture & Narrative`)` uses `.25rem`, `10px`, `12px`, `15px` radii, `#151723` highlights, and assets (logo-vecto.svg, photoLogo_11moissanstoi.png, 2_er3-xpipny2.css).
 5. **Colophon & Global Directory Footer (<footer.inset-0> — `https://11moissanstoit.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · OpenFreeMap · © OpenMapTiles`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="inset-0">` anchoring `11 mois sans toi(t), le tour du ` footer links (`MapLibre · EOxCloudless 2024 · CC BY-NC-SA · À propos`), copy *"15 years later, for the anniversary of our return (August 24"*, and `#dbc522` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.inset-0> — `https://11moissanstoit.com/`)` aligns to `1180px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `.5rem` lateral canvas padding with `.25rem` grid gap and attributes (data-precedence="next", data-sdkn="@vercel/analytics/next", data-sdkv="2.0.1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
@@ -285,8 +295,25 @@ Scaffold `11moissanstoit-com` (`11 mois sans toi(t), le tour du monde de Josué 
 - **Selector `transform\]`**: `transition: .15s` extracted from `11moissanstoit-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.6,1)`)**: Governs interactive state transitions across `<header.h-full>` and `<section.font-medium>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `900px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `11moissanstoit-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

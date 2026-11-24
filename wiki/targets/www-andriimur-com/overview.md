@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-andriimur-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.andriimur.com/"
 final_url: "https://www.andriimur.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Andrii Mur
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `29`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `116`
+- **Recovered Stylesheets**: `16`
 
 ---
 

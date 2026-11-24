@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: inherited-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `inherited-band` (**INHERITED**)
 - **Production URL**: [https://inherited.band/](https://inherited.band/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent)
 - **Summary**: INHERITED BAND
 - **Total Clean CSS Variables Extracted**: `5` (curated live-grounded set below)
@@ -69,7 +69,7 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.header> — `inherited-band`)**:
    - Landmark `<header class="header">` (`1440x900px`) hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
 2. **Hero Stage & Focal Lead (<section.member> — `I N H E R I T E D`)**:
-   - Landmark `<section class="member show">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
+   - Landmark `<section class="member no-transition">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
 3. **Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)**:
    - Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Guitarist Producer"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
 4. **Interactive Detail & Feature Matrix (<section.member:nth(2)> — `E d e r A n a y a`)**:

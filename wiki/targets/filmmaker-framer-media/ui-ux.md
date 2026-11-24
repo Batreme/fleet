@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: filmmaker-framer-media"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier2_webgl
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `filmmaker-framer-media` (**Filmmaker — Portfolio for Directors & Studios**)
 - **Production URL**: [https://filmmaker.framer.media/](https://filmmaker.framer.media/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ee`)
 - **Summary**: An independent film studio directing, shooting and finishing commercials, music videos, documentaries and short films, from the first ide...
 - **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
@@ -71,12 +71,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.lenis> — `filmmaker-framer-media`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
+   - Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
 2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `Filmmaker: a film studio for comme`)**:
    - Landmark `<div class="lenis-autoToggle">` presenting display lead `Filmmaker: a film studio for commercials, music v...` and copy excerpt *"(Scroll to explore)"* over `#000000` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<div.framer-v2pXD> — `Bloom`)**:
-   - Landmark `<div class="framer-v2pXD">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-nvb9y9> — `Red Lens`)**:
-   - Landmark `<div class="framer-nvb9y9">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
-5. **Colophon & Global Directory Footer (<footer.framer-6o4xpy-container> — `https://filmmaker.framer.media/`)**:
-   - Landmark `<footer class="framer-6o4xpy-container">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.
+3. **Primary Showcase & Content Grid (<div.lenis-stopped> — `Bloom`)**:
+   - Landmark `<div class="lenis-stopped">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `.hidden-kh3wqm { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-v2pXD> — `Red Lens`)**:
+   - Landmark `<div class="framer-v2pXD">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `.hidden-s381sx { display:none!important }`.
+5. **Colophon & Global Directory Footer (<footer.framer-nvb9y9> — `https://filmmaker.framer.media/`)**:
+   - Landmark `<footer class="framer-nvb9y9">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.

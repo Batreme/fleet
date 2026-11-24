@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: nodenza-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "nodenza-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 4
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `#000000` ink, `#ffffff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `
 
 > **Home · Nodenza** (https://nodenza.com/) — Nosenza invests globally in early-stage biotech, medtech, and healthcare companies advancing life sciences and improving patient outcomes.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Home · Nodenza** (`https://nodenza.com/`). Nosenza invests globally in early-stage biotech, medtech, and healthcare companies advancing life sciences and improving patient outcomes.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `#000000` ink, `#ffffff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e6efff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Aspekta` for display copy (`Experience the explosive power of wh`) with `Aspekta` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Aspekta` across display (`Experience the explosive power of wh`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20rem`, padding `var(--headroom-height)`) with `cubic-bezier(0.2,1,0.3,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=2330px` / doc `3230px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--headroom-height)` lateral canvas padding with `20rem` grid gap.
 - **Border Radius Scale**: `50%`, `10rem`, `16rem`, `var(--br1)`.
@@ -95,7 +100,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `.title` (`line-height: 0.95`, `letter-spacing: -0.03em`, `font-weight: 500`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64.8px`, `line-height: 61.56px`, `font-weight: 500`, `letter-spacing: -1.944px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`).
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`); rule `p` (`font-size: var(--f-d)`, `line-height: 1.3`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`).
 
@@ -112,6 +117,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `
 - **Selector `.unload .preloader`**: `transition: 0.5s` extracted from `nodenza-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,1,0.3,1)`)**: Governs interactive state transitions across `<header.hide-scrollbar>` and `<section.hero-snap__slide:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3230px`, deepest scrollY reached `2330px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Contact`)**: `backgroundColor`: `rgb(255, 255, 255)` -> `rgba(0, 0, 0, 0)`; `borderColor`: `rgba(0, 0, 0, 0)` -> `rgb(50, 0, 111)` (`transition-duration: 0.25s`, `timing: ease`).
+- **Route Transition Architecture**: First internal navigation (`/contact-us/`) measured as `direct` in `6075ms`.
 
 ---
 
@@ -170,6 +180,14 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e6efff` canvas, `
    - Landmark `<section class="hero-snap__slide">` framing `Press Option+1 for screen-reader mode, Option+0 ` and `Established by a team of experienced life scienc` (*"Established by a team of experienced life sciences entrepreneurs,"*) with `#ffffff` surface cards, `#ffffff` accents, and `.wrapper { width: 100%; margin: 0 auto; padding: 0 var(--wr); max-width: var(--mw); }`.
 5. **Colophon & Global Directory Footer (<footer.acsb-sr-alert> — `https://nodenza.com/`)**:
    - Landmark `<footer class="acsb-sr-alert">` anchoring `Home · Nodenza` footer links (`Home · Our Team · Portfolio · News · Webinars`), copy *"We leverage our team’s 100+ years experience in the creation"*, and `#00a0d2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Experience the explosive power of when science me...` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `36%`): Active landmark `What brings you to Nodenza?` · sticky/fixed elements: `0`
+- **Step 03** (`y=1700px`, `73%`): Active landmark `Our Approach` · sticky/fixed elements: `0`
+- **Step 04** (`y=2330px`, `100%`): Active landmark `Join the Conversation` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/contact-us/`)**: `https://nodenza.com/contact-us/` — H1: `Contact Us`, scrollHeight `2087px`, transition `direct` (`6075ms`)
 
 ---
 
@@ -186,7 +204,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e6efff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e6efff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Aspekta` for display copy (`Experience the explosive power of wh`) with `Aspekta` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Aspekta` across display (`Experience the explosive power of wh`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20rem`, padding `var(--headroom-height)`) with `cubic-bezier(0.2,1,0.3,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +243,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--c8`)**: `#5e5e5e` — grounded in `var(--c8)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--headroom-height)` lateral canvas padding with `20rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20rem`)
@@ -239,7 +257,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Aspekta`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `.title` (`line-height: 0.95`, `letter-spacing: -0.03em`, `font-weight: 500`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 64.8px`, `line-height: 61.56px`, `font-weight: 500`, `letter-spacing: -1.944px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 72px`, `line-height: 68.4px`, `font-weight: 500`, `letter-spacing: -2.16px`); rule `h2` (`font-size: var(--f-b)`, `line-height: 1`, `font-weight: 600`)
 - **Body Copy Rule**: live computed `body` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`); rule `p` (`font-size: var(--f-d)`, `line-height: 1.3`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 18px`, `line-height: 21.6px`, `font-weight: 400`, `letter-spacing: -0.36px`)
 
@@ -250,7 +268,7 @@ Scaffold `nodenza-com` (`Home · Nodenza`) with these exact structural regions, 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hide-scrollbar> — `nodenza-com`)` (`nodenza-com`) adapts across `@media (min-width: 1024px)`, `@media (max-width: 1023.98px)`, `@media (min-width: 1920px)`, `@media (hover: hover) and (pointer: fine) and (min-width: 1024px)` with `cubic-bezier(0.2,1,0.3,1)` transitions and links `Home · Our Team · Portfolio · News · Webinars`.
 2. **Hero Stage & Focal Lead (<section.hero-snap__slide> — `Experience the explosive power of `)**:
    - DOM & Selectors: Landmark `<section class="hero-snap__slide">` presenting display lead `Experience the explosive power of when science me...` and copy excerpt *"Enabling disruptive life sciences technology."* over `#e6efff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e6efff` background with `#000000` headline `Experience the explosive power of when science me...`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×2616px` mobile) sets `#e6efff` background with `#000000` headline `Experience the explosive power of when science me...`.
 3. **Primary Showcase & Content Grid (<section.hero-snap__slide:nth(2)> — `Enabling disruptive life sciences `)**:
    - DOM & Selectors: Landmark `<section class="hero-snap__slide">` rendering section `Enabling disruptive life sciences technology.` with copy *"Press Option+1 for screen-reader mode, Option+0 to cancel"*, asset references (`embed`, `styles.css`, `style.css`, `main.css`), and grid rule `body { overflow-x: hidden; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hero-snap__slide:nth(2)> — `Enabling disruptive life sciences `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20rem`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--headroom-height)` horizontal padding on mobile.
@@ -281,8 +299,37 @@ Scaffold `nodenza-com` (`Home · Nodenza`) with these exact structural regions, 
 - **Selector `.unload .preloader`**: `transition: 0.5s` extracted from `nodenza-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,1,0.3,1)`)**: Governs interactive state transitions across `<header.hide-scrollbar>` and `<section.hero-snap__slide:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3230px` across 4 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Experience the explosive po... (0%) -> What brings you to Nodenza? (36%) -> Our Approach (73%) -> Join the Conversation (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `backgroundColor, borderColor` with `0.25s ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/contact-us/` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `nodenza-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Experience the explosive power of when scienc... | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `36%` | What brings you to Nodenza? | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `73%` | Our Approach | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2330px` | `100%` | Join the Conversation | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Experience the explosive power of when sc... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1212px` | `50%` | Our Approach | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `2424px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://nodenza.com/contact-us/` | Contact Us | `2087px` | `direct` (`6075ms`) | [subpage-01-contact-us.webp](assets/subpage-01-contact-us.webp) |
+

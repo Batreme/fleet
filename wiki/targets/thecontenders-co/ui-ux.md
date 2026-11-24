@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: thecontenders-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thecontenders-co` (**The Contenders · Strategic Brand & Design Consultancy**)
 - **Production URL**: [https://thecontenders.co/](https://thecontenders.co/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ed0000`)
 - **Summary**: Where business meets brand. The Contenders is an independent Australian consultancy creating distinctive brands that deliver measurable i...
 - **Total Clean CSS Variables Extracted**: `130` (curated live-grounded set below)

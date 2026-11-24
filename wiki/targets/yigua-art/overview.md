@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: yigua-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://yigua.art/?lang=en"
 final_url: "https://yigua.art/?lang=en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: 一卦
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `37`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `138`
+- **Recovered Stylesheets**: `9`
 
 ---
 

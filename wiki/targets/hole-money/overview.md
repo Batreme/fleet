@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: hole-money"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://hole.money"
 final_url: "https://hole.money/"
 status: analyzed

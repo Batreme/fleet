@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: useguidely-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `useguidely-co` (**guidely - the hospitality of the future**)
 - **Production URL**: [https://useguidely.co/](https://useguidely.co/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14110d` ink, `#9b7b4d` accent)
 - **Summary**: A smart guest app that answers questions any hour, recommends what is good right now, plans the day and takes room orders, all from one l...
 - **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
@@ -60,7 +60,7 @@ http_status: 200
 | `--font-name` | `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif` | Typography / Scale Token |
 | `--font-body` | `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif` | Typography / Scale Token |
 | `--font-mono` | `ui-monospace,SFMono-Regular,Menlo,monospace` | Typography / Scale Token |
-| `--hero-ready` | `1` | Design System Custom Token |
+| `--hero-ready` | `0` | Design System Custom Token |
 | `--reveal-delay` | `0ms` | Motion / Easing Token |
 | `--useguidely-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
 | `--useguidely-co-ink` | `#14110d` | Primary Typography Ink (computed-derived) |

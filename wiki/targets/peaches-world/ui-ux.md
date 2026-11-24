@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: peaches-world"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `peaches-world` (**Peaches – Webdesign Pratteln, Basel · Websites worth pressing Enter for**)
 - **Production URL**: [https://peaches.world/](https://peaches.world/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0b0e` / `#ff5a00`)
 - **Summary**: Peaches is a web design studio in Pratteln near Basel, Switzerland. Custom-designed, animated websites that feel like a game and stay in...
 - **Total Clean CSS Variables Extracted**: `0` (curated live-grounded set below)

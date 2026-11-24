@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thefwa-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thefwa.net/"
 final_url: "https://thefwa.net/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: FWA Wire — winners' newswire
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `1`
+- **Recovered Stylesheets**: `4`
 
 ---
 

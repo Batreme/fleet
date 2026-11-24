@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: residences-loamhouse-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `residences-loamhouse-com-au` (**Loam House — Sandringham**)
 - **Production URL**: [https://residences.loamhouse.com.au](https://residences.loamhouse.com.au)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f1eee7` canvas, `#1e211d` ink, `#512616` accent)
 - **Summary**: Loam House — house-sized residences in Sandringham. Final release now selling.
 - **Total Clean CSS Variables Extracted**: `17` (curated live-grounded set below)
@@ -25,8 +25,8 @@ http_status: 200
 - **Body Font Stack**: `DM Sans`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 122.4px`, `line-height: 90.576px`, `font-weight: 300`, `letter-spacing: -5.508px`); rule `h1` (`font-size: clamp(76px,8.5vw,138px)`, `line-height: .74`, `letter-spacing: -.045em`, `font-weight: 300`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100.8px`, `line-height: 85.68px`, `font-weight: 400`, `letter-spacing: -3.024px`); rule `h2` (`font-size: clamp(52px,8vw,120px)`, `line-height: .9`, `letter-spacing: -.02em`, `font-weight: 400`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 300`); rule `p` (`font-size: clamp(15px,1.3vw,19px)`, `line-height: 1.6`, `font-weight: 300`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 115.2px`, `line-height: 103.68px`, `font-weight: 400`, `letter-spacing: -2.304px`); rule `h2` (`font-size: clamp(58px,7vw,112px)`, `line-height: .86`, `letter-spacing: -.04em`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 300`); rule `p` (`font-size: 16px`, `line-height: 1.5`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 300`)
 
 ---
@@ -70,12 +70,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `residences-loamhouse-com-au`)**:
-   - Landmark `<header class="site-header">` (`1440x82px`) hosting `Loam House — Sandringham` navigation (`Proposition · Size · Storage · Finishes · Precinct`), DOM attributes (`data-preloader`, `data-pl-pct`, `data-header`, `data-open-calendly`), and stylesheet rule `stage { position:absolute;inset:0;overflow:hidden }`.
+   - Landmark `<header class="site-header">` (`1440x82px`) hosting `Loam House — Sandringham` navigation (`Proposition · Size · Storage · Finishes · Precinct`), DOM attributes (`data-preloader`, `data-pl-pct`, `data-header`, `data-open-calendly`), and stylesheet rule `html { scroll-behavior:auto;-webkit-tap-highlight-color:transparent }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `House-sized. Bayside living.`)**:
    - Landmark `<section class="hero chapter">` presenting display lead `House-sized. Bayside living.` and copy excerpt *"FINAL RELEASE · SANDRINGHAM"* over `#f1eee7` canvas and `#1e211d` ink.
 3. **Primary Showcase & Content Grid (<section.form-chapter> — `Leave the upkeep. Keep the life.`)**:
-   - Landmark `<section class="form-chapter chapter">` rendering section `Leave the upkeep. Keep the life.` with copy *"Final release · Sandringham"*, asset references (`clientParamBuilder.bundle.js`, `clarity.js`, `yed6eroa3m`, `1440095636442948`), and grid rule `map { position:absolute;inset:0;width:100%;height:100%;display:block;touch-act... }`.
+   - Landmark `<section class="form-chapter chapter">` rendering section `Leave the upkeep. Keep the life.` with copy *"Final release · Sandringham"*, asset references (`clientParamBuilder.bundle.js`, `clarity.js`, `yed6eroa3m`, `1440095636442948`), and grid rule `body { margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans... }`.
 4. **Interactive Detail & Feature Matrix (<section.cine> — `A backyard oasis, without the mowi`)**:
-   - Landmark `<section class="cine chapter">` framing `A backyard oasis, without the mowing.` and `Everything you need. Nothing you don’t.` (*"Bayside’s largest apartments. 86–275m² residences from $850,000."*) with `#ffffff` surface cards, `#512616` accents, and `.station circle { fill:fff;stroke:40453b;stroke-width:1;pointer-events:none }`.
+   - Landmark `<section class="cine chapter">` framing `A backyard oasis, without the mowing.` and `Everything you need. Nothing you don’t.` (*"Bayside’s largest apartments. 86–275m² residences from $850,000."*) with `#ffffff` surface cards, `#512616` accents, and `img { display:block;width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.pl-panels> — `https://residences.loamhouse.com.au`)**:
    - Landmark `<footer class="pl-panels">` anchoring `Loam House — Sandringham` footer links (`Proposition · Size · Storage · Finishes · Precinct`), copy *"Artist’s impression"*, and `#cbc9c3` structural dividers.

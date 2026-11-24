@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: fabiantjoeaon-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "fabiantjoeaon-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 1
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#f3f3ef` ink, `#99ff99` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 > **Fabian Tjoe-A-On — Creative technologist** (https://fabiantjoeaon.com) — Creative and technical direction, analog heart with exceptional digitalism.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Fabian Tjoe-A-On — Creative technologist** (`https://fabiantjoeaon.com`). Creative and technical direction, analog heart with exceptional digitalism.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#f3f3ef` ink, `#99ff99` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3f3ef` primary typography and `#99ff99` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Suisse Intl` for display copy (`This portfolio is a real-time WebGPU`) with `Suisse Intl` and `Space Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Suisse Intl` across display (`This portfolio is a real-time WebGPU`) and body copy, paired with `Space Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px`, padding `43.2px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `43.2px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `50%`.
@@ -109,6 +114,10 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 - **Selector `.project-visit`**: `transition: color 250ms ease` extracted from `fabiantjoeaon-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.no-webgpu-header>` and `<section.no-webgpu-body:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Route Transition Architecture**: First internal navigation (`/about`) measured as `MPA` in `1577ms`.
 
 ---
 
@@ -167,6 +176,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
    - Landmark `<section class="no-webgpu-body">` framing `Creative and technical direction, analog heart w` and `WebGPU is available, but no compatible graphics ` (*"WebGPU is available, but no compatible graphics adapter was found"*) with `#a2e2e1` surface cards, `#99ff99` accents, and `.loader-mask > span { display: block; will-change: transform; }`.
 5. **Colophon & Global Directory Footer (<footer.no-webgpu-footer> — `https://fabiantjoeaon.com`)**:
    - Landmark `<footer class="no-webgpu-footer">` anchoring `Fabian Tjoe-A-On — Creative tech` footer links (`About`), copy *"WSJ Iconic Mints The Wall Street Journal, 2022"*, and `#353939` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `This portfolio is a real-time WebGPU experience.` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **About Route (`/about`)**: `https://fabiantjoeaon.com/about` — H1: `About`, scrollHeight `900px`, transition `MPA` (`1577ms`)
 
 ---
 
@@ -183,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f3f3ef`, **Accent / Highlight**: `#99ff99`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3f3ef` primary typography and `#99ff99` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Suisse Intl` for display copy (`This portfolio is a real-time WebGPU`) with `Suisse Intl` and `Space Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Suisse Intl` across display (`This portfolio is a real-time WebGPU`) and body copy, paired with `Space Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px`, padding `43.2px`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +233,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#353939` — grounded in `var(--rule)` in `:root` (`rgba(220, 237, 239, 0.24)`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `43.2px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px`)
@@ -244,7 +258,7 @@ Scaffold `fabiantjoeaon-com` (`Fabian Tjoe-A-On — Creative technologist`) with
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.no-webgpu-header> — `fabiantjoeaon-com`)` (`fabiantjoeaon-com`) adapts across `@media (max-width: 700px)`, `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1800px)`, `@media (max-width: 1000px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(0.19,1,0.22,1)`, `cubic-bezier(0.65,0,0.35,1)` transitions and links `About`.
 2. **Hero Stage & Focal Lead (<section.no-webgpu-body> — `This portfolio is a real-time WebG`)**:
    - DOM & Selectors: Landmark `<section class="no-webgpu-body">` presenting display lead `This portfolio is a real-time WebGPU experience.` and copy excerpt *"Creative technologist"* over `#000000` canvas and `#f3f3ef` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#f3f3ef` headline `This portfolio is a real-time WebGPU experience.`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#000000` background with `#f3f3ef` headline `This portfolio is a real-time WebGPU experience.`.
 3. **Primary Showcase & Content Grid (<section.no-webgpu-body:nth(2)> — `Creative technologist`)**:
    - DOM & Selectors: Landmark `<section class="no-webgpu-body">` rendering section `Creative technologist` with copy *"Creative and technical direction, analog heart with exceptional d"*, asset references (`SuisseIntl-Regular.otf`, `SpaceMono-Regular.ttf`, `favicon.ico`, `favicon.svg`), and grid rule `.loader-mask { display: block; overflow: hidden; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.no-webgpu-body:nth(2)> — `Creative technologist`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `43.2px` horizontal padding on mobile.
@@ -275,8 +289,31 @@ Scaffold `fabiantjoeaon-com` (`Fabian Tjoe-A-On — Creative technologist`) with
 - **Selector `.project-visit`**: `transition: color 250ms ease` extracted from `fabiantjoeaon-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.no-webgpu-header>` and `<section.no-webgpu-body:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: This portfolio is a real-ti... (0%).
+- **Multi-Page Routes**: Scaffold internal routes `/about` (about, MPA) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `fabiantjoeaon-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | This portfolio is a real-time WebGPU experience. | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | This portfolio is a real-time WebGPU expe... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `about` | `https://fabiantjoeaon.com/about` | About | `900px` | `MPA` (`1577ms`) | [subpage-01-about.webp](assets/subpage-01-about.webp) |
+

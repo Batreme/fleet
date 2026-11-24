@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: lolawilde-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "lolawilde-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 7
+subpages_crawled: 1
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas, `#f3eee7` ink, `#ff0000` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas
 
 > **LOLA WILDE — Learning Me** (https://lolawilde.com/) — Learning Me, the new album by LOLA WILDE. Listen on Spotify and read the lyrics.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x5796)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LOLA WILDE — Learning Me** (`https://lolawilde.com/`). Learning Me, the new album by LOLA WILDE. Listen on Spotify and read the lyrics.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas, `#f3eee7` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0b0a09` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3eee7` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`LOLA WILDE — LEARNING ME`) with `Inter` and `SpotifyMixMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `56px`) with `cubic-bezier(0.3,0,0,1)` easing.
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`LOLA WILDE — LEARNING ME`) and body copy, paired with `SpotifyMixMono` for monospace/code.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `56px`) with `cubic-bezier(0.3,0,0,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×5796px` (`assets/desktop-journey.webp`, `7` keyframes up to `y=4352px` / doc `5252px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
-- **Canvas Lateral Padding & Spacing**: `56px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `22px`, `8px`, `4px`, `.75rem`.
+- **Canvas Lateral Padding & Spacing**: `56px` lateral canvas padding with `4px` grid gap.
+- **Border Radius Scale**: `22px`, `48px`, `.25rem`, `4px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `56px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-height:351px)`, `@media (max-height:351px)and (max-width:509px)`, `@media (max-height:351px)and (max-width:359px)`.
+- **Extracted CSS Media Queries**: `@media (max-height:550px)`, `@media (max-height:200px)`, `@media (max-height:130px)`, `@media (max-width:359px)`.
 
 ---
 
@@ -107,11 +112,18 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas
 - **Extracted Timing Functions**: `cubic-bezier(0.3,0,0,1)`, `cubic-bezier(0,0,0.2,1)`, `cubic-bezier(0.8,0,1,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `sedMetadata_condensedMetadataWrap...`**: `transition: opacity .4s` extracted from `lolawilde-com` stylesheet.
+- **Selector `.PreSaveButton_preSaveButton__6lI...`**: `transition: transform .3s ease-in-out` extracted from `lolawilde-com` stylesheet.
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: .01ms!important` extracted from `lolawilde-com` stylesheet.
-- **Selector `.OverflowMenuPreRelease_menu__1_mnj`**: `transition: transform .2s ease-out` extracted from `lolawilde-com` stylesheet.
+- **Selector `tifyButton_saveOnSpotifyButton__Q...`**: `transition: transform .3s ease-in-out` extracted from `lolawilde-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.3,0,0,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.blk>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.blk>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `5252px`, deepest scrollY reached `4352px` across `7` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `01 Golden ▶ Play and sing along`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Hover Physics (`first_card` · `02 The Way You Said My Name ▶ Pla...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`carousel_next` · `Next song`)**: Triggered visual diff `13.099` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/press.html`) measured as `MPA` in `1745ms`.
 
 ---
 
@@ -142,7 +154,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas
 ### Visual Layout Schematic — Mobile Reflow (`390px`)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 8px)        │
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 4px)        │
 │ ====================================================================== │
 │ [ HEADER BAR (<header.nav>            ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
@@ -161,15 +173,26 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.nav> — `lolawilde-com`)**:
-   - Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `etadata_condensedMetadataWrapper_... { inset-inline:16px 56px;bottom:32px;width:auto;position:absolute;font-siz... }`.
+   - Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `.Error_wrapper__7m1Fk { display:flex;align-items:center;flex-direction:column }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `LOLA WILDE — LEARNING ME`)**:
    - Landmark `<section class="hero">` presenting display lead `LOLA WILDE — LEARNING ME` and copy excerpt *"Out now · New album"* over `#0b0a09` canvas and `#f3eee7` ink.
 3. **Primary Showcase & Content Grid (<section.blk> — `LOLA WILDE — Learning Me`)**:
-   - Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `adata_condensedMetadataContainer_... { align-items:center;display:inline-flex }`.
+   - Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `.Error_title__KvfPv { font-size:48px;line-height:1;letter-spacing:-.04em;margin:40px 0 16px;fo... }`.
 4. **Interactive Detail & Feature Matrix (<section.about-sec> — `The girl in the front row, learnin`)**:
-   - Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `F.CondensedMetadata_isPreRelease_... { inset-inline-start:12px;bottom:36px;-webkit-margin-end:154px;margin-inli... }`.
+   - Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `.Error_description__h_wjs { line-height:24px;max-width:507px;margin:0 0 40px;font-weight:200;display... }`.
 5. **Colophon & Global Directory Footer (<footer.pill> — `https://lolawilde.com/`)**:
    - Landmark `<footer class="pill">` anchoring `LOLA WILDE — Learning Me` footer links (`Songs · Album · About · Shop · Press`), copy *"Someone Else’s Version"*, and `#272524` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `LOLA WILDE — LEARNING ME` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `20%`): Active landmark `Learning Me` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `39%`): Active landmark `#about` · sticky/fixed elements: `3`
+- **Step 04** (`y=2550px`, `59%`): Active landmark `The girl in the front row, learning who she is.` · sticky/fixed elements: `2`
+- **Step 05** (`y=3400px`, `78%`): Active landmark `Lipstick Confessions on vinyl.` · sticky/fixed elements: `2`
+- **Step 06** (`y=4250px`, `98%`): Active landmark `Writing about Learning Me?` · sticky/fixed elements: `2`
+- **Step 07** (`y=4352px`, `100%`): Active landmark `Writing about Learning Me?` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/press.html`)**: `https://lolawilde.com/press.html` — H1: `LOLA WILDE LEARNING ME — OUT OCTOBER 16, 2026`, scrollHeight `6553px`, transition `MPA` (`1745ms`)
 
 ---
 
@@ -186,8 +209,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#0b0a09` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f3eee7`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0b0a09` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f3eee7` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`LOLA WILDE — LEARNING ME`) with `Inter` and `SpotifyMixMono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `56px`) with `cubic-bezier(0.3,0,0,1)` easing.
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`LOLA WILDE — LEARNING ME`) and body copy, paired with `SpotifyMixMono` for monospace/code.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 4px`, padding `56px`) with `cubic-bezier(0.3,0,0,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `lolawilde-com` in your global stylesheet:
@@ -225,14 +248,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--amber`)**: `#c8823a` — grounded in `var(--amber)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×5796px` (multi-frame vertical journey filmstrip (5796px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
-- **Padding & Gutters**: `56px` lateral canvas padding with `8px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
+- **Padding & Gutters**: `56px` lateral canvas padding with `4px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `56px` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-height:351px)`, `@media (max-height:351px)and (max-width:509px)`, `@media (max-height:351px)and (max-width:359px)`
-- **Corner Radii**: `22px`, `8px`, `4px`, `.75rem`
+- **Media Queries**: `@media (max-height:550px)`, `@media (max-height:200px)`, `@media (max-height:130px)`, `@media (max-width:359px)`
+- **Corner Radii**: `22px`, `48px`, `.25rem`, `4px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Inter`
@@ -246,20 +269,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `lolawilde-com` (`LOLA WILDE — Learning Me`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.nav> — `lolawilde-com`)**:
-   - DOM & Selectors: Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `etadata_condensedMetadataWrapper_... { inset-inline:16px 56px;bottom:32px;width:auto;position:absolute;font-siz... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `lolawilde-com`)` (`lolawilde-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-height:351px)`, `@media (max-height:351px)and (max-width:509px)`, `@media (max-height:351px)and (max-width:359px)` with `cubic-bezier(0.3,0,0,1)`, `cubic-bezier(0,0,0.2,1)`, `cubic-bezier(0.8,0,1,1)` transitions and links `Songs · Album · About · Shop · Press`.
+   - DOM & Selectors: Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `.Error_wrapper__7m1Fk { display:flex;align-items:center;flex-direction:column }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `lolawilde-com`)` (`lolawilde-com`) adapts across `@media (max-height:550px)`, `@media (max-height:200px)`, `@media (max-height:130px)`, `@media (max-width:359px)` with `cubic-bezier(0.3,0,0,1)`, `cubic-bezier(0,0,0.2,1)`, `cubic-bezier(0.8,0,1,1)` transitions and links `Songs · Album · About · Shop · Press`.
 2. **Hero Stage & Focal Lead (<section.hero> — `LOLA WILDE — LEARNING ME`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `LOLA WILDE — LEARNING ME` and copy excerpt *"Out now · New album"* over `#0b0a09` canvas and `#f3eee7` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0b0a09` background with `#f3eee7` headline `LOLA WILDE — LEARNING ME`.
+   - Responsive Contract: Hero stage (`1280×5796px` desktop / `390×2616px` mobile) sets `#0b0a09` background with `#f3eee7` headline `LOLA WILDE — LEARNING ME`.
 3. **Primary Showcase & Content Grid (<section.blk> — `LOLA WILDE — Learning Me`)**:
-   - DOM & Selectors: Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `adata_condensedMetadataContainer_... { align-items:center;display:inline-flex }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.blk> — `LOLA WILDE — Learning Me`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `56px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `.Error_title__KvfPv { font-size:48px;line-height:1;letter-spacing:-.04em;margin:40px 0 16px;fo... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.blk> — `LOLA WILDE — Learning Me`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `56px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.about-sec> — `The girl in the front row, learnin`)**:
-   - DOM & Selectors: Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `F.CondensedMetadata_isPreRelease_... { inset-inline-start:12px;bottom:36px;-webkit-margin-end:154px;margin-inli... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.about-sec> — `The girl in the front row, learnin`)` uses `22px`, `8px`, `4px`, `.75rem` radii, `#ff0000` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
+   - DOM & Selectors: Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `.Error_description__h_wjs { line-height:24px;max-width:507px;margin:0 0 40px;font-weight:200;display... }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.about-sec> — `The girl in the front row, learnin`)` uses `22px`, `48px`, `.25rem`, `4px` radii, `#ff0000` highlights, and assets (favicon.svg, favicon-32.png, apple-touch-icon.png).
 5. **Colophon & Global Directory Footer (<footer.pill> — `https://lolawilde.com/`)**:
    - DOM & Selectors: Landmark `<footer class="pill">` anchoring `LOLA WILDE — Learning Me` footer links (`Songs · Album · About · Shop · Press`), copy *"Someone Else’s Version"*, and `#272524` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.pill> — `https://lolawilde.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `56px` lateral canvas padding with `8px` grid gap and attributes (data-album-title, data-i="0", data-i="1").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.pill> — `https://lolawilde.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `56px` lateral canvas padding with `4px` grid gap and attributes (data-album-title, data-i="0", data-i="1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Out now · New album"*
@@ -270,19 +293,55 @@ Scaffold `lolawilde-com` (`LOLA WILDE — Learning Me`) with these exact structu
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.3,0,0,1)`, `cubic-bezier(0,0,0.2,1)`, `cubic-bezier(0.8,0,1,1)`
 - **Extracted Stylesheet Rules (`lolawilde-com`)**:
-- `etadata_condensedMetadataWrapper_... { inset-inline:16px 56px;bottom:32px;width:auto;position:absolute;font-siz... }`
-- `adata_condensedMetadataContainer_... { align-items:center;display:inline-flex }`
-- `F.CondensedMetadata_isPreRelease_... { inset-inline-start:12px;bottom:36px;-webkit-margin-end:154px;margin-inli... }`
-- `.CondensedMetadata_title__FRgOV { position:relative;min-width:0;display:flex }`
-- `densedMetadata_labelsAndSubtitle_... { -webkit-margin-end:48px;margin-inline-end:48px }`
+- `.Error_wrapper__7m1Fk { display:flex;align-items:center;flex-direction:column }`
+- `.Error_title__KvfPv { font-size:48px;line-height:1;letter-spacing:-.04em;margin:40px 0 16px;fo... }`
+- `.Error_description__h_wjs { line-height:24px;max-width:507px;margin:0 0 40px;font-weight:200;display... }`
+- `.Error_links__WY7mc { display:flex;flex-direction:column;align-items:center }`
+- `.Error_links__WY7mc a { font-size:1em;font-weight:700;text-decoration:none }`
 - **Per-Selector Transition Rules**:
-- **Selector `sedMetadata_condensedMetadataWrap...`**: `transition: opacity .4s` extracted from `lolawilde-com` stylesheet.
+- **Selector `.PreSaveButton_preSaveButton__6lI...`**: `transition: transform .3s ease-in-out` extracted from `lolawilde-com` stylesheet.
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: .01ms!important` extracted from `lolawilde-com` stylesheet.
-- **Selector `.OverflowMenuPreRelease_menu__1_mnj`**: `transition: transform .2s ease-out` extracted from `lolawilde-com` stylesheet.
+- **Selector `tifyButton_saveOnSpotifyButton__Q...`**: `transition: transform .3s ease-in-out` extracted from `lolawilde-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.3,0,0,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.blk>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.blk>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `5252px` across 7 distinct viewport chapters.
+- **Vertical Chapter Sequence**: LOLA WILDE — LEARNING ME (0%) -> Learning Me (20%) -> #about (39%) -> The girl in the front row,... (59%) -> Lipstick Confessions on vinyl. (78%) -> Writing about Learning Me? (98%) -> Writing about Learning Me? (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/press.html` (other, MPA) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `lolawilde-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | LOLA WILDE — LEARNING ME | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `20%` | Learning Me | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `39%` | #about | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `59%` | The girl in the front row, learning who she is. | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `78%` | Lipstick Confessions on vinyl. | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `98%` | Writing about Learning Me? | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `4352px` | `100%` | Writing about Learning Me? | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | LOLA WILDE — LEARNING ME | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2392px` | `50%` | #about | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `4785px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `carousel_next` (`Next song`, diff `13.099`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://lolawilde.com/press.html` | LOLA WILDE LEARNING ME — OUT OCTOBER... | `6553px` | `MPA` (`1745ms`) | [subpage-01-press-html.webp](assets/subpage-01-press-html.webp) |
+

@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-jarnket-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-jarnket-com` (**JarnKet · Ketsadaphone Boutpanyda, web engineer in Vientiane**)
 - **Production URL**: [https://www.jarnket.com/](https://www.jarnket.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f5f5` / `#2563eb`)
 - **Summary**: Software engineer in Vientiane, Laos and WorldSkills ASEAN 2025 Web Technologies Expert, building fast, accessible React and Next.js inte...
 - **Total Clean CSS Variables Extracted**: `87` (curated live-grounded set below)
@@ -73,6 +73,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.jk-flood> — `J A R N K E T`)**:
    - Landmark `<section class="jk-flood pb-28">` rendering section `J A R N K E T` with copy *"Web Technologies Expert @ WorldSkills ASEAN 2025"*, asset references (`1ccf8ef962b3f693-s.p.2xt4dxqx4hw9...`, `797e433ab948586e-s.p.1v5bejj26fx9...`, `8457265da2739722-s.p.00okbctd204v...`, `caa3a2e1cccd8315-s.p.0zr6hhvz-h9n...`), and grid rule `._8NX9hq_variable { --font-geist:"Geist", "Geist Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.relative:nth(2)> — `T o o l k i t`)**:
-   - Landmark `<section class="relative">` framing `T o o l k i t` and `UI & Styling` (*"Software Engineer @BCEL Bank Software Engineer @BCEL Bank, Web Te"*) with `#f4f5f7` surface cards, `#2563eb` accents, and `.z61v7q_className { font-family:Geist Mono,Geist Mono Fallback;font-style:normal }`.
+   - Landmark `<section class="relative">` framing `T o o l k i t` and `UI & Styling` (*"Web Techologies Expert @World Skills ASEAN 2025 Software Engineer"*) with `#f4f5f7` surface cards, `#2563eb` accents, and `.z61v7q_className { font-family:Geist Mono,Geist Mono Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.jk-flood> — `https://www.jarnket.com/`)**:
-   - Landmark `<footer class="jk-flood relative">` anchoring `JarnKet · Ketsadaphone Boutpanyd` footer links (`Index · Work · Field notes · Gallery · GitHub`), copy *"Software Engineer @BCEL Bank"*, and `#d7d9dc` structural dividers.
+   - Landmark `<footer class="jk-flood relative">` anchoring `JarnKet · Ketsadaphone Boutpanyd` footer links (`Index · Work · Field notes · Gallery · GitHub`), copy *"Web Techologies Expert @World Skills ASEAN 2025"*, and `#d7d9dc` structural dividers.

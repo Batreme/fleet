@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-imersion-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-imersion-io"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#007bff` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 
 > **Imersion — Get Immersed in the World's Most Beautiful Places** (https://www.imersion.io) — Get immersed in the most beautiful places on Earth — breathtaking landscapes, hidden hotels and surreal restaurants, each with its own st...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Imersion — Get Immersed in the World's Most Beautiful Places** (`https://www.imersion.io`). Get immersed in the most beautiful places on Earth — breathtaking landscapes, hidden hotels and surreal restaurants, each with its own st...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#007bff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#111111` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#007bff` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6364px` / doc `7269px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1140px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `86.3906px` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `0px 0px 6px 6px`, `.25rem`, `.2rem`, `.3rem`.
@@ -103,7 +108,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 100.8px`, `line-height: 92.736px`, `font-weight: 500`, `letter-spacing: -3.528px`); rule `,h1` (`font-size: 2.5rem`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 38.4px`, `line-height: 53.76px`, `font-weight: 500`, `letter-spacing: -0.576px`); rule `,h2` (`font-size: 2rem`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 76.8px`, `line-height: 78.336px`, `font-weight: 500`, `letter-spacing: -2.304px`); rule `,h2` (`font-size: 2rem`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `,small` (`font-size: 80%`, `font-weight: 400`).
 
@@ -120,6 +125,10 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 - **Selector `.btn`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `www-imersion-io` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.hh>` and `<section.recent>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7269px`, deepest scrollY reached `6364px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Route Transition Architecture**: First internal navigation (`/places/346`) measured as `direct` in `1231ms`.
 
 ---
 
@@ -178,6 +187,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
    - Landmark `<section class="about">` framing `Need a crew of AI agents?` and `G E T I M M E R S E D` (*"G E T I M M E R S E D"*) with `#0a0a0d` surface cards, `#007bff` accents, and `section { display:block }`.
 5. **Colophon & Global Directory Footer (<footer.hf> — `https://www.imersion.io`)**:
    - Landmark `<footer class="hf">` anchoring `Imersion — Get Immersed in the W` footer links (`Contact Contact`), copy *"Nusa Penida, Klungkung, Indonesia"*, and `#0f0f0f` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `GETIMMERSED` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `13%`): Active landmark `Section @ 13%` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `27%`): Active landmark `An immersive experience through the most beautifu...` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `40%`): Active landmark `RECENTLY ADDED` · sticky/fixed elements: `1`
+- **Step 05** (`y=4250px`, `67%`): Active landmark `LOCATION SCOUT` · sticky/fixed elements: `2`
+- **Step 06** (`y=5100px`, `80%`): Active landmark `QUALITY CHECKER` · sticky/fixed elements: `1`
+- **Step 07** (`y=5950px`, `93%`): Active landmark `Section @ 93%` · sticky/fixed elements: `1`
+- **Step 08** (`y=6364px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/places/346`)**: `https://www.imersion.io/places/346` — H1: `Kelingking Beach [+]`, scrollHeight `900px`, transition `direct` (`1231ms`)
+- **Detail Route (`/places/342`)**: `https://www.imersion.io/places/342` — H1: `Wayag Islands and Piaynemo Karst Lagoons Viewpoint`, scrollHeight `900px`, transition `direct` (`986ms`)
+- **Detail Route (`/places/16`)**: `https://www.imersion.io/places/16` — H1: `Deadvlei White Clay Pan with Camelthorn Trees [+]`, scrollHeight `900px`, transition `direct` (`582ms`)
 
 ---
 
@@ -241,8 +264,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--gray-dark`)**: `#343a40` — grounded in `var(--gray-dark)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1140px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `86.3906px` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1140px`, `gap: 24px`)
@@ -255,7 +278,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Source Code Pro`
 - **Monospace / Technical Font Stack**: `Geist Mono`
 - **H1 Display Rule**: live computed `h1` (`font-size: 100.8px`, `line-height: 92.736px`, `font-weight: 500`, `letter-spacing: -3.528px`); rule `,h1` (`font-size: 2.5rem`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 38.4px`, `line-height: 53.76px`, `font-weight: 500`, `letter-spacing: -0.576px`); rule `,h2` (`font-size: 2rem`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 76.8px`, `line-height: 78.336px`, `font-weight: 500`, `letter-spacing: -2.304px`); rule `,h2` (`font-size: 2rem`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `,small` (`font-size: 80%`, `font-weight: 400`)
 
@@ -266,7 +289,7 @@ Scaffold `www-imersion-io` (`Imersion — Get Immersed in the World's Most Beaut
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hh> — `www-imersion-io`)` (`www-imersion-io`) adapts across `@media (min-width:576px)`, `@media (min-width:768px)`, `@media (min-width:992px)`, `@media (min-width:1200px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.7,0,.3,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Contact Contact`.
 2. **Hero Stage & Focal Lead (<section.wow> — `GETIMMERSED`)**:
    - DOM & Selectors: Landmark `<section class="wow">` presenting display lead `GETIMMERSED` and copy excerpt *"…in breathtaking landscapes, hidden hotels and surreal restaurant"* over `#111111` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#111111` background with `#ffffff` headline `GETIMMERSED`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#111111` background with `#ffffff` headline `GETIMMERSED`.
 3. **Primary Showcase & Content Grid (<section.recent> — `…in breathtaking landscapes, hidde`)**:
    - DOM & Selectors: Landmark `<section class="recent">` rendering section `…in breathtaking landscapes, hidden hotels and s` with copy *"Need a crew of AI agents?"*, asset references (`favicon.ico`, `hero-poster.jpg`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `html { font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-w... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.recent> — `…in breathtaking landscapes, hidde`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1140px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `86.3906px` horizontal padding on mobile.
@@ -297,8 +320,42 @@ Scaffold `www-imersion-io` (`Imersion — Get Immersed in the World's Most Beaut
 - **Selector `.btn`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `www-imersion-io` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.hh>` and `<section.recent>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7269px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: GETIMMERSED (0%) -> Section @ 13% (13%) -> An immersive experience thr... (27%) -> RECENTLY ADDED (40%) -> LOCATION SCOUT (67%) -> QUALITY CHECKER (80%) -> Section @ 93% (93%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/places/346` (detail, direct), `/places/342` (detail, direct), `/places/16` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-imersion-io`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | GETIMMERSED | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `13%` | Section @ 13% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `27%` | An immersive experience through the most beau... | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `40%` | RECENTLY ADDED | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `67%` | LOCATION SCOUT | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5100px` | `80%` | QUALITY CHECKER | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5950px` | `93%` | Section @ 93% | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6364px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | GETIMMERSED | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2661px` | `50%` | A CREW OF AUTONOMOUS AI AGENTS | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5323px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.imersion.io/places/346` | Kelingking Beach [+] | `900px` | `direct` (`1231ms`) | [subpage-01-places-346.webp](assets/subpage-01-places-346.webp) |
+| `2` | `detail` | `https://www.imersion.io/places/342` | Wayag Islands and Piaynemo Karst Lago... | `900px` | `direct` (`986ms`) | [subpage-02-places-342.webp](assets/subpage-02-places-342.webp) |
+| `3` | `detail` | `https://www.imersion.io/places/16` | Deadvlei White Clay Pan with Cameltho... | `900px` | `direct` (`582ms`) | [subpage-03-places-16.webp](assets/subpage-03-places-16.webp) |
+

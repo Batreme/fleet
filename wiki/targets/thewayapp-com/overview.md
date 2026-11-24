@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thewayapp-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thewayapp.com"
 final_url: "https://www.thewayapp.com/"
 status: analyzed

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-terrenohotel-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-terrenohotel-com_en` (**Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca**)
 - **Production URL**: [https://www.terrenohotel.com/en/](https://www.terrenohotel.com/en/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `#570007` ink, `#cc3224` accent)
 - **Summary**: Boutique hotel in Palma de Mallorca with Mediterranean design, local character, rooftop moments and direct booking benefits on the offici...
-- **Total Clean CSS Variables Extracted**: `492` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `513` (curated live-grounded set below)
 
 ---
 
@@ -66,13 +66,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.mdl-header> — `www-terrenohotel-com_en`)**:
-   - Landmark `<header class="mdl-header color-scheme-burgundy">` (`1440x90px`) hosting `Terreno Barrio Hotel · Boutique hote` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_c4cc3437ae"`, `data-thn-current="1"`, `data-mirai-id="100380929"`, `data-type="hotel"`), and stylesheet rule `.mdl-hero .search-form { position: relative; z-index: 5; }`.
+1. **Persistent Left Sidebar Navigation (<aside.e-intro> — `280×752px` at `x=32`)**:
+   - Fixed/sticky left rail `<aside class="e-intro">` (`280px` wide) paired with top bar `<header class="mdl-header color-scheme-burgundy">` hosting `Terreno Barrio Hotel · Boutiqu` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_d4a75505ed"`, `data-mirai-id="100380929"`, `data-type="hotel"`, `data-title="Header"`), and rule `._3qK-PW_checkbox { position:relative }`.
 2. **Hero Stage & Focal Lead (<section.m-experiencias> — `A HOTEL WITH A NEIGHBORHOOD SOUL`)**:
-   - Landmark `<section class="m-experiencias color-scheme-burgundy">` presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
+   - Landmark `<section class="m-experiencias color-scheme-burgundy">` inside `1440px` main stage presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
 3. **Primary Showcase & Content Grid (<article.e-slide> — `a hotel with a neighborhood soul`)**:
-   - Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `0.8.77`, `clientParamBuilder.bundle.js`), and grid rule `.module-content { overflow: visible !important; }`.
+   - Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `clientParamBuilder.bundle.js`, `0.8.77`), and grid rule `._3qK-PW_checkbox input:disabled { border-color:var(--mirai-ui-checkbox-background-disabled) }`.
 4. **Interactive Detail & Feature Matrix (<article.swiper-slide> — `TERRENO IS PART OF THE NEIGHBOURHO`)**:
-   - Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `.mdl-header { z-index: 900; }`.
+   - Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `checkbox input:disabled._3qK-PW_c... { background-color:var(--mirai-ui-checkbox-background-disabled) }`.
 5. **Colophon & Global Directory Footer (<footer.module-footer> — `https://www.terrenohotel.com/en/`)**:
    - Landmark `<footer class="module-footer">` anchoring `Terreno Barrio Hotel · Boutique ` footer links (`Overview · Index · Archive · About · Contact`), copy *"24 HOURS IN TERRENO"*, and `#dddddd` structural dividers.

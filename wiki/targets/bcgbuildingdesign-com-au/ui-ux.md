@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: bcgbuildingdesign-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `bcgbuildingdesign-com-au` (**Building Designer Gold Coast · BCG Building Design**)
 - **Production URL**: [https://bcgbuildingdesign.com.au/](https://bcgbuildingdesign.com.au/)
 - **Final Redirected URL**: [https://www.bcgbuildingdesign.com.au/](https://www.bcgbuildingdesign.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f3efe8` canvas, `#3a3028` ink, `#0082f3` accent)
 - **Summary**: Boutique building design studio in Gold Coast crafting high-end custom homes and major renovations, personally led from concept to constr...
 - **Total Clean CSS Variables Extracted**: `159` (curated live-grounded set below)

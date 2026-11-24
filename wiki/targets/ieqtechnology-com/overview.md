@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: ieqtechnology-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ieqtechnology.com/"
 final_url: "https://ieqtechnology.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: IEQ Technology · Innovation. Experience. Quality.
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `3`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `11`
+- **Recovered Stylesheets**: `8`
 
 ---
 

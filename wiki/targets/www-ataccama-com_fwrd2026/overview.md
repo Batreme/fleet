@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-ataccama-com_fwrd2026"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.ataccama.com/fwrd2026"
 final_url: "https://www.ataccama.com/fwrd2026"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Ataccama FWRD 2026: Press play on what's next in data trust · Ataccama
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `53`
+- **Recovered Scripts**: `30`
 - **Recovered Stylesheets**: `7`
 
 ---

@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: dennypratama-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dennypratama.com"
 final_url: "https://dennypratama.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://dennypratama.com](https://dennypratama.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Denny Pratama · Product designer who now builds what he designs
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `17`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: dennypratama-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `13`
 - **Recovered Stylesheets**: `1`
 
 ---

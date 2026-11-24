@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-anduril-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-anduril-com` (**Transforming U.S. Defense Capabilities with Advanced Technology · Anduril**)
 - **Production URL**: [https://www.anduril.com/](https://www.anduril.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff3535`)
 - **Summary**: Anduril Industries builds advanced autonomous systems and defense technology to protect US and allied forces. Creating the future of nati...
-- **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `32` (curated live-grounded set below)
 
 ---
 
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.header> — `www-anduril-com`)**:
    - Landmark `<header class="header">` (`1440px`) hosting `Transforming U.S. Defense Capabiliti` navigation (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), DOM attributes (`data-path="/"`, `data-path="subterranean/future-s..."`, `data-label="Subterranean"`, `data-domain="Sea"`), and stylesheet rule `root { --is-mob:0 }`.
 2. **Hero Stage & Focal Lead (<main.GLA11y> — `@[shortTitle]`)**:
-   - Landmark `<main class="GLA11y">` presenting display lead `@[shortTitle]` and copy excerpt *"Anduril, U.S. Navy Invest $6.6 Billion to Expand America's Submar"* over `#000000` canvas and `#ffffff` ink.
+   - Landmark `<main class="GLA11y">` presenting display lead `@[shortTitle]` and copy excerpt *"THE DIGITAL BACKBONE OF MODERN DEFENSE MANUFACTURING"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<main.Header> — `@[title]`)**:
-   - Landmark `<main class="Header">` rendering section `@[title]` with copy *"Please enable javascript"*, asset references (`feed.xml`, `favicon.xxWKiVhdqu.ico`, `favicon.xxQR7xb3fo.svg`, `apple-touch-icon.xxx1TpF2gg.png`), and grid rule `Stage { width:100%;height:100%;margin:0;padding:0;overflow-x:clip }`.
-4. **Interactive Detail & Feature Matrix (<main.HeaderDesktop> — `Please enable javascript`)**:
-   - Landmark `<main class="HeaderDesktop">` framing `Please enable javascript` and `Tactical Reconnaissance & Strike` (*"Tactical Reconnaissance & Strike"*) with `#010101` surface cards, `#ff3535` accents, and `html { scrollbar-gutter:stable }`.
+   - Landmark `<main class="Header">` rendering section `@[title]` with copy *"The Digital Backbone of Modern Defense Manufacturing"*, asset references (`feed.xml`, `favicon.xxWKiVhdqu.ico`, `favicon.xxQR7xb3fo.svg`, `apple-touch-icon.xxx1TpF2gg.png`), and grid rule `Stage { width:100%;height:100%;margin:0;padding:0;overflow-x:clip }`.
+4. **Interactive Detail & Feature Matrix (<main.HeaderDesktop> — `Steelfin`)**:
+   - Landmark `<main class="HeaderDesktop">` framing `Steelfin` and `Barracuda` (*"A New Standard in Defense Manufacturing"*) with `#010101` surface cards, `#ff3535` accents, and `html { scrollbar-gutter:stable }`.
 5. **Colophon & Global Directory Footer (<footer.Footer> — `https://www.anduril.com/`)**:
-   - Landmark `<footer class="Footer">` anchoring `Transforming U.S. Defense Capabi` footer links (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), copy *"Air Dominance & Strike"*, and `#010101` structural dividers.
+   - Landmark `<footer class="Footer">` anchoring `Transforming U.S. Defense Capabi` footer links (`Anduril Logo · Subterranean · Space · Arsenal · Seapower`), copy *"Anduril, U.S. Navy Invest $6.6 Billion to Expand America's S"*, and `#010101` structural dividers.

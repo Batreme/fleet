@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: stillhere-hdfund-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "stillhere-hdfund-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 
 > **STILL HERE. · Three Years in Gaza · HDF** (https://stillhere.hdfund.org/) — Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **STILL HERE. · Three Years in Gaza · HDF** (`https://stillhere.hdfund.org/`). Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#111111` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 32px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `50997px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1260px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `32px` grid gap.
 - **Border Radius Scale**: `50%`, `2px`.
@@ -56,7 +61,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 |---|---|---|
 | **Primary Canvas Substrate** | `#111111` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `footer` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#090a09` | `.intro { background: #090a09 }` |
+| **Elevated Surface / Card Substrate** | `#090a09` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0000ff` | `.button-outline:hover { color: blue }` (`#0000ff`) |
 | **Secondary / Muted Copy** | `#a8aaa1` | `var(--muted)` in `:root` |
 | **Structural Hairline Border** | `#20201e` | `.year-ghost { stroke: #20201e }` |
@@ -98,7 +103,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 126.72px`, `line-height: 117.85px`, `font-weight: 700`, `letter-spacing: -1.9008px`); CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 172.8px`, `line-height: 152.064px`, `font-weight: 900`, `letter-spacing: -3.456px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 302.4px`, `line-height: 266.112px`, `font-weight: 900`, `letter-spacing: -6.048px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 600`, `letter-spacing: 1.05px`); rule `small` (`font-size: 12px`).
 
@@ -115,6 +120,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
 - **Selector `.button`**: `transition: background .2s,color .2s,border .2s` extracted from `stillhere-hdfund-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.first-days>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `50997px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -173,6 +181,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas
    - Landmark `<section class="timeline-intro">` framing `THE FIRST DAYS` and `THREE YEARS . STILL HERE .` (*"SCROLL UP TO BEGIN"*) with `#090a09` surface cards, `#0000ff` accents, and `img { display:block;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.campaign-footer> — `https://stillhere.hdfund.org/`)**:
    - Landmark `<footer class="campaign-footer">` anchoring `STILL HERE. · Three Years in Gaz` footer links (`Overview · Index · Archive · About · Contact`), copy *"GAZA CRISIS RESPONSE"*, and `#20201e` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `THE WORLD WATCHED.` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `2%`): Active landmark `THE WORLD WATCHED.` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `7%`): Active landmark `THE WORLD WATCHED.` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `12%`): Active landmark `BUILDING A RESPONSE THAT COULD LAST` · sticky/fixed elements: `3`
+- **Step 05** (`y=8500px`, `17%`): Active landmark `MOVING AGAIN BEFORE WINTER` · sticky/fixed elements: `2`
+- **Step 06** (`y=11050px`, `22%`): Active landmark `#year-2023` · sticky/fixed elements: `2`
+- **Step 07** (`y=13600px`, `27%`): Active landmark `HOLDING STEADY THROUGH THE HARDEST MONTHS` · sticky/fixed elements: `3`
+- **Step 08** (`y=14400px`, `29%`): Active landmark `#year-2024` · sticky/fixed elements: `2`
 
 ---
 
@@ -189,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#111111` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#111111` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Opening Barlow` for display copy (`THE WORLD WATCHED.`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `1260px` container bounds (`gap: 32px`, padding `57.6px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,7 +236,7 @@ Declare and consume these exact custom properties extracted from `stillhere-hdfu
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#111111` — grounded in live computed `body` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#ffffff` — grounded in live computed `footer` `color` (`computed_styles.json`)
-- **Elevated Surface / Card Substrate**: `#090a09` — grounded in `.intro { background: #090a09 }`
+- **Elevated Surface / Card Substrate**: `#090a09` — grounded in live computed `section` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#0000ff` — grounded in `.button-outline:hover { color: blue }` (`#0000ff`)
 - **Secondary / Muted Copy**: `#a8aaa1` — grounded in `var(--muted)` in `:root`
 - **Structural Hairline Border**: `#20201e` — grounded in `.year-ghost { stroke: #20201e }`
@@ -231,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--campaign-red`)**: `#bb0305` — grounded in `var(--campaign-red)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1260px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `57.6px` lateral canvas padding with `32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 32px`)
@@ -245,7 +262,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 126.72px`, `line-height: 117.85px`, `font-weight: 700`, `letter-spacing: -1.9008px`); CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 172.8px`, `line-height: 152.064px`, `font-weight: 900`, `letter-spacing: -3.456px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 302.4px`, `line-height: 266.112px`, `font-weight: 900`, `letter-spacing: -6.048px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 600`, `letter-spacing: 1.05px`); rule `small` (`font-size: 12px`)
 
@@ -256,7 +273,7 @@ Scaffold `stillhere-hdfund-org` (`STILL HERE. · Three Years in Gaza · HDF`) wi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `stillhere-hdfund-org`)` (`stillhere-hdfund-org`) adapts across `@media (min-width:1600px)`, `@media (max-width:1100px)`, `@media (max-width:700px)`, `@media (max-height:700px) and (min-width:701px)` with `cubic-bezier(.22,1,.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.intro> — `THE WORLD WATCHED.`)**:
    - DOM & Selectors: Landmark `<section class="intro scroll-scene">` presenting display lead `THE WORLD WATCHED.` and copy excerpt *"The opening couldn’t load."* over `#111111` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#111111` background with `#ffffff` headline `THE WORLD WATCHED.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#111111` background with `#ffffff` headline `THE WORLD WATCHED.`.
 3. **Primary Showcase & Content Grid (<section.first-days> — `THE WORLD WATCHED .`)**:
    - DOM & Selectors: Landmark `<section class="first-days scroll-scene">` rendering section `THE WORLD WATCHED .` with copy *"TIME KEPT MOVING ."*, asset references (`door-leaf.webp`, `al-aqsa-wall-print.webp`, `door-leaf-mono.webp`, `al-aqsa-wall-print-mono.webp`), and grid rule `button:focus-visible { outline:2px solid var(--gold);outline-offset:7px }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.first-days> — `THE WORLD WATCHED .`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1260px`, `gap: 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
@@ -287,8 +304,34 @@ Scaffold `stillhere-hdfund-org` (`STILL HERE. · Three Years in Gaza · HDF`) wi
 - **Selector `.button`**: `transition: background .2s,color .2s,border .2s` extracted from `stillhere-hdfund-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.first-days>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `50997px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: THE WORLD WATCHED. (0%) -> THE WORLD WATCHED. (2%) -> THE WORLD WATCHED. (7%) -> BUILDING A RESPONSE THAT CO... (12%) -> MOVING AGAIN BEFORE WINTER (17%) -> #year-2023 (22%) -> HOLDING STEADY THROUGH THE... (27%) -> #year-2024 (29%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `stillhere-hdfund-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | THE WORLD WATCHED. | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `2%` | THE WORLD WATCHED. | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `7%` | THE WORLD WATCHED. | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `12%` | BUILDING A RESPONSE THAT COULD LAST | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `17%` | MOVING AGAIN BEFORE WINTER | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `22%` | #year-2023 | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `27%` | HOLDING STEADY THROUGH THE HARDEST MONTHS | `3` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `29%` | #year-2024 | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | THE WORLD WATCHED. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | HDF'S CLINIC OPENS IN GAZA | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | THE NORTH GAZA EVACUATION ORDER | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: studyhall-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "studyhall-design"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)"
 ---
@@ -16,7 +21,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 > **Home · Study Hall ✶ Built to move you.** (https://studyhall.design/) — A creative agency based in Oakland and partnering globally. We craft brand, motion, and interactive to help businesses resonate now and r...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,21 +31,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 - **Brand Essence & Persona**: **Home · Study Hall ✶ Built to move you.** (`https://studyhall.design/`). A creative agency based in Oakland and partnering globally. We craft brand, motion, and interactive to help businesses resonate now and r...
 - **Final Redirected URL**: [https://www.studyhall.design/](https://www.studyhall.design/)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Neue Montreal` for display copy (`We're in the business of making thin`) with `Neue Montreal` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Neue Montreal` across display (`We're in the business of making thin`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=4185px` / doc `5085px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (live computed `main` `max-width`).
 - **Canvas Lateral Padding & Spacing**: `18px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `.25rem`, `3px`, `4px`, `5rem`.
@@ -110,6 +115,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 - **Selector `.transition-colors`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `studyhall-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.pt-20>` and `<section.py-gy>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `5085px`, deepest scrollY reached `4185px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/work`) measured as `MPA` in `1651ms`.
 
 ---
 
@@ -159,15 +168,26 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.pt-20> — `studyhall-design`)**:
-   - Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-leadin-portal-id="246568091"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-cookieconsent="ignore"`, `data-hs-ignore="true"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.pb-gy> — `We're in the business of making th`)**:
    - Landmark `<section class="pb-gy">` presenting display lead `We're in the business of making things move. Bran...` and copy excerpt *"San Francisco Running Company"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.py-gy> — `San Francisco Running Company Bran`)**:
-   - Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`246568091.js`, `collectedforms.js`, `banner.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`banner.js`, `collectedforms.js`, `246568091.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.gap-gutter> — `Awards & Publications`)**:
    - Landmark `<section class="py-gy gap-gutter">` framing `Awards & Publications` and `Recent Work` (*"Netflix Sports Club"*) with `#cdcdcd` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.mb-18> — `https://studyhall.design/`)**:
    - Landmark `<footer class="mb-18 pt-24">` anchoring `Home · Study Hall ✶ Built to mov` footer links (`About · Work with us`), copy *"Since day one, this unique blend 1 has powered vast creative"*, and `#e5e5e5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `We're in the business of making things move. Bran...` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `20%`): Active landmark `We're in the business of making things move. Bran...` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `41%`): Active landmark `RECENT WORK` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `61%`): Active landmark `Section @ 61%` · sticky/fixed elements: `2`
+- **Step 05** (`y=4185px`, `100%`): Active landmark `SITE` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/work`)**: `https://www.studyhall.design/work` — H1: `work`, scrollHeight `900px`, transition `MPA` (`1651ms`)
+- **Detail Route (`/work/sfrc`)**: `https://www.studyhall.design/work/sfrc` — H1: `San Francisco Running Company Brand Identity`, scrollHeight `20766px`, transition `direct` (`1280ms`)
+- **About Route (`/about`)**: `https://www.studyhall.design/about` — H1: `Things tend to move faster when the right people...`, scrollHeight `8213px`, transition `direct` (`5099ms`)
 
 ---
 
@@ -184,7 +204,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Neue Montreal` for display copy (`We're in the business of making thin`) with `Neue Montreal` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Neue Montreal` across display (`We're in the business of making thin`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(0,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -220,8 +240,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#e5e5e5` — grounded in `10 { border-color: #e5e5e5 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (live computed `main` `max-width`)
 - **Padding & Gutters**: `18px` lateral canvas padding with `18px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`)
@@ -241,20 +261,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `studyhall-design` (`Home · Study Hall ✶ Built to move you.`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.pt-20> — `studyhall-design`)**:
-   - DOM & Selectors: Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-leadin-portal-id="246568091"`, `data-leadin-env="prod"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - DOM & Selectors: Landmark `<nav class="pt-20 flex">` (`1440x54px`) hosting `Home · Study Hall ✶ Built to move yo` navigation (`About · Work with us`), DOM attributes (`data-cookieconsent="ignore"`, `data-hs-ignore="true"`, `data-loader="hs-scriptloader"`, `data-hsjs-portal="246568091"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.pt-20> — `studyhall-design`)` (`studyhall-design`) adapts across `@media (width>=48.0625rem)`, `@media (width>=64rem)`, `@media (width>=80rem)`, `@media (width>=96rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.45,0,.2,1)` transitions and links `About · Work with us`.
 2. **Hero Stage & Focal Lead (<section.pb-gy> — `We're in the business of making th`)**:
    - DOM & Selectors: Landmark `<section class="pb-gy">` presenting display lead `We're in the business of making things move. Bran...` and copy excerpt *"San Francisco Running Company"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `We're in the business of making things move. Bran...`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `We're in the business of making things move. Bran...`.
 3. **Primary Showcase & Content Grid (<section.py-gy> — `San Francisco Running Company Bran`)**:
-   - DOM & Selectors: Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`246568091.js`, `collectedforms.js`, `banner.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - DOM & Selectors: Landmark `<section class="py-gy px-gx">` rendering section `San Francisco Running Company Brand Identity` with copy *"Mt. Tamalpais is sacred ground in trail running, the site of the "*, asset references (`banner.js`, `collectedforms.js`, `246568091.js`, `594ac8afc003a31c157eba4bb9a25ab65...`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.py-gy> — `San Francisco Running Company Bran`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.gap-gutter> — `Awards & Publications`)**:
    - DOM & Selectors: Landmark `<section class="py-gy gap-gutter">` framing `Awards & Publications` and `Recent Work` (*"Netflix Sports Club"*) with `#cdcdcd` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.gap-gutter> — `Awards & Publications`)` uses `.25rem`, `3px`, `4px`, `5rem` radii, `#0000ff` highlights, and assets (246568091.js, collectedforms.js, banner.js).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.gap-gutter> — `Awards & Publications`)` uses `.25rem`, `3px`, `4px`, `5rem` radii, `#0000ff` highlights, and assets (banner.js, collectedforms.js, 246568091.js).
 5. **Colophon & Global Directory Footer (<footer.mb-18> — `https://studyhall.design/`)**:
    - DOM & Selectors: Landmark `<footer class="mb-18 pt-24">` anchoring `Home · Study Hall ✶ Built to mov` footer links (`About · Work with us`), copy *"Since day one, this unique blend 1 has powered vast creative"*, and `#e5e5e5` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mb-18> — `https://studyhall.design/`)` aligns to `1440px` (live computed `main` `max-width`) with `18px` lateral canvas padding with `18px` grid gap and attributes (data-leadin-portal-id="246568091", data-leadin-env="prod", data-loader="hs-scriptloader").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.mb-18> — `https://studyhall.design/`)` aligns to `1440px` (live computed `main` `max-width`) with `18px` lateral canvas padding with `18px` grid gap and attributes (data-cookieconsent="ignore", data-hs-ignore="true", data-loader="hs-scriptloader").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"San Francisco Running Company"*
@@ -276,8 +296,39 @@ Scaffold `studyhall-design` (`Home · Study Hall ✶ Built to move you.`) with t
 - **Selector `.transition-colors`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `studyhall-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.pt-20>` and `<section.py-gy>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `5085px` across 5 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: We're in the business of ma... (0%) -> We're in the business of ma... (20%) -> RECENT WORK (41%) -> Section @ 61% (61%) -> SITE (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/work` (listing, MPA), `/work/sfrc` (detail, direct), `/about` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `studyhall-design`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | We're in the business of making things move.... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `20%` | We're in the business of making things move.... | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `41%` | RECENT WORK | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `61%` | Section @ 61% | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4185px` | `100%` | SITE | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | We're in the business of making things mo... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3612px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `7225px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.studyhall.design/work` | work | `900px` | `MPA` (`1651ms`) | [subpage-01-work.webp](assets/subpage-01-work.webp) |
+| `2` | `detail` | `https://www.studyhall.design/work/sfrc` | San Francisco Running Company Brand I... | `20766px` | `direct` (`1280ms`) | [subpage-02-work-sfrc.webp](assets/subpage-02-work-sfrc.webp) |
+| `3` | `about` | `https://www.studyhall.design/about` | Things tend to move faster when the r... | `8213px` | `direct` (`5099ms`) | [subpage-03-about.webp](assets/subpage-03-about.webp) |
+

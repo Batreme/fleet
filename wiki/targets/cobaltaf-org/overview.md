@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: cobaltaf-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://cobaltaf.org/"
 final_url: "https://cobaltaf.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Cobalt Abortion Fund
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `16`
+- **Recovered Scripts**: `77`
+- **Recovered Stylesheets**: `43`
 
 ---
 

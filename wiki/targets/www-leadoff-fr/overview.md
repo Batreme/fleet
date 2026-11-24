@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-leadoff-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.leadoff.fr"
 final_url: "https://www.leadoff.fr/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Agence digitale à Vannes : web, mobile & acquisition · LEADOFF
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `3`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `24`
+- **Recovered Stylesheets**: `4`
 
 ---
 

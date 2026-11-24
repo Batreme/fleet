@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: gracefashion-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://gracefashion.ai"
 final_url: "https://gracefashion.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: KI-Fotostudio für Mode: Bilder ohne Shooting · grace ai
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `32`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `144`
+- **Recovered Stylesheets**: `4`
 
 ---
 

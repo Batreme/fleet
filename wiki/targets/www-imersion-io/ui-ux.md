@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-imersion-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-imersion-io` (**Imersion — Get Immersed in the World's Most Beautiful Places**)
 - **Production URL**: [https://www.imersion.io](https://www.imersion.io)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#007bff` accent)
 - **Summary**: Get immersed in the most beautiful places on Earth — breathtaking landscapes, hidden hotels and surreal restaurants, each with its own st...
 - **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Source Code Pro`
 - **Monospace / Technical Font Stack**: `Geist Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 100.8px`, `line-height: 92.736px`, `font-weight: 500`, `letter-spacing: -3.528px`); rule `,h1` (`font-size: 2.5rem`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 38.4px`, `line-height: 53.76px`, `font-weight: 500`, `letter-spacing: -0.576px`); rule `,h2` (`font-size: 2rem`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 76.8px`, `line-height: 78.336px`, `font-weight: 500`, `letter-spacing: -2.304px`); rule `,h2` (`font-size: 2rem`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `,small` (`font-size: 80%`, `font-weight: 400`)
 

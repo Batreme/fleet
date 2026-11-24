@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: velourproductions-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "velourproductions-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 7
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `
 
 > **Velour Productions · Vancouver Video & Photography** (https://velourproductions.com/) — Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x5796)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Velour Productions · Vancouver Video & Photography** (`https://velourproductions.com/`). Velour Productions is a Vancouver production studio creating cinematic video, photography, social content and creative direction for brands.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `#1a1a1a` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f0e5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1a` primary typography and `#ff0000` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×5796px` (`assets/desktop-journey.webp`, `7` keyframes up to `y=4254px` / doc `5154px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `34.56px` lateral canvas padding with `46.8px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`.
@@ -112,6 +117,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `
 - **Selector `data-opening-bypassed=true])>.sit...`**: `transition: none` extracted from `velourproductions-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.76,0,.24,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.work>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `5154px`, deepest scrollY reached `4254px` across `7` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Route Transition Architecture**: First internal navigation (`/our-work/smartsweets`) measured as `SPA` in `2806ms`.
 
 ---
 
@@ -170,6 +179,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f0e5` canvas, `
    - Landmark `<section class="services">` framing `Selected Work` and `Good company. Great stories.` (*"View project 01 Rugby Bricks Photography + Videography 2026"*) with `#e4e0d6` surface cards, `#ff0000` accents, and `smooth-wrapper { overflow-x:clip }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://velourproductions.com/`)**:
    - Landmark `<footer class="site-footer">` anchoring `Velour Productions · Vancouver V` footer links (`Work · About · Instagram · LinkedIn`), copy *"Photography + Videography"*, and `#7c7b76` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `WE GIVE YOU A POINT OF VIEW` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `20%`): Active landmark `SELECTED WORK` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `40%`): Active landmark `#services` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `60%`): Active landmark `#services` · sticky/fixed elements: `2`
+- **Step 05** (`y=3400px`, `80%`): Active landmark `GOOD COMPANY. GREAT STORIES.` · sticky/fixed elements: `2`
+- **Step 06** (`y=4250px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `2`
+- **Step 07** (`y=4254px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/our-work/smartsweets`)**: `https://velourproductions.com/our-work/smartsweets` — H1: `SMARTSWEETS`, scrollHeight `8558px`, transition `SPA` (`2806ms`)
+- **About Route (`/about-us`)**: `https://velourproductions.com/about-us` — H1: `ABOUT`, scrollHeight `5198px`, transition `direct` (`1186ms`)
+- **Detail Route (`/our-work/rugby-bricks`)**: `https://velourproductions.com/our-work/rugby-bricks` — H1: `RUGBY BRICKS`, scrollHeight `8512px`, transition `direct` (`616ms`)
 
 ---
 
@@ -225,8 +247,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-taupe`)**: `#a59b87` — grounded in `var(--color-taupe)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×5796px` (multi-frame vertical journey filmstrip (5796px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `34.56px` lateral canvas padding with `46.8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 46.8px`)
@@ -250,7 +272,7 @@ Scaffold `velourproductions-com` (`Velour Productions · Vancouver Video & Photo
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `velourproductions-com`)` (`velourproductions-com`) adapts across `@media (max-width:800px)`, `@media (max-width:520px)`, `@media (max-width:760px),(hover:none)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.76,0,.24,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.23,1,.32,1)` transitions and links `Work · About · Instagram · LinkedIn`.
 2. **Hero Stage & Focal Lead (<section.brand-opening> — `WE GIVE YOU A POINT OF VIEW`)**:
    - DOM & Selectors: Landmark `<section class="brand-opening">` presenting display lead `WE GIVE YOU A POINT OF VIEW` and copy excerpt *"You’re building a brand with something to say. We translate that "* over `#f4f0e5` canvas and `#1a1a1a` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f0e5` background with `#1a1a1a` headline `WE GIVE YOU A POINT OF VIEW`.
+   - Responsive Contract: Hero stage (`1280×5796px` desktop / `390×2616px` mobile) sets `#f4f0e5` background with `#1a1a1a` headline `WE GIVE YOU A POINT OF VIEW`.
 3. **Primary Showcase & Content Grid (<section.work> — `We give you a point of view`)**:
    - DOM & Selectors: Landmark `<section class="work filmstrip">` rendering section `We give you a point of view` with copy *"A selection of films, photographs, campaigns, and brand worlds."*, asset references (`loading-bracket-left.svg`, `loading-dots.svg`, `loading-bracket-right.svg`, `0035rp4bt3s1g.css`), and grid rule `smooth-content { min-height:100% }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.work> — `We give you a point of view`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 46.8px`) on desktop and Single-column vertical stack at `390px` viewport width with `34.56px` horizontal padding on mobile.
@@ -281,8 +303,41 @@ Scaffold `velourproductions-com` (`Velour Productions · Vancouver Video & Photo
 - **Selector `data-opening-bypassed=true])>.sit...`**: `transition: none` extracted from `velourproductions-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.76,0,.24,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.work>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `5154px` across 7 distinct viewport chapters.
+- **Vertical Chapter Sequence**: WE GIVE YOU A POINT OF VIEW (0%) -> SELECTED WORK (20%) -> #services (40%) -> #services (60%) -> GOOD COMPANY. GREAT STORIES. (80%) -> Footer (100%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/our-work/smartsweets` (detail, SPA), `/about-us` (about, direct), `/our-work/rugby-bricks` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `velourproductions-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | WE GIVE YOU A POINT OF VIEW | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `20%` | SELECTED WORK | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `40%` | #services | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `60%` | #services | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `80%` | GOOD COMPANY. GREAT STORIES. | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `100%` | Footer | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `4254px` | `100%` | Footer | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | WE GIVE YOU A POINT OF VIEW | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1429px` | `50%` | #services | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `2858px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://velourproductions.com/our-work/smartsweets` | SMARTSWEETS | `8558px` | `SPA` (`2806ms`) | [subpage-01-our-work-smartsweets.webp](assets/subpage-01-our-work-smartsweets.webp) |
+| `2` | `about` | `https://velourproductions.com/about-us` | ABOUT | `5198px` | `direct` (`1186ms`) | [subpage-02-about-us.webp](assets/subpage-02-about-us.webp) |
+| `3` | `detail` | `https://velourproductions.com/our-work/rugby-bricks` | RUGBY BRICKS | `8512px` | `direct` (`616ms`) | [subpage-03-our-work-rugby-bricks.webp](assets/subpage-03-our-work-rugby-bricks.webp) |
+

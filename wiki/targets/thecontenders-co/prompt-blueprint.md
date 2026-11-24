@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: thecontenders-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "thecontenders-co"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ed0000`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e
 
 > **The Contenders · Strategic Brand & Design Consultancy** (https://thecontenders.co/) — Where business meets brand. The Contenders is an independent Australian consultancy creating distinctive brands that deliver measurable i...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Contenders · Strategic Brand & Design Consultancy** (`https://thecontenders.co/`). Where business meets brand. The Contenders is an independent Australian consultancy creating distinctive brands that deliver measurable i...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ed0000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ed0000` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--inline-spacing)` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `2147483647px`, `var(--radius-md)`.
@@ -109,6 +114,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `thecontenders-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.py-4>` and `<section.homepage-intro-copy:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -167,6 +175,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e
    - Landmark `<section class="homepage-intro-copy">` framing `THE CONTENDERS IS A CONSULTANCY WHERE BUSINESS M` and `WE UNDERSTAND THAT YOUR ORGANISATION IS FIGHTING` (*"WE UNDERSTAND THAT YOUR ORGANISATION IS FIGHTING FOR SOMETHING."*) with `#e5e5e5` surface cards, `#ed0000` accents, and `.HMGLSG_className { font-family:Mesapholic,Mesapholic Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.fixed> — `https://thecontenders.co/`)**:
    - Landmark `<footer class="fixed">` anchoring `The Contenders · Strategic Brand` footer links (`Overview · Index · Archive · About · Contact`), copy *"GREATER GROWTH. GREATER INFLUENCE. GREATER IMPACT."*, and `#b2b2b2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Viewport` · sticky/fixed elements: `0`
 
 ---
 
@@ -219,8 +229,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#b2b2b2` — grounded in `.border-black-30 { border-color: #b2b2b2 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--inline-spacing)` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 24px`)
@@ -244,7 +254,7 @@ Scaffold `thecontenders-co` (`The Contenders · Strategic Brand & Design Consult
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.py-4> — `thecontenders-co`)` (`thecontenders-co`) adapts across `@media (min-width:37.5rem)`, `@media (min-width:48rem)`, `@media (min-width:80rem)`, `@media (min-width:96rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.78,0,.22,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.homepage-intro-copy> — `THE CONTENDERS IS A CONSULTANCY WH`)**:
    - DOM & Selectors: Landmark `<section class="homepage-intro-copy">` presenting display lead `THE CONTENDERS IS A CONSULTANCY WHERE BUSINESS ME...` and copy excerpt *"In the spirit of reconciliation, The Contenders acknowledges the "* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#000000` headline `THE CONTENDERS IS A CONSULTANCY WHERE BUSINESS ME...`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `THE CONTENDERS IS A CONSULTANCY WHERE BUSINESS ME...`.
 3. **Primary Showcase & Content Grid (<section.homepage-intro-copy:nth(2)> — `THE CONTENDERS`)**:
    - DOM & Selectors: Landmark `<section class="homepage-intro-copy">` rendering section `THE CONTENDERS` with copy *"THE CONTENDERS IS A CONSULTANCY WHERE BUSINESS MEETS BRAND."*, asset references (`Horizontal-3fa5268f-53f1-4223-a6c...`, `Compact-7923dd47-d322-4f23-802c-c...`, `00k7ot6zx_lfg.css`, `123l3rregymnq.js`), and grid rule `.WkV8yq_variable { --font-die-grotesk:"DieGrotesk", "DieGrotesk Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.homepage-intro-copy:nth(2)> — `THE CONTENDERS`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--inline-spacing)` horizontal padding on mobile.
@@ -275,8 +285,27 @@ Scaffold `thecontenders-co` (`The Contenders · Strategic Brand & Design Consult
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `thecontenders-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.py-4>` and `<section.homepage-intro-copy:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Viewport (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `thecontenders-co`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Viewport | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `384px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `769px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

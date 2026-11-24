@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: opportunity-waltonfamilyfoundation-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://opportunity.waltonfamilyfoundation.org/"
 final_url: "https://opportunity.waltonfamilyfoundation.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Access to Opportunity: Gallup Research · Walton Family Foundation
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `53`
+- **Recovered Stylesheets**: `4`
 
 ---
 

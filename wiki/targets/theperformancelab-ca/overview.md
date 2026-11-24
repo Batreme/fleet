@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: theperformancelab-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://theperformancelab.ca/"
 final_url: "https://theperformancelab.ca/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Performance Lab — Sports Science & Athletic Testing in Toronto
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `11`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `48`
+- **Recovered Stylesheets**: `4`
 
 ---
 

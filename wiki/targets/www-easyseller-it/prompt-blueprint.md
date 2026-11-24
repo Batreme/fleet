@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-easyseller-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-easyseller-it"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0d6efd`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 > **EASYSELLER · Sales Digital Agency** (https://www.easyseller.it/) — Aiutiamo i brand e retail multibrand a crescere online attraverso percorsi completi di consulenza · digitalizzazione · gestione · promozi...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **EASYSELLER · Sales Digital Agency** (`https://www.easyseller.it/`). Aiutiamo i brand e retail multibrand a crescere online attraverso percorsi completi di consulenza · digitalizzazione · gestione · promozi...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0d6efd`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Font2` for display copy (`Elevate Your Sales`) with `Font1` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Font2` for display copy (`Elevate Your Sales`) with `Font1`.
   - **Calibrated Spatial Grid & Motion**: Combines `97vw` container bounds (`gap: 12px`, padding `1px`) with `cubic-bezier(.6,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `97vw` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `1px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `100%`, `50%`, `10px`, `1.5rem`.
@@ -117,6 +122,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 - **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s left` extracted from `www-easyseller-it` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.6,0,.2,1)`)**: Governs interactive state transitions across `<header.py-4>` and `<section.py-5>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `MENU CHIUDI`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/servizi/e-commerce-by-shopify/`) measured as `direct` in `5223ms`.
 
 ---
 
@@ -175,6 +185,17 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
    - Landmark `<section class="py-5">` framing `Aiutiamo i brand e retail multibrand a crescere o...` and `Operatività concreta.` (*"Woman · Man · Kids Beachwear"*) with `#dddddd` surface cards, `#0d6efd` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.py-5> — `https://www.easyseller.it/`)**:
    - Landmark `<footer class="py-5">` anchoring `EASYSELLER · Sales Digital Agenc` footer links (`Instagram · LinkedIn · Facebook · Youtube · Servizi`), copy *"Woman · Man Beachwear"*, and `#9ec5fe` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Elevate Your Sales` · sticky/fixed elements: `2`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Elevate Your Sales` · sticky/fixed elements: `2`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Elevate Your Sales` · sticky/fixed elements: `2`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Elevate Your Sales` · sticky/fixed elements: `2`
+- **Step 05** (`y=0px`, `33%`): Active landmark `Elevate Your Sales` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/servizi/e-commerce-by-shopify/`)**: `https://www.easyseller.it/servizi/e-commerce-by-shopify/` — H1: `E-COMMERCE BY SHOPIFY`, scrollHeight `900px`, transition `direct` (`5223ms`)
+- **About Route (`/about/`)**: `https://www.easyseller.it/about/` — H1: `Results`, scrollHeight `900px`, transition `direct` (`1542ms`)
+- **Detail Route (`/servizi/digital-advertising-meta-google/`)**: `https://www.easyseller.it/servizi/digital-advertising-meta-google/` — H1: `DIGITAL ADVERTISING META & GOOGLE`, scrollHeight `900px`, transition `direct` (`9759ms`)
 
 ---
 
@@ -191,7 +212,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0d6efd`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Font2` for display copy (`Elevate Your Sales`) with `Font1` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Font2` for display copy (`Elevate Your Sales`) with `Font1`.
   - **Calibrated Spatial Grid & Motion**: Combines `97vw` container bounds (`gap: 12px`, padding `1px`) with `cubic-bezier(.6,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -235,8 +256,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--bs-red`)**: `#dc3545` — grounded in `var(--bs-red)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `97vw` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `1px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 97vw`, `gap: 12px`)
@@ -260,7 +281,7 @@ Scaffold `www-easyseller-it` (`EASYSELLER · Sales Digital Agency`) with these e
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.py-4> — `www-easyseller-it`)` (`www-easyseller-it`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-width:576px)`, `@media (min-width:768px)`, `@media (min-width:992px)` with `cubic-bezier(.6,0,.2,1)` transitions and links `Instagram · LinkedIn · Facebook · Youtube · Servizi`.
 2. **Hero Stage & Focal Lead (<section.hero_section> — `Elevate Your Sales`)**:
    - DOM & Selectors: Landmark `<section class="hero_section">` presenting display lead `Elevate Your Sales` and copy excerpt *"Dal 2013 il nostro obiettivo è aiutarti a vendere di più, acquisi"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#000000` headline `Elevate Your Sales`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×872px` mobile) sets `#ffffff` background with `#000000` headline `Elevate Your Sales`.
 3. **Primary Showcase & Content Grid (<section.py-5> — `E l e v a t e Y o u r S a l e s`)**:
    - DOM & Selectors: Landmark `<section class="py-5">` rendering section `E l e v a t e Y o u r S a l e s` with copy *"Alcuni dei brand che abbiamo supportato nel raggiungere nuovi ris"*, asset references (`favicon.png`, `embed`, `styles.css`, `bootstrap.min.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.py-5> — `E l e v a t e Y o u r S a l e s`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 97vw`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `1px` horizontal padding on mobile.
@@ -291,8 +312,37 @@ Scaffold `www-easyseller-it` (`EASYSELLER · Sales Digital Agency`) with these e
 - **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s left` extracted from `www-easyseller-it` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.6,0,.2,1)`)**: Governs interactive state transitions across `<header.py-4>` and `<section.py-5>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 5 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Elevate Your Sales (0%) -> Elevate Your Sales (8%) -> Elevate Your Sales (17%) -> Elevate Your Sales (25%) -> Elevate Your Sales (33%).
+- **Multi-Page Routes**: Scaffold internal routes `/servizi/e-commerce-by-shopify/` (detail, direct), `/about/` (about, direct), `/servizi/digital-advertising-meta-google/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-easyseller-it`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Elevate Your Sales | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Elevate Your Sales | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Elevate Your Sales | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Elevate Your Sales | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | Elevate Your Sales | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Elevate Your Sales | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.easyseller.it/servizi/e-commerce-by-shopify/` | E-COMMERCE BY SHOPIFY | `900px` | `direct` (`5223ms`) | [subpage-01-servizi-e-commerce-by-shopify.webp](assets/subpage-01-servizi-e-commerce-by-shopify.webp) |
+| `2` | `about` | `https://www.easyseller.it/about/` | Results | `900px` | `direct` (`1542ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://www.easyseller.it/servizi/digital-advertising-meta-google/` | DIGITAL ADVERTISING META & GOOGLE | `900px` | `direct` (`9759ms`) | [subpage-03-servizi-digital-advertising-meta-goo.webp](assets/subpage-03-servizi-digital-advertising-meta-goo.webp) |
+

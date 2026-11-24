@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: rozaliabomawrites-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://rozaliabomawrites.com/"
 final_url: "https://rozaliabomawrites.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Rozalia Boma — Multicultural Romance Author
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `85`
+- **Recovered Stylesheets**: `16`
 
 ---
 

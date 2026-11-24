@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-tomdekoning-work"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.tomdekoning.work/"
 final_url: "https://www.tomdekoning.work/"
-status: analyzed
-http_status: 200
-capture_tier: tier1_fast
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://www.tomdekoning.work/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.tomdekoning.work/](https://www.tomdekoning.work/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: tomdekoning.work — Building brands that turn heads
-- **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `76`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://www.tomdekoning.work/', waiting until 'domcontentloaded' )
+- **Page Title**: www-tomdekoning-work
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `11`
 - **Recovered Stylesheets**: `3`
 
 ---

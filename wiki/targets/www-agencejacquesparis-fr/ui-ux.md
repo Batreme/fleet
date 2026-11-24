@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-agencejacquesparis-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-agencejacquesparis-fr` (**Jacques Paris - Agence à impact positif**)
 - **Production URL**: [https://www.agencejacquesparis.fr/](https://www.agencejacquesparis.fr/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×2484px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f0f0dc` canvas, `#001847` ink, `#ffffff` accent)
 - **Summary**: La créativité au service des marques qui veulent changer les choses et prendre soin de ce qui compte.
 - **Total Clean CSS Variables Extracted**: `21` (curated live-grounded set below)
@@ -23,10 +23,10 @@ http_status: 200
 ## Typography & Hierarchy
 - **Display Font Stack**: `ClashGrotesk`
 - **Body Font Stack**: `ClashGrotesk`
-- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Monospace / Technical Font Stack**: `SF Mono`
 - **Hero Display (`H1`)**: observed font-size ladder: `16px`, `22.4px`, `14px`, `13.3333px`, `var(--text-xs)`
-- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `22.4px`, `14px`, `13.3333px`, `var(--text-xs)`
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-base: 15px`
+- **Section Heading (`H2`)**: rule `h2` (`font-size: var(--text-md)`, `letter-spacing: .01em`, `font-weight: 600`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-base: 15px`; rule `p` (`font-size: var(--text-base)`, `line-height: 1.7`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--text-xs: 11px`, `--text-sm: 14px`
 
 ---

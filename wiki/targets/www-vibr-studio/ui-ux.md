@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-vibr-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-vibr-studio` (**Vibr — Figma to code for designers who ship**)
 - **Production URL**: [https://www.vibr.studio/](https://www.vibr.studio/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#faf6ec` / `#586aea`)
 - **Summary**: Your design is the code. Vibr compiles your Figma file into a responsive Next.js site you own, edit with Claude Code or Codex and ship. J...
 - **Total Clean CSS Variables Extracted**: `87` (curated live-grounded set below)
@@ -78,12 +78,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hero-module__sup1Jq__hero> — `www-vibr-studio`)**:
-   - Landmark `<header class="hero-module__sup1Jq__hero">` (`1440x900px`) hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`), and stylesheet rule `.about-me-module__qpLcqW__headlin... { width:100%;display:block }`.
+   - Landmark `<header class="hero-module__sup1Jq__hero">` (`1440x900px`) hosting `Vibr — Figma to code for designers w` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-landing-section="hero"`, `data-tone="dark"`), and stylesheet rule `nter_5901b7c6-module__ec5Qua__cla... { font-family:Inter,Inter Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<main.landing-page-module__p_mWBW__page> — `VIBR : FIGMA TO CODE FOR DESIGNERS`)**:
    - Landmark `<main class="landing-page-module__p_mWBW__page">` presenting display lead `VIBR : FIGMA TO CODE FOR DESIGNERS WHO SHIP` and copy excerpt *"Your design is the code - Your design is the code - Your design i"* over `#faf6ec` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<main.landing-page-module__p_mWBW__page:nth(2)> — `Vibr : Figma to code for designers`)**:
-   - Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr : Figma to code for designers who ship` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `.about-me-module__qpLcqW__authorIcon { flex-shrink:0;width:22px;height:22px;position:relative }`.
+   - Landmark `<main class="landing-page-module__p_mWBW__page">` rendering section `Vibr : Figma to code for designers who ship` with copy *"Your design is the code -"*, asset references (`83afe278b6a6bb3c-s.p.3a6ba036.woff2`, `8780dfd0812b997c-s.p.5704523e.woff2`, `8800dfc60902df36-s.p.d48c4d68.woff2`, `Grain_Variable_Trial-s.p.2731fd70...`), and grid rule `inter_5901b7c6-module__ec5Qua__va... { --font-inter:"Inter","Inter Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<main.landing-page-module__p_mWBW__page:nth(3)> — `Vibr starts with your actual desig`)**:
-   - Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Vibr starts with your actual design.` and `Figma Build your sections` (*": Figma to code for designers who ship"*) with `#f5f5f7` surface cards, `#586aea` accents, and `.about-me-module__qpLcqW__authorG... { width:62.5%;height:62.5%;position:absolute;top:18.87%;left:18.75%;overfl... }`.
+   - Landmark `<main class="landing-page-module__p_mWBW__page">` framing `Vibr starts with your actual design.` and `Figma Build your sections` (*": Figma to code for designers who ship"*) with `#f5f5f7` surface cards, `#586aea` accents, and `nest_8464cd69-module__qhJtvG__cla... { font-family:Onest,Onest Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.landing-footer-module__8-2yDa__root> — `https://www.vibr.studio/`)**:
    - Landmark `<footer class="landing-footer-module__8-2yDa__root">` anchoring `Vibr — Figma to code for designe` footer links (`Overview · Index · Archive · About · Contact`), copy *"Vibr Studio came out of years of handoff frustration. I got "*, and `#e6e3d9` structural dividers.

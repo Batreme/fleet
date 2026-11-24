@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-dontlookup-app"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-dontlookup-app"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#ffffff`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#f
 
 > **Don't Look Up — a game about keeping everyone looking down** (https://www.dontlookup.app/) — You are very rich, very tall, and standing on quite a lot of people. Keep them distracted and they keep paying. Let them look up, and the...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Don't Look Up — a game about keeping everyone looking down** (`https://www.dontlookup.app/`). You are very rich, very tall, and standing on quite a lot of people. Keep them distracted and they keep paying. Let them look up, and the...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#ffffff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f3ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14140f` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Nunito` for display copy (`Don't Look Up — a game about keeping`) with `Nunito` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Nunito` across display (`Don't Look Up — a game about keeping`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 13px`, padding `5px`) with `cubic-bezier(0.2,1.5,0.32,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `5px` lateral canvas padding with `13px` grid gap.
 - **Border Radius Scale**: `11px`, `12px`, `17px`, `3px`.
@@ -115,6 +120,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#f
 - **Selector `fee-fill`**: `transition: width 200ms linear` extracted from `www-dontlookup-app` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,1.5,0.32,1)`)**: Governs interactive state transitions across `<header.is-title>` and `<div.is-teaching>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -173,6 +181,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#f
    - Landmark `<div class="mcell">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"Raise the fee Use +. This crowd will carry about 30%. Anything yo"*) with `#ffffff` surface cards, `#ffffff` accents, and `bubbles { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }`.
 5. **Colophon & Global Directory Footer (<footer.lbl> — `https://www.dontlookup.app/`)**:
    - Landmark `<footer class="lbl">` anchoring `Don't Look Up — a game about kee` footer links (`here`), copy *"Plant a distraction"*, and `#e0dfdb` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `6`
 
 ---
 
@@ -189,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f4f3ef` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#14140f`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f3ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14140f` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Nunito` for display copy (`Don't Look Up — a game about keeping`) with `Nunito` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Nunito` across display (`Don't Look Up — a game about keeping`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 13px`, padding `5px`) with `cubic-bezier(0.2,1.5,0.32,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--y3`)**: `#c98f06` — grounded in `var(--y3)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `5px` lateral canvas padding with `13px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 13px`)
@@ -256,7 +266,7 @@ Scaffold `www-dontlookup-app` (`Don't Look Up — a game about keeping everyone 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.is-title> — `www-dontlookup-app`)` (`www-dontlookup-app`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 1060px)`, `@media (max-width: 820px)`, `@media (max-width: 820px), (pointer: coarse)` with `cubic-bezier(0.2,1.5,0.32,1)`, `cubic-bezier(0.45,0.05,0.55,0.95)`, `cubic-bezier(0.33,1,0.68,1)` transitions and links `here`.
 2. **Hero Stage & Focal Lead (<div.is-asking> — `Don't Look Up — a game about keepi`)**:
    - DOM & Selectors: Landmark `<div class="is-asking">` presenting display lead `Don't Look Up — a game about keeping everyone lo` and copy excerpt *"We count runs, not people. Anonymously, through Google Analytics,"* over `#f4f3ef` canvas and `#14140f` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f4f3ef` background with `#14140f` headline `Don't Look Up — a game about keeping everyone lo`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#f4f3ef` background with `#14140f` headline `Don't Look Up — a game about keeping everyone lo`.
 3. **Primary Showcase & Content Grid (<div.is-teaching> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<div class="is-teaching">` rendering section `Featured Work & Interactive Showcase` with copy *"Keep your eye on the ball, not on the fees."*, asset references (`favicon.ico`, `favicon-32.png`, `icon-192.png`, `apple-touch-icon.png`), and grid rule `stage canvas { display: block; touch-action: none; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.is-teaching> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 13px`) on desktop and Single-column vertical stack at `390px` viewport width with `5px` horizontal padding on mobile.
@@ -287,8 +297,25 @@ Scaffold `www-dontlookup-app` (`Don't Look Up — a game about keeping everyone 
 - **Selector `fee-fill`**: `transition: width 200ms linear` extracted from `www-dontlookup-app` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,1.5,0.32,1)`)**: Governs interactive state transitions across `<header.is-title>` and `<div.is-teaching>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-dontlookup-app`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `6` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Viewport | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

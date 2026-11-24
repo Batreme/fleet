@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: art-appstate-edu"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://art.appstate.edu/"
 final_url: "about:blank"
 status: blocked

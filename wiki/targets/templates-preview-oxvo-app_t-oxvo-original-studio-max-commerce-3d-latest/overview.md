@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://templates-preview.oxvo.app/t/oxvo-original-studio-max-commerce-3d/latest/#/"
 final_url: "https://templates-preview.oxvo.app/t/oxvo-original-studio-max-commerce-3d/latest/#/"
 status: analyzed

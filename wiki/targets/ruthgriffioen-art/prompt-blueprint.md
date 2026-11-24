@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: ruthgriffioen-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "ruthgriffioen-art"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c42000`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c
 
 > **Ruth Griffioen – Colourful paintings & art prints** (https://ruthgriffioen.art/) — Discover colourful paintings by Dutch artist Ruth Griffioen, from portraits of women to still lifes and landscapes. Art prints coming Jan...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ruth Griffioen – Colourful paintings & art prints** (`https://ruthgriffioen.art/`). Discover colourful paintings by Dutch artist Ruth Griffioen, from portraits of women to still lifes and landscapes. Art prints coming Jan...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c42000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#111111` primary typography and `#c42000` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1536px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `31.9936px` lateral canvas padding with `normal 31.9984px` grid gap.
 - **Border Radius Scale**: `2px`, `var(--radius)`, `var(--diamond-round)`, `999px`.
@@ -113,6 +118,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c
 - **Selector `shopify-account::part(dialog)`**: `transition: opacity .45s var(--ease-line),transform .6s var(--ease-line)` extracted from `ruthgriffioen-art` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.artwall>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `ABOUT A B O U T`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/collections`) measured as `MPA` in `2615ms`.
 
 ---
 
@@ -171,6 +181,20 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c
    - Landmark `<section class="artwall is-ready">` framing `Contemplating · Coming soon` and `From Holland with love · Coming soon` (*"From Holland with love · Coming soon"*) with `#f2f4f5` surface cards, `#c42000` accents, and `after { box-sizing:border-box }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://ruthgriffioen.art/`)**:
    - Landmark `<footer class="site-footer site-footer--overlay">` anchoring `Ruth Griffioen – Colourful paint` footer links (`Home H o m e · Work W o r k · About A b o u t`), copy *"Her Sunday Best · Coming soon"*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 05** (`y=0px`, `33%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 06** (`y=0px`, `42%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 07** (`y=0px`, `50%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+- **Step 08** (`y=0px`, `58%`): Active landmark `Ruth Griffioen` · sticky/fixed elements: `6`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/collections`)**: `https://ruthgriffioen.art/collections` — H1: `Work`, scrollHeight `1315px`, transition `MPA` (`2615ms`)
+- **Detail Route (`/pages/about`)**: `https://ruthgriffioen.art/pages/about` — H1: `Ruth Griffioen`, scrollHeight `9912px`, transition `direct` (`1478ms`)
+- **Detail Route (`/pages/contact`)**: `https://ruthgriffioen.art/pages/contact` — H1: `Let's talk`, scrollHeight `923px`, transition `direct` (`1054ms`)
 
 ---
 
@@ -227,8 +251,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--highlight`)**: `#f55a3a` — grounded in `var(--highlight)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1536px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `31.9936px` lateral canvas padding with `normal 31.9984px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: normal 31.9984px`)
@@ -252,7 +276,7 @@ Scaffold `ruthgriffioen-art` (`Ruth Griffioen – Colourful paintings & art prin
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `ruthgriffioen-art`)` (`ruthgriffioen-art`) adapts across `@media (max-width:46.875em)`, `@media (max-width:46.875em)and (prefers-reduced-motion:reduce)`, `@media (max-width:46.875em),(max-aspect-ratio:4/5)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(.8,0,.4,1)` transitions and links `Home H o m e · Work W o r k · About A b o u t`.
 2. **Hero Stage & Focal Lead (<section.shopify-pc__banner__dialog> — `Ruth Griffioen`)**:
    - DOM & Selectors: Landmark `<section class="shopify-pc__banner__dialog">` presenting display lead `Ruth Griffioen` and copy excerpt *"PAINTINGS — THE NETHERLANDS"* over `#ffffff` canvas and `#111111` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ffffff` background with `#111111` headline `Ruth Griffioen`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#ffffff` background with `#111111` headline `Ruth Griffioen`.
 3. **Primary Showcase & Content Grid (<section.artwall> — `PAINTINGS — THE NETHERLANDS`)**:
    - DOM & Selectors: Landmark `<section class="artwall is-ready">` rendering section `PAINTINGS — THE NETHERLANDS` with copy *"Contemplating · Coming soon"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `playfair-display.woff2`), and grid rule `root { --header-h: 4.5rem }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.artwall> — `PAINTINGS — THE NETHERLANDS`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1536px`, `gap: normal 31.9984px`) on desktop and Single-column vertical stack at `390px` viewport width with `31.9936px` horizontal padding on mobile.
@@ -283,8 +307,40 @@ Scaffold `ruthgriffioen-art` (`Ruth Griffioen – Colourful paintings & art prin
 - **Selector `shopify-account::part(dialog)`**: `transition: opacity .45s var(--ease-line),transform .6s var(--ease-line)` extracted from `ruthgriffioen-art` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.artwall>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Ruth Griffioen (0%) -> Ruth Griffioen (8%) -> Ruth Griffioen (17%) -> Ruth Griffioen (25%) -> Ruth Griffioen (33%) -> Ruth Griffioen (42%) -> Ruth Griffioen (50%) -> Ruth Griffioen (58%).
+- **Multi-Page Routes**: Scaffold internal routes `/collections` (listing, MPA), `/pages/about` (detail, direct), `/pages/contact` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `ruthgriffioen-art`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Ruth Griffioen | `6` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Ruth Griffioen | `6` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Ruth Griffioen | `6` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Ruth Griffioen | `6` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | Ruth Griffioen | `6` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | Ruth Griffioen | `6` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | Ruth Griffioen | `6` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | Ruth Griffioen | `6` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Ruth Griffioen | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://ruthgriffioen.art/collections` | Work | `1315px` | `MPA` (`2615ms`) | [subpage-01-collections.webp](assets/subpage-01-collections.webp) |
+| `2` | `detail` | `https://ruthgriffioen.art/pages/about` | Ruth Griffioen | `9912px` | `direct` (`1478ms`) | [subpage-02-pages-about.webp](assets/subpage-02-pages-about.webp) |
+| `3` | `detail` | `https://ruthgriffioen.art/pages/contact` | Let's talk | `923px` | `direct` (`1054ms`) | [subpage-03-pages-contact.webp](assets/subpage-03-pages-contact.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: moderncraftaz-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `moderncraftaz-com` (**Select A Location · AllHaus**)
 - **Production URL**: [https://moderncraftaz.com/](https://moderncraftaz.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#404040` ink, `#0074db` accent)
 - **Summary**: Crafting exceptional residences with unmatched service in Arizona, Montana, and beyond.
-- **Total Clean CSS Variables Extracted**: `32` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `34` (curated live-grounded set below)
 
 ---
 
@@ -71,12 +71,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.yoast-schema-graph> — `moderncraftaz-com`)**:
-   - Landmark `<header class="yoast-schema-graph">` (`1440px`) hosting `Select A Location · AllHaus` navigation (`AZ AZ AZ · CO CO CO · MT MT MT`), DOM attributes (`data-again="always_show"`, `data-wait="load"`, `data-wait-sec="2"`, `data-nosnippet`), and stylesheet rule `input { overflow: visible; }`.
+   - Landmark `<header class="yoast-schema-graph">` (`1440px`) hosting `Select A Location · AllHaus` navigation (`AZ AZ AZ · CO CO CO · MT MT MT`), DOM attributes (`data-again="always_show"`, `data-wait="load"`, `data-wait-sec="2"`, `data-nosnippet`), and stylesheet rule `.has-didot-01-font-family { font-family:"didot-01"; }`.
 2. **Hero Stage & Focal Lead (<section.ct-section> — `UNPARALLELLED SERVICE FOR EXCEPTIO`)**:
    - Landmark `<section class="ct-section">` presenting display lead `UNPARALLELLED SERVICE FOR EXCEPTIONAL HOMES` and copy excerpt *"Code Snippet ma-customfonts 3.4.2"* over `#ffffff` canvas and `#404040` ink.
 3. **Primary Showcase & Content Grid (<section.ct-section:nth(2)> — `Unparallelled Service For Exceptio`)**:
-   - Landmark `<section class="ct-section">` rendering section `Unparallelled Service For Exceptional Homes` with copy *"UNPARALLELLED SERVICE FOR EXCEPTIONAL HOMES"*, asset references (`recaptcha__en.js`, `cdn.jsdelivr.net`, `embed`, `ma-customfonts.css`), and grid rule `video { display: inline-block; }`.
+   - Landmark `<section class="ct-section">` rendering section `Unparallelled Service For Exceptional Homes` with copy *"UNPARALLELLED SERVICE FOR EXCEPTIONAL HOMES"*, asset references (`recaptcha__en.js`, `cdn.jsdelivr.net`, `embed`, `ma-customfonts.css`), and grid rule `.has-didot-02-font-family { font-family:"didot-02"; }`.
 4. **Interactive Detail & Feature Matrix (<section.ct-section:nth(3)> — `moderncraftaz-com Interactive Matr`)**:
-   - Landmark `<section class="ct-section">` framing `moderncraftaz-com Interactive Matrix` and `moderncraftaz-com Archive & Directory` (*"Unparallelled Service For Exceptional Homes"*) with `#dddddd` surface cards, `#0074db` accents, and `sup { vertical-align: baseline; }`.
+   - Landmark `<section class="ct-section">` framing `moderncraftaz-com Interactive Matrix` and `moderncraftaz-com Archive & Directory` (*"Unparallelled Service For Exceptional Homes"*) with `#dddddd` surface cards, `#0074db` accents, and `.has-helveticaneue-font-family { font-family:"helveticaneue"; }`.
 5. **Colophon & Global Directory Footer (<footer.page> — `https://moderncraftaz.com/`)**:
    - Landmark `<footer class="page">` anchoring `Select A Location · AllHaus` footer links (`AZ AZ AZ · CO CO CO · MT MT MT`), copy *"moderncraftaz-com Interactive Matrix"*, and `#00a0d2` structural dividers.

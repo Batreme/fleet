@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-lev-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.lev.com/"
 final_url: "https://www.lev.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live desktop behavioral capture failed (0 valid keyframes)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.lev.com/](https://www.lev.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live desktop behavioral capture failed (0 valid keyframes)
 - **Page Title**: Lev · The AI platform for commercial real estate
-- **Identified Frameworks**: Framer, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `77`
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `73`
 - **Recovered Stylesheets**: `7`
 
 ---

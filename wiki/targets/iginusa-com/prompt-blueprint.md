@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: iginusa-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "iginusa-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **IGIN USA · Official Home of IGIN in the United States** (https://iginusa.com) — IGIN in the USA. Doodle merch, non-alcoholic Apple Citrus and Apple Peach, and where to find IGIN near you. Official store.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **IGIN USA · Official Home of IGIN in the United States** (`https://iginusa.com`). IGIN in the USA. Doodle merch, non-alcoholic Apple Citrus and Apple Peach, and where to find IGIN near you. Official store.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ff0000` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `13053px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `72.6rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--product-card-image-padding)` lateral canvas padding with `32px` grid gap.
 - **Border Radius Scale**: `50%`, `var(--product-card-corner-radius)`, `var(--collection-card-corner-radius)`, `var(--blog-card-corner-radius)`.
@@ -55,7 +60,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#000000` | live computed `nav` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ececec` | `.igST__bar span { background: #ececec }` |
 | **Interactive Accent / Highlight** | `#ff0000` | `.igin-btn-black:hover { background: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#ff6b8a` | `var(--pink)` in `:root` |
@@ -92,7 +97,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 149.76px`, `line-height: 122.803px`, `font-weight: 400`, `letter-spacing: 0.59904px`); rule `,.h1` (`font-size: calc(var(--font-heading-scale...`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86px`, `line-height: 86px`, `font-weight: 400`, `letter-spacing: 0.344px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 150px`, `line-height: 132px`, `font-weight: 400`, `letter-spacing: 0.6px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 28.8px`, `font-weight: 400`, `letter-spacing: 0.6px`); CSS variables `--font-body-family: Assistant, sans-serif`, `--font-body-style: normal`, `--font-body-weight: 400`; rule `p` (`font-size: 19px`, `line-height: 1.15`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 300`); CSS variables `--mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace`, `--dp-mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace`; rule `small` (`font-size: 10px`, `letter-spacing: .12em`, `font-weight: 600`).
 
@@ -109,6 +114,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `.animate-arrow .icon-arrow path`**: `transition: transform var(--duration-short) ease` extracted from `iginusa-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.3,1)`)**: Governs interactive state transitions across `<header.igin-rv>` and `<section.igin-rv-section>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `13053px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -167,6 +175,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
    - Landmark `<section class="igin-rv hero">` framing `Zero proof, same apples.` and `Two fans chatting about the new IGIN non alcoholi...` (*"Such a good-looking gin."*) with `#ececec` surface cards, `#ff0000` accents, and `.page-width.drawer-menu { max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.igin-rv> — `https://iginusa.com`)**:
    - Landmark `<footer class="igin-rv ftr">` anchoring `IGIN USA · Official Home of IGIN` footer links (`SHOP · Drinks · Our Story · Where to Buy · Play Doodle Pop`), copy *"Apple Citrus and Apple Peach. Buy now at BevMo and Gopuff."*, and `#f9b9b7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `IGIN USA: WHERE SMILES BEGIN` · sticky/fixed elements: `2`
 
 ---
 
@@ -212,15 +222,15 @@ Declare and consume these exact custom properties extracted from `iginusa-com` i
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `body` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#000000` — grounded in live computed `nav` `color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `h2` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#ececec` — grounded in `.igST__bar span { background: #ececec }`
 - **Interactive Accent / Highlight**: `#ff0000` — grounded in `.igin-btn-black:hover { background: red }` (`#ff0000`)
 - **Secondary / Muted Copy**: `#ff6b8a` — grounded in `var(--pink)` in `:root`
 - **Structural Hairline Border**: `#f9b9b7` — grounded in `.stage { border: #f9b9b7 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `72.6rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--product-card-image-padding)` lateral canvas padding with `32px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 72.6rem`, `gap: 32px`)
@@ -233,7 +243,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
 - **H1 Display Rule**: live computed `h1` (`font-size: 149.76px`, `line-height: 122.803px`, `font-weight: 400`, `letter-spacing: 0.59904px`); rule `,.h1` (`font-size: calc(var(--font-heading-scale...`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 86px`, `line-height: 86px`, `font-weight: 400`, `letter-spacing: 0.344px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 150px`, `line-height: 132px`, `font-weight: 400`, `letter-spacing: 0.6px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 28.8px`, `font-weight: 400`, `letter-spacing: 0.6px`); CSS variables `--font-body-family: Assistant, sans-serif`, `--font-body-style: normal`, `--font-body-weight: 400`; rule `p` (`font-size: 19px`, `line-height: 1.15`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 300`); CSS variables `--mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace`, `--dp-mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace`; rule `small` (`font-size: 10px`, `letter-spacing: .12em`, `font-weight: 600`)
 
@@ -244,7 +254,7 @@ Scaffold `iginusa-com` (`IGIN USA · Official Home of IGIN in the United States`
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.igin-rv> — `iginusa-com`)` (`iginusa-com`) adapts across `@media screen and (min-width:750px)`, `@media screen and (min-width:990px)`, `@media only screen and (min-width:750px)`, `@media screen and (max-width:749px)` with `cubic-bezier(0,0,.3,1)`, `cubic-bezier(.25,.46,.45,.94)`, `cubic-bezier(.52,0,.61,.99)` transitions and links `SHOP · Drinks · Our Story · Where to Buy · Play Doodle Pop`.
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `IGIN USA: WHERE SMILES BEGIN`)**:
    - DOM & Selectors: Landmark `<section class="shopify-section igin-doodle-pop-section">` presenting display lead `IGIN USA: WHERE SMILES BEGIN` and copy excerpt *"KOREAN MODERN GIN AND APPLE TONIC"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `IGIN USA: WHERE SMILES BEGIN`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×1744px` mobile) sets `#ffffff` background with `#000000` headline `IGIN USA: WHERE SMILES BEGIN`.
 3. **Primary Showcase & Content Grid (<section.igin-rv-section> — `IGIN USA: Where Smiles Begin`)**:
    - DOM & Selectors: Landmark `<section class="shopify-section igin-rv-section">` rendering section `IGIN USA: Where Smiles Begin` with copy *"Korean modern gin and apple tonic"*, asset references (`2721185198297886`, `fbevents.js`, `LOGO-IGIN_USA_SNS_Profile.png`, `fonts.shopifycdn.com`), and grid rule `.announcement-bar-section .page-w... { max-width:100% }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.igin-rv-section> — `IGIN USA: Where Smiles Begin`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 72.6rem`, `gap: 32px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--product-card-image-padding)` horizontal padding on mobile.
@@ -275,8 +285,26 @@ Scaffold `iginusa-com` (`IGIN USA · Official Home of IGIN in the United States`
 - **Selector `.animate-arrow .icon-arrow path`**: `transition: transform var(--duration-short) ease` extracted from `iginusa-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.3,1)`)**: Governs interactive state transitions across `<header.igin-rv>` and `<section.igin-rv-section>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `13053px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: IGIN USA: WHERE SMILES BEGIN (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `iginusa-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | IGIN USA: WHERE SMILES BEGIN | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | DOODLE POP | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `9984px` | `100%` | STRAIGHT FROM THE FRIDGE. | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+

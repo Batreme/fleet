@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-memedia-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-memedia-de"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1a1a1a` ink, `#f03714` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Webdesign München für nachhaltig denkende Unternehmer** (https://www.memedia.de) — Die Web-Experten für nachhaltig denkende Unternehmer: Strategie, Konzeption, Design und Umsetzung aus München. Websites, die Anfragen bri...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Webdesign München für nachhaltig denkende Unternehmer** (`https://www.memedia.de`). Die Web-Experten für nachhaltig denkende Unternehmer: Strategie, Konzeption, Design und Umsetzung aus München. Websites, die Anfragen bri...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1a1a1a` ink, `#f03714` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1a` primary typography and `#f03714` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Web-Experten für nachhaltig denk`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Die Web-Experten für nachhaltig denk`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28px`, padding `var(--gutter)`) with `cubic-bezier(.2,.7,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `18690px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--gutter)` lateral canvas padding with `28px` grid gap.
 - **Border Radius Scale**: `999px`, `2px`, `50%`, `var(--radius)`.
@@ -118,6 +123,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.lk .c svg`**: `transition: transform .2s` extracted from `www-memedia-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.intro>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.wp-block-group>` and `<section.intro>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `18690px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe (`LEISTUNGEN`)**: Triggered visual change (pixel diff `13.675`, captured in `assets/state-nav.webp`); revealed links: memedia Startseite, REFERENZEN, ÜBER UNS, BLOG, KONTAKT, SPRICH MIT BENNO.
+- **Hover Physics (`primary_cta` · `REFERENZEN`)**: Computed transition `0.15s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`accordion` · `Braucht meine Website einen Relau...`)**: Triggered visual diff `4.51` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/blog/`) measured as `MPA` in `1100ms`.
 
 ---
 
@@ -176,6 +188,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="wp-block-group section">` framing `Du willst eine hübsche Website?` and `Du willst eine technisch optimierte Website?` (*"nachhaltig denkende"*) with `#f4f4f2` surface cards, `#f03714` accents, and `video { display:block;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.gr-foot> — `https://www.memedia.de`)**:
    - Landmark `<footer class="gr-foot">` anchoring `Webdesign München für nachhaltig` footer links (`Alle Leistungen · Konzeption & UX · Design · Umsetzung · Betreuung & Support`), copy *"Nicht irgendeine Website."*, and `#d8d8d6` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Die Web-Experten für nachhaltig denkende Unterneh...` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Section @ 5%` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `19%`): Active landmark `Design` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `33%`): Active landmark `Gemeinwohl-Ökonomie (öffnet neues Fenster)` · sticky/fixed elements: `2`
+- **Step 05** (`y=8500px`, `48%`): Active landmark `Ein Ansprechpartner. Die besten Experten je Aufgabe.` · sticky/fixed elements: `2`
+- **Step 06** (`y=11050px`, `62%`): Active landmark `Section @ 62%` · sticky/fixed elements: `2`
+- **Step 07** (`y=13600px`, `76%`): Active landmark `Systemneutral, weil wir für jedes System die rich...` · sticky/fixed elements: `2`
+- **Step 08** (`y=14400px`, `81%`): Active landmark `Shopware` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/blog/`)**: `https://www.memedia.de/blog/` — H1: `Zum Weiterlesen.`, scrollHeight `6342px`, transition `MPA` (`1100ms`)
+- **Detail Route (`/leistungen/strategie/`)**: `https://www.memedia.de/leistungen/strategie/` — H1: `Strategie & Positionierung: das Fundament vor dem...`, scrollHeight `9816px`, transition `direct` (`840ms`)
+- **Detail Route (`/leistungen/konzeption-ux/`)**: `https://www.memedia.de/leistungen/konzeption-ux/` — H1: `Konzeption & UX: der Plan, der aus Besuchern Anfr...`, scrollHeight `10055px`, transition `direct` (`542ms`)
 
 ---
 
@@ -192,7 +218,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1a1a1a`, **Accent / Highlight**: `#f03714`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a1a` primary typography and `#f03714` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`Die Web-Experten für nachhaltig denk`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`Die Web-Experten für nachhaltig denk`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28px`, padding `var(--gutter)`) with `cubic-bezier(.2,.7,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -237,8 +263,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--lime`)**: `#e6f84a` — grounded in `var(--lime)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--gutter)` lateral canvas padding with `28px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28px`)
@@ -262,7 +288,7 @@ Scaffold `www-memedia-de` (`Webdesign München für nachhaltig denkende Unterneh
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-memedia-de`)` (`www-memedia-de`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (min-width:900px)`, `@media (max-width:899px)`, `@media (min-width:1200px)` with `cubic-bezier(.2,.7,.2,1)`, `cubic-bezier(.16,.84,.3,1)`, `cubic-bezier(.45,.05,.25,1)` transitions and links `Alle Leistungen · Konzeption & UX · Design · Umsetzung · Betreuung & Support`.
 2. **Hero Stage & Focal Lead (<section.wp-block-group> — `Die Web-Experten für nachhaltig de`)**:
    - DOM & Selectors: Landmark `<section class="wp-block-group hero">` presenting display lead `Die Web-Experten für nachhaltig denkende Unterneh...` and copy excerpt *"NICHT IRGENDEINE WEBSITE."* over `#ffffff` canvas and `#1a1a1a` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#1a1a1a` headline `Die Web-Experten für nachhaltig denkende Unterneh...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#1a1a1a` headline `Die Web-Experten für nachhaltig denkende Unterneh...`.
 3. **Primary Showcase & Content Grid (<section.intro> — `Was willst du eigentlich? Eine sch`)**:
    - DOM & Selectors: Landmark `<section class="wp-block-group intro">` rendering section `Was willst du eigentlich? Eine schöne Website?` with copy *"Die Web-Experten für"*, asset references (`poppins-latin-600-normal.woff2`, `poppins-latin-500-normal.woff2`, `favicon.svg`, `apple-touch-icon.png`), and grid rule `html { -webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smoo... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.intro> — `Was willst du eigentlich? Eine sch`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--gutter)` horizontal padding on mobile.
@@ -293,8 +319,49 @@ Scaffold `www-memedia-de` (`Webdesign München für nachhaltig denkende Unterneh
 - **Selector `.lk .c svg`**: `transition: transform .2s` extracted from `www-memedia-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.intro>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.wp-block-group>` and `<section.intro>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `18690px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Die Web-Experten für nachha... (0%) -> Section @ 5% (5%) -> Design (19%) -> Gemeinwohl-Ökonomie (öffnet... (33%) -> Ein Ansprechpartner. Die be... (48%) -> Section @ 62% (62%) -> Systemneutral, weil wir für... (76%) -> Shopware (81%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`LEISTUNGEN`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/blog/` (listing, MPA), `/leistungen/strategie/` (detail, direct), `/leistungen/konzeption-ux/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-memedia-de`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Die Web-Experten für nachhaltig denkende Unte... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Section @ 5% | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `19%` | Design | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `33%` | Gemeinwohl-Ökonomie (öffnet neues Fenster) | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `48%` | Ein Ansprechpartner. Die besten Experten je A... | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `62%` | Section @ 62% | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `76%` | Systemneutral, weil wir für jedes System die... | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `81%` | Shopware | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Die Web-Experten für nachhaltig denkende... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Für Unternehmer, die etwas Gutes bewirken... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Drei Wege, klein anzufangen. | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`LEISTUNGEN`, diff `13.675`) | [state-nav.webp](assets/state-nav.webp) |
+| `interactive_control` | Control `accordion` (`Braucht meine Website einen R...`, diff `4.51`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.memedia.de/blog/` | Zum Weiterlesen. | `6342px` | `MPA` (`1100ms`) | [subpage-01-blog.webp](assets/subpage-01-blog.webp) |
+| `2` | `detail` | `https://www.memedia.de/leistungen/strategie/` | Strategie & Positionierung: das Funda... | `9816px` | `direct` (`840ms`) | [subpage-02-leistungen-strategie.webp](assets/subpage-02-leistungen-strategie.webp) |
+| `3` | `detail` | `https://www.memedia.de/leistungen/konzeption-ux/` | Konzeption & UX: der Plan, der aus Be... | `10055px` | `direct` (`542ms`) | [subpage-03-leistungen-konzeption-ux.webp](assets/subpage-03-leistungen-konzeption-ux.webp) |
+

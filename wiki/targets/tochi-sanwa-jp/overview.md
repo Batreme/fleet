@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: tochi-sanwa-jp"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tochi-sanwa.jp/"
 final_url: "https://tochi-sanwa.jp/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: 岐阜県美濃加茂市でおしゃれな新築一戸建てはサンワ｜ワガママ採用率100%の工務店
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `16`
-- **Recovered Stylesheets**: `9`
+- **Recovered Scripts**: `76`
+- **Recovered Stylesheets**: `37`
 
 ---
 

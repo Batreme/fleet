@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: sixescricket-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sixescricket-com` (**Sixes Party Cricket · Let's Play · Nets & Simulator · Sixes Social Cricket**)
 - **Production URL**: [https://sixescricket.com/](https://sixescricket.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fff5e0` / `#185abc`)
 - **Summary**: Cricket, but not as you know it. We've re-imagined the age old game of cricket for the modern socialite.
 - **Total Clean CSS Variables Extracted**: `240` (curated live-grounded set below)
@@ -71,7 +71,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.stack> — `Sixes Social Cricket`)**:
    - Landmark `<section class="stack overflow-clip">` presenting display lead `Sixes Social Cricket` and copy excerpt *"Take a swing at Party Cricket. A carnival of fast bowls, flowing "* over `#fff5e0` canvas and `#590707` ink.
 3. **Primary Showcase & Content Grid (<article.overlay> — `Nothing Beats Hitting Sixes`)**:
-   - Landmark `<article class="overlay overlay-b">` rendering section `Nothing Beats Hitting Sixes` with copy *"Nothing Beats Hitting Sixes"*, asset references (`6gknobew.api.sanity.io`, `83afe278b6a6bb3c-s.p.45535valc9rz...`, `soehne_mono-s.p.1h8tgkdilcgxe.woff2`, `0dvybyowk9yut.css`), and grid rule `._1b6o2se1 { animation:.5s linear infinite _1b6o2se0 }`.
+   - Landmark `<article class="overlay overlay-b">` rendering section `Nothing Beats Hitting Sixes` with copy *"Nothing Beats Hitting Sixes"*, asset references (`0dvybyowk9yut.css`, `341tqej08bq76.css`, `events.js`, `state.js`), and grid rule `._1b6o2se1 { animation:.5s linear infinite _1b6o2se0 }`.
 4. **Interactive Detail & Feature Matrix (<article.overlay-b> — `Book Party Cricket`)**:
    - Landmark `<article class="overlay overlay-b">` framing `Book Party Cricket` and `Swing your heart out` (*"Inspired by the Age old game"*) with `#ffffff` surface cards, `#185abc` accents, and `._1lyk8y0 { align-items:center }`.
 5. **Colophon & Global Directory Footer (<footer.bg-mahogany-500> — `https://sixescricket.com/`)**:

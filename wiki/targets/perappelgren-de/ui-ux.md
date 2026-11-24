@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: perappelgren-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -11,9 +11,9 @@ http_status: 200
 # UI & UX Architecture: perappelgren-de
 
 ## Overview & Design Identity
-- **Target**: `perappelgren-de` (**Per Appelgren**)
+- **Target**: `perappelgren-de` (**Per Appelgren · Fashion & Beauty Photographer, Paris & Berlin**)
 - **Production URL**: [https://perappelgren.de/](https://perappelgren.de/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#213547`)
 - **Summary**: Per Appelgren is a Paris and Berlin based photographer working across fashion, beauty, editorial, and commercial image-making.
 - **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)
@@ -68,12 +68,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.home-nav> — `perappelgren-de`)**:
-   - Landmark `<nav class="home-nav top-0">` (`1440x40px`) hosting `Per Appelgren` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
-2. **Hero Stage & Focal Lead (<section.relative> — `Per Appelgren`)**:
-   - Landmark `<section class="relative w-full">` presenting display lead `Per Appelgren` and copy excerpt *"Hi! I am Per! I'm a German-Swedish photographer based between Par"* over `#ffffff` canvas and `#0f0f15` ink.
+   - Landmark `<nav class="home-nav top-0">` (`1440x40px`) hosting `Per Appelgren · Fashion & Beauty Pho` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-precedence="next"`, `data-engine="three.js r182"`, `data-gallery-title-track="true"`, `data-cursor="arrow"`), and stylesheet rule `real_94799760-module__C5EBEW__cla... { font-family:neueMontreal,neueMontreal Fallback }`.
+2. **Hero Stage & Focal Lead (<section.relative> — `Per Appelgren · Fashion & Beauty P`)**:
+   - Landmark `<section class="relative w-full">` presenting display lead `Per Appelgren · Fashion & Beauty Photographer, P` and copy excerpt *"Hi! I am Per! I'm a German-Swedish photographer based between Par"* over `#ffffff` canvas and `#0f0f15` ink.
 3. **Primary Showcase & Content Grid (<section.w-full> — `Featured Work & Interactive Showca`)**:
    - Landmark `<section class="relative w-full">` rendering section `Featured Work & Interactive Showcase` with copy *"CASABLANCA PRE-FALL ´26 CAMPAIGN"*, asset references (`vemior-s.p.0loat6znd6m5-.otf`, `12mrv9~q-_9yg.css`, `0wjx1qarcnur7.js`, `14x4ulv7j4.e5.js`), and grid rule `treal_94799760-module__C5EBEW__va... { --font-neue-montreal:"neueMontreal", "neueMontreal Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.h-auto> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="h-auto relative">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"ARCHIVE A R C H I V E"*) with `#1f1f2b` surface cards, `#213547` accents, and `mior_bd07f20d-module__cotiFq__cla... { font-family:vemior,vemior Fallback;font-style:normal;font-weight:400 }`.
 5. **Colophon & Global Directory Footer (<footer.z-42> — `https://perappelgren.de/`)**:
-   - Landmark `<footer class="z-42 relative">` anchoring `Per Appelgren` footer links (`Overview · Index · Archive · About · Contact`), copy *"CONTACT C O N T A C T"*, and `#33333d` structural dividers.
+   - Landmark `<footer class="z-42 relative">` anchoring `Per Appelgren · Fashion & Beauty` footer links (`Overview · Index · Archive · About · Contact`), copy *"CONTACT C O N T A C T"*, and `#33333d` structural dividers.

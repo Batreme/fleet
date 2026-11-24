@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: explorajourneys-com_int-en-explora-journal"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://explorajourneys.com/int/en/explora-journal"
 final_url: "https://explorajourneys.com/int/en/explora-journal"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://explorajourneys.com/int/en/explora-journal](https://explorajourneys.com/int/en/explora-journal)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Explora Journal, A Magazine by Explora Journeys
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `206`
-- **Recovered Stylesheets**: `7`
+- **Identified Frameworks**: Tailwind CSS
+- **Recovered Scripts**: `640`
+- **Recovered Stylesheets**: `30`
 
 ---
 

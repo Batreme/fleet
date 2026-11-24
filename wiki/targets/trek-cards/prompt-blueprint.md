@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: trek-cards"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "trek-cards"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 2
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#ff00ee`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#
 
 > **Trek Cards - The AI-Powered TCG Where Every Card Has a Story** (https://trek.cards/) — Trek Cards is the AI-powered trading card game (TCG). Craft UNIQUE character cards, battle players worldwide and track your cards around...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Trek Cards - The AI-Powered TCG Where Every Card Has a Story** (`https://trek.cards/`). Trek Cards is the AI-powered trading card game (TCG). Craft UNIQUE character cards, battle players worldwide and track your cards around...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#ff00ee`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#18001a` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff00ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 30px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `16713px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `12px` lateral canvas padding with `30px` grid gap.
 - **Border Radius Scale**: `50%`, `100px`, `6px`, `24px`.
@@ -99,7 +104,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 400`, `letter-spacing: -2.16px`); rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.4px`, `line-height: 84.672px`, `font-weight: 400`, `letter-spacing: -2.592px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 150px`, `line-height: 147px`, `font-weight: 400`, `letter-spacing: -4.5px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`).
 - **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14.5px`, `line-height: 23.2px`, `font-weight: 500`); rule `small` (`font-size: 11px`).
 
@@ -116,6 +121,13 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#
 - **Selector `.btn--glass::after`**: `transition: opacity .4s` extracted from `trek-cards` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.prologue>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `16713px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `NOTIFY ME`)**: `transform`: `none` -> `matrix(1.04911, 0, 0, 1...`; `boxShadow`: `rgba(255, 255, 255, 0.2...` -> `rgba(255, 255, 255, 0.2...` (`transition-duration: 0.25s, 0.3s`, `timing: cubic-bezier(0.2, 0.8, 0.2, 1), ease`).
+- **Hover Physics (`first_card` · `GLIMNA UNIQUE Power 9 Honor 26 Sp...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`accordion` · `Pick a sample prompt`)**: Triggered visual diff `4.274` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/terms.html`) measured as `direct` in `657ms`.
 
 ---
 
@@ -174,6 +186,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#18001a` / `#
    - Landmark `<section class="chapter ch-craft">` framing `Craft your Unique` and `1 Describe your character` (*"Trek Cards™ is the AI-powered TCG where you craft Unique cards to"*) with `#1a0a2e` surface cards, `#ff00ee` accents, and `html { -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-x: clip; }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://trek.cards/`)**:
    - Landmark `<footer class="foot">` anchoring `Trek Cards - The AI-Powered TCG ` footer links (`Craft · Battle · Journey · Legacy · Collect`), copy *"Download on the App Store"*, and `#2a142c` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `EVERY CARD HAS A STORY.` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `5%`): Active landmark `#prologue` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `22%`): Active landmark `CARDS ARE CHOSEN` · sticky/fixed elements: `2`
+- **Step 04** (`y=5950px`, `38%`): Active landmark `YOUR CARDS LIVE ON` · sticky/fixed elements: `2`
+- **Step 05** (`y=8500px`, `54%`): Active landmark `YOUR CARDS LIVE ON` · sticky/fixed elements: `2`
+- **Step 06** (`y=11050px`, `70%`): Active landmark `LEVEL THROUGH LEGACY` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `86%`): Active landmark `A LOOK INSIDE` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `91%`): Active landmark `#world` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/terms.html`)**: `https://trek.cards/terms.html` — H1: `TERMS OF SERVICE`, scrollHeight `10645px`, transition `direct` (`657ms`)
+- **Other Route (`/privacy.html`)**: `https://trek.cards/privacy.html` — H1: `PRIVACY POLICY`, scrollHeight `9386px`, transition `direct` (`3504ms`)
 
 ---
 
@@ -190,7 +215,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#18001a` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff00ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#18001a` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff00ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Rubik One` for display copy (`EVERY CARD HAS A STORY.`) with `Rubik`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 30px`, padding `12px`) with `cubic-bezier(.2,.8,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -233,8 +258,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--brand`)**: `#c215f6` — grounded in `var(--brand)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `12px` lateral canvas padding with `30px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 30px`)
@@ -247,7 +272,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Rubik`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 72px`, `line-height: 70.56px`, `font-weight: 400`, `letter-spacing: -2.16px`); rule `.title` (`line-height: .98`, `letter-spacing: -0.03em`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 86.4px`, `line-height: 84.672px`, `font-weight: 400`, `letter-spacing: -2.592px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 150px`, `line-height: 147px`, `font-weight: 400`, `letter-spacing: -4.5px`); rule `h2` (`font-size: clamp(38px, 6vw, 92px)`)
 - **Body Copy Rule**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); CSS variables `--body: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`font-size: 17px`, `line-height: 1.6`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14.5px`, `line-height: 23.2px`, `font-weight: 500`); rule `small` (`font-size: 11px`)
 
@@ -258,7 +283,7 @@ Scaffold `trek-cards` (`Trek Cards - The AI-Powered TCG Where Every Card Has a S
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nav> — `trek-cards`)` (`trek-cards`) adapts across `@media (max-width: 860px)`, `@media (max-width: 900px)`, `@media (max-width: 1000px)`, `@media (min-width: 821px) and (max-width: 1100px)` with `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.2,.6,.35,1)`, `cubic-bezier(.37,0,.63,1)` transitions and links `Craft · Battle · Journey · Legacy · Collect`.
 2. **Hero Stage & Focal Lead (<section.hero> — `EVERY CARD HAS A STORY.`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `EVERY CARD HAS A STORY.` and copy excerpt *"Trek Cards™ is the AI-powered TCG where you craft UNIQUE cards to"* over `#18001a` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#18001a` background with `#ffffff` headline `EVERY CARD HAS A STORY.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#18001a` background with `#ffffff` headline `EVERY CARD HAS A STORY.`.
 3. **Primary Showcase & Content Grid (<section.prologue> — `Every card has a story.`)**:
    - DOM & Selectors: Landmark `<section class="prologue">` rendering section `Every card has a story.` with copy *"Where losing is only the beginning"*, asset references (`favicon-32x32.png`, `apple-touch-icon.png`, `site.css`, `trek-logo.webp (Trek Cards)`), and grid rule `after { box-sizing: border-box; margin: 0; padding: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.prologue> — `Every card has a story.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 30px`) on desktop and Single-column vertical stack at `390px` viewport width with `12px` horizontal padding on mobile.
@@ -289,8 +314,47 @@ Scaffold `trek-cards` (`Trek Cards - The AI-Powered TCG Where Every Card Has a S
 - **Selector `.btn--glass::after`**: `transition: opacity .4s` extracted from `trek-cards` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.8,.2,1)`)**: Governs interactive state transitions across `<header.nav>` and `<section.prologue>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `16713px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: EVERY CARD HAS A STORY. (0%) -> #prologue (5%) -> CARDS ARE CHOSEN (22%) -> YOUR CARDS LIVE ON (38%) -> YOUR CARDS LIVE ON (54%) -> LEVEL THROUGH LEGACY (70%) -> A LOOK INSIDE (86%) -> #world (91%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform, boxShadow` with `0.25s, 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/terms.html` (other, direct), `/privacy.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `trek-cards`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | EVERY CARD HAS A STORY. | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | #prologue | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `22%` | CARDS ARE CHOSEN | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `38%` | YOUR CARDS LIVE ON | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `54%` | YOUR CARDS LIVE ON | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `70%` | LEVEL THROUGH LEGACY | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `86%` | A LOOK INSIDE | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `91%` | #world | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | EVERY CARD HAS A STORY. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | YOUR CARDSLIVE ON | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | CRAFTED BY YOU, PLAYED BY THE WORLD. | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Pick a sample prompt`, diff `4.274`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://trek.cards/terms.html` | TERMS OF SERVICE | `10645px` | `direct` (`657ms`) | [subpage-01-terms-html.webp](assets/subpage-01-terms-html.webp) |
+| `2` | `other` | `https://trek.cards/privacy.html` | PRIVACY POLICY | `9386px` | `direct` (`3504ms`) | [subpage-02-privacy-html.webp](assets/subpage-02-privacy-html.webp) |
+

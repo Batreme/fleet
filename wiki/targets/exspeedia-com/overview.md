@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: exspeedia-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://exspeedia.com"
 final_url: "https://speed.expedia.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,7 +28,7 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://exspeedia.com](https://exspeedia.com)
 - **Final Redirected URL**: [https://speed.expedia.com/](https://speed.expedia.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Official IShowSpeed Travel Site Powered by Expedia
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS, HTML5 Canvas / WebGL
 - **Recovered Scripts**: `4`

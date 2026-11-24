@@ -1,9 +1,9 @@
-# Round 50 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 50 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-50`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `10` live (`0` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-50`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `9` live (`1` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
@@ -12,7 +12,7 @@
   1. `www-miljofyrtarn-no` — *Hjem · Miljøfyrtårn*
   2. `www-motorq-com` — *Motorq · Turn Connected Vehicle Data Into Decisions*
   3. `www-mynobs-co` — *NoBS - No Brief Shit*
-  4. `www-nereo-io` — *Nereo — AI Video Generator for Creators & Marketers*
+  4. `www-nereo-io` — *Blocked (`Live mobile behavioral capture failed (0 valid WebP frames)`)*
   5. `www-nettiesbees-com` — *Raw Local Honey in Rochester, MA · Nettie's Bees*
   6. `www-norddeutscher-figuralchor-de` — *Norddeutscher Figuralchor Hannover — Kammerchor seit 1981*
   7. `www-oceans-faith_moralcatch` — *The Moral Catch: Fisheries & Ocean Justice — Faiths for Oceans*
@@ -22,17 +22,17 @@
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-miljofyrtarn-no` | `tier1_fast` | `1440×996px` (1,143,764 B) | `390×940px` (206,469 B) | 29 | 16 | 282 | 106 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-motorq-com` | `tier1_fast` | `1440×2400px` (687,267 B) | `390×2400px` (260,915 B) | 281 | 16 | 282 | 106 | `0.13` / `0.56` | **25.0 / 25.0** |
-| `www-mynobs-co` | `tier1_fast` | `1440×1820px` (147,701 B) | `390×1492px` (77,290 B) | 25 | 16 | 304 | 117 | `0.08` / `0.46` | **25.0 / 25.0** |
-| `www-nereo-io` | `tier1_fast` | `1440×2400px` (1,537,277 B) | `390×2400px` (524,334 B) | 137 | 16 | 282 | 106 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `www-nettiesbees-com` | `tier1_fast` | `1440×2400px` (2,929,597 B) | `390×2400px` (1,167,994 B) | 77 | 16 | 284 | 107 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `www-norddeutscher-figuralchor-de` | `tier1_fast` | `1440×2400px` (1,853,982 B) | `390×2400px` (216,898 B) | 24 | 16 | 290 | 110 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `www-oceans-faith_moralcatch` | `tier2_webgl` | `1440×900px` (276,863 B) | `390×844px` (21,974 B) | 30 | 16 | 282 | 106 | `0.08` / `0.46` | **25.0 / 25.0** |
-| `www-offforum-com` | `tier1_fast` | `1440×1397px` (949,021 B) | `390×1280px` (192,906 B) | 149 | 16 | 281 | 105 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `www-omni-org` | `tier1_fast` | `1440×2400px` (109,789 B) | `390×2400px` (65,437 B) | 45 | 16 | 292 | 111 | `0.13` / `0.56` | **25.0 / 25.0** |
-| `www-oregonoutdooralliance-org` | `tier1_fast` | `1440×2400px` (1,425,078 B) | `390×2400px` (416,155 B) | 234 | 16 | 282 | 106 | `0.10` / `0.56` | **25.0 / 25.0** |
+| `www-miljofyrtarn-no` | `tier1_fast` | `1280×6624px` (504,736 B) | `390×2616px` (80,190 B) | 29 | 16 | 340 | 110 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `www-motorq-com` | `tier1_fast` | `1280×6624px` (461,786 B) | `390×2616px` (85,784 B) | 281 | 16 | 343 | 111 | `0.13` / `0.54` | **25.0 / 25.0** |
+| `www-mynobs-co` | `tier1_fast` | `1280×1656px` (81,020 B) | `390×872px` (30,038 B) | 29 | 16 | 348 | 121 | `0.08` / `0.46` | **25.0 / 25.0** |
+| `www-nettiesbees-com` | `tier1_fast` | `1280×6624px` (527,270 B) | `390×2616px` (119,652 B) | 77 | 16 | 342 | 111 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `www-norddeutscher-figuralchor-de` | `tier1_fast` | `1280×5796px` (494,788 B) | `390×872px` (3,136 B) | 24 | 16 | 350 | 115 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `www-oceans-faith_moralcatch` | `tier1_fast` | `1280×6624px` (467,964 B) | `390×872px` (29,468 B) | 1004 | 16 | 337 | 110 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `www-offforum-com` | `tier1_fast` | `1280×1656px` (136,110 B) | `390×2616px` (74,748 B) | 149 | 16 | 327 | 109 | `0.10` / `0.52` | **25.0 / 25.0** |
+| `www-omni-org` | `tier1_fast` | `1280×6624px` (369,390 B) | `390×2616px` (88,628 B) | 985 | 16 | 353 | 117 | `0.13` / `0.54` | **25.0 / 25.0** |
+| `www-oregonoutdooralliance-org` | `tier1_fast` | `1280×4140px` (250,054 B) | `390×2616px` (74,098 B) | 234 | 16 | 340 | 110 | `0.09` / `0.54` | **25.0 / 25.0** |
+| `www-nereo-io` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Live mobile behavioral capture failed (0 valid WebP frames)`)** |

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-tokonoma-xyz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.tokonoma.xyz/"
 final_url: "https://www.tokonoma.xyz/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Tokonoma Studio — Image Making, Art, AI & Creative Direction
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `18`
+- **Recovered Stylesheets**: `9`
 
 ---
 

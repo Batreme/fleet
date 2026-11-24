@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: armor-bd-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://armor-bd.com"
 final_url: "https://www.armor-bd.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Headless Preloader / Blank Viewport Capture (LOADING ARMOR EXPERIENCE)"
 tags:
   - target
   - reverse-engineering
@@ -28,9 +29,10 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://armor-bd.com](https://armor-bd.com)
 - **Final Redirected URL**: [https://www.armor-bd.com/](https://www.armor-bd.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (LOADING ARMOR EXPERIENCE)
 - **Page Title**: Armor Bangladesh Limited — ATM, CRM & Banking Technology Solutions
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `13`
 - **Recovered Stylesheets**: `4`
 

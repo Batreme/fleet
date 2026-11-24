@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: adamperlis-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://adamperlis.com"
 final_url: "https://adamperlis.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://adamperlis.com](https://adamperlis.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Adam Perlis — I design and build apps
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `21`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `64`
+- **Recovered Stylesheets**: `4`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: residences-loamhouse-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://residences.loamhouse.com.au"
 final_url: "https://residences.loamhouse.com.au/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Loam House — Sandringham
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `15`
-- **Recovered Stylesheets**: `3`
+- **Recovered Stylesheets**: `5`
 
 ---
 

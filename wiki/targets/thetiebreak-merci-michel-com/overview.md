@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: thetiebreak-merci-michel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thetiebreak.merci-michel.com/"
 final_url: "https://thetiebreak.merci-michel.com/eu/en/"
 status: analyzed
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 tags:
   - target
   - reverse-engineering
@@ -27,10 +27,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://thetiebreak.merci-michel.com/](https://thetiebreak.merci-michel.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
 - **Page Title**: The Tie-break!
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `9`
+- **Recovered Scripts**: `8`
 - **Recovered Stylesheets**: `1`
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ellioteriksson-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,8 +13,8 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ellioteriksson-com` (**Elliot Eriksson — UI/UX, web & brand design, Stockholm & Åland**)
 - **Production URL**: [https://ellioteriksson.com/](https://ellioteriksson.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#c6f432`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#0c0c0c` ink, `#c6f432` accent)
 - **Summary**: Elliot Eriksson is a design technologist in Stockholm, designing clear, accessible websites and interfaces from first sketch to final pol...
 - **Total Clean CSS Variables Extracted**: `45` (curated live-grounded set below)
 
@@ -71,10 +71,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.site-header> — `ellioteriksson-com`)**:
    - Landmark `<header class="site-header">` (`1440x53px`) hosting `Elliot Eriksson — UI/UX, web & brand` navigation (`Home H o m e · Cases C a s e s · EN E N – English · SV S V – Svenska`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/immutab..."`, `data-sdkn="@vercel/analytics/next"`, `data-sdkv="2.0.1"`), and stylesheet rule `after { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `I’m elliot, an award winning desig`)**:
-   - Landmark `<section class="hero">` presenting display lead `I’m elliot, an award winning design technologist...` and copy excerpt *"CURRENTLY IN STOCKHOLM02:03"* over `#ffffff` canvas and `#0c0c0c` ink.
+   - Landmark `<section class="hero">` presenting display lead `I’m elliot, an award winning design technologist...` and copy excerpt *"CURRENTLY IN STOCKHOLM14:22"* over `#ffffff` canvas and `#0c0c0c` ink.
 3. **Primary Showcase & Content Grid (<section.showcase> — `I’m Elliot , an award winning desi`)**:
    - Landmark `<section class="showcase showcase--roomy">` rendering section `I’m Elliot , an award winning design technologist...` with copy *"Design technologist"*, asset references (`1dm-4pi_h5ujm.js`, `41lrt_djk18al.js`, `1x62cbew_54xo.js`, `2jqd0dpb7brv_.js`), and grid rule `img { max-width:100%;height:auto;display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.projects> — `Selected work Selected work`)**:
-   - Landmark `<section class="projects">` framing `Selected work Selected work` and `More projects` (*"Based in Stockholm B a s e d i n b w b w e g t m q"*) with `#f3f3f3` surface cards, `#c6f432` accents, and `button { font:inherit;letter-spacing:inherit;color:inherit;cursor:pointer;backgro... }`.
+   - Landmark `<section class="projects">` framing `Selected work Selected work` and `More projects` (*"Based in Stockholm B a s e d i n S t o c k h o l m"*) with `#f3f3f3` surface cards, `#c6f432` accents, and `button { font:inherit;letter-spacing:inherit;color:inherit;cursor:pointer;backgro... }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://ellioteriksson.com/`)**:
    - Landmark `<footer class="site-footer">` anchoring `Elliot Eriksson — UI/UX, web & b` footer links (`Home H o m e · Cases C a s e s · EN E N – English · SV S V – Svenska`), copy *"Based in Stockholm"*, and `#e1e1e1` structural dividers.

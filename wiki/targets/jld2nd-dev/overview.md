@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: jld2nd-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://jld2nd.dev"
 final_url: "https://jld2nd.dev/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: JLD'2nd – Designer & Developer
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `37`
+- **Recovered Stylesheets**: `6`
 
 ---
 

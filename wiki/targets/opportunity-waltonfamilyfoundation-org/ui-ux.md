@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: opportunity-waltonfamilyfoundation-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `opportunity-waltonfamilyfoundation-org` (**Access to Opportunity: Gallup Research · Walton Family Foundation**)
 - **Production URL**: [https://opportunity.waltonfamilyfoundation.org/](https://opportunity.waltonfamilyfoundation.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#e7e72b`)
 - **Summary**: Explore Walton Family Foundation and Gallup research on opportunity. See how investments in education, nature, and communities help oppor...
 - **Total Clean CSS Variables Extracted**: `74` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Apple Color Emoji`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 212.543px`, `line-height: 191.289px`, `font-weight: 400`, `letter-spacing: -3.825px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 39.485px`, `line-height: 47.382px`, `font-weight: 400`, `letter-spacing: -0.79px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 50.5422px`, `line-height: 50.5422px`, `font-weight: 400`, `letter-spacing: -0.96px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`
 
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#12110e` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffff00` | `.bg-yellow { background-color: yellow }` (`#ffff00`) |
 | **Interactive Accent / Highlight** | `#e7e72b` | `var(--highlight)` in `:root` |
-| **Secondary / Muted Copy** | `#808080` | `.text-grey { color: grey }` (`#808080`) |
+| **Secondary / Muted Copy** | `#e7e72b` | live computed `h2` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#ff7f7f` | `50 { border-color: #ff7f7f }` |
 | **Variable Token (`--green`)** | `#5f8763` | `var(--green)` in `:root` |
 | **Variable Token (`--teal`)** | `#337c83` | `var(--teal)` in `:root` |
@@ -71,7 +71,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.antialiased> — `opportunity-waltonfamilyfoundation-org`)**:
-   - Landmark `<header class="antialiased">` (`1440x0px`) hosting `Access to Opportunity: Gallup Resear` navigation (`Privacy Policy · Terms of Use`), DOM attributes (`data-precedence="next"`, `data-lenis-prevent="true"`, `data-gtm-vis-polling-id252455071_20="68"`, `data-menu-background="true"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="antialiased">` (`1440x0px`) hosting `Access to Opportunity: Gallup Resear` navigation (`Privacy Policy · Terms of Use`), DOM attributes (`data-precedence="next"`, `data-lenis-prevent="true"`, `data-gtm-vis-polling-id252455071_20="69"`, `data-menu-background="true"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.lenis> — `WHERE OPPORTUNITY TAKES ROOT`)**:
    - Landmark `<section class="lenis">` presenting display lead `WHERE OPPORTUNITY TAKES ROOT` and copy excerpt *"To build choice-filled lives. Our work helps create access to opp"* over `#ffffff` canvas and `#12110e` ink.
 3. **Primary Showcase & Content Grid (<section.bg-background> — `Where opportunity takes root`)**:

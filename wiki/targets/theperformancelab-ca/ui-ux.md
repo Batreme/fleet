@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: theperformancelab-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `theperformancelab-ca` (**The Performance Lab — Sports Science & Athletic Testing in Toronto**)
 - **Production URL**: [https://theperformancelab.ca/](https://theperformancelab.ca/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#171717` canvas, `#f2f2f2` ink, `#ff0000` accent)
 - **Summary**: The Performance Lab is a Toronto sports science centre offering 3D motion-capture testing, performance training, and sports therapy — tru...
-- **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `display`
 - **Monospace / Technical Font Stack**: `mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 39px`, `line-height: 31.2px`, `font-weight: 500`, `letter-spacing: -1.56px`); CSS variables `--font-display: var(--font-display-family)`, `--font-display-family: "display","display Fallback"`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 60px`, `line-height: 60px`, `font-weight: 500`, `letter-spacing: -2.4px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 135px`, `line-height: 108px`, `font-weight: 500`, `letter-spacing: -5.4px`)
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: 18px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 18px`, `font-weight: 400`); CSS variables `--font-mono: var(--font-mono-family)`, `--font-mono-family: "mono","mono Fallback"`, `--default-mono-font-family: var(--font-mono)`
 
@@ -72,7 +72,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.inset-x-0> — `theperformancelab-ca`)**:
-   - Landmark `<header class="inset-x-0 top-0">` (`1440x63px`) hosting `The Performance Lab — Sports Science` navigation (`H O M E · W H O W E A R E · B L O G · C O N T A C T`), DOM attributes (`data-precedence="next"`, `data-theme="dark"`, `data-services-open="false"`, `data-scroll-state="false"`), and stylesheet rule `.__className_9dcdb7 { font-family:display,display Fallback }`.
+   - Landmark `<header class="inset-x-0 top-0">` (`1440x62px`) hosting `The Performance Lab — Sports Science` navigation (`H O M E · W H O W E A R E · B L O G · C O N T A C T`), DOM attributes (`data-precedence="next"`, `data-theme="dark"`, `data-services-open="false"`, `data-scroll-state="false"`), and stylesheet rule `.__className_9dcdb7 { font-family:display,display Fallback }`.
 2. **Hero Stage & Focal Lead (<section.mx-auto> — `UNLOCKNEXT LEVELPERFORMANCE`)**:
    - Landmark `<section class="mx-auto relative">` presenting display lead `UNLOCKNEXT LEVELPERFORMANCE` and copy excerpt *"EVERYTHING YOUR BODY NEEDS TO PERFORM, RECOVER, AND LAST."* over `#171717` canvas and `#f2f2f2` ink.
 3. **Primary Showcase & Content Grid (<section.hidden> — `UNLOCK NEXT LEVEL PERFORMANCE`)**:

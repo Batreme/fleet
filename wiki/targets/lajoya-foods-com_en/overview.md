@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: lajoya-foods-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://lajoya-foods.com/en"
 final_url: "https://lajoya-foods.com/en"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: LAJOYA GOURMET
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `77`
+- **Recovered Scripts**: `74`
 - **Recovered Stylesheets**: `3`
 
 ---

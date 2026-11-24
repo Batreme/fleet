@@ -1,22 +1,29 @@
 ---
 title: "UI Prompt Blueprint: serus-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "serus-ai"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native+wheel
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
-archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#800080`)"
+archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0d0d` / `#800080`)"
 ---
 
 # UI Design System & Master Generation Blueprint: serus-ai
 
 > **Serus — Agentic Privacy & Intelligence** (https://serus.ai/) — Your own privacy agent: finds what's exposed, removes it, watches for more and lets you check who you're dealing with. Protection and int...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,24 +31,22 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 
 - **Brand Essence & Persona**: **Serus — Agentic Privacy & Intelligence** (`https://serus.ai/`). Your own privacy agent: finds what's exposed, removes it, watches for more and lets you check who you're dealing with. Protection and int...
 - **Final Redirected URL**: [https://www.serus.ai/](https://www.serus.ai/)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
-- **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#800080`)**.
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
+- **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0d0d` / `#800080`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0d` primary typography and `#800080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Reckless` for display copy (`Your privacy agent`) with `Geist Variable` and `Geist Mono Variable`.
-  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 8px`, padding `24px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0d0d0d` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#800080` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Reckless` for display copy (`Meet your personal security assistan`) with `Geist Variable` and `Geist Mono Variable`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 8px`, padding `24px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=7110px` / doc `8557px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `9999px`, `.25rem`, `1rem`, `var(--radius-md)`.
+- **Border Radius Scale**: `999px`, `.5rem`, `9999px`, `.25rem`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 8px`).
@@ -55,12 +60,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 ### Semantic Palette & Source Grounding
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
-| **Primary Canvas Substrate** | `#fafafa` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#0d0d0d` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffffff` | `var(--color-paper)` in `:root` |
-| **Interactive Accent / Highlight** | `#800080` | `.btn-brand { background: purple }` (`#800080`) |
-| **Secondary / Muted Copy** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#e2e2e2` | `var(--color-sds-border-default)` in `:root` (`0d0d0d1a`) |
+| **Primary Canvas Substrate** | `#0d0d0d` | live computed `body` `background-color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#f5f5f5` | live computed `h1` `color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#800080` | `.bt-pill-page { background-color: purple }` (`#800080`) |
+| **Interactive Accent / Highlight** | `#800080` | `.prose-serus a:hover { color: purple }` (`#800080`) |
+| **Secondary / Muted Copy** | `#808080` | `.eyebrow { color: gray }` (`#808080`) |
+| **Structural Hairline Border** | `#808080` | `.border-gray-200 { border-color: #808080 }` |
 | **Variable Token (`--dither-fill`)** | `#ebebeb` | `var(--dither-fill)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -94,7 +99,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 46px`, `font-weight: 400`, `letter-spacing: -0.7px`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 41.4px`, `font-weight: 500`, `letter-spacing: -0.72px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: 30px`, `line-height: 40px`, `letter-spacing: -.6px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`, `letter-spacing: -0.96px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: 30px`, `line-height: 40px`, `letter-spacing: -.6px`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`line-height: 1.625`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--chart-label: oklch(45% .01 260)`, `--font-mono: "Geist Mono Variable", ui-monospace, monospace`, `--text-xs: .75rem`.
 
@@ -103,14 +108,22 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.3,.64,1)`, `cubic-bezier(.16,1,.3,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `layer theme`**: `transition: .15s` extracted from `serus-ai` stylesheet.
-- **Selector `.btn-xl`**: `transition: background-color .15s,color .15s,transform .15s` extracted from `serus-ai` stylesheet.
-- **Selector `a.bt-name`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `serus-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.flex-col>`.
+- **Selector `ta-js] .chat-slide[data-astro-cid...`**: `transition: opacity .35s ease-in,filter .35s ease-in,visibility 0s .35s` extracted from `serus-ai` stylesheet.
+- **Selector `slide[data-astro-cid-2z7eqyuz][da...`**: `transition: opacity .6s ease-out .25s,filter .6s ease-out .25s` extracted from `serus-ai` stylesheet.
+- **Selector `.chat-label-wrap[data-astro-cid-2...`**: `transition: grid-template-rows .3s,grid-template-columns .3s` extracted from `serus-ai` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.px-4>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native+wheel` (max document height `8557px`, deepest scrollY reached `7110px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Nav / Drawer Probe**: Tested trigger `Product` (diff `0.977`, below state-capture threshold).
+- **Hover Physics (`primary_cta` · `Serus announces fundraising`)**: `color`: `rgba(245, 245, 245, 0.64)` -> `rgb(245, 245, 245)`; `borderColor`: `rgba(255, 255, 255, 0.12)` -> `oklab(0.970145 0.000044...` (`transition-duration: 0.15s`, `timing: cubic-bezier(0.4, 0, 0.2, 1)`).
+- **Interactive Control Probe (`accordion`)**: Tested `What does a Serus scan find?` (diff `2.93`).
+- **Theme Toggle Probe (`Switch to light mode`)**: Toggled body background `rgb(13, 13, 13)` -> `rgb(250, 250, 250)` and ink `rgb(245, 245, 245)` -> `rgb(13, 13, 13)`.
+- **Route Transition Architecture**: First internal navigation (`/blog/`) measured as `direct` in `1344ms`.
 
 ---
 
@@ -121,18 +134,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Serus — Agentic Privacy & Intelligence     │
 │ ====================================================================== │
-│ [ <header.top-0> (1440x52px)          | People Meet the team · Blog  ] │
+│ [ <header.top-0> (1440x56px)          | People Meet the team · Blog  ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.prot-hero> (w=1440px)                         | │
-│ | H1: Your privacy agent                                             | │
-│ | Substrate: #fafafa | Ink: #0d0d0d | Accent: #800080                | │
+│ | HERO STAGE: <section.bg-background-canvas> (w=1440px)              | │
+│ | H1: Meet your personal security assistant                          | │
+│ | Substrate: #0d0d0d | Ink: #f5f5f5 | Accent: #800080                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.flex-col>) max-w: 96rem                    | │
+│ | SHOWCASE GRID (<section.px-4>) max-w: 96rem                        | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Y o u r p r i v a c y a g e  |  | What to search               | | │
+│ | | Other AI waits to be asked.  |  | It notices when your data co | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.pt-12>) — Surveillance                     | │
+│ | DETAIL MODULE (<section.py-20>) — It watches the world             | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.pb-6>       ) | https://serus.ai/                    │
 └────────────────────────────────────────────────────────────────────────┘
@@ -145,14 +158,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 │ ====================================================================== │
 │ [ HEADER BAR (<header.top-0>          ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE (<section.prot-hero>) — 390px Vertical Lead             | │
-│ | H1: Your privacy agent                                             | │
+│ | HERO STAGE (<section.bg-background-c) — 390px Vertical Lead        | │
+│ | H1: Meet your personal security assistant                          | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<section.flex-col>) — 1-Col Stack                  | │
-│ | [ Item 1: Y o u r p r i v a c y a g e n t                        ] | │
-│ | [ Item 2: What to search                                         ] | │
+│ | SHOWCASE STACK (<section.px-4>) — 1-Col Stack                      | │
+│ | [ Item 1: Other AI waits to be asked. Serus texts you first.     ] | │
+│ | [ Item 2: It notices when your data comes back                   ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.pt-12>) — 1-Col (Surveillance)              | │
+│ | DETAIL STACK (<section.py-20>) — 1-Col (It watches the wor)        | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.pb-6>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -160,15 +173,29 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.top-0> — `serus-ai`)**:
-   - Landmark `<header class="top-0 bg-background-canvas">` (`1440x52px`) hosting `Serus — Agentic Privacy & Intelligen` navigation (`People Meet the team · Blog News & guides`), DOM attributes (`data-id="D6EM0HRC77UCIF8JNLS0"`, `data-id="D6EM0HRC77UCIF8JNLS0"`, `data-astro-cid-nen7h5rs`, `data-nav-menu`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.prot-hero> — `Your privacy agent`)**:
-   - Landmark `<section class="prot-hero mt-14">` presenting display lead `Your privacy agent` and copy excerpt *"Used by people at leading companies"* over `#fafafa` canvas and `#0d0d0d` ink.
-3. **Primary Showcase & Content Grid (<section.flex-col> — `Y o u r p r i v a c y a g e n t`)**:
-   - Landmark `<section class="flex-col">` rendering section `Y o u r p r i v a c y a g e n t` with copy *"Y o u r p r i v a c y a g e n t"*, asset references (`23e9b6c532a183c280b129fec77fdf385...`, `favicon.svg`, `apple-touch-icon.png`, `cdn.sanity.io`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.pt-12> — `What to search`)**:
-   - Landmark `<section class="pt-12 pb-28">` framing `What to search` and `Surveillance` (*"Serus AI Ask questions and explore with Serus."*) with `#ffffff` surface cards, `#800080` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<header class="top-0 bg-background-canvas">` (`1440x56px`) hosting `Serus — Agentic Privacy & Intelligen` navigation (`People Meet the team · Blog News & guides`), DOM attributes (`data-id="D6EM0HRC77UCIF8JNLS0"`, `data-id="D6EM0HRC77UCIF8JNLS0"`, `data-astro-cid-nen7h5rs`, `data-nav-menu`), and stylesheet rule `hover { transform:translateY(calc(var(--lift) - 6px)) rotate(0deg) }`.
+2. **Hero Stage & Focal Lead (<section.bg-background-canvas> — `Meet your personal security assist`)**:
+   - Landmark `<section class="bg-background-canvas text-sds-text-default">` presenting display lead `Meet your personal security assistant` and copy excerpt *"Proactive protection against threats and scams, and removal of yo"* over `#0d0d0d` canvas and `#f5f5f5` ink.
+3. **Primary Showcase & Content Grid (<section.px-4> — `Other AI waits to be asked. Serus `)**:
+   - Landmark `<section class="px-4 py-20">` rendering section `Other AI waits to be asked. Serus texts you first.` with copy *"Serus announces fundraising"*, asset references (`clientParamBuilder.bundle.js`, `identify_f7846436.js`, `main.MTUyMzg1YjAxMQ.js`, `events.js`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<section.py-20> — `It notices when your data comes ba`)**:
+   - Landmark `<section class="px-4 py-20">` framing `It notices when your data comes back` and `It watches the world around you` (*"Used by people at leading companies"*) with `#800080` surface cards, `#800080` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.pb-6> — `https://serus.ai/`)**:
-   - Landmark `<footer class="pb-6 pt-16">` anchoring `Serus — Agentic Privacy & Intell` footer links (`People Meet the team · Blog News & guides`), copy *"Ask questions and explore with Serus."*, and `#e2e2e2` structural dividers.
+   - Landmark `<footer class="pb-6 pt-16">` anchoring `Serus — Agentic Privacy & Intell` footer links (`People Meet the team · Blog News & guides`), copy *"A contact is hacked"*, and `#808080` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Meet your personal security assistant` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `11%`): Active landmark `Other AI waits to be asked. Serus texts you first.` · sticky/fixed elements: `1`
+- **Step 03** (`y=3360px`, `44%`): Active landmark `Most AI stops at advice. Serus does the whole job.` · sticky/fixed elements: `1`
+- **Step 04** (`y=4110px`, `54%`): Active landmark `A threat intelligence engine general AI doesn't have` · sticky/fixed elements: `1`
+- **Step 05** (`y=4860px`, `63%`): Active landmark `Get started today Get started today` · sticky/fixed elements: `1`
+- **Step 06** (`y=5610px`, `73%`): Active landmark `Get started today Get started today` · sticky/fixed elements: `1`
+- **Step 07** (`y=6360px`, `83%`): Active landmark `Frequently asked` · sticky/fixed elements: `1`
+- **Step 08** (`y=7110px`, `93%`): Active landmark `300,000 registered users` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/blog/`)**: `https://www.serus.ai/blog/` — H1: `Blog`, scrollHeight `6926px`, transition `direct` (`1344ms`)
+- **Detail Route (`/blog/serus-announces-fundraising/`)**: `https://www.serus.ai/blog/serus-announces-fundraising/` — H1: `Serus announces fundraising`, scrollHeight `3371px`, transition `direct` (`622ms`)
+- **About Route (`/manifesto/`)**: `https://www.serus.ai/manifesto/` — H1: `The internet keeps everything. Someone has to kee...`, scrollHeight `3473px`, transition `direct` (`319ms`)
 
 ---
 
@@ -180,13 +207,13 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#8
 You are a principal frontend architect and design systems engineer. Build a complete, production-ready web application replicating the exact design system, DOM landmarks, typographic hierarchy, color tokens, and motion physics of `serus-ai` (**Serus — Agentic Privacy & Intelligence** — `https://serus.ai/`).
 
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
-- **Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fafafa` / `#800080`).
+- **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0d0d0d` / `#800080`).
 - **Identity & Domain Context**: Your own privacy agent: finds what's exposed, removes it, watches for more and lets you check who you're dealing with. Protection and int...
-- **Primary Substrate**: `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0d0d0d`, **Accent / Highlight**: `#800080`.
+- **Primary Substrate**: `#0d0d0d` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f5f5f5`, **Accent / Highlight**: `#800080`.
 - **Site-Specific Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafafa` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0d` primary typography and `#800080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Reckless` for display copy (`Your privacy agent`) with `Geist Variable` and `Geist Mono Variable`.
-  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 8px`, padding `24px`) with `cubic-bezier(.4,0,1,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0d0d0d` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f5f5f5` primary typography and `#800080` accents.
+  - **Grounded Typographic Hierarchy**: Pairs `Reckless` for display copy (`Meet your personal security assistan`) with `Geist Variable` and `Geist Mono Variable`.
+  - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 8px`, padding `24px`) with `cubic-bezier(.22,1,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `serus-ai` in your global stylesheet:
@@ -213,73 +240,108 @@ Declare and consume these exact custom properties extracted from `serus-ai` in y
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
-- **Primary Canvas Substrate**: `#fafafa` — grounded in live computed `body` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#0d0d0d` — grounded in live computed `h1` `color` (`computed_styles.json`)
-- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `var(--color-paper)` in `:root`
-- **Interactive Accent / Highlight**: `#800080` — grounded in `.btn-brand { background: purple }` (`#800080`)
-- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `h2` `color` (`computed_styles.json`)
-- **Structural Hairline Border**: `#e2e2e2` — grounded in `var(--color-sds-border-default)` in `:root` (`0d0d0d1a`)
+- **Primary Canvas Substrate**: `#0d0d0d` — grounded in live computed `body` `background-color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#f5f5f5` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Elevated Surface / Card Substrate**: `#800080` — grounded in `.bt-pill-page { background-color: purple }` (`#800080`)
+- **Interactive Accent / Highlight**: `#800080` — grounded in `.prose-serus a:hover { color: purple }` (`#800080`)
+- **Secondary / Muted Copy**: `#808080` — grounded in `.eyebrow { color: gray }` (`#808080`)
+- **Structural Hairline Border**: `#808080` — grounded in `.border-gray-200 { border-color: #808080 }`
 - **Variable Token (`--dither-fill`)**: `#ebebeb` — grounded in `var(--dither-fill)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `24px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 8px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
 - **Media Queries**: `@media (width<=639px)`, `@media not all and (width>=40rem)`, `@media (width>=40rem)`, `@media (width>=48rem)`
-- **Corner Radii**: `9999px`, `.25rem`, `1rem`, `var(--radius-md)`
+- **Corner Radii**: `999px`, `.5rem`, `9999px`, `.25rem`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Reckless`
 - **Body Font Stack**: `Geist Variable`
 - **Monospace / Technical Font Stack**: `Geist Mono Variable`
 - **H1 Display Rule**: live computed `h1` (`font-size: 40px`, `line-height: 46px`, `font-weight: 400`, `letter-spacing: -0.7px`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 36px`, `line-height: 41.4px`, `font-weight: 500`, `letter-spacing: -0.72px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: 30px`, `line-height: 40px`, `letter-spacing: -.6px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`, `letter-spacing: -0.96px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: 30px`, `line-height: 40px`, `letter-spacing: -.6px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`line-height: 1.625`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--chart-label: oklch(45% .01 260)`, `--font-mono: "Geist Mono Variable", ui-monospace, monospace`, `--text-xs: .75rem`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `serus-ai` (`Serus — Agentic Privacy & Intelligence`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.top-0> — `serus-ai`)**:
-   - DOM & Selectors: Landmark `<header class="top-0 bg-background-canvas">` (`1440x52px`) hosting `Serus — Agentic Privacy & Intelligen` navigation (`People Meet the team · Blog News & guides`), DOM attributes (`data-id="D6EM0HRC77UCIF8JNLS0"`, `data-id="D6EM0HRC77UCIF8JNLS0"`, `data-astro-cid-nen7h5rs`, `data-nav-menu`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `serus-ai`)` (`serus-ai`) adapts across `@media (width<=639px)`, `@media not all and (width>=40rem)`, `@media (width>=40rem)`, `@media (width>=48rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `People Meet the team · Blog News & guides`.
-2. **Hero Stage & Focal Lead (<section.prot-hero> — `Your privacy agent`)**:
-   - DOM & Selectors: Landmark `<section class="prot-hero mt-14">` presenting display lead `Your privacy agent` and copy excerpt *"Used by people at leading companies"* over `#fafafa` canvas and `#0d0d0d` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fafafa` background with `#0d0d0d` headline `Your privacy agent`.
-3. **Primary Showcase & Content Grid (<section.flex-col> — `Y o u r p r i v a c y a g e n t`)**:
-   - DOM & Selectors: Landmark `<section class="flex-col">` rendering section `Y o u r p r i v a c y a g e n t` with copy *"Y o u r p r i v a c y a g e n t"*, asset references (`23e9b6c532a183c280b129fec77fdf385...`, `favicon.svg`, `apple-touch-icon.png`, `cdn.sanity.io`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.flex-col> — `Y o u r p r i v a c y a g e n t`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.pt-12> — `What to search`)**:
-   - DOM & Selectors: Landmark `<section class="pt-12 pb-28">` framing `What to search` and `Surveillance` (*"Serus AI Ask questions and explore with Serus."*) with `#ffffff` surface cards, `#800080` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.pt-12> — `What to search`)` uses `9999px`, `.25rem`, `1rem`, `var(--radius-md)` radii, `#800080` highlights, and assets (23e9b6c532a183c280b129fec77fdf385..., favicon.svg, apple-touch-icon.png).
+   - DOM & Selectors: Landmark `<header class="top-0 bg-background-canvas">` (`1440x56px`) hosting `Serus — Agentic Privacy & Intelligen` navigation (`People Meet the team · Blog News & guides`), DOM attributes (`data-id="D6EM0HRC77UCIF8JNLS0"`, `data-id="D6EM0HRC77UCIF8JNLS0"`, `data-astro-cid-nen7h5rs`, `data-nav-menu`), and stylesheet rule `hover { transform:translateY(calc(var(--lift) - 6px)) rotate(0deg) }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `serus-ai`)` (`serus-ai`) adapts across `@media (width<=639px)`, `@media not all and (width>=40rem)`, `@media (width>=40rem)`, `@media (width>=48rem)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.3,.64,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `People Meet the team · Blog News & guides`.
+2. **Hero Stage & Focal Lead (<section.bg-background-canvas> — `Meet your personal security assist`)**:
+   - DOM & Selectors: Landmark `<section class="bg-background-canvas text-sds-text-default">` presenting display lead `Meet your personal security assistant` and copy excerpt *"Proactive protection against threats and scams, and removal of yo"* over `#0d0d0d` canvas and `#f5f5f5` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#0d0d0d` background with `#f5f5f5` headline `Meet your personal security assistant`.
+3. **Primary Showcase & Content Grid (<section.px-4> — `Other AI waits to be asked. Serus `)**:
+   - DOM & Selectors: Landmark `<section class="px-4 py-20">` rendering section `Other AI waits to be asked. Serus texts you first.` with copy *"Serus announces fundraising"*, asset references (`clientParamBuilder.bundle.js`, `identify_f7846436.js`, `main.MTUyMzg1YjAxMQ.js`, `events.js`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.px-4> — `Other AI waits to be asked. Serus `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.py-20> — `It notices when your data comes ba`)**:
+   - DOM & Selectors: Landmark `<section class="px-4 py-20">` framing `It notices when your data comes back` and `It watches the world around you` (*"Used by people at leading companies"*) with `#800080` surface cards, `#800080` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.py-20> — `It notices when your data comes ba`)` uses `999px`, `.5rem`, `9999px`, `.25rem` radii, `#800080` highlights, and assets (clientParamBuilder.bundle.js, identify_f7846436.js, main.MTUyMzg1YjAxMQ.js).
 5. **Colophon & Global Directory Footer (<footer.pb-6> — `https://serus.ai/`)**:
-   - DOM & Selectors: Landmark `<footer class="pb-6 pt-16">` anchoring `Serus — Agentic Privacy & Intell` footer links (`People Meet the team · Blog News & guides`), copy *"Ask questions and explore with Serus."*, and `#e2e2e2` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="pb-6 pt-16">` anchoring `Serus — Agentic Privacy & Intell` footer links (`People Meet the team · Blog News & guides`), copy *"A contact is hacked"*, and `#808080` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.pb-6> — `https://serus.ai/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `24px` lateral canvas padding with `8px` grid gap and attributes (data-id="D6EM0HRC77UCIF8JNLS0", data-id="D6EM0HRC77UCIF8JNLS0", data-astro-cid-nen7h5rs).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Used by people at leading companies"*
-- Copy Excerpt 2: *"Y o u r p r i v a c y a g e n t"*
-- Copy Excerpt 3: *"Serus AI Ask questions and explore with Serus."*
-- Copy Excerpt 4: *"Ask questions and explore with Serus."*
+- Copy Excerpt 1: *"Proactive protection against threats and scams, and removal of your exposed data."*
+- Copy Excerpt 2: *"Serus announces fundraising"*
+- Copy Excerpt 3: *"Used by people at leading companies"*
+- Copy Excerpt 4: *"A contact is hacked"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`
+- **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.34,1.3,.64,1)`, `cubic-bezier(.16,1,.3,1)`
 - **Extracted Stylesheet Rules (`serus-ai`)**:
+- `hover { transform:translateY(calc(var(--lift) - 6px)) rotate(0deg) }`
 - `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
 - `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
 - `strong { font-weight:bolder }`
 - `small { font-size:80% }`
-- `sup { vertical-align:baseline;font-size:75%;line-height:0;position:relative }`
 - **Per-Selector Transition Rules**:
-- **Selector `layer theme`**: `transition: .15s` extracted from `serus-ai` stylesheet.
-- **Selector `.btn-xl`**: `transition: background-color .15s,color .15s,transform .15s` extracted from `serus-ai` stylesheet.
-- **Selector `a.bt-name`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `serus-ai` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.flex-col>`.
+- **Selector `ta-js] .chat-slide[data-astro-cid...`**: `transition: opacity .35s ease-in,filter .35s ease-in,visibility 0s .35s` extracted from `serus-ai` stylesheet.
+- **Selector `slide[data-astro-cid-2z7eqyuz][da...`**: `transition: opacity .6s ease-out .25s,filter .6s ease-out .25s` extracted from `serus-ai` stylesheet.
+- **Selector `.chat-label-wrap[data-astro-cid-2...`**: `transition: grid-template-rows .3s,grid-template-columns .3s` extracted from `serus-ai` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.px-4>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native+wheel` vertical progression up to `8557px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Meet your personal security... (0%) -> Other AI waits to be asked.... (11%) -> Most AI stops at advice. Se... (44%) -> A threat intelligence engin... (54%) -> Get started today Get start... (63%) -> Get started today Get start... (73%) -> Frequently asked (83%) -> 300,000 registered users (93%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `color, borderColor` with `0.15s cubic-bezier(0.4, 0, 0.2, 1)`.
+- **Multi-Page Routes**: Scaffold internal routes `/blog/` (listing, direct), `/blog/serus-announces-fundraising/` (detail, direct), `/manifesto/` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `serus-ai`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Meet your personal security assistant | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `11%` | Other AI waits to be asked. Serus texts you f... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3360px` | `44%` | Most AI stops at advice. Serus does the whole... | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4110px` | `54%` | A threat intelligence engine general AI doesn... | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4860px` | `63%` | Get started today Get started today | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5610px` | `73%` | Get started today Get started today | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `6360px` | `83%` | Frequently asked | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `7110px` | `93%` | 300,000 registered users | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Meet your personal security assistant | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4362px` | `50%` | A threat intelligence engine general AI d... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `8725px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.serus.ai/blog/` | Blog | `6926px` | `direct` (`1344ms`) | [subpage-01-blog.webp](assets/subpage-01-blog.webp) |
+| `2` | `detail` | `https://www.serus.ai/blog/serus-announces-fundraising/` | Serus announces fundraising | `3371px` | `direct` (`622ms`) | [subpage-02-blog-serus-announces-fundraising.webp](assets/subpage-02-blog-serus-announces-fundraising.webp) |
+| `3` | `about` | `https://www.serus.ai/manifesto/` | The internet keeps everything. Someon... | `3473px` | `direct` (`319ms`) | [subpage-03-manifesto.webp](assets/subpage-03-manifesto.webp) |
+

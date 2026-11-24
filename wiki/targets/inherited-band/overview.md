@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: inherited-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://inherited.band/"
 final_url: "https://inherited.band/"
 status: analyzed

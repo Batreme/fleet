@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-rosshalfin-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.rosshalfin.com"
 final_url: "https://www.rosshalfin.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Ross Halfin Photography · Music Images + Fine Art Prints
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `72`
-- **Recovered Stylesheets**: `28`
+- **Recovered Scripts**: `321`
+- **Recovered Stylesheets**: `56`
 
 ---
 

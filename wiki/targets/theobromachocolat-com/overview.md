@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: theobromachocolat-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://theobromachocolat.com/"
 final_url: "https://theobromachocolat.com/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://theobromachocolat.com/](https://theobromachocolat.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Cure Your Chocolate Craving · Theobroma Chocolate
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `31`
-- **Recovered Stylesheets**: `5`
+- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Recovered Scripts**: `461`
+- **Recovered Stylesheets**: `24`
 
 ---
 

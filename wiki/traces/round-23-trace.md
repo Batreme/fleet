@@ -1,15 +1,15 @@
-# Round 23 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 23 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-23`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `10` live (`0` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-23`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `9` live (`1` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 23 Target Scope
-  1. `loot-games-ru` — *LOOT – награды в играх за активность в реальной жизни*
+  1. `loot-games-ru` — *Blocked (`Empty DOM response (0 bytes, 0 visible text)`)*
   2. `lorenzolottici-it_en` — *Lorenzo Lottici · Order in chaos*
   3. `lpas-com` — *LPAS - Architecture and Interiors*
   4. `m3-pg-de` — *M3 Planungsgruppe*
@@ -22,17 +22,17 @@
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `loot-games-ru` | `tier2_webgl` | `1440×900px` (604,133 B) | `390×844px` (168,448 B) | 8 | 16 | 283 | 106 | `0.10` / `0.55` | **25.0 / 25.0** |
-| `lorenzolottici-it_en` | `tier1_fast` | `1440×2400px` (63,179 B) | `390×844px` (6,864 B) | 211 | 16 | 282 | 106 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `lpas-com` | `tier1_fast` | `1440×2400px` (1,224,818 B) | `390×2400px` (365,252 B) | 12 | 16 | 282 | 106 | `0.11` / `0.53` | **25.0 / 25.0** |
-| `m3-pg-de` | `tier1_fast` | `1440×2400px` (356,781 B) | `390×2400px` (247,552 B) | 445 | 16 | 304 | 117 | `0.09` / `0.47` | **25.0 / 25.0** |
-| `macmillan-studio` | `tier1_fast` | `1440×900px` (1,585,262 B) | `390×844px` (451,998 B) | 32 | 16 | 282 | 106 | `0.11` / `0.55` | **25.0 / 25.0** |
-| `madetodisrupt-com` | `tier1_fast` | `1440×2400px` (567,945 B) | `390×2400px` (174,027 B) | 226 | 16 | 286 | 108 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `magicshot-ai` | `tier1_fast` | `1440×2400px` (1,283,570 B) | `390×2400px` (401,649 B) | 159 | 16 | 282 | 106 | `0.09` / `0.44` | **25.0 / 25.0** |
-| `manifesto-blandina-org` | `tier1_fast` | `1440×2400px` (21,421 B) | `390×2400px` (676,465 B) | 97 | 16 | 294 | 112 | `0.09` / `0.52` | **25.0 / 25.0** |
-| `matchball-today` | `tier1_fast` | `1440×900px` (164,062 B) | `390×844px` (78,645 B) | 18 | 16 | 296 | 112 | `0.11` / `0.53` | **25.0 / 25.0** |
-| `matthisgarnier-com` | `tier2_webgl` | `1440×900px` (83,989 B) | `390×844px` (22,195 B) | 253 | 16 | 307 | 118 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `lorenzolottici-it_en` | `tier1_fast` | `1280×828px` (8,148 B) | `390×872px` (3,920 B) | 210 | 16 | 309 | 109 | `0.10` / `0.46` | **25.0 / 25.0** |
+| `lpas-com` | `tier1_fast` | `1280×6624px` (472,586 B) | `390×2616px` (38,104 B) | 12 | 16 | 347 | 111 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `m3-pg-de` | `tier1_fast` | `1280×4968px` (232,490 B) | `390×2616px` (81,512 B) | 445 | 16 | 358 | 121 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `macmillan-studio` | `tier1_fast` | `1280×6624px` (1,386,470 B) | `390×872px` (67,730 B) | 32 | 16 | 339 | 110 | `0.11` / `0.51` | **25.0 / 25.0** |
+| `madetodisrupt-com` | `tier1_fast` | `1280×6624px` (283,250 B) | `390×2616px` (71,100 B) | 227 | 16 | 345 | 113 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `magicshot-ai` | `tier1_fast` | `1280×6624px` (535,596 B) | `390×872px` (35,424 B) | 159 | 16 | 348 | 111 | `0.10` / `0.45` | **25.0 / 25.0** |
+| `manifesto-blandina-org` | `tier2_webgl` | `1280×828px` (7,526 B) | `390×872px` (1,798 B) | 97 | 16 | 321 | 115 | `0.09` / `0.53` | **25.0 / 25.0** |
+| `matchball-today` | `tier2_webgl` | `1280×828px` (14,576 B) | `390×872px` (11,070 B) | 18 | 16 | 323 | 115 | `0.11` / `0.53` | **25.0 / 25.0** |
+| `matthisgarnier-com` | `tier2_webgl` | `1280×828px` (65,912 B) | `390×872px` (25,204 B) | 253 | 16 | 338 | 121 | `0.09` / `0.50` | **25.0 / 25.0** |
+| `loot-games-ru` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Empty DOM response (0 bytes, 0 visible text)`)** |

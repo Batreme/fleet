@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-arsenals-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `www-arsenals-com` (**Arsenals · Liberty is built**)
 - **Production URL**: [http://www.arsenals.com](http://www.arsenals.com)
 - **Final Redirected URL**: [https://arsenals.com/](https://arsenals.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×1744px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#061a2b` / `#f0ebde`)
 - **Summary**: Liberty is built. Arsenals builds a new maritime arsenal: autonomous, attritable, massed. The Harpoon is our first asset.
 - **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
@@ -68,7 +68,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.el> — `www-arsenals-com`)**:
-   - Landmark `<nav class="el">` (`1920x1080px`) hosting `Arsenals · Liberty is built` navigation (`Careers Careers · LinkedIn LinkedIn`), DOM attributes (`data-layout="width"`, `data-hover-style="none"`, `data-btn="frame"`, `data-layout="desktop"`), and stylesheet rule `body { overflow-x:hidden }`.
+   - Landmark `<nav class="el">` (`1920x1080px`) hosting `Arsenals · Liberty is built` navigation (`Careers Careers · LinkedIn LinkedIn`), DOM attributes (`data-layout="width"`, `data-hover-style="none"`, `data-btn="frame"`, `data-el="bg-dim"`), and stylesheet rule `body { overflow-x:hidden }`.
 2. **Hero Stage & Focal Lead (<section.el> — `Arsenals`)**:
    - Landmark `<section class="el copy">` presenting display lead `Arsenals` and copy excerpt *"Liberty is not granted. Not given. It must be built. And today it"* over `#061a2b` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.copy> — `Liberty is built`)**:

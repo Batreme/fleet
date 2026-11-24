@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-deathtorobots-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-deathtorobots-com` (**Death to Robots**)
 - **Production URL**: [https://www.deathtorobots.com/](https://www.deathtorobots.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas, `#facfd7` ink, `#0000ee` accent)
 - **Summary**: Death To Robots is a multi disciplinary creative agency working with brands to bring their stories to life.
 - **Total Clean CSS Variables Extracted**: `31` (curated live-grounded set below)

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: ondocollective-jp"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "ondocollective-jp"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#008000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#0
 
 > **Ondo Collective** (https://ondocollective.jp/) — Ondo Collectiveは、ブランドの背景にある文脈を読み解き、理念やコンセプトの言語化からロゴ・キービジュアル・Webまでを一貫して手がけるクリエイティブ・コレクティブです。東京を拠点に、ブランドの世界観づくりを支援します。
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ondo Collective** (`https://ondocollective.jp/`). Ondo Collectiveは、ブランドの背景にある文脈を読み解き、理念やコンセプトの言語化からロゴ・キービジュアル・Webまでを一貫して手がけるクリエイティブ・コレクティブです。東京を拠点に、ブランドの世界観づくりを支援します。
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#008000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3e5de` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#003c26` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Ondo-96e094e12386a431` for display copy (`We weave context`) with `Gen Interface JP-aa1df9adf44a6d02` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Ondo-96e094e12386a431` for display copy (`We weave context`) with `Gen Interface JP-aa1df9adf44a6d02`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20rem`, padding `24rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `20214px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `24rem` lateral canvas padding with `20rem` grid gap.
 - **Border Radius Scale**: `4rem`.
@@ -95,7 +100,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#0
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`, `letter-spacing: -0.96px`); rule `.title` (`font-size: var(--title-font-size)`, `line-height: 1.2`, `letter-spacing: -.02em`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 59.6572px`, `line-height: 71.5886px`, `font-weight: 400`, `letter-spacing: -1.19314px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 59.6572px`, `line-height: 71.5886px`, `font-weight: 400`, `letter-spacing: -1.19314px`).
 - **Body Copy**: live computed `body` (`font-size: 14.4px`, `line-height: 16.56px`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14.4px`, `line-height: 16.56px`, `font-weight: 400`); CSS variables `--letter-spacing-base: .03em`; rule `.label` (`font-size: 14rem`, `line-height: 1.2`).
 
@@ -112,6 +117,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#0
 - **Selector `data-lqip] img`**: `transition: opacity var(--lqip-duration) var(--lqip-ease)` extracted from `ondocollective-jp` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.l-header>` and `<section.p-home-philosophy>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `20214px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/projects/`) measured as `direct` in `7616ms`.
 
 ---
 
@@ -170,6 +179,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f3e5de` / `#0
    - Landmark `<section class="p-home-introduction">` framing `Introduction` and `About Ondo Collective` (*"文脈から、ブランドの世界観を立ち上げる クリエイティブ・コレクティブ"*) with `#ffffff` surface cards, `#008000` accents, and `main { display:block }`.
 5. **Colophon & Global Directory Footer (<footer.l-footer> — `https://ondocollective.jp/`)**:
    - Landmark `<footer class="l-footer">` anchoring `Ondo Collective` footer links (`Home Home · Projects Projects · Visuals Visuals · Contact Contact`), copy *"想いや価値観、これまでの歩み、関わってきた人たちとのつながり。 そうしたひとつひとつの積み重ねが、ブランドらしさを形づく"*, and `#d5cac4` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `We weave context` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/projects/`)**: `https://ondocollective.jp/projects/` — H1: `SELECTED LANDSCAPES`, scrollHeight `3075px`, transition `direct` (`7616ms`)
 
 ---
 
@@ -186,7 +200,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f3e5de` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#003c26`, **Accent / Highlight**: `#008000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f3e5de` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#003c26` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Ondo-96e094e12386a431` for display copy (`We weave context`) with `Gen Interface JP-aa1df9adf44a6d02` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Ondo-96e094e12386a431` for display copy (`We weave context`) with `Gen Interface JP-aa1df9adf44a6d02`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20rem`, padding `24rem`) with `cubic-bezier(.22,1,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +239,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-filter-black`)**: `#0009` — grounded in `var(--color-filter-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `24rem` lateral canvas padding with `20rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20rem`)
@@ -239,7 +253,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Gen Interface JP-aa1df9adf44a6d02`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 48px`, `line-height: 57.6px`, `font-weight: 400`, `letter-spacing: -0.96px`); rule `.title` (`font-size: var(--title-font-size)`, `line-height: 1.2`, `letter-spacing: -.02em`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 59.6572px`, `line-height: 71.5886px`, `font-weight: 400`, `letter-spacing: -1.19314px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 59.6572px`, `line-height: 71.5886px`, `font-weight: 400`, `letter-spacing: -1.19314px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 14.4px`, `line-height: 16.56px`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14.4px`, `line-height: 16.56px`, `font-weight: 400`); CSS variables `--letter-spacing-base: .03em`; rule `.label` (`font-size: 14rem`, `line-height: 1.2`)
 
@@ -250,7 +264,7 @@ Scaffold `ondocollective-jp` (`Ondo Collective`) with these exact structural reg
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.l-header> — `ondocollective-jp`)` (`ondocollective-jp`) adapts across `@media (width<=767px)`, `@media (width>=768px)`, `@media (width<=400px) and (height<=674px)`, `@media (width<=420px) and (height<=720px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.25,1,.5,1)` transitions and links `Home Home · Projects Projects · Visuals Visuals · Contact Contact`.
 2. **Hero Stage & Focal Lead (<section.p-home-mv> — `We weave context`)**:
    - DOM & Selectors: Landmark `<section class="p-home-mv">` presenting display lead `We weave context` and copy excerpt *"Before it becomes words, there are traces — unseen, unnamed, yet "* over `#f3e5de` canvas and `#003c26` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#f3e5de` background with `#003c26` headline `We weave context`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#f3e5de` background with `#003c26` headline `We weave context`.
 3. **Primary Showcase & Content Grid (<section.p-home-philosophy> — `Before it becomes words`)**:
    - DOM & Selectors: Landmark `<section class="p-home-philosophy">` rendering section `Before it becomes words` with copy *"事業の背景、歴史、温度。 まだ言葉になっていない違和感や、 静かに漂う気配。 私たちは、そのかけらを拾い集め、 ひとつの文脈へと編"*, asset references (`gtm.js`, `favicon.ico`, `icon-96x96.png`, `icon-32x32.png`), and grid rule `html { -webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;li... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.p-home-philosophy> — `Before it becomes words`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20rem`) on desktop and Single-column vertical stack at `390px` viewport width with `24rem` horizontal padding on mobile.
@@ -281,8 +295,33 @@ Scaffold `ondocollective-jp` (`Ondo Collective`) with these exact structural reg
 - **Selector `data-lqip] img`**: `transition: opacity var(--lqip-duration) var(--lqip-ease)` extracted from `ondocollective-jp` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.l-header>` and `<section.p-home-philosophy>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `20214px` across 1 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: We weave context (0%).
+- **Multi-Page Routes**: Scaffold internal routes `/projects/` (listing, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `ondocollective-jp`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | We weave context | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | We weave context | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | We weave context | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `0px` | `100%` | We weave context | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://ondocollective.jp/projects/` | SELECTED LANDSCAPES | `3075px` | `direct` (`7616ms`) | [subpage-01-projects.webp](assets/subpage-01-projects.webp) |
+

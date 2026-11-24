@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-areyoudami-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.areyoudami.com"
 final_url: "https://www.areyoudami.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.areyoudami.com](https://www.areyoudami.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)
 - **Page Title**: AreyouDami. — Damilare Olawoyin, Creative Director
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `11`
 - **Recovered Stylesheets**: `1`
 

@@ -1,9 +1,9 @@
-# Round 29 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 29 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-29`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `10` live (`0` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-29`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `9` live (`1` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
@@ -17,22 +17,22 @@
   6. `plastic-audio_dot` — *Record internal audio on Mac, with key and BPM · DOT*
   7. `plastic-ocean-com` — *Plastic Ocean*
   8. `powa-snp-agency` — *Donate to POWA & Stand for Women's Equality · Help End Gender-Based Viol...*
-  9. `premotio-com` — *premotio — finished design into polished motion*
+  9. `premotio-com` — *Blocked (`Live mobile behavioral capture failed (0 valid WebP frames)`)*
   10. `preymaker-com` — *Preymaker*
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `performeurope-eu` | `tier1_fast` | `1440×2400px` (508,940 B) | `390×2400px` (177,438 B) | 228 | 16 | 292 | 111 | `0.10` / `0.48` | **25.0 / 25.0** |
-| `phin-helenadang-work` | `tier1_fast` | `1440×2400px` (1,332,743 B) | `390×2400px` (428,975 B) | 64 | 16 | 306 | 118 | `0.10` / `0.50` | **25.0 / 25.0** |
-| `pinreply-com` | `tier1_fast` | `1440×2400px` (305,821 B) | `390×2400px` (164,315 B) | 11 | 16 | 290 | 110 | `0.10` / `0.51` | **25.0 / 25.0** |
-| `pixlpin-com_designs` | `tier1_fast` | `1440×2400px` (2,012,528 B) | `390×2400px` (791,547 B) | 406 | 16 | 302 | 116 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `pixvibe-ai` | `tier2_webgl` | `1440×2400px` (738,989 B) | `390×844px` (90,618 B) | 565 | 16 | 296 | 113 | `0.08` / `0.46` | **25.0 / 25.0** |
-| `plastic-audio_dot` | `tier1_fast` | `1440×2400px` (656,285 B) | `390×2400px` (243,227 B) | 33 | 16 | 290 | 110 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `plastic-ocean-com` | `tier1_fast` | `1440×2400px` (1,320,113 B) | `390×2400px` (348,239 B) | 14 | 16 | 284 | 107 | `0.10` / `0.51` | **25.0 / 25.0** |
-| `powa-snp-agency` | `tier1_fast` | `1440×2400px` (1,364,577 B) | `390×2400px` (586,357 B) | 92 | 16 | 280 | 104 | `0.10` / `0.51` | **25.0 / 25.0** |
-| `premotio-com` | `tier2_webgl` | `1440×900px` (8,672 B) | `390×2400px` (21,103 B) | 445 | 16 | 286 | 108 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `preymaker-com` | `tier1_fast` | `1440×900px` (927,307 B) | `390×844px` (236,405 B) | 34 | 16 | 282 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `performeurope-eu` | `tier1_fast` | `1280×4968px` (422,842 B) | `390×2616px` (90,178 B) | 228 | 16 | 348 | 116 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `phin-helenadang-work` | `tier1_fast` | `1280×4968px` (558,710 B) | `390×2616px` (200,968 B) | 63 | 16 | 347 | 122 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `pinreply-com` | `tier1_fast` | `1280×4968px` (236,206 B) | `390×2616px` (81,272 B) | 11 | 16 | 348 | 116 | `0.10` / `0.49` | **25.0 / 25.0** |
+| `pixlpin-com_designs` | `tier1_fast` | `1280×6624px` (591,082 B) | `390×2616px` (88,532 B) | 413 | 16 | 369 | 121 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `pixvibe-ai` | `tier1_fast` | `1280×6624px` (291,316 B) | `390×2616px` (73,294 B) | 565 | 16 | 363 | 118 | `0.09` / `0.46` | **25.0 / 25.0** |
+| `plastic-audio_dot` | `tier1_fast` | `1280×6624px` (278,458 B) | `390×2616px` (69,800 B) | 757 | 16 | 348 | 115 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `plastic-ocean-com` | `tier1_fast` | `1280×6624px` (291,860 B) | `390×2616px` (67,666 B) | 14 | 16 | 327 | 110 | `0.10` / `0.50` | **25.0 / 25.0** |
+| `powa-snp-agency` | `tier1_fast` | `1280×6624px` (398,600 B) | `390×2616px` (70,198 B) | 92 | 16 | 335 | 109 | `0.10` / `0.50` | **25.0 / 25.0** |
+| `preymaker-com` | `tier1_fast` | `1280×6624px` (356,546 B) | `390×872px` (3,694 B) | 35 | 16 | 337 | 110 | `0.10` / `0.48` | **25.0 / 25.0** |
+| `premotio-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Live mobile behavioral capture failed (0 valid WebP frames)`)** |

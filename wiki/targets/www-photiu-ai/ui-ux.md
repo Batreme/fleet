@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-photiu-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-photiu-ai` (**Remove Background, Upscale & Erase Objects – Photiu.ai**)
 - **Production URL**: [https://www.photiu.ai](https://www.photiu.ai)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#9ca3af` accent)
 - **Summary**: Discover Photiu.ai's AI tools: remove backgrounds, upscale images, and erase unwanted objects. Achieve stunning photo edits online quickl...
 - **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Segoe UI`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 48px`, `line-height: 48px`, `font-weight: 700`); rule `h1` (`font-size: 2.25rem`, `line-height: 2.5rem`, `font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 30px`, `line-height: 50px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 42px`, `font-weight: 700`); rule `h2` (`font-size: 1.875rem`, `line-height: 2.25rem`, `font-weight: 700`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`); rule `p` (`line-height: 1.625`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 600`)
 

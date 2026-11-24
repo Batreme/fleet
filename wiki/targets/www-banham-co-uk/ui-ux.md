@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-banham-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-banham-co-uk` (**Banham · Experts in Security Services Since 1926**)
 - **Production URL**: [https://www.banham.co.uk/](https://www.banham.co.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ff0000` accent)
 - **Summary**: Welcome to Banham, market-leaders in the security industry since 1926, and the perfect people to help secure your property
 - **Total Clean CSS Variables Extracted**: `138` (curated live-grounded set below)
@@ -72,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.page-header> — `www-banham-co-uk`)**:
-   - Landmark `<header class="page-header">` (`1425x0px`) hosting `Banham · Experts in Security Service` navigation (`Book a Survey · Locks · All Locks · Door Locks · Emergency Locksmiths`), DOM attributes (`data-mm-order="40"`, `data-mm-order="50"`, `data-ueto="ueto_12e8e1f459"`, `data-hj-csq-tag`), and stylesheet rule `before { box-sizing:border-box;border:0 solid e5e7eb }`.
+   - Landmark `<header class="page-header">` (`1425x0px`) hosting `Banham · Experts in Security Service` navigation (`Book a Survey · Locks · All Locks · Door Locks · Emergency Locksmiths`), DOM attributes (`data-mm-order="40"`, `data-mm-order="50"`, `data-ueto="ueto_0d180c2ea0"`, `data-hj-csq-tag`), and stylesheet rule `.warning-icon { width:20%;max-width:30px;font-size:21px;display:inline-block;vertical-al... }`.
 2. **Hero Stage & Focal Lead (<section.message> — `Protect What You Cherish`)**:
    - Landmark `<section class="message global">` presenting display lead `Protect What You Cherish` and copy excerpt *"Prefer to call? Reach us on 020 7819 3730"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.storyblok-home> — `Handcrafted in Britain Since 1926`)**:
-   - Landmark `<section class="storyblok-home">` rendering section `Handcrafted in Britain Since 1926` with copy *"To celebrate 100 years of Banham, we went behind closed doors to "*, asset references (`styles.min.css`, `chosen.min.css`, `trustpilot.min.css`, `Banham_Logo_FA-04.png`), and grid rule `body { margin:0;line-height:inherit }`.
-4. **Interactive Detail & Feature Matrix (<section.fixed> — `Bespoke Doors`)**:
-   - Landmark `<section class="fixed w-full">` framing `Bespoke Doors` and `Explore Banham` (*"Marrying innovation with time honoured techniques, every detail o"*) with `#eeeeee` surface cards, `#ff0000` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="storyblok-home">` rendering section `Handcrafted in Britain Since 1926` with copy *"To celebrate 100 years of Banham, we went behind closed doors to "*, asset references (`styles.min.css`, `chosen.min.css`, `trustpilot.min.css`, `Banham_Logo_FA-04.png`), and grid rule `.trustbox-message-text { width:80%;display:inline-block;vertical-align:middle }`.
+4. **Interactive Detail & Feature Matrix (<section.fixed> — `Cherished Burgundy`)**:
+   - Landmark `<section class="fixed w-full">` framing `Cherished Burgundy` and `Bespoke Doors` (*"Marrying innovation with time honoured techniques, every detail o"*) with `#eeeeee` surface cards, `#ff0000` accents, and `container.chosen-with-drop .chose... { clip:auto;-webkit-clip-path:none;clip-path:none }`.
 5. **Colophon & Global Directory Footer (<footer.footer-container> — `https://www.banham.co.uk/`)**:
-   - Landmark `<footer class="footer-container">` anchoring `Banham · Experts in Security Ser` footer links (`Book a Survey · Locks · All Locks · Door Locks · Emergency Locksmiths`), copy *"Innovative, award-winning and precision engineered in Britai"*, and `#cbcccd` structural dividers.
+   - Landmark `<footer class="footer-container">` anchoring `Banham · Experts in Security Ser` footer links (`Book a Survey · Locks · All Locks · Door Locks · Emergency Locksmiths`), copy *"Introducing Cherished Burgundy, a colour created to celebrat"*, and `#cbcccd` structural dividers.

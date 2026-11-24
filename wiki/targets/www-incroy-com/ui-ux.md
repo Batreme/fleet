@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-incroy-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-incroy-com` (**Incroy · Webflow Certified Development Agency**)
 - **Production URL**: [https://www.incroy.com/](https://www.incroy.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0082f3` accent)
 - **Summary**: Incroy is a Webflow agency serving medium to large businesses. We handle design, development, copywriting, and ongoing site management un...
-- **Total Clean CSS Variables Extracted**: `84` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `261` (curated live-grounded set below)
 
 ---
 
@@ -24,10 +24,10 @@ http_status: 200
 - **Display Font Stack**: `Suisseintl Book`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 62px`, `line-height: 66.96px`, `font-weight: 400`, `letter-spacing: -3.41px`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 60px`, `font-weight: 400`, `letter-spacing: -2.16px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
-- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 23.994px`, `font-weight: 600`, `letter-spacing: -0.27px`); rule `body` (`font-size: 14px`, `line-height: 20px`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 21.328px`, `font-weight: 600`, `letter-spacing: -0.27px`); rule `small` (`font-size: 80%`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 78px`, `line-height: 84.24px`, `font-weight: 400`, `letter-spacing: -4.29px`); CSS variables `--font-size--h1: 5.625rem`, `--header-logo-display: none`, `--header-logo-inverse-display: block`; rule `h1` (`font-size: 2em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 60px`, `font-weight: 400`, `letter-spacing: -2.16px`); CSS variables `--font-size--h2: 3.75rem`; rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 23.994px`, `font-weight: 600`, `letter-spacing: -0.27px`); CSS variables `--font-paragraph--line-height: 1`, `--shopify-account-font-body: var(--font-body--family)`, `--shopify-account-font-body-weight: var(--font-body--weight)`; rule `body` (`font-size: 14px`, `line-height: 20px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 21.328px`, `font-weight: 600`, `letter-spacing: -0.27px`); CSS variables `--shopify-account-radius-button-small: var(--style-border-radius-buttons-primary)`; rule `small` (`font-size: 80%`)
 
 ---
 
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
 | **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
 | **Secondary / Muted Copy** | `#6053e5` | live computed `a` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+| **Structural Hairline Border** | `#f0f0f0` | `var(--private-button-border-color)` in `:root` (`rgb(0, 0, 0, 0.06)`) |
 
 ---
 
@@ -68,11 +68,11 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.navigation> — `www-incroy-com`)**:
    - Landmark `<nav class="navigation">` (`1248x101px`) hosting `Incroy · Webflow Certified Developme` navigation (`H o m e · W o r k · P r o c e s s · W h o a r e w e ? · C o n t a c t`), DOM attributes (`data-wf-domain="www.incroy.com"`, `data-wf-page="6a21b959b61cf447eaaeea89"`, `data-wf-site="6a21b956b61cf447eaaeea3c"`, `data-page-theme="light"`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
-2. **Hero Stage & Focal Lead (<section.section-dots> — `We might not be your first, but we`)**:
-   - Landmark `<section class="section-dots">` presenting display lead `We might not be your first, but we’ll certainly b...` and copy excerpt *"If you need a beautiful website that reflects your name, your mes"* over `#ffffff` canvas and `#000000` ink.
+2. **Hero Stage & Focal Lead (<section.section-dots> — `Ready to get started?`)**:
+   - Landmark `<section class="section-dots">` presenting display lead `Ready to get started?` and copy excerpt *"If you need a beautiful website that reflects your name, your mes"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.section-dots:nth(2)> — `W e m i g h t n o t b e y o u r f `)**:
    - Landmark `<section class="section-dots">` rendering section `W e m i g h t n o t b e y o u r f i r s t , b u t...` with copy *"I f y o u n e e d a b e a u t i f u l w e b s i t e t h a t r e f"*, asset references (`cdn.prod.website-files.com`, `incroy-v2.shared.e656a73ee.css`, `clarity.js`, `pw6po7h0ab`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.section-dots:nth(3)> — `W h a t i n t h e w o r l d w i d `)**:
    - Landmark `<section class="section-dots">` framing `W h a t i n t h e w o r l d w i d e w e b h a s h...` and `T h a t ’ s w h e r e w e c o m e i n` (*"L e t ’ s g o s i t e s e e i n g"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.hide> — `https://www.incroy.com/`)**:
-   - Landmark `<footer class="hide">` anchoring `Incroy · Webflow Certified Devel` footer links (`H o m e · W o r k · P r o c e s s · W h o a r e w e ? · C o n t a c t`), copy *"W e d e s i g n a n d d e v e l o p w e b s i t e s t h a t "*, and `#e2e2e2` structural dividers.
+   - Landmark `<footer class="hide">` anchoring `Incroy · Webflow Certified Devel` footer links (`H o m e · W o r k · P r o c e s s · W h o a r e w e ? · C o n t a c t`), copy *"W e d e s i g n a n d d e v e l o p w e b s i t e s t h a t "*, and `#f0f0f0` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-terrenohotel-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.terrenohotel.com/en/"
 final_url: "https://www.terrenohotel.com/en/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `39`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `137`
+- **Recovered Stylesheets**: `13`
 
 ---
 

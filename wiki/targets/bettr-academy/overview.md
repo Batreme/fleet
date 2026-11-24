@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bettr-academy"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bettr.academy/"
 final_url: "https://bettr.academy/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Bettr Academy · World-Class Barista & Coffee Training
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `71`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `273`
+- **Recovered Stylesheets**: `19`
 
 ---
 

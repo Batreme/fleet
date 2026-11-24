@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: imdday-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://imdday.ch/"
 final_url: "https://imdday.ch/"
 status: analyzed

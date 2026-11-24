@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: loopsii-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "loopsii-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c4f041`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 
 > **Loopsii: the all-in-one app for freelancers** (https://loopsii.com/) — Loopsii is the all-in-one app for freelancers: CRM, project management, time tracking, AI notes from client calls and dictation. 14-day f...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Loopsii: the all-in-one app for freelancers** (`https://loopsii.com/`). Loopsii is the all-in-one app for freelancers: CRM, project management, time tracking, AI notes from client calls and dictation. 14-day f...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c4f041`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f0f0f0` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c4f041` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Saans VF-1156b2189454d62c` for display copy (`Loopsii, the all-in-one app for free`) with `Saans VF-1156b2189454d62c` and `Geist Mono-c001706f58ecc7d6`.
+  - **Grounded Typographic Hierarchy**: Uses `Saans VF-1156b2189454d62c` across display (`Loopsii, the all-in-one app for free`) and body copy, paired with `Geist Mono-c001706f58ecc7d6` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1148px` container bounds (`gap: 45px`, padding `8px`) with `cubic-bezier(.84,0,.16,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `23868px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `1148px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `8px` lateral canvas padding with `45px` grid gap.
 - **Border Radius Scale**: `12px`, `50%`, `100%`, `18px`.
@@ -92,7 +97,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 21px`, `line-height: 29.4px`, `font-weight: 400`, `letter-spacing: -0.63px`); rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 55.5px`, `line-height: 55.5px`, `font-weight: 400`, `letter-spacing: -1.11px`); rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`).
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--font-body: var(--font-title)`.
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25 / .875)`, `--default-mono-font-family: var(--font-mono)`.
 
@@ -107,8 +112,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 - **Selector `.nav_body`**: `transition: background-color .5s ease, border-radius .5s ease, width .9s v...` extracted from `loopsii-com` stylesheet.
 - **Selector `.nav_body.is-active`**: `transition: background-color .5s,border-color .5s,border-radius .5s` extracted from `loopsii-com` stylesheet.
 - **Selector `.cookies_ok`**: `transition: background-color .3s,color .3s` extracted from `loopsii-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.84,0,.16,1)`)**: Governs interactive state transitions across `<header.is-loading>` and `<section.distraction>`.
+- **Extracted Easing Curve (`cubic-bezier(.84,0,.16,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.distraction>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `23868px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Sign up for free`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`accordion` · `Project`)**: Triggered visual diff `9.097` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/connect`) measured as `direct` in `1012ms`.
 
 ---
 
@@ -119,7 +130,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Loopsii: the all-in-one app for freelancer │
 │ ====================================================================== │
-│ [ <header.is-loading> (1440x872px)    | W h y L o o p s i i · F e a  ] │
+│ [ <header.lenis> (1440x872px)         | W h y L o o p s i i · F e a  ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.intro> (w=1440px)                             | │
 │ | H1: Loopsii, the all-in-one app for freelancers                    | │
@@ -132,7 +143,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 │ ---------------------------------------------------------------------- │
 │ | DETAIL MODULE (<section.app-demo>) — That's why Loopsii ex         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.fixed>      ) | https://loopsii.com/                 │
+│ [ FOOTER (<footer.right-42>   ) | https://loopsii.com/                 │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -141,7 +152,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 ┌────────────────────────────────────────────────────────────────────────┐
 │ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 45px)       │
 │ ====================================================================== │
-│ [ HEADER BAR (<header.is-loading>     ) | Compact Menu (390px)         │
+│ [ HEADER BAR (<header.lenis>          ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE (<section.intro>) — 390px Vertical Lead                 | │
 │ | H1: Loopsii, the all-in-one app for freelancers                    | │
@@ -152,21 +163,33 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f0f0f0` / `#c
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<section.app-demo>) — 1-Col (That's why Loopsii)     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.fixed>      ) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.right-42>   ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.is-loading> — `loopsii-com`)**:
-   - Landmark `<header class="is-loading">` (`1440x872px`) hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-loader`, `data-module="NavMorph"`, `data-track="nav-logo"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
+1. **Brand Header & Navigation Bar (<header.lenis> — `loopsii-com`)**:
+   - Landmark `<header class="lenis">` (`1440x872px`) hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-module="NavMorph"`, `data-track="nav-logo"`, `data-module="WeightHover"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `Loopsii, the all-in-one app for fr`)**:
    - Landmark `<section class="intro z-2">` presenting display lead `Loopsii, the all-in-one app for freelancers` and copy excerpt *"Every project follows a familiar loop. Loopsii keeps it moving, s"* over `#f0f0f0` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.distraction> — `The all-in-one app for freelancers`)**:
    - Landmark `<section class="distraction z-3">` rendering section `The all-in-one app for freelancers. Like a person...` with copy *"Too many things pulling you away"*, asset references (`f1306f12b629075b.woff2`, `fd3499837a53ca88.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `.v-text { writing-mode:vertical-lr }`.
 4. **Interactive Detail & Feature Matrix (<section.app-demo> — `Loopsii helps freelance designers `)**:
    - Landmark `<section class="app-demo app-demo--pinned">` framing `Loopsii helps freelance designers and developers...` and `That's why Loopsii exists` (*"from the work that actually matters"*) with `#ffffff` surface cards, `#c4f041` accents, and `.display { font-size:calc(164 * var(--spacing));letter-spacing:-.02em;font-variatio... }`.
-5. **Colophon & Global Directory Footer (<footer.fixed> — `https://loopsii.com/`)**:
-   - Landmark `<footer class="fixed">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"Forgot to start the timer"*, and `#d0d0d0` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.right-42> — `https://loopsii.com/`)**:
+   - Landmark `<footer class="right-42">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"Forgot to start the timer"*, and `#d0d0d0` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The all-in-one app for freelancers. Like a person...` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `4%`): Active landmark `Loopsii helps freelance designers and developers...` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `15%`): Active landmark `Section @ 15%` · sticky/fixed elements: `1`
+- **Step 04** (`y=5950px`, `26%`): Active landmark `Your workflow shouldn’t cost this much` · sticky/fixed elements: `1`
+- **Step 05** (`y=8500px`, `37%`): Active landmark `Everything around your work, handled` · sticky/fixed elements: `1`
+- **Step 06** (`y=11050px`, `48%`): Active landmark `Know where your money stands` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `59%`): Active landmark `Dictation` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `63%`): Active landmark `Pre-meeting briefs` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/connect`)**: `https://loopsii.com/connect` — H1: `Connect your AI assistant`, scrollHeight `1575px`, transition `direct` (`1012ms`)
 
 ---
 
@@ -183,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f0f0f0` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#c4f041`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f0f0f0` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c4f041` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Saans VF-1156b2189454d62c` for display copy (`Loopsii, the all-in-one app for free`) with `Saans VF-1156b2189454d62c` and `Geist Mono-c001706f58ecc7d6`.
+  - **Grounded Typographic Hierarchy**: Uses `Saans VF-1156b2189454d62c` across display (`Loopsii, the all-in-one app for free`) and body copy, paired with `Geist Mono-c001706f58ecc7d6` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1148px` container bounds (`gap: 45px`, padding `8px`) with `cubic-bezier(.84,0,.16,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +242,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#d0d0d0` — grounded in `.nav_legal .nav_legal-socials { border-color: #d0d0d0 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `1148px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `8px` lateral canvas padding with `45px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1148px`, `gap: 45px`)
@@ -233,27 +256,27 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Saans VF-1156b2189454d62c`
 - **Monospace / Technical Font Stack**: `Geist Mono-c001706f58ecc7d6`
 - **H1 Display Rule**: live computed `h1` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 21px`, `line-height: 29.4px`, `font-weight: 400`, `letter-spacing: -0.63px`); rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 55.5px`, `line-height: 55.5px`, `font-weight: 400`, `letter-spacing: -1.11px`); rule `h2` (`font-size: calc(28 * var(--spacing))`, `letter-spacing: -.01em`)
 - **Body Copy Rule**: live computed `body` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--font-body: var(--font-title)`
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: 12px`, `font-weight: 400`); CSS variables `--text-sm: .875rem`, `--text-sm--line-height: calc(1.25 / .875)`, `--default-mono-font-family: var(--font-mono)`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `loopsii-com` (`Loopsii: the all-in-one app for freelancers`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.is-loading> — `loopsii-com`)**:
-   - DOM & Selectors: Landmark `<header class="is-loading">` (`1440x872px`) hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-loader`, `data-module="NavMorph"`, `data-track="nav-logo"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.is-loading> — `loopsii-com`)` (`loopsii-com`) adapts across `@media screen and (width<=1023px)`, `@media screen and (width<=767px)`, `@media screen and (width<=479px)`, `@media screen and (width<=1024px)` with `cubic-bezier(.84,0,.16,1)`, `cubic-bezier(.76,0,.24,1)`, `cubic-bezier(.65,0,.35,1)` transitions and links `W h y L o o p s i i · F e a t u r e s · P r i c i n g`.
+1. **Brand Header & Navigation Bar (<header.lenis> — `loopsii-com`)**:
+   - DOM & Selectors: Landmark `<header class="lenis">` (`1440x872px`) hosting `Loopsii: the all-in-one app for free` navigation (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), DOM attributes (`data-transition="wrapper"`, `data-module="NavMorph"`, `data-track="nav-logo"`, `data-module="WeightHover"`), and stylesheet rule `root { --font-title:"Saans VF-1156b2189454d62c","Saans VF-1156b2189454d62c fall... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `loopsii-com`)` (`loopsii-com`) adapts across `@media screen and (width<=1023px)`, `@media screen and (width<=767px)`, `@media screen and (width<=479px)`, `@media screen and (width<=1024px)` with `cubic-bezier(.84,0,.16,1)`, `cubic-bezier(.76,0,.24,1)`, `cubic-bezier(.65,0,.35,1)` transitions and links `W h y L o o p s i i · F e a t u r e s · P r i c i n g`.
 2. **Hero Stage & Focal Lead (<section.intro> — `Loopsii, the all-in-one app for fr`)**:
    - DOM & Selectors: Landmark `<section class="intro z-2">` presenting display lead `Loopsii, the all-in-one app for freelancers` and copy excerpt *"Every project follows a familiar loop. Loopsii keeps it moving, s"* over `#f0f0f0` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#f0f0f0` background with `#000000` headline `Loopsii, the all-in-one app for freelancers`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×1744px` mobile) sets `#f0f0f0` background with `#000000` headline `Loopsii, the all-in-one app for freelancers`.
 3. **Primary Showcase & Content Grid (<section.distraction> — `The all-in-one app for freelancers`)**:
    - DOM & Selectors: Landmark `<section class="distraction z-3">` rendering section `The all-in-one app for freelancers. Like a person...` with copy *"Too many things pulling you away"*, asset references (`f1306f12b629075b.woff2`, `fd3499837a53ca88.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `.v-text { writing-mode:vertical-lr }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.distraction> — `The all-in-one app for freelancers`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1148px`, `gap: 45px`) on desktop and Single-column vertical stack at `390px` viewport width with `8px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.app-demo> — `Loopsii helps freelance designers `)**:
    - DOM & Selectors: Landmark `<section class="app-demo app-demo--pinned">` framing `Loopsii helps freelance designers and developers...` and `That's why Loopsii exists` (*"from the work that actually matters"*) with `#ffffff` surface cards, `#c4f041` accents, and `.display { font-size:calc(164 * var(--spacing));letter-spacing:-.02em;font-variatio... }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.app-demo> — `Loopsii helps freelance designers `)` uses `12px`, `50%`, `100%`, `18px` radii, `#c4f041` highlights, and assets (f1306f12b629075b.woff2, fd3499837a53ca88.woff2, favicon.ico).
-5. **Colophon & Global Directory Footer (<footer.fixed> — `https://loopsii.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="fixed">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"Forgot to start the timer"*, and `#d0d0d0` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.fixed> — `https://loopsii.com/`)` aligns to `1148px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `8px` lateral canvas padding with `45px` grid gap and attributes (data-transition="wrapper", data-loader, data-module="NavMorph").
+5. **Colophon & Global Directory Footer (<footer.right-42> — `https://loopsii.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="right-42">` anchoring `Loopsii: the all-in-one app for ` footer links (`W h y L o o p s i i · F e a t u r e s · P r i c i n g`), copy *"Forgot to start the timer"*, and `#d0d0d0` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.right-42> — `https://loopsii.com/`)` aligns to `1148px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `8px` lateral canvas padding with `45px` grid gap and attributes (data-transition="wrapper", data-module="NavMorph", data-track="nav-logo").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Every project follows a familiar loop. Loopsii keeps it moving, so you don’t have..."*
@@ -273,10 +296,46 @@ Scaffold `loopsii-com` (`Loopsii: the all-in-one app for freelancers`) with thes
 - **Selector `.nav_body`**: `transition: background-color .5s ease, border-radius .5s ease, width .9s v...` extracted from `loopsii-com` stylesheet.
 - **Selector `.nav_body.is-active`**: `transition: background-color .5s,border-color .5s,border-radius .5s` extracted from `loopsii-com` stylesheet.
 - **Selector `.cookies_ok`**: `transition: background-color .3s,color .3s` extracted from `loopsii-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.84,0,.16,1)`)**: Governs interactive state transitions across `<header.is-loading>` and `<section.distraction>`.
+- **Extracted Easing Curve (`cubic-bezier(.84,0,.16,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.distraction>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `23868px` across 8 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: The all-in-one app for free... (0%) -> Loopsii helps freelance des... (4%) -> Section @ 15% (15%) -> Your workflow shouldn’t cos... (26%) -> Everything around your work... (37%) -> Know where your money stands (48%) -> Dictation (59%) -> Pre-meeting briefs (63%).
+- **Multi-Page Routes**: Scaffold internal routes `/connect` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `loopsii-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The all-in-one app for freelancers. Like a pe... | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | Loopsii helps freelance designers and develop... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `15%` | Section @ 15% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `26%` | Your workflow shouldn’t cost this much | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `37%` | Everything around your work, handled | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `48%` | Know where your money stands | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `59%` | Dictation | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `63%` | Pre-meeting briefs | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The all-in-one app for freelancers. Like... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `14400px` | `100%` | One Plan. Everything included. | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `accordion` (`Project`, diff `9.097`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://loopsii.com/connect` | Connect your AI assistant | `1575px` | `direct` (`1012ms`) | [subpage-01-connect.webp](assets/subpage-01-connect.webp) |
+

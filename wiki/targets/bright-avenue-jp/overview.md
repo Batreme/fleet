@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bright-avenue-jp"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bright-avenue.jp/"
 final_url: "https://bright-avenue.jp/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
 - **Page Title**: 株式会社ブライトアベニュー · 不動産買取再販事業・リノベーション事業
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `9`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `14`
+- **Recovered Stylesheets**: `7`
 
 ---
 

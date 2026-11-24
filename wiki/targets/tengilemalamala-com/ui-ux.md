@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: tengilemalamala-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `tengilemalamala-com` (**Luxury Safari Experiences in Greater Kruger & Sabi Sand · Tengile MalaMa...**)
 - **Production URL**: [https://tengilemalamala.com/](https://tengilemalamala.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5eee9` canvas, `#373f1d` ink, `#5c6e21` accent)
 - **Summary**: Discover luxury safari experiences in Greater Kruger and Sabi Sand. Wildlife, luxury accommodation and unforgettable Big Five encounters....
 - **Total Clean CSS Variables Extracted**: `5` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 120px`, `line-height: 108px`, `font-weight: 220`, `letter-spacing: -2.4px`)
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 20px`, `line-height: 24px`, `font-weight: 310`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 36.8px`, `font-weight: 310`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20px`, `font-weight: 400`, `letter-spacing: -0.16px`); rule `p` (`letter-spacing: -.01em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 40px`, `line-height: 40px`, `font-weight: 220`, `letter-spacing: -0.16px`)
 

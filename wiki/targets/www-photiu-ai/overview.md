@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-photiu-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.photiu.ai"
 final_url: "https://www.photiu.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Remove Background, Upscale & Erase Objects – Photiu.ai
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `48`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `158`
+- **Recovered Stylesheets**: `4`
 
 ---
 

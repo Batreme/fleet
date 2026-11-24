@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: microdose-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://microdose.studio/"
 final_url: "https://microdose.studio/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://microdose.studio/](https://microdose.studio/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Microdose Studio - Design & Development Agency for Startups
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `94`
-- **Recovered Stylesheets**: `6`
+- **Identified Frameworks**: HTML5 Canvas / WebGL
+- **Recovered Scripts**: `234`
+- **Recovered Stylesheets**: `5`
 
 ---
 

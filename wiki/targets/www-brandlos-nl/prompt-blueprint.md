@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-brandlos-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-brandlos-nl"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `#040404` ink, `#0082f3` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `
 
 > **Brandlos · Het creatieve bureau van Limburg** (https://www.brandlos.nl) — Creatief bureau in Limburg. Wij bouwen merken met lef en karakter: van strategie en identiteit tot campagnes die opvallen. Geen grijze mu...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Brandlos · Het creatieve bureau van Limburg** (`https://www.brandlos.nl`). Creatief bureau in Limburg. Wij bouwen merken met lef en karakter: van strategie en identiteit tot campagnes die opvallen. Geen grijze mu...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `#040404` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#040404` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Vastagogrotesk` for display copy (`Omdat gewoon te gewoontjes is`) with `Vastagogrotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1190px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Grounded Typographic Hierarchy**: Uses `Vastagogrotesk` across display (`Omdat gewoon te gewoontjes is`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1190px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0,0,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8624px` / doc `9670px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1190px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `15px`.
@@ -109,14 +114,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(0.22,1,0.36,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(0.22,1,0.36,1)`.
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `.w-webflow-badge > img`**: `transition: unset` extracted from `www-brandlos-nl` stylesheet.
 - **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-brandlos-nl` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-brandlos-nl` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.home-showreel>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,0.25,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.home-showreel>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9670px`, deepest scrollY reached `8624px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Contact`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/portfolio`) measured as `MPA` in `2408ms`.
 
 ---
 
@@ -170,11 +180,25 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f4f4f4` canvas, `
 2. **Hero Stage & Focal Lead (<section.home-hero> — `Omdat gewoon te gewoontjes is`)**:
    - Landmark `<section class="home-hero">` presenting display lead `Omdat gewoon te gewoontjes is` and copy excerpt *"Grijze muizen zijn er al genoeg. Wij bouwen merken met lef, karak"* over `#f4f4f4` canvas and `#040404` ink.
 3. **Primary Showcase & Content Grid (<section.home-showreel> — `Grijze muizen zijn er al genoeg. W`)**:
-   - Landmark `<section class="home-showreel">` rendering section `Grijze muizen zijn er al genoeg. Wij bouwen merk` with copy *"L a a t m a a r e e n s z i e n d a n !"*, asset references (`cdn.prod.website-files.com`, `brandlos-nl.webflow.shared.3ea0ad...`, `widgetIcon.min.js`, `state.js`), and grid rule `body { margin: 0; }`.
+   - Landmark `<section class="home-showreel">` rendering section `Grijze muizen zijn er al genoeg. Wij bouwen merk` with copy *"L a a t m a a r e e n s z i e n d a n !"*, asset references (`cdn.prod.website-files.com`, `brandlos-nl.webflow.shared.973e1c...`, `widgetIcon.min.js`, `state.js`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.home-about> — `L a a t m a a r e e n s z i e n d `)**:
    - Landmark `<section class="home-about">` framing `L a a t m a a r e e n s z i e n d a n !` and `Wij zijn Brandlos®. Een creatief bureau in Limbu` (*"Wij zijn Brandlos®. Een creatief bureau in Limburg. We gaan altij"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotScrollAreaSide> — `https://www.brandlos.nl`)**:
    - Landmark `<footer class="CybotCookiebotScrollAreaSide">` anchoring `Brandlos · Het creatieve bureau ` footer links (`Overview · Index · Archive · About · Contact`), copy *"T e l l m e m o o o o o o r e"*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Omdat gewoon te gewoontjes is` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `10%`): Active landmark `#hero-showreel` · sticky/fixed elements: `0`
+- **Step 03** (`y=2550px`, `30%`): Active landmark `Kijk mam, dit hebben wij gemaakt` · sticky/fixed elements: `0`
+- **Step 04** (`y=4250px`, `49%`): Active landmark `Strategisch sterk, grafisch verdomd goed` · sticky/fixed elements: `0`
+- **Step 05** (`y=5100px`, `58%`): Active landmark `Strategisch sterk, grafisch verdomd goed` · sticky/fixed elements: `0`
+- **Step 06** (`y=6800px`, `78%`): Active landmark `Strategisch sterk, grafisch verdomd goed` · sticky/fixed elements: `0`
+- **Step 07** (`y=8500px`, `97%`): Active landmark `Hej, bonjour, hallo, konnichiwa!` · sticky/fixed elements: `0`
+- **Step 08** (`y=8624px`, `98%`): Active landmark `Hej, bonjour, hallo, konnichiwa!` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/portfolio`)**: `https://www.brandlos.nl/portfolio` — H1: `Meh? Nee bedankt.`, scrollHeight `5155px`, transition `MPA` (`2408ms`)
+- **Detail Route (`/cases/traject`)**: `https://www.brandlos.nl/cases/traject` — H1: `Traject`, scrollHeight `8842px`, transition `direct` (`587ms`)
+- **About Route (`/contact`)**: `https://www.brandlos.nl/contact` — H1: `Contact`, scrollHeight `3812px`, transition `direct` (`523ms`)
 
 ---
 
@@ -191,8 +215,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#040404`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#040404` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Vastagogrotesk` for display copy (`Omdat gewoon te gewoontjes is`) with `Vastagogrotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1190px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0.22,1,0.36,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
+  - **Grounded Typographic Hierarchy**: Uses `Vastagogrotesk` across display (`Omdat gewoon te gewoontjes is`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1190px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(0,0,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-brandlos-nl` in your global stylesheet:
@@ -235,8 +259,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--swiper-preloader-color`)**: `#ffffff` — grounded in `var(--swiper-preloader-color)` in stylesheet
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1190px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1190px`, `gap: 16px`)
@@ -257,16 +281,16 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 Scaffold `www-brandlos-nl` (`Brandlos · Het creatieve bureau van Limburg`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.w-mod-js> — `www-brandlos-nl`)**:
    - DOM & Selectors: Landmark `<header class="w-mod-js">` (`1440px`) hosting `Brandlos · Het creatieve bureau van ` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-wf-domain="www.brandlos.nl"`, `data-wf-page="6a60a2741f0d39e46e0880df"`, `data-wf-site="6a60a2731f0d39e46e0880dc"`, `data-nosnippet`), and stylesheet rule `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `www-brandlos-nl`)` (`www-brandlos-nl`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(0.22,1,0.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `www-brandlos-nl`)` (`www-brandlos-nl`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(0.22,1,0.36,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.home-hero> — `Omdat gewoon te gewoontjes is`)**:
    - DOM & Selectors: Landmark `<section class="home-hero">` presenting display lead `Omdat gewoon te gewoontjes is` and copy excerpt *"Grijze muizen zijn er al genoeg. Wij bouwen merken met lef, karak"* over `#f4f4f4` canvas and `#040404` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f4f4` background with `#040404` headline `Omdat gewoon te gewoontjes is`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#f4f4f4` background with `#040404` headline `Omdat gewoon te gewoontjes is`.
 3. **Primary Showcase & Content Grid (<section.home-showreel> — `Grijze muizen zijn er al genoeg. W`)**:
-   - DOM & Selectors: Landmark `<section class="home-showreel">` rendering section `Grijze muizen zijn er al genoeg. Wij bouwen merk` with copy *"L a a t m a a r e e n s z i e n d a n !"*, asset references (`cdn.prod.website-files.com`, `brandlos-nl.webflow.shared.3ea0ad...`, `widgetIcon.min.js`, `state.js`), and grid rule `body { margin: 0; }`.
+   - DOM & Selectors: Landmark `<section class="home-showreel">` rendering section `Grijze muizen zijn er al genoeg. Wij bouwen merk` with copy *"L a a t m a a r e e n s z i e n d a n !"*, asset references (`cdn.prod.website-files.com`, `brandlos-nl.webflow.shared.973e1c...`, `widgetIcon.min.js`, `state.js`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home-showreel> — `Grijze muizen zijn er al genoeg. W`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1190px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.home-about> — `L a a t m a a r e e n s z i e n d `)**:
    - DOM & Selectors: Landmark `<section class="home-about">` framing `L a a t m a a r e e n s z i e n d a n !` and `Wij zijn Brandlos®. Een creatief bureau in Limbu` (*"Wij zijn Brandlos®. Een creatief bureau in Limburg. We gaan altij"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.home-about> — `L a a t m a a r e e n s z i e n d `)` uses `3px`, `100%`, `50%`, `15px` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, brandlos-nl.webflow.shared.3ea0ad..., widgetIcon.min.js).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.home-about> — `L a a t m a a r e e n s z i e n d `)` uses `3px`, `100%`, `50%`, `15px` radii, `#0082f3` highlights, and assets (cdn.prod.website-files.com, brandlos-nl.webflow.shared.973e1c..., widgetIcon.min.js).
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotScrollAreaSide> — `https://www.brandlos.nl`)**:
    - DOM & Selectors: Landmark `<footer class="CybotCookiebotScrollAreaSide">` anchoring `Brandlos · Het creatieve bureau ` footer links (`Overview · Index · Archive · About · Contact`), copy *"T e l l m e m o o o o o o r e"*, and `#e2e2e2` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.CybotCookiebotScrollAreaSide> — `https://www.brandlos.nl`)` aligns to `1190px` (non-`@media` desktop container stylesheet rule) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.brandlos.nl", data-wf-page="6a60a2741f0d39e46e0880df", data-wf-site="6a60a2731f0d39e46e0880dc").
@@ -278,7 +302,7 @@ Scaffold `www-brandlos-nl` (`Brandlos · Het creatieve bureau van Limburg`) with
 - Copy Excerpt 4: *"T e l l m e m o o o o o o r e"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(0.22,1,0.36,1)`
+- **Primary Easing Functions**: `cubic-bezier(0,0,0.25,1)`, `cubic-bezier(0.22,1,0.36,1)`
 - **Extracted Stylesheet Rules (`www-brandlos-nl`)**:
 - `html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family:... }`
 - `body { margin: 0; }`
@@ -289,10 +313,44 @@ Scaffold `www-brandlos-nl` (`Brandlos · Het creatieve bureau van Limburg`) with
 - **Selector `.w-webflow-badge > img`**: `transition: unset` extracted from `www-brandlos-nl` stylesheet.
 - **Selector `.w-slider-dot`**: `transition: background-color .1s, color .1s` extracted from `www-brandlos-nl` stylesheet.
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-brandlos-nl` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.home-showreel>`.
+- **Extracted Easing Curve (`cubic-bezier(0,0,0.25,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.home-showreel>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9670px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Omdat gewoon te gewoontjes is (0%) -> #hero-showreel (10%) -> Kijk mam, dit hebben wij ge... (30%) -> Strategisch sterk, grafisch... (49%) -> Strategisch sterk, grafisch... (58%) -> Strategisch sterk, grafisch... (78%) -> Hej, bonjour, hallo, konnic... (97%) -> Hej, bonjour, hallo, konnic... (98%).
+- **Multi-Page Routes**: Scaffold internal routes `/portfolio` (listing, MPA), `/cases/traject` (detail, direct), `/contact` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-brandlos-nl`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Omdat gewoon te gewoontjes is | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | #hero-showreel | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `30%` | Kijk mam, dit hebben wij gemaakt | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `49%` | Strategisch sterk, grafisch verdomd goed | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `58%` | Strategisch sterk, grafisch verdomd goed | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `6800px` | `78%` | Strategisch sterk, grafisch verdomd goed | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `8500px` | `97%` | Hej, bonjour, hallo, konnichiwa! | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8624px` | `98%` | Hej, bonjour, hallo, konnichiwa! | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Omdat gewoon te gewoontjes is | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1798px` | `50%` | Strategisch sterk, grafisch verdomd goed | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3596px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.brandlos.nl/portfolio` | Meh? Nee bedankt. | `5155px` | `MPA` (`2408ms`) | [subpage-01-portfolio.webp](assets/subpage-01-portfolio.webp) |
+| `2` | `detail` | `https://www.brandlos.nl/cases/traject` | Traject | `8842px` | `direct` (`587ms`) | [subpage-02-cases-traject.webp](assets/subpage-02-cases-traject.webp) |
+| `3` | `about` | `https://www.brandlos.nl/contact` | Contact | `3812px` | `direct` (`523ms`) | [subpage-03-contact.webp](assets/subpage-03-contact.webp) |
+

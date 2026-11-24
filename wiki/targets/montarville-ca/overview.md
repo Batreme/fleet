@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: montarville-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://montarville.ca/"
 final_url: "https://montarville.ca/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: montarville · Une approche globale et intégrée dans la gestion de vos pr...
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `18`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `71`
+- **Recovered Stylesheets**: `16`
 
 ---
 

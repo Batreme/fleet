@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: mstage-group-jp"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "mstage-group-jp"
 status: blocked
 capture: none

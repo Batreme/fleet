@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: emmaus-agir-31-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `emmaus-agir-31-fr` (**Emmaüs A.G.I.R. — Boutiques solidaires à Toulouse et autour**)
 - **Production URL**: [https://emmaus-agir-31.fr/](https://emmaus-agir-31.fr/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f1ece1` / `#ebc017`)
 - **Summary**: Donnez une seconde vie à vos objets. Emmaüs A.G.I.R. collecte, trie et revend vos dons dans six boutiques solidaires à Toulouse et autour...
 - **Total Clean CSS Variables Extracted**: `70` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Bricolage Grotesque`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 164.8px`, `line-height: 138.432px`, `font-weight: 740`, `letter-spacing: -6.592px`); CSS variables `--fs-display: clamp(3.2rem,0.8rem + 7.2vw,11.5rem)`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 27px`, `line-height: 40.5px`, `font-weight: 700`); CSS variables `--fs-h2: clamp(2.5rem,1.3rem + 4.6vw,6.5rem)`; rule `.h2` (`font-size: clamp(1.5rem,8dvh,2.6rem)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 195.2px`, `line-height: 167.872px`, `font-weight: 720`, `letter-spacing: -6.832px`); CSS variables `--fs-h2: clamp(2.5rem,1.3rem + 4.6vw,6.5rem)`; rule `.h2` (`font-size: clamp(1.5rem,8dvh,2.6rem)`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 27px`, `font-weight: 400`); CSS variables `--fs-body: clamp(1rem,0.95rem + 0.2vw,1.125rem)`; rule `p` (`font-size: var(--fs-lead)`, `line-height: 1.45`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 21px`, `font-weight: 400`); CSS variables `--fs-small: 0.9375rem`, `--fs-label: clamp(0.75rem,0.72rem + 0.12vw,0.8125rem)`; rule `.label` (`font-size: .6875rem`)
 
@@ -72,7 +72,7 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.header> — `emmaus-agir-31-fr`)**:
    - Landmark `<header class="header">` (`1440x88px`) hosting `Emmaüs A.G.I.R. — Boutiques solidair` navigation (`0 1 Accueil Accueil · 05 61 63 14 94 · 05 61 52 02 23 · 09 53 53 93 05 · 09 84 12 80 62`), DOM attributes (`data-next-head`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`, `data-next-font="size-adjust"`), and stylesheet rule `.__className_2a1a39 { font-family:Bricolage Grotesque,Bricolage Grotesque Fallback;font-style:... }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Seconde vie, seconde chance.`)**:
-   - Landmark `<section class="hero">` presenting display lead `Seconde vie, seconde chance.` and copy excerpt *"ASSOCIATION GARONNAISE D’INSERTION PAR LA RÉCUPÉRATION"* over `#f1ece1` canvas and `#1b1b1b` ink.
+   - Landmark `<section class="hero">` presenting display lead `Seconde vie, seconde chance.` and copy excerpt *"Emmaüs A.G.I.R. collecte vos dons, leur redonne de la valeur et l"* over `#f1ece1` canvas and `#1b1b1b` ink.
 3. **Primary Showcase & Content Grid (<section.activites> — `S e c o n d e v i e , s e c o n d `)**:
    - Landmark `<section class="activites">` rendering section `S e c o n d e v i e , s e c o n d e c h a n c e .` with copy *"Association Garonnaise d’Insertion par la Récupération"*, asset references (`logo.svg`, `favicon.ico`, `favicon-32x32.png`, `apple-icon-180x180.png`), and grid rule `.__className_ae301a { font-family:"Instrument Serif","Instrument Serif Fallback";font-weight:400 }`.
 4. **Interactive Detail & Feature Matrix (<article.activites__text> — `Le parcours d’un don.`)**:

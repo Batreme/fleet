@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: errormade-tech"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier2_webgl
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `errormade-tech` (**Entrance — Errormade**)
 - **Production URL**: [https://errormade.tech/](https://errormade.tech/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#777777`)
 - **Summary**: Selected graphic design and art direction by Errormade.
 - **Total Clean CSS Variables Extracted**: `82` (curated live-grounded set below)
@@ -60,9 +60,9 @@ http_status: 200
 | `--page-background` | `#fff` | Canvas / Surface Token |
 | `--media-hover-outline` | `#e5e5e5` | Elevation / Border Token |
 | `--media-hover-icon-invert` | `0` | Design System Custom Token |
-| `--case-ruler-top` | `calc(115px + var(--safe-top))` | Dimension / Scale Token |
-| `--case-end-gap` | `200px` | Layout / Spatial Grid Token |
-| `--case-step-height` | `200px` | Layout / Spatial Grid Token |
+| `--row-motion-x` | `0px` | Motion / Easing Token |
+| `--media-flip-angle` | `0deg` | Design System Custom Token |
+| `--media-flip-opacity` | `1` | Design System Custom Token |
 
 ---
 

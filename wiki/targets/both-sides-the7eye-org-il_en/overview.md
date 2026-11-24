@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: both-sides-the7eye-org-il_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://both-sides.the7eye.org.il/en/"
 final_url: "https://both-sides.the7eye.org.il/en/"
 status: analyzed

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: reelmotion-fit"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://reelmotion.fit/"
 final_url: "https://reelmotion.fit/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Reel Motion: Turn Workout Videos Into Exercise Routines
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `17`
-- **Recovered Stylesheets**: `30`
+- **Recovered Scripts**: `33`
+- **Recovered Stylesheets**: `52`
 
 ---
 

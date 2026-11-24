@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: thesovietflip-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thesovietflip-com` (**The Soviet Flip**)
 - **Production URL**: [https://thesovietflip.com/](https://thesovietflip.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×968px`, Mobile `390×908px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0f0f0c` canvas, `#ffffff` ink, `#903c32` accent)
 - **Summary**: A visual historical research project about the Cold War, Israel, the USSR, and the rise of modern Palestinian identity, with archival sou...
-- **Total Clean CSS Variables Extracted**: `40` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)
 
 ---
 

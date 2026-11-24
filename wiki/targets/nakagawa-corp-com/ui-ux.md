@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: nakagawa-corp-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,8 +13,8 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `nakagawa-corp-com` (**久留米・うきはで注文住宅を建てるなら株式会社ナカガワ（ナカガワホーム）**)
 - **Production URL**: [https://nakagawa-corp.com/](https://nakagawa-corp.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#202020` ink, `#333333` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#202020` ink, `#185abc` accent)
 - **Summary**: 【1963年創業、久留米・うきはで60年以上】株式会社ナカガワ(本社:福岡県久留米市)は、真っ白な図面から一邸ずつ設計する完全自由設計の工務店です。注文住宅・分譲住宅・土地探しまで、暮らしに合わせてご提案します。
 - **Total Clean CSS Variables Extracted**: `131` (curated live-grounded set below)
 
@@ -37,7 +37,7 @@ http_status: 200
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#202020` | live computed `a` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f7f7f4` | `var(--leap-project-bg)` in `:root` |
-| **Interactive Accent / Highlight** | `#333333` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#185abc` | `.rc-2fa-submit-button-holder bu... { background-color: #185abc }` |
 | **Secondary / Muted Copy** | `#ad8a72` | `var(--clr-secondary-default)` in `:root` |
 | **Structural Hairline Border** | `#cccccc` | `hr { border-top: #cccccc }` |
 | **Variable Token (`--leap-project-main`)** | `#0073aa` | `var(--leap-project-main)` in `:root` |
@@ -77,6 +77,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.home-works> — `「応える」だけでなく、 「提案する」。`)**:
    - Landmark `<section class="home-works">` rendering section `「応える」だけでなく、 「提案する」。` with copy *"福岡・佐賀・大分で60年以上。 まだ言葉になっていない理想まで、形にする工務店。"*, asset references (`gtm.js`, `embed`, `front.css`, `style.css`), and grid rule `.box--ttl { font-size: var(--font-size-heading6); font-family: var(--font-jp-heading); }`.
 4. **Interactive Detail & Feature Matrix (<section.home-event> — `提案のための、余白を残す。`)**:
-   - Landmark `<section class="home-event section_pdg-md-top">` framing `提案のための、余白を残す。` and `いつも、真っ白な図面から。` (*"ご要望にお応えするだけでは、本当に心地よい住まいにはなりません。 ご家族の想いに、プロである私たちの提案を重ねていく。その先に、想"*) with `#f7f7f4` surface cards, `#333333` accents, and `.leap_box.leap_box-01 { padding: 1rem 1.5rem; }`.
+   - Landmark `<section class="home-event section_pdg-md-top">` framing `提案のための、余白を残す。` and `いつも、真っ白な図面から。` (*"ご要望にお応えするだけでは、本当に心地よい住まいにはなりません。 ご家族の想いに、プロである私たちの提案を重ねていく。その先に、想"*) with `#f7f7f4` surface cards, `#185abc` accents, and `.leap_box.leap_box-01 { padding: 1rem 1.5rem; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://nakagawa-corp.com/`)**:
    - Landmark `<footer class="footer">` anchoring `久留米・うきはで注文住宅を建てるなら株式会社ナカガワ（ナカガワホ` footer links (`ナカガワホームの家づくり · 私たちについて · 快適な住まいづくり · 徹底したこだわり · 家づくりの流れ・アフターサポート`), copy *"ご要望として語られるのは、理想のほんの一部。 言葉の奥にある暮らし方まで読み解き、ご提案します。"*, and `#cccccc` structural dividers.

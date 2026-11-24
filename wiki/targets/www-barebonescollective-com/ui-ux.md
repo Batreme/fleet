@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-barebonescollective-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-barebonescollective-com` (**Bare Bones Collective**)
 - **Production URL**: [https://www.barebonescollective.com/](https://www.barebonescollective.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
-- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#333333` ink, `#0082f3` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#333333` ink, `#ffcc00` accent)
 - **Summary**: We are a creative agency that believes great brands are built through audacious work
-- **Total Clean CSS Variables Extracted**: `1` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `184` (curated live-grounded set below)
 
 ---
 
@@ -37,8 +37,8 @@ http_status: 200
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#333333` | live computed `body` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
-| **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
-| **Secondary / Muted Copy** | `#ffd527` | live computed `a` `color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#ffcc00` | `crubber-button.ytp-swatch-backg... { background-color: #ffcc00 }` |
+| **Secondary / Muted Copy** | `#ffd527` | live computed `h2` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
 
 ---
@@ -47,18 +47,21 @@ http_status: 200
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
 | `--w-backdrop-animation` | `initial` | Motion / Easing Token |
-| `--www-barebonescol-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
-| `--www-barebonescol-ink` | `#333333` | Primary Typography Ink (computed-derived) |
-| `--www-barebonescol-surface` | `#ffff00` | Surface Substrate (computed-derived) |
-| `--www-barebonescol-accent` | `#0082f3` | Interactive Accent (computed-derived) |
-| `--www-barebonescol-muted` | `#ffd527` | Secondary Ink (computed-derived) |
-| `--www-barebonescol-border` | `#e2e2e2` | Structural Border (computed-derived) |
-| `--www-barebonescol-container` | `100rem` | Container Bound (computed-derived) |
-| `--www-barebonescol-gap` | `16px` | Grid Gutter (computed-derived) |
-| `--www-barebonescol-pad` | `9px` | Lateral Padding (computed-derived) |
-| `--www-barebonescol-ease` | `cubic-bezier(.165,.84,.44,1)` | Primary Easing Function |
-| `--www-barebonescol-radius` | `24px 24px 18px 18px` | Corner Radius (computed-derived) |
-| `--www-barebonescol-fs-base` | `100px` | Observed Font Size Token |
+| `--td176b92ada598f8f` | `initial` | Design System Custom Token |
+| `--td851cd75a8793667` | `initial` | Design System Custom Token |
+| `--tc58f4bf5a9869b3e` | `initial` | Design System Custom Token |
+| `--t3a480c2f814ef19c` | `initial` | Design System Custom Token |
+| `--t77e217518bcd986b` | `initial` | Design System Custom Token |
+| `--tc5e0863356bf5767` | `initial` | Design System Custom Token |
+| `--t7a2234c5eadde886` | `initial` | Design System Custom Token |
+| `--td340014d093b0821` | `initial` | Design System Custom Token |
+| `--tf8c80baf678711b8` | `initial` | Design System Custom Token |
+| `--t2986df03ecf88759` | `initial` | Design System Custom Token |
+| `--te0c856964146535b` | `initial` | Design System Custom Token |
+| `--tf630d2cff7da8057` | `initial` | Design System Custom Token |
+| `--tf69032263d26c015` | `initial` | Design System Custom Token |
+| `--ta5930fb3c4c7209c` | `initial` | Design System Custom Token |
+| `--t1f1729a8e756e8bf` | `initial` | Design System Custom Token |
 
 ---
 
@@ -70,6 +73,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.logo_element> — `Bare Bones Collective Primary Show`)**:
    - Landmark `<section class="logo_element">` rendering section `Bare Bones Collective Primary Showcase` with copy *"BARE"*, asset references (`cdn.prod.website-files.com`, `bare-bones-collective.webflow.sha...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.section-hero> — `www-barebonescollective-com Intera`)**:
-   - Landmark `<section class="section-hero">` framing `www-barebonescollective-com Interactive Matrix` and `www-barebonescollective-com Archive & Directory` (*"Bare Bones Collective Primary Showcase"*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
-5. **Colophon & Global Directory Footer (<footer.wf-ptserif-n7-active> — `https://www.barebonescollective.com/`)**:
-   - Landmark `<footer class="wf-ptserif-n7-active">` anchoring `Bare Bones Collective` footer links (`Menu · Work · Services · 360° Campaigns · films`), copy *"www-barebonescollective-com Interactive Matrix"*, and `#e2e2e2` structural dividers.
+   - Landmark `<section class="section-hero">` framing `www-barebonescollective-com Interactive Matrix` and `www-barebonescollective-com Archive & Directory` (*"Bare Bones Collective Primary Showcase"*) with `#ffff00` surface cards, `#ffcc00` accents, and `summary { display: block; }`.
+5. **Colophon & Global Directory Footer (<footer.wf-oswald-n2-active> — `https://www.barebonescollective.com/`)**:
+   - Landmark `<footer class="wf-oswald-n2-active">` anchoring `Bare Bones Collective` footer links (`Menu · Work · Services · 360° Campaigns · films`), copy *"www-barebonescollective-com Interactive Matrix"*, and `#e2e2e2` structural dividers.

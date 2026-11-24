@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: www-amberjs-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.amberjs.dev/"
 final_url: "https://amberjs.dev/"
 status: blocked
-http_status: 200
+http_status: null
 capture_tier: none
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://www.amberjs.dev/', waiting until 'domcontentloaded' )"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://www.amberjs.dev/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -29,8 +29,8 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.amberjs.dev/](https://www.amberjs.dev/)
 - **Final Redirected URL**: [https://amberjs.dev/](https://amberjs.dev/)
-- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://www.amberjs.dev/', waiting until 'domcontentloaded' )
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://www.amberjs.dev/', waiting until 'domcontentloaded' )
 - **Page Title**: www-amberjs-dev
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `5`

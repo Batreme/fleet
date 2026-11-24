@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-honeyquote-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.honeyquote.com/"
 final_url: "https://www.honeyquote.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Compare Insurance Quotes Worth Trusting · HoneyQuote
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `46`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `127`
+- **Recovered Stylesheets**: `11`
 
 ---
 

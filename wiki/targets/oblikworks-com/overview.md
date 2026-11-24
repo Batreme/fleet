@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: oblikworks-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://oblikworks.com/"
 final_url: "https://oblikworks.com/"
 status: analyzed

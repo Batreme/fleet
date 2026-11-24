@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: plastic-audio_dot"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://plastic.audio/dot/"
 final_url: "https://plastic.audio/dot/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://plastic.audio/dot/](https://plastic.audio/dot/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Record internal audio on Mac, with key and BPM · DOT
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `9`
-- **Recovered Stylesheets**: `1`
+- **Identified Frameworks**: Tailwind CSS
+- **Recovered Scripts**: `119`
+- **Recovered Stylesheets**: `8`
 
 ---
 

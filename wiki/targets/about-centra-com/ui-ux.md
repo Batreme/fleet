@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: about-centra-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `about-centra-com` (**Centra? Centra! The definitive guide.**)
 - **Production URL**: [https://about.centra.com](https://about.centra.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#ffff00` accent)
 - **Summary**: The commerce platform for fashion brands.
-- **Total Clean CSS Variables Extracted**: `31` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `150` (curated live-grounded set below)
 
 ---
 
@@ -24,9 +24,9 @@ http_status: 200
 - **Display Font Stack**: `neue-haas-grotesk-display`
 - **Body Font Stack**: `neue-haas-grotesk-text`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 144px`, `line-height: 122.4px`, `font-weight: 900`, `letter-spacing: 0.12px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 70px`, `line-height: 70px`, `font-weight: 700`)
-- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 146.71px`, `line-height: 124.703px`, `font-weight: 900`, `letter-spacing: 0.12px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 140px`, `line-height: 140px`, `font-weight: 700`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `p` (`font-size: inherit`, `font-weight: inherit`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--_colours---mono--0: white`, `--_colours---mono--900: black`, `--_colours---mono--300: darkgrey`
 
 ---
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#222222` | `.w-slider-nav-invert>div.w-active { background-color: #222222 }` |
 | **Interactive Accent / Highlight** | `#ffff00` | `.hs-button.submit:hover { background-color: yellow }` (`#ffff00`) |
 | **Secondary / Muted Copy** | `#a9a9a9` | live computed `p` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#3898ec` | `.w-select:focus { border-color: #3898ec }` |
+| **Structural Hairline Border** | `#959494` | `var(--hsf-default-field-input__border-color)` in `:root` (`rgb(149, 148, 148)`) |
 | **Variable Token (`--_colours---mono--200`)** | `#d9d9d9` | `var(--_colours---mono--200)` in `:root` |
 | **Variable Token (`--_colours---yellow--main`)** | `#fecf48` | `var(--_colours---yellow--main)` in `:root` |
 | **Variable Token (`--_colours---mono--800`)** | `#191919` | `var(--_colours---mono--800)` in `:root` |
@@ -84,4 +84,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.section-call-to-action> — `about-centra-com Interactive Matri`)**:
    - Landmark `<section class="section-call-to-action">` framing `about-centra-com Interactive Matrix` and `about-centra-com Archive & Directory` (*"Centra? Centra!"*) with `#222222` surface cards, `#ffff00` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.wf-neuehaasgrotesktext-n4-active> — `https://about.centra.com`)**:
-   - Landmark `<footer class="wf-neuehaasgrotesktext-n4-active">` anchoring `Centra? Centra! The definitive g` footer links (`13 ½ Centra Facts · Brands on Centra`), copy *"about-centra-com Interactive Matrix"*, and `#3898ec` structural dividers.
+   - Landmark `<footer class="wf-neuehaasgrotesktext-n4-active">` anchoring `Centra? Centra! The definitive g` footer links (`13 ½ Centra Facts · Brands on Centra`), copy *"about-centra-com Interactive Matrix"*, and `#959494` structural dividers.

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: iroom-devinthehood-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "iroom-devinthehood-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#1f72c7` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **iRoom framework 3 · Get started** (https://iroom.devinthehood.com/) — iRoom, the flex CSS framework: a twelve columns grid, 30+ components, light and dark themes driven by CSS custom properties, parallax, a...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **iRoom framework 3 · Get started** (`https://iroom.devinthehood.com/`). iRoom, the flex CSS framework: a twelve columns grid, 30+ components, light and dark themes driven by CSS custom properties, parallax, a...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#14181f` ink, `#1f72c7` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#14181f` primary typography and `#1f72c7` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=3044px` / doc `3944px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `8px`, `50%`, `var(--ir-radius)`, `var(--ir-radius-full)`.
@@ -112,6 +117,13 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.demo-copy`**: `transition: opacity var(--ir-duration) var(--ir-ease), color var(--ir-dura...` extracted from `iroom-devinthehood-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,0.7,0.3,1)`)**: Governs interactive state transitions across `<header.navbar>` and `<section.demo-section>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.demo-hero>` and `<section.demo-section>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3944px`, deepest scrollY reached `3044px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `Download v3.0.2`)**: `backgroundColor`: `rgb(31, 114, 199)` -> `color(srgb 0.103333 0.3...` (`transition-duration: 0.18s, 0.18s, 0.18s, 0.18s`, `timing: cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1)`).
+- **Interactive Control Probe (`tab` · `Settings`)**: Triggered visual diff `11.306` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Theme Toggle Probe (`Dark theme`)**: Toggled body background `rgb(255, 255, 255)` -> `rgb(14, 17, 23)` and ink `rgb(20, 24, 31)` -> `rgb(231, 234, 240)`.
+- **Route Transition Architecture**: First internal navigation (`/index.html`) measured as `MPA` in `1145ms`.
 
 ---
 
@@ -170,6 +182,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="demo-section bg-subtle">` framing `A real flex grid` and `Cascade layers` (*"Twelve columns, four sizes, true gaps instead of negative margins"*) with `#f6f7f9` surface cards, `#1f72c7` accents, and `.demo-hero .lead { max-width: 40rem; color: rgb(255 255 255 / .88); text-shadow: 0 1px 12px... }`.
 5. **Colophon & Global Directory Footer (<footer.demo-footer> — `https://iroom.devinthehood.com/`)**:
    - Landmark `<footer class="demo-footer">` anchoring `iRoom framework 3 · Get started` footer links (`Get started · Components · CSS · JavaScript · Download`), copy *"Reset, tokens, base, layout, components, utilities: an utili"*, and `#e3e6eb` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The flex one, in a flex world.` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `28%`): Active landmark `Everything a page needs, nothing it does not` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `56%`): Active landmark `One variable, a whole new look` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `84%`): Active landmark `Download` · sticky/fixed elements: `2`
+- **Step 05** (`y=3044px`, `100%`): Active landmark `Build from the sources optional` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/index.html`)**: `https://iroom.devinthehood.com/index.html` — H1: `The flex one, in a flex world.`, scrollHeight `3944px`, transition `MPA` (`1145ms`)
+- **Other Route (`/components.html`)**: `https://iroom.devinthehood.com/components.html` — H1: `Components`, scrollHeight `27933px`, transition `direct` (`2027ms`)
+- **Other Route (`/css.html`)**: `https://iroom.devinthehood.com/css.html` — H1: `CSS`, scrollHeight `14369px`, transition `direct` (`612ms`)
 
 ---
 
@@ -225,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--ir-text-muted`)**: `#5d6675` — grounded in `var(--ir-text-muted)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `2rem` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -250,7 +273,7 @@ Scaffold `iroom-devinthehood-com` (`iRoom framework 3 · Get started`) with thes
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.navbar> — `iroom-devinthehood-com`)` (`iroom-devinthehood-com`) adapts across `@media (max-width: 992px)`, `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion: no-preference)`, `@media (min-width: 601px)` with `cubic-bezier(0.2,0.7,0.3,1)` transitions and links `Get started · Components · CSS · JavaScript · Download`.
 2. **Hero Stage & Focal Lead (<section.demo-hero> — `The flex one, in a flex world.`)**:
    - DOM & Selectors: Landmark `<section class="demo-hero parallax">` presenting display lead `The flex one, in a flex world.` and copy excerpt *"A CSS framework built on flexbox, cascade layers and custom prope"* over `#ffffff` canvas and `#14181f` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#14181f` headline `The flex one, in a flex world.`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#14181f` headline `The flex one, in a flex world.`.
 3. **Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)**:
    - DOM & Selectors: Landmark `<section class="demo-section">` rendering section `Everything a page needs, nothing it does not` with copy *"Classes that read like what they do, a grid that bends to every s"*, asset references (`iroom.ico`, `favicon.png`, `iroom.min.css`, `demo.css`), and grid rule `.demo-logo-pending .demo-hero-bar... { visibility: hidden; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.demo-section> — `Everything a page needs, nothing i`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
@@ -281,8 +304,45 @@ Scaffold `iroom-devinthehood-com` (`iRoom framework 3 · Get started`) with thes
 - **Selector `.demo-copy`**: `transition: opacity var(--ir-duration) var(--ir-ease), color var(--ir-dura...` extracted from `iroom-devinthehood-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.2,0.7,0.3,1)`)**: Governs interactive state transitions across `<header.navbar>` and `<section.demo-section>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.demo-hero>` and `<section.demo-section>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3944px` across 5 distinct viewport chapters.
+- **Vertical Chapter Sequence**: The flex one, in a flex world. (0%) -> Everything a page needs, no... (28%) -> One variable, a whole new look (56%) -> Download (84%) -> Build from the sources opti... (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `backgroundColor` with `0.18s, 0.18s, 0.18s, 0.18s cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1), cubic-bezier(0.2, 0.7, 0.3, 1)`.
+- **Multi-Page Routes**: Scaffold internal routes `/index.html` (other, MPA), `/components.html` (other, direct), `/css.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `iroom-devinthehood-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The flex one, in a flex world. | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `28%` | Everything a page needs, nothing it does not | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `56%` | One variable, a whole new look | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `84%` | Download | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3044px` | `100%` | Build from the sources optional | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The flex one, in a flex world. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2815px` | `50%` | One variable, a whole new look | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5631px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `tab` (`Settings`, diff `11.306`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://iroom.devinthehood.com/index.html` | The flex one, in a flex world. | `3944px` | `MPA` (`1145ms`) | [subpage-01-index-html.webp](assets/subpage-01-index-html.webp) |
+| `2` | `other` | `https://iroom.devinthehood.com/components.html` | Components | `27933px` | `direct` (`2027ms`) | [subpage-02-components-html.webp](assets/subpage-02-components-html.webp) |
+| `3` | `other` | `https://iroom.devinthehood.com/css.html` | CSS | `14369px` | `direct` (`612ms`) | [subpage-03-css-html.webp](assets/subpage-03-css-html.webp) |
+

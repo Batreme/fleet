@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: sc-aesthetic-labs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sc-aesthetic-labs-com` (**Digital Systems for Visible Trust – S/C Lab**)
 - **Production URL**: [https://sc-aesthetic-labs.com/](https://sc-aesthetic-labs.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#151616` canvas, `#f2f4f4` ink, `#ff4d00` accent)
 - **Summary**: Digital Systems for Visible Trust by S/C Lab. Public image, digital form and visible trust for serious brands, clinics and institutions.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)

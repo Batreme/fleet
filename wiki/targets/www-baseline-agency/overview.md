@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-baseline-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.baseline.agency/"
 final_url: "https://www.baseline.agency/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Baseline · Brand identity systems, designed and built
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `17`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `66`
+- **Recovered Stylesheets**: `16`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest` (**SOLARA HALO S1 · Sound with presence.**)
 - **Production URL**: [https://templates-preview.oxvo.app/t/oxvo-original-studio-max-commerce-3d/latest/#/](https://templates-preview.oxvo.app/t/oxvo-original-studio-max-commerce-3d/latest/#/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0b0c0f` canvas, `#f9f6ef` ink, `#b29af3` accent)
 - **Summary**: Explore SOLARA HALO S1: a portable spatial speaker with a tactile acoustic shell. Choose a finish and try the local reservation preview.
-- **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `95` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Geist Variable`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 69.12px`, `line-height: 67.7376px`, `font-weight: 750`, `letter-spacing: -3.8016px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 69.12px`, `line-height: 67.7376px`, `font-weight: 750`, `letter-spacing: -3.8016px`); rule `h2` (`font-size: 23px`, `letter-spacing: -.04em`, `font-weight: 800`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 66.24px`, `line-height: 65.5776px`, `font-weight: 600`, `letter-spacing: -4.3056px`); rule `h2` (`font-size: 23px`, `letter-spacing: -.04em`, `font-weight: 800`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); rule `p` (`font-size: 11px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--default-mono-font-family: var(--font-mono)`, `--materials-caption-h: 57px`, `--materials-caption-gap: 12px`; rule `small` (`font-size: 10px`, `letter-spacing: .12em`, `font-weight: 600`)
 
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `templates-preview-oxvo-app_t-oxvo-original-studio-max-commerce-3d-latest`)**:
-   - Landmark `<header class="site-header">` (`1280x62px`) hosting `SOLARA HALO S1 · Sound with presence` navigation (`The idea · Design · Finishes · Specifications`), DOM attributes (`data-first-load="done"`, `data-first-load-path="cold@4131"`, `data-oxvo-mounted-static-preview-router`, `data-product-runtime-ready="false"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="site-header">` (`1280x62px`) hosting `SOLARA HALO S1 · Sound with presence` navigation (`The idea · Design · Finishes · Specifications`), DOM attributes (`data-first-load="loading"`, `data-first-load-path="cold@2964"`, `data-oxvo-mounted-static-preview-router`, `data-product-runtime-ready="false"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.immersive-hero> — `SOUND THAT HOLDS THE ROOM.`)**:
-   - Landmark `<section class="immersive-hero">` presenting display lead `SOUND THAT HOLDS THE ROOM.` and copy excerpt *"Preparing your experience"* over `#0b0c0f` canvas and `#f9f6ef` ink.
+   - Landmark `<section class="immersive-hero">` presenting display lead `SOUND THAT HOLDS THE ROOM.` and copy excerpt *"Portable spatial speaker"* over `#0b0c0f` canvas and `#f9f6ef` ink.
 3. **Primary Showcase & Content Grid (<section.content-band> — `WRAPPED AROUND AIR.`)**:
-   - Landmark `<section class="content-band promise-band">` rendering section `WRAPPED AROUND AIR.` with copy *"Portable spatial speaker"*, asset references (`index-B571lmvU.js`, `index-CiVtvupN.css`, `geist-latin-wght-normal-Dm3htQBi....`, `PersistentProductCanvas-m78oPoe0.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<article.sr-only> — `TACTILE BY DESIGN.`)**:
-   - Landmark `<article class="sr-only">` framing `TACTILE BY DESIGN.` and `BUILT FOR THE SECOND ROOM.` (*"Use the left and right arrow keys to turn the product, up and dow"*) with `#101114` surface cards, `#b29af3` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="content-band promise-band">` rendering section `WRAPPED AROUND AIR.` with copy *"Preparing your experience"*, asset references (`index-B571lmvU.js`, `index-CiVtvupN.css`, `geist-latin-wght-normal-Dm3htQBi....`, `PersistentProductCanvas-m78oPoe0.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+4. **Interactive Detail & Feature Matrix (<article.is-shown> — `TACTILE BY DESIGN.`)**:
+   - Landmark `<article class="is-shown">` framing `TACTILE BY DESIGN.` and `BUILT FOR THE SECOND ROOM.` (*"Use the left and right arrow keys to turn the product, up and dow"*) with `#101114` surface cards, `#b29af3` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://templates-preview.oxvo.app/t/oxvo-original-studio-max-commerce-3d/latest/#/`)**:
    - Landmark `<footer class="site-footer">` anchoring `SOLARA HALO S1 · Sound with pres` footer links (`The idea · Design · Finishes · Specifications`), copy *"A portable spatial speaker tuned for wide projection and dai"*, and `#48434e` structural dividers.

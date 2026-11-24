@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: awards-racing"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://awards.racing"
 final_url: "https://awards.racing/"
 status: analyzed
@@ -29,7 +29,7 @@ auth_required: false
 - **Target URL**: [https://awards.racing](https://awards.racing)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Awards Racing
-- **Identified Frameworks**: Vue / Nuxt
+- **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
 - **Recovered Scripts**: `23`
 - **Recovered Stylesheets**: `10`
 

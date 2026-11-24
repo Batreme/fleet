@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: fontsight-xyz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `fontsight-xyz` (**Fontsight: What Font Is That? Font Finder for Chrome**)
 - **Production URL**: [https://fontsight.xyz/](https://fontsight.xyz/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffd84a` / `#ffff00`)
 - **Summary**: What font is that? Point at any text to see the typeface that actually rendered, who made it, and the CSS to use it. A free font finder f...
 - **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `Geist Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 164.16px`, `line-height: 164.16px`, `font-weight: 400`); CSS variables `--display: "Bricolage Grotesque", "Inter", system-ui, sans-serif`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 109.44px`, `line-height: 98.496px`, `font-weight: 800`, `letter-spacing: -1.6416px`); rule `.h2` (`font-size: clamp(44px,6.4vw,104px)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 138.24px`, `line-height: 124.416px`, `font-weight: 800`, `letter-spacing: -2.0736px`); rule `.h2` (`font-size: clamp(44px,6.4vw,104px)`)
 - **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 25.5px`, `font-weight: 400`); rule `p` (`font-size: 15.5px`, `line-height: 1.5`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 25.5px`, `font-weight: 400`); CSS variables `--mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace`; rule `small` (`letter-spacing: normal`)
 

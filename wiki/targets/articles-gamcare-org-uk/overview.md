@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: articles-gamcare-org-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://articles.gamcare.org.uk/"
 final_url: "https://articles.gamcare.org.uk/"
 status: analyzed

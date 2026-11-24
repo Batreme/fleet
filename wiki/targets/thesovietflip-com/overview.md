@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thesovietflip-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thesovietflip.com/"
 final_url: "https://thesovietflip.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Soviet Flip
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `35`
+- **Recovered Stylesheets**: `15`
 
 ---
 

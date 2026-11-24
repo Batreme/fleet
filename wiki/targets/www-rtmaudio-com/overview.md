@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-rtmaudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.rtmaudio.com"
 final_url: "https://www.rtmaudio.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,10 +27,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.rtmaudio.com](https://www.rtmaudio.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: RTM Audio · Audio plug-ins for mixing and mastering
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `14`
+- **Recovered Scripts**: `46`
 - **Recovered Stylesheets**: `2`
 
 ---

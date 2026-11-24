@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: dcspaces-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dcspaces.co.uk/"
 final_url: "https://dcspaces.co.uk/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Chorley Builders · Extensions & Renovations · DC Carpentry
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `7`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `28`
+- **Recovered Stylesheets**: `8`
 
 ---
 

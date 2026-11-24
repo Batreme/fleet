@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: konkelectrical-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `konkelectrical-com` (**Konk Electrical · Eastern Suburbs Electricians, Sydney**)
 - **Production URL**: [https://konkelectrical.com/](https://konkelectrical.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0b0b0c` canvas, `#f6f3ec` ink, `#0068a0` accent)
 - **Summary**: Electrical and automation specialists for high-end homes across Sydney's Eastern Suburbs. Lighting, smart home, data and audio visual, wi...
 - **Total Clean CSS Variables Extracted**: `41` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Archivo`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 96.48px`, `line-height: 82.9728px`, `font-weight: 800`, `letter-spacing: -3.3768px`); CSS variables `--cc-font-display: 'Archivo', sans-serif`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.4px`, `line-height: 74.304px`, `font-weight: 800`, `letter-spacing: -3.024px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 118.4px`, `line-height: 101.824px`, `font-weight: 800`, `letter-spacing: -4.144px`)
 - **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`); rule `p` (`font-size: clamp(1.02rem,1.25vw,1.16rem)`, `line-height: 1.7`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 27.2px`, `font-weight: 400`)
 
@@ -38,9 +38,10 @@ http_status: 200
 | **Primary Typography Ink** | `#f6f3ec` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#121214` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0068a0` | `.sbi-feed-block-cta-btn { background: #0068a0 }` |
-| **Secondary / Muted Copy** | `#8c8a84` | live computed `button` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#26262a` | `.kv { border-top: #26262a }` |
 | **Variable Token (`--cc-bone`)** | `#f2f0eb` | `var(--cc-bone)` in `:root` |
+| **Variable Token (`--cc-steel`)** | `#8c8a84` | `var(--cc-steel)` in `:root` |
 | **Variable Token (`--cc-red`)** | `#c89446` | `var(--cc-red)` in `:root` |
 | **Variable Token (`--cc-gold`)** | `#e7b96f` | `var(--cc-gold)` in `:root` |
 | **Variable Token (`--ink-3`)** | `#17171a` | `var(--ink-3)` in `:root` |

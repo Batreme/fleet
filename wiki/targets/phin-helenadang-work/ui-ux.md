@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: phin-helenadang-work"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `phin-helenadang-work` (**PHIN PHIN · Saigon coffee, stirred by you**)
 - **Production URL**: [https://phin.helenadang.work/](https://phin.helenadang.work/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffd23f` / `#ffffff`)
 - **Summary**: PHIN PHIN is a made-up Saigon coffee shop. Watch your coffee drip, then stir it yourself. A concept by Helena Dang.
-- **Total Clean CSS Variables Extracted**: `64` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `63` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 207.144px`, `line-height: 178.144px`, `font-weight: 900`, `letter-spacing: 3.10716px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100.8px`, `line-height: 95.76px`, `font-weight: 900`, `letter-spacing: 0.504px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 236.8px`, `line-height: 213.12px`, `font-weight: 900`, `letter-spacing: 1.184px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 800`)
 
@@ -79,7 +79,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `phin-helenadang-work`)**:
-   - Landmark `<header class="site-header">` (`1440x88px`) hosting `PHIN PHIN · Saigon coffee, stirred b` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-engine="three.js r186"`, `data-js-only`, `data-from="sign-yellow"`, `data-to="tin-sky"`), and stylesheet rule `html.lenis body { height:auto }`.
+   - Landmark `<header class="site-header">` (`1440x88px`) hosting `PHIN PHIN · Saigon coffee, stirred b` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-js-only`, `data-from="sign-yellow"`, `data-to="tin-sky"`, `data-from="tin-sky"`), and stylesheet rule `html.lenis body { height:auto }`.
 2. **Hero Stage & Focal Lead (<section.beat> — `PHIN PHIN`)**:
    - Landmark `<section class="beat beat-sign">` presenting display lead `PHIN PHIN` and copy excerpt *"Chuyên bán: đen đá · sữa đá · bạc xỉu"* over `#ffd23f` canvas and `#111111` ink.
 3. **Primary Showcase & Content Grid (<section.beat-brew> — `Good coffee takes four minutes.`)**:

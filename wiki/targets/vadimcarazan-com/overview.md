@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: vadimcarazan-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://vadimcarazan.com/"
 final_url: "https://vadimcarazan.com/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Vadim Carazan, Creative Director
 - **Identified Frameworks**: HTML5 Canvas / WebGL
 - **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `2`
+- **Recovered Stylesheets**: `1`
 
 ---
 

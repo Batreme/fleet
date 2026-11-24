@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: filmmaker-framer-media"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "filmmaker-framer-media"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ee`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Filmmaker — Portfolio for Directors & Studios** (https://filmmaker.framer.media/) — An independent film studio directing, shooting and finishing commercials, music videos, documentaries and short films, from the first ide...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Filmmaker — Portfolio for Directors & Studios** (`https://filmmaker.framer.media/`). An independent film studio directing, shooting and finishing commercials, music videos, documentaries and short films, from the first ide...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0000ee`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Switzer` for display copy (`Filmmaker: a film studio for commerc`) with `Switzer Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Switzer` for display copy (`Filmmaker: a film studio for commerc`) with `Switzer Placeholder`.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 4px`, padding `20px`) with `cubic-bezier(0.76,0,0.24,1)` easing and Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1920px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `8px`, `15px`, `4px`, `10px`.
@@ -45,7 +50,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:809px) and (min-width:1px)`, `@media (max-width:0) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)`, `@media (max-width:809.98px)`.
+- **Extracted CSS Media Queries**: `@media (min-width: 1200px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:809px) and (min-width:1px)`.
 
 ---
 
@@ -110,9 +115,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 ### Per-Element Transition & Choreography Rules
 - **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `filmmaker-framer-media` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `filmmaker-framer-media` stylesheet.
-- **Selector `style]`**: `transition: opacity 0.3s linear` extracted from `filmmaker-framer-media` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.76,0,0.24,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<div.framer-v2pXD>`.
+- **Selector `style]`**: `transition: transform 0.1s cubic-bezier(0.76,0,0.24,1), opacity 0.1s cu...` extracted from `filmmaker-framer-media` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.76,0,0.24,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<div.lenis-stopped>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `Framer Motion`, `WebGL/Canvas`.
 
 ---
 
@@ -129,14 +137,14 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ | H1: Filmmaker: a film studio for commercials, music v...           | │
 │ | Substrate: #000000 | Ink: #ffffff | Accent: #0000ee                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.framer-v2pXD>) max-w: 1920px                   | │
+│ | SHOWCASE GRID (<div.lenis-stopped>) max-w: 1920px                  | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Bloom                        |  | Red Lens                     | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<div.framer-nvb9y9>) — Second Skin                  | │
+│ | DETAIL MODULE (<div.framer-v2pXD>) — Second Skin                   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-6o4xp) | https://filmmaker.framer.media/      │
+│ [ FOOTER (<footer.framer-nvb9y) | https://filmmaker.framer.media/      │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -150,27 +158,29 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ | HERO STAGE (<div.lenis-autoToggle>) — 390px Vertical Lead          | │
 │ | H1: Filmmaker: a film studio for commercials, music v...           | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<div.framer-v2pXD>) — 1-Col Stack                  | │
+│ | SHOWCASE STACK (<div.lenis-stopped>) — 1-Col Stack                 | │
 │ | [ Item 1: Bloom                                                  ] | │
 │ | [ Item 2: Red Lens                                               ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<div.framer-nvb9y9>) — 1-Col (Second Skin)           | │
+│ | DETAIL STACK (<div.framer-v2pXD>) — 1-Col (Second Skin)            | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-6o4xp) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.framer-nvb9y) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.lenis> — `filmmaker-framer-media`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
+   - Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
 2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `Filmmaker: a film studio for comme`)**:
    - Landmark `<div class="lenis-autoToggle">` presenting display lead `Filmmaker: a film studio for commercials, music v...` and copy excerpt *"(Scroll to explore)"* over `#000000` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<div.framer-v2pXD> — `Bloom`)**:
-   - Landmark `<div class="framer-v2pXD">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-nvb9y9> — `Red Lens`)**:
-   - Landmark `<div class="framer-nvb9y9">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
-5. **Colophon & Global Directory Footer (<footer.framer-6o4xpy-container> — `https://filmmaker.framer.media/`)**:
-   - Landmark `<footer class="framer-6o4xpy-container">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.
+3. **Primary Showcase & Content Grid (<div.lenis-stopped> — `Bloom`)**:
+   - Landmark `<div class="lenis-stopped">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `.hidden-kh3wqm { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-v2pXD> — `Red Lens`)**:
+   - Landmark `<div class="framer-v2pXD">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `.hidden-s381sx { display:none!important }`.
+5. **Colophon & Global Directory Footer (<footer.framer-nvb9y9> — `https://filmmaker.framer.media/`)**:
+   - Landmark `<footer class="framer-nvb9y9">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Bloom` · sticky/fixed elements: `3`
 
 ---
 
@@ -187,7 +197,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Switzer` for display copy (`Filmmaker: a film studio for commerc`) with `Switzer Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Switzer` for display copy (`Filmmaker: a film studio for commerc`) with `Switzer Placeholder`.
   - **Calibrated Spatial Grid & Motion**: Combines `1920px` container bounds (`gap: 4px`, padding `20px`) with `cubic-bezier(0.76,0,0.24,1)` easing and Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,13 +237,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-107047f9-7a86-4585-a089-f7c6945f5b94`)**: `#ff4444` — grounded in `var(--token-107047f9-7a86-4585-a089-f7c6945f5b94)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1920px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `20px` lateral canvas padding with `4px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
-- **Media Queries**: `@media (max-width:809px) and (min-width:1px)`, `@media (max-width:0) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)`, `@media (max-width:809.98px)`
+- **Media Queries**: `@media (min-width: 1200px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:809px) and (min-width:1px)`
 - **Corner Radii**: `8px`, `15px`, `4px`, `10px`
 
 ### 5. Typography & Editorial Scale Contract
@@ -248,20 +258,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `filmmaker-framer-media` (`Filmmaker — Portfolio for Directors & Studios`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.lenis> — `filmmaker-framer-media`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `filmmaker-framer-media`)` (`filmmaker-framer-media`) adapts across `@media (max-width:809px) and (min-width:1px)`, `@media (max-width:0) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)`, `@media (max-width:809.98px)` with `cubic-bezier(0.76,0,0.24,1)` transitions and links `Home · Works · About · Press · Contact`.
+   - DOM & Selectors: Landmark `<header class="lenis">` (`1440px`) hosting `Filmmaker — Portfolio for Directors ` navigation (`Home · Works · About · Press · Contact`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `filmmaker-framer-media`)` (`filmmaker-framer-media`) adapts across `@media (min-width: 1200px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:809px) and (min-width:1px)` with `cubic-bezier(0.76,0,0.24,1)` transitions and links `Home · Works · About · Press · Contact`.
 2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `Filmmaker: a film studio for comme`)**:
    - DOM & Selectors: Landmark `<div class="lenis-autoToggle">` presenting display lead `Filmmaker: a film studio for commercials, music v...` and copy excerpt *"(Scroll to explore)"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#ffffff` headline `Filmmaker: a film studio for commercials, music v...`.
-3. **Primary Showcase & Content Grid (<div.framer-v2pXD> — `Bloom`)**:
-   - DOM & Selectors: Landmark `<div class="framer-v2pXD">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.framer-v2pXD> — `Bloom`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.framer-nvb9y9> — `Red Lens`)**:
-   - DOM & Selectors: Landmark `<div class="framer-nvb9y9">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-nvb9y9> — `Red Lens`)` uses `8px`, `15px`, `4px`, `10px` radii, `#0000ee` highlights, and assets (VBRLrBkFJJ3iKvr3ee0PscUivO0.png, gOHbZD6M7GPcLWoAJjxuSCzbM4.png, script).
-5. **Colophon & Global Directory Footer (<footer.framer-6o4xpy-container> — `https://filmmaker.framer.media/`)**:
-   - DOM & Selectors: Landmark `<footer class="framer-6o4xpy-container">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-6o4xpy-container> — `https://filmmaker.framer.media/`)` aligns to `1920px` (non-`@media` desktop container stylesheet rule) with `20px` lateral canvas padding with `4px` grid gap and attributes (data-redirect-timezone="1", data-framer-font-css, data-framer-css-ssr-minified).
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#000000` background with `#ffffff` headline `Filmmaker: a film studio for commercials, music v...`.
+3. **Primary Showcase & Content Grid (<div.lenis-stopped> — `Bloom`)**:
+   - DOM & Selectors: Landmark `<div class="lenis-stopped">` rendering section `Bloom` with copy *"Create a free website with Framer, the website builder loved by s"*, asset references (`VBRLrBkFJJ3iKvr3ee0PscUivO0.png`, `gOHbZD6M7GPcLWoAJjxuSCzbM4.png`, `script`, `gyMkyphEohfoNDaOxqDjcfioUEg.jpg`), and grid rule `.hidden-kh3wqm { display:none!important }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.lenis-stopped> — `Bloom`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1920px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<div.framer-v2pXD> — `Red Lens`)**:
+   - DOM & Selectors: Landmark `<div class="framer-v2pXD">` framing `Red Lens` and `Second Skin` (*"Bloom"*) with `#ffffff` surface cards, `#0000ee` accents, and `.hidden-s381sx { display:none!important }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-v2pXD> — `Red Lens`)` uses `8px`, `15px`, `4px`, `10px` radii, `#0000ee` highlights, and assets (VBRLrBkFJJ3iKvr3ee0PscUivO0.png, gOHbZD6M7GPcLWoAJjxuSCzbM4.png, script).
+5. **Colophon & Global Directory Footer (<footer.framer-nvb9y9> — `https://filmmaker.framer.media/`)**:
+   - DOM & Selectors: Landmark `<footer class="framer-nvb9y9">` anchoring `Filmmaker — Portfolio for Direct` footer links (`Home · Works · About · Press · Contact`), copy *"Red Lens"*, and `#0000ee` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-nvb9y9> — `https://filmmaker.framer.media/`)` aligns to `1920px` (non-`@media` desktop container stylesheet rule) with `20px` lateral canvas padding with `4px` grid gap and attributes (data-redirect-timezone="1", data-framer-generated-canonical, data-framer-font-css).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"(Scroll to explore)"*
@@ -270,19 +280,36 @@ Scaffold `filmmaker-framer-media` (`Filmmaker — Portfolio for Directors & Stud
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0.76,0,0.24,1)`
 - **Extracted Stylesheet Rules (`filmmaker-framer-media`)**:
-- `main { box-sizing:border-box;margin:0;padding:0 }`
-- `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`
-- `button { font-family:sans-serif;font-size:12px }`
-- `__framer-badge-container { --infinity:infinity }`
-- `body { --framer-will-change-override:none }`
+- `.hidden-72rtr7 { display:none!important }`
+- `.hidden-kh3wqm { display:none!important }`
+- `.hidden-s381sx { display:none!important }`
+- `.hidden-nvb9y9 { display:none!important }`
+- `.hidden-1pjv3x2 { display:none!important }`
 - **Per-Selector Transition Rules**:
 - **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `filmmaker-framer-media` stylesheet.
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `filmmaker-framer-media` stylesheet.
-- **Selector `style]`**: `transition: opacity 0.3s linear` extracted from `filmmaker-framer-media` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0.76,0,0.24,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<div.framer-v2pXD>`.
+- **Selector `style]`**: `transition: transform 0.1s cubic-bezier(0.76,0,0.24,1), opacity 0.1s cu...` extracted from `filmmaker-framer-media` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(0.76,0,0.24,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<div.lenis-stopped>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, Framer Motion, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Bloom (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `filmmaker-framer-media`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Bloom | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Bloom | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: revelatio-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://revelatio.studio/"
 final_url: "https://revelatio.studio/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://revelatio.studio/](https://revelatio.studio/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Revelatio · Branding, Product Design & Code
-- **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: revelatio-studio
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `55`
 - **Recovered Stylesheets**: `7`
 

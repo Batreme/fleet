@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: lorenzolottici-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://lorenzolottici.it/en"
 final_url: "https://lorenzolottici.it/en"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Lorenzo Lottici · Order in chaos
 - **Identified Frameworks**: Framer, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `32`
+- **Recovered Scripts**: `31`
 - **Recovered Stylesheets**: `1`
 
 ---

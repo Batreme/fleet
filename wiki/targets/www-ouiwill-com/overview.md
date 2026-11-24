@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-ouiwill-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.ouiwill.com/"
 final_url: "https://www.ouiwill.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.ouiwill.com/](https://www.ouiwill.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Oui Will · Brand Transformation & Digital Experiences
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `1`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `3`
+- **Recovered Stylesheets**: `3`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-halcyon-co-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-halcyon-co-nz"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f7eb12`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **Halcyon · Leading Lighting Specialists** (https://www.halcyon.co.nz/) — Driven by innovation and an unwavering commitment to quality, Halcyon works with leading architects, specifiers and electrical experts to...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Halcyon · Leading Lighting Specialists** (`https://www.halcyon.co.nz/`). Driven by innovation and an unwavering commitment to quality, Halcyon works with leading architects, specifiers and electrical experts to...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f7eb12`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#f7eb12` accents.
@@ -34,13 +41,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `6175px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `8px` grid gap.
-- **Border Radius Scale**: `0px`, `34px`, `50%`, `40px`.
+- **Border Radius Scale**: `4px`, `0px`, `34px`, `50%`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 8px`).
@@ -55,7 +60,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#000000` | live computed `p` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffe5b4` | `var(--color-background)` in `:root` |
 | **Interactive Accent / Highlight** | `#f7eb12` | `.primary-button--light:after { background: #f7eb12 }` |
 | **Secondary / Muted Copy** | `#303030` | `var(--megamenu-item-text)` in `:root` |
@@ -96,7 +101,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Technical / Metadata Stack**: `Halcyon Monument Grotesk Semi-Mono`.
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`).
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`).
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 87.9984px`, `line-height: 87.9984px`, `font-weight: 500`, `letter-spacing: -1.76px`); rule `,.h2` (`font-size: 56px`, `line-height: 100%`, `letter-spacing: -.84px`, `font-weight: 500`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 500`); CSS variables `--boostsd-general-font-size-base: 16px`, `--boostsd-cart-body-padding: 16px`, `--boostsd-cart-body-padding-medium: 24px`; rule `p` (`font-size: 12px`, `line-height: 90%`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 12px`, `font-weight: 500`); CSS variables `--boostsd-product-label-padding: 2px 6px`, `--boostsd-product-label-border-radius: 2px`, `--boostsd-product-label-border-radius-capsule: 40px`; rule `.label` (`font-size: 12px`, `line-height: 12px`, `letter-spacing: 0`, `font-weight: 400`).
@@ -114,6 +119,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `.type-one-light-outline:after`**: `transition: .3s ease-out` extracted from `www-halcyon-co-nz` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.67,1.51,.8,.87)`)**: Governs interactive state transitions across `<header.js>` and `<section.featured-product>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6175px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -172,6 +180,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
    - Landmark `<section class="tabbed-collection">` framing `Latest Collections` and `Trade Flex Pro` (*"From discreet illumination to feature lighting and general ambien"*) with `#ffe5b4` surface cards, `#f7eb12` accents, and `pre { font-family:monospace,monospace;font-size:1em }`.
 5. **Colophon & Global Directory Footer (<footer.js-ajax-cart-empty> — `https://www.halcyon.co.nz/`)**:
    - Landmark `<footer class="js-ajax-cart-empty">` anchoring `Halcyon · Leading Lighting Speci` footer links (`Return · Products · About · Highlights · Stockists`), copy *"Cevon M80 Type 1 Dark Art Adjustable Black, Gold 3000K"*, and `#eeeeee` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Good Light.` · sticky/fixed elements: `1`
 
 ---
 
@@ -217,7 +227,7 @@ Declare and consume these exact custom properties extracted from `www-halcyon-co
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#ffffff` — grounded in live computed `browser-default` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#000000` — grounded in live computed `p` `color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#ffe5b4` — grounded in `var(--color-background)` in `:root`
 - **Interactive Accent / Highlight**: `#f7eb12` — grounded in `.primary-button--light:after { background: #f7eb12 }`
 - **Secondary / Muted Copy**: `#303030` — grounded in `var(--megamenu-item-text)` in `:root`
@@ -229,20 +239,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--halcyon-toast-warning`)**: `#f59e0b` — grounded in `var(--halcyon-toast-warning)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `16px` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 8px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
 - **Media Queries**: `@media (max-width:768.98px)`, `@media (max-width:991.98px)`, `@media (min-width:992px)`, `@media (max-width:768.98px)and (max-width:768.98px)`
-- **Corner Radii**: `0px`, `34px`, `50%`, `40px`
+- **Corner Radii**: `4px`, `0px`, `34px`, `50%`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Halcyon Monument Grotesk`
 - **Body Font Stack**: `Untitled`
 - **Monospace / Technical Font Stack**: `Halcyon Monument Grotesk Semi-Mono`
-- **H1 Display Rule**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`)
 - **H2 Section Rule**: live computed `h2` (`font-size: 87.9984px`, `line-height: 87.9984px`, `font-weight: 500`, `letter-spacing: -1.76px`); rule `,.h2` (`font-size: 56px`, `line-height: 100%`, `letter-spacing: -.84px`, `font-weight: 500`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 500`); CSS variables `--boostsd-general-font-size-base: 16px`, `--boostsd-cart-body-padding: 16px`, `--boostsd-cart-body-padding-medium: 24px`; rule `p` (`font-size: 12px`, `line-height: 90%`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 12px`, `font-weight: 500`); CSS variables `--boostsd-product-label-padding: 2px 6px`, `--boostsd-product-label-border-radius: 2px`, `--boostsd-product-label-border-radius-capsule: 40px`; rule `.label` (`font-size: 12px`, `line-height: 12px`, `letter-spacing: 0`, `font-weight: 400`)
@@ -254,13 +264,13 @@ Scaffold `www-halcyon-co-nz` (`Halcyon · Leading Lighting Specialists`) with th
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.js> — `www-halcyon-co-nz`)` (`www-halcyon-co-nz`) adapts across `@media (max-width:768.98px)`, `@media (max-width:991.98px)`, `@media (min-width:992px)`, `@media (max-width:768.98px)and (max-width:768.98px)` with `cubic-bezier(.67,1.51,.8,.87)`, `cubic-bezier(.075,.82,.165,1)`, `cubic-bezier(.445,.05,.55,.95)` transitions and links `Return · Products · About · Highlights · Stockists`.
 2. **Hero Stage & Focal Lead (<section.main-hero> — `Good Light.`)**:
    - DOM & Selectors: Landmark `<section class="main-hero hero-main-section">` presenting display lead `Good Light.` and copy excerpt *"At Halcyon we make lighting to perform, and we make lighting to l"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Good Light.`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `Good Light.`.
 3. **Primary Showcase & Content Grid (<section.featured-product> — `Cevon M-Type`)**:
    - DOM & Selectors: Landmark `<section class="featured-product">` rendering section `Cevon M-Type` with copy *"M-Type is a modular system developed for refined interiors where "*, asset references (`inventoryLocation.js`, `clarity.js`, `wwzwszat2d`, `gtm.js`), and grid rule `main { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.featured-product> — `Cevon M-Type`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.tabbed-collection> — `Latest Collections`)**:
    - DOM & Selectors: Landmark `<section class="tabbed-collection">` framing `Latest Collections` and `Trade Flex Pro` (*"From discreet illumination to feature lighting and general ambien"*) with `#ffe5b4` surface cards, `#f7eb12` accents, and `pre { font-family:monospace,monospace;font-size:1em }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.tabbed-collection> — `Latest Collections`)` uses `0px`, `34px`, `50%`, `40px` radii, `#f7eb12` highlights, and assets (inventoryLocation.js, clarity.js, wwzwszat2d).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.tabbed-collection> — `Latest Collections`)` uses `4px`, `0px`, `34px`, `50%` radii, `#f7eb12` highlights, and assets (inventoryLocation.js, clarity.js, wwzwszat2d).
 5. **Colophon & Global Directory Footer (<footer.js-ajax-cart-empty> — `https://www.halcyon.co.nz/`)**:
    - DOM & Selectors: Landmark `<footer class="js-ajax-cart-empty">` anchoring `Halcyon · Leading Lighting Speci` footer links (`Return · Products · About · Highlights · Stockists`), copy *"Cevon M80 Type 1 Dark Art Adjustable Black, Gold 3000K"*, and `#eeeeee` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.js-ajax-cart-empty> — `https://www.halcyon.co.nz/`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `8px` grid gap and attributes (data-collection-view="grid", data-source-attribution="shopify.exit_intersti...", data-source-attribution="shopify.loadfeatures").
@@ -285,8 +295,27 @@ Scaffold `www-halcyon-co-nz` (`Halcyon · Leading Lighting Specialists`) with th
 - **Selector `.type-one-light-outline:after`**: `transition: .3s ease-out` extracted from `www-halcyon-co-nz` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.67,1.51,.8,.87)`)**: Governs interactive state transitions across `<header.js>` and `<section.featured-product>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6175px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Good Light. (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-halcyon-co-nz`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Good Light. | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Good Light. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3043px` | `50%` | Trade Flex Pro | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6087px` | `100%` | OFF | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

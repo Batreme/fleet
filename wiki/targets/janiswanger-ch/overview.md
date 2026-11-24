@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: janiswanger-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://janiswanger.ch"
 final_url: "https://janiswanger.ch/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Janis Wanger — Creative Engineer in Bern
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `42`
-- **Recovered Stylesheets**: `10`
+- **Recovered Scripts**: `33`
+- **Recovered Stylesheets**: `7`
 
 ---
 

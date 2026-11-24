@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: crun-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://crun.ai"
 final_url: "https://crun.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: One API for All Top AI Models – Cost-Effective AI API · Crun
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `114`
+- **Recovered Stylesheets**: `40`
 
 ---
 

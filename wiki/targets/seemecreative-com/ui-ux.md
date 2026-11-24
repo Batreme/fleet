@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: seemecreative-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `seemecreative-com` (**SEE ME Creative**)
 - **Production URL**: [https://seemecreative.com/](https://seemecreative.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×2484px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f8f7f7` canvas, `#333333` ink, `#ffa500` accent)
 - **Summary**: SEE ME emerged from the desire to forge a creative environment that reimagines the ways in which we tell, create, and share stories.
-- **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
 
 ---
 
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#ffffff` | `:after { background-color: #ffffff }` |
 | **Interactive Accent / Highlight** | `#ffa500` | `.menu a.router-link-active .index { color: orange }` (`#ffa500`) |
 | **Secondary / Muted Copy** | `#ffa500` | `.glyph { color: orange }` (`#ffa500`) |
-| **Structural Hairline Border** | `#ffa500` | hairline divider derived from `.glyph { color: orange }` (`#ffa500`) |
+| **Structural Hairline Border** | `#ffa500` | `path { stroke: #ffa500 }` |
 | **Variable Token (`--color-black`)** | `#000000` | `var(--color-black)` in `:root` |
 | **Variable Token (`--color-gray`)** | `#b2b2b2` | `var(--color-gray)` in `:root` |
 | **Variable Token (`--color-orange`)** | `#ff5600` | `var(--color-orange)` in `:root` |
@@ -72,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.global-header> — `seemecreative-com`)**:
-   - Landmark `<header class="global-header header">` (`1440x66px`) hosting `SEE ME Creative` navigation (`001 Work · 002 Artists · 003 About · 004 News`), DOM attributes (`data-capo`, `data-v-344bacdf`, `data-v-bd05448e`, `data-v-61c5c60e`), and stylesheet rule `before { background-color:ff7e26;mix-blend-mode:color;z-index:200 }`.
+   - Landmark `<header class="global-header header">` (`1440x66px`) hosting `SEE ME Creative` navigation (`001 Work · 002 Artists · 003 About · 004 News`), DOM attributes (`data-capo`, `data-v-344bacdf`, `data-v-bd05448e`, `data-v-61c5c60e`), and stylesheet rule `.tag { color:var(--color-charcoal);font-size:10px;font-weight:400;line-height:201% }`.
 2. **Hero Stage & Focal Lead (<section.page> — `SEE ME Creative`)**:
    - Landmark `<section class="page page-home">` presenting display lead `SEE ME Creative` and copy excerpt *"sayhello@seemecreative.com"* over `#f8f7f7` canvas and `#333333` ink.
 3. **Primary Showcase & Content Grid (<section.page-home> — `Where your vision goes to grow`)**:
-   - Landmark `<section class="page page-home">` rendering section `Where your vision goes to grow` with copy *"SEE ME Creative"*, asset references (`entry.BKkY1yHX.css`, `wp-image.abO9u4pg.css`, `grid-work.Dsp1qX9O.css`, `grid-masonry.BnNvLTuH.css`), and grid rule `after { background-color:fff;z-index:100 }`.
+   - Landmark `<section class="page page-home">` rendering section `Where your vision goes to grow` with copy *"SEE ME Creative"*, asset references (`entry.BKkY1yHX.css`, `wp-image.abO9u4pg.css`, `grid-work.Dsp1qX9O.css`, `grid-masonry.BnNvLTuH.css`), and grid rule `.tag:after { color:var(--color-charcoal) }`.
 4. **Interactive Detail & Feature Matrix (<section.page:nth(2)> — `WE ARE A FULL-SERVICE CREATIVE AGE`)**:
-   - Landmark `<section class="page page-home">` framing `WE ARE A FULL-SERVICE CREATIVE AGENCY BUILDING WO...` and `「 WE ARE A FULL-SERVICE CREATIVE AGENCY BUILDING...` (*"Where your vision goes to grow"*) with `#ffffff` surface cards, `#ffa500` accents, and `.item { width:calc(33% - 10px) }`.
+   - Landmark `<section class="page page-home">` framing `WE ARE A FULL-SERVICE CREATIVE AGENCY BUILDING WO...` and `「 WE ARE A FULL-SERVICE CREATIVE AGENCY BUILDING...` (*"Where your vision goes to grow"*) with `#ffffff` surface cards, `#ffa500` accents, and `.media { transition:filter .4s var(--easing-motion) }`.
 5. **Colophon & Global Directory Footer (<footer.wp-seo> — `https://seemecreative.com/`)**:
    - Landmark `<footer class="wp-seo">` anchoring `SEE ME Creative` footer links (`001 Work · 002 Artists · 003 About · 004 News`), copy *"WE ARE A FULL-SERVICE CREATIVE AGENCY BUILDING WO..."*, and `#ffa500` structural dividers.

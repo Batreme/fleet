@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-enigmascult-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.enigmascult.com/"
 final_url: "https://www.enigmascult.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Enigma – Sneaker Auctions, Mystery Boxes & Reborn Customs
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `34`
-- **Recovered Stylesheets**: `13`
+- **Recovered Scripts**: `126`
+- **Recovered Stylesheets**: `50`
 
 ---
 

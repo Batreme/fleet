@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: mstage-group-jp"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://mstage-group.jp/"
 final_url: "https://mstage-group.jp/"
 status: blocked

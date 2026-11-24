@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: 360lexingtonave-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `360lexingtonave-com` (**360 Lexington Avenue**)
 - **Production URL**: [https://360lexingtonave.com](https://360lexingtonave.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: Located at 40th Street and Lexington Avenue, just a two-minute walk from Grand Central Terminal.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
@@ -67,13 +67,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.lenis> — `360lexingtonave-com`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
-2. **Hero Stage & Focal Lead (<div.lenis-smooth> — `Built For Difference Makers`)**:
-   - Landmark `<div class="lenis-smooth">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<div.framer-jJ6Uj> — `360 Lex has been thoroughly reimag`)**:
-   - Landmark `<div class="framer-jJ6Uj">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-DOsz9> — `2-Minute Walk to Grand Central`)**:
-   - Landmark `<div class="framer-DOsz9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
-5. **Colophon & Global Directory Footer (<footer.framer-Kw8IE> — `https://360lexingtonave.com`)**:
-   - Landmark `<footer class="framer-Kw8IE">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.
+1. **Brand Header & Navigation Bar (<header.framer-jJ6Uj> — `360lexingtonave-com`)**:
+   - Landmark `<header class="framer-jJ6Uj">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
+2. **Hero Stage & Focal Lead (<div.framer-DOsz9> — `Built For Difference Makers`)**:
+   - Landmark `<div class="framer-DOsz9">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.framer-Kw8IE> — `360 Lex has been thoroughly reimag`)**:
+   - Landmark `<div class="framer-Kw8IE">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-ZLQE9> — `2-Minute Walk to Grand Central`)**:
+   - Landmark `<div class="framer-ZLQE9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
+5. **Colophon & Global Directory Footer (<footer.framer-HPrnH> — `https://360lexingtonave.com`)**:
+   - Landmark `<footer class="framer-HPrnH">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: clubcharlestown-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `clubcharlestown-com-au` (**Home · Club Charlestown**)
 - **Production URL**: [https://clubcharlestown.com.au/](https://clubcharlestown.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#333333` ink, `#eb8f00` accent)
 - **Summary**: We're a vibrant, family-friendly club where everyone belongs. Come in and discover a place to relax, have fun, and connect with friends a...
-- **Total Clean CSS Variables Extracted**: `430` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `429` (curated live-grounded set below)
 
 ---
 

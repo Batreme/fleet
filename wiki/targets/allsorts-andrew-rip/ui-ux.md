@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: allsorts-andrew-rip"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `allsorts-andrew-rip` (**Allsorts · Andrew Robinson**)
 - **Production URL**: [https://allsorts.andrew.rip](https://allsorts.andrew.rip)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#dddddd`)
 - **Summary**: Liquorice allsorts to throw, pile and frame, rendered in your browser. Save one as a wallpaper. By Andrew Robinson.
 - **Total Clean CSS Variables Extracted**: `1` (curated live-grounded set below)

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: thefwa-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thefwa-net` (**FWA Wire — winners' newswire**)
 - **Production URL**: [https://thefwa.net/](https://thefwa.net/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffcc00` ink, `#ff9900` accent)
 - **Summary**: News from FWA winners — hires, launches, talks and work in progress. One post per person per day, newest first. No algorithm, no ranking.
 - **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffcc00` | live computed `h2` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#0c0c0c` | `var(--panel)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#0c0c0c` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ff9900` | live computed `button` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#7e7e7e` | live computed `a` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#303030` | `var(--line)` in `:root` |
@@ -73,12 +73,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.pager> — `thefwa-net`)**:
-   - Landmark `<nav class="pager">` (`598x45px`) hosting `FWA Wire — winners' newswire` navigation (`older →`), DOM attributes (`data-id="89"`, `data-view="video"`, `data-seen="p89:video"`, `data-src="https://www.youtube-n..."`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
+   - Landmark `<nav class="pager">` (`598x45px`) hosting `FWA Wire — winners' newswire` navigation (`older →`), DOM attributes (`data-id="90"`, `data-view="image"`, `data-seen="p90:image"`, `data-src="/media/posts/mwtbqeue..."`), and stylesheet rule `html { -webkit-text-size-adjust:100% }`.
 2. **Hero Stage & Focal Lead (<section.panel> — `FWA // CANON_STATUS: VERIFIED`)**:
-   - Landmark `<section class="panel">` presenting display lead `FWA // CANON_STATUS: VERIFIED` and copy excerpt *"CREDITSOliver Gareis"* over `#000000` canvas and `#ffcc00` ink.
-3. **Primary Showcase & Content Grid (<section.filters> — `Michael Bay Studio`)**:
-   - Landmark `<section class="panel filters">` rendering section `Michael Bay Studio` with copy *"Posted by FWA winners >>> one post per person per day >>> newest "*, asset references (`favicon.ico`, `icon.svg`, `apple-touch-icon.png`, `manifest.webmanifest`), and grid rule `.px { font-family:'Silkscreen',monospace;font-weight:400;letter-spacing:.02em }`.
+   - Landmark `<section class="panel">` presenting display lead `FWA // CANON_STATUS: VERIFIED` and copy excerpt *"CREDITSDaiki Fujita"* over `#000000` canvas and `#ffcc00` ink.
+3. **Primary Showcase & Content Grid (<section.filters> — `A DAY — Seasons of Youth`)**:
+   - Landmark `<section class="panel filters">` rendering section `A DAY — Seasons of Youth` with copy *"Posted by FWA winners >>> one post per person per day >>> newest "*, asset references (`favicon.ico`, `icon.svg`, `apple-touch-icon.png`, `manifest.webmanifest`), and grid rule `.px { font-family:'Silkscreen',monospace;font-weight:400;letter-spacing:.02em }`.
 4. **Interactive Detail & Feature Matrix (<section.wire> — `Posted by FWA winners >>> one post`)**:
    - Landmark `<section class="panel wire">` framing `Posted by FWA winners >>> one post per person pe` and `Winners post here. One item a day, newest first.` (*"Winners post here. One item a day, newest first."*) with `#0c0c0c` surface cards, `#ff9900` accents, and `.shell { max-width:940px;margin:0 auto;padding:8px }`.
 5. **Colophon & Global Directory Footer (<footer.ticker> — `https://thefwa.net/`)**:
-   - Landmark `<footer class="ticker">` anchoring `FWA Wire — winners' newswire` footer links (`older →`), copy *"Credits Oliver Gareis"*, and `#303030` structural dividers.
+   - Landmark `<footer class="ticker">` anchoring `FWA Wire — winners' newswire` footer links (`older →`), copy *"Credits Daiki Fujita"*, and `#303030` structural dividers.

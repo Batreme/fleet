@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: aestudio-studio_hozon"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `aestudio-studio_hozon` (**Hozon — Pickle & Fermented Food Recipe App**)
 - **Production URL**: [https://aestudio.studio/hozon](https://aestudio.studio/hozon)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)
 - **Summary**: Find Japanese pickle recipes and fermented food recipes in Hozon for iPhone. Explore quick pickles and nukazuke, track jars and discover...
 - **Total Clean CSS Variables Extracted**: `10` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Hiragino Kaku Gothic ProN`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 324px`, `line-height: 246.24px`, `font-weight: 900`, `letter-spacing: -24.3px`); rule `h1` (`font-size: clamp(100px,22.5vw,345px)`, `line-height: .76`, `letter-spacing: -.075em`, `font-weight: 900`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48.96px`, `line-height: 50.9184px`, `font-weight: 400`, `letter-spacing: -2.2032px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100.8px`, `line-height: 100.8px`, `font-weight: 400`, `letter-spacing: -6.552px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 15px`, `line-height: 1.7`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 400`); rule `nav` (`font-size: 14px`)
 

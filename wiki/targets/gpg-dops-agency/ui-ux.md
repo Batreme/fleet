@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: gpg-dops-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `gpg-dops-agency` (**Garvinpromo**)
 - **Production URL**: [https://gpg.dops.agency/](https://gpg.dops.agency/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#003c97` ink, `#7fa1d5` accent)
 - **Summary**: Welcome to Garvin Promotion Group, a leading provider of rebate management, spiffs, and loyalty incentive programs
-- **Total Clean CSS Variables Extracted**: `43` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `50` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `PPMori`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 65.28px`, `font-weight: 400`, `letter-spacing: -3.2px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 96px`, `line-height: 94.08px`, `font-weight: 400`, `letter-spacing: -4.8px`)
 - **Body Copy**: live computed `body` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 22px`, `line-height: 22px`, `font-weight: 400`)
 
@@ -35,7 +35,7 @@ http_status: 200
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#003c97` | live computed `h2` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#003c97` | live computed `a` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#b0c8eb` | `:before { background-color: #b0c8eb }` |
 | **Interactive Accent / Highlight** | `#7fa1d5` | `.btn--point__c { background-color: #7fa1d5 }` |
 | **Secondary / Muted Copy** | `#898995` | live computed `h1` `color` (`computed_styles.json`) |

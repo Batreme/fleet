@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: mrcresidencesbocaraton-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://mrcresidencesbocaraton.com"
 final_url: "https://mrcresidencesbocaraton.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Mr. C Residences Boca Raton · New Luxury Residences for Sale
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `75`
+- **Recovered Stylesheets**: `13`
 
 ---
 

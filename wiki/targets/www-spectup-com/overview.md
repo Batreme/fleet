@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-spectup-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.spectup.com/"
 final_url: "https://www.spectup.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Private Capital Advisory: Capital Raising and M&A · spectup
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `16`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `45`
+- **Recovered Stylesheets**: `12`
 
 ---
 

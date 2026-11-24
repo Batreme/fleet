@@ -1,13 +1,12 @@
 ---
 title: "Target Overview: suho-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://suho.studio/"
 final_url: "https://suho.studio/"
-status: blocked
-http_status: null
-capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+status: analyzed
+http_status: 200
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,12 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://suho.studio/](https://suho.studio/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: suho-studio
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: Suho Video Editor
+- **Identified Frameworks**: Framer, HTML5 Canvas / WebGL
+- **Recovered Scripts**: `16`
+- **Recovered Stylesheets**: `4`
 
 ---
 

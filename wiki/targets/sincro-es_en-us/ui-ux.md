@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: sincro-es_en-us"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sincro-es_en-us` (**Us - Sincro**)
 - **Production URL**: [https://sincro.es/en/us/](https://sincro.es/en/us/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#081423` ink, `#0040ff` accent)
 - **Summary**: Navigating complexity together
 - **Total Clean CSS Variables Extracted**: `133` (curated live-grounded set below)
@@ -68,7 +68,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top-0> — `sincro-es_en-us`)**:
-   - Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-8de50b09`, `data-swiper-slide-index="0"`, `data-swiper-slide-index="1"`, `data-swiper-slide-index="2"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-category="analytics"`, `data-analytics-type="ga"`, `data-gtmid="G-SCRK6TBT8Q"`, `data-v-8de50b09`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<main.flex-1> — `20 years of being who we say we ar`)**:
    - Landmark `<main class="flex-1 max-w-full">` presenting display lead `20 years of being who we say we are` and copy excerpt *"Navigating complexity together"* over `#ffffff` canvas and `#081423` ink.
 3. **Primary Showcase & Content Grid (<main.max-w-full> — `UNE Standard`)**:

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: ethanwong-photography"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "ethanwong-photography"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 3
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `#1c1813` ink, `#ff0000` accent)"
 ---
@@ -16,34 +21,34 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `
 
 > **Ethan W · Film-Inspired Wedding & Editorial Photographer · Washington DC...** (http://ethanwong.photography) — Documentary wedding, editorial, portrait and commercial photography by Ethan Wong of Ethan W Photography. Film-inspired, vintage-leaning...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ethan W · Film-Inspired Wedding & Editorial Photographer · Washington DC...** (`http://ethanwong.photography`). Documentary wedding, editorial, portrait and commercial photography by Ethan Wong of Ethan W Photography. Film-inspired, vintage-leaning...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `#1c1813` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#efede7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1c1813` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Hanken Grotesk` for display copy (`Ethan W (Ethan Wong), film-inspired `) with `Hanken Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8.64px`, padding `288px`) with `cubic-bezier(.65,0,.35,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Grounded Typographic Hierarchy**: Uses `Hanken Grotesk` across display (`Ethan W (Ethan Wong), film-inspired `) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1360px` container bounds (`gap: 8.64px`, padding `288px`) with `cubic-bezier(.65,0,.35,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
-- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
+- **Master Container Bounds**: `1360px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `288px` lateral canvas padding with `8.64px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`, `2px`, `10px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.64px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1360px`, `gap: 8.64px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `288px` horizontal padding.
 - **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-width:860px)`, `@media (max-width:540px)`, `@media (min-width:541px)and (max-width:860px)`.
 
@@ -98,7 +103,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`).
 - **Section Heading (`H2`)**: observed font-size ladder: `32px`, `16px`, `18px`, `29px`, `var(--lab-quiet)`.
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: clamp(14px,1.05vw,17px)`, `line-height: 1.5`, `font-weight: 600`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`).
 
 ---
@@ -114,6 +119,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `
 - **Selector `.idx-meta`**: `transition: opacity .5s ease` extracted from `ethanwong-photography` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,0,.35,1)`)**: Governs interactive state transitions across `<header.site>` and `<main.idx-main:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Nav / Drawer Probe (`MENU`)**: Triggered visual change (pixel diff `43.195`, captured in `assets/state-nav.webp`); revealed links: Home, 05 INQUIRE, 06 PRICING, 07 ABOUT, 08 SIGN IN, 10 EDITORIAL EXCHANGE.
+- **Hover Physics (`primary_cta` · `01 WEDDINGS WEDDINGS STORIES & GA...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/pricing`) measured as `MPA` in `1349ms`.
 
 ---
 
@@ -130,7 +141,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `
 │ | H1: Ethan W (Ethan Wong), film-inspired documentary w...           | │
 │ | Substrate: #efede7 | Ink: #1c1813 | Accent: #ff0000                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<main.idx-main:nth(2)>) max-w: 1440px               | │
+│ | SHOWCASE GRID (<main.idx-main:nth(2)>) max-w: 1360px               | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | The full collection in one g |  | W e d d i n g s W e d d i n  | | │
 │ | +------------------------------+  +------------------------------+ | │
@@ -172,6 +183,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efede7` canvas, `
    - Landmark `<main class="idx-main">` framing `W e d d i n g s W e d d i n g s` and `Stories & galleries` (*"Stories & galleries"*) with `#f4efe4` surface cards, `#ff0000` accents, and `.idx-backdrop { position:absolute;inset:0;z-index:0;overflow:hidden }`.
 5. **Colophon & Global Directory Footer (<footer.sf> — `http://ethanwong.photography`)**:
    - Landmark `<footer class="sf sf--fixed">` anchoring `Ethan W · Film-Inspired Wedding ` footer links (`Editorial Exchange`), copy *"All visual stories"*, and `#d3cfc9` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `3`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `3`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/pricing`)**: `https://ethanwong.photography/pricing` — H1: `Pricing · Ethan W, photographer for weddings, eng...`, scrollHeight `4555px`, transition `MPA` (`1349ms`)
+- **Detail Route (`/editorials/exchange`)**: `https://ethanwong.photography/editorials/exchange` — H1: `EDITORIAL EXCHANGE 2`, scrollHeight `10040px`, transition `direct` (`1042ms`)
+- **About Route (`/about`)**: `https://ethanwong.photography/about` — H1: `ABOUT`, scrollHeight `12382px`, transition `direct` (`942ms`)
 
 ---
 
@@ -188,8 +208,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#efede7` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1c1813`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#efede7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1c1813` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Hanken Grotesk` for display copy (`Ethan W (Ethan Wong), film-inspired `) with `Hanken Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8.64px`, padding `288px`) with `cubic-bezier(.65,0,.35,1)` easing and Lenis Smooth Scroll (`data-lenis`).
+  - **Grounded Typographic Hierarchy**: Uses `Hanken Grotesk` across display (`Ethan W (Ethan Wong), film-inspired `) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1360px` container bounds (`gap: 8.64px`, padding `288px`) with `cubic-bezier(.65,0,.35,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `ethanwong-photography` in your global stylesheet:
@@ -229,11 +249,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--red-deep`)**: `#8a0f1e` — grounded in `var(--red-deep)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
-- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
+- **Container Max-Width**: `1360px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `288px` lateral canvas padding with `8.64px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.64px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1360px`, `gap: 8.64px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `288px` horizontal padding
 - **Media Queries**: `@media (prefers-reduced-motion:reduce)`, `@media (max-width:860px)`, `@media (max-width:540px)`, `@media (min-width:541px)and (max-width:860px)`
 - **Corner Radii**: `999px`, `50%`, `2px`, `10px`
@@ -244,7 +264,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`)
 - **H2 Section Rule**: observed font-size ladder: `32px`, `16px`, `18px`, `29px`, `var(--lab-quiet)`
-- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: clamp(14px,1.05vw,17px)`, `line-height: 1.5`, `font-weight: 600`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
@@ -254,16 +274,16 @@ Scaffold `ethanwong-photography` (`Ethan W · Film-Inspired Wedding & Editorial 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site> — `ethanwong-photography`)` (`ethanwong-photography`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-width:860px)`, `@media (max-width:540px)`, `@media (min-width:541px)and (max-width:860px)` with `cubic-bezier(.65,0,.35,1)`, `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.55,0,1,.45)` transitions and links `Editorial Exchange`.
 2. **Hero Stage & Focal Lead (<main.idx-main> — `Ethan W (Ethan Wong), film-inspire`)**:
    - DOM & Selectors: Landmark `<main class="idx-main">` presenting display lead `Ethan W (Ethan Wong), film-inspired documentary w...` and copy excerpt *"The full collection in one grid. Any frame opens large."* over `#efede7` canvas and `#1c1813` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#efede7` background with `#1c1813` headline `Ethan W (Ethan Wong), film-inspired documentary w...`.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×872px` mobile) sets `#efede7` background with `#1c1813` headline `Ethan W (Ethan Wong), film-inspired documentary w...`.
 3. **Primary Showcase & Content Grid (<main.idx-main:nth(2)> — `The full collection in one grid. A`)**:
    - DOM & Selectors: Landmark `<main class="idx-main">` rendering section `The full collection in one grid. Any frame opens` with copy *"W e d d i n g s W e d d i n g s"*, asset references (`favicon-32.png`, `favicon-16.png`, `favicon-32-dark.png`, `favicon-16-dark.png`), and grid rule `.idx-wrap { position:relative;min-height:100vh;min-height:100svh;background:0f0e0c }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.idx-main:nth(2)> — `The full collection in one grid. A`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8.64px`) on desktop and Single-column vertical stack at `390px` viewport width with `288px` horizontal padding on mobile.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.idx-main:nth(2)> — `The full collection in one grid. A`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1360px`, `gap: 8.64px`) on desktop and Single-column vertical stack at `390px` viewport width with `288px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<main.idx-main:nth(3)> — `W e d d i n g s W e d d i n g s`)**:
    - DOM & Selectors: Landmark `<main class="idx-main">` framing `W e d d i n g s W e d d i n g s` and `Stories & galleries` (*"Stories & galleries"*) with `#f4efe4` surface cards, `#ff0000` accents, and `.idx-backdrop { position:absolute;inset:0;z-index:0;overflow:hidden }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.idx-main:nth(3)> — `W e d d i n g s W e d d i n g s`)` uses `999px`, `50%`, `2px`, `10px` radii, `#ff0000` highlights, and assets (favicon-32.png, favicon-16.png, favicon-32-dark.png).
 5. **Colophon & Global Directory Footer (<footer.sf> — `http://ethanwong.photography`)**:
    - DOM & Selectors: Landmark `<footer class="sf sf--fixed">` anchoring `Ethan W · Film-Inspired Wedding ` footer links (`Editorial Exchange`), copy *"All visual stories"*, and `#d3cfc9` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sf> — `http://ethanwong.photography`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `288px` lateral canvas padding with `8.64px` grid gap and attributes (data-cursor="always", data-nav, data-cta-ink).
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sf> — `http://ethanwong.photography`)` aligns to `1360px` (non-`@media` desktop container stylesheet rule) with `288px` lateral canvas padding with `8.64px` grid gap and attributes (data-cursor="always", data-nav, data-cta-ink).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"The full collection in one grid. Any frame opens large."*
@@ -285,8 +305,41 @@ Scaffold `ethanwong-photography` (`Ethan W · Film-Inspired Wedding & Editorial 
 - **Selector `.idx-meta`**: `transition: opacity .5s ease` extracted from `ethanwong-photography` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.65,0,.35,1)`)**: Governs interactive state transitions across `<header.site>` and `<main.idx-main:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 3 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: Hero (0%) -> Hero (8%) -> Hero (17%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`MENU`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/pricing` (listing, MPA), `/editorials/exchange` (detail, direct), `/about` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `ethanwong-photography`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`MENU`, diff `43.195`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://ethanwong.photography/pricing` | Pricing · Ethan W, photographer for w... | `4555px` | `MPA` (`1349ms`) | [subpage-01-pricing.webp](assets/subpage-01-pricing.webp) |
+| `2` | `detail` | `https://ethanwong.photography/editorials/exchange` | EDITORIAL EXCHANGE 2 | `10040px` | `direct` (`1042ms`) | [subpage-02-editorials-exchange.webp](assets/subpage-02-editorials-exchange.webp) |
+| `3` | `about` | `https://ethanwong.photography/about` | ABOUT | `12382px` | `direct` (`942ms`) | [subpage-03-about.webp](assets/subpage-03-about.webp) |
+

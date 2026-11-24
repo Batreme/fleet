@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: constellations-icilalune-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://constellations.icilalune.com/"
 final_url: "https://constellations.icilalune.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://constellations.icilalune.com/](https://constellations.icilalune.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
 - **Page Title**: Constellation(s) — Immersive virtual 3D art exhibitions
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `40`
+- **Recovered Stylesheets**: `2`
 
 ---
 

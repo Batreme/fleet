@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-miljofyrtarn-no"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-miljofyrtarn-no` (**Hjem · Miljøfyrtårn**)
 - **Production URL**: [https://www.miljofyrtarn.no/](https://www.miljofyrtarn.no/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×996px`, Mobile `390×940px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#00aceb` accent)
 - **Summary**: Miljøfyrtårn er Norges ledende miljøsertifisering. Kom i gang med sertifisering og miljøledelse i LUMA – et verktøy som gjør arbeidet enk...
 - **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#e6e6e6` | `.bg-grey-20 { background-color: #e6e6e6 }` |
 | **Interactive Accent / Highlight** | `#00aceb` | `stom-button.button-light .icon... { color: #00aceb }` |
-| **Secondary / Muted Copy** | `#141414` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#00aceb` | `stom-button.button-light .icon... { color: #00aceb }` |
 | **Structural Hairline Border** | `#e5e5e5` | `10 { border-color: #e5e5e5 }` |
 
 ---
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.top-bar> — `www-miljofyrtarn-no`)**:
-   - Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-nosnippet`, `data-template="popup"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
+   - Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-dgst`, `data-section="0"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
 2. **Hero Stage & Focal Lead (<section.stage> — `Norges mest brukte miljøsertifiser`)**:
    - Landmark `<section class="stage relative">` presenting display lead `Norges mest brukte miljøsertifisering` and copy excerpt *"Bli Miljøfyrtårn? Prøv vår interaktive veiviser!"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.image-fullscreen> — `Fordi bærekraft er konkurransekraf`)**:

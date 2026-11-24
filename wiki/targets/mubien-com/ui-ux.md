@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: mubien-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: null
 block_reason: "Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at https://mubien.com/ Call log: - navigating to 'https://mubien.com/', waiting until 'domcontentloaded)"

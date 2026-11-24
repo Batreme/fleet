@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: about-centra-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://about.centra.com"
 final_url: "https://about.centra.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Centra? Centra! The definitive guide.
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `51`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `113`
+- **Recovered Stylesheets**: `3`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: 21oaks-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `21oaks-org` (**21Oaks Student Apartments • USC & Williams-Brice**)
 - **Production URL**: [https://21oaks.org/](https://21oaks.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#292929` ink, `#0082f3` accent)
 - **Summary**: Freshly renovated student apartments minutes from Williams-Brice and USC. Modern living with pool, study spaces, and everything within re...
 - **Total Clean CSS Variables Extracted**: `9` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Exposure`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 64.8px`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 66.24px`, `line-height: 76.176px`, `font-weight: 400`, `letter-spacing: -1.3248px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 93.6px`, `line-height: 102.96px`, `font-weight: 400`, `letter-spacing: -1.872px`)
 - **Body Copy**: live computed `body` (`font-size: 14.4px`, `line-height: 14.4px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 18.72px`, `line-height: 18.72px`, `font-weight: 400`, `letter-spacing: -0.1872px`)
 

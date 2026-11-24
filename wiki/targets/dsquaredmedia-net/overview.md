@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: dsquaredmedia-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dsquaredmedia.net"
 final_url: "https://dsquaredmedia.net/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: South Florida Marketing Agency · Branding, Web & AI · Dsquared Media
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `32`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `120`
+- **Recovered Stylesheets**: `41`
 
 ---
 

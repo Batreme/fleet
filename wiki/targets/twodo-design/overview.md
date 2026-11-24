@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: twodo-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://twodo.design"
 final_url: "https://twodo.design/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Two-Do
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `4`
+- **Recovered Stylesheets**: `3`
 
 ---
 

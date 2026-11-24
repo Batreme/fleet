@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: errormade-tech"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://errormade.tech/"
 final_url: "https://errormade.tech/"
 status: analyzed

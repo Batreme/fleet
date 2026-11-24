@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: iginusa-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `iginusa-com` (**IGIN USA · Official Home of IGIN in the United States**)
 - **Production URL**: [https://iginusa.com](https://iginusa.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff0000`)
 - **Summary**: IGIN in the USA. Doodle merch, non-alcoholic Apple Citrus and Apple Peach, and where to find IGIN near you. Official store.
 - **Total Clean CSS Variables Extracted**: `204` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `JetBrains Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 149.76px`, `line-height: 122.803px`, `font-weight: 400`, `letter-spacing: 0.59904px`); rule `,.h1` (`font-size: calc(var(--font-heading-scale...`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86px`, `line-height: 86px`, `font-weight: 400`, `letter-spacing: 0.344px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 150px`, `line-height: 132px`, `font-weight: 400`, `letter-spacing: 0.6px`); rule `,.h2` (`font-size: calc(var(--font-heading-scale...`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 28.8px`, `font-weight: 400`, `letter-spacing: 0.6px`); CSS variables `--font-body-family: Assistant, sans-serif`, `--font-body-style: normal`, `--font-body-weight: 400`; rule `p` (`font-size: 19px`, `line-height: 1.15`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 26.4px`, `font-weight: 300`); CSS variables `--mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace`, `--dp-mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace`; rule `small` (`font-size: 10px`, `letter-spacing: .12em`, `font-weight: 600`)
 
@@ -35,7 +35,7 @@ http_status: 200
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#000000` | live computed `nav` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ececec` | `.igST__bar span { background: #ececec }` |
 | **Interactive Accent / Highlight** | `#ff0000` | `.igin-btn-black:hover { background: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#ff6b8a` | `var(--pink)` in `:root` |

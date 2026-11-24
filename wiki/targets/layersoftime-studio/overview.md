@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: layersoftime-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://layersoftime.studio/"
 final_url: "https://layersoftime.studio/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: LAYERS OF TIME — The show runs on our clock.
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `31`
+- **Recovered Stylesheets**: `7`
 
 ---
 

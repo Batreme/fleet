@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: zeyraglow-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "zeyraglow-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ff0000` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Zeyra Glow · Natural Body Care Products in the UAE** (https://zeyraglow.com/) — Discover natural body care products by Zeyra Glow, made with comfortable, skin-friendly ingredients for simple everyday care. Shop online...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Zeyra Glow · Natural Body Care Products in the UAE** (`https://zeyraglow.com/`). Discover natural body care products by Zeyra Glow, made with comfortable, skin-friendly ingredients for simple everyday care. Shop online...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `TikTok Sans` for display copy (`Body care you'll actually keep using`) with `Outfit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `TikTok Sans` for display copy (`Body care you'll actually keep using`) with `Outfit`.
   - **Calibrated Spatial Grid & Motion**: Combines `1680px` container bounds (`gap: .5rem`, padding `28px`) with `cubic-bezier(.795,-.035,0,1)` easing and Swiper Touch Carousel Engine, Lottie Vector Animation Player.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=3620px` / doc `4520px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1680px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `28px` lateral canvas padding with `.5rem` grid gap.
 - **Border Radius Scale**: `3px`, `4px`, `8px`, `var(--wc-form-border-radius)`.
@@ -45,7 +50,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: .5rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `28px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (min-width:673px)`, `@media screen and (min-width:1040px)`, `@media screen and (min-width:1110px)`, `@media screen and (min-width:1218px)`.
+- **Extracted CSS Media Queries**: `@media (max-width:767px)`, `@media (max-width:991px)`, `@media (max-width:575px)`, `@media (min-width:768px)`.
 
 ---
 
@@ -119,6 +124,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `textarea`**: `transition: all .3s` extracted from `zeyraglow-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.795,-.035,0,1)`)**: Governs interactive state transitions across `<header.elementor>` and `<article.p-card>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Lottie Vector Animation Player, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4520px`, deepest scrollY reached `3620px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Route Transition Architecture**: First internal navigation (`/shop/`) measured as `MPA` in `2073ms`.
 
 ---
 
@@ -168,15 +177,27 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.elementor> — `zeyraglow-com`)**:
-   - Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `merce-page .woocommerce-message .... { float:right }`.
+   - Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `.woocommerce form .form-row { padding:3px;margin:0 0 6px }`.
 2. **Hero Stage & Focal Lead (<section.products> — `Body care you'll actually keep usi`)**:
    - Landmark `<section class="products">` presenting display lead `Body care you'll actually keep using` and copy excerpt *"Taxes, shipping and promos are calculated at checkout."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<article.p-card> — `Glow Nila Body Cream`)**:
-   - Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `.woocommerce-page .col2-set { width:100% }`.
+   - Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `focus::-webkit-input-placeholder { -webkit-transition:opacity .5s .5s ease;transition:opacity .5s .5s ease;... }`.
 4. **Interactive Detail & Feature Matrix (<article.p-card:nth(2)> — `Glow Nila Body Scrub`)**:
-   - Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce-page .col2-set::before { content:" ";display:table }`.
+   - Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce form .form-row label { line-height:2 }`.
 5. **Colophon & Global Directory Footer (<footer.cart-footer> — `https://zeyraglow.com/`)**:
    - Landmark `<footer class="cart-footer cart-footer--empty">` anchoring `Zeyra Glow · Natural Body Care P` footer links (`Our story · Shop`), copy *"A traditional beauty powder with Moroccan roots"*, and `#4d3939` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Body care you'll actually keep using` · sticky/fixed elements: `10`
+- **Step 02** (`y=850px`, `23%`): Active landmark `Some days are quick. Some aren't` · sticky/fixed elements: `10`
+- **Step 03** (`y=1700px`, `47%`): Active landmark `Glow Nila Powder` · sticky/fixed elements: `10`
+- **Step 04** (`y=2550px`, `70%`): Active landmark `Natural ingredients for everyday rituals.` · sticky/fixed elements: `9`
+- **Step 05** (`y=3400px`, `94%`): Active landmark `Footer` · sticky/fixed elements: `8`
+- **Step 06** (`y=3620px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `8`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/shop/`)**: `https://zeyraglow.com/shop/` — H1: `Zeyra Glow · Shop Natural Body Care Products UAE`, scrollHeight `3470px`, transition `MPA` (`2073ms`)
+- **Detail Route (`/product/glow-nila-body-scrub/`)**: `https://zeyraglow.com/product/glow-nila-body-scrub/` — H1: `Glow Nila Body Scrub`, scrollHeight `3264px`, transition `direct` (`3961ms`)
+- **Detail Route (`/product/glow-nila-body-cream/`)**: `https://zeyraglow.com/product/glow-nila-body-cream/` — H1: `Glow Nila Body Cream`, scrollHeight `3214px`, transition `direct` (`7061ms`)
 
 ---
 
@@ -193,7 +214,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `TikTok Sans` for display copy (`Body care you'll actually keep using`) with `Outfit` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `TikTok Sans` for display copy (`Body care you'll actually keep using`) with `Outfit`.
   - **Calibrated Spatial Grid & Motion**: Combines `1680px` container bounds (`gap: .5rem`, padding `28px`) with `cubic-bezier(.795,-.035,0,1)` easing and Swiper Touch Carousel Engine, Lottie Vector Animation Player.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -239,13 +260,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--wc-subtext`)**: `#767676` — grounded in `var(--wc-subtext)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1680px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `28px` lateral canvas padding with `.5rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: .5rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `28px` horizontal padding
-- **Media Queries**: `@media screen and (min-width:673px)`, `@media screen and (min-width:1040px)`, `@media screen and (min-width:1110px)`, `@media screen and (min-width:1218px)`
+- **Media Queries**: `@media (max-width:767px)`, `@media (max-width:991px)`, `@media (max-width:575px)`, `@media (min-width:768px)`
 - **Corner Radii**: `3px`, `4px`, `8px`, `var(--wc-form-border-radius)`
 
 ### 5. Typography & Editorial Scale Contract
@@ -260,16 +281,16 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `zeyraglow-com` (`Zeyra Glow · Natural Body Care Products in the UAE`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.elementor> — `zeyraglow-com`)**:
-   - DOM & Selectors: Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `merce-page .woocommerce-message .... { float:right }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `zeyraglow-com`)` (`zeyraglow-com`) adapts across `@media screen and (min-width:673px)`, `@media screen and (min-width:1040px)`, `@media screen and (min-width:1110px)`, `@media screen and (min-width:1218px)` with `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.22,1,0.36,1)` transitions and links `Our story · Shop`.
+   - DOM & Selectors: Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `.woocommerce form .form-row { padding:3px;margin:0 0 6px }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.elementor> — `zeyraglow-com`)` (`zeyraglow-com`) adapts across `@media (max-width:767px)`, `@media (max-width:991px)`, `@media (max-width:575px)`, `@media (min-width:768px)` with `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.22,1,0.36,1)` transitions and links `Our story · Shop`.
 2. **Hero Stage & Focal Lead (<section.products> — `Body care you'll actually keep usi`)**:
    - DOM & Selectors: Landmark `<section class="products">` presenting display lead `Body care you'll actually keep using` and copy excerpt *"Taxes, shipping and promos are calculated at checkout."* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Body care you'll actually keep using`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `Body care you'll actually keep using`.
 3. **Primary Showcase & Content Grid (<article.p-card> — `Glow Nila Body Cream`)**:
-   - DOM & Selectors: Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `.woocommerce-page .col2-set { width:100% }`.
+   - DOM & Selectors: Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `focus::-webkit-input-placeholder { -webkit-transition:opacity .5s .5s ease;transition:opacity .5s .5s ease;... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.p-card> — `Glow Nila Body Cream`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1680px`, `gap: .5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `28px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.p-card:nth(2)> — `Glow Nila Body Scrub`)**:
-   - DOM & Selectors: Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce-page .col2-set::before { content:" ";display:table }`.
+   - DOM & Selectors: Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce form .form-row label { line-height:2 }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.p-card:nth(2)> — `Glow Nila Body Scrub`)` uses `3px`, `4px`, `8px`, `var(--wc-form-border-radius)` radii, `#ff0000` highlights, and assets (fonts.googleapis.com, embed, woocommerce-layout.css).
 5. **Colophon & Global Directory Footer (<footer.cart-footer> — `https://zeyraglow.com/`)**:
    - DOM & Selectors: Landmark `<footer class="cart-footer cart-footer--empty">` anchoring `Zeyra Glow · Natural Body Care P` footer links (`Our story · Shop`), copy *"A traditional beauty powder with Moroccan roots"*, and `#4d3939` structural dividers.
@@ -284,19 +305,51 @@ Scaffold `zeyraglow-com` (`Zeyra Glow · Natural Body Care Products in the UAE`)
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.58,.3,.005,1)`, `cubic-bezier(0.22,1,0.36,1)`
 - **Extracted Stylesheet Rules (`zeyraglow-com`)**:
-- `merce-page .woocommerce-message .... { float:right }`
-- `.woocommerce-page .col2-set { width:100% }`
-- `.woocommerce-page .col2-set::before { content:" ";display:table }`
-- `.woocommerce-page .col2-set::after { clear:both }`
-- `.woocommerce-page .col2-set .col-1 { float:left;width:48% }`
+- `.woocommerce form .form-row { padding:3px;margin:0 0 6px }`
+- `focus::-webkit-input-placeholder { -webkit-transition:opacity .5s .5s ease;transition:opacity .5s .5s ease;... }`
+- `.woocommerce form .form-row label { line-height:2 }`
+- `woocommerce form .form-row label.... { visibility:hidden }`
+- `.woocommerce-input-wrapper .descr... { background:1e85be;color:fff;border-radius:3px;padding:1em;margin:.5em 0... }`
 - **Per-Selector Transition Rules**:
 - **Selector `aceholder]:focus::-webkit-input-p...`**: `transition: opacity .5s .5s ease` extracted from `zeyraglow-com` stylesheet.
 - **Selector `mages .woocommerce-product-galler...`**: `transition: all cubic-bezier(.795,-.035,0,1) .5s` extracted from `zeyraglow-com` stylesheet.
 - **Selector `textarea`**: `transition: all .3s` extracted from `zeyraglow-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.795,-.035,0,1)`)**: Governs interactive state transitions across `<header.elementor>` and `<article.p-card>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Lottie Vector Animation Player, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4520px` across 6 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Body care you'll actually k... (0%) -> Some days are quick. Some a... (23%) -> Glow Nila Powder (47%) -> Natural ingredients for eve... (70%) -> Footer (94%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/shop/` (listing, MPA), `/product/glow-nila-body-scrub/` (detail, direct), `/product/glow-nila-body-cream/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `zeyraglow-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Body care you'll actually keep using | `10` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `23%` | Some days are quick. Some aren't | `10` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `47%` | Glow Nila Powder | `10` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `70%` | Natural ingredients for everyday rituals. | `9` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `94%` | Footer | `8` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3620px` | `100%` | Footer | `8` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Body care you'll actually keep using | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1511px` | `50%` | Glow Nila Powder | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3022px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://zeyraglow.com/shop/` | Zeyra Glow · Shop Natural Body Care P... | `3470px` | `MPA` (`2073ms`) | [subpage-01-shop.webp](assets/subpage-01-shop.webp) |
+| `2` | `detail` | `https://zeyraglow.com/product/glow-nila-body-scrub/` | Glow Nila Body Scrub | `3264px` | `direct` (`3961ms`) | [subpage-02-product-glow-nila-body-scrub.webp](assets/subpage-02-product-glow-nila-body-scrub.webp) |
+| `3` | `detail` | `https://zeyraglow.com/product/glow-nila-body-cream/` | Glow Nila Body Cream | `3214px` | `direct` (`7061ms`) | [subpage-03-product-glow-nila-body-cream.webp](assets/subpage-03-product-glow-nila-body-cream.webp) |
+

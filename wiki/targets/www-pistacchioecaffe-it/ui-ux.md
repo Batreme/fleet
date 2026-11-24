@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-pistacchioecaffe-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `www-pistacchioecaffe-it` (**Pistacchio & Caffè**)
 - **Production URL**: [http://www.pistacchioecaffe.it](http://www.pistacchioecaffe.it)
 - **Final Redirected URL**: [https://pistacchioecaffe.it/](https://pistacchioecaffe.it/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#302c27` ink, `#ff0000` accent)
 - **Summary**: Scopri il mondo di Francesca, interior designer e stylist. Dal design d'interni allo styling personalizzato, troverai soluzioni creative...
 - **Total Clean CSS Variables Extracted**: `45` (curated live-grounded set below)
@@ -28,7 +28,7 @@ http_status: 200
 - **Hero Display (`H1`)**: rule `h1` (`font-size: 3vw`, `line-height: 1.2`, `font-weight: normal`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 43.2px`, `line-height: 51.84px`, `font-weight: 400`); rule `h2` (`font-size: 2.5vw`)
 - **Body Copy**: live computed `body` (`font-size: 18px`, `line-height: 30px`, `font-weight: 400`); rule `body` (`font-size: 18px`, `line-height: 30px`, `font-weight: normal`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 30px`, `font-weight: 400`); rule `small` (`font-size: 15px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 18px`, `line-height: 30px`, `font-weight: 400`); rule `.label` (`font-size: 17px`, `line-height: 1`, `font-weight: normal`)
 
 ---
 
@@ -75,11 +75,11 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-pistacchioecaffe-it`)**:
-   - Landmark `<header class="site-header">` (`1440x101px`) hosting `Pistacchio & Caffè` navigation (`contattami · 0,00 €`), DOM attributes (`data-cmp-ab="2"`, `data-cmp-info="10"`, `data-cmp-vendor="289"`, `data-cmp-info="2"`), and stylesheet rule `urger.is-active .hamburger-inner:... { background-color: FFFAF0; }`.
+   - Landmark `<header class="site-header">` (`1440x101px`) hosting `Pistacchio & Caffè` navigation (`contattami · 0,00 €`), DOM attributes (`data-cmp-ab="2"`, `data-cmp-info="10"`, `data-cmp-ab="2"`, `data-cmp-info="2"`), and stylesheet rule `urger.is-active .hamburger-inner:... { background-color: FFFAF0; }`.
 2. **Hero Stage & Focal Lead (<article.post-7> — `Benvenuti nel mio mondo!`)**:
    - Landmark `<article class="post-7 page">` presenting display lead `Benvenuti nel mio mondo!` and copy excerpt *"Ciao, sono Francesca, interior designer e stylist. Ascolto, proge"* over `#ffffff` canvas and `#302c27` ink.
 3. **Primary Showcase & Content Grid (<article.page> — `E colore sia.`)**:
-   - Landmark `<article class="post-7 page">` rendering section `E colore sia.` with copy *"Amo disegnare e scrivere, ognuna di queste passioni è entrata pre"*, asset references (`recaptcha__en.js`, `30300652.js`, `core-it.js`, `jquery.min.js`), and grid rule `.hamburger-inner { display: block; top: 50%; margin-top: -1px; }`.
+   - Landmark `<article class="post-7 page">` rendering section `E colore sia.` with copy *"Amo disegnare e scrivere, ognuna di queste passioni è entrata pre"*, asset references (`30300652.js`, `core-it.js`, `recaptcha__en.js`, `jquery.min.js`), and grid rule `.hamburger-inner { display: block; top: 50%; margin-top: -1px; }`.
 4. **Interactive Detail & Feature Matrix (<article.type-page> — `Progetto per te.`)**:
    - Landmark `<article class="post-7 page">` framing `Progetto per te.` and `Ogni luogo ha il suo colore` (*"Potrei definire il mio stile POP_MINIMALE ma non dimentico mai co"*) with `#dddddd` surface cards, `#ff0000` accents, and `.hamburger-inner::after { content: ""; display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `http://www.pistacchioecaffe.it`)**:

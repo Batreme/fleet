@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-norddeutscher-figuralchor-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-norddeutscher-figuralchor-de"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native+wheel
+desktop_keyframes: 7
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c9a85e` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Norddeutscher Figuralchor Hannover — Kammerchor seit 1981** (https://www.norddeutscher-figuralchor.de) — Norddeutscher Figuralchor Hannover — semiprofessioneller Kammerchor seit 1981 unter Jörg Straube. Konzerte, CD-Einspielungen und Mitsinge...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x5796)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Norddeutscher Figuralchor Hannover — Kammerchor seit 1981** (`https://www.norddeutscher-figuralchor.de`). Norddeutscher Figuralchor Hannover — semiprofessioneller Kammerchor seit 1981 unter Jörg Straube. Konzerte, CD-Einspielungen und Mitsinge...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#c9a85e` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c9a85e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Syne` for display copy (`Norddeutscher Figuralchor — Kammerch`) with `Syne` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Syne` across display (`Norddeutscher Figuralchor — Kammerch`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 3.6px`, padding `2vw`) with `cubic-bezier(0.4,0,0.2,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×5796px` (`assets/desktop-journey.webp`, `7` keyframes up to `y=3212px` / doc `4112px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `2vw` lateral canvas padding with `3.6px` grid gap.
 - **Border Radius Scale**: `50%`, `0.25rem`, `16px`, `8px`.
@@ -113,6 +118,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.transition-colors`**: `transition: var(--tw-ease, var(--default-transition-timing-function))` extracted from `www-norddeutscher-figuralchor-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.bg-rose>` and `<section.bg-white:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native+wheel` (max document height `4112px`, deepest scrollY reached `3212px` across `7` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Nav / Drawer Probe (`Navigation öffnen`)**: Triggered visual change (pixel diff `31.337`, captured in `assets/state-nav.webp`); revealed links: Home, Der Chor, Der Dirigent, Instagram, Facebook, KONTAKT@NORDDEUTSCHER....
+- **Route Transition Architecture**: First internal navigation (`/index.html`) measured as `direct` in `1417ms`.
 
 ---
 
@@ -171,6 +181,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="bg-charcoal">` framing `wird Teil von einem.` and `Der Norddeutsche Figuralchor gestaltet seit 1981` (*"Der Norddeutsche Figuralchor gestaltet seit 1981 Konzerte, die Me"*) with `#e6cac7` surface cards, `#c9a85e` accents, and `h6 { font-size: inherit; font-weight: inherit; }`.
 5. **Colophon & Global Directory Footer (<footer.bg-ink> — `https://www.norddeutscher-figuralchor.de`)**:
    - Landmark `<footer class="bg-ink">` anchoring `Norddeutscher Figuralchor Hannov` footer links (`Home · Der Chor · Der Dirigent · Konzerte · CDs`), copy *"// 5 x Echo Klassik // Deutscher Chorwettbewerb // Brahms-We"*, and `#e3e3e3` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `D e r M a ẞ s t a b` · sticky/fixed elements: `1`
+- **Step 02** (`y=1358px`, `42%`): Active landmark `Section @ 42%` · sticky/fixed elements: `3`
+- **Step 03** (`y=2250px`, `70%`): Active landmark `Section @ 70%` · sticky/fixed elements: `1`
+- **Step 04** (`y=2997px`, `93%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 05** (`y=3211px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 06** (`y=3212px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 07** (`y=3212px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/index.html`)**: `https://www.norddeutscher-figuralchor.de/index.html` — H1: `Norddeutscher Figuralchor — Kammerchor aus Hannover`, scrollHeight `4112px`, transition `direct` (`1417ms`)
+- **Other Route (`/chor.html`)**: `https://www.norddeutscher-figuralchor.de/chor.html` — H1: `Der Chor — Norddeutscher Figuralchor`, scrollHeight `5043px`, transition `direct` (`620ms`)
+- **Other Route (`/dirigent.html`)**: `https://www.norddeutscher-figuralchor.de/dirigent.html` — H1: `Der Dirigent — Jörg Straube — Norddeutscher Figur...`, scrollHeight `5819px`, transition `direct` (`405ms`)
 
 ---
 
@@ -187,7 +210,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#c9a85e`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#c9a85e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Syne` for display copy (`Norddeutscher Figuralchor — Kammerch`) with `Syne` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Syne` across display (`Norddeutscher Figuralchor — Kammerch`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 3.6px`, padding `2vw`) with `cubic-bezier(0.4,0,0.2,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +250,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-silver`)**: `#d6d6d6` — grounded in `var(--color-silver)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×5796px` (multi-frame vertical journey filmstrip (5796px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `2vw` lateral canvas padding with `3.6px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 3.6px`)
@@ -252,7 +275,7 @@ Scaffold `www-norddeutscher-figuralchor-de` (`Norddeutscher Figuralchor Hannover
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bg-rose> — `www-norddeutscher-figuralchor-de`)` (`www-norddeutscher-figuralchor-de`) adapts across `@media (width >= 40rem)`, `@media (width >= 48rem)`, `@media (width >= 64rem)`, `@media (width >= 80rem)` with `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.25,0.46,0.45,0.94)`, `cubic-bezier(0.65,0,0.35,1)` transitions and links `Home · Der Chor · Der Dirigent · Konzerte · CDs`.
 2. **Hero Stage & Focal Lead (<section.bg-white> — `Norddeutscher Figuralchor — Kammer`)**:
    - DOM & Selectors: Landmark `<section class="bg-white overflow-hidden">` presenting display lead `Norddeutscher Figuralchor — Kammerchor aus Hannover` and copy excerpt *"Der Maßstab seit 1981"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Norddeutscher Figuralchor — Kammerchor aus Hannover`.
+   - Responsive Contract: Hero stage (`1280×5796px` desktop / `390×872px` mobile) sets `#ffffff` background with `#000000` headline `Norddeutscher Figuralchor — Kammerchor aus Hannover`.
 3. **Primary Showcase & Content Grid (<section.bg-white:nth(2)> — `Der Maßstab seit 1981`)**:
    - DOM & Selectors: Landmark `<section class="bg-white">` rendering section `Der Maßstab seit 1981` with copy *"wird Teil von einem."*, asset references (`favicon-home.svg`, `favicon.ico`, `apple-touch-icon.png`, `PlayfairDisplay-Regular.woff2`), and grid rule `hr { height: 0; color: inherit; border-top-width: 1px; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-white:nth(2)> — `Der Maßstab seit 1981`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 3.6px`) on desktop and Single-column vertical stack at `390px` viewport width with `2vw` horizontal padding on mobile.
@@ -283,8 +306,45 @@ Scaffold `www-norddeutscher-figuralchor-de` (`Norddeutscher Figuralchor Hannover
 - **Selector `.transition-colors`**: `transition: var(--tw-ease, var(--default-transition-timing-function))` extracted from `www-norddeutscher-figuralchor-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.bg-rose>` and `<section.bg-white:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native+wheel` vertical progression up to `4112px` across 7 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: D e r M a ẞ s t a b (0%) -> Section @ 42% (42%) -> Section @ 70% (70%) -> Footer (93%) -> Footer (100%) -> Footer (100%) -> Footer (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Navigation öffnen`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/index.html` (other, direct), `/chor.html` (other, direct), `/dirigent.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-norddeutscher-figuralchor-de`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | D e r M a ẞ s t a b | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `1358px` | `42%` | Section @ 42% | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2250px` | `70%` | Section @ 70% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2997px` | `93%` | Footer | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3211px` | `100%` | Footer | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3212px` | `100%` | Footer | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `3212px` | `100%` | Footer | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | D e r M a ẞ s t a b | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Navigation öffnen`, diff `31.337`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://www.norddeutscher-figuralchor.de/index.html` | Norddeutscher Figuralchor — Kammercho... | `4112px` | `direct` (`1417ms`) | [subpage-01-index-html.webp](assets/subpage-01-index-html.webp) |
+| `2` | `other` | `https://www.norddeutscher-figuralchor.de/chor.html` | Der Chor — Norddeutscher Figuralchor | `5043px` | `direct` (`620ms`) | [subpage-02-chor-html.webp](assets/subpage-02-chor-html.webp) |
+| `3` | `other` | `https://www.norddeutscher-figuralchor.de/dirigent.html` | Der Dirigent — Jörg Straube — Norddeu... | `5819px` | `direct` (`405ms`) | [subpage-03-dirigent-html.webp](assets/subpage-03-dirigent-html.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: glinto-co-kr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "glinto-co-kr"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **Glinto — Creative studio** (https://glinto.co.kr) — Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Glinto — Creative studio** (`https://glinto.co.kr`). Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f131f` primary typography and `#ff5c34` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Pretendard Variable` for display copy (`Everything your brand needs, from on`) with `Pretendard Variable` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Pretendard Variable` across display (`Everything your brand needs, from on`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `105rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8517px` / doc `9417px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `105rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap.
 - **Border Radius Scale**: `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem`.
@@ -124,6 +129,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `.transition-\[clip-path\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `glinto-co-kr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.site-header-wrap>` and `<section.pt-24>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9417px`, deepest scrollY reached `8517px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Media Klairs→`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Theme Toggle Probe (`Switch to dark mode`)**: Toggled body background `rgb(255, 255, 255)` -> `rgb(16, 17, 20)` and ink `rgb(15, 19, 31)` -> `rgb(255, 255, 255)`.
+- **Route Transition Architecture**: First internal navigation (`/en/about`) measured as `SPA` in `1745ms`.
 
 ---
 
@@ -179,9 +190,23 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 3. **Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)**:
    - Landmark `<section class="pt-24">` rendering section `Solutions shaped by how your brand runs` with copy *"Engineering Build it"*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `3b84er6uv62xn.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)**:
-   - Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`.
+   - Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `host { --header-fill:0;--px-x:80%;--px-y:0% }`.
 5. **Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)**:
    - Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Start small with the one service you need right now."*, and `#626880` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Media` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `10%`): Active landmark `Everything your brand needs, from one team` · sticky/fixed elements: `5`
+- **Step 03** (`y=2550px`, `30%`): Active landmark `Engineering` · sticky/fixed elements: `4`
+- **Step 04** (`y=4250px`, `50%`): Active landmark `BX` · sticky/fixed elements: `4`
+- **Step 05** (`y=5100px`, `60%`): Active landmark `Solutions shaped by how your brand runs` · sticky/fixed elements: `3`
+- **Step 06** (`y=6800px`, `80%`): Active landmark `Experience with brands across industries` · sticky/fixed elements: `2`
+- **Step 07** (`y=8500px`, `100%`): Active landmark `BX` · sticky/fixed elements: `2`
+- **Step 08** (`y=8517px`, `100%`): Active landmark `BX` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/en/about`)**: `https://glinto.co.kr/en/about` — H1: `Creative studio for Identity · Visuals · and Code`, scrollHeight `14531px`, transition `SPA` (`1745ms`)
+- **Detail Route (`/en/services`)**: `https://glinto.co.kr/en/services` — H1: `Glinto Services`, scrollHeight `8511px`, transition `direct` (`861ms`)
+- **Detail Route (`/en/works`)**: `https://glinto.co.kr/en/works` — H1: `Works`, scrollHeight `3591px`, transition `direct` (`743ms`)
 
 ---
 
@@ -198,7 +223,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0f131f`, **Accent / Highlight**: `#ff5c34`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f131f` primary typography and `#ff5c34` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Pretendard Variable` for display copy (`Everything your brand needs, from on`) with `Pretendard Variable` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Pretendard Variable` across display (`Everything your brand needs, from on`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `105rem` container bounds (`gap: var(--spacing-1)`, padding `var(--spacing-1)`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -249,8 +274,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--neutral-500`)**: `#8f8177` — grounded in `var(--neutral-500)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `105rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing-1)` lateral canvas padding with `var(--spacing-1)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105rem`, `gap: var(--spacing-1)`)
@@ -274,12 +299,12 @@ Scaffold `glinto-co-kr` (`Glinto — Creative studio`) with these exact structur
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header-wrap> — `glinto-co-kr`)` (`glinto-co-kr`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `About · Services · Glinto.dev · Works · Contact`.
 2. **Hero Stage & Focal Lead (<section.antialiased> — `Everything your brand needs, from `)**:
    - DOM & Selectors: Landmark `<section class="antialiased">` presenting display lead `Everything your brand needs, from one team` and copy excerpt *"Creative studio for identity, visuals, and code."* over `#ffffff` canvas and `#0f131f` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0f131f` headline `Everything your brand needs, from one team`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#0f131f` headline `Everything your brand needs, from one team`.
 3. **Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)**:
    - DOM & Selectors: Landmark `<section class="pt-24">` rendering section `Solutions shaped by how your brand runs` with copy *"Engineering Build it"*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `3b84er6uv62xn.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105rem`, `gap: var(--spacing-1)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-1)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)**:
-   - DOM & Selectors: Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`.
+   - DOM & Selectors: Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `host { --header-fill:0;--px-x:80%;--px-y:0% }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)` uses `.25rem`, `var(--pixel-radius)`, `.5rem`, `.75rem` radii, `#ff5c34` highlights, and assets (2f7d2945a32bc936-s.p.0q9pvfn3wr_3..., 5c285b27cdda1fe8-s.p.0lsanbtneewq..., 0k1f2nt08p6_n.css).
 5. **Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)**:
    - DOM & Selectors: Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Start small with the one service you need right now."*, and `#626880` structural dividers.
@@ -296,17 +321,51 @@ Scaffold `glinto-co-kr` (`Glinto — Creative studio`) with these exact structur
 - **Extracted Stylesheet Rules (`glinto-co-kr`)**:
 - `sans_efc253b3-module__w1i8Da__cla... { font-family:DM Sans,DM Sans Fallback;font-style:normal }`
 - `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`
-- `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`
-- `mono_dee0ec74-module__m2KSdq__cla... { font-family:JetBrains Mono,JetBrains Mono Fallback;font-style:normal }`
-- `rbit_fbf1de06-module__6Zwo7q__cla... { font-family:Orbit,Orbit Fallback;font-style:normal;font-weight:400 }`
+- `host { --header-fill:0;--px-x:80%;--px-y:0% }`
+- `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
+- `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`
 - **Per-Selector Transition Rules**:
 - **Selector `layer theme`**: `transition: .15s` extracted from `glinto-co-kr` stylesheet.
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `glinto-co-kr` stylesheet.
 - **Selector `.transition-\[clip-path\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `glinto-co-kr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.site-header-wrap>` and `<section.pt-24>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9417px` across 8 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Media (0%) -> Everything your brand needs... (10%) -> Engineering (30%) -> BX (50%) -> Solutions shaped by how you... (60%) -> Experience with brands acro... (80%) -> BX (100%) -> BX (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/en/about` (detail, SPA), `/en/services` (detail, direct), `/en/works` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `glinto-co-kr`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Media | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | Everything your brand needs, from one team | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `30%` | Engineering | `4` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `50%` | BX | `4` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `60%` | Solutions shaped by how your brand runs | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `6800px` | `80%` | Experience with brands across industries | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `8500px` | `100%` | BX | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8517px` | `100%` | BX | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | #services | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2914px` | `50%` | Engineering | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5828px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://glinto.co.kr/en/about` | Creative studio for Identity · Visual... | `14531px` | `SPA` (`1745ms`) | [subpage-01-en-about.webp](assets/subpage-01-en-about.webp) |
+| `2` | `detail` | `https://glinto.co.kr/en/services` | Glinto Services | `8511px` | `direct` (`861ms`) | [subpage-02-en-services.webp](assets/subpage-02-en-services.webp) |
+| `3` | `detail` | `https://glinto.co.kr/en/works` | Works | `3591px` | `direct` (`743ms`) | [subpage-03-en-works.webp](assets/subpage-03-en-works.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-pistacchioecaffe-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://www.pistacchioecaffe.it"
 final_url: "https://pistacchioecaffe.it/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Pistacchio & Caffè
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `47`
-- **Recovered Stylesheets**: `19`
+- **Recovered Scripts**: `185`
+- **Recovered Stylesheets**: `54`
 
 ---
 

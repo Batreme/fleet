@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: zeyraglow-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://zeyraglow.com/"
 final_url: "https://zeyraglow.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Zeyra Glow · Natural Body Care Products in the UAE
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `50`
-- **Recovered Stylesheets**: `35`
+- **Recovered Scripts**: `278`
+- **Recovered Stylesheets**: `68`
 
 ---
 
