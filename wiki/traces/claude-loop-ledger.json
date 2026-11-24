@@ -141,8 +141,33 @@
         "wireframe": 4,
         "generability": 5
       },
-      "notes": "Verified C1 mid-scroll wheel fallback, C2 scroll-coverage check in evaluate_batch.py/verify_visual_catalog.py, C4 real URL paths in blueprints, C6 stub subpage filtering, C9 SKIP_QUERY_RE, 0 .py files and 0 PNGs in fleet, 435/435 live at 25.0/25.0, 140/140 blocked C15-clean, unittest 17/17 OK. Follow-up backlog notes C13-C14 logged; C15-C16 nits resolved before PR."
+      "findings": [
+        "C13 [should, follow-up] ~33 scroll-locked/inner-container tall pages remained shallow (<60% coverage) even after wheel fallback; surfaced as [WARN] by C2",
+        "C14 [should, follow-up] Optional idle-CPU --retry-extended pass on 75 capture-incomplete targets to recover additional previously-live sites",
+        "C15 [nit, resolved] Synced UI_EVALS_DASHBOARD.md reviewer status row with Round 12 verdict",
+        "C16 [nit, resolved] Removed 34 stale raw/*/behavior.json files on blocked targets and added unlink() on blocked path"
+      ],
+      "notes": "Verified C1 mid-scroll wheel fallback, C2 scroll-coverage check in evaluate_batch.py/verify_visual_catalog.py, C4 real URL paths in blueprints, C6 stub subpage filtering, C9 SKIP_QUERY_RE, 0 .py files and 0 PNGs in fleet, 435/435 live at 25.0/25.0, 140/140 blocked C15-clean, unittest 17/17 OK."
+    },
+    {
+      "round": 13,
+      "agent": "claude-pr-reviewer",
+      "scope": "Pull Request Code Review Round 1 (Batreme/reverse-harness#3 & Batreme/fleet#4)",
+      "verdict": "APPROVE",
+      "score": "21/25",
+      "findings": [
+        "P1 [should, fixed] Updated wiki/INDEX.md claude-loop-ledger summary to Rounds 1-13",
+        "P2 [should, fixed] Added v2-adapted low-entropy warning checks in evaluate_batch.py and verify_visual_catalog.py + documented filmstrip gate in dashboard",
+        "P3 [should, fixed] Surfaced warning on corrupt behavior.json instead of silent except pass",
+        "P4 [should, fixed] Recorded C13-C16 explicitly in Round 12 ledger entry and added Round 13",
+        "P5 [should, fixed] Surfaced shallow scroll-coverage warning count explicitly in UI_EVALS_DASHBOARD.md",
+        "P6 [nit, fixed] Declared pillow>=10.0.0 in pyproject.toml dependencies",
+        "P7 [nit, deferred] Hardcoded paths in untouched legacy ui_gallery_server.py / rebuild_batch1_grounded.py deferred to follow-up PR",
+        "P8 [nit, fixed] Anchored FORBIDDEN interactive-probe regex with \\b word boundaries",
+        "P9 [nit, fixed] Closed any extra context.pages popup tabs opened during first-route click probe"
+      ],
+      "notes": "0 blockers; P1-P6 and P8-P9 fixed in follow-up commit, P7 deferred with written explanation on PR #3."
     }
   ],
-  "current_status": "VERDICT: APPROVE (22/25 — Token 5, Layout 4, Motion 4, Wireframe 4, Generability 5; Round 12 behavioral_journey_v2 claude-loop Complete: 435/435 live at 25.0/25.0, 65 site-blocked, 75 capture-incomplete [140/140 clean], 0 legacy PNGs, 0 specimens)"
+  "current_status": "VERDICT: APPROVE (Round 12: 22/25 · Round 13 PR Review: 21/25, P1-P6/P8-P9 fixed; 435/435 live at 25.0/25.0, 65 site-blocked, 75 capture-incomplete [140/140 clean], 0 legacy PNGs, 0 specimens)"
 }

@@ -23,7 +23,7 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 ### 📊 Dashboards & Execution Traces (`wiki/`)
 - [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`435/435` live `behavioral_journey_v2` targets at `25.0/25.0`, `0` synthetic specimens, `0` legacy PNGs, `65` `site-blocked` WAF/HTTP/dead targets + `75` `capture-incomplete` preloader/WebGPU/timeout targets = `140` `status: blocked` excluded cleanly per `C1`/`C15`), live top-to-bottom WebP (`q=82`) desktop & mobile journey filmstrips, subpage crawls, and `claude-loop` audit status.
 - [round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) — Complete 58-round live-recrawl execution traces and `C1`–`C15` verification ledgers.
-- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across Rounds 1–7 (`claude-sonnet-5-5-high`) and Round 8 Takeover Live-Recrawl (pending `claude-takeover-reviewer`).
+- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across Rounds 1–13 (`claude-sonnet-5-5-high`), including Round 12 `behavioral_journey_v2` `VERDICT: APPROVE` (`22/25`) and Round 13 PR Code Review (`Batreme/reverse-harness#3` & `Batreme/fleet#4`).
 
 ---
 
