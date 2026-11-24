@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-nettiesbees-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.nettiesbees.com/"
 final_url: "https://www.nettiesbees.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Raw Local Honey in Rochester, MA · Nettie's Bees
 - **Identified Frameworks**: Webflow, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `3`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `12`
+- **Recovered Stylesheets**: `5`
 
 ---
 

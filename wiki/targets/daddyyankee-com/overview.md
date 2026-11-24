@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: daddyyankee-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://daddyyankee.com/"
 final_url: "https://daddyyankee.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://daddyyankee.com/](https://daddyyankee.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Daddy Yankee · Official Website
-- **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `19`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: daddyyankee-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `6`
 - **Recovered Stylesheets**: `2`
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: 21oaks-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://21oaks.org/"
 final_url: "https://21oaks.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: 21Oaks Student Apartments • USC & Williams-Brice
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `34`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `141`
+- **Recovered Stylesheets**: `12`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: rubenwalma-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `rubenwalma-nl` (**Ruben Walma – Filmmaker & videoproductie Groningen**)
 - **Production URL**: [https://rubenwalma.nl/](https://rubenwalma.nl/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#0000ee`)
 - **Summary**: Filmmaker uit Groningen voor aftermovies, campagnes en creatieve videoproducties. Dynamische video’s met tempo, sfeer en een eigen stijl.
 - **Total Clean CSS Variables Extracted**: `58` (curated live-grounded set below)

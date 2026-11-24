@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-aaronbrimhall-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-aaronbrimhall-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 3
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#fe019a`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 
 > **Aaron Brimhall · Action & Automotive Photographer** (https://www.aaronbrimhall.com/) — Action and automotive photography by Aaron Brimhall: dynamic compositions, high-octane shoots and globe-trotting adventures. Fun fuels cr...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Aaron Brimhall · Action & Automotive Photographer** (`https://www.aaronbrimhall.com/`). Action and automotive photography by Aaron Brimhall: dynamic compositions, high-octane shoots and globe-trotting adventures. Fun fuels cr...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#fe019a`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#101010` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#fe019a` accents.
@@ -34,10 +41,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=1700px` / doc `6239px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `0%`.
@@ -55,7 +60,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#101010` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#222222` | `.w-slider-nav-invert>div.w-active { background-color: #222222 }` |
 | **Interactive Accent / Highlight** | `#fe019a` | `.ab-ab-cta-arrow { color: #fe019a }` |
 | **Secondary / Muted Copy** | `#333333` | live computed `nav` `color` (`computed_styles.json`) |
@@ -91,8 +96,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 - **Technical / Metadata Stack**: `IBM Plex Mono`.
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
-- **Hero Display (`H1`)**: observed font-size ladder: `100px`, `38px`, `14px`, `11px`, `2em`.
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100px`, `line-height: 95px`, `font-weight: 200`, `letter-spacing: 1px`).
+- **Hero Display (`H1`)**: observed font-size ladder: `144px`, `38px`, `14px`, `11px`, `2em`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 200`, `letter-spacing: -1.44px`).
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `.paragraph` (`letter-spacing: .01em`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`).
 
@@ -109,6 +114,10 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-aaronbrimhall-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<nav.ab-cs-socials>` and `<section.hero-section_wrapper>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6239px`, deepest scrollY reached `1700px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/projects/bmw`) measured as `direct` in `3798ms`.
 
 ---
 
@@ -165,8 +174,17 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#101010` / `#
    - Landmark `<section class="hero-section_wrapper">` rendering section `Featured Work & Interactive Showcase` with copy *"SIGNAL LOST — TRY AGAIN"*, asset references (`cdn.prod.website-files.com`, `aaron-brimhall-site-09-25-f01e7c4...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.gallery_section> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="gallery_section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"I M A G E G E N E R A T O R →"*) with `#222222` surface cards, `#fe019a` accents, and `video { vertical-align:baseline;display:inline-block }`.
-5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n6-active> — `https://www.aaronbrimhall.com/`)**:
-   - Landmark `<footer class="wf-ibmplexmono-n6-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n7-active> — `https://www.aaronbrimhall.com/`)**:
+   - Landmark `<footer class="wf-ibmplexmono-n7-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `8`
+- **Step 02** (`y=850px`, `16%`): Active landmark `Section @ 16%` · sticky/fixed elements: `9`
+- **Step 03** (`y=1700px`, `32%`): Active landmark `#grain` · sticky/fixed elements: `8`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/projects/bmw`)**: `https://www.aaronbrimhall.com/projects/bmw` — H1: `BMW BMW`, scrollHeight `10650px`, transition `direct` (`3798ms`)
+- **About Route (`/about`)**: `https://www.aaronbrimhall.com/about` — H1: `AARON BRIMHALL`, scrollHeight `3725px`, transition `direct` (`1262ms`)
+- **Detail Route (`/projects/aston-martin`)**: `https://www.aaronbrimhall.com/projects/aston-martin` — H1: `ASTON MARTIN ASTON MARTIN`, scrollHeight `14029px`, transition `direct` (`2464ms`)
 
 ---
 
@@ -212,15 +230,15 @@ Declare and consume these exact custom properties extracted from `www-aaronbrimh
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#101010` — grounded in live computed `body` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#ffffff` — grounded in live computed `button` `color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `h2` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#222222` — grounded in `.w-slider-nav-invert>div.w-active { background-color: #222222 }`
 - **Interactive Accent / Highlight**: `#fe019a` — grounded in `.ab-ab-cta-arrow { color: #fe019a }`
 - **Secondary / Muted Copy**: `#333333` — grounded in live computed `nav` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#3898ec` — grounded in `.w-select:focus { border-color: #3898ec }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -232,8 +250,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Display Font Stack**: `Inter Variablefont Opsz Wght`
 - **Body Font Stack**: `IBM Plex Mono`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
-- **H1 Display Rule**: observed font-size ladder: `100px`, `38px`, `14px`, `11px`, `2em`
-- **H2 Section Rule**: live computed `h2` (`font-size: 100px`, `line-height: 95px`, `font-weight: 200`, `letter-spacing: 1px`)
+- **H1 Display Rule**: observed font-size ladder: `144px`, `38px`, `14px`, `11px`, `2em`
+- **H2 Section Rule**: live computed `h2` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 200`, `letter-spacing: -1.44px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`); rule `.paragraph` (`letter-spacing: .01em`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
 
@@ -244,16 +262,16 @@ Scaffold `www-aaronbrimhall-com` (`Aaron Brimhall · Action & Automotive Photogr
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.ab-cs-socials> — `www-aaronbrimhall-com`)` (`www-aaronbrimhall-com`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(0.625,0.05,0,1)`, `cubic-bezier(0.19,1,0.22,1)` transitions and links `INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`.
 2. **Hero Stage & Focal Lead (<section.hero_section> — `Aaron Brimhall · Action & Automoti`)**:
    - DOM & Selectors: Landmark `<section class="hero_section ab-hx-short">` presenting display lead `Aaron Brimhall · Action & Automotive Photographe` and copy excerpt *"TRANSMISSION RECEIVED"* over `#101010` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#101010` background with `#ffffff` headline `Aaron Brimhall · Action & Automotive Photographe`.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×2616px` mobile) sets `#101010` background with `#ffffff` headline `Aaron Brimhall · Action & Automotive Photographe`.
 3. **Primary Showcase & Content Grid (<section.hero-section_wrapper> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<section class="hero-section_wrapper">` rendering section `Featured Work & Interactive Showcase` with copy *"SIGNAL LOST — TRY AGAIN"*, asset references (`cdn.prod.website-files.com`, `aaron-brimhall-site-09-25-f01e7c4...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `summary { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hero-section_wrapper> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.gallery_section> — `Technical Architecture & Narrative`)**:
    - DOM & Selectors: Landmark `<section class="gallery_section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"I M A G E G E N E R A T O R →"*) with `#222222` surface cards, `#fe019a` accents, and `video { vertical-align:baseline;display:inline-block }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.gallery_section> — `Technical Architecture & Narrative`)` uses `3px`, `100%`, `50%`, `0%` radii, `#fe019a` highlights, and assets (cdn.prod.website-files.com, aaron-brimhall-site-09-25-f01e7c4..., fonts.googleapis.com).
-5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n6-active> — `https://www.aaronbrimhall.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="wf-ibmplexmono-n6-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n6-active> — `https://www.aaronbrimhall.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.aaronbrimhall.com", data-wf-page="6941d6f273b44a2836ceae0d", data-wf-site="6941d6f273b44a2836ceae16").
+5. **Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n7-active> — `https://www.aaronbrimhall.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="wf-ibmplexmono-n7-active">` anchoring `Aaron Brimhall · Action & Automo` footer links (`INSTAGRAM ↗ · TIKTOK ↗ · BEHANCE ↗ · YOUTUBE ↗`), copy *"I M A G E G E N E R A T O R"*, and `#3898ec` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.wf-ibmplexmono-n7-active> — `https://www.aaronbrimhall.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="www.aaronbrimhall.com", data-wf-page="6941d6f273b44a2836ceae0d", data-wf-site="6941d6f273b44a2836ceae16").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"TRANSMISSION RECEIVED"*
@@ -275,8 +293,37 @@ Scaffold `www-aaronbrimhall-com` (`Aaron Brimhall · Action & Automotive Photogr
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-aaronbrimhall-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<nav.ab-cs-socials>` and `<section.hero-section_wrapper>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6239px` across 3 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%) -> Section @ 16% (16%) -> #grain (32%).
+- **Multi-Page Routes**: Scaffold internal routes `/projects/bmw` (detail, direct), `/about` (about, direct), `/projects/aston-martin` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-aaronbrimhall-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `8` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `16%` | Section @ 16% | `9` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `32%` | #grain | `8` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2354px` | `50%` | THOSE WHO GET IT | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `4708px` | `100%` | LET’S MAKE SOMETHING | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.aaronbrimhall.com/projects/bmw` | BMW BMW | `10650px` | `direct` (`3798ms`) | [subpage-01-projects-bmw.webp](assets/subpage-01-projects-bmw.webp) |
+| `2` | `about` | `https://www.aaronbrimhall.com/about` | AARON BRIMHALL | `3725px` | `direct` (`1262ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://www.aaronbrimhall.com/projects/aston-martin` | ASTON MARTIN ASTON MARTIN | `14029px` | `direct` (`2464ms`) | [subpage-03-projects-aston-martin.webp](assets/subpage-03-projects-aston-martin.webp) |
+

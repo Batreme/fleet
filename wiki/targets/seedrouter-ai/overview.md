@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: seedrouter-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://seedrouter.ai"
 final_url: "https://seedrouter.ai/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: SeedRouter · One API for Image, Video, LLM and Audio Models
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `38`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `124`
+- **Recovered Stylesheets**: `15`
 
 ---
 

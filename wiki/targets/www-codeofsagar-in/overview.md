@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-codeofsagar-in"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.codeofsagar.in/"
 final_url: "https://codeofsagar.in/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Sagar K. Ghosh — Full-stack Developer & Designer
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `40`
+- **Recovered Scripts**: `39`
 - **Recovered Stylesheets**: `0`
 
 ---

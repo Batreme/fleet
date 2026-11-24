@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-fieldrank-run"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-fieldrank-run` (**FieldRank: Trail and ultra rankings**)
 - **Production URL**: [https://www.fieldrank.run](https://www.fieldrank.run)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×1266px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1d1a` ink, `#f1efea` accent)
 - **Summary**: A season ranking of trail and ultra runners, built from race results. Overall and by distance.
 - **Total Clean CSS Variables Extracted**: `89` (curated live-grounded set below)

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: tour-kyrgyzstan-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `tour-kyrgyzstan-com` (**Tour Kyrgyzstan — Central Asia, unmapped**)
 - **Production URL**: [https://tour-kyrgyzstan.com/](https://tour-kyrgyzstan.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#dc2f02` accent)
 - **Summary**: Discover authentic Kyrgyzstan tours. Mountain trekking, nomadic culture, and professional video production services.
 - **Total Clean CSS Variables Extracted**: `6` (curated live-grounded set below)

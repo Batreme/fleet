@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-schlosshotel-kitzbuehel-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-schlosshotel-kitzbuehel-com_en` (**Schlosshotel Kitzbühel – a premium experience**)
 - **Production URL**: [https://www.schlosshotel-kitzbuehel.com/en](https://www.schlosshotel-kitzbuehel.com/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#300316` canvas, `#ffffff` ink, `#42041e` accent)
 - **Summary**: A beacon of elegance, exclusivity, and warmth – Schlosshotel Kitzbühel is a truly unparalleled retreat.
-- **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `65` (curated live-grounded set below)
 
 ---
 
@@ -39,7 +39,9 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#000000` | live computed `button` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#42041e` | `.branDNAmic .DNA-button--cta-bo... { color: #42041e }` |
 | **Secondary / Muted Copy** | `#999999` | live computed `button` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#999999` | `blockquote { border: #999999 }` |
+| **Structural Hairline Border** | `#2865ad` | `var(--BN-dynform--clr-button-border)` in `:root` |
+| **Variable Token (`--BN-dynform--clr-scrollbar-thumb`)** | `#c4c4c4` | `var(--BN-dynform--clr-scrollbar-thumb)` in `:root` |
+| **Variable Token (`--BN-dynform--clr-selection-text`)** | `#0b0b0b` | `var(--BN-dynform--clr-selection-text)` in `:root` |
 
 ---
 
@@ -50,18 +52,18 @@ http_status: 200
 | `--dna-tldr-text` | `#FFFFFF` | Typography Ink Token |
 | `--dna-tldr-fs-desktop` | `2.1em` | Dimension / Scale Token |
 | `--dna-tldr-fs-mobile` | `1.6em` | Dimension / Scale Token |
-| `--track-width` | `52px` | Layout / Spatial Grid Token |
-| `--track-height` | `28px` | Layout / Spatial Grid Token |
-| `--thumb-size` | `23px` | Layout / Spatial Grid Token |
-| `--thumb-gap` | `3px` | Layout / Spatial Grid Token |
-| `--track-radius` | `999px` | Elevation / Border Token |
-| `--vh` | `9px` | Layout / Spatial Grid Token |
-| `--bl-size` | `40px` | Layout / Spatial Grid Token |
-| `--bl-desktop-top` | `auto` | Design System Custom Token |
-| `--bl-desktop-bottom` | `1.5em` | Dimension / Scale Token |
-| `--bl-desktop-left` | `1.5em` | Dimension / Scale Token |
-| `--bl-desktop-right` | `auto` | Design System Custom Token |
-| `--bl-desktop-box-left` | `1.5em` | Dimension / Scale Token |
+| `--BN-dynform--ff` | `inherit` | Design System Custom Token |
+| `--BN-dynform--fw-bold` | `700` | Design System Custom Token |
+| `--BN-dynform--fw-light` | `300` | Canvas / Surface Token |
+| `--BN-dynform--fw-regular` | `400` | Design System Custom Token |
+| `--BN-dynform--clr-scrollbar-thumb` | `#C4C4C4` | Color / Atmospheric Token |
+| `--BN-dynform--clr-scrollbar-track` | `transparent` | Design System Custom Token |
+| `--BN-dynform--clr-selection-bg` | `#C4C4C4` | Canvas / Surface Token |
+| `--BN-dynform--clr-selection-text` | `#0B0B0B` | Typography Ink Token |
+| `--BN-dynform--clr-form-bg` | `#ffffff` | Canvas / Surface Token |
+| `--BN-dynform--clr-button-bg` | `#2865AD` | Canvas / Surface Token |
+| `--BN-dynform--clr-button-border` | `#2865AD` | Elevation / Border Token |
+| `--BN-dynform--clr-button-text` | `#ffffff` | Typography Ink Token |
 
 ---
 
@@ -75,4 +77,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.MOD-Text> — `Welcome to the threshold of the ex`)**:
    - Landmark `<section class="MOD-Text DNA-module">` framing `Welcome to the threshold of the extraordinary` and `For people of refined taste. For you.` (*"Welcome to the threshold of the extraordinary"*) with `#000000` surface cards, `#42041e` accents, and `body { font-family:Arial,sans-serif;font-size:12px }`.
 5. **Colophon & Global Directory Footer (<footer.SECT-Footer> — `https://www.schlosshotel-kitzbuehel.com/en`)**:
-   - Landmark `<footer class="SECT-Footer DNA-section">` anchoring `Schlosshotel Kitzbühel – a premi` footer links (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), copy *"No flashy façade. No hollow shine. Instead: real stone benea"*, and `#999999` structural dividers.
+   - Landmark `<footer class="SECT-Footer DNA-section">` anchoring `Schlosshotel Kitzbühel – a premi` footer links (`Book · Enquire · Spa · Rooms and Suites · Meetings & Events`), copy *"No flashy façade. No hollow shine. Instead: real stone benea"*, and `#2865ad` structural dividers.

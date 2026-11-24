@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: equitifyasset-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `equitifyasset-com` (**EquitiFy Assets · Home**)
 - **Production URL**: [https://equitifyasset.com/](https://equitifyasset.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fbfbfb` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: We source off-market commercial property, run the acquisition end to end, and hand you 100% ownership. No syndicates, no partners.
 - **Total Clean CSS Variables Extracted**: `96` (curated live-grounded set below)
@@ -75,13 +75,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.lenis> — `equitifyasset-com`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `EquitiFy Assets · Home` navigation (`Home · How We Work · Properties · about us · Contact Us`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `html.lenis body { height:auto }`.
-2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `100%`)**:
-   - Landmark `<div class="lenis-autoToggle">` presenting display lead `100%` and copy excerpt *"EquitiFy Assets sources off-market commercial properties built ar"* over `#fbfbfb` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<div.framer-ebH8S> — `Tax Benefits`)**:
-   - Landmark `<div class="framer-ebH8S">` rendering section `Tax Benefits` with copy *"We run the deal end-to-end. You keep 100%."*, asset references (`suGqY6sVqYrEl8vVN4Ar3ufRvmw.png`, `p8gmopxLkGo6Ily14ZQSTHPOFo0.png`, `3TkAWwL2xbK4k3fwlVTZWqigw.png`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-7dSme> — `W h e r e C a p i t a l B e c o m `)**:
-   - Landmark `<div class="framer-7dSme">` framing `W h e r e C a p i t a l B e c o m e s O w n e r s...` and `Exclusive Access` (*"The best properties never reach a listing. Ours come through an o"*) with `#c83e07` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+1. **Brand Header & Navigation Bar (<header.framer-ebH8S> — `equitifyasset-com`)**:
+   - Landmark `<header class="framer-ebH8S">` (`1440px`) hosting `EquitiFy Assets · Home` navigation (`Home · How We Work · Properties · about us · Contact Us`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `html.lenis body { height:auto }`.
+2. **Hero Stage & Focal Lead (<div.framer-7dSme> — `100%`)**:
+   - Landmark `<div class="framer-7dSme">` presenting display lead `100%` and copy excerpt *"EquitiFy Assets sources off-market commercial properties built ar"* over `#fbfbfb` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.framer-b5Z7g> — `Tax Benefits`)**:
+   - Landmark `<div class="framer-b5Z7g">` rendering section `Tax Benefits` with copy *"We run the deal end-to-end. You keep 100%."*, asset references (`suGqY6sVqYrEl8vVN4Ar3ufRvmw.png`, `p8gmopxLkGo6Ily14ZQSTHPOFo0.png`, `3TkAWwL2xbK4k3fwlVTZWqigw.png`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-4qNhg> — `W h e r e C a p i t a l B e c o m `)**:
+   - Landmark `<div class="framer-4qNhg">` framing `W h e r e C a p i t a l B e c o m e s O w n e r s...` and `Exclusive Access` (*"The best properties never reach a listing. Ours come through an o"*) with `#c83e07` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
 5. **Colophon & Global Directory Footer (<footer.framer-UGi5s> — `https://equitifyasset.com/`)**:
    - Landmark `<footer class="framer-UGi5s framer-m1Hmn">` anchoring `EquitiFy Assets · Home` footer links (`Home · How We Work · Properties · about us · Contact Us`), copy *"We buy the same properties we bring to you, in the same mark"*, and `#e2e2e2` structural dividers.

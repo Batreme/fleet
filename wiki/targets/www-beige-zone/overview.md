@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-beige-zone"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.beige.zone"
 final_url: "https://www.beige.zone/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Alex/Avery Beige Artist, Playwright / Creative Technologist / Biohacker
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `11`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `17`
+- **Recovered Stylesheets**: `2`
 
 ---
 

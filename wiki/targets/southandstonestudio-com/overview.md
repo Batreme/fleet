@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: southandstonestudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://southandstonestudio.com"
 final_url: "https://southandstonestudio.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: South & Stone Studio · Web Design & Brand Identity
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `17`
-- **Recovered Stylesheets**: `13`
+- **Recovered Scripts**: `59`
+- **Recovered Stylesheets**: `50`
 
 ---
 

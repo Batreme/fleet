@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-zagrebwebusluge-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.zagrebwebusluge.com/"
 final_url: "https://www.zagrebwebusluge.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live desktop behavioral capture failed (0 valid keyframes)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.zagrebwebusluge.com/](https://www.zagrebwebusluge.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Web agencija i digitalna rješenja · Zagreb Web Usluge
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `2`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live desktop behavioral capture failed (0 valid keyframes)
+- **Page Title**: www-zagrebwebusluge-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `19`
+- **Recovered Stylesheets**: `1`
 
 ---
 

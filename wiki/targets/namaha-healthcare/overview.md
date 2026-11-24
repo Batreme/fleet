@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: namaha-healthcare"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://namaha.healthcare"
 final_url: "https://www.namaha.healthcare/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Namaha Healthcare
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `24`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `114`
+- **Recovered Stylesheets**: `12`
 
 ---
 

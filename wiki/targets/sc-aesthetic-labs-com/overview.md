@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: sc-aesthetic-labs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://sc-aesthetic-labs.com/"
 final_url: "https://sc-aesthetic-labs.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Digital Systems for Visible Trust – S/C Lab
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `9`
+- **Recovered Stylesheets**: `5`
 
 ---
 

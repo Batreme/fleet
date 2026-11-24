@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: findra-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `findra-art` (**Findra: the AI character feed**)
 - **Production URL**: [https://findra.art/](https://findra.art/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas, `#ffffff` ink, `#e14bff` accent)
 - **Summary**: Who is rising among AI characters on TikTok, Instagram, X and YouTube: what they look like, their legends and where to follow them.
 - **Total Clean CSS Variables Extracted**: `59` (curated live-grounded set below)
@@ -75,11 +75,11 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top-0> — `findra-art`)**:
    - Landmark `<header class="top-0 backdrop-blur-xl">` (`1440x64px`) hosting `Findra: the AI character feed` navigation (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/react"`, `data-sdkv="1.6.1"`, `data-test="skip-to-content"`), and stylesheet rule `.u8MhCG_className { font-family:Geist,Geist Fallback;font-style:normal }`.
-2. **Hero Stage & Focal Lead (<article.group> — `WHO’S RISING`)**:
-   - Landmark `<article class="group justify-end">` presenting display lead `WHO’S RISING` and copy excerpt *"AI characters and the audiences they are building on TikTok, Inst"* over `#09090b` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.border-border> — `Who’s rising`)**:
-   - Landmark `<section class="border-border gap-3">` rendering section `Who’s rising` with copy *"adventurous ai cat character"*, asset references (`d25bf568acb89df91e84732c0a9d9da02...`, `3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.max-w-3xl> — `Claudia, the pop star anyone can m`)**:
-   - Landmark `<section class="max-w-3xl gap-2">` framing `Claudia, the pop star anyone can make` and `Latest story` (*"ai animal influencer"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
+2. **Hero Stage & Focal Lead (<section.border-foreground> — `WHO’S RISING`)**:
+   - Landmark `<section class="border-foreground gap-2">` presenting display lead `WHO’S RISING` and copy excerpt *"The account could not be read this morning. It is the only accoun"* over `#09090b` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<article.group> — `Who’s rising`)**:
+   - Landmark `<article class="group justify-end">` rendering section `Who’s rising` with copy *"AI characters and the audiences they are building on TikTok, Inst"*, asset references (`3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`, `30qn3skk62nz8.js`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.border-border> — `The week on Findra`)**:
+   - Landmark `<section class="border-border gap-3">` framing `The week on Findra` and `Latest story` (*"adventurous ai cat character"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
 5. **Colophon & Global Directory Footer (<footer.text-muted> — `https://findra.art/`)**:
-   - Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"anime fighter brought to life"*, and `#27272c` structural dividers.
+   - Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"ai animal influencer"*, and `#27272c` structural dividers.

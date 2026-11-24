@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-thedesignsociety-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.thedesignsociety.fr/"
 final_url: "https://www.thedesignsociety.fr/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Design Society Lyon — la communauté des designers
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `15`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `57`
+- **Recovered Stylesheets**: `8`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: johnhardy-com_collections-billie-eilish-and-finneas"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `johnhardy-com_collections-billie-eilish-and-finneas` (**Billie Eilish and FINNEAS – John Hardy**)
 - **Production URL**: [https://johnhardy.com/collections/billie-eilish-and-finneas](https://johnhardy.com/collections/billie-eilish-and-finneas)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c1d`)
 - **Summary**: John Hardy fine luxury jewelry. Made in Bali since 1975. Enjoy complimentary shipping and returns on all orders. Bracelets, Rings, Neckla...
-- **Total Clean CSS Variables Extracted**: `496` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `966` (curated live-grounded set below)
 
 ---
 
@@ -24,10 +24,10 @@ http_status: 200
 - **Display Font Stack**: `General Sans`
 - **Body Font Stack**: `General Sans`
 - **Monospace / Technical Font Stack**: `Source Code Pro`
-- **Hero Display (`H1`)**: CSS variables `--option-select-label-display: none`, `--bonsai-agent-share-display: none`; rule `h1` (`font-size: 1.5rem`, `line-height: 1.2`)
+- **Hero Display (`H1`)**: CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `h1` (`font-size: 1.5rem`, `line-height: 1.2`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 32px`, `line-height: 48px`, `font-weight: 500`, `letter-spacing: 0.5px`); rule `h2` (`font-size: var(--hero-title-size-mobile,...`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--bonsai-font-body: var(--font-family-general-sans)`, `--bonsai-agent-body-bold-weight: 550`; rule `,p` (`font-size: var(--font-size-3)`, `line-height: var(--line-height-0)`, `letter-spacing: var(--letter-spacing-0)`, `font-weight: var(--font-we...`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--letter-spacing-0: 0.5px`, `--letter-spacing-1: 1px`, `--letter-spacing-2: 1px`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--letter-spacing-0: 0.5px`, `--letter-spacing-1: 1px`, `--letter-spacing-2: 1px`; rule `small` (`font-size: calc(var(--kl-reviews-reviews...`, `font-weight: var(--kl-revi...`)
 
 ---
 
@@ -70,7 +70,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `johnhardy-com_collections-billie-eilish-and-finneas`)**:
-   - Landmark `<header class="site-header">` (`1440x87px`) hosting `Billie Eilish and FINNEAS – John Har` navigation (`Wishlist · Featured · New Arrivals · Best Sellers · Holiday Gifting`), DOM attributes (`data-header-state="open"`, `data-source-attribution="shopify.exit_intersti..."`, `data-rapid="true"`, `data-shop-id="72737456428"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
+   - Landmark `<header class="site-header">` (`1440x87px`) hosting `Billie Eilish and FINNEAS – John Har` navigation (`Wishlist · Featured · New Arrivals · Best Sellers · Holiday Gifting`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-rapid="true"`, `data-shop-id="72737456428"`, `data-venmo-supported="true"`), and stylesheet rule `.shopify-payment-button__button--... { visibility:hidden }`.
 2. **Hero Stage & Focal Lead (<section.site-header-offset> — `Billie Eilish & FINNEAS`)**:
    - Landmark `<section class="site-header-offset">` presenting display lead `Billie Eilish & FINNEAS` and copy excerpt *"Hard meets soft in two distinct design languages: delicate, roman"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.hero-banner-section> — `Two Expressions of One Creative Vi`)**:

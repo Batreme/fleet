@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: plastic-ocean-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `plastic-ocean-com` (**Plastic Ocean**)
 - **Production URL**: [http://plastic-ocean.com/](http://plastic-ocean.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d70ff` accent)
 - **Summary**: Plastic Ocean
 - **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
@@ -24,10 +24,10 @@ http_status: 200
 - **Display Font Stack**: `Host Grotesk Regular`
 - **Body Font Stack**: `Inter Tight`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
-- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `14px`, `22px`, `20px`, `10px`
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `24.048px`, `14px`, `22px`, `20px`
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `24.048px`, `14px`, `22px`, `20px`
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 24.048px`, `line-height: 24.048px`, `font-weight: 400`, `letter-spacing: -1.2024px`)
 
 ---
 
@@ -48,6 +48,7 @@ http_status: 200
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
 | `--default-cell-min-width` | `35px` | Layout / Spatial Grid Token |
+| `--custom-fade` | `1` | Design System Custom Token |
 | `--pswp-bg` | `#000` | Canvas / Surface Token |
 | `--pswp-placeholder-bg` | `#222` | Canvas / Surface Token |
 | `--pswp-root-z-index` | `100000` | Elevation / Border Token |
@@ -58,7 +59,6 @@ http_status: 200
 | `--pswp-icon-stroke-color` | `#4f4f4f` | Brand / Palette Token |
 | `--pswp-icon-stroke-width` | `2px` | Layout / Spatial Grid Token |
 | `--pswp-error-text-color` | `var(--pswp-icon-color)` | Typography Ink Token |
-| `--custom-fade` | `1` | Design System Custom Token |
 | `--webp-bottle-opacity` | `0` | Design System Custom Token |
 | `--white-bg-opacity` | `1` | Canvas / Surface Token |
 | `--plastic-ocean-co-bg` | `#ffffff` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
@@ -67,8 +67,8 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.wf-displayswap-n4-inactive> — `plastic-ocean-com`)**:
-   - Landmark `<header class="wf-displayswap-n4-inactive">` (`1440px`) hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`.
+1. **Brand Header & Navigation Bar (<header.wf-intertight-n4-active> — `plastic-ocean-com`)**:
+   - Landmark `<header class="wf-intertight-n4-active">` (`1440px`) hosting `Plastic Ocean` navigation (`get in touch · Case · Nikolai Kudriavtsev · Natalia Pugacheva · Evgeny Kuzmin`), DOM attributes (`data-size="1920x1080"`, `data-origin-src="/thumb/2/evC8fvcePJXD..."`, `data-lenis-prevent="true"`, `data-url="https://t.me/nick_kudrya"`), and stylesheet rule `body { overflow-anchor:none;overflow-wrap:break-word;background:fff;margin:0;fo... }`.
 2. **Hero Stage & Focal Lead (<section.section> — `Plastic Ocean`)**:
    - Landmark `<section class="section section--u-iqub3glf6">` presenting display lead `Plastic Ocean` and copy excerpt *"This website is a non-commercial demonstration project. We do not"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.section--u-i8upocq6y> — `Featured Work & Interactive Showca`)**:

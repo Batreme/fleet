@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: sibaldesign-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier2_webgl
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sibaldesign-com` (**Jeff Sibal — Visual & Digital Designer · SIBALDESIGN**)
 - **Production URL**: [https://sibaldesign.com/](https://sibaldesign.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#080c15` / `#5fe0ff`)
 - **Summary**: Jeff Sibal, visual and digital designer in Southern California. Twenty-plus years across web, UI/UX, email, video and photography. I desi...
 - **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)

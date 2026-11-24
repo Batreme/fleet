@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: actl-me"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "actl-me"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a2952` / `#000080`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a2952` / `#
 
 > **ACTL — Arabian Community Tennis League** (https://actl.me/) — Find your next tennis match in Dubai. Discover the ACTL community, challenge players, follow your ranking and explore ACTL merchandise.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **ACTL — Arabian Community Tennis League** (`https://actl.me/`). Find your next tennis match in Dubai. Discover the ACTL community, challenge players, follow your ranking and explore ACTL merchandise.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0a2952` / `#000080`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a2952` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ede6c4` primary typography and `#000080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`Find your people.`) with `montreal` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`Find your people.`) with `montreal`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28px`, padding `26px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=5400px` / doc `10391px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `26px` lateral canvas padding with `28px` grid gap.
 - **Border Radius Scale**: `30px`, `40px`, `32px`, `35px`.
@@ -111,6 +116,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a2952` / `#
 - **Selector `.product-image svg`**: `transition: transform .5s` extracted from `actl-me` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `10391px`, deepest scrollY reached `5400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Join via WhatsApp ↗`)**: `transform`: `none` -> `matrix(1, 0, 0, 1, 0, 0)` (`transition-duration: 0.2s, 0.2s`, `timing: ease, ease`).
+- **Interactive Control Probe (`accordion`)**: Tested `What is ACTL?` (diff `1.406`).
 
 ---
 
@@ -169,6 +179,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a2952` / `#
    - Landmark `<section class="match-section section">` framing `Less organising. More playing.` and `One more set? Always.` (*"More than the match"*) with `#000080` surface cards, `#000080` accents, and `root { --navy:0a2952;--lime:aaf136;--cream:ede6c4;--paper:f4f4f2 }`.
 5. **Colophon & Global Directory Footer (<footer.header-cta> — `https://actl.me/`)**:
    - Landmark `<footer class="header-cta">` anchoring `ACTL — Arabian Community Tennis ` footer links (`The league · The app · The shop · Contact`), copy *"A little competition. A lot of community."*, and `#6e7c84` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Find your people.` · sticky/fixed elements: `2`
+- **Step 02** (`y=1500px`, `16%`): Active landmark `Make your move.` · sticky/fixed elements: `2`
+- **Step 03** (`y=2150px`, `23%`): Active landmark `Simply love to play.` · sticky/fixed elements: `2`
+- **Step 04** (`y=2800px`, `30%`): Active landmark `Simply love to play.` · sticky/fixed elements: `2`
+- **Step 05** (`y=3450px`, `36%`): Active landmark `Your kind of tennis.` · sticky/fixed elements: `2`
+- **Step 06** (`y=4100px`, `43%`): Active landmark `Your kind of tennis.` · sticky/fixed elements: `1`
+- **Step 07** (`y=4750px`, `50%`): Active landmark `Less organising. More playing.` · sticky/fixed elements: `1`
+- **Step 08** (`y=5400px`, `57%`): Active landmark `One more set? Always.` · sticky/fixed elements: `1`
 
 ---
 
@@ -185,7 +204,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#0a2952` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ede6c4`, **Accent / Highlight**: `#000080`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a2952` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ede6c4` primary typography and `#000080` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`Find your people.`) with `montreal` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`Find your people.`) with `montreal`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 28px`, padding `26px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -223,8 +242,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--paper`)**: `#f4f4f2` — grounded in `var(--paper)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `26px` lateral canvas padding with `28px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28px`)
@@ -248,7 +267,7 @@ Scaffold `actl-me` (`ACTL — Arabian Community Tennis League`) with these exact
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `actl-me`)` (`actl-me`) adapts across `@media (max-width:1000px)`, `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:600px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `The league · The app · The shop · Contact`.
 2. **Hero Stage & Focal Lead (<section.league> — `Find your people.`)**:
    - DOM & Selectors: Landmark `<section class="league section">` presenting display lead `Find your people.` and copy excerpt *"Arabian Community Tennis League · Dubai"* over `#0a2952` canvas and `#ede6c4` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0a2952` background with `#ede6c4` headline `Find your people.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#0a2952` background with `#ede6c4` headline `Find your people.`.
 3. **Primary Showcase & Content Grid (<section.app> — `Your kind of tennis.`)**:
    - DOM & Selectors: Landmark `<section class="app section">` rendering section `Your kind of tennis.` with copy *"A shared court. A new rival. A reason to play again. Welcome to A"*, asset references (`NeueMontreal_Bold-s.p.1cs3sgkx_vm...`, `NeueMontreal_Regular-s.p.3qaxr7gv...`, `actl-logo.png`, `0xt1j8hd4-iqd.css`), and grid rule `treal_ae148c7a-module__pSTb6W__va... { --font-body:"montreal", "montreal Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.app> — `Your kind of tennis.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 28px`) on desktop and Single-column vertical stack at `390px` viewport width with `26px` horizontal padding on mobile.
@@ -279,8 +298,35 @@ Scaffold `actl-me` (`ACTL — Arabian Community Tennis League`) with these exact
 - **Selector `.product-image svg`**: `transition: transform .5s` extracted from `actl-me` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `10391px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Find your people. (0%) -> Make your move. (16%) -> Simply love to play. (23%) -> Simply love to play. (30%) -> Your kind of tennis. (36%) -> Your kind of tennis. (43%) -> Less organising. More playing. (50%) -> One more set? Always. (57%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform` with `0.2s, 0.2s ease, ease`.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `actl-me`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Find your people. | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `1500px` | `16%` | Make your move. | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2150px` | `23%` | Simply love to play. | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2800px` | `30%` | Simply love to play. | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3450px` | `36%` | Your kind of tennis. | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4100px` | `43%` | Your kind of tennis. | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `4750px` | `50%` | Less organising. More playing. | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `5400px` | `57%` | One more set? Always. | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Find your people. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4811px` | `50%` | #app | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `9623px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

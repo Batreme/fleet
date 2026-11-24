@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-1centre-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.1centre.com/"
 final_url: "https://www.1centre.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: 1Centre — Trade Credit Software for NZ & Australia
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `81`
+- **Recovered Stylesheets**: `8`
 
 ---
 

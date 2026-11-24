@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-offforum-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-offforum-com` (**A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM · SEPT 15, 2027 · OFFF S...**)
 - **Production URL**: [https://www.offforum.com/](https://www.offforum.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×1397px`, Mobile `390×1280px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#808080` accent)
 - **Summary**: A one-week festival convening designers, artists, and digital culture practitioners.
 - **Total Clean CSS Variables Extracted**: `149` (curated live-grounded set below)
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.header> — `www-offforum-com`)**:
    - Landmark `<header class="header h-header-height">` (`1440x120px`) hosting `A WEEK OF DESIGN, ART & DIGITAL CULT` navigation (`About`), DOM attributes (`data-svg-origin="609.3610229492188 0"`, `data-svg-origin="-0.09765620529651642..."`, `data-nuxt-data="nuxt-app"`, `data-ssr="true"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<main.min-h-screen> — `A WEEK OF DESIGN, ART & DIGITAL CU`)**:
-   - Landmark `<main class="min-h-screen">` presenting display lead `A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM ·...` and copy excerpt *"We use cookies on this site"* over `#000000` canvas and `#ffffff` ink.
+   - Landmark `<main class="min-h-screen">` presenting display lead `A WEEK OF DESIGN, ART & DIGITAL CULTURE · FORUM ·...` and copy excerpt *"©OFFFORUM 2026. All rights reserved."* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<main.min-h-screen:nth(2)> — `Join our community and get updates`)**:
    - Landmark `<main class="min-h-screen">` rendering section `Join our community and get updates, offers, and e...` with copy *"GET YOUR FORUM TICKET"*, asset references (`gtm.js`, `entry.CI2s3_W4.css`, `_payload.json`, `f8tcD554.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<main.min-h-screen:nth(3)> — `GET YOUR FORUM TICKET`)**:
-   - Landmark `<main class="min-h-screen">` framing `GET YOUR FORUM TICKET` and `©OFFFORUM 2026. All rights reserved.` (*"©OFFFORUM 2026. All rights reserved."*) with `#ff0000` surface cards, `#808080` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<main class="min-h-screen">` framing `GET YOUR FORUM TICKET` and `www-offforum-com Archive & Directory` (*"Join our community and get updates, offers, and e..."*) with `#ff0000` surface cards, `#808080` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.container-main> — `https://www.offforum.com/`)**:
    - Landmark `<footer class="container-main">` anchoring `A WEEK OF DESIGN, ART & DIGITAL ` footer links (`About`), copy *"GET YOUR FORUM TICKET"*, and `#808080` structural dividers.

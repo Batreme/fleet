@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: altamedfoundation-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "altamedfoundation-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **AltaMed Foundation · AltaMed Foundation** (https://altamedfoundation.org/) — AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **AltaMed Foundation · AltaMed Foundation** (`https://altamedfoundation.org/`). AltaMed ensures everyone in our community has access to quality health care, enabling them to live healthy, happy lives.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#242029` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#242029` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `proxima-nova` across display (`H.E.L.P. Campaign`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=3282px` / doc `4182px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `.25rem`, `4px`.
@@ -113,6 +118,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `color\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `altamedfoundation-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.relative>` and `<section.scroll-mt-24>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.bg-white>` and `<section.scroll-mt-24>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4182px`, deepest scrollY reached `3282px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe (`About Us`)**: Triggered visual change (pixel diff `41.829`, captured in `assets/state-nav.webp`); revealed links: Who We Are, What We Support, Institutional Partners, Leadership.
+- **Hover Physics (`primary_cta` · `Who We Are`)**: Computed transition `0.15s` / `cubic-bezier(0.4, 0, 0.2, 1)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/about/what-we-support`) measured as `SPA` in `1206ms`.
 
 ---
 
@@ -171,6 +182,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="scroll-mt-24 bg-white">` framing `Homeward Bound: Preemie Twins’ Incredible Journey...` and `Make a Difference` (*"Learn More about the H.E.L.P. Campaign"*) with `#ffa500` surface cards, `#242029` accents, and `.tk-gotham-narrow { font-family: "gotham-narrow",sans-serif; }`.
 5. **Colophon & Global Directory Footer (<footer.pt-8> — `https://altamedfoundation.org/`)**:
    - Landmark `<footer class="pt-8 pb-8">` anchoring `AltaMed Foundation · AltaMed Fou` footer links (`Overview · Index · Archive · About · Contact`), copy *"about the H.E.L.P. Campaign"*, and `#e5e5e5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#campaign` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `26%`): Active landmark `H.E.L.P. Campaign` · sticky/fixed elements: `0`
+- **Step 03** (`y=1700px`, `52%`): Active landmark `Homeward Bound: Preemie Twins’ Incredible Journey...` · sticky/fixed elements: `0`
+- **Step 04** (`y=2550px`, `78%`): Active landmark `Philanthropic Partners` · sticky/fixed elements: `0`
+- **Step 05** (`y=3282px`, `100%`): Active landmark `Events` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/about/what-we-support`)**: `https://altamedfoundation.org/about/what-we-support` — H1: `What We Support`, scrollHeight `4168px`, transition `SPA` (`1206ms`)
+- **About Route (`/about`)**: `https://altamedfoundation.org/about` — H1: `Who We Are`, scrollHeight `3241px`, transition `direct` (`745ms`)
+- **Detail Route (`/about/institutional-partners`)**: `https://altamedfoundation.org/about/institutional-partners` — H1: `Institutional Partners`, scrollHeight `3293px`, transition `direct` (`565ms`)
 
 ---
 
@@ -187,7 +209,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#242029`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#242029` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `proxima-nova` for display copy (`H.E.L.P. Campaign`) with `proxima-nova` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `proxima-nova` across display (`H.E.L.P. Campaign`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--spacing)`, padding `var(--spacing)`) with `cubic-bezier(0,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +249,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--secondary`)**: `#f5f5f5` — grounded in `var(--secondary)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing)`)
@@ -252,7 +274,7 @@ Scaffold `altamedfoundation-org` (`AltaMed Foundation · AltaMed Foundation`) wi
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.relative> — `altamedfoundation-org`)` (`altamedfoundation-org`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.bg-white> — `H.E.L.P. Campaign`)**:
    - DOM & Selectors: Landmark `<section class="bg-white py-12">` presenting display lead `H.E.L.P. Campaign` and copy excerpt *"AltaMed ensures everyone in our community has access to quality h"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `H.E.L.P. Campaign`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `H.E.L.P. Campaign`.
 3. **Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)**:
    - DOM & Selectors: Landmark `<section class="scroll-mt-24 bg-purple">` rendering section `Impact Stories` with copy *"Health. Equity. Life. Programs."*, asset references (`vdqo9h3n.api.sanity.io`, `altamed-foundation-logo.svg`, `3kc4s5-t1h7ps.js`, `1h6ujiewnnn1_.js`), and grid rule `.tk-gotham-xnarrow { font-family: "gotham-xnarrow",sans-serif; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll-mt-24> — `Impact Stories`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding on mobile.
@@ -283,8 +305,45 @@ Scaffold `altamedfoundation-org` (`AltaMed Foundation · AltaMed Foundation`) wi
 - **Selector `color\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `altamedfoundation-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.relative>` and `<section.scroll-mt-24>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.bg-white>` and `<section.scroll-mt-24>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4182px` across 5 distinct viewport chapters.
+- **Vertical Chapter Sequence**: #campaign (0%) -> H.E.L.P. Campaign (26%) -> Homeward Bound: Preemie Twi... (52%) -> Philanthropic Partners (78%) -> Events (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`About Us`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/about/what-we-support` (detail, SPA), `/about` (about, direct), `/about/institutional-partners` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `altamedfoundation-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #campaign | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `26%` | H.E.L.P. Campaign | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `52%` | Homeward Bound: Preemie Twins’ Incredible Jou... | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `78%` | Philanthropic Partners | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3282px` | `100%` | Events | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2999px` | `50%` | Make a Difference | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5999px` | `100%` | Get Our Newsletter | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`About Us`, diff `41.829`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://altamedfoundation.org/about/what-we-support` | What We Support | `4168px` | `SPA` (`1206ms`) | [subpage-01-about-what-we-support.webp](assets/subpage-01-about-what-we-support.webp) |
+| `2` | `about` | `https://altamedfoundation.org/about` | Who We Are | `3241px` | `direct` (`745ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://altamedfoundation.org/about/institutional-partners` | Institutional Partners | `3293px` | `direct` (`565ms`) | [subpage-03-about-institutional-partners.webp](assets/subpage-03-about-institutional-partners.webp) |
+

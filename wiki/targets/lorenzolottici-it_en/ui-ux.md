@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lorenzolottici-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lorenzolottici-it_en` (**Lorenzo Lottici · Order in chaos**)
 - **Production URL**: [https://lorenzolottici.it/en](https://lorenzolottici.it/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#0000ff`)
 - **Summary**: I bring order to the chaos in your business. Outside, a site people recognize at first glance. Inside, automations and AI agents that wor...
-- **Total Clean CSS Variables Extracted**: `211` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `210` (curated live-grounded set below)
 
 ---
 

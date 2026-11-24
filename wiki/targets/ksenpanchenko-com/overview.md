@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: ksenpanchenko-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ksenpanchenko.com/"
 final_url: "https://ksenpanchenko.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Ksen Panchenko — UX/UI & Product Designer in Dublin · FinTech & SaaS
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `15`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `48`
+- **Recovered Stylesheets**: `18`
 
 ---
 

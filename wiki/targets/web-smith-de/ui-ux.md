@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: web-smith-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `web-smith-de` (**Internetagentur Ostwestfalen: Websites & SEO · Web Smith**)
 - **Production URL**: [https://web-smith.de](https://web-smith.de)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#0a1320` ink, `#0000ff` accent)
 - **Summary**: Websites, SEO und individuelle Software: Web Smith ist deine Internetagentur aus Ostwestfalen – mit kostenlosem Website-Check und Konfigu...
 - **Total Clean CSS Variables Extracted**: `23` (curated live-grounded set below)
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#0a1320` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#f5f7fa` | `var(--bg-soft)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#f7f8fa` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0000ff` | `a:hover { color: blue }` (`#0000ff`) |
 | **Secondary / Muted Copy** | `#aeb8c7` | live computed `footer` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#dce2ea` | `var(--line)` in `:root` |
@@ -47,7 +47,7 @@ http_status: 200
 | **Variable Token (`--blue-soft`)** | `#8fb5fa` | `var(--blue-soft)` in `:root` |
 | **Variable Token (`--text`)** | `#4a5566` | `var(--text)` in `:root` |
 | **Variable Token (`--line-2`)** | `#cbd3df` | `var(--line-2)` in `:root` |
-| **Variable Token (`--bg-hero`)** | `#f7f8fa` | `var(--bg-hero)` in `:root` |
+| **Variable Token (`--bg-soft`)** | `#f5f7fa` | `var(--bg-soft)` in `:root` |
 | **Variable Token (`--chip`)** | `#f2f5f9` | `var(--chip)` in `:root` |
 
 ---
@@ -76,12 +76,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hd> — `web-smith-de`)**:
-   - Landmark `<header class="hd is-scrolled">` (`1440x72px`) hosting `Internetagentur Ostwestfalen: Websit` navigation (`Referenzen · Über uns`), DOM attributes (`data-astro-cid-nen7h5rs`, `data-hd`, `data-dd-item`, `data-dd-btn`), and stylesheet rule `hover { border-color:var(--navy);color:var(--navy);transform:translateY(3px) }`.
+   - Landmark `<header class="hd">` (`1440x84px`) hosting `Internetagentur Ostwestfalen: Websit` navigation (`Referenzen · Über uns`), DOM attributes (`data-astro-cid-nen7h5rs`, `data-hd`, `data-dd-item`, `data-dd-btn`), and stylesheet rule `after { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `WIR ENTWICKELN DIGITALE LÖSUNGEN D`)**:
    - Landmark `<section class="hero">` presenting display lead `WIR ENTWICKELN DIGITALE LÖSUNGEN DIE WIRKEN.` and copy excerpt *"Websites, SEO und individuelle Software für Unternehmen – schnell"* over `#ffffff` canvas and `#0a1320` ink.
 3. **Primary Showcase & Content Grid (<section.mq> — `Wir entwickeln digitale Lösungen d`)**:
-   - Landmark `<section class="mq">` rendering section `Wir entwickeln digitale Lösungen die wirken .` with copy *"Webdesign, Webentwicklung, SEO & SEA, Branding, Apps & APIs, KI-L"*, asset references (`favicon.ico`, `favicon.svg`, `favicon-32.png`, `favicon-192.png`), and grid rule `webkit-scrollbar { display:none }`.
+   - Landmark `<section class="mq">` rendering section `Wir entwickeln digitale Lösungen die wirken .` with copy *"Webdesign, Webentwicklung, SEO & SEA, Branding, Apps & APIs, KI-L"*, asset references (`favicon.ico`, `favicon.svg`, `favicon-32.png`, `favicon-192.png`), and grid rule `html { -webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:... }`.
 4. **Interactive Detail & Feature Matrix (<section.sec> — `Alles, was dein Unternehmen online`)**:
-   - Landmark `<section class="sec sec--blob">` framing `Alles, was dein Unternehmen online sichtbar macht.` and `Webentwicklung` (*"online sichtbar macht."*) with `#f5f7fa` surface cards, `#0000ff` accents, and `placeholder { color:8a96a8 }`.
+   - Landmark `<section class="sec sec--blob">` framing `Alles, was dein Unternehmen online sichtbar macht.` and `Webentwicklung` (*"online sichtbar macht."*) with `#f7f8fa` surface cards, `#0000ff` accents, and `svg { max-width:100%;display:block }`.
 5. **Colophon & Global Directory Footer (<footer.ft> — `https://web-smith.de`)**:
    - Landmark `<footer class="ft">` anchoring `Internetagentur Ostwestfalen: We` footer links (`Referenzen · Über uns`), copy *"Moderne Websites, Shops und Systeme – schnell, sicher und ge"*, and `#dce2ea` structural dividers.

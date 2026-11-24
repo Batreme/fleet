@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: oblikworks-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "oblikworks-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0082f3` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **oblikworks · Architectural Visualization & 3D Rendering Studio** (https://oblikworks.com/) — oblikworks is an architectural visualization studio creating photorealistic 3D renderings, architectural imagery, and visual storytelling...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x1744)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **oblikworks · Architectural Visualization & 3D Rendering Studio** (`https://oblikworks.com/`). oblikworks is an architectural visualization studio creating photorealistic 3D renderings, architectural imagery, and visual storytelling...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Suisseintl` for display copy (`Oblik is an Architectural 3D Visuali`) with `Suisseintl` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Suisseintl` across display (`Oblik is an Architectural 3D Visuali`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1900px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x1331)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×1331px` (`assets/mobile.png`, full-page live capture (1331px)).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=2819px` / doc `3719px`), Mobile `390×1744px` (`assets/mobile-journey.webp`, `2` keyframes).
 - **Master Container Bounds**: `1900px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `555px`.
@@ -110,6 +115,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `oblikworks-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.preloader:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3719px`, deepest scrollY reached `2819px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`.
 
 ---
 
@@ -168,6 +176,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<div class="preloader">` framing `New work: Faculty of Philology is now published ` and `In the Press: Our Visualizations of The Alfred f` (*"In the Press: Our Visualizations of The Alfred featured in Urban "*) with `#ffff00` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.body> — `https://oblikworks.com/`)**:
    - Landmark `<footer class="body">` anchoring `oblikworks · Architectural Visua` footer links (`Studio · Projects · News 3 · Contact · Archive`), copy *"We're integrating AI into our 3D Design pipeline."*, and `#eeeeee` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Oblik is an Architectural 3D Visualization Studio...` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `30%`): Active landmark `Section @ 30%` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `60%`): Active landmark `Section @ 60%` · sticky/fixed elements: `3`
+- **Step 04** (`y=2550px`, `90%`): Active landmark `Let’s start a conversation about your project.` · sticky/fixed elements: `3`
+- **Step 05** (`y=2819px`, `100%`): Active landmark `Let’s start a conversation about your project.` · sticky/fixed elements: `3`
 
 ---
 
@@ -184,7 +198,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Suisseintl` for display copy (`Oblik is an Architectural 3D Visuali`) with `Suisseintl` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Suisseintl` across display (`Oblik is an Architectural 3D Visuali`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1900px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.625,.05,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +235,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--_colors---button-grey`)**: `#f0f0f0` — grounded in `var(--_colors---button-grey)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×1331px` (full-page live capture (1331px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×1744px` (full-page live capture (1744px), `390px` standard mobile width).
 - **Container Max-Width**: `1900px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1900px`, `gap: 16px`)
@@ -246,7 +260,7 @@ Scaffold `oblikworks-com` (`oblikworks · Architectural Visualization & 3D Rende
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `oblikworks-com`)` (`oblikworks-com`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.625,.05,0,1)` transitions and links `Studio · Projects · News 3 · Contact · Archive`.
 2. **Hero Stage & Focal Lead (<div.preloader> — `Oblik is an Architectural 3D Visua`)**:
    - DOM & Selectors: Landmark `<div class="preloader">` presenting display lead `Oblik is an Architectural 3D Visualization Studio...` and copy excerpt *"info@oblikworks.com"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×1331px` mobile) sets `#ffffff` background with `#000000` headline `Oblik is an Architectural 3D Visualization Studio...`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×1744px` mobile) sets `#ffffff` background with `#000000` headline `Oblik is an Architectural 3D Visualization Studio...`.
 3. **Primary Showcase & Content Grid (<div.preloader:nth(2)> — `info@oblikworks.com`)**:
    - DOM & Selectors: Landmark `<div class="preloader">` rendering section `info@oblikworks.com` with copy *"New work: Faculty of Philology is now published on our website."*, asset references (`cdn.prod.website-files.com`, `oblik-studio.webflow.shared.30697...`, `1135743295497216`, `fbevents.js`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.preloader:nth(2)> — `info@oblikworks.com`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1900px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -277,8 +291,30 @@ Scaffold `oblikworks-com` (`oblikworks · Architectural Visualization & 3D Rende
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `oblikworks-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<div.preloader:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3719px` across 5 distinct viewport chapters using Lenis, GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Oblik is an Architectural 3... (0%) -> Section @ 30% (30%) -> Section @ 60% (60%) -> Let’s start a conversation... (90%) -> Let’s start a conversation... (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `oblikworks-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Oblik is an Architectural 3D Visualization St... | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `30%` | Section @ 30% | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `60%` | Section @ 60% | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `90%` | Let’s start a conversation about your project. | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `2819px` | `100%` | Let’s start a conversation about your project. | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Oblik is an Architectural 3D Visualizatio... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `487px` | `100%` | Let’s start a conversation about your pro... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+

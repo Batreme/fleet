@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-mynobs-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-mynobs-co` (**NoBS - No Brief Shit**)
 - **Production URL**: [https://www.mynobs.co](https://www.mynobs.co)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×1820px`, Mobile `390×1492px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `#0a0a0a` ink, `#ff0066` accent)
 - **Summary**: 💩 It's simple: drop in the buzzword-stuffed brief, and NoBS cuts the BS, handing back only what you need to know to start your job.
-- **Total Clean CSS Variables Extracted**: `25` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
 
 ---
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#fcfaf7` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#0a0a0a` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffd9ee` | `body.is-demo .nbs-topbar { background: #ffd9ee }` |
+| **Elevated Surface / Card Substrate** | `#dedede` | `var(--disabled-card-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff0066` | `.nbs-footer-link:hover { color: #ff0066 }` |
 | **Secondary / Muted Copy** | `#ec4899` | `var(--pink)` in `:root` |
 | **Structural Hairline Border** | `#a7a6a4` | `.nbs-account-row { border-bottom: #a7a6a4 }` |
@@ -84,6 +84,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.hero:nth(2)> — `Type, paste, or drop your brief. N`)**:
    - Landmark `<section class="hero">` rendering section `Type, paste, or drop your brief. No Brief Shit (` with copy *"Strictly necessary"*, asset references (`favicon.svg`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.nbs-logo img { display: block; height: 60px; width: auto; }`.
 4. **Interactive Detail & Feature Matrix (<section.hero:nth(3)> — `Strictly necessary`)**:
-   - Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#ffd9ee` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
+   - Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#dedede` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
 5. **Colophon & Global Directory Footer (<footer.nbs-footer> — `https://www.mynobs.co`)**:
    - Landmark `<footer class="nbs-footer">` anchoring `NoBS - No Brief Shit` footer links (`Overview · Index · Archive · About · Contact`), copy *"Makes NoBS remember the little things."*, and `#a7a6a4` structural dividers.

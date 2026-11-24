@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: drshabri-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://drshabri.com/"
 final_url: "https://drshabri.com/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://drshabri.com/](https://drshabri.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Cosmetic Dentist & Facial Aesthetics, Marylebone
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `30`
-- **Recovered Stylesheets**: `5`
+- **Identified Frameworks**: Webflow
+- **Recovered Scripts**: `119`
+- **Recovered Stylesheets**: `28`
 
 ---
 

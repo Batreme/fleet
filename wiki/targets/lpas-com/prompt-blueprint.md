@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: lpas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "lpas-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0e0e0e` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **LPAS - Architecture and Interiors** (https://lpas.com/) — Clear Process. Creative Results. Human-centered. Always Curious. At LPAS, we design with people at the center and purpose at every turn.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LPAS - Architecture and Interiors** (`https://lpas.com/`). Clear Process. Creative Results. Human-centered. Always Curious. At LPAS, we design with people at the center and purpose at every turn.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0e0e0e` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0e0e0e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Aeonik` for display copy (`We’re a process driven architecture `) with `Aeonik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Aeonik` across display (`We’re a process driven architecture `) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px 10px`, padding `1px`) with `cubic-bezier(.14,.83,.4,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8463px` / doc `9363px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (live computed `main` `max-width`).
 - **Canvas Lateral Padding & Spacing**: `1px` lateral canvas padding with `0px 10px` grid gap.
 - **Border Radius Scale**: `6px`, `50%`, `.2rem`, `1.3rem`.
@@ -109,6 +114,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.is-previous-container.is-darkene...`**: `transition: opacity .5s ease,backdrop-filter .6s ease` extracted from `lpas-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.14,.83,.4,1)`)**: Governs interactive state transitions across `<header.mainHeader>` and `<section.blockIntroGeneral>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9363px`, deepest scrollY reached `8463px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`.
+- **Nav / Drawer Probe (`Toggle navigation menu`)**: Triggered visual change (pixel diff `49.416`, captured in `assets/state-nav.webp`); revealed links: Housing, Interiors, Higher Education, Civic, Commercial, Portfolio.
+- **Hover Physics (`primary_cta` · `Affordable Housing`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/portfolio/`) measured as `direct` in `279ms`.
 
 ---
 
@@ -119,7 +130,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — LPAS - Architecture and Interiors          │
 │ ====================================================================== │
-│ [ <header.mainHeader> (900x225px)     | Housing · Interiors · Higher ] │
+│ [ <header.mainHeader> (1340x107px)    | Housing · Interiors · Higher ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.homeHero> (w=1440px)                          | │
 │ | H1: We’re a process driven architecture and interior...            | │
@@ -158,7 +169,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.mainHeader> — `lpas-com`)**:
-   - Landmark `<header class="mainHeader">` (`900x225px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
+   - Landmark `<header class="mainHeader">` (`1340x107px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
 2. **Hero Stage & Focal Lead (<section.homeHero> — `We’re a process driven architectur`)**:
    - Landmark `<section class="homeHero">` presenting display lead `We’re a process driven architecture and interior...` and copy excerpt *"Happy Halloween from LPAS! Teamwork makes the scream work."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.blockIntroGeneral> — `Higher Education`)**:
@@ -167,6 +178,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="blockProjectsHighlight">` framing `Clear Process. Creative Results. Human Centered....` and `Listen. Plan. Analyze. Shape.` (*"A Market-Focused Approach"*) with `#eeeeee` surface cards, `#0e0e0e` accents, and `body { line-height:1 }`.
 5. **Colophon & Global Directory Footer (<footer.navigationFooter> — `https://lpas.com/`)**:
    - Landmark `<footer class="navigationFooter">` anchoring `LPAS - Architecture and Interior` footer links (`Housing · Interiors · Higher Education · Civic · Commercial`), copy *"Swipe up to explore"*, and `#e5e5e5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `We’re a process driven architecture and interior...` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `10%`): Active landmark `We’re a process driven architecture and interior...` · sticky/fixed elements: `2`
+- **Step 03** (`y=2550px`, `30%`): Active landmark `We’re a process driven architecture and interior...` · sticky/fixed elements: `2`
+- **Step 04** (`y=3400px`, `40%`): Active landmark `We’re a process driven architecture and interior...` · sticky/fixed elements: `2`
+- **Step 05** (`y=5100px`, `60%`): Active landmark `Clear Process. Creative Results. Human Centered....` · sticky/fixed elements: `1`
+- **Step 06** (`y=5950px`, `70%`): Active landmark `Section @ 70%` · sticky/fixed elements: `1`
+- **Step 07** (`y=7650px`, `90%`): Active landmark `Sacramento` · sticky/fixed elements: `2`
+- **Step 08** (`y=8463px`, `100%`): Active landmark `Sacramento` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/portfolio/`)**: `https://lpas.com/portfolio/` — H1: `Portfolio`, scrollHeight `7044px`, transition `direct` (`279ms`)
+- **Detail Route (`/markets/housing/affordable-housing/`)**: `https://lpas.com/markets/housing/affordable-housing/` — H1: `Affordable Housing`, scrollHeight `9054px`, transition `direct` (`258ms`)
+- **About Route (`/about/`)**: `https://lpas.com/about/` — H1: `About`, scrollHeight `6069px`, transition `direct` (`186ms`)
 
 ---
 
@@ -183,7 +208,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0e0e0e`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0e0e0e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Aeonik` for display copy (`We’re a process driven architecture `) with `Aeonik` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Aeonik` across display (`We’re a process driven architecture `) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 0px 10px`, padding `1px`) with `cubic-bezier(.14,.83,.4,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +244,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#e5e5e5` — grounded in `.template__title { border-bottom: #e5e5e5 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (live computed `main` `max-width`)
 - **Padding & Gutters**: `1px` lateral canvas padding with `0px 10px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px 10px`)
@@ -240,11 +265,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `lpas-com` (`LPAS - Architecture and Interiors`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.mainHeader> — `lpas-com`)**:
-   - DOM & Selectors: Landmark `<header class="mainHeader">` (`900x225px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
+   - DOM & Selectors: Landmark `<header class="mainHeader">` (`1340x107px`) hosting `LPAS - Architecture and Interiors` navigation (`Housing · Interiors · Higher Education · Civic · Commercial`), DOM attributes (`data-browser="Chrome"`, `data-istoch="false"`, `data-logocolor="light"`, `data-first-visit="true"`), and stylesheet rule `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.mainHeader> — `lpas-com`)` (`lpas-com`) adapts across `@media (min-width: 480px)`, `@media (min-width: 768px)`, `@media (min-width: 1280px)`, `@media (min-width: 2150px)` with `cubic-bezier(.14,.83,.4,1)`, `cubic-bezier(0,0,.13,.99)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Housing · Interiors · Higher Education · Civic · Commercial`.
 2. **Hero Stage & Focal Lead (<section.homeHero> — `We’re a process driven architectur`)**:
    - DOM & Selectors: Landmark `<section class="homeHero">` presenting display lead `We’re a process driven architecture and interior...` and copy excerpt *"Happy Halloween from LPAS! Teamwork makes the scream work."* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `We’re a process driven architecture and interior...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `We’re a process driven architecture and interior...`.
 3. **Primary Showcase & Content Grid (<section.blockIntroGeneral> — `Higher Education`)**:
    - DOM & Selectors: Landmark `<section class="blockIntroGeneral">` rendering section `Higher Education` with copy *"Architecture + Interiors"*, asset references (`main-DN-9Dm9S.css`, `swup-config-DoT-9FzL.js`, `preloader-CQAQSTAa.js`, `lenisSmooth-BjXMsNId.js`), and grid rule `section { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.blockIntroGeneral> — `Higher Education`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 0px 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `1px` horizontal padding on mobile.
@@ -275,8 +300,48 @@ Scaffold `lpas-com` (`LPAS - Architecture and Interiors`) with these exact struc
 - **Selector `.is-previous-container.is-darkene...`**: `transition: opacity .5s ease,backdrop-filter .6s ease` extracted from `lpas-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.14,.83,.4,1)`)**: Governs interactive state transitions across `<header.mainHeader>` and `<section.blockIntroGeneral>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9363px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: We’re a process driven arch... (0%) -> We’re a process driven arch... (10%) -> We’re a process driven arch... (30%) -> We’re a process driven arch... (40%) -> Clear Process. Creative Res... (60%) -> Section @ 70% (70%) -> Sacramento (90%) -> Sacramento (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Toggle navigation menu`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/portfolio/` (listing, direct), `/markets/housing/affordable-housing/` (detail, direct), `/about/` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `lpas-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | We’re a process driven architecture and inter... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | We’re a process driven architecture and inter... | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `30%` | We’re a process driven architecture and inter... | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `40%` | We’re a process driven architecture and inter... | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `60%` | Clear Process. Creative Results. Human Center... | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `70%` | Section @ 70% | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `90%` | Sacramento | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8463px` | `100%` | Sacramento | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | We’re a process driven architecture and i... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3591px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `7182px` | `100%` | Sacramento | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Toggle navigation menu`, diff `49.416`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://lpas.com/portfolio/` | Portfolio | `7044px` | `direct` (`279ms`) | [subpage-01-portfolio.webp](assets/subpage-01-portfolio.webp) |
+| `2` | `detail` | `https://lpas.com/markets/housing/affordable-housing/` | Affordable Housing | `9054px` | `direct` (`258ms`) | [subpage-02-markets-housing-affordable-housing.webp](assets/subpage-02-markets-housing-affordable-housing.webp) |
+| `3` | `about` | `https://lpas.com/about/` | About | `6069px` | `direct` (`186ms`) | [subpage-03-about.webp](assets/subpage-03-about.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-miljofyrtarn-no"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-miljofyrtarn-no"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#00aceb` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Hjem · Miljøfyrtårn** (https://www.miljofyrtarn.no/) — Miljøfyrtårn er Norges ledende miljøsertifisering. Kom i gang med sertifisering og miljøledelse i LUMA – et verktøy som gjør arbeidet enk...
 
-![Desktop Viewport Capture (1440x996)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Hjem · Miljøfyrtårn** (`https://www.miljofyrtarn.no/`). Miljøfyrtårn er Norges ledende miljøsertifisering. Kom i gang med sertifisering og miljøledelse i LUMA – et verktøy som gjør arbeidet enk...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#00aceb` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#00aceb` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `matterFont` for display copy (`Norges mest brukte miljøsertifiserin`) with `matterFont` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `matterFont` across display (`Norges mest brukte miljøsertifiserin`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: var(--spacing)`, padding `var(--lines-gutter)`) with `cubic-bezier(0,0,.2,1)` easing and Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x940)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×996px` (`assets/desktop.png`, full-page live capture (996px)), Mobile `390×940px` (`assets/mobile.png`, full-page live capture (940px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `17284px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--lines-gutter)` lateral canvas padding with `var(--spacing)` grid gap.
 - **Border Radius Scale**: `.25rem`, `1.2rem`, `1.05rem`, `20px`.
@@ -58,7 +63,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#e6e6e6` | `.bg-grey-20 { background-color: #e6e6e6 }` |
 | **Interactive Accent / Highlight** | `#00aceb` | `stom-button.button-light .icon... { color: #00aceb }` |
-| **Secondary / Muted Copy** | `#141414` | live computed `a` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#00aceb` | `stom-button.button-light .icon... { color: #00aceb }` |
 | **Structural Hairline Border** | `#e5e5e5` | `10 { border-color: #e5e5e5 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -109,6 +114,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-miljofyrtarn-no` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.top-bar>` and `<section.image-fullscreen>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `17284px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Se flere kundehistorier`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/om-oss/bli-kjent-med-vare-ansatte`) measured as `direct` in `1769ms`.
 
 ---
 
@@ -158,7 +168,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.top-bar> — `www-miljofyrtarn-no`)**:
-   - Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-nosnippet`, `data-template="popup"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
+   - Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-dgst`, `data-section="0"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
 2. **Hero Stage & Focal Lead (<section.stage> — `Norges mest brukte miljøsertifiser`)**:
    - Landmark `<section class="stage relative">` presenting display lead `Norges mest brukte miljøsertifisering` and copy excerpt *"Bli Miljøfyrtårn? Prøv vår interaktive veiviser!"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.image-fullscreen> — `Fordi bærekraft er konkurransekraf`)**:
@@ -167,6 +177,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<section class="image-group lines-scope">` framing `Fornøyde kunder sier` and `Hvorfor bli Miljøfyrtårn` (*"Norges mest brukte"*) with `#e6e6e6` surface cards, `#00aceb` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.lines-scope> — `https://www.miljofyrtarn.no/`)**:
    - Landmark `<footer class="lines-scope overflow-clip">` anchoring `Hjem · Miljøfyrtårn` footer links (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), copy *"miljøsertifisering"*, and `#e5e5e5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Norges mest brukte miljøsertifisering` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Fordi bærekraft er konkurransekraft` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `21%`): Active landmark `Fornøyde kunder sier` · sticky/fixed elements: `1`
+- **Step 04** (`y=5950px`, `36%`): Active landmark `Hvorfor bli Miljøfyrtårn` · sticky/fixed elements: `1`
+- **Step 05** (`y=8500px`, `52%`): Active landmark `Kundehistorier` · sticky/fixed elements: `1`
+- **Step 06** (`y=11050px`, `67%`): Active landmark `Aktuelt` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `83%`): Active landmark `Kurs og webinarer` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `88%`): Active landmark `Kurs og webinarer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/om-oss/bli-kjent-med-vare-ansatte`)**: `https://www.miljofyrtarn.no/om-oss/bli-kjent-med-vare-ansatte` — H1: `Bli kjent med våre ansatte`, scrollHeight `3355px`, transition `direct` (`1769ms`)
+- **Detail Route (`/bli-miljofyrtarn/baerekraftsverktoyet-luma`)**: `https://www.miljofyrtarn.no/bli-miljofyrtarn/baerekraftsverktoyet-luma` — H1: `LUMA, Miljøfyrtårns bærekraftsverktøy`, scrollHeight `7777px`, transition `direct` (`813ms`)
+- **Detail Route (`/bli-miljofyrtarn/miljofyrtarn-og-anbud`)**: `https://www.miljofyrtarn.no/bli-miljofyrtarn/miljofyrtarn-og-anbud` — H1: `Miljøfyrtårn og anbud`, scrollHeight `4416px`, transition `direct` (`2002ms`)
 
 ---
 
@@ -183,7 +207,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#00aceb`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#00aceb` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `matterFont` for display copy (`Norges mest brukte miljøsertifiserin`) with `matterFont` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `matterFont` across display (`Norges mest brukte miljøsertifiserin`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `120rem` container bounds (`gap: var(--spacing)`, padding `var(--lines-gutter)`) with `cubic-bezier(0,0,.2,1)` easing and Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -215,12 +239,12 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#000000` — grounded in live computed `main` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#e6e6e6` — grounded in `.bg-grey-20 { background-color: #e6e6e6 }`
 - **Interactive Accent / Highlight**: `#00aceb` — grounded in `stom-button.button-light .icon... { color: #00aceb }`
-- **Secondary / Muted Copy**: `#141414` — grounded in live computed `a` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#00aceb` — grounded in `stom-button.button-light .icon... { color: #00aceb }`
 - **Structural Hairline Border**: `#e5e5e5` — grounded in `10 { border-color: #e5e5e5 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×996px` (full-page live capture (996px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×940px` (full-page live capture (940px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--lines-gutter)` lateral canvas padding with `var(--spacing)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: var(--spacing)`)
@@ -240,11 +264,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-miljofyrtarn-no` (`Hjem · Miljøfyrtårn`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.top-bar> — `www-miljofyrtarn-no`)**:
-   - DOM & Selectors: Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-nosnippet`, `data-template="popup"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
+   - DOM & Selectors: Landmark `<nav class="top-bar pointer-events-none">` (`1440x96px`) hosting `Hjem · Miljøfyrtårn` navigation (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-dgst`, `data-section="0"`), and stylesheet rule `._5KZDLG_className { font-family:matterFont,matterFont Fallback }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.top-bar> — `www-miljofyrtarn-no`)` (`www-miljofyrtarn-no`) adapts across `@media (min-width:30rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.4,0,.6,1)` transitions and links `Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`.
 2. **Hero Stage & Focal Lead (<section.stage> — `Norges mest brukte miljøsertifiser`)**:
    - DOM & Selectors: Landmark `<section class="stage relative">` presenting display lead `Norges mest brukte miljøsertifisering` and copy excerpt *"Bli Miljøfyrtårn? Prøv vår interaktive veiviser!"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×996px` desktop / `390×940px` mobile) sets `#ffffff` background with `#000000` headline `Norges mest brukte miljøsertifisering`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `Norges mest brukte miljøsertifisering`.
 3. **Primary Showcase & Content Grid (<section.image-fullscreen> — `Fordi bærekraft er konkurransekraf`)**:
    - DOM & Selectors: Landmark `<section class="image-fullscreen lines-scope">` rendering section `Fordi bærekraft er konkurransekraft` with copy *"Norges mest brukte miljøsertifisering"*, asset references (`MatterMedium-s.p.07t3y7_ykvrde.woff2`, `MatterRegular-s.p.3jjuiv35wp9rz.w...`, `MatterRegularItalic-s.p.03ktjrzd9...`, `MatterSemiBold-s.p.1twnp8ioanuv2....`), and grid rule `._5KZDLG_variable { --font-matter:"matterFont", "matterFont Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.image-fullscreen> — `Fordi bærekraft er konkurransekraf`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--lines-gutter)` horizontal padding on mobile.
@@ -253,7 +277,7 @@ Scaffold `www-miljofyrtarn-no` (`Hjem · Miljøfyrtårn`) with these exact struc
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.image-group> — `Fornøyde kunder sier`)` uses `.25rem`, `1.2rem`, `1.05rem`, `20px` radii, `#00aceb` highlights, and assets (MatterMedium-s.p.07t3y7_ykvrde.woff2, MatterRegular-s.p.3jjuiv35wp9rz.w..., MatterRegularItalic-s.p.03ktjrzd9...).
 5. **Colophon & Global Directory Footer (<footer.lines-scope> — `https://www.miljofyrtarn.no/`)**:
    - DOM & Selectors: Landmark `<footer class="lines-scope overflow-clip">` anchoring `Hjem · Miljøfyrtårn` footer links (`Interaktiv veiviser · Start registrering · Finn konsulent · Kundehistorier · Om oss Om oss`), copy *"miljøsertifisering"*, and `#e5e5e5` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lines-scope> — `https://www.miljofyrtarn.no/`)` aligns to `120rem` (non-`@media` desktop container stylesheet rule) with `var(--lines-gutter)` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-precedence="next", data-href="/_next/static/chunks/...", data-nosnippet).
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.lines-scope> — `https://www.miljofyrtarn.no/`)` aligns to `120rem` (non-`@media` desktop container stylesheet rule) with `var(--lines-gutter)` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-precedence="next", data-href="/_next/static/chunks/...", data-dgst).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Bli Miljøfyrtårn? Prøv vår interaktive veiviser!"*
@@ -275,8 +299,42 @@ Scaffold `www-miljofyrtarn-no` (`Hjem · Miljøfyrtårn`) with these exact struc
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `www-miljofyrtarn-no` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<nav.top-bar>` and `<section.image-fullscreen>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `17284px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Norges mest brukte miljøser... (0%) -> Fordi bærekraft er konkurra... (5%) -> Fornøyde kunder sier (21%) -> Hvorfor bli Miljøfyrtårn (36%) -> Kundehistorier (52%) -> Aktuelt (67%) -> Kurs og webinarer (83%) -> Kurs og webinarer (88%).
+- **Multi-Page Routes**: Scaffold internal routes `/om-oss/bli-kjent-med-vare-ansatte` (detail, direct), `/bli-miljofyrtarn/baerekraftsverktoyet-luma` (detail, direct), `/bli-miljofyrtarn/miljofyrtarn-og-anbud` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-miljofyrtarn-no`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Norges mest brukte miljøsertifisering | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Fordi bærekraft er konkurransekraft | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `21%` | Fornøyde kunder sier | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `36%` | Hvorfor bli Miljøfyrtårn | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `52%` | Kundehistorier | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `67%` | Aktuelt | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `83%` | Kurs og webinarer | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `88%` | Kurs og webinarer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Norges mest brukte miljøsertifisering | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5027px` | `50%` | Slik får Mestergruppen miljøledelse til å... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `10055px` | `100%` | Hjelp | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.miljofyrtarn.no/om-oss/bli-kjent-med-vare-ansatte` | Bli kjent med våre ansatte | `3355px` | `direct` (`1769ms`) | [subpage-01-om-oss-bli-kjent-med-vare-ansatte.webp](assets/subpage-01-om-oss-bli-kjent-med-vare-ansatte.webp) |
+| `2` | `detail` | `https://www.miljofyrtarn.no/bli-miljofyrtarn/baerekraftsverktoyet-luma` | LUMA, Miljøfyrtårns bærekraftsverktøy | `7777px` | `direct` (`813ms`) | [subpage-02-bli-miljofyrtarn-baerekraftsverktoye.webp](assets/subpage-02-bli-miljofyrtarn-baerekraftsverktoye.webp) |
+| `3` | `detail` | `https://www.miljofyrtarn.no/bli-miljofyrtarn/miljofyrtarn-og-anbud` | Miljøfyrtårn og anbud | `4416px` | `direct` (`2002ms`) | [subpage-03-bli-miljofyrtarn-miljofyrtarn-og-anb.webp](assets/subpage-03-bli-miljofyrtarn-miljofyrtarn-og-anb.webp) |
+

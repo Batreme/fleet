@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: akaiito-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "akaiito-ai"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#ff0000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#f
 
 > **Akai Ito — Your twin dates millions. You go on one date.** (https://akaiito.ai) — Akai Ito builds a digital twin of you. It goes on millions of first dates, lives ten thousand lives with your best match, then books one...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Akai Ito — Your twin dates millions. You go on one date.** (`https://akaiito.ai`). Akai Ito builds a digital twin of you. It goes on millions of first dates, lives ten thousand lives with your best match, then books one...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#ff0000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecebe5` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#111113` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`Your twin dates millions. You go on `) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`Your twin dates millions. You go on `) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `.5rem`) with `cubic-bezier(.2,.7,.1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `50%`, `62.4375rem`, `1.5rem`, `.75rem`.
@@ -112,6 +117,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#f
 - **Selector `.ln`**: `transition: transform .55s cubic-bezier(.2,.7,.1,1),opacity .4s` extracted from `akaiito-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.1,1)`)**: Governs interactive state transitions across `<header.ahd>` and `<section.hero>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -170,6 +178,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebe5` / `#f
    - Landmark `<section class="sec appsec">` framing `Your twin lives in your pocket.` and `Act I · Right now You’ve swiped almost 4,000 times.` (*"Your twin dates millions."*) with `#fbfaf7` surface cards, `#ff0000` accents, and `stage { position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0 }`.
 5. **Colophon & Global Directory Footer (<footer.anim-off> — `https://akaiito.ai`)**:
    - Landmark `<footer class="anim-off">` anchoring `Akai Ito — Your twin dates milli` footer links (`Akai Ito · App · How it works · The model · Simulation`), copy *"You go on one date."*, and `#d2d1cc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `2`
 
 ---
 
@@ -186,7 +196,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ecebe5` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#111113`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecebe5` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#111113` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Geist` for display copy (`Your twin dates millions. You go on `) with `Geist` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Geist` across display (`Your twin dates millions. You go on `) and body copy, paired with `Geist Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `.5rem`) with `cubic-bezier(.2,.7,.1,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +235,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--flesh`)**: `#f3c3a5` — grounded in `var(--flesh)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `.5rem` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
@@ -250,7 +260,7 @@ Scaffold `akaiito-ai` (`Akai Ito — Your twin dates millions. You go on one dat
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.ahd> — `akaiito-ai`)` (`akaiito-ai`) adapts across `@media (min-width:1500px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:900px)`, `@media (max-width:56.25rem)` with `cubic-bezier(.2,.7,.1,1)`, `cubic-bezier(.2,1.3,.35,1)`, `cubic-bezier(.2,1.45,.35,1)` transitions and links `Akai Ito · App · How it works · The model · Simulation`.
 2. **Hero Stage & Focal Lead (<section.sec> — `Your twin dates millions. You go o`)**:
    - DOM & Selectors: Landmark `<section class="sec opener">` presenting display lead `Your twin dates millions. You go on one date.` and copy excerpt *"Akai Ito is for grown-ups. Are you 18 or older?"* over `#ecebe5` canvas and `#111113` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ecebe5` background with `#111113` headline `Your twin dates millions. You go on one date.`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#ecebe5` background with `#111113` headline `Your twin dates millions. You go on one date.`.
 3. **Primary Showcase & Content Grid (<section.hero> — `1 window awake on this block Every`)**:
    - DOM & Selectors: Landmark `<section class="hero sec">` rendering section `1 window awake on this block Everyone you could l...` with copy *"Akai Ito · AI dating, by simulation"*, asset references (`icon.webp`, `favicon.png`, `apple-touch.png`, `phone.webp`), and grid rule `body { overflow-x:clip }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hero> — `1 window awake on this block Every`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
@@ -281,8 +291,25 @@ Scaffold `akaiito-ai` (`Akai Ito — Your twin dates millions. You go on one dat
 - **Selector `.ln`**: `transition: transform .55s cubic-bezier(.2,.7,.1,1),opacity .4s` extracted from `akaiito-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.1,1)`)**: Governs interactive state transitions across `<header.ahd>` and `<section.hero>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `900px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `akaiito-ai`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

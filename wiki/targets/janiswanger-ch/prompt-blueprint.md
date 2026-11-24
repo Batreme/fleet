@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: janiswanger-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "janiswanger-ch"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#007bc4`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#0
 
 > **Janis Wanger — Creative Engineer in Bern** (https://janiswanger.ch) — Portfolio of Janis Wanger, a creative Frontend Engineer in Bern working across design and code. Projects, experience, and how to get in t...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Janis Wanger — Creative Engineer in Bern** (`https://janiswanger.ch`). Portfolio of Janis Wanger, a creative Frontend Engineer in Bern working across design and code. Projects, experience, and how to get in t...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#007bc4`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e5e5e5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a19` primary typography and `#007bc4` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PolySans` for display copy (`Janis is a Bern-based creative Front`) with `PolySans` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `PolySans` across display (`Janis is a Bern-based creative Front`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `var(--spacing-container-level-1)`) with `cubic-bezier(.4,0,1,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `9679px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-container-level-1)` lateral canvas padding with `8px` grid gap.
 - **Border Radius Scale**: `3.35544e+07px`, `.25rem`, `999px`, `50%`.
@@ -92,7 +97,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#0
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 50.4px`, `line-height: 56.448px`, `font-weight: 700`, `letter-spacing: -1.26px`).
-- **Section Heading (`H2`)**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`.
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.4px`, `line-height: 82.08px`, `font-weight: 700`, `letter-spacing: -2.16px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`.
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`.
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`.
 
@@ -109,6 +114,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#0
 - **Selector `.site-header`**: `transition: opacity var(--page-transition-duration) var(--page-transition-...` extracted from `janiswanger-ch` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.hero-home>` and `<section.scroll-mt-navbar-height>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9679px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -162,11 +170,13 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#e5e5e5` / `#0
 2. **Hero Stage & Focal Lead (<section.py-32> — `Janis is a Bern-based creative Fro`)**:
    - Landmark `<section class="py-32 scroll-mt-navbar-height">` presenting display lead `Janis is a Bern-based creative Frontend Engineer...` and copy excerpt *"Sometimes the frequencies just match"* over `#e5e5e5` canvas and `#1a1a19` ink.
 3. **Primary Showcase & Content Grid (<section.scroll-mt-navbar-height> — `Technical skills`)**:
-   - Landmark `<section class="py-32 scroll-mt-navbar-height">` rendering section `Technical skills` with copy *"O P E N T O G E T T I N G H I R E D ☆ ♡ ✧ O P E N T O G E T T I N"*, asset references (`entry.CeVzuLMF.css`, `HireBadge.BgIwIulx.css`, `AutoplayVideo.ulh4C2Gx.css`, `DsRIxAzj.js`), and grid rule `it-media-controls-start-playback-... { display:none!important }`.
+   - Landmark `<section class="py-32 scroll-mt-navbar-height">` rendering section `Technical skills` with copy *"O P E N T O G E T T I N G H I R E D ☆ ♡ ✧ O P E N T O G E T T I N"*, asset references (`entry.CeVzuLMF.css`, `HireBadge.BgIwIulx.css`, `AutoplayVideo.ulh4C2Gx.css`, `BlJowbSL.js`), and grid rule `it-media-controls-start-playback-... { display:none!important }`.
 4. **Interactive Detail & Feature Matrix (<article.skills-enter> — `Want to work together ?`)**:
    - Landmark `<article class="skills-enter relative">` framing `Want to work together ?` and `Will I fit in your office?` (*"so beautiful patterns emerge."*) with `#ff8a3d` surface cards, `#007bc4` accents, and `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://janiswanger.ch`)**:
    - Landmark `<footer class="site-footer overflow-x-clip">` anchoring `Janis Wanger — Creative Engineer` footer links (`Main navigation`), copy *"Based in Switzerland, Bern"*, and `#c8c8c8` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#about` · sticky/fixed elements: `3`
 
 ---
 
@@ -183,7 +193,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e5e5e5` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1a1a19`, **Accent / Highlight**: `#007bc4`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e5e5e5` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1a1a19` primary typography and `#007bc4` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `PolySans` for display copy (`Janis is a Bern-based creative Front`) with `PolySans` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `PolySans` across display (`Janis is a Bern-based creative Front`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 8px`, padding `var(--spacing-container-level-1)`) with `cubic-bezier(.4,0,1,1)` easing and GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +229,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#c8c8c8` — grounded in `var(--color-hairline)` in `:root` (`1a1a1924`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--spacing-container-level-1)` lateral canvas padding with `8px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`)
@@ -233,7 +243,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `PolySans`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: live computed `h1` (`font-size: 50.4px`, `line-height: 56.448px`, `font-weight: 700`, `letter-spacing: -1.26px`)
-- **H2 Section Rule**: CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`
+- **H2 Section Rule**: live computed `h2` (`font-size: 86.4px`, `line-height: 82.08px`, `font-weight: 700`, `letter-spacing: -2.16px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: 1.33333`
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: 1.5`
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: 1.33333`, `--text-sm: .875rem`
 
@@ -244,9 +254,9 @@ Scaffold `janiswanger-ch` (`Janis Wanger — Creative Engineer in Bern`) with th
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.hero-home> — `janiswanger-ch`)` (`janiswanger-ch`) adapts across `@media (width>=48rem)`, `@media (prefers-reduced-motion:reduce)`, `@media not all and (width>=64rem)`, `@media not all and (width>=48rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Main navigation`.
 2. **Hero Stage & Focal Lead (<section.py-32> — `Janis is a Bern-based creative Fro`)**:
    - DOM & Selectors: Landmark `<section class="py-32 scroll-mt-navbar-height">` presenting display lead `Janis is a Bern-based creative Frontend Engineer...` and copy excerpt *"Sometimes the frequencies just match"* over `#e5e5e5` canvas and `#1a1a19` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e5e5e5` background with `#1a1a19` headline `Janis is a Bern-based creative Frontend Engineer...`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#e5e5e5` background with `#1a1a19` headline `Janis is a Bern-based creative Frontend Engineer...`.
 3. **Primary Showcase & Content Grid (<section.scroll-mt-navbar-height> — `Technical skills`)**:
-   - DOM & Selectors: Landmark `<section class="py-32 scroll-mt-navbar-height">` rendering section `Technical skills` with copy *"O P E N T O G E T T I N G H I R E D ☆ ♡ ✧ O P E N T O G E T T I N"*, asset references (`entry.CeVzuLMF.css`, `HireBadge.BgIwIulx.css`, `AutoplayVideo.ulh4C2Gx.css`, `DsRIxAzj.js`), and grid rule `it-media-controls-start-playback-... { display:none!important }`.
+   - DOM & Selectors: Landmark `<section class="py-32 scroll-mt-navbar-height">` rendering section `Technical skills` with copy *"O P E N T O G E T T I N G H I R E D ☆ ♡ ✧ O P E N T O G E T T I N"*, asset references (`entry.CeVzuLMF.css`, `HireBadge.BgIwIulx.css`, `AutoplayVideo.ulh4C2Gx.css`, `BlJowbSL.js`), and grid rule `it-media-controls-start-playback-... { display:none!important }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.scroll-mt-navbar-height> — `Technical skills`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 8px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-container-level-1)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.skills-enter> — `Want to work together ?`)**:
    - DOM & Selectors: Landmark `<article class="skills-enter relative">` framing `Want to work together ?` and `Will I fit in your office?` (*"so beautiful patterns emerge."*) with `#ff8a3d` surface cards, `#007bc4` accents, and `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
@@ -275,8 +285,27 @@ Scaffold `janiswanger-ch` (`Janis Wanger — Creative Engineer in Bern`) with th
 - **Selector `.site-header`**: `transition: opacity var(--page-transition-duration) var(--page-transition-...` extracted from `janiswanger-ch` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.hero-home>` and `<section.scroll-mt-navbar-height>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Swiper Touch Carousel Engine, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9679px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: #about (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `janiswanger-ch`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #about | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | #about | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4663px` | `50%` | Will I fit in your office? | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `8999px` | `100%` | Contact | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

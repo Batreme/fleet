@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: thunder-buns-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thunder-buns-com` (**Thunderbuns · Smashburgers Delivered**)
 - **Production URL**: [https://thunder-buns.com/](https://thunder-buns.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#12220f` / `#0000ee`)
 - **Summary**: The best smash burgers, 100% halal. Delivered across the Netherlands, Belgium and Germany. Order through your usual delivery app.
 - **Total Clean CSS Variables Extracted**: `124` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Satoshi`
 - **Monospace / Technical Font Stack**: `Haffer Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 130px`, `line-height: 114.4px`, `font-weight: 700`); rule `h1` (`font-size: min(14.5em,130px)`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 50px`, `line-height: 44px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 175px`, `line-height: 154px`, `font-weight: 700`); rule `h2` (`font-size: 3.3em`, `line-height: .88`)
 - **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 1.4em`, `line-height: 1.2`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 10px`, `line-height: normal`, `font-weight: 400`)
 

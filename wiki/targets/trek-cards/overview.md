@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: trek-cards"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://trek.cards/"
 final_url: "https://trek.cards/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Trek Cards - The AI-Powered TCG Where Every Card Has a Story
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `5`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `13`
+- **Recovered Stylesheets**: `3`
 
 ---
 

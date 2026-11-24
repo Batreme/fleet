@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: v4vevilos-gr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `v4vevilos-gr` (**Βέβηλος • Once dead twice alive**)
 - **Production URL**: [https://v4vevilos.gr](https://v4vevilos.gr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#050507` / `#ff6a00`)
 - **Summary**: Επίσημο hub του Βέβηλου • μουσική, live, δισκογραφία & σύνδεσμοι σε ένα σημείο.
-- **Total Clean CSS Variables Extracted**: `27` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
 
 ---
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#050507` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#08080a` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#050506` | `var(--pl-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff6a00` | `var(--accent-fire)` in `:root` |
 | **Secondary / Muted Copy** | `#f4efe6` | live computed `h2` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#1c1c1d` | `var(--border)` in `:root` (`rgba(255,255,255,.09)`) |
@@ -74,6 +74,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.gig-banner> — `Βέβηλος Β έ β η λ ο ς`)**:
    - Landmark `<section class="gig-banner hero-gig">` rendering section `Βέβηλος Β έ β η λ ο ς` with copy *"Ιδρυτικό μέλος των Βαβυλώνα και Omerta. Rap και hip-hop με βάθος,"*, asset references (`favicon.ico`, `apple-touch-icon.png`, `advent-pro-100-700-greek.woff2`, `advent-pro-100-700-latin.woff2`), and grid rule `body { overflow-x:clip }`.
 4. **Interactive Detail & Feature Matrix (<section.vv-consent> — `Νεκρή Ζώνη V`)**:
-   - Landmark `<section class="vv-consent">` framing `Νεκρή Ζώνη V` and `Η επόμενη σελίδα γράφεται και από σένα.` (*"Δεν χρειάζεται πια να ψάξεις τη Νεκρή Ζώνη.. Αυτή τη φορά, θα σε "*) with `#08080a` surface cards, `#ff6a00` accents, and `img { max-width:100%;display:block }`.
+   - Landmark `<section class="vv-consent">` framing `Νεκρή Ζώνη V` and `Η επόμενη σελίδα γράφεται και από σένα.` (*"Δεν χρειάζεται πια να ψάξεις τη Νεκρή Ζώνη.. Αυτή τη φορά, θα σε "*) with `#050506` surface cards, `#ff6a00` accents, and `img { max-width:100%;display:block }`.
 5. **Colophon & Global Directory Footer (<footer.pl-open> — `https://v4vevilos.gr`)**:
    - Landmark `<footer class="pl-open">` anchoring `Βέβηλος • Once dead twice alive` footer links (`EL · EN`), copy *"Δεν χρειάζεται πια να ψάξεις τη Νεκρή Ζώνη.."*, and `#1c1c1d` structural dividers.

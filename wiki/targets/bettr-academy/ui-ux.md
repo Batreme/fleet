@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: bettr-academy"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `bettr-academy` (**Bettr Academy · World-Class Barista & Coffee Training**)
 - **Production URL**: [https://bettr.academy/](https://bettr.academy/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f4ed` canvas, `#2c1c0f` ink, `#0082f3` accent)
 - **Summary**: Bettr Academy offers SCA-certified and WSQ-accredited coffee courses in Singapore — real, hands-on training with up to 70% SkillsFuture f...
 - **Total Clean CSS Variables Extracted**: `104` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Roboto`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 154.977px`, `line-height: 185.972px`, `font-weight: 600`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 600`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 84px`, `line-height: 84px`, `font-weight: 600`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_typography---font-styles--body: Roboto, sans-serif`; rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--_ui-styles---radius--small: .25rem`; rule `small` (`font-size: 80%`)
 

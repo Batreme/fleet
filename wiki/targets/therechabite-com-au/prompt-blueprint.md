@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: therechabite-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "therechabite-com-au"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas, `#ffffff` ink, `#000000` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
 
 > **The Rechabite • Multi-level Palace of Surprise and Delight** (https://therechabite.com.au/) — M e e t M e A t T h e R e c h a b i t e
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Rechabite • Multi-level Palace of Surprise and Delight** (`https://therechabite.com.au/`). M e e t M e A t T h e R e c h a b i t e
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas, `#ffffff` ink, `#000000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0f0f0f` (live computed `section` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#000000` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=850px` / doc `16727px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `105.625rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap.
 - **Border Radius Scale**: `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)`.
@@ -114,6 +119,12 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
 - **Selector `.transition-\[filter\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `therechabite-com-au` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.pointer-events-none>` and `<section.bg-light-black>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `16727px`, deepest scrollY reached `850px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Hover Physics (`primary_cta` · `WHAT’S ON WHAT’S ON`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`tab` · `ALWAYS ON`)**: Triggered visual diff `29.358` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/about/your-visit/`) measured as `direct` in `1127ms`.
 
 ---
 
@@ -132,10 +143,10 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.bg-light-black>) max-w: 105.625rem         | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | M e e t M e A t T h e R e c  |  | THE CBD TOUR · A YOU WOULDN’ | | │
+│ | | M e e t M e A t T h e R e c  |  | Buckshot with Sidney Phillip | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.overflow-hidden>) — Buckshot with Sidney   | │
+│ | DETAIL MODULE (<section.overflow-hidden>) — Barefaced Stories · N  | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.bg-light-bla) | https://therechabite.com.au/         │
 └────────────────────────────────────────────────────────────────────────┘
@@ -153,9 +164,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<section.bg-light-blac) — 1-Col Stack              | │
 │ | [ Item 1: M e e t M e A t T h e R e c h a b i t e                ] | │
-│ | [ Item 2: THE CBD TOUR · A YOU WOULDN’T LIVE SHOW                ] | │
+│ | [ Item 2: Buckshot with Sidney Phillips, Oscar18                 ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.overflow-hidden) — 1-Col (Buckshot with Sidn) │
+│ | DETAIL STACK (<section.overflow-hidden) — 1-Col (Barefaced Stories ) │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.bg-light-bla) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -168,10 +179,18 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas
    - Landmark `<section class="min-h-lvh bg-light-black">` presenting display lead `MEET ME AT THE RECH A BITE` and copy excerpt *"From scorching cabaret and red-hot comedy to live music that’ll m"* over `#0f0f0f` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.bg-light-black> — `M e e t M e A t T h e R e c h a b `)**:
    - Landmark `<section class="bg-light-black relative">` rendering section `M e e t M e A t T h e R e c h a b i t e` with copy *"What's on What's on"*, asset references (`clarity.js`, `z0jl5zt2hc`, `4457171594343694`, `fbevents.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `THE CBD TOUR · A YOU WOULDN’T LIVE`)**:
-   - Landmark `<section class="overflow-hidden text-white">` framing `THE CBD TOUR · A YOU WOULDN’T LIVE SHOW` and `Buckshot with Sidney Phillips, Oscar18` (*"What’s on What’s on"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
+4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `Buckshot with Sidney Phillips, Osc`)**:
+   - Landmark `<section class="overflow-hidden text-white">` framing `Buckshot with Sidney Phillips, Oscar18` and `Barefaced Stories · Nov 26 · Alive, Somehow` (*"All Events All Events"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.bg-light-black> — `https://therechabite.com.au/`)**:
-   - Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R ech a b i t e Hall"*, and `#000000` structural dividers.
+   - Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R e c h abi t e Ha l l"*, and `#000000` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `MEET ME AT THE RECH A BITE` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Section @ 5%` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **About Route (`/about/your-visit/`)**: `https://therechabite.com.au/about/your-visit/` — H1: `YOUR VISIT`, scrollHeight `4355px`, transition `direct` (`1127ms`)
+- **About Route (`/about/who-we-are/`)**: `https://therechabite.com.au/about/who-we-are/` — H1: `WHO WE ARE`, scrollHeight `5824px`, transition `direct` (`1211ms`)
+- **About Route (`/contact/`)**: `https://therechabite.com.au/contact/` — H1: `CONTACT`, scrollHeight `5220px`, transition `direct` (`1874ms`)
 
 ---
 
@@ -229,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--wp-admin-theme-color-darker-20`)**: `#005a87` — grounded in `var(--wp-admin-theme-color-darker-20)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `105.625rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105.625rem`, `gap: var(--spacing)`)
@@ -254,22 +273,22 @@ Scaffold `therechabite-com-au` (`The Rechabite • Multi-level Palace of Surpris
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.pointer-events-none> — `therechabite-com-au`)` (`therechabite-com-au`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.87,0,.13,1)` transitions and links `What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`.
 2. **Hero Stage & Focal Lead (<section.min-h-lvh> — `MEET ME AT THE RECH A BITE`)**:
    - DOM & Selectors: Landmark `<section class="min-h-lvh bg-light-black">` presenting display lead `MEET ME AT THE RECH A BITE` and copy excerpt *"From scorching cabaret and red-hot comedy to live music that’ll m"* over `#0f0f0f` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0f0f0f` background with `#ffffff` headline `MEET ME AT THE RECH A BITE`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×2616px` mobile) sets `#0f0f0f` background with `#ffffff` headline `MEET ME AT THE RECH A BITE`.
 3. **Primary Showcase & Content Grid (<section.bg-light-black> — `M e e t M e A t T h e R e c h a b `)**:
    - DOM & Selectors: Landmark `<section class="bg-light-black relative">` rendering section `M e e t M e A t T h e R e c h a b i t e` with copy *"What's on What's on"*, asset references (`clarity.js`, `z0jl5zt2hc`, `4457171594343694`, `fbevents.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.bg-light-black> — `M e e t M e A t T h e R e c h a b `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 105.625rem`, `gap: var(--spacing)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing)` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `THE CBD TOUR · A YOU WOULDN’T LIVE`)**:
-   - DOM & Selectors: Landmark `<section class="overflow-hidden text-white">` framing `THE CBD TOUR · A YOU WOULDN’T LIVE SHOW` and `Buckshot with Sidney Phillips, Oscar18` (*"What’s on What’s on"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.overflow-hidden> — `THE CBD TOUR · A YOU WOULDN’T LIVE`)` uses `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)` radii, `#000000` highlights, and assets (clarity.js, z0jl5zt2hc, 4457171594343694).
+4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `Buckshot with Sidney Phillips, Osc`)**:
+   - DOM & Selectors: Landmark `<section class="overflow-hidden text-white">` framing `Buckshot with Sidney Phillips, Oscar18` and `Barefaced Stories · Nov 26 · Alive, Somehow` (*"All Events All Events"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.overflow-hidden> — `Buckshot with Sidney Phillips, Osc`)` uses `.3125rem`, `.375rem`, `.25rem`, `var(--radius-2xl)` radii, `#000000` highlights, and assets (clarity.js, z0jl5zt2hc, 4457171594343694).
 5. **Colophon & Global Directory Footer (<footer.bg-light-black> — `https://therechabite.com.au/`)**:
-   - DOM & Selectors: Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R ech a b i t e Hall"*, and `#000000` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R e c h abi t e Ha l l"*, and `#000000` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.bg-light-black> — `https://therechabite.com.au/`)` aligns to `105.625rem` (non-`@media` desktop container stylesheet rule) with `var(--spacing)` lateral canvas padding with `var(--spacing)` grid gap and attributes (data-optimized="1", data-optimized="1", data-optimized="1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"From scorching cabaret and red-hot comedy to live music that’ll melt your thongs o..."*
 - Copy Excerpt 2: *"What's on What's on"*
-- Copy Excerpt 3: *"What’s on What’s on"*
-- Copy Excerpt 4: *"R ech a b i t e Hall"*
+- Copy Excerpt 3: *"All Events All Events"*
+- Copy Excerpt 4: *"R e c h abi t e Ha l l"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.87,0,.13,1)`
@@ -285,8 +304,41 @@ Scaffold `therechabite-com-au` (`The Rechabite • Multi-level Palace of Surpris
 - **Selector `.transition-\[filter\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `therechabite-com-au` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.pointer-events-none>` and `<section.bg-light-black>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `16727px` across 2 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: MEET ME AT THE RECH A BITE (0%) -> Section @ 5% (5%).
+- **Multi-Page Routes**: Scaffold internal routes `/about/your-visit/` (about, direct), `/about/who-we-are/` (about, direct), `/contact/` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `therechabite-com-au`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | MEET ME AT THE RECH A BITE | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Section @ 5% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | MEET ME AT THE RECH A BITE | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Section @ 49% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `tab` (`ALWAYS ON`, diff `29.358`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `about` | `https://therechabite.com.au/about/your-visit/` | YOUR VISIT | `4355px` | `direct` (`1127ms`) | [subpage-01-about-your-visit.webp](assets/subpage-01-about-your-visit.webp) |
+| `2` | `about` | `https://therechabite.com.au/about/who-we-are/` | WHO WE ARE | `5824px` | `direct` (`1211ms`) | [subpage-02-about-who-we-are.webp](assets/subpage-02-about-who-we-are.webp) |
+| `3` | `about` | `https://therechabite.com.au/contact/` | CONTACT | `5220px` | `direct` (`1874ms`) | [subpage-03-contact.webp](assets/subpage-03-contact.webp) |
+

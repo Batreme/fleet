@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: abyme-app"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://abyme.app"
-final_url: "https://abyme.app"
+final_url: "https://abyme.app/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -28,11 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://abyme.app](https://abyme.app)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: abyme-app
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: Curiouser and Curiouser
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
+- **Recovered Scripts**: `11`
 - **Recovered Stylesheets**: `0`
 
 ---

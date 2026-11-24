@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-qissa-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-qissa-co-uk` (**Indian Restaurant in Sevenoaks, Kent · Qissa**)
 - **Production URL**: [https://www.qissa.co.uk/](https://www.qissa.co.uk/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#0c1533`)
 - **Summary**: Qissa — A Tale of Food. Modern Indian dining beneath the blossoms in the heart of Sevenoaks, Kent. Reserve a table or order takeaway. Rat...
 - **Total Clean CSS Variables Extracted**: `26` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 121.6px`, `line-height: 119.168px`, `font-weight: 330`, `letter-spacing: -2.432px`); CSS variables `--f-display: 'Cormorant Garamond', 'Times New Roman', serif`; rule `.hero-title` (`font-size: clamp(2rem,9vw,7.6rem)`, `letter-spacing: -.02em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 57.6px`, `line-height: 59.904px`, `font-weight: 340`, `letter-spacing: -0.864px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 62.72px`, `font-weight: 330`, `letter-spacing: -1.28px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); CSS variables `--f-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`line-height: 1.6`, `font-weight: 350`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); rule `small` (`font-size: .7rem`)
 
@@ -75,7 +75,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-qissa-co-uk`)**:
-   - Landmark `<header class="site-header">` (`1440x133px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Landmark `<header class="site-header">` (`1440x136px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Qissa`)**:
    - Landmark `<section class="hero">` presenting display lead `Qissa` and copy excerpt *"Celebrating the flavors of India with dishes inspired by differen"* over `#0a1230` canvas and `#f6f1e7` ink.
 3. **Primary Showcase & Content Grid (<section.section> — `A word that means a tale.`)**:

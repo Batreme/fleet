@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: palaceskateboards-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://palaceskateboards.com/"
 final_url: "https://eu.palaceskateboards.com/"
 status: analyzed
@@ -30,9 +30,9 @@ auth_required: false
 - **Final Redirected URL**: [https://eu.palaceskateboards.com/](https://eu.palaceskateboards.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: PALACE SKATEBOARDS
-- **Identified Frameworks**: React, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `74`
-- **Recovered Stylesheets**: `1`
+- **Identified Frameworks**: React, Tailwind CSS
+- **Recovered Scripts**: `319`
+- **Recovered Stylesheets**: `4`
 
 ---
 

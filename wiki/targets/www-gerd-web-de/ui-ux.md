@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-gerd-web-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-gerd-web-de` (**Gerd Web 3 Second - Design**)
 - **Production URL**: [https://www.gerd-web.de](https://www.gerd-web.de)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#080c16` canvas, `#f5edff` ink, `#00f0ff` accent)
 - **Summary**: Design ist unsere Leidenschaft. Wir begleiten Ihr Webprojekt ganzheitlich – vom prägnanten Logo über ausdrucksstarke Bildwelten bis hin z...
 - **Total Clean CSS Variables Extracted**: `23` (curated live-grounded set below)

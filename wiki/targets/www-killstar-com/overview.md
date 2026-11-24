@@ -1,9 +1,9 @@
 ---
 title: "Target Overview: www-killstar-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.killstar.com/"
-final_url: "https://eu.killstar.com/"
+final_url: "https://www.killstar.com/"
 status: analyzed
 http_status: 200
 capture_tier: tier1_fast
@@ -27,12 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.killstar.com/](https://www.killstar.com/)
-- **Final Redirected URL**: [https://eu.killstar.com/](https://eu.killstar.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: KILLSTAR
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `273`
-- **Recovered Stylesheets**: `40`
+- **Recovered Scripts**: `1372`
+- **Recovered Stylesheets**: `41`
 
 ---
 

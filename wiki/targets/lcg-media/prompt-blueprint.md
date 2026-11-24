@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: lcg-media"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "lcg-media"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#de204e`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 > **LCG · The Agency That Fights for American Families** (https://lcg.media) — LCG provides hands-on consulting and creative solutions to support conservative campaigns and drive results for American Families.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LCG · The Agency That Fights for American Families** (`https://lcg.media`). LCG provides hands-on consulting and creative solutions to support conservative campaigns and drive results for American Families.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#de204e`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#121212` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#de204e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Soehne Breit Kraftig` for display copy (`The Agency That Fights for American `) with `PP Mori` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1249px` container bounds (`gap: 2.4rem`, padding `1.5rem`) with `cubic-bezier(0.47,0,0.745,0.715)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Grounded Typographic Hierarchy**: Pairs `Soehne Breit Kraftig` for display copy (`The Agency That Fights for American `) with `PP Mori`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1249px` container bounds (`gap: 2.4rem`, padding `1.5rem`) with `cubic-bezier(0.47,0,0.745,0.715)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1249px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `1.5rem` lateral canvas padding with `2.4rem` grid gap.
 - **Border Radius Scale**: `4rem`, `4.8rem`, `50rem`, `50%`.
@@ -58,7 +63,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 | **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#000000` | `.rendered body { background: black }` (`#000000`) |
 | **Interactive Accent / Highlight** | `#de204e` | `var(--color-highlight)` in `:root` |
-| **Secondary / Muted Copy** | `#68675f` | `nimated .subheader__wrapper spa... { color: #68675f }` |
+| **Secondary / Muted Copy** | `#777777` | `recaptchaJavascriptChallengeQrF... { color: #777777 }` |
 | **Structural Hairline Border** | `#000000` | `.cursor__bullet { border: #000000 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -108,7 +113,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 - **Selector `.button div`**: `transition: transform .8s var(--delay) var(--ease-in-out-quart)` extracted from `lcg-media` stylesheet.
 - **Selector `.cookies`**: `transition: transform .8s var(--ease-out-cubic)` extracted from `lcg-media` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.47,0,0.745,0.715)`)**: Governs interactive state transitions across `<nav.navigation>` and `<section.logo-video>`.
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`first_card` · `image-cards__medias`)**: Computed transition `0.6s` / `cubic-bezier(0.215, 0.61, 0.355, 1)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/cases/`) measured as `direct` in `1122ms`.
 
 ---
 
@@ -167,6 +177,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
    - Landmark `<section class="subheader subheader--right">` framing `C a s e s C a s e s` and `C a p a b i l i t i e s C a p a b i l i t i e s` (*"C a p a b i l i t i e s C a p a b i l i t i e s"*) with `#000000` surface cards, `#de204e` accents, and `video { margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:b... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://lcg.media`)**:
    - Landmark `<footer class="footer">` anchoring `LCG · The Agency That Fights for` footer links (`Home · Cases · Capabilities · Creed · Contact`), copy *"C r e e d C r e e d"*, and `#000000` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The Agency That Fights for American Families Cons...` · sticky/fixed elements: `2`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `2`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `2`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Fathers Wanted` · sticky/fixed elements: `2`
+- **Step 05** (`y=0px`, `33%`): Active landmark `Hero` · sticky/fixed elements: `2`
+- **Step 06** (`y=0px`, `42%`): Active landmark `Fueled by a commitment to serve American Families.` · sticky/fixed elements: `2`
+- **Step 07** (`y=0px`, `50%`): Active landmark `Fueled by a commitment to serve American Families.` · sticky/fixed elements: `2`
+- **Step 08** (`y=0px`, `58%`): Active landmark `Fueled by a commitment to serve American Families.` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/cases/`)**: `https://lcg.media/cases/` — H1: `cases`, scrollHeight `900px`, transition `direct` (`1122ms`)
+- **Detail Route (`/cases/fathers-wanted/`)**: `https://lcg.media/cases/fathers-wanted/` — H1: `Fathers Wanted`, scrollHeight `900px`, transition `direct` (`1212ms`)
+- **About Route (`/contact/`)**: `https://lcg.media/contact/` — H1: `Tailored service, wherever you’re located.`, scrollHeight `900px`, transition `direct` (`737ms`)
 
 ---
 
@@ -183,8 +207,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#121212` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#de204e`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#121212` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#de204e` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Soehne Breit Kraftig` for display copy (`The Agency That Fights for American `) with `PP Mori` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1249px` container bounds (`gap: 2.4rem`, padding `1.5rem`) with `cubic-bezier(0.47,0,0.745,0.715)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
+  - **Grounded Typographic Hierarchy**: Pairs `Soehne Breit Kraftig` for display copy (`The Agency That Fights for American `) with `PP Mori`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1249px` container bounds (`gap: 2.4rem`, padding `1.5rem`) with `cubic-bezier(0.47,0,0.745,0.715)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `lcg-media` in your global stylesheet:
@@ -215,12 +239,12 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#ffffff` — grounded in live computed `h2` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#000000` — grounded in `.rendered body { background: black }` (`#000000`)
 - **Interactive Accent / Highlight**: `#de204e` — grounded in `var(--color-highlight)` in `:root`
-- **Secondary / Muted Copy**: `#68675f` — grounded in `nimated .subheader__wrapper spa... { color: #68675f }`
+- **Secondary / Muted Copy**: `#777777` — grounded in `recaptchaJavascriptChallengeQrF... { color: #777777 }`
 - **Structural Hairline Border**: `#000000` — grounded in `.cursor__bullet { border: #000000 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1249px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `1.5rem` lateral canvas padding with `2.4rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1249px`, `gap: 2.4rem`)
@@ -244,7 +268,7 @@ Scaffold `lcg-media` (`LCG · The Agency That Fights for American Families`) wit
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.navigation> — `lcg-media`)` (`lcg-media`) adapts across `@media (min-width: 1024px)`, `@media (max-width: 1023px)`, `@media (max-width: 767px)`, `@media (min-width: 1025px)` with `cubic-bezier(0.47,0,0.745,0.715)`, `cubic-bezier(0.39,0.575,0.565,1)`, `cubic-bezier(0.445,0.05,0.55,0.95)` transitions and links `Home · Cases · Capabilities · Creed · Contact`.
 2. **Hero Stage & Focal Lead (<section.header> — `The Agency That Fights for America`)**:
    - DOM & Selectors: Landmark `<section class="header header--left">` presenting display lead `The Agency That Fights for American Families Cons...` and copy excerpt *"The Agency That Fights for"* over `#121212` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#121212` background with `#ffffff` headline `The Agency That Fights for American Families Cons...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#121212` background with `#ffffff` headline `The Agency That Fights for American Families Cons...`.
 3. **Primary Showcase & Content Grid (<section.logo-video> — `The Agency That Fights for A m e r`)**:
    - DOM & Selectors: Landmark `<section class="logo-video">` rendering section `The Agency That Fights for A m e r i c a n F a m...` with copy *"C a s e s C a s e s"*, asset references (`mask.svg`, `bundle.ea4ceea.css`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `before { box-sizing:border-box }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.logo-video> — `The Agency That Fights for A m e r`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1249px`, `gap: 2.4rem`) on desktop and Single-column vertical stack at `390px` viewport width with `1.5rem` horizontal padding on mobile.
@@ -274,9 +298,41 @@ Scaffold `lcg-media` (`LCG · The Agency That Fights for American Families`) wit
 - **Selector `.button div`**: `transition: transform .8s var(--delay) var(--ease-in-out-quart)` extracted from `lcg-media` stylesheet.
 - **Selector `.cookies`**: `transition: transform .8s var(--ease-out-cubic)` extracted from `lcg-media` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.47,0,0.745,0.715)`)**: Governs interactive state transitions across `<nav.navigation>` and `<section.logo-video>`.
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: The Agency That Fights for... (0%) -> Hero (8%) -> Hero (17%) -> Fathers Wanted (25%) -> Hero (33%) -> Fueled by a commitment to s... (42%) -> Fueled by a commitment to s... (50%) -> Fueled by a commitment to s... (58%).
+- **Multi-Page Routes**: Scaffold internal routes `/cases/` (listing, direct), `/cases/fathers-wanted/` (detail, direct), `/contact/` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `lcg-media`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The Agency That Fights for American Families... | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Fathers Wanted | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | Hero | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | Fueled by a commitment to serve American Fami... | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | Fueled by a commitment to serve American Fami... | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | Fueled by a commitment to serve American Fami... | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The Agency That Fights for American Famil... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://lcg.media/cases/` | cases | `900px` | `direct` (`1122ms`) | [subpage-01-cases.webp](assets/subpage-01-cases.webp) |
+| `2` | `detail` | `https://lcg.media/cases/fathers-wanted/` | Fathers Wanted | `900px` | `direct` (`1212ms`) | [subpage-02-cases-fathers-wanted.webp](assets/subpage-02-cases-fathers-wanted.webp) |
+| `3` | `about` | `https://lcg.media/contact/` | Tailored service, wherever you’re loc... | `900px` | `direct` (`737ms`) | [subpage-03-contact.webp](assets/subpage-03-contact.webp) |
+

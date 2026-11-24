@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: lpas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://lpas.com/"
 final_url: "https://lpas.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: LPAS - Architecture and Interiors
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `74`
+- **Recovered Stylesheets**: `4`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-undplus-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.undplus.com"
 final_url: "https://www.undplus.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: UNDPLUS — Brand Architecture & Spatial Design Studio
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `21`
+- **Recovered Scripts**: `27`
 - **Recovered Stylesheets**: `0`
 
 ---

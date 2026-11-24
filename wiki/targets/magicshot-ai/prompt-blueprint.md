@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: magicshot-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "magicshot-ai"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas, `#ffffff` ink, `#a22bff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas
 
 > **AI Image, Video & Audio Generator all in One Plan** (https://magicshot.ai) — Generate images, video, and audio with top AI models and countless tools under one subscription. No five tabs, no five invoices, one plan...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **AI Image, Video & Audio Generator all in One Plan** (`https://magicshot.ai`). Generate images, video, and audio with top AI models and countless tools under one subscription. No five tabs, no five invoices, one plan...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas, `#ffffff` ink, `#a22bff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a0a0f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#a22bff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`Every AI model. One plan. Endless co`) with `Archivo` and `Martian Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Archivo` across display (`Every AI model. One plan. Endless co`) and body copy, paired with `Martian Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 24px`, padding `.125rem`) with `cubic-bezier(.4,0,1,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=13589px` / doc `14489px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `.125rem` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `3.35544e+07px`, `8px`, `4px`, `var(--radius-card)`.
@@ -109,6 +114,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas
 - **Selector `media (prefers-reduced-motion:red...`**: `transition: .001ms!important` extracted from `magicshot-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.section-y:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `14489px`, deepest scrollY reached `13589px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe (`Show AI Image Generation Tools`)**: Triggered visual change (pixel diff `27.115`, captured in `assets/state-nav.webp`); revealed links: See all tools, Photo Generator Gener..., AI GIF Generator Make..., AI Image Enhancer Sha..., AI Logo Generator Cre..., Product Photo Generat....
+- **Hover Physics (`primary_cta` · `4.8 / 5 RATED ON Trustpilot`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Hover Physics (`first_card` · `absolute inset-0 rounded-[8px] fo...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`tab` · `Video Turn text and photos into v...`)**: Triggered visual diff `11.053` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/solutions`) measured as `MPA` in `4380ms`.
 
 ---
 
@@ -158,7 +171,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `magicshot-ai`)**:
-   - Landmark `<header class="site-header top-0">` (`1440x65px`) hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-navigate-track="reload"`, `data-navigate-track="reload"`, `data-animate`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="site-header top-0">` (`1440x65px`) hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-id="DB8MR53C77UC0DK7DIE0"`, `data-navigate-track="reload"`, `data-navigate-track="reload"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.section-y> — `Every AI model. One plan. Endless `)**:
    - Landmark `<section class="section-y pt-6">` presenting display lead `Every AI model. One plan. Endless content.` and copy excerpt *"Headshots, product shots, video ads and more, made in seconds fro"* over `#0a0a0f` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.section-y:nth(2)> — `Thanksgiving Feast Challenge is on`)**:
@@ -167,6 +180,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#0a0a0f` canvas
    - Landmark `<section class="section-y">` framing `Images, video, photoshoots, edits and audio. One...` and `Generate images from a single prompt` (*"What will you create today?"*) with `#121218` surface cards, `#a22bff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.border-surface-800> — `https://magicshot.ai`)**:
    - Landmark `<footer class="border-surface-800 bg-surface-950">` anchoring `AI Image, Video & Audio Generato` footer links (`Image · Video · Photoshoot · Photo Editing · Audio`), copy *"See What You Can Make"*, and `#7740a7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Every AI model. One plan. Endless content.` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `6%`): Active landmark `Thanksgiving Feast Challenge is on` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `25%`): Active landmark `AI Headshot Generator` · sticky/fixed elements: `1`
+- **Step 04** (`y=5950px`, `44%`): Active landmark `Section @ 44%` · sticky/fixed elements: `1`
+- **Step 05** (`y=7650px`, `56%`): Active landmark `One tab. Every tool.` · sticky/fixed elements: `1`
+- **Step 06** (`y=10200px`, `75%`): Active landmark `Plans for every creator` · sticky/fixed elements: `1`
+- **Step 07** (`y=12750px`, `94%`): Active landmark `Start with a sentence.` · sticky/fixed elements: `1`
+- **Step 08** (`y=13589px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/solutions`)**: `https://magicshot.ai/solutions` — H1: `The AI studio, tuned to your work.`, scrollHeight `3863px`, transition `MPA` (`4380ms`)
+- **Detail Route (`/ai-image-generator/photo-generator`)**: `https://magicshot.ai/ai-image-generator/photo-generator` — H1: `Photo Generator`, scrollHeight `10135px`, transition `direct` (`970ms`)
+- **Listing Route (`/pricing`)**: `https://magicshot.ai/pricing` — H1: `Simple pricing that scales with you`, scrollHeight `3698px`, transition `direct` (`1647ms`)
 
 ---
 
@@ -183,7 +210,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#0a0a0f` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#a22bff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a0a0f` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#a22bff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`Every AI model. One plan. Endless co`) with `Archivo` and `Martian Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Archivo` across display (`Every AI model. One plan. Endless co`) and body copy, paired with `Martian Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 24px`, padding `.125rem`) with `cubic-bezier(.4,0,1,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +246,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#7740a7` — grounded in `.key:hover { border-color: #7740a7 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `.125rem` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 24px`)
@@ -240,11 +267,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `magicshot-ai` (`AI Image, Video & Audio Generator all in One Plan`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `magicshot-ai`)**:
-   - DOM & Selectors: Landmark `<header class="site-header top-0">` (`1440x65px`) hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-navigate-track="reload"`, `data-navigate-track="reload"`, `data-animate`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - DOM & Selectors: Landmark `<header class="site-header top-0">` (`1440x65px`) hosting `AI Image, Video & Audio Generator al` navigation (`Image · Video · Photoshoot · Photo Editing · Audio`), DOM attributes (`data-motion`, `data-id="DB8MR53C77UC0DK7DIE0"`, `data-navigate-track="reload"`, `data-navigate-track="reload"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `magicshot-ai`)` (`magicshot-ai`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion:no-preference)`, `@media (width>=40rem)`, `@media (width>=48rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Image · Video · Photoshoot · Photo Editing · Audio`.
 2. **Hero Stage & Focal Lead (<section.section-y> — `Every AI model. One plan. Endless `)**:
    - DOM & Selectors: Landmark `<section class="section-y pt-6">` presenting display lead `Every AI model. One plan. Endless content.` and copy excerpt *"Headshots, product shots, video ads and more, made in seconds fro"* over `#0a0a0f` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0a0a0f` background with `#ffffff` headline `Every AI model. One plan. Endless content.`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#0a0a0f` background with `#ffffff` headline `Every AI model. One plan. Endless content.`.
 3. **Primary Showcase & Content Grid (<section.section-y:nth(2)> — `Thanksgiving Feast Challenge is on`)**:
    - DOM & Selectors: Landmark `<section class="section-y">` rendering section `Thanksgiving Feast Challenge is on` with copy *"Thanksgiving Feast Challenge · win 100k credits"*, asset references (`d2q9lphzn5ioni.cloudfront.net`, `favicon-96x96.png`, `favicon.svg`, `favicon.ico`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section-y:nth(2)> — `Thanksgiving Feast Challenge is on`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `.125rem` horizontal padding on mobile.
@@ -253,7 +280,7 @@ Scaffold `magicshot-ai` (`AI Image, Video & Audio Generator all in One Plan`) wi
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-y:nth(3)> — `Images, video, photoshoots, edits `)` uses `3.35544e+07px`, `8px`, `4px`, `var(--radius-card)` radii, `#a22bff` highlights, and assets (d2q9lphzn5ioni.cloudfront.net, favicon-96x96.png, favicon.svg).
 5. **Colophon & Global Directory Footer (<footer.border-surface-800> — `https://magicshot.ai`)**:
    - DOM & Selectors: Landmark `<footer class="border-surface-800 bg-surface-950">` anchoring `AI Image, Video & Audio Generato` footer links (`Image · Video · Photoshoot · Photo Editing · Audio`), copy *"See What You Can Make"*, and `#7740a7` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-surface-800> — `https://magicshot.ai`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `.125rem` lateral canvas padding with `24px` grid gap and attributes (data-motion, data-navigate-track="reload", data-navigate-track="reload").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-surface-800> — `https://magicshot.ai`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `.125rem` lateral canvas padding with `24px` grid gap and attributes (data-motion, data-id="DB8MR53C77UC0DK7DIE0", data-navigate-track="reload").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Headshots, product shots, video ads and more, made in seconds from a single prompt..."*
@@ -275,8 +302,47 @@ Scaffold `magicshot-ai` (`AI Image, Video & Audio Generator all in One Plan`) wi
 - **Selector `media (prefers-reduced-motion:red...`**: `transition: .001ms!important` extracted from `magicshot-ai` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.section-y:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `14489px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Every AI model. One plan. E... (0%) -> Thanksgiving Feast Challeng... (6%) -> AI Headshot Generator (25%) -> Section @ 44% (44%) -> One tab. Every tool. (56%) -> Plans for every creator (75%) -> Start with a sentence. (94%) -> Footer (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Show AI Image Generation Tools`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/solutions` (listing, MPA), `/ai-image-generator/photo-generator` (detail, direct), `/pricing` (listing, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `magicshot-ai`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Every AI model. One plan. Endless content. | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `6%` | Thanksgiving Feast Challenge is on | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `25%` | AI Headshot Generator | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `44%` | Section @ 44% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `7650px` | `56%` | One tab. Every tool. | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `10200px` | `75%` | Plans for every creator | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `12750px` | `94%` | Start with a sentence. | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `13589px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Every AI model. One plan. Endless content. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Show AI Image Generation Tools`, diff `27.115`) | [state-nav.webp](assets/state-nav.webp) |
+| `interactive_control` | Control `tab` (`Video Turn text and photos in...`, diff `11.053`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://magicshot.ai/solutions` | The AI studio, tuned to your work. | `3863px` | `MPA` (`4380ms`) | [subpage-01-solutions.webp](assets/subpage-01-solutions.webp) |
+| `2` | `detail` | `https://magicshot.ai/ai-image-generator/photo-generator` | Photo Generator | `10135px` | `direct` (`970ms`) | [subpage-02-ai-image-generator-photo-generator.webp](assets/subpage-02-ai-image-generator-photo-generator.webp) |
+| `3` | `listing` | `https://magicshot.ai/pricing` | Simple pricing that scales with you | `3698px` | `direct` (`1647ms`) | [subpage-03-pricing.webp](assets/subpage-03-pricing.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: untitledfilm-framer-website"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `untitledfilm-framer-website` (**“Untitled.”**)
 - **Production URL**: [https://untitledfilm.framer.website/](https://untitledfilm.framer.website/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ee` accent)
 - **Summary**: Discover our premium Framer template built for filmmakers and filmmaking agencies specializing in narrative and commercial production. Ci...
 - **Total Clean CSS Variables Extracted**: `38` (curated live-grounded set below)
@@ -71,12 +71,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.framer-yk3ex1> — `untitledfilm-framer-website`)**:
-   - Landmark `<nav class="framer-yk3ex1">` (`1440x59px`) hosting `“Untitled.”` navigation (`“Untitled.” · [view work]`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
+   - Landmark `<nav class="framer-yk3ex1">` (`1440x59px`) hosting `“Untitled.”` navigation (`“Untitled.” · [view work]`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
 2. **Hero Stage & Focal Lead (<section.framer-1czbuyf> — `Golden Static`)**:
    - Landmark `<section class="framer-1czbuyf">` presenting display lead `Golden Static` and copy excerpt *"New York, Brooklyn"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.framer-qdz5y> — `Aurelia Studios`)**:
-   - Landmark `<section class="framer-qdz5y framer-qt7BG">` rendering section `Aurelia Studios` with copy *"California, Big Sur"*, asset references (`fvHWptZ6qmlvCKfCMpUD3xRGR0.png`, `e3TdWqBmA0UQeUI4Q2TUBUkHWw.png`, `fonts.gstatic.com`, `hls.min.js`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
+   - Landmark `<section class="framer-qdz5y framer-qt7BG">` rendering section `Aurelia Studios` with copy *"California, Big Sur"*, asset references (`fvHWptZ6qmlvCKfCMpUD3xRGR0.png`, `e3TdWqBmA0UQeUI4Q2TUBUkHWw.png`, `fonts.gstatic.com`, `hls.min.js`), and grid rule `.hidden-1rctbgp { display:none!important }`.
 4. **Interactive Detail & Feature Matrix (<section.framer-qt7BG> — `Ultraviolet Bloom`)**:
-   - Landmark `<section class="framer-qdz5y framer-qt7BG">` framing `Ultraviolet Bloom` and `Lumora Lab` (*"hello@untitled.com"*) with `#ffffff` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
+   - Landmark `<section class="framer-qdz5y framer-qt7BG">` framing `Ultraviolet Bloom` and `Lumora Lab` (*"hello@untitled.com"*) with `#ffffff` surface cards, `#0000ee` accents, and `.hidden-19ueyzm { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.framer-yk3ex1> — `https://untitledfilm.framer.website/`)**:
    - Landmark `<footer class="framer-yk3ex1">` anchoring `“Untitled.”` footer links (`“Untitled.” · [view work]`), copy *"®2026 All Rights Reserved · “Untitled.”"*, and `#0000ee` structural dividers.

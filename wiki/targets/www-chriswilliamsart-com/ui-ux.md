@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-chriswilliamsart-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-chriswilliamsart-com` (**Chris Williams Art Gallery · Contemporary painting in London**)
 - **Production URL**: [https://www.chriswilliamsart.com/](https://www.chriswilliamsart.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f5f5` / `#b08a5c`)
 - **Summary**: Chris Williams Art Gallery shows contemporary painting in Bethnal Green, East London. Explore the work of seven artists online or visit W...
 - **Total Clean CSS Variables Extracted**: `7` (curated live-grounded set below)

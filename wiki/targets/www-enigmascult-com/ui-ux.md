@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-enigmascult-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-enigmascult-com` (**Enigma – Sneaker Auctions, Mystery Boxes & Reborn Customs**)
 - **Production URL**: [https://www.enigmascult.com/](https://www.enigmascult.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0a0a0a` / `#ff0000`)
 - **Summary**: Enigma is the cult of authenticated streetwear: live sneaker auctions, style-coded mystery boxes and Reborn customs. Decode your style. J...
 - **Total Clean CSS Variables Extracted**: `102` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Helvena`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 75px`, `line-height: 81px`, `font-weight: 200`, `letter-spacing: -3px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 75px`, `line-height: 69px`, `font-weight: 200`, `letter-spacing: -2.4px`); rule `h2` (`font-size: var(--wp--preset--font-size--...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 90px`, `line-height: 82.8px`, `font-weight: 200`); rule `h2` (`font-size: var(--wp--preset--font-size--...`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: clamp(14px,.8854166667vw,17px)`, `line-height: 1.4`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--wpforms-field-size-sublabel-spacing: 5px`, `--wpforms-label-size-font-size: 16px`, `--wpforms-label-size-line-height: 19px`; rule `small` (`font-size: clamp(11px,.6770833333vw,13px)`)
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#0a0a0a` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#f9f9f9` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#111111` | `var(--rfc-bg)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#000000` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ff0000` | `.woocommerce a.remove { color: red }` (`#ff0000`) |
 | **Secondary / Muted Copy** | `#767676` | `var(--wc-subtext)` in `:root` |
 | **Structural Hairline Border** | `#066aab` | `var(--wpforms-button-border-color)` in `:root` |
@@ -80,8 +80,8 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.block-hero> — `DECODE YOUR STYLE`)**:
    - Landmark `<section class="block-hero alignfull">` presenting display lead `DECODE YOUR STYLE` and copy excerpt *"CREATED FROM STUNNERS, FOR STUNNERS."* over `#0a0a0a` canvas and `#f9f9f9` ink.
 3. **Primary Showcase & Content Grid (<section.manifesto> — `Decode Your Style`)**:
-   - Landmark `<section class="manifesto alignfull">` rendering section `Decode Your Style` with copy *"Created from stunners, for stunners."*, asset references (`recaptcha__en.js`, `embed`, `woocommerce-blocktheme.css`, `style-index.css`), and grid rule `.clear { clear:both }`.
+   - Landmark `<section class="manifesto alignfull">` rendering section `Decode Your Style` with copy *"Created from stunners, for stunners."*, asset references (`embed`, `woocommerce-blocktheme.css`, `style-index.css`, `woocommerce-layout.css`), and grid rule `.clear { clear:both }`.
 4. **Interactive Detail & Feature Matrix (<section.mystery-box> — `Mini Manifesto`)**:
-   - Landmark `<section class="mystery-box alignfull">` framing `Mini Manifesto` and `Honor the Grind` (*"This isn’t fashion — it’s initiation. “we don’t revive fashion. w"*) with `#111111` surface cards, `#ff0000` accents, and `hover { opacity:.5 }`.
+   - Landmark `<section class="mystery-box alignfull">` framing `Mini Manifesto` and `Honor the Grind` (*"This isn’t fashion — it’s initiation. “we don’t revive fashion. w"*) with `#000000` surface cards, `#ff0000` accents, and `hover { opacity:.5 }`.
 5. **Colophon & Global Directory Footer (<footer.wp-block-template-part> — `https://www.enigmascult.com/`)**:
    - Landmark `<footer class="wp-block-template-part">` anchoring `Enigma – Sneaker Auctions, Myste` footer links (`My Account · Cart · Wishlist`), copy *"Enigma is a fashion cult that guards the flame of true hype."*, and `#066aab` structural dividers.

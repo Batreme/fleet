@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-incroy-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.incroy.com/"
 final_url: "https://www.incroy.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.incroy.com/](https://www.incroy.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Incroy · Webflow Certified Development Agency
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `138`
+- **Recovered Stylesheets**: `20`
 
 ---
 

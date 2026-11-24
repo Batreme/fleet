@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-lapl-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-lapl-org` (**Homepage · Los Angeles Public Library**)
 - **Production URL**: [https://www.lapl.org/](https://www.lapl.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f7f2eb` canvas, `#000000` ink, `#ffff00` accent)
 - **Summary**: The Library will be closed on Thursday, November 26 & Friday, November 27, 2026, in observance of Thanksgiving.
-- **Total Clean CSS Variables Extracted**: `188` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `189` (curated live-grounded set below)
 
 ---
 

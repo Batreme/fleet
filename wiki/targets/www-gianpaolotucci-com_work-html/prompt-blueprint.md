@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-gianpaolotucci-com_work-html"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-gianpaolotucci-com_work-html"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 3
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1f2bd6`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1
 
 > **Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences** (https://www.gianpaolotucci.com/work.html) — Gianpaolo Tucci is a Berlin-based creative director and experience design director shaping AI-native products, luxury digital experiences...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Gianpaolo Tucci — Creative Director, Berlin · AI-native experiences** (`https://www.gianpaolotucci.com/work.html`). Gianpaolo Tucci is a Berlin-based creative director and experience design director shaping AI-native products, luxury digital experiences...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1f2bd6`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0c` primary typography and `#1f2bd6` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Instrument Sans` and `DM Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Instrument Sans` across display (`Gianpaolo Tucci — Creative Director,`) and body copy, paired with `DM Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `22px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`.
@@ -96,7 +101,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 158.4px`, `line-height: 133.056px`, `font-weight: 500`, `letter-spacing: -8.712px`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 17px`, `line-height: 1.5`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 11px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 0.22px`); CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`).
 
@@ -113,6 +118,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1
 - **Selector `.idx.on .idx-list button`**: `transition: color .3s,padding .45s var(--ease),opacity .7s var(--ease) var...` extracted from `www-gianpaolotucci-com_work-html` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.idx-head>` and `<section.boot>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -171,6 +179,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e7` / `#1
    - Landmark `<section class="col">` framing `Versace Biggies` and `Moncler City of Genius` (*"Versace Biggies 2024 · Creative direction · Global campaign. One "*) with `#fbf9f4` surface cards, `#1f2bd6` accents, and `img { max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.lcol> — `https://www.gianpaolotucci.com/work.html`)**:
    - Landmark `<footer class="lcol">` anchoring `Gianpaolo Tucci — Creative Direc` footer links (`Overview · Index · Archive · About · Contact`), copy *"2024 · Creative direction · Global campaign. One campaign ac"*, and `#d5d1c8` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Index` · sticky/fixed elements: `5`
+- **Step 02** (`y=0px`, `20%`): Active landmark `Index` · sticky/fixed elements: `5`
+- **Step 03** (`y=0px`, `40%`): Active landmark `Index` · sticky/fixed elements: `5`
 
 ---
 
@@ -187,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0d0d0c`, **Accent / Highlight**: `#1f2bd6`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f5f1e7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0d0d0c` primary typography and `#1f2bd6` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Gianpaolo Tucci — Creative Director,`) with `Instrument Sans` and `DM Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `Instrument Sans` across display (`Gianpaolo Tucci — Creative Director,`) and body copy, paired with `DM Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `16px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +239,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--go`)**: `#13a35e` — grounded in `var(--go)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `16px` lateral canvas padding with `22px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`)
@@ -241,7 +253,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Instrument Sans`
 - **Monospace / Technical Font Stack**: `DM Mono`
 - **H1 Display Rule**: live computed `h1` (`font-size: 32px`, `line-height: normal`, `font-weight: 700`); CSS variables `--f-display: "Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif`; rule `h1` (`font-size: clamp(72px,16vw,250px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: var(--hl-w)`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 24px`, `line-height: normal`, `font-weight: 700`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 158.4px`, `line-height: 133.056px`, `font-weight: 500`, `letter-spacing: -8.712px`); rule `h2` (`font-size: clamp(64px,11vw,170px)`, `line-height: .84`, `letter-spacing: -.055em`, `font-weight: 500`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 17px`, `line-height: 1.5`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 11px`, `line-height: normal`, `font-weight: 400`, `letter-spacing: 0.22px`); CSS variables `--f-mono: "DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace`; rule `.mono` (`font-size: 11px`, `letter-spacing: .02em`, `font-weight: 400`)
 
@@ -252,7 +264,7 @@ Scaffold `www-gianpaolotucci-com_work-html` (`Gianpaolo Tucci — Creative Direc
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.idx-head> — `www-gianpaolotucci-com_work-html`)` (`www-gianpaolotucci-com_work-html`) adapts across `@media (max-width:819px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:820px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.77,0,.18,1)`, `cubic-bezier(.34,1.56,.64,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.sr-only> — `Gianpaolo Tucci — Creative Directo`)**:
    - DOM & Selectors: Landmark `<section class="sr-only">` presenting display lead `Gianpaolo Tucci — Creative Director, Berlin` and copy excerpt *"Gianpaolo Tucci is a Berlin-based creative director and experienc"* over `#f5f1e7` canvas and `#0d0d0c` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f5f1e7` background with `#0d0d0c` headline `Gianpaolo Tucci — Creative Director, Berlin`.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×872px` mobile) sets `#f5f1e7` background with `#0d0d0c` headline `Gianpaolo Tucci — Creative Director, Berlin`.
 3. **Primary Showcase & Content Grid (<section.boot> — `Selected work`)**:
    - DOM & Selectors: Landmark `<section class="boot">` rendering section `Selected work` with copy *"This is not a portfolio. This is a timeline of a shift."*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `button { font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poi... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.boot> — `Selected work`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
@@ -283,8 +295,27 @@ Scaffold `www-gianpaolotucci-com_work-html` (`Gianpaolo Tucci — Creative Direc
 - **Selector `.idx.on .idx-list button`**: `transition: color .3s,padding .45s var(--ease),opacity .7s var(--ease) var...` extracted from `www-gianpaolotucci-com_work-html` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<header.idx-head>` and `<section.boot>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 3 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Index (0%) -> Index (20%) -> Index (40%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-gianpaolotucci-com_work-html`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Index | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `20%` | Index | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `40%` | Index | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Index | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

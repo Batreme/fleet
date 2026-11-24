@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-velaaprivateisland-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-velaaprivateisland-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `#000000` ink, `#0000ee` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `
 
 > **Velaa Private Island Maldives** (https://www.velaaprivateisland.com/) — The World's Best Kept Secret
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Velaa Private Island Maldives** (`https://www.velaaprivateisland.com/`). The World's Best Kept Secret
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `#000000` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8e6df` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Canela Text LC Web Thin` for display copy (`A symphony of flavours & shared mome`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Canela Text LC Web Thin` for display copy (`A symphony of flavours & shared mome`) with `Instrument Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 192px`, padding `24px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=13655px` / doc `14555px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `192px` grid gap.
-- **Border Radius Scale**: `1px`, `8px`, `15px`, `0px`.
+- **Border Radius Scale**: `1px`, `0px`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 192px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width:809.98px)`, `@media (max-width:1199px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)`.
+- **Extracted CSS Media Queries**: `@media (min-width: 1920px)`, `@media (min-width: 1200px) and (max-width: 1919.98px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`.
 
 ---
 
@@ -110,10 +115,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-velaaprivateisland-com` stylesheet.
-- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-velaaprivateisland-com` stylesheet.
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-velaaprivateisland-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `14555px`, deepest scrollY reached `13655px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Framer Motion`.
 
 ---
 
@@ -124,20 +130,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Velaa Private Island Maldives              │
 │ ====================================================================== │
-│ [ <header.lenis> (1440px)             | Find your home · Step into a ] │
+│ [ <header.framer-Olafn> (1440px)      | Find your home · Step into a ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <div.lenis-autoToggle> (w=1440px)                      | │
+│ | HERO STAGE: <div.framer-h13ff> (w=1440px)                          | │
 │ | H1: A symphony of flavours & shared moments                        | │
 │ | Substrate: #e8e6df | Ink: #000000 | Accent: #0000ee                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.framer-Olafn>) max-w: 1600px                   | │
+│ | SHOWCASE GRID (<div.framer-sg5GW>) max-w: 1600px                   | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | Velaa is a world of its own. |  | T h e a r t o f c o m i n g  | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<div.framer-h13ff>) — More than paradise, i         | │
+│ | DETAIL MODULE (<div.framer-oQS6D>) — More than paradise, i         | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-sg5GW) | https://www.velaaprivateisland.com/  │
+│ [ FOOTER (<footer.framer-RVHbs) | https://www.velaaprivateisland.com/  │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -146,32 +152,41 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 192px)      │
 │ ====================================================================== │
-│ [ HEADER BAR (<header.lenis>          ) | Compact Menu (390px)         │
+│ [ HEADER BAR (<header.framer-Olafn>   ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE (<div.lenis-autoToggle>) — 390px Vertical Lead          | │
+│ | HERO STAGE (<div.framer-h13ff>) — 390px Vertical Lead              | │
 │ | H1: A symphony of flavours & shared moments                        | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<div.framer-Olafn>) — 1-Col Stack                  | │
+│ | SHOWCASE STACK (<div.framer-sg5GW>) — 1-Col Stack                  | │
 │ | [ Item 1: Velaa is a world of its own.                           ] | │
 │ | [ Item 2: T h e a r t o f c o m i n g h o m e , w h e r e e...   ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<div.framer-h13ff>) — 1-Col (More than paradise)     | │
+│ | DETAIL STACK (<div.framer-oQS6D>) — 1-Col (More than paradise)     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-sg5GW) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.framer-RVHbs) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.lenis> — `www-velaaprivateisland-com`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `html.lenis body { height:auto }`.
-2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `A symphony of flavours & shared mo`)**:
-   - Landmark `<div class="lenis-autoToggle">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<div.framer-Olafn> — `Velaa is a world of its own.`)**:
-   - Landmark `<div class="framer-Olafn">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-h13ff> — `T h e a r t o f c o m i n g h o m `)**:
-   - Landmark `<div class="framer-h13ff">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.framer-sg5GW> — `https://www.velaaprivateisland.com/`)**:
-   - Landmark `<footer class="framer-sg5GW">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.
+1. **Brand Header & Navigation Bar (<header.framer-Olafn> — `www-velaaprivateisland-com`)**:
+   - Landmark `<header class="framer-Olafn">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `html.lenis body { height:auto }`.
+2. **Hero Stage & Focal Lead (<div.framer-h13ff> — `A symphony of flavours & shared mo`)**:
+   - Landmark `<div class="framer-h13ff">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.framer-sg5GW> — `Velaa is a world of its own.`)**:
+   - Landmark `<div class="framer-sg5GW">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-oQS6D> — `T h e a r t o f c o m i n g h o m `)**:
+   - Landmark `<div class="framer-oQS6D">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+5. **Colophon & Global Directory Footer (<footer.framer-RVHbs> — `https://www.velaaprivateisland.com/`)**:
+   - Landmark `<footer class="framer-RVHbs">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `6%`): Active landmark `Section @ 6%` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `25%`): Active landmark `A place you don’t just visit. You belong.` · sticky/fixed elements: `1`
+- **Step 04** (`y=5950px`, `44%`): Active landmark `An invisible thread of care,` · sticky/fixed elements: `0`
+- **Step 05** (`y=7650px`, `56%`): Active landmark `"For the first time in years, we didn't have to m...` · sticky/fixed elements: `0`
+- **Step 06** (`y=10200px`, `75%`): Active landmark `The magic of the unexpected` · sticky/fixed elements: `0`
+- **Step 07** (`y=12750px`, `93%`): Active landmark `A secret held for you.` · sticky/fixed elements: `0`
+- **Step 08** (`y=13655px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `0`
 
 ---
 
@@ -188,7 +203,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e8e6df` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e8e6df` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Canela Text LC Web Thin` for display copy (`A symphony of flavours & shared mome`) with `Instrument Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Canela Text LC Web Thin` for display copy (`A symphony of flavours & shared mome`) with `Instrument Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 192px`, padding `24px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -229,14 +244,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-63ce1974-4123-43fe-af3f-45583d0362a1`)**: `#040326` — grounded in `var(--token-63ce1974-4123-43fe-af3f-45583d0362a1)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `24px` lateral canvas padding with `192px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 192px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
-- **Media Queries**: `@media (max-width:809.98px)`, `@media (max-width:1199px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)`
-- **Corner Radii**: `1px`, `8px`, `15px`, `0px`
+- **Media Queries**: `@media (min-width: 1920px)`, `@media (min-width: 1200px) and (max-width: 1919.98px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`
+- **Corner Radii**: `1px`, `0px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Canela Text LC Web Thin`
@@ -249,21 +264,21 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-velaaprivateisland-com` (`Velaa Private Island Maldives`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.lenis> — `www-velaaprivateisland-com`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `html.lenis body { height:auto }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `www-velaaprivateisland-com`)` (`www-velaaprivateisland-com`) adapts across `@media (max-width:809.98px)`, `@media (max-width:1199px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1199.98px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`.
-2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `A symphony of flavours & shared mo`)**:
-   - DOM & Selectors: Landmark `<div class="lenis-autoToggle">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#e8e6df` background with `#000000` headline `A symphony of flavours & shared moments`.
-3. **Primary Showcase & Content Grid (<div.framer-Olafn> — `Velaa is a world of its own.`)**:
-   - DOM & Selectors: Landmark `<div class="framer-Olafn">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.framer-Olafn> — `Velaa is a world of its own.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 192px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.framer-h13ff> — `T h e a r t o f c o m i n g h o m `)**:
-   - DOM & Selectors: Landmark `<div class="framer-h13ff">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-h13ff> — `T h e a r t o f c o m i n g h o m `)` uses `1px`, `8px`, `15px`, `0px` radii, `#0000ee` highlights, and assets (SeYxW6iTSKyLSDpsNhJ7cT1OhI.png, GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png, fonts.gstatic.com).
-5. **Colophon & Global Directory Footer (<footer.framer-sg5GW> — `https://www.velaaprivateisland.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="framer-sg5GW">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-sg5GW> — `https://www.velaaprivateisland.com/`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `24px` lateral canvas padding with `192px` grid gap and attributes (data-redirect-timezone="1", data-framer-font-css, data-framer-css-ssr-minified).
+1. **Brand Header & Navigation Bar (<header.framer-Olafn> — `www-velaaprivateisland-com`)**:
+   - DOM & Selectors: Landmark `<header class="framer-Olafn">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `html.lenis body { height:auto }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.framer-Olafn> — `www-velaaprivateisland-com`)` (`www-velaaprivateisland-com`) adapts across `@media (min-width: 1920px)`, `@media (min-width: 1200px) and (max-width: 1919.98px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`.
+2. **Hero Stage & Focal Lead (<div.framer-h13ff> — `A symphony of flavours & shared mo`)**:
+   - DOM & Selectors: Landmark `<div class="framer-h13ff">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#e8e6df` background with `#000000` headline `A symphony of flavours & shared moments`.
+3. **Primary Showcase & Content Grid (<div.framer-sg5GW> — `Velaa is a world of its own.`)**:
+   - DOM & Selectors: Landmark `<div class="framer-sg5GW">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.framer-sg5GW> — `Velaa is a world of its own.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 192px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<div.framer-oQS6D> — `T h e a r t o f c o m i n g h o m `)**:
+   - DOM & Selectors: Landmark `<div class="framer-oQS6D">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-oQS6D> — `T h e a r t o f c o m i n g h o m `)` uses `1px`, `0px` radii, `#0000ee` highlights, and assets (SeYxW6iTSKyLSDpsNhJ7cT1OhI.png, GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png, fonts.gstatic.com).
+5. **Colophon & Global Directory Footer (<footer.framer-RVHbs> — `https://www.velaaprivateisland.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="framer-RVHbs">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-RVHbs> — `https://www.velaaprivateisland.com/`)` aligns to `1600px` (non-`@media` desktop container stylesheet rule) with `24px` lateral canvas padding with `192px` grid gap and attributes (data-redirect-timezone="1", data-framer-font-css, data-framer-breakpoint-css).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"From the moment you arrive, the world outside fades. The air is lighter here, and..."*
@@ -278,15 +293,39 @@ Scaffold `www-velaaprivateisland-com` (`Velaa Private Island Maldives`) with the
 - `.lenis-stopped { overflow:clip }`
 - `.lenis.lenis-smooth iframe { pointer-events:none }`
 - `.lenis.lenis-autoToggle { transition-property:overflow;transition-duration:1ms;transition-behavior... }`
-- `main { box-sizing:border-box;margin:0;padding:0 }`
+- `.hidden-7zscqu { display:none!important }`
 - **Per-Selector Transition Rules**:
 - **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-velaaprivateisland-com` stylesheet.
-- **Selector `.lenis.lenis-autoToggle`**: `transition: 1ms` extracted from `www-velaaprivateisland-com` stylesheet.
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-velaaprivateisland-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `14555px` across 8 distinct viewport chapters using Framer Motion.
+- **Vertical Chapter Sequence**: Hero (0%) -> Section @ 6% (6%) -> A place you don’t just visi... (25%) -> An invisible thread of care, (44%) -> "For the first time in year... (56%) -> The magic of the unexpected (75%) -> A secret held for you. (93%) -> Footer / Bottom (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-velaaprivateisland-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `6%` | Section @ 6% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `25%` | A place you don’t just visit. You belong. | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `44%` | An invisible thread of care, | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `7650px` | `56%` | "For the first time in years, we didn't have... | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `10200px` | `75%` | The magic of the unexpected | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `12750px` | `93%` | A secret held for you. | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `13655px` | `100%` | Footer / Bottom | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `6280px` | `50%` | Freedom in its purest form, following you... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `12561px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

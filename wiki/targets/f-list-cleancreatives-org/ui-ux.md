@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: f-list-cleancreatives-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `f-list-cleancreatives-org` (**F-List 2026**)
 - **Production URL**: [https://f-list.cleancreatives.org/](https://f-list.cleancreatives.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1d1d1d` ink, `#ffff00` accent)
 - **Summary**: Search the F-List 2026 to uncover the 802 advertising and PR agencies behind 1,321 documented fossil fuel contracts worldwide.
 - **Total Clean CSS Variables Extracted**: `56` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `roc-grotesk`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 132.951px`, `line-height: 99.7133px`, `font-weight: 700`); rule `,.h1` (`font-size: 4.5rem`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.1638px`, `line-height: 73.2393px`, `font-weight: 600`); rule `h2` (`font-size: 17px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 95.7373px`, `line-height: 81.3767px`, `font-weight: 600`); rule `,.h2` (`font-size: 3.75rem`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-longform-paragraph-margin: 2.125rem 0 0 0`, `--cmplz_category_body_font_size: 12px`; rule `p` (`font-size: 16px`, `line-height: 24px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `small` (`line-height: 100%`, `font-weight: 300`)
 
@@ -72,12 +72,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.browser-chrome> — `f-list-cleancreatives-org`)**:
-   - Landmark `<header class="browser-chrome">` (`1440x95px`) hosting `F-List 2026` navigation (`The report · The F-List · Dirty work · Take Action`), DOM attributes (`data-cmplz="1"`, `data-nosnippet="true"`, `data-prefix="fas"`, `data-icon="times"`), and stylesheet rule `opular_post_widget .icon-comment:... { content: "\e900"; }`.
+   - Landmark `<header class="browser-chrome">` (`1440x95px`) hosting `F-List 2026` navigation (`The report · The F-List · Dirty work · Take Action`), DOM attributes (`data-cmplz="1"`, `data-nosnippet="true"`, `data-prefix="fas"`, `data-icon="times"`), and stylesheet rule `div.notice-box { border: 1px LightSkyBlue solid; border-left-width: 5px; padding: 10px 15... }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `THE CREATIVE COVER-UP`)**:
    - Landmark `<section class="hero home">` presenting display lead `THE CREATIVE COVER-UP` and copy excerpt *"The agencies providing cover for the fossil fuel industry."* over `#ffffff` canvas and `#1d1d1d` ink.
 3. **Primary Showcase & Content Grid (<section.call-intro> — `The Creative Cover-up`)**:
-   - Landmark `<section class="call-intro flex">` rendering section `The Creative Cover-up` with copy *"Functional Always active"*, asset references (`xmlrpc.php`, `www.googletagmanager.com`, `flist2026.b-cdn.net`, `embed`), and grid rule `s_popular_post_widget .icon-chat:... { content: "\e900"; }`.
+   - Landmark `<section class="call-intro flex">` rendering section `The Creative Cover-up` with copy *"Functional Always active"*, asset references (`xmlrpc.php`, `www.googletagmanager.com`, `flist2026.b-cdn.net`, `embed`), and grid rule `div.notice-box.notice-success { border-color: MediumSpringGreen ; }`.
 4. **Interactive Detail & Feature Matrix (<section.redacted> — `Functional Always active`)**:
-   - Landmark `<section class="redacted bg-cream">` framing `Functional Always active` and `The technical storage or access is strictly nece` (*"The technical storage or access is strictly necessary for the leg"*) with `#edcc4b` surface cards, `#ffff00` accents, and `s_popular_post_widget .icon-talk:... { content: "\e900"; }`.
+   - Landmark `<section class="redacted bg-cream">` framing `Functional Always active` and `The technical storage or access is strictly nece` (*"The technical storage or access is strictly necessary for the leg"*) with `#edcc4b` surface cards, `#ffff00` accents, and `div.notice-box.notice-danger { border-color: LightCoral ; }`.
 5. **Colophon & Global Directory Footer (<footer.page-template> — `https://f-list.cleancreatives.org/`)**:
    - Landmark `<footer class="page-template">` anchoring `F-List 2026` footer links (`The report · The F-List · Dirty work · Take Action`), copy *"The technical storage or access is necessary for the legitim"*, and `#f2f2f2` structural dividers.

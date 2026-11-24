@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: untitledfilm-framer-website"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://untitledfilm.framer.website/"
 final_url: "https://untitledfilm.framer.website/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: “Untitled.”
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `24`
+- **Recovered Scripts**: `78`
 - **Recovered Stylesheets**: `0`
 
 ---

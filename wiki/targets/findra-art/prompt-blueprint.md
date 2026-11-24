@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: findra-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "findra-art"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas, `#ffffff` ink, `#e14bff` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 
 > **Findra: the AI character feed** (https://findra.art/) — Who is rising among AI characters on TikTok, Instagram, X and YouTube: what they look like, their legends and where to follow them.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Findra: the AI character feed** (`https://findra.art/`). Who is rising among AI characters on TikTok, Instagram, X and YouTube: what they look like, their legends and where to follow them.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas, `#ffffff` ink, `#e14bff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#09090b` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#e14bff` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=11966px` / doc `12866px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1600px` (live computed `main` `max-width`).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `64px` grid gap.
 - **Border Radius Scale**: `3.35544e+07px`, `8px`, `.25rem`, `var(--radius-2xl)`.
@@ -114,8 +119,13 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 - **Selector `layer theme`**: `transition: .15s` extracted from `findra-art` stylesheet.
 - **Selector `scale\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `findra-art` stylesheet.
 - **Selector `scale\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `findra-art` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.border-border>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<article.group>` and `<section.border-border>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<article.group>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.border-foreground>` and `<article.group>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `12866px`, deepest scrollY reached `11966px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `NIGEL BATT’S INSTAGRAM ACCOUNT IS...`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/magazine/nigel-batt-instagram-account-unavailable`) measured as `SPA` in `1290ms`.
 
 ---
 
@@ -128,16 +138,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 │ ====================================================================== │
 │ [ <header.top-0> (1440x64px)          | Feed · Magazine · Wire · Lea ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <article.group> (w=1440px)                             | │
+│ | HERO STAGE: <section.border-foreground> (w=1440px)                 | │
 │ | H1: WHO’S RISING                                                   | │
 │ | Substrate: #09090b | Ink: #ffffff | Accent: #e14bff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.border-border>) max-w: 1600px              | │
+│ | SHOWCASE GRID (<article.group>) max-w: 1600px                      | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Who’s rising                 |  | Claudia, the pop star anyone | | │
+│ | | Who’s rising                 |  | The week on Findra           | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.max-w-3xl>) — Latest story                 | │
+│ | DETAIL MODULE (<section.border-border>) — Latest story             | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.text-muted> ) | https://findra.art/                  │
 └────────────────────────────────────────────────────────────────────────┘
@@ -150,14 +160,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 │ ====================================================================== │
 │ [ HEADER BAR (<header.top-0>          ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE (<article.group>) — 390px Vertical Lead                 | │
+│ | HERO STAGE (<section.border-foregrou) — 390px Vertical Lead        | │
 │ | H1: WHO’S RISING                                                   | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<section.border-border) — 1-Col Stack              | │
+│ | SHOWCASE STACK (<article.group>) — 1-Col Stack                     | │
 │ | [ Item 1: Who’s rising                                           ] | │
-│ | [ Item 2: Claudia, the pop star anyone can make                  ] | │
+│ | [ Item 2: The week on Findra                                     ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.max-w-3xl>) — 1-Col (Latest story)          | │
+│ | DETAIL STACK (<section.border-border>) — 1-Col (Latest story)      | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.text-muted> ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -166,14 +176,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#09090b` canvas
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.top-0> — `findra-art`)**:
    - Landmark `<header class="top-0 backdrop-blur-xl">` (`1440x64px`) hosting `Findra: the AI character feed` navigation (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/react"`, `data-sdkv="1.6.1"`, `data-test="skip-to-content"`), and stylesheet rule `.u8MhCG_className { font-family:Geist,Geist Fallback;font-style:normal }`.
-2. **Hero Stage & Focal Lead (<article.group> — `WHO’S RISING`)**:
-   - Landmark `<article class="group justify-end">` presenting display lead `WHO’S RISING` and copy excerpt *"AI characters and the audiences they are building on TikTok, Inst"* over `#09090b` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.border-border> — `Who’s rising`)**:
-   - Landmark `<section class="border-border gap-3">` rendering section `Who’s rising` with copy *"adventurous ai cat character"*, asset references (`d25bf568acb89df91e84732c0a9d9da02...`, `3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.max-w-3xl> — `Claudia, the pop star anyone can m`)**:
-   - Landmark `<section class="max-w-3xl gap-2">` framing `Claudia, the pop star anyone can make` and `Latest story` (*"ai animal influencer"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
+2. **Hero Stage & Focal Lead (<section.border-foreground> — `WHO’S RISING`)**:
+   - Landmark `<section class="border-foreground gap-2">` presenting display lead `WHO’S RISING` and copy excerpt *"The account could not be read this morning. It is the only accoun"* over `#09090b` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<article.group> — `Who’s rising`)**:
+   - Landmark `<article class="group justify-end">` rendering section `Who’s rising` with copy *"AI characters and the audiences they are building on TikTok, Inst"*, asset references (`3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`, `30qn3skk62nz8.js`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.border-border> — `The week on Findra`)**:
+   - Landmark `<section class="border-border gap-3">` framing `The week on Findra` and `Latest story` (*"adventurous ai cat character"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
 5. **Colophon & Global Directory Footer (<footer.text-muted> — `https://findra.art/`)**:
-   - Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"anime fighter brought to life"*, and `#27272c` structural dividers.
+   - Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"ai animal influencer"*, and `#27272c` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `WHO’S RISING` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `7%`): Active landmark `THE WEEK ON FINDRA` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `28%`): Active landmark `DAHAB DADDY` · sticky/fixed elements: `1`
+- **Step 04** (`y=5100px`, `43%`): Active landmark `MASSIVE UNC` · sticky/fixed elements: `1`
+- **Step 05** (`y=7650px`, `64%`): Active landmark `ABDUL BIGOTE` · sticky/fixed elements: `1`
+- **Step 06** (`y=9350px`, `78%`): Active landmark `HAROLD PUDDINGTON` · sticky/fixed elements: `1`
+- **Step 07** (`y=11900px`, `99%`): Active landmark `UNIVERSES` · sticky/fixed elements: `1`
+- **Step 08** (`y=11966px`, `100%`): Active landmark `UNIVERSES` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/magazine/nigel-batt-instagram-account-unavailable`)**: `https://findra.art/magazine/nigel-batt-instagram-account-unavailable` — H1: `NIGEL BATT’S INSTAGRAM ACCOUNT IS UNAVAILABLE`, scrollHeight `6098px`, transition `SPA` (`1290ms`)
+- **About Route (`/contact`)**: `https://findra.art/contact` — H1: `CONTACT`, scrollHeight `1066px`, transition `direct` (`719ms`)
+- **Detail Route (`/magazine/the-week-on-findra-2026-11-16`)**: `https://findra.art/magazine/the-week-on-findra-2026-11-16` — H1: `THE WEEK ON FINDRA`, scrollHeight `8657px`, transition `direct` (`1627ms`)
 
 ---
 
@@ -233,8 +257,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--ink-accent`)**: `#8a1ca6` — grounded in `var(--ink-accent)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1600px` (live computed `main` `max-width`)
 - **Padding & Gutters**: `24px` lateral canvas padding with `64px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 64px`)
@@ -256,24 +280,24 @@ Scaffold `findra-art` (`Findra: the AI character feed`) with these exact structu
 1. **Brand Header & Navigation Bar (<header.top-0> — `findra-art`)**:
    - DOM & Selectors: Landmark `<header class="top-0 backdrop-blur-xl">` (`1440x64px`) hosting `Findra: the AI character feed` navigation (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), DOM attributes (`data-precedence="next"`, `data-sdkn="@vercel/analytics/react"`, `data-sdkv="1.6.1"`, `data-test="skip-to-content"`), and stylesheet rule `.u8MhCG_className { font-family:Geist,Geist Fallback;font-style:normal }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `findra-art`)` (`findra-art`) adapts across `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:63rem)`, `@media (min-width:80rem)` with `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Feed · Magazine · Wire · Leaderboard · 40 Under 40`.
-2. **Hero Stage & Focal Lead (<article.group> — `WHO’S RISING`)**:
-   - DOM & Selectors: Landmark `<article class="group justify-end">` presenting display lead `WHO’S RISING` and copy excerpt *"AI characters and the audiences they are building on TikTok, Inst"* over `#09090b` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#09090b` background with `#ffffff` headline `WHO’S RISING`.
-3. **Primary Showcase & Content Grid (<section.border-border> — `Who’s rising`)**:
-   - DOM & Selectors: Landmark `<section class="border-border gap-3">` rendering section `Who’s rising` with copy *"adventurous ai cat character"*, asset references (`d25bf568acb89df91e84732c0a9d9da02...`, `3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.border-border> — `Who’s rising`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 64px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.max-w-3xl> — `Claudia, the pop star anyone can m`)**:
-   - DOM & Selectors: Landmark `<section class="max-w-3xl gap-2">` framing `Claudia, the pop star anyone can make` and `Latest story` (*"ai animal influencer"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.max-w-3xl> — `Claudia, the pop star anyone can m`)` uses `3.35544e+07px`, `8px`, `.25rem`, `var(--radius-2xl)` radii, `#e14bff` highlights, and assets (d25bf568acb89df91e84732c0a9d9da02..., 3f38907974d4f61e778b2b56d301ade05..., d4d0f0a272f823cf8d0558137c9b10adc...).
+2. **Hero Stage & Focal Lead (<section.border-foreground> — `WHO’S RISING`)**:
+   - DOM & Selectors: Landmark `<section class="border-foreground gap-2">` presenting display lead `WHO’S RISING` and copy excerpt *"The account could not be read this morning. It is the only accoun"* over `#09090b` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#09090b` background with `#ffffff` headline `WHO’S RISING`.
+3. **Primary Showcase & Content Grid (<article.group> — `Who’s rising`)**:
+   - DOM & Selectors: Landmark `<article class="group justify-end">` rendering section `Who’s rising` with copy *"AI characters and the audiences they are building on TikTok, Inst"*, asset references (`3f38907974d4f61e778b2b56d301ade05...`, `d4d0f0a272f823cf8d0558137c9b10adc...`, `3qago8bg0x8_-.css`, `30qn3skk62nz8.js`), and grid rule `.u8MhCG_variable { --font-geist:"Geist", "Geist Fallback" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.group> — `Who’s rising`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 64px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.border-border> — `The week on Findra`)**:
+   - DOM & Selectors: Landmark `<section class="border-border gap-3">` framing `The week on Findra` and `Latest story` (*"adventurous ai cat character"*) with `#141417` surface cards, `#e14bff` accents, and `.mJqafq_className { font-family:Anton,Anton Fallback;font-style:normal;font-weight:400 }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.border-border> — `The week on Findra`)` uses `3.35544e+07px`, `8px`, `.25rem`, `var(--radius-2xl)` radii, `#e14bff` highlights, and assets (3f38907974d4f61e778b2b56d301ade05..., d4d0f0a272f823cf8d0558137c9b10adc..., 3qago8bg0x8_-.css).
 5. **Colophon & Global Directory Footer (<footer.text-muted> — `https://findra.art/`)**:
-   - DOM & Selectors: Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"anime fighter brought to life"*, and `#27272c` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="text-muted gap-4">` anchoring `Findra: the AI character feed` footer links (`Feed · Magazine · Wire · Leaderboard · 40 Under 40`), copy *"ai animal influencer"*, and `#27272c` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.text-muted> — `https://findra.art/`)` aligns to `1600px` (live computed `main` `max-width`) with `24px` lateral canvas padding with `64px` grid gap and attributes (data-precedence="next", data-sdkn="@vercel/analytics/react", data-sdkv="1.6.1").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"AI characters and the audiences they are building on TikTok, Instagram, X and YouT..."*
-- Copy Excerpt 2: *"adventurous ai cat character"*
-- Copy Excerpt 3: *"ai animal influencer"*
-- Copy Excerpt 4: *"anime fighter brought to life"*
+- Copy Excerpt 1: *"The account could not be read this morning. It is the only account Findra tracks f..."*
+- Copy Excerpt 2: *"AI characters and the audiences they are building on TikTok, Instagram, X and YouT..."*
+- Copy Excerpt 3: *"adventurous ai cat character"*
+- Copy Excerpt 4: *"ai animal influencer"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(.4,0,.2,1)`
@@ -287,10 +311,44 @@ Scaffold `findra-art` (`Findra: the AI character feed`) with these exact structu
 - **Selector `layer theme`**: `transition: .15s` extracted from `findra-art` stylesheet.
 - **Selector `scale\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `findra-art` stylesheet.
 - **Selector `scale\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `findra-art` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<section.border-border>`.
-- **State & Hover Choreography**: Opacity and transform transitions on `<article.group>` and `<section.border-border>` interactive targets.
+- **Extracted Easing Curve (`cubic-bezier(0,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<article.group>`.
+- **State & Hover Choreography**: Opacity and transform transitions on `<section.border-foreground>` and `<article.group>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `12866px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: WHO’S RISING (0%) -> THE WEEK ON FINDRA (7%) -> DAHAB DADDY (28%) -> MASSIVE UNC (43%) -> ABDUL BIGOTE (64%) -> HAROLD PUDDINGTON (78%) -> UNIVERSES (99%) -> UNIVERSES (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/magazine/nigel-batt-instagram-account-unavailable` (detail, SPA), `/contact` (about, direct), `/magazine/the-week-on-findra-2026-11-16` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `findra-art`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | WHO’S RISING | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `7%` | THE WEEK ON FINDRA | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `28%` | DAHAB DADDY | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `43%` | MASSIVE UNC | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `7650px` | `64%` | ABDUL BIGOTE | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `9350px` | `78%` | HAROLD PUDDINGTON | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `11900px` | `99%` | UNIVERSES | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `11966px` | `100%` | UNIVERSES | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | WHO’S RISING | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `6995px` | `50%` | BILL SMITH | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `13943px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://findra.art/magazine/nigel-batt-instagram-account-unavailable` | NIGEL BATT’S INSTAGRAM ACCOUNT IS UNA... | `6098px` | `SPA` (`1290ms`) | [subpage-01-magazine-nigel-batt-instagram-accoun.webp](assets/subpage-01-magazine-nigel-batt-instagram-accoun.webp) |
+| `2` | `about` | `https://findra.art/contact` | CONTACT | `1066px` | `direct` (`719ms`) | [subpage-02-contact.webp](assets/subpage-02-contact.webp) |
+| `3` | `detail` | `https://findra.art/magazine/the-week-on-findra-2026-11-16` | THE WEEK ON FINDRA | `8657px` | `direct` (`1627ms`) | [subpage-03-magazine-the-week-on-findra-2026-11-.webp](assets/subpage-03-magazine-the-week-on-findra-2026-11-.webp) |
+

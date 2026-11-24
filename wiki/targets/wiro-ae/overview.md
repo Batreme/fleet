@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: wiro-ae"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://wiro.ae/"
 final_url: "https://wiro.ae/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://wiro.ae/](https://wiro.ae/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Wiro · Operating System for All Agencies
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `18`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `111`
+- **Recovered Stylesheets**: `26`
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: wndws-space"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `wndws-space` (**windows · place is temporary. you are not.**)
 - **Production URL**: [https://wndws.space/](https://wndws.space/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#efefef`)
 - **Summary**: Upload your window — tell what chapter of life you're living through.
 - **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
@@ -71,8 +71,8 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<div.custom-cursor-enabled> — `105 windows`)**:
    - Landmark `<div class="custom-cursor-enabled">` presenting display lead `105 windows` and copy excerpt *"windows · place is temporary. you are not."* over `#cacaca` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<div.nuxt-route-announcer> — `windows · place is temporary. you `)**:
-   - Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Areg — Yerevan, Armenia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
-4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Areg — Yerevan, Armenia`)**:
-   - Landmark `<div class="route-stage">` framing `Areg — Yerevan, Armenia` and `Maria — Saint Petersburg, Russia` (*"Maria — Saint Petersburg, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
+   - Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Vsevolod — Moscow, Russia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
+4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Vsevolod — Moscow, Russia`)**:
+   - Landmark `<div class="route-stage">` framing `Vsevolod — Moscow, Russia` and `Sergey Savinykh — Moscow, Russia` (*"Sergey Savinykh — Moscow, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://wndws.space/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"VESTAHAHA — Guangzhou, China"*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"Polina — Chelyabinsk, Russia"*, and `#ffffff` structural dividers.

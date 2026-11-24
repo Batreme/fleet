@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: uimaven-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://uimaven.art"
 final_url: "https://uimaven.art/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: uimaven.art
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `15`
+- **Recovered Scripts**: `17`
 - **Recovered Stylesheets**: `1`
 
 ---

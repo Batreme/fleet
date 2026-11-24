@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: theinfinitysocks-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://theinfinitysocks.com/"
 final_url: "https://theinfinitysocks.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://theinfinitysocks.com/](https://theinfinitysocks.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Infinity Socks — Performance Basketball Socks
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `2`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: theinfinitysocks-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `13`
+- **Recovered Stylesheets**: `3`
 
 ---
 

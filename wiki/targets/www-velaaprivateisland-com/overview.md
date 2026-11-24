@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-velaaprivateisland-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.velaaprivateisland.com/"
 final_url: "https://www.velaaprivateisland.com/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Velaa Private Island Maldives
 - **Identified Frameworks**: Framer
 - **Recovered Scripts**: `37`
-- **Recovered Stylesheets**: `2`
+- **Recovered Stylesheets**: `1`
 
 ---
 

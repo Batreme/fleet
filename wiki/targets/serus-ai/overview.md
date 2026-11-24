@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: serus-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://serus.ai/"
 final_url: "https://www.serus.ai/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Serus — Agentic Privacy & Intelligence
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `84`
+- **Recovered Stylesheets**: `5`
 
 ---
 

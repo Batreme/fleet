@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: vivmgmt-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://vivmgmt.com/"
 final_url: "https://vivmgmt.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Photographer Agency & Commercial Photo Production — ViV MGMT
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `5`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `15`
+- **Recovered Stylesheets**: `3`
 
 ---
 

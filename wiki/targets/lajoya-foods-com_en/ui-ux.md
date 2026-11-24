@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lajoya-foods-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lajoya-foods-com_en` (**LAJOYA GOURMET**)
 - **Production URL**: [https://lajoya-foods.com/en](https://lajoya-foods.com/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#00ef84` / `#ea3323`)
 - **Summary**: Optimal preservation of porcelain interior
 - **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)

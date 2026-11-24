@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: rialto-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://rialto.com.au/"
 final_url: "https://rialto.com.au/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Rialto · The icon of Melbourne's skyline
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `38`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `77`
+- **Recovered Stylesheets**: `17`
 
 ---
 

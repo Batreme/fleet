@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ringpopcandy-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ringpopcandy-com` (**Ring Pop® — Candy for Every Celebration**)
 - **Production URL**: [https://ringpopcandy.com/](https://ringpopcandy.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `#141723` ink, `#ff8300` accent)
 - **Summary**: Ring Pop turns any occasion into a celebration: birthdays, weddings, game days, wins. Shop the collections and find Ring Pop at a store n...
-- **Total Clean CSS Variables Extracted**: `489` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `975` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Greed Standard`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 250px`, `line-height: 213px`, `font-weight: 400`, `letter-spacing: -5px`); CSS variables `--font-heading-h1: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h1-weight: 400`, `--h1-font-case: uppercase`; rule `,h1` (`font-size: var(--font-heading-h1-size-mo...`, `line-height: var(--font-heading-h1...`, `letter-spacing: var(--font-heading-h1...`, `font-weight: var(--font-he...`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 120px`, `line-height: 100px`, `font-weight: 400`, `letter-spacing: -2.4px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 250px`, `line-height: 205px`, `font-weight: 500`, `letter-spacing: -5px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`)
 - **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--font-body: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-body-size-xsmall: 14px`, `--font-body-size-small: 18px`; rule `p` (`font-size: inherit`, `line-height: inherit`, `letter-spacing: inherit`, `font-weight: inherit`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 19px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--font-heading-small-title: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-heading-small-title-weight: 900`, `--small_title-font-case: uppercase`; rule `.label` (`font-size: 1.5rem`, `line-height: 1.083em`, `letter-spacing: -.0225rem`, `font-weight: 600`)
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: sincro-es_en-us"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://sincro.es/en/us/"
 final_url: "https://sincro.es/en/us/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Us - Sincro
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS
-- **Recovered Scripts**: `34`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `146`
+- **Recovered Stylesheets**: `19`
 
 ---
 

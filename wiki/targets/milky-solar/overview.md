@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: milky-solar"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://milky.solar"
 final_url: "https://milky.solar/"
 status: analyzed

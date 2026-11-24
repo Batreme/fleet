@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: aestudio-studio_hozon"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "aestudio-studio_hozon"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 4
+subpages_crawled: 1
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 > **Hozon — Pickle & Fermented Food Recipe App** (https://aestudio.studio/hozon) — Find Japanese pickle recipes and fermented food recipes in Hozon for iPhone. Explore quick pickles and nukazuke, track jars and discover...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Hozon — Pickle & Fermented Food Recipe App** (`https://aestudio.studio/hozon`). Find Japanese pickle recipes and fermented food recipes in Hozon for iPhone. Explore quick pickles and nukazuke, track jars and discover...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#20221c` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`HOZON`) with `Hiragino Kaku Gothic ProN` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`HOZON`) with `Hiragino Kaku Gothic ProN`.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 24px`, padding `72px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=2548px` / doc `3448px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1600px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `72px` lateral canvas padding with `24px` grid gap.
 - **Border Radius Scale**: `50%`, `3px`, `40px`, `2px`.
@@ -93,7 +98,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 324px`, `line-height: 246.24px`, `font-weight: 900`, `letter-spacing: -24.3px`); rule `h1` (`font-size: clamp(100px,22.5vw,345px)`, `line-height: .76`, `letter-spacing: -.075em`, `font-weight: 900`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48.96px`, `line-height: 50.9184px`, `font-weight: 400`, `letter-spacing: -2.2032px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100.8px`, `line-height: 100.8px`, `font-weight: 400`, `letter-spacing: -6.552px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 15px`, `line-height: 1.7`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 400`); rule `nav` (`font-size: 14px`).
 
@@ -110,6 +115,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 - **Selector `::after`**: `transition: none!important` extracted from `aestudio-studio_hozon` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3448px`, deepest scrollY reached `2548px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `HOZON`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`tab` · `02 Give every jar its time. ↗`)**: Triggered visual diff `5.911` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/hozon/ja`) measured as `MPA` in `1078ms`.
 
 ---
 
@@ -168,6 +179,14 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
    - Landmark `<section class="idea-section section-wrap">` framing `Pickle recipes. Fermented favourites.` and `Less waste. More wonder.` (*"FRESH TODAY. SAVOURED TOMORROW."*) with `#eef0e5` surface cards, `#008000` accents, and `focus-visible { outline:3px solid var(--green);outline-offset:6px }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://aestudio.studio/hozon`)**:
    - Landmark `<footer class="footer">` anchoring `Hozon — Pickle & Fermented Food ` footer links (`The app · The idea`), copy *"Turn everyday ingredients into something worth waiting for. "*, and `#dedfd7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `HOZON` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `33%`): Active landmark `Pickle recipes. Fermented favourites.` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `67%`): Active landmark `Less waste. More wonder.` · sticky/fixed elements: `1`
+- **Step 04** (`y=2548px`, `100%`): Active landmark `Make a little room for good.` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/hozon/ja`)**: `https://aestudio.studio/hozon/ja` — H1: `HOZON`, scrollHeight `3482px`, transition `MPA` (`1078ms`)
 
 ---
 
@@ -184,7 +203,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#20221c`, **Accent / Highlight**: `#008000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#20221c` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`HOZON`) with `Hiragino Kaku Gothic ProN` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Georgia` for display copy (`HOZON`) with `Hiragino Kaku Gothic ProN`.
   - **Calibrated Spatial Grid & Motion**: Combines `1600px` container bounds (`gap: 24px`, padding `72px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +240,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--green`)**: `#4b603c` — grounded in `var(--green)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1600px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `72px` lateral canvas padding with `24px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 24px`)
@@ -235,7 +254,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Hiragino Kaku Gothic ProN`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 324px`, `line-height: 246.24px`, `font-weight: 900`, `letter-spacing: -24.3px`); rule `h1` (`font-size: clamp(100px,22.5vw,345px)`, `line-height: .76`, `letter-spacing: -.075em`, `font-weight: 900`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 48.96px`, `line-height: 50.9184px`, `font-weight: 400`, `letter-spacing: -2.2032px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 100.8px`, `line-height: 100.8px`, `font-weight: 400`, `letter-spacing: -6.552px`); rule `h2` (`font-size: clamp(32px,3.4vw,52px)`, `line-height: 1.04`, `letter-spacing: -.045em`, `font-weight: 400`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 15px`, `line-height: 1.7`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 400`); rule `nav` (`font-size: 14px`)
 
@@ -246,7 +265,7 @@ Scaffold `aestudio-studio_hozon` (`Hozon — Pickle & Fermented Food Recipe App`
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `aestudio-studio_hozon`)` (`aestudio-studio_hozon`) adapts across `@media (min-width:1600px)`, `@media (max-width:1000px)`, `@media (max-width:700px)`, `@media (max-width:370px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `The app · The idea`.
 2. **Hero Stage & Focal Lead (<section.hero> — `HOZON`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `HOZON` and copy excerpt *"THE ART OF KEEPING."* over `#ffffff` canvas and `#20221c` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#20221c` headline `HOZON`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#20221c` headline `HOZON`.
 3. **Primary Showcase & Content Grid (<section.app-section> — `A little time. A lot of flavour.`)**:
    - DOM & Selectors: Landmark `<section class="app-section section-wrap">` rendering section `A little time. A lot of flavour.` with copy *"A pickling companion. A slower kind of good."*, asset references (`hozon`, `favicon.svg`, `jar-v1.webp`, `cucumber-v2.webp`), and grid rule `img { display:block;max-width:100%;height:auto }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.app-section> — `A little time. A lot of flavour.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1600px`, `gap: 24px`) on desktop and Single-column vertical stack at `390px` viewport width with `72px` horizontal padding on mobile.
@@ -277,8 +296,41 @@ Scaffold `aestudio-studio_hozon` (`Hozon — Pickle & Fermented Food Recipe App`
 - **Selector `::after`**: `transition: none!important` extracted from `aestudio-studio_hozon` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3448px` across 4 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: HOZON (0%) -> Pickle recipes. Fermented f... (33%) -> Less waste. More wonder. (67%) -> Make a little room for good. (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/hozon/ja` (detail, MPA) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `aestudio-studio_hozon`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | HOZON | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `33%` | Pickle recipes. Fermented favourites. | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `67%` | Less waste. More wonder. | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2548px` | `100%` | Make a little room for good. | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | HOZON | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1496px` | `50%` | #the-idea | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `2992px` | `100%` | Make a little room for good. | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `tab` (`02 Give every jar its time. ↗`, diff `5.911`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://aestudio.studio/hozon/ja` | HOZON | `3482px` | `MPA` (`1078ms`) | [subpage-01-hozon-ja.webp](assets/subpage-01-hozon-ja.webp) |
+

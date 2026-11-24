@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-halcyon-co-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-halcyon-co-nz` (**Halcyon · Leading Lighting Specialists**)
 - **Production URL**: [https://www.halcyon.co.nz/](https://www.halcyon.co.nz/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f7eb12`)
 - **Summary**: Driven by innovation and an unwavering commitment to quality, Halcyon works with leading architects, specifiers and electrical experts to...
-- **Total Clean CSS Variables Extracted**: `1262` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `775` (curated live-grounded set below)
 
 ---
 
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `Halcyon Monument Grotesk`
 - **Body Font Stack**: `Untitled`
 - **Monospace / Technical Font Stack**: `Halcyon Monument Grotesk Semi-Mono`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 115.2px`, `line-height: 115.2px`, `font-weight: 500`, `letter-spacing: -3.76px`); rule `,.h1` (`font-size: 88px`, `line-height: 100%`, `letter-spacing: -1.76px`, `font-weight: 500`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 87.9984px`, `line-height: 87.9984px`, `font-weight: 500`, `letter-spacing: -1.76px`); rule `,.h2` (`font-size: 56px`, `line-height: 100%`, `letter-spacing: -.84px`, `font-weight: 500`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 500`); CSS variables `--boostsd-general-font-size-base: 16px`, `--boostsd-cart-body-padding: 16px`, `--boostsd-cart-body-padding-medium: 24px`; rule `p` (`font-size: 12px`, `line-height: 90%`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 12px`, `font-weight: 500`); CSS variables `--boostsd-product-label-padding: 2px 6px`, `--boostsd-product-label-border-radius: 2px`, `--boostsd-product-label-border-radius-capsule: 40px`; rule `.label` (`font-size: 12px`, `line-height: 12px`, `letter-spacing: 0`, `font-weight: 400`)
@@ -35,7 +35,7 @@ http_status: 200
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#000000` | live computed `p` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffe5b4` | `var(--color-background)` in `:root` |
 | **Interactive Accent / Highlight** | `#f7eb12` | `.primary-button--light:after { background: #f7eb12 }` |
 | **Secondary / Muted Copy** | `#303030` | `var(--megamenu-item-text)` in `:root` |

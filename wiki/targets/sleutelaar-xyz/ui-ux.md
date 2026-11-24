@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: sleutelaar-xyz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `sleutelaar-xyz` (**Hans Sleutelaar · Officiële website**)
 - **Production URL**: [https://sleutelaar.xyz/](https://sleutelaar.xyz/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0000ff`)
 - **Summary**: Digitaal archief over dichter, journalist en Nieuwe Stijl-oprichter Hans Sleutelaar (1935–2020). Gedichten, essays, foto's en bibliografie.
 - **Total Clean CSS Variables Extracted**: `11` (curated live-grounded set below)
@@ -36,10 +36,10 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `html` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#0d0d0d` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#0000ff` | `.home-gradient.svelte-w91zfd { background: blue }` (`#0000ff`) |
-| **Interactive Accent / Highlight** | `#0000ff` | `.home-content ::selection { color: blue }` (`#0000ff`) |
-| **Secondary / Muted Copy** | `#0000ff` | `.home-content ::selection { color: blue }` (`#0000ff`) |
-| **Structural Hairline Border** | `#0000ff` | hairline divider derived from `.home-content ::selection { color: blue }` (`#0000ff`) |
+| **Elevated Surface / Card Substrate** | `#0000ff` | `.bg-blue { background-color: blue }` (`#0000ff`) |
+| **Interactive Accent / Highlight** | `#0000ff` | `.bg-blue { background-color: blue }` (`#0000ff`) |
+| **Secondary / Muted Copy** | `#0000ff` | `html.blue ::selection { color: blue }` (`#0000ff`) |
+| **Structural Hairline Border** | `#0000ff` | hairline divider derived from `html.blue ::selection { color: blue }` (`#0000ff`) |
 | **Variable Token (`--color-blue`)** | `#009dd8` | `var(--color-blue)` in `:root` |
 | **Variable Token (`--color-beige`)** | `#f0e6db` | `var(--color-beige)` in `:root` |
 
@@ -69,12 +69,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.uppercase> — `sleutelaar-xyz`)**:
-   - Landmark `<header class="uppercase left-0">` (`1440x45px`) hosting `Hans Sleutelaar · Officiële website` navigation (`Biografie · Index · Gedichten · Archief`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-engine="three.js r185"`), and stylesheet rule `p.svelte-335qri .article-break-sp... { height:.675em;display:block }`.
+   - Landmark `<header class="uppercase left-0">` (`1440x45px`) hosting `Hans Sleutelaar · Officiële website` navigation (`Biografie · Index · Gedichten · Archief`), DOM attributes (`data-sveltekit-preload-data="hover"`, `data-engine="three.js r185"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.grid-cols-12> — `Uitgevers en instituties`)**:
    - Landmark `<section class="grid-cols-12 text-48">` presenting display lead `Uitgevers en instituties` and copy excerpt *"Hans Sleutelaar (22 september 1935 – 25 juni 2020). Dichter - Jou"* over `#ffffff` canvas and `#0d0d0d` ink.
 3. **Primary Showcase & Content Grid (<section.gap-y-20> — `Samen met`)**:
-   - Landmark `<section class="gap-y-20 text-48">` rendering section `Samen met` with copy *"Voor het betere schrijfwerk Sleutelaar groeide op als enigs kind "*, asset references (`ABCMonumentGroteskTrial-Regular.otf`, `ABCMonumentGroteskTrial-Medium.otf`, `6b9a08feb31cdbce07aca8010c8613f21...`, `0.CvILTd3z.css`), and grid rule `.inner.svelte-2wwapc { margin-top:calc(.375rem * var(--gap-scale,1)) }`.
+   - Landmark `<section class="gap-y-20 text-48">` rendering section `Samen met` with copy *"Voor het betere schrijfwerk Sleutelaar groeide op als enigs kind "*, asset references (`ABCMonumentGroteskTrial-Regular.otf`, `ABCMonumentGroteskTrial-Medium.otf`, `6b9a08feb31cdbce07aca8010c8613f21...`, `0.CvILTd3z.css`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.text-48> — `Voor het betere schrijfwerk Sleute`)**:
-   - Landmark `<section class="gap-y-20 text-48">` framing `Voor het betere schrijfwerk Sleutelaar groeide o` and `Hij bleef nauw betrokken bij het behoud, het red` (*"Hij bleef nauw betrokken bij het behoud, het redigeren en heruitg"*) with `#0000ff` surface cards, `#0000ff` accents, and `section.svelte-dltha4 { clip-path:inset(0);height:50svh;overflow:hidden }`.
+   - Landmark `<section class="gap-y-20 text-48">` framing `Voor het betere schrijfwerk Sleutelaar groeide o` and `Hij bleef nauw betrokken bij het behoud, het red` (*"Hij bleef nauw betrokken bij het behoud, het redigeren en heruitg"*) with `#0000ff` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.items-center> — `https://sleutelaar.xyz/`)**:
    - Landmark `<footer class="items-center">` anchoring `Hans Sleutelaar · Officiële webs` footer links (`Biografie · Index · Gedichten · Archief`), copy *"2018 International Film Festival Rotterdam (IFFR) - première"*, and `#0000ff` structural dividers.

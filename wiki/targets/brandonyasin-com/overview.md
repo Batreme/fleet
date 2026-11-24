@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: brandonyasin-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://brandonyasin.com"
 final_url: "https://brandonyasin.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Brandon Yasin — Creative Director & Designer
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `32`
+- **Recovered Stylesheets**: `12`
 
 ---
 

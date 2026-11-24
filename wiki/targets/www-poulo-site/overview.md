@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-poulo-site"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.poulo.site/"
 final_url: "https://www.poulo.site/"
 status: blocked

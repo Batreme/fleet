@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: concretaceramiche-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "concretaceramiche-it"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas, `#c0d2cc` ink, `#ff0000` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 
 > **Concreta Ceramiche Artigianali Fatte a Mano** (https://concretaceramiche.it/) — Ceramiche artigianali uniche, realizzate a mano nei Castelli Romani. Gres, stampa 3D e tradizione familiare in ogni pezzo. Scopri la coll...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Concreta Ceramiche Artigianali Fatte a Mano** (`https://concretaceramiche.it/`). Ceramiche artigianali uniche, realizzate a mano nei Castelli Romani. Gres, stampa 3D e tradizione familiare in ogni pezzo. Scopri la coll...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas, `#c0d2cc` ink, `#ff0000` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#2d0d01` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#c0d2cc` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Elgoc` for display copy (`ConCreta ceramiche artigianali Roma`) with `Elgoc` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Elgoc` across display (`ConCreta ceramiche artigianali Roma`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1325px` container bounds (`gap: 12px`, padding `15px`) with `cubic-bezier(.5856,.0703,.4143,.9297)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8147px` / doc `9047px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1325px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `15px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `4px`, `3px`, `50%`, `.25rem`.
@@ -99,7 +104,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `h1` (`font-size: 25px`, `line-height: 32px`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`); rule `h2` (`font-weight: 400`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--cmplz_category_body_font_size: 12px`; rule `p` (`font-weight: 500`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `small` (`font-size: 15px`).
 
@@ -114,8 +119,12 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 - **Selector `mponents-notice-banner__content ....`**: `transition: all .2s ease-in-out` extracted from `concretaceramiche-it` stylesheet.
 - **Selector `.wc-block-components-button:not(....`**: `transition: box-shadow .1s linear` extracted from `concretaceramiche-it` stylesheet.
 - **Selector `k-components-radio-control__input...`**: `transition: opacity .2s ease` extracted from `concretaceramiche-it` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.5856,.0703,.4143,.9297)`)**: Governs interactive state transitions across `<header.negative>` and `<section.logo>`.
+- **Extracted Easing Curve (`cubic-bezier(.5856,.0703,.4143,.9297)`)**: Governs interactive state transitions across `<header.fixed>` and `<section.logo>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `9047px`, deepest scrollY reached `8147px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Route Transition Architecture**: First internal navigation (`/shop/`) measured as `MPA` in `1835ms`.
 
 ---
 
@@ -126,7 +135,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Concreta Ceramiche Artigianali Fatte a Man │
 │ ====================================================================== │
-│ [ <header.negative> (1425x78px)       | h o m e h o m e · c o r s i  ] │
+│ [ <header.fixed> (1425x78px)          | h o m e h o m e · c o r s i  ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.rank-math-schema> (w=1425px)                  | │
 │ | H1: ConCreta ceramiche artigianali Roma                            | │
@@ -148,7 +157,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 ┌────────────────────────────────────────────────────────────────────────┐
 │ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 12px)       │
 │ ====================================================================== │
-│ [ HEADER BAR (<header.negative>       ) | Compact Menu (390px)         │
+│ [ HEADER BAR (<header.fixed>          ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE (<section.rank-math-schem) — 390px Vertical Lead        | │
 │ | H1: ConCreta ceramiche artigianali Roma                            | │
@@ -164,16 +173,30 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.negative> — `concretaceramiche-it`)**:
-   - Landmark `<header class="negative fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
+1. **Brand Header & Navigation Bar (<header.fixed> — `concretaceramiche-it`)**:
+   - Landmark `<header class="fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
 2. **Hero Stage & Focal Lead (<section.rank-math-schema> — `ConCreta ceramiche artigianali Rom`)**:
-   - Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"Nel cuore dei Castelli Romani, diamo forma a oggetti che uniscono"* over `#2d0d01` canvas and `#c0d2cc` ink.
+   - Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"l a b o r a t o r i o l a b o r a t o r i o"* over `#2d0d01` canvas and `#c0d2cc` ink.
 3. **Primary Showcase & Content Grid (<section.logo> — `La ceramica artigianale prende for`)**:
-   - Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
+   - Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
 4. **Interactive Detail & Feature Matrix (<section.wp-singular> — `Oggetti in ceramica nati dall’inco`)**:
-   - Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"l a b o r a t o r i o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
+   - Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
 5. **Colophon & Global Directory Footer (<footer.page-template> — `https://concretaceramiche.it/`)**:
-   - Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.
+   - Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `10%`): Active landmark `#intro` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `31%`): Active landmark `Section @ 31%` · sticky/fixed elements: `1`
+- **Step 04** (`y=3400px`, `42%`): Active landmark `Un luogo dove la terra diventa forma e prende vita` · sticky/fixed elements: `0`
+- **Step 05** (`y=5100px`, `63%`): Active landmark `#projects` · sticky/fixed elements: `1`
+- **Step 06** (`y=5950px`, `73%`): Active landmark `Scopri la nostra collezione artigianale, unica e...` · sticky/fixed elements: `1`
+- **Step 07** (`y=7650px`, `94%`): Active landmark `Entra nel nostro mondo: workshop, eventi e collab...` · sticky/fixed elements: `0`
+- **Step 08** (`y=8147px`, `100%`): Active landmark `creta` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/shop/`)**: `https://concretaceramiche.it/shop/` — H1: `s h o p`, scrollHeight `1955px`, transition `MPA` (`1835ms`)
+- **Detail Route (`/prodotto/vaso-mod/`)**: `https://concretaceramiche.it/prodotto/vaso-mod/` — H1: `s h o p`, scrollHeight `2830px`, transition `direct` (`8708ms`)
+- **Detail Route (`/prodotto/vaso-lica-m-in-gres-stampato-in-3d/`)**: `https://concretaceramiche.it/prodotto/vaso-lica-m-in-gres-stampato-in-3d/` — H1: `s h o p`, scrollHeight `2796px`, transition `direct` (`2899ms`)
 
 ---
 
@@ -190,7 +213,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#2d0d01` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#c0d2cc`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#2d0d01` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#c0d2cc` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Elgoc` for display copy (`ConCreta ceramiche artigianali Roma`) with `Elgoc` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `Elgoc` across display (`ConCreta ceramiche artigianali Roma`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1325px` container bounds (`gap: 12px`, padding `15px`) with `cubic-bezier(.5856,.0703,.4143,.9297)` easing and Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -233,8 +256,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--wc-green`)**: `#008a20` — grounded in `var(--wc-green)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1325px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `15px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1325px`, `gap: 12px`)
@@ -247,33 +270,33 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Elgoc`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: live computed `h1` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `h1` (`font-size: 25px`, `line-height: 32px`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`); rule `h2` (`font-weight: 400`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--cmplz_category_body_font_size: 12px`; rule `p` (`font-weight: 500`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `small` (`font-size: 15px`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `concretaceramiche-it` (`Concreta Ceramiche Artigianali Fatte a Mano`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.negative> — `concretaceramiche-it`)**:
-   - DOM & Selectors: Landmark `<header class="negative fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.negative> — `concretaceramiche-it`)` (`concretaceramiche-it`) adapts across `@media only screen and (min-width:768px)`, `@media only screen and (min-width:1168px)`, `@media screen and (prefers-reduced-motion:reduce)`, `@media (max-width:600px)` with `cubic-bezier(.5856,.0703,.4143,.9297)`, `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.075,.82,.165,1)` transitions and links `h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`.
+1. **Brand Header & Navigation Bar (<header.fixed> — `concretaceramiche-it`)**:
+   - DOM & Selectors: Landmark `<header class="fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.fixed> — `concretaceramiche-it`)` (`concretaceramiche-it`) adapts across `@media only screen and (min-width:768px)`, `@media only screen and (min-width:1168px)`, `@media screen and (prefers-reduced-motion:reduce)`, `@media (max-width:600px)` with `cubic-bezier(.5856,.0703,.4143,.9297)`, `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.075,.82,.165,1)` transitions and links `h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`.
 2. **Hero Stage & Focal Lead (<section.rank-math-schema> — `ConCreta ceramiche artigianali Rom`)**:
-   - DOM & Selectors: Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"Nel cuore dei Castelli Romani, diamo forma a oggetti che uniscono"* over `#2d0d01` canvas and `#c0d2cc` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#2d0d01` background with `#c0d2cc` headline `ConCreta ceramiche artigianali Roma`.
+   - DOM & Selectors: Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"l a b o r a t o r i o l a b o r a t o r i o"* over `#2d0d01` canvas and `#c0d2cc` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#2d0d01` background with `#c0d2cc` headline `ConCreta ceramiche artigianali Roma`.
 3. **Primary Showcase & Content Grid (<section.logo> — `La ceramica artigianale prende for`)**:
-   - DOM & Selectors: Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
+   - DOM & Selectors: Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.logo> — `La ceramica artigianale prende for`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1325px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `15px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.wp-singular> — `Oggetti in ceramica nati dall’inco`)**:
-   - DOM & Selectors: Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"l a b o r a t o r i o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
+   - DOM & Selectors: Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.wp-singular> — `Oggetti in ceramica nati dall’inco`)` uses `4px`, `3px`, `50%`, `.25rem` radii, `#ff0000` highlights, and assets (Elgoc-Bold.woff2, Elgoc-Regular.woff2, Inter28pt-Medium.woff2).
 5. **Colophon & Global Directory Footer (<footer.page-template> — `https://concretaceramiche.it/`)**:
-   - DOM & Selectors: Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-template> — `https://concretaceramiche.it/`)` aligns to `1325px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `15px` lateral canvas padding with `12px` grid gap and attributes (data-wp-strategy="defer", data-wp-strategy="defer", data-wp-strategy="defer").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Nel cuore dei Castelli Romani, diamo forma a oggetti che uniscono antiche manualit..."*
-- Copy Excerpt 2: *"l a b o r a t o r i o l a b o r a t o r i o"*
-- Copy Excerpt 3: *"l a b o r a t o r i o"*
-- Copy Excerpt 4: *"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*
+- Copy Excerpt 1: *"l a b o r a t o r i o l a b o r a t o r i o"*
+- Copy Excerpt 2: *"l a b o r a t o r i o"*
+- Copy Excerpt 3: *"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*
+- Copy Excerpt 4: *"c o s a r e a l i z z i a m o"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.5856,.0703,.4143,.9297)`, `cubic-bezier(.795,-.035,0,1)`, `cubic-bezier(.075,.82,.165,1)`
@@ -287,10 +310,44 @@ Scaffold `concretaceramiche-it` (`Concreta Ceramiche Artigianali Fatte a Mano`) 
 - **Selector `mponents-notice-banner__content ....`**: `transition: all .2s ease-in-out` extracted from `concretaceramiche-it` stylesheet.
 - **Selector `.wc-block-components-button:not(....`**: `transition: box-shadow .1s linear` extracted from `concretaceramiche-it` stylesheet.
 - **Selector `k-components-radio-control__input...`**: `transition: opacity .2s ease` extracted from `concretaceramiche-it` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.5856,.0703,.4143,.9297)`)**: Governs interactive state transitions across `<header.negative>` and `<section.logo>`.
+- **Extracted Easing Curve (`cubic-bezier(.5856,.0703,.4143,.9297)`)**: Governs interactive state transitions across `<header.fixed>` and `<section.logo>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `9047px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%) -> #intro (10%) -> Section @ 31% (31%) -> Un luogo dove la terra dive... (42%) -> #projects (63%) -> Scopri la nostra collezione... (73%) -> Entra nel nostro mondo: wor... (94%) -> creta (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/shop/` (listing, MPA), `/prodotto/vaso-mod/` (detail, direct), `/prodotto/vaso-lica-m-in-gres-stampato-in-3d/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `concretaceramiche-it`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `10%` | #intro | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `31%` | Section @ 31% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `42%` | Un luogo dove la terra diventa forma e prende... | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `63%` | #projects | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `73%` | Scopri la nostra collezione artigianale, unic... | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `94%` | Entra nel nostro mondo: workshop, eventi e co... | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8147px` | `100%` | creta | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | La ceramica artigianale prende forma tra... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3343px` | `50%` | #projects | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6687px` | `100%` | SOCIAL | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://concretaceramiche.it/shop/` | s h o p | `1955px` | `MPA` (`1835ms`) | [subpage-01-shop.webp](assets/subpage-01-shop.webp) |
+| `2` | `detail` | `https://concretaceramiche.it/prodotto/vaso-mod/` | s h o p | `2830px` | `direct` (`8708ms`) | [subpage-02-prodotto-vaso-mod.webp](assets/subpage-02-prodotto-vaso-mod.webp) |
+| `3` | `detail` | `https://concretaceramiche.it/prodotto/vaso-lica-m-in-gres-stampato-in-3d/` | s h o p | `2796px` | `direct` (`2899ms`) | [subpage-03-prodotto-vaso-lica-m-in-gres-stampat.webp](assets/subpage-03-prodotto-vaso-lica-m-in-gres-stampat.webp) |
+

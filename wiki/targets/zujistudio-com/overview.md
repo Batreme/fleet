@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: zujistudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://zujistudio.com/"
-final_url: "https://zujistudio.com/"
+final_url: "https://www.zujistudio.com/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,13 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://zujistudio.com/](https://zujistudio.com/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: zujistudio-com
+- **Final Redirected URL**: [https://www.zujistudio.com/](https://www.zujistudio.com/)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: zuji studio - index
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `20`
+- **Recovered Stylesheets**: `2`
 
 ---
 

@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: patmos-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://patmos.studio/"
 final_url: "https://patmos.studio/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Headless Preloader / Blank Viewport Capture (Loading complete. Choose whether to play sound. Praksis of Gestalting )"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://patmos.studio/](https://patmos.studio/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (Loading complete. Choose whether to play sound. Praksis of Gestalting )
 - **Page Title**: Patmos · Wahr, Gut, Schön
-- **Identified Frameworks**: Tailwind CSS
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `5`
 - **Recovered Stylesheets**: `4`
 

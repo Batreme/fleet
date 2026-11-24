@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: book-sequel-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://book.sequel.co/"
 final_url: "https://book.sequel.co/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The First Fifty
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `57`
+- **Recovered Scripts**: `36`
 - **Recovered Stylesheets**: `1`
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: bybang-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `bybang-co` (**Estudio Bang · Architecture, Interiors, Objects & Digital Media**)
 - **Production URL**: [https://bybang.co/](https://bybang.co/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#141414` ink, `#c7161d` accent)
 - **Summary**: Estudio Bang is a Barcelona-based architecture studio working across architecture, interiors, objects and digital media. We create spaces...
 - **Total Clean CSS Variables Extracted**: `50` (curated live-grounded set below)
@@ -72,10 +72,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.site-chrome> — `bybang-co`)**:
    - Landmark `<header class="site-chrome">` (`1376x24px`) hosting `Estudio Bang · Architecture, Interio` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-cursor-target="logo"`, `data-cursor-target="logo"`, `data-entry-signal="0"`, `data-filter="all"`), and stylesheet rule `html.lenis body { height:auto }`.
 2. **Hero Stage & Focal Lead (<main.site-home> — `estudiobang`)**:
-   - Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 05 : 01 BUE 01 : 01"* over `#ffffff` canvas and `#141414` ink.
-3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 05 : 01 BUE 01 : 01`)**:
-   - Landmark `<main class="site-home site-home--ready">` rendering section `BCN 05 : 01 BUE 01 : 01` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
+   - Landmark `<main class="site-home site-home--ready">` presenting display lead `estudiobang` and copy excerpt *"BCN 13 : 59 BUE 09 : 59"* over `#ffffff` canvas and `#141414` ink.
+3. **Primary Showcase & Content Grid (<main.site-home--ready> — `BCN 13 : 59 BUE 09 : 59`)**:
+   - Landmark `<main class="site-home site-home--ready">` rendering section `BCN 13 : 59 BUE 09 : 59` with copy *"Copyright Estudio Bang® 2026 · Legal & Privacy · Made by Tremendo"*, asset references (`intro-01.webp`, `intro-02.webp`, `intro-03.webp`, `intro-04.webp`), and grid rule `.lenis-stopped { overflow:clip }`.
 4. **Interactive Detail & Feature Matrix (<main.site-home:nth(2)> — `Copyright Estudio Bang® 2026 · Leg`)**:
    - Landmark `<main class="site-home site-home--ready">` framing `Copyright Estudio Bang® 2026 · Legal & Privacy ·` and `Copyright Estudio Bang® 2026` (*"Copyright Estudio Bang® 2026"*) with `#f5f5f2` surface cards, `#c7161d` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.custom-cursor__split> — `https://bybang.co/`)**:
-   - Landmark `<footer class="custom-cursor__split">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.custom-cursor__label> — `https://bybang.co/`)**:
+   - Landmark `<footer class="custom-cursor__label">` anchoring `Estudio Bang · Architecture, Int` footer links (`Overview · Index · Archive · About · Contact`), copy *"Copyright Estudio Bang® 2026 · Legal & Privacy ·"*, and `#ececec` structural dividers.

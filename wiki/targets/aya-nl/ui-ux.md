@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: aya-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `aya-nl` (**Danstheater AYA - eigenzinnige voorstellingen voor jong publiek**)
 - **Production URL**: [https://aya.nl](https://aya.nl)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas, `#fffdfd` ink, `#0000ee` accent)
 - **Summary**: AYA voorstellingen voor kinderen en jongeren spelen in theaters en op scholen. Met een spannende mix van dans, spel, zang en livemuziek u...
 - **Total Clean CSS Variables Extracted**: `66` (curated live-grounded set below)
@@ -80,12 +80,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.framer-pbvui3> — `aya-nl`)**:
-   - Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
+   - Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`, `data-framer-css="true"`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
 2. **Hero Stage & Focal Lead (<section.framer-Z9U3S> — `BRRROTHERS 6+`)**:
    - Landmark `<section class="framer-Z9U3S framer-cwJq3">` presenting display lead `BRRROTHERS 6+` and copy excerpt *"Overload 12+ Ontdek"* over `#ff2f11` canvas and `#fffdfd` ink.
 3. **Primary Showcase & Content Grid (<section.framer-NxIXs> — `Eigenzinnig danstheater voor een j`)**:
-   - Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `.hidden-72rtr7 { display:none!important }`.
+   - Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `main { box-sizing:border-box;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.framer-T1bJL> — `Spreken zonder woorden 12+ Ontdek`)**:
-   - Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `.hidden-rjvtpu { display:none!important }`.
+   - Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
 5. **Colophon & Global Directory Footer (<footer.framer-Ysu5g> — `https://aya.nl`)**:
    - Landmark `<footer class="framer-Ysu5g framer-QSpah">` anchoring `Danstheater AYA - eigenzinnige v` footer links (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), copy *"UP NEXT: Stilzitten is voor stoelen 7+ Ontdek"*, and `#f02c10` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-future-human-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-future-human-de` (**FUTURE HUMAN · A Shared Year of Co-Creation & Presence**)
 - **Production URL**: [https://www.future-human.de/](https://www.future-human.de/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `#000000` ink, `#ffffff` accent)
 - **Summary**: A one-year training for multidimensional coaching & co-creation. 8 modules, 16 participants, at Das HILLA near Kassel. Starts Oct 30, 2026.
 - **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: allsorts-andrew-rip"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://allsorts.andrew.rip"
 final_url: "https://allsorts.andrew.rip/"
 status: analyzed

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-3moons-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-3moons-it` (**3Moons Studio · App mobile, software enterprise e AI su misura**)
 - **Production URL**: [https://www.3moons.it](https://www.3moons.it)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas, `#ffffff` ink, `#2563eb` accent)
 - **Summary**: Creiamo soluzioni software su misura per aziende e startup tecnologiche, dall’ideazione al prodotto finito: prototipi rapidi, costi conte...
 - **Total Clean CSS Variables Extracted**: `17` (curated live-grounded set below)

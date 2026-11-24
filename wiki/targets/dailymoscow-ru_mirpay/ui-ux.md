@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: dailymoscow-ru_mirpay"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `dailymoscow-ru_mirpay` (**Спорт без лишних действий — Mir Pay × Daily Moscow**)
 - **Production URL**: [https://dailymoscow.ru/mirpay](https://dailymoscow.ru/mirpay)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f4f7fc` canvas, `#000000` ink, `#007bff` accent)
 - **Summary**: Бокс, гольф, бассейн, падел, скалодром и йога — и ни одного лишнего движения, когда дело доходит до оплаты
-- **Total Clean CSS Variables Extracted**: `22` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)
 
 ---
 
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `MP Graphik`
 - **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 103.68px`, `line-height: 101.606px`, `font-weight: 700`, `letter-spacing: -3.1104px`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 103.68px`, `line-height: 101.606px`, `font-weight: 700`, `letter-spacing: -3.1104px`); rule `h1` (`font-size: 56px`, `line-height: 60px`, `letter-spacing: -1.2px`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 67.68px`, `line-height: 67.68px`, `font-weight: 700`, `letter-spacing: -2.7072px`); rule `.section-title` (`font-weight: 800`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `p` (`font-size: 14px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`)
@@ -38,17 +38,13 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#ffffff` | `.main-btn.active { background: #ffffff }` |
 | **Interactive Accent / Highlight** | `#007bff` | `.privacy-consent__link { color: #007bff }` |
-| **Secondary / Muted Copy** | `#9d9da4` | `var(--dmf-muted)` in `:root` |
-| **Structural Hairline Border** | `#f6f8fc` | `var(--dmf-rule)` in `:root` (`rgba(255, 255, 255, .14)`) |
-| **Variable Token (`--dmf-dim`)** | `#7b7b81` | `var(--dmf-dim)` in `:root` |
+| **Secondary / Muted Copy** | `#7b7b81` | `var(--bl-muted)` in `:root` |
+| **Structural Hairline Border** | `#efeff3` | `var(--bl-rule)` in `:root` |
+| **Variable Token (`--dmf-muted`)** | `#9d9da4` | `var(--dmf-muted)` in `:root` |
+| **Variable Token (`--bl-fill`)** | `#f6f6f9` | `var(--bl-fill)` in `:root` |
+| **Variable Token (`--bl-accent`)** | `#d5181f` | `var(--bl-accent)` in `:root` |
 | **Variable Token (`--blue`)** | `#1f5bd7` | `var(--blue)` in `:root` |
 | **Variable Token (`--sky`)** | `#00aaff` | `var(--sky)` in `:root` |
-| **Variable Token (`--green`)** | `#00a263` | `var(--green)` in `:root` |
-| **Variable Token (`--green-t`)** | `#008452` | `var(--green-t)` in `:root` |
-| **Variable Token (`--green-d`)** | `#0b4d31` | `var(--green-d)` in `:root` |
-| **Variable Token (`--ink`)** | `#0f1530` | `var(--ink)` in `:root` |
-| **Variable Token (`--text`)** | `#2a3150` | `var(--text)` in `:root` |
-| **Variable Token (`--mute`)** | `#5d6683` | `var(--mute)` in `:root` |
 
 ---
 
@@ -63,14 +59,14 @@ http_status: 200
 | `--dmf-surface` | `rgba(255, 255, 255, .05)` | Canvas / Surface Token |
 | `--dmf-gap` | `32px` | Layout / Spatial Grid Token |
 | `--dmf-rail` | `340px` | Dimension / Scale Token |
+| `--bl-ink` | `#000` | Typography Ink Token |
+| `--bl-muted` | `#7b7b81` | Color / Atmospheric Token |
+| `--bl-dim` | `#9d9da4` | Color / Atmospheric Token |
+| `--bl-rule` | `#efeff3` | Color / Atmospheric Token |
+| `--bl-fill` | `#f6f6f9` | Color / Atmospheric Token |
+| `--bl-accent` | `#d5181f` | Brand / Palette Token |
 | `--blue` | `#1f5bd7` | Color / Atmospheric Token |
 | `--sky` | `#00aaff` | Color / Atmospheric Token |
-| `--green` | `#00a263` | Color / Atmospheric Token |
-| `--green-t` | `#008452` | Color / Atmospheric Token |
-| `--green-d` | `#0b4d31` | Color / Atmospheric Token |
-| `--ink` | `#0f1530` | Typography Ink Token |
-| `--text` | `#2a3150` | Typography Ink Token |
-| `--mute` | `#5d6683` | Color / Atmospheric Token |
 
 ---
 
@@ -84,4 +80,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.m3-sec:nth(2)> — `Начинала я с бокса`)**:
    - Landmark `<section class="m3-sec">` framing `Начинала я с бокса` and `Потом был гольф` (*"редактор Daily Moscow"*) with `#ffffff` surface cards, `#007bff` accents, and `.dm-footer__logo img { width: 220px; height: auto; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://dailymoscow.ru/mirpay`)**:
-   - Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"Я не спортсменка. Я женщина, которая время от времени вспоми"*, and `#f6f8fc` structural dividers.
+   - Landmark `<footer class="footer dm-footer">` anchoring `Спорт без лишних действий — Mir ` footer links (`Бокс · Гольф · Бассейн · Падел · Скалодром`), copy *"Я не спортсменка. Я женщина, которая время от времени вспоми"*, and `#efeff3` structural dividers.

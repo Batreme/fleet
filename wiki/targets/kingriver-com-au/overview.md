@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: kingriver-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://kingriver.com.au/"
 final_url: "https://kingriver.com.au/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://kingriver.com.au/](https://kingriver.com.au/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)
 - **Page Title**: Australian Wagyu Beef · King River Legendary Wagyu
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `17`
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `29`
 - **Recovered Stylesheets**: `3`
 
 ---

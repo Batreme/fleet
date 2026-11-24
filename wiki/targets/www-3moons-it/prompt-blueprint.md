@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-3moons-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-3moons-it"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas, `#ffffff` ink, `#2563eb` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas
 
 > **3Moons Studio · App mobile, software enterprise e AI su misura** (https://www.3moons.it) — Creiamo soluzioni software su misura per aziende e startup tecnologiche, dall’ideazione al prodotto finito: prototipi rapidi, costi conte...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **3Moons Studio · App mobile, software enterprise e AI su misura** (`https://www.3moons.it`). Creiamo soluzioni software su misura per aziende e startup tecnologiche, dall’ideazione al prodotto finito: prototipi rapidi, costi conte...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas, `#ffffff` ink, `#2563eb` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#060a14` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#2563eb` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Dal desiderio alla realizzazione`) with `DM Sans` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `DM Sans` across display (`Dal desiderio alla realizzazione`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 2px`, padding `var(--gutter)`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=6372px` / doc `7272px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--gutter)` lateral canvas padding with `2px` grid gap.
 - **Border Radius Scale**: `10px`, `6px`, `999px`, `8px`.
@@ -115,6 +120,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas
 - **Selector `.hero .tags a`**: `transition: border-color .2s,color .2s` extracted from `www-3moons-it` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.panel>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7272px`, deepest scrollY reached `6372px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `MOONSHOT`)**: Computed transition `0.2s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/app/micia_storia`) measured as `direct` in `516ms`.
 
 ---
 
@@ -173,6 +183,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#060a14` canvas
    - Landmark `<section class="panel flip">` framing `Tecnologia allo stato dell’arte` and `La nuova frontiera dell’IT` (*"Fast Time-to-Value"*) with `#2563eb` surface cards, `#2563eb` accents, and `.mascot img { animation:float 6s ease-in-out infinite!important }`.
 5. **Colophon & Global Directory Footer (<footer.topbar> — `https://www.3moons.it`)**:
    - Landmark `<footer class="topbar">` anchoring `3Moons Studio · App mobile, soft` footer links (`Moonshot · Cross-platform · Enterprise · Pervasive AI · Team`), copy *"Social Communities"*, and `#1f222c` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#moonshot` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `13%`): Active landmark `Dal desiderio alla realizzazione` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `27%`): Active landmark `Qualità senza compromessi` · sticky/fixed elements: `1`
+- **Step 04** (`y=2550px`, `40%`): Active landmark `Tecnologia allo stato dell’arte` · sticky/fixed elements: `1`
+- **Step 05** (`y=4250px`, `67%`): Active landmark `Diritti e proprietà intellettuale` · sticky/fixed elements: `1`
+- **Step 06** (`y=5100px`, `80%`): Active landmark `Progetti in cantiere` · sticky/fixed elements: `1`
+- **Step 07** (`y=5950px`, `93%`): Active landmark `Un’idea da realizzare?` · sticky/fixed elements: `1`
+- **Step 08** (`y=6372px`, `100%`): Active landmark `Il racconto di #MICIA` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/app/micia_storia`)**: `https://www.3moons.it/app/micia_storia` — H1: `I racconti di #MICIA · 3Moons Studio`, scrollHeight `1946px`, transition `direct` (`516ms`)
+- **Other Route (`/index_sun.html`)**: `https://www.3moons.it/index_sun.html` — H1: `3Moons Studio · App mobile, software enterprise e...`, scrollHeight `7272px`, transition `direct` (`371ms`)
+- **Other Route (`/index.html`)**: `https://www.3moons.it/index.html` — H1: `3Moons Studio · App mobile, software enterprise e...`, scrollHeight `7272px`, transition `direct` (`346ms`)
 
 ---
 
@@ -189,7 +213,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#060a14` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#2563eb`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#060a14` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#2563eb` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `DM Sans` for display copy (`Dal desiderio alla realizzazione`) with `DM Sans` and `JetBrains Mono`.
+  - **Grounded Typographic Hierarchy**: Uses `DM Sans` across display (`Dal desiderio alla realizzazione`) and body copy, paired with `JetBrains Mono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 2px`, padding `var(--gutter)`) with `cubic-bezier(0.25,0.1,0.25,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +255,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--mustard`)**: `#ffcc00` — grounded in `var(--mustard)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--gutter)` lateral canvas padding with `2px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 2px`)
@@ -256,7 +280,7 @@ Scaffold `www-3moons-it` (`3Moons Studio · App mobile, software enterprise e AI
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.topbar> — `www-3moons-it`)` (`www-3moons-it`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-width:761px)`, `@media (max-width:520px)`, `@media (max-width:560px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Moonshot · Cross-platform · Enterprise · Pervasive AI · Team`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Dal desiderio alla realizzazione`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Dal desiderio alla realizzazione` and copy excerpt *"Creiamo soluzioni software su misura per aziende e startup tecnol"* over `#060a14` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#060a14` background with `#ffffff` headline `Dal desiderio alla realizzazione`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#060a14` background with `#ffffff` headline `Dal desiderio alla realizzazione`.
 3. **Primary Showcase & Content Grid (<section.panel> — `Qualità senza compromessi`)**:
    - DOM & Selectors: Landmark `<section class="panel">` rendering section `Qualità senza compromessi` with copy *"Startup Engineering"*, asset references (`index_en.html`, `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`), and grid rule `body::before { animation:none!important;transition:none!important }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.panel> — `Qualità senza compromessi`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 2px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--gutter)` horizontal padding on mobile.
@@ -287,8 +311,42 @@ Scaffold `www-3moons-it` (`3Moons Studio · App mobile, software enterprise e AI
 - **Selector `.hero .tags a`**: `transition: border-color .2s,color .2s` extracted from `www-3moons-it` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.panel>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7272px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: #moonshot (0%) -> Dal desiderio alla realizza... (13%) -> Qualità senza compromessi (27%) -> Tecnologia allo stato dell’... (40%) -> Diritti e proprietà intelle... (67%) -> Progetti in cantiere (80%) -> Un’idea da realizzare? (93%) -> Il racconto di #MICIA (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/app/micia_storia` (detail, direct), `/index_sun.html` (other, direct), `/index.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-3moons-it`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #moonshot | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `13%` | Dal desiderio alla realizzazione | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `27%` | Qualità senza compromessi | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `40%` | Tecnologia allo stato dell’arte | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `67%` | Diritti e proprietà intellettuale | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5100px` | `80%` | Progetti in cantiere | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5950px` | `93%` | Un’idea da realizzare? | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `6372px` | `100%` | Il racconto di #MICIA | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Dal desiderio alla realizzazione | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4524px` | `50%` | #ai | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `9049px` | `100%` | Il racconto di #MICIA | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.3moons.it/app/micia_storia` | I racconti di #MICIA · 3Moons Studio | `1946px` | `direct` (`516ms`) | [subpage-01-app-micia-storia.webp](assets/subpage-01-app-micia-storia.webp) |
+| `2` | `other` | `https://www.3moons.it/index_sun.html` | 3Moons Studio · App mobile, software... | `7272px` | `direct` (`371ms`) | [subpage-02-index-sun-html.webp](assets/subpage-02-index-sun-html.webp) |
+| `3` | `other` | `https://www.3moons.it/index.html` | 3Moons Studio · App mobile, software... | `7272px` | `direct` (`346ms`) | [subpage-03-index-html.webp](assets/subpage-03-index-html.webp) |
+

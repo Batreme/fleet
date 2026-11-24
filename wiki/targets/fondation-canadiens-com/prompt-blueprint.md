@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: fondation-canadiens-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "fondation-canadiens-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0000ff`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0
 
 > **Montreal Canadiens Children's Foundation - Play to thrive** (https://fondation.canadiens.com/) — The Foundation encourages physical activity and the adoption of a healthy lifestyle among underprivileged youth from 4 to 17 years old.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Montreal Canadiens Children's Foundation - Play to thrive** (`https://fondation.canadiens.com/`). The Foundation encourages physical activity and the adoption of a healthy lifestyle among underprivileged youth from 4 to 17 years old.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f4f4f4` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#001a66` primary typography and `#0000ff` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=9825px` / doc `10725px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `var(--spacing-margin)` grid gap.
 - **Border Radius Scale**: `0px 0px 13.5px`, `var(--radius-md)`, `var(--radius-sm)`, `.25rem`.
@@ -56,10 +61,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0
 |---|---|---|
 | **Primary Canvas Substrate** | `#f4f4f4` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#001a66` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffffff` | `.bg-white { background-color: white }` (`#ffffff`) |
+| **Elevated Surface / Card Substrate** | `#f5f5f5` | `var(--checkbox-handle-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#0000ff` | `.prose-column .pill-btn:hover { background-color: blue }` (`#0000ff`) |
-| **Secondary / Muted Copy** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#c3c3c3` | `.loader { border-color: #c3c3c3 }` |
+| **Secondary / Muted Copy** | `#6b6b6b` | `var(--default-text-secondary)` in `:root` |
+| **Structural Hairline Border** | `#cccccc` | `var(--iti-border-color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
@@ -109,6 +114,13 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0
 - **Selector `swiper-pagination .swiper-paginat...`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `fondation-canadiens-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.left-0>` and `<article.space-y-gutter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `10725px`, deepest scrollY reached `9825px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Nav / Drawer Probe (`header button[aria-expanded...`)**: Triggered visual change (pixel diff `62.546`, captured in `assets/state-nav.webp`); revealed links: Montreal Canadiens 50..., Laval Rocket 50/50 Ra....
+- **Hover Physics (`primary_cta` · `Bleu Blanc Bouge`)**: Computed transition `0.4s` / `cubic-bezier(0.4, 0, 0.2, 1)` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`accordion` · `Sign up`)**: Triggered visual diff `73.764` (attr `false -> true`, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/en/make-a-donation`) measured as `direct` in `1617ms`.
 
 ---
 
@@ -164,9 +176,23 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#0
 3. **Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)**:
    - Landmark `<article class="pt-margin space-y-gutter">` rendering section `P l a y t o t h r i v e` with copy *"Behind every rink and every program, there is a story of a child "*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)**:
-   - Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#ffffff` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#f5f5f5` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)**:
-   - Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#c3c3c3` structural dividers.
+   - Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#cccccc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `PLAY TO THRIVE` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `9%`): Active landmark `PLAY TO THRIVE` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `26%`): Active landmark `Section @ 26%` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `43%`): Active landmark `Section @ 43%` · sticky/fixed elements: `1`
+- **Step 05** (`y=5950px`, `61%`): Active landmark `Section @ 61%` · sticky/fixed elements: `1`
+- **Step 06** (`y=7650px`, `78%`): Active landmark `News & Stories` · sticky/fixed elements: `1`
+- **Step 07** (`y=9350px`, `95%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 08** (`y=9825px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/en/make-a-donation`)**: `https://fondation.canadiens.com/en/make-a-donation` — H1: `Make a donation`, scrollHeight `3726px`, transition `direct` (`1617ms`)
+- **Detail Route (`/en/50-50`)**: `https://fondation.canadiens.com/en/50-50` — H1: `50/50 Raffles`, scrollHeight `4530px`, transition `direct` (`1949ms`)
+- **Detail Route (`/en/auctions`)**: `https://fondation.canadiens.com/en/auctions` — H1: `Digital Auctions`, scrollHeight `4103px`, transition `direct` (`1912ms`)
 
 ---
 
@@ -213,14 +239,14 @@ Declare and consume these exact custom properties extracted from `fondation-cana
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#f4f4f4` — grounded in live computed `body` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#001a66` — grounded in live computed `main` `color` (`computed_styles.json`)
-- **Elevated Surface / Card Substrate**: `#ffffff` — grounded in `.bg-white { background-color: white }` (`#ffffff`)
+- **Elevated Surface / Card Substrate**: `#f5f5f5` — grounded in `var(--checkbox-handle-bg)` in `:root`
 - **Interactive Accent / Highlight**: `#0000ff` — grounded in `.prose-column .pill-btn:hover { background-color: blue }` (`#0000ff`)
-- **Secondary / Muted Copy**: `#ffffff` — grounded in live computed `h1` `color` (`computed_styles.json`)
-- **Structural Hairline Border**: `#c3c3c3` — grounded in `.loader { border-color: #c3c3c3 }`
+- **Secondary / Muted Copy**: `#6b6b6b` — grounded in `var(--default-text-secondary)` in `:root`
+- **Structural Hairline Border**: `#cccccc` — grounded in `var(--iti-border-color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `10px` lateral canvas padding with `var(--spacing-margin)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing-margin)`)
@@ -244,15 +270,15 @@ Scaffold `fondation-canadiens-com` (`Montreal Canadiens Children's Foundation - 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.left-0> — `fondation-canadiens-com`)` (`fondation-canadiens-com`) adapts across `@media (min-width:64rem)`, `@media not all and (max-width:64rem)`, `@media (min-width:40rem)`, `@media (min-width:48rem)` with `cubic-bezier(.32,0,.67,0)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.65,0,.35,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<article.pt-margin> — `PLAY TO THRIVE`)**:
    - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` presenting display lead `PLAY TO THRIVE` and copy excerpt *"For over 25 years, the Montreal Canadiens Children's Foundation h"* over `#f4f4f4` canvas and `#001a66` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f4f4f4` background with `#001a66` headline `PLAY TO THRIVE`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#f4f4f4` background with `#001a66` headline `PLAY TO THRIVE`.
 3. **Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)**:
    - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` rendering section `P l a y t o t h r i v e` with copy *"Behind every rink and every program, there is a story of a child "*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.space-y-gutter> — `P l a y t o t h r i v e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--spacing-margin)`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)**:
-   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#ffffff` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
+   - DOM & Selectors: Landmark `<article class="pt-margin space-y-gutter">` framing `News & Stories` and `A child discovering the fun of being active` (*"A child discovering the fun of being active"*) with `#f5f5f5` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.bg-gray-light> — `News & Stories`)` uses `0px 0px 13.5px`, `var(--radius-md)`, `var(--radius-sm)`, `.25rem` radii, `#0000ff` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
 5. **Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#c3c3c3` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="px-margin pb-30">` anchoring `Montreal Canadiens Children's Fo` footer links (`Overview · Index · Archive · About · Contact`), copy *"one skate stride at a time."*, and `#cccccc` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.px-margin> — `https://fondation.canadiens.com/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `10px` lateral canvas padding with `var(--spacing-margin)` grid gap and attributes (data-sveltekit-preload-data="hover", data-svg-origin="464 490", data-svg-origin="857.5 300.5").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
@@ -275,8 +301,49 @@ Scaffold `fondation-canadiens-com` (`Montreal Canadiens Children's Foundation - 
 - **Selector `swiper-pagination .swiper-paginat...`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `fondation-canadiens-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.32,0,.67,0)`)**: Governs interactive state transitions across `<header.left-0>` and `<article.space-y-gutter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `10725px` across 8 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: PLAY TO THRIVE (0%) -> PLAY TO THRIVE (9%) -> Section @ 26% (26%) -> Section @ 43% (43%) -> Section @ 61% (61%) -> News & Stories (78%) -> Footer (95%) -> Footer (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`header button[aria-expanded...`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/en/make-a-donation` (detail, direct), `/en/50-50` (detail, direct), `/en/auctions` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `fondation-canadiens-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | PLAY TO THRIVE | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `9%` | PLAY TO THRIVE | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `26%` | Section @ 26% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `43%` | Section @ 43% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5950px` | `61%` | Section @ 61% | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `7650px` | `78%` | News & Stories | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `9350px` | `95%` | Footer | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `9825px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | PLAY TO THRIVE | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3115px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6231px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`header button[aria-expanded="...`, diff `62.546`) | [state-nav.webp](assets/state-nav.webp) |
+| `interactive_control` | Control `accordion` (`Sign up`, diff `73.764`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://fondation.canadiens.com/en/make-a-donation` | Make a donation | `3726px` | `direct` (`1617ms`) | [subpage-01-en-make-a-donation.webp](assets/subpage-01-en-make-a-donation.webp) |
+| `2` | `detail` | `https://fondation.canadiens.com/en/50-50` | 50/50 Raffles | `4530px` | `direct` (`1949ms`) | [subpage-02-en-50-50.webp](assets/subpage-02-en-50-50.webp) |
+| `3` | `detail` | `https://fondation.canadiens.com/en/auctions` | Digital Auctions | `4103px` | `direct` (`1912ms`) | [subpage-03-en-auctions.webp](assets/subpage-03-en-auctions.webp) |
+

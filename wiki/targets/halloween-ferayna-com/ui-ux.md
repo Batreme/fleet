@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: halloween-ferayna-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: 200
 block_reason: "Browser/WebGPU Hardware Gate (Every brief has a face | Ferayna)"

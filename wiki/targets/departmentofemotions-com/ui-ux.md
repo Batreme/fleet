@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: departmentofemotions-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `departmentofemotions-com` (**Department of Emotions**)
 - **Production URL**: [https://departmentofemotions.com/](https://departmentofemotions.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f9f9f3` canvas, `#000000` ink, `#212c24` accent)
 - **Summary**: Explore your emotions with an interactive feeling wheel, body-language examples, somatic sensations, and behavioral experiences.
 - **Total Clean CSS Variables Extracted**: `11` (curated live-grounded set below)
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.lab-switcher> — `departmentofemotions-com`)**:
-   - Landmark `<nav class="lab-switcher">` (`400x42px`) hosting `Department of Emotions` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-wheel="feelings"`, `data-moving="false"`, `data-sector-index="0"`, `data-emotion="Anger"`), and stylesheet rule `.privacy-page { max-width:648px;margin-inline:auto;padding:64px 24px;color:212c24;font:1... }`.
-2. **Hero Stage & Focal Lead (<section.wheel-workspace> — `Isolated`)**:
-   - Landmark `<section class="wheel-workspace">` presenting display lead `Isolated` and copy excerpt *"Feeling separated from other people or unable to take part in a s"* over `#f9f9f3` canvas and `#000000` ink.
+   - Landmark `<nav class="lab-switcher">` (`400x42px`) hosting `Department of Emotions` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-wheel="feelings"`, `data-moving="true"`, `data-sector-index="0"`, `data-emotion="Anger"`), and stylesheet rule `.privacy-page { max-width:648px;margin-inline:auto;padding:64px 24px;color:212c24;font:1... }`.
+2. **Hero Stage & Focal Lead (<section.wheel-workspace> — `Joy`)**:
+   - Landmark `<section class="wheel-workspace">` presenting display lead `Joy` and copy excerpt *"A bright sense of pleasure, connection, or delight in being alive"* over `#f9f9f3` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.experience-section> — `How it may feel in the body`)**:
-   - Landmark `<section class="experience-section">` rendering section `How it may feel in the body` with copy *"01 An empty or constricted feeling in the chest."*, asset references (`favicon.ico`, `favicon-32.png`, `favicon.svg`, `apple-touch-icon.png`), and grid rule `.privacy-brand { display:inline-flex;align-items:center;gap:5px;font-weight:650;font-size... }`.
+   - Landmark `<section class="experience-section">` rendering section `How it may feel in the body` with copy *"01 Warmth spreading through the chest."*, asset references (`favicon.ico`, `favicon-32.png`, `favicon.svg`, `apple-touch-icon.png`), and grid rule `.privacy-brand { display:inline-flex;align-items:center;gap:5px;font-weight:650;font-size... }`.
 4. **Interactive Detail & Feature Matrix (<section.experience-section:nth(2)> — `Possible body language & behaviors`)**:
-   - Landmark `<section class="experience-section">` framing `Possible body language & behaviors` and `An empty or constricted feeling in the chest.` (*"An empty or constricted feeling in the chest."*) with `#ffffff` surface cards, `#212c24` accents, and `.privacy-page h1 { margin:40px 0 24px;font:400 42px/1.2 Gilda Display,Georgia,serif }`.
+   - Landmark `<section class="experience-section">` framing `Possible body language & behaviors` and `Warmth spreading through the chest.` (*"Warmth spreading through the chest."*) with `#ffffff` surface cards, `#212c24` accents, and `.privacy-page h1 { margin:40px 0 24px;font:400 42px/1.2 Gilda Display,Georgia,serif }`.
 5. **Colophon & Global Directory Footer (<footer.sidebar-footer> — `https://departmentofemotions.com/`)**:
-   - Landmark `<footer class="sidebar-footer">` anchoring `Department of Emotions` footer links (`Overview · Index · Archive · About · Contact`), copy *"02 Heaviness in the arms and legs."*, and `#6f7f74` structural dividers.
+   - Landmark `<footer class="sidebar-footer">` anchoring `Department of Emotions` footer links (`Overview · Index · Archive · About · Contact`), copy *"02 A light, energetic feeling in the body."*, and `#6f7f74` structural dividers.

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-concretemanagement-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-concretemanagement-fr"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 2
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas, `#ffffff` ink, `#0082f3` accent)"
 ---
@@ -16,7 +21,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas
 
 > **Concrete.** (https://www.concretemanagement.fr/) — L’immobilier, pensé pour vous
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,21 +31,19 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas
 
 - **Brand Essence & Persona**: **Concrete.** (`https://www.concretemanagement.fr/`). L’immobilier, pensé pour vous
 - **Final Redirected URL**: [https://www.concretemanagement.ch/fr](https://www.concretemanagement.ch/fr)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas, `#ffffff` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#141416` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Otto` for display copy (`L’immobilier, pensé pour vous`) with `Interdisplay` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Otto` for display copy (`L’immobilier, pensé pour vous`) with `Interdisplay`.
   - **Calibrated Spatial Grid & Motion**: Combines `80em` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.36,.33,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `80em` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `4px`.
@@ -98,7 +103,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 300`, `letter-spacing: -10.08px`); rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 300`, `letter-spacing: -3.92px`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 72px`, `font-weight: 300`, `letter-spacing: -5.04px`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 24px`, `line-height: 20.8px`, `font-weight: 400`); rule `small` (`font-size: 80%`).
 
@@ -115,6 +120,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-concretemanagement-fr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.36,.33,0,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.presentation>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Hover Physics (`primary_cta` · `Paris`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/fr/gestion-moyenne-duree`) measured as `direct` in `713ms`.
 
 ---
 
@@ -173,6 +183,14 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#141416` canvas
    - Landmark `<section class="stacking u-section">` framing `Votre patrimoine, notre expertise` and `Gestion moyenne durée` (*"Gestion courte durée"*) with `#222222` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.portail-btn> — `https://www.concretemanagement.fr/`)**:
    - Landmark `<footer class="portail-btn">` anchoring `Concrete.` footer links (`Paris · Lausanne · Propriétaires + · Locataires + · À propos`), copy *"Trouver un appartement"*, and `#3898ec` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `L’immobilier, pensé pour vous` · sticky/fixed elements: `0`
+- **Step 02** (`y=0px`, `8%`): Active landmark `L’immobilier, pensé pour vous` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/fr/gestion-moyenne-duree`)**: `https://www.concretemanagement.ch/fr/gestion-moyenne-duree` — H1: `Augmentez vos revenus locatifs de 25% avec Concrete`, scrollHeight `9734px`, transition `direct` (`713ms`)
+- **Detail Route (`/fr/gestion-courte-duree`)**: `https://www.concretemanagement.ch/fr/gestion-courte-duree` — H1: `Augmentez vos revenus locatifs de 50% avec Concrete`, scrollHeight `11423px`, transition `direct` (`190ms`)
+- **Detail Route (`/fr/investir`)**: `https://www.concretemanagement.ch/fr/investir` — H1: `Investissez avec Concrete et transformez vos actifs`, scrollHeight `11924px`, transition `direct` (`6356ms`)
 
 ---
 
@@ -189,7 +207,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#141416` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0082f3`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#141416` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0082f3` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Otto` for display copy (`L’immobilier, pensé pour vous`) with `Interdisplay` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Otto` for display copy (`L’immobilier, pensé pour vous`) with `Interdisplay`.
   - **Calibrated Spatial Grid & Motion**: Combines `80em` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.36,.33,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -230,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--_colors---white--20`)**: `#fff3` — grounded in `var(--_colors---white--20)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `80em` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 80em`, `gap: 16px`)
@@ -244,7 +262,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Interdisplay`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 144px`, `line-height: 129.6px`, `font-weight: 300`, `letter-spacing: -10.08px`); rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 56px`, `line-height: 61.6px`, `font-weight: 300`, `letter-spacing: -3.92px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 72px`, `line-height: 72px`, `font-weight: 300`, `letter-spacing: -5.04px`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 24px`, `line-height: 20.8px`, `font-weight: 400`); rule `small` (`font-size: 80%`)
 
@@ -255,7 +273,7 @@ Scaffold `www-concretemanagement-fr` (`Concrete.`) with these exact structural r
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.w-mod-js> — `www-concretemanagement-fr`)` (`www-concretemanagement-fr`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.36,.33,0,1)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Paris · Lausanne · Propriétaires + · Locataires + · À propos`.
 2. **Hero Stage & Focal Lead (<section.hero> — `L’immobilier, pensé pour vous`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `L’immobilier, pensé pour vous` and copy excerpt *"Demander une estimation"* over `#141416` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#141416` background with `#ffffff` headline `L’immobilier, pensé pour vous`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×872px` mobile) sets `#141416` background with `#ffffff` headline `L’immobilier, pensé pour vous`.
 3. **Primary Showcase & Content Grid (<section.presentation> — `Concrete est une structure de gest`)**:
    - DOM & Selectors: Landmark `<section class="presentation u-section">` rendering section `Concrete est une structure de gestion patrimonial...` with copy *"Gestion moyenne durée"*, asset references (`cdn.prod.website-files.com`, `concrete-3b73a4.webflow.shared.4d...`, `69809783d135718ad587d127_favicon.png`, `69809785d587f5575f03e822_favicon-...`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.presentation> — `Concrete est une structure de gest`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 80em`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -286,8 +304,34 @@ Scaffold `www-concretemanagement-fr` (`Concrete.`) with these exact structural r
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-concretemanagement-fr` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.36,.33,0,1)`)**: Governs interactive state transitions across `<header.w-mod-js>` and `<section.presentation>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 2 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: L’immobilier, pensé pour vous (0%) -> L’immobilier, pensé pour vous (8%).
+- **Multi-Page Routes**: Scaffold internal routes `/fr/gestion-moyenne-duree` (detail, direct), `/fr/gestion-courte-duree` (detail, direct), `/fr/investir` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-concretemanagement-fr`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | L’immobilier, pensé pour vous | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | L’immobilier, pensé pour vous | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | L’immobilier, pensé pour vous | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.concretemanagement.ch/fr/gestion-moyenne-duree` | Augmentez vos revenus locatifs de 25%... | `9734px` | `direct` (`713ms`) | [subpage-01-fr-gestion-moyenne-duree.webp](assets/subpage-01-fr-gestion-moyenne-duree.webp) |
+| `2` | `detail` | `https://www.concretemanagement.ch/fr/gestion-courte-duree` | Augmentez vos revenus locatifs de 50%... | `11423px` | `direct` (`190ms`) | [subpage-02-fr-gestion-courte-duree.webp](assets/subpage-02-fr-gestion-courte-duree.webp) |
+| `3` | `detail` | `https://www.concretemanagement.ch/fr/investir` | Investissez avec Concrete et transfor... | `11924px` | `direct` (`6356ms`) | [subpage-03-fr-investir.webp](assets/subpage-03-fr-investir.webp) |
+

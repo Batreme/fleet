@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-codeofsagar-in"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `www-codeofsagar-in` (**Sagar K. Ghosh — Full-stack Developer & Designer**)
 - **Production URL**: [https://www.codeofsagar.in/](https://www.codeofsagar.in/)
 - **Final Redirected URL**: [https://codeofsagar.in/](https://codeofsagar.in/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)
 - **Summary**: Websites and stores that sell, 3D people remember and automation that gives your team its time back, designed and built by Sagar K. Ghosh.
 - **Total Clean CSS Variables Extracted**: `126` (curated live-grounded set below)

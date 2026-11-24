@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: sincro-es_en-us"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "sincro-es_en-us"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#081423` ink, `#0040ff` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Us - Sincro** (https://sincro.es/en/us/) — Navigating complexity together
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Us - Sincro** (`https://sincro.es/en/us/`). Navigating complexity together
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#081423` ink, `#0040ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#081423` primary typography and `#0040ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`20 years of being who we say we are`) with `Schibsted Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Schibsted Grotesk` across display (`20 years of being who we say we are`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 29.97px`, padding `var(--spacing-L)`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `19719px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `var(--spacing-L)` lateral canvas padding with `29.97px` grid gap.
-- **Border Radius Scale**: `3.996px`, `.25rem`, `2147483647px`, `var(--radius-sm)`.
+- **Border Radius Scale**: `3.996px`, `50%`, `.25rem`, `2147483647px`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 29.97px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--spacing-L)` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (width>=40rem)`, `@media (width>=64rem)`, `@media (width>=80rem)`, `@media (width>=96rem)`.
+- **Extracted CSS Media Queries**: `@media (width>=64rem)`, `@media (width>=40rem)`, `@media (width>=80rem)`, `@media (width>=96rem)`.
 
 ---
 
@@ -110,6 +115,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.transition-\[height\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `sincro-es_en-us` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<main.max-w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `19719px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Route Transition Architecture**: First internal navigation (`/en/talent/`) measured as `direct` in `1518ms`.
 
 ---
 
@@ -159,7 +168,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.top-0> — `sincro-es_en-us`)**:
-   - Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-8de50b09`, `data-swiper-slide-index="0"`, `data-swiper-slide-index="1"`, `data-swiper-slide-index="2"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-category="analytics"`, `data-analytics-type="ga"`, `data-gtmid="G-SCRK6TBT8Q"`, `data-v-8de50b09`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<main.flex-1> — `20 years of being who we say we ar`)**:
    - Landmark `<main class="flex-1 max-w-full">` presenting display lead `20 years of being who we say we are` and copy excerpt *"Navigating complexity together"* over `#ffffff` canvas and `#081423` ink.
 3. **Primary Showcase & Content Grid (<main.max-w-full> — `UNE Standard`)**:
@@ -168,6 +177,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
    - Landmark `<main class="flex-1 max-w-full">` framing `Driven by and for the people` and `Building networks` (*"To help you navigate complexity with direction and confidence."*) with `#081423` surface cards, `#0040ff` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.border-mediumGrey> — `https://sincro.es/en/us/`)**:
    - Landmark `<footer class="border-mediumGrey pt-XL">` anchoring `Us - Sincro` footer links (`Overview · Index · Archive · About · Contact`), copy *"We were born and grew faithful to a simple idea: that consul"*, and `#808080` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Us` · sticky/fixed elements: `1`
+- **Step 02** (`y=849px`, `5%`): Active landmark `20 years of being who we say we are` · sticky/fixed elements: `1`
+- **Step 03** (`y=1700px`, `9%`): Active landmark `20 years of being who we say we are` · sticky/fixed elements: `1`
+- **Step 04** (`y=3400px`, `18%`): Active landmark `Section @ 18%` · sticky/fixed elements: `1`
+- **Step 05** (`y=4250px`, `23%`): Active landmark `Our values` · sticky/fixed elements: `3`
+- **Step 06** (`y=12750px`, `68%`): Active landmark `Section @ 68%` · sticky/fixed elements: `3`
+- **Step 07** (`y=13600px`, `72%`): Active landmark `Our people are our strength` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `77%`): Active landmark `Section @ 77%` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/en/talent/`)**: `https://sincro.es/en/talent/` — H1: `Sincro Culture`, scrollHeight `10466px`, transition `direct` (`1518ms`)
+- **Detail Route (`/en/technology/`)**: `https://sincro.es/en/technology/` — H1: `Technology`, scrollHeight `9601px`, transition `direct` (`895ms`)
+- **Detail Route (`/en/sdg/`)**: `https://sincro.es/en/sdg/` — H1: `SDG`, scrollHeight `9012px`, transition `direct` (`892ms`)
 
 ---
 
@@ -184,7 +207,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#081423`, **Accent / Highlight**: `#0040ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#081423` primary typography and `#0040ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Schibsted Grotesk` for display copy (`20 years of being who we say we are`) with `Schibsted Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Schibsted Grotesk` across display (`20 years of being who we say we are`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: 29.97px`, padding `var(--spacing-L)`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,14 +244,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-black`)**: `#000000` — grounded in `var(--color-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `var(--spacing-L)` lateral canvas padding with `29.97px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 29.97px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--spacing-L)` horizontal padding
-- **Media Queries**: `@media (width>=40rem)`, `@media (width>=64rem)`, `@media (width>=80rem)`, `@media (width>=96rem)`
-- **Corner Radii**: `3.996px`, `.25rem`, `2147483647px`, `var(--radius-sm)`
+- **Media Queries**: `@media (width>=64rem)`, `@media (width>=40rem)`, `@media (width>=80rem)`, `@media (width>=96rem)`
+- **Corner Radii**: `3.996px`, `50%`, `.25rem`, `2147483647px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Schibsted Grotesk`
@@ -242,20 +265,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `sincro-es_en-us` (`Us - Sincro`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.top-0> — `sincro-es_en-us`)**:
-   - DOM & Selectors: Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-8de50b09`, `data-swiper-slide-index="0"`, `data-swiper-slide-index="1"`, `data-swiper-slide-index="2"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `sincro-es_en-us`)` (`sincro-es_en-us`) adapts across `@media (width>=40rem)`, `@media (width>=64rem)`, `@media (width>=80rem)`, `@media (width>=96rem)` with `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - DOM & Selectors: Landmark `<header class="top-0 left-0">` (`1440px`) hosting `Us - Sincro` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-category="analytics"`, `data-analytics-type="ga"`, `data-gtmid="G-SCRK6TBT8Q"`, `data-v-8de50b09`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.top-0> — `sincro-es_en-us`)` (`sincro-es_en-us`) adapts across `@media (width>=64rem)`, `@media (width>=40rem)`, `@media (width>=80rem)`, `@media (width>=96rem)` with `cubic-bezier(.4,0,.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.flex-1> — `20 years of being who we say we ar`)**:
    - DOM & Selectors: Landmark `<main class="flex-1 max-w-full">` presenting display lead `20 years of being who we say we are` and copy excerpt *"Navigating complexity together"* over `#ffffff` canvas and `#081423` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#081423` headline `20 years of being who we say we are`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#081423` headline `20 years of being who we say we are`.
 3. **Primary Showcase & Content Grid (<main.max-w-full> — `UNE Standard`)**:
    - DOM & Selectors: Landmark `<main class="flex-1 max-w-full">` rendering section `UNE Standard` with copy *"We aim to be the strategic partner that brings excellence, techno"*, asset references (`entry.BcfY3otZ.css`, `Media.DbUUtcYg.css`, `PageBuilder.D9iVxonM.css`, `SchibstedGrotesk-Regular.woff2`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.max-w-full> — `UNE Standard`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 29.97px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--spacing-L)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<main.relative> — `Driven by and for the people`)**:
    - DOM & Selectors: Landmark `<main class="flex-1 max-w-full">` framing `Driven by and for the people` and `Building networks` (*"To help you navigate complexity with direction and confidence."*) with `#081423` surface cards, `#0040ff` accents, and `strong { font-weight:bolder }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.relative> — `Driven by and for the people`)` uses `3.996px`, `.25rem`, `2147483647px`, `var(--radius-sm)` radii, `#0040ff` highlights, and assets (entry.BcfY3otZ.css, Media.DbUUtcYg.css, PageBuilder.D9iVxonM.css).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<main.relative> — `Driven by and for the people`)` uses `3.996px`, `50%`, `.25rem`, `2147483647px` radii, `#0040ff` highlights, and assets (entry.BcfY3otZ.css, Media.DbUUtcYg.css, PageBuilder.D9iVxonM.css).
 5. **Colophon & Global Directory Footer (<footer.border-mediumGrey> — `https://sincro.es/en/us/`)**:
    - DOM & Selectors: Landmark `<footer class="border-mediumGrey pt-XL">` anchoring `Us - Sincro` footer links (`Overview · Index · Archive · About · Contact`), copy *"We were born and grew faithful to a simple idea: that consul"*, and `#808080` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-mediumGrey> — `https://sincro.es/en/us/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `var(--spacing-L)` lateral canvas padding with `29.97px` grid gap and attributes (data-v-8de50b09, data-swiper-slide-index="0", data-swiper-slide-index="1").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.border-mediumGrey> — `https://sincro.es/en/us/`)` aligns to `96rem` (non-`@media` desktop container stylesheet rule) with `var(--spacing-L)` lateral canvas padding with `29.97px` grid gap and attributes (data-category="analytics", data-analytics-type="ga", data-gtmid="G-SCRK6TBT8Q").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Navigating complexity together"*
@@ -277,8 +300,42 @@ Scaffold `sincro-es_en-us` (`Us - Sincro`) with these exact structural regions, 
 - **Selector `.transition-\[height\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `sincro-es_en-us` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.top-0>` and `<main.max-w-full>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `19719px` across 8 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: Us (0%) -> 20 years of being who we sa... (5%) -> 20 years of being who we sa... (9%) -> Section @ 18% (18%) -> Our values (23%) -> Section @ 68% (68%) -> Our people are our strength (72%) -> Section @ 77% (77%).
+- **Multi-Page Routes**: Scaffold internal routes `/en/talent/` (detail, direct), `/en/technology/` (detail, direct), `/en/sdg/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `sincro-es_en-us`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Us | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `849px` | `5%` | 20 years of being who we say we are | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `9%` | 20 years of being who we say we are | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `18%` | Section @ 18% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `23%` | Our values | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `12750px` | `68%` | Section @ 68% | `3` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `72%` | Our people are our strength | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `77%` | Section @ 77% | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Us | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3985px` | `50%` | Our people are our strength | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `7971px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://sincro.es/en/talent/` | Sincro Culture | `10466px` | `direct` (`1518ms`) | [subpage-01-en-talent.webp](assets/subpage-01-en-talent.webp) |
+| `2` | `detail` | `https://sincro.es/en/technology/` | Technology | `9601px` | `direct` (`895ms`) | [subpage-02-en-technology.webp](assets/subpage-02-en-technology.webp) |
+| `3` | `detail` | `https://sincro.es/en/sdg/` | SDG | `9012px` | `direct` (`892ms`) | [subpage-03-en-sdg.webp](assets/subpage-03-en-sdg.webp) |
+

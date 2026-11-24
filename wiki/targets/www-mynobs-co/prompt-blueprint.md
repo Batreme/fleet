@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-mynobs-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-mynobs-co"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 2
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `#0a0a0a` ink, `#ff0066` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `
 
 > **NoBS - No Brief Shit** (https://www.mynobs.co) — 💩 It's simple: drop in the buzzword-stuffed brief, and NoBS cuts the BS, handing back only what you need to know to start your job.
 
-![Desktop Viewport Capture (1440x1820)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x1656)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **NoBS - No Brief Shit** (`https://www.mynobs.co`). 💩 It's simple: drop in the buzzword-stuffed brief, and NoBS cuts the BS, handing back only what you need to know to start your job.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `#0a0a0a` ink, `#ff0066` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fcfaf7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0a0a0a` primary typography and `#ff0066` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Sugra` for display copy (`IF YOUR BRIEF IS A LET'S CUT THE BS`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Sugra` for display copy (`IF YOUR BRIEF IS A LET'S CUT THE BS`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `980px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x1492)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×1820px` (`assets/desktop.png`, full-page live capture (1820px)), Mobile `390×1492px` (`assets/mobile.png`, full-page live capture (1492px)).
+- **Captured Journey Filmstrips**: Desktop `1280×1656px` (`assets/desktop-journey.webp`, `2` keyframes up to `y=920px` / doc `1820px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `980px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `999px`, `3px`, `50%`, `4px`.
@@ -56,7 +61,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `
 |---|---|---|
 | **Primary Canvas Substrate** | `#fcfaf7` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#0a0a0a` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffd9ee` | `body.is-demo .nbs-topbar { background: #ffd9ee }` |
+| **Elevated Surface / Card Substrate** | `#dedede` | `var(--disabled-card-bg)` in `:root` |
 | **Interactive Accent / Highlight** | `#ff0066` | `.nbs-footer-link:hover { color: #ff0066 }` |
 | **Secondary / Muted Copy** | `#ec4899` | `var(--pink)` in `:root` |
 | **Structural Hairline Border** | `#a7a6a4` | `.nbs-account-row { border-bottom: #a7a6a4 }` |
@@ -120,6 +125,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `
 - **Selector `.nbs-toggle-bar`**: `transition: transform 0.32s cubic-bezier(0.4,0,0.2,1), top 0.32s cubic-...` extracted from `www-mynobs-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.nbs-topbar>` and `<section.hero:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.hero:nth(2)>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `1820px`, deepest scrollY reached `920px` across `2` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `WHAT IS NoBS`)**: Computed transition `0.12s, 0.12s` / `ease, ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/pages/login.html`) measured as `direct` in `524ms`.
 
 ---
 
@@ -175,9 +185,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fcfaf7` canvas, `
 3. **Primary Showcase & Content Grid (<section.hero:nth(2)> — `Type, paste, or drop your brief. N`)**:
    - Landmark `<section class="hero">` rendering section `Type, paste, or drop your brief. No Brief Shit (` with copy *"Strictly necessary"*, asset references (`favicon.svg`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.nbs-logo img { display: block; height: 60px; width: auto; }`.
 4. **Interactive Detail & Feature Matrix (<section.hero:nth(3)> — `Strictly necessary`)**:
-   - Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#ffd9ee` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
+   - Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#dedede` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
 5. **Colophon & Global Directory Footer (<footer.nbs-footer> — `https://www.mynobs.co`)**:
    - Landmark `<footer class="nbs-footer">` anchoring `NoBS - No Brief Shit` footer links (`Overview · Index · Archive · About · Contact`), copy *"Makes NoBS remember the little things."*, and `#a7a6a4` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `IF YOUR BRIEF IS A LET'S CUT THE BS` · sticky/fixed elements: `3`
+- **Step 02** (`y=920px`, `100%`): Active landmark `C💩💩KIES YES, WE USE SOME.` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/pages/login.html`)**: `https://www.mynobs.co/pages/login.html` — H1: `IF YOUR BRIEF IS A LET'S CUT THE BS`, scrollHeight `1820px`, transition `direct` (`524ms`)
+- **Detail Route (`/pages/whatis.html`)**: `https://www.mynobs.co/pages/whatis.html` — H1: `THE BRIEF, EASIER`, scrollHeight `10673px`, transition `direct` (`788ms`)
+- **Detail Route (`/pages/register.html`)**: `https://www.mynobs.co/pages/register.html` — H1: `H-E-L-P-! WE NEED SOMEBODY`, scrollHeight `3554px`, transition `direct` (`896ms`)
 
 ---
 
@@ -194,7 +212,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fcfaf7` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0a0a0a`, **Accent / Highlight**: `#ff0066`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fcfaf7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0a0a0a` primary typography and `#ff0066` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Sugra` for display copy (`IF YOUR BRIEF IS A LET'S CUT THE BS`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Sugra` for display copy (`IF YOUR BRIEF IS A LET'S CUT THE BS`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `980px` container bounds (`gap: 16px`, padding `24px`) with `cubic-bezier(0.4,0,0.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -224,7 +242,7 @@ Declare and consume these exact custom properties extracted from `www-mynobs-co`
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#fcfaf7` — grounded in live computed `body` `background-color` (`computed_styles.json`)
 - **Primary Typography Ink**: `#0a0a0a` — grounded in live computed `h1` `color` (`computed_styles.json`)
-- **Elevated Surface / Card Substrate**: `#ffd9ee` — grounded in `body.is-demo .nbs-topbar { background: #ffd9ee }`
+- **Elevated Surface / Card Substrate**: `#dedede` — grounded in `var(--disabled-card-bg)` in `:root`
 - **Interactive Accent / Highlight**: `#ff0066` — grounded in `.nbs-footer-link:hover { color: #ff0066 }`
 - **Secondary / Muted Copy**: `#ec4899` — grounded in `var(--pink)` in `:root`
 - **Structural Hairline Border**: `#a7a6a4` — grounded in `.nbs-account-row { border-bottom: #a7a6a4 }`
@@ -241,8 +259,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--cream-darker`)**: `#f5f1e8` — grounded in `var(--cream-darker)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×1820px` (full-page live capture (1820px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×1492px` (full-page live capture (1492px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×1656px` (full-page live capture (1656px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `980px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `24px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 980px`, `gap: 16px`)
@@ -266,12 +284,12 @@ Scaffold `www-mynobs-co` (`NoBS - No Brief Shit`) with these exact structural re
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.nbs-topbar> — `www-mynobs-co`)` (`www-mynobs-co`) adapts across `@media (max-width: 480px)`, `@media (max-width: 640px)`, `@media (max-width: 720px)`, `@media (max-width: 1100px)` with `cubic-bezier(0.4,0,0.2,1)`, `cubic-bezier(0.34,1.56,0.64,1)`, `cubic-bezier(0.2,0.8,0.2,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.hero> — `IF YOUR BRIEF IS A LET'S CUT THE B`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `IF YOUR BRIEF IS A LET'S CUT THE BS` and copy excerpt *"Type, paste, or drop your brief. No Brief Shit (or NoBS, if we're"* over `#fcfaf7` canvas and `#0a0a0a` ink.
-   - Responsive Contract: Hero stage (`1440×1820px` desktop / `390×1492px` mobile) sets `#fcfaf7` background with `#0a0a0a` headline `IF YOUR BRIEF IS A LET'S CUT THE BS`.
+   - Responsive Contract: Hero stage (`1280×1656px` desktop / `390×872px` mobile) sets `#fcfaf7` background with `#0a0a0a` headline `IF YOUR BRIEF IS A LET'S CUT THE BS`.
 3. **Primary Showcase & Content Grid (<section.hero:nth(2)> — `Type, paste, or drop your brief. N`)**:
    - DOM & Selectors: Landmark `<section class="hero">` rendering section `Type, paste, or drop your brief. No Brief Shit (` with copy *"Strictly necessary"*, asset references (`favicon.svg`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.nbs-logo img { display: block; height: 60px; width: auto; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.hero:nth(2)> — `Type, paste, or drop your brief. N`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 980px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.hero:nth(3)> — `Strictly necessary`)**:
-   - DOM & Selectors: Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#ffd9ee` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
+   - DOM & Selectors: Landmark `<section class="hero">` framing `Strictly necessary` and `Without this, nothing else loads.` (*"Without this, nothing else loads."*) with `#dedede` surface cards, `#ff0066` accents, and `.nbs-topbar-skeleton { position: sticky; top: 0; z-index: 100; background: var(--cream); min-he... }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.hero:nth(3)> — `Strictly necessary`)` uses `999px`, `3px`, `50%`, `4px` radii, `#ff0066` highlights, and assets (favicon.svg, fonts.googleapis.com, fonts.gstatic.com).
 5. **Colophon & Global Directory Footer (<footer.nbs-footer> — `https://www.mynobs.co`)**:
    - DOM & Selectors: Landmark `<footer class="nbs-footer">` anchoring `NoBS - No Brief Shit` footer links (`Overview · Index · Archive · About · Contact`), copy *"Makes NoBS remember the little things."*, and `#a7a6a4` structural dividers.
@@ -297,8 +315,34 @@ Scaffold `www-mynobs-co` (`NoBS - No Brief Shit`) with these exact structural re
 - **Selector `.nbs-toggle-bar`**: `transition: transform 0.32s cubic-bezier(0.4,0,0.2,1), top 0.32s cubic-...` extracted from `www-mynobs-co` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0,0.2,1)`)**: Governs interactive state transitions across `<header.nbs-topbar>` and `<section.hero:nth(2)>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.hero>` and `<section.hero:nth(2)>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `1820px` across 2 distinct viewport chapters.
+- **Vertical Chapter Sequence**: IF YOUR BRIEF IS A LET'S CU... (0%) -> C💩💩KIES YES, WE USE SOME. (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/pages/login.html` (detail, direct), `/pages/whatis.html` (detail, direct), `/pages/register.html` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-mynobs-co`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | IF YOUR BRIEF IS A LET'S CUT THE BS | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `920px` | `100%` | C💩💩KIES YES, WE USE SOME. | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | IF YOUR BRIEF IS A LET'S CUT THE BS | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.mynobs.co/pages/login.html` | IF YOUR BRIEF IS A LET'S CUT THE BS | `1820px` | `direct` (`524ms`) | [subpage-01-pages-login-html.webp](assets/subpage-01-pages-login-html.webp) |
+| `2` | `detail` | `https://www.mynobs.co/pages/whatis.html` | THE BRIEF, EASIER | `10673px` | `direct` (`788ms`) | [subpage-02-pages-whatis-html.webp](assets/subpage-02-pages-whatis-html.webp) |
+| `3` | `detail` | `https://www.mynobs.co/pages/register.html` | H-E-L-P-! WE NEED SOMEBODY | `3554px` | `direct` (`896ms`) | [subpage-03-pages-register-html.webp](assets/subpage-03-pages-register-html.webp) |
+

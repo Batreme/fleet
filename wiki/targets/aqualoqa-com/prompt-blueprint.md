@@ -1,20 +1,20 @@
 ---
 title: "UI Prompt Blueprint: aqualoqa-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "aqualoqa-com"
 status: blocked
 capture: none
 capture_desktop: none
 capture_mobile: none
 http_status: null
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )"
 archetype: "Blocked / Unreachable Target (Excluded from Tally)"
 ---
 
 # UI Design System & Master Generation Blueprint: aqualoqa-com (`status: blocked`)
 
 > [!WARNING]
-> **Target Status**: `status: blocked` (`http_status: N/A` — `Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )`)  
+> **Target Status**: `status: blocked` (`http_status: N/A` — `Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )`)  
 > **Production URL**: [https://aqualoqa.com/](https://aqualoqa.com/)  
 > **Verification Policy**: Excluded from the `25.0` truth evaluation tally per `claude-loop` `C1` / `C15` (zero fabricated tokens, zero WAF/CAPTCHA bypass, zero stray screenshots).

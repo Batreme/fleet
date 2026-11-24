@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: familyservicelincoln-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://familyservicelincoln.org"
 final_url: "https://familyservicelincoln.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Family Service Lincoln: Everyone Deserves the Chance to Thrive
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `13`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `65`
+- **Recovered Stylesheets**: `17`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: senawastudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `senawastudio-com` (**Senawa · Architecture & Interior Design Studio in Jakarta**)
 - **Production URL**: [https://senawastudio.com](https://senawastudio.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `#302620` ink, `#8a5a2b` accent)
 - **Summary**: Architecture made for how people actually live. An architecture, interior, and furniture design studio in the Greater Jakarta area.
 - **Total Clean CSS Variables Extracted**: `58` (curated live-grounded set below)

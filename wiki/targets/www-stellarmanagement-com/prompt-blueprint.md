@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-stellarmanagement-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-stellarmanagement-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#181513` ink, `#0000ff` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Stellar Management · NYC Real Estate Developer & No Fee Rentals** (https://www.stellarmanagement.com) — Stellar is a leading New York real estate developer and manager providing a wide range of apartments and commercial properties. Browse no...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Stellar Management · NYC Real Estate Developer & No Fee Rentals** (`https://www.stellarmanagement.com`). Stellar is a leading New York real estate developer and manager providing a wide range of apartments and commercial properties. Browse no...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#181513` ink, `#0000ff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#181513` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `General Sans Variable` for display copy (`We help New Yorkers find home`) with `General Sans Variable` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: normal 18px`, padding `36px`) with `cubic-bezier(.28,.11,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `General Sans Variable` across display (`We help New Yorkers find home`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1368px` container bounds (`gap: normal 18px`, padding `36px`) with `cubic-bezier(.28,.11,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
-- **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=11050px` / doc `12360px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
+- **Master Container Bounds**: `1368px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `36px` lateral canvas padding with `normal 18px` grid gap.
 - **Border Radius Scale**: `50%`, `2px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 18px`).
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1368px`, `gap: normal 18px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `36px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (max-width:1360px)`.
+- **Extracted CSS Media Queries**: `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (min-width:968px)`.
 
 ---
 
@@ -118,10 +123,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `animation=image-scale] img[data-v...`**: `transition: .6s` extracted from `www-stellarmanagement-com` stylesheet.
-- **Selector `body[data-v-149ae9ef]`**: `transition: background-color var(--transition-slow)` extracted from `www-stellarmanagement-com` stylesheet.
-- **Selector `svg[data-v-149ae9ef]`**: `transition: color var(--transition-default)` extracted from `www-stellarmanagement-com` stylesheet.
+- **Selector `body[data-v-f3e39c51]`**: `transition: background-color var(--transition-slow)` extracted from `www-stellarmanagement-com` stylesheet.
+- **Selector `svg[data-v-f3e39c51]`**: `transition: color var(--transition-default)` extracted from `www-stellarmanagement-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.28,.11,.32,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.block>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `12360px`, deepest scrollY reached `11050px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Approach The Way We Work, Defines...`)**: Computed transition `0.42s` / `cubic-bezier(0.28, 0.11, 0.32, 1)` (no static color/transform shift captured at rest).
+- **Hover Physics (`first_card` · `New Development 300+ Affordable H...`)**: Computed transition `0.42s` / `cubic-bezier(0.28, 0.11, 0.32, 1)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/no-fee-NYC-rentals/new-york-city-neighborhoods/Manhattan-rental-apartment-listings`) measured as `direct` in `3565ms`.
 
 ---
 
@@ -138,7 +149,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 │ | H1: We help New Yorkers find home                                  | │
 │ | Substrate: #ffffff | Ink: #181513 | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.block>) max-w: 1440px                      | │
+│ | SHOWCASE GRID (<section.block>) max-w: 1368px                      | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | We help New Yorkers find h o |  | From h i s t o r i c blocks  | | │
 │ | +------------------------------+  +------------------------------+ | │
@@ -177,9 +188,23 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 3. **Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)**:
    - Landmark `<section class="block">` rendering section `We help New Yorkers find h o m e` with copy *"R e n t w i t h u s R e n t w i t h u s"*, asset references (`entry.BO5l_mVZ.css`, `default.D_u9mJpK.css`, `filterMain.Dy3QUOs1.css`, `appInput.BLk3pTmz.css`), and grid rule `before { background:var(--white)!important }`.
 4. **Interactive Detail & Feature Matrix (<section.neighborhoods> — `From h i s t o r i c blocks to n e`)**:
-   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `.tag-word { display:none }`.
+   - Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `hover { border-color:var(--dark-blue);color:var(--dark-blue) }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)**:
    - Landmark `<footer class="footer">` anchoring `Stellar Management · NYC Real Es` footer links (`Overview · Index · Archive · About · Contact`), copy *"The Way We Work, Defines Who We Are"*, and `#0000ff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `We help New Yorkers find home` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `7%`): Active landmark `From historic blocks to new developments, we crea...` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `22%`): Active landmark `Where numbers reflect people, places, and purpose` · sticky/fixed elements: `1`
+- **Step 04** (`y=0px`, `0%`): Active landmark `Viewport` · sticky/fixed elements: `0`
+- **Step 05** (`y=6800px`, `59%`): Active landmark `We don’t just invest in properties – we invest in...` · sticky/fixed elements: `1`
+- **Step 06** (`y=8500px`, `74%`): Active landmark `L` · sticky/fixed elements: `1`
+- **Step 07** (`y=10200px`, `89%`): Active landmark `Let’s talk Real Estate` · sticky/fixed elements: `1`
+- **Step 08** (`y=11050px`, `96%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/no-fee-NYC-rentals/new-york-city-neighborhoods/Manhattan-rental-apartment-listings`)**: `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Manhattan-rental-apartment-listings` — H1: `Apartments for Rent in Manhattan, NYC · Stellar M...`, scrollHeight `8582px`, transition `direct` (`3565ms`)
+- **Detail Route (`/no-fee-NYC-rentals/new-york-city-neighborhoods/Brooklyn-rental-apartment-listings`)**: `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Brooklyn-rental-apartment-listings` — H1: `Brooklyn`, scrollHeight `6977px`, transition `direct` (`1965ms`)
+- **Detail Route (`/no-fee-NYC-rentals/new-york-city-neighborhoods/Queens-rental-apartment-listings`)**: `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Queens-rental-apartment-listings` — H1: `Apartments for Rent in Queens, NYC · Stellar Mana...`, scrollHeight `6823px`, transition `direct` (`3584ms`)
 
 ---
 
@@ -196,8 +221,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#181513`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#181513` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `General Sans Variable` for display copy (`We help New Yorkers find home`) with `General Sans Variable` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: normal 18px`, padding `36px`) with `cubic-bezier(.28,.11,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `General Sans Variable` across display (`We help New Yorkers find home`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1368px` container bounds (`gap: normal 18px`, padding `36px`) with `cubic-bezier(.28,.11,.32,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-stellarmanagement-com` in your global stylesheet:
@@ -245,13 +270,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--green-light`)**: `#def2df` — grounded in `var(--green-light)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
-- **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
+- **Container Max-Width**: `1368px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `36px` lateral canvas padding with `normal 18px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 18px`)
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1368px`, `gap: normal 18px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `36px` horizontal padding
-- **Media Queries**: `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (max-width:1360px)`
+- **Media Queries**: `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (min-width:968px)`
 - **Corner Radii**: `50%`, `2px`
 
 ### 5. Typography & Editorial Scale Contract
@@ -267,19 +292,19 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 Scaffold `www-stellarmanagement-com` (`Stellar Management · NYC Real Estate Developer & No Fee Rentals`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `www-stellarmanagement-com`)**:
    - DOM & Selectors: Landmark `<header class="header">` (`1440x63px`) hosting `Stellar Management · NYC Real Estate` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-hid="page-vw"`, `data-gtag`, `data-v-d3185d1d`, `data-path="/"`), and stylesheet rule `root { --block-width-m:84rem;--search-sidebar-width:30rem }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `www-stellarmanagement-com`)` (`www-stellarmanagement-com`) adapts across `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (max-width:1360px)` with `cubic-bezier(.28,.11,.32,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `www-stellarmanagement-com`)` (`www-stellarmanagement-com`) adapts across `@media screen and (max-width:1024px)`, `@media screen and (max-width:967px)`, `@media screen and (max-width:650px)`, `@media screen and (min-width:968px)` with `cubic-bezier(.28,.11,.32,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.first> — `We help New Yorkers find home`)**:
    - DOM & Selectors: Landmark `<section class="first scroll-locked-fullscreen">` presenting display lead `We help New Yorkers find home` and copy excerpt *"Since 1985, creating, investing, developing & living NYC real est"* over `#ffffff` canvas and `#181513` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#181513` headline `We help New Yorkers find home`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#ffffff` background with `#181513` headline `We help New Yorkers find home`.
 3. **Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)**:
    - DOM & Selectors: Landmark `<section class="block">` rendering section `We help New Yorkers find h o m e` with copy *"R e n t w i t h u s R e n t w i t h u s"*, asset references (`entry.BO5l_mVZ.css`, `default.D_u9mJpK.css`, `filterMain.Dy3QUOs1.css`, `appInput.BLk3pTmz.css`), and grid rule `before { background:var(--white)!important }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: normal 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `36px` horizontal padding on mobile.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.block> — `We help New Yorkers find h o m e`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1368px`, `gap: normal 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `36px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.neighborhoods> — `From h i s t o r i c blocks to n e`)**:
-   - DOM & Selectors: Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `.tag-word { display:none }`.
+   - DOM & Selectors: Landmark `<section class="neighborhoods neighborhoods-section">` framing `From h i s t o r i c blocks to n e w developments...` and `Explore our b a c k y a r d` (*"R e n t w i t h u s"*) with `#808080` surface cards, `#0000ff` accents, and `hover { border-color:var(--dark-blue);color:var(--dark-blue) }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.neighborhoods> — `From h i s t o r i c blocks to n e`)` uses `50%`, `2px` radii, `#0000ff` highlights, and assets (entry.BO5l_mVZ.css, default.D_u9mJpK.css, filterMain.Dy3QUOs1.css).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)**:
    - DOM & Selectors: Landmark `<footer class="footer">` anchoring `Stellar Management · NYC Real Es` footer links (`Overview · Index · Archive · About · Contact`), copy *"The Way We Work, Defines Who We Are"*, and `#0000ff` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `36px` lateral canvas padding with `normal 18px` grid gap and attributes (data-hid="page-vw", data-gtag, data-v-d3185d1d).
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://www.stellarmanagement.com`)` aligns to `1368px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `36px` lateral canvas padding with `normal 18px` grid gap and attributes (data-hid="page-vw", data-gtag, data-v-d3185d1d).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Since 1985, creating, investing, developing & living NYC real estate."*
@@ -292,17 +317,49 @@ Scaffold `www-stellarmanagement-com` (`Stellar Management · NYC Real Estate Dev
 - **Extracted Stylesheet Rules (`www-stellarmanagement-com`)**:
 - `root { --block-width-m:84rem;--search-sidebar-width:30rem }`
 - `before { background:var(--white)!important }`
-- `.tag-word { display:none }`
-- `last-child { transform:translate(-100%) }`
-- `host { display:block;margin-left:auto;margin-right:auto;position:relative;z-ind... }`
+- `hover { border-color:var(--dark-blue);color:var(--dark-blue) }`
+- `.app-input { width:max(55px,9rem) }`
+- `.app-input .app-input-desc { color:var(--grey-dark) }`
 - **Per-Selector Transition Rules**:
 - **Selector `animation=image-scale] img[data-v...`**: `transition: .6s` extracted from `www-stellarmanagement-com` stylesheet.
-- **Selector `body[data-v-149ae9ef]`**: `transition: background-color var(--transition-slow)` extracted from `www-stellarmanagement-com` stylesheet.
-- **Selector `svg[data-v-149ae9ef]`**: `transition: color var(--transition-default)` extracted from `www-stellarmanagement-com` stylesheet.
+- **Selector `body[data-v-f3e39c51]`**: `transition: background-color var(--transition-slow)` extracted from `www-stellarmanagement-com` stylesheet.
+- **Selector `svg[data-v-f3e39c51]`**: `transition: color var(--transition-default)` extracted from `www-stellarmanagement-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.28,.11,.32,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.block>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `12360px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: We help New Yorkers find home (0%) -> From historic blocks to new... (7%) -> Where numbers reflect peopl... (22%) -> Viewport (0%) -> We don’t just invest in pro... (59%) -> L (74%) -> Let’s talk Real Estate (89%) -> Footer (96%).
+- **Multi-Page Routes**: Scaffold internal routes `/no-fee-NYC-rentals/new-york-city-neighborhoods/Manhattan-rental-apartment-listings` (detail, direct), `/no-fee-NYC-rentals/new-york-city-neighborhoods/Brooklyn-rental-apartment-listings` (detail, direct), `/no-fee-NYC-rentals/new-york-city-neighborhoods/Queens-rental-apartment-listings` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-stellarmanagement-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | We help New Yorkers find home | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `7%` | From historic blocks to new developments, we... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `22%` | Where numbers reflect people, places, and pur... | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `0%` | Viewport | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `59%` | We don’t just invest in properties – we inves... | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `74%` | L | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `89%` | Let’s talk Real Estate | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `11050px` | `96%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Manhattan-rental-apartment-listings` | Apartments for Rent in Manhattan, NYC... | `8582px` | `direct` (`3565ms`) | [subpage-01-no-fee-nyc-rentals-new-york-city-nei.webp](assets/subpage-01-no-fee-nyc-rentals-new-york-city-nei.webp) |
+| `2` | `detail` | `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Brooklyn-rental-apartment-listings` | Brooklyn | `6977px` | `direct` (`1965ms`) | [subpage-02-no-fee-nyc-rentals-new-york-city-nei.webp](assets/subpage-02-no-fee-nyc-rentals-new-york-city-nei.webp) |
+| `3` | `detail` | `https://www.stellarmanagement.com/no-fee-NYC-rentals/new-york-city-neighborhoods/Queens-rental-apartment-listings` | Apartments for Rent in Queens, NYC ·... | `6823px` | `direct` (`3584ms`) | [subpage-03-no-fee-nyc-rentals-new-york-city-nei.webp](assets/subpage-03-no-fee-nyc-rentals-new-york-city-nei.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: yaas-energy-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `yaas-energy-com` (**YAAS Energy — Zero-Sugar Energy Drink in 5 Bold Flavors**)
 - **Production URL**: [https://yaas-energy.com/](https://yaas-energy.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×1744px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas, `#ffffff` ink, `#e53a6b` accent)
 - **Summary**: YAAS — zero-sugar, 5-calorie energy drink in 5 bold flavors: Citrus Lemon, Blueberry Rush, Wild Strawberry, Solar Orange, Green Apple. No...
 - **Total Clean CSS Variables Extracted**: `54` (curated live-grounded set below)
@@ -36,10 +36,10 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#0b0a09` | live computed `html` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#212121` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#e43a6c` | `var(--card-color)` in `:root` |
 | **Interactive Accent / Highlight** | `#e53a6b` | `.screen2-h2-accent { color: #e53a6b }` |
 | **Secondary / Muted Copy** | `#212121` | live computed `p` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#212121` | live computed `button` `border-color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#212121` | hairline divider derived from live computed `p` `color` (`computed_styles.json`) |
 
 ---
 
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<nav.hero-nav> — `yaas-energy-com`)**:
    - Landmark `<nav class="hero-nav">` (`1240x34px`) hosting `YAAS Energy — Zero-Sugar Energy Drin` navigation (`Flavors · About us · FAQ · Contacts`), DOM attributes (`data-seo="1"`, `data-seo="1"`, `data-seo="1"`, `data-seo="1"`), and stylesheet rule `root { --block-heading: clamp(30px, 4.17vw, calc(80px * var(--ui-scale))) }`.
 2. **Hero Stage & Focal Lead (<section.intro-wrap> — `YAAS. That feeling when everything`)**:
-   - Landmark `<section class="intro-wrap">` presenting display lead `YAAS. That feeling when everything just hits diff...` and copy excerpt *"Yes, we use cookies. Sugar-free."* over `#0b0a09` canvas and `#ffffff` ink.
+   - Landmark `<section class="intro-wrap">` presenting display lead `YAAS. That feeling when everything just hits diff...` and copy excerpt *"You don't drink YAAS on a schedule — you drink it when you need t"* over `#0b0a09` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.screen2> — `5 Flavors. 1 Energy.`)**:
    - Landmark `<section class="screen2 is-arc-running">` rendering section `5 Flavors. 1 Energy.` with copy *"Zero-sugar energy for people who move at their own speed. Flavor "*, asset references (`favicon.svg`, `favicon-32.png`, `favicon-16.png`, `apple-touch-icon.png`), and grid rule `html { background:0b0a09 }`.
 4. **Interactive Detail & Feature Matrix (<section.screen2-arc> — `Zero-sugar energy for people who m`)**:
-   - Landmark `<section class="screen2-arc">` framing `Zero-sugar energy for people who move at their o` and `This isn't about hyping you up. It's about stayi` (*"This isn't about hyping you up. It's about staying locked in to y"*) with `#212121` surface cards, `#e53a6b` accents, and `button { font-family:inherit;color:inherit;background:none;border:none;cursor:poi... }`.
+   - Landmark `<section class="screen2-arc">` framing `Zero-sugar energy for people who move at their o` and `This isn't about hyping you up. It's about stayi` (*"This isn't about hyping you up. It's about staying locked in to y"*) with `#e43a6c` surface cards, `#e53a6b` accents, and `button { font-family:inherit;color:inherit;background:none;border:none;cursor:poi... }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://yaas-energy.com/`)**:
    - Landmark `<footer class="site-footer is-reveal">` anchoring `YAAS Energy — Zero-Sugar Energy ` footer links (`Flavors · About us · FAQ · Contacts`), copy *"When the night's just getting started and your battery isn't"*, and `#212121` structural dividers.

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-future-human-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-future-human-de"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `#000000` ink, `#ffffff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `
 
 > **FUTURE HUMAN · A Shared Year of Co-Creation & Presence** (https://www.future-human.de/) — A one-year training for multidimensional coaching & co-creation. 8 modules, 16 participants, at Das HILLA near Kassel. Starts Oct 30, 2026.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **FUTURE HUMAN · A Shared Year of Co-Creation & Presence** (`https://www.future-human.de/`). A one-year training for multidimensional coaching & co-creation. 8 modules, 16 participants, at Das HILLA near Kassel. Starts Oct 30, 2026.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `#000000` ink, `#ffffff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff9ea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Spectral` for display copy (`THE FUTURE IS HUMAN.`) with `Plus Jakarta Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Spectral` for display copy (`THE FUTURE IS HUMAN.`) with `Plus Jakarta Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `40px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `8px`, `15px`, `100px`, `50px`.
@@ -111,6 +116,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `
 - **Selector `style]`**: `transition: none` extracted from `www-future-human-de` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Framer Motion`.
 
 ---
 
@@ -169,6 +177,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff9ea` canvas, `
    - Landmark `<section class="framer-i64cag sct-room">` framing `T h e M u l t i d i m e n s i o n a l H u m a n` and `T h e C o l l e c t i v e F i e l d` (*"e i n z i g a r t i g e"*) with `#fff9ea` surface cards, `#ffffff` accents, and `.hidden-126ue0n { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.framer-1818ei9> — `https://www.future-human.de/`)**:
    - Landmark `<footer class="framer-1818ei9">` anchoring `FUTURE HUMAN · A Shared Year of ` footer links (`Overview · Index · Archive · About · Contact`), copy *"M u l t i d i m e n s i o n a l"*, and `#0099ff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `THE FUTURE IS HUMAN.` · sticky/fixed elements: `1`
 
 ---
 
@@ -185,7 +195,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fff9ea` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ffffff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff9ea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ffffff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Spectral` for display copy (`THE FUTURE IS HUMAN.`) with `Plus Jakarta Sans` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Spectral` for display copy (`THE FUTURE IS HUMAN.`) with `Plus Jakarta Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `40px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -223,8 +233,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-30996a26-1fe4-4007-9944-c80e3f142e44`)**: `#fffefc` — grounded in `var(--token-30996a26-1fe4-4007-9944-c80e3f142e44)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `40px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -248,7 +258,7 @@ Scaffold `www-future-human-de` (`FUTURE HUMAN · A Shared Year of Co-Creation & 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.framer-1m76co> — `www-future-human-de`)` (`www-future-human-de`) adapts across `@media (min-width: 1200px)`, `@media (min-width: 810px) and (max-width: 1199.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:1199px) and (min-width:810px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.framer-16vyecu> — `THE FUTURE IS HUMAN.`)**:
    - DOM & Selectors: Landmark `<section class="framer-16vyecu sct-room">` presenting display lead `THE FUTURE IS HUMAN.` and copy excerpt *"Die Welt braucht deine einzigartige Gabe."* over `#fff9ea` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fff9ea` background with `#000000` headline `THE FUTURE IS HUMAN.`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#fff9ea` background with `#000000` headline `THE FUTURE IS HUMAN.`.
 3. **Primary Showcase & Content Grid (<section.framer-1omsice> — `T H E F U T U R E I S H U M A N .`)**:
    - DOM & Selectors: Landmark `<section class="framer-1omsice sct-room">` rendering section `T H E F U T U R E I S H U M A N .` with copy *"D i e W e l t b r a u c h t d e i n e e i n z i g a r t i g e G a"*, asset references (`GAHKwEi2fQdp0x0qCbx0ph5tnCs.png`, `fonts.gstatic.com`, `hls.min.js`, `script`), and grid rule `.hidden-181529u { display:none!important }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.framer-1omsice> — `T H E F U T U R E I S H U M A N .`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `40px` horizontal padding on mobile.
@@ -279,8 +289,25 @@ Scaffold `www-future-human-de` (`FUTURE HUMAN · A Shared Year of Co-Creation & 
 - **Selector `style]`**: `transition: none` extracted from `www-future-human-de` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Framer Motion.
+- **Vertical Chapter Sequence**: THE FUTURE IS HUMAN. (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-future-human-de`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | THE FUTURE IS HUMAN. | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | THE FUTURE IS HUMAN. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

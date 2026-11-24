@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-brandlos-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.brandlos.nl"
 final_url: "https://www.brandlos.nl/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Brandlos · Het creatieve bureau van Limburg
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `37`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `169`
+- **Recovered Stylesheets**: `9`
 
 ---
 

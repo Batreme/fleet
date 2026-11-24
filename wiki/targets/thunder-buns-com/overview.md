@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: thunder-buns-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thunder-buns.com/"
 final_url: "https://thunder-buns.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,10 +27,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://thunder-buns.com/](https://thunder-buns.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Thunderbuns · Smashburgers Delivered
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `7`
+- **Recovered Scripts**: `8`
 - **Recovered Stylesheets**: `1`
 
 ---

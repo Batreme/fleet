@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: inherited-band"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "inherited-band"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 0
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 
 > **INHERITED** (https://inherited.band/) — INHERITED BAND
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **INHERITED** (`https://inherited.band/`). INHERITED BAND
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#eee2c5` ink, `#fcfffe` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#eee2c5` primary typography and `#fcfffe` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Founders Grotesk` across display (`I N H E R I T E D`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=3847px` / doc `4747px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `18px` lateral canvas padding with `18px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
@@ -109,6 +114,9 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 - **Selector `#nav a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.no-transition>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4747px`, deepest scrollY reached `3847px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
 
 ---
 
@@ -160,13 +168,20 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas
 1. **Brand Header & Navigation Bar (<header.header> — `inherited-band`)**:
    - Landmark `<header class="header">` (`1440x900px`) hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
 2. **Hero Stage & Focal Lead (<section.member> — `I N H E R I T E D`)**:
-   - Landmark `<section class="member show">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
+   - Landmark `<section class="member no-transition">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
 3. **Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)**:
    - Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Guitarist Producer"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
 4. **Interactive Detail & Feature Matrix (<section.member:nth(2)> — `E d e r A n a y a`)**:
    - Landmark `<section class="member no-transition">` framing `E d e r A n a y a` and `( Me, Myself, and Sam )` (*"( Me, Myself, and Sam )"*) with `#d50305` surface cards, `#fcfffe` accents, and `.h1 { font-size:115rem }`.
 5. **Colophon & Global Directory Footer (<footer.items> — `https://inherited.band/`)**:
    - Landmark `<footer class="items">` anchoring `INHERITED` footer links (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), copy *"E d e r A n a y a"*, and `#eee2c5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `I N H E R I T E D` · sticky/fixed elements: `7`
+- **Step 02** (`y=850px`, `22%`): Active landmark `E D E R A N A Y A` · sticky/fixed elements: `8`
+- **Step 03** (`y=1700px`, `44%`): Active landmark `#diego` · sticky/fixed elements: `8`
+- **Step 04** (`y=2550px`, `66%`): Active landmark `#manuel` · sticky/fixed elements: `7`
+- **Step 05** (`y=3400px`, `88%`): Active landmark `#bats` · sticky/fixed elements: `7`
+- **Step 06** (`y=3847px`, `100%`): Active landmark `#bats` · sticky/fixed elements: `7`
 
 ---
 
@@ -183,7 +198,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#eee2c5`, **Accent / Highlight**: `#fcfffe`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#eee2c5` primary typography and `#fcfffe` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Founders Grotesk` for display copy (`I N H E R I T E D`) with `Founders Grotesk` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Founders Grotesk` across display (`I N H E R I T E D`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 18px`, padding `18px`) with `cubic-bezier(.6,.14,0,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +234,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#eee2c5` — grounded in hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `18px` lateral canvas padding with `18px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`)
@@ -243,8 +258,8 @@ Scaffold `inherited-band` (`INHERITED`) with these exact structural regions, ext
    - DOM & Selectors: Landmark `<header class="header">` (`1440x900px`) hosting `INHERITED` navigation (`INHERITED · Spotify · Instagram · Tik Tok · Contact us`), DOM attributes (`data-touch="false"`, `data-custom-loaded="true"`, `data-title="about"`, `data-title="members"`), and stylesheet rule `body { font-size:15rem;line-height:1.21;font-weight:400 }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `inherited-band`)` (`inherited-band`) adapts across `@media (max-width: 1024px)` with `cubic-bezier(.6,.14,0,1)`, `cubic-bezier(.35,.42,0,1)`, `cubic-bezier(.19,1,.22,1)` transitions and links `INHERITED · Spotify · Instagram · Tik Tok · Contact us`.
 2. **Hero Stage & Focal Lead (<section.member> — `I N H E R I T E D`)**:
-   - DOM & Selectors: Landmark `<section class="member show">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×844px` mobile) sets `#000000` background with `#eee2c5` headline `I N H E R I T E D`.
+   - DOM & Selectors: Landmark `<section class="member no-transition">` presenting display lead `I N H E R I T E D` and copy excerpt *"Metalcore Deathcore"* over `#000000` canvas and `#eee2c5` ink.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#000000` background with `#eee2c5` headline `I N H E R I T E D`.
 3. **Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)**:
    - DOM & Selectors: Landmark `<section class="member no-transition">` rendering section `2016 Deathcore Metalcore` with copy *"Guitarist Producer"*, asset references (`fav.ico`, `fav.svg`, `fav-mask.svg`, `apple-touch.png`), and grid rule `.h3 { line-height:1;letter-spacing:-.015em;margin:0;text-transform:uppercase;f... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.no-transition> — `2016 Deathcore Metalcore`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 18px`) on desktop and Single-column vertical stack at `390px` viewport width with `18px` horizontal padding on mobile.
@@ -274,8 +289,32 @@ Scaffold `inherited-band` (`INHERITED`) with these exact structural regions, ext
 - **Selector `#nav a:after`**: `transition: transform 1s cubic-bezier(.6,.14,0,1)` extracted from `inherited-band` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.6,.14,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.no-transition>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4747px` across 6 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: I N H E R I T E D (0%) -> E D E R A N A Y A (22%) -> #diego (44%) -> #manuel (66%) -> #bats (88%) -> #bats (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `inherited-band`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | I N H E R I T E D | `7` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `22%` | E D E R A N A Y A | `8` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `44%` | #diego | `8` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `66%` | #manuel | `7` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `88%` | #bats | `7` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3847px` | `100%` | #bats | `7` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | I N H E R I T E D | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | I N H E R I T E D | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `0px` | `100%` | I N H E R I T E D | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

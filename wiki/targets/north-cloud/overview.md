@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: north-cloud"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://north.cloud"
 final_url: "https://north.cloud/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://north.cloud](https://north.cloud)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
 - **Page Title**: North.cloud · Take control of your cloud costs with AI-powered FinOps.
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `27`
-- **Recovered Stylesheets**: `2`
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `31`
+- **Recovered Stylesheets**: `3`
 
 ---
 

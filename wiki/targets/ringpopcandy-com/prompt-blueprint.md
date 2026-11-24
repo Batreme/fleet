@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: ringpopcandy-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "ringpopcandy-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `#141723` ink, `#ff8300` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `
 
 > **Ring Pop® — Candy for Every Celebration** (https://ringpopcandy.com/) — Ring Pop turns any occasion into a celebration: birthdays, weddings, game days, wins. Shop the collections and find Ring Pop at a store n...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ring Pop® — Candy for Every Celebration** (`https://ringpopcandy.com/`). Ring Pop turns any occasion into a celebration: birthdays, weddings, game days, wins. Shop the collections and find Ring Pop at a store n...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `#141723` ink, `#ff8300` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff7e9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#141723` primary typography and `#ff8300` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Ringold` for display copy (`RING POP`) with `Greed Standard` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Ringold` for display copy (`RING POP`) with `Greed Standard`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: .75rem`, padding `.75rem`) with `cubic-bezier(.5,0,0,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=11277px` / doc `12337px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `.75rem` lateral canvas padding with `.75rem` grid gap.
 - **Border Radius Scale**: `var(--header-border-radius-desktop)`, `.8125rem`, `var(--header-border-radius-sticky-mobile)`, `var(--header-border-radius-sticky-desktop)`.
@@ -102,7 +107,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 250px`, `line-height: 213px`, `font-weight: 400`, `letter-spacing: -5px`); CSS variables `--font-heading-h1: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h1-weight: 400`, `--h1-font-case: uppercase`; rule `,h1` (`font-size: var(--font-heading-h1-size-mo...`, `line-height: var(--font-heading-h1...`, `letter-spacing: var(--font-heading-h1...`, `font-weight: var(--font-he...`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 120px`, `line-height: 100px`, `font-weight: 400`, `letter-spacing: -2.4px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 250px`, `line-height: 205px`, `font-weight: 500`, `letter-spacing: -5px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`).
 - **Body Copy**: live computed `body` (`font-size: 20px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--font-body: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-body-size-xsmall: 14px`, `--font-body-size-small: 18px`; rule `p` (`font-size: inherit`, `line-height: inherit`, `letter-spacing: inherit`, `font-weight: inherit`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 19px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--font-heading-small-title: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-heading-small-title-weight: 900`, `--small_title-font-case: uppercase`; rule `.label` (`font-size: 1.5rem`, `line-height: 1.083em`, `letter-spacing: -.0225rem`, `font-weight: 600`).
 
@@ -119,6 +124,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `
 - **Selector `header.header .header__wrapper`**: `transition: .4s all cubic-bezier(.5,0,0,1)` extracted from `ringpopcandy-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.5,0,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.mfr-core__banner-with-box>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `12337px`, deepest scrollY reached `11277px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Explore Collection`)**: `transform`: `none` -> `matrix(1.01, 0, 0, 1.01...`; `boxShadow`: `none` -> `rgba(0, 0, 0, 0.25) 0px...` (`transition-duration: 0.2s`, `timing: cubic-bezier(0.5, 0, 0, 1)`).
+- **Interactive Control Probe (`carousel_next` · `Next`)**: Triggered visual diff `64.581` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/pages/weddings`) measured as `MPA` in `1104ms`.
 
 ---
 
@@ -177,6 +188,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff7e9` canvas, `
    - Landmark `<section class="mfr-core__scrolling-bar">` framing `A little Bling to Celebrate Your Thing` and `The Sweetest Way To Say Yes!` (*"Ring Pop x Mindy Weiss"*) with `#fffaf6` surface cards, `#ff8300` accents, and `go.has-sticky-logo .header-logo__... { display:block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ringpopcandy.com/`)**:
    - Landmark `<footer class="footer">` anchoring `Ring Pop® — Candy for Every Cele` footer links (`Products · Explore · About`), copy *"Perfect for engagements, bridal showers, bachelorettes & wed"*, and `#fcfcfc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `A LITTLE BLING TO CELEBRATE YOUR THING` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `7%`): Active landmark `THE SWEETEST WAY TO SAY YES!` · sticky/fixed elements: `1`
+- **Step 03** (`y=2419px`, `21%`): Active landmark `PARTY PACK` · sticky/fixed elements: `1`
+- **Step 04** (`y=5100px`, `45%`): Active landmark `PARTY PACK` · sticky/fixed elements: `1`
+- **Step 05** (`y=6800px`, `60%`): Active landmark `SEASONAL` · sticky/fixed elements: `1`
+- **Step 06** (`y=9350px`, `83%`): Active landmark `STAY IN THE LOOP` · sticky/fixed elements: `1`
+- **Step 07** (`y=11050px`, `98%`): Active landmark `Footer` · sticky/fixed elements: `1`
+- **Step 08** (`y=11277px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/pages/weddings`)**: `https://ringpopcandy.com/pages/weddings` — H1: `WEDDINGS`, scrollHeight `6704px`, transition `MPA` (`1104ms`)
+- **Detail Route (`/pages/shop`)**: `https://ringpopcandy.com/pages/shop` — H1: `SHOP`, scrollHeight `5564px`, transition `direct` (`1311ms`)
+- **Detail Route (`/pages/content-hub`)**: `https://ringpopcandy.com/pages/content-hub` — H1: `CONTENT HUB`, scrollHeight `15902px`, transition `direct` (`1281ms`)
 
 ---
 
@@ -193,7 +218,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fff7e9` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#141723`, **Accent / Highlight**: `#ff8300`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff7e9` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#141723` primary typography and `#ff8300` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Ringold` for display copy (`RING POP`) with `Greed Standard` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Ringold` for display copy (`RING POP`) with `Greed Standard`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: .75rem`, padding `.75rem`) with `cubic-bezier(.5,0,0,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -239,8 +264,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-off-white`)**: `#f5f4f3` — grounded in `var(--color-off-white)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `.75rem` lateral canvas padding with `.75rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: .75rem`)
@@ -253,7 +278,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Greed Standard`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 250px`, `line-height: 213px`, `font-weight: 400`, `letter-spacing: -5px`); CSS variables `--font-heading-h1: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h1-weight: 400`, `--h1-font-case: uppercase`; rule `,h1` (`font-size: var(--font-heading-h1-size-mo...`, `line-height: var(--font-heading-h1...`, `letter-spacing: var(--font-heading-h1...`, `font-weight: var(--font-he...`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 120px`, `line-height: 100px`, `font-weight: 400`, `letter-spacing: -2.4px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 250px`, `line-height: 205px`, `font-weight: 500`, `letter-spacing: -5px`); CSS variables `--font-heading-h2: 'Ringold', Helvetica, Arial, sans-serif`, `--font-heading-h2-weight: 400`, `--h2-font-case: uppercase`; rule `,h2` (`font-size: var(--font-heading-h2-size-mo...`, `line-height: var(--font-heading-h2...`, `letter-spacing: var(--font-heading-h2...`, `font-weight: var(--font-he...`)
 - **Body Copy Rule**: live computed `body` (`font-size: 20px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--font-body: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-body-size-xsmall: 14px`, `--font-body-size-small: 18px`; rule `p` (`font-size: inherit`, `line-height: inherit`, `letter-spacing: inherit`, `font-weight: inherit`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 19px`, `line-height: 30px`, `font-weight: 400`); CSS variables `--font-heading-small-title: 'Greed Standard', Helvetica, Arial, sans-serif`, `--font-heading-small-title-weight: 900`, `--small_title-font-case: uppercase`; rule `.label` (`font-size: 1.5rem`, `line-height: 1.083em`, `letter-spacing: -.0225rem`, `font-weight: 600`)
 
@@ -264,7 +289,7 @@ Scaffold `ringpopcandy-com` (`Ring Pop® — Candy for Every Celebration`) with 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `ringpopcandy-com`)` (`ringpopcandy-com`) adapts across `@media print,screen and (min-width:64em)`, `@media print,screen and (max-width:63.99875em)`, `@media print,screen and (max-width:63.99875em)and (min-width:64em)`, `@media screen and (pointer:fine)` with `cubic-bezier(.5,0,0,1)`, `cubic-bezier(.65,.49,.21,.98)`, `cubic-bezier(0,.96,.4,.93)` transitions and links `Products · Explore · About`.
 2. **Hero Stage & Focal Lead (<section.mfr-core__hero-section> — `RING POP`)**:
    - DOM & Selectors: Landmark `<section class="mfr-core__hero-section rendered">` presenting display lead `RING POP` and copy excerpt *"Explore Collections"* over `#fff7e9` canvas and `#141723` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff7e9` background with `#141723` headline `RING POP`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fff7e9` background with `#141723` headline `RING POP`.
 3. **Primary Showcase & Content Grid (<section.mfr-core__banner-with-box> — `Ring Pop`)**:
    - DOM & Selectors: Landmark `<section class="mfr-core__banner-with-box grid-gutter-mobile">` rendering section `Ring Pop` with copy *"Made for every moment"*, asset references (`identify_f7846436.js`, `main.MTUyMzg1YjAxOQ.js`, `main.140d4362.js`, `events.js`), and grid rule `o.has-sticky-logo .header-logo__d... { display:none }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.mfr-core__banner-with-box> — `Ring Pop`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: .75rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.75rem` horizontal padding on mobile.
@@ -295,8 +320,48 @@ Scaffold `ringpopcandy-com` (`Ring Pop® — Candy for Every Celebration`) with 
 - **Selector `header.header .header__wrapper`**: `transition: .4s all cubic-bezier(.5,0,0,1)` extracted from `ringpopcandy-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.5,0,0,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.mfr-core__banner-with-box>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `12337px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: A LITTLE BLING TO CELEBRATE... (0%) -> THE SWEETEST WAY TO SAY YES! (7%) -> PARTY PACK (21%) -> PARTY PACK (45%) -> SEASONAL (60%) -> STAY IN THE LOOP (83%) -> Footer (98%) -> Footer (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform, boxShadow` with `0.2s cubic-bezier(0.5, 0, 0, 1)`.
+- **Multi-Page Routes**: Scaffold internal routes `/pages/weddings` (detail, MPA), `/pages/shop` (detail, direct), `/pages/content-hub` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `ringpopcandy-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | A LITTLE BLING TO CELEBRATE YOUR THING | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `7%` | THE SWEETEST WAY TO SAY YES! | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2419px` | `21%` | PARTY PACK | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `45%` | PARTY PACK | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `60%` | SEASONAL | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `9350px` | `83%` | STAY IN THE LOOP | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `11050px` | `98%` | Footer | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `11277px` | `100%` | Footer | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | A LITTLE BLING TO CELEBRATE YOUR THING | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4852px` | `50%` | PARTY PACK | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `9704px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `carousel_next` (`Next`, diff `64.581`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://ringpopcandy.com/pages/weddings` | WEDDINGS | `6704px` | `MPA` (`1104ms`) | [subpage-01-pages-weddings.webp](assets/subpage-01-pages-weddings.webp) |
+| `2` | `detail` | `https://ringpopcandy.com/pages/shop` | SHOP | `5564px` | `direct` (`1311ms`) | [subpage-02-pages-shop.webp](assets/subpage-02-pages-shop.webp) |
+| `3` | `detail` | `https://ringpopcandy.com/pages/content-hub` | CONTENT HUB | `15902px` | `direct` (`1281ms`) | [subpage-03-pages-content-hub.webp](assets/subpage-03-pages-content-hub.webp) |
+

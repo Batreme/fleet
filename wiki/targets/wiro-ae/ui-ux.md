@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: wiro-ae"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `wiro-ae` (**Wiro · Operating System for All Agencies**)
 - **Production URL**: [https://wiro.ae/](https://wiro.ae/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#efacd4`)
-- **Summary**: Run your whole agency in one place: projects, clients, invoices, social scheduling, ads, influencers and PR. The agency operating system...
-- **Total Clean CSS Variables Extracted**: `84` (curated live-grounded set below)
+- **Summary**: Projects, clients, invoices, social, ads, influencers and PR in one place. The operating system for marketing agencies and in-house marke...
+- **Total Clean CSS Variables Extracted**: `124` (curated live-grounded set below)
 
 ---
 
@@ -72,7 +72,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.mkt-header> — `wiro-ae`)**:
-   - Landmark `<header class="mkt-header">` (`1440x68px`) hosting `Wiro · Operating System for All Agen` navigation (`Platform · Influencer · Dubai and the UAE · Articles · For creators`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `html { scroll-behavior:smooth }`.
+   - Landmark `<header class="mkt-header">` (`1440x68px`) hosting `Wiro · Operating System for All Agen` navigation (`Platform · Influencer · Articles · For creators · Free tools`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `html { scroll-behavior:smooth }`.
 2. **Hero Stage & Focal Lead (<section.wi> — `Organize Your Chaos`)**:
    - Landmark `<section class="wi">` presenting display lead `Organize Your Chaos` and copy excerpt *"The operating system for modern agencies."* over `#000000` canvas and `#f6f0e4` ink.
 3. **Primary Showcase & Content Grid (<section.lp-hero> — `One system for every page your age`)**:
@@ -80,4 +80,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<section.lp-section> — `Projects`)**:
    - Landmark `<section class="lp-section lp-pages">` framing `Projects` and `Clients` (*"Progress 7 of 9 8 of 9"*) with `#10100f` surface cards, `#efacd4` accents, and `.lp-page strong { font-family:var(--lp-heading);font-weight:700;letter-spacing:0 }`.
 5. **Colophon & Global Directory Footer (<footer.lp-footer> — `https://wiro.ae/`)**:
-   - Landmark `<footer class="lp-footer lp-footer-scatter">` anchoring `Wiro · Operating System for All ` footer links (`Platform · Influencer · Dubai and the UAE · Articles · For creators`), copy *"Briefs, timelines, owners and approvals moving through one s"*, and `#222220` structural dividers.
+   - Landmark `<footer class="lp-footer lp-footer-scatter">` anchoring `Wiro · Operating System for All ` footer links (`Platform · Influencer · Articles · For creators · Free tools`), copy *"Briefs, timelines, owners and approvals moving through one s"*, and `#222220` structural dividers.

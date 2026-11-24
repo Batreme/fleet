@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: noravale-framer-website"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `noravale-framer-website` (**Blankit – Ultimate Portfolio System for Framer**)
 - **Production URL**: [https://noravale.framer.website/](https://noravale.framer.website/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×1510px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#ffffff` ink, `#0000ee` accent)
 - **Summary**: The ultimate portfolio system for Framer. Build premium portfolio websites with components, templates and design foundations.
 - **Total Clean CSS Variables Extracted**: `151` (curated live-grounded set below)
@@ -73,13 +73,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.lenis> — `noravale-framer-website`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Blankit – Ultimate Portfolio System ` navigation (`Purchase`), DOM attributes (`data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`, `data-framer-css="true"`), and stylesheet rule `main { box-sizing:border-box;margin:0;padding:0 }`.
+1. **Brand Header & Navigation Bar (<header.framer-ssi77> — `noravale-framer-website`)**:
+   - Landmark `<header class="framer-ssi77">` (`1440px`) hosting `Blankit – Ultimate Portfolio System ` navigation (`Purchase`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
 2. **Hero Stage & Focal Lead (<main.framer-17y96vw> — `Blankit – Ultimate Portfolio Syste`)**:
    - Landmark `<main class="framer-17y96vw">` presenting display lead `Blankit – Ultimate Portfolio System for Framer` and copy excerpt *"B u i l d i n g a l i f e s t y l e b r a n d r o o t e d i n c o"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<main.framer-17y96vw:nth(2)> — `Featured Work & Interactive Showca`)**:
-   - Landmark `<main class="framer-17y96vw">` rendering section `Featured Work & Interactive Showcase` with copy *"A d i g i t a l - f i r s t i d e n t i t y f o r a f a s t - g r"*, asset references (`default-favicon-light.v1.png`, `default-favicon-dark.v1.png`, `default-touch-icon.v3.png`, `fonts.gstatic.com`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
+   - Landmark `<main class="framer-17y96vw">` rendering section `Featured Work & Interactive Showcase` with copy *"A d i g i t a l - f i r s t i d e n t i t y f o r a f a s t - g r"*, asset references (`default-favicon-light.v1.png`, `default-favicon-dark.v1.png`, `default-touch-icon.v3.png`, `fonts.gstatic.com`), and grid rule `.hidden-1pgop7x { display:none!important }`.
 4. **Interactive Detail & Feature Matrix (<main.framer-17y96vw:nth(3)> — `Technical Architecture & Narrative`)**:
-   - Landmark `<main class="framer-17y96vw">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"d i g i t a l - f i r s t"*) with `#999999` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
-5. **Colophon & Global Directory Footer (<footer.framer-RrLH2> — `https://noravale.framer.website/`)**:
-   - Landmark `<footer class="framer-RrLH2">` anchoring `Blankit – Ultimate Portfolio Sys` footer links (`Purchase`), copy *"f a s t - g r o w i n g"*, and `#181818` structural dividers.
+   - Landmark `<main class="framer-17y96vw">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"d i g i t a l - f i r s t"*) with `#999999` surface cards, `#0000ee` accents, and `.hidden-ghtek5 { display:none!important }`.
+5. **Colophon & Global Directory Footer (<footer.framer-mbz2V> — `https://noravale.framer.website/`)**:
+   - Landmark `<footer class="framer-mbz2V">` anchoring `Blankit – Ultimate Portfolio Sys` footer links (`Purchase`), copy *"f a s t - g r o w i n g"*, and `#181818` structural dividers.

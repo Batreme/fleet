@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-extrafazant-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.extrafazant.nl/"
 final_url: "https://www.extrafazant.nl/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Extrafazant · Social Content, Video's & Animatie
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `26`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `105`
+- **Recovered Stylesheets**: `8`
 
 ---
 

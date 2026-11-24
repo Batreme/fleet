@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: aya-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://aya.nl"
 final_url: "https://aya.nl/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Danstheater AYA - eigenzinnige voorstellingen voor jong publiek
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `48`
+- **Recovered Scripts**: `193`
 - **Recovered Stylesheets**: `0`
 
 ---

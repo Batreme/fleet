@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-mynobs-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.mynobs.co"
 final_url: "https://www.mynobs.co/pages/login"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: NoBS - No Brief Shit
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `8`
+- **Recovered Scripts**: `72`
+- **Recovered Stylesheets**: `13`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: dairyfoodbg-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dairyfoodbg.com/"
 final_url: "https://dairyfoodbg.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Dairy Food Bulgaria — Private-Label UHT Dairy Manufacturer
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `80`
+- **Recovered Stylesheets**: `9`
 
 ---
 

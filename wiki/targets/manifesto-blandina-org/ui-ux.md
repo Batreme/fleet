@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: manifesto-blandina-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `manifesto-blandina-org` (**Connect, Create, Change: Manifesto of Blandina**)
 - **Production URL**: [https://manifesto.blandina.org/](https://manifesto.blandina.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#edece8` / `#ffa500`)
 - **Summary**: Manifesto of Blandina: connect with yourself, create the life you want, change the world. Yoga, mindfulness and meditation in Padua, the...
 - **Total Clean CSS Variables Extracted**: `97` (curated live-grounded set below)
@@ -76,9 +76,9 @@ http_status: 200
    - Landmark `<header class="inspirational-gallery__head">` (`1400x34px`) hosting `Connect, Create, Change: Manifesto o` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-v-cb3bbcd5`, `data-v-59ccf550`, `data-cursor="hide"`, `data-v-ba6e3b8d`), and stylesheet rule `property --line-bottom { syntax:"<length>";inherits:true;initial-value:360px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Blandina`)**:
    - Landmark `<section class="hero hero--fx">` presenting display lead `Blandina` and copy excerpt *"CLICK ANYWHERE TO ENTER WITH SOUND"* over `#edece8` canvas and `#1d150c` ink.
-3. **Primary Showcase & Content Grid (<section.the-intro> — `E v e r y t h i n g b e g i n s w `)**:
-   - Landmark `<section class="the-intro home-h__panel">` rendering section `E v e r y t h i n g b e g i n s w i t h i n .` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
-4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `C o n n e c t w i t h y o u r s e `)**:
-   - Landmark `<section class="immersive-video home-h__panel">` framing `C o n n e c t w i t h y o u r s e l f` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
+3. **Primary Showcase & Content Grid (<section.the-intro> — `Everything begins within.`)**:
+   - Landmark `<section class="the-intro home-h__panel">` rendering section `Everything begins within.` with copy *"Connect with yourself,Create the life you want,Change the world. "*, asset references (`embeds.iubenda.com`, `cdn.iubenda.com`, `entry.D6Uwv4sb.css`, `useSmokeLayer.C7tBsLdG.css`), and grid rule `.-is-hidden { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<section.immersive-video> — `Connect with yourself`)**:
+   - Landmark `<section class="immersive-video home-h__panel">` framing `Connect with yourself` and `Create the life you want` (*"Connect with yourself,Create the life you want,Change the world."*) with `#ffa500` surface cards, `#ffa500` accents, and `.-is-mobile { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.the-footer> — `https://manifesto.blandina.org/`)**:
    - Landmark `<footer class="the-footer">` anchoring `Connect, Create, Change: Manifes` footer links (`Overview · Index · Archive · About · Contact`), copy *"Connect with yourself,"*, and `#fa712a` structural dividers.

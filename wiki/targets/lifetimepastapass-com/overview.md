@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: lifetimepastapass-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://lifetimepastapass.com"
 final_url: "https://lifetimepastapass.com/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://lifetimepastapass.com](https://lifetimepastapass.com)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: LIFETIME PASTA PASS · BRADEN'S INFINITE TOUR OF ITALY
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `2`
+- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Recovered Scripts**: `788`
+- **Recovered Stylesheets**: `40`
 
 ---
 

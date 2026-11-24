@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-agrumeafarm-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-agrumeafarm-it_en` (**Agrumea Farm · Jams, pestos and flavours of Sicily**)
 - **Production URL**: [https://www.agrumeafarm.it/en](https://www.agrumeafarm.it/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×3312px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#fdf3eb` / `#e94e1b`)
 - **Summary**: Agrumea Farm transforms Sicilian citrus fruits, other fruits and produce into artisanal jams, pestos and preserves with an authentic flavour
 - **Total Clean CSS Variables Extracted**: `66` (curated live-grounded set below)

@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: www-get-daffed-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.get-daffed.com/"
 final_url: "https://www.get-daffed.com/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.get-daffed.com/](https://www.get-daffed.com/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
-- **Page Title**: www-get-daffed-com
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: Dafne Salvatori · Brand, design and marketing, Europe
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `8`
+- **Recovered Stylesheets**: `2`
 
 ---
 

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: aya-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "aya-nl"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas, `#fffdfd` ink, `#0000ee` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas
 
 > **Danstheater AYA - eigenzinnige voorstellingen voor jong publiek** (https://aya.nl) — AYA voorstellingen voor kinderen en jongeren spelen in theaters en op scholen. Met een spannende mix van dans, spel, zang en livemuziek u...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Danstheater AYA - eigenzinnige voorstellingen voor jong publiek** (`https://aya.nl`). AYA voorstellingen voor kinderen en jongeren spelen in theaters en op scholen. Met een spannende mix van dans, spel, zang en livemuziek u...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas, `#fffdfd` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ff2f11` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#fffdfd` primary typography and `#0000ee` accents.
@@ -34,10 +41,8 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=7266px` / doc `8166px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `4px` grid gap.
 - **Border Radius Scale**: `400px`, `96px`, `8px`, `6px`.
@@ -45,7 +50,7 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (min-width: 1440px)`, `@media (min-width: 810px) and (max-width: 1439.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:1439px) and (min-width:810px)`.
+- **Extracted CSS Media Queries**: `@media (max-width:1439px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1439.98px)`, `@media (max-width:809.98px)`.
 
 ---
 
@@ -121,6 +126,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas
 - **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `aya-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.44,0,.56,1)`)**: Governs interactive state transitions across `<header.framer-pbvui3>` and `<section.framer-NxIXs>`.
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `8166px`, deepest scrollY reached `7266px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Interactive Control Probe (`carousel_next` · `Next`)**: Triggered visual diff `33.053` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/voorstelling/brrrothers-6`) measured as `direct` in `879ms`.
 
 ---
 
@@ -170,15 +180,29 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#ff2f11` canvas
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.framer-pbvui3> — `aya-nl`)**:
-   - Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
+   - Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`, `data-framer-css="true"`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
 2. **Hero Stage & Focal Lead (<section.framer-Z9U3S> — `BRRROTHERS 6+`)**:
    - Landmark `<section class="framer-Z9U3S framer-cwJq3">` presenting display lead `BRRROTHERS 6+` and copy excerpt *"Overload 12+ Ontdek"* over `#ff2f11` canvas and `#fffdfd` ink.
 3. **Primary Showcase & Content Grid (<section.framer-NxIXs> — `Eigenzinnig danstheater voor een j`)**:
-   - Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `.hidden-72rtr7 { display:none!important }`.
+   - Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `main { box-sizing:border-box;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.framer-T1bJL> — `Spreken zonder woorden 12+ Ontdek`)**:
-   - Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `.hidden-rjvtpu { display:none!important }`.
+   - Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
 5. **Colophon & Global Directory Footer (<footer.framer-Ysu5g> — `https://aya.nl`)**:
    - Landmark `<footer class="framer-Ysu5g framer-QSpah">` anchoring `Danstheater AYA - eigenzinnige v` footer links (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), copy *"UP NEXT: Stilzitten is voor stoelen 7+ Ontdek"*, and `#f02c10` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `BRRROTHERS 6+` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `12%`): Active landmark `Section @ 12%` · sticky/fixed elements: `0`
+- **Step 03** (`y=1700px`, `23%`): Active landmark `EIGENZINNIG DANSTHEATER VOOR EEN JONG PUBLIEK.` · sticky/fixed elements: `0`
+- **Step 04** (`y=3400px`, `47%`): Active landmark `VOLG AYA` · sticky/fixed elements: `0`
+- **Step 05** (`y=4250px`, `58%`): Active landmark `BRUTAAL` · sticky/fixed elements: `0`
+- **Step 06** (`y=5950px`, `82%`): Active landmark `WE HOREN GRAAG VAN JE` · sticky/fixed elements: `0`
+- **Step 07** (`y=6800px`, `94%`): Active landmark `NIKS MISSEN?` · sticky/fixed elements: `0`
+- **Step 08** (`y=7266px`, `100%`): Active landmark `DANS MET ONS MEE` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/voorstelling/brrrothers-6`)**: `https://aya.nl/voorstelling/brrrothers-6` — H1: `BRRROTHERS 6+`, scrollHeight `9912px`, transition `direct` (`879ms`)
+- **About Route (`/contact`)**: `https://aya.nl/contact` — H1: `CONTACT`, scrollHeight `6374px`, transition `direct` (`1103ms`)
+- **Detail Route (`/voorstelling/up-next-stilzitten-is-voor-stoelen-7`)**: `https://aya.nl/voorstelling/up-next-stilzitten-is-voor-stoelen-7` — H1: `UP NEXT: STILZITTEN IS VOOR STOELEN 7+`, scrollHeight `7199px`, transition `direct` (`447ms`)
 
 ---
 
@@ -244,13 +268,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-bde3f413-9fb1-4992-8a57-31caf08869e1`)**: `#eac4c8` — grounded in `var(--token-bde3f413-9fb1-4992-8a57-31caf08869e1)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `24px` lateral canvas padding with `4px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `24px` horizontal padding
-- **Media Queries**: `@media (min-width: 1440px)`, `@media (min-width: 810px) and (max-width: 1439.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:1439px) and (min-width:810px)`
+- **Media Queries**: `@media (max-width:1439px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1439.98px)`, `@media (max-width:809.98px)`
 - **Corner Radii**: `400px`, `96px`, `8px`, `6px`
 
 ### 5. Typography & Editorial Scale Contract
@@ -265,20 +289,20 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `aya-nl` (`Danstheater AYA - eigenzinnige voorstellingen voor jong publiek`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.framer-pbvui3> — `aya-nl`)**:
-   - DOM & Selectors: Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.framer-pbvui3> — `aya-nl`)` (`aya-nl`) adapts across `@media (min-width: 1440px)`, `@media (min-width: 810px) and (max-width: 1439.98px)`, `@media (max-width: 809.98px)`, `@media (max-width:1439px) and (min-width:810px)` with `cubic-bezier(.44,0,.56,1)` transitions and links `Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`.
+   - DOM & Selectors: Landmark `<header class="framer-pbvui3">` (`1440x54px`) hosting `Danstheater AYA - eigenzinnige voors` navigation (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), DOM attributes (`data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`, `data-framer-css="true"`), and stylesheet rule `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.framer-pbvui3> — `aya-nl`)` (`aya-nl`) adapts across `@media (max-width:1439px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (min-width:810px) and (max-width:1439.98px)`, `@media (max-width:809.98px)` with `cubic-bezier(.44,0,.56,1)` transitions and links `Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`.
 2. **Hero Stage & Focal Lead (<section.framer-Z9U3S> — `BRRROTHERS 6+`)**:
    - DOM & Selectors: Landmark `<section class="framer-Z9U3S framer-cwJq3">` presenting display lead `BRRROTHERS 6+` and copy excerpt *"Overload 12+ Ontdek"* over `#ff2f11` canvas and `#fffdfd` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ff2f11` background with `#fffdfd` headline `BRRROTHERS 6+`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ff2f11` background with `#fffdfd` headline `BRRROTHERS 6+`.
 3. **Primary Showcase & Content Grid (<section.framer-NxIXs> — `Eigenzinnig danstheater voor een j`)**:
-   - DOM & Selectors: Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `.hidden-72rtr7 { display:none!important }`.
+   - DOM & Selectors: Landmark `<section class="framer-NxIXs framer-X0WqL">` rendering section `Eigenzinnig danstheater voor een jong publiek.` with copy *"Spreken zonder woorden 12+ Ontdek"*, asset references (`Or12pwiuyAgiMvRWdQLIcZMcr0.svg`, `LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png`, `476311956316258`, `fbevents.js`), and grid rule `main { box-sizing:border-box;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.framer-NxIXs> — `Eigenzinnig danstheater voor een j`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 4px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.framer-T1bJL> — `Spreken zonder woorden 12+ Ontdek`)**:
-   - DOM & Selectors: Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `.hidden-rjvtpu { display:none!important }`.
+   - DOM & Selectors: Landmark `<section class="framer-T1bJL framer-X0WqL">` framing `Spreken zonder woorden 12+ Ontdek` and `Kokolampu 10+ Ontdek` (*"Kokolampu 10+ Ontdek"*) with `#191717` surface cards, `#0000ee` accents, and `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.framer-T1bJL> — `Spreken zonder woorden 12+ Ontdek`)` uses `400px`, `96px`, `8px`, `6px` radii, `#0000ee` highlights, and assets (Or12pwiuyAgiMvRWdQLIcZMcr0.svg, LLqEU4Zu3OKa98ycxXoQ6T8bHQ.png, 476311956316258).
 5. **Colophon & Global Directory Footer (<footer.framer-Ysu5g> — `https://aya.nl`)**:
    - DOM & Selectors: Landmark `<footer class="framer-Ysu5g framer-QSpah">` anchoring `Danstheater AYA - eigenzinnige v` footer links (`Agenda · Voorstellingen · Educatie · Over Aya · Nieuws`), copy *"UP NEXT: Stilzitten is voor stoelen 7+ Ontdek"*, and `#f02c10` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-Ysu5g> — `https://aya.nl`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `24px` lateral canvas padding with `4px` grid gap and attributes (data-framer-generated-canonical, data-framer-font-css, data-framer-breakpoint-css).
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-Ysu5g> — `https://aya.nl`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `24px` lateral canvas padding with `4px` grid gap and attributes (data-framer-font-css, data-framer-css-ssr-minified, data-framer-components="framer-lib-cursors-ho...").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Overload 12+ Ontdek"*
@@ -290,17 +314,56 @@ Scaffold `aya-nl` (`Danstheater AYA - eigenzinnige voorstellingen voor jong publ
 - **Primary Easing Functions**: `cubic-bezier(.44,0,.56,1)`
 - **Extracted Stylesheet Rules (`aya-nl`)**:
 - `font-face { font-family: "Copal Std Solid"; src: url("https://framerusercontent.com/... }`
-- `.hidden-72rtr7 { display:none!important }`
-- `.hidden-rjvtpu { display:none!important }`
-- `.hidden-1nhk5d5 { display:none!important }`
 - `main { box-sizing:border-box;margin:0;padding:0 }`
+- `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`
+- `button { font-family:sans-serif;font-size:12px }`
+- `body { --framer-will-change-override:transform }`
 - **Per-Selector Transition Rules**:
 - **Selector `r-styles-preset-126pksw.rich-text...`**: `transition: color .1s cubic-bezier(.44,0,.56,1)` extracted from `aya-nl` stylesheet.
 - **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `aya-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.44,0,.56,1)`)**: Governs interactive state transitions across `<header.framer-pbvui3>` and `<section.framer-NxIXs>`.
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `8166px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: BRRROTHERS 6+ (0%) -> Section @ 12% (12%) -> EIGENZINNIG DANSTHEATER VOO... (23%) -> VOLG AYA (47%) -> BRUTAAL (58%) -> WE HOREN GRAAG VAN JE (82%) -> NIKS MISSEN? (94%) -> DANS MET ONS MEE (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/voorstelling/brrrothers-6` (detail, direct), `/contact` (about, direct), `/voorstelling/up-next-stilzitten-is-voor-stoelen-7` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `aya-nl`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | BRRROTHERS 6+ | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `12%` | Section @ 12% | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `23%` | EIGENZINNIG DANSTHEATER VOOR EEN JONG PUBLIEK. | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `47%` | VOLG AYA | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `58%` | BRUTAAL | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `82%` | WE HOREN GRAAG VAN JE | `0` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `6800px` | `94%` | NIKS MISSEN? | `0` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `7266px` | `100%` | DANS MET ONS MEE | `0` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | BRRROTHERS 6+ | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4396px` | `50%` | AS YOU ARE | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `8793px` | `100%` | STEUN AYA | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `carousel_next` (`Next`, diff `33.053`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://aya.nl/voorstelling/brrrothers-6` | BRRROTHERS 6+ | `9912px` | `direct` (`879ms`) | [subpage-01-voorstelling-brrrothers-6.webp](assets/subpage-01-voorstelling-brrrothers-6.webp) |
+| `2` | `about` | `https://aya.nl/contact` | CONTACT | `6374px` | `direct` (`1103ms`) | [subpage-02-contact.webp](assets/subpage-02-contact.webp) |
+| `3` | `detail` | `https://aya.nl/voorstelling/up-next-stilzitten-is-voor-stoelen-7` | UP NEXT: STILZITTEN IS VOOR STOELEN 7+ | `7199px` | `direct` (`447ms`) | [subpage-03-voorstelling-up-next-stilzitten-is-v.webp](assets/subpage-03-voorstelling-up-next-stilzitten-is-v.webp) |
+

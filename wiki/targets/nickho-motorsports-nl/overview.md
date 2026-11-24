@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: nickho-motorsports-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://nickho-motorsports.nl/"
 final_url: "https://nickho-motorsports.nl/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Nick Ho - Dutch Racing Driver · Porsche Carrera Cup
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `54`
+- **Recovered Scripts**: `56`
 - **Recovered Stylesheets**: `2`
 
 ---

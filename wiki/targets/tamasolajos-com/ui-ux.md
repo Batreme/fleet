@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: tamasolajos-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `tamasolajos-com` (**Tamás Olajos — AI Filmmaker & Director · London & Budapest**)
 - **Production URL**: [https://tamasolajos.com/](https://tamasolajos.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×1082px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ffffff`)
 - **Summary**: Tamás Olajos is an award-winning AI filmmaker and director, Runway and Dreamina Creative Partner. Cinematic commercial campaigns and expe...
 - **Total Clean CSS Variables Extracted**: `1` (curated live-grounded set below)

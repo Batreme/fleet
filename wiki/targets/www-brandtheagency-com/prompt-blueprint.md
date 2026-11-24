@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-brandtheagency-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-brandtheagency-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 3
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#e4351e`)"
 ---
@@ -16,17 +21,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **BR& – Creating brands that make you smile** (https://www.brandtheagency.com/) — BR& is a creative agency based in Dubai offering branding, marketing, strategy, advertising and social media services. Blending local exp...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **BR& – Creating brands that make you smile** (`https://www.brandtheagency.com/`). BR& is a creative agency based in Dubai offering branding, marketing, strategy, advertising and social media services. Blending local exp...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#e4351e`)**.
 - **Anti-AI-Slop Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#efeee9` primary typography and `#e4351e` accents.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#e4351e` accents.
   - **Grounded Typographic Hierarchy**: Pairs `Gloock` for display copy (`creating brands that make you smile`) with `Helvetica Neue` and `Pixelify Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--form-field-checkbox-space-between-icon-and-text)`, padding `17px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
@@ -34,10 +41,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=904px` / doc `1804px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `17px` lateral canvas padding with `var(--form-field-checkbox-space-between-icon-and-text)` grid gap.
 - **Border Radius Scale**: `1000px`, `3px`, `.4rem`, `0.4rem`.
@@ -55,17 +60,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 | Semantic Role | Ground-Truth Value | Extracted Live / CSS Source |
 |---|---|---|
 | **Primary Canvas Substrate** | `#000000` | live computed `body` `background-color` (`computed_styles.json`) |
-| **Primary Typography Ink** | `#efeee9` | live computed `h1` `color` (`computed_styles.json`) |
+| **Primary Typography Ink** | `#ffffff` | live computed `button` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#3e3e3e` | `.sqs-system-error input.disable... { background-color: #3e3e3e }` |
 | **Interactive Accent / Highlight** | `#e4351e` | `ontent .buttons .confirmation-b... { background-color: #e4351e }` |
-| **Secondary / Muted Copy** | `#797979` | `ockStatus-box-kbArticleLink a:a... { color: #797979 }` |
+| **Secondary / Muted Copy** | `#efeee9` | live computed `p` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#262626` | `.T7RRDU2nDIcMmFA2 { border-color: #262626 }` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
 | Variable Name | Extracted Value | Semantic Role |
 |---|---|---|
-| `--image-component-container-width` | `initial` | Layout / Spatial Grid Token |
-| `--image-component-container-height` | `initial` | Layout / Spatial Grid Token |
 | `--tweak-form-block-title-color-on-background` | `#000` | Canvas / Surface Token |
 | `--tweak-form-block-caption-color-on-background` | `#000` | Canvas / Surface Token |
 | `--tweak-form-block-option-color-on-background` | `#000` | Canvas / Surface Token |
@@ -80,6 +83,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 | `--outline-hover-alpha-modifier` | `0.4` | Elevation / Border Token |
 | `--inverted-solid-hover-alpha-modifier` | `var(--solid-hover-alpha-modifier)` | Design System Custom Token |
 | `--inverted-outline-hover-alpha-modifier` | `var(--outline-hover-alpha-modifier)` | Elevation / Border Token |
+| `--solid-focus-alpha-modifier` | `1` | Design System Custom Token |
+| `--outline-focus-alpha-modifier` | `0.4` | Elevation / Border Token |
 
 ---
 
@@ -109,6 +114,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `layout-caption-overlay-hover .ima...`**: `transition: margin-bottom .1s ease-out` extracted from `www-brandtheagency-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.yui3-js-enabled>` and `<section.region>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `1804px`, deepest scrollY reached `904px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -123,7 +131,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <article.page-regions> (w=1440px)                      | │
 │ | H1: creating brands that make you smile                            | │
-│ | Substrate: #000000 | Ink: #efeee9 | Accent: #e4351e                | │
+│ | Substrate: #000000 | Ink: #ffffff | Accent: #e4351e                | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.region>) max-w: 1440px                     | │
 │ | +------------------------------+  +------------------------------+ | │
@@ -158,15 +166,19 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.yui3-js-enabled> — `www-brandtheagency-com`)**:
-   - Landmark `<header class="yui3-js-enabled">` (`1440px`) hosting `BR& – Creating brands that make you ` navigation (`Subscribe · our services · projects · careers · contact us`), DOM attributes (`data-sqsp-font-ids="6a3134d3db03507f54d78..."`, `data-name="static-context"`, `data-sqs-type="cookiepreferencesgetter"`, `data-motion-style="m-6b08526a3060ed6bcdf2"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
+   - Landmark `<header class="yui3-js-enabled">` (`1440px`) hosting `BR& – Creating brands that make you ` navigation (`Subscribe · our services · projects · careers · contact us`), DOM attributes (`data-sqsp-font-ids="6a313988fd7025398af25..."`, `data-name="static-context"`, `data-sqs-type="cookiepreferencesgetter"`, `data-motion-style="m-6b08526a3060ed6bcdf2"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
 2. **Hero Stage & Focal Lead (<article.page-regions> — `creating brands that make you smil`)**:
-   - Landmark `<article class="page-regions">` presenting display lead `creating brands that make you smile` and copy excerpt *"creating brands that make you smile"* over `#000000` canvas and `#efeee9` ink.
+   - Landmark `<article class="page-regions">` presenting display lead `creating brands that make you smile` and copy excerpt *"creating brands that make you smile"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.region> — `creating brands that make you smil`)**:
    - Landmark `<section class="region">` rendering section `creating brands that make you smile creating bran...` with copy *"creating brands that make you smile"*, asset references (`favicon.ico`, `www.brandtheagency.com`, `BR%26_banner.jpg`, `images.squarespace-cdn.com`), and grid rule `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`.
 4. **Interactive Detail & Feature Matrix (<section.page-section> — `www-brandtheagency-com Interactive`)**:
    - Landmark `<section class="page-section full-bleed-section">` framing `www-brandtheagency-com Interactive Matrix` and `www-brandtheagency-com Archive & Directory` (*"creating brands that make you smile creating bran..."*) with `#3e3e3e` surface cards, `#e4351e` accents, and `.hWuyu_pGCLQnxiCx { animation-name:fadein;animation-iteration-count:1 }`.
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://www.brandtheagency.com/`)**:
    - Landmark `<footer class="sections">` anchoring `BR& – Creating brands that make ` footer links (`Subscribe · our services · projects · careers · contact us`), copy *"www-brandtheagency-com Interactive Matrix"*, and `#262626` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `94%`): Active landmark `creating brands that make you smilecreating brand...` · sticky/fixed elements: `1`
+- **Step 03** (`y=904px`, `100%`): Active landmark `creating brands that make you smilecreating brand...` · sticky/fixed elements: `1`
 
 ---
 
@@ -180,9 +192,9 @@ You are a principal frontend architect and design systems engineer. Build a comp
 ### 1. Visual Archetype & Anti-AI-Slop Mandates
 - **Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#e4351e`).
 - **Identity & Domain Context**: BR& is a creative agency based in Dubai offering branding, marketing, strategy, advertising and social media services. Blending local exp...
-- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#efeee9`, **Accent / Highlight**: `#e4351e`.
+- **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#e4351e`.
 - **Site-Specific Differentiators**:
-  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#efeee9` primary typography and `#e4351e` accents.
+  - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#e4351e` accents.
   - **Grounded Typographic Hierarchy**: Pairs `Gloock` for display copy (`creating brands that make you smile`) with `Helvetica Neue` and `Pixelify Sans`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--form-field-checkbox-space-between-icon-and-text)`, padding `17px`) with `cubic-bezier(.175,.885,.32,1.275)` easing and Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router.
 
@@ -191,8 +203,6 @@ Declare and consume these exact custom properties extracted from `www-brandtheag
 
 :root {
   /* BR& – Creating brands that make you smile (www-brandtheagency-com) — Live-Grounded CSS Variables */
-  --image-component-container-width: initial; /* Layout / Spatial Grid Token (www-brandtheagency-com) */
-  --image-component-container-height: initial; /* Layout / Spatial Grid Token (www-brandtheagency-com) */
   --tweak-form-block-title-color-on-background: #000; /* Canvas / Surface Token (www-brandtheagency-com) */
   --tweak-form-block-caption-color-on-background: #000; /* Canvas / Surface Token (www-brandtheagency-com) */
   --tweak-form-block-option-color-on-background: #000; /* Canvas / Surface Token (www-brandtheagency-com) */
@@ -207,20 +217,22 @@ Declare and consume these exact custom properties extracted from `www-brandtheag
   --outline-hover-alpha-modifier: 0.4; /* Elevation / Border Token (www-brandtheagency-com) */
   --inverted-solid-hover-alpha-modifier: var(--solid-hover-alpha-modifier); /* Design System Custom Token (www-brandtheagency-com) */
   --inverted-outline-hover-alpha-modifier: var(--outline-hover-alpha-modifier); /* Elevation / Border Token (www-brandtheagency-com) */
+  --solid-focus-alpha-modifier: 1; /* Design System Custom Token (www-brandtheagency-com) */
+  --outline-focus-alpha-modifier: 0.4; /* Elevation / Border Token (www-brandtheagency-com) */
 }
 
 ### 3. Semantic Color & Materiality Contract
 Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Canvas Substrate**: `#000000` — grounded in live computed `body` `background-color` (`computed_styles.json`)
-- **Primary Typography Ink**: `#efeee9` — grounded in live computed `h1` `color` (`computed_styles.json`)
+- **Primary Typography Ink**: `#ffffff` — grounded in live computed `button` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#3e3e3e` — grounded in `.sqs-system-error input.disable... { background-color: #3e3e3e }`
 - **Interactive Accent / Highlight**: `#e4351e` — grounded in `ontent .buttons .confirmation-b... { background-color: #e4351e }`
-- **Secondary / Muted Copy**: `#797979` — grounded in `ockStatus-box-kbArticleLink a:a... { color: #797979 }`
+- **Secondary / Muted Copy**: `#efeee9` — grounded in live computed `p` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#262626` — grounded in `.T7RRDU2nDIcMmFA2 { border-color: #262626 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `17px` lateral canvas padding with `var(--form-field-checkbox-space-between-icon-and-text)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--form-field-checkbox-space-between-icon-and-text)`)
@@ -240,11 +252,11 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-brandtheagency-com` (`BR& – Creating brands that make you smile`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.yui3-js-enabled> — `www-brandtheagency-com`)**:
-   - DOM & Selectors: Landmark `<header class="yui3-js-enabled">` (`1440px`) hosting `BR& – Creating brands that make you ` navigation (`Subscribe · our services · projects · careers · contact us`), DOM attributes (`data-sqsp-font-ids="6a3134d3db03507f54d78..."`, `data-name="static-context"`, `data-sqs-type="cookiepreferencesgetter"`, `data-motion-style="m-6b08526a3060ed6bcdf2"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
+   - DOM & Selectors: Landmark `<header class="yui3-js-enabled">` (`1440px`) hosting `BR& – Creating brands that make you ` navigation (`Subscribe · our services · projects · careers · contact us`), DOM attributes (`data-sqsp-font-ids="6a313988fd7025398af25..."`, `data-name="static-context"`, `data-sqs-type="cookiepreferencesgetter"`, `data-motion-style="m-6b08526a3060ed6bcdf2"`), and stylesheet rule `.J5FOAYd29BA3bVlN { animation-name:spin;animation-duration:1s;animation-timing-function:line... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.yui3-js-enabled> — `www-brandtheagency-com`)` (`www-brandtheagency-com`) adapts across `@media (prefers-reduced-motion)`, `@media (prefers-reduced-motion:reduce)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:1024px)` with `cubic-bezier(.175,.885,.32,1.275)`, `cubic-bezier(.5,0,1,.5)`, `cubic-bezier(.4,0,.2,1)` transitions and links `Subscribe · our services · projects · careers · contact us`.
 2. **Hero Stage & Focal Lead (<article.page-regions> — `creating brands that make you smil`)**:
-   - DOM & Selectors: Landmark `<article class="page-regions">` presenting display lead `creating brands that make you smile` and copy excerpt *"creating brands that make you smile"* over `#000000` canvas and `#efeee9` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#000000` background with `#efeee9` headline `creating brands that make you smile`.
+   - DOM & Selectors: Landmark `<article class="page-regions">` presenting display lead `creating brands that make you smile` and copy excerpt *"creating brands that make you smile"* over `#000000` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×2616px` mobile) sets `#000000` background with `#ffffff` headline `creating brands that make you smile`.
 3. **Primary Showcase & Content Grid (<section.region> — `creating brands that make you smil`)**:
    - DOM & Selectors: Landmark `<section class="region">` rendering section `creating brands that make you smile creating bran...` with copy *"creating brands that make you smile"*, asset references (`favicon.ico`, `www.brandtheagency.com`, `BR%26_banner.jpg`, `images.squarespace-cdn.com`), and grid rule `.n0vbvuFosektXczs { animation-name:fadeout;animation-iteration-count:1 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.region> — `creating brands that make you smil`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--form-field-checkbox-space-between-icon-and-text)`) on desktop and Single-column vertical stack at `390px` viewport width with `17px` horizontal padding on mobile.
@@ -253,7 +265,7 @@ Scaffold `www-brandtheagency-com` (`BR& – Creating brands that make you smile`
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-section> — `www-brandtheagency-com Interactive`)` uses `1000px`, `3px`, `.4rem`, `0.4rem` radii, `#e4351e` highlights, and assets (favicon.ico, www.brandtheagency.com, BR%26_banner.jpg).
 5. **Colophon & Global Directory Footer (<footer.sections> — `https://www.brandtheagency.com/`)**:
    - DOM & Selectors: Landmark `<footer class="sections">` anchoring `BR& – Creating brands that make ` footer links (`Subscribe · our services · projects · careers · contact us`), copy *"www-brandtheagency-com Interactive Matrix"*, and `#262626` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://www.brandtheagency.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `17px` lateral canvas padding with `var(--form-field-checkbox-space-between-icon-and-text)` grid gap and attributes (data-sqsp-font-ids="6a3134d3db03507f54d78...", data-name="static-context", data-sqs-type="cookiepreferencesgetter").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.sections> — `https://www.brandtheagency.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `17px` lateral canvas padding with `var(--form-field-checkbox-space-between-icon-and-text)` grid gap and attributes (data-sqsp-font-ids="6a313988fd7025398af25...", data-name="static-context", data-sqs-type="cookiepreferencesgetter").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"creating brands that make you smile"*
@@ -272,8 +284,29 @@ Scaffold `www-brandtheagency-com` (`BR& – Creating brands that make you smile`
 - **Selector `layout-caption-overlay-hover .ima...`**: `transition: margin-bottom .1s ease-out` extracted from `www-brandtheagency-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.175,.885,.32,1.275)`)**: Governs interactive state transitions across `<header.yui3-js-enabled>` and `<section.region>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline, Barba.js Page Transition Router with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `1804px` across 3 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%) -> creating brands that make y... (94%) -> creating brands that make y... (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-brandtheagency-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `94%` | creating brands that make you smilecreating b... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `904px` | `100%` | creating brands that make you smilecreating b... | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | creating brands that make you smilecreati... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `379px` | `50%` | creating brands that make you smilecreati... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `758px` | `100%` | Give us your email, we will send you cool... | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

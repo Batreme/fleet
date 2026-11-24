@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-qissa-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-qissa-co-uk"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#0c1533`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
 
 > **Indian Restaurant in Sevenoaks, Kent · Qissa** (https://www.qissa.co.uk/) — Qissa — A Tale of Food. Modern Indian dining beneath the blossoms in the heart of Sevenoaks, Kent. Reserve a table or order takeaway. Rat...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Indian Restaurant in Sevenoaks, Kent · Qissa** (`https://www.qissa.co.uk/`). Qissa — A Tale of Food. Modern Indian dining beneath the blossoms in the heart of Sevenoaks, Kent. Reserve a table or order takeaway. Rat...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#0c1533`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a1230` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f6f1e7` primary typography and `#0c1533` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Cormorant Garamond` for display copy (`Qissa`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Cormorant Garamond` for display copy (`Qissa`) with `Manrope`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `72px`) with `cubic-bezier(.22,.61,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=10842px` / doc `11788px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `72px` lateral canvas padding with `22px` grid gap.
 - **Border Radius Scale**: `100%`, `100px`, `50%`, `var(--radius)`.
@@ -100,7 +105,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 121.6px`, `line-height: 119.168px`, `font-weight: 330`, `letter-spacing: -2.432px`); CSS variables `--f-display: 'Cormorant Garamond', 'Times New Roman', serif`; rule `.hero-title` (`font-size: clamp(2rem,9vw,7.6rem)`, `letter-spacing: -.02em`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 57.6px`, `line-height: 59.904px`, `font-weight: 340`, `letter-spacing: -0.864px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 62.72px`, `font-weight: 330`, `letter-spacing: -1.28px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); CSS variables `--f-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`line-height: 1.6`, `font-weight: 350`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); rule `small` (`font-size: .7rem`).
 
@@ -117,6 +122,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
 - **Selector `.site-header`**: `transition: padding .5s var(--ease),background .5s var(--ease),backdrop-fi...` extracted from `www-qissa-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.section>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `11788px`, deepest scrollY reached `10842px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Nav / Drawer Probe (`MENU`)**: Triggered visual change (pixel diff `29.403`, captured in `assets/state-nav.webp`); revealed links: Qissa — A Tale of Food, ORDER, RESERVE, VIEW MENU, RESERVE A TABLE.
+- **Hover Physics (`primary_cta` · `VIEW MENU`)**: `transform`: `none` -> `matrix(1, 0, 0, 1, 0, -...`; `color`: `rgb(246, 241, 231)` -> `rgb(240, 217, 160)`; `borderColor`: `rgba(201, 162, 75, 0.22)` -> `rgb(201, 162, 75)` (`transition-duration: 0.5s, 0.5s, 0.4s, 0.4s`, `timing: cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1), ease, ease`).
+- **Route Transition Architecture**: First internal navigation (`/journal/`) measured as `direct` in `1690ms`.
 
 ---
 
@@ -127,7 +138,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Indian Restaurant in Sevenoaks, Kent · Qis │
 │ ====================================================================== │
-│ [ <header.site-header> (1440x133px)   | 00 Home · 01 Our Story · 02  ] │
+│ [ <header.site-header> (1440x136px)   | 00 Home · 01 Our Story · 02  ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.hero> (w=1440px)                              | │
 │ | H1: Qissa                                                          | │
@@ -166,7 +177,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-qissa-co-uk`)**:
-   - Landmark `<header class="site-header">` (`1440x133px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Landmark `<header class="site-header">` (`1440x136px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Qissa`)**:
    - Landmark `<section class="hero">` presenting display lead `Qissa` and copy excerpt *"Celebrating the flavors of India with dishes inspired by differen"* over `#0a1230` canvas and `#f6f1e7` ink.
 3. **Primary Showcase & Content Grid (<section.section> — `A word that means a tale.`)**:
@@ -175,6 +186,20 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0a1230` / `#
    - Landmark `<section class="section masterpieces">` framing `Crafted icons & signature plates.` and `Explore the menu, course by course.` (*"‘Qissa’ tells the extraordinary stories behind the foods we eat: "*) with `#23282d` surface cards, `#0c1533` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://www.qissa.co.uk/`)**:
    - Landmark `<footer class="site-footer">` anchoring `Indian Restaurant in Sevenoaks, ` footer links (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), copy *"Qissa is a place of gathering, of celebrations, of business,"*, and `#1e2c57` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Qissa` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `8%`): Active landmark `A word that means a tale.` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `24%`): Active landmark `Section @ 24%` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `39%`): Active landmark `A feast worth gathering for.` · sticky/fixed elements: `1`
+- **Step 05** (`y=6800px`, `62%`): Active landmark `Beneath the blossoms.` · sticky/fixed elements: `1`
+- **Step 06** (`y=8500px`, `78%`): Active landmark `Section @ 78%` · sticky/fixed elements: `1`
+- **Step 07** (`y=10200px`, `94%`): Active landmark `Reserve a Table` · sticky/fixed elements: `1`
+- **Step 08** (`y=10842px`, `100%`): Active landmark `EXPLORE` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/journal/`)**: `https://www.qissa.co.uk/journal/` — H1: `Journal`, scrollHeight `2634px`, transition `direct` (`1690ms`)
+- **About Route (`/story/`)**: `https://www.qissa.co.uk/story/` — H1: `Our Story`, scrollHeight `4585px`, transition `direct` (`649ms`)
+- **About Route (`/contact/`)**: `https://www.qissa.co.uk/contact/` — H1: `Visit Us`, scrollHeight `2952px`, transition `direct` (`1235ms`)
 
 ---
 
@@ -191,7 +216,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#0a1230` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#f6f1e7`, **Accent / Highlight**: `#0c1533`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0a1230` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f6f1e7` primary typography and `#0c1533` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Cormorant Garamond` for display copy (`Qissa`) with `Manrope` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Cormorant Garamond` for display copy (`Qissa`) with `Manrope`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 22px`, padding `72px`) with `cubic-bezier(.22,.61,.36,1)` easing and HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -235,8 +260,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--blossom-2`)**: `#f2c6d9` — grounded in `var(--blossom-2)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `72px` lateral canvas padding with `22px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`)
@@ -249,18 +274,18 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 121.6px`, `line-height: 119.168px`, `font-weight: 330`, `letter-spacing: -2.432px`); CSS variables `--f-display: 'Cormorant Garamond', 'Times New Roman', serif`; rule `.hero-title` (`font-size: clamp(2rem,9vw,7.6rem)`, `letter-spacing: -.02em`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 57.6px`, `line-height: 59.904px`, `font-weight: 340`, `letter-spacing: -0.864px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 62.72px`, `font-weight: 330`, `letter-spacing: -1.28px`); rule `.h2` (`font-size: clamp(2rem,4.6vw,3.6rem)`, `letter-spacing: -.015em`, `font-weight: 340`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); CSS variables `--f-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`; rule `body` (`line-height: 1.6`, `font-weight: 350`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 350`); rule `small` (`font-size: .7rem`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-qissa-co-uk` (`Indian Restaurant in Sevenoaks, Kent · Qissa`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.site-header> — `www-qissa-co-uk`)**:
-   - DOM & Selectors: Landmark `<header class="site-header">` (`1440x133px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - DOM & Selectors: Landmark `<header class="site-header">` (`1440x136px`) hosting `Indian Restaurant in Sevenoaks, Kent` navigation (`00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`), DOM attributes (`data-u="contact"`, `data-d="qissa.co.uk"`, `data-tilt`, `data-count="4.8"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.site-header> — `www-qissa-co-uk`)` (`www-qissa-co-uk`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:560px)`, `@media (max-width:820px)` with `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.65,.05,.36,1)`, `cubic-bezier(0.22,1,0.36,1)` transitions and links `00 Home · 01 Our Story · 02 The Menu · Food Menu · Drinks Menu`.
 2. **Hero Stage & Focal Lead (<section.hero> — `Qissa`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `Qissa` and copy excerpt *"Celebrating the flavors of India with dishes inspired by differen"* over `#0a1230` canvas and `#f6f1e7` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#0a1230` background with `#f6f1e7` headline `Qissa`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#0a1230` background with `#f6f1e7` headline `Qissa`.
 3. **Primary Showcase & Content Grid (<section.section> — `A word that means a tale.`)**:
    - DOM & Selectors: Landmark `<section class="section">` rendering section `A word that means a tale.` with copy *"Food is all about its story — the origin, the spices, the texture"*, asset references (`gtm.js`, `hero-poster.webp`, `favicon-96.png`, `favicon-32.png`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section> — `A word that means a tale.`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 22px`) on desktop and Single-column vertical stack at `390px` viewport width with `72px` horizontal padding on mobile.
@@ -291,8 +316,49 @@ Scaffold `www-qissa-co-uk` (`Indian Restaurant in Sevenoaks, Kent · Qissa`) wit
 - **Selector `.site-header`**: `transition: padding .5s var(--ease),background .5s var(--ease),backdrop-fi...` extracted from `www-qissa-co-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.site-header>` and `<section.section>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `11788px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Qissa (0%) -> A word that means a tale. (8%) -> Section @ 24% (24%) -> A feast worth gathering for. (39%) -> Beneath the blossoms. (62%) -> Section @ 78% (78%) -> Reserve a Table (94%) -> EXPLORE (100%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`MENU`) with Escape-to-close keyboard handling.
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform, color, borderColor` with `0.5s, 0.5s, 0.4s, 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1), ease, ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/journal/` (listing, direct), `/story/` (about, direct), `/contact/` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-qissa-co-uk`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Qissa | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `8%` | A word that means a tale. | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `24%` | Section @ 24% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `39%` | A feast worth gathering for. | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `62%` | Beneath the blossoms. | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `78%` | Section @ 78% | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `94%` | Reserve a Table | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `10842px` | `100%` | EXPLORE | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Qissa | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5938px` | `50%` | Truck Drivers Lamb Curry | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `11877px` | `100%` | HOURS | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`MENU`, diff `29.403`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.qissa.co.uk/journal/` | Journal | `2634px` | `direct` (`1690ms`) | [subpage-01-journal.webp](assets/subpage-01-journal.webp) |
+| `2` | `about` | `https://www.qissa.co.uk/story/` | Our Story | `4585px` | `direct` (`649ms`) | [subpage-02-story.webp](assets/subpage-02-story.webp) |
+| `3` | `about` | `https://www.qissa.co.uk/contact/` | Visit Us | `2952px` | `direct` (`1235ms`) | [subpage-03-contact.webp](assets/subpage-03-contact.webp) |
+

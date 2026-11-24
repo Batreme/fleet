@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: giga-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://giga.ai/"
 final_url: "https://giga.ai/"
-status: analyzed
-http_status: 200
-capture_tier: tier1_fast
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://giga.ai/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://giga.ai/](https://giga.ai/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Giga: AI support agents that improve your metrics
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `45`
-- **Recovered Stylesheets**: `6`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://giga.ai/', waiting until 'domcontentloaded' )
+- **Page Title**: giga-ai
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `18`
+- **Recovered Stylesheets**: `5`
 
 ---
 

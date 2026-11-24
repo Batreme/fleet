@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: tengilemalamala-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tengilemalamala.com/"
 final_url: "https://tengilemalamala.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Luxury Safari Experiences in Greater Kruger & Sabi Sand · Tengile MalaMa...
 - **Identified Frameworks**: Next.js
-- **Recovered Scripts**: `42`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `223`
+- **Recovered Stylesheets**: `38`
 
 ---
 

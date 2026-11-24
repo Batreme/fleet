@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: layernative-com_tinkeroll"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://layernative.com/tinkeroll/"
 final_url: "https://layernative.com/tinkeroll/"
 status: blocked
-http_status: 200
+http_status: null
 capture_tier: none
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://layernative.com/tinkeroll/', waiting until 'domcontentloaded' )"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://layernative.com/tinkeroll/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -28,8 +28,8 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://layernative.com/tinkeroll/](https://layernative.com/tinkeroll/)
-- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://layernative.com/tinkeroll/', waiting until 'domcontentloaded' )
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://layernative.com/tinkeroll/', waiting until 'domcontentloaded' )
 - **Page Title**: layernative-com_tinkeroll
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `7`

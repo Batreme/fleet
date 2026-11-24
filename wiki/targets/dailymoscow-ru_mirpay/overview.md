@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: dailymoscow-ru_mirpay"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://dailymoscow.ru/mirpay"
 final_url: "https://dailymoscow.ru/mirpay"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Спорт без лишних действий — Mir Pay × Daily Moscow
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `4`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `20`
+- **Recovered Stylesheets**: `7`
 
 ---
 

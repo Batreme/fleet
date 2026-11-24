@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: explorewashingtonpark-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://explorewashingtonpark.org"
 final_url: "https://www.explorewashingtonpark.org/"
-status: analyzed
-http_status: 200
-capture_tier: tier1_fast
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://explorewashingtonpark.org/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -28,11 +29,12 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://explorewashingtonpark.org](https://explorewashingtonpark.org)
 - **Final Redirected URL**: [https://www.explorewashingtonpark.org/](https://www.explorewashingtonpark.org/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Explore Washington Park
-- **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `90`
-- **Recovered Stylesheets**: `39`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://explorewashingtonpark.org/', waiting until 'domcontentloaded' )
+- **Page Title**: explorewashingtonpark-org
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `57`
+- **Recovered Stylesheets**: `29`
 
 ---
 

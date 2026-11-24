@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-discoverforgiveness-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-discoverforgiveness-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 2
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `#433f35` ink, `#0082f3` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
 
 > **Discover Forgiveness · Templeton World Charity Foundation** (https://www.discoverforgiveness.org/) — Explore the transformative power of forgiveness at Discover Forgiveness. Our experts, from psychologists to spiritual leaders, offer insi...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Discover Forgiveness · Templeton World Charity Foundation** (`https://www.discoverforgiveness.org/`). Explore the transformative power of forgiveness at Discover Forgiveness. Our experts, from psychologists to spiritual leaders, offer insi...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `#433f35` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fefefb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#433f35` primary typography and `#0082f3` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=5343px` / doc `6243px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1320px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `2px`.
@@ -58,12 +63,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
 | **Primary Typography Ink** | `#433f35` | live computed `body` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f0f0e5` | live computed `header` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
-| **Secondary / Muted Copy** | `#777269` | live computed `h2` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#6251d2` | live computed `h1` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
-| **Variable Token (`--purple3`)** | `#6251d2` | `var(--purple3)` in `:root` |
 | **Variable Token (`--tan5`)** | `#abaa9c` | `var(--tan5)` in `:root` |
 | **Variable Token (`--tan`)** | `#fbfaf4` | `var(--tan)` in `:root` |
 | **Variable Token (`--purple_transp`)** | `#8170f0` | `var(--purple_transp)` in `:root` |
+| **Variable Token (`--dk-gray`)** | `#777269` | `var(--dk-gray)` in `:root` |
 | **Variable Token (`--tan4`)** | `#cbc8be` | `var(--tan4)` in `:root` |
 | **Variable Token (`--tan3`)** | `#e2e2d5` | `var(--tan3)` in `:root` |
 | **Variable Token (`--transparent`)** | `#0000` | `var(--transparent)` in `:root` |
@@ -102,7 +107,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 89.8064px`, `line-height: 89.8064px`, `font-weight: 400`); rule `h1` (`font-size: 2em`).
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 22.4516px`, `line-height: 31.4323px`, `font-weight: 700`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 67.3548px`, `line-height: 80.8258px`, `font-weight: 400`); rule `h2` (`font-size: 32px`, `line-height: 36px`).
 - **Body Copy**: live computed `body` (`font-size: 14.9677px`, `line-height: 22.4516px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16.8387px`, `line-height: 18.5226px`, `font-weight: 800`); rule `small` (`font-size: 80%`).
 
@@ -119,6 +124,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-discoverforgiveness-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.445,.05,.55,.95)`)**: Governs interactive state transitions across `<header.section_header37>` and `<section.section_layout349>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6243px`, deepest scrollY reached `5343px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `Curious about forgiveness science?`)**: `borderColor`: `rgb(171, 170, 156)` -> `rgb(98, 81, 210)` (`transition-duration: 0.25s`, `timing: ease`).
+- **Route Transition Architecture**: First internal navigation (`/resources/hope-after-hurt-the-healing-power-of-forgiveness`) measured as `direct` in `648ms`.
 
 ---
 
@@ -177,6 +187,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `
    - Landmark `<section class="section_blog41">` framing `In this section, you will find videos from past ` and `Forgiveness is a powerful tool for personal grow` (*"Forgiveness is a powerful tool for personal growth and community "*) with `#f0f0e5` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer3_component> — `https://www.discoverforgiveness.org/`)**:
    - Landmark `<footer class="footer3_component">` anchoring `Discover Forgiveness · Templeton` footer links (`Educators · Faith Leaders · Anthropology · Art · Digital Landscape`), copy *"What makes forgiveness possible? Why is it so important? Is "*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Discover Forgiveness` · sticky/fixed elements: `4`
+- **Step 02** (`y=850px`, `16%`): Active landmark `WHAT IS DISCOVER FORGIVENESS?` · sticky/fixed elements: `4`
+- **Step 03** (`y=1700px`, `32%`): Active landmark `Forgiveness Tools` · sticky/fixed elements: `4`
+- **Step 04** (`y=2550px`, `48%`): Active landmark `Research` · sticky/fixed elements: `4`
+- **Step 05** (`y=3400px`, `64%`): Active landmark `Dialogues` · sticky/fixed elements: `4`
+- **Step 06** (`y=4250px`, `80%`): Active landmark `Templeton World Charity Foundation` · sticky/fixed elements: `4`
+- **Step 07** (`y=5100px`, `95%`): Active landmark `Featured Resources for Getting Started` · sticky/fixed elements: `4`
+- **Step 08** (`y=5343px`, `100%`): Active landmark `Hope After Hurt: The Healing Power of Forgiveness` · sticky/fixed elements: `4`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/resources/hope-after-hurt-the-healing-power-of-forgiveness`)**: `https://www.discoverforgiveness.org/resources/hope-after-hurt-the-healing-power-of-forgiveness` — H1: `Hope After Hurt: The Healing Power of Forgiveness`, scrollHeight `2058px`, transition `direct` (`648ms`)
+- **Detail Route (`/resources/forgiveness-updates-interpersonal-memories-to-be-less-negative`)**: `https://www.discoverforgiveness.org/resources/forgiveness-updates-interpersonal-memories-to-be-less-negative` — H1: `Forgiveness Updates Interpersonal Memories to Be...`, scrollHeight `1565px`, transition `direct` (`768ms`)
 
 ---
 
@@ -225,12 +248,12 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#433f35` — grounded in live computed `body` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#f0f0e5` — grounded in live computed `header` `background-color` (`computed_styles.json`)
 - **Interactive Accent / Highlight**: `#0082f3` — grounded in `.w-dropdown-link.w--current { color: #0082f3 }`
-- **Secondary / Muted Copy**: `#777269` — grounded in live computed `h2` `color` (`computed_styles.json`)
+- **Secondary / Muted Copy**: `#6251d2` — grounded in live computed `h1` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
-- **Variable Token (`--purple3`)**: `#6251d2` — grounded in `var(--purple3)` in `:root`
 - **Variable Token (`--tan5`)**: `#abaa9c` — grounded in `var(--tan5)` in `:root`
 - **Variable Token (`--tan`)**: `#fbfaf4` — grounded in `var(--tan)` in `:root`
 - **Variable Token (`--purple_transp`)**: `#8170f0` — grounded in `var(--purple_transp)` in `:root`
+- **Variable Token (`--dk-gray`)**: `#777269` — grounded in `var(--dk-gray)` in `:root`
 - **Variable Token (`--tan4`)**: `#cbc8be` — grounded in `var(--tan4)` in `:root`
 - **Variable Token (`--tan3`)**: `#e2e2d5` — grounded in `var(--tan3)` in `:root`
 - **Variable Token (`--transparent`)**: `#0000` — grounded in `var(--transparent)` in `:root`
@@ -239,8 +262,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--pear2`)**: `#d9e273` — grounded in `var(--pear2)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1320px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1320px`, `gap: 16px`)
@@ -253,7 +276,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Area Normal`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
 - **H1 Display Rule**: live computed `h1` (`font-size: 89.8064px`, `line-height: 89.8064px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
-- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 22.4516px`, `line-height: 31.4323px`, `font-weight: 700`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 67.3548px`, `line-height: 80.8258px`, `font-weight: 400`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 14.9677px`, `line-height: 22.4516px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16.8387px`, `line-height: 18.5226px`, `font-weight: 800`); rule `small` (`font-size: 80%`)
 
@@ -264,7 +287,7 @@ Scaffold `www-discoverforgiveness-org` (`Discover Forgiveness · Templeton World
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.section_header37> — `www-discoverforgiveness-org`)` (`www-discoverforgiveness-org`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.445,.05,.55,.95)` transitions and links `Educators · Faith Leaders · Anthropology · Art · Digital Landscape`.
 2. **Hero Stage & Focal Lead (<section.section_layout134> — `Discover Forgiveness`)**:
    - DOM & Selectors: Landmark `<section class="section_layout134">` presenting display lead `Discover Forgiveness` and copy excerpt *"Frontline workers include mental health professionals, faith lead"* over `#fefefb` canvas and `#433f35` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fefefb` background with `#433f35` headline `Discover Forgiveness`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fefefb` background with `#433f35` headline `Discover Forgiveness`.
 3. **Primary Showcase & Content Grid (<section.section_layout349> — `What is Discover forgiveness?`)**:
    - DOM & Selectors: Landmark `<section class="section_layout349">` rendering section `What is Discover forgiveness?` with copy *"In this section, you will find videos from past Forgiveness Forum"*, asset references (`cdn.prod.website-files.com`, `discover-forgiveness.webflow.shar...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section_layout349> — `What is Discover forgiveness?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1320px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -295,8 +318,42 @@ Scaffold `www-discoverforgiveness-org` (`Discover Forgiveness · Templeton World
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-discoverforgiveness-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.445,.05,.55,.95)`)**: Governs interactive state transitions across `<header.section_header37>` and `<section.section_layout349>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Lottie Vector Animation Player with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6243px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Discover Forgiveness (0%) -> WHAT IS DISCOVER FORGIVENESS? (16%) -> Forgiveness Tools (32%) -> Research (48%) -> Dialogues (64%) -> Templeton World Charity Fou... (80%) -> Featured Resources for Gett... (95%) -> Hope After Hurt: The Healin... (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `borderColor` with `0.25s ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/resources/hope-after-hurt-the-healing-power-of-forgiveness` (detail, direct), `/resources/forgiveness-updates-interpersonal-memories-to-be-less-negative` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-discoverforgiveness-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Discover Forgiveness | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `16%` | WHAT IS DISCOVER FORGIVENESS? | `4` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `32%` | Forgiveness Tools | `4` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `48%` | Research | `4` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `64%` | Dialogues | `4` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `80%` | Templeton World Charity Foundation | `4` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `5100px` | `95%` | Featured Resources for Getting Started | `4` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `5343px` | `100%` | Hope After Hurt: The Healing Power of Forgive... | `4` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Discover Forgiveness | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3103px` | `50%` | Dialogues | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6207px` | `100%` | Hope After Hurt: The Healing Power of For... | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.discoverforgiveness.org/resources/hope-after-hurt-the-healing-power-of-forgiveness` | Hope After Hurt: The Healing Power of... | `2058px` | `direct` (`648ms`) | [subpage-01-resources-hope-after-hurt-the-healin.webp](assets/subpage-01-resources-hope-after-hurt-the-healin.webp) |
+| `3` | `detail` | `https://www.discoverforgiveness.org/resources/forgiveness-updates-interpersonal-memories-to-be-less-negative` | Forgiveness Updates Interpersonal Mem... | `1565px` | `direct` (`768ms`) | [subpage-03-resources-forgiveness-updates-interp.webp](assets/subpage-03-resources-forgiveness-updates-interp.webp) |
+

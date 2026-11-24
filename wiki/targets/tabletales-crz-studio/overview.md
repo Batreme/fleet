@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: tabletales-crz-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tabletales.crz.studio/"
 final_url: "https://tabletales.crz.studio/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://tabletales.crz.studio/](https://tabletales.crz.studio/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Table Tales by CRZ.STUDIO · Board Game Collection & Play Log
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `19`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `70`
+- **Recovered Stylesheets**: `11`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-dontlookup-app"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-dontlookup-app` (**Don't Look Up — a game about keeping everyone looking down**)
 - **Production URL**: [https://www.dontlookup.app/](https://www.dontlookup.app/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f3ef` / `#ffffff`)
 - **Summary**: You are very rich, very tall, and standing on quite a lot of people. Keep them distracted and they keep paying. Let them look up, and the...
 - **Total Clean CSS Variables Extracted**: `24` (curated live-grounded set below)

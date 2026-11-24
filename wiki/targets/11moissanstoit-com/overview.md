@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: 11moissanstoit-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://11moissanstoit.com/"
 final_url: "https://11moissanstoit.com/"
 status: analyzed

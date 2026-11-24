@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thenest-pl_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thenest.pl/en"
 final_url: "https://thenest.pl/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Nest — a registered business address in central Warsaw
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `28`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `119`
+- **Recovered Stylesheets**: `12`
 
 ---
 

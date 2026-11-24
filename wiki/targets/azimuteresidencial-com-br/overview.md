@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: azimuteresidencial-com-br"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://azimuteresidencial.com.br/"
 final_url: "https://azimuteresidencial.com.br/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live desktop behavioral capture failed (0 valid keyframes)"
 tags:
   - target
   - reverse-engineering
@@ -27,7 +28,8 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://azimuteresidencial.com.br/](https://azimuteresidencial.com.br/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live desktop behavioral capture failed (0 valid keyframes)
 - **Page Title**: Azimute — Seu próximo horizonte · ASL
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `8`

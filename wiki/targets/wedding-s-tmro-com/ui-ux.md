@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: wedding-s-tmro-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `wedding-s-tmro-com` (**Wedding Invitation · Yuri & Tomoro**)
 - **Production URL**: [https://wedding.s-tmro.com/](https://wedding.s-tmro.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#333333`)
 - **Summary**: 結婚式へのご招待です。日時は2026年11月29日（いい肉の日）、10:00に受付、10:30に開始です。会場は桜通線「国際センター」駅近くのレストラン「recipe」です。
 - **Total Clean CSS Variables Extracted**: `16` (curated live-grounded set below)
@@ -75,5 +75,5 @@ http_status: 200
    - Landmark `<section class="section">` rendering section `Featured Work & Interactive Showcase` with copy *"“ii-fuku-nohi” & “ii-niku-nohi”"*, asset references (`84a82c89-316b-4152-8b5a-bb944f91e1b1`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.lenis-stopped { overflow: clip; }`.
 4. **Interactive Detail & Feature Matrix (<section.section:nth(3)> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"mixture restaurant"*) with `#ffffff` surface cards, `#333333` accents, and `.lenis.lenis-smooth iframe { pointer-events: none; }`.
-5. **Colophon & Global Directory Footer (<footer.section-inner> — `https://wedding.s-tmro.com/`)**:
-   - Landmark `<footer class="section-inner">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.text> — `https://wedding.s-tmro.com/`)**:
+   - Landmark `<footer class="text">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: fitosauna-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "fitosauna-com"
 status: blocked
 capture: none

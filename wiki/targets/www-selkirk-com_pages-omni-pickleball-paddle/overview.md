@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-selkirk-com_pages-omni-pickleball-paddle"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.selkirk.com/pages/omni-pickleball-paddle"
 final_url: "https://www.selkirk.com/pages/omni-pickleball-paddle?variant=45607806271590"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live desktop behavioral capture failed (0 valid keyframes)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.selkirk.com/pages/omni-pickleball-paddle](https://www.selkirk.com/pages/omni-pickleball-paddle)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live desktop behavioral capture failed (0 valid keyframes)
 - **Page Title**: Selkirk OMNI™ Pickleball Paddle · Selkirk Sport - We Are Pickleball
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `139`
+- **Recovered Scripts**: `134`
 - **Recovered Stylesheets**: `26`
 
 ---

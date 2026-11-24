@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: kohenavocats-com_avocats-droit-famille-paris"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://kohenavocats.com/avocats-droit-famille-paris/"
 final_url: "https://kohenavocats.com/avocats-droit-famille-paris/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Avocat Droit de la Famille Paris · Divorce, Garde d'Enfants, Succession
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `50`
-- **Recovered Stylesheets**: `35`
+- **Recovered Scripts**: `184`
+- **Recovered Stylesheets**: `45`
 
 ---
 

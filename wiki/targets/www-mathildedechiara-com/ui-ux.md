@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-mathildedechiara-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-mathildedechiara-com` (**Mathilde De Chiara, designer and interior architect**)
 - **Production URL**: [https://www.mathildedechiara.com/](https://www.mathildedechiara.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f7f5f2` / `#000000`)
 - **Summary**: Portfolio of Mathilde De Chiara: interior architecture, scenography and object design, from the Basque Country to Paris. Projects, exhibi...
 - **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)

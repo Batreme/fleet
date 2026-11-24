@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: m3-pg-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://m3-pg.de"
 final_url: "https://m3-pg.de/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: M3 Planungsgruppe
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `12`
-- **Recovered Stylesheets**: `7`
+- **Recovered Scripts**: `45`
+- **Recovered Stylesheets**: `28`
 
 ---
 

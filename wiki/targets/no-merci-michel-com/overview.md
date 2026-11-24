@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: no-merci-michel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://no.merci-michel.com"
 final_url: "https://no.merci-michel.com/en/"
 status: analyzed

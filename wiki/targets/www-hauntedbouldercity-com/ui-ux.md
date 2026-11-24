@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-hauntedbouldercity-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-hauntedbouldercity-com` (**Boulder City Ghost & UFO Walking Tour · Haunted Boulder City**)
 - **Production URL**: [https://www.hauntedbouldercity.com/](https://www.hauntedbouldercity.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#090f0e` canvas, `#e7e9d8` ink, `#b9cbb7` accent)
 - **Summary**: Meet the stranger side of Boulder City. Discover local ghost stories, desert mysteries and UFO folklore on a one-hour walking tour with B...
-- **Total Clean CSS Variables Extracted**: `18` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `20` (curated live-grounded set below)
 
 ---
 
@@ -76,5 +76,5 @@ http_status: 200
    - Landmark `<section class="intro section-pad">` rendering section `NICE LITTLE TOWN. STRANGE LITTLE SECRETS.` with copy *"Starting at Beer Zombies."*, asset references (`fog.webp`, `manticore.woff2`, `display.ttf`, `favicon-32.png`), and grid rule `selection { background:var(--accent);color:var(--ink) }`.
 4. **Interactive Detail & Feature Matrix (<section.stories-scroll> — `NOT EVERY LOCAL IS LIVING.`)**:
    - Landmark `<section class="stories-scroll">` framing `NOT EVERY LOCAL IS LIVING.` and `THE PAST DOESN’T STAY BURIED.` (*"Quiet streets. Restless spirits."*) with `#192a23` surface cards, `#b9cbb7` accents, and `button { font:inherit;cursor:pointer }`.
-5. **Colophon & Global Directory Footer (<footer.scroll-progress> — `https://www.hauntedbouldercity.com/`)**:
-   - Landmark `<footer class="scroll-progress">` anchoring `Boulder City Ghost & UFO Walking` footer links (`Get tickets · Directions`), copy *"Keep an eye on the sky."*, and `#35463d` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.skip-link> — `https://www.hauntedbouldercity.com/`)**:
+   - Landmark `<footer class="skip-link">` anchoring `Boulder City Ghost & UFO Walking` footer links (`Get tickets · Directions`), copy *"Keep an eye on the sky."*, and `#35463d` structural dividers.

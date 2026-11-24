@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: zeyraglow-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `zeyraglow-com` (**Zeyra Glow · Natural Body Care Products in the UAE**)
 - **Production URL**: [https://zeyraglow.com/](https://zeyraglow.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ff0000` accent)
 - **Summary**: Discover natural body care products by Zeyra Glow, made with comfortable, skin-friendly ingredients for simple everyday care. Shop online...
-- **Total Clean CSS Variables Extracted**: `148` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `150` (curated live-grounded set below)
 
 ---
 
@@ -77,12 +77,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.elementor> — `zeyraglow-com`)**:
-   - Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `merce-page .woocommerce-message .... { float:right }`.
+   - Landmark `<header class="elementor elementor-1083">` (`424x67px`) hosting `Zeyra Glow · Natural Body Care Produ` navigation (`Our story · Shop`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `.woocommerce form .form-row { padding:3px;margin:0 0 6px }`.
 2. **Hero Stage & Focal Lead (<section.products> — `Body care you'll actually keep usi`)**:
    - Landmark `<section class="products">` presenting display lead `Body care you'll actually keep using` and copy excerpt *"Taxes, shipping and promos are calculated at checkout."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<article.p-card> — `Glow Nila Body Cream`)**:
-   - Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `.woocommerce-page .col2-set { width:100% }`.
+   - Landmark `<article class="p-card">` rendering section `Glow Nila Body Cream` with copy *"Soft daily moisture, with argan"*, asset references (`fonts.googleapis.com`, `embed`, `woocommerce-layout.css`, `woocommerce-smallscreen.css`), and grid rule `focus::-webkit-input-placeholder { -webkit-transition:opacity .5s .5s ease;transition:opacity .5s .5s ease;... }`.
 4. **Interactive Detail & Feature Matrix (<article.p-card:nth(2)> — `Glow Nila Body Scrub`)**:
-   - Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce-page .col2-set::before { content:" ";display:table }`.
+   - Landmark `<article class="p-card">` framing `Glow Nila Body Scrub` and `Glow Nila Powder` (*"A rinse-off body scrub with argan, for uneven-feeling"*) with `#f2f2f2` surface cards, `#ff0000` accents, and `.woocommerce form .form-row label { line-height:2 }`.
 5. **Colophon & Global Directory Footer (<footer.cart-footer> — `https://zeyraglow.com/`)**:
    - Landmark `<footer class="cart-footer cart-footer--empty">` anchoring `Zeyra Glow · Natural Body Care P` footer links (`Our story · Shop`), copy *"A traditional beauty powder with Moroccan roots"*, and `#4d3939` structural dividers.

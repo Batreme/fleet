@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: heronaiapp-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://heronaiapp.com/"
 final_url: "https://heronaiapp.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Heron AI · Works inside your design tools
 - **Identified Frameworks**: Webflow, Framer, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `17`
+- **Recovered Scripts**: `68`
 - **Recovered Stylesheets**: `1`
 
 ---

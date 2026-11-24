@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: digitalofthings-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://digitalofthings.studio/"
 final_url: "https://digitalofthings.studio/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: digital of things · user experience digital studio
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `4`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `16`
+- **Recovered Stylesheets**: `4`
 
 ---
 

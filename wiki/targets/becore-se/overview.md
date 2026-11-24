@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: becore-se"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://becore.se/"
 final_url: "https://becore.se/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Becore
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `116`
-- **Recovered Stylesheets**: `10`
+- **Recovered Scripts**: `552`
+- **Recovered Stylesheets**: `40`
 
 ---
 

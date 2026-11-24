@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: nickho-motorsports-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `nickho-motorsports-nl` (**Nick Ho - Dutch Racing Driver · Porsche Carrera Cup**)
 - **Production URL**: [https://nickho-motorsports.nl/](https://nickho-motorsports.nl/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fed60a`)
 - **Summary**: 21-year-old racing driver from Rotterdam competing in Porsche Carrera Cup Deutschland. 17 career podiums, 14 circuits raced. Follow my mo...
 - **Total Clean CSS Variables Extracted**: `94` (curated live-grounded set below)

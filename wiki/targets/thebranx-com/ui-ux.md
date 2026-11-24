@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: thebranx-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `thebranx-com` (**The branding agency for startups, AI & SaaS - The Branx**)
 - **Production URL**: [https://thebranx.com](https://thebranx.com)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#050608` ink, `#0000ff` accent)
 - **Summary**: The Branx builds category-defining brands and websites for AI, SaaS and B2B tech startups: strategy, identity, web design and motion, fro...
-- **Total Clean CSS Variables Extracted**: `195` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `199` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Helvetica Neue`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 48.96px`, `line-height: 47.9808px`, `font-weight: 300`, `letter-spacing: -1.4688px`); CSS variables `--bx-display-ls: -.01em`, `--bx-fs-display: clamp(44px, 5.6vw, 120px)`, `--bx-lh-display: 1.05`; rule `h1` (`font-size: var(--bx-fs-statement)`, `line-height: var(--bx-lh-statement)`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40.32px`, `line-height: 42.336px`, `font-weight: 300`, `letter-spacing: -0.4032px`); CSS variables `--bx-fs-h2: clamp(32px, 3.6vw, 72px)`, `--text-3xl: var(--bx-fs-h2)`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `h2` (`font-size: var(--text-xl)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48.96px`, `line-height: 49.9392px`, `font-weight: 300`, `letter-spacing: -0.4896px`); CSS variables `--bx-fs-h2: clamp(32px, 3.6vw, 72px)`, `--text-3xl: var(--bx-fs-h2)`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `h2` (`font-size: var(--text-xl)`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--bx-fs-body: 16px`, `--bx-lh-body: 1.6`, `--leading-body: var(--bx-lh-body)`; rule `p` (`font-size: var(--bx-fs-lead)`, `line-height: var(--bx-lh-body)`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 25.6px`, `font-weight: 400`); CSS variables `--bx-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`, `--bx-fs-small: 15px`, `--font-mono: var(--bx-mono)`
 
@@ -74,12 +74,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.bx-navbar> — `thebranx-com`)**:
-   - Landmark `<header class="bx-navbar">` (`1440x73px`) hosting `The branding agency for startups, AI` navigation (`Brand identity · Web design & dev. · Strategy & messaging · Motion design · Product naming`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-ch2css="true"`, `data-bx-nav`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="bx-navbar">` (`1440x73px`) hosting `The branding agency for startups, AI` navigation (`Brand identity · Web design & dev. · Strategy & messaging · Motion design · Product naming`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-ch2css="true"`, `data-bx-nav`), and stylesheet rule `llus_b0edf5b9-module__eeLBqG__cla... { font-family:Marcellus,Marcellus Fallback;font-style:normal;font-weight:400 }`.
 2. **Hero Stage & Focal Lead (<section.bx-imm> — `The tech branding agency for AI & `)**:
    - Landmark `<section class="bx-imm">` presenting display lead `The tech branding agency for AI & SaaS startups` and copy excerpt *"THE STARTUP BRANDING AGENCY"* over `#ffffff` canvas and `#050608` ink.
 3. **Primary Showcase & Content Grid (<section.bx-section> — `The Branx turns complex tech into `)**:
-   - Landmark `<section class="bx-section">` rendering section `The Branx turns complex tech into category-defini...` with copy *"The startup branding agency"*, asset references (`ec2f4458eb06f74e-s.p.217u6tza6bra...`, `0u5m-o-ck0mfs.css`, `144yzcacp2x5_.css`, `194ug3jq7qzm9.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="bx-section">` rendering section `The Branx turns complex tech into category-defini...` with copy *"The startup branding agency"*, asset references (`ec2f4458eb06f74e-s.p.217u6tza6bra...`, `0u5m-o-ck0mfs.css`, `44nobezqmqmh0.css`, `194ug3jq7qzm9.js`), and grid rule `ellus_b0edf5b9-module__eeLBqG__va... { --font-marcellus:"Marcellus", "Marcellus Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.bx-philosophy> — `AI made it easy to launch a brand.`)**:
-   - Landmark `<section class="bx-philosophy">` framing `AI made it easy to launch a brand. It made it har...` and `Start with the identity. Add the rest when you're...` (*"The tech branding agency"*) with `#ffff00` surface cards, `#0000ff` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="bx-philosophy">` framing `AI made it easy to launch a brand. It made it har...` and `Start with the identity. Add the rest when you're...` (*"The tech branding agency"*) with `#ffff00` surface cards, `#0000ff` accents, and `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.bx-footer> — `https://thebranx.com`)**:
    - Landmark `<footer class="bx-footer">` anchoring `The branding agency for startups` footer links (`Brand identity · Web design & dev. · Strategy & messaging · Motion design · Product naming`), copy *"for AI & SaaS startups"*, and `#232426` structural dividers.

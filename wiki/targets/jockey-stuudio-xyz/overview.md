@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: jockey-stuudio-xyz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://jockey.stuudio.xyz/"
 final_url: "https://jockey.stuudio.xyz/"
 status: blocked
 http_status: null
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://jockey.stuudio.xyz/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -29,11 +29,11 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://jockey.stuudio.xyz/](https://jockey.stuudio.xyz/)
 - **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://jockey.stuudio.xyz/', waiting until 'domcontentloaded' )
 - **Page Title**: jockey-stuudio-xyz
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `3`
+- **Recovered Stylesheets**: `1`
 
 ---
 

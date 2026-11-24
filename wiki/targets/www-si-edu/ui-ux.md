@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-si-edu"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: 403
 block_reason: "Upstream HTTP 403 — Cloudflare Origin/WAF Error"

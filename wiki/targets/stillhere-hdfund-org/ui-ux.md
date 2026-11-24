@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: stillhere-hdfund-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `stillhere-hdfund-org` (**STILL HERE. · Three Years in Gaza · HDF**)
 - **Production URL**: [https://stillhere.hdfund.org/](https://stillhere.hdfund.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#111111` canvas, `#ffffff` ink, `#0000ff` accent)
 - **Summary**: Three years. One story. Experience three years of HDF’s work in Gaza from 2023–2026.
 - **Total Clean CSS Variables Extracted**: `74` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 126.72px`, `line-height: 117.85px`, `font-weight: 700`, `letter-spacing: -1.9008px`); CSS variables `--display: Barlow,'Arial Narrow',Impact,sans-serif`; rule `h1` (`font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 172.8px`, `line-height: 152.064px`, `font-weight: 900`, `letter-spacing: -3.456px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 302.4px`, `line-height: 266.112px`, `font-weight: 900`, `letter-spacing: -6.048px`); rule `h2` (`font-size: clamp(76px,8.8vw,156px)`, `line-height: .93`, `letter-spacing: -.015em`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--body: Inter,Arial,sans-serif`; rule `p` (`font-size: 14px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: normal`, `font-weight: 600`, `letter-spacing: 1.05px`); rule `small` (`font-size: 12px`)
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#111111` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `footer` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#090a09` | `.intro { background: #090a09 }` |
+| **Elevated Surface / Card Substrate** | `#090a09` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0000ff` | `.button-outline:hover { color: blue }` (`#0000ff`) |
 | **Secondary / Muted Copy** | `#a8aaa1` | `var(--muted)` in `:root` |
 | **Structural Hairline Border** | `#20201e` | `.year-ghost { stroke: #20201e }` |

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: webdesign-kernjosh-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `webdesign-kernjosh-com` (**Josh Kern**)
 - **Production URL**: [https://webdesign.kernjosh.com](https://webdesign.kernjosh.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×886px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5f1e6` / `#007aff`)
 - **Summary**: Josh Kern - webdesign and dev. Some work, info, and how to get in touch.
 - **Total Clean CSS Variables Extracted**: `64` (curated live-grounded set below)

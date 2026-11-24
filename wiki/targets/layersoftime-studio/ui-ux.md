@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: layersoftime-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `layersoftime-studio` (**LAYERS OF TIME — The show runs on our clock.**)
 - **Production URL**: [https://layersoftime.studio/](https://layersoftime.studio/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#8a9099`)
 - **Summary**: LAYERS OF TIME is a show studio in Singapore. We design light, video and sound for live rooms, and we build the engine that keeps all of...
 - **Total Clean CSS Variables Extracted**: `35` (curated live-grounded set below)
@@ -74,12 +74,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.header> — `layersoftime-studio`)**:
-   - Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `.brand__mark { flex:none;width:17px;height:20px }`.
+   - Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `root { --gutter:32px;--col-gap:24px;--header-h:64px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `The show runs on our clock.`)**:
    - Landmark `<section class="hero">` presenting display lead `The show runs on our clock.` and copy excerpt *"The mark is a rig. Ten fixtures, replaying a night recorded throu"* over `#08090b` canvas and `#e9ecef` ink.
 3. **Primary Showcase & Content Grid (<section.chapter> — `A show studio in Singapore that bu`)**:
-   - Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 22:54:01:21 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `hover { color:var(--fg) }`.
+   - Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 10:01:28:14 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `font-face { font-family:Söhne;src:url(/fonts/soehne-buch.woff2)format("woff2");font-... }`.
 4. **Interactive Detail & Feature Matrix (<section.section-tight> — `Rooms we have run.`)**:
-   - Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 23h 05m"*) with `#0e1013` surface cards, `#8a9099` accents, and `.footer__mark { flex:none;width:44px;height:52px }`.
+   - Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 11h 58m"*) with `#0e1013` surface cards, `#8a9099` accents, and `after { box-sizing:border-box }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://layersoftime.studio/`)**:
-   - Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 23h 05m"*, and `#232527` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 11h 58m"*, and `#232527` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: structureengineering-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `structureengineering-com-au` (**Structure Consulting Engineers · Structural Engineering Sydney**)
 - **Production URL**: [https://structureengineering.com.au/](https://structureengineering.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#000000` ink, `#ffffff` accent)
 - **Summary**: Specialists in structural engineering in Sydney, we work across a range of industries from residential to commercial, remedial, governmen...
 - **Total Clean CSS Variables Extracted**: `5` (curated live-grounded set below)
@@ -25,8 +25,8 @@ http_status: 200
 - **Body Font Stack**: `SequelSans`
 - **Monospace / Technical Font Stack**: `PPFraktionMono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 81.6px`, `line-height: 81.6px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `.h2` (`font-size: 3.7em`, `line-height: 1`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `body` (`font-size: 0.8em`, `line-height: 1.3`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 81.6px`, `line-height: 81.6px`, `font-weight: 400`); rule `.h2` (`font-size: 3.7em`, `line-height: 1`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `p` (`font-size: 0.8em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 20.8px`, `font-weight: 400`); rule `small` (`font-size: 80%`)
 
 ---
@@ -36,8 +36,8 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#f5f5f5` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffffff` | live computed `button` `background-color` (`computed_styles.json`) |
-| **Interactive Accent / Highlight** | `#ffffff` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#ffffff` | `.background-color-white { background-color: white }` (`#ffffff`) |
+| **Interactive Accent / Highlight** | `#ffffff` | `ackground-color-gold .block-hea... { color: #ffffff }` |
 | **Secondary / Muted Copy** | `#777777` | `form-wrap .dropdown-menu>.disab... { color: #777777 }` |
 | **Structural Hairline Border** | `#ffffff` | `a.btn-with-arrow:hover { border-color: #ffffff }` |
 | **Variable Token (`--color-gold`)** | `#b9b36d` | `var(--color-gold)` in `:root` |
@@ -74,8 +74,8 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.section> — `A different approach to traditiona`)**:
    - Landmark `<section class="section section-topbannerhome">` presenting display lead `A different approach to traditional structural en...` and copy excerpt *"Residential Northbridge House II"* over `#f5f5f5` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.section-intro> — `Northbridge House II`)**:
-   - Landmark `<section class="section section-intro">` rendering section `Northbridge House II` with copy *"Residential Castlecrag House"*, asset references (`www.googletagmanager.com`, `SequelSans-Medium.woff2`, `PPFraktionMono-Regular.woff2`, `s.svg`), and grid rule `body { margin: 0; }`.
+   - Landmark `<section class="section section-intro">` rendering section `Northbridge House II` with copy *"Residential Castlecrag House"*, asset references (`gtm.js`, `www.googletagmanager.com`, `SequelSans-Medium.woff2`, `PPFraktionMono-Regular.woff2`), and grid rule `figure { border: none; padding: 0; display: inline-block; margin: 1em 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.section-spread> — `Castlecrag House`)**:
-   - Landmark `<section class="section section-spread">` framing `Castlecrag House` and `Marrickville House` (*"Residential Marrickville House"*) with `#ffffff` surface cards, `#ffffff` accents, and `main { display: block; }`.
+   - Landmark `<section class="section section-spread">` framing `Castlecrag House` and `Marrickville House` (*"Residential Marrickville House"*) with `#ffffff` surface cards, `#ffffff` accents, and `img { pointer-events: none; }`.
 5. **Colophon & Global Directory Footer (<footer.preloadergone> — `https://structureengineering.com.au/`)**:
    - Landmark `<footer class="preloadergone">` anchoring `Structure Consulting Engineers ·` footer links (`About · Company · Careers · People · Sectors`), copy *"Through thoughtful design, clear communication and lateral t"*, and `#ffffff` structural dividers.

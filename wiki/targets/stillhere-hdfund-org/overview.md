@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: stillhere-hdfund-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://stillhere.hdfund.org/"
 final_url: "https://stillhere.hdfund.org/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: STILL HERE. · Three Years in Gaza · HDF
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `37`
+- **Recovered Scripts**: `38`
 - **Recovered Stylesheets**: `1`
 
 ---

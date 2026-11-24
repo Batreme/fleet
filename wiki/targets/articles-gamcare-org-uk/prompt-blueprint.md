@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: articles-gamcare-org-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "articles-gamcare-org-uk"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fff8ef` canvas, `#000000` ink, `#ff9c00` accent)"
 ---
@@ -16,31 +21,31 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff8ef` canvas, `
 
 > **The Gamification of Everything · GamCare** (https://articles.gamcare.org.uk/) — Gambling-like mechanics are becoming part of everyday digital life. Explore how gamification can shape behaviour and why prevention needs...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **The Gamification of Everything · GamCare** (`https://articles.gamcare.org.uk/`). Gambling-like mechanics are becoming part of everyday digital life. Explore how gamification can shape behaviour and why prevention needs...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fff8ef` canvas, `#000000` ink, `#ff9c00` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff8ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ff9c00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Outfit` for display copy (`The gamification of everything`) with `Outfit` and `Inconsolata`.
+  - **Grounded Typographic Hierarchy**: Uses `Outfit` across display (`The gamification of everything`) and body copy, paired with `Inconsolata` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `90rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.165,.84,.44,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `24130px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `90rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
-- **Border Radius Scale**: `50%`, `3px`, `100%`, `var(--_sizes---border-radius--small)`.
+- **Border Radius Scale**: `3px`, `100%`, `50%`, `var(--_sizes---border-radius--small)`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90rem`, `gap: 16px`).
@@ -104,11 +109,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff8ef` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `articles-gamcare-org-uk` stylesheet.
-- **Selector `.swiper-pagination`**: `transition: .3s opacity` extracted from `articles-gamcare-org-uk` stylesheet.
-- **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s top` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `articles-gamcare-org-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.165,.84,.44,1)`)**: Governs interactive state transitions across `<nav.nav_link-wrap>` and `<section.section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `24130px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
+- **Hover Physics (`primary_cta` · `Familiar patterns`)**: `opacity`: `0.3` -> `0.940152` (`transition-duration: 0.4s`, `timing: cubic-bezier(0.165, 0.84, 0.44, 1)`).
 
 ---
 
@@ -158,15 +167,24 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fff8ef` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<nav.nav_link-wrap> — `articles-gamcare-org-uk`)**:
-   - Landmark `<nav class="nav_link-wrap w-nav-menu">` (`137x26px`) hosting `The Gamification of Everything · Gam` navigation (`0808 8020 133`), DOM attributes (`data-wf-domain="articles.gamcare.org.uk"`, `data-wf-page="6a9541bcb6d4e8d3269865d8"`, `data-wf-site="6a9541b9b6d4e8d32698651c"`, `data-animation="default"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - Landmark `<nav class="nav_link-wrap w-nav-menu">` (`137x26px`) hosting `The Gamification of Everything · Gam` navigation (`0808 8020 133`), DOM attributes (`data-wf-domain="articles.gamcare.org.uk"`, `data-wf-page="6a9541bcb6d4e8d3269865d8"`, `data-wf-site="6a9541b9b6d4e8d32698651c"`, `data-animation="default"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
 2. **Hero Stage & Focal Lead (<section.section> — `The gamification of everything`)**:
    - Landmark `<section class="section is-home-hero">` presenting display lead `The gamification of everything` and copy excerpt *"Gambling-like mechanics are becoming part of everyday digital lif"* over `#fff8ef` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.section:nth(2)> — `What do we mean by gamification?`)**:
-   - Landmark `<section class="section">` rendering section `What do we mean by gamification?` with copy *"People contacting GamCare’s National Gambling Helpline are increa"*, asset references (`cdn.prod.website-files.com`, `gamcare.webflow.shared.3ff275b4f....`, `clarity.js`, `yqtqehex3o`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+   - Landmark `<section class="section">` rendering section `What do we mean by gamification?` with copy *"People contacting GamCare’s National Gambling Helpline are increa"*, asset references (`cdn.prod.website-files.com`, `gamcare.webflow.shared.3ff275b4f....`, `clarity.js`, `yqtqehex3o`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.section:nth(3)> — `The concern is not The concern is `)**:
-   - Landmark `<section class="section">` framing `The concern is not The concern is not gamificatio...` and `Gambling harm is changing shape.` (*"We’re talking about design features like variable rewards, near m"*) with `#ffff00` surface cards, `#ff9c00` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
+   - Landmark `<section class="section">` framing `The concern is not The concern is not gamificatio...` and `Gambling harm is changing shape.` (*"We’re talking about design features like variable rewards, near m"*) with `#ffff00` surface cards, `#ff9c00` accents, and `video { vertical-align:baseline;display:inline-block }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://articles.gamcare.org.uk/`)**:
    - Landmark `<footer class="footer">` anchoring `The Gamification of Everything ·` footer links (`0808 8020 133`), copy *"Drawing on nearly three decades’ experience, GamCare treats "*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The gamification of everything` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `4%`): Active landmark `#familiar-patterns` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `15%`): Active landmark `The signal` · sticky/fixed elements: `6`
+- **Step 04** (`y=5950px`, `26%`): Active landmark `The concern is not The concern is not gamificatio...` · sticky/fixed elements: `1`
+- **Step 05** (`y=8500px`, `37%`): Active landmark `Section @ 37%` · sticky/fixed elements: `5`
+- **Step 06** (`y=11050px`, `48%`): Active landmark `Section @ 48%` · sticky/fixed elements: `7`
+- **Step 07** (`y=13600px`, `59%`): Active landmark `Gambling harm is changing shape.` · sticky/fixed elements: `2`
+- **Step 08** (`y=14400px`, `62%`): Active landmark `If we look only at products legally` · sticky/fixed elements: `2`
 
 ---
 
@@ -183,7 +201,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fff8ef` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#ff9c00`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fff8ef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#ff9c00` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Outfit` for display copy (`The gamification of everything`) with `Outfit` and `Inconsolata`.
+  - **Grounded Typographic Hierarchy**: Uses `Outfit` across display (`The gamification of everything`) and body copy, paired with `Inconsolata` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `90rem` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.165,.84,.44,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,14 +237,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `90rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90rem`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `9px` horizontal padding
 - **Media Queries**: `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)`
-- **Corner Radii**: `50%`, `3px`, `100%`, `var(--_sizes---border-radius--small)`
+- **Corner Radii**: `3px`, `100%`, `50%`, `var(--_sizes---border-radius--small)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Outfit`
@@ -240,17 +258,17 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `articles-gamcare-org-uk` (`The Gamification of Everything · GamCare`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<nav.nav_link-wrap> — `articles-gamcare-org-uk`)**:
-   - DOM & Selectors: Landmark `<nav class="nav_link-wrap w-nav-menu">` (`137x26px`) hosting `The Gamification of Everything · Gam` navigation (`0808 8020 133`), DOM attributes (`data-wf-domain="articles.gamcare.org.uk"`, `data-wf-page="6a9541bcb6d4e8d3269865d8"`, `data-wf-site="6a9541b9b6d4e8d32698651c"`, `data-animation="default"`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - DOM & Selectors: Landmark `<nav class="nav_link-wrap w-nav-menu">` (`137x26px`) hosting `The Gamification of Everything · Gam` navigation (`0808 8020 133`), DOM attributes (`data-wf-domain="articles.gamcare.org.uk"`, `data-wf-page="6a9541bcb6d4e8d3269865d8"`, `data-wf-site="6a9541b9b6d4e8d32698651c"`, `data-animation="default"`), and stylesheet rule `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav_link-wrap> — `articles-gamcare-org-uk`)` (`articles-gamcare-org-uk`) adapts across `@media screen and (max-width:991px)`, `@media screen and (max-width:767px)`, `@media screen and (max-width:479px)`, `@media (min-width:768px)` with `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)` transitions and links `0808 8020 133`.
 2. **Hero Stage & Focal Lead (<section.section> — `The gamification of everything`)**:
    - DOM & Selectors: Landmark `<section class="section is-home-hero">` presenting display lead `The gamification of everything` and copy excerpt *"Gambling-like mechanics are becoming part of everyday digital lif"* over `#fff8ef` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fff8ef` background with `#000000` headline `The gamification of everything`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fff8ef` background with `#000000` headline `The gamification of everything`.
 3. **Primary Showcase & Content Grid (<section.section:nth(2)> — `What do we mean by gamification?`)**:
-   - DOM & Selectors: Landmark `<section class="section">` rendering section `What do we mean by gamification?` with copy *"People contacting GamCare’s National Gambling Helpline are increa"*, asset references (`cdn.prod.website-files.com`, `gamcare.webflow.shared.3ff275b4f....`, `clarity.js`, `yqtqehex3o`), and grid rule `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`.
+   - DOM & Selectors: Landmark `<section class="section">` rendering section `What do we mean by gamification?` with copy *"People contacting GamCare’s National Gambling Helpline are increa"*, asset references (`cdn.prod.website-files.com`, `gamcare.webflow.shared.3ff275b4f....`, `clarity.js`, `yqtqehex3o`), and grid rule `summary { display:block }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section:nth(2)> — `What do we mean by gamification?`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 90rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.section:nth(3)> — `The concern is not The concern is `)**:
-   - DOM & Selectors: Landmark `<section class="section">` framing `The concern is not The concern is not gamificatio...` and `Gambling harm is changing shape.` (*"We’re talking about design features like variable rewards, near m"*) with `#ffff00` surface cards, `#ff9c00` accents, and `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section:nth(3)> — `The concern is not The concern is `)` uses `50%`, `3px`, `100%`, `var(--_sizes---border-radius--small)` radii, `#ff9c00` highlights, and assets (cdn.prod.website-files.com, gamcare.webflow.shared.3ff275b4f...., clarity.js).
+   - DOM & Selectors: Landmark `<section class="section">` framing `The concern is not The concern is not gamificatio...` and `Gambling harm is changing shape.` (*"We’re talking about design features like variable rewards, near m"*) with `#ffff00` surface cards, `#ff9c00` accents, and `video { vertical-align:baseline;display:inline-block }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section:nth(3)> — `The concern is not The concern is `)` uses `3px`, `100%`, `50%`, `var(--_sizes---border-radius--small)` radii, `#ff9c00` highlights, and assets (cdn.prod.website-files.com, gamcare.webflow.shared.3ff275b4f...., clarity.js).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://articles.gamcare.org.uk/`)**:
    - DOM & Selectors: Landmark `<footer class="footer">` anchoring `The Gamification of Everything ·` footer links (`0808 8020 133`), copy *"Drawing on nearly three decades’ experience, GamCare treats "*, and `#e2e2e2` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://articles.gamcare.org.uk/`)` aligns to `90rem` (non-`@media` desktop container stylesheet rule) with `9px` lateral canvas padding with `16px` grid gap and attributes (data-wf-domain="articles.gamcare.org.uk", data-wf-page="6a9541bcb6d4e8d3269865d8", data-wf-site="6a9541b9b6d4e8d32698651c").
@@ -264,19 +282,46 @@ Scaffold `articles-gamcare-org-uk` (`The Gamification of Everything · GamCare`)
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.165,.84,.44,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)`
 - **Extracted Stylesheet Rules (`articles-gamcare-org-uk`)**:
-- `root { --swiper-theme-color:007aff }`
-- `host { position:relative;display:block;margin-left:auto;margin-right:auto;z-ind... }`
-- `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`
-- `.swiper-vertical>.swiper-wrapper { flex-direction:column }`
-- `.swiper-wrapper { transform:translate3d(0px,0,0) }`
+- `html { -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans... }`
+- `summary { display:block }`
+- `video { vertical-align:baseline;display:inline-block }`
+- `template { display:none }`
+- `strong { font-weight:700 }`
 - **Per-Selector Transition Rules**:
-- **Selector `.swiper-wrapper`**: `transition: var(--swiper-wrapper-transition-timing-function,initial)` extracted from `articles-gamcare-org-uk` stylesheet.
-- **Selector `.swiper-pagination`**: `transition: .3s opacity` extracted from `articles-gamcare-org-uk` stylesheet.
-- **Selector `n-bullets-dynamic .swiper-paginat...`**: `transition: .2s transform,.2s top` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-webflow-badge>img`**: `transition: unset` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-slider-dot`**: `transition: background-color .1s,color .1s` extracted from `articles-gamcare-org-uk` stylesheet.
+- **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `articles-gamcare-org-uk` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.165,.84,.44,1)`)**: Governs interactive state transitions across `<nav.nav_link-wrap>` and `<section.section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `24130px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: The gamification of everything (0%) -> #familiar-patterns (4%) -> The signal (15%) -> The concern is not The conc... (26%) -> Section @ 37% (37%) -> Section @ 48% (48%) -> Gambling harm is changing s... (59%) -> If we look only at products... (62%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `opacity` with `0.4s cubic-bezier(0.165, 0.84, 0.44, 1)`.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `articles-gamcare-org-uk`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The gamification of everything | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | #familiar-patterns | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `15%` | The signal | `6` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `26%` | The concern is not The concern is not gamific... | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `37%` | Section @ 37% | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `48%` | Section @ 48% | `7` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `59%` | Gambling harm is changing shape. | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `62%` | If we look only at products legally | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The gamification of everything | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Section @ 31% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | If we look only at products legally | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: palominoprod-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "palominoprod-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 3
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0000`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 > **Palomino — Cinematic Sports & Brand Films** (https://palominoprod.com/) — Cinematic sports and branded films—from global campaigns to athlete documentaries and live events—with strategy, premium production & edi...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x2484)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Palomino — Cinematic Sports & Brand Films** (`https://palominoprod.com/`). Cinematic sports and branded films—from global campaigns to athlete documentaries and live events—with strategy, premium production & edi...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#ff0000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `HostGrotesk` for display copy (`SPORTS INTO STORIES`) with `HostGrotesk` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `HostGrotesk` across display (`SPORTS INTO STORIES`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--gap-x-default)`, padding `20px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×2484px` (`assets/desktop-journey.webp`, `3` keyframes up to `y=1700px` / doc `8375px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `var(--gap-x-default)` grid gap.
 - **Border Radius Scale**: `3px`, `var(--radius-lg)`.
@@ -95,7 +100,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 172.8px`, `line-height: 172.8px`, `font-weight: 600`); rule `,h1` (`font-size: clamp(38px,5vw,101px)`, `line-height: 1.2`, `font-weight: 600`).
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 20px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `,h2` (`font-size: clamp(26px,3vw,50px)`, `line-height: 1.2`, `font-weight: 600`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 43.2px`, `line-height: 51.84px`, `font-weight: 600`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `,h2` (`font-size: clamp(26px,3vw,50px)`, `line-height: 1.2`, `font-weight: 600`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
 
@@ -112,6 +117,12 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `palominoprod-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.px-x-default>` and `<section.pt-y-default>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `8375px`, deepest scrollY reached `1700px` across `3` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `PALOMINO`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`carousel_next`)**: Tested `Next testimonial` (diff `2.81`).
+- **Route Transition Architecture**: First internal navigation (`/en/work`) measured as `SPA` in `2877ms`.
 
 ---
 
@@ -170,6 +181,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#
    - Landmark `<section class="px-x-default pt-y-default">` framing `Running FW26 × Decathlon` and `Mennen TV Spot` (*"S E E A L L W O R K S E E A L L W O R K"*) with `#008000` surface cards, `#ff0000` accents, and `html ::selection { background:var(--color-black);color:var(--color-white) }`.
 5. **Colophon & Global Directory Footer (<footer.select-none> — `https://palominoprod.com/`)**:
    - Landmark `<footer class="select-none bottom-0">` anchoring `Palomino — Cinematic Sports & Br` footer links (`W O R K W O R K · A B O U T A B O U T`), copy *"S E E A L L W O R K"*, and `#080748` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `SPORTS INTO STORIES` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `11%`): Active landmark `OUR CLIENTS` · sticky/fixed elements: `4`
+- **Step 03** (`y=1700px`, `23%`): Active landmark `KEY FIGURES` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/en/work`)**: `https://palominoprod.com/en/work` — H1: `SPORTS INTO STORIES`, scrollHeight `8375px`, transition `SPA` (`2877ms`)
+- **Detail Route (`/en/work/running-fw26-decathlon`)**: `https://palominoprod.com/en/work/running-fw26-decathlon` — H1: `Running FW26 × Decathlon — Adidas · Palomino`, scrollHeight `3154px`, transition `direct` (`1872ms`)
+- **About Route (`/en/about`)**: `https://palominoprod.com/en/about` — H1: `ABOUT`, scrollHeight `7121px`, transition `direct` (`1167ms`)
 
 ---
 
@@ -186,7 +206,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#000000` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#ff0000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#000000` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#ff0000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `HostGrotesk` for display copy (`SPORTS INTO STORIES`) with `HostGrotesk` and `SFMono-Regular`.
+  - **Grounded Typographic Hierarchy**: Uses `HostGrotesk` across display (`SPORTS INTO STORIES`) and body copy, paired with `SFMono-Regular` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `96rem` container bounds (`gap: var(--gap-x-default)`, padding `20px`) with `cubic-bezier(.4,0,.2,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +245,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-orange-400`)**: `#ff8b1a` — grounded in `var(--color-orange-400)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×2484px` (multi-frame vertical journey filmstrip (2484px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `20px` lateral canvas padding with `var(--gap-x-default)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--gap-x-default)`)
@@ -239,7 +259,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `HostGrotesk`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: live computed `h1` (`font-size: 172.8px`, `line-height: 172.8px`, `font-weight: 600`); rule `,h1` (`font-size: clamp(38px,5vw,101px)`, `line-height: 1.2`, `font-weight: 600`)
-- **H2 Section Rule**: live computed `h3 (primary section heading)` (`font-size: 20px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `,h2` (`font-size: clamp(26px,3vw,50px)`, `line-height: 1.2`, `font-weight: 600`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 43.2px`, `line-height: 51.84px`, `font-weight: 600`); CSS variables `--text-3xl: 1.875rem`, `--text-3xl--line-height: calc(2.25 / 1.875)`; rule `,h2` (`font-size: clamp(26px,3vw,50px)`, `line-height: 1.2`, `font-weight: 600`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
@@ -250,7 +270,7 @@ Scaffold `palominoprod-com` (`Palomino — Cinematic Sports & Brand Films`) with
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.px-x-default> — `palominoprod-com`)` (`palominoprod-com`) adapts across `@media (min-width:380px)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.3,1,.7,1)`, `cubic-bezier(.83,0,.17,1)` transitions and links `W O R K W O R K · A B O U T A B O U T`.
 2. **Hero Stage & Focal Lead (<section.top-0> — `SPORTS INTO STORIES`)**:
    - DOM & Selectors: Landmark `<section class="top-0 min-h-fit">` presenting display lead `SPORTS INTO STORIES` and copy excerpt *"Sports film and photography studio. We turn brand campaigns and a"* over `#000000` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#000000` background with `#ffffff` headline `SPORTS INTO STORIES`.
+   - Responsive Contract: Hero stage (`1280×2484px` desktop / `390×2616px` mobile) sets `#000000` background with `#ffffff` headline `SPORTS INTO STORIES`.
 3. **Primary Showcase & Content Grid (<section.pt-y-default> — `SELECTED PROJECTS`)**:
    - DOM & Selectors: Landmark `<section class="pt-y-default noise-overlay">` rendering section `SELECTED PROJECTS` with copy *"Where effort meets the light. A glimpse of the stories we've brou"*, asset references (`favicon.ico`, `HostGrotesk-Variable.woff2`, `0d_rtsbnnnoar.css`, `0eydbtu3qzciz.js`), and grid rule `html { scrollbar-width:none;-ms-overflow-style:none }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.pt-y-default> — `SELECTED PROJECTS`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: var(--gap-x-default)`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
@@ -281,8 +301,37 @@ Scaffold `palominoprod-com` (`Palomino — Cinematic Sports & Brand Films`) with
 - **Selector `.transition`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `palominoprod-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.px-x-default>` and `<section.pt-y-default>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `8375px` across 3 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: SPORTS INTO STORIES (0%) -> OUR CLIENTS (11%) -> KEY FIGURES (23%).
+- **Multi-Page Routes**: Scaffold internal routes `/en/work` (listing, SPA), `/en/work/running-fw26-decathlon` (detail, direct), `/en/about` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `palominoprod-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | SPORTS INTO STORIES | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `11%` | OUR CLIENTS | `4` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `23%` | KEY FIGURES | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | SPORTS INTO STORIES | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `8526px` | `50%` | TESTIMONIALS | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `10479px` | `100%` | Section @ 79% | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://palominoprod.com/en/work` | SPORTS INTO STORIES | `8375px` | `SPA` (`2877ms`) | [subpage-01-en-work.webp](assets/subpage-01-en-work.webp) |
+| `2` | `detail` | `https://palominoprod.com/en/work/running-fw26-decathlon` | Running FW26 × Decathlon — Adidas · P... | `3154px` | `direct` (`1872ms`) | [subpage-02-en-work-running-fw26-decathlon.webp](assets/subpage-02-en-work-running-fw26-decathlon.webp) |
+| `3` | `about` | `https://palominoprod.com/en/about` | ABOUT | `7121px` | `direct` (`1167ms`) | [subpage-03-en-about.webp](assets/subpage-03-en-about.webp) |
+

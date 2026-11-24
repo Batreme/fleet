@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-soe-org-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.soe.org.uk/"
 final_url: "https://soe.org.uk/"
 status: blocked

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-terrenohotel-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-terrenohotel-com_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `#570007` ink, `#cc3224` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `
 
 > **Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca** (https://www.terrenohotel.com/en/) — Boutique hotel in Palma de Mallorca with Mediterranean design, local character, rooftop moments and direct booking benefits on the offici...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca** (`https://www.terrenohotel.com/en/`). Boutique hotel in Palma de Mallorca with Mediterranean design, local character, rooftop moments and direct booking benefits on the offici...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `#570007` ink, `#cc3224` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecffb3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#570007` primary typography and `#cc3224` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `WT Central Avenue` for display copy (`A HOTEL WITH A NEIGHBORHOOD SOUL`) with `Tiempos Text` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1026px` container bounds (`gap: 10px`, padding `100px`) with `cubic-bezier(.68,-.55,.27,1.55)` easing and Swiper Touch Carousel Engine.
+  - **Grounded Typographic Hierarchy**: Pairs `WT Central Avenue` for display copy (`A HOTEL WITH A NEIGHBORHOOD SOUL`) with `Tiempos Text`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1026px` container bounds (`gap: 10px`, padding `var(--mirai-ui-tooltip-space)`) with `cubic-bezier(.68,-.55,.27,1.55)` easing and Swiper Touch Carousel Engine.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=9725px` / doc `10842px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1026px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
-- **Canvas Lateral Padding & Spacing**: `100px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `0px`, `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%`.
+- **Canvas Lateral Padding & Spacing**: `var(--mirai-ui-tooltip-space)` lateral canvas padding with `10px` grid gap.
+- **Border Radius Scale**: `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%`, `var(--mirai-ui-switch-border-radius)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1026px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `100px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (max-width: 767px)`, `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)`.
+- **Desktop Layout**: 2-column persistent left sidebar (`280px`, <aside.e-intro>) + `1440px` main content stage at `1440px` (`max-width: 1026px`, `gap: 10px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with collapsed `<aside.e-intro>` drawer navigation and `var(--mirai-ui-tooltip-space)` horizontal padding.
+- **Extracted CSS Media Queries**: `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)`, `@media only screen and (max-height:480px)`.
 
 ---
 
@@ -109,6 +114,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `
 - **Selector `input.I2Uiuq_input:-webkit-autofill`**: `transition: none` extracted from `www-terrenohotel-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.68,-.55,.27,1.55)`)**: Governs interactive state transitions across `<header.mdl-header>` and `<article.e-slide>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `10842px`, deepest scrollY reached `9725px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Nav / Drawer Probe (`header [role="button"]`)**: Triggered visual change (pixel diff `53.608`, captured in `assets/state-nav.webp`); revealed links: (+34) 871624624, Español, Català, Deutsch, SCROLL TO DISCOVER TE....
+- **Hover Physics (`primary_cta` · `Español`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/en/neighbourhood/`) measured as `direct` in `3025ms`.
 
 ---
 
@@ -117,21 +128,19 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `
 ### Visual Layout Schematic — Desktop (`1440px`, Grounded in `dom.html` & Landmark Bounding Boxes)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DESKTOP VIEWPORT (1440px) — Terreno Barrio Hotel · Boutique hotel in P │
+│ DESKTOP VIEWPORT (1440px) — Sidebar (280px) + Main (1440px)            │
 │ ====================================================================== │
-│ [ <header.mdl-header> (1440x90px)     | Overview · Index · Archive · ] │
-│ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <section.m-experiencias> (w=1440px)                    | │
-│ | H1: A HOTEL WITH A NEIGHBORHOOD SOUL                               | │
-│ | Substrate: #ecffb3 | Ink: #570007 | Accent: #cc3224                | │
-│ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<article.e-slide>) max-w: 1026px                    | │
-│ | +------------------------------+  +------------------------------+ | │
-│ | | a hotel with a neighborhood  |  | TERRENO IS PART OF THE NEIGH | | │
-│ | +------------------------------+  +------------------------------+ | │
-│ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<article.swiper-slide>) — THE PLACE TO STAY         | │
-│ ---------------------------------------------------------------------- │
+│ +--[ SIDEBAR (280px) ]--+--[ MAIN CONTENT STAGE (1440px) ]-----------+ │
+│ | <aside.e-intro>       | [ <header.mdl-heade | Overview · Index · ] | │
+│ | - Overview            | ------------------------------------------ | │
+│ | - Index               | HERO STAGE: <section.m-experiencias>       | │
+│ | - Archive             | H1: A HOTEL WITH A NEIGHBORHOOD SOUL       | │
+│ | - About               | Bg:#ecffb3 Ink:#570007 Acc:#cc3224         | │
+│ | x=32 h=752px rail     | ------------------------------------------ | │
+│ |                       | SHOWCASE: <article.e-slide> max:1026px     | │
+│ |                       | [a hotel with a nei] [TERRENO IS PART OF]  | │
+│ |                       | DETAIL: <article.swiper-slide>             | │
+│ +-----------------------+--------------------------------------------+ │
 │ [ FOOTER (<footer.module-foote) | https://www.terrenohotel.com/en/     │
 └────────────────────────────────────────────────────────────────────────┘
 ```
@@ -139,34 +148,48 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ecffb3` canvas, `
 ### Visual Layout Schematic — Mobile Reflow (`390px`)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ MOBILE VIEWPORT REFLOW (390px) — Collapsed Sidebar + 1-Col Stack       │
 │ ====================================================================== │
-│ [ HEADER BAR (<header.mdl-header>     ) | Compact Menu (390px)         │
+│ [ DRAWER (<aside.e-intro>       ) | <header.mdl-header>                │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE (<section.m-experiencias>) — 390px Vertical Lead        | │
+│ | HERO STAGE (<section.m-experiencias>) — 390px Full-Width           | │
 │ | H1: A HOTEL WITH A NEIGHBORHOOD SOUL                               | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<article.e-slide>) — 1-Col Stack                   | │
-│ | [ Item 1: a hotel with a neighborhood soul                       ] | │
-│ | [ Item 2: TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...   ] | │
+│ | SHOWCASE STACK (<article.e-slide>) — 1-Col (gap: 10px)             | │
+│ | [ Card 1: a hotel with a neighborhood soul                       ] | │
+│ | [ Card 2: TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...   ] | │
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<article.swiper-slide>) — 1-Col (THE PLACE TO STAY)  | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.module-foote) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.module-footer>) | Stacked 390px Colophon             │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.mdl-header> — `www-terrenohotel-com_en`)**:
-   - Landmark `<header class="mdl-header color-scheme-burgundy">` (`1440x90px`) hosting `Terreno Barrio Hotel · Boutique hote` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_c4cc3437ae"`, `data-thn-current="1"`, `data-mirai-id="100380929"`, `data-type="hotel"`), and stylesheet rule `.mdl-hero .search-form { position: relative; z-index: 5; }`.
+1. **Persistent Left Sidebar Navigation (<aside.e-intro> — `280×752px` at `x=32`)**:
+   - Fixed/sticky left rail `<aside class="e-intro">` (`280px` wide) paired with top bar `<header class="mdl-header color-scheme-burgundy">` hosting `Terreno Barrio Hotel · Boutiqu` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_d4a75505ed"`, `data-mirai-id="100380929"`, `data-type="hotel"`, `data-title="Header"`), and rule `._3qK-PW_checkbox { position:relative }`.
 2. **Hero Stage & Focal Lead (<section.m-experiencias> — `A HOTEL WITH A NEIGHBORHOOD SOUL`)**:
-   - Landmark `<section class="m-experiencias color-scheme-burgundy">` presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
+   - Landmark `<section class="m-experiencias color-scheme-burgundy">` inside `1440px` main stage presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
 3. **Primary Showcase & Content Grid (<article.e-slide> — `a hotel with a neighborhood soul`)**:
-   - Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `0.8.77`, `clientParamBuilder.bundle.js`), and grid rule `.module-content { overflow: visible !important; }`.
+   - Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `clientParamBuilder.bundle.js`, `0.8.77`), and grid rule `._3qK-PW_checkbox input:disabled { border-color:var(--mirai-ui-checkbox-background-disabled) }`.
 4. **Interactive Detail & Feature Matrix (<article.swiper-slide> — `TERRENO IS PART OF THE NEIGHBOURHO`)**:
-   - Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `.mdl-header { z-index: 900; }`.
+   - Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `checkbox input:disabled._3qK-PW_c... { background-color:var(--mirai-ui-checkbox-background-disabled) }`.
 5. **Colophon & Global Directory Footer (<footer.module-footer> — `https://www.terrenohotel.com/en/`)**:
    - Landmark `<footer class="module-footer">` anchoring `Terreno Barrio Hotel · Boutique ` footer links (`Overview · Index · Archive · About · Contact`), copy *"24 HOURS IN TERRENO"*, and `#dddddd` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `A HOTEL WITH A NEIGHBORHOOD SOUL` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `9%`): Active landmark `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `26%`): Active landmark `Section @ 26%` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `44%`): Active landmark `A DAY IN OUR NEIGHBOURHOOD` · sticky/fixed elements: `1`
+- **Step 05** (`y=5950px`, `61%`): Active landmark `FOOD, UNFILTERED` · sticky/fixed elements: `1`
+- **Step 06** (`y=7650px`, `77%`): Active landmark `WHATEVER YOUR BODY FEELS LIKE` · sticky/fixed elements: `1`
+- **Step 07** (`y=9350px`, `94%`): Active landmark `A HOTEL IN A NEIGHBOURHOOD. A NEIGHBOURHOOD IN A...` · sticky/fixed elements: `1`
+- **Step 08** (`y=9725px`, `98%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/en/neighbourhood/`)**: `https://www.terrenohotel.com/en/neighbourhood/` — H1: `WE’VE GOT THE NEIGHBOURHOOD INSIDE US`, scrollHeight `7386px`, transition `direct` (`3025ms`)
+- **Detail Route (`/en/history/`)**: `https://www.terrenohotel.com/en/history/` — H1: `THE HISTORY OF A NEIGHBOURHOOD OPEN TO NEW IDEAS`, scrollHeight `3171px`, transition `direct` (`1185ms`)
+- **Detail Route (`/en/destape-restaurante-palma/`)**: `https://www.terrenohotel.com/en/destape-restaurante-palma/` — H1: `RESTAURANT AND BAR IN PALMA`, scrollHeight `8136px`, transition `direct` (`2079ms`)
 
 ---
 
@@ -183,8 +206,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ecffb3` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#570007`, **Accent / Highlight**: `#cc3224`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecffb3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#570007` primary typography and `#cc3224` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `WT Central Avenue` for display copy (`A HOTEL WITH A NEIGHBORHOOD SOUL`) with `Tiempos Text` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1026px` container bounds (`gap: 10px`, padding `100px`) with `cubic-bezier(.68,-.55,.27,1.55)` easing and Swiper Touch Carousel Engine.
+  - **Grounded Typographic Hierarchy**: Pairs `WT Central Avenue` for display copy (`A HOTEL WITH A NEIGHBORHOOD SOUL`) with `Tiempos Text`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1026px` container bounds (`gap: 10px`, padding `var(--mirai-ui-tooltip-space)`) with `cubic-bezier(.68,-.55,.27,1.55)` easing and Swiper Touch Carousel Engine.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `www-terrenohotel-com_en` in your global stylesheet:
@@ -219,14 +242,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#dddddd` — grounded in `var(--mirai-ui-content-border)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1026px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
-- **Padding & Gutters**: `100px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1026px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `100px` horizontal padding
-- **Media Queries**: `@media (max-width: 767px)`, `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)`
-- **Corner Radii**: `0px`, `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%`
+- **Padding & Gutters**: `var(--mirai-ui-tooltip-space)` lateral canvas padding with `10px` grid gap
+- **Desktop Grid**: 2-column persistent left sidebar (`280px`, <aside.e-intro>) + `1440px` main content stage at `1440px` (`max-width: 1026px`, `gap: 10px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with collapsed `<aside.e-intro>` drawer navigation and `var(--mirai-ui-tooltip-space)` horizontal padding
+- **Media Queries**: `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)`, `@media only screen and (max-height:480px)`
+- **Corner Radii**: `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%`, `var(--mirai-ui-switch-border-radius)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `WT Central Avenue`
@@ -239,21 +262,21 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-terrenohotel-com_en` (`Terreno Barrio Hotel · Boutique hotel in Palma de Mallorca`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.mdl-header> — `www-terrenohotel-com_en`)**:
-   - DOM & Selectors: Landmark `<header class="mdl-header color-scheme-burgundy">` (`1440x90px`) hosting `Terreno Barrio Hotel · Boutique hote` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_c4cc3437ae"`, `data-thn-current="1"`, `data-mirai-id="100380929"`, `data-type="hotel"`), and stylesheet rule `.mdl-hero .search-form { position: relative; z-index: 5; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.mdl-header> — `www-terrenohotel-com_en`)` (`www-terrenohotel-com_en`) adapts across `@media (max-width: 767px)`, `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)` with `cubic-bezier(.68,-.55,.27,1.55)`, `cubic-bezier(.1,.1,.25,.9)`, `cubic-bezier(0.4,0,0.22,1)` transitions and links `Overview · Index · Archive · About · Contact`.
+1. **Persistent Left Sidebar Navigation (<aside.e-intro> — `280×752px` at `x=32`)**:
+   - DOM & Selectors: Fixed/sticky left rail `<aside class="e-intro">` (`280px` wide) paired with top bar `<header class="mdl-header color-scheme-burgundy">` hosting `Terreno Barrio Hotel · Boutiqu` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-ueto="ueto_d4a75505ed"`, `data-mirai-id="100380929"`, `data-type="hotel"`, `data-title="Header"`), and rule `._3qK-PW_checkbox { position:relative }`.
+   - Responsive Contract: Header `Persistent Left Sidebar Navigation (<aside.e-intro> — `280×752px` at `x=32`)` (`www-terrenohotel-com_en`) adapts across `@media only screen and (max-width:480px)`, `@media only screen and (min-width:481px)`, `@media only screen and (min-width:481px) and (max-width:1179px)`, `@media only screen and (max-height:480px)` with `cubic-bezier(.68,-.55,.27,1.55)`, `cubic-bezier(.1,.1,.25,.9)`, `cubic-bezier(0.4,0,0.22,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.m-experiencias> — `A HOTEL WITH A NEIGHBORHOOD SOUL`)**:
-   - DOM & Selectors: Landmark `<section class="m-experiencias color-scheme-burgundy">` presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ecffb3` background with `#570007` headline `A HOTEL WITH A NEIGHBORHOOD SOUL`.
+   - DOM & Selectors: Landmark `<section class="m-experiencias color-scheme-burgundy">` inside `1440px` main stage presenting display lead `A HOTEL WITH A NEIGHBORHOOD SOUL` and copy excerpt *"Some neighbourhoods have something you can’t quite put your finge"* over `#ecffb3` canvas and `#570007` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ecffb3` background with `#570007` headline `A HOTEL WITH A NEIGHBORHOOD SOUL`.
 3. **Primary Showcase & Content Grid (<article.e-slide> — `a hotel with a neighborhood soul`)**:
-   - DOM & Selectors: Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `0.8.77`, `clientParamBuilder.bundle.js`), and grid rule `.module-content { overflow: visible !important; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.e-slide> — `a hotel with a neighborhood soul`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1026px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `100px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<article class="e-slide swiper-slide">` rendering section `a hotel with a neighborhood soul` with copy *"LIVE BARRIO AGENDA SPA"*, asset references (`favicon-ios-7f1277496f8279e6f805a...`, `favicon-ios-3a0235b9e158e0432cb3d...`, `clientParamBuilder.bundle.js`, `0.8.77`), and grid rule `._3qK-PW_checkbox input:disabled { border-color:var(--mirai-ui-checkbox-background-disabled) }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.e-slide> — `a hotel with a neighborhood soul`)` applies 2-column persistent left sidebar (`280px`, <aside.e-intro>) + `1440px` main content stage at `1440px` (`max-width: 1026px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with collapsed `<aside.e-intro>` drawer navigation and `var(--mirai-ui-tooltip-space)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.swiper-slide> — `TERRENO IS PART OF THE NEIGHBOURHO`)**:
-   - DOM & Selectors: Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `.mdl-header { z-index: 900; }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.swiper-slide> — `TERRENO IS PART OF THE NEIGHBOURHO`)` uses `0px`, `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%` radii, `#cc3224` highlights, and assets (favicon-ios-7f1277496f8279e6f805a..., favicon-ios-3a0235b9e158e0432cb3d..., 0.8.77).
+   - DOM & Selectors: Landmark `<article class="e-slide swiper-slide">` framing `TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEIGHBO...` and `THE PLACE TO STAY` (*"DRINK EL TERRADO Club"*) with `#f6f6f6` surface cards, `#cc3224` accents, and `checkbox input:disabled._3qK-PW_c... { background-color:var(--mirai-ui-checkbox-background-disabled) }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.swiper-slide> — `TERRENO IS PART OF THE NEIGHBOURHO`)` uses `var(--mirai-ui-checkbox-border-radius)`, `var(--mirai-ui-input-text-radius)`, `50%`, `var(--mirai-ui-switch-border-radius)` radii, `#cc3224` highlights, and assets (favicon-ios-7f1277496f8279e6f805a..., favicon-ios-3a0235b9e158e0432cb3d..., clientParamBuilder.bundle.js).
 5. **Colophon & Global Directory Footer (<footer.module-footer> — `https://www.terrenohotel.com/en/`)**:
    - DOM & Selectors: Landmark `<footer class="module-footer">` anchoring `Terreno Barrio Hotel · Boutique ` footer links (`Overview · Index · Archive · About · Contact`), copy *"24 HOURS IN TERRENO"*, and `#dddddd` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.module-footer> — `https://www.terrenohotel.com/en/`)` aligns to `1026px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `100px` lateral canvas padding with `10px` grid gap and attributes (data-ueto="ueto_c4cc3437ae", data-thn-current="1", data-mirai-id="100380929").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.module-footer> — `https://www.terrenohotel.com/en/`)` aligns to `1026px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `var(--mirai-ui-tooltip-space)` lateral canvas padding with `10px` grid gap and attributes (data-ueto="ueto_d4a75505ed", data-mirai-id="100380929", data-type="hotel").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Some neighbourhoods have something you can’t quite put your finger on. You just fe..."*
@@ -264,19 +287,59 @@ Scaffold `www-terrenohotel-com_en` (`Terreno Barrio Hotel · Boutique hotel in P
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.68,-.55,.27,1.55)`, `cubic-bezier(.1,.1,.25,.9)`, `cubic-bezier(0.4,0,0.22,1)`
 - **Extracted Stylesheet Rules (`www-terrenohotel-com_en`)**:
-- `.mdl-hero .search-form { position: relative; z-index: 5; }`
-- `.module-content { overflow: visible !important; }`
-- `.mdl-header { z-index: 900; }`
 - `._3qK-PW_checkbox { position:relative }`
 - `._3qK-PW_checkbox input:disabled { border-color:var(--mirai-ui-checkbox-background-disabled) }`
+- `checkbox input:disabled._3qK-PW_c... { background-color:var(--mirai-ui-checkbox-background-disabled) }`
+- `._3qK-PW_checked { background-color:var(--mirai-ui-checkbox-background-checked);border-colo... }`
+- `._3qK-PW_error { border-color:var(--mirai-ui-error);box-shadow:var(--mirai-ui-input-shado... }`
 - **Per-Selector Transition Rules**:
 - **Selector `._3qK-PW_checkbox input`**: `transition: background-color var(--mirai-ui-motion-collapse)var(--mirai-ui...` extracted from `www-terrenohotel-com_en` stylesheet.
 - **Selector `t.I2Uiuq_input:focus:required:inv...`**: `transition: none` extracted from `www-terrenohotel-com_en` stylesheet.
 - **Selector `input.I2Uiuq_input:-webkit-autofill`**: `transition: none` extracted from `www-terrenohotel-com_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.68,-.55,.27,1.55)`)**: Governs interactive state transitions across `<header.mdl-header>` and `<article.e-slide>`.
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `10842px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: A HOTEL WITH A NEIGHBORHOOD... (0%) -> TERRENO IS PART OF THE NEIG... (9%) -> Section @ 26% (26%) -> A DAY IN OUR NEIGHBOURHOOD (44%) -> FOOD, UNFILTERED (61%) -> WHATEVER YOUR BODY FEELS LIKE (77%) -> A HOTEL IN A NEIGHBOURHOOD.... (94%) -> Footer / Bottom (98%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`header [role="button"]`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/en/neighbourhood/` (detail, direct), `/en/history/` (detail, direct), `/en/destape-restaurante-palma/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-terrenohotel-com_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | A HOTEL WITH A NEIGHBORHOOD SOUL | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `9%` | TERRENO IS PART OF THE NEIGHBOURHOOD. THE NEI... | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `26%` | Section @ 26% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `44%` | A DAY IN OUR NEIGHBOURHOOD | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5950px` | `61%` | FOOD, UNFILTERED | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `7650px` | `77%` | WHATEVER YOUR BODY FEELS LIKE | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `9350px` | `94%` | A HOTEL IN A NEIGHBOURHOOD. A NEIGHBOURHOOD I... | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `9725px` | `98%` | Footer / Bottom | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | A HOTEL WITH A NEIGHBORHOOD SOUL | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `4914px` | `50%` | A DAY IN OUR NEIGHBOURHOOD | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `9648px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`header [role="button"]`, diff `53.608`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.terrenohotel.com/en/neighbourhood/` | WE’VE GOT THE NEIGHBOURHOOD INSIDE US | `7386px` | `direct` (`3025ms`) | [subpage-01-en-neighbourhood.webp](assets/subpage-01-en-neighbourhood.webp) |
+| `2` | `detail` | `https://www.terrenohotel.com/en/history/` | THE HISTORY OF A NEIGHBOURHOOD OPEN T... | `3171px` | `direct` (`1185ms`) | [subpage-02-en-history.webp](assets/subpage-02-en-history.webp) |
+| `3` | `detail` | `https://www.terrenohotel.com/en/destape-restaurante-palma/` | RESTAURANT AND BAR IN PALMA | `8136px` | `direct` (`2079ms`) | [subpage-03-en-destape-restaurante-palma.webp](assets/subpage-03-en-destape-restaurante-palma.webp) |
+

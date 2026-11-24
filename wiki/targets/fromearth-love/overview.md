@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: fromearth-love"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://fromearth.love"
-final_url: "http://fromearth.love"
+final_url: "https://fromearth.love/"
 status: blocked
 http_status: null
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'http://fromearth.love/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -29,11 +29,11 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [http://fromearth.love](http://fromearth.love)
 - **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'http://fromearth.love/', waiting until 'domcontentloaded' )
 - **Page Title**: fromearth-love
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `50`
+- **Recovered Stylesheets**: `6`
 
 ---
 

@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-theboringblog-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://www.theboringblog.ai/"
-final_url: "https://www.theboringblog.ai/"
-status: analyzed
-http_status: 200
-capture_tier: tier2_webgl
+final_url: "http://www.theboringblog.ai/"
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Desktop session exceeded 178s sub-budget)"
 tags:
   - target
   - reverse-engineering
@@ -27,10 +28,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [http://www.theboringblog.ai/](http://www.theboringblog.ai/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: The Boring Blog — art, engineering and AI
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `25`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Desktop session exceeded 178s sub-budget)
+- **Page Title**: www-theboringblog-ai
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `0`
 - **Recovered Stylesheets**: `5`
 
 ---

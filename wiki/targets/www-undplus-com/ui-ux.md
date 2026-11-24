@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-undplus-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-undplus-com` (**UNDPLUS — Brand Architecture & Spatial Design Studio**)
 - **Production URL**: [https://www.undplus.com](https://www.undplus.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ca9df1` accent)
 - **Summary**: Studio for brand architecture, spatial design and live experiences. We build trade fair booths, brand spaces and installations from Berli...
 - **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
@@ -22,10 +22,10 @@ http_status: 200
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Poppins Bold`
-- **Body Font Stack**: `Poppins SemiBold`
+- **Body Font Stack**: `Magiel Black`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 52px`, `line-height: 62.4px`, `font-weight: 700`); rule `h1` (`font-size: 108px`, `line-height: 1.1em`, `letter-spacing: 0em`, `font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 76.8px`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 205px`, `line-height: 184.5px`, `font-weight: 900`, `letter-spacing: 14.35px`)
 - **Body Copy**: live computed `body` (`font-size: 12px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: 13px`, `line-height: 1.6em`, `letter-spacing: 0em`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 52px`, `line-height: 62.4px`, `font-weight: 500`); CSS variables `--letter-spacing: var(--framer-letter-spacing)`
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffd650` | `.framer-AYmJg .framer-esf7s4 { background-color: #ffd650 }` |
+| **Elevated Surface / Card Substrate** | `#ffd650` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ca9df1` | `r-styles-preset-5qir1a.rich-tex... { color: #ca9df1 }` |
 | **Secondary / Muted Copy** | `#0099ff` | `.framer-AYmJg .framer-1dooqsd { color: #0099ff }` |
 | **Structural Hairline Border** | `#0099ff` | hairline divider derived from `.framer-AYmJg .framer-1dooqsd { color: #0099ff }` |
@@ -73,9 +73,9 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.framer-dYpKI> — `www-undplus-com`)**:
    - Landmark `<header class="framer-dYpKI">` (`1440px`) hosting `UNDPLUS — Brand Architecture & Spati` navigation (`Brand Architecture · Retail & Hospitality · Workplace & New Work · More projects`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-generated-canonical`, `data-framer-font-css`, `data-framer-breakpoint-css`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
 2. **Hero Stage & Focal Lead (<section.framer-ap504g> — `UNDPLUS Studio for brand experienc`)**:
-   - Landmark `<section class="framer-ap504g">` presenting display lead `UNDPLUS Studio for brand experiences in real life...` and copy excerpt *"or just the degree you need."* over `#ffffff` canvas and `#000000` ink.
+   - Landmark `<section class="framer-ap504g">` presenting display lead `UNDPLUS Studio for brand experiences in real life` and copy excerpt *"or just the degree you need."* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.framer-AYmJg> — `or just the degree you need.`)**:
-   - Landmark `<section class="framer-AYmJg">` rendering section `or just the degree you need.` with copy *"brand experiences in real life b r a n d e x p e r i e n c e s i "*, asset references (`cXo2Pf7EWgS5at03i8N3qhgZg.svg`, `S6PCFl3VKfoljDTPsWBO3MD8eps.svg`, `gtm.js`, `script`), and grid rule `.hidden-pfdayg { display:none!important }`.
+   - Landmark `<section class="framer-AYmJg">` rendering section `or just the degree you need.` with copy *"brand experiences in real life b r a n d e x p e r i e n c e s i "*, asset references (`cXo2Pf7EWgS5at03i8N3qhgZg.svg`, `S6PCFl3VKfoljDTPsWBO3MD8eps.svg`, `script`, `U2mu30OyPRwHZ1Hq7pp8ryGs.mp4`), and grid rule `.hidden-pfdayg { display:none!important }`.
 4. **Interactive Detail & Feature Matrix (<section.framer-3gfgd> — `brand experiences in real life b r`)**:
    - Landmark `<section class="framer-3gfgd">` framing `brand experiences in real life b r a n d e x p e` and `brand experiences in real life` (*"brand experiences in real life"*) with `#ffd650` surface cards, `#ca9df1` accents, and `.hidden-9alzb1 { display:none!important }`.
 5. **Colophon & Global Directory Footer (<footer.framer-LFW7G> — `https://www.undplus.com`)**:

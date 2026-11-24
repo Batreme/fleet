@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: kelvin-8b-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `kelvin-8b-com` (**Kelvin — three nights of music, filmed in heat**)
 - **Production URL**: [https://kelvin.8b.com/](https://kelvin.8b.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f1ede4` canvas, `#110d19` ink, `#ffe000` accent)
 - **Summary**: Kelvin is a three-night music festival filmed through thermal cameras and projected back into a former power station in Rotterdam. 23–25...
 - **Total Clean CSS Variables Extracted**: `23` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Hubot Sans`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 34px`, `line-height: 52.7px`, `font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 86.4px`, `line-height: 88.128px`, `font-weight: 200`, `letter-spacing: -1.728px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 120.571px`, `line-height: 98.8683px`, `font-weight: 300`, `letter-spacing: -1.20571px`)
 - **Body Copy**: live computed `body` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 26.35px`, `font-weight: 400`)
 
@@ -39,7 +39,7 @@ http_status: 200
 | **Elevated Surface / Card Substrate** | `#f1ede4` | transparent/inherited card surface over live computed `body` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ffe000` | `var(--color-6)` in `:root` |
 | **Secondary / Muted Copy** | `#110d19` | secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#110d19` | hairline divider derived from secondary opacity step of live computed `h1` `color` (`computed_styles.json`) |
+| **Structural Hairline Border** | `#110d19` | live computed `header` `border-color` (`computed_styles.json`) |
 | **Variable Token (`--color-3`)** | `#2d18a8` | `var(--color-3)` in `:root` |
 | **Variable Token (`--color-4`)** | `#2a5cff` | `var(--color-4)` in `:root` |
 | **Variable Token (`--color-5`)** | `#12c3e3` | `var(--color-5)` in `:root` |

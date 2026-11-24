@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-ouiwill-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-ouiwill-com` (**Oui Will · Brand Transformation & Digital Experiences**)
 - **Production URL**: [https://www.ouiwill.com/](https://www.ouiwill.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#33ff96`)
 - **Summary**: Oui Will is an independent digital agency shaping ambitious brands through strategy, identity, digital experiences, and technology.
 - **Total Clean CSS Variables Extracted**: `106` (curated live-grounded set below)
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `base`
 - **Body Font Stack**: `base`
 - **Monospace / Technical Font Stack**: `mono`
-- **Hero Display (`H1`)**: observed font-size ladder: `60px`, `18px`, `14px`, `12px`, `2.66667vw`
+- **Hero Display (`H1`)**: observed font-size ladder: `60px`, `50px`, `14px`, `12px`, `2.66667vw`
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 60px`, `line-height: 63px`, `font-weight: 400`, `letter-spacing: -1.2px`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 14px`, `font-weight: 400`); rule `p` (`font-size: 1.2rem`, `line-height: 1.3`, `letter-spacing: -.02em`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 14px`, `font-weight: 400`)

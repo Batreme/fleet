@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: skhiladze-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `skhiladze-com` (**Luka Skhiladze, motion designer and product engineer**)
 - **Production URL**: [https://skhiladze.com](https://skhiladze.com)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#090c12` / `#fb5e28`)
 - **Summary**: Motion design, AI film, 3D and original sound, plus the website or app to go with them. Tbilisi, working worldwide.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
@@ -73,7 +73,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.hero> — `Luka Skhiladze, motion designer an`)**:
    - Landmark `<section class="hero is-top">` presenting display lead `Luka Skhiladze, motion designer and product engineer` and copy excerpt *"Logos, type, characters and interfaces in motion, and explainers "* over `#090c12` canvas and `#f2f2ef` ink.
 3. **Primary Showcase & Content Grid (<section.make> — `What I make`)**:
-   - Landmark `<section class="make no-field">` rendering section `What I make` with copy *"Logicor Park 08 Client, AI"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `martian-display-lat.woff2`), and grid rule `html.lenis body { height:auto }`.
+   - Landmark `<section class="make">` rendering section `What I make` with copy *"Logicor Park 08 Client, AI"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `martian-display-lat.woff2`), and grid rule `html.lenis body { height:auto }`.
 4. **Interactive Detail & Feature Matrix (<section.op> — `About`)**:
    - Landmark `<section class="op">` framing `About` and `Coffee prices Spec` (*"Coffee prices Spec"*) with `#11151c` surface cards, `#fb5e28` accents, and `.lenis.lenis-smooth { scroll-behavior:auto!important }`.
 5. **Colophon & Global Directory Footer (<footer.no-gl> — `https://skhiladze.com`)**:

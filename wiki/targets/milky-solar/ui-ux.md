@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: milky-solar"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `milky-solar` (**Earth**)
 - **Production URL**: [https://milky.solar](https://milky.solar)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ff0000` accent)
 - **Summary**: Follow Wolfs journeys on Earth, navigating eternal cycles of conflict and transformation.
 - **Total Clean CSS Variables Extracted**: `0` (curated live-grounded set below)

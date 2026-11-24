@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-greenlock-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-greenlock-io` (**Independent Wealth Oversight for Family Offices · GreenLock**)
 - **Production URL**: [https://www.greenlock.io](https://www.greenlock.io)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#0a1516` ink, `#0000ff` accent)
 - **Summary**: GreenLock is a Swiss-based platform offering objective, independent oversight for Single Family Offices. Expose hidden costs, optimize pe...
-- **Total Clean CSS Variables Extracted**: `62` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `996` (curated live-grounded set below)
 
 ---
 
@@ -24,10 +24,10 @@ http_status: 200
 - **Display Font Stack**: `Reckless Neue Licensed`
 - **Body Font Stack**: `Manrope`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 54.5058px`, `line-height: 59.6676px`, `font-weight: 500`); rule `h1` (`font-size: 2.5rem`, `line-height: 3.375rem`, `font-weight: 600`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54.5058px`, `line-height: 59.6676px`, `font-weight: 500`); rule `h2` (`font-size: 2.5rem`, `line-height: 3.375rem`, `font-weight: 600`)
-- **Body Copy**: live computed `body` (`font-size: 20.6238px`, `line-height: 23.5701px`, `font-weight: 400`); rule `p` (`font-size: 1.75rem`, `line-height: 3rem`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 20.6238px`, `line-height: 23.5701px`, `font-weight: 400`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 54.5058px`, `line-height: 59.6676px`, `font-weight: 500`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5 / 2.25)`, `--text-5xl: 3rem`; rule `h1` (`font-size: 2.5rem`, `line-height: 3.375rem`, `font-weight: 600`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 54.5058px`, `line-height: 59.6676px`, `font-weight: 500`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`, `--text-3xl: 1.875rem`; rule `h2` (`font-size: 2.5rem`, `line-height: 3.375rem`, `font-weight: 600`)
+- **Body Copy**: live computed `body` (`font-size: 20.6238px`, `line-height: 23.5701px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`, `--font-ds-body: "Inter var", ui-sans-serif, system-ui, sans-serif`; rule `p` (`font-size: 1.75rem`, `line-height: 3rem`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 20.6238px`, `line-height: 23.5701px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
 ---
 
@@ -36,10 +36,10 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `browser-default` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#0a1516` | live computed `p` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ffff00` | `mark { background: #ffff00 }` |
+| **Elevated Surface / Card Substrate** | `#f1f5f9` | `var(--background-color-ds-tertiary)` in `:root` |
 | **Interactive Accent / Highlight** | `#0000ff` | `.button.is-text.w--current { color: blue }` (`#0000ff`) |
-| **Secondary / Muted Copy** | `#333333` | live computed `a` `color` (`computed_styles.json`) |
-| **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
+| **Secondary / Muted Copy** | `#f670c7` | `var(--ds-pink-400)` in `:root` |
+| **Structural Hairline Border** | `#e2e8f0` | `var(--border)` in `:root` |
 | **Variable Token (`--green-700`)** | `#0c221b` | `var(--green-700)` in `:root` |
 | **Variable Token (`--green-100`)** | `#e0faef` | `var(--green-100)` in `:root` |
 | **Variable Token (`--green-200`)** | `#99f4c0` | `var(--green-200)` in `:root` |
@@ -86,6 +86,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.v2-hero-section> — `Fee`)**:
    - Landmark `<section class="v2-hero-section full-height-fix">` rendering section `Fee` with copy *"Investment Performance Audit"*, asset references (`cdn.prod.website-files.com`, `greenlock-site.webflow.shared.26f...`, `fonts.googleapis.com`, `fonts.gstatic.com`), and grid rule `summary { display:block }`.
 4. **Interactive Detail & Feature Matrix (<section.v2-ticker-section> — `Benchmarking`)**:
-   - Landmark `<section class="v2-ticker-section">` framing `Benchmarking` and `& Reduction` (*"PE/VC Portfolio Optimization"*) with `#ffff00` surface cards, `#0000ff` accents, and `video { vertical-align:baseline;display:inline-block }`.
-5. **Colophon & Global Directory Footer (<footer.wf-manrope-n6-active> — `https://www.greenlock.io`)**:
-   - Landmark `<footer class="wf-manrope-n6-active">` anchoring `Independent Wealth Oversight for` footer links (`Pricing · Insights · About us · Client portal`), copy *"Real Estate Assets Monitoring"*, and `#e2e2e2` structural dividers.
+   - Landmark `<section class="v2-ticker-section">` framing `Benchmarking` and `& Reduction` (*"PE/VC Portfolio Optimization"*) with `#f1f5f9` surface cards, `#0000ff` accents, and `video { vertical-align:baseline;display:inline-block }`.
+5. **Colophon & Global Directory Footer (<footer.wf-manrope-n5-active> — `https://www.greenlock.io`)**:
+   - Landmark `<footer class="wf-manrope-n5-active">` anchoring `Independent Wealth Oversight for` footer links (`Pricing · Insights · About us · Client portal`), copy *"Real Estate Assets Monitoring"*, and `#e2e8f0` structural dividers.

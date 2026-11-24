@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-feelreformed-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-feelreformed-com` (**Reformed: The biggest thing to happen to Coffee since Coffee.**)
 - **Production URL**: [https://www.feelreformed.com/](https://www.feelreformed.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f9f8f6` canvas, `#000000` ink, `#ff0000` accent)
 - **Summary**: Reformed: Arabica coffee and ceremonial matcha, enriched with functionality: collagen or creatine, adaptogens and twenty-one vitamins.
-- **Total Clean CSS Variables Extracted**: `779` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `1258` (curated live-grounded set below)
 
 ---
 
@@ -24,9 +24,9 @@ http_status: 200
 - **Display Font Stack**: `Optima`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 24px`, `line-height: 27.6px`, `font-weight: 400`); CSS variables `--header-logo-display: none`, `--header-logo-inverse-display: block`, `--font-h1--spacing: 0.25em`; rule `h1` (`line-height: var(--line-height--di...`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`); CSS variables `--font-h2--spacing: 0.25em`, `--font-size--h2: clamp(1.75rem, 4.8vw, 3.0rem)`, `--font-h2--weight: var(--font-heading--weight)`; rule `h2` (`font-size: 24px`)
-- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 22.4px`, `font-weight: 400`); CSS variables `--font-paragraph--line-height: 1`, `--font-body--family: Inter, sans-serif`, `--font-body--style: normal`; rule `p` (`line-height: var(--line-height--bo...`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 24px`, `line-height: 27.6px`, `font-weight: 400`); CSS variables `--header-logo-display: none`, `--header-logo-inverse-display: block`, `--text-4xl: calc(var(--base-font-size)*2.25)`; rule `h1` (`line-height: var(--line-height--di...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 48px`, `line-height: 52.8px`, `font-weight: 400`); CSS variables `--text-2xl: calc(var(--base-font-size)*1.5)`, `--text-2xl--line-height: calc(2/1.5)`, `--font-h2--spacing: 0.25em`; rule `h2` (`font-size: 24px`)
+- **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 22.4px`, `font-weight: 400`); CSS variables `--font-paragraph--line-height: 1`, `--text-base: calc(var(--base-font-size))`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`line-height: var(--line-height--bo...`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 22.4px`, `font-weight: 400`); CSS variables `--section-height-small: 15rem`, `--oke-text-small: 14px`, `--checkbox-label-padding: 8px`; rule `small` (`font-size: 80%`)
 
 ---

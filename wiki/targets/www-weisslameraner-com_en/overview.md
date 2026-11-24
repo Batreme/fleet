@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-weisslameraner-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.weisslameraner.com/en"
 final_url: "https://www.weisslameraner.com/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Weiss & Lameraner Media Group – Lifestyle Media House Vienna
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `28`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `112`
+- **Recovered Stylesheets**: `8`
 
 ---
 

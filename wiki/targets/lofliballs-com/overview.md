@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: lofliballs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://lofliballs.com"
 final_url: "https://lofliballs.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: LoFli Balls—Innovative Training Tools for Youth Athletes – Lofli
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `155`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `903`
+- **Recovered Stylesheets**: `43`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: heirest-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `heirest-com` (**HEIREST · Fine Jewellery, Authored By You**)
 - **Production URL**: [https://heirest.com/](https://heirest.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#ffc700` accent)
 - **Summary**: Fine jewellery for those who choose to author what others inherit. Configured by you and crafted to last.
-- **Total Clean CSS Variables Extracted**: `1469` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `1464` (curated live-grounded set below)
 
 ---
 
@@ -25,9 +25,9 @@ http_status: 200
 - **Body Font Stack**: `Moderat-Regular`
 - **Monospace / Technical Font Stack**: `ModeratMono-Regular`
 - **Hero Display (`H1`)**: CSS variables `--loyalty-shimmer-display: none`, `--font-h1--spacing: var(--font-heading--spacing)`, `--max-width--display-normal: 13em`; rule `h1` (`line-height: var(--line-height--di...`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 47px`, `line-height: 54.05px`, `font-weight: 400`, `letter-spacing: -1.88px`); CSS variables `--loyalty-banner-subtitle-size: 14px`, `--font-h2--spacing: var(--font-heading--spacing)`, `--font-h2--weight: 400`; rule `h2` (`font-size: var(--heading-font-size)`, `font-weight: var(--heading...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 62px`, `line-height: 71.3px`, `font-weight: 400`, `letter-spacing: -2.79px`); CSS variables `--loyalty-banner-subtitle-size: 14px`, `--font-h2--spacing: var(--font-heading--spacing)`, `--font-h2--weight: 400`; rule `h2` (`font-size: var(--heading-font-size)`, `font-weight: var(--heading...`)
 - **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 21.45px`, `font-weight: 400`, `letter-spacing: -0.195px`); CSS variables `--paragraph-font-size: 16px`, `--paragraph-font-weight: 400`, `--form-paragraph-font-weight: var(--paragraph-font-weight)`; rule `p` (`line-height: var(--line-height--bo...`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 21.45px`, `font-weight: 400`, `letter-spacing: -0.195px`); CSS variables `--section-height-small: 15rem`, `--default-mono-font-family: var(--font-mono)`, `--bundle-product-label-size: 16px`
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 21.45px`, `font-weight: 400`, `letter-spacing: -0.195px`); CSS variables `--section-height-small: 15rem`, `--default-mono-font-family: var(--font-mono)`, `--image-height-small: calc(var(--image-height-basis) * 2)`
 
 ---
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#fefdfc` | `var(--color-background-default)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#fefdfc` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#ffc700` | `oduct-review .question-form .ra... { color: #ffc700 }` |
 | **Secondary / Muted Copy** | `#606775` | `var(--cs-secondary-text)` in `:root` |
 | **Structural Hairline Border** | `#fefdfc` | `var(--color-border-secondary)` in `:root` |
@@ -72,7 +72,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `Author what others inherit.`)**:
    - Landmark `<section class="shopify-section featured-blog-posts">` presenting display lead `Author what others inherit.` and copy excerpt *"cookies are used on this site. Privacy Policy"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.template-index> — `Time-honoured finery, authored by `)**:
-   - Landmark `<section class="template-index">` rendering section `Time-honoured finery, authored by you.` with copy *"Every decision yours. Every step visible."*, asset references (`1297080862623390`, `fbevents.js`, `swym-ext-shopify.js`, `clarity.js`), and grid rule `body::-webkit-scrollbar { width:0;height:0;display:none }`.
+   - Landmark `<section class="template-index">` rendering section `Time-honoured finery, authored by you.` with copy *"Every decision yours. Every step visible."*, asset references (`swym-ext-shopify.js`, `1297080862623390`, `fbevents.js`, `clarity.js`), and grid rule `body::-webkit-scrollbar { width:0;height:0;display:none }`.
 4. **Interactive Detail & Feature Matrix (<section.navbar--always-show> — `Our Standards`)**:
    - Landmark `<section class="navbar--always-show">` framing `Our Standards` and `Start with a category` (*"Clarity and transparency at every step"*) with `#fefdfc` surface cards, `#ffc700` accents, and `svg { display:block;max-width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.announcement-bar--show> — `https://heirest.com/`)**:

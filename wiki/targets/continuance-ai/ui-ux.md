@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: continuance-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `continuance-ai` (**Continuance - A novel by Chris Bennett**)
 - **Production URL**: [https://continuance.ai/](https://continuance.ai/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f4` / `#343849`)
 - **Summary**: A near-future thriller about the people we'd do anything to keep — and what it costs when we succeed.
 - **Total Clean CSS Variables Extracted**: `46` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Roboto Mono`
 - **Monospace / Technical Font Stack**: `Roboto Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 187.864px`, `line-height: 216.044px`, `font-weight: 400`, `letter-spacing: -3px`); rule `,h1` (`font-size: var(--font-size-4xl)`)
-- **Section Heading (`H2`)**: observed font-size ladder: `187.864px`, `16px`, `11.068px`, `.75rem`, `var(--font-size-sx)`
+- **Section Heading (`H2`)**: observed font-size ladder: `187.864px`, `16px`, `15.3786px`, `140px`, `var(--font-size-sx)`
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`); CSS variables `--font-family-body: "Roboto Mono","Roboto Mono Fallback"`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 18.4px`, `font-weight: 400`)
 
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.SiteIndexNav_site-index-nav__60kV3> — `continuance-ai`)**:
-   - Landmark `<nav class="SiteIndexNav_site-index-nav__60kV3">` (`1x1px`) hosting `Continuance - A novel by Chris Benne` navigation (`Get the book · Why now · About the author · Top secret · Privacy policy`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.Device_device__yuADF { position:absolute;top:0;left:0;width:100%;height:100% }`.
+   - Landmark `<nav class="SiteIndexNav_site-index-nav__60kV3">` (`1x1px`) hosting `Continuance - A novel by Chris Benne` navigation (`Get the book · Why now · About the author · Top secret · Privacy policy`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.not-found_not-found__code-bg__i2F7C { width:100%;height:100%;z-index:2 }`.
 2. **Hero Stage & Focal Lead (<main.home> — `C O N T I N U A N C E`)**:
-   - Landmark `<main class="home">` presenting display lead `C O N T I N U A N C E` and copy excerpt *"MAPPING NEURAL SIGNATURES..."* over `#f4f4f4` canvas and `#000000` ink.
+   - Landmark `<main class="home">` presenting display lead `C O N T I N U A N C E` and copy excerpt *"SYNCHRONIZING WITH KAIKU SYSTEM _"* over `#f4f4f4` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<main.home:nth(2)> — `C o n t i n u a n c e`)**:
-   - Landmark `<main class="home">` rendering section `C o n t i n u a n c e` with copy *"Mapping neural signatures..."*, asset references (`0807ff31c16ab04c.css`, `a4eac32ba22d1fcc.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `.Device_device__rune___9Rho { border:0;outline:0;box-shadow:none;-webkit-appearance:none;-moz-appearan... }`.
+   - Landmark `<main class="home">` rendering section `C o n t i n u a n c e` with copy *"Mapping neural signatures..."*, asset references (`0807ff31c16ab04c.css`, `a4eac32ba22d1fcc.css`, `a5188067206b89ec.css`, `5b6568268f4e7c11.css`), and grid rule `ot-found_not-found__status-label_... { color:var(--c-font-tertiary);margin-right:calc(5rem/var(--fz-base)) }`.
 4. **Interactive Detail & Feature Matrix (<main.home:nth(3)> — `Mapping neural signatures...`)**:
-   - Landmark `<main class="home">` framing `Mapping neural signatures...` and `Synchronizing with Kaiku System _` (*"Synchronizing with Kaiku System _"*) with `#c8c8ca` surface cards, `#343849` accents, and `evice_device__rune___9Rho:focus-v... { outline:0;box-shadow:none }`.
+   - Landmark `<main class="home">` framing `Mapping neural signatures...` and `Synchronizing with Kaiku System _` (*"Synchronizing with Kaiku System _"*) with `#c8c8ca` surface cards, `#343849` accents, and `not-found_not-found__error-label_... { color:var(--c-brand-secondary);font-size:var(--font-size-2xl);letter-spa... }`.
 5. **Colophon & Global Directory Footer (<footer.Footer_footer__2_6CR> — `https://continuance.ai/`)**:
    - Landmark `<footer class="Footer_footer__2_6CR">` anchoring `Continuance - A novel by Chris B` footer links (`Get the book · Why now · About the author · Top secret · Privacy policy`), copy *"Synchronizing with Kaiku System"*, and `#ffa500` structural dividers.

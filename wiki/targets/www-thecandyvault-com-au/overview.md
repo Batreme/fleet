@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-thecandyvault-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.thecandyvault.com.au/"
 final_url: "https://www.thecandyvault.com.au/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Candy Vault · Buy Sweets Online · Australia
 - **Identified Frameworks**: React
-- **Recovered Scripts**: `136`
+- **Recovered Scripts**: `526`
 - **Recovered Stylesheets**: `0`
 
 ---

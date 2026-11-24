@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: effepinnastudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://effepinnastudio.com/"
 final_url: "https://effepinnastudio.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Fabio Pinna — Art Director e Graphic Designer · Effepinna Studio
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `30`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `121`
+- **Recovered Stylesheets**: `52`
 
 ---
 

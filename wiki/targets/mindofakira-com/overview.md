@@ -1,13 +1,12 @@
 ---
 title: "Target Overview: mindofakira-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://mindofakira.com"
 final_url: "https://mindofakira.com/"
-status: blocked
-http_status: null
-capture_tier: none
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'http://mindofakira.com/', waiting until 'domcontentloaded' )"
+status: analyzed
+http_status: 200
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,10 +27,9 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [http://mindofakira.com](http://mindofakira.com)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'http://mindofakira.com/', waiting until 'domcontentloaded' )
-- **Page Title**: mindofakira-com
-- **Identified Frameworks**: Modern Web Application
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: Mind of Akira
+- **Identified Frameworks**: HTML5 Canvas / WebGL
 - **Recovered Scripts**: `10`
 - **Recovered Stylesheets**: `2`
 

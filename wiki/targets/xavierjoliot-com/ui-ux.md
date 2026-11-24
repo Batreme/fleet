@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: xavierjoliot-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `xavierjoliot-com` (**Xavier Joliot · Développeur Créatif**)
 - **Production URL**: [https://xavierjoliot.com](https://xavierjoliot.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#1c1730` / `#ffd23f`)
 - **Summary**: Xavier Joliot, développeur créatif à Béziers : branding, UI/UX, stratégie, développement full-stack et mise en production. Disponible imm...
 - **Total Clean CSS Variables Extracted**: `37` (curated live-grounded set below)
@@ -78,7 +78,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top> — `xavierjoliot-com`)**:
-   - Landmark `<header class="top">` (`1420x36px`) hosting `Xavier Joliot · Développeur Créatif` navigation (`FR · EN`), DOM attributes (`data-boot="off"`, `data-precedence="next"`, `data-label="Connexion"`, `data-n="1"`), and stylesheet rule `nded_fdf5727d-module__3a_gmq__cla... { font-family:Unbounded,Unbounded Fallback;font-style:normal }`.
+   - Landmark `<header class="top">` (`1420x36px`) hosting `Xavier Joliot · Développeur Créatif` navigation (`FR · EN`), DOM attributes (`data-precedence="next"`, `data-label="Connexion"`, `data-n="1"`, `data-n="2"`), and stylesheet rule `nded_fdf5727d-module__3a_gmq__cla... { font-family:Unbounded,Unbounded Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.screen> — `Xavier Joliot · Développeur Créati`)**:
    - Landmark `<section class="screen">` presenting display lead `Xavier Joliot · Développeur Créatif` and copy excerpt *"Je pense la marque, je conçois l'interface, je développe le produ"* over `#1c1730` canvas and `#f4ead9` ink.
 3. **Primary Showcase & Content Grid (<section.screen:nth(2)> — `Featured Work & Interactive Showca`)**:

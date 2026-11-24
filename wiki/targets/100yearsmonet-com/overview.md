@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: 100yearsmonet-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://100yearsmonet.com"
 final_url: "https://100yearsmonet.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Monet 100 — A century without Claude Monet · 3D gallery
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `7`
+- **Recovered Scripts**: `13`
 - **Recovered Stylesheets**: `0`
 
 ---

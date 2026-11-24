@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: moderncraftaz-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://moderncraftaz.com/"
 final_url: "https://moderncraftaz.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Select A Location · AllHaus
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `7`
+- **Recovered Scripts**: `62`
+- **Recovered Stylesheets**: `48`
 
 ---
 

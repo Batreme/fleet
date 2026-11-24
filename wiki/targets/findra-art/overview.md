@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: findra-art"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://findra.art/"
 final_url: "https://findra.art/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Findra: the AI character feed
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `21`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `62`
+- **Recovered Stylesheets**: `3`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-gravelleduparc-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.gravelleduparc.com/"
 final_url: "https://www.gravelleduparc.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Gravelle du Parc · Événement gravel bike — 2-4 octobre 2026
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `16`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `29`
+- **Recovered Stylesheets**: `4`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: offform-net"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: 502
 block_reason: "Upstream HTTP 502 (502 Bad Gateway)"

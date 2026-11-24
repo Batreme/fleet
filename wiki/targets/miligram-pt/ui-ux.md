@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: miligram-pt"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `miligram-pt` (**Miligram Brand Agency**)
 - **Production URL**: [https://miligram.pt](https://miligram.pt)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f4f4` canvas, `#1a1a1a` ink, `#ff0000` accent)
 - **Summary**: Somos uma agência de Branding, Design e Marketing Digital em Portugal. Criamos marcas, websites e experiências digitais que fazem negócio...
 - **Total Clean CSS Variables Extracted**: `257` (curated live-grounded set below)

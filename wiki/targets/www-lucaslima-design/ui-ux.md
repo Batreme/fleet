@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-lucaslima-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-lucaslima-design` (**Lucas Lima · Product designer and design engineer**)
 - **Production URL**: [https://www.lucaslima.design/](https://www.lucaslima.design/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f4f4f2` / `#1570ef`)
 - **Summary**: Brazilian product designer working across SaaS, finance and AI. I work directly in code, exploring live interfaces and bridging design an...
-- **Total Clean CSS Variables Extracted**: `143` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `213` (curated live-grounded set below)
 
 ---
 
@@ -24,7 +24,7 @@ http_status: 200
 - **Display Font Stack**: `General Sans`
 - **Body Font Stack**: `Inter Variable`
 - **Monospace / Technical Font Stack**: `Geist Mono`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 102.237px`, `line-height: 92.0131px`, `font-weight: 500`, `letter-spacing: -4.60066px`); CSS variables `--brand-display: 4rem`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 102.237px`, `line-height: 92.0131px`, `font-weight: 500`, `letter-spacing: -4.60066px`); CSS variables `--brand-display: 4rem`; rule `h1` (`font-weight: 500`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 14px`, `line-height: 20.3px`, `font-weight: 500`); rule `h2` (`letter-spacing: inherit`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--brand-body: 1rem`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 24.65px`, `font-weight: 400`, `letter-spacing: -0.17px`); CSS variables `--font-mono: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`, `--brand-caption: .8125rem`, `--default-mono-font-family: var(--font-mono)`; rule `small` (`font-size: 12px`, `font-weight: 400`)
@@ -79,12 +79,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.st-header> — `www-lucaslima-design`)**:
-   - Landmark `<header class="st-header">` (`1361x44px`) hosting `Lucas Lima · Product designer and de` navigation (`Lucas Lima · Projects · Writing · About · Photography`), DOM attributes (`data-theme="light"`, `data-prerendered="true"`, `data-js="live"`, `data-intro="play"`), and stylesheet rule `html { scroll-behavior:auto;scrollbar-gutter:stable }`.
+   - Landmark `<header class="st-header">` (`1361x44px`) hosting `Lucas Lima · Product designer and de` navigation (`Lucas Lima · Projects · Writing · About · Photography`), DOM attributes (`data-theme="light"`, `data-prerendered="true"`, `data-js="live"`, `data-app`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 2. **Hero Stage & Focal Lead (<section.st-pad> — `SENIOR PRODUCT DESIGNER`)**:
    - Landmark `<section class="st-pad">` presenting display lead `SENIOR PRODUCT DESIGNER` and copy excerpt *"Lucas Lima is a Brazilian designer and psychologist with a soft s"* over `#f4f4f2` canvas and `#121211` ink.
 3. **Primary Showcase & Content Grid (<section.st-pad:nth(2)> — `Senior Product Designer`)**:
-   - Landmark `<section class="st-pad">` rendering section `Senior Product Designer` with copy *"hello@lucaslima.design Copied"*, asset references (`general-sans-500.woff2`, `general-sans-400.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `body { font-family:var(--font-sans) }`.
+   - Landmark `<section class="st-pad">` rendering section `Senior Product Designer` with copy *"hello@lucaslima.design Copied"*, asset references (`general-sans-500.woff2`, `general-sans-400.woff2`, `favicon.ico`, `favicon.svg`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.st-pad:nth(3)> — `Selected work`)**:
-   - Landmark `<section class="st-pad">` framing `Selected work` and `Things I make on the side` (*"hello@lucaslima.design"*) with `#f2f3f5` surface cards, `#1570ef` accents, and `.portfolio { min-height:100svh }`.
+   - Landmark `<section class="st-pad">` framing `Selected work` and `Things I make on the side` (*"hello@lucaslima.design"*) with `#f2f3f5` surface cards, `#1570ef` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.st-footer> — `https://www.lucaslima.design/`)**:
    - Landmark `<footer class="st-footer">` anchoring `Lucas Lima · Product designer an` footer links (`Lucas Lima · Projects · Writing · About · Photography`), copy *"Internal tools & ops"*, and `#d7d7d0` structural dividers.

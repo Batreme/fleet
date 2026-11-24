@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-unimaticwatches-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.unimaticwatches.com/?srsltid=AfmBOor1S-k1GXW2WUlgmQd-YbKuDQWHeKBxyRjTFNyURmTvXoeNJXHD"
 final_url: "https://www.unimaticwatches.com/?srsltid=AfmBOor1S-k1GXW2WUlgmQd-YbKuDQWHeKBxyRjTFNyURmTvXoeNJXHD"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: UNIMATIC Watches
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `133`
-- **Recovered Stylesheets**: `5`
+- **Recovered Scripts**: `835`
+- **Recovered Stylesheets**: `20`
 
 ---
 

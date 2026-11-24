@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: robertoattanasio-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `robertoattanasio-com_en` (**Roberto Attanasio**)
 - **Production URL**: [https://robertoattanasio.com/en](https://robertoattanasio.com/en)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#080808` / `#9c0ea3`)
 - **Summary**: I write code by day and words by night. Projects, music and poems, all hidden in my digital world: drag the field and find them.
 - **Total Clean CSS Variables Extracted**: `65` (curated live-grounded set below)
@@ -81,4 +81,4 @@ http_status: 200
 4. **Interactive Detail & Feature Matrix (<article.py-5> — `poetry poetry poetry`)**:
    - Landmark `<article class="box-content py-5">` framing `poetry poetry poetry` and `I write code by day and words by night. In betwe` (*"I write code by day and words by night. In between there's the pi"*) with `#080808` surface cards, `#9c0ea3` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.flex> — `https://robertoattanasio.com/en`)**:
-   - Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com 1753ZT0X-=X="*, and `#cecece` structural dividers.
+   - Landmark `<footer class="flex">` anchoring `Roberto Attanasio` footer links (`Overview · Index · Archive · About · Contact`), copy *"r.attanasio90@gmail.com r.attanasio90@gmail.com KV12·3N+T7VX"*, and `#cecece` structural dividers.

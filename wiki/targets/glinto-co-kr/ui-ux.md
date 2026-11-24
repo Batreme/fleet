@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: glinto-co-kr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `glinto-co-kr` (**Glinto — Creative studio**)
 - **Production URL**: [https://glinto.co.kr](https://glinto.co.kr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#ff5c34`)
 - **Summary**: Glinto is a creative studio where one team takes brand strategy and identity, film and photography, design, and web and app development f...
 - **Total Clean CSS Variables Extracted**: `292` (curated live-grounded set below)
@@ -88,6 +88,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.pt-24> — `Solutions shaped by how your brand`)**:
    - Landmark `<section class="pt-24">` rendering section `Solutions shaped by how your brand runs` with copy *"Engineering Build it"*, asset references (`2f7d2945a32bc936-s.p.0q9pvfn3wr_3...`, `5c285b27cdda1fe8-s.p.0lsanbtneewq...`, `0k1f2nt08p6_n.css`, `3b84er6uv62xn.css`), and grid rule `sans_efc253b3-module__w1i8Da__var... { --font-dm-sans:"DM Sans", "DM Sans Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<section.pt-24:nth(2)> — `Launch & care`)**:
-   - Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `f_kr_611a1780-module__N7vmma__cla... { font-family:Noto Serif KR,Noto Serif KR Fallback;font-style:normal;font-... }`.
+   - Landmark `<section class="pt-24">` framing `Launch & care` and `Experience with brands across industries` (*"From brand strategy to design, media and development, specialists"*) with `#fdeceb` surface cards, `#ff5c34` accents, and `host { --header-fill:0;--px-x:80%;--px-y:0% }`.
 5. **Colophon & Global Directory Footer (<footer.mt-24> — `https://glinto.co.kr`)**:
    - Landmark `<footer class="mt-24">` anchoring `Glinto — Creative studio` footer links (`About · Services · Glinto.dev · Works · Contact`), copy *"Start small with the one service you need right now."*, and `#626880` structural dividers.

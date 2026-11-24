@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-emblematica-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.emblematica.agency"
 final_url: "https://emblematica.agency/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: emblematica — concept-led brand & web design agency in barcelona
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `10`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `55`
+- **Recovered Stylesheets**: `14`
 
 ---
 

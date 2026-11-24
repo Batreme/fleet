@@ -1,8 +1,8 @@
-# Round 43 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 43 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-43`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-43`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
 > **Analyzed Targets**: `7` live (`3` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
@@ -22,17 +22,17 @@
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `www-bitwip-fr_en` | `tier1_fast` | `1440×2400px` (149,542 B) | `390×2400px` (207,729 B) | 184 | 16 | 296 | 113 | `0.08` / `0.47` | **25.0 / 25.0** |
-| `www-bluesqx-com` | `tier1_fast` | `1440×2400px` (638,877 B) | `390×2400px` (780,456 B) | 67 | 16 | 286 | 108 | `0.11` / `0.55` | **25.0 / 25.0** |
-| `www-blumjeffrey-com` | `tier1_fast` | `1440×2400px` (1,565,391 B) | `390×2400px` (431,324 B) | 46 | 16 | 283 | 106 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `www-brandlos-nl` | `tier1_fast` | `1440×2400px` (82,933 B) | `390×2400px` (95,706 B) | 11 | 16 | 298 | 114 | `0.11` / `0.55` | **25.0 / 25.0** |
-| `www-brandtheagency-com` | `tier2_webgl` | `1440×900px` (575,945 B) | `390×844px` (162,213 B) | 1044 | 16 | 279 | 103 | `0.08` / `0.46` | **25.0 / 25.0** |
-| `www-butter-video` | `tier1_fast` | `1440×2400px` (206,149 B) | `390×2400px` (145,086 B) | 40 | 16 | 304 | 117 | `0.08` / `0.49` | **25.0 / 25.0** |
-| `www-casamomo-at` | `tier1_fast` | `1440×2400px` (1,237,953 B) | `390×2400px` (629,152 B) | 36 | 16 | 290 | 110 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-bitwip-fr_en` | `tier1_fast` | `1280×6624px` (355,890 B) | `390×2616px` (66,888 B) | 186 | 16 | 363 | 118 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `www-bluesqx-com` | `tier1_fast` | `1280×6624px` (401,124 B) | `390×2616px` (66,884 B) | 67 | 16 | 351 | 113 | `0.11` / `0.54` | **25.0 / 25.0** |
+| `www-blumjeffrey-com` | `tier1_fast` | `1280×6624px` (526,508 B) | `390×2616px` (83,572 B) | 56 | 16 | 341 | 110 | `0.09` / `0.49` | **25.0 / 25.0** |
+| `www-brandlos-nl` | `tier1_fast` | `1280×6624px` (270,718 B) | `390×2616px` (73,368 B) | 11 | 16 | 356 | 118 | `0.11` / `0.54` | **25.0 / 25.0** |
+| `www-brandtheagency-com` | `tier1_fast` | `1280×2484px` (121,282 B) | `390×2616px` (51,286 B) | 1042 | 16 | 312 | 106 | `0.09` / `0.47` | **25.0 / 25.0** |
+| `www-butter-video` | `tier1_fast` | `1280×1656px` (73,278 B) | `390×1744px` (24,386 B) | 40 | 16 | 335 | 120 | `0.08` / `0.49` | **25.0 / 25.0** |
+| `www-casamomo-at` | `tier1_fast` | `1280×6624px` (336,390 B) | `390×1744px` (19,808 B) | 36 | 16 | 347 | 114 | `0.08` / `0.49` | **25.0 / 25.0** |
 | `www-cadillacf1team-com` | `blocked` (`403`) | `none` | `none` | — | — | — | — | — | **Excluded (`Upstream HTTP 403 — CloudFront WAF Block`)** |
 | `www-cartier-com_en-fr-lechoeurdespierres` | `blocked` (`403`) | `none` | `none` | — | — | — | — | — | **Excluded (`Upstream HTTP 403 — Edge WAF Access Denied`)** |
 | `www-cartier-com_en-us-roadster-universe-html` | `blocked` (`403`) | `none` | `none` | — | — | — | — | — | **Excluded (`Upstream HTTP 403 — Edge WAF Access Denied`)** |

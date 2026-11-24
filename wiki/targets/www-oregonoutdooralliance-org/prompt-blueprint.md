@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-oregonoutdooralliance-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-oregonoutdooralliance-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `#616161` ink, `#0082f3` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `
 
 > **Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry** (https://www.oregonoutdooralliance.org/) — Connect with Oregon’s outdoor community. Explore events, resources, and partnerships that help outdoor brands and leaders grow and thrive.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Oregon Outdoor Alliance · Growing Oregon’s Outdoor Industry** (`https://www.oregonoutdooralliance.org/`). Connect with Oregon’s outdoor community. Explore events, resources, and partnerships that help outdoor brands and leaders grow and thrive.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `#616161` ink, `#0082f3` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#efeeee` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#616161` primary typography and `#0082f3` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=3005px` / doc `3905px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `120rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `100%`, `3px`, `50%`, `2px`.
@@ -109,6 +114,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-oregonoutdooralliance-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<nav.nav_desktop_layout>` and `<section.page_wrap>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `3905px`, deepest scrollY reached `3005px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`.
+- **Hover Physics (`first_card` · `Join the Oregon Outdoor Alliance...`)**: Computed transition `0.2s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`carousel_next` · `Previous slide`)**: Triggered visual diff `24.108` (attr ` -> `, captured in `assets/state-interactive.webp`).
+- **Route Transition Architecture**: First internal navigation (`/membership/member-sign-in`) measured as `MPA` in `1994ms`.
 
 ---
 
@@ -167,6 +178,17 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#efeeee` canvas, `
    - Landmark `<section class="page_code_wrap">` framing `Connection. Cultivation. Business Growth.` and `Join the Oregon Outdoor Alliance` (*"O r e g o n O u t d o o r A l l i a n c e u n i t e s i n d i v i"*) with `#ffffff` surface cards, `#0082f3` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.footer_wrap> — `https://www.oregonoutdooralliance.org/`)**:
    - Landmark `<footer class="footer_wrap u-overflow-hidden">` anchoring `Oregon Outdoor Alliance · Growin` footer links (`Connect · Events · Brand Members · Sponsorship · Cultivate`), copy *"Be part of an extensive member directory that helps you find"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `OREGON’S OUTDOOR BUSINESS ALLIANCE` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `28%`): Active landmark `WHO WE ARE` · sticky/fixed elements: `0`
+- **Step 03** (`y=1700px`, `57%`): Active landmark `Build Your Network` · sticky/fixed elements: `0`
+- **Step 04** (`y=2550px`, `85%`): Active landmark `Section @ 85%` · sticky/fixed elements: `0`
+- **Step 05** (`y=3005px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/membership/member-sign-in`)**: `https://www.oregonoutdooralliance.org/membership/member-sign-in` — H1: `SIGN IN`, scrollHeight `2762px`, transition `MPA` (`1994ms`)
+- **About Route (`/about`)**: `https://www.oregonoutdooralliance.org/about` — H1: `ABOUT OOA`, scrollHeight `4559px`, transition `direct` (`1238ms`)
+- **Detail Route (`/connect/events`)**: `https://www.oregonoutdooralliance.org/connect/events` — H1: `OOA EVENTS`, scrollHeight `4283px`, transition `direct` (`1022ms`)
 
 ---
 
@@ -219,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#ffffff` — grounded in `var(--ez-banner-border)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `120rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 16px`)
@@ -244,7 +266,7 @@ Scaffold `www-oregonoutdooralliance-org` (`Oregon Outdoor Alliance · Growing Or
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav_desktop_layout> — `www-oregonoutdooralliance-org`)` (`www-oregonoutdooralliance-org`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.625,.05,0,1)`, `cubic-bezier(0.17,0,0.2,1)`, `cubic-bezier(0.5,0,0.83,1)` transitions and links `Connect · Events · Brand Members · Sponsorship · Cultivate`.
 2. **Hero Stage & Focal Lead (<section.page_hero> — `OREGON’S OUTDOOR BUSINESS ALLIANCE`)**:
    - DOM & Selectors: Landmark `<section class="page_hero u-position-relative">` presenting display lead `OREGON’S OUTDOOR BUSINESS ALLIANCE` and copy excerpt *"Join the Oregon Outdoor Alliance today!"* over `#efeeee` canvas and `#616161` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#efeeee` background with `#616161` headline `OREGON’S OUTDOOR BUSINESS ALLIANCE`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#efeeee` background with `#616161` headline `OREGON’S OUTDOOR BUSINESS ALLIANCE`.
 3. **Primary Showcase & Content Grid (<section.page_wrap> — `Oregon’s Outdoor Business Alliance`)**:
    - DOM & Selectors: Landmark `<section class="page_wrap">` rendering section `Oregon’s Outdoor Business Alliance` with copy *"The Southern Oregon Panel: Enhancing the Outdoor Recreation Econo"*, asset references (`cdn.prod.website-files.com`, `261-ooa.webflow.shared.d47e507e6.css`, `437a9f0a-aec5-11f0-9d68-0bd0c0028851`, `gtm.js`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page_wrap> — `Oregon’s Outdoor Business Alliance`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 120rem`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -275,8 +297,44 @@ Scaffold `www-oregonoutdooralliance-org` (`Oregon Outdoor Alliance · Growing Or
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `www-oregonoutdooralliance-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.625,.05,0,1)`)**: Governs interactive state transitions across `<nav.nav_desktop_layout>` and `<section.page_wrap>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `3905px` across 5 distinct viewport chapters using Lenis, GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: OREGON’S OUTDOOR BUSINESS A... (0%) -> WHO WE ARE (28%) -> Build Your Network (57%) -> Section @ 85% (85%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/membership/member-sign-in` (detail, MPA), `/about` (about, direct), `/connect/events` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-oregonoutdooralliance-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | OREGON’S OUTDOOR BUSINESS ALLIANCE | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `28%` | WHO WE ARE | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `57%` | Build Your Network | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `85%` | Section @ 85% | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3005px` | `100%` | Footer | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | OREGON’S OUTDOOR BUSINESS ALLIANCE | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1919px` | `50%` | Our Members | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3839px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `carousel_next` (`Previous slide`, diff `24.108`) | [state-interactive.webp](assets/state-interactive.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://www.oregonoutdooralliance.org/membership/member-sign-in` | SIGN IN | `2762px` | `MPA` (`1994ms`) | [subpage-01-membership-member-sign-in.webp](assets/subpage-01-membership-member-sign-in.webp) |
+| `2` | `about` | `https://www.oregonoutdooralliance.org/about` | ABOUT OOA | `4559px` | `direct` (`1238ms`) | [subpage-02-about.webp](assets/subpage-02-about.webp) |
+| `3` | `detail` | `https://www.oregonoutdooralliance.org/connect/events` | OOA EVENTS | `4283px` | `direct` (`1022ms`) | [subpage-03-connect-events.webp](assets/subpage-03-connect-events.webp) |
+

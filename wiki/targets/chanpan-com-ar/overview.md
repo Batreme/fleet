@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: chanpan-com-ar"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://chanpan.com.ar"
 final_url: "https://chanpan.com.ar/CH/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: ChanPan · AI Video Production, Commercials & Creative Studio — Argentina
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `4`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `14`
+- **Recovered Stylesheets**: `6`
 
 ---
 

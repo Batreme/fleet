@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: aqualoqa-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://aqualoqa.com/"
 final_url: "https://aqualoqa.com/"
 status: blocked
 http_status: null
 capture_tier: none
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )"
+block_reason: "Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -29,10 +29,10 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://aqualoqa.com/](https://aqualoqa.com/)
 - **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 22000ms exceeded. Call log: - navigating to 'https://aqualoqa.com/', waiting until 'domcontentloaded' )
 - **Page Title**: aqualoqa-com
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `26`
+- **Recovered Scripts**: `24`
 - **Recovered Stylesheets**: `0`
 
 ---

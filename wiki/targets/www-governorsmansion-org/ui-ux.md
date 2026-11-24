@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-governorsmansion-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-governorsmansion-org` (**Louisiana's House · Louisiana Governor's Mansion**)
 - **Production URL**: [https://www.governorsmansion.org/](https://www.governorsmansion.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#002b59` canvas, `#ffffff` ink, `#0082f3` accent)
 - **Summary**: Step inside the Louisiana Governor’s Mansion and discover a rich blend of history, culture, and civic pride. Take a virtual tour, explore...
 - **Total Clean CSS Variables Extracted**: `171` (curated live-grounded set below)

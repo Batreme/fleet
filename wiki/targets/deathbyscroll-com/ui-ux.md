@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: deathbyscroll-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,17 +13,17 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `deathbyscroll-com` (**Death by Scroll**)
 - **Production URL**: [https://deathbyscroll.com](https://deathbyscroll.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#111111` / `#ff0000`)
 - **Summary**: Killer scroll animation. Perfect for product launches, microsites, and explainers. Create a cult-like devotion to your brand.
-- **Total Clean CSS Variables Extracted**: `83` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `91` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Girthy`
 - **Body Font Stack**: `Satoshi`
-- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
+- **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 66px`, `line-height: 66px`, `font-weight: 400`); CSS variables `--font-size--h1: 2.3125rem`, `--line-height--h1: 2.375rem`
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 54px`, `line-height: 54px`, `font-weight: 400`); CSS variables `--font-size--h2: 2.5rem`, `--line-height--h2: 3rem`; rule `h2` (`font-size: 1.5rem`, `line-height: 1.2`, `letter-spacing: 2px`, `font-weight: 600`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 22px`, `font-weight: 400`); CSS variables `--typeface-body: "Satoshi",sans-serif`, `--typeface-body-bold: "Satoshi Black",sans-serif`, `--line-height--body: 1.375rem`; rule `p` (`font-size: 1rem`, `line-height: 1.25rem`)

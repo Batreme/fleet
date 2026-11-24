@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: thestudiobyjuliegranger-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://thestudiobyjuliegranger.com/"
 final_url: "https://thestudiobyjuliegranger.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Studio by Julie Granger
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `111`
-- **Recovered Stylesheets**: `19`
+- **Recovered Scripts**: `288`
+- **Recovered Stylesheets**: `44`
 
 ---
 

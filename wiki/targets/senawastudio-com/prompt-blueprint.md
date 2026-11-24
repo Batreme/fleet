@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: senawastudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "senawastudio-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `#302620` ink, `#8a5a2b` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `
 
 > **Senawa · Architecture & Interior Design Studio in Jakarta** (https://senawastudio.com) — Architecture made for how people actually live. An architecture, interior, and furniture design studio in the Greater Jakarta area.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Senawa · Architecture & Interior Design Studio in Jakarta** (`https://senawastudio.com`). Architecture made for how people actually live. An architecture, interior, and furniture design studio in the Greater Jakarta area.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `#302620` ink, `#8a5a2b` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f6f2eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#302620` primary typography and `#8a5a2b` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Sora` for display copy (`Senawa, Architecture & Interior Desi`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Sora` for display copy (`Senawa, Architecture & Interior Desi`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `1480px` container bounds (`gap: 16px`, padding `48px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1480px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `48px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `2px`, `3px`, `var(--radius-sm)`, `var(--radius-md)`.
@@ -115,6 +120,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `
 - **Selector `.PageTransition-module__kKDxmW__mark`**: `transition: opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezi...` extracted from `senawastudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.Nav-module__bLoQaq__nav>` and `<section.skip-link>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.antialiased>` and `<section.skip-link>` interactive targets.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `NSB PS 2024COMMERCIAL`)**: Computed transition `0.6s` / `cubic-bezier(0.16, 1, 0.3, 1)` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/work`) measured as `direct` in `1156ms`.
 
 ---
 
@@ -173,6 +183,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#f6f2eb` canvas, `
    - Landmark `<section class="Nav-module__bLoQaq__nav">` framing `BSD, Tangerang Selatan` and `Residential · 2025` (*"Residential · 2025"*) with `#302620` surface cards, `#8a5a2b` accents, and `sora_2a023f4c-module__BGqKYq__cla... { font-family:Sora,Sora Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.Nav-module__bLoQaq__navHome> — `https://senawastudio.com`)**:
    - Landmark `<footer class="Nav-module__bLoQaq__navHome">` anchoring `Senawa · Architecture & Interior` footer links (`Overview · Index · Archive · About · Contact`), copy *"Louver House Giriloka"*, and `#dcd2bf` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 02** (`y=0px`, `8%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 03** (`y=0px`, `17%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 04** (`y=0px`, `25%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 05** (`y=0px`, `33%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 06** (`y=0px`, `42%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 07** (`y=0px`, `50%`): Active landmark `Hero` · sticky/fixed elements: `5`
+- **Step 08** (`y=0px`, `58%`): Active landmark `Hero` · sticky/fixed elements: `5`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/work`)**: `https://senawastudio.com/work` — H1: `Work: Selected Architecture & Interior Projects i...`, scrollHeight `2643px`, transition `direct` (`1156ms`)
+- **Detail Route (`/work/aa-house`)**: `https://senawastudio.com/work/aa-house` — H1: `AA House`, scrollHeight `3638px`, transition `direct` (`2533ms`)
+- **About Route (`/studio`)**: `https://senawastudio.com/studio` — H1: `INSIDE THE STUDIO`, scrollHeight `3292px`, transition `direct` (`428ms`)
 
 ---
 
@@ -189,7 +213,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f6f2eb` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#302620`, **Accent / Highlight**: `#8a5a2b`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f6f2eb` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#302620` primary typography and `#8a5a2b` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Sora` for display copy (`Senawa, Architecture & Interior Desi`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Sora` for display copy (`Senawa, Architecture & Interior Desi`) with `Inter`.
   - **Calibrated Spatial Grid & Motion**: Combines `1480px` container bounds (`gap: 16px`, padding `48px`) with `cubic-bezier(.4,0,.2,1)` easing.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -231,8 +255,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--flax`)**: `#8c7b5c` — grounded in `var(--flax)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1480px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `48px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1480px`, `gap: 16px`)
@@ -256,7 +280,7 @@ Scaffold `senawastudio-com` (`Senawa · Architecture & Interior Design Studio in
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.Nav-module__bLoQaq__nav> — `senawastudio-com`)` (`senawastudio-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (min-width:1024px) and (max-height:860px)`, `@media (max-width:1023px)`, `@media (max-width:767px)` with `cubic-bezier(.4,0,.2,1)`, `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.5,1,.89,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<section.antialiased> — `Senawa, Architecture & Interior De`)**:
    - DOM & Selectors: Landmark `<section class="antialiased">` presenting display lead `Senawa, Architecture & Interior Design Studio in...` and copy excerpt *"AA House, Residential, 2025 (1 of 8)"* over `#f6f2eb` canvas and `#302620` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#f6f2eb` background with `#302620` headline `Senawa, Architecture & Interior Design Studio in...`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#f6f2eb` background with `#302620` headline `Senawa, Architecture & Interior Design Studio in...`.
 3. **Primary Showcase & Content Grid (<section.skip-link> — `AA House, Residential, 2025 (1 of `)**:
    - DOM & Selectors: Landmark `<section class="skip-link">` rendering section `AA House, Residential, 2025 (1 of 8)` with copy *"BSD, Tangerang Selatan"*, asset references (`clarity.js`, `xmr8ny30a5`, `0ha4m18glnjqn.js`, `3r7r9eemmq-97.js`), and grid rule `inter_c21b1aaa-module__0pqmKW__va... { --font-sans:"Inter", "Inter Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.skip-link> — `AA House, Residential, 2025 (1 of `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1480px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `48px` horizontal padding on mobile.
@@ -287,8 +311,40 @@ Scaffold `senawastudio-com` (`Senawa · Architecture & Interior Design Studio in
 - **Selector `.PageTransition-module__kKDxmW__mark`**: `transition: opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezi...` extracted from `senawastudio-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.Nav-module__bLoQaq__nav>` and `<section.skip-link>`.
 - **State & Hover Choreography**: Opacity and transform transitions on `<section.antialiased>` and `<section.skip-link>` interactive targets.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%) -> Hero (8%) -> Hero (17%) -> Hero (25%) -> Hero (33%) -> Hero (42%) -> Hero (50%) -> Hero (58%).
+- **Multi-Page Routes**: Scaffold internal routes `/work` (listing, direct), `/work/aa-house` (detail, direct), `/studio` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `senawastudio-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `0px` | `8%` | Hero | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `0px` | `17%` | Hero | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `0px` | `25%` | Hero | `5` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `0px` | `33%` | Hero | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `0px` | `42%` | Hero | `5` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `0px` | `50%` | Hero | `5` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `0px` | `58%` | Hero | `5` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://senawastudio.com/work` | Work: Selected Architecture & Interio... | `2643px` | `direct` (`1156ms`) | [subpage-01-work.webp](assets/subpage-01-work.webp) |
+| `2` | `detail` | `https://senawastudio.com/work/aa-house` | AA House | `3638px` | `direct` (`2533ms`) | [subpage-02-work-aa-house.webp](assets/subpage-02-work-aa-house.webp) |
+| `3` | `about` | `https://senawastudio.com/studio` | INSIDE THE STUDIO | `3292px` | `direct` (`428ms`) | [subpage-03-studio.webp](assets/subpage-03-studio.webp) |
+

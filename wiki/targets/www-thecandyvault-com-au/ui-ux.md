@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-thecandyvault-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-thecandyvault-com-au` (**The Candy Vault · Buy Sweets Online · Australia**)
 - **Production URL**: [https://www.thecandyvault.com.au/](https://www.thecandyvault.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: Shop delicious lollies, chocolates and sweet treats online at The Candy Vault. Discover a colourful range of favourites delivered across...
-- **Total Clean CSS Variables Extracted**: `2100` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `2102` (curated live-grounded set below)
 
 ---
 
@@ -71,7 +71,7 @@ http_status: 200
 2. **Hero Stage & Focal Lead (<section.ke5pl1> — `Fancy a sweet raid?`)**:
    - Landmark `<section class="ke5pl1 comp-mu3xtrpz">` presenting display lead `Fancy a sweet raid?` and copy excerpt *"Christmas has arrived at The Candy Vault!"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.comp-mu19a2q3> — `Explore our collection of old favo`)**:
-   - Landmark `<section class="ke5pl1 comp-mu19a2q3">` rendering section `Explore our collection of old favourites, new dis...` with copy *"Too Sweet to Spook"*, asset references (`f415e2_d11d56bae7454bc98dfbe3e86d...`, `bundle.tracing.es5.min.js`, `www.thecandyvault.com.au`, `wix-image-kit.90dfe90c.bundle.min.js`), and grid rule `root::view-transition { pointer-events:none }`.
+   - Landmark `<section class="ke5pl1 comp-mu19a2q3">` rendering section `Explore our collection of old favourites, new dis...` with copy *"Too Sweet to Spook"*, asset references (`f415e2_d11d56bae7454bc98dfbe3e86d...`, `minified.js`, `focus-within-polyfill.js`, `www.thecandyvault.com.au`), and grid rule `root::view-transition { pointer-events:none }`.
 4. **Interactive Detail & Feature Matrix (<section.comp-mu43swgv-container> — `Too Sweet to Spook`)**:
    - Landmark `<section class="ke5pl1 comp-mu43swgv-container">` framing `Too Sweet to Spook` and `What Are You Craving?` (*"Get ready for little monsters at the door with our collection of "*) with `#cccccc` surface cards, `#0000ee` accents, and `SITE_HEADER { view-transition-name:header-group }`.
 5. **Colophon & Global Directory Footer (<footer.comp-mu93k1t9> — `https://www.thecandyvault.com.au/`)**:

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: zeropact-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://zeropact.co"
 final_url: "https://zeropact.co/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: ZeroPact · LCA, Product Carbon Footprint, DPP, GLEC & EmpCo
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `15`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `61`
+- **Recovered Stylesheets**: `8`
 
 ---
 

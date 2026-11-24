@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: twodo-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `twodo-design` (**Two-Do**)
 - **Production URL**: [https://twodo.design](https://twodo.design)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#1b1815` canvas, `#f1ece3` ink, `#b8842a` accent)
 - **Summary**: Two-Do case study: a voice-first, shared to-do app for couples, where an AI agent does the legwork and nothing happens until you both agree.
 - **Total Clean CSS Variables Extracted**: `19` (curated live-grounded set below)
@@ -77,7 +77,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.bar> — `twodo-design`)**:
-   - Landmark `<header class="bar scrolled">` (`1440x79px`) hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
+   - Landmark `<header class="bar">` (`1440x79px`) hosting `Two-Do` navigation (`The idea · Moments · System`), DOM attributes (`data-theme="dark"`, `data-action="capture"`, `data-arg="checkup"`, `data-title="Say it out loud"`), and stylesheet rule `html { scroll-behavior: smooth; overflow-x: clip; }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `The to-do list built for two.`)**:
    - Landmark `<section class="hero">` presenting display lead `The to-do list built for two.` and copy excerpt *"A PRODUCT CONCEPT · 2026"* over `#1b1815` canvas and `#f1ece3` ink.
 3. **Primary Showcase & Content Grid (<section.idea> — `The to- do list built for two.`)**:

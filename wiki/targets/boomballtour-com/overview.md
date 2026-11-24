@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: boomballtour-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://boomballtour.com/"
 final_url: "https://boomball.com/"
 status: analyzed
@@ -31,8 +31,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Boom Ball Baseball · The Ultimate Family Sports Experience
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `53`
-- **Recovered Stylesheets**: `22`
+- **Recovered Scripts**: `193`
+- **Recovered Stylesheets**: `42`
 
 ---
 

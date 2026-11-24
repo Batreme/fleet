@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-impastofornoantico-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.impastofornoantico.com/"
 final_url: "https://www.impastofornoantico.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Handcrafted Bread with Soul - Impasto
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `16`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `68`
+- **Recovered Stylesheets**: `6`
 
 ---
 

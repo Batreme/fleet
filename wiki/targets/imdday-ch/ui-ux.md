@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: imdday-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `imdday-ch` (**IMDDay 2026**)
 - **Production URL**: [https://imdday.ch/](https://imdday.ch/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#b2b2b2` / `#bbbcc4`)
 - **Summary**: Dirk Koy, born in 1977, is a Basel-based artist active in various fields of moving image creation. He is a digital world-builder who samp...
 - **Total Clean CSS Variables Extracted**: `53` (curated live-grounded set below)

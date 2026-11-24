@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-designbomb-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-designbomb-it` (**Design Bomb Festival**)
 - **Production URL**: [https://www.designbomb.it/](https://www.designbomb.it/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#141414` / `#0000ee`)
 - **Summary**: The Wave presenta la nuova edizione di Design Bomb, che cresce e diventa festival. 22-23-24 Maggio, Catania.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)

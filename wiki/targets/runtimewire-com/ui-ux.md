@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: runtimewire-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `runtimewire-com` (**RuntimeWire: Breaking tech news. Before everyone else.**)
 - **Production URL**: [https://runtimewire.com](https://runtimewire.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f9fafb` canvas, `#171a26` ink, `#cb3610` accent)
 - **Summary**: Breaking tech news. Before everyone else. Independent investigations, original reporting and a continuous news feed covering startups and...
 - **Total Clean CSS Variables Extracted**: `209` (curated live-grounded set below)
@@ -68,11 +68,11 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.public-site-header> — `runtimewire-com`)**:
    - Landmark `<header class="public-site-header backdrop-blur-md">` (`1440x114px`) hosting `RuntimeWire: Breaking tech news. Bef` navigation (`Investigations · Stories · AI · Startups · Venture`), DOM attributes (`data-testid="skip-to-content"`, `data-anim="static"`, `data-testid="header-search-button"`, `data-testid="theme-switch"`), and stylesheet rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.border-border> — `Amazon Prime Air drone crashes on `)**:
-   - Landmark `<section class="border-border relative">` presenting display lead `Amazon Prime Air drone crashes on Detroit home af...` and copy excerpt *"Residents say the MK30 rose into a fiber-optic line on November 2"* over `#f9fafb` canvas and `#171a26` ink.
-3. **Primary Showcase & Content Grid (<article.gap-4> — `Microsoft backs OpenAI's proposal `)**:
-   - Landmark `<article class="gap-4 flex">` rendering section `Microsoft backs OpenAI's proposal to pause fronti...` with copy *"The Daily Briefing"*, asset references (`investigations.xml`, `stories.xml`, `featured`, `favicon.ico`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+2. **Hero Stage & Focal Lead (<section.border-border> — `Nvidia's board reinstated Jensen H`)**:
+   - Landmark `<section class="border-border relative">` presenting display lead `Nvidia's board reinstated Jensen Huang on Sunday,...` and copy excerpt *"An SEC filing dates the board's action to November 22nd, a day be"* over `#f9fafb` canvas and `#171a26` ink.
+3. **Primary Showcase & Content Grid (<article.gap-4> — `OX Security finds prompt injection`)**:
+   - Landmark `<article class="gap-4 flex">` rendering section `OX Security finds prompt injection or tool poison...` with copy *"The Daily Briefing"*, asset references (`investigations.xml`, `stories.xml`, `featured`, `favicon.ico`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<article.border-border> — `Editor’s picks`)**:
-   - Landmark `<article class="gap-4 border-border">` framing `Editor’s picks` and `Win an NVIDIA DGX Spark` (*"Published 1 hour ago"*) with `#ffa500` surface cards, `#cb3610` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<article class="gap-4 border-border">` framing `Editor’s picks` and `INVESTIGATIONS` (*"Published 41 minutes ago"*) with `#ffa500` surface cards, `#cb3610` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.border-border> — `https://runtimewire.com`)**:
-   - Landmark `<footer class="border-border mt-20">` anchoring `RuntimeWire: Breaking tech news.` footer links (`Investigations · Stories · AI · Startups · Venture`), copy *"Microsoft AI chief Mustafa Suleyman endorsed OpenAI's plan f"*, and `#7fe0a8` structural dividers.
+   - Landmark `<footer class="border-border mt-20">` anchoring `RuntimeWire: Breaking tech news.` footer links (`Investigations · Stories · AI · Startups · Venture`), copy *"OX Security, co-founded by Neatsun Ziv, analyzed 542,207 com"*, and `#7fe0a8` structural dividers.

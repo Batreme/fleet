@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-baseline-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-baseline-agency` (**Baseline · Brand identity systems, designed and built**)
 - **Production URL**: [https://www.baseline.agency/](https://www.baseline.agency/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#000000`)
 - **Summary**: Brand identity studio in Cluj-Napoca led by Victor Deaconu. Positioning, identity, rules and guidelines in 3 to 4 weeks, for brands that...
-- **Total Clean CSS Variables Extracted**: `61` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `64` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 46.5333px`, `line-height: 44.2067px`, `font-weight: 700`, `letter-spacing: -1.396px`); CSS variables `--t-display: clamp(calc(34*1px),calc(30.1*1px) + 1.04vw,calc(48.07*1px))`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 45.8333px`, `line-height: 50.4167px`, `font-weight: 700`, `letter-spacing: -1.375px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 53.48px`, `line-height: 53.48px`, `font-weight: 600`, `letter-spacing: -1.6044px`)
 - **Body Copy**: live computed `body` (`font-size: 15.28px`, `line-height: 22.92px`, `font-weight: 400`); CSS variables `--t-body: clamp(calc(16*1px),calc(15.45*1px) + .148vw,calc(18*1px))`
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 15.28px`, `line-height: 18.145px`, `font-weight: 700`, `letter-spacing: -0.6112px`); CSS variables `--t-label: calc(14*1px)`, `--default-mono-font-family: var(--font-mono)`, `--about-small: clamp(calc(11 * 1px), .88vw, calc(24 * 1px))`
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `body` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#e0e0e0` | `.UwedmG_neutral .UwedmG_layerBase { background: #e0e0e0 }` |
+| **Elevated Surface / Card Substrate** | `#d0d0d0` | `:focus { background-color: #d0d0d0 }` |
 | **Interactive Accent / Highlight** | `#000000` | `.S6Hkya_link:hover { color: #000000 }` |
 | **Secondary / Muted Copy** | `#0d0d0d` | `:focus-visible { color: #0d0d0d }` |
 | **Structural Hairline Border** | `#cecece` | `25 { border-color: #cecece }` |
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.lenis> — `www-baseline-agency`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Baseline · Brand identity systems, d` navigation (`About > A b o u t`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`), and stylesheet rule `.LW-vgW_cta { opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s linear .3s }`.
+   - Landmark `<header class="lenis">` (`1440px`) hosting `Baseline · Brand identity systems, d` navigation (`About > A b o u t`), DOM attributes (`data-precedence="next"`, `data-precedence="next"`, `data-precedence="next"`, `data-sdkn="@vercel/analytics/next"`), and stylesheet rule `.LINzvG_className { font-family:Inter,Inter Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.hero-drift> — `You got here with your brand worki`)**:
    - Landmark `<section class="hero-drift relative">` presenting display lead `You got here with your brand working against you....` and copy excerpt *"You've grown this far despite the brand and website built when yo"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.relative> — `You've grown this far despite the `)**:
-   - Landmark `<section class="relative text-white">` rendering section `You've grown this far despite the brand and webs` with copy *"Baseline B a s e l i n e Studio S t u d i o"*, asset references (`41q-9hyqnol8s.css`, `11vyltt-w7ouz.css`, `027ldshog-_ys.css`, `3ya-20k_dn7en.js`), and grid rule `.LW-vgW_dim { opacity:0;transition:opacity 0s linear .3s }`.
+   - Landmark `<section class="relative text-white">` rendering section `You've grown this far despite the brand and webs` with copy *"Baseline B a s e l i n e Studio S t u d i o"*, asset references (`41q-9hyqnol8s.css`, `11vyltt-w7ouz.css`, `027ldshog-_ys.css`, `3ya-20k_dn7en.js`), and grid rule `.LINzvG_variable { --font-inter:"Inter", "Inter Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<article.flex> — `Baseline B a s e l i n e Studio S `)**:
-   - Landmark `<article class="flex flex-col">` framing `Baseline B a s e l i n e Studio S t u d i o` and `Baseline B a s e l i n e` (*"Baseline B a s e l i n e"*) with `#e0e0e0` surface cards, `#000000` accents, and `.LW-vgW_line { margin:0 -.1em -.14em;padding:0 .1em .14em;display:block;overflow:hidden }`.
+   - Landmark `<article class="flex flex-col">` framing `Baseline B a s e l i n e Studio S t u d i o` and `Baseline B a s e l i n e` (*"Baseline B a s e l i n e"*) with `#d0d0d0` surface cards, `#000000` accents, and `.PJ4aQa_className { font-family:Inter Tight,Inter Tight Fallback;font-style:normal;font-weig... }`.
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.baseline.agency/`)**:
    - Landmark `<footer class="relative w-full">` anchoring `Baseline · Brand identity system` footer links (`About > A b o u t`), copy *"Studio S t u d i o"*, and `#cecece` structural dividers.

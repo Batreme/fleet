@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: ty1official-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `ty1official-com` (**TY1 — DJ & Producer**)
 - **Production URL**: [https://ty1official.com](https://ty1official.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#181618` / `#ec651d`)
 - **Summary**: TY1, tra i DJ e producer più influenti della scena Hip Hop italiana. Prossimi live, ultime uscite, riconoscimenti e booking.
-- **Total Clean CSS Variables Extracted**: `175` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `174` (curated live-grounded set below)
 
 ---
 
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.testata> — `ty1official-com`)**:
    - Landmark `<header class="testata">` (`1440x76px`) hosting `TY1 — DJ & Producer` navigation (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), DOM attributes (`data-world="artist"`, `data-suono`, `data-testata`, `data-fit="0.98"`), and stylesheet rule `property --sfondo-t { syntax: "<number>"; inherits: true; initial-value: 1; }`.
 2. **Hero Stage & Focal Lead (<section.intro> — `TY1 — DJ & Producer, Junkie Musik`)**:
-   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"A u d i o O n O f f"* over `#181618` canvas and `#f5f5f5` ink.
+   - Landmark `<section class="intro vscroll">` presenting display lead `TY1 — DJ & Producer, Junkie Musik` and copy excerpt *"Clicca il video per ingrandirlo"* over `#181618` canvas and `#f5f5f5` ink.
 3. **Primary Showcase & Content Grid (<section.trasf> — `Il vinile di Junkie Musik`)**:
-   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"C l i c c a i l v i d e o p e r i n g r a n d i r l o"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
+   - Landmark `<section class="trasf vscroll">` rendering section `Il vinile di Junkie Musik` with copy *"S i d e A · S i d e B"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `font-face { font-family:Thunder;src:local("Thunder");font-weight:700;font-style:norm... }`.
 4. **Interactive Detail & Feature Matrix (<section.section> — `G i o c a e v i n c i u n i n c o `)**:
-   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"S i d e A · S i d e B"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
+   - Landmark `<section class="section vinile">` framing `G i o c a e v i n c i u n i n c o n t r o c o n T...` and `Regolamento — Junkie Run` (*"J u n k i e M u s i k"*) with `#0d0b0c` surface cards, `#ec651d` accents, and `.consenso__piu { position:absolute;bottom:4px;font:400 14px/1 Inter,system-ui,sans-serif;... }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://ty1official.com`)**:
-   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"J u n k i e M u s i k"*, and `#333132` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `TY1 — DJ & Producer` footer links (`A p p l e M u s i c · D e e z e r · S o u n d C l o u d · S p o t i f y`), copy *"G i o c a e v i n c i u n"*, and `#333132` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: estudioniksen-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://estudioniksen.com/"
 final_url: "https://estudioniksen.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Estudio Niksen
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `132`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `897`
+- **Recovered Stylesheets**: `42`
 
 ---
 

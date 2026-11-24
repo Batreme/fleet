@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: myfrida-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://myfrida.com/"
 final_url: "https://myfrida.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: My Frida · Chocolate-Covered Fruit, Smoothies & Cake Bars
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `9`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `34`
+- **Recovered Stylesheets**: `8`
 
 ---
 

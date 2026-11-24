@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: concretaceramiche-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `concretaceramiche-it` (**Concreta Ceramiche Artigianali Fatte a Mano**)
 - **Production URL**: [https://concretaceramiche.it/](https://concretaceramiche.it/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#2d0d01` canvas, `#c0d2cc` ink, `#ff0000` accent)
 - **Summary**: Ceramiche artigianali uniche, realizzate a mano nei Castelli Romani. Gres, stampa 3D e tradizione familiare in ogni pezzo. Scopri la coll...
 - **Total Clean CSS Variables Extracted**: `68` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Elgoc`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `h1` (`font-size: 25px`, `line-height: 32px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 40px`, `font-weight: 400`); rule `h2` (`font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); CSS variables `--cmplz_category_body_font_size: 12px`; rule `p` (`font-weight: 500`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 16px`, `font-weight: 400`); rule `small` (`font-size: 15px`)
 
@@ -73,13 +73,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.negative> — `concretaceramiche-it`)**:
-   - Landmark `<header class="negative fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
+1. **Brand Header & Navigation Bar (<header.fixed> — `concretaceramiche-it`)**:
+   - Landmark `<header class="fixed">` (`1425x78px`) hosting `Concreta Ceramiche Artigianali Fatte` navigation (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), DOM attributes (`data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`, `data-wp-strategy="defer"`), and stylesheet rule `body.wc-modal--open { overflow:hidden }`.
 2. **Hero Stage & Focal Lead (<section.rank-math-schema> — `ConCreta ceramiche artigianali Rom`)**:
-   - Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"Nel cuore dei Castelli Romani, diamo forma a oggetti che uniscono"* over `#2d0d01` canvas and `#c0d2cc` ink.
+   - Landmark `<section class="rank-math-schema">` presenting display lead `ConCreta ceramiche artigianali Roma` and copy excerpt *"l a b o r a t o r i o l a b o r a t o r i o"* over `#2d0d01` canvas and `#c0d2cc` ink.
 3. **Primary Showcase & Content Grid (<section.logo> — `La ceramica artigianale prende for`)**:
-   - Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
+   - Landmark `<section class="logo">` rendering section `La ceramica artigianale prende forma tra gesti an...` with copy *"l a b o r a t o r i o"*, asset references (`Elgoc-Bold.woff2`, `Elgoc-Regular.woff2`, `Inter28pt-Medium.woff2`, `Inter28pt-Regular.woff2`), and grid rule `products .wc-block-grid__product-... { display:block;position:relative;text-decoration:none }`.
 4. **Interactive Detail & Feature Matrix (<section.wp-singular> — `Oggetti in ceramica nati dall’inco`)**:
-   - Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"l a b o r a t o r i o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
+   - Landmark `<section class="wp-singular">` framing `Oggetti in ceramica nati dall’incontro tra tecnic...` and `Un luogo dove la terra diventa forma e prende vita` (*"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*) with `#cd2653` surface cards, `#ff0000` accents, and `roducts .wc-block-grid__product-i... { border:0;box-shadow:none;outline:0;text-decoration:none }`.
 5. **Colophon & Global Directory Footer (<footer.page-template> — `https://concretaceramiche.it/`)**:
-   - Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.
+   - Landmark `<footer class="page-template">` anchoring `Concreta Ceramiche Artigianali F` footer links (`h o m e h o m e · c o r s i c o r s i · S h o p S h o p · EN · Home`), copy *"c o s a r e a l i z z i a m o"*, and `#230806` structural dividers.

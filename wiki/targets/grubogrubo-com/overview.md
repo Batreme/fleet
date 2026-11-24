@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: grubogrubo-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://grubogrubo.com"
 final_url: "https://grubogrubo.com/"
-status: analyzed
-http_status: 200
-capture_tier: tier2_webgl
+status: blocked
+http_status: null
+capture_tier: none
+block_reason: "Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://grubogrubo.com/', waiting until 'domcontentloaded' )"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://grubogrubo.com](https://grubogrubo.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: GruboGrubo — Creative Ideas & Visual Production Studio · Warsaw
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `18`
-- **Recovered Stylesheets**: `4`
+- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 30000ms exceeded. Call log: - navigating to 'https://grubogrubo.com/', waiting until 'domcontentloaded' )
+- **Page Title**: grubogrubo-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `0`
+- **Recovered Stylesheets**: `1`
 
 ---
 

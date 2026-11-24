@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: v4vevilos-gr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://v4vevilos.gr"
 final_url: "https://v4vevilos.gr/"
 status: analyzed

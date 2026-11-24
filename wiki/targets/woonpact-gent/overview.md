@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: woonpact-gent"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://woonpact.gent/"
 final_url: "https://woonpact.gent/"
 status: blocked

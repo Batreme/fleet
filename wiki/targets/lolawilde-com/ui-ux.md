@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lolawilde-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lolawilde-com` (**LOLA WILDE — Learning Me**)
 - **Production URL**: [https://lolawilde.com/](https://lolawilde.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0b0a09` canvas, `#f3eee7` ink, `#ff0000` accent)
 - **Summary**: Learning Me, the new album by LOLA WILDE. Listen on Spotify and read the lyrics.
 - **Total Clean CSS Variables Extracted**: `183` (curated live-grounded set below)
@@ -70,12 +70,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.nav> — `lolawilde-com`)**:
-   - Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `etadata_condensedMetadataWrapper_... { inset-inline:16px 56px;bottom:32px;width:auto;position:absolute;font-siz... }`.
+   - Landmark `<header class="nav">` (`1440x82px`) hosting `LOLA WILDE — Learning Me` navigation (`Songs · Album · About · Shop · Press`), DOM attributes (`data-album-title`, `data-i="0"`, `data-i="1"`, `data-i="2"`), and stylesheet rule `.Error_wrapper__7m1Fk { display:flex;align-items:center;flex-direction:column }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `LOLA WILDE — LEARNING ME`)**:
    - Landmark `<section class="hero">` presenting display lead `LOLA WILDE — LEARNING ME` and copy excerpt *"Out now · New album"* over `#0b0a09` canvas and `#f3eee7` ink.
 3. **Primary Showcase & Content Grid (<section.blk> — `LOLA WILDE — Learning Me`)**:
-   - Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `adata_condensedMetadataContainer_... { align-items:center;display:inline-flex }`.
+   - Landmark `<section class="blk">` rendering section `LOLA WILDE — Learning Me` with copy *"▶ Play and sing along"*, asset references (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `fonts.googleapis.com`), and grid rule `.Error_title__KvfPv { font-size:48px;line-height:1;letter-spacing:-.04em;margin:40px 0 16px;fo... }`.
 4. **Interactive Detail & Feature Matrix (<section.about-sec> — `The girl in the front row, learnin`)**:
-   - Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `F.CondensedMetadata_isPreRelease_... { inset-inline-start:12px;bottom:36px;-webkit-margin-end:154px;margin-inli... }`.
+   - Landmark `<section class="about-sec">` framing `The girl in the front row, learning who she is.` and `Lipstick Confessions on vinyl.` (*"The Way You Said My Name"*) with `#1d1915` surface cards, `#ff0000` accents, and `.Error_description__h_wjs { line-height:24px;max-width:507px;margin:0 0 40px;font-weight:200;display... }`.
 5. **Colophon & Global Directory Footer (<footer.pill> — `https://lolawilde.com/`)**:
    - Landmark `<footer class="pill">` anchoring `LOLA WILDE — Learning Me` footer links (`Songs · Album · About · Shop · Press`), copy *"Someone Else’s Version"*, and `#272524` structural dividers.

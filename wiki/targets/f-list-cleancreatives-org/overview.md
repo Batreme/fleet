@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: f-list-cleancreatives-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://f-list.cleancreatives.org/"
 final_url: "https://f-list.cleancreatives.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: F-List 2026
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `29`
-- **Recovered Stylesheets**: `14`
+- **Recovered Scripts**: `71`
+- **Recovered Stylesheets**: `35`
 
 ---
 

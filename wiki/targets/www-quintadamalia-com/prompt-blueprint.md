@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-quintadamalia-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-quintadamalia-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1e1e` ink, `#007fff` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **Quinta D. Amália - Redefining Luxury Living in Portugal** (https://www.quintadamalia.com/) — Set in the heart of Vila Nova de Gaia, Quinta D. Amália is more than a residence - it’s a lifestyle defined by exclusivity, wellness & na...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Quinta D. Amália - Redefining Luxury Living in Portugal** (`https://www.quintadamalia.com/`). Set in the heart of Vila Nova de Gaia, Quinta D. Amália is more than a residence - it’s a lifestyle defined by exclusivity, wellness & na...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1e1e` ink, `#007fff` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1e1e1e` primary typography and `#007fff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Marcellus` for display copy (`Where luxury meets serenity`) with `Syne` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Marcellus` for display copy (`Where luxury meets serenity`) with `Syne`.
   - **Calibrated Spatial Grid & Motion**: Combines `1870px` container bounds (`gap: 1rem`, padding `57.6px`) with `cubic-bezier(.28,.84,.42,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `17067px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1870px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `57.6px` lateral canvas padding with `1rem` grid gap.
 - **Border Radius Scale**: `999px`, `100px`, `50%`, `0.375rem`.
@@ -45,7 +50,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1870px`, `gap: 1rem`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (max-width:800px) and (orientation:landscape),...`, `@media all and (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)`.
 
 ---
 
@@ -107,9 +112,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 140px`, `line-height: 140px`, `font-weight: 400`, `letter-spacing: -5.6px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 200px`, `line-height: 200px`, `font-weight: 400`, `letter-spacing: -4px`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`).
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `p` (`font-size: 22px`, `line-height: 1.36`, `letter-spacing: -.02em`, `font-weight: 500`).
-- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `small` (`font-size: 12px`, `line-height: 14px`).
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `,small` (`font-size: .875em`).
 
 ---
 
@@ -124,6 +129,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.tp-pdt-meta-social-btn`**: `transition: 0.3s` extracted from `www-quintadamalia-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.28,.84,.42,1)`)**: Governs interactive state transitions across `<header.qda-header>` and `<div.elementor-385>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `17067px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `GSAP/ScrollTrigger`.
 
 ---
 
@@ -134,7 +142,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — Quinta D. Amália - Redefining Luxury Livin │
 │ ====================================================================== │
-│ [ <header.qda-header> (1440x66px)     | Home · About · Apartments ·  ] │
+│ [ <header.qda-header> (1440x78px)     | Home · About · Apartments ·  ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <div.elementor> (w=1440px)                             | │
 │ | H1: Where luxury meets serenity                                    | │
@@ -142,10 +150,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<div.elementor-385>) max-w: 1870px                  | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Quinta D. Amália is more tha |  | Every residence is a masterp | | │
+│ | | Contact us today to clear an |  | Quinta D. Amália is more tha | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<div.elementor:nth(2)>) — With construction beg     | │
+│ | DETAIL MODULE (<div.elementor:nth(2)>) — Every residence is a      | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.home>       ) | https://www.quintadamalia.com/       │
 └────────────────────────────────────────────────────────────────────────┘
@@ -162,10 +170,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 │ | H1: Where luxury meets serenity                                    | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<div.elementor-385>) — 1-Col Stack                 | │
-│ | [ Item 1: Quinta D. Amália is more than a residence - it’s       ] | │
-│ | [ Item 2: Every residence is a masterpiece of craftsmanshi       ] | │
+│ | [ Item 1: Contact us today to clear any questions, get mor       ] | │
+│ | [ Item 2: Quinta D. Amália is more than a residence - it’s       ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<div.elementor:nth(2)>) — 1-Col (With construction ) | │
+│ | DETAIL STACK (<div.elementor:nth(2)>) — 1-Col (Every residence is) | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.home>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -173,15 +181,24 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.qda-header> — `www-quintadamalia-com`)**:
-   - Landmark `<header class="qda-header is-stuck">` (`1440x66px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
+   - Landmark `<header class="qda-header">` (`1440x78px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
 2. **Hero Stage & Focal Lead (<div.elementor> — `Where luxury meets serenity`)**:
-   - Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"* over `#ffffff` canvas and `#1e1e1e` ink.
-3. **Primary Showcase & Content Grid (<div.elementor-385> — `Quinta D. Amália is more than a re`)**:
-   - Landmark `<div class="elementor elementor-385">` rendering section `Quinta D. Amália is more than a residence - it’s` with copy *"Every residence is a masterpiece of craftsmanship, featuring prem"*, asset references (`0486c33379293b947859233762b05.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
-4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Every residence is a masterpiece o`)**:
-   - Landmark `<div class="elementor elementor-385">` framing `Every residence is a masterpiece of craftsmanshi` and `With construction beginning in Q4 2026, Quinta D` (*"With construction beginning in Q4 2026, Quinta D. Amália is poise"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
+   - Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Contact us today to clear any questions, get more information and"* over `#ffffff` canvas and `#1e1e1e` ink.
+3. **Primary Showcase & Content Grid (<div.elementor-385> — `Contact us today to clear any ques`)**:
+   - Landmark `<div class="elementor elementor-385">` rendering section `Contact us today to clear any questions, get mor` with copy *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"*, asset references (`ff19e2716e4af741afc51614093bc.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
+4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Quinta D. Amália is more than a re`)**:
+   - Landmark `<div class="elementor elementor-385">` framing `Quinta D. Amália is more than a residence - it’s` and `Every residence is a masterpiece of craftsmanshi` (*"Every residence is a masterpiece of craftsmanship, featuring prem"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
 5. **Colophon & Global Directory Footer (<footer.home> — `https://www.quintadamalia.com/`)**:
-   - Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"Elegant Simplicity"*, and `#9ec5fe` structural dividers.
+   - Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"With construction beginning in Q4 2026, Quinta D. Amália is "*, and `#9ec5fe` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Where luxury meets serenity` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Section @ 5%` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `21%`): Active landmark `Section @ 21%` · sticky/fixed elements: `1`
+- **Step 04** (`y=5950px`, `37%`): Active landmark `One-Bedroom` · sticky/fixed elements: `1`
+- **Step 05** (`y=8500px`, `53%`): Active landmark `Three-Bedroom` · sticky/fixed elements: `1`
+- **Step 06** (`y=11050px`, `68%`): Active landmark `& More` · sticky/fixed elements: `1`
+- **Step 07** (`y=13600px`, `84%`): Active landmark `Section @ 84%` · sticky/fixed elements: `1`
+- **Step 08** (`y=14400px`, `89%`): Active landmark `Section @ 89%` · sticky/fixed elements: `1`
 
 ---
 
@@ -198,7 +215,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#1e1e1e`, **Accent / Highlight**: `#007fff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#1e1e1e` primary typography and `#007fff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Marcellus` for display copy (`Where luxury meets serenity`) with `Syne` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Marcellus` for display copy (`Where luxury meets serenity`) with `Syne`.
   - **Calibrated Spatial Grid & Motion**: Combines `1870px` container bounds (`gap: 1rem`, padding `57.6px`) with `cubic-bezier(.28,.84,.42,1)` easing and GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -249,13 +266,13 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--bs-gray-200`)**: `#e9ecef` — grounded in `var(--bs-gray-200)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1870px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `57.6px` lateral canvas padding with `1rem` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1870px`, `gap: 1rem`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding
-- **Media Queries**: `@media screen and (max-width:800px) and (orientation:landscape),...`, `@media all and (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`
+- **Media Queries**: `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)`
 - **Corner Radii**: `999px`, `100px`, `50%`, `0.375rem`
 
 ### 5. Typography & Editorial Scale Contract
@@ -263,33 +280,33 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Syne`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 140px`, `line-height: 140px`, `font-weight: 400`, `letter-spacing: -5.6px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 200px`, `line-height: 200px`, `font-weight: 400`, `letter-spacing: -4px`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
 - **Body Copy Rule**: live computed `body` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `p` (`font-size: 22px`, `line-height: 1.36`, `letter-spacing: -.02em`, `font-weight: 500`)
-- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `small` (`font-size: 12px`, `line-height: 14px`)
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `,small` (`font-size: .875em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `www-quintadamalia-com` (`Quinta D. Amália - Redefining Luxury Living in Portugal`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.qda-header> — `www-quintadamalia-com`)**:
-   - DOM & Selectors: Landmark `<header class="qda-header is-stuck">` (`1440x66px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.qda-header> — `www-quintadamalia-com`)` (`www-quintadamalia-com`) adapts across `@media screen and (max-width:800px) and (orientation:landscape),...`, `@media all and (max-width:900px)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)` with `cubic-bezier(.28,.84,.42,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0.4,0,0.2,1)` transitions and links `Home · About · Apartments · Lifestyle · Contact`.
+   - DOM & Selectors: Landmark `<header class="qda-header">` (`1440x78px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.qda-header> — `www-quintadamalia-com`)` (`www-quintadamalia-com`) adapts across `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`, `@media (min-width:768px)` with `cubic-bezier(.28,.84,.42,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0.4,0,0.2,1)` transitions and links `Home · About · Apartments · Lifestyle · Contact`.
 2. **Hero Stage & Focal Lead (<div.elementor> — `Where luxury meets serenity`)**:
-   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"* over `#ffffff` canvas and `#1e1e1e` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#1e1e1e` headline `Where luxury meets serenity`.
-3. **Primary Showcase & Content Grid (<div.elementor-385> — `Quinta D. Amália is more than a re`)**:
-   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` rendering section `Quinta D. Amália is more than a residence - it’s` with copy *"Every residence is a masterpiece of craftsmanship, featuring prem"*, asset references (`0486c33379293b947859233762b05.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.elementor-385> — `Quinta D. Amália is more than a re`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1870px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Every residence is a masterpiece o`)**:
-   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` framing `Every residence is a masterpiece of craftsmanshi` and `With construction beginning in Q4 2026, Quinta D` (*"With construction beginning in Q4 2026, Quinta D. Amália is poise"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Every residence is a masterpiece o`)` uses `999px`, `100px`, `50%`, `0.375rem` radii, `#007fff` highlights, and assets (0486c33379293b947859233762b05.css, 8vIH7w4qzmVxm2BL9A.woff2, marcellus-weo_ebrok8hqldviaf81vvo...).
+   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Contact us today to clear any questions, get more information and"* over `#ffffff` canvas and `#1e1e1e` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#1e1e1e` headline `Where luxury meets serenity`.
+3. **Primary Showcase & Content Grid (<div.elementor-385> — `Contact us today to clear any ques`)**:
+   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` rendering section `Contact us today to clear any questions, get mor` with copy *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"*, asset references (`ff19e2716e4af741afc51614093bc.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.elementor-385> — `Contact us today to clear any ques`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1870px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `57.6px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Quinta D. Amália is more than a re`)**:
+   - DOM & Selectors: Landmark `<div class="elementor elementor-385">` framing `Quinta D. Amália is more than a residence - it’s` and `Every residence is a masterpiece of craftsmanshi` (*"Every residence is a masterpiece of craftsmanship, featuring prem"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Quinta D. Amália is more than a re`)` uses `999px`, `100px`, `50%`, `0.375rem` radii, `#007fff` highlights, and assets (ff19e2716e4af741afc51614093bc.css, 8vIH7w4qzmVxm2BL9A.woff2, marcellus-weo_ebrok8hqldviaf81vvo...).
 5. **Colophon & Global Directory Footer (<footer.home> — `https://www.quintadamalia.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"Elegant Simplicity"*, and `#9ec5fe` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"With construction beginning in Q4 2026, Quinta D. Amália is "*, and `#9ec5fe` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.home> — `https://www.quintadamalia.com/`)` aligns to `1870px` (non-`@media` desktop container stylesheet rule) with `57.6px` lateral canvas padding with `1rem` grid gap and attributes (data-rocket-preload, data-wpr-hosted-gf-parameters="family=Big+Shoulders+...", data-wpr-hosted-gf-parameters="family=Big+Shoulders+...").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Quinta D. Amália is more than a residence - it’s a lifestyle defined by exclusivit..."*
-- Copy Excerpt 2: *"Every residence is a masterpiece of craftsmanship, featuring premium materials lik..."*
-- Copy Excerpt 3: *"With construction beginning in Q4 2026, Quinta D. Amália is poised to become the r..."*
-- Copy Excerpt 4: *"Elegant Simplicity"*
+- Copy Excerpt 1: *"Contact us today to clear any questions, get more information and to pre-order you..."*
+- Copy Excerpt 2: *"Quinta D. Amália is more than a residence - it’s a lifestyle defined by exclusivit..."*
+- Copy Excerpt 3: *"Every residence is a masterpiece of craftsmanship, featuring premium materials lik..."*
+- Copy Excerpt 4: *"With construction beginning in Q4 2026, Quinta D. Amália is poised to become the r..."*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.28,.84,.42,1)`, `cubic-bezier(.4,0,.6,1)`, `cubic-bezier(0.4,0,0.2,1)`
@@ -305,8 +322,34 @@ Scaffold `www-quintadamalia-com` (`Quinta D. Amália - Redefining Luxury Living 
 - **Selector `.tp-pdt-meta-social-btn`**: `transition: 0.3s` extracted from `www-quintadamalia-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.28,.84,.42,1)`)**: Governs interactive state transitions across `<header.qda-header>` and `<div.elementor-385>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `17067px` across 8 distinct viewport chapters using GSAP/ScrollTrigger.
+- **Vertical Chapter Sequence**: Where luxury meets serenity (0%) -> Section @ 5% (5%) -> Section @ 21% (21%) -> One-Bedroom (37%) -> Three-Bedroom (53%) -> & More (68%) -> Section @ 84% (84%) -> Section @ 89% (89%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-quintadamalia-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Where luxury meets serenity | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Section @ 5% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `21%` | Section @ 21% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5950px` | `37%` | One-Bedroom | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `8500px` | `53%` | Three-Bedroom | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `68%` | & More | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `84%` | Section @ 84% | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `89%` | Section @ 89% | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Where luxury meets serenity | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Three-Bedroom | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | SEND A MESSAGE | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: foxvaluations-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://foxvaluations.com.au"
 final_url: "https://foxvaluations.com.au/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Property valuations Brisbane · Fox Valuations
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `3`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `12`
+- **Recovered Stylesheets**: `4`
 
 ---
 

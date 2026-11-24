@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-discoverforgiveness-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-discoverforgiveness-org` (**Discover Forgiveness · Templeton World Charity Foundation**)
 - **Production URL**: [https://www.discoverforgiveness.org/](https://www.discoverforgiveness.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fefefb` canvas, `#433f35` ink, `#0082f3` accent)
 - **Summary**: Explore the transformative power of forgiveness at Discover Forgiveness. Our experts, from psychologists to spiritual leaders, offer insi...
 - **Total Clean CSS Variables Extracted**: `28` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Area Normal`
 - **Monospace / Technical Font Stack**: `IBM Plex Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 89.8064px`, `line-height: 89.8064px`, `font-weight: 400`); rule `h1` (`font-size: 2em`)
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 22.4516px`, `line-height: 31.4323px`, `font-weight: 700`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 67.3548px`, `line-height: 80.8258px`, `font-weight: 400`); rule `h2` (`font-size: 32px`, `line-height: 36px`)
 - **Body Copy**: live computed `body` (`font-size: 14.9677px`, `line-height: 22.4516px`, `font-weight: 400`); rule `body` (`font-size: 14px`, `line-height: 20px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16.8387px`, `line-height: 18.5226px`, `font-weight: 800`); rule `small` (`font-size: 80%`)
 
@@ -38,12 +38,12 @@ http_status: 200
 | **Primary Typography Ink** | `#433f35` | live computed `body` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f0f0e5` | live computed `header` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0082f3` | `.w-dropdown-link.w--current { color: #0082f3 }` |
-| **Secondary / Muted Copy** | `#777269` | live computed `h2` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#6251d2` | live computed `h1` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#e2e2e2` | `blockquote { border-left: #e2e2e2 }` |
-| **Variable Token (`--purple3`)** | `#6251d2` | `var(--purple3)` in `:root` |
 | **Variable Token (`--tan5`)** | `#abaa9c` | `var(--tan5)` in `:root` |
 | **Variable Token (`--tan`)** | `#fbfaf4` | `var(--tan)` in `:root` |
 | **Variable Token (`--purple_transp`)** | `#8170f0` | `var(--purple_transp)` in `:root` |
+| **Variable Token (`--dk-gray`)** | `#777269` | `var(--dk-gray)` in `:root` |
 | **Variable Token (`--tan4`)** | `#cbc8be` | `var(--tan4)` in `:root` |
 | **Variable Token (`--tan3`)** | `#e2e2d5` | `var(--tan3)` in `:root` |
 | **Variable Token (`--transparent`)** | `#0000` | `var(--transparent)` in `:root` |

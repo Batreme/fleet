@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: pinreply-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://pinreply.com/"
 final_url: "https://pinreply.com/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Page Title**: Website Feedback Tool for Chrome · PinReply
 - **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Stylesheets**: `2`
 
 ---
 

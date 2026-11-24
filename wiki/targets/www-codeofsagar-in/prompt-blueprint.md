@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-codeofsagar-in"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-codeofsagar-in"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)"
 ---
@@ -16,7 +21,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 > **Sagar K. Ghosh — Full-stack Developer & Designer** (https://www.codeofsagar.in/) — Websites and stores that sell, 3D people remember and automation that gives your team its time back, designed and built by Sagar K. Ghosh.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
@@ -24,21 +31,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 
 - **Brand Essence & Persona**: **Sagar K. Ghosh — Full-stack Developer & Designer** (`https://www.codeofsagar.in/`). Websites and stores that sell, 3D people remember and automation that gives your team its time back, designed and built by Sagar K. Ghosh.
 - **Final Redirected URL**: [https://codeofsagar.in/](https://codeofsagar.in/)
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#008000`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f0f0f` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `spaceGrotesk` for display copy (`Websites That Sell. AI That Never Sl`) with `spaceGrotesk` and `spaceMono`.
+  - **Grounded Typographic Hierarchy**: Uses `spaceGrotesk` across display (`Websites That Sell. AI That Never Sl`) and body copy, paired with `spaceMono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1700px` container bounds (`gap: 10px`, padding `28.8px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1700px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `28.8px` lateral canvas padding with `10px` grid gap.
 - **Border Radius Scale**: `.25rem`, `2rem`, `var(--radius-md)`, `var(--radius-sm)`.
@@ -110,6 +115,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
 - **Selector `.transition\!`**: `transition: var(--tw-ease,var(--default-transition-timing-function))!impor...` extracted from `www-codeofsagar-in` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.NavBar-module__aMivtW__bar>` and `<section.grain-surface>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -168,6 +176,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#0
    - Landmark `<section class="bg-paper">` framing `S A G A R K . G H O S H` and `Get Found. Get Chosen. Get Bought.` (*"on my third coffee."*) with `#eeeae5` surface cards, `#008000` accents, and `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.relative> — `https://www.codeofsagar.in/`)**:
    - Landmark `<footer class="relative flex">` anchoring `Sagar K. Ghosh — Full-stack Deve` footer links (`H H o o m m e e · W W o o r r k k · A A b b o o u u t t · F F A A Q Q`), copy *"Let's make it simple."*, and `#eeeeee` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Viewport` · sticky/fixed elements: `0`
 
 ---
 
@@ -184,7 +194,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0f0f0f`, **Accent / Highlight**: `#008000`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0f0f0f` primary typography and `#008000` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `spaceGrotesk` for display copy (`Websites That Sell. AI That Never Sl`) with `spaceGrotesk` and `spaceMono`.
+  - **Grounded Typographic Hierarchy**: Uses `spaceGrotesk` across display (`Websites That Sell. AI That Never Sl`) and body copy, paired with `spaceMono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1700px` container bounds (`gap: 10px`, padding `28.8px`) with `cubic-bezier(.4,0,1,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -220,8 +230,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#eeeeee` — grounded in `var(--line)` in `:root` (`0f0f0f12`)
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1700px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `28.8px` lateral canvas padding with `10px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1700px`, `gap: 10px`)
@@ -245,7 +255,7 @@ Scaffold `www-codeofsagar-in` (`Sagar K. Ghosh — Full-stack Developer & Design
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.NavBar-module__aMivtW__bar> — `www-codeofsagar-in`)` (`www-codeofsagar-in`) adapts across `@media (min-width:1700px)`, `@media (min-width:40rem)`, `@media (min-width:48rem)`, `@media (min-width:64rem)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `H H o o m m e e · W W o o r r k k · A A b b o o u u t t · F F A A Q Q`.
 2. **Hero Stage & Focal Lead (<section.relative> — `Websites That Sell. AI That Never `)**:
    - DOM & Selectors: Landmark `<section class="relative z-10">` presenting display lead `Websites That Sell. AI That Never Sleeps.` and copy excerpt *"I'm Sagar, a web developer. I design and build your website, your"* over `#ffffff` canvas and `#0f0f0f` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#0f0f0f` headline `Websites That Sell. AI That Never Sleeps.`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#0f0f0f` headline `Websites That Sell. AI That Never Sleeps.`.
 3. **Primary Showcase & Content Grid (<section.grain-surface> — `Websites that sell. AI that never `)**:
    - DOM & Selectors: Landmark `<section class="grain-surface home-titles">` rendering section `Websites that sell. AI that never sleeps.` with copy *"That's me, on my third coffee."*, asset references (`space_grotesk_latin_wght_normal-s...`, `space_mono_latin_400_normal-s.p.1...`, `space_mono_latin_700_normal-s.p.0...`, `36s0t0o8ux5as.js`), and grid rule `backdrop { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.grain-surface> — `Websites that sell. AI that never `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1700px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `28.8px` horizontal padding on mobile.
@@ -276,8 +286,27 @@ Scaffold `www-codeofsagar-in` (`Sagar K. Ghosh — Full-stack Developer & Design
 - **Selector `.transition\!`**: `transition: var(--tw-ease,var(--default-transition-timing-function))!impor...` extracted from `www-codeofsagar-in` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.NavBar-module__aMivtW__bar>` and `<section.grain-surface>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Viewport (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-codeofsagar-in`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Viewport | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Websites That Sell. AI That Never Sleeps. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `0px` | `50%` | Websites That Sell. AI That Never Sleeps. | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `338px` | `100%` | Websites That Sell. AI That Never Sleeps. | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

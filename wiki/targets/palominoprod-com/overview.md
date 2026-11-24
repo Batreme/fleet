@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: palominoprod-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://palominoprod.com/"
 final_url: "https://palominoprod.com/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Palomino — Cinematic Sports & Brand Films
 - **Identified Frameworks**: Next.js, Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `44`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `96`
+- **Recovered Stylesheets**: `3`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: powa-snp-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `powa-snp-agency` (**Donate to POWA & Stand for Women's Equality · Help End Gender-Based Viol...**)
 - **Production URL**: [https://powa.snp.agency/](https://powa.snp.agency/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f6f4f2` canvas, `#242424` ink, `#a133ff` accent)
 - **Summary**: Join POWA's campaign to stand against gender-based violence. Donate and create a symbol for women's equality. Together, we can make a dif...
 - **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
@@ -27,7 +27,7 @@ http_status: 200
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 131.25px`, `line-height: 105px`, `font-weight: 800`, `letter-spacing: -2.625px`)
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 131.25px`, `line-height: 105px`, `font-weight: 800`, `letter-spacing: -2.625px`)
 - **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 15px`, `font-weight: 400`); rule `p` (`letter-spacing: -.02em`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 15px`, `font-weight: 400`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 13.125px`, `line-height: 17.7188px`, `font-weight: 400`, `letter-spacing: -0.13125px`)
 
 ---
 

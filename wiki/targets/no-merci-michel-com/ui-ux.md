@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: no-merci-michel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier2_webgl
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `no-merci-michel-com` (**No Mercy Michel**)
 - **Production URL**: [https://no.merci-michel.com](https://no.merci-michel.com)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#3ea0f1` / `#ffffff`)
 - **Summary**: You thought we were nice people...Step into the arena and fight! Spoiler: you'll lose.
 - **Total Clean CSS Variables Extracted**: `49` (curated live-grounded set below)

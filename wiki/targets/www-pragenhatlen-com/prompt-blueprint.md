@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-pragenhatlen-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-pragenhatlen-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0000ff`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0
 
 > **Prägen Hätlen · Swiss watchmaking for the crypto community.** (https://www.pragenhatlen.com/) — Trust, precision, resilience and uncompromising attention to detail.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Prägen Hätlen · Swiss watchmaking for the crypto community.** (`https://www.pragenhatlen.com/`). Trust, precision, resilience and uncompromising attention to detail.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecebea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c1114` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`The scarcest asset, on your wrist`) with `Manrope` and `RedHatMono`.
+  - **Grounded Typographic Hierarchy**: Uses `Manrope` across display (`THE SCARCEST ASSET, ON YOUR WRIST`) and body copy, paired with `RedHatMono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px 168px`, padding `32px`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `16667px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `12px 168px` grid gap.
 - **Border Radius Scale**: `var(--border-radius)`, `100%`, `1rem`, `4px`.
@@ -108,8 +113,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0
 - **Selector `.Header-module__top__mJsjm`**: `transition: .5s ease color` extracted from `www-pragenhatlen-com` stylesheet.
 - **Selector `.Header-module__top_open__BgPji`**: `transition: unset` extracted from `www-pragenhatlen-com` stylesheet.
 - **Selector `media (hover: hover)`**: `transition: .25s cubic-bezier(.215,.61,.355,1) opacity` extracted from `www-pragenhatlen-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header-module__top__mJsjm>` and `<section.App-module__root__JTuhI>`.
+- **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header-module__top__mJsjm>` and `<section.RotateScreen-module__root__m8vUV>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `16667px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Interactive Control Probe (`accordion`)**: Tested `Is the watch Swiss Made? [ + ]` (diff `2.449`).
 
 ---
 
@@ -123,15 +132,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0
 │ [ <header.Header-module_ (1440x76px)  | [02] A b o u t · [04] F A Q  ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.HeroVideo-module__root__FiO (w=1440px)        | │
-│ | H1: The scarcest asset, on your wrist                              | │
+│ | H1: THE SCARCEST ASSET, ON YOUR WRIST                              | │
 │ | Substrate: #ecebea | Ink: #0c1114 | Accent: #0000ff                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<section.App-module__root_) max-w: 1440px           | │
+│ | SHOWCASE GRID (<section.RotateScreen-modu) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Precision in every layer     |  | Plate Customization          | | │
+│ | | The scarcest asset, on your  |  | Precision in every layer     | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.RotateScreen-modu) — Screw-Down Crown      | │
+│ | DETAIL MODULE (<section.RotateScreen-modu) — Plate Customization   | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.Footer-modul) | https://www.pragenhatlen.com/        │
 └────────────────────────────────────────────────────────────────────────┘
@@ -145,13 +154,13 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0
 │ [ HEADER BAR (<header.Header-module__t) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE (<section.HeroVideo-modul) — 390px Vertical Lead        | │
-│ | H1: The scarcest asset, on your wrist                              | │
+│ | H1: THE SCARCEST ASSET, ON YOUR WRIST                              | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<section.App-module__r) — 1-Col Stack              | │
-│ | [ Item 1: Precision in every layer                               ] | │
-│ | [ Item 2: Plate Customization                                    ] | │
+│ | SHOWCASE STACK (<section.RotateScreen-) — 1-Col Stack              | │
+│ | [ Item 1: The scarcest asset, on your wrist                      ] | │
+│ | [ Item 2: Precision in every layer                               ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.RotateScreen-mo) — 1-Col (Screw-Down Crown) | │
+│ | DETAIL STACK (<section.RotateScreen-mo) — 1-Col (Plate Customizatio) │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.Footer-modul) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -160,14 +169,23 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.Header-module__top__mJsjm> — `www-pragenhatlen-com`)**:
    - Landmark `<header class="Header-module__top__mJsjm">` (`1440x76px`) hosting `Prägen Hätlen · Swiss watchmaking fo` navigation (`[02] A b o u t · [04] F A Q`), DOM attributes (`data-modal-id="cart"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`), and stylesheet rule `.App-module__root__JTuhI { background-color:var(--color-bg) }`.
-2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `The scarcest asset, on your wrist`)**:
-   - Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `The scarcest asset, on your wrist` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
-3. **Primary Showcase & Content Grid (<section.App-module__root__JTuhI> — `Precision in every layer`)**:
-   - Landmark `<section class="App-module__root__JTuhI">` rendering section `Precision in every layer` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
-4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__root__m8vUV> — `Plate Customization`)**:
-   - Landmark `<section class="RotateScreen-module__root__m8vUV">` framing `Plate Customization` and `Screw-Down Crown` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
+2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `THE SCARCEST ASSET, ON YOUR WRIST`)**:
+   - Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `THE SCARCEST ASSET, ON YOUR WRIST` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
+3. **Primary Showcase & Content Grid (<section.RotateScreen-module__root__m8vUV> — `The scarcest asset, on your wrist`)**:
+   - Landmark `<section class="RotateScreen-module__root__m8vUV">` rendering section `The scarcest asset, on your wrist` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
+4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__hidden__pMK7C> — `Precision in every layer`)**:
+   - Landmark `<section class="RotateScreen-module__hidden__pMK7C">` framing `Precision in every layer` and `Plate Customization` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
 5. **Colophon & Global Directory Footer (<footer.Footer-module__root__oib9b> — `https://www.pragenhatlen.com/`)**:
    - Landmark `<footer class="Footer-module__root__oib9b">` anchoring `Prägen Hätlen · Swiss watchmakin` footer links (`[02] A b o u t · [04] F A Q`), copy *"Through this interaction, they can access the associated Pro"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `THE SCARCEST ASSET, ON YOUR WRIST` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `5%`): Active landmark `Precision in every layer` · sticky/fixed elements: `2`
+- **Step 03** (`y=3400px`, `22%`): Active landmark `Section @ 22%` · sticky/fixed elements: `2`
+- **Step 04** (`y=5100px`, `32%`): Active landmark `By scanning the watch crystal with a smartphone,...` · sticky/fixed elements: `2`
+- **Step 05** (`y=9350px`, `59%`): Active landmark `By scanning the watch crystal with a smartphone,...` · sticky/fixed elements: `2`
+- **Step 06** (`y=11050px`, `70%`): Active landmark `By scanning the watch crystal with a smartphone,...` · sticky/fixed elements: `2`
+- **Step 07** (`y=13600px`, `86%`): Active landmark `#place-your-interest` · sticky/fixed elements: `2`
+- **Step 08** (`y=14400px`, `91%`): Active landmark `#place-your-interest` · sticky/fixed elements: `2`
 
 ---
 
@@ -184,7 +202,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ecebea` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#0c1114`, **Accent / Highlight**: `#0000ff`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ecebea` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#0c1114` primary typography and `#0000ff` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Manrope` for display copy (`The scarcest asset, on your wrist`) with `Manrope` and `RedHatMono`.
+  - **Grounded Typographic Hierarchy**: Uses `Manrope` across display (`THE SCARCEST ASSET, ON YOUR WRIST`) and body copy, paired with `RedHatMono` for monospace/code.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 12px 168px`, padding `32px`) with `cubic-bezier(.215,.61,.355,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +239,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-black`)**: `#000000` — grounded in `var(--color-black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `32px` lateral canvas padding with `12px 168px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px 168px`)
@@ -244,15 +262,15 @@ Scaffold `www-pragenhatlen-com` (`Prägen Hätlen · Swiss watchmaking for the c
 1. **Brand Header & Navigation Bar (<header.Header-module__top__mJsjm> — `www-pragenhatlen-com`)**:
    - DOM & Selectors: Landmark `<header class="Header-module__top__mJsjm">` (`1440x76px`) hosting `Prägen Hätlen · Swiss watchmaking fo` navigation (`[02] A b o u t · [04] F A Q`), DOM attributes (`data-modal-id="cart"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`), and stylesheet rule `.App-module__root__JTuhI { background-color:var(--color-bg) }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Header-module__top__mJsjm> — `www-pragenhatlen-com`)` (`www-pragenhatlen-com`) adapts across `@media (min-width: 768px) and (min-height: 500px) and (orientati...`, `@media (max-width: 768px)`, `@media (max-width: 768px) and (min-width: 768px) and (min-height...`, `@media (min-width: 768px)` with `cubic-bezier(.215,.61,.355,1)` transitions and links `[02] A b o u t · [04] F A Q`.
-2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `The scarcest asset, on your wrist`)**:
-   - DOM & Selectors: Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `The scarcest asset, on your wrist` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#ecebea` background with `#0c1114` headline `The scarcest asset, on your wrist`.
-3. **Primary Showcase & Content Grid (<section.App-module__root__JTuhI> — `Precision in every layer`)**:
-   - DOM & Selectors: Landmark `<section class="App-module__root__JTuhI">` rendering section `Precision in every layer` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.App-module__root__JTuhI> — `Precision in every layer`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px 168px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__root__m8vUV> — `Plate Customization`)**:
-   - DOM & Selectors: Landmark `<section class="RotateScreen-module__root__m8vUV">` framing `Plate Customization` and `Screw-Down Crown` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.RotateScreen-module__root__m8vUV> — `Plate Customization`)` uses `var(--border-radius)`, `100%`, `1rem`, `4px` radii, `#0000ff` highlights, and assets (watch-background-drawing-D_cIL0zr..., cart-DdlU5Vpi.png, engrave_blue-Bx6rooYN.jpg).
+2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `THE SCARCEST ASSET, ON YOUR WRIST`)**:
+   - DOM & Selectors: Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `THE SCARCEST ASSET, ON YOUR WRIST` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×872px` mobile) sets `#ecebea` background with `#0c1114` headline `THE SCARCEST ASSET, ON YOUR WRIST`.
+3. **Primary Showcase & Content Grid (<section.RotateScreen-module__root__m8vUV> — `The scarcest asset, on your wrist`)**:
+   - DOM & Selectors: Landmark `<section class="RotateScreen-module__root__m8vUV">` rendering section `The scarcest asset, on your wrist` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.RotateScreen-module__root__m8vUV> — `The scarcest asset, on your wrist`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 12px 168px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__hidden__pMK7C> — `Precision in every layer`)**:
+   - DOM & Selectors: Landmark `<section class="RotateScreen-module__hidden__pMK7C">` framing `Precision in every layer` and `Plate Customization` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.RotateScreen-module__hidden__pMK7C> — `Precision in every layer`)` uses `var(--border-radius)`, `100%`, `1rem`, `4px` radii, `#0000ff` highlights, and assets (watch-background-drawing-D_cIL0zr..., cart-DdlU5Vpi.png, engrave_blue-Bx6rooYN.jpg).
 5. **Colophon & Global Directory Footer (<footer.Footer-module__root__oib9b> — `https://www.pragenhatlen.com/`)**:
    - DOM & Selectors: Landmark `<footer class="Footer-module__root__oib9b">` anchoring `Prägen Hätlen · Swiss watchmakin` footer links (`[02] A b o u t · [04] F A Q`), copy *"Through this interaction, they can access the associated Pro"*, and `#ffffff` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.Footer-module__root__oib9b> — `https://www.pragenhatlen.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `32px` lateral canvas padding with `12px 168px` grid gap and attributes (data-modal-id="cart", data-lenis-prevent="true", data-lenis-prevent="true").
@@ -275,10 +293,34 @@ Scaffold `www-pragenhatlen-com` (`Prägen Hätlen · Swiss watchmaking for the c
 - **Selector `.Header-module__top__mJsjm`**: `transition: .5s ease color` extracted from `www-pragenhatlen-com` stylesheet.
 - **Selector `.Header-module__top_open__BgPji`**: `transition: unset` extracted from `www-pragenhatlen-com` stylesheet.
 - **Selector `media (hover: hover)`**: `transition: .25s cubic-bezier(.215,.61,.355,1) opacity` extracted from `www-pragenhatlen-com` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header-module__top__mJsjm>` and `<section.App-module__root__JTuhI>`.
+- **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.Header-module__top__mJsjm>` and `<section.RotateScreen-module__root__m8vUV>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `16667px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: THE SCARCEST ASSET, ON YOUR... (0%) -> Precision in every layer (5%) -> Section @ 22% (22%) -> By scanning the watch cryst... (32%) -> By scanning the watch cryst... (59%) -> By scanning the watch cryst... (70%) -> #place-your-interest (86%) -> #place-your-interest (91%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-pragenhatlen-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | THE SCARCEST ASSET, ON YOUR WRIST | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `5%` | Precision in every layer | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `22%` | Section @ 22% | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `32%` | By scanning the watch crystal with a smartpho... | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `9350px` | `59%` | By scanning the watch crystal with a smartpho... | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `70%` | By scanning the watch crystal with a smartpho... | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `86%` | #place-your-interest | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `91%` | #place-your-interest | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

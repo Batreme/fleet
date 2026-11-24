@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: altufanulu-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `altufanulu-com_en` (**Altufan Ulu Law Office · Istanbul Legal Counsel**)
 - **Production URL**: [https://altufanulu.com/en/](https://altufanulu.com/en/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: Altufan Ulu Law Office provides trusted, fast and strategic legal services in Istanbul. Expert counsel across corporate, employment, IP,...
 - **Total Clean CSS Variables Extracted**: `6` (curated live-grounded set below)
@@ -72,8 +72,8 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.scrollUp> — `altufanulu-com_en`)**:
-   - Landmark `<header class="scrollUp">` (`1440x130px`) hosting `Altufan Ulu Law Office · Istanbul Le` navigation (`HOME · ABOUT US · PRACTICE AREAS · SECTORS · CAREER`), DOM attributes (`data-optimized="1"`, `data-optimized="1"`, `data-no-transition`, `data-barba="wrapper"`), and stylesheet rule `root { font-size:10px!important }`.
+1. **Brand Header & Navigation Bar (<header.lenis> — `altufanulu-com_en`)**:
+   - Landmark `<header class="lenis">` (`1440x130px`) hosting `Altufan Ulu Law Office · Istanbul Le` navigation (`HOME · ABOUT US · PRACTICE AREAS · SECTORS · CAREER`), DOM attributes (`data-optimized="1"`, `data-optimized="1"`, `data-no-transition`, `data-barba="wrapper"`), and stylesheet rule `root { font-size:10px!important }`.
 2. **Hero Stage & Focal Lead (<section.hero-content> — `Trusted, fast and strategic legal `)**:
    - Landmark `<section class="hero-content">` presenting display lead `Trusted, fast and strategic legal services.` and copy excerpt *"We give every case the focus it deserves. When needed, we bring t"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.padding> — `WHY ALTUFAN ULU?`)**:

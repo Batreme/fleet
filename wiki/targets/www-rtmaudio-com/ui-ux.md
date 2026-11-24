@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-rtmaudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-rtmaudio-com` (**RTM Audio · Audio plug-ins for mixing and mastering**)
 - **Production URL**: [https://www.rtmaudio.com](https://www.rtmaudio.com)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0e0f10` / `#d6c5a3`)
 - **Summary**: Mixing and mastering plug-ins, built by working engineers. Judge the change. Not the volume.
 - **Total Clean CSS Variables Extracted**: `73` (curated live-grounded set below)
@@ -37,7 +37,7 @@ http_status: 200
 | **Primary Canvas Substrate** | `#0e0f10` | live computed `html` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#f0e9dc` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#121315` | live computed `a` `background-color` (`computed_styles.json`) |
-| **Interactive Accent / Highlight** | `#d6c5a3` | live computed `a` `color` (`computed_styles.json`) |
+| **Interactive Accent / Highlight** | `#d6c5a3` | live computed `button` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#b08b5c` | `var(--ink-dim)` in `:root` |
 | **Structural Hairline Border** | `#252524` | `var(--line)` in `:root` (`rgba(240,233,220,.10)`) |
 | **Variable Token (`--green`)** | `#57c279` | `var(--green)` in `:root` |

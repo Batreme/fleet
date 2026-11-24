@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-zrk-technology"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-zrk-technology` (**Shahed interceptor with auto-guidance · Zirka**)
 - **Production URL**: [https://www.zrk.technology/](https://www.zrk.technology/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#050505` / `#ffa500`)
 - **Summary**: Ukrainian interceptor drone Zirka for defeating UAV threats. Automatic target tracking, combat-proven technology, and an airspeed twice t...
-- **Total Clean CSS Variables Extracted**: `8` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `7` (curated live-grounded set below)
 
 ---
 
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Inter display`
 - **Monospace / Technical Font Stack**: `Geist mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 72px`, `line-height: 63.36px`, `font-weight: 500`, `letter-spacing: -3.6px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 47.952px`, `line-height: 43.1568px`, `font-weight: 500`, `letter-spacing: -1.91995px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 63.36px`, `font-weight: 500`, `letter-spacing: -3.6px`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 20px`, `font-weight: 400`)
 
@@ -54,7 +54,6 @@ http_status: 200
 | `--gap` | `2.5px` | Layout / Spatial Grid Token |
 | `--word` | `1` | Design System Custom Token |
 | `--char` | `1` | Design System Custom Token |
-| `--delay` | `0s` | Motion / Easing Token |
 | `--www-zrk-technolo-bg` | `#050505` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
 | `--www-zrk-technolo-ink` | `#dddddd` | Primary Typography Ink (computed-derived) |
 | `--www-zrk-technolo-surface` | `#222222` | Surface Substrate (computed-derived) |
@@ -63,6 +62,7 @@ http_status: 200
 | `--www-zrk-technolo-border` | `#3898ec` | Structural Border (computed-derived) |
 | `--www-zrk-technolo-container` | `97.7778rem` | Container Bound (computed-derived) |
 | `--www-zrk-technolo-gap` | `16px` | Grid Gutter (computed-derived) |
+| `--www-zrk-technolo-pad` | `15.984px` | Lateral Padding (computed-derived) |
 
 ---
 

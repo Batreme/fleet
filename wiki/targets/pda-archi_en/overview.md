@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: pda-archi_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://pda.archi/en"
 final_url: "https://pda.archi/en"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Architecture firm in Paris: renovation, refurbishment — PDA
 - **Identified Frameworks**: Vue / Nuxt, Tailwind CSS
-- **Recovered Scripts**: `32`
+- **Recovered Scripts**: `131`
 - **Recovered Stylesheets**: `0`
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: altufanulu-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://altufanulu.com/en/"
 final_url: "https://altufanulu.com/en/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Altufan Ulu Law Office · Istanbul Legal Counsel
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `23`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `86`
+- **Recovered Stylesheets**: `8`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-qissa-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.qissa.co.uk/"
 final_url: "https://www.qissa.co.uk/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Indian Restaurant in Sevenoaks, Kent · Qissa
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `10`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `47`
+- **Recovered Stylesheets**: `9`
 
 ---
 

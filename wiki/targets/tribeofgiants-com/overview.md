@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: tribeofgiants-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://tribeofgiants.com/"
 final_url: "https://tribeofgiants.com/"
 status: analyzed
@@ -29,9 +29,9 @@ auth_required: false
 - **Target URL**: [https://tribeofgiants.com/](https://tribeofgiants.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Mindset Coaching & Personal Growth — The Tribe of Giants
-- **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `25`
-- **Recovered Stylesheets**: `3`
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `81`
+- **Recovered Stylesheets**: `12`
 
 ---
 

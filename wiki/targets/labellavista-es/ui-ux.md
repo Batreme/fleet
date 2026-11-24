@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: labellavista-es"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `labellavista-es` (**LABELLAVISTA — Creative production co.**)
 - **Production URL**: [https://labellavista.es/](https://labellavista.es/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#2f4a8a` canvas, `#ffffff` ink, `#e2d6c0` accent)
 - **Summary**: LABELLAVISTA is a creative production co. based in Galicia and Madrid: music videos, commercials and films, shot wherever the story is.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#2f4a8a` | live computed `html` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `nav` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#0000ff` | `html { background: blue }` (`#0000ff`) |
+| **Elevated Surface / Card Substrate** | `#000000` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#e2d6c0` | live computed `a` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#e2d6c0` | live computed `p` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#65749a` | `var(--line)` in `:root` (`e2d6c04d`) |
@@ -73,10 +73,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<header.bar> — `labellavista-es`)**:
    - Landmark `<header class="bar">` (`1440x48px`) hosting `LABELLAVISTA — Creative production c` navigation (`MUSIC VIDEOS · COMMERCIALS · FILMS · STUDIO · CONTACT`), DOM attributes (`data-cover`, `data-precedence="next"`, `data-room="dark"`, `data-hidden="false"`), and stylesheet rule `hivo_8c2be2a3-module__iX1fDW__cla... { font-family:Archivo,Archivo Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.reel> — `LABELLAVISTA`)**:
-   - Landmark `<section class="reel">` presenting display lead `LABELLAVISTA` and copy excerpt *"PLEASE LOWER YOUR WINDOW SHADE"* over `#2f4a8a` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.reel:nth(2)> — `PLEASE LOWER YOUR WINDOW SHADE`)**:
-   - Landmark `<section class="reel">` rendering section `PLEASE LOWER YOUR WINDOW SHADE` with copy *"BV 009 SÉ FELIZ X MI · Christian Nodal"*, asset references (`21ca8f3f56c22ca2-s.p.1cp9-4nby68j...`, `36363bfb06833f56-s.p.38hmww4cj4vm...`, `cabin-window.webp`, `cabin-shade.webp`), and grid rule `chivo_8c2be2a3-module__iX1fDW__va... { --font-archivo:"Archivo", "Archivo Fallback" }`.
-4. **Interactive Detail & Feature Matrix (<section.reel:nth(3)> — `BV 009 SÉ FELIZ X MI · Christian N`)**:
-   - Landmark `<section class="reel">` framing `BV 009 SÉ FELIZ X MI · Christian Nodal` and `BV 013 Non Sei Como · The Rapants ft. Joe Crepús` (*"BV 013 Non Sei Como · The Rapants ft. Joe Crepúsculo"*) with `#0000ff` surface cards, `#e2d6c0` accents, and `mono_685a951c-module__v6oBuq__cla... { font-family:DM Mono,DM Mono Fallback;font-style:normal;font-weight:400 }`.
+   - Landmark `<section class="reel">` presenting display lead `LABELLAVISTA` and copy excerpt *"BV 009 SÉ FELIZ X MI · Christian Nodal"* over `#2f4a8a` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.reel:nth(2)> — `BV 009 SÉ FELIZ X MI · Christian N`)**:
+   - Landmark `<section class="reel">` rendering section `BV 009 SÉ FELIZ X MI · Christian Nodal` with copy *"BV 013 Non Sei Como · The Rapants ft. Joe Crepúsculo"*, asset references (`21ca8f3f56c22ca2-s.p.1cp9-4nby68j...`, `36363bfb06833f56-s.p.38hmww4cj4vm...`, `cabin-window.webp`, `cabin-shade.webp`), and grid rule `chivo_8c2be2a3-module__iX1fDW__va... { --font-archivo:"Archivo", "Archivo Fallback" }`.
+4. **Interactive Detail & Feature Matrix (<section.reel:nth(3)> — `BV 013 Non Sei Como · The Rapants `)**:
+   - Landmark `<section class="reel">` framing `BV 013 Non Sei Como · The Rapants ft. Joe Crepús` and `· The Rapants ft. Joe Crepúsculo` (*"· The Rapants ft. Joe Crepúsculo"*) with `#000000` surface cards, `#e2d6c0` accents, and `mono_685a951c-module__v6oBuq__cla... { font-family:DM Mono,DM Mono Fallback;font-style:normal;font-weight:400 }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://labellavista.es/`)**:
-   - Landmark `<footer class="foot ui">` anchoring `LABELLAVISTA — Creative producti` footer links (`MUSIC VIDEOS · COMMERCIALS · FILMS · STUDIO · CONTACT`), copy *"· The Rapants ft. Joe Crepúsculo"*, and `#65749a` structural dividers.
+   - Landmark `<footer class="foot ui">` anchoring `LABELLAVISTA — Creative producti` footer links (`MUSIC VIDEOS · COMMERCIALS · FILMS · STUDIO · CONTACT`), copy *"BV 008 AMÉ · Christian Nodal"*, and `#65749a` structural dividers.

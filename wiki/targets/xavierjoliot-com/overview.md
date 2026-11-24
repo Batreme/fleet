@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: xavierjoliot-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://xavierjoliot.com"
 final_url: "https://xavierjoliot.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Xavier Joliot · Développeur Créatif
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `14`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `42`
+- **Recovered Stylesheets**: `3`
 
 ---
 

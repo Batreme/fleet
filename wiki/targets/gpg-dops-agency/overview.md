@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: gpg-dops-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://gpg.dops.agency/"
 final_url: "https://gpg.dops.agency/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Garvinpromo
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `46`
-- **Recovered Stylesheets**: `24`
+- **Recovered Scripts**: `99`
+- **Recovered Stylesheets**: `40`
 
 ---
 

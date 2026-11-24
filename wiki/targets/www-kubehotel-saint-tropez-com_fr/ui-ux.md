@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-kubehotel-saint-tropez-com_fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `www-kubehotel-saint-tropez-com_fr` (**Layne Saint-Tropez, hôtel 5 étoiles : ouverture le 1er mai 2027**)
 - **Production URL**: [https://www.kubehotel-saint-tropez.com/fr](https://www.kubehotel-saint-tropez.com/fr)
 - **Final Redirected URL**: [https://www.layne-sainttropez.com/fr](https://www.layne-sainttropez.com/fr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fdf9f4` canvas, `#000000` ink, `#0082f3` accent)
 - **Summary**: Face au golfe de Saint-Tropez, découvrez Layne, un nouvel hôtel 5 étoiles à Gassin. Ouverture le 1er mai 2027. Contact : info@layne-saint...
 - **Total Clean CSS Variables Extracted**: `160` (curated live-grounded set below)
@@ -68,12 +68,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.hero_header_wrap> — `www-kubehotel-saint-tropez-com_fr`)**:
-   - Landmark `<header class="hero_header_wrap">` (`1356x40px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
+   - Landmark `<header class="hero_header_wrap">` (`1356x48px`) hosting `Layne Saint-Tropez, hôtel 5 étoiles ` navigation (`fr · en · it · ru`), DOM attributes (`data-wf-domain="www.layne-sainttropez..."`, `data-wf-page="69c122f05101301b0245c797"`, `data-wf-site="69c122f05101301b0245c7c6"`, `data-nosnippet`), and stylesheet rule `root { --swiper-theme-color:007aff }`.
 2. **Hero Stage & Focal Lead (<section.hero_wrap> — `LES PLUS BELLES VACANCES ONT LE GO`)**:
    - Landmark `<section class="hero_wrap u-section">` presenting display lead `LES PLUS BELLES VACANCES ONT LE GOÛT DE L’INSOUCI...` and copy excerpt *"HÔTEL - RESTAURANT - SPA - PISCINES"* over `#fdf9f4` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.u-section> — `Les plus belles vacances ont le go`)**:
    - Landmark `<section class="hero_wrap u-section">` rendering section `Les plus belles vacances ont le goût de l’insouci...` with copy *"Hôtel - Restaurant - Spa - Piscines"*, asset references (`cdn.prod.website-files.com`, `layne-sainttropez.webflow.shared....`, `state.js`, `widgetIcon.min.js`), and grid rule `.swiper { margin-left:auto;margin-right:auto;position:relative;overflow:hidden;lis... }`.
 4. **Interactive Detail & Feature Matrix (<section.u-theme-dark> — `Hôtel - Restaurant - Spa - Piscine`)**:
-   - Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1 er mai 2027` (*"Ouverture 1 er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
+   - Landmark `<section class="hero_wrap u-section">` framing `Hôtel - Restaurant - Spa - Piscines` and `Ouverture 1er mai 2027` (*"Ouverture 1er mai 2027"*) with `#ffff00` surface cards, `#0082f3` accents, and `.swiper-vertical>.swiper-wrapper { flex-direction:column }`.
 5. **Colophon & Global Directory Footer (<footer.CybotCookiebotDialogContentWrapper> — `https://www.kubehotel-saint-tropez.com/fr`)**:
    - Landmark `<footer class="CybotCookiebotDialogContentWrapper">` anchoring `Layne Saint-Tropez, hôtel 5 étoi` footer links (`fr · en · it · ru`), copy *"Informations et réservations : info@layne-sainttropez.com"*, and `#e2e2e2` structural dividers.

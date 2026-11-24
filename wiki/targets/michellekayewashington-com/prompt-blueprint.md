@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: michellekayewashington-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "michellekayewashington-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 2
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#7a6560` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `
 
 > **Michelle Kaye — Fine Arts · Contemporary Artist, Charleston SC** (https://michellekayewashington.com/) — Michelle Kaye is a contemporary artist in Charleston, SC, exploring humanity’s relationship with the natural world. See Against the Grain...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Michelle Kaye — Fine Arts · Contemporary Artist, Charleston SC** (`https://michellekayewashington.com/`). Michelle Kaye is a contemporary artist in Charleston, SC, exploring humanity’s relationship with the natural world. See Against the Grain...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#7a6560` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffdf8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#120a09` primary typography and `#7a6560` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Cormorant` for display copy (`Michelle Kaye`) with `Cormorant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Cormorant` across display (`Michelle Kaye`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1224px` container bounds (`gap: 40px`, padding `46.08px`) with `cubic-bezier(0.22,1,0.36,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1224px` (measured `<main>` bounding box width within `1440px` desktop viewport).
 - **Canvas Lateral Padding & Spacing**: `46.08px` lateral canvas padding with `40px` grid gap.
 - **Border Radius Scale**: `50%`, `999px`, `1px`, `4px`.
@@ -112,6 +117,11 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `
 - **Selector `.nav-label::after`**: `transition: transform 0.45s var(--ease)` extracted from `michellekayewashington-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.shell>` and `<section.home:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`.
+- **Hover Physics (`primary_cta` · `Enter the Gallery →`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/gallery`) measured as `SPA` in `1088ms`.
 
 ---
 
@@ -170,6 +180,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `
    - Landmark `<section class="home">` framing `Ways to get in touch` and `Keep scrolling to the Gallery` (*"Keep scrolling to the Gallery"*) with `#f6f0e8` surface cards, `#7a6560` accents, and `body { margin: 0; height: 100%; }`.
 5. **Colophon & Global Directory Footer (<footer.wordmark-name> — `https://michellekayewashington.com/`)**:
    - Landmark `<footer class="wordmark-name">` anchoring `Michelle Kaye — Fine Arts · Cont` footer links (`01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`), copy *"Ways to get in touch"*, and `#dedbd7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Michelle Kaye` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/gallery`)**: `https://michellekayewashington.com/gallery` — H1: `Gallery: paintings and charcoal drawings by Miche...`, scrollHeight `19888px`, transition `SPA` (`1088ms`)
+- **Other Route (`/connect`)**: `https://michellekayewashington.com/connect` — H1: `Socials`, scrollHeight `900px`, transition `direct` (`363ms`)
 
 ---
 
@@ -186,7 +202,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fffdf8` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#120a09`, **Accent / Highlight**: `#7a6560`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fffdf8` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#120a09` primary typography and `#7a6560` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Cormorant` for display copy (`Michelle Kaye`) with `Cormorant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Cormorant` across display (`Michelle Kaye`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1224px` container bounds (`gap: 40px`, padding `46.08px`) with `cubic-bezier(0.22,1,0.36,1)` easing and Lenis Smooth Scroll (`data-lenis`).
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -225,8 +241,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--tan`)**: `#b7a397` — grounded in `var(--tan)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1224px` (measured `<main>` bounding box width within `1440px` desktop viewport)
 - **Padding & Gutters**: `46.08px` lateral canvas padding with `40px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1224px`, `gap: 40px`)
@@ -250,7 +266,7 @@ Scaffold `michellekayewashington-com` (`Michelle Kaye — Fine Arts · Contempor
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.shell> — `michellekayewashington-com`)` (`michellekayewashington-com`) adapts across `@media (max-width: 599px)`, `@media (max-height: 480px)`, `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 899px), (max-width: 999px) and (max-height: 5...` with `cubic-bezier(0.22,1,0.36,1)`, `cubic-bezier(0.65,0,0.35,1)` transitions and links `01 Michelle · 02 Gallery · 03 Socials · Charleston Magazine`.
 2. **Hero Stage & Focal Lead (<section.home> — `Michelle Kaye`)**:
    - DOM & Selectors: Landmark `<section class="home">` presenting display lead `Michelle Kaye` and copy excerpt *"Michelle Kaye explores the human condition through humanity’s rel"* over `#fffdf8` canvas and `#120a09` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#fffdf8` background with `#120a09` headline `Michelle Kaye`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#fffdf8` background with `#120a09` headline `Michelle Kaye`.
 3. **Primary Showcase & Content Grid (<section.home:nth(2)> — `About the Artist`)**:
    - DOM & Selectors: Landmark `<section class="home">` rendering section `About the Artist` with copy *"Ways to get in touch"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`), and grid rule `after { box-sizing: border-box; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.home:nth(2)> — `About the Artist`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1224px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `46.08px` horizontal padding on mobile.
@@ -280,8 +296,32 @@ Scaffold `michellekayewashington-com` (`Michelle Kaye — Fine Arts · Contempor
 - **Selector `.nav-label::after`**: `transition: transform 0.45s var(--ease)` extracted from `michellekayewashington-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.22,1,0.36,1)`)**: Governs interactive state transitions across `<header.shell>` and `<section.home:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`) with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using Lenis.
+- **Vertical Chapter Sequence**: Michelle Kaye (0%).
+- **Multi-Page Routes**: Scaffold internal routes `/gallery` (other, SPA), `/connect` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `michellekayewashington-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Michelle Kaye | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Michelle Kaye | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://michellekayewashington.com/gallery` | Gallery: paintings and charcoal drawi... | `19888px` | `SPA` (`1088ms`) | [subpage-01-gallery.webp](assets/subpage-01-gallery.webp) |
+| `2` | `other` | `https://michellekayewashington.com/connect` | Socials | `900px` | `direct` (`363ms`) | [subpage-02-connect.webp](assets/subpage-02-connect.webp) |
+

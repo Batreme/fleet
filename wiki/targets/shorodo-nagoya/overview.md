@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: shorodo-nagoya"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://shorodo.nagoya/"
 final_url: "https://shorodo.nagoya/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: 松露堂 — 手の中の温度 · 明治十年創業・名古屋 円頓寺の和菓子処
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `5`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `32`
+- **Recovered Stylesheets**: `2`
 
 ---
 

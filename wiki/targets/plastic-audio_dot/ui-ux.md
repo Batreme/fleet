@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: plastic-audio_dot"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,21 +13,21 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `plastic-audio_dot` (**Record internal audio on Mac, with key and BPM · DOT**)
 - **Production URL**: [https://plastic.audio/dot/](https://plastic.audio/dot/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0a0908` canvas, `#f2f0ea` ink, `#cfcfcf` accent)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0a0908` canvas, `#f2f0ea` ink, `#088ef9` accent)
 - **Summary**: Record internal audio on Mac with no BlackHole or Soundflower to set up. DOT gives every clip its key, BPM and chords. Drag it into your...
-- **Total Clean CSS Variables Extracted**: `33` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `757` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
 - **Display Font Stack**: `Uncut Sans`
 - **Body Font Stack**: `Uncut Sans`
-- **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 88px`, `line-height: 89.76px`, `font-weight: 400`, `letter-spacing: -1.76px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 73.44px`, `font-weight: 400`, `letter-spacing: -1.44px`)
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `p` (`font-size: calc(var(--u)*16/18)`, `line-height: calc(var(--u)*24/18)`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 19px`, `font-weight: 400`); rule `.label` (`font-size: calc(var(--u)*12/18)`, `line-height: calc(var(--u)*20/18)`, `letter-spacing: .1em`)
+- **Monospace / Technical Font Stack**: `IBM Plex Mono`
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 88px`, `line-height: 89.76px`, `font-weight: 400`, `letter-spacing: -1.76px`); CSS variables `--listItemCheckMobileDisplay: none`, `--listItemCheckDesktopDisplay: block`; rule `h1` (`font-size: 36px`, `line-height: 48px`, `letter-spacing: -.025em`, `font-weight: 500`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 72px`, `line-height: 73.44px`, `font-weight: 400`, `letter-spacing: -1.44px`); rule `h2` (`font-size: 30px`, `line-height: 39px`, `letter-spacing: -.025em`, `font-weight: 500`)
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--linkBrandedRoot-fontSizeBodyLg: clamp(14px,1.143em,20px)`, `--linkBrandedRoot-fontLineHeightBodyLg: clamp(17px,1.43em,25px)`, `--linkBrandedRoot-fontSizeBodyMd: clamp(12px,1em,20px)`; rule `p` (`font-size: calc(var(--u)*16/18)`, `line-height: calc(var(--u)*24/18)`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 19px`, `font-weight: 400`); CSS variables `--linkUi-fontSizeLabelLg: var(--linkUi-fontSizeBodyLg)`, `--linkUi-fontSizeLabelMd: var(--linkUi-fontSizeBodyMd)`, `--linkUi-fontSizeLabelSm: var(--linkUi-fontSizeBodySm)`; rule `.label` (`font-size: calc(var(--u)*12/18)`, `line-height: calc(var(--u)*20/18)`, `letter-spacing: .1em`)
 
 ---
 
@@ -36,9 +36,9 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#0a0908` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#f2f0ea` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#ff0000` | `.rdot { background: red }` (`#ff0000`) |
-| **Interactive Accent / Highlight** | `#cfcfcf` | live computed `a` `color` (`computed_styles.json`) |
-| **Secondary / Muted Copy** | `#a8a8a8` | `var(--ink-2)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#141414` | `var(--lemon-background)` in `:root` |
+| **Interactive Accent / Highlight** | `#088ef9` | `var(--linkUi-colorInfo400)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | `var(--lemon-secondary-text)` in `:root` |
 | **Structural Hairline Border** | `#ff0000` | `.dragmock .slot { border: #ff0000 }` |
 | **Variable Token (`--grey`)** | `#86847e` | `var(--grey)` in `:root` |
 | **Variable Token (`--faint`)** | `#5a5853` | `var(--faint)` in `:root` |
@@ -77,6 +77,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.intro> — `Press Record in your menu bar, fro`)**:
    - Landmark `<section class="intro">` rendering section `Press Record in your menu bar, from any app, eve` with copy *"DOT Audio Recorder"*, asset references (`s.js`, `favicon.ico`, `icon.svg`, `apple-touch-icon.png`), and grid rule `.sr { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0) }`.
 4. **Interactive Detail & Feature Matrix (<section.statement> — `DOT Audio Recorder`)**:
-   - Landmark `<section class="statement">` framing `DOT Audio Recorder` and `DOT Audio Recorder Catch any sound your Mac play` (*"DOT Audio Recorder Catch any sound your Mac plays."*) with `#ff0000` surface cards, `#cfcfcf` accents, and `.rdot.s { width:8px;height:8px;margin:0 10px 0 0;transform:none;vertical-align:1px }`.
+   - Landmark `<section class="statement">` framing `DOT Audio Recorder` and `DOT Audio Recorder Catch any sound your Mac play` (*"DOT Audio Recorder Catch any sound your Mac plays."*) with `#141414` surface cards, `#088ef9` accents, and `.rdot.s { width:8px;height:8px;margin:0 10px 0 0;transform:none;vertical-align:1px }`.
 5. **Colophon & Global Directory Footer (<footer.foot> — `https://plastic.audio/dot/`)**:
    - Landmark `<footer class="foot pfoot">` anchoring `Record internal audio on Mac, wi` footer links (`How it works · Pricing`), copy *"Catch any sound your Mac plays."*, and `#ff0000` structural dividers.

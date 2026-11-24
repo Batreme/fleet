@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: hopecancerresources-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `hopecancerresources-org` (**Hope Cancer Resources - Support. Educate. Prevent.**)
 - **Production URL**: [https://hopecancerresources.org/](https://hopecancerresources.org/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×5796px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ff` accent)
 - **Summary**: Providing free cancer support services through counseling, transportation, financial assistance, personal training, tobacco treatment, &...
-- **Total Clean CSS Variables Extracted**: `20` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `32` (curated live-grounded set below)
 
 ---
 
@@ -25,9 +25,9 @@ http_status: 200
 - **Body Font Stack**: `BrandonText`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 100px`, `line-height: 100px`, `font-weight: 800`); rule `h1` (`font-size: 2rem`, `line-height: 1`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 23px`, `line-height: 26.45px`, `font-weight: 800`); rule `h2` (`font-size: clamp(1.6rem,5vw,3rem)`, `font-weight: 900`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 50px`, `line-height: 57.5px`, `font-weight: 800`); rule `h2` (`font-size: clamp(1.6rem,5vw,3rem)`, `font-weight: 900`)
 - **Body Copy**: live computed `body` (`font-size: 10px`, `line-height: 11.5px`, `font-weight: 400`); rule `p` (`font-size: 2rem`, `line-height: 1.5`, `font-weight: 400`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 10px`, `line-height: 11.5px`, `font-weight: 400`); rule `.label` (`font-size: 1rem`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 10px`, `line-height: 11.5px`, `font-weight: 400`); CSS variables `--dbcqt-small-desktop-columns: minmax(clamp(208px, 22vw, 248px), 1.05fr) minmax(0, 1.1fr) 135px 40px`; rule `.label` (`font-size: 1rem`)
 
 ---
 
@@ -38,11 +38,11 @@ http_status: 200
 | **Primary Typography Ink** | `#000000` | live computed `button` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#edf1f4` | live computed `footer` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#0000ff` | `.link { color: blue }` (`#0000ff`) |
-| **Secondary / Muted Copy** | `#0e1829` | live computed `nav` `color` (`computed_styles.json`) |
+| **Secondary / Muted Copy** | `#476577` | live computed `h2` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#b0c5dc` | `hr { border-top: #b0c5dc }` |
+| **Variable Token (`--color-brand-black`)** | `#0e1829` | `var(--color-brand-black)` in `:root` |
 | **Variable Token (`--color-brand-blue`)** | `#1b7aaf` | `var(--color-brand-blue)` in `:root` |
 | **Variable Token (`--color-brand-lightblue`)** | `#1fa0e5` | `var(--color-brand-lightblue)` in `:root` |
-| **Variable Token (`--color-brand-darkblue`)** | `#476577` | `var(--color-brand-darkblue)` in `:root` |
 | **Variable Token (`--color-brand-gray-500`)** | `#90a3bf` | `var(--color-brand-gray-500)` in `:root` |
 | **Variable Token (`--color-notice-warning`)** | `#dc4b4b` | `var(--color-notice-warning)` in `:root` |
 | **Variable Token (`--color-notice-success`)** | `#2db292` | `var(--color-notice-success)` in `:root` |
@@ -73,7 +73,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-header> — `hopecancerresources-org`)**:
-   - Landmark `<header class="site-header template-home">` (`1440x60px`) hosting `Hope Cancer Resources - Support. Edu` navigation (`Shop for Hope · About Hope · Our Story · Our Foundation · Staff`), DOM attributes (`data-template="base.twig"`, `data-date-iso="2026-11-23CST19:45:23..."`, `data-types="Yoga"`, `data-date-iso="2026-11-26CST19:45:23..."`), and stylesheet rule `content { background:fff;background-size:100% }`.
+   - Landmark `<header class="site-header template-home">` (`1440x60px`) hosting `Hope Cancer Resources - Support. Edu` navigation (`Shop for Hope · About Hope · Our Story · Our Foundation · Staff`), DOM attributes (`data-template="base.twig"`, `data-date-iso="2026-11-27CST05:43:16..."`, `data-types="Yoga"`, `data-date-iso="2026-11-30CST05:43:17..."`), and stylesheet rule `content { background:fff;background-size:100% }`.
 2. **Hero Stage & Focal Lead (<article.post-type-page> — `Support. Educate. Prevent.`)**:
    - Landmark `<article class="post-type-page">` presenting display lead `Support. Educate. Prevent.` and copy excerpt *"Providing hope and healing through compassionate care, support, c"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.page_heading> — `Driving real Change in Northwest A`)**:

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-killstar-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,8 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-killstar-com` (**KILLSTAR**)
 - **Production URL**: [https://www.killstar.com/](https://www.killstar.com/)
-- **Final Redirected URL**: [https://eu.killstar.com/](https://eu.killstar.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f5f5` canvas, `#111111` ink, `#f1c40f` accent)
 - **Summary**: Clothing & Lifestyle company with a twist of darkness, channeling emotional power and raw energy into every thread.
 - **Total Clean CSS Variables Extracted**: `224` (curated live-grounded set below)
@@ -82,11 +81,11 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.shopify-section> — `www-killstar-com`)**:
    - Landmark `<header class="shopify-section shopify-section-group-header-group">` (`1440x71px`) hosting `KILLSTAR` navigation (`NEW IN · DRESSES · WOMENS · PLUS · MENS`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="53907226789"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `button { box-sizing:border-box;margin:0;padding:0 }`.
-2. **Hero Stage & Focal Lead (<section.shopify-section> — `Winter's Vale Coat`)**:
-   - Landmark `<section class="shopify-section section-full-width-media">` presenting display lead `Winter's Vale Coat` and copy excerpt *"We use cookies & other technologies to provide a personalised exp"* over `#f5f5f5` canvas and `#111111` ink.
-3. **Primary Showcase & Content Grid (<section.section-model-image-blocks> — `Skultra Cropped Cardigan`)**:
-   - Landmark `<section class="shopify-section section-model-image-blocks">` rendering section `Skultra Cropped Cardigan` with copy *"Please select a Size"*, asset references (`reamaze-push.js`, `tp.min.js`, `37086_1783060609.js`, `init.js`), and grid rule `section { display:block }`.
-4. **Interactive Detail & Feature Matrix (<section.section-full-width-media> — `Basilica Cape`)**:
-   - Landmark `<section class="shopify-section section-full-width-media">` framing `Basilica Cape` and `CRUCIFIX SLOUCH BAG` (*"Please select a Colour"*) with `#faf9f8` surface cards, `#f1c40f` accents, and `table { border-collapse:collapse;border-spacing:0 }`.
+2. **Hero Stage & Focal Lead (<section.shopify-section> — `Dark Haven Coat`)**:
+   - Landmark `<section class="shopify-section section-full-width-media">` presenting display lead `Dark Haven Coat` and copy excerpt *"We use cookies & other technologies to provide a personalised exp"* over `#f5f5f5` canvas and `#111111` ink.
+3. **Primary Showcase & Content Grid (<section.section-model-image-blocks> — `Nocturnal Sequin Maxi Dress`)**:
+   - Landmark `<section class="shopify-section section-model-image-blocks">` rendering section `Nocturnal Sequin Maxi Dress` with copy *"Please select a Size"*, asset references (`reamaze-push.js`, `tp.min.js`, `37086_1783060609.js`, `init.js`), and grid rule `section { display:block }`.
+4. **Interactive Detail & Feature Matrix (<section.section-full-width-media> — `Spiderella Knitted Sweater`)**:
+   - Landmark `<section class="shopify-section section-full-width-media">` framing `Spiderella Knitted Sweater` and `MIST OF DAWN COAT` (*"Please select a Colour"*) with `#faf9f8` surface cards, `#f1c40f` accents, and `table { border-collapse:collapse;border-spacing:0 }`.
 5. **Colophon & Global Directory Footer (<footer.shopify-section> — `https://www.killstar.com/`)**:
-   - Landmark `<footer class="shopify-section shopify-section-group-footer-group">` anchoring `KILLSTAR` footer links (`NEW IN · DRESSES · WOMENS · PLUS · MENS`), copy *"Please select a Material Content"*, and `#41a1e6` structural dividers.
+   - Landmark `<footer class="shopify-section shopify-section-group-footer-group">` anchoring `KILLSTAR` footer links (`NEW IN · DRESSES · WOMENS · PLUS · MENS`), copy *"70% Polyurethane 22% Viscose 4% Polyester 2% Cotton 2% Metal"*, and `#41a1e6` structural dividers.

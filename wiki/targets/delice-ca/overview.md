@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: delice-ca"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://delice.ca/"
 final_url: "https://delice.ca/"
 status: analyzed

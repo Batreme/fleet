@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-ataccama-com_fwrd2026"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-ataccama-com_fwrd2026` (**Ataccama FWRD 2026: Press play on what's next in data trust · Ataccama**)
 - **Production URL**: [https://www.ataccama.com/fwrd2026](https://www.ataccama.com/fwrd2026)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f10090`)
 - **Summary**: Rewind through the shifts in data quality, agentic data management, and governed context that shaped trusted AI in 2026, then fast-forwar...
 - **Total Clean CSS Variables Extracted**: `323` (curated live-grounded set below)
@@ -75,12 +75,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.position-relative> — `www-ataccama-com_fwrd2026`)**:
-   - Landmark `<header class="position-relative pt-md-96">` (`1440x96px`) hosting `Ataccama FWRD 2026: Press play on wh` navigation (`Register now`), DOM attributes (`data-hubspot-styled-components`, `data-wp-strategy="defer"`, `data-nosnippet`, `data-template="overlay"`), and stylesheet rule `.a0-footer { display: none; }`.
+   - Landmark `<header class="position-relative pt-md-96">` (`1440x96px`) hosting `Ataccama FWRD 2026: Press play on wh` navigation (`Register now`), DOM attributes (`data-hubspot-styled-components`, `data-wp-strategy="defer"`, `data-lottie-intro-src="/dist/images/other/an..."`, `data-lottie-loop-src="/dist/images/other/an..."`), and stylesheet rule `.a0-footer { display: none; }`.
 2. **Hero Stage & Focal Lead (<section.py-56> — `Press play on what’s next in data `)**:
-   - Landmark `<section class="py-56 py-sm-120">` presenting display lead `Press play on what’s next in data trust` and copy excerpt *"Join hundreds of data leaders at our biggest event of the year. L"* over `#ffffff` canvas and `#1a0c42` ink.
+   - Landmark `<section class="py-56 py-sm-120">` presenting display lead `Press play on what’s next in data trust` and copy excerpt *"Get an inside look at how data and AI strategies are evolving fro"* over `#ffffff` canvas and `#1a0c42` ink.
 3. **Primary Showcase & Content Grid (<section.pb-56> — `Hear from the leaders moving data `)**:
    - Landmark `<section class="pb-56 pb-sm-120">` rendering section `Hear from the leaders moving data and AI FWRD` with copy *"NOV 5 · 10 AM ET · VIRTUAL"*, asset references (`main-qGdQcxOC.css`, `cdnjs.cloudflare.com`, `feed`, `embed`), and grid rule `a0-widget .a0-zocial.a0-wp-login { background-color: 490050; }`.
 4. **Interactive Detail & Feature Matrix (<section.bg-navy> — `Camilla Björkqvist`)**:
-   - Landmark `<section class="bg-navy py-56">` framing `Camilla Björkqvist` and `Chantale Boulanger` (*"You're joining speakers and attendees from:"*) with `#dddddd` surface cards, `#f10090` accents, and `wp-login-form-wrapper { display: none; }`.
+   - Landmark `<section class="bg-navy py-56">` framing `Camilla Björkqvist` and `Chantale Boulanger` (*"Join hundreds of data leaders at our biggest event of the year. L"*) with `#dddddd` surface cards, `#f10090` accents, and `wp-login-form-wrapper { display: none; }`.
 5. **Colophon & Global Directory Footer (<footer.page-id-13449> — `https://www.ataccama.com/fwrd2026`)**:
-   - Landmark `<footer class="page-id-13449">` anchoring `Ataccama FWRD 2026: Press play o` footer links (`Register now`), copy *"Get an inside look at how data and AI strategies are evolvin"*, and `#e9ecef` structural dividers.
+   - Landmark `<footer class="page-id-13449">` anchoring `Ataccama FWRD 2026: Press play o` footer links (`Register now`), copy *"You're joining speakers and attendees from:"*, and `#e9ecef` structural dividers.

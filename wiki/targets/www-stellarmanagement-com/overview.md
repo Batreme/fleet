@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-stellarmanagement-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.stellarmanagement.com"
 final_url: "https://www.stellarmanagement.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Stellar Management · NYC Real Estate Developer & No Fee Rentals
 - **Identified Frameworks**: Vue / Nuxt
-- **Recovered Scripts**: `38`
-- **Recovered Stylesheets**: `27`
+- **Recovered Scripts**: `269`
+- **Recovered Stylesheets**: `40`
 
 ---
 

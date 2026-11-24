@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-easyseller-it"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.easyseller.it/"
 final_url: "https://www.easyseller.it/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: EASYSELLER · Sales Digital Agency
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `22`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `85`
+- **Recovered Stylesheets**: `24`
 
 ---
 

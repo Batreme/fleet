@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: statusisup-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://statusisup.com/"
 final_url: "https://statusisup.com/lang/de/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Status Is UP — Index für Service-Uptime, Performance & Zuverlässigkeit
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `9`
+- **Recovered Scripts**: `7`
 - **Recovered Stylesheets**: `2`
 
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Target Overview: overworldaudio-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://overworldaudio.com/"
 final_url: "https://overworldaudio.com/"
 status: blocked
-http_status: null
+http_status: 200
 capture_tier: none
-block_reason: "Hard per-target capture deadline exceeded (150s)"
+block_reason: "Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)"
 tags:
   - target
   - reverse-engineering
@@ -28,12 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://overworldaudio.com/](https://overworldaudio.com/)
-- **Status**: `blocked` (`http_status: N/A`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Hard per-target capture deadline exceeded (150s)
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Headless Preloader / Blank Viewport Capture (solid blank desktop viewport)
 - **Page Title**: overworldaudio-com
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `0`
-- **Recovered Stylesheets**: `0`
+- **Recovered Scripts**: `14`
+- **Recovered Stylesheets**: `11`
 
 ---
 

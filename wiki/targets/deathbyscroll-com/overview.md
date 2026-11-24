@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: deathbyscroll-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://deathbyscroll.com"
 final_url: "https://deathbyscroll.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Death by Scroll
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `8`
+- **Recovered Stylesheets**: `8`
 
 ---
 

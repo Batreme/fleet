@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: jld2nd-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,19 +13,19 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `jld2nd-dev` (**JLD'2nd – Designer & Developer**)
 - **Production URL**: [https://jld2nd.dev](https://jld2nd.dev)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#121212` canvas, `#ffffff` ink, `#f6c53a` accent)
 - **Summary**: I believe web design should be as expressive as the ideas behind it. Driven by curiosity, I explore new possibilities at the intersection...
-- **Total Clean CSS Variables Extracted**: `53` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `63` (curated live-grounded set below)
 
 ---
 
 ## Typography & Hierarchy
-- **Display Font Stack**: `Mozilla Headline`
+- **Display Font Stack**: `Minecraft`
 - **Body Font Stack**: `Mozilla Headline`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: CSS variables `--fs-display-2xl: clamp(3.75rem, 3.5536rem + .9821vw, 5.125rem)`, `--fs-display-xl: clamp(3.5rem, calc(3.4rem + .5vw), 4rem)`, `--fs-display-lg: clamp(3.125rem, 2.9018rem + 1.1161vw, 4.6875rem)`
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 62.5006px`, `line-height: 68.7507px`, `font-weight: 600`, `letter-spacing: 1px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 70.9998px`, `line-height: 70.9998px`, `font-weight: 600`, `letter-spacing: 5px`)
 - **Body Copy**: live computed `body` (`font-size: 16.9995px`, `line-height: 25.4993px`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16.9995px`, `line-height: 25.4993px`, `font-weight: 400`); CSS variables `--fs-text-sm: .875rem`, `--fs-text-xs: .75rem`
 

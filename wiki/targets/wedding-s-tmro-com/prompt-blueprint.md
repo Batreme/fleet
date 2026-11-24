@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: wedding-s-tmro-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "wedding-s-tmro-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#333333`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#3
 
 > **Wedding Invitation · Yuri & Tomoro** (https://wedding.s-tmro.com/) — 結婚式へのご招待です。日時は2026年11月29日（いい肉の日）、10:00に受付、10:30に開始です。会場は桜通線「国際センター」駅近くのレストラン「recipe」です。
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Wedding Invitation · Yuri & Tomoro** (`https://wedding.s-tmro.com/`). 結婚式へのご招待です。日時は2026年11月29日（いい肉の日）、10:00に受付、10:30に開始です。会場は桜通線「国際センター」駅近くのレストラン「recipe」です。
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#333333`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f7f7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#333333` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Stack Sans Notch` for display copy (`Wedding Invitation · Yuri & Tomoro`) with `Italianno` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Stack Sans Notch` for display copy (`Wedding Invitation · Yuri & Tomoro`) with `Italianno`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 40px`, padding `10px`) with `cubic-bezier(0.4,0.4,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=10472px` / doc `11373px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `10px` lateral canvas padding with `40px` grid gap.
 - **Border Radius Scale**: `2px`, `6px`, `8px`, `0px`.
@@ -110,6 +115,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#3
 - **Selector `.video-container`**: `transition: all 0.3s cubic-bezier(0.4,0.4,0,1)` extracted from `wedding-s-tmro-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0.4,0,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `11373px`, deepest scrollY reached `10472px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
 
 ---
 
@@ -133,7 +141,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#3
 │ ---------------------------------------------------------------------- │
 │ | DETAIL MODULE (<section.section:nth(3)>) — Global Directory & Co   | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.section-inne) | https://wedding.s-tmro.com/          │
+│ [ FOOTER (<footer.text>       ) | https://wedding.s-tmro.com/          │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -153,7 +161,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#3
 │ ---------------------------------------------------------------------- │
 │ | DETAIL STACK (<section.section:nth(3)>) — 1-Col (Global Directory &) │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.section-inne) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.text>       ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -166,8 +174,17 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#f7f7f7` / `#3
    - Landmark `<section class="section">` rendering section `Featured Work & Interactive Showcase` with copy *"“ii-fuku-nohi” & “ii-niku-nohi”"*, asset references (`84a82c89-316b-4152-8b5a-bb944f91e1b1`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.lenis-stopped { overflow: clip; }`.
 4. **Interactive Detail & Feature Matrix (<section.section:nth(3)> — `Technical Architecture & Narrative`)**:
    - Landmark `<section class="section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"mixture restaurant"*) with `#ffffff` surface cards, `#333333` accents, and `.lenis.lenis-smooth iframe { pointer-events: none; }`.
-5. **Colophon & Global Directory Footer (<footer.section-inner> — `https://wedding.s-tmro.com/`)**:
-   - Landmark `<footer class="section-inner">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.text> — `https://wedding.s-tmro.com/`)**:
+   - Landmark `<footer class="text">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#message` · sticky/fixed elements: `0`
+- **Step 02** (`y=850px`, `8%`): Active landmark `#message` · sticky/fixed elements: `1`
+- **Step 03** (`y=2550px`, `24%`): Active landmark `#message` · sticky/fixed elements: `1`
+- **Step 04** (`y=4250px`, `41%`): Active landmark `Section @ 41%` · sticky/fixed elements: `1`
+- **Step 05** (`y=6800px`, `65%`): Active landmark `#reply` · sticky/fixed elements: `1`
+- **Step 06** (`y=8500px`, `81%`): Active landmark `#reply` · sticky/fixed elements: `1`
+- **Step 07** (`y=10200px`, `97%`): Active landmark `#reply` · sticky/fixed elements: `1`
+- **Step 08** (`y=10472px`, `100%`): Active landmark `#reply` · sticky/fixed elements: `1`
 
 ---
 
@@ -184,7 +201,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#f7f7f7` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#333333`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#f7f7f7` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#333333` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Stack Sans Notch` for display copy (`Wedding Invitation · Yuri & Tomoro`) with `Italianno` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Stack Sans Notch` for display copy (`Wedding Invitation · Yuri & Tomoro`) with `Italianno`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 40px`, padding `10px`) with `cubic-bezier(0.4,0.4,0,1)` easing and Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -221,8 +238,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--s-color-27b6cb51`)**: `#f2f2f2` — grounded in `var(--s-color-27b6cb51)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `10px` lateral canvas padding with `40px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 40px`)
@@ -246,16 +263,16 @@ Scaffold `wedding-s-tmro-com` (`Wedding Invitation · Yuri & Tomoro`) with these
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `wedding-s-tmro-com`)` (`wedding-s-tmro-com`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-resolution: 1.5dppx)`, `@media (min-resolution: 1dppx) and (max-resolution: 1.5dppx)`, `@media (max-resolution: 1dppx)` with `cubic-bezier(0.4,0.4,0,1)`, `cubic-bezier(.4,.4,0,1)` transitions and links `@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`.
 2. **Hero Stage & Focal Lead (<section.section> — `Wedding Invitation · Yuri & Tomoro`)**:
    - DOM & Selectors: Landmark `<section class="section">` presenting display lead `Wedding Invitation · Yuri & Tomoro` and copy excerpt *"Yuri Kunimatsu & Tomoro Sugawara Wedding Ceremony"* over `#f7f7f7` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#f7f7f7` background with `#000000` headline `Wedding Invitation · Yuri & Tomoro`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#f7f7f7` background with `#000000` headline `Wedding Invitation · Yuri & Tomoro`.
 3. **Primary Showcase & Content Grid (<section.section:nth(2)> — `Featured Work & Interactive Showca`)**:
    - DOM & Selectors: Landmark `<section class="section">` rendering section `Featured Work & Interactive Showcase` with copy *"“ii-fuku-nohi” & “ii-niku-nohi”"*, asset references (`84a82c89-316b-4152-8b5a-bb944f91e1b1`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.lenis-stopped { overflow: clip; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section:nth(2)> — `Featured Work & Interactive Showca`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `10px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.section:nth(3)> — `Technical Architecture & Narrative`)**:
    - DOM & Selectors: Landmark `<section class="section">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"mixture restaurant"*) with `#ffffff` surface cards, `#333333` accents, and `.lenis.lenis-smooth iframe { pointer-events: none; }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section:nth(3)> — `Technical Architecture & Narrative`)` uses `2px`, `6px`, `8px`, `0px` radii, `#333333` highlights, and assets (84a82c89-316b-4152-8b5a-bb944f91e1b1, fonts.googleapis.com, fonts.gstatic.com).
-5. **Colophon & Global Directory Footer (<footer.section-inner> — `https://wedding.s-tmro.com/`)**:
-   - DOM & Selectors: Landmark `<footer class="section-inner">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.section-inner> — `https://wedding.s-tmro.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `10px` lateral canvas padding with `40px` grid gap and attributes (data-appear, data-inited-appear, data-sd-img-src="https://storage.googl...").
+5. **Colophon & Global Directory Footer (<footer.text> — `https://wedding.s-tmro.com/`)**:
+   - DOM & Selectors: Landmark `<footer class="text">` anchoring `Wedding Invitation · Yuri & Tomo` footer links (`@recipe · MESSAGE · INFORMATION · YOUR REPLY · @recipe @recipe`), copy *"Good clothes Good meats Good Fortunes"*, and `#cccccc` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.text> — `https://wedding.s-tmro.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `10px` lateral canvas padding with `40px` grid gap and attributes (data-appear, data-inited-appear, data-sd-img-src="https://storage.googl...").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Yuri Kunimatsu & Tomoro Sugawara Wedding Ceremony"*
@@ -277,8 +294,34 @@ Scaffold `wedding-s-tmro-com` (`Wedding Invitation · Yuri & Tomoro`) with these
 - **Selector `.video-container`**: `transition: all 0.3s cubic-bezier(0.4,0.4,0,1)` extracted from `wedding-s-tmro-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(0.4,0.4,0,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<section.section:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `11373px` across 8 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: #message (0%) -> #message (8%) -> #message (24%) -> Section @ 41% (41%) -> #reply (65%) -> #reply (81%) -> #reply (97%) -> #reply (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `wedding-s-tmro-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #message | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `8%` | #message | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `24%` | #message | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `41%` | Section @ 41% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `65%` | #reply | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `81%` | #reply | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `97%` | #reply | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `10472px` | `100%` | #reply | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5099px` | `50%` | #information | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `10199px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

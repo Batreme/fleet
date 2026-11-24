@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: belgradearbor-rs_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "belgradearbor-rs_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 2
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e7fd55`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e
 
 > **Belgrade Arbor · Residential & Business Complex in New Belgrade** (https://belgradearbor.rs/en) — Discover Belgrade Arbor - premium apartments and business spaces in New Belgrade. Explore residences, amenities, location, and availability.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Belgrade Arbor · Residential & Business Complex in New Belgrade** (`https://belgradearbor.rs/en`). Discover Belgrade Arbor - premium apartments and business spaces in New Belgrade. Explore residences, amenities, location, and availability.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e7fd55`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fdfbef` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#2e3a26` primary typography and `#e7fd55` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=8500px` / doc `20121px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1601px` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `0px` lateral canvas padding with `0px (flush layout)` grid gap.
 - **Border Radius Scale**: `.25rem`, `1.25rem`, `1.75rem`, `2147483647px`.
@@ -97,7 +102,7 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 151.2px`, `line-height: 151.2px`, `font-weight: 400`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 55.944px`, `line-height: 61.5384px`, `font-weight: 300`, `letter-spacing: 1.11888px`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 239.76px`, `line-height: 239.76px`, `font-weight: 300`).
 - **Body Copy**: live computed `body` (`font-size: 15.984px`, `line-height: 23.976px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`.
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 15.984px`, `line-height: 23.976px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`.
 
@@ -114,6 +119,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e
 - **Selector `box-shadow\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `belgradearbor-rs_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.mt-12>` and `<section.introduction-mobile>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `20121px`, deepest scrollY reached `8500px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Nav / Drawer Probe (`Open navigation menu`)**: Triggered visual change (pixel diff `100.475`, captured in `assets/state-nav.webp`); revealed links: Home Home, 3D Experience 3D Expe..., Residences Residences, Business Business, Retail Spaces Retail..., Location Location.
+- **Interactive Control Probe (`carousel_next`)**: Tested `Next image` (diff `0.0`).
+- **Route Transition Architecture**: First internal navigation (`/en/3d`) measured as `MPA` in `8639ms`.
 
 ---
 
@@ -172,6 +183,19 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fdfbef` / `#e
    - Landmark `<section class="z-1 relative">` framing `The visual identity of Belgrade Arbor is defined...` and `Belgrade Arbor isn't just another addition to the...` (*"Explore in 3d Explore in 3d"*) with `#ffffff` surface cards, `#e7fd55` accents, and `.UoXJ4a_className { font-family:editorialOld,editorialOld Fallback }`.
 5. **Colophon & Global Directory Footer (<footer.to-vanilla> — `https://belgradearbor.rs/en`)**:
    - Landmark `<footer class="to-vanilla bg-linear-to-t">` anchoring `Belgrade Arbor · Residential & B` footer links (`Home Home · Business Business · Location Location · Amenities Amenities · Contact Contact`), copy *"A clear architectural vision, a carefully selected location,"*, and `#e5e5e5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=200px`, `0%`): Active landmark `BELGRADE ARBOR` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `4%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `9%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 04** (`y=3400px`, `18%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 05** (`y=4250px`, `22%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 06** (`y=5950px`, `31%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 07** (`y=7650px`, `40%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+- **Step 08** (`y=8500px`, `44%`): Active landmark `The visual identity of Belgrade Arbor is defined...` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/en/3d`)**: `https://belgradearbor.rs/en/3d` — H1: `en-3d`, scrollHeight `900px`, transition `MPA` (`8639ms`)
+- **Detail Route (`/en/residences`)**: `https://belgradearbor.rs/en/residences` — H1: `RESIDENCES`, scrollHeight `6408px`, transition `direct` (`3018ms`)
 
 ---
 
@@ -229,8 +253,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--destructive`)**: `#e40014` — grounded in `var(--destructive)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1601px` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `0px` lateral canvas padding with `0px (flush layout)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1601px`, `gap: 0px (flush layout)`)
@@ -243,7 +267,7 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Apple Color Emoji`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
 - **H1 Display Rule**: live computed `h1` (`font-size: 151.2px`, `line-height: 151.2px`, `font-weight: 400`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 55.944px`, `line-height: 61.5384px`, `font-weight: 300`, `letter-spacing: 1.11888px`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 239.76px`, `line-height: 239.76px`, `font-weight: 300`)
 - **Body Copy Rule**: live computed `body` (`font-size: 15.984px`, `line-height: 23.976px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 15.984px`, `line-height: 23.976px`, `font-weight: 400`); CSS variables `--text-xs: .75rem`, `--text-xs--line-height: calc(1 / .75)`, `--text-sm: .875rem`
 
@@ -254,7 +278,7 @@ Scaffold `belgradearbor-rs_en` (`Belgrade Arbor · Residential & Business Comple
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.mt-12> — `belgradearbor-rs_en`)` (`belgradearbor-rs_en`) adapts across `@media not all and (min-width:1121px)`, `@media not all and (min-width:601px)`, `@media (min-width:481px)`, `@media (min-width:601px)` with `cubic-bezier(.4,0,.2,1)` transitions and links `Home Home · Business Business · Location Location · Amenities Amenities · Contact Contact`.
 2. **Hero Stage & Focal Lead (<section.relative> — `BELGRADE ARBOR`)**:
    - DOM & Selectors: Landmark `<section class="relative">` presenting display lead `BELGRADE ARBOR` and copy excerpt *"BELGRADE ARBOR DESIGN"* over `#fdfbef` canvas and `#2e3a26` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×2400px` mobile) sets `#fdfbef` background with `#2e3a26` headline `BELGRADE ARBOR`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#fdfbef` background with `#2e3a26` headline `BELGRADE ARBOR`.
 3. **Primary Showcase & Content Grid (<section.introduction-mobile> — `Belgrade Arbor`)**:
    - DOM & Selectors: Landmark `<section class="introduction-mobile relative">` rendering section `Belgrade Arbor` with copy *"B E L G R A D E A R B O R D E S I G N"*, asset references (`0kbue0j55e2ep.css`, `2l_3j-qfad4j4.css`, `2zlpkz7lx5tcy.css`, `07bpw61iauvjs.js`), and grid rule `.VqkbDq_variable { --font-workSans:"Work Sans", "Work Sans Fallback" }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.introduction-mobile> — `Belgrade Arbor`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1601px`, `gap: 0px (flush layout)`) on desktop and Single-column vertical stack at `390px` viewport width with `0px` horizontal padding on mobile.
@@ -285,8 +309,47 @@ Scaffold `belgradearbor-rs_en` (`Belgrade Arbor · Residential & Business Comple
 - **Selector `box-shadow\]`**: `transition: var(--tw-ease,var(--default-transition-timing-function))` extracted from `belgradearbor-rs_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<nav.mt-12>` and `<section.introduction-mobile>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `20121px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: BELGRADE ARBOR (0%) -> The visual identity of Belg... (4%) -> The visual identity of Belg... (9%) -> The visual identity of Belg... (18%) -> The visual identity of Belg... (22%) -> The visual identity of Belg... (31%) -> The visual identity of Belg... (40%) -> The visual identity of Belg... (44%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`Open navigation menu`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/en/3d` (detail, MPA), `/en/residences` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `belgradearbor-rs_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `200px` | `0%` | BELGRADE ARBOR | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `9%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `18%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `4250px` | `22%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `31%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `40%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `8500px` | `44%` | The visual identity of Belgrade Arbor is defi... | `3` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | BELGRADE ARBOR | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | #Residences | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | AMENITIES | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`Open navigation menu`, diff `100.475`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://belgradearbor.rs/en/3d` | en-3d | `900px` | `MPA` (`8639ms`) | [subpage-01-en-3d.webp](assets/subpage-01-en-3d.webp) |
+| `2` | `detail` | `https://belgradearbor.rs/en/residences` | RESIDENCES | `6408px` | `direct` (`3018ms`) | [subpage-02-en-residences.webp](assets/subpage-02-en-residences.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: lorenzolottici-it_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "lorenzolottici-it_en"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#0000ff`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#
 
 > **Lorenzo Lottici · Order in chaos** (https://lorenzolottici.it/en) — I bring order to the chaos in your business. Outside, a site people recognize at first glance. Inside, automations and AI agents that wor...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Lorenzo Lottici · Order in chaos** (`https://lorenzolottici.it/en`). I bring order to the chaos in your business. Outside, a site people recognize at first glance. Inside, automations and AI agents that wor...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#0000ff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#070707` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#f0ede8` primary typography and `#0000ff` accents.
@@ -34,10 +41,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `24039px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `96rem` (non-`@media` desktop container stylesheet rule).
 - **Canvas Lateral Padding & Spacing**: `48.96px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `50%`, `4px`, `.25rem`, `var(--radius-2xl)`.
@@ -109,6 +114,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#
 - **Selector `html[data-lavori-esce] ._2ZgDjW_p...`**: `transition: transform var(--dur-stato) var(--curva)` extracted from `lorenzolottici-it_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.indice-home>` and `<section.js>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `24039px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -167,6 +175,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#070707` / `#
    - Landmark `<section class="scroll-fermo">` framing `What I do` and `Work` (*"Order in the chaos"*) with `#f0ede8` surface cards, `#0000ff` accents, and `.iLAgaa_pianeta { width:120vw;top:-74vw;right:-62vw }`.
 5. **Colophon & Global Directory Footer (<footer.su-piede> — `https://lorenzolottici.it/en`)**:
    - Landmark `<footer class="su-piede indice-home">` anchoring `Lorenzo Lottici · Order in chaos` footer links (`What I do · Path · Work · Thinking · Let’s talk`), copy *"of your processes."*, and `#4b2a18` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `ORDER IN THE CHAOS OF YOUR PROCESSES. ORDER IN TH...` · sticky/fixed elements: `5`
 
 ---
 
@@ -219,8 +229,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#4b2a18` — grounded in `30 { border-color: #4b2a18 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `96rem` (non-`@media` desktop container stylesheet rule)
 - **Padding & Gutters**: `48.96px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 12px`)
@@ -244,7 +254,7 @@ Scaffold `lorenzolottici-it_en` (`Lorenzo Lottici · Order in chaos`) with these
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.indice-home> — `lorenzolottici-it_en`)` (`lorenzolottici-it_en`) adapts across `@media (max-width:640px)`, `@media (max-width:760px)`, `@media (max-width:300px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(.4,0,1,1)`, `cubic-bezier(0,0,.2,1)`, `cubic-bezier(.4,0,.2,1)` transitions and links `What I do · Path · Work · Thinking · Let’s talk`.
 2. **Hero Stage & Focal Lead (<section.dark> — `ORDER IN THE CHAOS OF YOUR PROCESS`)**:
    - DOM & Selectors: Landmark `<section class="dark">` presenting display lead `ORDER IN THE CHAOS OF YOUR PROCESSES. ORDER IN TH...` and copy excerpt *"Creative Developer & Automation Architect"* over `#070707` canvas and `#f0ede8` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×844px` mobile) sets `#070707` background with `#f0ede8` headline `ORDER IN THE CHAOS OF YOUR PROCESSES. ORDER IN TH...`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#070707` background with `#f0ede8` headline `ORDER IN THE CHAOS OF YOUR PROCESSES. ORDER IN TH...`.
 3. **Primary Showcase & Content Grid (<section.js> — `Order in the chaos of your process`)**:
    - DOM & Selectors: Landmark `<section class="js">` rendering section `Order in the chaos of your processes. Order in th...` with copy *"Order in the chaos of your processes."*, asset references (`archivo_latin_var-s.p.3b1_7etm2gp...`, `jetbrains_mono_latin_var.p.0gbvn7...`, `polvere-carta.webp`, `420u9fgvjqgpl.js`), and grid rule `.iLAgaa_stelle { border-radius:50%;width:1px;height:1px;position:absolute;top:0;left:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.js> — `Order in the chaos of your process`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 96rem`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `48.96px` horizontal padding on mobile.
@@ -275,8 +285,25 @@ Scaffold `lorenzolottici-it_en` (`Lorenzo Lottici · Order in chaos`) with these
 - **Selector `html[data-lavori-esce] ._2ZgDjW_p...`**: `transition: transform var(--dur-stato) var(--curva)` extracted from `lorenzolottici-it_en` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,1,1)`)**: Governs interactive state transitions across `<header.indice-home>` and `<section.js>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `24039px` across 1 distinct viewport chapters.
+- **Vertical Chapter Sequence**: ORDER IN THE CHAOS OF YOUR... (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `lorenzolottici-it_en`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | ORDER IN THE CHAOS OF YOUR PROCESSES. ORDER I... | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | ORDER IN THE CHAOS OF YOUR PROCESSES. ORD... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

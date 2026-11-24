@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: diversify-nz"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://diversify.nz"
 final_url: "https://www.diversify.nz/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,11 +28,11 @@ auth_required: false
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://diversify.nz](https://diversify.nz)
 - **Final Redirected URL**: [https://www.diversify.nz/](https://www.diversify.nz/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: diversify.nz
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `112`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `119`
+- **Recovered Stylesheets**: `3`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: davaris-gr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `davaris-gr` (**Homepage - Davaris**)
 - **Production URL**: [https://davaris.gr/](https://davaris.gr/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#f5f2e5` canvas, `#2e1414` ink, `#f65f00` accent)
 - **Summary**: We are a family-owned company built on heritage, excellence, and a human-centric approach. Taking all the necessary steps for the protect...
 - **Total Clean CSS Variables Extracted**: `223` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Moderat`
 - **Monospace / Technical Font Stack**: `Moderat Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 90px`, `line-height: 81px`, `font-weight: 500`, `letter-spacing: -1.8px`); CSS variables `--fs-h1: clamp(3.75rem, 3.09rem + 2.817vw, 5.625rem)`, `--lh-h1: .9`; rule `,.h1` (`line-height: 1.2`, `font-weight: 500`)
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 60.0048px`, `line-height: 60.0048px`, `font-weight: 500`, `letter-spacing: 2.40019px`); CSS variables `--fs-h2: clamp(2.125rem, 1.4rem + 3.6vw, 4.688rem)`, `--lh-h2: 1`; rule `,.h2` (`font-size: calc(1.325rem + .9vw)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 45.008px`, `line-height: 45.008px`, `font-weight: 500`); CSS variables `--fs-h2: clamp(2.125rem, 1.4rem + 3.6vw, 4.688rem)`, `--lh-h2: 1`; rule `,.h2` (`font-size: calc(1.325rem + .9vw)`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `p` (`font-size: 1.125rem`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 17.6px`, `font-weight: 400`)
 

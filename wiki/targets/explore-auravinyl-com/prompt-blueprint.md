@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: explore-auravinyl-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "explore-auravinyl-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#e3fc02`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 
 > **Aura Vinyl Color Explorer** (https://explore.auravinyl.com) — Explore over 500 colors across matte, satin, and gloss finishes from Aura Premium Vinyl. Find vinyl wrap ideas and inspiration.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Aura Vinyl Color Explorer** (`https://explore.auravinyl.com`). Explore over 500 colors across matte, satin, and gloss finishes from Aura Premium Vinyl. Find vinyl wrap ideas and inspiration.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#e3fc02`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#161616` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#e3fc02` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ARCTIC FIRE`) with `Helvetica Neue` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`Arctic Fire`) with `Helvetica Neue` and `Geist Mono`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.215,.61,.355,1)` easing and Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `10px` grid gap.
 - **Border Radius Scale**: `6px`, `var(--radius-pill)`, `50%`, `2px`.
@@ -102,7 +107,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 30px`, `line-height: 27px`, `font-weight: 900`, `letter-spacing: -0.6px`); rule `.title` (`font-size: 18px`, `line-height: 1.1`, `letter-spacing: -.02em`, `font-weight: 800`).
 - **Section Heading (`H2`)**: live computed `h2` (`font-size: 28px`, `line-height: 25.2px`, `font-weight: 900`, `letter-spacing: -0.56px`).
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `.body` (`font-size: 13px`, `line-height: 1.5`, `font-weight: 500`).
-- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 12px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`.
+- **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 13px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`.
 
 ---
 
@@ -117,6 +122,11 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 - **Selector `.FormDialog .panel`**: `transition: transform var(--dur-fast) var(--ease-standard)` extracted from `explore-auravinyl-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.head>` and `<section.card>`.
 - **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Buy now`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Interactive Control Probe (`tab` · `OUTDOOR`)**: Triggered visual diff `6.494` (attr `false -> true`, captured in `assets/state-interactive.webp`).
 
 ---
 
@@ -130,15 +140,15 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 │ [ <header.head> (1440px)              | Overview · Index · Archive · ] │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE: <section.mbar> (w=1440px)                              | │
-│ | H1: ARCTIC FIRE                                                    | │
+│ | H1: Arctic Fire                                                    | │
 │ | Substrate: #161616 | Ink: #ffffff | Accent: #e3fc02                | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<section.card>) max-w: 1440px                       | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | Arctic Fire                  |  | Paint Metallic Diamond Green | | │
+│ | | No colors match. Clear the h |  | Please enable javascript     | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<section.sec>) — Metallic Gold Green S              | │
+│ | DETAIL MODULE (<section.sec>) — Show more / 741 left               | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.shell>      ) | https://explore.auravinyl.com        │
 └────────────────────────────────────────────────────────────────────────┘
@@ -152,13 +162,13 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 │ [ HEADER BAR (<header.head>           ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
 │ | HERO STAGE (<section.mbar>) — 390px Vertical Lead                  | │
-│ | H1: ARCTIC FIRE                                                    | │
+│ | H1: Arctic Fire                                                    | │
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<section.card>) — 1-Col Stack                      | │
-│ | [ Item 1: Arctic Fire                                            ] | │
-│ | [ Item 2: Paint Metallic Diamond Green                           ] | │
+│ | [ Item 1: No colors match. Clear the hue or collection, or       ] | │
+│ | [ Item 2: Please enable javascript                               ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<section.sec>) — 1-Col (Metallic Gold Gree)          | │
+│ | DETAIL STACK (<section.sec>) — 1-Col (Show more / 741 le)          | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.shell>      ) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -166,15 +176,17 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#161616` / `#
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.head> — `explore-auravinyl-com`)**:
-   - Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-perma="satin-diamond-white"`, `data-perma="gloss-paint-metallic-..."`, `data-perma="matte-green-black-shift"`, `data-perma="ultra-gloss-metallic-..."`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
-2. **Hero Stage & Focal Lead (<section.mbar> — `ARCTIC FIRE`)**:
-   - Landmark `<section class="mbar">` presenting display lead `ARCTIC FIRE` and copy excerpt *"Please enable javascript"* over `#161616` canvas and `#ffffff` ink.
-3. **Primary Showcase & Content Grid (<section.card> — `Arctic Fire`)**:
-   - Landmark `<section class="card">` rendering section `Arctic Fire` with copy *"Paint Metallic Diamond Green"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
-4. **Interactive Detail & Feature Matrix (<section.sec> — `Paint Metallic Diamond Green`)**:
-   - Landmark `<section class="sec">` framing `Paint Metallic Diamond Green` and `Metallic Gold Green Shift` (*"Metallic Gold Green Shift"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
+   - Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-target="explore-auravinyl-com"`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
+2. **Hero Stage & Focal Lead (<section.mbar> — `Arctic Fire`)**:
+   - Landmark `<section class="mbar">` presenting display lead `Arctic Fire` and copy excerpt *"No colors match. Clear the hue or collection, or try another word"* over `#161616` canvas and `#ffffff` ink.
+3. **Primary Showcase & Content Grid (<section.card> — `No colors match. Clear the hue or `)**:
+   - Landmark `<section class="card">` rendering section `No colors match. Clear the hue or collection, or` with copy *"Please enable javascript"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
+4. **Interactive Detail & Feature Matrix (<section.sec> — `Please enable javascript`)**:
+   - Landmark `<section class="sec">` framing `Please enable javascript` and `Show more / 741 left` (*"Show more / 741 left"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
 5. **Colophon & Global Directory Footer (<footer.shell> — `https://explore.auravinyl.com`)**:
-   - Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Shift"*, and `#262626` structural dividers.
+   - Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Nebula"*, and `#262626` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
 
 ---
 
@@ -191,7 +203,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#161616` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#e3fc02`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#161616` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#e3fc02` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`ARCTIC FIRE`) with `Helvetica Neue` and `Geist Mono`.
+  - **Grounded Typographic Hierarchy**: Pairs `Archivo` for display copy (`Arctic Fire`) with `Helvetica Neue` and `Geist Mono`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.215,.61,.355,1)` easing and Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -235,8 +247,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--danger`)**: `#ff5a4f` — grounded in `var(--danger)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `16px` lateral canvas padding with `10px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`)
@@ -251,31 +263,31 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **H1 Display Rule**: live computed `h1` (`font-size: 30px`, `line-height: 27px`, `font-weight: 900`, `letter-spacing: -0.6px`); rule `.title` (`font-size: 18px`, `line-height: 1.1`, `letter-spacing: -.02em`, `font-weight: 800`)
 - **H2 Section Rule**: live computed `h2` (`font-size: 28px`, `line-height: 25.2px`, `font-weight: 900`, `letter-spacing: -0.56px`)
 - **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `.body` (`font-size: 13px`, `line-height: 1.5`, `font-weight: 500`)
-- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 12px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`
+- **Metadata & Index Rule**: live computed `nav/a` (`font-size: 13px`, `line-height: normal`, `font-weight: 700`); CSS variables `--font-mono: "Geist Mono", ui-monospace, monospace`
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `explore-auravinyl-com` (`Aura Vinyl Color Explorer`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.head> — `explore-auravinyl-com`)**:
-   - DOM & Selectors: Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-perma="satin-diamond-white"`, `data-perma="gloss-paint-metallic-..."`, `data-perma="matte-green-black-shift"`, `data-perma="ultra-gloss-metallic-..."`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
+   - DOM & Selectors: Landmark `<header class="head">` (`1440px`) hosting `Aura Vinyl Color Explorer` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-target="explore-auravinyl-com"`), and stylesheet rule `.FormDialog.on { visibility:visible;opacity:1;pointer-events:auto;transition:opacity var(... }`.
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.head> — `explore-auravinyl-com`)` (`explore-auravinyl-com`) adapts across `@media (max-width:900px)`, `@media (prefers-reduced-motion:reduce)`, `@media (min-width:901px)`, `@media (max-width:560px)` with `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Overview · Index · Archive · About · Contact`.
-2. **Hero Stage & Focal Lead (<section.mbar> — `ARCTIC FIRE`)**:
-   - DOM & Selectors: Landmark `<section class="mbar">` presenting display lead `ARCTIC FIRE` and copy excerpt *"Please enable javascript"* over `#161616` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#161616` background with `#ffffff` headline `ARCTIC FIRE`.
-3. **Primary Showcase & Content Grid (<section.card> — `Arctic Fire`)**:
-   - DOM & Selectors: Landmark `<section class="card">` rendering section `Arctic Fire` with copy *"Paint Metallic Diamond Green"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.card> — `Arctic Fire`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<section.sec> — `Paint Metallic Diamond Green`)**:
-   - DOM & Selectors: Landmark `<section class="sec">` framing `Paint Metallic Diamond Green` and `Metallic Gold Green Shift` (*"Metallic Gold Green Shift"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sec> — `Paint Metallic Diamond Green`)` uses `6px`, `var(--radius-pill)`, `50%`, `2px` radii, `#e3fc02` highlights, and assets (favicon.svg, 180.png, 152.png).
+2. **Hero Stage & Focal Lead (<section.mbar> — `Arctic Fire`)**:
+   - DOM & Selectors: Landmark `<section class="mbar">` presenting display lead `Arctic Fire` and copy excerpt *"No colors match. Clear the hue or collection, or try another word"* over `#161616` canvas and `#ffffff` ink.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#161616` background with `#ffffff` headline `Arctic Fire`.
+3. **Primary Showcase & Content Grid (<section.card> — `No colors match. Clear the hue or `)**:
+   - DOM & Selectors: Landmark `<section class="card">` rendering section `No colors match. Clear the hue or collection, or` with copy *"Please enable javascript"*, asset references (`favicon.svg`, `180.png`, `152.png`, `167.png`), and grid rule `.FormDialog { padding:10px }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.card> — `No colors match. Clear the hue or `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<section.sec> — `Please enable javascript`)**:
+   - DOM & Selectors: Landmark `<section class="sec">` framing `Please enable javascript` and `Show more / 741 left` (*"Show more / 741 left"*) with `#0a0a0a` surface cards, `#e3fc02` accents, and `.FormDialog .backdrop { position:absolute;inset:0;background:rgba(5,5,5,.8) }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.sec> — `Please enable javascript`)` uses `6px`, `var(--radius-pill)`, `50%`, `2px` radii, `#e3fc02` highlights, and assets (favicon.svg, 180.png, 152.png).
 5. **Colophon & Global Directory Footer (<footer.shell> — `https://explore.auravinyl.com`)**:
-   - DOM & Selectors: Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Shift"*, and `#262626` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.shell> — `https://explore.auravinyl.com`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `16px` lateral canvas padding with `10px` grid gap and attributes (data-perma="satin-diamond-white", data-perma="gloss-paint-metallic-...", data-perma="matte-green-black-shift").
+   - DOM & Selectors: Landmark `<footer class="shell">` anchoring `Aura Vinyl Color Explorer` footer links (`Overview · Index · Archive · About · Contact`), copy *"Ultra Gloss / Nebula"*, and `#262626` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.shell> — `https://explore.auravinyl.com`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `16px` lateral canvas padding with `10px` grid gap and attributes (explore-auravinyl-com).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
-- Copy Excerpt 1: *"Please enable javascript"*
-- Copy Excerpt 2: *"Paint Metallic Diamond Green"*
-- Copy Excerpt 3: *"Metallic Gold Green Shift"*
-- Copy Excerpt 4: *"Ultra Gloss / Shift"*
+- Copy Excerpt 1: *"No colors match. Clear the hue or collection, or try another word."*
+- Copy Excerpt 2: *"Please enable javascript"*
+- Copy Excerpt 3: *"Show more / 741 left"*
+- Copy Excerpt 4: *"Ultra Gloss / Nebula"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.215,.61,.355,1)`, `cubic-bezier(.645,.045,.355,1)`, `cubic-bezier(.16,1,.3,1)`
@@ -291,8 +303,30 @@ Scaffold `explore-auravinyl-com` (`Aura Vinyl Color Explorer`) with these exact 
 - **Selector `.FormDialog .panel`**: `transition: transform var(--dur-fast) var(--ease-standard)` extracted from `explore-auravinyl-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.215,.61,.355,1)`)**: Governs interactive state transitions across `<header.head>` and `<section.card>`.
 - **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `explore-auravinyl-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `interactive_control` | Control `tab` (`OUTDOOR`, diff `6.494`) | [state-interactive.webp](assets/state-interactive.webp) |
+

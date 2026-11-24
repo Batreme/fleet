@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: ads-apple-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://ads.apple.com"
 final_url: "https://ads.apple.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Apple Ads
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `10`
-- **Recovered Stylesheets**: `8`
+- **Recovered Scripts**: `42`
+- **Recovered Stylesheets**: `34`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: grids03-obys-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `grids03-obys-agency` (**Grids — DES Season 03**)
 - **Production URL**: [https://grids03.obys.agency/](https://grids03.obys.agency/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#000000`)
 - **Summary**: Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 202...
 - **Total Clean CSS Variables Extracted**: `20` (curated live-grounded set below)

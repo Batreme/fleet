@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-johnbolster-design"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-johnbolster-design"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4b5cff`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4
 
 > **John Bolster · Brand Identity Designer and Art Director, Saratoga Spring...** (https://www.johnbolster.design/) — Independent brand identity designer and art director in Saratoga Springs, NY. Brand strategy, identity, print and web for businesses, hig...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **John Bolster · Brand Identity Designer and Art Director, Saratoga Spring...** (`https://www.johnbolster.design/`). Independent brand identity designer and art director in Saratoga Springs, NY. Brand strategy, identity, print and web for businesses, hig...
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4b5cff`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#eceae2` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#121413` primary typography and `#4b5cff` accents.
@@ -34,10 +41,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=14400px` / doc `24580px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1392px` (measured `<main>` bounding box width within `1440px` desktop viewport).
 - **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `12px` grid gap.
 - **Border Radius Scale**: `2px`, `50%`, `999px`, `10px`.
@@ -112,6 +117,12 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4
 - **Selector `#menu a`**: `transition: transform .9s cubic-bezier(.7,0,.2,1)` extracted from `www-johnbolster-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,0,.2,1)`)**: Governs interactive state transitions across `<header.bar>` and `<section.st:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `24580px`, deepest scrollY reached `14400px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Nav / Drawer Probe (`MENU`)**: Triggered visual change (pixel diff `190.033`, captured in `assets/state-nav.webp`); revealed links: 01 ABOUT, 02 JOURNEY, 03 WHAT I DO, 04 WORK, 05 DISTINKT, 06 CONTACT.
+- **Hover Physics (`primary_cta` · `SCROLL TO EXPLORE`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/services`) measured as `direct` in `523ms`.
 
 ---
 
@@ -170,6 +181,20 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#eceae2` / `#4
    - Landmark `<section class="st">` framing `L e t ' s m a k e s o m e t h i n g` and `I n d e p e n d e n t B r a n d D e s i g n e r` (*"I n d e p e n d e n t B r a n d D e s i g n e r"*) with `#ffa500` surface cards, `#4b5cff` accents, and `img { max-width:100%;display:block }`.
 5. **Colophon & Global Directory Footer (<footer.burger> — `https://www.johnbolster.design/`)**:
    - Landmark `<footer class="burger">` anchoring `John Bolster · Brand Identity De` footer links (`01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`), copy *"I n d e p e n d e n t"*, and `#2234e0` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `JOHN BOLSTER` · sticky/fixed elements: `4`
+- **Step 02** (`y=850px`, `4%`): Active landmark `Section @ 4%` · sticky/fixed elements: `1`
+- **Step 03** (`y=3400px`, `14%`): Active landmark `Section @ 14%` · sticky/fixed elements: `4`
+- **Step 04** (`y=5100px`, `22%`): Active landmark `Section @ 22%` · sticky/fixed elements: `3`
+- **Step 05** (`y=9350px`, `39%`): Active landmark `Section @ 39%` · sticky/fixed elements: `3`
+- **Step 06** (`y=11050px`, `47%`): Active landmark `Section @ 47%` · sticky/fixed elements: `7`
+- **Step 07** (`y=13600px`, `57%`): Active landmark `Section @ 57%` · sticky/fixed elements: `2`
+- **Step 08** (`y=14400px`, `61%`): Active landmark `Section @ 61%` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/services`)**: `https://www.johnbolster.design/services` — H1: `BRAND STRATEGY, IDENTITY AND DESIGN`, scrollHeight `3613px`, transition `direct` (`523ms`)
+- **Other Route (`/faq`)**: `https://www.johnbolster.design/faq` — H1: `QUESTIONS, ANSWERED`, scrollHeight `1402px`, transition `direct` (`294ms`)
+- **Other Route (`/saratoga-springs-brand-designer`)**: `https://www.johnbolster.design/saratoga-springs-brand-designer` — H1: `BRAND DESIGNER IN SARATOGA SPRINGS`, scrollHeight `3259px`, transition `direct` (`347ms`)
 
 ---
 
@@ -225,8 +250,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--black`)**: `#0a0a0a` — grounded in `var(--black)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1392px` (measured `<main>` bounding box width within `1440px` desktop viewport)
 - **Padding & Gutters**: `16px` lateral canvas padding with `12px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 12px`)
@@ -250,7 +275,7 @@ Scaffold `www-johnbolster-design` (`John Bolster · Brand Identity Designer and 
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.bar> — `www-johnbolster-design`)` (`www-johnbolster-design`) adapts across `@media (max-width:760px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:760px)and (max-height:780px)`, `@media (max-width:400px)` with `cubic-bezier(.7,0,.2,1)`, `cubic-bezier(.2,.8,.2,1)`, `cubic-bezier(.3,1.6,.4,1)` transitions and links `01 About · 02 Journey · 03 What I do · 04 Work · 05 Distinkt`.
 2. **Hero Stage & Focal Lead (<section.st> — `JOHN BOLSTER`)**:
    - DOM & Selectors: Landmark `<section class="st">` presenting display lead `JOHN BOLSTER` and copy excerpt *"Thoughtful brand identity and design for brands and everything th"* over `#eceae2` canvas and `#121413` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#eceae2` background with `#121413` headline `JOHN BOLSTER`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#eceae2` background with `#121413` headline `JOHN BOLSTER`.
 3. **Primary Showcase & Content Grid (<section.st:nth(2)> — `J o h n B o l s t e r`)**:
    - DOM & Selectors: Landmark `<section class="st">` rendering section `J o h n B o l s t e r` with copy *"Designer · Since 2002"*, asset references (`favicon-32.png`, `icon-512.png`, `apple-touch-icon.png`, `bebas-neue-pro-semiexp-bold.woff2`), and grid rule `body::-webkit-scrollbar { display:none;width:0;height:0 }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.st:nth(2)> — `J o h n B o l s t e r`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1392px`, `gap: 12px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
@@ -281,8 +306,48 @@ Scaffold `www-johnbolster-design` (`John Bolster · Brand Identity Designer and 
 - **Selector `#menu a`**: `transition: transform .9s cubic-bezier(.7,0,.2,1)` extracted from `www-johnbolster-design` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,0,.2,1)`)**: Governs interactive state transitions across `<header.bar>` and `<section.st:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `24580px` across 8 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: JOHN BOLSTER (0%) -> Section @ 4% (4%) -> Section @ 14% (14%) -> Section @ 22% (22%) -> Section @ 39% (39%) -> Section @ 47% (47%) -> Section @ 57% (57%) -> Section @ 61% (61%).
+- **Navigation Drawer / Menu State**: Replicate interactive menu toggle (`MENU`) with Escape-to-close keyboard handling.
+- **Multi-Page Routes**: Scaffold internal routes `/services` (listing, direct), `/faq` (other, direct), `/saratoga-springs-brand-designer` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-johnbolster-design`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | JOHN BOLSTER | `4` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `4%` | Section @ 4% | `1` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `3400px` | `14%` | Section @ 14% | `4` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `22%` | Section @ 22% | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `9350px` | `39%` | Section @ 39% | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `11050px` | `47%` | Section @ 47% | `7` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `13600px` | `57%` | Section @ 57% | `2` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `14400px` | `61%` | Section @ 61% | `2` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | JOHN BOLSTER | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `7200px` | `50%` | Section @ 30% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `14400px` | `100%` | Section @ 60% | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Interactive UI State Captures (`1440×900` WebP)
+| State Type | Trigger / Observation | Visual Asset |
+| :--- | :--- | :--- |
+| `nav_menu` | Nav/Menu opened (`MENU`, diff `190.033`) | [state-nav.webp](assets/state-nav.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://www.johnbolster.design/services` | BRAND STRATEGY, IDENTITY AND DESIGN | `3613px` | `direct` (`523ms`) | [subpage-01-services.webp](assets/subpage-01-services.webp) |
+| `2` | `other` | `https://www.johnbolster.design/faq` | QUESTIONS, ANSWERED | `1402px` | `direct` (`294ms`) | [subpage-02-faq.webp](assets/subpage-02-faq.webp) |
+| `3` | `other` | `https://www.johnbolster.design/saratoga-springs-brand-designer` | BRAND DESIGNER IN SARATOGA SPRINGS | `3259px` | `direct` (`347ms`) | [subpage-03-saratoga-springs-brand-designer.webp](assets/subpage-03-saratoga-springs-brand-designer.webp) |
+

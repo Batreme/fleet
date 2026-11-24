@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: rubenwalma-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "rubenwalma-nl"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#0000ee`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 
 > **Ruben Walma – Filmmaker & videoproductie Groningen** (https://rubenwalma.nl/) — Filmmaker uit Groningen voor aftermovies, campagnes en creatieve videoproducties. Dynamische video’s met tempo, sfeer en een eigen stijl.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Ruben Walma – Filmmaker & videoproductie Groningen** (`https://rubenwalma.nl/`). Filmmaker uit Groningen voor aftermovies, campagnes en creatieve videoproducties. Dynamische video’s met tempo, sfeer en een eigen stijl.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#0000ee`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#121212` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Pacaembu` for display copy (`Videoproductie Groningen`) with `Pacaembu` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Pacaembu` across display (`Videoproductie Groningen`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--grid-gap)`, padding `var(--container-padding)`) with `cubic-bezier(.33,1,.68,1)` easing and Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=3936px` / doc `4844px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `var(--container-padding)` lateral canvas padding with `var(--grid-gap)` grid gap.
 - **Border Radius Scale**: `50%`, `2px`, `100px`, `var(--button-040-border-radius)`.
@@ -113,6 +118,10 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
 - **Selector `body.nav-hidden header`**: `transition: transform .5s cubic-bezier(.33,1,.68,1),opacity 1s` extracted from `rubenwalma-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<main.menu-toggle>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4844px`, deepest scrollY reached `3936px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/projecten/my-year-2025`) measured as `direct` in `1040ms`.
 
 ---
 
@@ -171,6 +180,18 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#
    - Landmark `<main class="menu-toggle__label">` framing `Over Ruben` and `u i t G r o n i n g e n` (*"u i t G r o n i n g e n"*) with `#202623` surface cards, `#0000ee` accents, and `html { background-color:var(--black);color:var(--white);scrollbar-gutter:stable... }`.
 5. **Colophon & Global Directory Footer (<footer.hamburger> — `https://rubenwalma.nl/`)**:
    - Landmark `<footer class="hamburger">` anchoring `Ruben Walma – Filmmaker & videop` footer links (`Overview · Index · Archive · About · Contact`), copy *"Groningen stad Regiofilm"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Videoproductie Groningen` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `22%`): Active landmark `Filmmaker uit Groningen uut Grunn Verhalen die bl...` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `43%`): Active landmark `Over Ruben` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `65%`): Active landmark `Section @ 65%` · sticky/fixed elements: `3`
+- **Step 05** (`y=3408px`, `87%`): Active landmark `Section @ 87%` · sticky/fixed elements: `3`
+- **Step 06** (`y=3936px`, `100%`): Active landmark `Footer` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/projecten/my-year-2025`)**: `https://rubenwalma.nl/projecten/my-year-2025` — H1: `My year 2025`, scrollHeight `3767px`, transition `direct` (`1040ms`)
+- **About Route (`/contact`)**: `https://rubenwalma.nl/contact` — H1: `Heb je een vraag of idee? Hit me up!`, scrollHeight `4564px`, transition `direct` (`882ms`)
+- **Detail Route (`/projecten/groningen-stad-regiofilm`)**: `https://rubenwalma.nl/projecten/groningen-stad-regiofilm` — H1: `Groningen stad Regiofilm`, scrollHeight `3340px`, transition `direct` (`1007ms`)
 
 ---
 
@@ -187,7 +208,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#121212` (live computed `html` `background-color` (`computed_styles.json`)), **Primary Ink**: `#ffffff`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#121212` (live computed `html` `background-color` (`computed_styles.json`)) paired with `#ffffff` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Pacaembu` for display copy (`Videoproductie Groningen`) with `Pacaembu` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Pacaembu` across display (`Videoproductie Groningen`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: var(--grid-gap)`, padding `var(--container-padding)`) with `cubic-bezier(.33,1,.68,1)` easing and Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -227,8 +248,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--button-040-color-arrow`)**: `#efeeec` — grounded in `var(--button-040-color-arrow)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `var(--container-padding)` lateral canvas padding with `var(--grid-gap)` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--grid-gap)`)
@@ -252,7 +273,7 @@ Scaffold `rubenwalma-nl` (`Ruben Walma – Filmmaker & videoproductie Groningen`
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `rubenwalma-nl`)` (`rubenwalma-nl`) adapts across `@media screen and (min-width:480px)`, `@media screen and (min-width:768px)`, `@media screen and (min-width:992px)`, `@media screen and (min-width:1920px)` with `cubic-bezier(.33,1,.68,1)`, `cubic-bezier(.32,0,.67,0)`, `cubic-bezier(.625,.05,0,1)` transitions and links `Overview · Index · Archive · About · Contact`.
 2. **Hero Stage & Focal Lead (<main.logo> — `Videoproductie Groningen`)**:
    - DOM & Selectors: Landmark `<main class="logo">` presenting display lead `Videoproductie Groningen` and copy excerpt *"Ik ben Ruben. Filmmaker uit Groningen en al veel te lang bezig me"* over `#121212` canvas and `#ffffff` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#121212` background with `#ffffff` headline `Videoproductie Groningen`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#121212` background with `#ffffff` headline `Videoproductie Groningen`.
 3. **Primary Showcase & Content Grid (<main.menu-toggle> — `F i l m m a k e r u i t G r o n i `)**:
    - DOM & Selectors: Landmark `<main class="menu-toggle">` rendering section `F i l m m a k e r u i t G r o n i n g e n u u t G...` with copy *"u i t G r o n i n g e n u u t G r u n n V e r h a l e n d i e b l"*, asset references (`favicon-dark2.png`, `favicon-white.png`, `sitemap.xml`, `stream.mux.com`), and grid rule `selection { background-color:var(--primary);color:fff }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<main.menu-toggle> — `F i l m m a k e r u i t G r o n i `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: var(--grid-gap)`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--container-padding)` horizontal padding on mobile.
@@ -283,8 +304,40 @@ Scaffold `rubenwalma-nl` (`Ruben Walma – Filmmaker & videoproductie Groningen`
 - **Selector `body.nav-hidden header`**: `transition: transform .5s cubic-bezier(.33,1,.68,1),opacity 1s` extracted from `rubenwalma-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.33,1,.68,1)`)**: Governs interactive state transitions across `<header.lenis>` and `<main.menu-toggle>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, HTML5 `<canvas>` Interactive Viewport Surface with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4844px` across 6 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: Videoproductie Groningen (0%) -> Filmmaker uit Groningen uut... (22%) -> Over Ruben (43%) -> Section @ 65% (65%) -> Section @ 87% (87%) -> Footer (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/projecten/my-year-2025` (detail, direct), `/contact` (about, direct), `/projecten/groningen-stad-regiofilm` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `rubenwalma-nl`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Videoproductie Groningen | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `22%` | Filmmaker uit Groningen uut Grunn Verhalen di... | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `43%` | Over Ruben | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `65%` | Section @ 65% | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3408px` | `87%` | Section @ 87% | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3936px` | `100%` | Footer | `2` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Videoproductie Groningen | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1454px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `2909px` | `100%` | Footer | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://rubenwalma.nl/projecten/my-year-2025` | My year 2025 | `3767px` | `direct` (`1040ms`) | [subpage-01-projecten-my-year-2025.webp](assets/subpage-01-projecten-my-year-2025.webp) |
+| `2` | `about` | `https://rubenwalma.nl/contact` | Heb je een vraag of idee? Hit me up! | `4564px` | `direct` (`882ms`) | [subpage-02-contact.webp](assets/subpage-02-contact.webp) |
+| `3` | `detail` | `https://rubenwalma.nl/projecten/groningen-stad-regiofilm` | Groningen stad Regiofilm | `3340px` | `direct` (`1007ms`) | [subpage-03-projecten-groningen-stad-regiofilm.webp](assets/subpage-03-projecten-groningen-stad-regiofilm.webp) |
+

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: www-deathtorobots-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "www-deathtorobots-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas, `#facfd7` ink, `#0000ee` accent)"
 ---
@@ -16,14 +21,16 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas
 
 > **Death to Robots** (https://www.deathtorobots.com/) — Death To Robots is a multi disciplinary creative agency working with brands to bring their stories to life.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Death to Robots** (`https://www.deathtorobots.com/`). Death To Robots is a multi disciplinary creative agency working with brands to bring their stories to life.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas, `#facfd7` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#18181c` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#facfd7` primary typography and `#0000ee` accents.
@@ -34,13 +41,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=7925px` / doc `8825px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1280px` (measured widest bounded `<section>` landmark width on `1440px` desktop).
 - **Canvas Lateral Padding & Spacing**: `120px` lateral canvas padding with `40px` grid gap.
-- **Border Radius Scale**: `50%`, `8px`, `15px`, `100px`.
+- **Border Radius Scale**: `50%`, `100px`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1280px`, `gap: 40px`).
@@ -109,9 +114,11 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas
 - **Extracted Timing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-deathtorobots-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `8825px`, deepest scrollY reached `7925px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
 
 ---
 
@@ -170,6 +177,15 @@ archetype: "High-Contrast Obsidian / Atmospheric Design System (`#18181c` canvas
    - Landmark `<section class="framer-JsaAU">` framing `We are seasoned individuals. Marketing aficionad` and `Each cohort operates under the direction of a se` (*"Each cohort operates under the direction of a senior partner. Our"*) with `#000000` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
 5. **Colophon & Global Directory Footer (<footer.framer-owpXO> — `https://www.deathtorobots.com/`)**:
    - Landmark `<footer class="framer-owpXO">` anchoring `Death to Robots` footer links (`View project · Privacy Policy`), copy *"Relationship + Insight + Creativity = Results with Purpose"*, and `#ffd4e7` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `CREATIVITY WITH THE HUMAN TOUCH` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `11%`): Active landmark `Section @ 11%` · sticky/fixed elements: `2`
+- **Step 03** (`y=2550px`, `32%`): Active landmark `Section @ 32%` · sticky/fixed elements: `1`
+- **Step 04** (`y=3400px`, `43%`): Active landmark `Section @ 43%` · sticky/fixed elements: `1`
+- **Step 05** (`y=5100px`, `64%`): Active landmark `Imitation is the sincerest form of flattery that...` · sticky/fixed elements: `1`
+- **Step 06** (`y=5950px`, `75%`): Active landmark `Section @ 75%` · sticky/fixed elements: `1`
+- **Step 07** (`y=7650px`, `97%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
+- **Step 08** (`y=7925px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
 
 ---
 
@@ -227,14 +243,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-16de7c3c-1de6-4c69-bb44-67f15599c539`)**: `#ffffff` — grounded in `var(--token-16de7c3c-1de6-4c69-bb44-67f15599c539)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1280px` (measured widest bounded `<section>` landmark width on `1440px` desktop)
 - **Padding & Gutters**: `120px` lateral canvas padding with `40px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1280px`, `gap: 40px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `120px` horizontal padding
 - **Media Queries**: `@media (max-width:1439px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (max-width:1199px) and (min-width:810px)`, `@media (min-width:810px) and (max-width:1439.98px)`
-- **Corner Radii**: `50%`, `8px`, `15px`, `100px`
+- **Corner Radii**: `50%`, `100px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Inter Display`
@@ -252,13 +268,13 @@ Scaffold `www-deathtorobots-com` (`Death to Robots`) with these exact structural
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.framer-cZUYc> — `www-deathtorobots-com`)` (`www-deathtorobots-com`) adapts across `@media (max-width:1439px) and (min-width:810px)`, `@media (max-width:809px) and (min-width:0)`, `@media (max-width:1199px) and (min-width:810px)`, `@media (min-width:810px) and (max-width:1439.98px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `View project · Privacy Policy`.
 2. **Hero Stage & Focal Lead (<section.framer-40HKB> — `CREATIVITY WITH THE HUMAN TOUCH`)**:
    - DOM & Selectors: Landmark `<section class="framer-40HKB">` presenting display lead `CREATIVITY WITH THE HUMAN TOUCH` and copy excerpt *"Said the human to the robot. And the robot was sad. For it knew t"* over `#18181c` canvas and `#facfd7` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#18181c` background with `#facfd7` headline `CREATIVITY WITH THE HUMAN TOUCH`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#18181c` background with `#facfd7` headline `CREATIVITY WITH THE HUMAN TOUCH`.
 3. **Primary Showcase & Content Grid (<section.framer-MvPmZ> — `Said the human to the robot. And t`)**:
    - DOM & Selectors: Landmark `<section class="framer-MvPmZ">` rendering section `Said the human to the robot. And the robot was s` with copy *"We are seasoned individuals. Marketing aficionados driven by our "*, asset references (`C3gIWFd95Sm9nRAlHsGFIAHc.png`, `9ElfLHgpoirQvFUBxVdBZSXBbY.png`, `fonts.gstatic.com`, `script`), and grid rule `root { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.framer-MvPmZ> — `Said the human to the robot. And t`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1280px`, `gap: 40px`) on desktop and Single-column vertical stack at `390px` viewport width with `120px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.framer-JsaAU> — `We are seasoned individuals. Marke`)**:
    - DOM & Selectors: Landmark `<section class="framer-JsaAU">` framing `We are seasoned individuals. Marketing aficionad` and `Each cohort operates under the direction of a se` (*"Each cohort operates under the direction of a senior partner. Our"*) with `#000000` surface cards, `#0000ee` accents, and `button { font-family:sans-serif;font-size:12px }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.framer-JsaAU> — `We are seasoned individuals. Marke`)` uses `50%`, `8px`, `15px`, `100px` radii, `#0000ee` highlights, and assets (C3gIWFd95Sm9nRAlHsGFIAHc.png, 9ElfLHgpoirQvFUBxVdBZSXBbY.png, fonts.gstatic.com).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.framer-JsaAU> — `We are seasoned individuals. Marke`)` uses `50%`, `100px` radii, `#0000ee` highlights, and assets (C3gIWFd95Sm9nRAlHsGFIAHc.png, 9ElfLHgpoirQvFUBxVdBZSXBbY.png, fonts.gstatic.com).
 5. **Colophon & Global Directory Footer (<footer.framer-owpXO> — `https://www.deathtorobots.com/`)**:
    - DOM & Selectors: Landmark `<footer class="framer-owpXO">` anchoring `Death to Robots` footer links (`View project · Privacy Policy`), copy *"Relationship + Insight + Creativity = Results with Purpose"*, and `#ffd4e7` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-owpXO> — `https://www.deathtorobots.com/`)` aligns to `1280px` (measured widest bounded `<section>` landmark width on `1440px` desktop) with `120px` lateral canvas padding with `40px` grid gap and attributes (data-framer-font-css, data-framer-css-ssr-minified, data-framer-components="framer-lib-cursors-ho...").
@@ -278,11 +294,36 @@ Scaffold `www-deathtorobots-com` (`Death to Robots`) with these exact structural
 - `body { --framer-will-change-override:transform }`
 - `before { content:"";padding-bottom:calc(100%/calc(var(--aspect-ratio)));display:b... }`
 - **Per-Selector Transition Rules**:
-- **Selector `#__framer-editorbar-label`**: `transition: opacity 0.4s ease-out` extracted from `www-deathtorobots-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `8825px` across 8 distinct viewport chapters.
+- **Vertical Chapter Sequence**: CREATIVITY WITH THE HUMAN T... (0%) -> Section @ 11% (11%) -> Section @ 32% (32%) -> Section @ 43% (43%) -> Imitation is the sincerest... (64%) -> Section @ 75% (75%) -> Footer / Bottom (97%) -> Footer / Bottom (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `www-deathtorobots-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | CREATIVITY WITH THE HUMAN TOUCH | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `11%` | Section @ 11% | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `32%` | Section @ 32% | `1` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `3400px` | `43%` | Section @ 43% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `5100px` | `64%` | Imitation is the sincerest form of flattery t... | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `5950px` | `75%` | Section @ 75% | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `7650px` | `97%` | Footer / Bottom | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `7925px` | `100%` | Footer / Bottom | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | CREATIVITY WITH THE HUMAN TOUCH | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `3054px` | `50%` | Imitation is the sincerest form of flatte... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `6108px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

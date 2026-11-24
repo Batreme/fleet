@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: aestudio-studio_hozon"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://aestudio.studio/hozon"
 final_url: "https://aestudio.studio/hozon"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Hozon — Pickle & Fermented Food Recipe App
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `1`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `2`
+- **Recovered Stylesheets**: `2`
 
 ---
 

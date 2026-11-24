@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: mont-rural-emblematica-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `mont-rural-emblematica-agency` (**MontRural — Private Masia Among the Vineyards of Penedès**)
 - **Production URL**: [https://mont-rural.emblematica.agency](https://mont-rural.emblematica.agency)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#37482f` canvas, `#f8e8c5` ink, `#cfa65a` accent)
 - **Summary**: Rent a masia for a peaceful and cozy getaway just an hour's drive from Barcelona. Perfect for nature retreats, family gatherings, and int...
 - **Total Clean CSS Variables Extracted**: `140` (curated live-grounded set below)
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `Playfair`
 - **Body Font Stack**: `Arial)`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `13.3333px`, `10px`, `13px`, `8px`
-- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `13.3333px`, `10px`, `13px`, `8px`
+- **Hero Display (`H1`)**: observed font-size ladder: `16px`, `13.3333px`, `100%`, `26px`, `14px`
+- **Section Heading (`H2`)**: observed font-size ladder: `16px`, `13.3333px`, `100%`, `26px`, `14px`
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`)
 
@@ -72,7 +72,7 @@ http_status: 200
    - Landmark `<div class="t-records t-records_animated">` presenting display lead `MontRural — Private Masia Among the Vineyards of` and copy excerpt *"CHECK AVAILABILITY"* over `#37482f` canvas and `#f8e8c5` ink.
 3. **Primary Showcase & Content Grid (<div.t-records_animated> — `Featured Work & Interactive Showca`)**:
    - Landmark `<div class="t-records t-records_animated">` rendering section `Featured Work & Interactive Showcase` with copy *"R e n t a m a s i a f o r a p e a c e f u l a n d c o z y g e t a"*, asset references (`mont-rural.emblematica.agency`, `ws.tildacdn.com`, `static.tildacdn.com`, `Frame_1948756319.png`), and grid rule `.t_datepicker__header { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.2); }`.
-4. **Interactive Detail & Feature Matrix (<div.t-records__overflow-hidden> — `Technical Architecture & Narrative`)**:
+4. **Interactive Detail & Feature Matrix (<div.t-records_visible> — `Technical Architecture & Narrative`)**:
    - Landmark `<div class="t-records t-records_animated">` framing `Technical Architecture & Narrative` and `Global Directory & Contact` (*"a n h o u r ' s d r i v e f r o m B a r c e l o n a . P e r f e c"*) with `#293b21` surface cards, `#cfa65a` accents, and `.t_datepicker__label span { color: 8F8637; font-weight: 500; }`.
-5. **Colophon & Global Directory Footer (<footer.t-records__overflow-hidden> — `https://mont-rural.emblematica.agency`)**:
-   - Landmark `<footer class="t-records__overflow-hidden">` anchoring `MontRural — Private Masia Among ` footer links (`About · location · What's Inside · SERVICES · Contacts`), copy *"B a r c e l o n a ."*, and `#5f6d59` structural dividers.
+5. **Colophon & Global Directory Footer (<footer.t-records_visible> — `https://mont-rural.emblematica.agency`)**:
+   - Landmark `<footer class="t-records_visible">` anchoring `MontRural — Private Masia Among ` footer links (`About · location · What's Inside · SERVICES · Contacts`), copy *"B a r c e l o n a ."*, and `#5f6d59` structural dividers.

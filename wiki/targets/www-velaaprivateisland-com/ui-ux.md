@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-velaaprivateisland-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-velaaprivateisland-com` (**Velaa Private Island Maldives**)
 - **Production URL**: [https://www.velaaprivateisland.com/](https://www.velaaprivateisland.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#e8e6df` canvas, `#000000` ink, `#0000ee` accent)
 - **Summary**: The World's Best Kept Secret
 - **Total Clean CSS Variables Extracted**: `48` (curated live-grounded set below)
@@ -71,13 +71,13 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Brand Header & Navigation Bar (<header.lenis> — `www-velaaprivateisland-com`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `html.lenis body { height:auto }`.
-2. **Hero Stage & Focal Lead (<div.lenis-autoToggle> — `A symphony of flavours & shared mo`)**:
-   - Landmark `<div class="lenis-autoToggle">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<div.framer-Olafn> — `Velaa is a world of its own.`)**:
-   - Landmark `<div class="framer-Olafn">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-h13ff> — `T h e a r t o f c o m i n g h o m `)**:
-   - Landmark `<div class="framer-h13ff">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
-5. **Colophon & Global Directory Footer (<footer.framer-sg5GW> — `https://www.velaaprivateisland.com/`)**:
-   - Landmark `<footer class="framer-sg5GW">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.
+1. **Brand Header & Navigation Bar (<header.framer-Olafn> — `www-velaaprivateisland-com`)**:
+   - Landmark `<header class="framer-Olafn">` (`1440px`) hosting `Velaa Private Island Maldives` navigation (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), DOM attributes (`data-redirect-timezone="1"`, `data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`), and stylesheet rule `html.lenis body { height:auto }`.
+2. **Hero Stage & Focal Lead (<div.framer-h13ff> — `A symphony of flavours & shared mo`)**:
+   - Landmark `<div class="framer-h13ff">` presenting display lead `A symphony of flavours & shared moments` and copy excerpt *"From the moment you arrive, the world outside fades. The air is l"* over `#e8e6df` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.framer-sg5GW> — `Velaa is a world of its own.`)**:
+   - Landmark `<div class="framer-sg5GW">` rendering section `Velaa is a world of its own.` with copy *"Discover Story of Velaa"*, asset references (`SeYxW6iTSKyLSDpsNhJ7cT1OhI.png`, `GXFdcLw3RCaSfwQY7YSTLdzO0Vk.png`, `fonts.gstatic.com`, `script`), and grid rule `.lenis-stopped { overflow:clip }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-oQS6D> — `T h e a r t o f c o m i n g h o m `)**:
+   - Landmark `<div class="framer-oQS6D">` framing `T h e a r t o f c o m i n g h o m e , w h e r e e...` and `More than paradise, it's the feeling of being exa...` (*"Your personal butler is the guardian of your peace. It’s beyond s"*) with `#dddddd` surface cards, `#0000ee` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+5. **Colophon & Global Directory Footer (<footer.framer-RVHbs> — `https://www.velaaprivateisland.com/`)**:
+   - Landmark `<footer class="framer-RVHbs">` anchoring `Velaa Private Island Maldives` footer links (`Find your home · Step into adventure · Explore all dining · See what awaits · Villas Villas`), copy *"Everything at Velaa begins with majaa — the spirit of joy an"*, and `#8a8479` structural dividers.

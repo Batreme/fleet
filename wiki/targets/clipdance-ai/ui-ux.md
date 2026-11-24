@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: clipdance-ai"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `clipdance-ai` (**Seedance 2.0 - Free AI Video Generator · Text/Image to Video**)
 - **Production URL**: [https://clipdance.ai](https://clipdance.ai)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×855px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#8a6b0d`)
 - **Summary**: Create cinematic AI videos with Seedance 2.0. Text-to-video, image-to-video, native audio. The Seedance 2.0 AI video generator. Free to s...
 - **Total Clean CSS Variables Extracted**: `287` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `fontInter`
 - **Monospace / Technical Font Stack**: `Noto Sans Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 40px`, `line-height: 43.2px`, `font-weight: 800`, `letter-spacing: -1px`); CSS variables `--text-4xl: 2.25rem`, `--text-4xl--line-height: calc(2.5/2.25)`, `--text-5xl: 3rem`
-- **Section Heading (`H2`)**: live computed `h2 (largest visible desktop heading)` (`font-size: 40px`, `line-height: 1.2`, `font-weight: 600`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 40px`, `line-height: 48px`, `font-weight: 600`, `letter-spacing: -0.4px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2/1.5)`, `--text-3xl: 1.875rem`
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5/1)`; rule `p` (`line-height: var(--leading-relaxed)`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--font-mono: var(--font-noto-sans-mono)`, `--font-noto-sans-mono: "Noto Sans Mono", "Noto Sans Mono Fallback"`, `--text-xs: .75rem`
 
@@ -70,8 +70,8 @@ http_status: 200
 ---
 
 ## Structural DOM Landmarks (`dom.html`)
-1. **Persistent Left Sidebar Navigation (<nav.max-w-max> — `206×607px` at `x=13`)**:
-   - Fixed/sticky left rail `<nav class="max-w-max flex-1">` (`206px` wide) paired with top bar `<header class="inset-x-0 top-0">` hosting `Seedance 2.0 - Free AI Video G` navigation (`Seedance 2.5 · Blog · Pricing · My Creations`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-state="closed"`, `data-slot="sheet-trigger"`), and rule `nter_a1c1f49b-module__H0XvcG__cla... { font-family:fontInter,fontInter Fallback;font-style:normal }`.
+1. **Persistent Left Sidebar Navigation (<aside.my-3> — `208×776px` at `x=12`)**:
+   - Fixed/sticky left rail `<aside class="my-3 ml-3">` (`208px` wide) paired with top bar `<header class="inset-x-0 top-0">` hosting `Seedance 2.0 - Free AI Video G` navigation (`Seedance 2.5 · Blog · Pricing · My Creations`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/chunks/..."`, `data-state="closed"`, `data-slot="sheet-trigger"`), and rule `nter_a1c1f49b-module__H0XvcG__cla... { font-family:fontInter,fontInter Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.relative> — `Free Seedance 2.0 AI Video Generat`)**:
    - Landmark `<section class="relative w-full">` inside `1220px` main stage presenting display lead `Free Seedance 2.0 AI Video Generator` and copy excerpt *"Turn text and images into professional 1080p videos with synchron"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.w-full> — `GPT Image 2.5 Flare & Sunburst.`)**:

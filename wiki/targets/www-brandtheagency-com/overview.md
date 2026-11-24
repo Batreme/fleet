@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-brandtheagency-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.brandtheagency.com/"
 final_url: "https://www.brandtheagency.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.brandtheagency.com/](https://www.brandtheagency.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: BR& – Creating brands that make you smile
 - **Identified Frameworks**: HTML5 Canvas / WebGL
 - **Recovered Scripts**: `47`
-- **Recovered Stylesheets**: `14`
+- **Recovered Stylesheets**: `11`
 
 ---
 

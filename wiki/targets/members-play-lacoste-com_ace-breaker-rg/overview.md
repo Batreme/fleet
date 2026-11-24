@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: members-play-lacoste-com_ace-breaker-rg"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://members-play.lacoste.com/ace-breaker-rg"
 final_url: "https://members-play.lacoste.com/ace-breaker-rg/gb/en/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,10 +27,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://members-play.lacoste.com/ace-breaker-rg](https://members-play.lacoste.com/ace-breaker-rg)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Lacoste - Ace breaker
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `11`
+- **Recovered Scripts**: `12`
 - **Recovered Stylesheets**: `2`
 
 ---

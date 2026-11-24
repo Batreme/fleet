@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: turismo-gov-st_fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `turismo-gov-st_fr` (**Homepage · São Tomé E Príncipe**)
 - **Production URL**: [https://turismo.gov.st/fr](https://turismo.gov.st/fr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×1744px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#eeedea` canvas, `#000000` ink, `#008000` accent)
 - **Summary**: Ce que vous devez savoir sur la taxe de tourisme
 - **Total Clean CSS Variables Extracted**: `103` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Outfit`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 50px`, `line-height: 55px`, `font-weight: 400`, `letter-spacing: 0.5px`); CSS variables `--font-display: gyst-variable,serif`
-- **Section Heading (`H2`)**: live computed `h3 (primary section heading)` (`font-size: 100px`, `line-height: 80px`, `font-weight: 400`, `letter-spacing: 10px`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 35px`, `line-height: 38.5px`, `font-weight: 400`, `letter-spacing: 0.35px`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--font-body: Outfit,Arial,Helvetica,sans-serif`, `--paragraph-max-width: 100%`, `--paragraph-margin-bottom: 0`; rule `p` (`font-size: var(--fz-size, 1.7rem)`, `line-height: 1.5`, `font-weight: 300`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 17px`, `line-height: 25.5px`, `font-weight: 300`)
 
@@ -68,12 +68,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.Header> — `turismo-gov-st_fr`)**:
-   - Landmark `<header class="Header">` (`1440x120px`) hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1795404115548-0`), and stylesheet rule `.ajax-progress { display: inline-block; padding: 1px 5px 2px 5px; }`.
+   - Landmark `<header class="Header">` (`1440x120px`) hosting `Homepage · São Tomé E Príncipe` navigation (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), DOM attributes (`data-barba="wrapper"`, `data-once="form-single-submit we..."`, `data-off-canvas-main-canvas`, `data-container-query-observer-bae45330cd3d4e0e96b60d26b57009b5-1795453191897-0`), and stylesheet rule `.webform-flexbox { display: flex; margin: 1em -0.5em; }`.
 2. **Hero Stage & Focal Lead (<section.Homepage> — `São Tomé e Príncipe`)**:
    - Landmark `<section class="Homepage node">` presenting display lead `São Tomé e Príncipe` and copy excerpt *"Ce que vous devez savoir sur la taxe de tourisme"* over `#eeedea` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.ParagraphImmersiveMesh> — `Pourquoi São Tomé?`)**:
-   - Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Pourquoi São Tomé?` with copy *"expérience sensorielle"*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.ajax-progress-throbber .throbber { display: inline; padding: 1px 6px 2px; background: transparent url(../th... }`.
+   - Landmark `<section class="ParagraphImmersiveMesh paragraph">` rendering section `Pourquoi São Tomé?` with copy *"expérience sensorielle"*, asset references (`sdk.js`, `gtm.js`, `favicon.png`, `webform.element.flexbox.css`), and grid rule `.webform-flexbox .webform-flexbox { margin: 1em 0; }`.
 4. **Interactive Detail & Feature Matrix (<section.ParagraphVerticalSlider> — `Une expérience totale, pure et sau`)**:
-   - Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Une expérience totale, pure et sauvage` and `Nos activités` (*"envoûtement océanique"*) with `#ffffff` surface cards, `#008000` accents, and `.ajax-progress-throbber .message { display: inline; padding: 1px 5px 2px; }`.
+   - Landmark `<section class="ParagraphVerticalSlider paragraph">` framing `Une expérience totale, pure et sauvage` and `Nos activités` (*"envoûtement océanique"*) with `#ffffff` surface cards, `#008000` accents, and `.webform-flexbox--justify-flex-start { justify-content: flex-start; }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://turismo.gov.st/fr`)**:
    - Landmark `<footer class="footer">` anchoring `Homepage · São Tomé E Príncipe` footer links (`Nature · Un éden insulaire · Une flore luxuriante · Plages de sable doré · Croyances`), copy *"immersion culturelle"*, and `#bbbbbb` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-zzdp-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.zzdp.nl/"
 final_url: "https://www.zzdp.nl/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Al meer dan 70 jaar betekenisvolle architectuur · ZZDP
 - **Identified Frameworks**: Next.js
-- **Recovered Scripts**: `21`
-- **Recovered Stylesheets**: `14`
+- **Recovered Scripts**: `69`
+- **Recovered Stylesheets**: `49`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: giallostudio-it_en-the-experience"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://giallostudio.it/en/the-experience"
 final_url: "https://giallostudio.it/en/the-experience"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: The Experience: Milan lights up in yellow · Giallo
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `36`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `128`
+- **Recovered Stylesheets**: `7`
 
 ---
 

@@ -1,15 +1,15 @@
-# Round 32 Execution Trace: Live Recrawl & UI Prompt Blueprint Verification
+# Round 32 Execution Trace: Full Behavioral Journey Crawl (`behavioral_journey_v2`) & WebP Verification
 
 > [!NOTE]
-> **Audit Trace ID**: `TRACE-2026-11-23-ROUND-32`  
-> **Active Branch**: `fix/live-recrawl-575-targets`  
-> **Analyzed Targets**: `8` live (`2` marked `status: blocked` and excluded from tally per `C1`)  
+> **Audit Trace ID**: `TRACE-2026-11-24-ROUND-32`  
+> **Active Branch**: `feat/full-behavioral-journey-webp`  
+> **Analyzed Targets**: `7` live (`3` marked `status: blocked` and excluded from tally per `C1`)  
 > **Deterministic Evaluation (`C1`–`C15`)**: **`25.0 / 25.0`**
 
 ---
 
 ## 1. Round 32 Target Scope
-  1. `santalarch-com` — *Santalarch*
+  1. `santalarch-com` — *Blocked (`Empty DOM response (0 bytes, 0 visible text)`)*
   2. `santionispirits-com` — *Blocked (`Browser Compatibility Gate (Not Supported)`)*
   3. `sc-aesthetic-labs-com` — *Digital Systems for Visible Trust – S/C Lab*
   4. `secure-the-unknown-cyera-com` — *Blocked (`Browser Compatibility Gate (Not Supported)`)*
@@ -22,17 +22,17 @@
 
 ---
 
-## 2. Live Capture & Ground-Truth Extraction Metrics (Verified PNG IHDR, Computed Styles & DOM/CSS)
+## 2. Live Capture & Ground-Truth Extraction Metrics (Verified WebP Filmstrips, Behavioral Telemetry, Computed Styles & DOM/CSS)
 
-| Target Slug | Capture Tier | Desktop PNG (`assets/desktop.png`) | Mobile PNG (`assets/mobile.png`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
+| Target Slug | Capture Tier | Desktop Journey (`assets/desktop-journey.webp`) | Mobile Journey (`assets/mobile-journey.webp`) | Raw CSS Vars | Curated Root Vars | Blueprint Lines | Unsplit Fence Lines | Max Jaccard (Line / Word) | Truth Eval Score |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `santalarch-com` | `tier1_fast` | `1440×900px` (33,071 B) | `390×844px` (15,876 B) | 103 | 16 | 286 | 108 | `0.09` / `0.54` | **25.0 / 25.0** |
-| `sc-aesthetic-labs-com` | `tier1_fast` | `1440×2400px` (486,083 B) | `390×2400px` (188,244 B) | 36 | 16 | 288 | 109 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `seedance3-si` | `tier1_fast` | `1440×2400px` (1,857,984 B) | `390×2400px` (478,824 B) | 431 | 16 | 292 | 111 | `0.09` / `0.55` | **25.0 / 25.0** |
-| `seedrouter-ai` | `tier1_fast` | `1440×2400px` (1,554,765 B) | `390×2400px` (680,406 B) | 377 | 16 | 296 | 113 | `0.09` / `0.55` | **25.0 / 25.0** |
-| `seemecreative-com` | `tier1_fast` | `1440×2400px` (1,723,310 B) | `390×2400px` (490,785 B) | 26 | 16 | 289 | 108 | `0.09` / `0.49` | **25.0 / 25.0** |
-| `senawastudio-com` | `tier1_fast` | `1440×900px` (1,436,566 B) | `390×844px` (238,820 B) | 58 | 16 | 294 | 112 | `0.09` / `0.50` | **25.0 / 25.0** |
-| `serus-ai` | `tier1_fast` | `1440×2400px` (543,120 B) | `390×2400px` (256,640 B) | 140 | 16 | 285 | 107 | `0.09` / `0.51` | **25.0 / 25.0** |
-| `shorodo-nagoya` | `tier1_fast` | `1440×2230px` (1,665,114 B) | `390×2400px` (547,073 B) | 21 | 16 | 292 | 111 | `0.08` / `0.54` | **25.0 / 25.0** |
+| `sc-aesthetic-labs-com` | `tier1_fast` | `1280×6624px` (297,208 B) | `390×2616px` (42,766 B) | 36 | 16 | 346 | 113 | `0.09` / `0.50` | **25.0 / 25.0** |
+| `seedance3-si` | `tier1_fast` | `1280×6624px` (432,264 B) | `390×2616px` (95,868 B) | 429 | 16 | 363 | 118 | `0.09` / `0.55` | **25.0 / 25.0** |
+| `seedrouter-ai` | `tier1_fast` | `1280×6624px` (437,842 B) | `390×2616px` (87,058 B) | 560 | 16 | 364 | 119 | `0.09` / `0.55` | **25.0 / 25.0** |
+| `seemecreative-com` | `tier1_fast` | `1280×2484px` (190,960 B) | `390×2616px` (96,334 B) | 29 | 16 | 338 | 113 | `0.09` / `0.50` | **25.0 / 25.0** |
+| `senawastudio-com` | `tier1_fast` | `1280×6624px` (786,878 B) | `390×872px` (3,374 B) | 58 | 16 | 350 | 116 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `serus-ai` | `tier1_fast` | `1280×6624px` (233,008 B) | `390×2616px` (55,236 B) | 177 | 16 | 347 | 112 | `0.09` / `0.48` | **25.0 / 25.0** |
+| `shorodo-nagoya` | `tier1_fast` | `1280×6624px` (238,846 B) | `390×872px` (8,372 B) | 21 | 16 | 353 | 115 | `0.09` / `0.52` | **25.0 / 25.0** |
+| `santalarch-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Empty DOM response (0 bytes, 0 visible text)`)** |
 | `santionispirits-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Browser Compatibility Gate (Not Supported)`)** |
 | `secure-the-unknown-cyera-com` | `blocked` (`200`) | `none` | `none` | — | — | — | — | — | **Excluded (`Browser Compatibility Gate (Not Supported)`)** |

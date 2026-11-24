@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: cue-onebranding-webflow-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `cue-onebranding-webflow-io` (**Cue - Creating Unforgettable Experiences**)
 - **Production URL**: [https://cue-onebranding.webflow.io/](https://cue-onebranding.webflow.io/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#13171a` ink, `#0000ff` accent)
 - **Summary**: Fan-first technology for premium brands and event experiences. Take your events to the next level with CUE and experience true fan engage...
 - **Total Clean CSS Variables Extracted**: `14` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Poppins`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 64px`, `line-height: 83.2px`, `font-weight: 700`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80px`, `line-height: 100px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 36px`, `line-height: 43.2px`, `font-weight: 300`); rule `,h2` (`font-size: 2.5rem`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); rule `p` (`font-size: inherit`, `line-height: inherit`, `font-weight: 400`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 22.4px`, `font-weight: 300`); CSS variables `--radius--small: .25rem`
 

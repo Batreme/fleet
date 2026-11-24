@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-quintadamalia-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-quintadamalia-com` (**Quinta D. Amália - Redefining Luxury Living in Portugal**)
 - **Production URL**: [https://www.quintadamalia.com/](https://www.quintadamalia.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1e1e1e` ink, `#007fff` accent)
 - **Summary**: Set in the heart of Vila Nova de Gaia, Quinta D. Amália is more than a residence - it’s a lifestyle defined by exclusivity, wellness & na...
 - **Total Clean CSS Variables Extracted**: `574` (curated live-grounded set below)
@@ -25,9 +25,9 @@ http_status: 200
 - **Body Font Stack**: `Syne`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 140px`, `line-height: 140px`, `font-weight: 400`, `letter-spacing: -5.6px`); CSS variables `--page-title-display: block`, `--display: flex`; rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 20px`, `line-height: 28px`, `font-weight: 400`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 200px`, `line-height: 200px`, `font-weight: 400`, `letter-spacing: -4px`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
 - **Body Copy**: live computed `body` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `p` (`font-size: 22px`, `line-height: 1.36`, `letter-spacing: -.02em`, `font-weight: 500`)
-- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `small` (`font-size: 12px`, `line-height: 14px`)
+- **Metadata & Labels**: live computed `nav/a` (`font-size: 14px`, `line-height: 26px`, `font-weight: 400`); rule `,small` (`font-size: .875em`)
 
 ---
 
@@ -82,12 +82,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.qda-header> — `www-quintadamalia-com`)**:
-   - Landmark `<header class="qda-header is-stuck">` (`1440x66px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
+   - Landmark `<header class="qda-header">` (`1440x78px`) hosting `Quinta D. Amália - Redefining Luxury` navigation (`Home · About · Apartments · Lifestyle · Contact`), DOM attributes (`data-rocket-preload`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters="family=Big+Shoulders+..."`, `data-wpr-hosted-gf-parameters`), and stylesheet rule `.themepure-theme-btn:hover { background-color:var(--tp-common-white);border-color:var(--tp-common-bla... }`.
 2. **Hero Stage & Focal Lead (<div.elementor> — `Where luxury meets serenity`)**:
-   - Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"* over `#ffffff` canvas and `#1e1e1e` ink.
-3. **Primary Showcase & Content Grid (<div.elementor-385> — `Quinta D. Amália is more than a re`)**:
-   - Landmark `<div class="elementor elementor-385">` rendering section `Quinta D. Amália is more than a residence - it’s` with copy *"Every residence is a masterpiece of craftsmanship, featuring prem"*, asset references (`0486c33379293b947859233762b05.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
-4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Every residence is a masterpiece o`)**:
-   - Landmark `<div class="elementor elementor-385">` framing `Every residence is a masterpiece of craftsmanshi` and `With construction beginning in Q4 2026, Quinta D` (*"With construction beginning in Q4 2026, Quinta D. Amália is poise"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
+   - Landmark `<div class="elementor elementor-385">` presenting display lead `Where luxury meets serenity` and copy excerpt *"Contact us today to clear any questions, get more information and"* over `#ffffff` canvas and `#1e1e1e` ink.
+3. **Primary Showcase & Content Grid (<div.elementor-385> — `Contact us today to clear any ques`)**:
+   - Landmark `<div class="elementor elementor-385">` rendering section `Contact us today to clear any questions, get mor` with copy *"Quinta D. Amália is more than a residence - it’s a lifestyle defi"*, asset references (`ff19e2716e4af741afc51614093bc.css`, `8vIH7w4qzmVxm2BL9A.woff2`, `marcellus-weo_ebrok8hqldviaf81vvo...`, `css2`), and grid rule `.themepure-theme-btn span { display:inline-block }`.
+4. **Interactive Detail & Feature Matrix (<div.elementor:nth(2)> — `Quinta D. Amália is more than a re`)**:
+   - Landmark `<div class="elementor elementor-385">` framing `Quinta D. Amália is more than a residence - it’s` and `Every residence is a masterpiece of craftsmanshi` (*"Every residence is a masterpiece of craftsmanship, featuring prem"*) with `#f5f7f5` surface cards, `#007fff` accents, and `.themepure-theme-btn img { object-fit:cover }`.
 5. **Colophon & Global Directory Footer (<footer.home> — `https://www.quintadamalia.com/`)**:
-   - Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"Elegant Simplicity"*, and `#9ec5fe` structural dividers.
+   - Landmark `<footer class="home">` anchoring `Quinta D. Amália - Redefining Lu` footer links (`Home · About · Apartments · Lifestyle · Contact`), copy *"With construction beginning in Q4 2026, Quinta D. Amália is "*, and `#9ec5fe` structural dividers.

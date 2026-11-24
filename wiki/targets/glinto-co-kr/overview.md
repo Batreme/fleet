@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: glinto-co-kr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://glinto.co.kr"
 final_url: "https://glinto.co.kr/en"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Glinto — Creative studio
 - **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `28`
-- **Recovered Stylesheets**: `3`
+- **Recovered Scripts**: `77`
+- **Recovered Stylesheets**: `9`
 
 ---
 

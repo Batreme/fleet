@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: wndws-space"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "wndws-space"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#efefef`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#e
 
 > **windows · place is temporary. you are not.** (https://wndws.space/) — Upload your window — tell what chapter of life you're living through.
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **windows · place is temporary. you are not.** (`https://wndws.space/`). Upload your window — tell what chapter of life you're living through.
-- **Capture Provenance**: Live browser capture (`tier2_webgl`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#efefef`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#cacaca` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#efefef` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`105 windows`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`105 windows`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20px`, padding `9px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `1462px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `20px` grid gap.
 - **Border Radius Scale**: `999px`, `2px`, `6px`, `5px`.
@@ -109,6 +114,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#e
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: 1ms` extracted from `wndws-space` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<div.nuxt-route-announcer>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `1462px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/windows/rec0z2tDFBaED478f`) measured as `direct` in `2740ms`.
 
 ---
 
@@ -127,10 +136,10 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#e
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE GRID (<div.nuxt-route-announcer>) max-w: 1440px           | │
 │ | +------------------------------+  +------------------------------+ | │
-│ | | windows · place is temporary |  | Areg — Yerevan, Armenia      | | │
+│ | | windows · place is temporary |  | Vsevolod — Moscow, Russia    | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<div.route-stage>) — Maria — Saint Petersb          | │
+│ | DETAIL MODULE (<div.route-stage>) — Sergey Savinykh — Mos          | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.site-footer>) | https://wndws.space/                 │
 └────────────────────────────────────────────────────────────────────────┘
@@ -148,9 +157,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#e
 │ ---------------------------------------------------------------------- │
 │ | SHOWCASE STACK (<div.nuxt-route-announ) — 1-Col Stack              | │
 │ | [ Item 1: windows · place is temporary. you are not.             ] | │
-│ | [ Item 2: Areg — Yerevan, Armenia                                ] | │
+│ | [ Item 2: Vsevolod — Moscow, Russia                              ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<div.route-stage>) — 1-Col (Maria — Saint Pete)      | │
+│ | DETAIL STACK (<div.route-stage>) — 1-Col (Sergey Savinykh — )      | │
 │ ---------------------------------------------------------------------- │
 │ [ FOOTER (<footer.site-footer>) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
@@ -162,11 +171,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#cacaca` / `#e
 2. **Hero Stage & Focal Lead (<div.custom-cursor-enabled> — `105 windows`)**:
    - Landmark `<div class="custom-cursor-enabled">` presenting display lead `105 windows` and copy excerpt *"windows · place is temporary. you are not."* over `#cacaca` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<div.nuxt-route-announcer> — `windows · place is temporary. you `)**:
-   - Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Areg — Yerevan, Armenia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
-4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Areg — Yerevan, Armenia`)**:
-   - Landmark `<div class="route-stage">` framing `Areg — Yerevan, Armenia` and `Maria — Saint Petersburg, Russia` (*"Maria — Saint Petersburg, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
+   - Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Vsevolod — Moscow, Russia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
+4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Vsevolod — Moscow, Russia`)**:
+   - Landmark `<div class="route-stage">` framing `Vsevolod — Moscow, Russia` and `Sergey Savinykh — Moscow, Russia` (*"Sergey Savinykh — Moscow, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://wndws.space/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"VESTAHAHA — Guangzhou, China"*, and `#ffffff` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"Polina — Chelyabinsk, Russia"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/windows/rec0z2tDFBaED478f`)**: `https://wndws.space/windows/rec0z2tDFBaED478f` — H1: `Nikita`, scrollHeight `924px`, transition `direct` (`2740ms`)
+- **Detail Route (`/windows/rec1qPUzxFlQMSlUl`)**: `https://wndws.space/windows/rec1qPUzxFlQMSlUl` — H1: `Yulia`, scrollHeight `924px`, transition `direct` (`1483ms`)
+- **Detail Route (`/windows/rec2yRSKTwVXLn75o`)**: `https://wndws.space/windows/rec2yRSKTwVXLn75o` — H1: `Andy`, scrollHeight `924px`, transition `direct` (`2500ms`)
 
 ---
 
@@ -183,7 +199,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#cacaca` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#efefef`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#cacaca` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#efefef` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`105 windows`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`105 windows`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 20px`, padding `9px`) with `cubic-bezier(.22,1,.36,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +235,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#ffffff` — grounded in `tml.prelude-route::-webkit-scro... { border-color: #ffffff }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `9px` lateral canvas padding with `20px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px`)
@@ -244,22 +260,22 @@ Scaffold `wndws-space` (`windows · place is temporary. you are not.`) with thes
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.nav> — `wndws-space`)` (`wndws-space`) adapts across `@media (max-width:700px)`, `@media (max-width:900px)`, `@media (prefers-reduced-motion:reduce)`, `@media (max-width:430px)` with `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.4,1)`, `cubic-bezier(.34,1.4,.5,1)` transitions and links `prelude prelude`.
 2. **Hero Stage & Focal Lead (<div.custom-cursor-enabled> — `105 windows`)**:
    - DOM & Selectors: Landmark `<div class="custom-cursor-enabled">` presenting display lead `105 windows` and copy excerpt *"windows · place is temporary. you are not."* over `#cacaca` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#cacaca` background with `#000000` headline `105 windows`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#cacaca` background with `#000000` headline `105 windows`.
 3. **Primary Showcase & Content Grid (<div.nuxt-route-announcer> — `windows · place is temporary. you `)**:
-   - DOM & Selectors: Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Areg — Yerevan, Armenia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
+   - DOM & Selectors: Landmark `<div class="nuxt-route-announcer">` rendering section `windows · place is temporary. you are not.` with copy *"Vsevolod — Moscow, Russia"*, asset references (`fonts.googleapis.com`, `fonts.gstatic.com`, `css2`, `entry.DtyUHzly.css`), and grid rule `html::-webkit-scrollbar { width:10px }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.nuxt-route-announcer> — `windows · place is temporary. you `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 20px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Areg — Yerevan, Armenia`)**:
-   - DOM & Selectors: Landmark `<div class="route-stage">` framing `Areg — Yerevan, Armenia` and `Maria — Saint Petersburg, Russia` (*"Maria — Saint Petersburg, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.route-stage> — `Areg — Yerevan, Armenia`)` uses `999px`, `2px`, `6px`, `5px` radii, `#efefef` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
+4. **Interactive Detail & Feature Matrix (<div.route-stage> — `Vsevolod — Moscow, Russia`)**:
+   - DOM & Selectors: Landmark `<div class="route-stage">` framing `Vsevolod — Moscow, Russia` and `Sergey Savinykh — Moscow, Russia` (*"Sergey Savinykh — Moscow, Russia"*) with `#efefef` surface cards, `#efefef` accents, and `html::-webkit-scrollbar-track { background:transparent }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.route-stage> — `Vsevolod — Moscow, Russia`)` uses `999px`, `2px`, `6px`, `5px` radii, `#efefef` highlights, and assets (fonts.googleapis.com, fonts.gstatic.com, css2).
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://wndws.space/`)**:
-   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"VESTAHAHA — Guangzhou, China"*, and `#ffffff` structural dividers.
+   - DOM & Selectors: Landmark `<footer class="site-footer">` anchoring `windows · place is temporary. yo` footer links (`prelude prelude`), copy *"Polina — Chelyabinsk, Russia"*, and `#ffffff` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.site-footer> — `https://wndws.space/`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `9px` lateral canvas padding with `20px` grid gap and attributes (data-v-20a15833, data-v-045ed839, data-v-feaf1087).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"windows · place is temporary. you are not."*
-- Copy Excerpt 2: *"Areg — Yerevan, Armenia"*
-- Copy Excerpt 3: *"Maria — Saint Petersburg, Russia"*
-- Copy Excerpt 4: *"VESTAHAHA — Guangzhou, China"*
+- Copy Excerpt 2: *"Vsevolod — Moscow, Russia"*
+- Copy Excerpt 3: *"Sergey Savinykh — Moscow, Russia"*
+- Copy Excerpt 4: *"Polina — Chelyabinsk, Russia"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.4,0,.4,1)`, `cubic-bezier(.34,1.4,.5,1)`
@@ -275,8 +291,33 @@ Scaffold `wndws-space` (`windows · place is temporary. you are not.`) with thes
 - **Selector `media(prefers-reduced-motion:reduce)`**: `transition: 1ms` extracted from `wndws-space` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,1,.36,1)`)**: Governs interactive state transitions across `<nav.nav>` and `<div.nuxt-route-announcer>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `1462px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Hero (0%).
+- **Multi-Page Routes**: Scaffold internal routes `/windows/rec0z2tDFBaED478f` (detail, direct), `/windows/rec1qPUzxFlQMSlUl` (detail, direct), `/windows/rec2yRSKTwVXLn75o` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `wndws-space`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://wndws.space/windows/rec0z2tDFBaED478f` | Nikita | `924px` | `direct` (`2740ms`) | [subpage-01-windows-rec0z2tdfbaed478f.webp](assets/subpage-01-windows-rec0z2tdfbaed478f.webp) |
+| `2` | `detail` | `https://wndws.space/windows/rec1qPUzxFlQMSlUl` | Yulia | `924px` | `direct` (`1483ms`) | [subpage-02-windows-rec1qpuzxflqmslul.webp](assets/subpage-02-windows-rec1qpuzxflqmslul.webp) |
+| `3` | `detail` | `https://wndws.space/windows/rec2yRSKTwVXLn75o` | Andy | `924px` | `direct` (`2500ms`) | [subpage-03-windows-rec2yrsktwvxln75o.webp](assets/subpage-03-windows-rec2yrsktwvxln75o.webp) |
+

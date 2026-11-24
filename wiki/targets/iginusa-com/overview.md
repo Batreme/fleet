@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: iginusa-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://iginusa.com"
 final_url: "https://iginusa.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: IGIN USA · Official Home of IGIN in the United States
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `144`
+- **Recovered Scripts**: `128`
 - **Recovered Stylesheets**: `7`
 
 ---

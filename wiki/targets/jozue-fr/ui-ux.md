@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: jozue-fr"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `jozue-fr` (**Josué Pichot, freelance art director and photographer in Paris**)
 - **Production URL**: [https://jozue.fr](https://jozue.fr)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#111319` ink, `#f73326` accent)
 - **Summary**: Paris-based freelance art director, photographer, director and product designer. 15+ years in advertising and digital. Available in-house...
-- **Total Clean CSS Variables Extracted**: `103` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `104` (curated live-grounded set below)
 
 ---
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#111319` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#dcdcd9` | `.scroll-pagination { background-color: #dcdcd9 }` |
+| **Elevated Surface / Card Substrate** | `#f3f2f0` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#f73326` | `.button-selected:hover { color: #f73326 }` |
 | **Secondary / Muted Copy** | `#999999` | `.lightbox { color: #999999 }` |
 | **Structural Hairline Border** | `#8c8c8c` | `.button-slide:hover path { stroke: #8c8c8c }` |
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.menu> — `jozue-fr`)**:
-   - Landmark `<nav class="menu menu--site">` (`1440x900px`) hosting `Josué Pichot, freelance art director` navigation (`About. · Works. · Contact. · Français.`), DOM attributes (`data-intro="full"`, `data-period="917"`, `data-written="561"`, `data-fade="799"`), and stylesheet rule `.project-hero-image--drawn { --reveal-duration:.9s;--reveal-distance:32px }`.
+   - Landmark `<nav class="menu menu--site">` (`1440x900px`) hosting `Josué Pichot, freelance art director` navigation (`About. · Works. · Contact. · Français.`), DOM attributes (`data-intro="done"`, `data-color="111319"`, `data-color="F73326"`, `data-title="About"`), and stylesheet rule `.lazyframe__title { z-index:3;padding:15px 17px;position:absolute;top:0;left:0;right:0 }`.
 2. **Hero Stage & Focal Lead (<article.homepage> — `art director + photo grapher`)**:
-   - Landmark `<article class="homepage">` presenting display lead `art director + photo grapher` and copy excerpt *"English. Français."* over `#ffffff` canvas and `#111319` ink.
+   - Landmark `<article class="homepage">` presenting display lead `art director + photo grapher` and copy excerpt *"93310 Le Pré-Saint-Gervais"* over `#ffffff` canvas and `#111319` ink.
 3. **Primary Showcase & Content Grid (<section.js-infos> — `a r t d i r e c t o r + p h o t o `)**:
-   - Landmark `<section class="js-infos homepage__infos">` rendering section `a r t d i r e c t o r + p h o t o g r a p h e r c...` with copy *"a r t d i r e c t o r + p h o t o g r a p h e r"*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `jozue-logo-full.DpMZCk-F.svg`), and grid rule `.is-in { opacity:1;transform:none }`.
+   - Landmark `<section class="js-infos homepage__infos">` rendering section `a r t d i r e c t o r + p h o t o g r a p h e r c...` with copy *"English. Français."*, asset references (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `jozue-logo-full.DpMZCk-F.svg`), and grid rule `.lazyframe__title:after { z-index:-1 }`.
 4. **Interactive Detail & Feature Matrix (<section.wrapper> — `selected works 18`)**:
-   - Landmark `<section class="wrapper wrapper--infos">` framing `selected works 18` and `Awards & Archives` (*"a r t d i r e c t o r"*) with `#dcdcd9` surface cards, `#f73326` accents, and `.panel-host { z-index:200;pointer-events:none;position:fixed;top:0;bottom:0;left:0;rig... }`.
-5. **Colophon & Global Directory Footer (<footer.main> — `https://jozue.fr`)**:
-   - Landmark `<footer class="main">` anchoring `Josué Pichot, freelance art dire` footer links (`About. · Works. · Contact. · Français.`), copy *"+ p h o t o g r a p h e r"*, and `#8c8c8c` structural dividers.
+   - Landmark `<section class="wrapper wrapper--infos">` framing `selected works 18` and `Awards & Archives` (*"a r t d i r e c t o r + p h o t o g r a p h e r"*) with `#f3f2f0` surface cards, `#f73326` accents, and `.lazyframe:hover { cursor:pointer }`.
+5. **Colophon & Global Directory Footer (<footer.transi> — `https://jozue.fr`)**:
+   - Landmark `<footer class="transi">` anchoring `Josué Pichot, freelance art dire` footer links (`About. · Works. · Contact. · Français.`), copy *"a r t d i r e c t o r"*, and `#8c8c8c` structural dividers.

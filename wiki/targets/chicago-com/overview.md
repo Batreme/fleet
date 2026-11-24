@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: chicago-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://chicago.com/"
 final_url: "https://chicago.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: chicago.com
 - **Identified Frameworks**: React, Tailwind CSS
-- **Recovered Scripts**: `49`
-- **Recovered Stylesheets**: `8`
+- **Recovered Scripts**: `152`
+- **Recovered Stylesheets**: `26`
 
 ---
 

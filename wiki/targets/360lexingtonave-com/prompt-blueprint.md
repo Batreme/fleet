@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: 360lexingtonave-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "360lexingtonave-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)"
 ---
@@ -16,31 +21,31 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **360 Lexington Avenue** (https://360lexingtonave.com) — Located at 40th Street and Lexington Avenue, just a two-minute walk from Grand Central Terminal.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **360 Lexington Avenue** (`https://360lexingtonave.com`). Located at 40th Street and Lexington Avenue, just a two-minute walk from Grand Central Terminal.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Built For Difference Makers`) with `Instrument Sans Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `20px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Built For Difference Makers`) with `Instrument Sans Placeholder`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `20px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Barba.js Page Transition Router, Framer Motion Layout Physics.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=11887px` / doc `12787px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `20px` lateral canvas padding with `10px` grid gap.
-- **Border Radius Scale**: `4px`, `8px`, `15px`, `0px`.
+- **Border Radius Scale**: `4px`, `0px`.
 
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`).
@@ -109,7 +114,10 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Selector `.framer-form-input-wrapper`**: `transition: var(--framer-input-focused-transition)` extracted from `360lexingtonave-com` stylesheet.
 - **Selector `.framer-form-text-input-clear`**: `transition: color .15s` extracted from `360lexingtonave-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `12787px`, deepest scrollY reached `11887px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `Framer Motion`.
 
 ---
 
@@ -120,20 +128,20 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ DESKTOP VIEWPORT (1440px) — 360 Lexington Avenue                       │
 │ ====================================================================== │
-│ [ <header.lenis> (1440px)             | Available Offices · Prime Co ] │
+│ [ <header.framer-jJ6Uj> (1440px)      | Available Offices · Prime Co ] │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE: <div.lenis-smooth> (w=1440px)                          | │
+│ | HERO STAGE: <div.framer-DOsz9> (w=1440px)                          | │
 │ | H1: Built For Difference Makers                                    | │
 │ | Substrate: #ffffff | Ink: #000000 | Accent: #0000ee                | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE GRID (<div.framer-jJ6Uj>) max-w: 1440px                   | │
+│ | SHOWCASE GRID (<div.framer-Kw8IE>) max-w: 1440px                   | │
 │ | +------------------------------+  +------------------------------+ | │
 │ | | 360 Lex has been thoroughly  |  | 2-Minute Walk to Grand Centr | | │
 │ | +------------------------------+  +------------------------------+ | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL MODULE (<div.framer-DOsz9>) — Surrounded By Dining          | │
+│ | DETAIL MODULE (<div.framer-ZLQE9>) — Surrounded By Dining          | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-Kw8IE) | https://360lexingtonave.com          │
+│ [ FOOTER (<footer.framer-HPrnH) | https://360lexingtonave.com          │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -142,32 +150,41 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ┌────────────────────────────────────────────────────────────────────────┐
 │ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
 │ ====================================================================== │
-│ [ HEADER BAR (<header.lenis>          ) | Compact Menu (390px)         │
+│ [ HEADER BAR (<header.framer-jJ6Uj>   ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
-│ | HERO STAGE (<div.lenis-smooth>) — 390px Vertical Lead              | │
+│ | HERO STAGE (<div.framer-DOsz9>) — 390px Vertical Lead              | │
 │ | H1: Built For Difference Makers                                    | │
 │ ---------------------------------------------------------------------- │
-│ | SHOWCASE STACK (<div.framer-jJ6Uj>) — 1-Col Stack                  | │
+│ | SHOWCASE STACK (<div.framer-Kw8IE>) — 1-Col Stack                  | │
 │ | [ Item 1: 360 Lex has been thoroughly reimagined with a new...   ] | │
 │ | [ Item 2: 2-Minute Walk to Grand Central                         ] | │
 │ ---------------------------------------------------------------------- │
-│ | DETAIL STACK (<div.framer-DOsz9>) — 1-Col (Surrounded By Dini)     | │
+│ | DETAIL STACK (<div.framer-ZLQE9>) — 1-Col (Surrounded By Dini)     | │
 │ ---------------------------------------------------------------------- │
-│ [ FOOTER (<footer.framer-Kw8IE) | Stacked 390px Colophon               │
+│ [ FOOTER (<footer.framer-HPrnH) | Stacked 390px Colophon               │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Granular DOM Region Breakdown
-1. **Brand Header & Navigation Bar (<header.lenis> — `360lexingtonave-com`)**:
-   - Landmark `<header class="lenis">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
-2. **Hero Stage & Focal Lead (<div.lenis-smooth> — `Built For Difference Makers`)**:
-   - Landmark `<div class="lenis-smooth">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
-3. **Primary Showcase & Content Grid (<div.framer-jJ6Uj> — `360 Lex has been thoroughly reimag`)**:
-   - Landmark `<div class="framer-jJ6Uj">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
-4. **Interactive Detail & Feature Matrix (<div.framer-DOsz9> — `2-Minute Walk to Grand Central`)**:
-   - Landmark `<div class="framer-DOsz9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
-5. **Colophon & Global Directory Footer (<footer.framer-Kw8IE> — `https://360lexingtonave.com`)**:
-   - Landmark `<footer class="framer-Kw8IE">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.
+1. **Brand Header & Navigation Bar (<header.framer-jJ6Uj> — `360lexingtonave-com`)**:
+   - Landmark `<header class="framer-jJ6Uj">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
+2. **Hero Stage & Focal Lead (<div.framer-DOsz9> — `Built For Difference Makers`)**:
+   - Landmark `<div class="framer-DOsz9">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
+3. **Primary Showcase & Content Grid (<div.framer-Kw8IE> — `360 Lex has been thoroughly reimag`)**:
+   - Landmark `<div class="framer-Kw8IE">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
+4. **Interactive Detail & Feature Matrix (<div.framer-ZLQE9> — `2-Minute Walk to Grand Central`)**:
+   - Landmark `<div class="framer-ZLQE9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
+5. **Colophon & Global Directory Footer (<footer.framer-HPrnH> — `https://360lexingtonave.com`)**:
+   - Landmark `<footer class="framer-HPrnH">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Built For Difference Makers` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `7%`): Active landmark `Section @ 7%` · sticky/fixed elements: `3`
+- **Step 03** (`y=2550px`, `21%`): Active landmark `Section @ 21%` · sticky/fixed elements: `2`
+- **Step 04** (`y=5100px`, `43%`): Active landmark `Section @ 43%` · sticky/fixed elements: `1`
+- **Step 05** (`y=6800px`, `57%`): Active landmark `Surrounded By Dining & Entertainment` · sticky/fixed elements: `1`
+- **Step 06** (`y=9350px`, `79%`): Active landmark `Section @ 79%` · sticky/fixed elements: `1`
+- **Step 07** (`y=11050px`, `93%`): Active landmark `Section @ 93%` · sticky/fixed elements: `1`
+- **Step 08** (`y=11887px`, `100%`): Active landmark `Footer / Bottom` · sticky/fixed elements: `1`
 
 ---
 
@@ -184,8 +201,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Built For Difference Makers`) with `Instrument Sans Placeholder` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `20px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router.
+  - **Grounded Typographic Hierarchy**: Pairs `Instrument Sans` for display copy (`Built For Difference Makers`) with `Instrument Sans Placeholder`.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 10px`, padding `20px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Barba.js Page Transition Router, Framer Motion Layout Physics.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `360lexingtonave-com` in your global stylesheet:
@@ -221,14 +238,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--token-fcb71b86-915a-48dc-848f-900a8d21781e`)**: `#fff6` — grounded in `var(--token-fcb71b86-915a-48dc-848f-900a8d21781e)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `20px` lateral canvas padding with `10px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `20px` horizontal padding
 - **Media Queries**: `@media (min-width: 1440px)`, `@media (min-width: 1024px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 1023.98px)`, `@media (max-width: 809.98px)`
-- **Corner Radii**: `4px`, `8px`, `15px`, `0px`
+- **Corner Radii**: `4px`, `0px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Instrument Sans`
@@ -241,21 +258,21 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `360lexingtonave-com` (`360 Lexington Avenue`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
-1. **Brand Header & Navigation Bar (<header.lenis> — `360lexingtonave-com`)**:
-   - DOM & Selectors: Landmark `<header class="lenis">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.lenis> — `360lexingtonave-com`)` (`360lexingtonave-com`) adapts across `@media (min-width: 1440px)`, `@media (min-width: 1024px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 1023.98px)`, `@media (max-width: 809.98px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`.
-2. **Hero Stage & Focal Lead (<div.lenis-smooth> — `Built For Difference Makers`)**:
-   - DOM & Selectors: Landmark `<div class="lenis-smooth">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `Built For Difference Makers`.
-3. **Primary Showcase & Content Grid (<div.framer-jJ6Uj> — `360 Lex has been thoroughly reimag`)**:
-   - DOM & Selectors: Landmark `<div class="framer-jJ6Uj">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.framer-jJ6Uj> — `360 Lex has been thoroughly reimag`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
-4. **Interactive Detail & Feature Matrix (<div.framer-DOsz9> — `2-Minute Walk to Grand Central`)**:
-   - DOM & Selectors: Landmark `<div class="framer-DOsz9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-DOsz9> — `2-Minute Walk to Grand Central`)` uses `4px`, `8px`, `15px`, `0px` radii, `#0000ee` highlights, and assets (Grxz4pBrnDA6VjRjN6h8ucts0.png, oehMxFzuMfSIeZHPUFXOF3LFOiM.png, factors.js).
-5. **Colophon & Global Directory Footer (<footer.framer-Kw8IE> — `https://360lexingtonave.com`)**:
-   - DOM & Selectors: Landmark `<footer class="framer-Kw8IE">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-Kw8IE> — `https://360lexingtonave.com`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `20px` lateral canvas padding with `10px` grid gap and attributes (data-framer-font-css, data-framer-breakpoint-css, data-framer-css-ssr-minified).
+1. **Brand Header & Navigation Bar (<header.framer-jJ6Uj> — `360lexingtonave-com`)**:
+   - DOM & Selectors: Landmark `<header class="framer-jJ6Uj">` (`1440px`) hosting `360 Lexington Avenue` navigation (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), DOM attributes (`data-framer-font-css`, `data-framer-breakpoint-css`, `data-framer-css-ssr-minified`, `data-framer-components="framer-lib-cursors-ho..."`), and stylesheet rule `.hidden-72rtr7 { display:none!important }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.framer-jJ6Uj> — `360lexingtonave-com`)` (`360lexingtonave-com`) adapts across `@media (min-width: 1440px)`, `@media (min-width: 1024px) and (max-width: 1439.98px)`, `@media (min-width: 810px) and (max-width: 1023.98px)`, `@media (max-width: 809.98px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`.
+2. **Hero Stage & Focal Lead (<div.framer-DOsz9> — `Built For Difference Makers`)**:
+   - DOM & Selectors: Landmark `<div class="framer-DOsz9">` presenting display lead `Built For Difference Makers` and copy excerpt *"Prime Corner Retail"* over `#ffffff` canvas and `#000000` ink.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `Built For Difference Makers`.
+3. **Primary Showcase & Content Grid (<div.framer-Kw8IE> — `360 Lex has been thoroughly reimag`)**:
+   - DOM & Selectors: Landmark `<div class="framer-Kw8IE">` rendering section `360 Lex has been thoroughly reimagined with a new...` with copy *"Located at 40th Street and Lexington Avenue:"*, asset references (`Grxz4pBrnDA6VjRjN6h8ucts0.png`, `oehMxFzuMfSIeZHPUFXOF3LFOiM.png`, `factors.js`, `fonts.gstatic.com`), and grid rule `.hidden-xwkejd { display:none!important }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.framer-Kw8IE> — `360 Lex has been thoroughly reimag`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `20px` horizontal padding on mobile.
+4. **Interactive Detail & Feature Matrix (<div.framer-ZLQE9> — `2-Minute Walk to Grand Central`)**:
+   - DOM & Selectors: Landmark `<div class="framer-ZLQE9">` framing `2-Minute Walk to Grand Central` and `Surrounded By Dining & Entertainment` (*"just a two-minute walk from Grand Central Terminal."*) with `#f5f5f5` surface cards, `#0000ee` accents, and `.hidden-l5vpik { display:none!important }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<div.framer-ZLQE9> — `2-Minute Walk to Grand Central`)` uses `4px`, `0px` radii, `#0000ee` highlights, and assets (Grxz4pBrnDA6VjRjN6h8ucts0.png, oehMxFzuMfSIeZHPUFXOF3LFOiM.png, factors.js).
+5. **Colophon & Global Directory Footer (<footer.framer-HPrnH> — `https://360lexingtonave.com`)**:
+   - DOM & Selectors: Landmark `<footer class="framer-HPrnH">` anchoring `360 Lexington Avenue` footer links (`Available Offices · Prime Corner Retail · Contact Us · Explore Retail · Explore Offices`), copy *"Located at 40th and Lexington Avenue, just a two-minute walk"*, and `#111213` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.framer-HPrnH> — `https://360lexingtonave.com`)` aligns to `1440px` (full-bleed `100%` viewport stage) with `20px` lateral canvas padding with `10px` grid gap and attributes (data-framer-font-css, data-framer-breakpoint-css, data-framer-css-ssr-minified).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Prime Corner Retail"*
@@ -276,9 +293,35 @@ Scaffold `360lexingtonave-com` (`360 Lexington Avenue`) with these exact structu
 - **Selector `.framer-form-input-wrapper`**: `transition: var(--framer-input-focused-transition)` extracted from `360lexingtonave-com` stylesheet.
 - **Selector `.framer-form-text-input-clear`**: `transition: color .15s` extracted from `360lexingtonave-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
-- **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+- **Runtime Interaction Engine**: Integrates Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `12787px` across 8 distinct viewport chapters using Lenis, Framer Motion.
+- **Vertical Chapter Sequence**: Built For Difference Makers (0%) -> Section @ 7% (7%) -> Section @ 21% (21%) -> Section @ 43% (43%) -> Surrounded By Dining & Ente... (57%) -> Section @ 79% (79%) -> Section @ 93% (93%) -> Footer / Bottom (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `360lexingtonave-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Built For Difference Makers | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `7%` | Section @ 7% | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `21%` | Section @ 21% | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `5100px` | `43%` | Section @ 43% | `1` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `57%` | Surrounded By Dining & Entertainment | `1` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `9350px` | `79%` | Section @ 79% | `1` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `11050px` | `93%` | Section @ 93% | `1` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `11887px` | `100%` | Footer / Bottom | `1` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Built For Difference Makers | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `6078px` | `50%` | Section @ 50% | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `12157px` | `100%` | Footer / Bottom | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

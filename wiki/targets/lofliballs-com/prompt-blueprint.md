@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: lofliballs-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "lofliballs-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f4da40`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f
 
 > **LoFli Balls—Innovative Training Tools for Youth Athletes – Lofli** (http://lofliballs.com) — LoFli Balls are weighted training tools with emulated stitching to mimic the feel of a real ball. Flying about half the distance of a sta...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LoFli Balls—Innovative Training Tools for Youth Athletes – Lofli** (`http://lofliballs.com`). LoFli Balls are weighted training tools with emulated stitching to mimic the feel of a real ball. Flying about half the distance of a sta...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f4da40`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafeff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#101820` primary typography and `#f4da40` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Alumni Sans` for display copy (`SWING HARD FLY LOW`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Alumni Sans` for display copy (`SWING HARD FLY LOW`) with `Assistant`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 64px`, padding `48px`) with `cubic-bezier(.34,1.56,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=4250px` / doc `7969px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `48px` lateral canvas padding with `64px` grid gap.
 - **Border Radius Scale**: `var(--radius)`, `var(--radius-full)`, `var(--radius-xs)`, `var(--radius-xl)`.
@@ -107,8 +112,8 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 259.2px`, `line-height: 168.48px`, `font-weight: 700`, `letter-spacing: -7.776px`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 63.36px`, `line-height: 57.024px`, `font-weight: 900`, `letter-spacing: -2.5344px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`).
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 47.52px`, `line-height: 41.3424px`, `font-weight: 900`, `letter-spacing: -1.9008px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`, `--jm-body-lg-size: var(--jm-font-size-450)`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `small` (`font-size: calc(var(--kl-reviews-reviews...`, `font-weight: var(--kl-revi...`).
 
 ---
@@ -124,6 +129,11 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f
 - **Selector `.gw-btn`**: `transition: background-color .18s ease, color .18s ease, border-color .18s...` extracted from `lofliballs-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.34,1.56,.64,1)`)**: Governs interactive state transitions across `<header.gw-header>` and `<section.gw-hero>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `7969px`, deepest scrollY reached `4250px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
+- **Hover Physics (`primary_cta` · `Play Ball`)**: Computed transition `0.18s, 0.18s, 0.18s` / `ease, ease, ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/collections/all`) measured as `direct` in `1013ms`.
 
 ---
 
@@ -182,6 +192,18 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#fafeff` / `#f
    - Landmark `<section class="shopify-section">` framing `Less Chasing. More Hitting.` and `Made For The Whole Game.` (*"We built the LoFli ball to fly like a real baseball when thrown a"*) with `#ffffff` surface cards, `#f4da40` accents, and `.gw-type-h2 { font-size:calc(1rem * var(--type-scale) * var(--type-scale)) }`.
 5. **Colophon & Global Directory Footer (<footer.gw-footer> — `http://lofliballs.com`)**:
    - Landmark `<footer class="gw-footer gw-footer--black">` anchoring `LoFli Balls—Innovative Training ` footer links (`Shop · Shop All · LoFli Baseball · LoFli Softball · About`), copy *"Not just for hitting. LoFli has the weight of a real ball, w"*, and `#ffffff` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `SWING HARD FLY LOW` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `12%`): Active landmark `Less Chasing. More Hitting.` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `24%`): Active landmark `#shopify-section-template--24228952932438__banner` · sticky/fixed elements: `3`
+- **Step 04** (`y=2550px`, `36%`): Active landmark `LoFli Baseball` · sticky/fixed elements: `3`
+- **Step 05** (`y=3400px`, `48%`): Active landmark `THE INSIDE STORY.` · sticky/fixed elements: `3`
+- **Step 06** (`y=4250px`, `60%`): Active landmark `Play Anywhere` · sticky/fixed elements: `4`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/collections/all`)**: `https://lofliballs.com/collections/all` — H1: `Products`, scrollHeight `2071px`, transition `direct` (`1013ms`)
+- **Detail Route (`/products/lofli-baseball`)**: `https://lofliballs.com/products/lofli-baseball` — H1: `LoFli Baseball`, scrollHeight `6606px`, transition `direct` (`1045ms`)
+- **Detail Route (`/products/lofli-softball`)**: `https://lofliballs.com/products/lofli-softball` — H1: `LoFli Softball`, scrollHeight `5552px`, transition `direct` (`842ms`)
 
 ---
 
@@ -198,7 +220,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#fafeff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#101820`, **Accent / Highlight**: `#f4da40`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#fafeff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#101820` primary typography and `#f4da40` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Alumni Sans` for display copy (`SWING HARD FLY LOW`) with `Assistant` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Alumni Sans` for display copy (`SWING HARD FLY LOW`) with `Assistant`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 64px`, padding `48px`) with `cubic-bezier(.34,1.56,.64,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -249,8 +271,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--color-cyan-300`)**: `#7bcee7` — grounded in `var(--color-cyan-300)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `48px` lateral canvas padding with `64px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 64px`)
@@ -263,8 +285,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Body Font Stack**: `Assistant`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
 - **H1 Display Rule**: live computed `h1` (`font-size: 259.2px`, `line-height: 168.48px`, `font-weight: 700`, `letter-spacing: -7.776px`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 63.36px`, `line-height: 57.024px`, `font-weight: 900`, `letter-spacing: -2.5344px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`)
-- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 47.52px`, `line-height: 41.3424px`, `font-weight: 900`, `letter-spacing: -1.9008px`); rule `h2` (`font-size: calc(var(--kl-reviews-reviews...`, `line-height: 122%`, `font-weight: calc(var(--kl...`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); CSS variables `--gw-ball-body: var(--bg-brand)`, `--font-body: Assistant, sans-serif`, `--jm-body-lg-size: var(--jm-font-size-450)`; rule `p` (`font-size: medium`, `line-height: normal`, `letter-spacing: normal`, `font-weight: normal`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 16px`, `line-height: normal`, `font-weight: 400`); rule `small` (`font-size: calc(var(--kl-reviews-reviews...`, `font-weight: var(--kl-revi...`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
@@ -274,7 +296,7 @@ Scaffold `lofliballs-com` (`LoFli Balls—Innovative Training Tools for Youth At
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.gw-header> — `lofliballs-com`)` (`lofliballs-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-width:749px)`, `@media (max-width: 749px)`, `@media (min-width: 750px)` with `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.22,1,.36,1)`, `cubic-bezier(.55,0,.68,.3)` transitions and links `Shop · Shop All · LoFli Baseball · LoFli Softball · About`.
 2. **Hero Stage & Focal Lead (<section.shopify-section> — `SWING HARD FLY LOW`)**:
    - DOM & Selectors: Landmark `<section class="shopify-section">` presenting display lead `SWING HARD FLY LOW` and copy excerpt *"HITS LIKE A REAL BALL, BUT TRAVELS ABOUT HALF AS FAR."* over `#fafeff` canvas and `#101820` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#fafeff` background with `#101820` headline `SWING HARD FLY LOW`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#fafeff` background with `#101820` headline `SWING HARD FLY LOW`.
 3. **Primary Showcase & Content Grid (<section.gw-hero> — `Swing hard Fly low`)**:
    - DOM & Selectors: Landmark `<section class="gw-hero color-scheme-1">` rendering section `Swing hard Fly low` with copy *"Hits like a real ball, but travels about half as far."*, asset references (`destination`, `1129077949490951`, `fbevents.js`, `lofli-favicon.png`), and grid rule `.gw-type-h1 { font-size:calc(1rem * var(--type-scale) * var(--type-scale) * var(--type... }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.gw-hero> — `Swing hard Fly low`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 64px`) on desktop and Single-column vertical stack at `390px` viewport width with `48px` horizontal padding on mobile.
@@ -305,8 +327,40 @@ Scaffold `lofliballs-com` (`LoFli Balls—Innovative Training Tools for Youth At
 - **Selector `.gw-btn`**: `transition: background-color .18s ease, color .18s ease, border-color .18s...` extracted from `lofliballs-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.34,1.56,.64,1)`)**: Governs interactive state transitions across `<header.gw-header>` and `<section.gw-hero>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `7969px` across 6 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: SWING HARD FLY LOW (0%) -> Less Chasing. More Hitting. (12%) -> #shopify-section-template--... (24%) -> LoFli Baseball (36%) -> THE INSIDE STORY. (48%) -> Play Anywhere (60%).
+- **Multi-Page Routes**: Scaffold internal routes `/collections/all` (detail, direct), `/products/lofli-baseball` (detail, direct), `/products/lofli-softball` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `lofliballs-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | SWING HARD FLY LOW | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `12%` | Less Chasing. More Hitting. | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `24%` | #shopify-section-template--24228952932438__ba... | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `36%` | LoFli Baseball | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `48%` | THE INSIDE STORY. | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `4250px` | `60%` | Play Anywhere | `4` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | SWING HARD FLY LOW | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `2992px` | `50%` | #shopify-section-template--24228952932438... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `5984px` | `100%` | LEARN | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://lofliballs.com/collections/all` | Products | `2071px` | `direct` (`1013ms`) | [subpage-01-collections-all.webp](assets/subpage-01-collections-all.webp) |
+| `2` | `detail` | `https://lofliballs.com/products/lofli-baseball` | LoFli Baseball | `6606px` | `direct` (`1045ms`) | [subpage-02-products-lofli-baseball.webp](assets/subpage-02-products-lofli-baseball.webp) |
+| `3` | `detail` | `https://lofliballs.com/products/lofli-softball` | LoFli Softball | `5552px` | `direct` (`842ms`) | [subpage-03-products-lofli-softball.webp](assets/subpage-03-products-lofli-softball.webp) |
+

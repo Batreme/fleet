@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: kissbranding-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://kissbranding.co.uk/"
 final_url: "https://kissbranding.co.uk/"
 status: analyzed

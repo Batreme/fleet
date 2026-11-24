@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: myfrida-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `myfrida-com` (**My Frida · Chocolate-Covered Fruit, Smoothies & Cake Bars**)
 - **Production URL**: [https://myfrida.com/](https://myfrida.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#020a0a` ink, `#0d6efd` accent)
 - **Summary**: Discover My Frida: real fruit wrapped in chocolate, fruity Choco Smoothies, frozen treats and layered Fridika Cake Bars. Find your favour...
 - **Total Clean CSS Variables Extracted**: `497` (curated live-grounded set below)
@@ -79,12 +79,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.webp> — `myfrida-com`)**:
-   - Landmark `<header class="webp">` (`1440x114px`) hosting `My Frida · Chocolate-Covered Fruit, ` navigation (`Meet Frida · Contact us`), DOM attributes (`data-smush-preload`, `data-rocket-prefetch`, `data-rocket-preload`, `data-minify="1"`), and stylesheet rule `.fa-lg { font-size:1.33333em;line-height:.75em;vertical-align:-.0667em }`.
+   - Landmark `<header class="webp">` (`1440x114px`) hosting `My Frida · Chocolate-Covered Fruit, ` navigation (`Meet Frida · Contact us`), DOM attributes (`data-smush-preload`, `data-rocket-prefetch`, `data-rocket-preload`, `data-minify="1"`), and stylesheet rule `after { box-sizing:border-box }`.
 2. **Hero Stage & Focal Lead (<section.tf-hero> — `My Frida my moment`)**:
    - Landmark `<section class="tf-hero">` presenting display lead `My Frida my moment` and copy excerpt *"Frida always had a way of making moments a little sweeter."* over `#ffffff` canvas and `#020a0a` ink.
 3. **Primary Showcase & Content Grid (<section.tf-uvod> — `Whatever you call her,`)**:
-   - Landmark `<section class="tf-uvod container-fluid">` rendering section `Whatever you call her,` with copy *"Choco Fruits Frozen ›"*, asset references (`myfrida-hero-frozen-1200.webp`, `b4751355.assetcdn.net`, `www.googletagmanager.com`, `myfrida-source-sans-pro-400-latin...`), and grid rule `.fa-xs { font-size:.75em }`.
+   - Landmark `<section class="tf-uvod container-fluid">` rendering section `Whatever you call her,` with copy *"Choco Fruits Frozen ›"*, asset references (`myfrida-hero-frozen-1200.webp`, `b4751355.assetcdn.net`, `www.googletagmanager.com`, `myfrida-source-sans-pro-400-latin...`), and grid rule `.h1 { margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:v... }`.
 4. **Interactive Detail & Feature Matrix (<section.tf-marquee> — `Choco Fruits`)**:
-   - Landmark `<section class="tf-marquee container-fluid">` framing `Choco Fruits` and `Choco Smoothies` (*"Frida always had a way of"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `.fa-sm { font-size:.875em }`.
-5. **Colophon & Global Directory Footer (<footer.home> — `https://myfrida.com/`)**:
-   - Landmark `<footer class="home">` anchoring `My Frida · Chocolate-Covered Fru` footer links (`Meet Frida · Contact us`), copy *"making moments a little sweeter."*, and `#9ec5fe` structural dividers.
+   - Landmark `<section class="tf-marquee container-fluid">` framing `Choco Fruits` and `Choco Smoothies` (*"Frida always had a way of"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `.h2 { font-size:calc(1.325rem + 0.9vw) }`.
+5. **Colophon & Global Directory Footer (<footer.wp-singular> — `https://myfrida.com/`)**:
+   - Landmark `<footer class="wp-singular">` anchoring `My Frida · Chocolate-Covered Fru` footer links (`Meet Frida · Contact us`), copy *"making moments a little sweeter."*, and `#9ec5fe` structural dividers.

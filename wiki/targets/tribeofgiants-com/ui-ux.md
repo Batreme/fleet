@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: tribeofgiants-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `tribeofgiants-com` (**Mindset Coaching & Personal Growth — The Tribe of Giants**)
 - **Production URL**: [https://tribeofgiants.com/](https://tribeofgiants.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
-- **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0c1018` / `#ffa500`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
+- **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0c1018` canvas, `#e9e5db` ink, `#ffa500` accent)
 - **Summary**: Name the pattern that's been running your life — then outgrow it. 12 guided journeys, Rimi your AI guide, the Mirror, and a tribe that wa...
-- **Total Clean CSS Variables Extracted**: `92` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `93` (curated live-grounded set below)
 
 ---
 
@@ -80,12 +80,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.lp-hero-cinema> — `tribeofgiants-com`)**:
-   - Landmark `<header class="lp-hero-cinema">` (`1440x860px`) hosting `Mindset Coaching & Personal Growth —` navigation (`Why the Tribe · Journeys · Blog · Podcast · Becoming Giants`), DOM attributes (`data-si="1"`, `data-theme="dark"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `.spl.spl-moving .spl-ring { transition:left .28s,top .28s,width .28s,height .28s,border-radius .28s }`.
+   - Landmark `<header class="lp-hero-cinema">` (`1440x860px`) hosting `Mindset Coaching & Personal Growth —` navigation (`Overview · Index · Archive · About · Contact`), DOM attributes (`data-si="1"`, `data-theme="dark"`, `data-precedence="next"`, `data-precedence="next"`), and stylesheet rule `ther_2c35139b-module__HfawKa__cla... { font-family:Merriweather,Merriweather Fallback;font-style:normal }`.
 2. **Hero Stage & Focal Lead (<section.lp-section> — `Name the pattern that's been runni`)**:
    - Landmark `<section class="lp-section ins">` presenting display lead `Name the pattern that's been running your life. T...` and copy excerpt *"The Tribe of Giants"* over `#0c1018` canvas and `#e9e5db` ink.
 3. **Primary Showcase & Content Grid (<section.fbk-section> — `A day inside the Tribe`)**:
-   - Landmark `<section class="lp-section fbk-section">` rendering section `A day inside the Tribe` with copy *"Home of the 12 Journeys — where every Giant was once a Small"*, asset references (`248e1dc0efc99276-s.p.0dq1pb0w2tem...`, `345c85a432359eed-s.p.24jxsbewvqxg...`, `8e451580e5e95631-s.p.0ic9f6t6i9np...`, `9be384ea93fe3f49-s.p.0oq27de-d8s-...`), and grid rule `.spl { --spl-dim:080b11b8 }`.
+   - Landmark `<section class="lp-section fbk-section">` rendering section `A day inside the Tribe` with copy *"Home of the 12 Journeys — where every Giant was once a Small"*, asset references (`248e1dc0efc99276-s.p.0dq1pb0w2tem...`, `345c85a432359eed-s.p.24jxsbewvqxg...`, `8e451580e5e95631-s.p.0ic9f6t6i9np...`, `9be384ea93fe3f49-s.p.0oq27de-d8s-...`), and grid rule `ather_2c35139b-module__HfawKa__va... { --font-heading:"Merriweather", "Merriweather Fallback" }`.
 4. **Interactive Detail & Feature Matrix (<article.fbk-card> — `One honest question`)**:
-   - Landmark `<article class="fbk-card">` framing `One honest question` and `Your page, read back` (*"You've read the books. You've heard the podcasts. You've collecte"*) with `#1a222f` surface cards, `#ffa500` accents, and `.spl-guide { --spl-dim:080b1185 }`.
+   - Landmark `<article class="fbk-card">` framing `One honest question` and `Your page, read back` (*"You've read the books. You've heard the podcasts. You've collecte"*) with `#1a222f` surface cards, `#ffa500` accents, and `lato_f12e19e3-module__zjPV4q__cla... { font-family:Lato,Lato Fallback;font-style:normal }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://tribeofgiants.com/`)**:
-   - Landmark `<footer class="site-footer">` anchoring `Mindset Coaching & Personal Grow` footer links (`Why the Tribe · Journeys · Blog · Podcast · Becoming Giants`), copy *"Join free, for life. Your seat in the Tribe, Journey 1 and t"*, and `#c2550f` structural dividers.
+   - Landmark `<footer class="site-footer">` anchoring `Mindset Coaching & Personal Grow` footer links (`Overview · Index · Archive · About · Contact`), copy *"Join free, for life. Your seat in the Tribe, Journey 1 and t"*, and `#c2550f` structural dividers.

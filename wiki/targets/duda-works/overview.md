@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: duda-works"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "http://duda.works"
 final_url: "https://www.duda.works/"
 status: analyzed
@@ -31,7 +31,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Duda Lima
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `5`
+- **Recovered Scripts**: `8`
 - **Recovered Stylesheets**: `0`
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: structureengineering-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://structureengineering.com.au/"
 final_url: "https://structureengineering.com.au/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Structure Consulting Engineers · Structural Engineering Sydney
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `2`
-- **Recovered Stylesheets**: `26`
+- **Recovered Scripts**: `27`
+- **Recovered Stylesheets**: `45`
 
 ---
 

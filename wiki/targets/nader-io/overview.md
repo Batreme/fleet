@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: nader-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://nader.io"
 final_url: "https://nader.io/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Nader Cserny
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `5`
+- **Recovered Scripts**: `25`
 - **Recovered Stylesheets**: `0`
 
 ---

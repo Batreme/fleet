@@ -1,13 +1,12 @@
 ---
 title: "Target Overview: www-31-for-31-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.31-for-31.com/"
 final_url: "https://www.31-for-31.com/"
-status: blocked
+status: analyzed
 http_status: 200
-capture_tier: none
-block_reason: "Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://www.31-for-31.com/', waiting until 'domcontentloaded' )"
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -28,11 +27,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.31-for-31.com/](https://www.31-for-31.com/)
-- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
-- **Block / Unreachable Reason**: Network/Navigation failure (Page.goto: Timeout 35000ms exceeded. Call log: - navigating to 'https://www.31-for-31.com/', waiting until 'domcontentloaded' )
-- **Page Title**: www-31-for-31-com
-- **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `20`
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Page Title**: 31 for 31 · One scary movie for every night of October
+- **Identified Frameworks**: HTML5 Canvas / WebGL
+- **Recovered Scripts**: `29`
 - **Recovered Stylesheets**: `1`
 
 ---

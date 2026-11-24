@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-feelreformed-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.feelreformed.com/"
 final_url: "https://www.feelreformed.com/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Reformed: The biggest thing to happen to Coffee since Coffee.
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `235`
-- **Recovered Stylesheets**: `12`
+- **Recovered Scripts**: `1661`
+- **Recovered Stylesheets**: `40`
 
 ---
 

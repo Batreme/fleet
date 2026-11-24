@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: lcg-media"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `lcg-media` (**LCG · The Agency That Fights for American Families**)
 - **Production URL**: [https://lcg.media](https://lcg.media)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#121212` / `#de204e`)
 - **Summary**: LCG provides hands-on consulting and creative solutions to support conservative campaigns and drive results for American Families.
 - **Total Clean CSS Variables Extracted**: `36` (curated live-grounded set below)
@@ -38,7 +38,7 @@ http_status: 200
 | **Primary Typography Ink** | `#ffffff` | live computed `h2` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#000000` | `.rendered body { background: black }` (`#000000`) |
 | **Interactive Accent / Highlight** | `#de204e` | `var(--color-highlight)` in `:root` |
-| **Secondary / Muted Copy** | `#68675f` | `nimated .subheader__wrapper spa... { color: #68675f }` |
+| **Secondary / Muted Copy** | `#777777` | `recaptchaJavascriptChallengeQrF... { color: #777777 }` |
 | **Structural Hairline Border** | `#000000` | `.cursor__bullet { border: #000000 }` |
 
 ---

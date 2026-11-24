@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: zenobasi-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `zenobasi-com` (**Zen Obasi — Art Director**)
 - **Production URL**: [https://zenobasi.com](https://zenobasi.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#0c0c0c`)
 - **Summary**: Art director and visual strategist working across identity, campaign and editorial for brands worldwide.
 - **Total Clean CSS Variables Extracted**: `13` (curated live-grounded set below)
@@ -67,7 +67,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<nav.lenis> — `zenobasi-com`)**:
-   - Landmark `<nav class="lenis">` (`1440x111px`) hosting `Zen Obasi — Art Director` navigation (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/5f4..."`, `data-engine="three.js r186"`, `data-copy="lines"`), and stylesheet rule `html { overflow-x:clip }`.
+   - Landmark `<nav class="lenis">` (`1440x111px`) hosting `Zen Obasi — Art Director` navigation (`Index Index · Work Work · About About · Inquire Inquire · Zen Obasi Zen Obasi`), DOM attributes (`data-precedence="next"`, `data-href="/_next/static/css/5f4..."`, `data-copy="lines"`, `data-copy="lines"`), and stylesheet rule `html { overflow-x:clip }`.
 2. **Hero Stage & Focal Lead (<main.background> — `Zen Obasi, Art Director`)**:
    - Landmark `<main class="background">` presenting display lead `Zen Obasi, Art Director` and copy excerpt *"ART DIRECTION / VISUAL IDENTITY"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<main.container> — `ART DIRECTION / VISUAL IDENTITY`)**:

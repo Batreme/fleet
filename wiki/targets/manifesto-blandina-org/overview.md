@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: manifesto-blandina-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://manifesto.blandina.org/"
 final_url: "https://manifesto.blandina.org/"
 status: analyzed
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: tier2_webgl
 tags:
   - target
   - reverse-engineering
@@ -27,7 +27,7 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://manifesto.blandina.org/](https://manifesto.blandina.org/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
 - **Page Title**: Connect, Create, Change: Manifesto of Blandina
 - **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
 - **Recovered Scripts**: `24`

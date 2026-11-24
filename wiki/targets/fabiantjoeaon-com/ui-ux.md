@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: fabiantjoeaon-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `fabiantjoeaon-com` (**Fabian Tjoe-A-On — Creative technologist**)
 - **Production URL**: [https://fabiantjoeaon.com](https://fabiantjoeaon.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#000000` canvas, `#f3f3ef` ink, `#99ff99` accent)
 - **Summary**: Creative and technical direction, analog heart with exceptional digitalism.
 - **Total Clean CSS Variables Extracted**: `30` (curated live-grounded set below)

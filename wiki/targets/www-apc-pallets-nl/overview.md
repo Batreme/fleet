@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-apc-pallets-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.apc-pallets.nl/"
 final_url: "https://www.apc-pallets.nl/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Algemeen Pallet Centrum · APC
 - **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `42`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `170`
+- **Recovered Stylesheets**: `6`
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: www-pragenhatlen-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-pragenhatlen-com` (**Prägen Hätlen · Swiss watchmaking for the crypto community.**)
 - **Production URL**: [https://www.pragenhatlen.com/](https://www.pragenhatlen.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ecebea` / `#0000ff`)
 - **Summary**: Trust, precision, resilience and uncompromising attention to detail.
-- **Total Clean CSS Variables Extracted**: `71` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `78` (curated live-grounded set below)
 
 ---
 
@@ -69,11 +69,11 @@ http_status: 200
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.Header-module__top__mJsjm> — `www-pragenhatlen-com`)**:
    - Landmark `<header class="Header-module__top__mJsjm">` (`1440x76px`) hosting `Prägen Hätlen · Swiss watchmaking fo` navigation (`[02] A b o u t · [04] F A Q`), DOM attributes (`data-modal-id="cart"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`, `data-lenis-prevent="true"`), and stylesheet rule `.App-module__root__JTuhI { background-color:var(--color-bg) }`.
-2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `The scarcest asset, on your wrist`)**:
-   - Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `The scarcest asset, on your wrist` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
-3. **Primary Showcase & Content Grid (<section.App-module__root__JTuhI> — `Precision in every layer`)**:
-   - Landmark `<section class="App-module__root__JTuhI">` rendering section `Precision in every layer` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
-4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__root__m8vUV> — `Plate Customization`)**:
-   - Landmark `<section class="RotateScreen-module__root__m8vUV">` framing `Plate Customization` and `Screw-Down Crown` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
+2. **Hero Stage & Focal Lead (<section.HeroVideo-module__root__FiOC1> — `THE SCARCEST ASSET, ON YOUR WRIST`)**:
+   - Landmark `<section class="HeroVideo-module__root__FiOC1">` presenting display lead `THE SCARCEST ASSET, ON YOUR WRIST` and copy excerpt *"Limited Edition. Swiss-made. Crypto Native"* over `#ecebea` canvas and `#0c1114` ink.
+3. **Primary Showcase & Content Grid (<section.RotateScreen-module__root__m8vUV> — `The scarcest asset, on your wrist`)**:
+   - Landmark `<section class="RotateScreen-module__root__m8vUV">` rendering section `The scarcest asset, on your wrist` with copy *"Prägen Hätlen introduces a new relationship between craftsmanship"*, asset references (`watch-background-drawing-D_cIL0zr...`, `cart-DdlU5Vpi.png`, `engrave_blue-Bx6rooYN.jpg`, `www.pragenhatlen.com`), and grid rule `.App-module__link__jsQ7Z { color:var(--color-black) }`.
+4. **Interactive Detail & Feature Matrix (<section.RotateScreen-module__hidden__pMK7C> — `Precision in every layer`)**:
+   - Landmark `<section class="RotateScreen-module__hidden__pMK7C">` framing `Precision in every layer` and `Plate Customization` (*"By scanning the watch crystal with a smartphone, collectors are c"*) with `#ffffff` surface cards, `#0000ff` accents, and `.App-module__link__jsQ7Z:hover { color:var(--color-blue-cher-ami) }`.
 5. **Colophon & Global Directory Footer (<footer.Footer-module__root__oib9b> — `https://www.pragenhatlen.com/`)**:
    - Landmark `<footer class="Footer-module__root__oib9b">` anchoring `Prägen Hätlen · Swiss watchmakin` footer links (`[02] A b o u t · [04] F A Q`), copy *"Through this interaction, they can access the associated Pro"*, and `#ffffff` structural dividers.

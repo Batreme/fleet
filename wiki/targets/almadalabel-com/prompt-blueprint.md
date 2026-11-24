@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: almadalabel-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "almadalabel-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **ALMADA LABEL - A modern take on a seasonless wardrobe** (https://almadalabel.com/) — Seasonless modern wardrobe staples designed with Scandinavian minimalism, resonating beyond trends. Responsibly crafted from high-quality...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **ALMADA LABEL - A modern take on a seasonless wardrobe** (`https://almadalabel.com/`). Seasonless modern wardrobe staples designed with Scandinavian minimalism, resonating beyond trends. Responsibly crafted from high-quality...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Paragraph Primary Font` for display copy (`ALMADA`) with `Paragraph Primary Font` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Paragraph Primary Font` across display (`ALMADA`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Swiper Touch Carousel Engine, Barba.js Page Transition Router.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=3108px` / doc `4008px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `32px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `50%`, `4px`, `5px`, `8px`.
@@ -45,7 +50,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ### Responsive Breakpoint Architecture
 - **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
 - **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media screen and (min-width:1025px)`, `@media (min-width:1025px)`, `@media screen and (max-width:1024px)`, `@media (prefers-reduced-motion:reduce)`.
+- **Extracted CSS Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (min-width:1440px)and (max-width:1440px)`, `@media screen and (min-width:1441px)`, `@media (min-width:1025px)`.
 
 ---
 
@@ -58,11 +63,12 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 | **Primary Typography Ink** | `#000000` | live computed `h1` `color` (`computed_styles.json`) |
 | **Elevated Surface / Card Substrate** | `#f3f2f2` | `var(--background_color_2)` in `:root` |
 | **Interactive Accent / Highlight** | `#0000ee` | live computed `a` `color` (`computed_styles.json`) |
-| **Secondary / Muted Copy** | `#88847c` | `var(--secondary_gray)` in `:root` |
+| **Secondary / Muted Copy** | `#808080` | live computed `hr` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#a6a6a5` | `var(--button-border)` in `:root` |
 | **Variable Token (`--primary_text`)** | `#17140f` | `var(--primary_text)` in `:root` |
 | **Variable Token (`--secondary_accent`)** | `#38302e` | `var(--secondary_accent)` in `:root` |
 | **Variable Token (`--primary_gray`)** | `#55534e` | `var(--primary_gray)` in `:root` |
+| **Variable Token (`--secondary_gray`)** | `#88847c` | `var(--secondary_gray)` in `:root` |
 | **Variable Token (`--loader_color`)** | `#1e242a` | `var(--loader_color)` in `:root` |
 
 ### Sanitized Root CSS Variables (`ui-ux.md` Ground Truth)
@@ -108,11 +114,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(0.25,0.1,0.25,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.product-card__media`**: `transition: opacity .15s ease-out` extracted from `almadalabel-com` stylesheet.
-- **Selector `.product-card__image`**: `transition: opacity .35s ease` extracted from `almadalabel-com` stylesheet.
-- **Selector `duct-card[data-slider] .product-c...`**: `transition: transform .35s ease` extracted from `almadalabel-com` stylesheet.
+- **Selector `.search[aria-hidden=true]`**: `transition: all .5s ease-in` extracted from `almadalabel-com` stylesheet.
+- **Selector `.Image--FadeIn`**: `transition: filter .3s .1s,-webkit-filter .3s .1s` extracted from `almadalabel-com` stylesheet.
+- **Selector `.localizationOverlay`**: `transition: opacity .3s ease-in-out` extracted from `almadalabel-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4008px`, deepest scrollY reached `3108px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Interactive Control Probe (`carousel_next`)**: Tested `Previous slide` (diff `0.0`).
+- **Route Transition Architecture**: First internal navigation (`/blogs/journal`) measured as `direct` in `4206ms`.
 
 ---
 
@@ -166,11 +177,22 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 2. **Hero Stage & Focal Lead (<article.favorites-drawer__item> — `ALMADA`)**:
    - Landmark `<article class="favorites-drawer__item">` presenting display lead `ALMADA` and copy excerpt *"Free shipping to Germany on orders over 300€"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<article.favorites-drawer__item:nth(2)> — `Silk, lustrous satin and delicate `)**:
-   - Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`script.js`, `weglot_script_tag.js`, `storefrontattributes`, `trsdk`), and grid rule `.form-checkbox__label-text p { display:inline }`.
+   - Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`222020436221013`, `fbevents.js`, `script.js`, `weglot_script_tag.js`), and grid rule `.form-checkbox__label-text p { display:inline }`.
 4. **Interactive Detail & Feature Matrix (<article.favorites-drawer__item:nth(3)> — `Search`)**:
    - Landmark `<article class="favorites-drawer__item">` framing `Search` and `Search Wishlist Cart 0` (*"Search Wishlist Cart 0"*) with `#f3f2f2` surface cards, `#0000ee` accents, and `.form-checkbox { width:100% }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://almadalabel.com/`)**:
    - Landmark `<footer class="footer colorGroup--primary">` anchoring `ALMADA LABEL - A modern take on ` footer links (`Journal · New Arrivals · Coming Soon · Gift Edit New · Occasion Edit New`), copy *"Autumn / Winter 26"*, and `#a6a6a5` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Hero` · sticky/fixed elements: `1`
+- **Step 02** (`y=850px`, `27%`): Active landmark `Section @ 27%` · sticky/fixed elements: `0`
+- **Step 03** (`y=1700px`, `55%`): Active landmark `Silk, lustrous satin and delicate sheer layers` · sticky/fixed elements: `0`
+- **Step 04** (`y=2550px`, `82%`): Active landmark `Section @ 82%` · sticky/fixed elements: `0`
+- **Step 05** (`y=3108px`, `100%`): Active landmark `Join our mailing list` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Detail Route (`/blogs/journal`)**: `https://almadalabel.com/blogs/journal` — H1: `Journal`, scrollHeight `25474px`, transition `direct` (`4206ms`)
+- **Detail Route (`/collections/new-arrivals`)**: `https://almadalabel.com/collections/new-arrivals` — H1: `New arrivals`, scrollHeight `11121px`, transition `direct` (`9516ms`)
+- **Detail Route (`/collections/coming-soon`)**: `https://almadalabel.com/collections/coming-soon` — H1: `Coming soon`, scrollHeight `2164px`, transition `direct` (`8131ms`)
 
 ---
 
@@ -187,7 +209,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `browser-default` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Paragraph Primary Font` for display copy (`ALMADA`) with `Paragraph Primary Font` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Paragraph Primary Font` across display (`ALMADA`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `32px`) with `cubic-bezier(0.25,0.1,0.25,1)` easing and Swiper Touch Carousel Engine, Barba.js Page Transition Router.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,21 +241,22 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Primary Typography Ink**: `#000000` — grounded in live computed `h1` `color` (`computed_styles.json`)
 - **Elevated Surface / Card Substrate**: `#f3f2f2` — grounded in `var(--background_color_2)` in `:root`
 - **Interactive Accent / Highlight**: `#0000ee` — grounded in live computed `a` `color` (`computed_styles.json`)
-- **Secondary / Muted Copy**: `#88847c` — grounded in `var(--secondary_gray)` in `:root`
+- **Secondary / Muted Copy**: `#808080` — grounded in live computed `hr` `color` (`computed_styles.json`)
 - **Structural Hairline Border**: `#a6a6a5` — grounded in `var(--button-border)` in `:root`
 - **Variable Token (`--primary_text`)**: `#17140f` — grounded in `var(--primary_text)` in `:root`
 - **Variable Token (`--secondary_accent`)**: `#38302e` — grounded in `var(--secondary_accent)` in `:root`
 - **Variable Token (`--primary_gray`)**: `#55534e` — grounded in `var(--primary_gray)` in `:root`
+- **Variable Token (`--secondary_gray`)**: `#88847c` — grounded in `var(--secondary_gray)` in `:root`
 - **Variable Token (`--loader_color`)**: `#1e242a` — grounded in `var(--loader_color)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `32px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
 - **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `32px` horizontal padding
-- **Media Queries**: `@media screen and (min-width:1025px)`, `@media (min-width:1025px)`, `@media screen and (max-width:1024px)`, `@media (prefers-reduced-motion:reduce)`
+- **Media Queries**: `@media screen and (min-width:1025px)`, `@media screen and (min-width:1440px)and (max-width:1440px)`, `@media screen and (min-width:1441px)`, `@media (min-width:1025px)`
 - **Corner Radii**: `50%`, `4px`, `5px`, `8px`
 
 ### 5. Typography & Editorial Scale Contract
@@ -249,16 +272,16 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 Scaffold `almadalabel-com` (`ALMADA LABEL - A modern take on a seasonless wardrobe`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.Drawer__header> — `almadalabel-com`)**:
    - DOM & Selectors: Landmark `<header class="Drawer__header">` (`1440px`) hosting `ALMADA LABEL - A modern take on a se` navigation (`Journal · New Arrivals · Coming Soon · Gift Edit New · Occasion Edit New`), DOM attributes (`data-source-attribution="shopify.exit_intersti..."`, `data-shop-id="25465225306"`, `data-venmo-supported="false"`, `data-environment="production"`), and stylesheet rule `.form-checkbox__label { display:flex;flex-direction:row;align-items:center;gap:.5rem;width:100%;... }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Drawer__header> — `almadalabel-com`)` (`almadalabel-com`) adapts across `@media screen and (min-width:1025px)`, `@media (min-width:1025px)`, `@media screen and (max-width:1024px)`, `@media (prefers-reduced-motion:reduce)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Journal · New Arrivals · Coming Soon · Gift Edit New · Occasion Edit New`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.Drawer__header> — `almadalabel-com`)` (`almadalabel-com`) adapts across `@media screen and (min-width:1025px)`, `@media screen and (min-width:1440px)and (max-width:1440px)`, `@media screen and (min-width:1441px)`, `@media (min-width:1025px)` with `cubic-bezier(0.25,0.1,0.25,1)` transitions and links `Journal · New Arrivals · Coming Soon · Gift Edit New · Occasion Edit New`.
 2. **Hero Stage & Focal Lead (<article.favorites-drawer__item> — `ALMADA`)**:
    - DOM & Selectors: Landmark `<article class="favorites-drawer__item">` presenting display lead `ALMADA` and copy excerpt *"Free shipping to Germany on orders over 300€"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `ALMADA`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `ALMADA`.
 3. **Primary Showcase & Content Grid (<article.favorites-drawer__item:nth(2)> — `Silk, lustrous satin and delicate `)**:
-   - DOM & Selectors: Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`script.js`, `weglot_script_tag.js`, `storefrontattributes`, `trsdk`), and grid rule `.form-checkbox__label-text p { display:inline }`.
+   - DOM & Selectors: Landmark `<article class="favorites-drawer__item">` rendering section `Silk, lustrous satin and delicate sheer layers` with copy *"Shop occasion edit"*, asset references (`222020436221013`, `fbevents.js`, `script.js`, `weglot_script_tag.js`), and grid rule `.form-checkbox__label-text p { display:inline }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.favorites-drawer__item:nth(2)> — `Silk, lustrous satin and delicate `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `32px` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<article.favorites-drawer__item:nth(3)> — `Search`)**:
    - DOM & Selectors: Landmark `<article class="favorites-drawer__item">` framing `Search` and `Search Wishlist Cart 0` (*"Search Wishlist Cart 0"*) with `#f3f2f2` surface cards, `#0000ee` accents, and `.form-checkbox { width:100% }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.favorites-drawer__item:nth(3)> — `Search`)` uses `50%`, `4px`, `5px`, `8px` radii, `#0000ee` highlights, and assets (script.js, weglot_script_tag.js, storefrontattributes).
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<article.favorites-drawer__item:nth(3)> — `Search`)` uses `50%`, `4px`, `5px`, `8px` radii, `#0000ee` highlights, and assets (222020436221013, fbevents.js, script.js).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://almadalabel.com/`)**:
    - DOM & Selectors: Landmark `<footer class="footer colorGroup--primary">` anchoring `ALMADA LABEL - A modern take on ` footer links (`Journal · New Arrivals · Coming Soon · Gift Edit New · Occasion Edit New`), copy *"Autumn / Winter 26"*, and `#a6a6a5` structural dividers.
    - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://almadalabel.com/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `32px` lateral canvas padding with `16px` grid gap and attributes (data-source-attribution="shopify.exit_intersti...", data-shop-id="25465225306", data-venmo-supported="false").
@@ -278,13 +301,44 @@ Scaffold `almadalabel-com` (`ALMADA LABEL - A modern take on a seasonless wardro
 - `label .svg-checkbox__square-solid { display:flex;align-items:center;justify-content:center }`
 - `.icon-text-block { display:flex;align-items:center }`
 - **Per-Selector Transition Rules**:
-- **Selector `.product-card__media`**: `transition: opacity .15s ease-out` extracted from `almadalabel-com` stylesheet.
-- **Selector `.product-card__image`**: `transition: opacity .35s ease` extracted from `almadalabel-com` stylesheet.
-- **Selector `duct-card[data-slider] .product-c...`**: `transition: transform .35s ease` extracted from `almadalabel-com` stylesheet.
+- **Selector `.search[aria-hidden=true]`**: `transition: all .5s ease-in` extracted from `almadalabel-com` stylesheet.
+- **Selector `.Image--FadeIn`**: `transition: filter .3s .1s,-webkit-filter .3s .1s` extracted from `almadalabel-com` stylesheet.
+- **Selector `.localizationOverlay`**: `transition: opacity .3s ease-in-out` extracted from `almadalabel-com` stylesheet.
 - **Standard CSS Easing (`cubic-bezier(0.25,0.1,0.25,1)`)**: Default timing curve (no custom `cubic-bezier()` declared in captured CSS).
 - **Runtime Interaction Engine**: Integrates Swiper Touch Carousel Engine, Barba.js Page Transition Router, Framer Motion Layout Physics with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4008px` across 5 distinct viewport chapters.
+- **Vertical Chapter Sequence**: Hero (0%) -> Section @ 27% (27%) -> Silk, lustrous satin and de... (55%) -> Section @ 82% (82%) -> Join our mailing list (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/blogs/journal` (detail, direct), `/collections/new-arrivals` (detail, direct), `/collections/coming-soon` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `almadalabel-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Hero | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `27%` | Section @ 27% | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `55%` | Silk, lustrous satin and delicate sheer layers | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `82%` | Section @ 82% | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3108px` | `100%` | Join our mailing list | `0` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Hero | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1134px` | `50%` | Silk, lustrous satin and delicate sheer l... | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `2269px` | `100%` | Join our mailing list | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `detail` | `https://almadalabel.com/blogs/journal` | Journal | `25474px` | `direct` (`4206ms`) | [subpage-01-blogs-journal.webp](assets/subpage-01-blogs-journal.webp) |
+| `2` | `detail` | `https://almadalabel.com/collections/new-arrivals` | New arrivals | `11121px` | `direct` (`9516ms`) | [subpage-02-collections-new-arrivals.webp](assets/subpage-02-collections-new-arrivals.webp) |
+| `3` | `detail` | `https://almadalabel.com/collections/coming-soon` | Coming soon | `2164px` | `direct` (`8131ms`) | [subpage-03-collections-coming-soon.webp](assets/subpage-03-collections-coming-soon.webp) |
+

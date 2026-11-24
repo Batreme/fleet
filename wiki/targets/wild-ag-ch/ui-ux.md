@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: wild-ag-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `wild-ag-ch` (**Wild AG – Entwicklung von Liegenschaften & Immobilien**)
 - **Production URL**: [https://wild-ag.ch/](https://wild-ag.ch/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#faf9f4` canvas, `#0000ee` ink, `#0082f3` accent)
 - **Summary**: Die Wild AG analysiert und entwickelt Grundstücke mit Potenzial. Wir bewerten Areale strategisch und mit dem Ziel, Eigentümer eine nachha...
 - **Total Clean CSS Variables Extracted**: `40` (curated live-grounded set below)

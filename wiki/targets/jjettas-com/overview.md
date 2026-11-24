@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: jjettas-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://jjettas.com"
 final_url: "https://jjettas.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://jjettas.com](https://jjettas.com)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Justin Jefferson
-- **Identified Frameworks**: Tailwind CSS, HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: jjettas-com
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `32`
 - **Recovered Stylesheets**: `6`
 

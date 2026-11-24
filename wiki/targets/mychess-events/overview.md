@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: mychess-events"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://mychess.events/"
 final_url: "https://mychess.events/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Find Chess Tournaments Worldwide · MyChess.Events
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `87`
+- **Recovered Scripts**: `453`
 - **Recovered Stylesheets**: `44`
 
 ---

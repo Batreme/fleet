@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: nickho-motorsports-nl"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "nickho-motorsports-nl"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 8
+subpages_crawled: 0
 http_status: 200
 archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fed60a`)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 
 > **Nick Ho - Dutch Racing Driver · Porsche Carrera Cup** (https://nickho-motorsports.nl/) — 21-year-old racing driver from Rotterdam competing in Porsche Carrera Cup Deutschland. 17 career podiums, 14 circuits raced. Follow my mo...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x6624)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Nick Ho - Dutch Racing Driver · Porsche Carrera Cup** (`https://nickho-motorsports.nl/`). 21-year-old racing driver from Rotterdam competing in Porsche Carrera Cup Deutschland. 17 career podiums, 14 circuits raced. Follow my mo...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#fed60a`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#fed60a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`NICK HO`) with `.875rem` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`NICK HO`) with `.875rem`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.7,0,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×6624px` (`assets/desktop-journey.webp`, `8` keyframes up to `y=10767px` / doc `11667px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
 - **Canvas Lateral Padding & Spacing**: `9px` lateral canvas padding with `16px` grid gap.
 - **Border Radius Scale**: `3px`, `100%`, `50%`, `62.5rem`.
@@ -109,6 +114,9 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `nickho-motorsports-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,0,.3,1)`)**: Governs interactive state transitions across `<nav.bold-nav-full>` and `<section.section_about>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `11667px`, deepest scrollY reached `10767px` across `8` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `GSAP/ScrollTrigger`, `WebGL/Canvas`.
 
 ---
 
@@ -167,6 +175,15 @@ archetype: "Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#f
    - Landmark `<section class="section_agenda">` framing `S o u n d o n S o u n d o n` and `I n s t a g r a m I n s t a g r a m` (*"I n s t a g r a m I n s t a g r a m"*) with `#ffff00` surface cards, `#fed60a` accents, and `summary { display: block; }`.
 5. **Colophon & Global Directory Footer (<footer.w-embed> — `https://nickho-motorsports.nl/`)**:
    - Landmark `<footer class="w-embed">` anchoring `Nick Ho - Dutch Racing Driver · ` footer links (`About · History · Gallery · Calendar · Contact`), copy *"L i n k e d I n L i n k e d I n"*, and `#e2e2e2` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=140px`, `0%`): Active landmark `NICK HO` · sticky/fixed elements: `5`
+- **Step 02** (`y=850px`, `8%`): Active landmark `#hero` · sticky/fixed elements: `5`
+- **Step 03** (`y=2550px`, `24%`): Active landmark `#history` · sticky/fixed elements: `5`
+- **Step 04** (`y=4250px`, `39%`): Active landmark `THE FOUNDATION` · sticky/fixed elements: `5`
+- **Step 05** (`y=6800px`, `63%`): Active landmark `RACE 1 - WEC IMOLA` · sticky/fixed elements: `5`
+- **Step 06** (`y=8500px`, `79%`): Active landmark `Section @ 79%` · sticky/fixed elements: `5`
+- **Step 07** (`y=10200px`, `95%`): Active landmark `CONTACT` · sticky/fixed elements: `5`
+- **Step 08** (`y=10767px`, `100%`): Active landmark `#contact` · sticky/fixed elements: `5`
 
 ---
 
@@ -183,7 +200,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#fed60a`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#fed60a` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`NICK HO`) with `.875rem` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Pairs `Anton` for display copy (`NICK HO`) with `.875rem`.
   - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `9px`) with `cubic-bezier(.7,0,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -219,8 +236,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#e2e2e2` — grounded in `blockquote { border-left: #e2e2e2 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×6624px` (multi-frame vertical journey filmstrip (6624px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
 - **Padding & Gutters**: `9px` lateral canvas padding with `16px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
@@ -244,7 +261,7 @@ Scaffold `nickho-motorsports-nl` (`Nick Ho - Dutch Racing Driver · Porsche Carr
    - Responsive Contract: Header `Brand Header & Navigation Bar (<nav.bold-nav-full> — `nickho-motorsports-nl`)` (`nickho-motorsports-nl`) adapts across `@media screen and (max-width: 991px)`, `@media screen and (max-width: 767px)`, `@media screen and (max-width: 479px)`, `@media (min-width: 768px)` with `cubic-bezier(.7,0,.3,1)`, `cubic-bezier(.9,0,.1,1)`, `cubic-bezier(0.4,0,0.2,1)` transitions and links `About · History · Gallery · Calendar · Contact`.
 2. **Hero Stage & Focal Lead (<section.section_hero> — `NICK HO`)**:
    - DOM & Selectors: Landmark `<section class="section_hero">` presenting display lead `NICK HO` and copy excerpt *"S e e m o r e S e e m o r e"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `NICK HO`.
+   - Responsive Contract: Hero stage (`1280×6624px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `NICK HO`.
 3. **Primary Showcase & Content Grid (<section.section_about> — `Nick Ho`)**:
    - DOM & Selectors: Landmark `<section class="section_about">` rendering section `Nick Ho` with copy *"S o u n d o n S o u n d o n"*, asset references (`cdn.prod.website-files.com`, `nick-ho.webflow.shared.f23fd3a71.css`, `6a423f0c4a28dcd7702058a2_nick-ho-...`, `6a423f14a90180269b9bab31_nick-ho-...`), and grid rule `body { margin: 0; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.section_about> — `Nick Ho`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `9px` horizontal padding on mobile.
@@ -275,8 +292,34 @@ Scaffold `nickho-motorsports-nl` (`Nick Ho - Dutch Racing Driver · Porsche Carr
 - **Selector `.w-lightbox-control`**: `transition: all .3s` extracted from `nickho-motorsports-nl` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.7,0,.3,1)`)**: Governs interactive state transitions across `<nav.bold-nav-full>` and `<section.section_about>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), GSAP Timeline & ScrollTrigger, Three.js / WebGL Canvas Pipeline, Swiper Touch Carousel Engine with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `11667px` across 8 distinct viewport chapters using Lenis, GSAP/ScrollTrigger, WebGL/Canvas.
+- **Vertical Chapter Sequence**: NICK HO (0%) -> #hero (8%) -> #history (24%) -> THE FOUNDATION (39%) -> RACE 1 - WEC IMOLA (63%) -> Section @ 79% (79%) -> CONTACT (95%) -> #contact (100%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `nickho-motorsports-nl`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `140px` | `0%` | NICK HO | `5` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `8%` | #hero | `5` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `2550px` | `24%` | #history | `5` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `4250px` | `39%` | THE FOUNDATION | `5` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `6800px` | `63%` | RACE 1 - WEC IMOLA | `5` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `8500px` | `79%` | Section @ 79% | `5` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+| `#07` | `10200px` | `95%` | CONTACT | `5` | [desktop-step-07.webp](assets/desktop-step-07.webp) |
+| `#08` | `10767px` | `100%` | #contact | `5` | [desktop-step-08.webp](assets/desktop-step-08.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | NICK HO | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5508px` | `50%` | GOING INTERNATIONAL | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `11270px` | `100%` | #contact | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+

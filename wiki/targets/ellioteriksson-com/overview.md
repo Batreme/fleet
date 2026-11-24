@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: ellioteriksson-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ellioteriksson.com/"
 final_url: "https://ellioteriksson.com/"
 status: analyzed
@@ -29,8 +29,8 @@ auth_required: false
 - **Target URL**: [https://ellioteriksson.com/](https://ellioteriksson.com/)
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Elliot Eriksson — UI/UX, web & brand design, Stockholm & Åland
-- **Identified Frameworks**: Webflow, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `31`
+- **Identified Frameworks**: Webflow
+- **Recovered Scripts**: `85`
 - **Recovered Stylesheets**: `0`
 
 ---

@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: m3-pg-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "m3-pg-de"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 6
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d6efd` accent)"
 ---
@@ -16,36 +21,36 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 > **M3 Planungsgruppe** (https://m3-pg.de) — Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4968)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **M3 Planungsgruppe** (`https://m3-pg.de`). Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#0d6efd` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`M3 Planungsgruppe`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`M3 Planungsgruppe`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 1rem`, padding `2rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4968px` (`assets/desktop-journey.webp`, `6` keyframes up to `y=3831px` / doc `4731px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1420px` (non-`@media` desktop container stylesheet rule).
-- **Canvas Lateral Padding & Spacing**: `16px` lateral canvas padding with `10px` grid gap.
+- **Canvas Lateral Padding & Spacing**: `2rem` lateral canvas padding with `1rem` grid gap.
 - **Border Radius Scale**: `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 1rem`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`.
 
 ---
 
@@ -102,9 +107,9 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Technical / Metadata Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`).
 
 ### Typographic Scale & Rules (Live Computed & Stylesheet Grounded)
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `h1` (`font-size: clamp(40px, 11.1cqw, 198px)`, `line-height: 1em`, `letter-spacing: -0.03em`, `font-weight: 700`).
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `.h2` (`font-size: 64px`, `line-height: 1.125em`, `letter-spacing: -0.03em`, `font-weight: 600`).
-- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`).
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`).
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`).
+- **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 18px`, `line-height: 26px`).
 - **Metadata & Navigation Labels**: live computed `nav/a` (`font-size: 20px`, `line-height: 24px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `,small` (`font-size: .875em`).
 
 ---
@@ -115,11 +120,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 - **Extracted Timing Functions**: `cubic-bezier(.4,0,.2,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `header`**: `transition: background-color 0.3s ease` extracted from `m3-pg-de` stylesheet.
-- **Selector `.readmore::after`**: `transition: width 0.6s ease` extracted from `m3-pg-de` stylesheet.
-- **Selector `.bottom-row a`**: `transition: all .3s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.form-control`**: `transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out` extracted from `m3-pg-de` stylesheet.
+- **Selector `media (prefers-reduced-motion:red...`**: `transition: none` extracted from `m3-pg-de` stylesheet.
+- **Selector `.form-control::-webkit-file-uploa...`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `m3-pg-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.header-desk>` and `<section.page-template>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `4731px`, deepest scrollY reached `3831px` across `6` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `M3 Planungsgruppe`)**: Computed transition `0s` / `ease` (no static color/transform shift captured at rest).
+- **Route Transition Architecture**: First internal navigation (`/blog/`) measured as `MPA` in `1882ms`.
 
 ---
 
@@ -150,7 +160,7 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 ### Visual Layout Schematic — Mobile Reflow (`390px`)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 10px)       │
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1rem)       │
 │ ====================================================================== │
 │ [ HEADER BAR (<header.header-desk>    ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
@@ -169,15 +179,27 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)**:
-   - Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
+   - Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.bi-123::before { content:"\f67f" }`.
 2. **Hero Stage & Focal Lead (<section.wp-singular> — `M3 Planungsgruppe`)**:
    - Landmark `<section class="wp-singular">` presenting display lead `M3 Planungsgruppe` and copy excerpt *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"* over `#ffffff` canvas and `#000000` ink.
 3. **Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
-   - Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
+   - Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.bi-alarm-fill::before { content:"\f101" }`.
 4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)**:
-   - Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
+   - Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `.bi-alarm::before { content:"\f102" }`.
 5. **Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)**:
    - Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Auf dieser Grundlage entwickeln wir eine klare Projektstrate"*, and `#9ec5fe` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `#intro` · sticky/fixed elements: `2`
+- **Step 02** (`y=850px`, `22%`): Active landmark `Planung, die Bestand hat.` · sticky/fixed elements: `3`
+- **Step 03** (`y=1700px`, `44%`): Active landmark `#logo-middle` · sticky/fixed elements: `3`
+- **Step 04** (`y=2550px`, `67%`): Active landmark `Labwerk` · sticky/fixed elements: `3`
+- **Step 05** (`y=3400px`, `89%`): Active landmark `WIR DENKEN BAUPROJEKTE ALS SYSTEM – GESTALTET, GE...` · sticky/fixed elements: `3`
+- **Step 06** (`y=3831px`, `100%`): Active landmark `M3 Planungsgruppe` · sticky/fixed elements: `3`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/blog/`)**: `https://m3-pg.de/blog/` — H1: `Blog`, scrollHeight `2924px`, transition `MPA` (`1882ms`)
+- **Detail Route (`/project/labwerk/`)**: `https://m3-pg.de/project/labwerk/` — H1: `NEUBAU EINES BÜRO- UND LABORGEBÄUDES MIT LAGERHALLE`, scrollHeight `6154px`, transition `direct` (`1165ms`)
+- **Detail Route (`/project/hanghaus/`)**: `https://m3-pg.de/project/hanghaus/` — H1: `HANGHAUS`, scrollHeight `4774px`, transition `direct` (`1273ms`)
 
 ---
 
@@ -194,8 +216,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0d6efd`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#ffffff` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0d6efd` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Inter` for display copy (`M3 Planungsgruppe`) with `Inter` and not declared in live computed styles (uses primary stack / `ui-monospace`).
-  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 10px`, padding `16px`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `Inter` across display (`M3 Planungsgruppe`) and body copy.
+  - **Calibrated Spatial Grid & Motion**: Combines `1420px` container bounds (`gap: 1rem`, padding `2rem`) with `cubic-bezier(.4,0,.2,1)` easing and Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `m3-pg-de` in your global stylesheet:
@@ -241,41 +263,41 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--bs-gray-200`)**: `#e9ecef` — grounded in `var(--bs-gray-200)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4968px` (multi-frame vertical journey filmstrip (4968px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1420px` (non-`@media` desktop container stylesheet rule)
-- **Padding & Gutters**: `16px` lateral canvas padding with `10px` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `16px` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)`
+- **Padding & Gutters**: `2rem` lateral canvas padding with `1rem` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 1rem`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding
+- **Media Queries**: `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)`
 - **Corner Radii**: `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Inter`
 - **Body Font Stack**: `Inter`
 - **Monospace / Technical Font Stack**: not declared in live computed styles (uses primary stack / `ui-monospace`)
-- **H1 Display Rule**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `h1` (`font-size: clamp(40px, 11.1cqw, 198px)`, `line-height: 1em`, `letter-spacing: -0.03em`, `font-weight: 700`)
-- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `.h2` (`font-size: 64px`, `line-height: 1.125em`, `letter-spacing: -0.03em`, `font-weight: 600`)
-- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 16px`, `line-height: 1.5em`, `letter-spacing: -0.01em`, `font-weight: 400`)
+- **H1 Display Rule**: live computed `h1` (`font-size: 155.4px`, `line-height: 155.4px`, `font-weight: 700`, `letter-spacing: -4.662px`); rule `,h1` (`font-size: calc(1.375rem + 1.5vw)`)
+- **H2 Section Rule**: live computed `h2` (`font-size: 64px`, `line-height: 74px`, `font-weight: 600`, `letter-spacing: -1.92px`); rule `,h2` (`font-size: calc(1.325rem + .9vw)`)
+- **Body Copy Rule**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.16px`); CSS variables `--bs-body-font-family: var(--bs-font-sans-serif)`, `--bs-body-font-size: 1rem`, `--bs-body-font-weight: 400`; rule `body` (`font-size: 18px`, `line-height: 26px`)
 - **Metadata & Index Rule**: live computed `nav/a` (`font-size: 20px`, `line-height: 24px`, `font-weight: 600`, `letter-spacing: -0.4px`); rule `,small` (`font-size: .875em`)
 
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `m3-pg-de` (`M3 Planungsgruppe`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)**:
-   - DOM & Selectors: Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.wpcf7 .hidden-fields-container { display: none; }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)` (`m3-pg-de`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (min-width: 1300px)`, `@media (min-width: 1430px)`, `@media screen and (min-width: 1024px)` with `cubic-bezier(.4,0,.2,1)` transitions and links `M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`.
+   - DOM & Selectors: Landmark `<header class="header-desk">` (`1440x60px`) hosting `M3 Planungsgruppe` navigation (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), DOM attributes (`data-wp-strategy="defer"`, `data-more="Mehr erfahren"`, `data-less="Weniger"`, `data-more="Mehr erfahren"`), and stylesheet rule `.bi-123::before { content:"\f67f" }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header-desk> — `m3-pg-de`)` (`m3-pg-de`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (prefers-reduced-motion:no-preference)`, `@media (min-width:1200px)`, `@media (min-width:576px)` with `cubic-bezier(.4,0,.2,1)` transitions and links `M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`.
 2. **Hero Stage & Focal Lead (<section.wp-singular> — `M3 Planungsgruppe`)**:
    - DOM & Selectors: Landmark `<section class="wp-singular">` presenting display lead `M3 Planungsgruppe` and copy excerpt *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirts"* over `#ffffff` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#ffffff` background with `#000000` headline `M3 Planungsgruppe`.
+   - Responsive Contract: Hero stage (`1280×4968px` desktop / `390×2616px` mobile) sets `#ffffff` background with `#000000` headline `M3 Planungsgruppe`.
 3. **Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)**:
-   - DOM & Selectors: Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 10px`) on desktop and Single-column vertical stack at `390px` viewport width with `16px` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="page-template">` rendering section `Nachhaltigkeit. Ästhetik. Wirtschaftlichkeit.` with copy *"Unser Fokus liegt auf präziser Planung, bewusst eingesetzten Mate"*, asset references (`bootstrap.min.css`, `slick.min.css`, `main.css`, `responsive.css`), and grid rule `.bi-alarm-fill::before { content:"\f101" }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.page-template> — `Nachhaltigkeit. Ästhetik. Wirtscha`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1420px`, `gap: 1rem`) on desktop and Single-column vertical stack at `390px` viewport width with `2rem` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)**:
-   - DOM & Selectors: Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `form.submitting .wpcf7-response-o... { display: none; }`.
+   - DOM & Selectors: Landmark `<section class="page-template-templates">` framing `Planung, die Bestand hat.` and `B18 – Fachwerk trifft Glas` (*"Jedes Projekt beginnt mit einem offenen und zielgerichteten Dialo"*) with `#f8f9fa` surface cards, `#0d6efd` accents, and `.bi-alarm::before { content:"\f102" }`.
    - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.page-template-templates> — `Planung, die Bestand hat.`)` uses `100%`, `0.375rem`, `.25rem`, `var(--bs-border-radius)` radii, `#0d6efd` highlights, and assets (bootstrap.min.css, slick.min.css, main.css).
 5. **Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)**:
    - DOM & Selectors: Landmark `<footer class="page-template-home">` anchoring `M3 Planungsgruppe` footer links (`M3 Planungsgruppe · Leistungen · Projekte · Über uns · Blog`), copy *"Auf dieser Grundlage entwickeln wir eine klare Projektstrate"*, and `#9ec5fe` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)` aligns to `1420px` (non-`@media` desktop container stylesheet rule) with `16px` lateral canvas padding with `10px` grid gap and attributes (data-wp-strategy="defer", data-more="Mehr erfahren", data-less="Weniger").
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.page-template-home> — `https://m3-pg.de`)` aligns to `1420px` (non-`@media` desktop container stylesheet rule) with `2rem` lateral canvas padding with `1rem` grid gap and attributes (data-wp-strategy="defer", data-more="Mehr erfahren", data-less="Weniger").
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"Gute Planung verbindet für uns Nachhaltigkeit, Ästhetik und Wirtschaftlichkeit. Wi..."*
@@ -286,19 +308,51 @@ Scaffold `m3-pg-de` (`M3 Planungsgruppe`) with these exact structural regions, e
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
 - **Primary Easing Functions**: `cubic-bezier(.4,0,.2,1)`
 - **Extracted Stylesheet Rules (`m3-pg-de`)**:
-- `.wpcf7 .hidden-fields-container { display: none; }`
-- `.wpcf7 form .wpcf7-response-output { margin: 2em 0.5em 1em; padding: 0.2em 1em; border: 2px solid 00a0d2; }`
-- `form.submitting .wpcf7-response-o... { display: none; }`
-- `.wpcf7 form.sent .wpcf7-response-... { border-color: 46b450; }`
-- `cf7 form.aborted .wpcf7-response-... { border-color: dc3232; }`
+- `.bi-123::before { content:"\f67f" }`
+- `.bi-alarm-fill::before { content:"\f101" }`
+- `.bi-alarm::before { content:"\f102" }`
+- `.bi-align-bottom::before { content:"\f103" }`
+- `.bi-align-center::before { content:"\f104" }`
 - **Per-Selector Transition Rules**:
-- **Selector `header`**: `transition: background-color 0.3s ease` extracted from `m3-pg-de` stylesheet.
-- **Selector `.readmore::after`**: `transition: width 0.6s ease` extracted from `m3-pg-de` stylesheet.
-- **Selector `.bottom-row a`**: `transition: all .3s ease` extracted from `m3-pg-de` stylesheet.
+- **Selector `.form-control`**: `transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out` extracted from `m3-pg-de` stylesheet.
+- **Selector `media (prefers-reduced-motion:red...`**: `transition: none` extracted from `m3-pg-de` stylesheet.
+- **Selector `.form-control::-webkit-file-uploa...`**: `transition: color .15s ease-in-out,background-color .15s ease-in-out,borde...` extracted from `m3-pg-de` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.4,0,.2,1)`)**: Governs interactive state transitions across `<header.header-desk>` and `<section.page-template>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `4731px` across 6 distinct viewport chapters.
+- **Vertical Chapter Sequence**: #intro (0%) -> Planung, die Bestand hat. (22%) -> #logo-middle (44%) -> Labwerk (67%) -> WIR DENKEN BAUPROJEKTE ALS... (89%) -> M3 Planungsgruppe (100%).
+- **Multi-Page Routes**: Scaffold internal routes `/blog/` (listing, MPA), `/project/labwerk/` (detail, direct), `/project/hanghaus/` (detail, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `m3-pg-de`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | #intro | `2` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `22%` | Planung, die Bestand hat. | `3` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `44%` | #logo-middle | `3` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `67%` | Labwerk | `3` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `89%` | WIR DENKEN BAUPROJEKTE ALS SYSTEM – GESTALTET... | `3` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+| `#06` | `3831px` | `100%` | M3 Planungsgruppe | `3` | [desktop-step-06.webp](assets/desktop-step-06.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | NACHHALTIGKEIT. ÄSTHETIK. WIRTSCHAFTLICHK... | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `1915px` | `50%` | Labwerk | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `3830px` | `100%` | M3 Planungsgruppe | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://m3-pg.de/blog/` | Blog | `2924px` | `MPA` (`1882ms`) | [subpage-01-blog.webp](assets/subpage-01-blog.webp) |
+| `2` | `detail` | `https://m3-pg.de/project/labwerk/` | NEUBAU EINES BÜRO- UND LABORGEBÄUDES... | `6154px` | `direct` (`1165ms`) | [subpage-02-project-labwerk.webp](assets/subpage-02-project-labwerk.webp) |
+| `3` | `detail` | `https://m3-pg.de/project/hanghaus/` | HANGHAUS | `4774px` | `direct` (`1273ms`) | [subpage-03-project-hanghaus.webp](assets/subpage-03-project-hanghaus.webp) |
+

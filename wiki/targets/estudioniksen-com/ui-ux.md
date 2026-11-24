@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: estudioniksen-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `estudioniksen-com` (**Estudio Niksen**)
 - **Production URL**: [https://estudioniksen.com/](https://estudioniksen.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#000000` ink, `#2e5fdc` accent)
 - **Summary**: We are an independent lifestyle brand presenting elevated garments and living-space goods through a mix of influences.
-- **Total Clean CSS Variables Extracted**: `130` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `633` (curated live-grounded set below)
 
 ---
 
@@ -24,8 +24,8 @@ http_status: 200
 - **Display Font Stack**: `PP Neue Montreal`
 - **Body Font Stack**: `PP Neue Montreal`
 - **Monospace / Technical Font Stack**: `SFMono-Regular`
-- **Hero Display (`H1`)**: live computed `h1` (`font-size: 42px`, `line-height: 42px`, `font-weight: 400`, `letter-spacing: -1.47px`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 24px`, `line-height: 24px`, `font-weight: 400`, `letter-spacing: -0.84px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: 120%`, `font-weight: bold`)
+- **Hero Display (`H1`)**: live computed `h1` (`font-size: 42px`, `line-height: 42px`, `font-weight: 400`, `letter-spacing: -1.47px`); CSS variables `--x-shell-disclosure-display: block`, `--x-shell-order-summary-display: none`, `--x-shell-content-display: grid`; rule `h1` (`font-size: var(--x-heading-level1-font-s...`, `line-height: var(--x-typography-li...`, `letter-spacing: var(--x-heading-level...`, `font-weight: var(--x-headi...`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 42px`, `line-height: 42px`, `font-weight: 400`, `letter-spacing: -1.47px`); CSS variables `--text-2xl: 1.5rem`, `--text-2xl--line-height: calc(2 / 1.5)`; rule `h2` (`font-size: var(--x-heading-level2-font-s...`, `line-height: var(--x-typography-li...`, `letter-spacing: var(--x-heading-level...`, `font-weight: var(--x-headi...`)
 - **Body Copy**: live computed `body` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-base: 1rem`, `--text-base--line-height: calc(1.5 / 1)`; rule `p` (`font-size: var(--text-xxs)`, `line-height: 1.1`, `font-weight: var(--font-we...`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 16px`, `line-height: 24px`, `font-weight: 400`); CSS variables `--text-xs: 12px`, `--text-xs--line-height: calc(1 / .75)`, `--default-mono-font-family: var(--font-mono)`
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#000000` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#808080` | `.bg-gray { background-color: gray }` (`#808080`) |
+| **Elevated Surface / Card Substrate** | `#f2f3f5` | `.O9AXs { background-color: #f2f3f5 }` |
 | **Interactive Accent / Highlight** | `#2e5fdc` | `.grow_modal__btn-primary { background-color: #2e5fdc }` |
 | **Secondary / Muted Copy** | `#4f4f4f` | `var(--pswp-icon-color-secondary)` in `:root` |
 | **Structural Hairline Border** | `#4f4f4f` | `var(--pswp-icon-stroke-color)` in `:root` |
@@ -74,6 +74,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.shopify-pc__banner__dialog:nth(2)> — `New arrivals`)**:
    - Landmark `<section class="shopify-pc__banner__dialog">` rendering section `New arrivals` with copy *"Shop all new arrivals"*, asset references (`1437315943278764`, `fbevents.js`, `a2f45e7b43c941fd84b3f91a8.js`, `favicon.svg`), and grid rule `.lenis-stopped { overflow:clip }`.
 4. **Interactive Detail & Feature Matrix (<section.shopify-pc__banner__dialog:nth(3)> — `Shop the Look`)**:
-   - Landmark `<section class="shopify-pc__banner__dialog">` framing `Shop the Look` and `Niksen Projects` (*"View Product : Wool Pocket Coat"*) with `#808080` surface cards, `#2e5fdc` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
+   - Landmark `<section class="shopify-pc__banner__dialog">` framing `Shop the Look` and `Niksen Projects` (*"View Product : Wool Pocket Coat"*) with `#f2f3f5` surface cards, `#2e5fdc` accents, and `.lenis.lenis-smooth iframe { pointer-events:none }`.
 5. **Colophon & Global Directory Footer (<footer.mt-fluid-3xl> — `https://estudioniksen.com/`)**:
    - Landmark `<footer class="mt-fluid-3xl pb-gutter">` anchoring `Estudio Niksen` footer links (`Shop All · Outerwear · All Outerwear · Coats · Jackets`), copy *"View Product : Boxy Wool Jacket"*, and `#4f4f4f` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-mdscollective-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-mdscollective-com` (**MDS Collective · China Marketing Agency for Hotels & Tourism**)
 - **Production URL**: [https://www.mdscollective.com](https://www.mdscollective.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#101010` ink, `#ffa500` accent)
 - **Summary**: Award-winning China marketing agency for luxury hotels and tourism brands. RedNote, WeChat, Douyin, KOLs and AI search. Formerly Metric D...
 - **Total Clean CSS Variables Extracted**: `15` (curated live-grounded set below)
@@ -25,7 +25,7 @@ http_status: 200
 - **Body Font Stack**: `Helvetica Neue`
 - **Monospace / Technical Font Stack**: `SF Mono`
 - **Hero Display (`H1`)**: live computed `h1` (`font-size: 141.12px`, `line-height: 143.942px`, `font-weight: 400`, `letter-spacing: -3.528px`); rule `h1` (`font-size: clamp(54px,9.8vw,156px)`, `line-height: 1.02`, `letter-spacing: -.025em`, `font-weight: 400`)
-- **Section Heading (`H2`)**: live computed `h2` (`font-size: 80.64px`, `line-height: 82.2528px`, `font-weight: 400`, `letter-spacing: -2.016px`); rule `h2` (`font-size: clamp(38px,5.6vw,88px)`, `line-height: 1.02`, `letter-spacing: -.025em`, `font-weight: 400`)
+- **Section Heading (`H2`)**: live computed `h2` (`font-size: 100.8px`, `line-height: 98.784px`, `font-weight: 400`, `letter-spacing: -3.024px`); rule `h2` (`font-size: clamp(38px,5.6vw,88px)`, `line-height: 1.02`, `letter-spacing: -.025em`, `font-weight: 400`)
 - **Body Copy**: live computed `body` (`font-size: 15px`, `line-height: 22.5px`, `font-weight: 400`); rule `p` (`font-size: 15px`)
 - **Metadata & Labels**: live computed `nav/a` (`font-size: 15px`, `line-height: 22.5px`, `font-weight: 400`); rule `small` (`font-size: .5em`)
 

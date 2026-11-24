@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: wild-ag-ch"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://wild-ag.ch/"
 final_url: "https://wild-ag.ch/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Wild AG – Entwicklung von Liegenschaften & Immobilien
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `10`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `27`
+- **Recovered Stylesheets**: `3`
 
 ---
 

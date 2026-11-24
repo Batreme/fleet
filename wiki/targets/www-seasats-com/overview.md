@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-seasats-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.seasats.com/"
 final_url: "https://www.seasats.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.seasats.com/](https://www.seasats.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: Seasats · Ocean Autonomy That Works
-- **Identified Frameworks**: HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: www-seasats-com
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `23`
-- **Recovered Stylesheets**: `5`
+- **Recovered Stylesheets**: `3`
 
 ---
 

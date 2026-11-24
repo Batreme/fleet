@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: realevate-agency"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `realevate-agency` (**Realevate · Exceptional Real Estate Investments in Cyprus, Montenegro &...**)
 - **Production URL**: [https://realevate.agency/](https://realevate.agency/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×2484px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#1f2b5e` ink, `#000080` accent)
 - **Summary**: Realevate is a global real estate agency specializing in unique properties and exceptional developments in high-demand markets, offering...
 - **Total Clean CSS Variables Extracted**: `305` (curated live-grounded set below)

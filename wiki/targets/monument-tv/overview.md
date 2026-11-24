@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: monument-tv"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://monument.tv/"
 final_url: "https://monument.tv/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Homepage - Monument
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `11`
-- **Recovered Stylesheets**: `4`
+- **Recovered Scripts**: `40`
+- **Recovered Stylesheets**: `16`
 
 ---
 

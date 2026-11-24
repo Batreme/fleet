@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: ofrenda-davidlangarica-dev"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://ofrenda.davidlangarica.dev"
 final_url: "https://ofrenda.davidlangarica.dev/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Live desktop behavioral capture failed (0 valid keyframes)"
 tags:
   - target
   - reverse-engineering
@@ -27,9 +28,10 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://ofrenda.davidlangarica.dev](https://ofrenda.davidlangarica.dev)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: OFRENDA — Create a personal Día de Muertos altar
-- **Identified Frameworks**: HTML5 Canvas / WebGL
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live desktop behavioral capture failed (0 valid keyframes)
+- **Page Title**: ofrenda-davidlangarica-dev
+- **Identified Frameworks**: Modern Web Application
 - **Recovered Scripts**: `4`
 - **Recovered Stylesheets**: `1`
 

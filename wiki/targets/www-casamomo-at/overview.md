@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-casamomo-at"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.casamomo.at/"
 final_url: "https://www.casamomo.at/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Casa Momo • Boutique Apartments in Graz
 - **Identified Frameworks**: Framer
-- **Recovered Scripts**: `23`
+- **Recovered Scripts**: `85`
 - **Recovered Stylesheets**: `0`
 
 ---

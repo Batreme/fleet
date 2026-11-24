@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: brand-helloasso-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `brand-helloasso-com` (**Accueil – Brandbook HelloAsso**)
 - **Production URL**: [https://brand.helloasso.com/](https://brand.helloasso.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4140px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#ffffff` / `#d7e103`)
 - **Summary**: Logotype, typographie, couleurs, direction photographique et identité verbale de HelloAsso.
 - **Total Clean CSS Variables Extracted**: `262` (curated live-grounded set below)

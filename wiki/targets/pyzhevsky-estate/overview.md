@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: pyzhevsky-estate"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://pyzhevsky.estate/"
 final_url: "https://pyzhevsky.estate/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Pyzhevsky — official website of a deluxe residence five minutes from the...
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `9`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `27`
+- **Recovered Stylesheets**: `6`
 
 ---
 

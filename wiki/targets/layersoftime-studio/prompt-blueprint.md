@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: layersoftime-studio"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "layersoftime-studio"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: native
+desktop_keyframes: 5
+subpages_crawled: 3
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#8a9099`)"
 ---
@@ -16,36 +21,36 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#
 
 > **LAYERS OF TIME — The show runs on our clock.** (https://layersoftime.studio/) — LAYERS OF TIME is a show studio in Singapore. We design light, video and sound for live rooms, and we build the engine that keeps all of...
 
-![Desktop Viewport Capture (1440x2400)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x4140)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x2616)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **LAYERS OF TIME — The show runs on our clock.** (`https://layersoftime.studio/`). LAYERS OF TIME is a show studio in Singapore. We design light, video and sound for live rooms, and we build the engine that keeps all of...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#8a9099`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#08090b` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#e9ecef` primary typography and `#8a9099` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Söhne` for display copy (`The show runs on our clock.`) with `Söhne` and `Söhne Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 1.5rem`, padding `.5rem`) with `cubic-bezier(.16,1,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `Söhne` across display (`The show runs on our clock.`) and body copy, paired with `Söhne Mono` for monospace/code.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `var(--gutter)`) with `cubic-bezier(.22,.61,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x2400)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×2400px` (`assets/desktop.png`, clamped at 2400px live multi-section capture), Mobile `390×2400px` (`assets/mobile.png`, clamped at 2400px live multi-section capture).
+- **Captured Journey Filmstrips**: Desktop `1280×4140px` (`assets/desktop-journey.webp`, `5` keyframes up to `y=3400px` / doc `6125px`), Mobile `390×2616px` (`assets/mobile-journey.webp`, `3` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport).
-- **Canvas Lateral Padding & Spacing**: `.5rem` lateral canvas padding with `1.5rem` grid gap.
-- **Border Radius Scale**: `50%`, `2px`, `var(--phone-r)`, `1px`.
+- **Canvas Lateral Padding & Spacing**: `var(--gutter)` lateral canvas padding with `16px` grid gap.
+- **Border Radius Scale**: `2px`, `50%`, `var(--phone-r)`, `1px`.
 
 ### Responsive Breakpoint Architecture
-- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1.5rem`).
-- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding.
-- **Extracted CSS Media Queries**: `@media (prefers-reduced-motion)`, `@media (width>=900px)`, `@media (width<=30rem)`, `@media (width<=1279px)`.
+- **Desktop Layout**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`).
+- **Mobile Layout**: Single-column vertical stack at `390px` viewport width with `var(--gutter)` horizontal padding.
+- **Extracted CSS Media Queries**: `@media (width>=768px)`, `@media (width>=1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion)`.
 
 ---
 
@@ -108,14 +113,18 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#
 ## 5. Choreographed Motion & Interaction Physics
 
 ### Primary Easing Curves
-- **Extracted Timing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)`.
+- **Extracted Timing Functions**: `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)`, `cubic-bezier(.16,1,.3,1)`.
 
 ### Per-Element Transition & Choreography Rules
-- **Selector `.header[data-astro-cid-nen7h5rs]`**: `transition: transform var(--d-base) var(--ease), background-color var(--d-...` extracted from `layersoftime-studio` stylesheet.
-- **Selector `.status[data-astro-cid-nen7h5rs]`**: `transition: color var(--d-fast) var(--ease)` extracted from `layersoftime-studio` stylesheet.
-- **Selector `.cursor__dot`**: `transition: opacity .2s var(--ease), width .2s var(--ease)` extracted from `layersoftime-studio` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.chapter>`.
+- **Selector `body`**: `transition: background-color var(--d-slow) var(--ease), color var(--d-slow...` extracted from `layersoftime-studio` stylesheet.
+- **Selector `.link`**: `transition: color var(--d-fast) var(--ease), background-size var(--d-base)...` extracted from `layersoftime-studio` stylesheet.
+- **Selector `.arrow-link svg`**: `transition: transform var(--d-base) var(--ease)` extracted from `layersoftime-studio` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.chapter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `native` (max document height `6125px`, deepest scrollY reached `3400px` across `5` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `Lenis`, `WebGL/Canvas`.
+- **Route Transition Architecture**: First internal navigation (`/work`) measured as `SPA` in `5177ms`.
 
 ---
 
@@ -146,7 +155,7 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#
 ### Visual Layout Schematic — Mobile Reflow (`390px`)
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 1.5rem)     │
+│ MOBILE VIEWPORT REFLOW (390px) — Single-Column Stack (gap: 16px)       │
 │ ====================================================================== │
 │ [ HEADER BAR (<header.header>         ) | Compact Menu (390px)         │
 │ ---------------------------------------------------------------------- │
@@ -165,15 +174,26 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#08090b` / `#
 
 ### Granular DOM Region Breakdown
 1. **Brand Header & Navigation Bar (<header.header> — `layersoftime-studio`)**:
-   - Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `.brand__mark { flex:none;width:17px;height:20px }`.
+   - Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `root { --gutter:32px;--col-gap:24px;--header-h:64px }`.
 2. **Hero Stage & Focal Lead (<section.hero> — `The show runs on our clock.`)**:
    - Landmark `<section class="hero">` presenting display lead `The show runs on our clock.` and copy excerpt *"The mark is a rig. Ten fixtures, replaying a night recorded throu"* over `#08090b` canvas and `#e9ecef` ink.
 3. **Primary Showcase & Content Grid (<section.chapter> — `A show studio in Singapore that bu`)**:
-   - Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 22:54:01:21 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `hover { color:var(--fg) }`.
+   - Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 10:01:28:14 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `font-face { font-family:Söhne;src:url(/fonts/soehne-buch.woff2)format("woff2");font-... }`.
 4. **Interactive Detail & Feature Matrix (<section.section-tight> — `Rooms we have run.`)**:
-   - Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 23h 05m"*) with `#0e1013` surface cards, `#8a9099` accents, and `.footer__mark { flex:none;width:44px;height:52px }`.
+   - Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 11h 58m"*) with `#0e1013` surface cards, `#8a9099` accents, and `after { box-sizing:border-box }`.
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://layersoftime.studio/`)**:
-   - Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 23h 05m"*, and `#232527` structural dividers.
+   - Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 11h 58m"*, and `#232527` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `The show runs on our clock.` · sticky/fixed elements: `3`
+- **Step 02** (`y=850px`, `16%`): Active landmark `A show studio in Singapore that builds the softwa...` · sticky/fixed elements: `2`
+- **Step 03** (`y=1700px`, `33%`): Active landmark `Collective Minds: ARTBAT × Agents Of Time, Pasir...` · sticky/fixed elements: `2`
+- **Step 04** (`y=2550px`, `49%`): Active landmark `Built on tour, between soundcheck and doors.` · sticky/fixed elements: `2`
+- **Step 05** (`y=3400px`, `65%`): Active landmark `65 nights run, 6 ahead. 34 cities, 13 countries.` · sticky/fixed elements: `2`
+
+### Multi-Page Internal Route Map
+- **Listing Route (`/work`)**: `https://layersoftime.studio/work` — H1: `Every room, in order.`, scrollHeight `2614px`, transition `SPA` (`5177ms`)
+- **Detail Route (`/software/parallax`)**: `https://layersoftime.studio/software/parallax` — H1: `The same scene from every output, every node and...`, scrollHeight `2355px`, transition `direct` (`1403ms`)
+- **About Route (`/studio`)**: `https://layersoftime.studio/studio` — H1: `LAYERS OF TIME is a show studio. We draw the rig,...`, scrollHeight `4132px`, transition `direct` (`423ms`)
 
 ---
 
@@ -190,8 +210,8 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#08090b` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#e9ecef`, **Accent / Highlight**: `#8a9099`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#08090b` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#e9ecef` primary typography and `#8a9099` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Söhne` for display copy (`The show runs on our clock.`) with `Söhne` and `Söhne Mono`.
-  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 1.5rem`, padding `.5rem`) with `cubic-bezier(.16,1,.3,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
+  - **Grounded Typographic Hierarchy**: Uses `Söhne` across display (`The show runs on our clock.`) and body copy, paired with `Söhne Mono` for monospace/code.
+  - **Calibrated Spatial Grid & Motion**: Combines `1440px` container bounds (`gap: 16px`, padding `var(--gutter)`) with `cubic-bezier(.22,.61,.36,1)` easing and Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
 Declare and consume these exact custom properties extracted from `layersoftime-studio` in your global stylesheet:
@@ -233,14 +253,14 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--parsec`)**: `#a3e635` — grounded in `var(--parsec)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×2400px` (clamped at 2400px live multi-section capture, `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×2400px` (clamped at 2400px live multi-section capture, `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×4140px` (multi-frame vertical journey filmstrip (4140px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×2616px` (multi-frame vertical journey filmstrip (2616px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport)
-- **Padding & Gutters**: `.5rem` lateral canvas padding with `1.5rem` grid gap
-- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1.5rem`)
-- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding
-- **Media Queries**: `@media (prefers-reduced-motion)`, `@media (width>=900px)`, `@media (width<=30rem)`, `@media (width<=1279px)`
-- **Corner Radii**: `50%`, `2px`, `var(--phone-r)`, `1px`
+- **Padding & Gutters**: `var(--gutter)` lateral canvas padding with `16px` grid gap
+- **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`)
+- **Mobile Adaptation**: Single-column vertical stack at `390px` viewport width with `var(--gutter)` horizontal padding
+- **Media Queries**: `@media (width>=768px)`, `@media (width>=1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion)`
+- **Corner Radii**: `2px`, `50%`, `var(--phone-r)`, `1px`
 
 ### 5. Typography & Editorial Scale Contract
 - **Display Font Stack**: `Söhne`
@@ -254,43 +274,74 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 ### 6. Component Hierarchy, Verbatim Copy & Real DOM Landmarks
 Scaffold `layersoftime-studio` (`LAYERS OF TIME — The show runs on our clock.`) with these exact structural regions, extracted copy, and CSS rules from `dom.html`:
 1. **Brand Header & Navigation Bar (<header.header> — `layersoftime-studio`)**:
-   - DOM & Selectors: Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `.brand__mark { flex:none;width:17px;height:20px }`.
-   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `layersoftime-studio`)` (`layersoftime-studio`) adapts across `@media (prefers-reduced-motion)`, `@media (width>=900px)`, `@media (width<=30rem)`, `@media (width<=1279px)` with `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)` transitions and links `Work · Studio · Software · Log · Contact`.
+   - DOM & Selectors: Landmark `<header class="header">` (`1440x64px`) hosting `LAYERS OF TIME — The show runs on ou` navigation (`Work · Studio · Software · Log · Contact`), DOM attributes (`data-theme="dark"`, `data-astro-exec`, `data-header`, `data-astro-cid-nen7h5rs`), and stylesheet rule `root { --gutter:32px;--col-gap:24px;--header-h:64px }`.
+   - Responsive Contract: Header `Brand Header & Navigation Bar (<header.header> — `layersoftime-studio`)` (`layersoftime-studio`) adapts across `@media (width>=768px)`, `@media (width>=1280px)`, `@media (prefers-reduced-motion:reduce)`, `@media (prefers-reduced-motion)` with `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)`, `cubic-bezier(.16,1,.3,1)` transitions and links `Work · Studio · Software · Log · Contact`.
 2. **Hero Stage & Focal Lead (<section.hero> — `The show runs on our clock.`)**:
    - DOM & Selectors: Landmark `<section class="hero">` presenting display lead `The show runs on our clock.` and copy excerpt *"The mark is a rig. Ten fixtures, replaying a night recorded throu"* over `#08090b` canvas and `#e9ecef` ink.
-   - Responsive Contract: Hero stage (`1440×2400px` desktop / `390×2400px` mobile) sets `#08090b` background with `#e9ecef` headline `The show runs on our clock.`.
+   - Responsive Contract: Hero stage (`1280×4140px` desktop / `390×2616px` mobile) sets `#08090b` background with `#e9ecef` headline `The show runs on our clock.`.
 3. **Primary Showcase & Content Grid (<section.chapter> — `A show studio in Singapore that bu`)**:
-   - DOM & Selectors: Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 22:54:01:21 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `hover { color:var(--fg) }`.
-   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.chapter> — `A show studio in Singapore that bu`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 1.5rem`) on desktop and Single-column vertical stack at `390px` viewport width with `.5rem` horizontal padding on mobile.
+   - DOM & Selectors: Landmark `<section class="chapter chapter--light">` rendering section `A show studio in Singapore that builds the softwa...` with copy *"Your clock 10:01:28:14 EST"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `soehne-kraftig.woff2`, `soehne-buch.woff2`), and grid rule `font-face { font-family:Söhne;src:url(/fonts/soehne-buch.woff2)format("woff2");font-... }`.
+   - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<section.chapter> — `A show studio in Singapore that bu`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 16px`) on desktop and Single-column vertical stack at `390px` viewport width with `var(--gutter)` horizontal padding on mobile.
 4. **Interactive Detail & Feature Matrix (<section.section-tight> — `Rooms we have run.`)**:
-   - DOM & Selectors: Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 23h 05m"*) with `#0e1013` surface cards, `#8a9099` accents, and `.footer__mark { flex:none;width:44px;height:52px }`.
-   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-tight> — `Rooms we have run.`)` uses `50%`, `2px`, `var(--phone-r)`, `1px` radii, `#8a9099` highlights, and assets (favicon.svg, apple-touch-icon.png, soehne-kraftig.woff2).
+   - DOM & Selectors: Landmark `<section class="section-tight">` framing `Rooms we have run.` and `Built on tour, between soundcheck and doors.` (*"Next night Singapore · Pasir Panjang Power Station · 4d 11h 58m"*) with `#0e1013` surface cards, `#8a9099` accents, and `after { box-sizing:border-box }`.
+   - Responsive Contract: Detail module `Interactive Detail & Feature Matrix (<section.section-tight> — `Rooms we have run.`)` uses `2px`, `50%`, `var(--phone-r)`, `1px` radii, `#8a9099` highlights, and assets (favicon.svg, apple-touch-icon.png, soehne-kraftig.woff2).
 5. **Colophon & Global Directory Footer (<footer.footer> — `https://layersoftime.studio/`)**:
-   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 23h 05m"*, and `#232527` structural dividers.
-   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://layersoftime.studio/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `.5rem` lateral canvas padding with `1.5rem` grid gap and attributes (data-theme="dark", data-astro-exec, data-header).
+   - DOM & Selectors: Landmark `<footer class="footer">` anchoring `LAYERS OF TIME — The show runs o` footer links (`Work · Studio · Software · Log · Contact`), copy *"Singapore · Pasir Panjang Power Station · 4d 11h 58m"*, and `#232527` structural dividers.
+   - Responsive Contract: Footer `Colophon & Global Directory Footer (<footer.footer> — `https://layersoftime.studio/`)` aligns to `1440px` (full-bleed `100%` desktop stage measured on `1440px` viewport) with `var(--gutter)` lateral canvas padding with `16px` grid gap and attributes (data-theme="dark", data-astro-exec, data-header).
 
 #### Verbatim DOM Copy Excerpts (`dom.html`)
 - Copy Excerpt 1: *"The mark is a rig. Ten fixtures, replaying a night recorded through SINGULARITY."*
-- Copy Excerpt 2: *"Your clock 22:54:01:21 EST"*
-- Copy Excerpt 3: *"Next night Singapore · Pasir Panjang Power Station · 4d 23h 05m"*
-- Copy Excerpt 4: *"Singapore · Pasir Panjang Power Station · 4d 23h 05m"*
+- Copy Excerpt 2: *"Your clock 10:01:28:14 EST"*
+- Copy Excerpt 3: *"Next night Singapore · Pasir Panjang Power Station · 4d 11h 58m"*
+- Copy Excerpt 4: *"Singapore · Pasir Panjang Power Station · 4d 11h 58m"*
 
 ### 7. Motion, Extracted Stylesheet Rules & Interaction Choreography
-- **Primary Easing Functions**: `cubic-bezier(.16,1,.3,1)`, `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)`
+- **Primary Easing Functions**: `cubic-bezier(.22,.61,.36,1)`, `cubic-bezier(.77,0,.175,1)`, `cubic-bezier(.16,1,.3,1)`
 - **Extracted Stylesheet Rules (`layersoftime-studio`)**:
-- `.brand__mark { flex:none;width:17px;height:20px }`
-- `hover { color:var(--fg) }`
-- `.footer__mark { flex:none;width:44px;height:52px }`
-- `last-child { grid-column:1/-1 }`
-- `before { content:"· " }`
+- `root { --gutter:32px;--col-gap:24px;--header-h:64px }`
+- `font-face { font-family:Söhne;src:url(/fonts/soehne-buch.woff2)format("woff2");font-... }`
+- `after { box-sizing:border-box }`
+- `html.lenis body { height:auto }`
+- `.lenis.lenis-smooth { scroll-behavior:auto!important }`
 - **Per-Selector Transition Rules**:
-- **Selector `.header[data-astro-cid-nen7h5rs]`**: `transition: transform var(--d-base) var(--ease), background-color var(--d-...` extracted from `layersoftime-studio` stylesheet.
-- **Selector `.status[data-astro-cid-nen7h5rs]`**: `transition: color var(--d-fast) var(--ease)` extracted from `layersoftime-studio` stylesheet.
-- **Selector `.cursor__dot`**: `transition: opacity .2s var(--ease), width .2s var(--ease)` extracted from `layersoftime-studio` stylesheet.
-- **Extracted Easing Curve (`cubic-bezier(.16,1,.3,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.chapter>`.
+- **Selector `body`**: `transition: background-color var(--d-slow) var(--ease), color var(--d-slow...` extracted from `layersoftime-studio` stylesheet.
+- **Selector `.link`**: `transition: color var(--d-fast) var(--ease), background-size var(--d-base)...` extracted from `layersoftime-studio` stylesheet.
+- **Selector `.arrow-link svg`**: `transition: transform var(--d-base) var(--ease)` extracted from `layersoftime-studio` stylesheet.
+- **Extracted Easing Curve (`cubic-bezier(.22,.61,.36,1)`)**: Governs interactive state transitions across `<header.header>` and `<section.chapter>`.
 - **Runtime Interaction Engine**: Integrates Lenis Smooth Scroll (`data-lenis`), Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `native` vertical progression up to `6125px` across 5 distinct viewport chapters using Lenis, WebGL/Canvas.
+- **Vertical Chapter Sequence**: The show runs on our clock. (0%) -> A show studio in Singapore... (16%) -> Collective Minds: ARTBAT ×... (33%) -> Built on tour, between soun... (49%) -> 65 nights run, 6 ahead. 34... (65%).
+- **Multi-Page Routes**: Scaffold internal routes `/work` (listing, SPA), `/software/parallax` (detail, direct), `/studio` (about, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `layersoftime-studio`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | The show runs on our clock. | `3` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `850px` | `16%` | A show studio in Singapore that builds the so... | `2` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `1700px` | `33%` | Collective Minds: ARTBAT × Agents Of Time, Pa... | `2` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `2550px` | `49%` | Built on tour, between soundcheck and doors. | `2` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+| `#05` | `3400px` | `65%` | 65 nights run, 6 ahead. 34 cities, 13 countries. | `2` | [desktop-step-05.webp](assets/desktop-step-05.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | The show runs on our clock. | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+| `#02` | `5752px` | `50%` | Jakarta Indonesia | [mobile-step-02.webp](assets/mobile-step-02.webp) |
+| `#03` | `11504px` | `100%` | SUPPORT | [mobile-step-03.webp](assets/mobile-step-03.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `listing` | `https://layersoftime.studio/work` | Every room, in order. | `2614px` | `SPA` (`5177ms`) | [subpage-01-work.webp](assets/subpage-01-work.webp) |
+| `2` | `detail` | `https://layersoftime.studio/software/parallax` | The same scene from every output, eve... | `2355px` | `direct` (`1403ms`) | [subpage-02-software-parallax.webp](assets/subpage-02-software-parallax.webp) |
+| `3` | `about` | `https://layersoftime.studio/studio` | LAYERS OF TIME is a show studio. We d... | `4132px` | `direct` (`423ms`) | [subpage-03-studio.webp](assets/subpage-03-studio.webp) |
+

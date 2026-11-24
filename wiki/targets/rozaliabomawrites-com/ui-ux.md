@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: rozaliabomawrites-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `rozaliabomawrites-com` (**Rozalia Boma — Multicultural Romance Author**)
 - **Production URL**: [https://rozaliabomawrites.com/](https://rozaliabomawrites.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Gallery WebGL / Canvas Interactive Experience (`#f5dafb` / `#ffcc00`)
 - **Summary**: Official site of Rozalia Boma, author of multicultural YA romance. Books, diary entries, guestbook and newsletter.
 - **Total Clean CSS Variables Extracted**: `270` (curated live-grounded set below)
@@ -69,10 +69,10 @@ http_status: 200
 1. **Brand Header & Navigation Bar (<nav.top-0> — `rozaliabomawrites-com`)**:
    - Landmark `<nav class="top-0 left-0">` (`1440x68px`) hosting `Rozalia Boma — Multicultural Romance` navigation (`Home · Author · Books · Blog · Guestbook`), DOM attributes (`data-artifact-kind="dwl_content_hash"`, `data-artifact-id="db5c4db312500dfaed9e3..."`, `data-commit-sha="37366776bd44c18a989e4..."`, `data-context-token="v1.eyJwcm9qZWN0X2lkIj..."`), and stylesheet rule `after { box-sizing:border-box;border-width:0;border-style:solid;border-color:e5e7eb }`.
 2. **Hero Stage & Focal Lead (<section.fixed> — `Rozalia Boma — writing multicultur`)**:
-   - Landmark `<section class="fixed">` presenting display lead `Rozalia Boma — writing multicultural romances` and copy excerpt *"I'm Polish Nigerian, soon moving out of Hong Kong to go back to L"* over `#f5dafb` canvas and `#491237` ink.
-3. **Primary Showcase & Content Grid (<section.overflow-x-clip> — `I'm Polish Nigerian, soon moving o`)**:
-   - Landmark `<section class="overflow-x-clip overflow-y-visible">` rendering section `I'm Polish Nigerian, soon moving out of Hong Kon` with copy *"Beware! Black Eastern European baddies on the rise!"*, asset references (`holo-sky-bg-C4iYYOxV.webp`, `fonts.googleapis.com`, `fonts.gstatic.com`, `sykz-yx0lLcxQaSIhS23-w.woff2`), and grid rule `body { margin:0;line-height:inherit }`.
-4. **Interactive Detail & Feature Matrix (<section.py-24> — `Beware! Black Eastern European bad`)**:
-   - Landmark `<section class="py-24 relative">` framing `Beware! Black Eastern European baddies on the ri` and `w r i t i n g m u l t i c u l t u r a l` (*"w r i t i n g m u l t i c u l t u r a l"*) with `#ffffff` surface cards, `#ffcc00` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="fixed">` presenting display lead `Rozalia Boma — writing multicultural romances` and copy excerpt *"ROZALIA BOMA WRITES IS LOADING"* over `#f5dafb` canvas and `#491237` ink.
+3. **Primary Showcase & Content Grid (<section.overflow-x-clip> — `ROZALIA BOMA WRITES IS LOADING`)**:
+   - Landmark `<section class="overflow-x-clip overflow-y-visible">` rendering section `ROZALIA BOMA WRITES IS LOADING` with copy *"Rozalia Boma Writes is loading"*, asset references (`holo-sky-bg-C4iYYOxV.webp`, `fonts.googleapis.com`, `fonts.gstatic.com`, `sykz-yx0lLcxQaSIhS23-w.woff2`), and grid rule `body { margin:0;line-height:inherit }`.
+4. **Interactive Detail & Feature Matrix (<section.py-24> — `Rozalia Boma Writes is loading`)**:
+   - Landmark `<section class="py-24 relative">` framing `Rozalia Boma Writes is loading` and `Beware! Black Eastern European baddies on the ri` (*"Beware! Black Eastern European baddies on the rise!"*) with `#ffffff` surface cards, `#ffcc00` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.mt-8> — `https://rozaliabomawrites.com/`)**:
-   - Landmark `<footer class="mt-8 relative">` anchoring `Rozalia Boma — Multicultural Rom` footer links (`Home · Author · Books · Blog · Guestbook`), copy *"m u l t i c u l t u r a l"*, and `#e5e7eb` structural dividers.
+   - Landmark `<footer class="mt-8 relative">` anchoring `Rozalia Boma — Multicultural Rom` footer links (`Home · Author · Books · Blog · Guestbook`), copy *"w r i t i n g m u l t i c u l t u r a l"*, and `#e5e7eb` structural dividers.

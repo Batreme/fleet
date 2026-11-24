@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: michellekayewashington-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `michellekayewashington-com` (**Michelle Kaye — Fine Arts · Contemporary Artist, Charleston SC**)
 - **Production URL**: [https://michellekayewashington.com/](https://michellekayewashington.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fffdf8` canvas, `#120a09` ink, `#7a6560` accent)
 - **Summary**: Michelle Kaye is a contemporary artist in Charleston, SC, exploring humanity’s relationship with the natural world. See Against the Grain...
 - **Total Clean CSS Variables Extracted**: `42` (curated live-grounded set below)

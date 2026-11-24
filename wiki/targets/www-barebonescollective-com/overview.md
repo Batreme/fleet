@@ -1,12 +1,12 @@
 ---
 title: "Target Overview: www-barebonescollective-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.barebonescollective.com/"
 final_url: "https://www.barebonescollective.com/"
 status: analyzed
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 tags:
   - target
   - reverse-engineering
@@ -27,11 +27,11 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.barebonescollective.com/](https://www.barebonescollective.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
+- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Bare Bones Collective
 - **Identified Frameworks**: Webflow
-- **Recovered Scripts**: `11`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `37`
+- **Recovered Stylesheets**: `10`
 
 ---
 

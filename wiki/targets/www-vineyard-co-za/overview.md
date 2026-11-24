@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-vineyard-co-za"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.vineyard.co.za/"
 final_url: "https://www.vineyard.co.za/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier1_fast
+capture_tier: none
+block_reason: "Live mobile behavioral capture failed (0 valid WebP frames)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.vineyard.co.za/](https://www.vineyard.co.za/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
-- **Page Title**: The Vineyard Hotel · Hotel & Spa in Newlands, Cape Town
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Live mobile behavioral capture failed (0 valid WebP frames)
+- **Page Title**: www-vineyard-co-za
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `138`
-- **Recovered Stylesheets**: `6`
+- **Recovered Scripts**: `303`
+- **Recovered Stylesheets**: `54`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: webdesign-kernjosh-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://webdesign.kernjosh.com"
 final_url: "https://webdesign.kernjosh.com/"
 status: analyzed
@@ -30,7 +30,7 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Josh Kern
 - **Identified Frameworks**: HTML5 Canvas / WebGL
-- **Recovered Scripts**: `8`
+- **Recovered Scripts**: `6`
 - **Recovered Stylesheets**: `1`
 
 ---

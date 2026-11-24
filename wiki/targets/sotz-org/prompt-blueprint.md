@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: sotz-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "sotz-org"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 4
+subpages_crawled: 3
 http_status: 200
 archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `#000000` ink, `#0000ee` accent)"
 ---
@@ -16,28 +21,28 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `
 
 > **Shout out to Zanzibar** (https://sotz.org/) — S h o u t o u t t o Z a n z i b a r :
 
-![Desktop Viewport Capture (1440x1064)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x3312)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Shout out to Zanzibar** (`https://sotz.org/`). S h o u t o u t t o Z a n z i b a r :
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `#000000` ink, `#0000ee` accent)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e9e2d3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`SHOUT OUT TO ZANZIBAR:`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`SHOUT OUT TO ZANZIBAR:`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1240px` container bounds (`gap: 30px`, padding `24px`) with `cubic-bezier(.22,.9,.35,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ---
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×1064px` (`assets/desktop.png`, full-page live capture (1064px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×3312px` (`assets/desktop-journey.webp`, `4` keyframes up to `y=164px` / doc `1064px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1240px` (measured `<main>` bounding box width within `1440px` desktop viewport).
 - **Canvas Lateral Padding & Spacing**: `24px` lateral canvas padding with `30px` grid gap.
 - **Border Radius Scale**: `999px`, `50%`.
@@ -71,15 +76,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `
 | `--breath-y` | `-2.5px` | Dimension / Scale Token |
 | `--sd` | `4.2s` | Motion / Timing Token |
 | `--sdd` | `0s` | Motion / Timing Token |
-| `--fx` | `-8.963657902432804px` | Dimension / Scale Token |
-| `--fy` | `-57.39062020612461px` | Dimension / Scale Token |
-| `--fd` | `9.104268337879649s` | Motion / Timing Token |
-| `--fdd` | `-1.4289036550019194s` | Motion / Timing Token |
-| `--gd` | `4.621072714254437s` | Motion / Timing Token |
-| `--gdd` | `-3.922843652651112s` | Motion / Timing Token |
+| `--fx` | `12.686829972268164px` | Dimension / Scale Token |
+| `--fy` | `-42.338201167836075px` | Dimension / Scale Token |
+| `--fd` | `8.03990141361104s` | Motion / Timing Token |
+| `--fdd` | `-4.525146343807082s` | Motion / Timing Token |
+| `--gd` | `3.218259545023418s` | Motion / Timing Token |
+| `--gdd` | `-1.1055247801866024s` | Motion / Timing Token |
+| `--dx` | `97.66093029928604px` | Dimension / Scale Token |
+| `--dy` | `-56.65180577215252px` | Dimension / Scale Token |
 | `--sotz-org-bg` | `#e9e2d3` | Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) |
-| `--sotz-org-ink` | `#000000` | Primary Typography Ink (computed-derived) |
-| `--sotz-org-surface` | `#f3eddd` | Surface Substrate (computed-derived) |
 
 ---
 
@@ -105,10 +110,15 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `
 
 ### Per-Element Transition & Choreography Rules
 - **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
-- **Selector `.cta`**: `transition: transform .25s ease, box-shadow .25s ease` extracted from `sotz-org` stylesheet.
-- **Selector `.cta .arr`**: `transition: transform .25s ease` extracted from `sotz-org` stylesheet.
+- **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
+- **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.9,.35,1)`)**: Governs interactive state transitions across `<header.headline>` and `<article.story-panel:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `1064px`, deepest scrollY reached `164px` across `4` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: Native browser scroll / standard CSS transitions.
+- **Hover Physics (`primary_cta` · `EXPLORE OUR STORY →`)**: `transform`: `none` -> `matrix(1, 0, 0, 1, 0, -...`; `boxShadow`: `rgba(0, 0, 0, 0.35) 0px...` -> `rgba(0, 0, 0, 0.447) 0p...` (`transition-duration: 0.25s, 0.25s`, `timing: ease, ease`).
+- **Route Transition Architecture**: First internal navigation (`/index.html`) measured as `direct` in `2699ms`.
 
 ---
 
@@ -167,6 +177,16 @@ archetype: "Light-Substrate Editorial & Modular Grid System (`#e9e2d3` canvas, `
    - Landmark `<article class="story-panel">` framing `No Pity but for the Future of Children` and `SOTZ, Shout out to Zanzibar is the non-profit or` (*"SOTZ, Shout out to Zanzibar is the non-profit organization dedica"*) with `#f3eddd` surface cards, `#0000ee` accents, and `.stage-art { position: absolute; inset: 0; }`.
 5. **Colophon & Global Directory Footer (<footer.site-footer> — `https://sotz.org/`)**:
    - Landmark `<footer class="site-footer">` anchoring `Shout out to Zanzibar` footer links (`Home · About Us · Pictures · Writings · Projects`), copy *"We believe that charity should not originate from a sense of"*, and `#b9ae95` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `SHOUT OUT TO ZANZIBAR:` · sticky/fixed elements: `0`
+- **Step 02** (`y=164px`, `100%`): Active landmark `SHOUT OUT TO ZANZIBAR:` · sticky/fixed elements: `0`
+- **Step 03** (`y=164px`, `100%`): Active landmark `SHOUT OUT TO ZANZIBAR:` · sticky/fixed elements: `0`
+- **Step 04** (`y=164px`, `100%`): Active landmark `SHOUT OUT TO ZANZIBAR:` · sticky/fixed elements: `0`
+
+### Multi-Page Internal Route Map
+- **Other Route (`/index.html`)**: `https://sotz.org/index.html` — H1: `SHOUT OUT TO ZANZIBAR:`, scrollHeight `1064px`, transition `direct` (`2699ms`)
+- **Other Route (`/about_us.html`)**: `https://sotz.org/about_us.html` — H1: `About Us — Shout out to Zanzibar`, scrollHeight `1721px`, transition `direct` (`2589ms`)
+- **Other Route (`/picture.html`)**: `https://sotz.org/picture.html` — H1: `Pictures — Shout out to Zanzibar`, scrollHeight `900px`, transition `direct` (`1392ms`)
 
 ---
 
@@ -183,7 +203,7 @@ You are a principal frontend architect and design systems engineer. Build a comp
 - **Primary Substrate**: `#e9e2d3` (live computed `body` `background-color` (`computed_styles.json`)), **Primary Ink**: `#000000`, **Accent / Highlight**: `#0000ee`.
 - **Site-Specific Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#e9e2d3` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#000000` primary typography and `#0000ee` accents.
-  - **Grounded Typographic Hierarchy**: Pairs `Poppins` for display copy (`SHOUT OUT TO ZANZIBAR:`) with `Poppins` and not declared in live computed styles (uses primary stack / `ui-monospace`).
+  - **Grounded Typographic Hierarchy**: Uses `Poppins` across display (`SHOUT OUT TO ZANZIBAR:`) and body copy.
   - **Calibrated Spatial Grid & Motion**: Combines `1240px` container bounds (`gap: 30px`, padding `24px`) with `cubic-bezier(.22,.9,.35,1)` easing and GSAP Timeline & ScrollTrigger.
 
 ### 2. Ground-Truth CSS Variables (`:root` Token Contract)
@@ -198,15 +218,15 @@ Declare and consume these exact custom properties extracted from `sotz-org` in y
   --breath-y: -2.5px; /* Dimension / Scale Token (sotz-org) */
   --sd: 4.2s; /* Motion / Timing Token (sotz-org) */
   --sdd: 0s; /* Motion / Timing Token (sotz-org) */
-  --fx: -8.963657902432804px; /* Dimension / Scale Token (sotz-org) */
-  --fy: -57.39062020612461px; /* Dimension / Scale Token (sotz-org) */
-  --fd: 9.104268337879649s; /* Motion / Timing Token (sotz-org) */
-  --fdd: -1.4289036550019194s; /* Motion / Timing Token (sotz-org) */
-  --gd: 4.621072714254437s; /* Motion / Timing Token (sotz-org) */
-  --gdd: -3.922843652651112s; /* Motion / Timing Token (sotz-org) */
+  --fx: 12.686829972268164px; /* Dimension / Scale Token (sotz-org) */
+  --fy: -42.338201167836075px; /* Dimension / Scale Token (sotz-org) */
+  --fd: 8.03990141361104s; /* Motion / Timing Token (sotz-org) */
+  --fdd: -4.525146343807082s; /* Motion / Timing Token (sotz-org) */
+  --gd: 3.218259545023418s; /* Motion / Timing Token (sotz-org) */
+  --gdd: -1.1055247801866024s; /* Motion / Timing Token (sotz-org) */
+  --dx: 97.66093029928604px; /* Dimension / Scale Token (sotz-org) */
+  --dy: -56.65180577215252px; /* Dimension / Scale Token (sotz-org) */
   --sotz-org-bg: #e9e2d3; /* Canvas Substrate (from live computed `body` `background-color` (`computed_styles.json`)) (sotz-org) */
-  --sotz-org-ink: #000000; /* Primary Typography Ink (computed-derived) (sotz-org) */
-  --sotz-org-surface: #f3eddd; /* Surface Substrate (computed-derived) (sotz-org) */
 }
 
 ### 3. Semantic Color & Materiality Contract
@@ -219,8 +239,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Structural Hairline Border**: `#b9ae95` — grounded in `.site-footer { border-top: #b9ae95 }`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×1064px` (full-page live capture (1064px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×3312px` (multi-frame vertical journey filmstrip (3312px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1240px` (measured `<main>` bounding box width within `1440px` desktop viewport)
 - **Padding & Gutters**: `24px` lateral canvas padding with `30px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1240px`, `gap: 30px`)
@@ -244,7 +264,7 @@ Scaffold `sotz-org` (`Shout out to Zanzibar`) with these exact structural region
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.headline> — `sotz-org`)` (`sotz-org`) adapts across `@media (prefers-reduced-motion: reduce)`, `@media (max-width: 640px)` with `cubic-bezier(.22,.9,.35,1)`, `cubic-bezier(.34,1.56,.64,1)`, `cubic-bezier(.7,0,.3,1)` transitions and links `Home · About Us · Pictures · Writings · Projects`.
 2. **Hero Stage & Focal Lead (<article.story-panel> — `SHOUT OUT TO ZANZIBAR:`)**:
    - DOM & Selectors: Landmark `<article class="story-panel">` presenting display lead `SHOUT OUT TO ZANZIBAR:` and copy excerpt *"Where every small hand holds a big dream — beneath Kilimanjaro’s "* over `#e9e2d3` canvas and `#000000` ink.
-   - Responsive Contract: Hero stage (`1440×1064px` desktop / `390×844px` mobile) sets `#e9e2d3` background with `#000000` headline `SHOUT OUT TO ZANZIBAR:`.
+   - Responsive Contract: Hero stage (`1280×3312px` desktop / `390×872px` mobile) sets `#e9e2d3` background with `#000000` headline `SHOUT OUT TO ZANZIBAR:`.
 3. **Primary Showcase & Content Grid (<article.story-panel:nth(2)> — `S h o u t o u t t o Z a n z i b a `)**:
    - DOM & Selectors: Landmark `<article class="story-panel">` rendering section `S h o u t o u t t o Z a n z i b a r :` with copy *"Shout out to Zanzibar"*, asset references (`sotz_logo.png`, `fonts.googleapis.com`, `fonts.gstatic.com`, `css2`), and grid rule `.site-footer .flinks a:focus-visible { border-color: 8a6b47; color: 4a4233; }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<article.story-panel:nth(2)> — `S h o u t o u t t o Z a n z i b a `)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1240px`, `gap: 30px`) on desktop and Single-column vertical stack at `390px` viewport width with `24px` horizontal padding on mobile.
@@ -271,12 +291,41 @@ Scaffold `sotz-org` (`Shout out to Zanzibar`) with these exact structural region
 - `.layer { position: absolute; inset: 0; }`
 - **Per-Selector Transition Rules**:
 - **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
-- **Selector `.cta`**: `transition: transform .25s ease, box-shadow .25s ease` extracted from `sotz-org` stylesheet.
-- **Selector `.cta .arr`**: `transition: transform .25s ease` extracted from `sotz-org` stylesheet.
+- **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
+- **Selector `.site-footer .flinks a`**: `transition: color .25s ease, border-color .25s ease` extracted from `sotz-org` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.22,.9,.35,1)`)**: Governs interactive state transitions across `<header.headline>` and `<article.story-panel:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates GSAP Timeline & ScrollTrigger with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `1064px` across 4 distinct viewport chapters.
+- **Vertical Chapter Sequence**: SHOUT OUT TO ZANZIBAR: (0%) -> SHOUT OUT TO ZANZIBAR: (100%) -> SHOUT OUT TO ZANZIBAR: (100%) -> SHOUT OUT TO ZANZIBAR: (100%).
+- **Hover Micro-Interaction (`primary_cta`)**: Animate `transform, boxShadow` with `0.25s, 0.25s ease, ease`.
+- **Multi-Page Routes**: Scaffold internal routes `/index.html` (other, direct), `/about_us.html` (other, direct), `/picture.html` (other, direct) sharing the global header/footer shell and design tokens.
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `sotz-org`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | SHOUT OUT TO ZANZIBAR: | `0` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+| `#02` | `164px` | `100%` | SHOUT OUT TO ZANZIBAR: | `0` | [desktop-step-02.webp](assets/desktop-step-02.webp) |
+| `#03` | `164px` | `100%` | SHOUT OUT TO ZANZIBAR: | `0` | [desktop-step-03.webp](assets/desktop-step-03.webp) |
+| `#04` | `164px` | `100%` | SHOUT OUT TO ZANZIBAR: | `0` | [desktop-step-04.webp](assets/desktop-step-04.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | SHOUT OUT TO ZANZIBAR: | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+
+### Internal Subpage Filmstrips (`1080px` Wide WebP)
+| # | Template | Route URL | H1 / Title | Scroll Height | Transition | Filmstrip Asset |
+| :-: | :---: | :--- | :--- | :---: | :---: | :--- |
+| `1` | `other` | `https://sotz.org/index.html` | SHOUT OUT TO ZANZIBAR: | `1064px` | `direct` (`2699ms`) | [subpage-01-index-html.webp](assets/subpage-01-index-html.webp) |
+| `2` | `other` | `https://sotz.org/about_us.html` | About Us — Shout out to Zanzibar | `1721px` | `direct` (`2589ms`) | [subpage-02-about-us-html.webp](assets/subpage-02-about-us-html.webp) |
+| `3` | `other` | `https://sotz.org/picture.html` | Pictures — Shout out to Zanzibar | `900px` | `direct` (`1392ms`) | [subpage-03-picture-html.webp](assets/subpage-03-picture-html.webp) |
+

@@ -16,13 +16,14 @@ Logs of past projects, refactors, and investigations—capturing the intended go
 - [2026-11-14-awwwards-multi-category-expansion](ventures/2026-11-14-awwwards-multi-category-expansion.md) — Massive multi-vertical expansion across all 25 Awwwards industry categories (575 production targets cataloged).
 - [2026-11-14-custom-city-streetwear-embroidery](ventures/2026-11-14-custom-city-streetwear-embroidery.md) — Dark heavyweight industrial streetwear e-commerce platform with interactive 2D live embroidery simulator, 3D puff relief preview, Tech Pack generator, and BLIK checkout.
 - [2026-11-15-ui-prompt-designer-and-claude-loop](ventures/2026-11-15-ui-prompt-designer-and-claude-loop.md) — UI Prompt Designer skill ([ui-prompt-designer](../skills/ui-prompt-designer/SKILL.md)), Anthropic `claude-loop` verification workflow ([claude-loop](../skills/claude-loop/SKILL.md)), Batch 1 zero-shot UI Prompt Blueprints (`prompt-blueprint.md`) with full-page desktop/mobile captures, and [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md).
+- [2026-11-23-full-behavioral-journey-webp](ventures/2026-11-23-full-behavioral-journey-webp.md) — Full top-to-bottom `behavioral_journey_v2` crawl & WebP (`q=82`) migration across all 575 targets (`435/435` live at `25.0/25.0`, `0` legacy PNGs, `140/140` blocked C15-clean, labeled desktop/mobile journey filmstrips, interactive UI probes, multi-page subpage crawls, and enriched Sections 5–8 blueprints).
 
 ---
 
 ### 📊 Dashboards & Execution Traces (`wiki/`)
-- [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`494/494` live analyzed targets at `25.0/25.0`, `0` synthetic specimens, `23` `site-blocked` WAF/HTTP/dead targets + `58` `capture-incomplete` preloader/WebGPU/timeout targets = `81` `status: blocked` excluded cleanly per `C1`/`C15`), live `1440×[900..2400]` desktop & `390×[844..2400]` mobile viewport captures, and `claude-loop` audit status (Round 9 Takeover Remediation `R1`–`R8` pending `claude-takeover-reviewer`).
+- [UI_EVALS_DASHBOARD](UI_EVALS_DASHBOARD.md) — Master Obsidian dashboard tracking all 575 cataloged targets across 58 Execution Rounds (`435/435` live `behavioral_journey_v2` targets at `25.0/25.0`, `0` synthetic specimens, `0` legacy PNGs, `65` `site-blocked` WAF/HTTP/dead targets + `75` `capture-incomplete` preloader/WebGPU/timeout targets = `140` `status: blocked` excluded cleanly per `C1`/`C15`), live top-to-bottom WebP (`q=82`) desktop & mobile journey filmstrips, subpage crawls, and `claude-loop` audit status.
 - [round-01-trace](traces/round-01-trace.md) .. [round-58-trace](traces/round-58-trace.md) — Complete 58-round live-recrawl execution traces and `C1`–`C15` verification ledgers.
-- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across Rounds 1–7 (`claude-sonnet-5-5-high`) and Round 8 Takeover Live-Recrawl (pending `claude-takeover-reviewer`).
+- [claude-loop-ledger](traces/claude-loop-ledger.json) — Full multi-round audit ledger across Rounds 1–13 (`claude-sonnet-5-5-high`), including Round 12 `behavioral_journey_v2` `VERDICT: APPROVE` (`22/25`) and Round 13 PR Code Review (`Batreme/reverse-harness#3` & `Batreme/fleet#4`).
 
 ---
 

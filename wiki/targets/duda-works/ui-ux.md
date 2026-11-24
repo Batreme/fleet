@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: duda-works"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `duda-works` (**Duda Lima**)
 - **Production URL**: [http://duda.works](http://duda.works)
 - **Final Redirected URL**: [https://www.duda.works/](https://www.duda.works/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×2121px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#060403` canvas, `#ffffff` ink, `#ffffff` accent)
 - **Summary**: Production web application and digital experience at http://duda.works.
 - **Total Clean CSS Variables Extracted**: `5` (curated live-grounded set below)

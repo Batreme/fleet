@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-plugandplaydesign-co-uk"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.plugandplaydesign.co.uk/"
 final_url: "https://www.plugandplaydesign.co.uk/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Web Design Agency London & Guildford · Plug & Play
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `26`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `66`
+- **Recovered Stylesheets**: `6`
 
 ---
 

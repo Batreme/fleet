@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: www-impastofornoantico-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `www-impastofornoantico-com` (**Handcrafted Bread with Soul - Impasto**)
 - **Production URL**: [https://www.impastofornoantico.com/](https://www.impastofornoantico.com/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×872px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#efefe7` canvas, `#312426` ink, `#0082f3` accent)
 - **Summary**: Discover Impasto’s soulful, handcrafted bread - Rye, Focaccia, Sourdough. Experience the rhythm of baking with care. Order or contact us...
 - **Total Clean CSS Variables Extracted**: `236` (curated live-grounded set below)

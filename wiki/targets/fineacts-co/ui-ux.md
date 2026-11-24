@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: fineacts-co"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: blocked
 http_status: null
 block_reason: "Network/Navigation failure (Page.goto: net::ERR_EMPTY_RESPONSE at https://fineacts.co/ Call log: - navigating to 'https://fineacts.co/', waiting until 'domcontentload)"

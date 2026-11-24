@@ -1,12 +1,13 @@
 ---
 title: "Target Overview: www-huxleysaga-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.huxleysaga.com/"
 final_url: "https://www.huxleysaga.com/"
-status: analyzed
+status: blocked
 http_status: 200
-capture_tier: tier2_webgl
+capture_tier: none
+block_reason: "Empty DOM response (0 bytes, 0 visible text)"
 tags:
   - target
   - reverse-engineering
@@ -27,11 +28,12 @@ auth_required: false
 
 ## Architecture & Stack Fingerprint
 - **Target URL**: [https://www.huxleysaga.com/](https://www.huxleysaga.com/)
-- **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier2_webgl`)
-- **Page Title**: Huxley · Home
-- **Identified Frameworks**: Vue / Nuxt, HTML5 Canvas / WebGL
-- **Recovered Scripts**: `36`
-- **Recovered Stylesheets**: `14`
+- **Status**: `blocked` (`http_status: 200`, `capture_tier: none`)
+- **Block / Unreachable Reason**: Empty DOM response (0 bytes, 0 visible text)
+- **Page Title**: www-huxleysaga-com
+- **Identified Frameworks**: Modern Web Application
+- **Recovered Scripts**: `35`
+- **Recovered Stylesheets**: `25`
 
 ---
 

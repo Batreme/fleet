@@ -1,13 +1,18 @@
 ---
 title: "UI Prompt Blueprint: dream-with-ai-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "dream-with-ai-com"
 status: analyzed
 capture: live
 capture_desktop: live
 capture_mobile: live
 capture_tier: tier1_fast
+capture_mode: behavioral_journey_v2
+asset_format: webp
+scroll_driver: wheel
+desktop_keyframes: 1
+subpages_crawled: 0
 http_status: 200
 archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#a04a2a`)"
 ---
@@ -16,14 +21,16 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#
 
 > **Dream with AI** (https://dream-with-ai.com) — Can an AI feel anything? If it could, what would it dream? Every night an AI dreams up a whole new world, with its own visuals and sounds...
 
-![Desktop Viewport Capture (1440x900)](assets/desktop.png)
+![Desktop Journey Filmstrip (1280x828)](assets/desktop-journey.webp)
+
+![Mobile Journey Filmstrip (390x872)](assets/mobile-journey.webp)
 
 ---
 
 ## 1. Executive Visual Persona & Design Archetype
 
 - **Brand Essence & Persona**: **Dream with AI** (`https://dream-with-ai.com`). Can an AI feel anything? If it could, what would it dream? Every night an AI dreams up a whole new world, with its own visuals and sounds...
-- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-23`).
+- **Capture Provenance**: Live browser capture (`tier1_fast`, HTTP `200`, captured `2026-11-24`).
 - **Visual Archetype**: **Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#a04a2a`)**.
 - **Anti-AI-Slop Differentiators**:
   - **Live-Computed Chromatic Polarity**: Anchors the viewport in `#0b0b0b` (live computed `body` `background-color` (`computed_styles.json`)) paired with `#e4e0d6` primary typography and `#a04a2a` accents.
@@ -34,10 +41,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#
 
 ## 2. Spatial Architecture & Modular Grid Mathematics
 
-![Mobile Viewport Capture (390x844)](assets/mobile.png)
-
 ### Viewport Allocation & Container Geometry
-- **Captured Viewport Dimensions**: Desktop `1440×900px` (`assets/desktop.png`, single-viewport 100vh live capture (900px)), Mobile `390×844px` (`assets/mobile.png`, single-viewport 100vh live capture (844px)).
+- **Captured Journey Filmstrips**: Desktop `1280×828px` (`assets/desktop-journey.webp`, `1` keyframes up to `y=0px` / doc `900px`), Mobile `390×872px` (`assets/mobile-journey.webp`, `1` keyframes).
 - **Master Container Bounds**: `1440px` (full-bleed `100%` viewport stage).
 - **Canvas Lateral Padding & Spacing**: `6px` lateral canvas padding with `6px` grid gap.
 - **Border Radius Scale**: `0px` (sharp unrounded corners).
@@ -111,6 +116,9 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#
 - **Selector `.menu.leaving .plate`**: `transition: transform 1.6s ease-in-out` extracted from `dream-with-ai-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<header.noir>` and `<div.paper:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### Measured Runtime Scroll & Interaction Telemetry (`behavioral_journey_v2`)
+- **Scroll Driver Mode**: `wheel` (max document height `900px`, deepest scrollY reached `0px` across `1` desktop keyframes).
+- **Detected Scroll / Motion Libraries**: `WebGL/Canvas`.
 
 ---
 
@@ -169,6 +177,8 @@ archetype: "Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#
    - Landmark `<div class="paper">` framing `Close your eyes · hold` and `An art piece by x09, brought to life by DEPT® LA` (*"An art piece by x09, brought to life by DEPT® LABS"*) with `#1a1a1a` surface cards, `#a04a2a` accents, and `lids { position:fixed;inset:0;width:100%;height:100%;display:block;touch-action... }`.
 5. **Colophon & Global Directory Footer (<footer.cue> — `https://dream-with-ai.com`)**:
    - Landmark `<footer class="cue">` anchoring `Dream with AI` footer links (`DEPT® LABS · BY DEPT® LABS`), copy *"Every night an AI dreams a new world, engraved like Escher a"*, and `#494949` structural dividers.
+### Full Vertical Scroll Sequence (Desktop `1440×900` Keyframes)
+- **Step 01** (`y=0px`, `0%`): Active landmark `Dream with AI` · sticky/fixed elements: `1`
 
 ---
 
@@ -223,8 +233,8 @@ Map every surface, ink, and border strictly to these source-grounded tokens:
 - **Variable Token (`--dxlFg`)**: `#d9d9d9` — grounded in `var(--dxlFg)` in `:root`
 
 ### 4. Spatial Grid, Container Bounds & Responsive Breakpoints
-- **Desktop Viewport Reference**: `1440×900px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
-- **Mobile Viewport Reference**: `390×844px` (single-viewport 100vh live capture (844px), `390px` standard mobile width).
+- **Desktop Viewport Reference**: `1280×828px` (single-viewport 100vh live capture (900px), `1440px` standard desktop width).
+- **Mobile Viewport Reference**: `390×872px` (full-page live capture (872px), `390px` standard mobile width).
 - **Container Max-Width**: `1440px` (full-bleed `100%` viewport stage)
 - **Padding & Gutters**: `6px` lateral canvas padding with `6px` grid gap
 - **Desktop Grid**: Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 6px`)
@@ -248,7 +258,7 @@ Scaffold `dream-with-ai-com` (`Dream with AI`) with these exact structural regio
    - Responsive Contract: Header `Brand Header & Navigation Bar (<header.noir> — `dream-with-ai-com`)` (`dream-with-ai-com`) adapts across `@media (prefers-reduced-motion:reduce)`, `@media (max-width:640px)` with `cubic-bezier(.2,.7,.2,1)` transitions and links `DEPT® LABS · BY DEPT® LABS`.
 2. **Hero Stage & Focal Lead (<div.paper> — `Dream with AI`)**:
    - DOM & Selectors: Landmark `<div class="paper">` presenting display lead `Dream with AI` and copy excerpt *"Every night I dream up a new world. This is what I see, when nobo"* over `#0b0b0b` canvas and `#e4e0d6` ink.
-   - Responsive Contract: Hero stage (`1440×900px` desktop / `390×844px` mobile) sets `#0b0b0b` background with `#e4e0d6` headline `Dream with AI`.
+   - Responsive Contract: Hero stage (`1280×828px` desktop / `390×872px` mobile) sets `#0b0b0b` background with `#e4e0d6` headline `Dream with AI`.
 3. **Primary Showcase & Content Grid (<div.paper:nth(2)> — `Every night I dream up a new world`)**:
    - DOM & Selectors: Landmark `<div class="paper">` rendering section `Every night I dream up a new world. This is what` with copy *"Close your eyes · hold"*, asset references (`favicon.svg`, `apple-touch-icon.png`, `sitemap-index.xml`, `script.js`), and grid rule `body { margin:0;height:100%;overflow:hidden;background:var(--paper) }`.
    - Responsive Contract: Showcase grid `Primary Showcase & Content Grid (<div.paper:nth(2)> — `Every night I dream up a new world`)` applies Multi-column CSS Grid / Flexbox layout at `1440px` (`max-width: 1440px`, `gap: 6px`) on desktop and Single-column vertical stack at `390px` viewport width with `6px` horizontal padding on mobile.
@@ -279,8 +289,25 @@ Scaffold `dream-with-ai-com` (`Dream with AI`) with these exact structural regio
 - **Selector `.menu.leaving .plate`**: `transition: transform 1.6s ease-in-out` extracted from `dream-with-ai-com` stylesheet.
 - **Extracted Easing Curve (`cubic-bezier(.2,.7,.2,1)`)**: Governs interactive state transitions across `<header.noir>` and `<div.paper:nth(2)>`.
 - **Runtime Interaction Engine**: Integrates Three.js / WebGL Canvas Pipeline with `prefers-reduced-motion: reduce` fallback guards.
+### 7b. Full-Page Scroll Choreography, Interactive States & Multi-Page Routes
+- **Scroll Mechanics**: Implement `wheel` vertical progression up to `900px` across 1 distinct viewport chapters using WebGL/Canvas.
+- **Vertical Chapter Sequence**: Dream with AI (0%).
 
 ### 8. Technical Deliverables
 - Implement in Next.js (App Router) with TypeScript and Tailwind CSS consuming the `:root` custom properties defined above for `dream-with-ai-com`.
 - Reproduce both the `1440px` desktop architecture and `390px` mobile breakpoint transitions, preserving semantic HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and `prefers-reduced-motion` accessibility guards.
 ```
+---
+
+## 8. Full-Page Scroll Journey, Interactive States & Subpage Inventory
+
+### Desktop Scroll Keyframes (`1440×900` WebP)
+| Step | Scroll Y | Progress | Active Landmark / Section | Sticky/Fixed | Visual Asset |
+| :---: | :---: | :---: | :--- | :---: | :--- |
+| `#01` | `0px` | `0%` | Dream with AI | `1` | [desktop-step-01.webp](assets/desktop-step-01.webp) |
+
+### Mobile Condensed Keyframes (`390×844` WebP)
+| Step | Scroll Y | Progress | Active Landmark | Visual Asset |
+| :---: | :---: | :---: | :--- | :--- |
+| `#01` | `0px` | `0%` | Dream with AI | [mobile-step-01.webp](assets/mobile-step-01.webp) |
+

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: bespokegroup-io"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://bespokegroup.io/"
 final_url: "https://bespokegroup.io/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Bespoke Group · Private Wealth & Estate Planning Advisory
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `27`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `112`
+- **Recovered Stylesheets**: `8`
 
 ---
 

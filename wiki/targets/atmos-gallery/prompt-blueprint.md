@@ -1,7 +1,7 @@
 ---
 title: "UI Prompt Blueprint: atmos-gallery"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 target: "atmos-gallery"
 status: blocked
 capture: none

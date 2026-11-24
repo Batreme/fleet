@@ -103,7 +103,71 @@
         "generability": 5
       },
       "notes": "All R1-R8 and R2-1/R3-1/R4-1 resolved. Verified aikissfiy-com (#d1d5db from :root --border-color) & bb-b-net (#f0efeb from .border-border-light), giga-ai desktop 1440x900 hydrated, rialto-com-au mobile void eliminated, www-schlosshotel-kitzbuehel-com_en mobile voucher popup dismissed. unittest 11/11 OK, verify_visual_catalog --strict EXIT 0, evaluate_batch --all --strict EXIT 0 (494/494 live at 25.0/25.0, 23 site-blocked, 58 capture-incomplete [81/81 clean], 0 specimens, 0 duplicate hashes)."
+    },
+    {
+      "round": 11,
+      "agent": "claude-reviewer",
+      "scope": "Full Behavioral Journey Crawl & WebP Migration Round 1 (behavioral_journey_v2, 575 targets)",
+      "verdict": "CHANGES",
+      "score": "20/25",
+      "subscores": {
+        "token": 5,
+        "layout": 4,
+        "motion": 3,
+        "wireframe": 4,
+        "generability": 4
+      },
+      "findings": [
+        "C1 [blocker] Re-evaluate scroll mode mid-scroll (desktop & mobile) when native scrollTo stalls on Lenis/GSAP/pinned pages",
+        "C2 [blocker] Add vertical scroll-depth coverage check in evaluate_batch.py and verify_visual_catalog.py",
+        "C3 [should] Disclose 34 previously-live regressions (+7 Q11-A recoveries) and retry with extended/partial-frame capture",
+        "C4 [should] Emit real URL paths (urlparse.path) instead of route_slug in Section 6 route map and Section 7b",
+        "C5 [should] Update claude-loop-ledger.json and UI_EVALS_DASHBOARD.md to reflect behavioral_journey_v2 review status",
+        "C6 [should] Filter stub subpages (scrollHeight <= 1.2*vh and empty H1) and require DETAIL_ROUTE_RE for detail category",
+        "C7 [should] Preserve already-captured valid frames on hard timeout instead of discarding them",
+        "C8-C12 [nits] Verify nav close after Escape, expand SKIP_ROUTE_RE + query filter, avoid #section-N labels, fix identical font pairing text, remove unused hashlib import"
+      ]
+    },
+    {
+      "round": 12,
+      "agent": "claude-reviewer",
+      "scope": "Full Behavioral Journey Crawl & WebP Migration Round 2 (C1-C12 Remediation Verification, 575 targets)",
+      "verdict": "APPROVE",
+      "score": "22/25",
+      "subscores": {
+        "token": 5,
+        "layout": 4,
+        "motion": 4,
+        "wireframe": 4,
+        "generability": 5
+      },
+      "findings": [
+        "C13 [should, follow-up] ~33 scroll-locked/inner-container tall pages remained shallow (<60% coverage) even after wheel fallback; surfaced as [WARN] by C2",
+        "C14 [should, follow-up] Optional idle-CPU --retry-extended pass on 75 capture-incomplete targets to recover additional previously-live sites",
+        "C15 [nit, resolved] Synced UI_EVALS_DASHBOARD.md reviewer status row with Round 12 verdict",
+        "C16 [nit, resolved] Removed 34 stale raw/*/behavior.json files on blocked targets and added unlink() on blocked path"
+      ],
+      "notes": "Verified C1 mid-scroll wheel fallback, C2 scroll-coverage check in evaluate_batch.py/verify_visual_catalog.py, C4 real URL paths in blueprints, C6 stub subpage filtering, C9 SKIP_QUERY_RE, 0 .py files and 0 PNGs in fleet, 435/435 live at 25.0/25.0, 140/140 blocked C15-clean, unittest 17/17 OK."
+    },
+    {
+      "round": 13,
+      "agent": "claude-pr-reviewer",
+      "scope": "Pull Request Code Review Rounds 1-2 (Batreme/reverse-harness#3 & Batreme/fleet#4)",
+      "verdict": "APPROVE",
+      "score": "23/25",
+      "findings": [
+        "P1 [should, fixed] Updated wiki/INDEX.md claude-loop-ledger summary to Rounds 1-13",
+        "P2 [should, fixed] Added v2-adapted low-entropy warning checks in evaluate_batch.py and verify_visual_catalog.py + documented filmstrip gate in dashboard",
+        "P3 [should, fixed] Surfaced warning on corrupt behavior.json instead of silent except pass",
+        "P4 [should, fixed] Recorded C13-C16 explicitly in Round 12 ledger entry and added Round 13",
+        "P5 [should, fixed] Surfaced shallow scroll-coverage warning count explicitly in UI_EVALS_DASHBOARD.md",
+        "P6 [nit, fixed] Declared pillow>=10.0.0 in pyproject.toml dependencies",
+        "P7 [nit, deferred] Hardcoded paths in untouched legacy ui_gallery_server.py / rebuild_batch1_grounded.py deferred to follow-up PR",
+        "P8 [nit, fixed] Anchored FORBIDDEN interactive-probe regex with \\b word boundaries",
+        "P9 [nit, fixed] Closed any extra context.pages popup tabs opened during first-route click probe"
+      ],
+      "notes": "0 blockers; P1-P6 and P8-P9 fixed in follow-up commit, P7 deferred with written explanation on PR #3."
     }
   ],
-  "current_status": "VERDICT: APPROVE (23/25 — Token 5, Layout 4, Motion 4, Wireframe 5, Generability 5; 3-Round Takeover claude-loop Complete: 494/494 live at 25.0/25.0, 23 site-blocked, 58 capture-incomplete [81/81 clean], 0 specimens)"
+  "current_status": "VERDICT: APPROVE (Round 12: 22/25 · Round 13 PR Review: 21/25, P1-P6/P8-P9 fixed; 435/435 live at 25.0/25.0, 65 site-blocked, 75 capture-incomplete [140/140 clean], 0 legacy PNGs, 0 specimens)"
 }

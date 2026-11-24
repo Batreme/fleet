@@ -1,10 +1,10 @@
 ---
 title: "UI & UX Architecture: exspeedia-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
-capture_tier: tier2_webgl
+capture_tier: tier1_fast
 http_status: 200
 ---
 
@@ -14,7 +14,7 @@ http_status: 200
 - **Target**: `exspeedia-com` (**Official IShowSpeed Travel Site Powered by Expedia**)
 - **Production URL**: [https://exspeedia.com](https://exspeedia.com)
 - **Final Redirected URL**: [https://speed.expedia.com/](https://speed.expedia.com/)
-- **Capture Provenance**: `capture: live` (`tier2_webgl`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#030c1d` / `#005aeb`)
 - **Summary**: The official IShowSpeed travel website powered by Expedia. Book trips inspired by Speed’s real travels, enter sweepstakes, and earn rewards.
 - **Total Clean CSS Variables Extracted**: `398` (curated live-grounded set below)
@@ -37,7 +37,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#030c1d` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#ffffff` | live computed `h1` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#020247` | live computed `button` `background-color` (`computed_styles.json`) |
+| **Elevated Surface / Card Substrate** | `#000000` | `8 { background-color: black }` (`#000000`) |
 | **Interactive Accent / Highlight** | `#005aeb` | live computed `a` `color` (`computed_styles.json`) |
 | **Secondary / Muted Copy** | `#575b6e` | live computed `p` `color` (`computed_styles.json`) |
 | **Structural Hairline Border** | `#808080` | `.border-gray-200 { border-color: #808080 }` |
@@ -74,6 +74,6 @@ http_status: 200
 3. **Primary Showcase & Content Grid (<section.ot-hide> — `checkbox label label`)**:
    - Landmark `<section class="ot-hide ot-pc-scrollbar">` rendering section `checkbox label label` with copy *"GO PLACES LIKE"*, asset references (`speed-cdn.expedia.com`, `d2848tzd1fqvrv.cloudfront.net`, `cdn.usefathom.com`, `favicon-96x96.png`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 4. **Interactive Detail & Feature Matrix (<section.fixed> — `exspeedia-com Interactive Matrix`)**:
-   - Landmark `<section class="fixed">` framing `exspeedia-com Interactive Matrix` and `exspeedia-com Archive & Directory` (*"checkbox label label"*) with `#020247` surface cards, `#005aeb` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="fixed">` framing `exspeedia-com Interactive Matrix` and `exspeedia-com Archive & Directory` (*"checkbox label label"*) with `#000000` surface cards, `#005aeb` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.inset-0> — `https://exspeedia.com`)**:
    - Landmark `<footer class="inset-0">` anchoring `Official IShowSpeed Travel Site ` footer links (`Overview · Index · Archive · About · Contact`), copy *"exspeedia-com Interactive Matrix"*, and `#808080` structural dividers.

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: altamedfoundation-org"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://altamedfoundation.org/"
 final_url: "https://altamedfoundation.org/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: AltaMed Foundation · AltaMed Foundation
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `36`
-- **Recovered Stylesheets**: `2`
+- **Recovered Scripts**: `107`
+- **Recovered Stylesheets**: `6`
 
 ---
 

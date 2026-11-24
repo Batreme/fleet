@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: tridentstars-maserati-com_en"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `tridentstars-maserati-com_en` (**Discover Maserati’s Trident Constellation in the Sky**)
 - **Production URL**: [https://tridentstars.maserati.com/en/](https://tridentstars.maserati.com/en/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#000000` / `#2285f7`)
 - **Summary**: A real constellation of stars created to celebrate 100 years of vision, performance and iconic design.
 - **Total Clean CSS Variables Extracted**: `89` (curated live-grounded set below)
@@ -67,12 +67,12 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.top-0> — `tridentstars-maserati-com_en`)**:
-   - Landmark `<header class="top-0 right-0">` (`1440x90px`) hosting `Discover Maserati’s Trident Constell` navigation (`the manifesto · discover more`), DOM attributes (`data-domain-script="81be852f-f22f-496a-87..."`, `data-document-language="true"`, `data-hid="adobe-launch"`, `data-hid="adobe-data-layer"`), and stylesheet rule `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<header class="top-0 right-0">` (`1440x90px`) hosting `Discover Maserati’s Trident Constell` navigation (`the manifesto · discover more`), DOM attributes (`data-domain-script="81be852f-f22f-496a-87..."`, `data-document-language="true"`, `data-hid="adobe-launch"`, `data-hid="adobe-data-layer"`), and stylesheet rule `.external-link-icon__arrow { transition:translate .3s }`.
 2. **Hero Stage & Focal Lead (<section.ot-sdk-row> — `100 YEARS OF THE TRIDENT LOGO 1 0 `)**:
    - Landmark `<section class="ot-sdk-row ot-cat-grp">` presenting display lead `100 YEARS OF THE TRIDENT LOGO 1 0 0 Y E A R S O F...` and copy excerpt *"SCROLL TO EXPLORE THE TRIDENT CONSTELLATION"* over `#000000` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.ot-hide> — `SCROLL TO EXPLORE THE TRIDENT CONS`)**:
-   - Landmark `<section class="ot-hide ot-hosts-ui">` rendering section `SCROLL TO EXPLORE THE TRIDENT CONSTELLATION` with copy *"100 YEARS OF THE TRIDENT LOGO 1 0 0 Y E A R S O F T H E T R I D E"*, asset references (`entry.Btz3ffrH.css`, `default.CffeYOeI.css`, `MoleculesExternalLink.BgGEM1Uz.css`, `MoleculesPopup.CyDrrBxz.css`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
+   - Landmark `<section class="ot-hide ot-hosts-ui">` rendering section `SCROLL TO EXPLORE THE TRIDENT CONSTELLATION` with copy *"100 YEARS OF THE TRIDENT LOGO 1 0 0 Y E A R S O F T H E T R I D E"*, asset references (`entry.Btz3ffrH.css`, `default.CffeYOeI.css`, `MoleculesExternalLink.BgGEM1Uz.css`, `MoleculesPopup.CyDrrBxz.css`), and grid rule `hover .external-link-icon__arrow { translate:2px -2px }`.
 4. **Interactive Detail & Feature Matrix (<section.left-0> — `100 YEARS OF THE TRIDENT LOGO 1 0 `)**:
-   - Landmark `<section class="left-0">` framing `100 YEARS OF THE TRIDENT LOGO 1 0 0 Y E A R S O ` and `100 YEARS OF THE TRIDENT LOGO` (*"100 YEARS OF THE TRIDENT LOGO"*) with `#2d2d2d` surface cards, `#2285f7` accents, and `strong { font-weight:bolder }`.
+   - Landmark `<section class="left-0">` framing `100 YEARS OF THE TRIDENT LOGO 1 0 0 Y E A R S O ` and `100 YEARS OF THE TRIDENT LOGO` (*"100 YEARS OF THE TRIDENT LOGO"*) with `#2d2d2d` surface cards, `#2285f7` accents, and `before { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
 5. **Colophon & Global Directory Footer (<footer.z-header> — `https://tridentstars.maserati.com/en/`)**:
    - Landmark `<footer class="z-header">` anchoring `Discover Maserati’s Trident Cons` footer links (`the manifesto · discover more`), copy *"1 0 0 Y E A R S O F T H E T R I D E N T L O G O"*, and `#2d2d2d` structural dividers.

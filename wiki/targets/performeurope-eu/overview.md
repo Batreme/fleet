@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: performeurope-eu"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://performeurope.eu/"
 final_url: "https://performeurope.eu/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Perform Europe - Reimagine International Touring
 - **Identified Frameworks**: Modern Web Application
-- **Recovered Scripts**: `20`
-- **Recovered Stylesheets**: `8`
+- **Recovered Scripts**: `85`
+- **Recovered Stylesheets**: `34`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Target Overview: www-norddeutscher-figuralchor-de"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 url: "https://www.norddeutscher-figuralchor.de"
 final_url: "https://www.norddeutscher-figuralchor.de/"
 status: analyzed
@@ -30,8 +30,8 @@ auth_required: false
 - **Status**: `analyzed` (`http_status: 200`, `capture_tier: tier1_fast`)
 - **Page Title**: Norddeutscher Figuralchor Hannover — Kammerchor seit 1981
 - **Identified Frameworks**: Tailwind CSS
-- **Recovered Scripts**: `8`
-- **Recovered Stylesheets**: `1`
+- **Recovered Scripts**: `31`
+- **Recovered Stylesheets**: `4`
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: foxvaluations-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `foxvaluations-com-au` (**Property valuations Brisbane · Fox Valuations**)
 - **Production URL**: [https://foxvaluations.com.au](https://foxvaluations.com.au)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×4968px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#fbfaf7` canvas, `#131a24` ink, `#d96b3f` accent)
 - **Summary**: Independent property valuations across Brisbane and South East Queensland by registered valuer Sebastian Fox. Fixed fee, quoted free.
 - **Total Clean CSS Variables Extracted**: `29` (curated live-grounded set below)
@@ -77,7 +77,7 @@ http_status: 200
 
 ## Structural DOM Landmarks (`dom.html`)
 1. **Brand Header & Navigation Bar (<header.site-head> — `foxvaluations-com-au`)**:
-   - Landmark `<header class="site-head site-head-cine">` (`1440x72px`) hosting `Property valuations Brisbane · Fox V` navigation (`Valuations · The standard · From the den · Tools · About`), DOM attributes (`data-website-id="dc310766-8aa8-41ef-af..."`, `data-website-id="dc310766-8aa8-41ef-af..."`, `data-portrait="1"`, `data-slot="svc-residential"`), and stylesheet rule `html { scroll-behavior: smooth }`.
+   - Landmark `<header class="site-head site-head-cine">` (`1440x72px`) hosting `Property valuations Brisbane · Fox V` navigation (`Valuations · The standard · From the den · Tools · About`), DOM attributes (`data-website-id="dc310766-8aa8-41ef-af..."`, `data-portrait="1"`, `data-slot="svc-residential"`, `data-slot="svc-commercial"`), and stylesheet rule `html { scroll-behavior: smooth }`.
 2. **Hero Stage & Focal Lead (<section.landing> — `What is your property worth?`)**:
    - Landmark `<section class="landing">` presenting display lead `What is your property worth?` and copy excerpt *"Independent property valuations by a registered valuer. Brisbane "* over `#fbfaf7` canvas and `#131a24` ink.
 3. **Primary Showcase & Content Grid (<section.cred-strip> — `A figure you can act on.`)**:

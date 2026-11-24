@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: dream-with-ai-com"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `dream-with-ai-com` (**Dream with AI**)
 - **Production URL**: [https://dream-with-ai.com](https://dream-with-ai.com)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×900px`, Mobile `390×844px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×828px`, Mobile `390×872px`)
 - **Visual Archetype**: Dark-Substrate WebGL / Canvas Interactive Experience (`#0b0b0b` / `#a04a2a`)
 - **Summary**: Can an AI feel anything? If it could, what would it dream? Every night an AI dreams up a whole new world, with its own visuals and sounds...
 - **Total Clean CSS Variables Extracted**: `16` (curated live-grounded set below)

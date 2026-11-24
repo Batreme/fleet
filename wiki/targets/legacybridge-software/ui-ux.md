@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: legacybridge-software"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,10 +13,10 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `legacybridge-software` (**AI Document Entry for AS/400 & Legacy Systems · LegacyBridge**)
 - **Production URL**: [https://legacybridge.software/](https://legacybridge.software/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×6624px`, Mobile `390×2616px`)
 - **Visual Archetype**: Light-Substrate Editorial & Modular Grid System (`#ffffff` canvas, `#082a1c` ink, `#cdff8c` accent)
 - **Summary**: An AI agent that reads invoices, orders and claims and keys them into AS/400 (IBM i), mainframe and other legacy systems. Human approval,...
-- **Total Clean CSS Variables Extracted**: `46` (curated live-grounded set below)
+- **Total Clean CSS Variables Extracted**: `51` (curated live-grounded set below)
 
 ---
 
@@ -36,7 +36,7 @@ http_status: 200
 |---|---|---|
 | **Primary Canvas Substrate** | `#ffffff` | live computed `body` `background-color` (`computed_styles.json`) |
 | **Primary Typography Ink** | `#082a1c` | live computed `main` `color` (`computed_styles.json`) |
-| **Elevated Surface / Card Substrate** | `#f4f7f9` | `var(--surface-card)` in `:root` |
+| **Elevated Surface / Card Substrate** | `#f4f7f9` | live computed `section` `background-color` (`computed_styles.json`) |
 | **Interactive Accent / Highlight** | `#cdff8c` | `var(--brand-accent)` in `:root` |
 | **Secondary / Muted Copy** | `#94a3b8` | `var(--text-inverse-muted)` in `:root` |
 | **Structural Hairline Border** | `#dde3e7` | `var(--border-divider)` in `:root` |

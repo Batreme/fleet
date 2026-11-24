@@ -1,7 +1,7 @@
 ---
 title: "UI & UX Architecture: therechabite-com-au"
-date: 2026-11-23
-captured_at: 2026-11-23
+date: 2026-11-24
+captured_at: 2026-11-24
 status: analyzed
 capture: live
 capture_tier: tier1_fast
@@ -13,7 +13,7 @@ http_status: 200
 ## Overview & Design Identity
 - **Target**: `therechabite-com-au` (**The Rechabite • Multi-level Palace of Surprise and Delight**)
 - **Production URL**: [https://therechabite.com.au/](https://therechabite.com.au/)
-- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1440×2400px`, Mobile `390×2400px`)
+- **Capture Provenance**: `capture: live` (`tier1_fast`, HTTP `200`, Desktop `1280×1656px`, Mobile `390×2616px`)
 - **Visual Archetype**: High-Contrast Obsidian / Atmospheric Design System (`#0f0f0f` canvas, `#ffffff` ink, `#000000` accent)
 - **Summary**: M e e t M e A t T h e R e c h a b i t e
 - **Total Clean CSS Variables Extracted**: `73` (curated live-grounded set below)
@@ -77,7 +77,7 @@ http_status: 200
    - Landmark `<section class="min-h-lvh bg-light-black">` presenting display lead `MEET ME AT THE RECH A BITE` and copy excerpt *"From scorching cabaret and red-hot comedy to live music that’ll m"* over `#0f0f0f` canvas and `#ffffff` ink.
 3. **Primary Showcase & Content Grid (<section.bg-light-black> — `M e e t M e A t T h e R e c h a b `)**:
    - Landmark `<section class="bg-light-black relative">` rendering section `M e e t M e A t T h e R e c h a b i t e` with copy *"What's on What's on"*, asset references (`clarity.js`, `z0jl5zt2hc`, `4457171594343694`, `fbevents.js`), and grid rule `file-selector-button { box-sizing:border-box;border:0 solid;margin:0;padding:0 }`.
-4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `THE CBD TOUR · A YOU WOULDN’T LIVE`)**:
-   - Landmark `<section class="overflow-hidden text-white">` framing `THE CBD TOUR · A YOU WOULDN’T LIVE SHOW` and `Buckshot with Sidney Phillips, Oscar18` (*"What’s on What’s on"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
+4. **Interactive Detail & Feature Matrix (<section.overflow-hidden> — `Buckshot with Sidney Phillips, Osc`)**:
+   - Landmark `<section class="overflow-hidden text-white">` framing `Buckshot with Sidney Phillips, Oscar18` and `Barefaced Stories · Nov 26 · Alive, Somehow` (*"All Events All Events"*) with `#000000` surface cards, `#000000` accents, and `strong { font-weight:bolder }`.
 5. **Colophon & Global Directory Footer (<footer.bg-light-black> — `https://therechabite.com.au/`)**:
-   - Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R ech a b i t e Hall"*, and `#000000` structural dividers.
+   - Landmark `<footer class="bg-light-black text-white">` anchoring `The Rechabite • Multi-level Pala` footer links (`What’s On What’s On · Rechabite Hall · Hello Rooftop · Double Rainbow · Goodwill Club`), copy *"R e c h abi t e Ha l l"*, and `#000000` structural dividers.
