@@ -152,9 +152,9 @@
     {
       "round": 13,
       "agent": "claude-pr-reviewer",
-      "scope": "Pull Request Code Review Round 1 (Batreme/reverse-harness#3 & Batreme/fleet#4)",
+      "scope": "Pull Request Code Review Rounds 1-2 (Batreme/reverse-harness#3 & Batreme/fleet#4)",
       "verdict": "APPROVE",
-      "score": "21/25",
+      "score": "23/25",
       "findings": [
         "P1 [should, fixed] Updated wiki/INDEX.md claude-loop-ledger summary to Rounds 1-13",
         "P2 [should, fixed] Added v2-adapted low-entropy warning checks in evaluate_batch.py and verify_visual_catalog.py + documented filmstrip gate in dashboard",
